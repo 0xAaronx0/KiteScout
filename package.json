@@ -1,0 +1,25 @@
+{
+  "name": "kitescout",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "cli": "tsx src/cli.ts",
+    "pipeline:seed": "tsx src/cli.ts seed",
+    "pipeline:search": "tsx src/cli.ts search",
+    "pipeline:extract": "tsx src/cli.ts extract",
+    "pipeline:dedupe": "tsx src/cli.ts dedupe",
+    "pipeline:status": "tsx src/cli.ts status"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@supabase/supabase-js": "^2.49.4",
+    "dotenv": "^16.4.7",
+    "p-limit": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
