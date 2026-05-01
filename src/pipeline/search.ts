@@ -2,6 +2,7 @@ import pLimit from 'p-limit';
 import { supabase } from '../lib/supabase.js';
 import { search } from '../lib/tavily.js';
 import { withRetry } from '../lib/retry.js';
+import { BLOCKED_DOMAINS } from '../config.js';
 
 const CONCURRENCY = 3;
 
@@ -25,7 +26,7 @@ export async function runSearch(batchSize = 50): Promise<{ ran: number; remainin
     queries.map(q =>
       limit(async () => {
         try {
-          const results = await withRetry(() => search(q.query, 20));
+          const results = await withRetry(() => search(q.query, 20, BLOCKED_DOMAINS));
 
           await supabase
             .from('discovery_queries')

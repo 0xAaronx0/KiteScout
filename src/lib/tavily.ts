@@ -29,7 +29,11 @@ async function post(path: string, body: Record<string, unknown>): Promise<unknow
   return res.json();
 }
 
-export async function search(query: string, maxResults = 20): Promise<SearchResult[]> {
+export async function search(
+  query: string,
+  maxResults = 20,
+  excludeDomains: string[] = [],
+): Promise<SearchResult[]> {
   const data = (await post('/search', {
     query,
     search_depth: 'advanced',
@@ -37,6 +41,7 @@ export async function search(query: string, maxResults = 20): Promise<SearchResu
     include_answer: false,
     include_raw_content: false,
     include_images: false,
+    ...(excludeDomains.length > 0 && { exclude_domains: excludeDomains }),
   })) as { results: SearchResult[] };
 
   return data.results ?? [];

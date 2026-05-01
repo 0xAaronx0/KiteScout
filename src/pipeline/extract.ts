@@ -4,6 +4,7 @@ import { anthropic, EXTRACTION_MODEL } from '../lib/anthropic.js';
 import { extract as tavilyExtract } from '../lib/tavily.js';
 import { withRetry } from '../lib/retry.js';
 import type { ProviderExtraction, TripType } from '../types.js';
+import { BLOCKED_DOMAINS } from '../config.js';
 
 const CONCURRENCY = 3;
 const MAX_CONTENT_CHARS = 8000;
@@ -99,6 +100,15 @@ export async function runExtract(batchSize = 30): Promise<{ processed: number; r
   if (error) throw error;
   if (!results || results.length === 0) return { processed: 0, remaining: 0 };
 
+  // Mark blocked domains as processed immediately
+  const blocked = results.filter(r => BLOCKED_DOMAINS.some(d => rootDomain(r.url).endsWith(d)));
+  if (blocked.length > 0) {
+    await supabase
+      .from('raw_search_results')
+      .update({ processed: true, error: 'blocked_domain' })
+      .in('id', blocked.map(r => r.id));
+  }
+
   // Load already-known domains to skip re-extraction
   const { data: existing } = await supabase.from('providers').select('root_domain');
   const knownDomains = new Set((existing ?? []).map(p => p.root_domain as string));
@@ -112,7 +122,9 @@ export async function runExtract(batchSize = 30): Promise<{ processed: number; r
       .in('id', alreadyKnown.map(r => r.id));
   }
 
-  const toProcess = results.filter(r => !knownDomains.has(rootDomain(r.url)));
+  const toProcess = results.filter(
+    r => !knownDomains.has(rootDomain(r.url)) && !BLOCKED_DOMAINS.some(d => rootDomain(r.url).endsWith(d)),
+  );
   console.log(
     `Extracting ${toProcess.length} new URLs (${alreadyKnown.length} already known)…`,
   );
