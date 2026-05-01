@@ -13,5 +13,9 @@ export const BLOCKED_DOMAINS: string[] = [
   'tripadvisor.com',
   'yelp.com',
   'wikipedia.org',
+  'wikipedia.com',
   'wikimedia.org',
+  'windy.app',
+  'thekitemag.com',
+  'iksurfmag.com',
 ];
