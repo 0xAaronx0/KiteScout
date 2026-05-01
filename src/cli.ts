@@ -32,15 +32,15 @@ async function status(): Promise<void> {
   console.log(`Providers: ${totalProviders ?? 0} total  (${newProviders ?? 0} new, ${verifiedProviders ?? 0} verified)`);
 }
 
-async function runSearchLoop(batchSize: number): Promise<void> {
+async function runSearchLoop(batchSize: number, loop: boolean): Promise<void> {
   let total = 0;
   while (true) {
     const { ran, remaining } = await runSearch(batchSize);
     total += ran;
-    if (remaining === 0) break;
+    if (remaining === 0) { console.log(`Search complete. Total queries run: ${total}`); break; }
+    if (!loop) { console.log(`Batch done. ${remaining} queries still pending. Run again to continue.`); break; }
     console.log(`  ${remaining} queries still pending…`);
   }
-  console.log(`Search complete. Total queries run: ${total}`);
 }
 
 async function runExtractLoop(batchSize: number): Promise<void> {
@@ -60,9 +60,11 @@ async function main(): Promise<void> {
       await seedQueries();
       break;
 
-    case 'search':
-      await runSearchLoop(batchSize);
+    case 'search': {
+      const loop = args.includes('--loop');
+      await runSearchLoop(batchSize, loop);
       break;
+    }
 
     case 'extract':
       await runExtractLoop(parseInt(args[0] ?? '30', 10));
