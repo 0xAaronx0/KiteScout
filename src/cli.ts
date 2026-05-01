@@ -52,7 +52,51 @@ async function runExtractLoop(batchSize: number): Promise<void> {
   console.log('Extraction complete.');
 }
 
-async function main(): Promise<void> {
+async function blocklistCandidates(limit = 50): Promise<void> {
+  // Extract root domain from URL using Postgres string functions
+  const { data, error } = await supabase.rpc('blocklist_candidates', { row_limit: limit });
+
+  if (error) {
+    // RPC doesn't exist yet — fall back to fetching and processing in JS
+    const { data: rows } = await supabase
+      .from('raw_search_results')
+      .select('url, error')
+      .or('error.like.not_provider%,error.eq.pre-screen rejected,error.eq.blocked_domain')
+      .limit(10000);
+
+    if (!rows || rows.length === 0) {
+      console.log('No rejected URLs yet — run extract first.');
+      return;
+    }
+
+    const counts = new Map<string, number>();
+    for (const row of rows) {
+      try {
+        const host = new URL(row.url).hostname.replace(/^www\./, '');
+        counts.set(host, (counts.get(host) ?? 0) + 1);
+      } catch { /* skip malformed URLs */ }
+    }
+
+    const sorted = [...counts.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, limit);
+
+    console.log('=== Blocklist Candidates (most-rejected domains) ===');
+    console.log('Add any of these to BLOCKED_DOMAINS in src/config.ts\n');
+    for (const [domain, count] of sorted) {
+      console.log(`  ${String(count).padStart(4)}x  ${domain}`);
+    }
+    return;
+  }
+
+  console.log('=== Blocklist Candidates (most-rejected domains) ===');
+  console.log('Add any of these to BLOCKED_DOMAINS in src/config.ts\n');
+  for (const row of (data as Array<{ domain: string; rejections: number }>)) {
+    console.log(`  ${String(row.rejections).padStart(4)}x  ${row.domain}`);
+  }
+}
+
+
   const batchSize = parseInt(args[0] ?? '50', 10);
 
   switch (command) {
@@ -78,17 +122,22 @@ async function main(): Promise<void> {
       await status();
       break;
 
+    case 'blocklist-candidates':
+      await blocklistCandidates(parseInt(args[0] ?? '50', 10));
+      break;
+
     default:
       console.log('KiteScout Provider Discovery Pipeline');
       console.log('');
-      console.log('Usage: pnpm cli <command> [batchSize]');
+      console.log('Usage: pnpm cli <command> [n]');
       console.log('');
       console.log('Commands:');
-      console.log('  seed             Generate and insert all seed queries into the DB');
-      console.log('  search [n]       Run pending Tavily searches (batch size n, default 50)');
-      console.log('  extract [n]      Extract providers from raw URLs (batch size n, default 30)');
-      console.log('  dedupe           Identify and mark cross-domain duplicate providers');
-      console.log('  status           Show pipeline stats');
+      console.log('  seed                      Generate and insert all seed queries into the DB');
+      console.log('  search [n]                Run pending Tavily searches (batch n, default 50)');
+      console.log('  extract [n]               Extract providers from raw URLs (batch n, default 30)');
+      console.log('  dedupe                    Identify and mark cross-domain duplicate providers');
+      console.log('  status                    Show pipeline stats');
+      console.log('  blocklist-candidates [n]  Show top n most-rejected domains (default 50)');
   }
 }
 
