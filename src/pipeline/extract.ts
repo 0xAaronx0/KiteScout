@@ -1,6 +1,6 @@
 import pLimit from 'p-limit';
 import { supabase } from '../lib/supabase.js';
-import { anthropic, EXTRACTION_MODEL } from '../lib/anthropic.js';
+import { anthropic, SCREENING_MODEL, EXTRACTION_MODEL } from '../lib/anthropic.js';
 import { extract as tavilyExtract } from '../lib/tavily.js';
 import { withRetry } from '../lib/retry.js';
 import type { ProviderExtraction, TripType } from '../types.js';
@@ -17,6 +17,39 @@ function rootDomain(url: string): string {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Stage 1: cheap pre-screen using snippet only (no page fetch)
+// Returns true if the URL is worth a full extraction, false to discard.
+// ---------------------------------------------------------------------------
+async function preScreen(url: string, title: string | null, snippet: string | null): Promise<boolean> {
+  // If we have no signal at all, attempt a full extract anyway
+  if (!title && !snippet) return true;
+
+  const msg = await withRetry(() =>
+    anthropic.messages.create({
+      model: SCREENING_MODEL,
+      max_tokens: 16,
+      messages: [
+        {
+          role: 'user',
+          content: `Does this search result belong to a business that sells kite travel packages (camps, safaris, cruises, tours) or kite equipment rental / kite schools?
+Answer only "yes" or "no".
+
+URL: ${url}
+Title: ${title ?? ''}
+Snippet: ${snippet ?? ''}`,
+        },
+      ],
+    }),
+  );
+
+  const answer = (msg.content[0].type === 'text' ? msg.content[0].text : '').toLowerCase().trim();
+  return answer.startsWith('yes');
+}
+
+// ---------------------------------------------------------------------------
+// Stage 2: full extraction using homepage + /contact page content
+// ---------------------------------------------------------------------------
 const EXTRACTION_PROMPT = `You are analyzing web page content to determine whether it belongs to a kite travel or kite rental provider.
 
 A provider is a business that offers any of:
@@ -48,28 +81,22 @@ Extract the following as strict JSON (no markdown, no prose):
   "notProviderReason": "Why this is not a provider, or null if it is one"
 }
 
-Important rules for operatesIn:
+Rules for operatesIn:
 - List EVERY country, region, and named spot where the provider offers services.
 - A provider running camps in Egypt AND Morocco AND Brazil should have three entries.
 - Include specific spot names (e.g. Dakhla, Cabarete, Mui Ne) wherever mentioned.
-- Do not limit to the primary location — capture all of them.
 
-Important rules for contact info:
-- Search the full page text carefully for email addresses (look for @ symbols).
+Rules for contact info:
+- Search the full text carefully for email addresses (look for @ symbols).
 - Look for WhatsApp links (wa.me/...) or any mention of WhatsApp with a number.
 - Look for phone numbers in any format.`;
 
-async function extractFromUrl(
-  url: string,
-  snippet: string | null,
-): Promise<ProviderExtraction | null> {
+async function fullExtract(url: string, snippet: string | null): Promise<ProviderExtraction | null> {
   const domain = rootDomain(url);
 
-  // Fetch homepage + /contact page simultaneously for better contact info coverage
-  const contactUrl = `https://${domain}/contact`;
   const [mainContent, contactContent] = await Promise.all([
     tavilyExtract(url),
-    tavilyExtract(contactUrl),
+    tavilyExtract(`https://${domain}/contact`),
   ]);
 
   let content = mainContent ?? snippet ?? '';
@@ -109,10 +136,13 @@ async function extractFromUrl(
   }
 }
 
+// ---------------------------------------------------------------------------
+// Main export
+// ---------------------------------------------------------------------------
 export async function runExtract(batchSize = 30): Promise<{ processed: number; remaining: number }> {
   const { data: results, error } = await supabase
     .from('raw_search_results')
-    .select('id, url, snippet')
+    .select('id, url, title, snippet')
     .eq('processed', false)
     .is('error', null)
     .order('fetched_at')
@@ -121,7 +151,7 @@ export async function runExtract(batchSize = 30): Promise<{ processed: number; r
   if (error) throw error;
   if (!results || results.length === 0) return { processed: 0, remaining: 0 };
 
-  // Mark blocked domains as processed immediately
+  // Immediately discard blocked domains
   const blocked = results.filter(r => BLOCKED_DOMAINS.some(d => rootDomain(r.url).endsWith(d)));
   if (blocked.length > 0) {
     await supabase
@@ -130,7 +160,7 @@ export async function runExtract(batchSize = 30): Promise<{ processed: number; r
       .in('id', blocked.map(r => r.id));
   }
 
-  // Load already-known domains to skip re-extraction
+  // Load known domains to avoid re-processing
   const { data: existing } = await supabase.from('providers').select('root_domain');
   const knownDomains = new Set((existing ?? []).map(p => p.root_domain as string));
 
@@ -148,10 +178,12 @@ export async function runExtract(batchSize = 30): Promise<{ processed: number; r
       !BLOCKED_DOMAINS.some(d => rootDomain(r.url).endsWith(d)),
   );
 
-  console.log(`Extracting ${toProcess.length} new URLs (${alreadyKnown.length} already known)…`);
+  console.log(`Processing ${toProcess.length} URLs (${alreadyKnown.length} already known)…`);
 
   const limit = pLimit(CONCURRENCY);
   let done = 0;
+  let screened = 0;
+  let extracted = 0;
 
   await Promise.all(
     toProcess.map(result =>
@@ -167,7 +199,23 @@ export async function runExtract(batchSize = 30): Promise<{ processed: number; r
           return;
         }
 
-        const extraction = await extractFromUrl(result.url, result.snippet ?? null);
+        // ── Stage 1: pre-screen (snippet only, very cheap) ──────────────
+        const isCandidate = await preScreen(result.url, result.title ?? null, result.snippet ?? null);
+        screened++;
+
+        if (!isCandidate) {
+          await supabase
+            .from('raw_search_results')
+            .update({ processed: true, error: 'not_provider: pre-screen rejected' })
+            .eq('id', result.id);
+          done++;
+          process.stdout.write(`\r  ${done}/${toProcess.length} done (${screened} screened, ${extracted} extracted)`);
+          return;
+        }
+
+        // ── Stage 2: full extraction (page fetch + Haiku) ────────────────
+        const extraction = await fullExtract(result.url, result.snippet ?? null);
+        extracted++;
 
         if (!extraction) {
           await supabase
@@ -231,7 +279,7 @@ export async function runExtract(batchSize = 30): Promise<{ processed: number; r
         }
 
         done++;
-        process.stdout.write(`\r  ${done}/${toProcess.length} done`);
+        process.stdout.write(`\r  ${done}/${toProcess.length} done (${screened} screened, ${extracted} full extracts)`);
       }),
     ),
   );
