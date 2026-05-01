@@ -11,6 +11,7 @@ export async function runSearch(batchSize = 50): Promise<{ ran: number; remainin
     .from('discovery_queries')
     .select('id, query, language')
     .is('executed_at', null)
+    .order('priority')
     .order('created_at')
     .limit(batchSize);
 
