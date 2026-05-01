@@ -2,6 +2,7 @@ import 'dotenv/config';
 import { seedQueries } from './pipeline/seed-queries.js';
 import { runSearch } from './pipeline/search.js';
 import { runExtract } from './pipeline/extract.js';
+import { runReextract } from './pipeline/reextract.js';
 import { runDedupe } from './pipeline/dedupe.js';
 import { supabase } from './lib/supabase.js';
 
@@ -114,6 +115,17 @@ async function blocklistCandidates(limit = 50): Promise<void> {
       await runExtractLoop(parseInt(args[0] ?? '30', 10));
       break;
 
+    case 'reextract': {
+      const reBatchSize = parseInt(args[0] ?? '20', 10);
+      while (true) {
+        const { processed, remaining } = await runReextract(reBatchSize);
+        if (processed === 0 || remaining === 0) break;
+        console.log(`  ${remaining} providers still missing locations…`);
+      }
+      console.log('Re-extraction complete.');
+      break;
+    }
+
     case 'dedupe':
       await runDedupe();
       break;
@@ -137,6 +149,7 @@ async function blocklistCandidates(limit = 50): Promise<void> {
       console.log('  extract [n]               Extract providers from raw URLs (batch n, default 30)');
       console.log('  dedupe                    Identify and mark cross-domain duplicate providers');
       console.log('  status                    Show pipeline stats');
+      console.log('  reextract [n]             Re-extract providers missing location data (batch n, default 20)');
       console.log('  blocklist-candidates [n]  Show top n most-rejected domains (default 50)');
   }
 }
