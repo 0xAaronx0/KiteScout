@@ -97,7 +97,7 @@ async function blocklistCandidates(limit = 50): Promise<void> {
   }
 }
 
-
+async function main(): Promise<void> {
   const batchSize = parseInt(args[0] ?? '50', 10);
 
   switch (command) {
