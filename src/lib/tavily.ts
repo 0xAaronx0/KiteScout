@@ -47,14 +47,17 @@ export async function search(
   return data.results ?? [];
 }
 
-export async function extract(url: string): Promise<string | null> {
+export async function extract(urls: string | string[]): Promise<string | null> {
   try {
-    const data = (await post('/extract', { urls: [url] })) as {
+    const urlList = Array.isArray(urls) ? urls : [urls];
+    const data = (await post('/extract', { urls: urlList })) as {
       results: Array<{ url: string; raw_content: string; failed?: boolean }>;
     };
-    const result = data.results?.[0];
-    if (!result || result.failed) return null;
-    return result.raw_content ?? null;
+    const contents = (data.results ?? [])
+      .filter(r => !r.failed && r.raw_content)
+      .map(r => r.raw_content)
+      .join('\n\n---\n\n');
+    return contents || null;
   } catch {
     return null;
   }

@@ -24,6 +24,8 @@ export interface ProviderExtraction {
   tripTypes: TripType[];
   contactEmail: string | null;
   contactFormUrl: string | null;
+  whatsapp: string | null;
+  phone: string | null;
   languages: string[];
   description: string | null;
   notProviderReason: string | null;

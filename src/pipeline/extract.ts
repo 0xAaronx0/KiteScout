@@ -7,7 +7,7 @@ import type { ProviderExtraction, TripType } from '../types.js';
 import { BLOCKED_DOMAINS } from '../config.js';
 
 const CONCURRENCY = 3;
-const MAX_CONTENT_CHARS = 8000;
+const MAX_CONTENT_CHARS = 12000;
 
 function rootDomain(url: string): string {
   try {
@@ -17,7 +17,7 @@ function rootDomain(url: string): string {
   }
 }
 
-const EXTRACTION_PROMPT = `You are analyzing a web page to determine whether it belongs to a kite travel or kite rental provider.
+const EXTRACTION_PROMPT = `You are analyzing web page content to determine whether it belongs to a kite travel or kite rental provider.
 
 A provider is a business that offers any of:
 - Kite camps (multi-day kite travel packages with accommodation)
@@ -27,30 +27,53 @@ A provider is a business that offers any of:
 - Kite schools / kite lessons
 - Kite equipment rental / kite gear rental
 
-NOT a provider: news articles, blog posts, review aggregators (TripAdvisor, Yelp), directories/marketplaces (unless they are the provider themselves), social media profiles, or Wikipedia pages.
+NOT a provider: news articles, blog posts, review aggregators, directories/marketplaces (unless they ARE the provider), social media profiles, weather sites, or encyclopaedia pages.
 
 Extract the following as strict JSON (no markdown, no prose):
 {
   "isProvider": boolean,
   "name": string | null,
-  "primaryCountry": string | null,
-  "primaryRegion": string | null,
-  "operatesIn": [{ "country": string, "region": string | null, "spotName": string | null }],
-  "tripTypes": Array of: "camp" | "safari" | "cruise" | "tour" | "school" | "lessons" | "rental" | "equipment_rental",
-  "contactEmail": string | null,
-  "contactFormUrl": string | null,
-  "languages": string[],
-  "description": "One concise sentence describing the provider, or null",
+  "primaryCountry": "The country where this provider is primarily based, or null",
+  "primaryRegion": "The main city/region, or null",
+  "operatesIn": [
+    { "country": string, "region": string | null, "spotName": string | null }
+  ],
+  "tripTypes": ["camp" | "safari" | "cruise" | "tour" | "school" | "lessons" | "rental" | "equipment_rental"],
+  "contactEmail": "Any email address found on the page, or null",
+  "contactFormUrl": "Full URL of a contact form if present, or null",
+  "whatsapp": "WhatsApp number or wa.me link if found, or null",
+  "phone": "Phone number if found, or null",
+  "languages": ["ISO 639-1 codes of languages the site is available in"],
+  "description": "One concise sentence describing what this provider offers",
   "notProviderReason": "Why this is not a provider, or null if it is one"
-}`;
+}
+
+Important rules for operatesIn:
+- List EVERY country, region, and named spot where the provider offers services.
+- A provider running camps in Egypt AND Morocco AND Brazil should have three entries.
+- Include specific spot names (e.g. Dakhla, Cabarete, Mui Ne) wherever mentioned.
+- Do not limit to the primary location — capture all of them.
+
+Important rules for contact info:
+- Search the full page text carefully for email addresses (look for @ symbols).
+- Look for WhatsApp links (wa.me/...) or any mention of WhatsApp with a number.
+- Look for phone numbers in any format.`;
 
 async function extractFromUrl(
   url: string,
   snippet: string | null,
 ): Promise<ProviderExtraction | null> {
-  // Fetch full page content; fall back to snippet if extraction fails
-  let content = await tavilyExtract(url);
-  if (!content) content = snippet ?? '';
+  const domain = rootDomain(url);
+
+  // Fetch homepage + /contact page simultaneously for better contact info coverage
+  const contactUrl = `https://${domain}/contact`;
+  const [mainContent, contactContent] = await Promise.all([
+    tavilyExtract(url),
+    tavilyExtract(contactUrl),
+  ]);
+
+  let content = mainContent ?? snippet ?? '';
+  if (contactContent) content += '\n\n--- Contact page ---\n\n' + contactContent;
   if (!content.trim()) return null;
 
   const truncated = content.slice(0, MAX_CONTENT_CHARS);
@@ -75,12 +98,11 @@ async function extractFromUrl(
     return null;
   }
 
-  // Strip accidental markdown fences
   const json = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
 
   try {
     const parsed = JSON.parse(json) as Omit<ProviderExtraction, 'rootDomain'>;
-    return { ...parsed, rootDomain: rootDomain(url) };
+    return { ...parsed, rootDomain: domain };
   } catch {
     console.error(`\n  JSON parse failed for ${url}:`, json.slice(0, 200));
     return null;
@@ -88,7 +110,6 @@ async function extractFromUrl(
 }
 
 export async function runExtract(batchSize = 30): Promise<{ processed: number; remaining: number }> {
-  // Fetch unprocessed results
   const { data: results, error } = await supabase
     .from('raw_search_results')
     .select('id, url, snippet')
@@ -113,7 +134,6 @@ export async function runExtract(batchSize = 30): Promise<{ processed: number; r
   const { data: existing } = await supabase.from('providers').select('root_domain');
   const knownDomains = new Set((existing ?? []).map(p => p.root_domain as string));
 
-  // Immediately mark already-known domains as processed
   const alreadyKnown = results.filter(r => knownDomains.has(rootDomain(r.url)));
   if (alreadyKnown.length > 0) {
     await supabase
@@ -123,11 +143,12 @@ export async function runExtract(batchSize = 30): Promise<{ processed: number; r
   }
 
   const toProcess = results.filter(
-    r => !knownDomains.has(rootDomain(r.url)) && !BLOCKED_DOMAINS.some(d => rootDomain(r.url).endsWith(d)),
+    r =>
+      !knownDomains.has(rootDomain(r.url)) &&
+      !BLOCKED_DOMAINS.some(d => rootDomain(r.url).endsWith(d)),
   );
-  console.log(
-    `Extracting ${toProcess.length} new URLs (${alreadyKnown.length} already known)…`,
-  );
+
+  console.log(`Extracting ${toProcess.length} new URLs (${alreadyKnown.length} already known)…`);
 
   const limit = pLimit(CONCURRENCY);
   let done = 0;
@@ -137,7 +158,6 @@ export async function runExtract(batchSize = 30): Promise<{ processed: number; r
       limit(async () => {
         const domain = rootDomain(result.url);
 
-        // Double-check: another concurrent extraction may have added this domain
         if (knownDomains.has(domain)) {
           await supabase
             .from('raw_search_results')
@@ -163,7 +183,6 @@ export async function runExtract(batchSize = 30): Promise<{ processed: number; r
             })
             .eq('id', result.id);
         } else {
-          // Upsert provider (domain is the natural key)
           const { data: provider, error: upsertErr } = await supabase
             .from('providers')
             .upsert(
@@ -175,6 +194,8 @@ export async function runExtract(batchSize = 30): Promise<{ processed: number; r
                 primary_region: extraction.primaryRegion,
                 contact_email: extraction.contactEmail,
                 contact_form_url: extraction.contactFormUrl,
+                whatsapp: extraction.whatsapp,
+                phone: extraction.phone,
                 languages: extraction.languages,
                 trip_types: extraction.tripTypes as TripType[],
                 description: extraction.description,
@@ -190,7 +211,6 @@ export async function runExtract(batchSize = 30): Promise<{ processed: number; r
           } else if (provider) {
             knownDomains.add(domain);
 
-            // Insert locations
             const locations = extraction.operatesIn.filter(l => l.country);
             if (locations.length > 0) {
               await supabase.from('provider_locations').insert(
