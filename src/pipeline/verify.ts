@@ -83,11 +83,11 @@ export async function runVerify(batchSize = 20): Promise<{ processed: number; re
   await Promise.all(
     providers.map(provider =>
       limit(async () => {
-        const url = provider.website_url as string;
         const domain = provider.root_domain as string;
+        const homepageUrl = `https://${domain}`;
 
         const [mainContent, contactContent] = await Promise.all([
-          tavilyExtract(url),
+          tavilyExtract(homepageUrl),
           tavilyExtract(`https://${domain}/contact`),
         ]);
 
@@ -112,13 +112,13 @@ export async function runVerify(batchSize = 20): Promise<{ processed: number; re
               system: [{ type: 'text', text: VERIFY_PROMPT, cache_control: { type: 'ephemeral' } }],
               messages: [{
                 role: 'user',
-                content: `URL: ${url}\n\nPage content:\n${truncated}`,
+                content: `URL: ${homepageUrl}\n\nPage content:\n${truncated}`,
               }],
             }),
           );
           text = msg.content[0].type === 'text' ? msg.content[0].text : '';
         } catch (err) {
-          console.error(`\n  Claude error for ${url}:`, err);
+          console.error(`\n  Claude error for ${homepageUrl}:`, err);
           done++;
           return;
         }
