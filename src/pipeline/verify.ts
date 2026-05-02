@@ -94,8 +94,13 @@ export async function runVerify(batchSize = 20): Promise<{ processed: number; re
         let content = mainContent ?? '';
         if (contactContent) content += '\n\n--- Contact page ---\n\n' + contactContent;
 
-        if (!content.trim()) {
-          // Can't fetch — stamp verified_at so we don't retry forever
+        const trimmed = content.trim();
+        const looksLikeErrorPage =
+          trimmed.length < 500 &&
+          /(403|forbidden|access denied|not found|404|blocked|captcha|cloudflare|just a moment)/i.test(trimmed);
+
+        if (!trimmed || looksLikeErrorPage) {
+          // Can't fetch meaningful content — stamp verified_at so we don't retry forever, but don't reject
           await supabase.from('providers').update({ verified_at: new Date().toISOString() }).eq('id', provider.id);
           done++;
           process.stdout.write(`\r  ${done}/${providers.length} done (${rejected} rejected)`);

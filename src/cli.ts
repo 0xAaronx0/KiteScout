@@ -157,6 +157,30 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'restore': {
+      const domains = args.filter(a => !a.startsWith('-'));
+      if (domains.length === 0) {
+        console.error('Usage: pnpm cli restore <domain> [domain2 ...]');
+        process.exit(1);
+      }
+      // Normalise: strip https://, www., trailing slashes
+      const normalised = domains.map(d =>
+        d.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/.*$/, '').toLowerCase(),
+      );
+      const { data, error } = await supabase
+        .from('providers')
+        .update({ status: 'new', verified_at: null })
+        .in('root_domain', normalised)
+        .select('root_domain, name');
+      if (error) { console.error('DB error:', error); process.exit(1); }
+      if (!data || data.length === 0) {
+        console.log('No matching providers found for:', normalised.join(', '));
+      } else {
+        for (const p of data) console.log(`  Restored: ${p.root_domain} (${p.name ?? 'unnamed'})`);
+      }
+      break;
+    }
+
     default:
       console.log('KiteScout Provider Discovery Pipeline');
       console.log('');
@@ -172,6 +196,7 @@ async function main(): Promise<void> {
       console.log('  blocklist-candidates [n]  Show top n most-rejected domains (default 50)');
       console.log('  map [file]                Generate provider map HTML (default: map.html)');
       console.log('  verify [n]                Re-verify all providers + fill contact gaps (batch n, default 20)');
+      console.log('  restore <domain> [...]    Restore wrongly-rejected providers back to status=new');
   }
 }
 
