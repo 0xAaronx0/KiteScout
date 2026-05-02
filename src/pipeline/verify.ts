@@ -128,7 +128,7 @@ export async function runVerify(batchSize = 20): Promise<{ processed: number; re
         try {
           parsed = JSON.parse(json);
         } catch {
-          console.error(`\n  JSON parse failed for ${url}:`, json.slice(0, 200));
+          console.error(`\n  JSON parse failed for ${homepageUrl}:`, json.slice(0, 200));
           done++;
           return;
         }
@@ -136,7 +136,7 @@ export async function runVerify(batchSize = 20): Promise<{ processed: number; re
         const now = new Date().toISOString();
 
         if (!parsed.isKiteProvider) {
-          console.log(`\n  ✗ ${url}\n    ${parsed.evidence ?? 'no reason given'}`);
+          console.log(`\n  ✗ ${homepageUrl}\n    ${parsed.evidence ?? 'no reason given'}`);
           await supabase
             .from('providers')
             .update({ status: 'dead', verified_at: now })
