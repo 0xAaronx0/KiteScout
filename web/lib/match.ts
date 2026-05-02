@@ -76,12 +76,34 @@ export async function matchProviders({ countries, regions, tripTypes, limit = 12
     .in('provider_id', pids);
 
   const locMap = new Map<string, string[]>();
+  const matchedLocMap = new Map<string, string[]>();
+
+  const normCountries = (countries ?? []).map(c => c.toLowerCase());
+  const normRegions = (regions ?? []).map(r => r.toLowerCase());
+
   for (const loc of (locs ?? [])) {
     const label = [loc.spot_name || loc.region, loc.country].filter(Boolean).join(', ');
     const pid = loc.provider_id as string;
+
     if (!locMap.has(pid)) locMap.set(pid, []);
-    const arr = locMap.get(pid)!;
-    if (!arr.includes(label)) arr.push(label);
+    const all = locMap.get(pid)!;
+    if (!all.includes(label)) all.push(label);
+
+    // Track which locations match the search filters
+    const locCountry = (loc.country as string ?? '').toLowerCase();
+    const locRegion = (loc.region as string ?? '').toLowerCase();
+    const locSpot = (loc.spot_name as string ?? '').toLowerCase();
+    const matchesCountry = normCountries.length === 0 || normCountries.some(c => c === locCountry);
+    const matchesRegion = normRegions.length === 0 || normRegions.some(r => r === locRegion || r === locSpot);
+    const isMatch = hasGeoFilter
+      ? (normCountries.length > 0 && matchesCountry) || (normRegions.length > 0 && matchesRegion)
+      : true;
+
+    if (isMatch) {
+      if (!matchedLocMap.has(pid)) matchedLocMap.set(pid, []);
+      const matched = matchedLocMap.get(pid)!;
+      if (!matched.includes(label)) matched.push(label);
+    }
   }
 
   return sorted.map((p, i) => ({
@@ -97,6 +119,7 @@ export async function matchProviders({ countries, regions, tripTypes, limit = 12
     whatsapp: p.whatsapp as string | null,
     phone: p.phone as string | null,
     locations: locMap.get(p.id as string) ?? [],
+    matchedLocations: matchedLocMap.get(p.id as string) ?? locMap.get(p.id as string) ?? [],
     isHighlight: i < 3,
   }));
 }

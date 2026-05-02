@@ -28,16 +28,16 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex }: Prop
   const startX = useRef<number | null>(null);
   const startY = useRef<number | null>(null);
 
-  // Geocode primary location for the map pin
+  // Geocode the search-relevant spot for the map pin
   useEffect(() => {
-    const q = provider.locations[0]
+    const q = provider.matchedLocations[0]
       ?? [provider.primary_region, provider.primary_country].filter(Boolean).join(', ');
     if (!q) return;
     fetch(`/api/map-pin?q=${encodeURIComponent(q)}`)
       .then(r => r.json())
       .then(d => { if (d.lat && d.lon) setCoords({ lat: d.lat, lon: d.lon }); })
       .catch(() => {});
-  }, [provider.locations, provider.primary_region, provider.primary_country]);
+  }, [provider.matchedLocations, provider.primary_region, provider.primary_country]);
 
   // Fetch og:image from provider's own website
   useEffect(() => {
