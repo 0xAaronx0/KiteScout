@@ -67,6 +67,7 @@ export async function runVerify(batchSize = 20): Promise<{ processed: number; re
     .select('id, name, website_url, root_domain, contact_email, contact_form_url, whatsapp, phone, description, trip_types, primary_country, primary_region, status')
     .not('status', 'in', '("dead","duplicate")')
     .not('website_url', 'is', null)
+    .is('verified_at', null)
     .order('created_at')
     .limit(batchSize);
 
@@ -132,31 +133,30 @@ export async function runVerify(batchSize = 20): Promise<{ processed: number; re
           return;
         }
 
+        const now = new Date().toISOString();
+
         if (!parsed.isKiteProvider) {
           console.log(`\n  ✗ ${url}\n    ${parsed.evidence ?? 'no reason given'}`);
           await supabase
             .from('providers')
-            .update({ status: 'dead' })
+            .update({ status: 'dead', verified_at: now })
             .eq('id', provider.id);
           rejected++;
         } else {
           // Only fill in fields that are currently empty — never overwrite existing data
-          const updates: Record<string, unknown> = {};
+          const updates: Record<string, unknown> = { verified_at: now };
           if (!provider.contact_email && parsed.contactEmail) updates.contact_email = parsed.contactEmail;
           if (!provider.contact_form_url && parsed.contactFormUrl) updates.contact_form_url = parsed.contactFormUrl;
           if (!provider.whatsapp && parsed.whatsapp) updates.whatsapp = parsed.whatsapp;
           if (!provider.phone && parsed.phone) updates.phone = parsed.phone;
           if (!provider.description && parsed.description) updates.description = parsed.description;
-          if ((!provider.primary_country) && parsed.primaryCountry) updates.primary_country = parsed.primaryCountry;
-          if ((!provider.primary_region) && parsed.primaryRegion) updates.primary_region = parsed.primaryRegion;
+          if (!provider.primary_country && parsed.primaryCountry) updates.primary_country = parsed.primaryCountry;
+          if (!provider.primary_region && parsed.primaryRegion) updates.primary_region = parsed.primaryRegion;
           const existingTypes = provider.trip_types as TripType[] | null;
           if ((!existingTypes || existingTypes.length === 0) && parsed.tripTypes?.length) {
             updates.trip_types = parsed.tripTypes;
           }
-
-          if (Object.keys(updates).length > 0) {
-            await supabase.from('providers').update(updates).eq('id', provider.id);
-          }
+          await supabase.from('providers').update(updates).eq('id', provider.id);
         }
 
         done++;
@@ -170,7 +170,8 @@ export async function runVerify(batchSize = 20): Promise<{ processed: number; re
   const { count: remaining } = await supabase
     .from('providers')
     .select('*', { count: 'exact', head: true })
-    .not('status', 'in', '("dead","duplicate")');
+    .not('status', 'in', '("dead","duplicate")')
+    .is('verified_at', null);
 
   return { processed: providers.length, remaining: remaining ?? 0, rejected };
 }
