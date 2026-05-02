@@ -2,7 +2,7 @@
 
 import { useChat } from 'ai/react';
 import { useEffect, useRef } from 'react';
-import ProviderCard from './ProviderCard';
+import SwipeDeck from './SwipeDeck';
 import type { ProviderResult } from '../lib/types';
 
 const SUGGESTIONS = [
@@ -29,7 +29,7 @@ export default function Chat() {
   return (
     <div className="flex flex-col h-full">
       <div className="flex-1 overflow-y-auto px-4 py-6">
-        <div className="max-w-2xl mx-auto space-y-6">
+        <div className="max-w-xl mx-auto space-y-6">
 
           {isEmpty && (
             <div className="text-center pt-12 pb-4">
@@ -41,7 +41,7 @@ export default function Chat() {
               <div className="flex flex-wrap gap-2 justify-center">
                 {SUGGESTIONS.map(s => (
                   <button key={s} onClick={() => setInput(s)}
-                    className="text-sm bg-white border border-slate-200 rounded-full px-4 py-2 hover:border-blue-400 hover:text-blue-600 transition-colors cursor-pointer">
+                    className="text-sm bg-white border border-slate-200 rounded-full px-4 py-2 hover:border-sky-400 hover:text-sky-600 transition-colors cursor-pointer">
                     {s}
                   </button>
                 ))}
@@ -53,14 +53,14 @@ export default function Chat() {
             <div key={message.id}>
               {message.role === 'user' && (
                 <div className="flex justify-end">
-                  <div className="bg-blue-600 text-white rounded-2xl rounded-tr-sm px-4 py-3 max-w-sm text-sm">
+                  <div className="bg-sky-600 text-white rounded-2xl rounded-tr-sm px-4 py-3 max-w-sm text-sm">
                     {message.content as string}
                   </div>
                 </div>
               )}
 
               {message.role === 'assistant' && (
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {(message.content as string) && (
                     <p className="text-slate-700 text-sm leading-relaxed whitespace-pre-wrap">
                       {message.content as string}
@@ -70,15 +70,12 @@ export default function Chat() {
                     if (inv.toolName !== 'searchProviders' || inv.state !== 'result') return null;
                     const providers = (inv as { result: ProviderResult[] }).result;
                     if (!providers?.length) return (
-                      <p key={inv.toolCallId} className="text-sm text-slate-400 italic">No matching providers found.</p>
+                      <p key={inv.toolCallId} className="text-sm text-slate-400 italic">
+                        No matching providers found.
+                      </p>
                     );
                     return (
-                      <div key={inv.toolCallId} className="space-y-2">
-                        <p className="text-xs text-slate-400 font-medium uppercase tracking-wide">
-                          {providers.length} provider{providers.length !== 1 ? 's' : ''} found
-                        </p>
-                        {providers.map(p => <ProviderCard key={p.id} provider={p} />)}
-                      </div>
+                      <SwipeDeck key={inv.toolCallId} providers={providers} />
                     );
                   })}
                 </div>
@@ -101,16 +98,16 @@ export default function Chat() {
       </div>
 
       <div className="border-t border-slate-200 bg-white px-4 py-4 shrink-0">
-        <form onSubmit={handleSubmit} className="max-w-2xl mx-auto flex gap-3">
+        <form onSubmit={handleSubmit} className="max-w-xl mx-auto flex gap-3">
           <input
             value={input}
             onChange={handleInputChange}
             placeholder="Describe your ideal kite trip…"
             disabled={isLoading}
-            className="flex-1 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:opacity-50 bg-white"
+            className="flex-1 border border-slate-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent disabled:opacity-50 bg-white"
           />
           <button type="submit" disabled={isLoading || !input.trim()}
-            className="bg-blue-600 text-white rounded-xl px-5 py-3 text-sm font-semibold hover:bg-blue-700 disabled:opacity-40 transition-colors shrink-0">
+            className="bg-sky-600 text-white rounded-xl px-5 py-3 text-sm font-semibold hover:bg-sky-700 disabled:opacity-40 transition-colors shrink-0">
             Send
           </button>
         </form>
