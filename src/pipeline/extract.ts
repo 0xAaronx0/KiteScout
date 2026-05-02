@@ -59,6 +59,7 @@ A provider is a business that offers any of:
 - Kite tours
 - Kite schools / kite lessons
 - Kite equipment rental / kite gear rental
+- Snowkite camps, snowkite tours, snowkite lessons, or snowkite equipment rental
 
 NOT a provider: news articles, blog posts, review aggregators, directories/marketplaces (unless they ARE the provider), social media profiles, weather sites, or encyclopaedia pages.
 
@@ -71,7 +72,7 @@ Extract the following as strict JSON (no markdown, no prose):
   "operatesIn": [
     { "country": string, "region": string | null, "spotName": string | null }
   ],
-  "tripTypes": ["camp" | "safari" | "cruise" | "tour" | "school" | "lessons" | "rental" | "equipment_rental"],
+  "tripTypes": ["camp" | "safari" | "cruise" | "tour" | "school" | "lessons" | "rental" | "equipment_rental" | "snowkite"],
   "contactEmail": "Any email address found on the page, or null",
   "contactFormUrl": "Full URL of a contact form if present, or null",
   "whatsapp": "WhatsApp number or wa.me link if found, or null",

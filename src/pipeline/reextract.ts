@@ -17,7 +17,7 @@ Extract the following as strict JSON (no markdown, no prose):
   "operatesIn": [
     { "country": string, "region": string | null, "spotName": string | null }
   ],
-  "tripTypes": ["camp" | "safari" | "cruise" | "tour" | "school" | "lessons" | "rental" | "equipment_rental"],
+  "tripTypes": ["camp" | "safari" | "cruise" | "tour" | "school" | "lessons" | "rental" | "equipment_rental" | "snowkite"],
   "contactEmail": "Any email address found on the page, or null",
   "contactFormUrl": "Full URL of a contact form if present, or null",
   "whatsapp": "WhatsApp number or wa.me link if found, or null",

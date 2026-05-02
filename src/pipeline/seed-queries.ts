@@ -34,6 +34,11 @@ const EN_CATEGORIES = [
   'kiteboarding equipment rental',
   'kite travel',
   'kitesurfing travel',
+  'snowkite camp',
+  'snowkite lessons',
+  'snowkite tour',
+  'snowkite school',
+  'snowkite rental',
 ];
 
 const DE_CATEGORIES = [
@@ -61,6 +66,10 @@ const DE_CATEGORIES = [
   'Kite Ausrüstung Verleih',
   'Kitesurfen Reise',
   'Kite Reiseveranstalter',
+  'Snowkite Camp',
+  'Snowkite Kurs',
+  'Snowkite Tour',
+  'Snowkite Verleih',
 ];
 
 // The most commercially distinct EN categories — used to identify "must run first" queries.
@@ -73,6 +82,8 @@ const TOP_EN_CATEGORIES = new Set([
   'kite rental',
   'kite safari',
   'kite travel',
+  'snowkite camp',
+  'snowkite lessons',
 ]);
 
 const TOP_DE_CATEGORIES = new Set([
@@ -222,6 +233,9 @@ const GLOBAL_EN = [
   'kite holiday package',
   'kitesurfing adventure travel',
   'kite school worldwide',
+  'snowkite camp worldwide',
+  'snowkite lessons worldwide',
+  'snowkite tour operator',
 ];
 
 const GLOBAL_DE = [

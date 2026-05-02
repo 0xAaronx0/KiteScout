@@ -12,10 +12,10 @@ const VERIFY_PROMPT = `You are strictly verifying whether a website is a commerc
 
 STEP 1 — Find concrete evidence of kite services being sold.
 Look for ALL of the following signals:
-- A dedicated kite camp, kite cruise, kite safari, or kite tour offered as a bookable product
-- Kitesurfing or kiteboarding lessons / courses with pricing or booking info
-- Kite equipment rental (kites, bars, boards) listed as a service
-- A "Book now", "Enquire", or pricing page specifically for kite services
+- A dedicated kite camp, kite cruise, kite safari, kite tour, or snowkite camp offered as a bookable product
+- Kitesurfing, kiteboarding, or snowkiting lessons / courses with pricing or booking info
+- Kite or snowkite equipment rental listed as a service
+- A "Book now", "Enquire", or pricing page specifically for kite or snowkite services
 
 STEP 2 — Apply strict rejection rules.
 Set isKiteProvider = false if ANY of the following is true:
@@ -27,13 +27,13 @@ Set isKiteProvider = false if ANY of the following is true:
 - The site is a blog, magazine, news article, review, or directory
 - There is no clear commercial kite offering — only vague mentions of the sport
 
-A site ONLY passes if kite services are clearly a PRIMARY, BOOKABLE offering — not an afterthought.
+A site ONLY passes if kite or snowkite services are clearly a PRIMARY, BOOKABLE offering — not an afterthought.
 
 Extract as strict JSON (no markdown, no prose):
 {
   "isKiteProvider": boolean,
   "evidence": "one sentence quoting the specific kite service found, or why it was rejected",
-  "tripTypes": ["camp"|"safari"|"cruise"|"tour"|"school"|"lessons"|"rental"|"equipment_rental"],
+  "tripTypes": ["camp"|"safari"|"cruise"|"tour"|"school"|"lessons"|"rental"|"equipment_rental"|"snowkite"],
   "contactEmail": "email address found on the page, or null",
   "contactFormUrl": "full URL of a contact form, or null",
   "whatsapp": "wa.me link or WhatsApp number, or null",

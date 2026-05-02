@@ -6,7 +6,8 @@ export type TripType =
   | 'school'
   | 'lessons'
   | 'rental'
-  | 'equipment_rental';
+  | 'equipment_rental'
+  | 'snowkite';
 
 export type ProviderStatus = 'new' | 'verified' | 'dead' | 'duplicate';
 
