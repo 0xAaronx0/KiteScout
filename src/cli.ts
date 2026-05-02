@@ -4,6 +4,7 @@ import { runSearch } from './pipeline/search.js';
 import { runExtract } from './pipeline/extract.js';
 import { runReextract } from './pipeline/reextract.js';
 import { runDedupe } from './pipeline/dedupe.js';
+import { generateMap } from './pipeline/map.js';
 import { supabase } from './lib/supabase.js';
 
 const [command, ...args] = process.argv.slice(2);
@@ -138,6 +139,10 @@ async function main(): Promise<void> {
       await blocklistCandidates(parseInt(args[0] ?? '50', 10));
       break;
 
+    case 'map':
+      await generateMap(args[0] ?? 'map.html');
+      break;
+
     default:
       console.log('KiteScout Provider Discovery Pipeline');
       console.log('');
@@ -151,6 +156,7 @@ async function main(): Promise<void> {
       console.log('  status                    Show pipeline stats');
       console.log('  reextract [n]             Re-extract providers missing location data (batch n, default 20)');
       console.log('  blocklist-candidates [n]  Show top n most-rejected domains (default 50)');
+      console.log('  map [file]                Generate provider map HTML (default: map.html)');
   }
 }
 
