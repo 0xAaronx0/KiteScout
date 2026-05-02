@@ -103,9 +103,10 @@ export async function runVerify(batchSize = 20): Promise<{ processed: number; re
             anthropic.messages.create({
               model: EXTRACTION_MODEL,
               max_tokens: 512,
+              system: [{ type: 'text', text: VERIFY_PROMPT, cache_control: { type: 'ephemeral' } }],
               messages: [{
                 role: 'user',
-                content: `${VERIFY_PROMPT}\n\nURL: ${url}\n\nPage content:\n${truncated}`,
+                content: `URL: ${url}\n\nPage content:\n${truncated}`,
               }],
             }),
           );

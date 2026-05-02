@@ -96,12 +96,8 @@ export async function runReextract(batchSize = 20): Promise<{ processed: number;
             anthropic.messages.create({
               model: EXTRACTION_MODEL,
               max_tokens: 1024,
-              messages: [
-                {
-                  role: 'user',
-                  content: `${EXTRACTION_PROMPT}\n\nURL: ${url}\n\nPage content:\n${truncated}`,
-                },
-              ],
+              system: [{ type: 'text', text: EXTRACTION_PROMPT, cache_control: { type: 'ephemeral' } }],
+              messages: [{ role: 'user', content: `URL: ${url}\n\nPage content:\n${truncated}` }],
             }),
           );
           text = msg.content[0].type === 'text' ? msg.content[0].text : '';
