@@ -4,3 +4,6 @@ dist/
 *.env.local
 geocache.json
 map.html
+web/.next/
+web/node_modules/
+web/.env.local
