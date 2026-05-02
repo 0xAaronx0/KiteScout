@@ -8,26 +8,31 @@ import type { TripType } from '../types.js';
 const CONCURRENCY = 3;
 const MAX_CONTENT_CHARS = 14000;
 
-const VERIFY_PROMPT = `You are re-verifying a business already in a kite travel database.
+const VERIFY_PROMPT = `You are strictly verifying whether a website is a commercial kite travel or kite rental provider.
 
-A VALID kite provider must offer AT LEAST ONE of these specifically:
-- Kite camps (multi-day packages that include kitesurfing or kiteboarding)
-- Kite safaris, kite cruises, kite tours
-- Kite schools / kitesurfing or kiteboarding lessons
-- Kite equipment rental (kites, bars, boards — for kitesurfing/kiteboarding)
+STEP 1 — Find concrete evidence of kite services being sold.
+Look for ALL of the following signals:
+- A dedicated kite camp, kite cruise, kite safari, or kite tour offered as a bookable product
+- Kitesurfing or kiteboarding lessons / courses with pricing or booking info
+- Kite equipment rental (kites, bars, boards) listed as a service
+- A "Book now", "Enquire", or pricing page specifically for kite services
 
-Mark isKiteProvider = false if the business is ONLY:
-- A surf camp with no kite offering (surfing, SUP, or windsurfing only)
-- A boat charter with no kite-specific programme
-- A general watersports / dive / snorkel / fishing operation with no kite services
-- A hotel or guesthouse with no dedicated kite services
-- A general travel agency not specialising in kite travel
-- A news site, blog, directory, or aggregator
+STEP 2 — Apply strict rejection rules.
+Set isKiteProvider = false if ANY of the following is true:
+- Kite / kitesurfing is mentioned only once or twice in passing, but is not a core service
+- The site primarily offers surf camps, SUP, windsurfing, or general watersports — even if kite is briefly listed as an add-on
+- The site is a boat charter or sailing company with no dedicated kite programme
+- The site is a hotel, hostel, guesthouse, or resort that happens to be near a kite beach but does not sell kite services
+- The site is a general outdoor / adventure travel agency with no kite-specific packages
+- The site is a blog, magazine, news article, review, or directory
+- There is no clear commercial kite offering — only vague mentions of the sport
+
+A site ONLY passes if kite services are clearly a PRIMARY, BOOKABLE offering — not an afterthought.
 
 Extract as strict JSON (no markdown, no prose):
 {
   "isKiteProvider": boolean,
-  "notKiteReason": "short explanation if false, else null",
+  "evidence": "one sentence quoting the specific kite service found, or why it was rejected",
   "tripTypes": ["camp"|"safari"|"cruise"|"tour"|"school"|"lessons"|"rental"|"equipment_rental"],
   "contactEmail": "email address found on the page, or null",
   "contactFormUrl": "full URL of a contact form, or null",
@@ -45,7 +50,7 @@ Rules for contact info — search the full text carefully:
 
 interface VerifyResult {
   isKiteProvider: boolean;
-  notKiteReason: string | null;
+  evidence: string | null;
   tripTypes?: TripType[];
   contactEmail?: string | null;
   contactFormUrl?: string | null;
@@ -128,6 +133,7 @@ export async function runVerify(batchSize = 20): Promise<{ processed: number; re
         }
 
         if (!parsed.isKiteProvider) {
+          console.log(`\n  ✗ ${url}\n    ${parsed.evidence ?? 'no reason given'}`);
           await supabase
             .from('providers')
             .update({ status: 'dead' })
