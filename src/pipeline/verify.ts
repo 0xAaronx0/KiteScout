@@ -95,7 +95,8 @@ export async function runVerify(batchSize = 20): Promise<{ processed: number; re
         if (contactContent) content += '\n\n--- Contact page ---\n\n' + contactContent;
 
         if (!content.trim()) {
-          // Can't fetch — leave as-is, don't mark dead
+          // Can't fetch — stamp verified_at so we don't retry forever
+          await supabase.from('providers').update({ verified_at: new Date().toISOString() }).eq('id', provider.id);
           done++;
           process.stdout.write(`\r  ${done}/${providers.length} done (${rejected} rejected)`);
           return;
@@ -119,6 +120,7 @@ export async function runVerify(batchSize = 20): Promise<{ processed: number; re
           text = msg.content[0].type === 'text' ? msg.content[0].text : '';
         } catch (err) {
           console.error(`\n  Claude error for ${homepageUrl}:`, err);
+          await supabase.from('providers').update({ verified_at: new Date().toISOString() }).eq('id', provider.id);
           done++;
           return;
         }
@@ -129,6 +131,7 @@ export async function runVerify(batchSize = 20): Promise<{ processed: number; re
           parsed = JSON.parse(json);
         } catch {
           console.error(`\n  JSON parse failed for ${homepageUrl}:`, json.slice(0, 200));
+          await supabase.from('providers').update({ verified_at: new Date().toISOString() }).eq('id', provider.id);
           done++;
           return;
         }
