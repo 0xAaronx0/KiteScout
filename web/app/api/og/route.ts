@@ -1,38 +1,36 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-const CACHE: Record<string, string> = {};
-
 export async function GET(req: NextRequest) {
-  const location = req.nextUrl.searchParams.get('location'); // e.g. "Dakhla, Morocco"
-
-  if (!location) return NextResponse.json({ spotImageUrl: null });
-
-  if (CACHE[location]) {
-    return NextResponse.json(
-      { spotImageUrl: CACHE[location] },
-      { headers: { 'Cache-Control': 'public, max-age=86400' } },
-    );
-  }
-
-  // Use Unsplash source to get a real photo URL for the kite spot.
-  // Following the redirect gives a stable images.unsplash.com CDN URL.
-  const keywords = encodeURIComponent(`kitesurfing kite ${location}`);
-  const sourceUrl = `https://source.unsplash.com/featured/800x500/?${keywords}`;
+  const url = req.nextUrl.searchParams.get('url');
+  if (!url) return NextResponse.json({ imageUrl: null });
 
   try {
-    const res = await fetch(sourceUrl, {
-      redirect: 'follow',
+    const res = await fetch(url, {
       signal: AbortSignal.timeout(5000),
+      // Social crawler UA — many sites only serve og:image to crawlers
+      headers: { 'User-Agent': 'facebookexternalhit/1.1' },
     });
+    if (!res.ok) return NextResponse.json({ imageUrl: null });
 
-    const spotImageUrl = res.ok && res.url !== sourceUrl ? res.url : null;
-    if (spotImageUrl) CACHE[location] = spotImageUrl;
+    const html = await res.text();
+
+    const match =
+      /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i.exec(html) ??
+      /<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i.exec(html);
+
+    let imageUrl = match?.[1] ?? null;
+
+    // Resolve protocol-relative and root-relative URLs
+    if (imageUrl) {
+      if (imageUrl.startsWith('//')) imageUrl = 'https:' + imageUrl;
+      else if (imageUrl.startsWith('/')) imageUrl = new URL(url).origin + imageUrl;
+    }
 
     return NextResponse.json(
-      { spotImageUrl },
+      { imageUrl },
       { headers: { 'Cache-Control': 'public, max-age=86400, s-maxage=86400' } },
     );
   } catch {
-    return NextResponse.json({ spotImageUrl: null });
+    return NextResponse.json({ imageUrl: null });
   }
 }

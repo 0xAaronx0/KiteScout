@@ -27,17 +27,16 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex }: Prop
   const startX = useRef<number | null>(null);
   const startY = useRef<number | null>(null);
 
-  // Fetch a real spot photo based on provider location
+  // Fetch og:image from provider's own website
   useEffect(() => {
-    const location =
-      provider.locations[0] ??
-      [provider.primary_region, provider.primary_country].filter(Boolean).join(', ');
-    if (!location) return;
-    fetch(`/api/og?location=${encodeURIComponent(location)}`)
+    if (!provider.website_url) return;
+    let origin: string;
+    try { origin = new URL(provider.website_url).origin; } catch { return; }
+    fetch(`/api/og?url=${encodeURIComponent(origin)}`)
       .then(r => r.json())
-      .then(d => { if (d.spotImageUrl) setSpotImg(d.spotImageUrl); })
+      .then(d => { if (d.imageUrl) setSpotImg(d.imageUrl); })
       .catch(() => {});
-  }, [provider.locations, provider.primary_region, provider.primary_country]);
+  }, [provider.website_url]);
 
   function flyAway(dir: 'left' | 'right') {
     if (flying) return;
