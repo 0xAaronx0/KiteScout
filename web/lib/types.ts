@@ -11,4 +11,5 @@ export interface ProviderResult {
   whatsapp: string | null;
   phone: string | null;
   locations: string[];
+  isHighlight: boolean;
 }

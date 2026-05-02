@@ -16,30 +16,31 @@ interface Props {
   provider: ProviderResult;
   onSwipe: (dir: 'left' | 'right') => void;
   isTop: boolean;
-  stackIndex: number; // 0 = top card, 1 = second, 2 = third
+  stackIndex: number;
 }
 
 export default function SwipeCard({ provider, onSwipe, isTop, stackIndex }: Props) {
   const [x, setX] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [flying, setFlying] = useState<'left' | 'right' | null>(null);
-  const [imgSrc, setImgSrc] = useState<string | null>(null);
-  const [imgError, setImgError] = useState(false);
+  const [spotImg, setSpotImg] = useState<string | null>(null);
   const startX = useRef<number | null>(null);
   const startY = useRef<number | null>(null);
 
+  // Fetch a real spot photo based on provider location
   useEffect(() => {
-    const base = provider.website_url
-      ? (() => { try { return new URL(provider.website_url!).origin; } catch { return null; } })()
-      : null;
-    if (!base) return;
-    fetch(`/api/og?url=${encodeURIComponent(base)}`)
+    const location =
+      provider.locations[0] ??
+      [provider.primary_region, provider.primary_country].filter(Boolean).join(', ');
+    if (!location) return;
+    fetch(`/api/og?location=${encodeURIComponent(location)}`)
       .then(r => r.json())
-      .then(d => { if (d.imageUrl) setImgSrc(d.imageUrl); })
+      .then(d => { if (d.spotImageUrl) setSpotImg(d.spotImageUrl); })
       .catch(() => {});
-  }, [provider.website_url]);
+  }, [provider.locations, provider.primary_region, provider.primary_country]);
 
   function flyAway(dir: 'left' | 'right') {
+    if (flying) return;
     setAnimating(true);
     setFlying(dir);
     setX(dir === 'right' ? FLY_X : -FLY_X);
@@ -55,11 +56,10 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex }: Prop
 
   function handlePointerMove(e: React.PointerEvent) {
     if (startX.current === null || flying) return;
-    // Cancel if scrolling vertically more than horizontally
+    const dx = e.clientX - startX.current;
     const dy = Math.abs(e.clientY - (startY.current ?? e.clientY));
-    const dx = Math.abs(e.clientX - startX.current);
-    if (dy > dx + 10) return;
-    setX(e.clientX - startX.current);
+    if (dy > Math.abs(dx) + 10) return; // vertical scroll wins
+    setX(dx);
   }
 
   function handlePointerUp() {
@@ -74,23 +74,18 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex }: Prop
     }
   }
 
-  const rotation = isTop ? x * 0.07 : 0;
+  const rotation = isTop ? x * 0.06 : 0;
   const likeOpacity = Math.max(0, Math.min(1, x / SWIPE_THRESHOLD));
   const nopeOpacity = Math.max(0, Math.min(1, -x / SWIPE_THRESHOLD));
 
-  const scale = 1 - stackIndex * 0.04;
-  const translateY = stackIndex * 10;
-
-  const location = provider.locations.length > 0
-    ? [...new Set(provider.locations)].slice(0, 3).join(' · ')
-    : [provider.primary_region, provider.primary_country].filter(Boolean).join(', ');
-
   const displayName = provider.name
-    ?? (() => { try { return new URL(provider.website_url!).hostname.replace(/^www\./, ''); } catch { return provider.website_url ?? '—'; } })();
+    ?? (() => { try { return new URL(provider.website_url!).hostname.replace(/^www\./, ''); } catch { return '—'; } })();
 
   const whatsappHref = provider.whatsapp
     ? (provider.whatsapp.startsWith('http') ? provider.whatsapp : `https://wa.me/${provider.whatsapp.replace(/\D/g, '')}`)
     : null;
+
+  const contactUrl = provider.contact_form_url ?? (provider.contact_email ? `mailto:${provider.contact_email}` : null);
 
   return (
     <div
@@ -98,11 +93,11 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex }: Prop
       style={{
         transform: isTop
           ? `translateX(${x}px) rotate(${rotation}deg)`
-          : `scale(${scale}) translateY(${translateY}px)`,
+          : `scale(${1 - stackIndex * 0.04}) translateY(${stackIndex * 12}px)`,
         transition: animating ? 'transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94)' : 'none',
         zIndex: 10 - stackIndex,
         touchAction: 'none',
-        cursor: isTop ? (startX.current !== null ? 'grabbing' : 'grab') : 'default',
+        cursor: isTop ? 'grab' : 'default',
         userSelect: 'none',
       }}
       onPointerDown={handlePointerDown}
@@ -113,102 +108,125 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex }: Prop
     >
       <div className="bg-white rounded-3xl shadow-2xl overflow-hidden mx-auto" style={{ maxWidth: 420 }}>
 
-        {/* Photo */}
-        <div className="relative bg-gradient-to-br from-sky-400 via-blue-500 to-cyan-400" style={{ height: 280 }}>
-          {imgSrc && !imgError && (
+        {/* ── Hero photo ── */}
+        <div className="relative" style={{ height: 260 }}>
+          {/* Gradient fallback always present */}
+          <div className="absolute inset-0 bg-gradient-to-br from-sky-400 via-blue-500 to-cyan-400" />
+
+          {spotImg && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
-              src={imgSrc}
+              src={spotImg}
               alt=""
-              className="w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover"
               draggable={false}
               referrerPolicy="no-referrer"
-              onError={() => setImgError(true)}
             />
           )}
 
-          {/* Gradient overlay so text below photo is legible */}
-          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/40 to-transparent" />
+          {/* Bottom gradient so name text is readable */}
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/70 to-transparent" />
 
-          {/* LIKE stamp */}
+          {/* Highlight badge */}
+          {provider.isHighlight && (
+            <div className="absolute top-3 left-3 bg-amber-400 text-amber-900 text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+              ⭐ Top Pick
+            </div>
+          )}
+
+          {/* LIKE / NOPE stamps */}
           <div
             className="absolute top-5 left-5 border-4 border-emerald-400 text-emerald-400 font-black text-xl tracking-widest px-3 py-1 rounded-xl"
-            style={{ opacity: likeOpacity, transform: 'rotate(-15deg)', transition: 'opacity 0.05s' }}
+            style={{ opacity: likeOpacity, transform: 'rotate(-15deg)' }}
           >
             LIKE
           </div>
-
-          {/* NOPE stamp */}
           <div
             className="absolute top-5 right-5 border-4 border-rose-400 text-rose-400 font-black text-xl tracking-widest px-3 py-1 rounded-xl"
-            style={{ opacity: nopeOpacity, transform: 'rotate(15deg)', transition: 'opacity 0.05s' }}
+            style={{ opacity: nopeOpacity, transform: 'rotate(15deg)' }}
           >
             NOPE
           </div>
+
+          {/* Name + primary location over photo */}
+          <div className="absolute inset-x-0 bottom-0 px-4 pb-3">
+            <h3 className="font-bold text-white text-xl leading-tight drop-shadow">{displayName}</h3>
+            {provider.primary_country && (
+              <p className="text-sm text-white/80 mt-0.5 drop-shadow">
+                📍 {[provider.primary_region, provider.primary_country].filter(Boolean).join(', ')}
+              </p>
+            )}
+          </div>
         </div>
 
-        {/* Info */}
-        <div className="px-5 pt-4 pb-2">
-          <h3 className="font-bold text-slate-900 text-xl leading-tight">{displayName}</h3>
-          {location && <p className="text-sm text-slate-500 mt-0.5">📍 {location}</p>}
+        {/* ── Body ── */}
+        <div className="px-4 pt-3 pb-2 space-y-3">
 
-          <div className="flex flex-wrap gap-1.5 mt-2.5">
-            {provider.trip_types.slice(0, 5).map(t => (
-              <span key={t} className="text-xs bg-sky-50 text-sky-700 border border-sky-200 rounded-full px-2.5 py-0.5 font-medium">
-                {TYPE_LABELS[t] ?? t}
-              </span>
-            ))}
-          </div>
-
-          {provider.description && (
-            <p className="text-sm text-slate-600 mt-2.5 line-clamp-2 leading-relaxed">{provider.description}</p>
+          {/* All operating spots */}
+          {provider.locations.length > 0 && (
+            <div className="flex flex-wrap gap-1.5">
+              {provider.locations.map(loc => (
+                <span key={loc} className="text-xs bg-slate-100 text-slate-600 rounded-full px-2.5 py-0.5">
+                  {loc}
+                </span>
+              ))}
+            </div>
           )}
 
-          {/* Contact links */}
-          <div className="flex items-center gap-4 mt-3 flex-wrap">
+          {/* Trip types */}
+          {provider.trip_types.length > 0 && (
+            <div className="flex flex-wrap gap-1.5">
+              {provider.trip_types.map(t => (
+                <span key={t} className="text-xs bg-sky-50 text-sky-700 border border-sky-200 rounded-full px-2.5 py-0.5 font-medium">
+                  {TYPE_LABELS[t] ?? t}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {/* Description */}
+          {provider.description && (
+            <p className="text-sm text-slate-600 leading-relaxed line-clamp-3">{provider.description}</p>
+          )}
+
+          {/* Contact CTAs */}
+          <div className="flex gap-2 flex-wrap pt-1" onClick={e => e.stopPropagation()}>
             {provider.website_url && (
               <a href={provider.website_url} target="_blank" rel="noopener noreferrer"
-                className="text-sm text-blue-600 hover:underline font-medium"
-                onClick={e => e.stopPropagation()}>
-                Website →
+                className="flex-1 min-w-[100px] text-center text-sm bg-sky-600 text-white rounded-xl px-3 py-2 font-medium hover:bg-sky-700 transition-colors">
+                Visit website
               </a>
             )}
-            {provider.contact_email && (
-              <a href={`mailto:${provider.contact_email}`}
-                className="text-sm text-slate-400 hover:text-slate-600 truncate max-w-[180px]"
-                onClick={e => e.stopPropagation()}>
-                {provider.contact_email}
+            {contactUrl && (
+              <a href={contactUrl} target="_blank" rel="noopener noreferrer"
+                className="flex-1 min-w-[80px] text-center text-sm bg-slate-100 text-slate-700 rounded-xl px-3 py-2 font-medium hover:bg-slate-200 transition-colors">
+                {provider.contact_email ? 'Email' : 'Enquire'}
               </a>
             )}
             {whatsappHref && (
               <a href={whatsappHref} target="_blank" rel="noopener noreferrer"
-                className="text-sm text-emerald-600 hover:underline font-medium"
-                onClick={e => e.stopPropagation()}>
+                className="flex-1 min-w-[80px] text-center text-sm bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-xl px-3 py-2 font-medium hover:bg-emerald-100 transition-colors">
                 WhatsApp
               </a>
             )}
           </div>
         </div>
 
-        {/* Action buttons — only on the top card */}
+        {/* ── Swipe buttons ── */}
         {isTop && (
-          <div className="flex justify-center gap-8 py-4">
+          <div className="flex justify-center gap-8 py-3 border-t border-slate-100">
             <button
               onPointerDown={e => e.stopPropagation()}
               onClick={() => flyAway('left')}
-              className="w-16 h-16 rounded-full border-2 border-rose-300 text-rose-400 text-3xl hover:bg-rose-50 active:scale-95 transition-all flex items-center justify-center shadow-md"
+              className="w-14 h-14 rounded-full border-2 border-rose-300 text-rose-400 text-2xl hover:bg-rose-50 active:scale-95 transition-all flex items-center justify-center shadow-sm"
               aria-label="Skip"
-            >
-              ✕
-            </button>
+            >✕</button>
             <button
               onPointerDown={e => e.stopPropagation()}
               onClick={() => flyAway('right')}
-              className="w-16 h-16 rounded-full border-2 border-emerald-300 text-emerald-500 text-3xl hover:bg-emerald-50 active:scale-95 transition-all flex items-center justify-center shadow-md"
+              className="w-14 h-14 rounded-full border-2 border-emerald-300 text-emerald-500 text-2xl hover:bg-emerald-50 active:scale-95 transition-all flex items-center justify-center shadow-sm"
               aria-label="Like"
-            >
-              ♥
-            </button>
+            >♥</button>
           </div>
         )}
       </div>
