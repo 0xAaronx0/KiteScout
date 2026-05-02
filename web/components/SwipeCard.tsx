@@ -200,16 +200,14 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex }: Prop
             <p className="text-sm text-slate-600 leading-relaxed line-clamp-3">{provider.description}</p>
           )}
 
-          {/* Mini map */}
+          {/* Mini map — pointer-events:none so drag still works on the card */}
           {coords && (
-            <div className="rounded-xl overflow-hidden border border-slate-200" style={{ height: 120 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`https://staticmap.openstreetmap.de/staticmap.php?center=${coords.lat},${coords.lon}&zoom=9&size=400x120&markers=${coords.lat},${coords.lon},red-pushpin`}
-                alt="Map"
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
-                draggable={false}
+            <div className="rounded-xl overflow-hidden border border-slate-200" style={{ height: 130 }}>
+              <iframe
+                src={`https://www.openstreetmap.org/export/embed.html?bbox=${coords.lon - 0.4},${coords.lat - 0.4},${coords.lon + 0.4},${coords.lat + 0.4}&layer=mapnik&marker=${coords.lat},${coords.lon}`}
+                style={{ width: '100%', height: '100%', border: 'none', pointerEvents: 'none' }}
+                title="Location map"
+                scrolling="no"
               />
             </div>
           )}
