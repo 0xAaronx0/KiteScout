@@ -1,6 +1,82 @@
 import 'dotenv/config';
-import { writeFileSync } from 'fs';
+import { writeFileSync, readFileSync, existsSync } from 'fs';
 import { supabase } from '../lib/supabase.js';
+
+// ---------------------------------------------------------------------------
+// Geocoding cache — persisted to disk so Nominatim is only called once per spot
+// ---------------------------------------------------------------------------
+
+const GEOCACHE_PATH = new URL('../../geocache.json', import.meta.url).pathname;
+type GeoCache = Record<string, [number, number] | null>;
+
+function loadGeocache(): GeoCache {
+  if (existsSync(GEOCACHE_PATH)) {
+    try { return JSON.parse(readFileSync(GEOCACHE_PATH, 'utf8')); } catch { /* */ }
+  }
+  return {};
+}
+
+function saveGeocache(cache: GeoCache): void {
+  writeFileSync(GEOCACHE_PATH, JSON.stringify(cache, null, 2), 'utf8');
+}
+
+let _lastNominatimCall = 0;
+async function nominatim(query: string): Promise<[number, number] | null> {
+  // Nominatim ToS: max 1 req/sec
+  const wait = 1100 - (Date.now() - _lastNominatimCall);
+  if (wait > 0) await new Promise(r => setTimeout(r, wait));
+  _lastNominatimCall = Date.now();
+
+  try {
+    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=1`;
+    const res = await fetch(url, { headers: { 'User-Agent': 'KiteScout/1.0 (kite-travel provider discovery)' } });
+    const data = await res.json() as Array<{ lat: string; lon: string }>;
+    if (data.length > 0) return [parseFloat(data[0].lat), parseFloat(data[0].lon)];
+  } catch { /* network error — return null */ }
+  return null;
+}
+
+// Geocode all unknown (spot, country) pairs upfront, update cache, return merged lookup.
+async function resolveAllCoords(
+  unknown: Array<{ name: string; country: string }>,
+  hardcoded: Record<string, [number, number]>,
+): Promise<Record<string, [number, number] | null>> {
+  const cache = loadGeocache();
+  const merged: Record<string, [number, number] | null> = { ...hardcoded };
+
+  // Deduplicate
+  const toFetch = new Map<string, string>(); // key → country context
+  for (const { name, country } of unknown) {
+    const key = `${name}|${country}`;
+    if (!(key in cache) && !(name in hardcoded)) {
+      toFetch.set(key, country);
+    }
+  }
+
+  if (toFetch.size > 0) {
+    console.log(`  Geocoding ${toFetch.size} unknown spots via Nominatim (${Math.ceil(toFetch.size * 1.1)}s est.)…`);
+    let done = 0;
+    for (const [key, country] of toFetch) {
+      const name = key.split('|')[0];
+      const coords = await nominatim(`${name}, ${country}`);
+      cache[key] = coords;
+      done++;
+      process.stdout.write(`\r  Geocoded ${done}/${toFetch.size}`);
+    }
+    console.log();
+    saveGeocache(cache);
+  }
+
+  // Merge cache into result
+  for (const [key, coords] of Object.entries(cache)) {
+    const name = key.split('|')[0];
+    if (coords) merged[name] = merged[name] ?? coords; // don't overwrite hardcoded
+    // Also store by full key for context-aware lookup
+    merged[key] = coords;
+  }
+
+  return merged;
+}
 
 // Approximate centroids for every location in the seed matrix
 const COORDS: Record<string, [number, number]> = {
@@ -155,33 +231,46 @@ export async function generateMap(outputPath = 'map.html'): Promise<void> {
     }
   }
 
+  // Collect all spots not already in COORDS so we can geocode them
+  const unknownSpots: Array<{ name: string; country: string }> = [];
+  for (const loc of rawLocs) {
+    for (const name of [loc.spot_name, loc.region].filter(Boolean) as string[]) {
+      if (!COORDS[name]) unknownSpots.push({ name, country: loc.country });
+    }
+  }
+  const allCoords = await resolveAllCoords(unknownSpots, COORDS);
+
   const noCoords = new Set<string>();
+
+  function resolveLabel(candidates: string[], country: string): { label: string; coords: [number, number] } | null {
+    for (const c of candidates) {
+      // Try context-aware key first (spot|country), then plain name
+      const coords = allCoords[`${c}|${country}`] ?? allCoords[c];
+      if (coords) return { label: c, coords };
+    }
+    return null;
+  }
 
   function buildGroups(mode: 'country' | 'spot'): MapGroup[] {
     const groups = new Map<string, MapGroup>();
 
     for (const loc of rawLocs) {
-      // In country mode use only the country; in spot mode try spot → region → country
       const candidates = mode === 'country'
         ? [loc.country]
         : [loc.spot_name, loc.region, loc.country].filter(Boolean) as string[];
 
-      let resolvedLabel: string | null = null;
-      let resolvedCoords: [number, number] | null = null;
-      for (const c of candidates) {
-        if (COORDS[c]) { resolvedLabel = c; resolvedCoords = COORDS[c]; break; }
-      }
-
-      if (!resolvedLabel || !resolvedCoords) {
+      const resolved = resolveLabel(candidates, loc.country);
+      if (!resolved) {
         noCoords.add(loc.spot_name ?? loc.region ?? loc.country ?? '?');
         continue;
       }
+      const { label, coords } = resolved;
 
-      if (!groups.has(resolvedLabel)) {
-        groups.set(resolvedLabel, { label: resolvedLabel, coords: resolvedCoords, count: 0, providers: [] });
+      if (!groups.has(label)) {
+        groups.set(label, { label, coords, count: 0, providers: [] });
       }
 
-      const group = groups.get(resolvedLabel)!;
+      const group = groups.get(label)!;
       const provider = providerById.get(loc.provider_id);
       if (!provider) continue;
 
