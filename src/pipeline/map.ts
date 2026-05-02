@@ -132,113 +132,109 @@ export async function generateMap(outputPath = 'map.html'): Promise<void> {
 
   console.log(`Fetching locations for ${ids.length} providers…`);
   const CHUNK = 200;
-  const allLocs: { provider_id: string; country: string; region: string | null; spot_name: string | null }[] = [];
+  const rawLocs: { provider_id: string; country: string; region: string | null; spot_name: string | null }[] = [];
   for (let i = 0; i < ids.length; i += CHUNK) {
     const { data: chunk, error: lErr } = await supabase
       .from('provider_locations')
       .select('provider_id, country, region, spot_name')
       .in('provider_id', ids.slice(i, i + CHUNK));
     if (lErr) throw lErr;
-    if (chunk) allLocs.push(...chunk as typeof allLocs);
+    if (chunk) rawLocs.push(...chunk as typeof rawLocs);
   }
-  const locs = allLocs;
 
-  // Group by the most specific named location we have coordinates for
-  const groups = new Map<string, MapGroup>();
+  // Add primary_country fallback for providers with no location rows
+  const placedIds = new Set(rawLocs.map(l => l.provider_id));
+  for (const p of providers) {
+    if (!placedIds.has(p.id as string) && p.primary_country) {
+      rawLocs.push({
+        provider_id: p.id as string,
+        country: p.primary_country as string,
+        region: p.primary_region as string | null ?? null,
+        spot_name: null,
+      });
+    }
+  }
+
   const noCoords = new Set<string>();
 
-  for (const loc of (locs ?? [])) {
-    // Try spot → region → country for coord lookup
-    const candidates = [loc.spot_name, loc.region, loc.country].filter(Boolean) as string[];
-    let resolvedLabel: string | null = null;
-    let resolvedCoords: [number, number] | null = null;
+  function buildGroups(mode: 'country' | 'spot'): MapGroup[] {
+    const groups = new Map<string, MapGroup>();
 
-    for (const c of candidates) {
-      if (COORDS[c]) { resolvedLabel = c; resolvedCoords = COORDS[c]; break; }
-    }
+    for (const loc of rawLocs) {
+      // In country mode use only the country; in spot mode try spot → region → country
+      const candidates = mode === 'country'
+        ? [loc.country]
+        : [loc.spot_name, loc.region, loc.country].filter(Boolean) as string[];
 
-    if (!resolvedLabel || !resolvedCoords) {
-      noCoords.add(loc.spot_name ?? loc.region ?? loc.country ?? '?');
-      continue;
-    }
+      let resolvedLabel: string | null = null;
+      let resolvedCoords: [number, number] | null = null;
+      for (const c of candidates) {
+        if (COORDS[c]) { resolvedLabel = c; resolvedCoords = COORDS[c]; break; }
+      }
 
-    if (!groups.has(resolvedLabel)) {
-      groups.set(resolvedLabel, { label: resolvedLabel, coords: resolvedCoords, count: 0, providers: [] });
-    }
+      if (!resolvedLabel || !resolvedCoords) {
+        noCoords.add(loc.spot_name ?? loc.region ?? loc.country ?? '?');
+        continue;
+      }
 
-    const group = groups.get(resolvedLabel)!;
-    const provider = providerById.get(loc.provider_id as string);
-    if (!provider) continue;
+      if (!groups.has(resolvedLabel)) {
+        groups.set(resolvedLabel, { label: resolvedLabel, coords: resolvedCoords, count: 0, providers: [] });
+      }
 
-    if (!group.providers.find(p => p.url === provider.website_url)) {
-      group.providers.push({
-        name: provider.name as string | null,
-        url: provider.website_url as string | null,
-        status: provider.status as string,
-      });
-      group.count++;
-    }
-  }
+      const group = groups.get(resolvedLabel)!;
+      const provider = providerById.get(loc.provider_id);
+      if (!provider) continue;
 
-  // Fallback: providers with no location rows — place them at primary_country / primary_region
-  const placedIds = new Set(allLocs.map(l => l.provider_id));
-  for (const provider of providers) {
-    if (placedIds.has(provider.id as string)) continue;
-    const candidates = [
-      provider.primary_region as string | null,
-      provider.primary_country as string | null,
-    ].filter(Boolean) as string[];
-    for (const c of candidates) {
-      if (COORDS[c]) {
-        if (!groups.has(c)) {
-          groups.set(c, { label: c, coords: COORDS[c], count: 0, providers: [] });
-        }
-        const group = groups.get(c)!;
-        if (!group.providers.find(p => p.url === provider.website_url)) {
-          group.providers.push({
-            name: provider.name as string | null,
-            url: provider.website_url as string | null,
-            status: provider.status as string,
-          });
-          group.count++;
-        }
-        break;
+      if (!group.providers.find(p => p.url === provider.website_url)) {
+        group.providers.push({
+          name: provider.name as string | null,
+          url: provider.website_url as string | null,
+          status: provider.status as string,
+        });
+        group.count++;
       }
     }
+
+    return [...groups.values()];
   }
+
+  const countryGroups = buildGroups('country');
+  const spotGroups = buildGroups('spot');
 
   if (noCoords.size > 0) {
     console.log(`  No coordinates for: ${[...noCoords].join(', ')}`);
   }
 
-  const mapData = [...groups.values()];
   const totalProviders = providers.length;
-  const totalOnMap = new Set(mapData.flatMap(g => g.providers.map(p => p.url))).size;
+  const totalOnMap = new Set(spotGroups.flatMap(g => g.providers.map(p => p.url))).size;
+  console.log(`Generating map — ${spotGroups.length} spot locations, ${countryGroups.length} countries, ${totalOnMap}/${totalProviders} providers placed…`);
 
-  console.log(`Generating map — ${mapData.length} locations, ${totalOnMap}/${totalProviders} providers placed…`);
-
-  const html = buildHtml(mapData, totalProviders);
+  const html = buildHtml(countryGroups, spotGroups, totalProviders);
   writeFileSync(outputPath, html, 'utf8');
   console.log(`Map saved to ${outputPath} — open it in your browser.`);
 }
 
-function buildHtml(groups: MapGroup[], totalProviders: number): string {
-  const geojson = {
-    type: 'FeatureCollection',
-    features: groups.map(g => ({
-      type: 'Feature',
-      geometry: { type: 'Point', coordinates: [g.coords[1], g.coords[0]] },
-      properties: {
-        label: g.label,
-        count: g.count,
-        providers: g.providers.map(p => ({
-          name: p.name ?? p.url ?? 'Unknown',
-          url: p.url,
-          status: p.status,
-        })),
-      },
-    })),
-  };
+function buildHtml(countryGroups: MapGroup[], spotGroups: MapGroup[], totalProviders: number): string {
+  function toGeojson(groups: MapGroup[]) {
+    return {
+      type: 'FeatureCollection',
+      features: groups.map(g => ({
+        type: 'Feature',
+        geometry: { type: 'Point', coordinates: [g.coords[1], g.coords[0]] },
+        properties: {
+          label: g.label,
+          count: g.count,
+          providers: g.providers.map(p => ({
+            name: p.name ?? p.url ?? 'Unknown',
+            url: p.url,
+            status: p.status,
+          })),
+        },
+      })),
+    };
+  }
+
+  const date = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -254,9 +250,29 @@ function buildHtml(groups: MapGroup[], totalProviders: number): string {
     position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
     z-index: 1000; background: rgba(13,17,23,0.88); padding: 8px 18px;
     border-radius: 20px; font-size: 13px; color: #8b949e; backdrop-filter: blur(6px);
-    border: 1px solid #30363d;
+    border: 1px solid #30363d; white-space: nowrap;
   }
   #info strong { color: #58a6ff; }
+  #toggle-wrap {
+    position: absolute; top: 12px; right: 16px; z-index: 1000;
+    background: rgba(13,17,23,0.88); border: 1px solid #30363d;
+    border-radius: 20px; padding: 5px 6px; backdrop-filter: blur(6px);
+    display: flex; align-items: center; gap: 8px; font-size: 12px; color: #8b949e;
+  }
+  #toggle-wrap label { cursor: pointer; user-select: none; }
+  /* pill toggle */
+  .pill { position: relative; display: inline-block; width: 44px; height: 22px; }
+  .pill input { opacity: 0; width: 0; height: 0; }
+  .pill-track {
+    position: absolute; inset: 0; background: #30363d; border-radius: 22px;
+    cursor: pointer; transition: background .2s;
+  }
+  .pill input:checked + .pill-track { background: #1f6feb; }
+  .pill-thumb {
+    position: absolute; top: 3px; left: 3px; width: 16px; height: 16px;
+    background: #e6edf3; border-radius: 50%; transition: transform .2s; pointer-events: none;
+  }
+  .pill input:checked ~ .pill-thumb { transform: translateX(22px); }
   .leaflet-popup-content-wrapper {
     background: #161b22; border: 1px solid #30363d; border-radius: 8px; color: #e6edf3;
     box-shadow: 0 8px 24px rgba(0,0,0,0.6);
@@ -273,47 +289,67 @@ function buildHtml(groups: MapGroup[], totalProviders: number): string {
 </head>
 <body>
 <div id="info">
-  KiteScout &nbsp;·&nbsp; <strong>${totalProviders}</strong> providers discovered
-  &nbsp;·&nbsp; Generated ${new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}
+  KiteScout &nbsp;·&nbsp; <strong>${totalProviders}</strong> providers &nbsp;·&nbsp; ${date}
+</div>
+<div id="toggle-wrap">
+  <label for="view-toggle">Country</label>
+  <label class="pill">
+    <input type="checkbox" id="view-toggle">
+    <span class="pill-track"></span>
+    <span class="pill-thumb"></span>
+  </label>
+  <label for="view-toggle">Spot</label>
 </div>
 <div id="map"></div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 const map = L.map('map', { zoomControl: false }).setView([20, 10], 2);
 L.control.zoom({ position: 'bottomright' }).addTo(map);
-
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; OpenStreetMap &copy; CARTO',
-  maxZoom: 18,
+  attribution: '&copy; OpenStreetMap &copy; CARTO', maxZoom: 18,
 }).addTo(map);
 
-const data = ${JSON.stringify(geojson)};
+const countryData = ${JSON.stringify(toGeojson(countryGroups))};
+const spotData    = ${JSON.stringify(toGeojson(spotGroups))};
 
-data.features.forEach(f => {
-  const { label, count, providers } = f.properties;
-  const [lng, lat] = f.geometry.coordinates;
-  const r = Math.max(6, Math.min(28, 5 + Math.sqrt(count) * 5));
+function makeLayer(geojson) {
+  const layer = L.layerGroup();
+  geojson.features.forEach(f => {
+    const { label, count, providers } = f.properties;
+    const [lng, lat] = f.geometry.coordinates;
+    const r = Math.max(6, Math.min(28, 5 + Math.sqrt(count) * 5));
+    const circle = L.circleMarker([lat, lng], {
+      radius: r, fillColor: '#58a6ff', color: '#1f6feb',
+      weight: 1.5, fillOpacity: 0.75,
+    });
+    const items = providers.map(p => {
+      const badge = p.status === 'verified' ? '<span class="badge-verified">✓</span>' : '';
+      const link = p.url
+        ? \`<a href="\${p.url}" target="_blank" rel="noopener">\${p.name}</a>\${badge}\`
+        : \`\${p.name}\${badge}\`;
+      return \`<li>\${link}</li>\`;
+    }).join('');
+    circle.bindPopup(\`
+      <div class="popup-title">\${label}&nbsp;<small style="font-weight:400;color:#8b949e">(\${count})</small></div>
+      <ul class="popup-list">\${items}</ul>
+    \`, { maxWidth: 280 });
+    layer.addLayer(circle);
+  });
+  return layer;
+}
 
-  const circle = L.circleMarker([lat, lng], {
-    radius: r,
-    fillColor: '#58a6ff',
-    color: '#1f6feb',
-    weight: 1.5,
-    fillOpacity: 0.75,
-  }).addTo(map);
+const countryLayer = makeLayer(countryData);
+const spotLayer    = makeLayer(spotData);
+countryLayer.addTo(map);
 
-  const items = providers.map(p => {
-    const badge = p.status === 'verified' ? '<span class="badge-verified">✓</span>' : '';
-    const link = p.url
-      ? \`<a href="\${p.url}" target="_blank" rel="noopener">\${p.name}</a>\${badge}\`
-      : \`\${p.name}\${badge}\`;
-    return \`<li>\${link}</li>\`;
-  }).join('');
-
-  circle.bindPopup(\`
-    <div class="popup-title">\${label} &nbsp;<small style="font-weight:400;color:#8b949e">(\${count})</small></div>
-    <ul class="popup-list">\${items}</ul>
-  \`, { maxWidth: 280 });
+document.getElementById('view-toggle').addEventListener('change', e => {
+  if (e.target.checked) {
+    map.removeLayer(countryLayer);
+    spotLayer.addTo(map);
+  } else {
+    map.removeLayer(spotLayer);
+    countryLayer.addTo(map);
+  }
 });
 </script>
 </body>
