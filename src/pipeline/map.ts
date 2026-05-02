@@ -62,6 +62,43 @@ const COORDS: Record<string, [number, number]> = {
   // Pacific & Indian Ocean
   Maldives: [3.20, 73.22], 'New Caledonia': [-20.90, 165.62],
   Tahiti: [-17.68, -149.41], Fiji: [-16.58, 179.42],
+
+  // Additional countries
+  Turkey: [38.96, 35.24], Cyprus: [35.13, 33.43], Qatar: [25.35, 51.18],
+  'United Arab Emirates': [23.42, 53.85], 'Trinidad and Tobago': [10.69, -61.22],
+  Grenada: [12.12, -61.68], Dominica: [15.41, -61.37], 'Costa Rica': [9.75, -83.75],
+  Panama: [8.54, -80.78], Belize: [17.19, -88.50], Peru: [-9.19, -75.02],
+  Chile: [-35.68, -71.54], Namibia: [-22.96, 18.49], Singapore: [1.35, 103.82],
+  Japan: [36.20, 138.25], Georgia: [42.32, 43.36], Iceland: [64.96, -19.02],
+  Austria: [47.52, 14.55], Switzerland: [46.82, 8.23], Albania: [41.15, 20.17],
+  Norway: [60.47, 8.47], Finland: [61.92, 25.75], 'Saudi Arabia': [23.89, 45.08],
+  Jordan: [30.59, 36.24], 'British Virgin Islands': [18.43, -64.62],
+  'Virgin Islands': [18.34, -64.90], 'Saint Lucia': [13.91, -60.98],
+  'Saint Vincent and the Grenadines': [12.98, -61.29],
+  'Antigua and Barbuda': [17.06, -61.80], 'French Polynesia': [-17.68, -149.41],
+  'Trinidad': [10.65, -61.52], Gambia: [13.44, -15.31],
+
+  // Additional spots / resorts
+  'Alacati': [38.27, 26.37], 'Alaçatı': [38.27, 26.37], 'Gokova': [37.07, 28.40],
+  'Gökova': [37.07, 28.40], 'Istanbul': [41.01, 28.95],
+  Dubai: [25.20, 55.27], 'Ras Al Khaimah': [25.68, 55.94], 'Jebel Ali': [24.99, 55.03],
+  Musandam: [26.20, 56.25], 'Walvis Bay': [-22.96, 14.51], 'Sossusvlei': [-24.73, 15.34],
+  'Union Island': [12.59, -61.44], Canouan: [12.71, -61.33], Mayreau: [12.64, -61.39],
+  'Tobago Cays': [12.63, -61.36], 'Petit Saint Vincent': [12.54, -61.38],
+  'Punta Chame': [8.60, -79.88], 'Corpus Christi': [27.80, -97.40],
+  'South Padre Island': [26.11, -97.17], 'Fort Lauderdale': [26.12, -80.14],
+  'Pompano Beach': [26.24, -80.12], 'New York': [40.71, -74.01],
+  Houston: [29.76, -95.37], Florida: [27.66, -81.52], California: [36.78, -119.42],
+  'Puerto Rico': [18.22, -66.59], Alaska: [64.20, -153.37],
+  'Hatteras Island': [35.22, -75.54], 'Kitty Hawk': [36.06, -75.72],
+  'Lake Neusiedl': [47.82, 16.77], 'Lake Garda': [45.63, 10.66],
+  'Port Elizabeth': [-33.96, 25.60], 'Port Elisabeth': [-33.96, 25.60],
+  'Fuwairit Kite Beach': [26.03, 51.37],
+
+  // Aliases / alternate spellings
+  'Turks and Caicos Islands': [21.69, -71.80],
+  Caribbean: [15.00, -73.00], Mediterranean: [35.00, 18.00],
+  'South America': [-15.00, -60.00], Europe: [50.00, 10.00],
 };
 
 interface ProviderInfo {
