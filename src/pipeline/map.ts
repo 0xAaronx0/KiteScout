@@ -94,12 +94,17 @@ export async function generateMap(outputPath = 'map.html'): Promise<void> {
   const ids = [...providerById.keys()];
 
   console.log(`Fetching locations for ${ids.length} providers…`);
-  const { data: locs, error: lErr } = await supabase
-    .from('provider_locations')
-    .select('provider_id, country, region, spot_name')
-    .in('provider_id', ids);
-
-  if (lErr) throw lErr;
+  const CHUNK = 200;
+  const allLocs: { provider_id: string; country: string; region: string | null; spot_name: string | null }[] = [];
+  for (let i = 0; i < ids.length; i += CHUNK) {
+    const { data: chunk, error: lErr } = await supabase
+      .from('provider_locations')
+      .select('provider_id, country, region, spot_name')
+      .in('provider_id', ids.slice(i, i + CHUNK));
+    if (lErr) throw lErr;
+    if (chunk) allLocs.push(...chunk as typeof allLocs);
+  }
+  const locs = allLocs;
 
   // Group by the most specific named location we have coordinates for
   const groups = new Map<string, MapGroup>();
