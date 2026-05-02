@@ -86,7 +86,7 @@ export default function SwipeDeck({ providers, onShortlist }: Props) {
       </div>
 
       {/* Card stack */}
-      <div className="relative" style={{ height: 540 }}>
+      <div className="relative" style={{ height: 660 }}>
         {[...visible].reverse().map((provider, reversedIdx) => {
           const stackIndex = visible.length - 1 - reversedIdx;
           return (

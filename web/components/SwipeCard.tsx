@@ -24,8 +24,20 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex }: Prop
   const [animating, setAnimating] = useState(false);
   const [flying, setFlying] = useState<'left' | 'right' | null>(null);
   const [spotImg, setSpotImg] = useState<string | null>(null);
+  const [coords, setCoords] = useState<{ lat: number; lon: number } | null>(null);
   const startX = useRef<number | null>(null);
   const startY = useRef<number | null>(null);
+
+  // Geocode primary location for the map pin
+  useEffect(() => {
+    const q = provider.locations[0]
+      ?? [provider.primary_region, provider.primary_country].filter(Boolean).join(', ');
+    if (!q) return;
+    fetch(`/api/map-pin?q=${encodeURIComponent(q)}`)
+      .then(r => r.json())
+      .then(d => { if (d.lat && d.lon) setCoords({ lat: d.lat, lon: d.lon }); })
+      .catch(() => {});
+  }, [provider.locations, provider.primary_region, provider.primary_country]);
 
   // Fetch og:image from provider's own website
   useEffect(() => {
@@ -186,6 +198,20 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex }: Prop
           {/* Description */}
           {provider.description && (
             <p className="text-sm text-slate-600 leading-relaxed line-clamp-3">{provider.description}</p>
+          )}
+
+          {/* Mini map */}
+          {coords && (
+            <div className="rounded-xl overflow-hidden border border-slate-200" style={{ height: 120 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`https://staticmap.openstreetmap.de/staticmap.php?center=${coords.lat},${coords.lon}&zoom=9&size=400x120&markers=${coords.lat},${coords.lon},red-pushpin`}
+                alt="Map"
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+                draggable={false}
+              />
+            </div>
           )}
 
           {/* Contact CTAs */}
