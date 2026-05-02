@@ -5,6 +5,7 @@ import { runExtract } from './pipeline/extract.js';
 import { runReextract } from './pipeline/reextract.js';
 import { runDedupe } from './pipeline/dedupe.js';
 import { generateMap } from './pipeline/map.js';
+import { runVerify } from './pipeline/verify.js';
 import { supabase } from './lib/supabase.js';
 
 const [command, ...args] = process.argv.slice(2);
@@ -143,6 +144,19 @@ async function main(): Promise<void> {
       await generateMap(args[0] ?? 'map.html');
       break;
 
+    case 'verify': {
+      const verifyBatch = parseInt(args[0] ?? '20', 10);
+      let totalRejected = 0;
+      while (true) {
+        const { processed, remaining, rejected } = await runVerify(verifyBatch);
+        totalRejected += rejected;
+        if (processed === 0 || remaining === 0) break;
+        console.log(`  ${remaining} providers still pending…`);
+      }
+      console.log(`Verification complete. ${totalRejected} providers marked dead (not kite providers).`);
+      break;
+    }
+
     default:
       console.log('KiteScout Provider Discovery Pipeline');
       console.log('');
@@ -157,6 +171,7 @@ async function main(): Promise<void> {
       console.log('  reextract [n]             Re-extract providers missing location data (batch n, default 20)');
       console.log('  blocklist-candidates [n]  Show top n most-rejected domains (default 50)');
       console.log('  map [file]                Generate provider map HTML (default: map.html)');
+      console.log('  verify [n]                Re-verify all providers + fill contact gaps (batch n, default 20)');
   }
 }
 
