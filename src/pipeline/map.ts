@@ -81,7 +81,7 @@ export async function generateMap(outputPath = 'map.html'): Promise<void> {
   console.log('Fetching providers…');
   const { data: providers, error: pErr } = await supabase
     .from('providers')
-    .select('id, name, status, website_url')
+    .select('id, name, status, website_url, primary_country, primary_region')
     .not('status', 'in', '("dead","duplicate")');
 
   if (pErr) throw pErr;
@@ -140,6 +140,33 @@ export async function generateMap(outputPath = 'map.html'): Promise<void> {
         status: provider.status as string,
       });
       group.count++;
+    }
+  }
+
+  // Fallback: providers with no location rows — place them at primary_country / primary_region
+  const placedIds = new Set(allLocs.map(l => l.provider_id));
+  for (const provider of providers) {
+    if (placedIds.has(provider.id as string)) continue;
+    const candidates = [
+      provider.primary_region as string | null,
+      provider.primary_country as string | null,
+    ].filter(Boolean) as string[];
+    for (const c of candidates) {
+      if (COORDS[c]) {
+        if (!groups.has(c)) {
+          groups.set(c, { label: c, coords: COORDS[c], count: 0, providers: [] });
+        }
+        const group = groups.get(c)!;
+        if (!group.providers.find(p => p.url === provider.website_url)) {
+          group.providers.push({
+            name: provider.name as string | null,
+            url: provider.website_url as string | null,
+            status: provider.status as string,
+          });
+          group.count++;
+        }
+        break;
+      }
     }
   }
 
