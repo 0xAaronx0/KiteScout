@@ -2,14 +2,15 @@
 
 import { useState } from 'react';
 import SwipeCard from './SwipeCard';
-import type { ProviderResult } from '../lib/types';
+import type { ProviderResult, SearchContext } from '../lib/types';
 
 interface Props {
   providers: ProviderResult[];
+  searchContext?: SearchContext;
   onShortlist?: (liked: ProviderResult[]) => void;
 }
 
-export default function SwipeDeck({ providers, onShortlist }: Props) {
+export default function SwipeDeck({ providers, searchContext, onShortlist }: Props) {
   const [index, setIndex] = useState(0);
   const [liked, setLiked] = useState<ProviderResult[]>([]);
   const [done, setDone] = useState(false);
@@ -86,7 +87,7 @@ export default function SwipeDeck({ providers, onShortlist }: Props) {
       </div>
 
       {/* Card stack */}
-      <div className="relative" style={{ height: 660 }}>
+      <div className="relative" style={{ height: 760 }}>
         {[...visible].reverse().map((provider, reversedIdx) => {
           const stackIndex = visible.length - 1 - reversedIdx;
           return (
@@ -96,6 +97,7 @@ export default function SwipeDeck({ providers, onShortlist }: Props) {
               onSwipe={dir => handleSwipe(provider, dir)}
               isTop={stackIndex === 0}
               stackIndex={stackIndex}
+              searchContext={searchContext}
             />
           );
         })}

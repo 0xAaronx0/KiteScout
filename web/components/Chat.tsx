@@ -3,7 +3,7 @@
 import { useChat } from 'ai/react';
 import { useEffect, useRef } from 'react';
 import SwipeDeck from './SwipeDeck';
-import type { ProviderResult } from '../lib/types';
+import type { ProviderResult, SearchContext } from '../lib/types';
 
 const SUGGESTIONS = [
   'Kite camp in Morocco 🇲🇦',
@@ -69,13 +69,14 @@ export default function Chat() {
                   {message.toolInvocations?.map(inv => {
                     if (inv.toolName !== 'searchProviders' || inv.state !== 'result') return null;
                     const providers = (inv as { result: ProviderResult[] }).result;
+                    const searchContext = (inv as { args: SearchContext }).args;
                     if (!providers?.length) return (
                       <p key={inv.toolCallId} className="text-sm text-slate-400 italic">
                         No matching providers found.
                       </p>
                     );
                     return (
-                      <SwipeDeck key={inv.toolCallId} providers={providers} />
+                      <SwipeDeck key={inv.toolCallId} providers={providers} searchContext={searchContext} />
                     );
                   })}
                 </div>

@@ -1,3 +1,18 @@
+export interface SearchContext {
+  countries?: string[];
+  regions?: string[];
+  tripTypes?: string[];
+}
+
+export interface OfferResult {
+  found: boolean;
+  offerName?: string | null;
+  price?: string | null;
+  dates?: string | null;
+  highlights?: string[];
+  directUrl?: string | null;
+}
+
 export interface ProviderResult {
   id: string;
   name: string | null;

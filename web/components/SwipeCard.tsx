@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import type { ProviderResult } from '../lib/types';
+import type { OfferResult, ProviderResult, SearchContext } from '../lib/types';
 
 const TYPE_LABELS: Record<string, string> = {
   camp: 'Camp', safari: 'Safari', cruise: 'Cruise', tour: 'Tour',
@@ -17,16 +17,37 @@ interface Props {
   onSwipe: (dir: 'left' | 'right') => void;
   isTop: boolean;
   stackIndex: number;
+  searchContext?: SearchContext;
 }
 
-export default function SwipeCard({ provider, onSwipe, isTop, stackIndex }: Props) {
+export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, searchContext }: Props) {
   const [x, setX] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [flying, setFlying] = useState<'left' | 'right' | null>(null);
   const [spotImg, setSpotImg] = useState<string | null>(null);
   const [coords, setCoords] = useState<{ lat: number; lon: number } | null>(null);
+  const [offer, setOffer] = useState<OfferResult | null>(null);
+  const [offerLoading, setOfferLoading] = useState(false);
+  const offerFetched = useRef(false);
   const startX = useRef<number | null>(null);
   const startY = useRef<number | null>(null);
+
+  // Fetch specific offer when this card becomes the top card
+  useEffect(() => {
+    if (!isTop || offerFetched.current || !searchContext) return;
+    const location = searchContext.regions?.[0] ?? searchContext.countries?.[0];
+    if (!location) return;
+    let domain: string;
+    try { domain = new URL(provider.website_url!).hostname.replace(/^www\./, ''); } catch { return; }
+    offerFetched.current = true;
+    setOfferLoading(true);
+    const tripType = searchContext.tripTypes?.[0] ?? '';
+    fetch(`/api/offer?domain=${encodeURIComponent(domain)}&location=${encodeURIComponent(location)}&tripType=${encodeURIComponent(tripType)}`)
+      .then(r => r.json())
+      .then(d => setOffer(d as OfferResult))
+      .catch(() => {})
+      .finally(() => setOfferLoading(false));
+  }, [isTop]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Geocode the search-relevant spot for the map pin
   useEffect(() => {
@@ -192,6 +213,47 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex }: Prop
                   {TYPE_LABELS[t] ?? t}
                 </span>
               ))}
+            </div>
+          )}
+
+          {/* Offer spotlight — shown when a specific match is found */}
+          {offerLoading && (
+            <div className="rounded-xl bg-amber-50 border border-amber-200 px-3 py-2.5 animate-pulse">
+              <div className="h-3 bg-amber-200 rounded w-2/3 mb-2" />
+              <div className="h-3 bg-amber-100 rounded w-1/3" />
+            </div>
+          )}
+          {!offerLoading && offer?.found && (
+            <div className="rounded-xl bg-amber-50 border border-amber-200 px-3 py-2.5 space-y-1.5">
+              <div className="flex items-start justify-between gap-2">
+                <p className="font-semibold text-amber-900 text-sm leading-snug">
+                  {offer.offerName ?? 'Matching offer found'}
+                </p>
+                {offer.price && (
+                  <span className="shrink-0 text-xs font-bold bg-amber-400 text-amber-900 rounded-full px-2.5 py-0.5 whitespace-nowrap">
+                    {offer.price}
+                  </span>
+                )}
+              </div>
+              {offer.dates && (
+                <p className="text-xs text-amber-700">📅 {offer.dates}</p>
+              )}
+              {offer.highlights && offer.highlights.length > 0 && (
+                <ul className="space-y-0.5">
+                  {offer.highlights.map((h, i) => (
+                    <li key={i} className="text-xs text-amber-800 flex gap-1.5">
+                      <span className="shrink-0">·</span>{h}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {offer.directUrl && (
+                <a href={offer.directUrl} target="_blank" rel="noopener noreferrer"
+                  className="inline-block text-xs text-amber-700 font-medium hover:underline"
+                  onClick={e => e.stopPropagation()}>
+                  View this offer →
+                </a>
+              )}
             </div>
           )}
 
