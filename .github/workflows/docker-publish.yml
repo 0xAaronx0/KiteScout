@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - web/**
+  workflow_dispatch: {} # allow manual "Run workflow" from the Actions tab
 
 # Cancel an in-flight run if a newer push lands, so deploys can't race.
 concurrency:
