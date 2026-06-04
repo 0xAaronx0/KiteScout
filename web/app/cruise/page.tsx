@@ -1,19 +1,29 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import SwipeDeck from '../../components/SwipeDeck';
 import type { ProviderResult } from '../../lib/types';
 
-const SUGGESTIONS = [
-  'Grenadines ⛵',
-  'Philippines 🇵🇭',
-  'Indonesia 🇮🇩',
-  'Red Sea 🌊',
-  'Maldives 🏝️',
-  'Caribbean 🌴',
-  'Thailand 🇹🇭',
-  'Cape Verde 🇨🇻',
-];
+interface CruiseDestination {
+  destination: string;
+  count: number;
+}
+
+// Flag emoji for the common cruise countries; falls back to ⛵.
+const FLAGS: Record<string, string> = {
+  Egypt: '🇪🇬', Greece: '🇬🇷', 'Saint Vincent and the Grenadines': '🇻🇨',
+  Bahamas: '🇧🇸', Italy: '🇮🇹', France: '🇫🇷', 'Antigua and Barbuda': '🇦🇬',
+  Spain: '🇪🇸', Croatia: '🇭🇷', Grenada: '🇬🇩', Turkey: '🇹🇷',
+  'Dominican Republic': '🇩🇴', Seychelles: '🇸🇨', Maldives: '🇲🇻',
+  'Turks and Caicos': '🇹🇨', 'British Virgin Islands': '🇻🇬',
+};
+
+// Shorter display labels for long official country names.
+const SHORT_LABELS: Record<string, string> = {
+  'Saint Vincent and the Grenadines': 'Grenadines',
+  'Antigua and Barbuda': 'Antigua',
+  'British Virgin Islands': 'BVI',
+};
 
 type Phase = 'search' | 'loading' | 'results';
 
@@ -23,6 +33,15 @@ export default function CruisePage() {
   const [providers, setProviders] = useState<ProviderResult[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [searchedDestination, setSearchedDestination] = useState('');
+  const [topDestinations, setTopDestinations] = useState<CruiseDestination[]>([]);
+
+  // Load the most popular cruise destinations for the quick-option chips.
+  useEffect(() => {
+    fetch('/api/cruise-destinations')
+      .then(r => r.json())
+      .then(d => { if (Array.isArray(d)) setTopDestinations(d as CruiseDestination[]); })
+      .catch(() => {});
+  }, []);
 
   async function runSearch(query: string) {
     const q = query.trim();
@@ -51,11 +70,9 @@ export default function CruisePage() {
     runSearch(destination);
   }
 
-  function handleSuggestion(s: string) {
-    // Strip the emoji from the suggestion before searching
-    const clean = s.replace(/[\u{1F300}-\u{1FFFF}]/gu, '').trim();
-    setDestination(clean);
-    runSearch(clean);
+  function handleSuggestion(dest: string) {
+    setDestination(dest);
+    runSearch(dest);
   }
 
   function reset() {
@@ -160,18 +177,26 @@ export default function CruisePage() {
           </div>
         </form>
 
-        {/* Suggestion chips */}
-        <div className="flex flex-wrap gap-2 justify-center mt-6 max-w-md">
-          {SUGGESTIONS.map(s => (
-            <button
-              key={s}
-              onClick={() => handleSuggestion(s)}
-              className="text-sm bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-full px-4 py-2 transition-colors backdrop-blur-sm"
-            >
-              {s}
-            </button>
-          ))}
-        </div>
+        {/* Quick options — top destinations by number of cruise offers */}
+        {topDestinations.length > 0 && (
+          <div className="mt-7 max-w-md">
+            <p className="text-white/50 text-xs uppercase tracking-wide mb-2.5">Most cruise offers</p>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {topDestinations.map(({ destination: dest, count }) => (
+                <button
+                  key={dest}
+                  onClick={() => handleSuggestion(dest)}
+                  className="group flex items-center gap-2 text-sm bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-full pl-4 pr-2 py-2 transition-colors backdrop-blur-sm"
+                >
+                  <span>{FLAGS[dest] ?? '⛵'} {SHORT_LABELS[dest] ?? dest}</span>
+                  <span className="text-xs font-semibold bg-white/20 group-hover:bg-white/30 rounded-full px-2 py-0.5 transition-colors">
+                    {count}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         {error && (
           <p className="mt-5 text-red-300 text-sm bg-red-900/40 rounded-xl px-4 py-2">{error}</p>
