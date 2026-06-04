@@ -6,8 +6,15 @@ on:
     paths:
       - web/**
 
+# Cancel an in-flight run if a newer push lands, so deploys can't race.
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   IMAGE: ghcr.io/0xaaronx0/kitescout
+  HOSTINGER_VM_ID: "1601314"
+  HOSTINGER_PROJECT: kitescout
 
 jobs:
   build-and-push:
@@ -33,3 +40,38 @@ jobs:
           tags: ${{ env.IMAGE }}:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Hostinger redeploy (pull latest + recreate)
+        run: |
+          if [ -z "${HOSTINGER_API_TOKEN}" ]; then
+            echo "::error::HOSTINGER_API_TOKEN secret is not set — add it in repo Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          echo "Triggering update of project '${HOSTINGER_PROJECT}' on VM ${HOSTINGER_VM_ID}…"
+          curl --fail-with-body -sS -X POST \
+            "https://developers.hostinger.com/api/vps/v1/virtual-machines/${HOSTINGER_VM_ID}/docker/${HOSTINGER_PROJECT}/update" \
+            -H "Authorization: Bearer ${HOSTINGER_API_TOKEN}" \
+            -H "Content-Type: application/json"
+          echo ""
+          echo "Redeploy triggered."
+        env:
+          HOSTINGER_API_TOKEN: ${{ secrets.HOSTINGER_API_TOKEN }}
+
+      - name: Verify site is healthy after redeploy
+        run: |
+          echo "Waiting for the container to be recreated…"
+          for i in $(seq 1 20); do
+            sleep 6
+            code=$(curl -sS --max-time 10 -o /dev/null -w "%{http_code}" https://kitescout.tech || echo "000")
+            echo "attempt $i: HTTP $code"
+            if [ "$code" = "200" ]; then
+              echo "✅ kitescout.tech is healthy."
+              exit 0
+            fi
+          done
+          echo "::error::Site did not return 200 within ~2 minutes after redeploy."
+          exit 1
