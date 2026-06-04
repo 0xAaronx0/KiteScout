@@ -1,7 +1,7 @@
 import { anthropic } from '@ai-sdk/anthropic';
 import { generateObject } from 'ai';
 import { z } from 'zod';
-import { matchProviders } from '../../../lib/match';
+import { matchCruiseLocations } from '../../../lib/match-cruise';
 
 export async function POST(req: Request) {
   const { destination } = await req.json() as { destination: string };
@@ -22,10 +22,9 @@ If the query is an ocean/sea (e.g. "Red Sea", "Caribbean") put it in regions, no
 Return empty arrays if nothing specific is found.`,
   });
 
-  const providers = await matchProviders({
+  const providers = await matchCruiseLocations({
     countries: object.countries,
     regions: object.regions,
-    tripTypes: ['cruise'],
     limit: 15,
   });
 

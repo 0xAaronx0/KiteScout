@@ -49,8 +49,12 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
       .finally(() => setOfferLoading(false));
   }, [isTop]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Geocode the search-relevant spot for the map pin
+  // Map pin: prefer the real coords from cruise_locations; otherwise geocode the spot.
   useEffect(() => {
+    if (typeof provider.lat === 'number' && typeof provider.lng === 'number') {
+      setCoords({ lat: provider.lat, lon: provider.lng });
+      return;
+    }
     const q = provider.matchedLocations[0]
       ?? [provider.primary_region, provider.primary_country].filter(Boolean).join(', ');
     if (!q) return;
@@ -58,7 +62,7 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
       .then(r => r.json())
       .then(d => { if (d.lat && d.lon) setCoords({ lat: d.lat, lon: d.lon }); })
       .catch(() => {});
-  }, [provider.matchedLocations, provider.primary_region, provider.primary_country]);
+  }, [provider.lat, provider.lng, provider.matchedLocations, provider.primary_region, provider.primary_country]);
 
   // Fetch og:image from provider's own website
   useEffect(() => {
@@ -213,6 +217,27 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
                   {TYPE_LABELS[t] ?? t}
                 </span>
               ))}
+            </div>
+          )}
+
+          {/* Cruise enrichment — only renders once data is filled in */}
+          {(provider.vesselName || provider.vesselType || provider.durationDays || provider.pricePerPersonEur) && (
+            <div className="flex flex-wrap gap-1.5">
+              {(provider.vesselName || provider.vesselType) && (
+                <span className="text-xs bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full px-2.5 py-0.5 font-medium">
+                  ⛵ {provider.vesselName ?? provider.vesselType!.replace(/_/g, ' ')}
+                </span>
+              )}
+              {provider.durationDays && (
+                <span className="text-xs bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full px-2.5 py-0.5 font-medium">
+                  📅 {provider.durationDays} days
+                </span>
+              )}
+              {provider.pricePerPersonEur && (
+                <span className="text-xs bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full px-2.5 py-0.5 font-medium">
+                  from €{provider.pricePerPersonEur}/pp
+                </span>
+              )}
             </div>
           )}
 

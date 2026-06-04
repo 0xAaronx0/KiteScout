@@ -28,4 +28,13 @@ export interface ProviderResult {
   locations: string[];
   matchedLocations: string[]; // locations that matched the search query
   isHighlight: boolean;
+  // Coordinates of the search-relevant cruise spot (from cruise_locations).
+  // When present, the card uses these directly instead of geocoding.
+  lat?: number | null;
+  lng?: number | null;
+  // Cruise-specific enrichment (from cruise_providers), all optional.
+  vesselName?: string | null;
+  vesselType?: string | null;
+  durationDays?: number | null;
+  pricePerPersonEur?: number | null;
 }
