@@ -1,4 +1,4 @@
-import { supabase } from './supabase';
+import { getSupabase } from './supabase';
 import type { ProviderResult } from './types';
 
 interface MatchParams {
@@ -30,22 +30,22 @@ export async function matchProviders({ countries, regions, tripTypes, limit = 12
 
   if (hasGeoFilter) {
     if (countries?.length) {
-      const { data } = await supabase
+      const { data } = await getSupabase()
         .from('provider_locations').select('provider_id').in('country', countries);
       (data ?? []).forEach(r => idSet.add(r.provider_id as string));
 
-      const { data: byPrimary } = await supabase
+      const { data: byPrimary } = await getSupabase()
         .from('providers').select('id').in('primary_country', countries)
         .not('status', 'in', '("dead","duplicate")');
       (byPrimary ?? []).forEach(p => idSet.add(p.id as string));
     }
 
     if (regions?.length) {
-      const { data: byRegion } = await supabase
+      const { data: byRegion } = await getSupabase()
         .from('provider_locations').select('provider_id').in('region', regions);
       (byRegion ?? []).forEach(r => idSet.add(r.provider_id as string));
 
-      const { data: bySpot } = await supabase
+      const { data: bySpot } = await getSupabase()
         .from('provider_locations').select('provider_id').in('spot_name', regions);
       (bySpot ?? []).forEach(r => idSet.add(r.provider_id as string));
     }
@@ -55,7 +55,7 @@ export async function matchProviders({ countries, regions, tripTypes, limit = 12
 
   // Fetch slightly more than limit so sorting by completeness is meaningful
   const fetchLimit = Math.min(limit * 3, 60);
-  let query = supabase
+  let query = getSupabase()
     .from('providers')
     .select('id, name, website_url, description, trip_types, primary_country, primary_region, contact_email, contact_form_url, whatsapp, phone')
     .not('status', 'in', '("dead","duplicate")')
@@ -71,7 +71,7 @@ export async function matchProviders({ countries, regions, tripTypes, limit = 12
   const sorted = [...providers].sort((a, b) => completenessScore(b) - completenessScore(a)).slice(0, limit);
 
   const pids = sorted.map(p => p.id as string);
-  const { data: locs } = await supabase
+  const { data: locs } = await getSupabase()
     .from('provider_locations').select('provider_id, country, region, spot_name')
     .in('provider_id', pids);
 
