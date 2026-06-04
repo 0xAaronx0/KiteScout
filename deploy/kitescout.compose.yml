@@ -1,0 +1,21 @@
+# Deployed on the Hostinger VPS (id 1601314) as Docker Compose project "kitescout".
+# Managed via the Hostinger API, not docker-compose CLI. This file is the source of
+# truth — keep it in sync with what's on the VPS.
+#
+# Secrets are injected via the project's environment (NOT committed). See deploy/README.md.
+services:
+  kitescout:
+    image: ghcr.io/0xaaronx0/kitescout:latest
+    restart: unless-stopped
+    environment:
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.kitescout.rule=Host(`kitescout.tech`) || Host(`www.kitescout.tech`)
+      - traefik.http.routers.kitescout.entrypoints=websecure
+      - traefik.http.routers.kitescout.tls.certresolver=letsencrypt
+      - traefik.http.services.kitescout.loadbalancer.server.port=3000
+      # Opt this container in to Watchtower auto-updates (see deploy/watchtower.compose.yml)
+      - com.centurylinklabs.watchtower.enable=true
