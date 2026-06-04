@@ -1,6 +1,8 @@
 import { topCruiseDestinations } from '../../../lib/cruise-destinations';
 
-export const revalidate = 3600; // counts change rarely; cache for an hour
+// Must be dynamic: the route queries Supabase at request time. Static
+// prerendering at build would run it with no env vars (supabaseUrl is required).
+export const dynamic = 'force-dynamic';
 
 export async function GET() {
   const destinations = await topCruiseDestinations(8);
