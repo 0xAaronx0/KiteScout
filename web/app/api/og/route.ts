@@ -22,59 +22,45 @@ function looksLikeImage(u: string): boolean {
   return true;
 }
 
-// Pull the best provider image out of a page's HTML, in priority order.
-function extractImage(html: string, base: string): string | null {
-  const pick = (re: RegExp): string | null => {
-    const m = re.exec(html);
-    const abs = m ? absolutize(m[1], base) : null;
-    return abs && looksLikeImage(abs) ? abs : null;
+// Pull provider images out of a page's HTML, best-first, deduped.
+function extractImages(html: string, base: string, into: string[], seen: Set<string>, limit: number) {
+  const add = (raw: string | null | undefined) => {
+    if (into.length >= limit || !raw) return;
+    const abs = absolutize(raw, base);
+    if (!abs || !looksLikeImage(abs)) return;
+    // Dedupe ignoring the query string (CDNs vary it for resizing).
+    const key = abs.split('?')[0];
+    if (seen.has(key)) return;
+    seen.add(key);
+    into.push(abs);
   };
+  const pick = (re: RegExp) => { const m = re.exec(html); if (m) add(m[1]); };
 
-  // 1. Open Graph (the provider's chosen share image — usually a real hero).
-  let img =
-    pick(/<meta[^>]+property=["']og:image:secure_url["'][^>]+content=["']([^"']+)["']/i) ??
-    pick(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i) ??
-    pick(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i);
-  if (img) return img;
+  // 1. Open Graph + Twitter (the provider's chosen hero/share images).
+  pick(/<meta[^>]+property=["']og:image:secure_url["'][^>]+content=["']([^"']+)["']/i);
+  pick(/<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/i);
+  pick(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:image["']/i);
+  pick(/<meta[^>]+name=["']twitter:image(?::src)?["'][^>]+content=["']([^"']+)["']/i);
+  pick(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image(?::src)?["']/i);
 
-  // 2. Twitter card image.
-  img =
-    pick(/<meta[^>]+name=["']twitter:image(?::src)?["'][^>]+content=["']([^"']+)["']/i) ??
-    pick(/<meta[^>]+content=["']([^"']+)["'][^>]+name=["']twitter:image(?::src)?["']/i);
-  if (img) return img;
+  // 2. itemprop / link rel=image_src.
+  pick(/<meta[^>]+itemprop=["']image["'][^>]+content=["']([^"']+)["']/i);
+  pick(/<link[^>]+rel=["']image_src["'][^>]+href=["']([^"']+)["']/i);
 
-  // 3. itemprop / link rel=image_src.
-  img =
-    pick(/<meta[^>]+itemprop=["']image["'][^>]+content=["']([^"']+)["']/i) ??
-    pick(/<link[^>]+rel=["']image_src["'][^>]+href=["']([^"']+)["']/i);
-  if (img) return img;
-
-  // 4. JSON-LD "image": "...", or "image": ["..."], or "image": { "url": "..." }
+  // 3. JSON-LD images (string, array, or { url }).
   for (const block of html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
     const body = block[1];
-    const m =
-      /"image"\s*:\s*"([^"]+)"/i.exec(body) ??
-      /"image"\s*:\s*\[\s*"([^"]+)"/i.exec(body) ??
-      /"image"\s*:\s*\{[^}]*"url"\s*:\s*"([^"]+)"/i.exec(body);
-    const abs = m ? absolutize(m[1], base) : null;
-    if (abs && looksLikeImage(abs)) return abs;
+    for (const m of body.matchAll(/"(?:url|contentUrl)"\s*:\s*"(https?:[^"]+\.(?:jpe?g|png|webp)[^"]*)"/gi)) add(m[1]);
+    for (const m of body.matchAll(/"image"\s*:\s*"([^"]+)"/gi)) add(m[1]);
   }
 
-  // 5. First sizeable hero background-image: url(...) in inline styles or <style>.
-  for (const m of html.matchAll(/background(?:-image)?\s*:\s*url\((["']?)([^"')]+)\1\)/gi)) {
-    const abs = absolutize(m[2], base);
-    if (abs && looksLikeImage(abs)) return abs;
-  }
+  // 4. Hero background-image: url(...) in inline styles or <style>.
+  for (const m of html.matchAll(/background(?:-image)?\s*:\s*url\((["']?)([^"')]+)\1\)/gi)) add(m[2]);
 
-  // 6. First content <img> / <source srcset> that isn't obviously a logo/icon.
+  // 5. Content <img> / <source srcset> in document order (skips logos/icons via filter).
   for (const m of html.matchAll(/<(?:img|source)\b[^>]*?(?:src|srcset|data-src|data-lazy-src)=["']([^"']+)["'][^>]*>/gi)) {
-    // srcset can be "url1 1x, url2 2x" — take the first URL.
-    const first = m[1].split(',')[0].trim().split(/\s+/)[0];
-    const abs = absolutize(first, base);
-    if (abs && looksLikeImage(abs)) return abs;
+    add(m[1].split(',')[0].trim().split(/\s+/)[0]); // srcset → first URL
   }
-
-  return null;
 }
 
 async function fetchHtml(url: string): Promise<{ html: string; finalUrl: string } | null> {
@@ -112,16 +98,19 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ imageUrl: null });
   }
 
-  let imageUrl: string | null = null;
+  const LIMIT = 6;
+  const images: string[] = [];
+  const seen = new Set<string>();
   for (const target of targets) {
+    if (images.length >= LIMIT) break;
     const page = await fetchHtml(target);
     if (!page) continue;
-    imageUrl = extractImage(page.html, page.finalUrl);
-    if (imageUrl) break;
+    extractImages(page.html, page.finalUrl, images, seen, LIMIT);
   }
 
   return NextResponse.json(
-    { imageUrl },
-    { headers: { 'Cache-Control': 'public, max-age=86400, s-maxage=86400' } },
+    { images, imageUrl: images[0] ?? null },
+    // Short browser cache (so UI changes propagate fast) with long stale-while-revalidate.
+    { headers: { 'Cache-Control': 'public, max-age=3600, stale-while-revalidate=604800' } },
   );
 }

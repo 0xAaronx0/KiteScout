@@ -24,7 +24,8 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
   const [x, setX] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [flying, setFlying] = useState<'left' | 'right' | null>(null);
-  const [spotImg, setSpotImg] = useState<string | null>(null);
+  const [images, setImages] = useState<string[]>([]);
+  const [imgIdx, setImgIdx] = useState(0);
   const [coords, setCoords] = useState<{ lat: number; lon: number } | null>(null);
   const [offer, setOffer] = useState<OfferResult | null>(null);
   const [offerLoading, setOfferLoading] = useState(false);
@@ -64,15 +65,34 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
       .catch(() => {});
   }, [provider.lat, provider.lng, provider.matchedLocations, provider.primary_region, provider.primary_country]);
 
-  // Fetch a hero image from the provider's own website (the specific trip page,
-  // falling back to the site root server-side).
+  // Fetch hero images from the provider's own website (the specific trip page,
+  // falling back to the site root server-side). May return several for a slider.
   useEffect(() => {
     if (!provider.website_url) return;
     fetch(`/api/og?url=${encodeURIComponent(provider.website_url)}`)
       .then(r => r.json())
-      .then(d => { if (d.imageUrl) setSpotImg(d.imageUrl); })
+      .then(d => {
+        const imgs: string[] = Array.isArray(d.images) ? d.images : (d.imageUrl ? [d.imageUrl] : []);
+        if (imgs.length) { setImages(imgs); setImgIdx(0); }
+      })
       .catch(() => {});
   }, [provider.website_url]);
+
+  function nextImg(e: React.SyntheticEvent) {
+    e.stopPropagation();
+    setImgIdx(i => (i + 1) % images.length);
+  }
+  function prevImg(e: React.SyntheticEvent) {
+    e.stopPropagation();
+    setImgIdx(i => (i - 1 + images.length) % images.length);
+  }
+  function handleImgError(url: string) {
+    setImages(prev => {
+      const next = prev.filter(u => u !== url);
+      setImgIdx(i => (next.length ? i % next.length : 0));
+      return next;
+    });
+  }
 
   function flyAway(dir: 'left' | 'right') {
     if (flying) return;
@@ -135,42 +155,73 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
   const shownSpots = spotLabels.slice(0, 3);
   const moreSpots = spotLabels.length > 3;
 
+  const safeIdx = images.length ? Math.min(imgIdx, images.length - 1) : 0;
+  const heroImg = images[safeIdx] ?? null;
+  const hasSlider = images.length > 1;
+
   return (
     <div
-      className="absolute inset-x-0 top-0"
+      className="absolute inset-0"
       style={{
         transform: isTop
           ? `translateX(${x}px) rotate(${rotation}deg)`
           : `scale(${1 - stackIndex * 0.04}) translateY(${stackIndex * 12}px)`,
         transition: animating ? 'transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94)' : 'none',
         zIndex: 10 - stackIndex,
-        touchAction: 'none',
         cursor: isTop ? 'grab' : 'default',
         userSelect: 'none',
       }}
-      onPointerDown={handlePointerDown}
-      onPointerMove={handlePointerMove}
-      onPointerUp={handlePointerUp}
-      onPointerCancel={handlePointerUp}
       onTransitionEnd={() => { if (flying) onSwipe(flying); }}
     >
-      <div className="bg-white rounded-3xl shadow-2xl overflow-hidden mx-auto" style={{ maxWidth: 420 }}>
+      <div className="bg-white rounded-3xl shadow-2xl overflow-hidden mx-auto flex flex-col h-full w-full" style={{ maxWidth: 420 }}>
 
-        {/* ── Hero photo ── */}
-        <div className="relative" style={{ height: 260 }}>
+        {/* ── Hero photo (drag surface + slider) ── */}
+        <div
+          className="relative shrink-0 h-48 sm:h-60"
+          style={{ touchAction: 'none' }}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerCancel={handlePointerUp}
+        >
           {/* Gradient fallback always present */}
           <div className="absolute inset-0 bg-gradient-to-br from-sky-400 via-blue-500 to-cyan-400" />
 
-          {spotImg && (
+          {heroImg && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
-              src={spotImg}
+              key={heroImg}
+              src={heroImg}
               alt=""
               className="absolute inset-0 w-full h-full object-cover"
               draggable={false}
               referrerPolicy="no-referrer"
-              onError={() => setSpotImg(null)}
+              onError={() => handleImgError(heroImg)}
             />
+          )}
+
+          {/* Photo slider controls (only with >1 image) */}
+          {hasSlider && (
+            <>
+              <button
+                onPointerDown={e => e.stopPropagation()}
+                onClick={prevImg}
+                aria-label="Previous photo"
+                className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/35 hover:bg-black/55 text-white flex items-center justify-center backdrop-blur-sm"
+              >‹</button>
+              <button
+                onPointerDown={e => e.stopPropagation()}
+                onClick={nextImg}
+                aria-label="Next photo"
+                className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/35 hover:bg-black/55 text-white flex items-center justify-center backdrop-blur-sm"
+              >›</button>
+              <div className="absolute top-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                {images.map((_, i) => (
+                  <span key={i} className="h-1.5 rounded-full transition-all"
+                    style={{ width: i === safeIdx ? 16 : 6, background: i === safeIdx ? '#fff' : 'rgba(255,255,255,0.5)' }} />
+                ))}
+              </div>
+            </>
           )}
 
           {/* Bottom gradient so name text is readable */}
@@ -208,8 +259,8 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
           </div>
         </div>
 
-        {/* ── Body ── */}
-        <div className="px-4 pt-3 pb-2 space-y-3">
+        {/* ── Body (scrolls so the card fits any screen) ── */}
+        <div className="px-4 pt-3 pb-2 space-y-3 flex-1 overflow-y-auto overscroll-contain">
 
           {/* Operating spots — up to 3, then an ellipsis */}
           {shownSpots.length > 0 && (
@@ -338,19 +389,19 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
           </div>
         </div>
 
-        {/* ── Swipe buttons ── */}
+        {/* ── Swipe buttons (pinned, always visible) ── */}
         {isTop && (
-          <div className="flex justify-center gap-8 py-3 border-t border-slate-100">
+          <div className="shrink-0 flex justify-center gap-8 py-2.5 border-t border-slate-100 bg-white">
             <button
               onPointerDown={e => e.stopPropagation()}
               onClick={() => flyAway('left')}
-              className="w-14 h-14 rounded-full border-2 border-rose-300 text-rose-400 text-2xl hover:bg-rose-50 active:scale-95 transition-all flex items-center justify-center shadow-sm"
+              className="w-12 h-12 rounded-full border-2 border-rose-300 text-rose-400 text-2xl hover:bg-rose-50 active:scale-95 transition-all flex items-center justify-center shadow-sm"
               aria-label="Skip"
             >✕</button>
             <button
               onPointerDown={e => e.stopPropagation()}
               onClick={() => flyAway('right')}
-              className="w-14 h-14 rounded-full border-2 border-emerald-300 text-emerald-500 text-2xl hover:bg-emerald-50 active:scale-95 transition-all flex items-center justify-center shadow-sm"
+              className="w-12 h-12 rounded-full border-2 border-emerald-300 text-emerald-500 text-2xl hover:bg-emerald-50 active:scale-95 transition-all flex items-center justify-center shadow-sm"
               aria-label="Like"
             >♥</button>
           </div>
