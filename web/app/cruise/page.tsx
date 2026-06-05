@@ -109,7 +109,8 @@ export default function CruisePage() {
   if (phase === 'loading') {
     return (
       <div className="min-h-screen bg-gradient-to-br from-sky-900 via-blue-900 to-cyan-900 flex flex-col items-center justify-center gap-5">
-        <div className="text-6xl animate-bounce">⛵</div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logo.svg" alt="" className="w-20 h-20 animate-bounce drop-shadow-lg" />
         <p className="text-white/80 text-lg font-medium">Searching cruise providers…</p>
         <div className="flex gap-2">
           {[0, 200, 400].map(d => (
@@ -130,9 +131,11 @@ export default function CruisePage() {
             className="text-sky-600 text-sm font-medium hover:text-sky-700 flex items-center gap-1">
             ← Back
           </button>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.svg" alt="KiteScout Cruises" className="w-7 h-7 shrink-0" />
           <div className="flex-1 min-w-0">
             <h1 className="font-bold text-slate-900 truncate">
-              ⛵ Kite Cruises — {searchedDestination}
+              Kite Cruises — {searchedDestination}
             </h1>
             <p className="text-xs text-slate-400">
               {providers.length === 0
@@ -173,7 +176,8 @@ export default function CruisePage() {
     <div className="min-h-screen flex flex-col">
       {/* Hero */}
       <div className="flex-1 bg-gradient-to-br from-sky-900 via-blue-800 to-cyan-900 flex flex-col items-center justify-center px-4 py-16 text-center">
-        <div className="text-6xl mb-5">⛵</div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logo.svg" alt="KiteScout Cruises" className="w-24 h-24 mb-5 drop-shadow-xl" />
         <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3 tracking-tight">
           Kite Cruise Finder
         </h1>
