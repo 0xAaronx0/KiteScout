@@ -46,33 +46,52 @@ jobs:
     needs: build-and-push
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Hostinger redeploy (pull latest + recreate)
+      - name: Deploy to VPS and wait until healthy
+        env:
+          HOSTINGER_API_TOKEN: ${{ secrets.HOSTINGER_API_TOKEN }}
         run: |
+          set -uo pipefail
           if [ -z "${HOSTINGER_API_TOKEN}" ]; then
             echo "::error::HOSTINGER_API_TOKEN secret is not set — add it in repo Settings → Secrets and variables → Actions."
             exit 1
           fi
-          echo "Triggering update of project '${HOSTINGER_PROJECT}' on VM ${HOSTINGER_VM_ID}…"
-          curl --fail-with-body -sS -X POST \
-            "https://developers.hostinger.com/api/vps/v1/virtual-machines/${HOSTINGER_VM_ID}/docker/${HOSTINGER_PROJECT}/update" \
-            -H "Authorization: Bearer ${HOSTINGER_API_TOKEN}" \
-            -H "Content-Type: application/json"
-          echo ""
-          echo "Redeploy triggered."
-        env:
-          HOSTINGER_API_TOKEN: ${{ secrets.HOSTINGER_API_TOKEN }}
+          BASE="https://developers.hostinger.com/api/vps/v1/virtual-machines/${HOSTINGER_VM_ID}"
 
-      - name: Verify site is healthy after redeploy
-        run: |
-          echo "Waiting for the container to be recreated…"
-          for i in $(seq 1 20); do
+          # 1. Trigger the recreate (the API is async — it returns an action id).
+          echo "Triggering update of '${HOSTINGER_PROJECT}' on VM ${HOSTINGER_VM_ID}…"
+          RESP=$(curl --fail-with-body -sS -X POST \
+            "${BASE}/docker/${HOSTINGER_PROJECT}/update" \
+            -H "Authorization: Bearer ${HOSTINGER_API_TOKEN}" \
+            -H "Content-Type: application/json") || { echo "::error::deploy request failed: $RESP"; exit 1; }
+          echo "$RESP"
+          ACTION_ID=$(echo "$RESP" | python3 -c "import sys,json; print(json.load(sys.stdin).get('id',''))" 2>/dev/null || echo "")
+
+          # 2. Wait for the async recreate action to actually finish (up to ~5 min).
+          if [ -n "$ACTION_ID" ]; then
+            echo "Waiting for recreate action ${ACTION_ID}…"
+            for i in $(seq 1 30); do
+              sleep 8
+              STATE=$(curl -sS "${BASE}/actions/${ACTION_ID}" \
+                -H "Authorization: Bearer ${HOSTINGER_API_TOKEN}" \
+                | python3 -c "import sys,json; print(json.load(sys.stdin).get('state',''))" 2>/dev/null || echo "")
+              echo "  action state: ${STATE:-?}"
+              case "$STATE" in
+                success) break ;;
+                error|failed) echo "::error::VPS recreate action ended in state '$STATE'"; exit 1 ;;
+              esac
+            done
+          fi
+
+          # 3. Health-check the live site; require 2 consecutive 200s to ride out the
+          #    brief 502 window while Traefik swaps to the new container.
+          echo "Health-checking https://kitescout.tech …"
+          ok=0
+          for i in $(seq 1 30); do
+            code=$(curl -sS --max-time 10 -o /dev/null -w "%{http_code}" https://kitescout.tech/ || echo "000")
+            echo "  attempt $i: HTTP $code"
+            if [ "$code" = "200" ]; then ok=$((ok + 1)); else ok=0; fi
+            if [ "$ok" -ge 2 ]; then echo "✅ kitescout.tech is healthy."; exit 0; fi
             sleep 6
-            code=$(curl -sS --max-time 10 -o /dev/null -w "%{http_code}" https://kitescout.tech || echo "000")
-            echo "attempt $i: HTTP $code"
-            if [ "$code" = "200" ]; then
-              echo "✅ kitescout.tech is healthy."
-              exit 0
-            fi
           done
-          echo "::error::Site did not return 200 within ~2 minutes after redeploy."
+          echo "::error::Site did not return a stable 200 after redeploy."
           exit 1
