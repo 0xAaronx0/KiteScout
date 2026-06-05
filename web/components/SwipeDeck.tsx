@@ -86,8 +86,9 @@ export default function SwipeDeck({ providers, searchContext, onShortlist }: Pro
         </div>
       </div>
 
-      {/* Card stack — height fits the viewport so the whole card shows on mobile */}
-      <div className="relative" style={{ height: 'clamp(420px, calc(100dvh - 160px), 680px)' }}>
+      {/* Card stack — sized to the SMALL viewport (svh) so the whole card,
+          including the swipe buttons, fits even with mobile browser toolbars showing. */}
+      <div className="relative" style={{ height: 'min(680px, calc(100svh - 150px))' }}>
         {[...visible].reverse().map((provider, reversedIdx) => {
           const stackIndex = visible.length - 1 - reversedIdx;
           return (

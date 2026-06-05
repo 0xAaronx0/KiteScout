@@ -124,7 +124,7 @@ export default function CruisePage() {
   /* ── Results ── */
   if (phase === 'results') {
     return (
-      <div className="min-h-screen bg-slate-50">
+      <div className="min-h-[100svh] bg-slate-50">
         <header className="bg-white border-b border-slate-200 px-4 py-3 flex items-center gap-3 sticky top-0 z-20">
           <button onClick={reset}
             className="text-sky-600 text-sm font-medium hover:text-sky-700 flex items-center gap-1">

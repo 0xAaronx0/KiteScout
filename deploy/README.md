@@ -15,12 +15,16 @@ behind Traefik, which terminates TLS with Let's Encrypt.
 1. Push to `main` touching `web/**`.
 2. GitHub Actions (`.github/workflows/docker-publish.yml`) builds `web/Dockerfile`
    and pushes `ghcr.io/0xaaronx0/kitescout:latest` (the GHCR package is **public**).
-3. **Watchtower** on the VPS polls the registry every 60s, sees the new image digest,
-   and recreates the `kitescout` container with its existing env + labels.
+3. The workflow's `deploy` job calls the Hostinger API
+   (`POST /api/vps/v1/virtual-machines/1601314/docker/kitescout/update`, bearer
+   `secrets.HOSTINGER_API_TOKEN`) to pull the new image and recreate the container,
+   then health-checks `https://kitescout.tech`.
 4. Traefik picks up the new container automatically.
 
-No manual VPS step is needed. To force an immediate update, restart the `kitescout`
-or `watchtower` project from the Hostinger panel.
+This is the single deploy path. (Watchtower was removed — running it alongside the
+API-triggered deploy caused a double-recreate race that produced a brief 502 window
+and tripped the health check.) To force an update manually, re-run the workflow from
+the Actions tab (`workflow_dispatch`) or restart the `kitescout` project in the panel.
 
 ## Compose projects (source of truth)
 
@@ -31,8 +35,6 @@ change to the VPS (Hostinger panel → project → edit, or the Hostinger API).
 - `kitescout.compose.yml` — the app. Secrets come from the project's *environment*
   (set on the VPS, never committed): `ANTHROPIC_API_KEY`, `SUPABASE_URL`,
   `SUPABASE_SERVICE_ROLE_KEY`.
-- `watchtower.compose.yml` — the auto-updater. Only touches containers labelled
-  `com.centurylinklabs.watchtower.enable=true`.
 
 ## Secrets
 

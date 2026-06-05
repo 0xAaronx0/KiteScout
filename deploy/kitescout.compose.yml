@@ -17,5 +17,3 @@ services:
       - traefik.http.routers.kitescout.entrypoints=websecure
       - traefik.http.routers.kitescout.tls.certresolver=letsencrypt
       - traefik.http.services.kitescout.loadbalancer.server.port=3000
-      # Opt this container in to Watchtower auto-updates (see deploy/watchtower.compose.yml)
-      - com.centurylinklabs.watchtower.enable=true

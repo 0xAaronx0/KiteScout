@@ -12,6 +12,27 @@ const TYPE_LABELS: Record<string, string> = {
 const SWIPE_THRESHOLD = 90;
 const FLY_X = 700;
 
+// Load an image just to read its real dimensions (no CORS issue for sizes).
+function measureImage(url: string): Promise<{ url: string; w: number; h: number } | null> {
+  return new Promise(resolve => {
+    const img = new Image();
+    img.referrerPolicy = 'no-referrer';
+    img.onload = () => resolve({ url, w: img.naturalWidth, h: img.naturalHeight });
+    img.onerror = () => resolve(null);
+    img.src = url;
+  });
+}
+
+// Heuristic: is this image a logo / banner / icon rather than a real photo?
+// Logos tend to be small or have an extreme (very wide / very tall) aspect ratio.
+function isLogoLike(w: number, h: number): boolean {
+  if (!w || !h) return true;
+  const ar = w / h;
+  if (w < 350 || h < 230) return true; // too small to be a proper hero photo
+  if (ar > 2.6 || ar < 0.4) return true; // wordmark banner / vertical strip
+  return false;
+}
+
 interface Props {
   provider: ProviderResult;
   onSwipe: (dir: 'left' | 'right') => void;
@@ -66,16 +87,24 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
   }, [provider.lat, provider.lng, provider.matchedLocations, provider.primary_region, provider.primary_country]);
 
   // Fetch hero images from the provider's own website (the specific trip page,
-  // falling back to the site root server-side). May return several for a slider.
+  // falling back to the site root server-side). Measure each one and keep only
+  // real photos — never logos/banners/icons — for the slider.
   useEffect(() => {
     if (!provider.website_url) return;
+    let cancelled = false;
     fetch(`/api/og?url=${encodeURIComponent(provider.website_url)}`)
       .then(r => r.json())
-      .then(d => {
-        const imgs: string[] = Array.isArray(d.images) ? d.images : (d.imageUrl ? [d.imageUrl] : []);
-        if (imgs.length) { setImages(imgs); setImgIdx(0); }
+      .then(async d => {
+        const urls: string[] = Array.isArray(d.images) ? d.images : (d.imageUrl ? [d.imageUrl] : []);
+        if (!urls.length) return;
+        const measured = await Promise.all(urls.map(measureImage));
+        if (cancelled) return;
+        const good = measured.filter((m): m is { url: string; w: number; h: number } =>
+          !!m && !isLogoLike(m.w, m.h)).map(m => m.url);
+        if (good.length) { setImages(good); setImgIdx(0); }
       })
       .catch(() => {});
+    return () => { cancelled = true; };
   }, [provider.website_url]);
 
   function nextImg(e: React.SyntheticEvent) {
@@ -260,7 +289,12 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
         </div>
 
         {/* ── Body (scrolls so the card fits any screen) ── */}
-        <div className="px-4 pt-3 pb-2 space-y-3 flex-1 overflow-y-auto overscroll-contain">
+        {/* min-h-0 is essential: lets this flex child shrink so overflow-y-auto
+            actually scrolls instead of expanding and pushing the buttons off-screen. */}
+        <div
+          className="px-4 pt-3 pb-2 space-y-3 flex-1 min-h-0 overflow-y-auto overscroll-contain"
+          style={{ touchAction: 'pan-y' }}
+        >
 
           {/* Operating spots — up to 3, then an ellipsis */}
           {shownSpots.length > 0 && (
