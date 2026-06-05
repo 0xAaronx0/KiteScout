@@ -5,6 +5,9 @@ interface MatchParams {
   countries?: string[];
   regions?: string[];
   limit?: number;
+  // When set, returns just this one cruise provider with ALL its cruise
+  // locations (used for deep-linking a single card from the map).
+  providerId?: string;
 }
 
 interface CruiseLocationRow {
@@ -71,7 +74,7 @@ function clean(term: string): string {
  * (so "Grenadines" matches "Saint Vincent and the Grenadines", etc.).
  */
 export async function matchCruiseLocations(
-  { countries, regions, limit = 15 }: MatchParams,
+  { countries, regions, limit = 15, providerId }: MatchParams,
 ): Promise<ProviderResult[]> {
   const supabase = getSupabase();
   const terms = [...(countries ?? []), ...(regions ?? [])]
@@ -84,7 +87,10 @@ export async function matchCruiseLocations(
     .from('cruise_locations')
     .select('cruise_provider_id, country, region, spot_name, lat, lng, confidence');
 
-  if (hasFilter) {
+  if (providerId) {
+    // Deep-link mode: every cruise spot for this one provider.
+    locQuery = locQuery.eq('cruise_provider_id', providerId);
+  } else if (hasFilter) {
     const ors = terms.flatMap(t => [
       `country.ilike.%${t}%`,
       `region.ilike.%${t}%`,

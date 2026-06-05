@@ -43,6 +43,30 @@ export default function CruisePage() {
       .catch(() => {});
   }, []);
 
+  // Deep-link from the cruise map: ?provider=<id> opens that one provider's
+  // card directly; ?destination=<query> pre-runs a destination search.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const providerId = params.get('provider');
+    const dest = params.get('destination');
+
+    if (providerId) {
+      setPhase('loading');
+      fetch(`/api/cruise-provider?id=${encodeURIComponent(providerId)}`)
+        .then(r => (r.ok ? r.json() : Promise.reject()))
+        .then((p: ProviderResult) => {
+          setProviders([p]);
+          setSearchedDestination(p.primary_region ?? p.primary_country ?? p.name ?? 'Cruise');
+          setPhase('results');
+        })
+        .catch(() => { setError('That cruise provider could not be found.'); setPhase('search'); });
+    } else if (dest) {
+      setDestination(dest);
+      runSearch(dest);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   async function runSearch(query: string) {
     const q = query.trim();
     if (!q) return;
