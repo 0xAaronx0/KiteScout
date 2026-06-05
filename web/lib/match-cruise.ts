@@ -96,11 +96,14 @@ export async function matchCruiseLocations(
   const { data: matchedLocs, error: locErr } = await locQuery.returns<CruiseLocationRow[]>();
   if (locErr || !matchedLocs?.length) return [];
 
-  // Track, per provider: matched location labels + the best matched spot's coords.
+  // Track, per provider: matched cruise-spot labels, best spot's coords, and the
+  // best matched spot itself (for the card's headline location).
   const matchedLabels = new Map<string, string[]>();
   const bestCoords = new Map<string, { lat: number; lng: number }>();
+  const bestSpot = new Map<string, { country: string; region: string | null; spot_name: string | null }>();
   const confRank = { high: 3, medium: 2, low: 1 } as const;
   const bestConf = new Map<string, number>();
+  const bestSpotConf = new Map<string, number>();
 
   for (const loc of matchedLocs) {
     const pid = loc.cruise_provider_id;
@@ -109,9 +112,17 @@ export async function matchCruiseLocations(
     const arr = matchedLabels.get(pid)!;
     if (!arr.includes(lbl)) arr.push(lbl);
 
+    const rank = confRank[loc.confidence] ?? 0;
+
+    // Best matched spot (by confidence) → drives the card's headline location.
+    if (rank >= (bestSpotConf.get(pid) ?? -1)) {
+      bestSpotConf.set(pid, rank);
+      bestSpot.set(pid, { country: loc.country, region: loc.region, spot_name: loc.spot_name });
+    }
+
+    // Best matched spot that also has coords → drives the map pin.
     const lat = num(loc.lat);
     const lng = num(loc.lng);
-    const rank = confRank[loc.confidence] ?? 0;
     if (lat !== null && lng !== null && rank >= (bestConf.get(pid) ?? -1)) {
       bestConf.set(pid, rank);
       bestCoords.set(pid, { lat, lng });
@@ -134,23 +145,7 @@ export async function matchCruiseLocations(
 
   if (provErr || !providers?.length) return [];
 
-  // ---- 3. Fetch ALL cruise_locations for these providers (full spot list per card) ----
-  const { data: allLocs } = await supabase
-    .from('cruise_locations')
-    .select('cruise_provider_id, country, region, spot_name')
-    .in('cruise_provider_id', providers.map(p => p.id))
-    .returns<Pick<CruiseLocationRow, 'cruise_provider_id' | 'country' | 'region' | 'spot_name'>[]>();
-
-  const allLabels = new Map<string, string[]>();
-  for (const loc of allLocs ?? []) {
-    const pid = loc.cruise_provider_id;
-    const lbl = label(loc);
-    if (!allLabels.has(pid)) allLabels.set(pid, []);
-    const arr = allLabels.get(pid)!;
-    if (!arr.includes(lbl)) arr.push(lbl);
-  }
-
-  // ---- 4. Rank: high-confidence match > more matched spots > completeness ----
+  // ---- 3. Rank: high-confidence match > more matched spots > completeness ----
   const sorted = [...providers].sort((a, b) => {
     const ca = bestConf.get(a.id) ?? 0;
     const cb = bestConf.get(b.id) ?? 0;
@@ -161,23 +156,28 @@ export async function matchCruiseLocations(
     return completenessScore(b) - completenessScore(a);
   }).slice(0, limit);
 
-  // ---- 5. Shape into ProviderResult for the swipe deck ----
+  // ---- 4. Shape into ProviderResult — CRUISE ONLY ----
+  // Cards must show only the kite-cruise offer: the matched cruise spot(s) and
+  // the 'cruise' service — never the provider's other services or other
+  // (non-matching) locations.
   return sorted.map((p, i) => {
     const coords = bestCoords.get(p.id);
+    const matched = matchedLabels.get(p.id) ?? [];
+    const spot = bestSpot.get(p.id);
     return {
       id: p.id,
       name: p.name,
       website_url: p.website_url,
       description: p.description,
-      trip_types: p.trip_types ?? [],
-      primary_country: p.primary_country,
-      primary_region: p.primary_region,
+      trip_types: ['cruise'],                               // drop other services
+      primary_country: spot?.country ?? p.primary_country,  // headline = matched cruise spot
+      primary_region: spot ? (spot.spot_name ?? spot.region) : p.primary_region,
       contact_email: p.contact_email,
       contact_form_url: p.contact_form_url,
       whatsapp: p.whatsapp,
       phone: p.phone,
-      locations: allLabels.get(p.id) ?? matchedLabels.get(p.id) ?? [],
-      matchedLocations: matchedLabels.get(p.id) ?? [],
+      locations: matched,                                   // only matched cruise spots
+      matchedLocations: matched,
       isHighlight: i < 3,
       lat: coords?.lat ?? null,
       lng: coords?.lng ?? null,
