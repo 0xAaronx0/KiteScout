@@ -123,6 +123,19 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
 
   const contactUrl = provider.contact_form_url ?? (provider.contact_email ? `mailto:${provider.contact_email}` : null);
 
+  // Location chips: drop the trailing ", <country>" when it matches the card's
+  // overall country (only keep it when the spot is in a different country),
+  // then show at most 3 concrete spots followed by an ellipsis.
+  const overallCountry = provider.primary_country?.trim().toLowerCase() ?? '';
+  const spotLabels = provider.locations.map(loc => {
+    const i = loc.lastIndexOf(', ');
+    if (i === -1) return loc;
+    const country = loc.slice(i + 2).trim().toLowerCase();
+    return country === overallCountry ? loc.slice(0, i) : loc;
+  });
+  const shownSpots = spotLabels.slice(0, 3);
+  const moreSpots = spotLabels.length > 3;
+
   return (
     <div
       className="absolute inset-x-0 top-0"
@@ -198,14 +211,17 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
         {/* ── Body ── */}
         <div className="px-4 pt-3 pb-2 space-y-3">
 
-          {/* All operating spots */}
-          {provider.locations.length > 0 && (
+          {/* Operating spots — up to 3, then an ellipsis */}
+          {shownSpots.length > 0 && (
             <div className="flex flex-wrap gap-1.5">
-              {provider.locations.map(loc => (
-                <span key={loc} className="text-xs bg-slate-100 text-slate-600 rounded-full px-2.5 py-0.5">
+              {shownSpots.map((loc, i) => (
+                <span key={i} className="text-xs bg-slate-100 text-slate-600 rounded-full px-2.5 py-0.5">
                   {loc}
                 </span>
               ))}
+              {moreSpots && (
+                <span className="text-xs text-slate-400 px-1 py-0.5">…</span>
+              )}
             </div>
           )}
 
