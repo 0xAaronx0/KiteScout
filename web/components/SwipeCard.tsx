@@ -64,12 +64,11 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
       .catch(() => {});
   }, [provider.lat, provider.lng, provider.matchedLocations, provider.primary_region, provider.primary_country]);
 
-  // Fetch og:image from provider's own website
+  // Fetch a hero image from the provider's own website (the specific trip page,
+  // falling back to the site root server-side).
   useEffect(() => {
     if (!provider.website_url) return;
-    let origin: string;
-    try { origin = new URL(provider.website_url).origin; } catch { return; }
-    fetch(`/api/og?url=${encodeURIComponent(origin)}`)
+    fetch(`/api/og?url=${encodeURIComponent(provider.website_url)}`)
       .then(r => r.json())
       .then(d => { if (d.imageUrl) setSpotImg(d.imageUrl); })
       .catch(() => {});
@@ -170,6 +169,7 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
               className="absolute inset-0 w-full h-full object-cover"
               draggable={false}
               referrerPolicy="no-referrer"
+              onError={() => setSpotImg(null)}
             />
           )}
 
