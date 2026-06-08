@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 import type { OfferResult, ProviderResult, SearchContext } from '../lib/types';
+import MiniMap from './MiniMap';
+import WindBars from './WindBars';
 
 const TYPE_LABELS: Record<string, string> = {
   camp: 'Camp', safari: 'Safari', cruise: 'Cruise', tour: 'Tour',
@@ -53,6 +55,7 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
   const offerFetched = useRef(false);
   const startX = useRef<number | null>(null);
   const startY = useRef<number | null>(null);
+  const dragging = useRef(false);
 
   // Fetch specific offer when this card becomes the top card
   useEffect(() => {
@@ -134,22 +137,36 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
     if (!isTop || flying) return;
     startX.current = e.clientX;
     startY.current = e.clientY;
+    dragging.current = false;
     setAnimating(false);
-    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+    // Capture is deferred to the first clearly-horizontal move, so a vertical
+    // gesture on the hero stays a native scroll of the card instead of a swipe.
   }
 
   function handlePointerMove(e: React.PointerEvent) {
     if (startX.current === null || flying) return;
     const dx = e.clientX - startX.current;
-    const dy = Math.abs(e.clientY - (startY.current ?? e.clientY));
-    if (dy > Math.abs(dx) + 10) return; // vertical scroll wins
+    const dy = e.clientY - (startY.current ?? e.clientY);
+    if (!dragging.current) {
+      // Undecided: only claim the gesture once it's clearly horizontal;
+      // otherwise let it scroll the card body.
+      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 8) {
+        dragging.current = true;
+        try { (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId); } catch {}
+      } else {
+        return;
+      }
+    }
     setX(dx);
   }
 
   function handlePointerUp() {
     if (startX.current === null || flying) return;
+    const wasDragging = dragging.current;
     startX.current = null;
     startY.current = null;
+    dragging.current = false;
+    if (!wasDragging) return; // it was a scroll, not a swipe
     if (Math.abs(x) >= SWIPE_THRESHOLD) {
       flyAway(x > 0 ? 'right' : 'left');
     } else {
@@ -164,12 +181,6 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
 
   const displayName = provider.name
     ?? (() => { try { return new URL(provider.website_url!).hostname.replace(/^www\./, ''); } catch { return '—'; } })();
-
-  const whatsappHref = provider.whatsapp
-    ? (provider.whatsapp.startsWith('http') ? provider.whatsapp : `https://wa.me/${provider.whatsapp.replace(/\D/g, '')}`)
-    : null;
-
-  const contactUrl = provider.contact_form_url ?? (provider.contact_email ? `mailto:${provider.contact_email}` : null);
 
   // Location chips: drop the trailing ", <country>" when it matches the card's
   // overall country (only keep it when the spot is in a different country),
@@ -204,10 +215,18 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
     >
       <div className="bg-white rounded-3xl shadow-2xl overflow-hidden mx-auto flex flex-col h-full w-full" style={{ maxWidth: 420 }}>
 
+        {/* ── Scrollable region: the hero image scrolls together with the body,
+             so the usable scroll area isn't squeezed into the space below a
+             fixed image. Only the swipe buttons stay pinned below. ── */}
+        <div
+          className="flex-1 min-h-0 overflow-y-auto overscroll-contain"
+          style={{ touchAction: 'pan-y' }}
+        >
+
         {/* ── Hero photo (drag surface + slider) ── */}
         <div
-          className="relative shrink-0 h-48 sm:h-60"
-          style={{ touchAction: 'none' }}
+          className="relative h-48 sm:h-60"
+          style={{ touchAction: 'pan-y' }}
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
           onPointerUp={handlePointerUp}
@@ -277,8 +296,8 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
             NOPE
           </div>
 
-          {/* Name + primary location over photo */}
-          <div className="absolute inset-x-0 bottom-0 px-4 pb-3">
+          {/* Name + primary location over photo (pr leaves room for the trip chip) */}
+          <div className="absolute inset-x-0 bottom-0 pl-4 pr-28 pb-3">
             <h3 className="font-bold text-white text-xl leading-tight drop-shadow">{displayName}</h3>
             {provider.primary_country && (
               <p className="text-sm text-white/80 mt-0.5 drop-shadow">
@@ -286,15 +305,21 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
               </p>
             )}
           </div>
+
+          {/* Trip type(s) — pinned to the bottom-right of the photo */}
+          {provider.trip_types.length > 0 && (
+            <div className="absolute bottom-3 right-3 flex flex-wrap gap-1 justify-end max-w-[45%]">
+              {provider.trip_types.map(t => (
+                <span key={t} className="text-xs bg-white/90 text-sky-700 rounded-full px-2.5 py-0.5 font-semibold backdrop-blur-sm shadow">
+                  {TYPE_LABELS[t] ?? t}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
-        {/* ── Body (scrolls so the card fits any screen) ── */}
-        {/* min-h-0 is essential: lets this flex child shrink so overflow-y-auto
-            actually scrolls instead of expanding and pushing the buttons off-screen. */}
-        <div
-          className="px-4 pt-3 pb-2 space-y-3 flex-1 min-h-0 overflow-y-auto overscroll-contain"
-          style={{ touchAction: 'pan-y' }}
-        >
+        {/* ── Body ── */}
+        <div className="px-4 pt-3 pb-2 space-y-3">
 
           {/* Operating spots — up to 3, then an ellipsis */}
           {shownSpots.length > 0 && (
@@ -307,17 +332,6 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
               {moreSpots && (
                 <span className="text-xs text-slate-400 px-1 py-0.5">…</span>
               )}
-            </div>
-          )}
-
-          {/* Trip types */}
-          {provider.trip_types.length > 0 && (
-            <div className="flex flex-wrap gap-1.5">
-              {provider.trip_types.map(t => (
-                <span key={t} className="text-xs bg-sky-50 text-sky-700 border border-sky-200 rounded-full px-2.5 py-0.5 font-medium">
-                  {TYPE_LABELS[t] ?? t}
-                </span>
-              ))}
             </div>
           )}
 
@@ -388,39 +402,14 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
             <p className="text-sm text-slate-600 leading-relaxed line-clamp-3">{provider.description}</p>
           )}
 
-          {/* Mini map — pointer-events:none so drag still works on the card */}
-          {coords && (
-            <div className="rounded-xl overflow-hidden border border-slate-200" style={{ height: 130 }}>
-              <iframe
-                src={`https://www.openstreetmap.org/export/embed.html?bbox=${coords.lon - 0.4},${coords.lat - 0.4},${coords.lon + 0.4},${coords.lat + 0.4}&layer=mapnik&marker=${coords.lat},${coords.lon}`}
-                style={{ width: '100%', height: '100%', border: 'none', pointerEvents: 'none' }}
-                title="Location map"
-                scrolling="no"
-              />
-            </div>
-          )}
+          {/* Wind probability across the year (estimated for now) */}
+          <WindBars seed={String(provider.id)} />
 
-          {/* Contact CTAs */}
-          <div className="flex gap-2 flex-wrap pt-1" onClick={e => e.stopPropagation()}>
-            {provider.website_url && (
-              <a href={provider.website_url} target="_blank" rel="noopener noreferrer"
-                className="flex-1 min-w-[100px] text-center text-sm bg-sky-600 text-white rounded-xl px-3 py-2 font-medium hover:bg-sky-700 transition-colors">
-                Visit website
-              </a>
-            )}
-            {contactUrl && (
-              <a href={contactUrl} target="_blank" rel="noopener noreferrer"
-                className="flex-1 min-w-[80px] text-center text-sm bg-slate-100 text-slate-700 rounded-xl px-3 py-2 font-medium hover:bg-slate-200 transition-colors">
-                {provider.contact_email ? 'Email' : 'Enquire'}
-              </a>
-            )}
-            {whatsappHref && (
-              <a href={whatsappHref} target="_blank" rel="noopener noreferrer"
-                className="flex-1 min-w-[80px] text-center text-sm bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-xl px-3 py-2 font-medium hover:bg-emerald-100 transition-colors">
-                WhatsApp
-              </a>
-            )}
-          </div>
+          {/* Simple, non-interactive location map */}
+          {coords && <MiniMap lat={coords.lat} lon={coords.lon} />}
+
+        </div>
+        {/* end scrollable region (hero + body) */}
         </div>
 
         {/* ── Swipe buttons (pinned, always visible) ── */}
