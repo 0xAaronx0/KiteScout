@@ -239,6 +239,14 @@ export default function CruiseFinder() {
           </div>
         )}
 
+        {/* Link to the standalone Cruise World Map */}
+        <a
+          href="https://map.kitescout.tech"
+          className="mt-8 inline-flex items-center gap-2 text-sm text-white/80 hover:text-white border border-white/25 hover:border-white/50 rounded-full px-5 py-2.5 transition-colors backdrop-blur-sm"
+        >
+          🗺️ Explore the Cruise World Map →
+        </a>
+
         {error && (
           <p className="mt-5 text-red-300 text-sm bg-red-900/40 rounded-xl px-4 py-2">{error}</p>
         )}
