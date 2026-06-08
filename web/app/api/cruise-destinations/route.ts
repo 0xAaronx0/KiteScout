@@ -5,7 +5,7 @@ import { topCruiseDestinations } from '../../../lib/cruise-destinations';
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
-  const destinations = await topCruiseDestinations(8);
+  const destinations = await topCruiseDestinations(10);
   return Response.json(destinations, {
     headers: { 'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400' },
   });
