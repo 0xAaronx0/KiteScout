@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import SwipeCard from './SwipeCard';
 import type { ProviderResult, SearchContext } from '../lib/types';
+import { prefetchAvailability } from '../lib/availability';
 
 interface Props {
   providers: ProviderResult[];
@@ -21,6 +22,12 @@ export default function SwipeDeck({ providers, searchContext, onShortlist, onPro
   useEffect(() => {
     onProgress?.(done ? providers.length : index, providers.length);
   }, [index, done, providers.length]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Prefetch live availability for the current card + the next 5 so they're warm
+  // (no skeleton) by the time the user swipes to them.
+  useEffect(() => {
+    prefetchAvailability(providers.slice(index, index + 6));
+  }, [index, providers]);
 
   function handleSwipe(provider: ProviderResult, dir: 'left' | 'right') {
     const newLiked = dir === 'right' ? [...liked, provider] : liked;

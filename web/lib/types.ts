@@ -13,6 +13,26 @@ export interface OfferResult {
   directUrl?: string | null;
 }
 
+// A single bookable departure window found on a provider's site.
+export interface AvailabilityDeparture {
+  dates: string;                 // e.g. "12 – 19 Jul 2026" or "April – October"
+  price?: string | null;         // price for this departure if listed
+  spotsLeft?: number | null;     // remaining places if listed
+}
+
+// Live availability extracted from the provider's own website via web search.
+export interface AvailabilityResult {
+  found: boolean;
+  places?: number | null;        // total berths/places on the boat
+  cabins?: number | null;        // number of cabins
+  departures?: AvailabilityDeparture[];  // open/available dates
+  pricePerPerson?: string | null;
+  pricePerCabin?: string | null;
+  priceWholeBoat?: string | null;
+  bookingOptions?: string[];     // which units are bookable: e.g. ["per person","cabin","whole boat"]
+  sourceUrl?: string | null;     // page the data came from
+}
+
 export interface ProviderResult {
   id: string;
   name: string | null;

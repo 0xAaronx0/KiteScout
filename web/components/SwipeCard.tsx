@@ -1,9 +1,11 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import type { OfferResult, ProviderResult, SearchContext } from '../lib/types';
+import type { ProviderResult, SearchContext } from '../lib/types';
 import MiniMap from './MiniMap';
 import WindBars from './WindBars';
+import Reviews from './Reviews';
+import Availability from './Availability';
 import { windMonthsForCountry } from '../lib/wind-stats';
 
 const TYPE_LABELS: Record<string, string> = {
@@ -44,36 +46,16 @@ interface Props {
   searchContext?: SearchContext;
 }
 
-export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, searchContext }: Props) {
+export default function SwipeCard({ provider, onSwipe, isTop, stackIndex }: Props) {
   const [x, setX] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [flying, setFlying] = useState<'left' | 'right' | null>(null);
   const [images, setImages] = useState<string[]>([]);
   const [imgIdx, setImgIdx] = useState(0);
   const [coords, setCoords] = useState<{ lat: number; lon: number } | null>(null);
-  const [offer, setOffer] = useState<OfferResult | null>(null);
-  const [offerLoading, setOfferLoading] = useState(false);
-  const offerFetched = useRef(false);
   const startX = useRef<number | null>(null);
   const startY = useRef<number | null>(null);
   const dragging = useRef(false);
-
-  // Fetch specific offer when this card becomes the top card
-  useEffect(() => {
-    if (!isTop || offerFetched.current || !searchContext) return;
-    const location = searchContext.regions?.[0] ?? searchContext.countries?.[0];
-    if (!location) return;
-    let domain: string;
-    try { domain = new URL(provider.website_url!).hostname.replace(/^www\./, ''); } catch { return; }
-    offerFetched.current = true;
-    setOfferLoading(true);
-    const tripType = searchContext.tripTypes?.[0] ?? '';
-    fetch(`/api/offer?domain=${encodeURIComponent(domain)}&location=${encodeURIComponent(location)}&tripType=${encodeURIComponent(tripType)}`)
-      .then(r => r.json())
-      .then(d => setOffer(d as OfferResult))
-      .catch(() => {})
-      .finally(() => setOfferLoading(false));
-  }, [isTop]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Map pin: prefer the real coords from cruise_locations; otherwise geocode the spot.
   useEffect(() => {
@@ -337,8 +319,8 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
             </div>
           )}
 
-          {/* Cruise enrichment — only renders once data is filled in */}
-          {(provider.vesselName || provider.vesselType || provider.durationDays || provider.pricePerPersonEur) && (
+          {/* Cruise enrichment — vessel & trip length (price now lives in Availability) */}
+          {(provider.vesselName || provider.vesselType || provider.durationDays) && (
             <div className="flex flex-wrap gap-1.5">
               {(provider.vesselName || provider.vesselType) && (
                 <span className="text-xs bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full px-2.5 py-0.5 font-medium">
@@ -350,59 +332,20 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
                   📅 {provider.durationDays} days
                 </span>
               )}
-              {provider.pricePerPersonEur && (
-                <span className="text-xs bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full px-2.5 py-0.5 font-medium">
-                  from €{provider.pricePerPersonEur}/pp
-                </span>
-              )}
             </div>
           )}
 
-          {/* Offer spotlight — shown when a specific match is found */}
-          {offerLoading && (
-            <div className="rounded-xl bg-amber-50 border border-amber-200 px-3 py-2.5 animate-pulse">
-              <div className="h-3 bg-amber-200 rounded w-2/3 mb-2" />
-              <div className="h-3 bg-amber-100 rounded w-1/3" />
-            </div>
-          )}
-          {!offerLoading && offer?.found && (
-            <div className="rounded-xl bg-amber-50 border border-amber-200 px-3 py-2.5 space-y-1.5">
-              <div className="flex flex-wrap items-start justify-between gap-x-2 gap-y-1">
-                <p className="font-semibold text-amber-900 text-sm leading-snug min-w-0">
-                  {offer.offerName ?? 'Matching offer found'}
-                </p>
-                {offer.price && (
-                  <span className="text-xs font-bold bg-amber-400 text-amber-900 rounded-lg px-2.5 py-0.5 max-w-full break-words">
-                    {offer.price}
-                  </span>
-                )}
-              </div>
-              {offer.dates && (
-                <p className="text-xs text-amber-700">📅 {offer.dates}</p>
-              )}
-              {offer.highlights && offer.highlights.length > 0 && (
-                <ul className="space-y-0.5">
-                  {offer.highlights.map((h, i) => (
-                    <li key={i} className="text-xs text-amber-800 flex gap-1.5">
-                      <span className="shrink-0">·</span>{h}
-                    </li>
-                  ))}
-                </ul>
-              )}
-              {offer.directUrl && (
-                <a href={offer.directUrl} target="_blank" rel="noopener noreferrer"
-                  className="inline-block text-xs text-amber-700 font-medium hover:underline"
-                  onClick={e => e.stopPropagation()}>
-                  View this offer →
-                </a>
-              )}
-            </div>
-          )}
+          {/* Availability — live dates, pricing tiers & boat capacity scraped
+              from the provider's own site via web search (top card only) */}
+          <Availability provider={provider} isTop={isTop} />
 
           {/* Description */}
           {provider.description && (
             <p className="text-sm text-slate-600 leading-relaxed line-clamp-3">{provider.description}</p>
           )}
+
+          {/* Reviews preview — bstoked + Tripadvisor (mock for now) */}
+          <Reviews seed={String(provider.id)} />
 
           {/* Wind probability across the year — real per-country data from
               bstoked.net where covered, otherwise an estimated seasonal curve */}
