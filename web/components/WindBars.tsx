@@ -37,7 +37,8 @@ function mockMonths(seed: string): number[] {
 // A small 12-month wind-probability strip (Jan–Dec) with the current month
 // highlighted. Data is estimated for now — wire `months` to real data later.
 export default function WindBars({ seed, months }: Props) {
-  const data = months && months.length === 12 ? months : mockMonths(seed);
+  const isReal = !!(months && months.length === 12);
+  const data = isReal ? months! : mockMonths(seed);
   const current = new Date().getMonth();
 
   return (
@@ -46,7 +47,11 @@ export default function WindBars({ seed, months }: Props) {
         <span className="text-[11px] font-medium uppercase tracking-wide text-slate-500">
           Wind by month
         </span>
-        <span className="text-[10px] text-slate-400">est.</span>
+        <span className="text-[10px] text-slate-400" title={isReal
+          ? 'Windy-day probability from bstoked.net'
+          : 'Estimated — no per-country data yet'}>
+          {isReal ? 'bstoked.net' : 'est.'}
+        </span>
       </div>
       <div className="flex items-end gap-[3px] h-9">
         {data.map((v, m) => (

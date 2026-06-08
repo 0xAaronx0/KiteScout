@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { OfferResult, ProviderResult, SearchContext } from '../lib/types';
 import MiniMap from './MiniMap';
 import WindBars from './WindBars';
+import { windMonthsForCountry } from '../lib/wind-stats';
 
 const TYPE_LABELS: Record<string, string> = {
   camp: 'Camp', safari: 'Safari', cruise: 'Cruise', tour: 'Tour',
@@ -218,20 +219,20 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
         {/* ── Scrollable region: the hero image scrolls together with the body,
              so the usable scroll area isn't squeezed into the space below a
              fixed image. Only the swipe buttons stay pinned below. ── */}
+        {/* Drag-to-swipe lives on this wrapper so a horizontal drag ANYWHERE on
+            the card selects/dismisses; vertical stays a native scroll.
+            overflow-x-hidden makes sure nothing can ever scroll sideways. */}
         <div
-          className="flex-1 min-h-0 overflow-y-auto overscroll-contain"
-          style={{ touchAction: 'pan-y' }}
-        >
-
-        {/* ── Hero photo (drag surface + slider) ── */}
-        <div
-          className="relative h-48 sm:h-60"
+          className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden overscroll-contain"
           style={{ touchAction: 'pan-y' }}
           onPointerDown={handlePointerDown}
           onPointerMove={handlePointerMove}
           onPointerUp={handlePointerUp}
           onPointerCancel={handlePointerUp}
         >
+
+        {/* ── Hero photo (slider) ── */}
+        <div className="relative h-48 sm:h-60">
           {/* Gradient fallback always present */}
           <div className="absolute inset-0 bg-gradient-to-br from-sky-400 via-blue-500 to-cyan-400" />
 
@@ -272,8 +273,9 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
             </>
           )}
 
-          {/* Bottom gradient so name text is readable */}
-          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/70 to-transparent" />
+          {/* Bottom gradient so name text is readable — pointer-events-none so it
+              doesn't sit on top of the slider arrows and swallow their taps. */}
+          <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
 
           {/* Highlight badge */}
           {provider.isHighlight && (
@@ -365,12 +367,12 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
           )}
           {!offerLoading && offer?.found && (
             <div className="rounded-xl bg-amber-50 border border-amber-200 px-3 py-2.5 space-y-1.5">
-              <div className="flex items-start justify-between gap-2">
-                <p className="font-semibold text-amber-900 text-sm leading-snug">
+              <div className="flex flex-wrap items-start justify-between gap-x-2 gap-y-1">
+                <p className="font-semibold text-amber-900 text-sm leading-snug min-w-0">
                   {offer.offerName ?? 'Matching offer found'}
                 </p>
                 {offer.price && (
-                  <span className="shrink-0 text-xs font-bold bg-amber-400 text-amber-900 rounded-full px-2.5 py-0.5 whitespace-nowrap">
+                  <span className="text-xs font-bold bg-amber-400 text-amber-900 rounded-lg px-2.5 py-0.5 max-w-full break-words">
                     {offer.price}
                   </span>
                 )}
@@ -402,8 +404,12 @@ export default function SwipeCard({ provider, onSwipe, isTop, stackIndex, search
             <p className="text-sm text-slate-600 leading-relaxed line-clamp-3">{provider.description}</p>
           )}
 
-          {/* Wind probability across the year (estimated for now) */}
-          <WindBars seed={String(provider.id)} />
+          {/* Wind probability across the year — real per-country data from
+              bstoked.net where covered, otherwise an estimated seasonal curve */}
+          <WindBars
+            seed={String(provider.id)}
+            months={windMonthsForCountry(provider.primary_country)}
+          />
 
           {/* Simple, non-interactive location map */}
           {coords && <MiniMap lat={coords.lat} lon={coords.lon} />}
