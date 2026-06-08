@@ -4,7 +4,14 @@ import { z } from 'zod';
 import { matchCruiseLocations } from '../../../lib/match-cruise';
 
 export async function POST(req: Request) {
-  const { destination } = await req.json() as { destination: string };
+  const { destination, country } = await req.json() as { destination?: string; country?: string };
+
+  // Country chip: deterministic exact-country match, no AI expansion and no cap,
+  // so the number of cards equals the count shown on the start page.
+  if (country?.trim()) {
+    const providers = await matchCruiseLocations({ countries: [country.trim()] });
+    return Response.json(providers);
+  }
 
   if (!destination?.trim()) {
     return Response.json({ error: 'destination is required' }, { status: 400 });
@@ -22,10 +29,10 @@ If the query is an ocean/sea (e.g. "Red Sea", "Caribbean") put it in regions, no
 Return empty arrays if nothing specific is found.`,
   });
 
+  // Free-text search: AI-parsed countries + regions, also uncapped.
   const providers = await matchCruiseLocations({
     countries: object.countries,
     regions: object.regions,
-    limit: 15,
   });
 
   return Response.json(providers);

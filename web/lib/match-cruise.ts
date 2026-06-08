@@ -74,13 +74,15 @@ function clean(term: string): string {
  * (so "Grenadines" matches "Saint Vincent and the Grenadines", etc.).
  */
 export async function matchCruiseLocations(
-  { countries, regions, limit = 15, providerId }: MatchParams,
+  { countries, regions, limit, providerId }: MatchParams,
 ): Promise<ProviderResult[]> {
   const supabase = getSupabase();
-  const terms = [...(countries ?? []), ...(regions ?? [])]
-    .map(clean)
-    .filter(t => t.length >= 2);
-  const hasFilter = terms.length > 0;
+  // Countries match their cruise_locations.country EXACTLY (case-insensitive),
+  // so a country chip returns exactly the providers counted on the start page.
+  // Regions/seas/spots are matched as substrings across all location fields.
+  const countryTerms = (countries ?? []).map(clean).filter(t => t.length >= 2);
+  const regionTerms = (regions ?? []).map(clean).filter(t => t.length >= 2);
+  const hasFilter = countryTerms.length + regionTerms.length > 0;
 
   // ---- 1. Find matching cruise_locations (which providers + which spots matched) ----
   let locQuery = supabase
@@ -91,11 +93,16 @@ export async function matchCruiseLocations(
     // Deep-link mode: every cruise spot for this one provider.
     locQuery = locQuery.eq('cruise_provider_id', providerId);
   } else if (hasFilter) {
-    const ors = terms.flatMap(t => [
-      `country.ilike.%${t}%`,
-      `region.ilike.%${t}%`,
-      `spot_name.ilike.%${t}%`,
-    ]);
+    const ors = [
+      // Country term → exact (case-insensitive) match on country (no wildcards).
+      ...countryTerms.map(c => `country.ilike.${c}`),
+      // Region/sea/spot term → substring across all location fields.
+      ...regionTerms.flatMap(t => [
+        `country.ilike.%${t}%`,
+        `region.ilike.%${t}%`,
+        `spot_name.ilike.%${t}%`,
+      ]),
+    ];
     locQuery = locQuery.or(ors.join(','));
   }
 
@@ -145,7 +152,7 @@ export async function matchCruiseLocations(
       'contact_email, contact_form_url, whatsapp, phone, vessel_name, vessel_type, ' +
       'typical_duration_days, price_per_person_eur',
     )
-    .in('id', providerIds.slice(0, 200))
+    .in('id', providerIds.slice(0, 1000))
     .not('status', 'in', '("dead","duplicate")')
     .returns<CruiseProviderRow[]>();
 
@@ -160,13 +167,16 @@ export async function matchCruiseLocations(
     const mb = matchedLabels.get(b.id)?.length ?? 0;
     if (mb !== ma) return mb - ma;
     return completenessScore(b) - completenessScore(a);
-  }).slice(0, limit);
+  });
+  // No hard cap any more — show every matching cruise provider. `limit` is only
+  // applied when a caller explicitly passes one.
+  const ranked = typeof limit === 'number' ? sorted.slice(0, limit) : sorted;
 
   // ---- 4. Shape into ProviderResult — CRUISE ONLY ----
   // Cards must show only the kite-cruise offer: the matched cruise spot(s) and
   // the 'cruise' service — never the provider's other services or other
   // (non-matching) locations.
-  return sorted.map((p, i) => {
+  return ranked.map((p, i) => {
     const coords = bestCoords.get(p.id);
     const matched = matchedLabels.get(p.id) ?? [];
     const spot = bestSpot.get(p.id);

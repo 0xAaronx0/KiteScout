@@ -68,7 +68,9 @@ export default function CruiseFinder() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  async function runSearch(query: string) {
+  // `asCountry` runs a deterministic exact-country search (used by the start-page
+  // chips) so the result count matches the number shown on the chip.
+  async function runSearch(query: string, asCountry = false) {
     const q = query.trim();
     if (!q) return;
     setPhase('loading');
@@ -79,7 +81,7 @@ export default function CruiseFinder() {
       const res = await fetch('/api/cruise-search', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ destination: q }),
+        body: JSON.stringify(asCountry ? { country: q } : { destination: q }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error((data as { error?: string }).error ?? 'Search failed');
@@ -98,7 +100,7 @@ export default function CruiseFinder() {
 
   function handleSuggestion(dest: string) {
     setDestination(dest);
-    runSearch(dest);
+    runSearch(dest, true); // chips are exact countries
   }
 
   function reset() {
@@ -198,11 +200,12 @@ export default function CruiseFinder() {
         {/* Search form */}
         <form onSubmit={handleSubmit} className="w-full max-w-md">
           <div className="flex rounded-2xl overflow-hidden shadow-2xl bg-white">
+            {/* text-base (16px) keeps iOS Safari from auto-zooming on focus */}
             <input
               value={destination}
               onChange={e => setDestination(e.target.value)}
               placeholder="Where do you want to kite? e.g. Grenadines"
-              className="flex-1 px-5 py-4 text-slate-900 text-sm focus:outline-none placeholder:text-slate-400"
+              className="flex-1 px-5 py-4 text-slate-900 text-base focus:outline-none placeholder:text-slate-400"
               autoFocus
             />
             <button

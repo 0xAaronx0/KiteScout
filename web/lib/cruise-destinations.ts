@@ -26,18 +26,21 @@ export async function topCruiseDestinations(limit = 8): Promise<CruiseDestinatio
     .select('cruise_provider_id, country')
     .returns<{ cruise_provider_id: string; country: string }[]>();
 
-  // Count distinct providers per country.
-  const byCountry = new Map<string, Set<string>>();
+  // Count distinct providers per country, case-insensitively so casing variants
+  // ("Egypt"/"egypt") merge — exactly how a country search matches them, which
+  // keeps this number equal to the number of cards the chip then shows.
+  const byCountry = new Map<string, { display: string; providers: Set<string> }>();
   for (const loc of locs ?? []) {
     if (!valid.has(loc.cruise_provider_id)) continue;
-    const c = loc.country?.trim();
-    if (!c) continue;
-    if (!byCountry.has(c)) byCountry.set(c, new Set());
-    byCountry.get(c)!.add(loc.cruise_provider_id);
+    const display = loc.country?.trim();
+    if (!display) continue;
+    const key = display.toLowerCase();
+    if (!byCountry.has(key)) byCountry.set(key, { display, providers: new Set() });
+    byCountry.get(key)!.providers.add(loc.cruise_provider_id);
   }
 
-  return [...byCountry.entries()]
-    .map(([destination, set]) => ({ destination, count: set.size }))
+  return [...byCountry.values()]
+    .map(({ display, providers }) => ({ destination: display, count: providers.size }))
     .sort((a, b) => b.count - a.count || a.destination.localeCompare(b.destination))
     .slice(0, limit);
 }
