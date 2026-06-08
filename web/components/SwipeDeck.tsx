@@ -1,9 +1,21 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import SwipeCard from './SwipeCard';
 import type { ProviderResult, SearchContext } from '../lib/types';
-import { prefetchAvailability } from '../lib/availability';
+import { loadAvailability, peekAvailability } from '../lib/availability';
+import { providerScore } from '../lib/richness';
+
+// Order providers most-data-first. Stable: equal scores keep their input order.
+function rankByRichness(list: ProviderResult[]): ProviderResult[] {
+  return list
+    .map((p, i) => ({ p, i }))
+    .sort((a, b) => {
+      const d = providerScore(b.p, peekAvailability(b.p)) - providerScore(a.p, peekAvailability(a.p));
+      return d !== 0 ? d : a.i - b.i;
+    })
+    .map(x => x.p);
+}
 
 interface Props {
   providers: ProviderResult[];
@@ -17,22 +29,55 @@ export default function SwipeDeck({ providers, searchContext, onShortlist, onPro
   const [index, setIndex] = useState(0);
   const [liked, setLiked] = useState<ProviderResult[]>([]);
   const [done, setDone] = useState(false);
+  // Display order: starts as an instant static-richness sort, then gets refined
+  // as live availability streams in. Cards up to & including the current one are
+  // locked so the card being viewed never reshuffles under the user.
+  const [order, setOrder] = useState<ProviderResult[]>(() => rankByRichness(providers));
+  const requested = useRef<Set<string>>(new Set());
+  const [availVersion, setAvailVersion] = useState(0);
+
+  // New search → reset the deck and re-rank from scratch.
+  useEffect(() => {
+    requested.current = new Set();
+    setOrder(rankByRichness(providers));
+    setIndex(0);
+    setLiked([]);
+    setDone(false);
+  }, [providers]);
 
   // Keep the parent's header counter/progress bar in sync with the deck.
   useEffect(() => {
-    onProgress?.(done ? providers.length : index, providers.length);
-  }, [index, done, providers.length]); // eslint-disable-line react-hooks/exhaustive-deps
+    onProgress?.(done ? order.length : index, order.length);
+  }, [index, done, order.length]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Prefetch live availability for the current card + the next 5 so they're warm
-  // (no skeleton) by the time the user swipes to them.
+  // Prefetch live availability for the current card + the next 5. Fire once per
+  // provider (guarded), and bump a version when each resolves so the queue
+  // re-ranks. As richer cards get pulled forward, they enter the window and load.
   useEffect(() => {
-    prefetchAvailability(providers.slice(index, index + 6));
-  }, [index, providers]);
+    for (const p of order.slice(index, index + 6)) {
+      if (requested.current.has(p.id)) continue;
+      requested.current.add(p.id);
+      loadAvailability(p).then(() => setAvailVersion(v => v + 1));
+    }
+  }, [index, order]);
+
+  // Re-rank the not-yet-seen queue when new availability arrives. Before the
+  // first swipe we let position 0 settle to the richest card too (cards show a
+  // loading skeleton then, so it's near-invisible); once the user starts
+  // swiping, the current card and history are locked so nothing reshuffles
+  // under them.
+  useEffect(() => {
+    if (availVersion === 0) return;
+    setOrder(prev => {
+      const lock = index === 0 ? 0 : index + 1;
+      return [...prev.slice(0, lock), ...rankByRichness(prev.slice(lock))];
+    });
+  }, [availVersion]); // eslint-disable-line react-hooks/exhaustive-deps
 
   function handleSwipe(provider: ProviderResult, dir: 'left' | 'right') {
     const newLiked = dir === 'right' ? [...liked, provider] : liked;
     const next = index + 1;
-    if (next >= providers.length) {
+    if (next >= order.length) {
       setLiked(newLiked);
       setDone(true);
       onShortlist?.(newLiked);
@@ -76,7 +121,7 @@ export default function SwipeDeck({ providers, searchContext, onShortlist, onPro
   }
 
   // Show top 3 cards; render in reverse so top card is painted last (highest z-index)
-  const visible = providers.slice(index, index + 3);
+  const visible = order.slice(index, index + 3);
 
   return (
     <div>
