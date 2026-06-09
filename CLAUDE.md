@@ -150,6 +150,6 @@ top-destinations start page, per-card offer / reviews / availability / wind stri
 **Not yet built:**
 - Admin UI for reviewing, enriching, and verifying provider records
 - Spot characteristics data (flat/wave, beginner/advanced, crowded/remote)
-- Booking request email flow (outbound inquiry + inbound reply relay)
+- Booking request email flow (outbound inquiry + inbound reply relay) — **spec drafted:** `docs/booking-email-flow.md` (full relay via Postmark; ready for a focused build session)
 - User auth and session storage
 - (A general chat interface exists but is retired — cruise is the current focus)
