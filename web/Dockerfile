@@ -7,8 +7,11 @@ FROM node:20-slim AS builder
 WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+# Cache-bust the build layer per commit so the gha cache can never serve a stale
+# `npm run build` (a 71s "build" once shipped an image with old source).
+ARG GIT_SHA=dev
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN npm run build
+RUN echo "building ${GIT_SHA}" && npm run build
 
 FROM node:20-slim AS runner
 WORKDIR /app
