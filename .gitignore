@@ -7,3 +7,14 @@ map.html
 web/.next/
 web/node_modules/
 web/.env.local
+web/next-env.d.ts
+web/*.tsbuildinfo
+
+# OS / editor junk
+.DS_Store
+**/.DS_Store
+
+# Local-only Claude Code config (keep launch.json shared, ignore personal/transient)
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+.claude/worktrees/

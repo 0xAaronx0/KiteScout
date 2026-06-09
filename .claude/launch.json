@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "kitescout-web",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "export ANTHROPIC_API_KEY=$(grep '^ANTHROPIC_API_KEY=' web/.env.local | cut -d= -f2-) && npm --prefix web run dev"],
+      "port": 3000
+    }
+  ]
+}
