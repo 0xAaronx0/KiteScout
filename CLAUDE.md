@@ -6,7 +6,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 An AI-powered kite travel assistant. End goal: a user describes a kite trip (destination, dates, skill level, budget) and the system searches a curated provider database, shortlists matching camps/tours/rentals, and handles the booking inquiry by emailing providers and relaying their reply.
 
-**Current phase:** Step 1 — building the provider database through automated web discovery.
+**Status (2026-06):**
+- **Provider database** — built via the automated discovery pipeline in `src/` (Tavily + Claude), including a cruise-specific layer (`cruise_providers` / `cruise_locations`).
+- **Kite Cruise Finder** — a Next.js 15 app in `web/`, **live at https://kitescout.tech** (the cruise finder is the main app at `/`, with `/cruise` kept as an alias). Searches the cruise tables; users swipe to shortlist. This is the current focus — see the project memory files for the standing scope directive (`scope-cruise-only`).
 
 ## Tech Stack
 
@@ -33,8 +35,44 @@ src/
     └── dedupe.ts         # Claude-assisted cross-domain duplicate detection
 supabase/
 └── migrations/
-    └── 20260430000000_initial_schema.sql
+    ├── 20260430000000_initial_schema.sql
+    ├── 20260504000000_create_cruise_providers.sql
+    └── 20260505000000_create_cruise_locations.sql
 ```
+
+## Cruise Finder Web App (`web/`)
+
+A Next.js 15 (App Router, ESM) app — **the live product at https://kitescout.tech**.
+
+```
+web/
+├── app/
+│   ├── page.tsx                  # renders <CruiseFinder/> at /  (also /cruise alias)
+│   ├── layout.tsx                # metadata + viewport (pinned to 1× to stop iOS zoom)
+│   └── api/
+│       ├── cruise-search/        # POST {country} → exact match; POST {destination} → AI parse
+│       ├── cruise-destinations/  # GET: top countries by cruise-provider count (start-page chips)
+│       ├── cruise-provider/      # GET: one provider by id (map deep-link)
+│       └── offer · og · map-pin · availability   # per-card enrichment
+├── components/
+│   ├── CruiseFinder.tsx          # start page + search flow + results header
+│   ├── SwipeDeck.tsx / SwipeCard.tsx   # Tinder-style swipe stack
+│   └── MiniMap · WindBars · Reviews · Availability
+└── lib/
+    ├── match-cruise.ts           # core matching against cruise_locations / cruise_providers
+    ├── cruise-destinations.ts    # start-page country counts (must equal what a chip returns)
+    └── supabase.ts (lazy getSupabase) · types.ts · wind-stats.ts · availability.ts
+```
+
+**Deploy (push-to-deploy):** push to `main` touching `web/**` → GitHub Actions builds & pushes
+`ghcr.io/0xaaronx0/kitescout:latest`, then calls the Hostinger API to recreate the container and
+health-checks the site (Hostinger VPS behind Traefik). Non-`web/**` changes do NOT deploy.
+**Full infra + the recurring build/deploy gotchas live in the project memory files**
+(`vps-deployment`, `deploy-gotchas`) — read them before any deploy work.
+
+**Local dev:** `npm --prefix web run dev`. The harness shell exports `ANTHROPIC_API_KEY=""`
+(empty) and Next won't override it, so inject the key when starting dev (see `deploy-gotchas`).
+CI-parity build before pushing: `cd web && mv .env.local .env.local.bak && npm run build; mv .env.local.bak .env.local`.
 
 ## Commands
 
@@ -46,6 +84,7 @@ pnpm cli search [n]       # run pending Tavily searches, batch size n (default 5
 pnpm cli extract [n]      # extract providers from unprocessed URLs, batch n (default 30); loops until done
 pnpm cli dedupe           # mark cross-domain duplicate providers
 pnpm cli status           # show counts: queries / URLs / providers
+pnpm cli cruise-locations # extract validated cruise-only spots → cruise_providers / cruise_locations
 ```
 
 ## Pipeline Architecture
@@ -75,6 +114,17 @@ Four tables:
 
 `providers.status` lifecycle: `new` → `verified` (manual) or `dead` or `duplicate`.
 
+**Cruise layer** (populated by `pnpm cli cruise-locations`; this is what the web app queries):
+
+| Table | Purpose |
+|---|---|
+| `cruise_providers` | One row per kite-cruise business; `status` excludes `dead`/`duplicate` |
+| `cruise_locations` | Cruise spots per provider — `country` / `region` / `spot_name` + `lat`/`lng` + `confidence` |
+
+Matching rule the web app relies on: a country chip = distinct valid providers with a
+`cruise_locations.country` equal to that country (case-insensitive). `match-cruise.ts` and
+`cruise-destinations.ts` must stay in sync so a chip's number equals the cards it shows.
+
 ## Environment Variables
 
 ```
@@ -92,11 +142,14 @@ SUPABASE_SERVICE_ROLE_KEY   # service role bypasses RLS — only used server-sid
 4. `pnpm install`
 5. `pnpm cli seed` then `pnpm cli search` then `pnpm cli extract`
 
-## Planned Next Steps (not yet built)
+## Planned Next Steps
 
-- Admin UI (Next.js) for reviewing, enriching, and verifying provider records
-- Wind probability context data per destination × month
+**Shipped:** provider DB + cruise tables; the live Cruise Finder web app (search, swipe, mini-map,
+top-destinations start page, per-card offer / reviews / availability / wind strip); push-to-deploy.
+
+**Not yet built:**
+- Admin UI for reviewing, enriching, and verifying provider records
 - Spot characteristics data (flat/wave, beginner/advanced, crowded/remote)
-- User-facing chat interface (trip preference extraction → provider matching)
 - Booking request email flow (outbound inquiry + inbound reply relay)
 - User auth and session storage
+- (A general chat interface exists but is retired — cruise is the current focus)
