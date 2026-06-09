@@ -12,14 +12,14 @@
     "pipeline:status": "tsx src/cli.ts status"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.39.0",
-    "@supabase/supabase-js": "^2.49.4",
-    "dotenv": "^16.4.7",
-    "p-limit": "^6.2.0"
+    "@anthropic-ai/sdk": "0.39.0",
+    "@supabase/supabase-js": "2.105.1",
+    "dotenv": "16.6.1",
+    "p-limit": "6.2.0"
   },
   "devDependencies": {
-    "@types/node": "^22.14.1",
-    "tsx": "^4.19.3",
-    "typescript": "^5.8.3"
+    "@types/node": "22.19.17",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3"
   }
 }

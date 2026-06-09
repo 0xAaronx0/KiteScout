@@ -6,6 +6,7 @@ import { runReextract } from './pipeline/reextract.js';
 import { runDedupe } from './pipeline/dedupe.js';
 import { generateMap } from './pipeline/map.js';
 import { runVerify } from './pipeline/verify.js';
+import { runExtractCruiseLocations } from './pipeline/extract-cruise-locations.js';
 import { supabase } from './lib/supabase.js';
 
 const [command, ...args] = process.argv.slice(2);
@@ -157,6 +158,12 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'cruise-locations': {
+      const { providers, locations } = await runExtractCruiseLocations();
+      console.log(`Done: ${locations} cruise locations extracted across ${providers} providers.`);
+      break;
+    }
+
     case 'restore': {
       const domains = args.filter(a => !a.startsWith('-'));
       if (domains.length === 0) {
@@ -196,7 +203,8 @@ async function main(): Promise<void> {
       console.log('  blocklist-candidates [n]  Show top n most-rejected domains (default 50)');
       console.log('  map [file]                Generate provider map HTML (default: map.html)');
       console.log('  verify [n]                Re-verify all providers + fill contact gaps (batch n, default 20)');
-      console.log('  restore <domain> [...]    Restore wrongly-rejected providers back to status=new');
+      console.log('  cruise-locations          Extract validated cruise-only locations for all cruise providers');
+  console.log('  restore <domain> [...]    Restore wrongly-rejected providers back to status=new');
   }
 }
 
