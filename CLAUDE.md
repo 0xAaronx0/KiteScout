@@ -85,6 +85,8 @@ pnpm cli extract [n]      # extract providers from unprocessed URLs, batch n (de
 pnpm cli dedupe           # mark cross-domain duplicate providers
 pnpm cli status           # show counts: queries / URLs / providers
 pnpm cli cruise-locations # extract validated cruise-only spots → cruise_providers / cruise_locations
+pnpm cli cruise-offers    # crawl each cruise provider → structured offers (+ curated images) → cruise_offers
+pnpm cli cruise-reviews   # match bstoked/TripAdvisor review links onto cruise_providers (--all re-checks)
 ```
 
 ## Pipeline Architecture
@@ -118,8 +120,9 @@ Four tables:
 
 | Table | Purpose |
 |---|---|
-| `cruise_providers` | One row per kite-cruise business; `status` excludes `dead`/`duplicate` |
+| `cruise_providers` | One row per kite-cruise business; `status` excludes `dead`/`duplicate`. Also holds bstoked/TripAdvisor review links (`bstoked_url`, `tripadvisor_url`, ratings, `review_match_notes`) from `cruise-reviews` |
 | `cruise_locations` | Cruise spots per provider — `country` / `region` / `spot_name` + `lat`/`lng` + `confidence` |
+| `cruise_offers` | One row per distinct cruise **product** (provider → many): location (+`continent`), vessel, `booking_modes`, suitability, season/dates, pricing, `itinerary_spots` (ordered named stops), AI `summary`, and `images` (curated WebP in the private `cruise-images` Supabase bucket; row stores storage paths). Populated by `cruise-offers`. Unique on `(cruise_provider_id, slug)` |
 
 Matching rule the web app relies on: a country chip = distinct valid providers with a
 `cruise_locations.country` equal to that country (case-insensitive). `match-cruise.ts` and

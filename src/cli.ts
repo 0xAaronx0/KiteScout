@@ -1,4 +1,5 @@
 import 'dotenv/config';
+import { appendFileSync } from 'node:fs';
 import { seedQueries } from './pipeline/seed-queries.js';
 import { runSearch } from './pipeline/search.js';
 import { runExtract } from './pipeline/extract.js';
@@ -7,6 +8,9 @@ import { runDedupe } from './pipeline/dedupe.js';
 import { generateMap } from './pipeline/map.js';
 import { runVerify } from './pipeline/verify.js';
 import { runExtractCruiseLocations } from './pipeline/extract-cruise-locations.js';
+import { runExtractCruiseOffers } from './pipeline/extract-cruise-offers.js';
+import { runExtractCruiseReviews } from './pipeline/extract-cruise-reviews.js';
+import { runMonitor, showChanges, type DetectedChange } from './pipeline/monitor.js';
 import { supabase } from './lib/supabase.js';
 
 const [command, ...args] = process.argv.slice(2);
@@ -100,6 +104,77 @@ async function blocklistCandidates(limit = 50): Promise<void> {
   }
 }
 
+function flagValue(name: string, fallback: number): number {
+  const idx = args.indexOf(name);
+  if (idx >= 0 && args[idx + 1]) {
+    const n = parseInt(args[idx + 1], 10);
+    if (!Number.isNaN(n)) return n;
+  }
+  return fallback;
+}
+
+// Append a GitHub Actions step summary when running inside CI.
+function writeStepSummary(changes: DetectedChange[], totals: { checked: number; significant: number }): void {
+  const file = process.env.GITHUB_STEP_SUMMARY;
+  if (!file) return;
+  const lines = [
+    '## KiteScout cruise provider monitor',
+    '',
+    `Checked **${totals.checked}** pages · **${totals.significant}** significant change(s).`,
+    '',
+  ];
+  if (changes.length > 0) {
+    lines.push('| Provider | Change | Details |', '| --- | --- | --- |');
+    for (const c of changes) {
+      const name = (c.name ?? c.url).replace(/\|/g, '\\|');
+      const summary = c.summary.replace(/\|/g, '\\|');
+      lines.push(`| ${name} | ${c.changeType} | ${summary} |`);
+    }
+  } else {
+    lines.push('_No significant changes this run._');
+  }
+  try { appendFileSync(file, lines.join('\n') + '\n'); } catch { /* best effort */ }
+}
+
+async function runMonitorLoop(
+  batchSize: number,
+  opts: { intervalDays: number; all: boolean; baselineOnly: boolean; loop: boolean },
+): Promise<void> {
+  const allChanges: DetectedChange[] = [];
+  let totalChecked = 0;
+  let totalSignificant = 0;
+  let lastRemaining = 0;
+
+  // For an --all sweep we pin a cutoff at the loop start so each iteration only
+  // picks up rows not yet checked this run (otherwise the loop never terminates).
+  const cutoffISO = opts.all && opts.loop ? new Date().toISOString() : undefined;
+
+  while (true) {
+    const r = await runMonitor(batchSize, {
+      intervalDays: opts.intervalDays,
+      all: opts.all,
+      baselineOnly: opts.baselineOnly,
+      cutoffISO,
+    });
+    totalChecked += r.checked;
+    totalSignificant += r.significant;
+    lastRemaining = r.remaining;
+    allChanges.push(...r.changes);
+
+    if (r.checked === 0) break;
+    if (!opts.loop) break;
+    if (r.remaining === 0) break;
+    console.log(`  ${r.remaining} page(s) still due…`);
+  }
+
+  console.log(`\nMonitoring complete. ${totalChecked} page(s) checked, ${totalSignificant} significant change(s) detected.`);
+  if (!opts.loop && lastRemaining > 0) {
+    console.log(`  ${lastRemaining} page(s) still due — run again, or pass --loop to drain them all.`);
+  }
+  if (totalSignificant > 0) console.log(`Run "pnpm cli changes" to review them.`);
+  writeStepSummary(allChanges, { checked: totalChecked, significant: totalSignificant });
+}
+
 async function main(): Promise<void> {
   const batchSize = parseInt(args[0] ?? '50', 10);
 
@@ -164,6 +239,35 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'cruise-offers': {
+      const { providers, offers } = await runExtractCruiseOffers();
+      console.log(`Done: ${offers} cruise offers extracted across ${providers} providers.`);
+      break;
+    }
+
+    case 'cruise-reviews': {
+      const { providers, matched } = await runExtractCruiseReviews({ all: args.includes('--all') });
+      console.log(`Done: ${matched} review links matched across ${providers} providers.`);
+      break;
+    }
+
+    case 'monitor': {
+      const monitorBatch = parseInt((args[0] && !args[0].startsWith('-') ? args[0] : '30'), 10);
+      await runMonitorLoop(monitorBatch, {
+        intervalDays: flagValue('--interval-days', 7),
+        all: args.includes('--all'),
+        baselineOnly: args.includes('--baseline-only'),
+        loop: args.includes('--loop'),
+      });
+      break;
+    }
+
+    case 'changes': {
+      const changesLimit = parseInt((args[0] && !args[0].startsWith('-') ? args[0] : '20'), 10);
+      await showChanges(changesLimit, args.includes('--unseen'));
+      break;
+    }
+
     case 'restore': {
       const domains = args.filter(a => !a.startsWith('-'));
       if (domains.length === 0) {
@@ -204,6 +308,10 @@ async function main(): Promise<void> {
       console.log('  map [file]                Generate provider map HTML (default: map.html)');
       console.log('  verify [n]                Re-verify all providers + fill contact gaps (batch n, default 20)');
       console.log('  cruise-locations          Extract validated cruise-only locations for all cruise providers');
+      console.log('  cruise-offers             Extract structured cruise offers (+ curated images) for all cruise providers');
+      console.log('  cruise-reviews            Match bstoked/TripAdvisor review links (domain-corroborated; --all to re-check)');
+      console.log('  monitor [n]               Detect changes on cruise provider sites (flags: --loop --all --baseline-only --interval-days <d>)');
+      console.log('  changes [n]               Show recent detected provider changes (default 20; --unseen for new only)');
   console.log('  restore <domain> [...]    Restore wrongly-rejected providers back to status=new');
   }
 }
