@@ -113,6 +113,21 @@ function flagValue(name: string, fallback: number): number {
   return fallback;
 }
 
+function flagStr(name: string): string | undefined {
+  const idx = args.indexOf(name);
+  if (idx >= 0 && args[idx + 1] && !args[idx + 1].startsWith('-')) return args[idx + 1];
+  return undefined;
+}
+
+// Optional leading positional batch size (ignored when it's a flag like --domain).
+function positionalLimit(): number | undefined {
+  if (args[0] && !args[0].startsWith('-')) {
+    const n = parseInt(args[0], 10);
+    if (!Number.isNaN(n)) return n;
+  }
+  return undefined;
+}
+
 // Append a GitHub Actions step summary when running inside CI.
 function writeStepSummary(changes: DetectedChange[], totals: { checked: number; significant: number }): void {
   const file = process.env.GITHUB_STEP_SUMMARY;
@@ -240,13 +255,20 @@ async function main(): Promise<void> {
     }
 
     case 'cruise-offers': {
-      const { providers, offers } = await runExtractCruiseOffers();
+      const { providers, offers } = await runExtractCruiseOffers({
+        domain: flagStr('--domain'),
+        limit: positionalLimit(),
+      });
       console.log(`Done: ${offers} cruise offers extracted across ${providers} providers.`);
       break;
     }
 
     case 'cruise-reviews': {
-      const { providers, matched } = await runExtractCruiseReviews({ all: args.includes('--all') });
+      const { providers, matched } = await runExtractCruiseReviews({
+        all: args.includes('--all'),
+        domain: flagStr('--domain'),
+        limit: positionalLimit(),
+      });
       console.log(`Done: ${matched} review links matched across ${providers} providers.`);
       break;
     }

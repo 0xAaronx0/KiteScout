@@ -62,3 +62,23 @@ export async function extract(urls: string | string[]): Promise<string | null> {
     return null;
   }
 }
+
+// Tavily renders the page, so this surfaces JS-loaded gallery images that a
+// static HTML fetch misses. Returns image URLs (possibly via CDN/optimizer
+// wrappers); the caller is responsible for filtering and dedup.
+export async function extractImages(urls: string | string[]): Promise<string[]> {
+  try {
+    const urlList = Array.isArray(urls) ? urls : [urls];
+    const data = (await post('/extract', { urls: urlList, include_images: true })) as {
+      results: Array<{ url: string; images?: string[]; failed?: boolean }>;
+    };
+    const imgs: string[] = [];
+    for (const r of data.results ?? []) {
+      if (r.failed || !Array.isArray(r.images)) continue;
+      for (const u of r.images) if (typeof u === 'string' && u) imgs.push(u);
+    }
+    return imgs;
+  } catch {
+    return [];
+  }
+}

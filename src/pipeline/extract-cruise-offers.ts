@@ -2,7 +2,7 @@ import pLimit from 'p-limit';
 import { parse } from 'node-html-parser';
 import { supabase } from '../lib/supabase.js';
 import { anthropic, ANALYSIS_MODEL } from '../lib/anthropic.js';
-import { extract as tavilyExtract } from '../lib/tavily.js';
+import { extract as tavilyExtract, extractImages as tavilyExtractImages } from '../lib/tavily.js';
 import { fetchPageConditional } from '../lib/fetchPage.js';
 import { htmlToText, collapse } from '../lib/content.js';
 import { withRetry } from '../lib/retry.js';
@@ -131,6 +131,17 @@ async function geocode(query: string): Promise<{ lat: number; lng: number } | nu
 // ---------------------------------------------------------------------------
 // Crawl: homepage + cruise-relevant internal pages
 // ---------------------------------------------------------------------------
+// Tavily image candidates per page (cached so offers sharing a source page
+// don't trigger duplicate Tavily calls within one provider run).
+const tavilyImageCache = new Map<string, string[]>();
+async function getTavilyImages(url: string): Promise<string[]> {
+  const cached = tavilyImageCache.get(url);
+  if (cached) return cached;
+  const imgs = await tavilyExtractImages(url);
+  tavilyImageCache.set(url, imgs);
+  return imgs;
+}
+
 function absolutize(src: string, baseUrl: string): string | null {
   try {
     const u = new URL(src.trim(), baseUrl);
@@ -350,22 +361,26 @@ async function processProvider(cp: {
       });
     }
 
-    // Images: reuse if already stored, else discover (context-scoped) + curate.
+    // Images: reuse if already stored, else discover (static HTML + Tavily) + curate.
     let images: StoredImage[] = existingImages.get(slug) ?? [];
     if (images.length === 0) {
       const srcUrl = (offer.source_page && pageByUrl.has(offer.source_page))
         ? offer.source_page
         : homeUrl;
       const srcPage = pageByUrl.get(srcUrl) ?? pages[0];
-      if (srcPage?.html) {
-        const candidates = discoverImageUrls(srcPage.html, srcPage.url, offer.page_anchor);
+      const staticCandidates = srcPage?.html
+        ? discoverImageUrls(srcPage.html, srcPage.url, offer.page_anchor)
+        : [];
+      const tavilyCandidates = await getTavilyImages(srcUrl);
+      const candidates = [...staticCandidates, ...tavilyCandidates];
+      if (candidates.length > 0) {
         const ctx = `${offer.title} — kite cruise${offer.country ? ' in ' + offer.country : ''}` +
           `${offer.region ? ', ' + offer.region : ''}${offer.vessel_type ? ', ' + offer.vessel_type : ''}`;
         images = await curateAndStoreImages({
           candidateUrls: candidates,
           providerId: cp.id,
           slug,
-          sourceUrl: srcPage.url,
+          sourceUrl: srcUrl,
           context: ctx,
         });
       }
@@ -417,11 +432,16 @@ async function processProvider(cp: {
 // ---------------------------------------------------------------------------
 // Main export
 // ---------------------------------------------------------------------------
-export async function runExtractCruiseOffers(): Promise<{ providers: number; offers: number }> {
-  const { data: cruiseProviders, error } = await supabase
+export async function runExtractCruiseOffers(
+  opts: { domain?: string; limit?: number } = {},
+): Promise<{ providers: number; offers: number }> {
+  let pq = supabase
     .from('cruise_providers')
     .select('id, name, root_domain, website_url')
     .in('status', ['new', 'verified']);
+  if (opts.domain) pq = pq.eq('root_domain', opts.domain);
+  if (opts.limit) pq = pq.limit(opts.limit);
+  const { data: cruiseProviders, error } = await pq;
 
   if (error) throw error;
   if (!cruiseProviders || cruiseProviders.length === 0) {

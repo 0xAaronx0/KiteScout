@@ -77,6 +77,25 @@ function absolutize(src: string, baseUrl: string): string | null {
   }
 }
 
+/**
+ * Canonical dedup key for an image URL. Collapses image-optimizer wrappers
+ * (Next.js `/_next/image?url=…`, and other CDNs that pass the real image in a
+ * `url` query param) to the underlying file, so the same photo served raw AND
+ * through an optimizer isn't stored twice.
+ */
+function canonicalKey(absUrl: string): string {
+  try {
+    const u = new URL(absUrl);
+    const inner = u.searchParams.get('url');
+    if (inner) {
+      try { return new URL(inner, u.origin).pathname; } catch { return inner; }
+    }
+    return u.pathname;
+  } catch {
+    return absUrl.split('?')[0];
+  }
+}
+
 /** Pick the largest URL from a srcset / data-srcset value. */
 function pickFromSrcset(srcset: string): string | null {
   const parts = srcset.split(',').map(s => s.trim()).filter(Boolean);
@@ -130,7 +149,7 @@ export function discoverImageUrls(
     if (!raw) return;
     const abs = absolutize(raw, baseUrl);
     if (!abs || JUNK_RE.test(abs)) return;
-    const key = abs.split('?')[0];
+    const key = canonicalKey(abs);
     if (seen.has(key)) return;
     seen.add(key);
     urls.push(abs);
@@ -300,9 +319,20 @@ export async function curateAndStoreImages(opts: {
   const { candidateUrls, providerId, slug, sourceUrl, context } = opts;
   if (candidateUrls.length === 0) return [];
 
+  // Merge-safe dedup + junk filter (Tavily-sourced URLs bypass discoverImageUrls).
+  const deduped: string[] = [];
+  const seenKeys = new Set<string>();
+  for (const u of candidateUrls) {
+    if (JUNK_RE.test(u)) continue;
+    const k = canonicalKey(u);
+    if (seenKeys.has(k)) continue;
+    seenKeys.add(k);
+    deduped.push(u);
+  }
+
   // 1. Download (bounded), measure, heuristic-filter logos/banners/tiny.
   const downloaded: DownloadedImage[] = [];
-  for (const url of candidateUrls.slice(0, MAX_DOWNLOADS)) {
+  for (const url of deduped.slice(0, MAX_DOWNLOADS)) {
     const buf = await downloadImage(url);
     if (!buf) continue;
     let width = 0;

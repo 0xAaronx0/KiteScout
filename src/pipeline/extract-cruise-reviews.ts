@@ -246,7 +246,9 @@ async function processProvider(cp: {
 // ---------------------------------------------------------------------------
 // Main export
 // ---------------------------------------------------------------------------
-export async function runExtractCruiseReviews(opts: { all?: boolean } = {}): Promise<{
+export async function runExtractCruiseReviews(
+  opts: { all?: boolean; domain?: string; limit?: number } = {},
+): Promise<{
   providers: number;
   matched: number;
 }> {
@@ -254,7 +256,9 @@ export async function runExtractCruiseReviews(opts: { all?: boolean } = {}): Pro
     .from('cruise_providers')
     .select('id, name, root_domain, website_url, primary_country')
     .in('status', ['new', 'verified']);
-  if (!opts.all) query = query.is('reviews_checked_at', null);
+  if (opts.domain) query = query.eq('root_domain', opts.domain);
+  else if (!opts.all) query = query.is('reviews_checked_at', null);
+  if (opts.limit) query = query.limit(opts.limit);
 
   const { data: providers, error } = await query;
   if (error) throw error;
