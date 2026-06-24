@@ -258,6 +258,7 @@ async function main(): Promise<void> {
       const { providers, offers } = await runExtractCruiseOffers({
         domain: flagStr('--domain'),
         limit: positionalLimit(),
+        dryRun: args.includes('--dry-run'),
       });
       console.log(`Done: ${offers} cruise offers extracted across ${providers} providers.`);
       break;

@@ -9,11 +9,12 @@ This is the data the new cruise UI should consume. Backend only — no frontend 
 
 ## 1. Prerequisites / current state
 
-- The two migrations must be applied in Supabase, and the pipeline must be run to populate data:
+- All three migrations are **already applied** in Supabase (cruise_offers, provider review links, and the `source_text` column):
   - `supabase/migrations/20260623000000_create_cruise_offers.sql`
   - `supabase/migrations/20260623000100_add_provider_review_links.sql`
-  - `pnpm cli cruise-offers` (populates offers + uploads images), `pnpm cli cruise-reviews` (review links).
-- **Until the pipeline has run, `cruise_offers` is empty** and review columns are null. Check with the data owner whether it's been populated before wiring UI against live rows.
+  - `supabase/migrations/20260623000200_add_cruise_offer_source_text.sql`
+- **Right now only `kitesafaris.com` is populated** — 3 sample offers (Antigua with 5 images + full 4-tier pricing, Greece, Sardinia) plus their images in the private bucket. Enough to build and preview the UI against real data.
+- **The full ~60-provider sweep runs after your sign-off** (`pnpm cli cruise-offers`, then `pnpm cli cruise-reviews`). So treat the table as a representative sample, not the full set, and expect many more rows + variety once it runs.
 - Tables are in the same Supabase project the current app already uses.
 
 ---
@@ -48,10 +49,11 @@ Unique on `(cruise_provider_id, slug)`.
 | `season_start_month` / `season_end_month` | smallint | 1–12, for filtering |
 | `duration_days` | int | |
 | `dates` | jsonb | concrete departures — see shape below (often null) |
-| `pricing` | jsonb | structured prices — see shape below |
-| `price_from_eur` | int | normalized lowest p.p. price → **use this for sorting/filtering** |
+| `pricing` | jsonb | structured prices incl. **every tier** in `options[]` — see shape below |
+| `price_from_eur` | int | lowest **genuine per-person** price (never divided from a cabin price); null if none shown → **use for sorting/filtering** |
 | `currency` | text | original quote currency (often USD) |
 | `summary` | text | AI 2–3 sentence description |
+| `source_text` | text | full readable text of the offer's source subpage; kept for the booking agent to answer free-form questions — **not for direct display** |
 | `images` | jsonb | **array of stored images** — see §3 |
 | `extraction_confidence` | text | `high\|medium\|low` (data quality, not a rating) |
 | `manually_verified` | bool | false until a human checks it |
@@ -60,19 +62,29 @@ Unique on `(cruise_provider_id, slug)`.
 **JSONB shapes:**
 
 ```jsonc
-// itinerary_spots  (ordered; lat/lng best-effort, may be null)
+// itinerary_spots — ordered stops. lat/lng are best-effort OSM Nominatim geocodes,
+// often null for unusual/misspelled names; use `name` as the label, coords for maps only.
 [{ "name": "Sal Rei", "country": "Cape Verde", "region": null,
    "lat": 16.18, "lng": -22.91, "order": 0 }]
 
-// dates  (whole field may be null when no concrete departures published)
+// dates — whole field often null; WITHIN an entry every field
+// (start_date / end_date / price / currency / status) may be null independently.
 [{ "start_date": "2026-07-04", "end_date": "2026-07-11",
    "price": 1890, "currency": "EUR", "status": "available" }]
 
-// pricing  (any field may be null)
-{ "per_person": 1890, "per_cabin": 3600, "whole_boat": 14000,
-  "currency": "EUR", "raw": "from €1,890 p.p. (cabin share)" }
+// pricing — options[] is the AUTHORITATIVE list of every tier shown; within an option,
+// price / currency / basis may each be null (null-check them). per_person/per_cabin/
+// whole_boat are convenience fields the model also fills — may be null or lag options[],
+// so prefer options[].
+{ "options": [
+    { "label": "Shared Cabin (Solo Traveler)", "price": 1900, "currency": "EUR", "basis": "per_person" },
+    { "label": "Private Cabin (2 Guests)",      "price": 3500, "currency": "EUR", "basis": "per_cabin" },
+    { "label": "Full Catamaran (6 Guests)",     "price": 9900, "currency": "EUR", "basis": "whole_boat" } ],
+  "per_person": 1900, "per_cabin": 3500, "whole_boat": 9900,
+  "currency": "EUR", "raw": "from €1,900 p.p. (cabin share)" }
 
-// images[]  — see §3; `path` is a STORAGE PATH, not a URL
+// images[] — see §3; `path` is a STORAGE PATH, not a URL. `sort` = display order
+// (0 = primary); iterate by `sort`, not array order. May be an empty array.
 [{ "path": "cruise-offers/<providerId>/<slug>/0.webp", "source_url": "https://…",
    "width": 1280, "height": 853, "bytes": 98213,
    "caption": "catamaran at anchor", "sort": 0 }]
@@ -114,9 +126,10 @@ const supa = getSupabase();
 const paths = offer.images.map(i => i.path);
 const { data } = await supa.storage
   .from('cruise-images')
-  .createSignedUrls(paths, 60 * 60); // 1-hour TTL; data[i].signedUrl aligns with paths[i]
+  .createSignedUrls(paths, 60 * 60); // 1-hour TTL; returns [{ path, signedUrl, error }], 1:1 with paths
 
-const imageUrls = (data ?? []).map(d => d.signedUrl).filter(Boolean);
+// each item can fail independently — drop the ones with an error
+const imageUrls = (data ?? []).filter(d => !d.error && d.signedUrl).map(d => d.signedUrl);
 ```
 
 Pick one delivery model:
@@ -125,7 +138,10 @@ Pick one delivery model:
 
 Either keeps the bucket non-public. Do **not** make the bucket public.
 
-This **replaces the old per-card live OG scrape** (`/api/og` + client-side logo filtering in `SwipeCard.tsx`): offers ship pre-curated, compressed, logo-filtered images. Keep `/api/og` only as a fallback for offers whose `images` array is empty.
+This **replaces the old per-card live OG scrape** (`/api/og` + client-side logo filtering in `SwipeCard.tsx`): offers ship pre-curated, compressed, logo-filtered images.
+
+- `images` is **always an array, never null** — but may be **empty** when extraction found no suitable photo (sparse / JS-heavy sites, or "Coming Soon" pages). Check `images.length > 0`, and keep `/api/og` as the fallback only for the empty case.
+- Render images in ascending **`sort`** order (`0` = primary) — it's the stable display sequence; don't rely on array order.
 
 ---
 
@@ -154,9 +170,11 @@ const { data: offers } = await supa
 
 Then sign `images[].path` per offer (§3) before returning to the client.
 
-Notes for display logic:
-- Treat nullable booleans as **"unknown"**, not false (don't render "no lessons" when it's just unstated).
-- `price_from_eur` is approximate (USD/GBP roughly converted) — show original via `pricing.raw` / `currency` when present.
+Notes for display **and querying**:
+- Treat nullable booleans as **"unknown"**, not false (don't render "no lessons" when it's just unstated). When filtering a facet, use `.eq('beginner_friendly', true)` — it matches only explicit trues and correctly excludes unknowns; avoid negated filters that sweep in nulls.
+- Filtering by `price_from_eur` (or any numeric) **excludes null-valued rows** by SQL NULL semantics — `.gte('price_from_eur', 1500)` will not return offers with unknown pricing. Fetch unfiltered and sort/filter client-side if you need to keep them. `price_from_eur` itself is approximate (USD/GBP roughly converted) — show the original via `pricing.raw` / `currency` when present.
+- `country` is **case-sensitive and nullable** — use `.ilike()` for case-insensitive matching, or filter by `continent` for broad buckets.
+- **Re-run pruning:** re-running the extractor for a provider deletes offers whose title/slug changed. Don't persist `cruise_offers.id` as a permanent reference — the stable key is **`(cruise_provider_id, slug)`**.
 - `extraction_confidence` is data-quality, **not** a user-facing rating — use the review fields for trust signals.
 - A provider with zero `cruise_offers` rows is valid (extractor found no structured offer) — fall back to `cruise_providers` + `cruise_locations`.
 
@@ -165,6 +183,8 @@ Notes for display logic:
 ## 5. Out of scope / not built
 - No frontend, API routes, or types for offers yet — all yours to design.
 - `price_from_eur` is a heuristic conversion; if you need exact FX, do it at read time from `pricing` + `currency`.
+- **No per-offer reviews** — all review signals (`bstoked_*`, `tripadvisor_*`) are **provider-level**, shared across that provider's offers.
+- `source_text` is the **full page text, server-side only** (for the future booking agent) — never render it; use `summary` for any UI copy.
 - Booking flow (`BookingRequestForm`, `/api/booking/*`) is a separate, gated feature — see `docs/booking-email-flow.md`.
 
 **Questions on the data?** Ping the backend owner; the pipeline code is in `src/pipeline/extract-cruise-offers.ts` and `src/pipeline/extract-cruise-reviews.ts`.

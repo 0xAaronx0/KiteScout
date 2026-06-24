@@ -11,7 +11,7 @@ import { discoverImageUrls, curateAndStoreImages, slugify, type StoredImage } fr
 
 const CONCURRENCY = 3;
 const MAX_INTERNAL_PAGES = 10;         // internal pages crawled per provider (+ homepage)
-const MAX_CONTENT_CHARS = 24000;       // combined page text sent to Claude
+const MAX_CONTENT_CHARS = 40000;       // combined page text sent to Claude
 const NOMINATIM_DELAY_MS = 1200;
 
 const VESSEL_TYPES = [
@@ -19,7 +19,7 @@ const VESSEL_TYPES = [
 ] as const;
 const BOOKING_MODES = ['whole_boat', 'per_cabin', 'single_spot'] as const;
 const LINK_KEY_RE =
-  /(cruise|liveaboard|safari|trip|voyage|expedition|itinerary|sailing|boat|booking|book-now|dates|prices?|packages?|fleet|yacht)/i;
+  /(cruise|liveaboard|safari|trip|voyage|expedition|itinerary|sailing|boat|booking|book-now|dates|pric|rates?|cost|packages?|fleet|yacht)/i;
 
 interface ItinerarySpot {
   name: string;
@@ -87,17 +87,25 @@ For each offer, extract this exact JSON shape (use null when the site does not s
   "beginner_friendly": true | false | null,
   "kite_lessons": true | false | null,
   "equipment_rental": true | false | null,
-  "season_text": "human availability window, e.g. 'June–September', or null",
+  "season_text": "the kite / best-season window, e.g. 'April–October', or null",
   "season_start_month": 1-12 or null,
   "season_end_month": 1-12 or null,
   "duration_days": integer or null,
   "dates": [ { "start_date": "YYYY-MM-DD or null", "end_date": "YYYY-MM-DD or null", "price": number or null, "currency": "ISO code or null", "status": "available|sold_out|null" } ] or null,
-  "pricing": { "per_person": number|null, "per_cabin": number|null, "whole_boat": number|null, "currency": "ISO code or null", "raw": "verbatim price phrase or null" } or null,
-  "price_from_eur": "lowest per-person price as an integer in EUR; if quoted in USD multiply by ~0.92, GBP by ~1.17; null if no price",
+  "pricing": {
+    "options": [ { "label": "tier name, e.g. 'Shared Cabin (Solo Traveler)', 'Private Cabin (2 guests)', 'Whole Boat (6 guests)'", "price": number, "currency": "ISO code", "basis": "per_person|per_cabin|whole_boat|other" } ],
+    "per_person": number|null, "per_cabin": number|null, "whole_boat": number|null,
+    "currency": "ISO code or null", "raw": "verbatim price phrase or null"
+  } or null,
+  "price_from_eur": "the LOWEST genuine PER-PERSON price as an integer in EUR (convert USD×0.92, GBP×1.17). Use a real per-person rate only — never divide a per-cabin/whole-boat price to fabricate one. null if no per-person price is shown",
   "currency": "the original quote currency ISO code, or null",
   "summary": "2-3 sentence neutral description of this cruise for a traveler",
   "confidence": "high" | "medium" | "low"
 }
+
+PRICING: capture EVERY pricing tier shown — solo/shared cabin, private cabin, whole boat, etc. — in pricing.options, each with its amount, currency and basis. Prices often live on a dedicated pricing/rates page included in the content below; apply a price block only to the specific offer it belongs to (a pricing page that names a destination or duration applies only to that offer). Report only amounts actually shown — never invent or divide to fabricate a number.
+
+SEASON: for the availability window use the offer's stated best / kite season (e.g. a 'Best Season: Apr–Oct' fact, or 'from April to October'). Do NOT report a generic 'year-round' / 'all year' / 'open all year' phrase as the season when a specific best-season window is given.
 
 Confidence: high = explicitly sold as a kite cruise/liveaboard; medium = strongly implied multi-day boat trip; low = inferred from partial info.
 
@@ -194,12 +202,22 @@ async function crawlProvider(homeUrl: string, rootDomain: string): Promise<Fetch
       const p = await fetchPage(url);
       if (p) pages.push(p);
     }
-  } else {
-    // Homepage unavailable as HTML — try the usual cruise paths directly.
-    for (const path of ['/cruises', '/trips', '/kite-cruise', '/liveaboard']) {
-      const p = await fetchPage(`https://${rootDomain}${path}`);
-      if (p) pages.push(p);
-    }
+  }
+
+  // Probe high-value pages that are frequently unlinked in client-rendered
+  // navigation — especially a dedicated pricing page, where the real per-tier
+  // prices live and are otherwise easy to miss. Add the cruise fallbacks too
+  // when there was no homepage HTML to discover links from.
+  const seenPaths = new Set(
+    pages.map(p => { try { return new URL(p.url).pathname.replace(/\/$/, ''); } catch { return p.url; } }),
+  );
+  const probePaths = home?.html
+    ? ['/pricing', '/prices', '/rates']
+    : ['/pricing', '/prices', '/rates', '/cruises', '/trips', '/kite-cruise', '/liveaboard'];
+  for (const path of probePaths) {
+    if (seenPaths.has(path)) continue;
+    const p = await fetchPage(`https://${rootDomain}${path}`);
+    if (p) { pages.push(p); seenPaths.add(path); }
   }
   return pages;
 }
@@ -207,9 +225,18 @@ async function crawlProvider(homeUrl: string, rootDomain: string): Promise<Fetch
 // ---------------------------------------------------------------------------
 // Claude offer extraction
 // ---------------------------------------------------------------------------
+const PRICING_URL_RE = /\/(pricing|prices|rates|fares?|booking)\b/i;
+
 function buildContent(pages: FetchedPage[]): string {
+  // Homepage first, then pricing/rates pages (small but high-value — the real
+  // per-tier prices live there and must not be truncated out), then the rest in
+  // crawl order.
+  const rank = (p: FetchedPage): number =>
+    p === pages[0] ? 0 : PRICING_URL_RE.test(p.url) ? 1 : 2;
+  const ordered = [...pages].sort((a, b) => rank(a) - rank(b));
+
   let combined = '';
-  for (const p of pages) {
+  for (const p of ordered) {
     const section = `=== PAGE: ${p.url} ===\n${p.text}\n\n`;
     if (combined.length + section.length > MAX_CONTENT_CHARS) {
       combined += section.slice(0, Math.max(0, MAX_CONTENT_CHARS - combined.length));
@@ -238,6 +265,8 @@ async function extractOffers(
           content: `Provider: ${providerName}\nPAGES (use these exact URLs for source_page):\n${pageUrls.join('\n')}\n\nContent:\n${content}`,
         }],
       }),
+      5,    // more patient retries: ride out sporadic 529 overloads during a sweep
+      3000,
     );
     text = msg.content[0]?.type === 'text' ? msg.content[0].text : '';
   } catch (err) {
@@ -303,7 +332,7 @@ async function processProvider(cp: {
   name: string | null;
   root_domain: string;
   website_url: string | null;
-}): Promise<number> {
+}, dryRun = false): Promise<number> {
   const homeUrl = cp.website_url ?? `https://${cp.root_domain}`;
   const name = cp.name ?? cp.root_domain;
 
@@ -314,6 +343,22 @@ async function processProvider(cp: {
   const content = buildContent(pages);
   const offers = await extractOffers(content, name, pages.map(p => p.url));
   if (offers.length === 0) return 0;
+
+  // Dry run: print what would be stored (pricing / season / source text), no writes.
+  if (dryRun) {
+    for (const offer of offers) {
+      const srcUrl = (offer.source_page && pageByUrl.has(offer.source_page)) ? offer.source_page : homeUrl;
+      const src = pageByUrl.get(srcUrl);
+      const pricing = (offer.pricing && typeof offer.pricing === 'object')
+        ? (offer.pricing as Record<string, unknown>) : null;
+      console.log(`\n• ${offer.title}  [${offer.confidence}]`);
+      console.log(`   season  : ${offer.season_text ?? '-'}  (${offer.season_start_month}-${offer.season_end_month})`);
+      console.log(`   from EUR: ${offer.price_from_eur ?? '-'}  | currency: ${offer.currency ?? '-'}`);
+      console.log(`   options : ${JSON.stringify(pricing?.options ?? [])}`);
+      console.log(`   source  : ${srcUrl}  (text ${src?.text?.length ?? 0} chars)`);
+    }
+    return offers.length;
+  }
 
   // Existing offers for this provider → reuse already-stored images (no re-churn).
   const { data: existing } = await supabase
@@ -361,13 +406,15 @@ async function processProvider(cp: {
       });
     }
 
+    // Resolve the offer's source page (used for images + the stored source_text).
+    const srcUrl = (offer.source_page && pageByUrl.has(offer.source_page))
+      ? offer.source_page
+      : homeUrl;
+    const srcPage = pageByUrl.get(srcUrl) ?? pages[0];
+
     // Images: reuse if already stored, else discover (static HTML + Tavily) + curate.
     let images: StoredImage[] = existingImages.get(slug) ?? [];
     if (images.length === 0) {
-      const srcUrl = (offer.source_page && pageByUrl.has(offer.source_page))
-        ? offer.source_page
-        : homeUrl;
-      const srcPage = pageByUrl.get(srcUrl) ?? pages[0];
       const staticCandidates = srcPage?.html
         ? discoverImageUrls(srcPage.html, srcPage.url, offer.page_anchor)
         : [];
@@ -390,7 +437,8 @@ async function processProvider(cp: {
       cruise_provider_id: cp.id,
       title: offer.title,
       slug,
-      source_url: (offer.source_page && pageByUrl.has(offer.source_page)) ? offer.source_page : homeUrl,
+      source_url: srcUrl,
+      source_text: srcPage?.text ?? null,
       continent,
       country: offer.country ?? null,
       region: offer.region ?? null,
@@ -426,6 +474,19 @@ async function processProvider(cp: {
     }
   }
 
+  // Prune this provider's offers from earlier runs whose title (slug) changed,
+  // so re-running the sweep doesn't accumulate duplicate offers. Only runs when
+  // we successfully extracted at least one offer (we never wipe on a failed run).
+  if (usedSlugs.size > 0) {
+    const list = [...usedSlugs].map(s => `"${s}"`).join(',');
+    const { error: pruneErr } = await supabase
+      .from('cruise_offers')
+      .delete()
+      .eq('cruise_provider_id', cp.id)
+      .not('slug', 'in', `(${list})`);
+    if (pruneErr) console.error(`\n  prune error for ${cp.root_domain}:`, pruneErr.message);
+  }
+
   return stored;
 }
 
@@ -433,7 +494,7 @@ async function processProvider(cp: {
 // Main export
 // ---------------------------------------------------------------------------
 export async function runExtractCruiseOffers(
-  opts: { domain?: string; limit?: number } = {},
+  opts: { domain?: string; limit?: number; dryRun?: boolean } = {},
 ): Promise<{ providers: number; offers: number }> {
   let pq = supabase
     .from('cruise_providers')
@@ -459,7 +520,7 @@ export async function runExtractCruiseOffers(
     cruiseProviders.map(cp =>
       limit(async () => {
         try {
-          const n = await processProvider(cp);
+          const n = await processProvider(cp, opts.dryRun);
           totalOffers += n;
         } catch (err) {
           console.error(`\n  Failed ${cp.root_domain}:`, err instanceof Error ? err.message : err);
