@@ -321,7 +321,6 @@ export async function curateAndStoreImages(opts: {
   context: string;
   max?: number;
   maxDownloads?: number;
-  strictVision?: boolean;
 }): Promise<StoredImage[]> {
   const { candidateUrls, providerId, slug, sourceUrl, context } = opts;
   const cap = opts.max ?? MAX_STORED;
@@ -365,11 +364,10 @@ export async function curateAndStoreImages(opts: {
   const visionPick = USE_VISION_QC ? await visionSelect(downloaded, context) : null;
   if (visionPick && visionPick.length > 0) {
     selected = visionPick.slice(0, cap);
-  } else if (opts.strictVision) {
-    // For a broad pool, vision is the ONLY content filter; if it fails, don't grab
-    // raw-largest (could be food/interior). Return none → caller's hero fallback runs.
-    return [];
   } else {
+    // Vision unavailable/failed → fall back to largest-by-area. Obvious junk
+    // (logos, food, badges, etc.) is already filtered by JUNK_RE, so the
+    // largest survivors are almost always the real boat/kite hero shots.
     selected = [...downloaded]
       .sort((a, b) => b.width * b.height - a.width * a.height)
       .slice(0, cap)

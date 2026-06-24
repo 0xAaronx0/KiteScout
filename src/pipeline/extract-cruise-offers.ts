@@ -81,6 +81,8 @@ interface ExtractedOffer {
   price_from_eur: number | null;
   currency: string | null;
   summary: string;
+  is_reseller: boolean;
+  operated_by: string | null;
   confidence: 'high' | 'medium' | 'low';
 }
 
@@ -128,12 +130,16 @@ For each offer, extract this exact JSON shape (use null when the site does not s
   "price_from_eur": "the LOWEST genuine PER-PERSON price as an integer in EUR (convert USD×0.92, GBP×1.17). Use a real per-person rate only — never divide a per-cabin/whole-boat price to fabricate one. null if no per-person price is shown",
   "currency": "the original quote currency ISO code, or null",
   "summary": "2-3 sentence neutral description of this cruise for a traveler",
+  "is_reseller": true | false — true if THIS site merely resells the cruise and it is operated by a THIRD PARTY (e.g. "operated by a trusted partner, not by us", "in cooperation with", "we earn a commission"); false if this operator runs the cruise itself,
+  "operated_by": "the actual operator / partner name if the page names them (only when is_reseller is true), else null",
   "confidence": "high" | "medium" | "low"
 }
 
 PRICING: capture EVERY pricing tier shown — solo/shared cabin, private cabin, whole boat, etc. — in pricing.options, each with its amount, currency and basis. Prices often live on a dedicated pricing/rates page included in the content below; apply a price block only to the specific offer it belongs to (a pricing page that names a destination or duration applies only to that offer). Report only amounts actually shown — never invent or divide to fabricate a number.
 
 SEASON: for the availability window use the offer's stated best / kite season (e.g. a 'Best Season: Apr–Oct' fact, or 'from April to October'). Do NOT report a generic 'year-round' / 'all year' / 'open all year' phrase as the season when a specific best-season window is given.
+
+RESELLER: many sites resell other operators' cruises as affiliates. If the page indicates the trip is operated by a third party / partner and this site merely books it or earns a commission, set is_reseller=true (and operated_by to the partner's name if stated). Set is_reseller=false only when this operator clearly runs the boat itself.
 
 Confidence: high = explicitly sold as a kite cruise/liveaboard; medium = strongly implied multi-day boat trip; low = inferred from partial info.
 
@@ -481,7 +487,7 @@ async function processProvider(cp: {
       const bs = src?.text ? parseBestSeason(src.text) : null;
       const pricing = (offer.pricing && typeof offer.pricing === 'object')
         ? (offer.pricing as Record<string, unknown>) : null;
-      console.log(`\n• ${offer.title}  [${offer.confidence}]`);
+      console.log(`\n• ${offer.title}  [${offer.confidence}]${offer.is_reseller ? `  ⚠ RESELLER (operated by: ${offer.operated_by ?? '?'})` : ''}`);
       const sText = bs ? bs.text : (offer.season_text ?? '-');
       const sMonths = bs ? `${bs.start}-${bs.end}` : `${offer.season_start_month}-${offer.season_end_month}`;
       console.log(`   season  : ${sText}  (${sMonths})${bs ? ' [from page]' : ''}`);
@@ -623,7 +629,6 @@ async function processProvider(cp: {
           sourceUrl: srcUrl,
           context: ctx,
           maxDownloads: singleOffer ? 24 : undefined,
-          strictVision: singleOffer,
         });
       }
     }
@@ -662,6 +667,8 @@ async function processProvider(cp: {
       price_from_eur: cleanInt(offer.price_from_eur),
       currency: offer.currency ?? null,
       summary: offer.summary ?? null,
+      is_reseller: offer.is_reseller === true,
+      operated_by: typeof offer.operated_by === 'string' ? offer.operated_by : null,
       images,
       extraction_confidence: offer.confidence,
     };

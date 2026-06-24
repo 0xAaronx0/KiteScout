@@ -57,6 +57,8 @@ Unique on `(cruise_provider_id, slug)`.
 | `images` | jsonb | **array of stored images** — see §3 |
 | `extraction_confidence` | text | `high\|medium\|low` (data quality, not a rating) |
 | `manually_verified` | bool | false until a human checks it |
+| `is_reseller` | bool | **true = affiliate listing** (this site resells another operator's cruise, e.g. "operated by a trusted partner"). **Exclude from results by default** |
+| `operated_by` | text | the actual operator's name, when `is_reseller` and the page named them |
 | `created_at` / `updated_at` | timestamptz | |
 
 **JSONB shapes:**
@@ -175,6 +177,7 @@ Notes for display **and querying**:
 - Treat nullable booleans as **"unknown"**, not false (don't render "no lessons" when it's just unstated). When filtering a facet, use `.eq('beginner_friendly', true)` — it matches only explicit trues and correctly excludes unknowns; avoid negated filters that sweep in nulls.
 - Filtering by `price_from_eur` (or any numeric) **excludes null-valued rows** by SQL NULL semantics — `.gte('price_from_eur', 1500)` will not return offers with unknown pricing. Fetch unfiltered and sort/filter client-side if you need to keep them. `price_from_eur` itself is approximate (USD/GBP roughly converted) — show the original via `pricing.raw` / `currency` when present.
 - `country` is **case-sensitive and nullable** — use `.ilike()` for case-insensitive matching, or filter by `continent` for broad buckets.
+- **Exclude `is_reseller = true` by default** — these are affiliate listings (the site resells another operator's cruise). They mis-attribute and duplicate the real operator; surface them only behind an explicit "include resellers" toggle, if at all.
 - **Re-run pruning:** re-running the extractor for a provider deletes offers whose title/slug changed. Don't persist `cruise_offers.id` as a permanent reference — the stable key is **`(cruise_provider_id, slug)`**.
 - `extraction_confidence` is data-quality, **not** a user-facing rating — use the review fields for trust signals.
 - A provider with zero `cruise_offers` rows is valid (extractor found no structured offer) — fall back to `cruise_providers` + `cruise_locations`.
