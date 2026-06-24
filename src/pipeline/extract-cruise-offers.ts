@@ -19,7 +19,32 @@ const VESSEL_TYPES = [
 ] as const;
 const BOOKING_MODES = ['whole_boat', 'per_cabin', 'single_spot'] as const;
 const LINK_KEY_RE =
-  /(cruise|liveaboard|safari|trip|voyage|expedition|itinerary|sailing|boat|booking|book-now|dates|pric|rates?|cost|packages?|fleet|yacht)/i;
+  /(cruise|liveaboard|safari|trip|voyage|expedition|itinerary|sailing|boat|booking|book-now|dates|pric|rates?|cost|packages?|fleet|yacht|galler|photos?|media)/i;
+
+// Pages that hold a (usually destination-tagged) photo gallery.
+const GALLERY_URL_RE = /\/(gallery|photos?|photo-gallery|media|portfolio)\b/i;
+
+// Country -> adjective/demonym, so a gallery image whose only destination clue is
+// alt text like "Greek Aegean" still matches the Greece offer. Best-effort; the
+// country name itself (often embedded in the filename) is matched too.
+const COUNTRY_ADJECTIVES: Record<string, string> = {
+  greece: 'greek', italy: 'italian', spain: 'spanish', portugal: 'portuguese',
+  croatia: 'croatian', france: 'french', turkey: 'turkish', egypt: 'egyptian',
+  morocco: 'moroccan', tunisia: 'tunisian', brazil: 'brazilian', mexico: 'mexican',
+  thailand: 'thai', philippines: 'philippine', indonesia: 'indonesian',
+  'cape verde': 'verdean', 'cabo verde': 'verdean', tanzania: 'tanzanian',
+  kenya: 'kenyan', madagascar: 'malagasy', oman: 'omani', maldives: 'maldivian',
+  'sri lanka': 'lankan', cuba: 'cuban', 'dominican republic': 'dominican',
+  grenada: 'grenadian', antigua: 'antiguan', australia: 'australian',
+};
+
+// Too generic to identify a destination — excluded from gallery-match tokens so
+// e.g. "islands" in a Caribbean caption can't pull that shot into a Greece offer.
+const GENERIC_GEO = new Set([
+  'island', 'islands', 'beach', 'beaches', 'coast', 'waters', 'water', 'ocean',
+  'sea', 'lagoon', 'bay', 'reef', 'tropical', 'kiteboarding', 'kitesurfing',
+  'catamaran', 'cruise', 'safari', 'luxury', 'paradise',
+]);
 
 interface ItinerarySpot {
   name: string;
@@ -190,6 +215,69 @@ async function fetchPage(url: string): Promise<FetchedPage | null> {
   return null;
 }
 
+// ---------------------------------------------------------------------------
+// Destination-tagged gallery images
+// ---------------------------------------------------------------------------
+/** Lowercased tokens that identify an offer's destination (country + adjective, region, spots). */
+function destinationTokens(
+  country: string | null,
+  region: string | null,
+  spots: Array<{ name?: unknown }>,
+): string[] {
+  const out = new Set<string>();
+  const add = (s: unknown): void => {
+    if (typeof s !== 'string') return;
+    const n = s.toLowerCase().trim();
+    if (n.length >= 4 && !GENERIC_GEO.has(n)) out.add(n);
+    for (const w of n.split(/[^a-z]+/)) if (w.length >= 5 && !GENERIC_GEO.has(w)) out.add(w);
+  };
+  if (country) {
+    const c = country.toLowerCase().trim();
+    if (c.length >= 4) out.add(c);
+    if (COUNTRY_ADJECTIVES[c]) out.add(COUNTRY_ADJECTIVES[c]);
+  }
+  add(region);
+  for (const s of spots ?? []) add(s?.name);
+  return [...out].filter(t => t.length >= 4);
+}
+
+/** Collect candidate images (with their alt/filename label) from a provider's gallery pages. */
+async function collectGalleryCandidates(galleryPages: FetchedPage[]): Promise<Array<{ url: string; label: string }>> {
+  const out: Array<{ url: string; label: string }> = [];
+  const seen = new Set<string>();
+  for (const p of galleryPages) {
+    if (p.html) {
+      for (const img of parse(p.html).querySelectorAll('img')) {
+        const raw = img.getAttribute('src') ?? img.getAttribute('data-src') ?? img.getAttribute('data-lazy-src');
+        const abs = raw ? absolutize(raw, p.url) : null;
+        if (!abs || seen.has(abs)) continue;
+        seen.add(abs);
+        out.push({ url: abs, label: img.getAttribute('alt') ?? '' });
+      }
+    }
+    // Tavily renders the gallery and surfaces images the static HTML lazy-loads;
+    // their filenames frequently carry the destination (e.g. "greece:img-...").
+    for (const u of await getTavilyImages(p.url)) {
+      if (seen.has(u)) continue;
+      seen.add(u);
+      out.push({ url: u, label: '' });
+    }
+  }
+  return out;
+}
+
+/** Gallery image URLs whose filename or alt text matches the offer's destination tokens. */
+function galleryUrlsForOffer(gallery: Array<{ url: string; label: string }>, tokens: string[]): string[] {
+  if (tokens.length === 0) return [];
+  const matched: string[] = [];
+  for (const g of gallery) {
+    let hay = g.label.toLowerCase();
+    try { hay += ' ' + decodeURIComponent(g.url).toLowerCase(); } catch { hay += ' ' + g.url.toLowerCase(); }
+    if (tokens.some(t => hay.includes(t))) matched.push(g.url);
+  }
+  return matched;
+}
+
 async function crawlProvider(homeUrl: string, rootDomain: string): Promise<FetchedPage[]> {
   const home = await fetchPage(homeUrl);
   const pages: FetchedPage[] = home ? [home] : [];
@@ -211,9 +299,10 @@ async function crawlProvider(homeUrl: string, rootDomain: string): Promise<Fetch
   const seenPaths = new Set(
     pages.map(p => { try { return new URL(p.url).pathname.replace(/\/$/, ''); } catch { return p.url; } }),
   );
+  const galleryProbes = ['/gallery', '/destinations/gallery', '/photos', '/media'];
   const probePaths = home?.html
-    ? ['/pricing', '/prices', '/rates']
-    : ['/pricing', '/prices', '/rates', '/cruises', '/trips', '/kite-cruise', '/liveaboard'];
+    ? ['/pricing', '/prices', '/rates', ...galleryProbes]
+    : ['/pricing', '/prices', '/rates', ...galleryProbes, '/cruises', '/trips', '/kite-cruise', '/liveaboard'];
   for (const path of probePaths) {
     if (seenPaths.has(path)) continue;
     const p = await fetchPage(`https://${rootDomain}${path}`);
@@ -372,6 +461,14 @@ async function processProvider(cp: {
     }
   }
 
+  // Destination-tagged gallery images (collected once, matched per offer).
+  const galleryPages = pages.filter(p => GALLERY_URL_RE.test(p.url));
+  let galleryCands: Array<{ url: string; label: string }> | null = null;
+  const getGallery = async (): Promise<Array<{ url: string; label: string }>> => {
+    if (galleryCands === null) galleryCands = await collectGalleryCandidates(galleryPages);
+    return galleryCands;
+  };
+
   // Lazily-curated homepage hero, reused as a fallback so a provider's offers are
   // never left completely imageless when their own page yields nothing usable.
   let homepageFallback: StoredImage[] | null = null;
@@ -436,14 +533,17 @@ async function processProvider(cp: {
       : homeUrl;
     const srcPage = pageByUrl.get(srcUrl) ?? pages[0];
 
-    // Images: reuse if already stored, else discover (static HTML + Tavily) + curate.
+    // Images: reuse if already stored, else discover (gallery + own page + Tavily) + curate.
     let images: StoredImage[] = existingImages.get(slug) ?? [];
     if (images.length === 0) {
+      // Destination-tagged gallery shots first — they're the most location-specific.
+      const tokens = destinationTokens(offer.country ?? null, offer.region ?? null, rawSpots);
+      const galleryCandidates = galleryUrlsForOffer(await getGallery(), tokens);
       const staticCandidates = srcPage?.html
         ? discoverImageUrls(srcPage.html, srcPage.url, offer.page_anchor)
         : [];
       const tavilyCandidates = await getTavilyImages(srcUrl);
-      const candidates = [...staticCandidates, ...tavilyCandidates];
+      const candidates = [...galleryCandidates, ...staticCandidates, ...tavilyCandidates];
       if (candidates.length > 0) {
         const ctx = `${offer.title} — kite cruise${offer.country ? ' in ' + offer.country : ''}` +
           `${offer.region ? ', ' + offer.region : ''}${offer.vessel_type ? ', ' + offer.vessel_type : ''}`;
