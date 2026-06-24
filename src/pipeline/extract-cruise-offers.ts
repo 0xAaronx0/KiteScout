@@ -4,23 +4,25 @@ import { supabase } from '../lib/supabase.js';
 import { anthropic, ANALYSIS_MODEL } from '../lib/anthropic.js';
 import { extract as tavilyExtract, extractImages as tavilyExtractImages } from '../lib/tavily.js';
 import { fetchPageConditional } from '../lib/fetchPage.js';
-import { htmlToText, collapse } from '../lib/content.js';
+import { htmlToText, collapse, contentHash } from '../lib/content.js';
 import { withRetry } from '../lib/retry.js';
 import { countryToContinent } from '../lib/continents.js';
 import { discoverImageUrls, curateAndStoreImages, slugify, type StoredImage } from '../lib/images.js';
+import { discoverSiteUrls, PAGE_VALUE_RE } from '../lib/crawl.js';
 
-const CONCURRENCY = 3;
-const MAX_INTERNAL_PAGES = 10;         // internal pages crawled per provider (+ homepage)
-const MAX_CONTENT_CHARS = 40000;       // combined page text sent to Claude
+const CONCURRENCY = 3;                  // providers in parallel
+const PAGE_CONCURRENCY = 8;             // global page fetches in flight (across providers)
+const MAX_CRAWL_PAGES = 70;             // pages crawled + stored per provider
+const MAX_CONTENT_CHARS = 60000;        // ranked subset of page text sent to Claude
 const NOMINATIM_DELAY_MS = 1200;
+
+// Global limiter so a full-site crawl per provider can't blow up total fetches.
+const pageLimit = pLimit(PAGE_CONCURRENCY);
 
 const VESSEL_TYPES = [
   'catamaran', 'sailing_yacht', 'motor_yacht', 'gulet', 'dhow', 'liveaboard', 'speedboat', 'other',
 ] as const;
 const BOOKING_MODES = ['whole_boat', 'per_cabin', 'single_spot'] as const;
-const LINK_KEY_RE =
-  /(cruise|liveaboard|safari|trip|voyage|expedition|itinerary|sailing|boat|booking|book-now|dates|pric|rates?|cost|packages?|fleet|yacht|galler|photos?|media)/i;
-
 // Pages that hold a (usually destination-tagged) photo gallery.
 const GALLERY_URL_RE = /\/(gallery|photos?|photo-gallery|media|portfolio)\b/i;
 
@@ -85,7 +87,8 @@ interface ExtractedOffer {
 interface FetchedPage {
   url: string;
   html: string | null; // raw HTML when fetched directly (needed for image discovery)
-  text: string;        // readable text for the LLM
+  text: string;        // readable text for the LLM / stored corpus
+  title: string | null;
 }
 
 const EXTRACTION_PROMPT = `You are extracting structured KITE-CRUISE OFFERS from a kite travel operator's website.
@@ -185,33 +188,22 @@ function absolutize(src: string, baseUrl: string): string | null {
   }
 }
 
-function discoverInternalLinks(html: string, baseUrl: string, rootDomain: string): string[] {
-  const root = parse(html);
-  const links = new Set<string>();
-  for (const a of root.querySelectorAll('a')) {
-    const href = a.getAttribute('href');
-    if (!href) continue;
-    const abs = absolutize(href, baseUrl);
-    if (!abs) continue;
-    let host: string;
-    try { host = new URL(abs).hostname.replace(/^www\./, ''); } catch { continue; }
-    if (host !== rootDomain) continue;
-    if (LINK_KEY_RE.test(abs) || LINK_KEY_RE.test(a.text)) {
-      links.add(abs.split('#')[0]);
-    }
-  }
-  return [...links];
+function extractTitle(html: string): string | null {
+  const m = html.match(/<title[^>]*>([^<]{1,200})<\/title>/i);
+  return m ? m[1].replace(/\s+/g, ' ').trim() : null;
 }
 
-/** Fetch a single page directly; fall back to Tavily text if blocked. */
-async function fetchPage(url: string): Promise<FetchedPage | null> {
+/** Fetch a page directly; fall back to Tavily text only when allowed (cost control). */
+async function fetchPage(url: string, allowTavily = true): Promise<FetchedPage | null> {
   const res = await fetchPageConditional(url);
   if (res.status === 'ok' && res.html) {
     const text = htmlToText(res.html);
-    if (text.length > 150) return { url, html: res.html, text };
+    if (text.length > 150) return { url, html: res.html, text, title: extractTitle(res.html) };
   }
-  const md = await tavilyExtract(url);
-  if (md) return { url, html: null, text: collapse(md) };
+  if (allowTavily) {
+    const md = await tavilyExtract(url);
+    if (md) return { url, html: null, text: collapse(md), title: null };
+  }
   return null;
 }
 
@@ -279,49 +271,62 @@ function galleryUrlsForOffer(gallery: Array<{ url: string; label: string }>, tok
 }
 
 async function crawlProvider(homeUrl: string, rootDomain: string): Promise<FetchedPage[]> {
-  const home = await fetchPage(homeUrl);
-  const pages: FetchedPage[] = home ? [home] : [];
+  const { urls } = await discoverSiteUrls(homeUrl, rootDomain, MAX_CRAWL_PAGES);
+  const norm = (u: string): string => u.replace(/\/$/, '');
+  // Belt-and-suspenders: a few high-value paths in case the sitemap omits them.
+  const probes = ['/pricing', '/prices', '/rates', '/gallery', '/destinations/gallery', '/photos']
+    .map(p => `https://${rootDomain}${p}`);
+  const all = [...new Set([norm(homeUrl), ...urls.map(norm), ...probes])];
 
-  if (home?.html) {
-    const candidates = discoverInternalLinks(home.html, homeUrl, rootDomain)
-      .filter(u => u.split('#')[0] !== homeUrl.replace(/\/$/, '') && u !== homeUrl)
-      .slice(0, MAX_INTERNAL_PAGES);
-    for (const url of candidates) {
-      const p = await fetchPage(url);
-      if (p) pages.push(p);
-    }
-  }
-
-  // Probe high-value pages that are frequently unlinked in client-rendered
-  // navigation — especially a dedicated pricing page, where the real per-tier
-  // prices live and are otherwise easy to miss. Add the cruise fallbacks too
-  // when there was no homepage HTML to discover links from.
-  const seenPaths = new Set(
-    pages.map(p => { try { return new URL(p.url).pathname.replace(/\/$/, ''); } catch { return p.url; } }),
-  );
-  const galleryProbes = ['/gallery', '/destinations/gallery', '/photos', '/media'];
-  const probePaths = home?.html
-    ? ['/pricing', '/prices', '/rates', ...galleryProbes]
-    : ['/pricing', '/prices', '/rates', ...galleryProbes, '/cruises', '/trips', '/kite-cruise', '/liveaboard'];
-  for (const path of probePaths) {
-    if (seenPaths.has(path)) continue;
-    const p = await fetchPage(`https://${rootDomain}${path}`);
-    if (p) { pages.push(p); seenPaths.add(path); }
-  }
+  const pages: FetchedPage[] = [];
+  await Promise.all(all.map(u => pageLimit(async () => {
+    // Reserve the paid Tavily fallback for the homepage + traveller-relevant pages.
+    const allowTavily = norm(u) === norm(homeUrl) || PAGE_VALUE_RE.test(u);
+    const p = await fetchPage(u, allowTavily);
+    if (p) pages.push(p);
+  })));
   return pages;
+}
+
+/** Persist the full crawled text as the per-provider corpus (provider_pages). */
+async function storeCorpus(providerId: string, pages: FetchedPage[]): Promise<void> {
+  const rows = pages
+    .filter(p => p.text && p.text.length > 0)
+    .map(p => ({
+      cruise_provider_id: providerId,
+      url: p.url,
+      title: p.title,
+      text: p.text,
+      content_hash: contentHash(p.text),
+      fetched_at: new Date().toISOString(),
+    }));
+  if (rows.length === 0) return;
+  const { error } = await supabase
+    .from('provider_pages')
+    .upsert(rows, { onConflict: 'cruise_provider_id,url' });
+  if (error) console.error(`\n  corpus error (${providerId}):`, error.message);
 }
 
 // ---------------------------------------------------------------------------
 // Claude offer extraction
 // ---------------------------------------------------------------------------
 const PRICING_URL_RE = /\/(pricing|prices|rates|fares?|booking)\b/i;
+// Pages that actually define offers — ranked just after pricing so every
+// destination/trip page survives the content budget, ahead of about/contact/faq.
+const OFFER_PAGE_RE = /\/(destinations?|trips?|cruises?|safaris?|liveaboards?|itinerar|packages?|tours?)\b/i;
 
-function buildContent(pages: FetchedPage[]): string {
-  // Homepage first, then pricing/rates pages (small but high-value — the real
-  // per-tier prices live there and must not be truncated out), then the rest in
-  // crawl order.
-  const rank = (p: FetchedPage): number =>
-    p === pages[0] ? 0 : PRICING_URL_RE.test(p.url) ? 1 : 2;
+function buildContent(pages: FetchedPage[], homeUrl: string): string {
+  // Fit the most relevant pages into the LLM budget: homepage, then pricing,
+  // then other traveller-relevant pages, then the rest. The FULL crawl is stored
+  // in provider_pages regardless of what makes it into this subset.
+  const home = homeUrl.replace(/\/$/, '');
+  const rank = (p: FetchedPage): number => {
+    if (p.url.replace(/\/$/, '') === home) return 0;
+    if (PRICING_URL_RE.test(p.url)) return 1;
+    if (OFFER_PAGE_RE.test(p.url)) return 2;
+    if (PAGE_VALUE_RE.test(p.url)) return 3;
+    return 4;
+  };
   const ordered = [...pages].sort((a, b) => rank(a) - rank(b));
 
   let combined = '';
@@ -429,7 +434,10 @@ async function processProvider(cp: {
   if (pages.length === 0) return 0;
   const pageByUrl = new Map(pages.map(p => [p.url, p]));
 
-  const content = buildContent(pages);
+  // Persist the full crawled corpus (independent of how many offers we find).
+  if (!dryRun) await storeCorpus(cp.id, pages);
+
+  const content = buildContent(pages, homeUrl);
   const offers = await extractOffers(content, name, pages.map(p => p.url));
   if (offers.length === 0) return 0;
 
