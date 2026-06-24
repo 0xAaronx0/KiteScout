@@ -95,7 +95,7 @@ const EXTRACTION_PROMPT = `You are extracting structured KITE-CRUISE OFFERS from
 
 A kite cruise = participants travel by boat (catamaran, gulet, sailing yacht, dhow, motor yacht, liveaboard, etc.) between kiteboarding spots, typically sleeping on board, over multiple days.
 
-A single operator may sell SEVERAL distinct offers (different regions, vessels, durations, or seasons). Return one object per genuinely distinct offer. If the site presents a single generic cruise product, return exactly one offer. Do NOT invent offers, and do NOT include land-based camps, kite schools, fixed-base lessons, or single day-trips that return to the same harbour each night.
+A single operator may sell SEVERAL distinct offers (different regions, vessels, durations, or seasons). Return one object per genuinely distinct offer. If the site presents a single generic cruise product, return exactly one offer. The SAME boat and itinerary offered both as scheduled/cabin departures AND as a private whole-boat charter is ONE offer — record both ways to book in booking_modes; do NOT split it into separate offers. Offers are distinct only when they differ by region, vessel, or itinerary — not merely by booking mode, departure type, or year. Do NOT invent offers, and do NOT include land-based camps, kite schools, fixed-base lessons, or single day-trips that return to the same harbour each night.
 
 For each offer, extract this exact JSON shape (use null when the site does not state something — never guess):
 {
@@ -512,6 +512,23 @@ async function processProvider(cp: {
     return galleryCands;
   };
 
+  // Whole-site image pool (lazy) — used for single-location providers, where every
+  // kite/boat photo on the site belongs to the one offer. Static images from every
+  // crawled page + Tavily-rendered images from the homepage and gallery pages.
+  let siteImagesCache: string[] | null = null;
+  const getSiteImages = async (): Promise<string[]> => {
+    if (siteImagesCache) return siteImagesCache;
+    const urls: string[] = [];
+    const seen = new Set<string>();
+    const push = (u: string): void => { if (!seen.has(u)) { seen.add(u); urls.push(u); } };
+    for (const p of pages) if (p.html) for (const u of discoverImageUrls(p.html, p.url)) push(u);
+    for (const t of new Set<string>([homeUrl, ...galleryPages.map(p => p.url)])) {
+      for (const u of await getTavilyImages(t)) push(u);
+    }
+    siteImagesCache = urls;
+    return urls;
+  };
+
   // Lazily-curated homepage hero, reused as a fallback so a provider's offers are
   // never left completely imageless when their own page yields nothing usable.
   let homepageFallback: StoredImage[] | null = null;
@@ -536,6 +553,8 @@ async function processProvider(cp: {
     return homepageFallback[0] ?? null;
   };
 
+  // Single-location provider → use the whole site's kite/boat imagery for its offer.
+  const singleOffer = offers.length === 1;
   const usedSlugs = new Set<string>();
   let stored = 0;
 
@@ -589,7 +608,11 @@ async function processProvider(cp: {
         ? discoverImageUrls(srcPage.html, srcPage.url, offer.page_anchor)
         : [];
       const tavilyCandidates = await getTavilyImages(srcUrl);
-      const candidates = [...galleryCandidates, ...staticCandidates, ...tavilyCandidates];
+      // Single-location provider: widen to the whole site (vision keeps only the
+      // boat/kiting shots). Multi-offer providers stay destination-scoped.
+      const candidates = singleOffer
+        ? [...(await getSiteImages()), ...tavilyCandidates]
+        : [...galleryCandidates, ...staticCandidates, ...tavilyCandidates];
       if (candidates.length > 0) {
         const ctx = `${offer.title} — kite cruise${offer.country ? ' in ' + offer.country : ''}` +
           `${offer.region ? ', ' + offer.region : ''}${offer.vessel_type ? ', ' + offer.vessel_type : ''}`;
@@ -599,6 +622,8 @@ async function processProvider(cp: {
           slug,
           sourceUrl: srcUrl,
           context: ctx,
+          maxDownloads: singleOffer ? 24 : undefined,
+          strictVision: singleOffer,
         });
       }
     }

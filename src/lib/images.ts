@@ -29,7 +29,7 @@ const BROWSER_UA =
 
 // Filenames that are almost never a real offer photo.
 const JUNK_RE =
-  /(logo|icon|sprite|favicon|avatar|badge|placeholder|spinner|loader|pixel|tracking|1x1|blank|transparent|cookie|gdpr|banner-ad)/i;
+  /(logo|icon|sprite|favicon|avatar|badge|placeholder|spinner|loader|pixel|tracking|1x1|blank|transparent|cookie|gdpr|banner-ad|food|menu|recipe|breakfast|lunch|dinner|cuisine|cocktail|testimonial|headshot)/i;
 
 const MAX_CANDIDATES = 16; // distinct URLs to consider per page
 const MAX_DOWNLOADS = 14;  // images actually fetched + measured
@@ -283,6 +283,8 @@ Order them best-first. Respond with ONLY a JSON array: [{"index": <number>, "cap
         max_tokens: 512,
         messages: [{ role: 'user', content: blocks }],
       }),
+      5,    // ride out transient 529s — vision is the only content filter for a broad pool
+      3000,
     );
     text = msg.content[0]?.type === 'text' ? msg.content[0].text : '';
   } catch {
@@ -318,9 +320,12 @@ export async function curateAndStoreImages(opts: {
   sourceUrl: string;
   context: string;
   max?: number;
+  maxDownloads?: number;
+  strictVision?: boolean;
 }): Promise<StoredImage[]> {
   const { candidateUrls, providerId, slug, sourceUrl, context } = opts;
   const cap = opts.max ?? MAX_STORED;
+  const dlCap = opts.maxDownloads ?? MAX_DOWNLOADS;
   if (candidateUrls.length === 0) return [];
 
   // Merge-safe dedup + junk filter (Tavily-sourced URLs bypass discoverImageUrls).
@@ -336,7 +341,7 @@ export async function curateAndStoreImages(opts: {
 
   // 1. Download (bounded), measure, heuristic-filter logos/banners/tiny.
   const downloaded: DownloadedImage[] = [];
-  for (const url of deduped.slice(0, MAX_DOWNLOADS)) {
+  for (const url of deduped.slice(0, dlCap)) {
     const buf = await downloadImage(url);
     if (!buf) continue;
     let width = 0;
@@ -360,6 +365,10 @@ export async function curateAndStoreImages(opts: {
   const visionPick = USE_VISION_QC ? await visionSelect(downloaded, context) : null;
   if (visionPick && visionPick.length > 0) {
     selected = visionPick.slice(0, cap);
+  } else if (opts.strictVision) {
+    // For a broad pool, vision is the ONLY content filter; if it fails, don't grab
+    // raw-largest (could be food/interior). Return none → caller's hero fallback runs.
+    return [];
   } else {
     selected = [...downloaded]
       .sort((a, b) => b.width * b.height - a.width * a.height)
