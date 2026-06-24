@@ -418,6 +418,38 @@ function cleanBool(b: unknown): boolean | null {
   return typeof b === 'boolean' ? b : null;
 }
 
+const MONTH_NAMES = ['', 'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December'];
+const MONTH_PAT =
+  '(jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)';
+
+function monthToNum(m: string): number | null {
+  const map: Record<string, number> = {
+    jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6,
+    jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12,
+  };
+  return map[m.toLowerCase().slice(0, 3)] ?? null;
+}
+
+/**
+ * Deterministic season from a page's "Best Season: Apr - Oct"-style fact, so the
+ * stored season doesn't flip run-to-run on the LLM's whim. Prefers an explicit
+ * best/kite season label; falls back to a wind-season range. Null if none found.
+ */
+export function parseBestSeason(text: string): { text: string; start: number; end: number } | null {
+  for (const label of ['best\\s*season', 'kite\\s*season', 'riding\\s*season', 'wind\\s*season']) {
+    const re = new RegExp(
+      `${label}[\\s:>\\-]{0,8}${MONTH_PAT}\\s*(?:-|to|through|[\\u2013\\u2014])\\s*${MONTH_PAT}`,
+      'i',
+    );
+    const m = text.match(re);
+    const a = m ? monthToNum(m[1]) : null;
+    const b = m ? monthToNum(m[2]) : null;
+    if (a && b) return { text: `${MONTH_NAMES[a]}–${MONTH_NAMES[b]}`, start: a, end: b };
+  }
+  return null;
+}
+
 // ---------------------------------------------------------------------------
 // Process one provider end-to-end
 // ---------------------------------------------------------------------------
@@ -446,10 +478,13 @@ async function processProvider(cp: {
     for (const offer of offers) {
       const srcUrl = (offer.source_page && pageByUrl.has(offer.source_page)) ? offer.source_page : homeUrl;
       const src = pageByUrl.get(srcUrl);
+      const bs = src?.text ? parseBestSeason(src.text) : null;
       const pricing = (offer.pricing && typeof offer.pricing === 'object')
         ? (offer.pricing as Record<string, unknown>) : null;
       console.log(`\n• ${offer.title}  [${offer.confidence}]`);
-      console.log(`   season  : ${offer.season_text ?? '-'}  (${offer.season_start_month}-${offer.season_end_month})`);
+      const sText = bs ? bs.text : (offer.season_text ?? '-');
+      const sMonths = bs ? `${bs.start}-${bs.end}` : `${offer.season_start_month}-${offer.season_end_month}`;
+      console.log(`   season  : ${sText}  (${sMonths})${bs ? ' [from page]' : ''}`);
       console.log(`   from EUR: ${offer.price_from_eur ?? '-'}  | currency: ${offer.currency ?? '-'}`);
       console.log(`   options : ${JSON.stringify(pricing?.options ?? [])}`);
       console.log(`   source  : ${srcUrl}  (text ${src?.text?.length ?? 0} chars)`);
@@ -541,6 +576,9 @@ async function processProvider(cp: {
       : homeUrl;
     const srcPage = pageByUrl.get(srcUrl) ?? pages[0];
 
+    // Deterministic best-season from the offer's page overrides the flaky LLM guess.
+    const bestSeason = srcPage?.text ? parseBestSeason(srcPage.text) : null;
+
     // Images: reuse if already stored, else discover (gallery + own page + Tavily) + curate.
     let images: StoredImage[] = existingImages.get(slug) ?? [];
     if (images.length === 0) {
@@ -590,9 +628,9 @@ async function processProvider(cp: {
       beginner_friendly: cleanBool(offer.beginner_friendly),
       kite_lessons: cleanBool(offer.kite_lessons),
       equipment_rental: cleanBool(offer.equipment_rental),
-      season_text: offer.season_text ?? null,
-      season_start_month: cleanMonth(offer.season_start_month),
-      season_end_month: cleanMonth(offer.season_end_month),
+      season_text: bestSeason ? bestSeason.text : (offer.season_text ?? null),
+      season_start_month: bestSeason ? bestSeason.start : cleanMonth(offer.season_start_month),
+      season_end_month: bestSeason ? bestSeason.end : cleanMonth(offer.season_end_month),
       duration_days: cleanInt(offer.duration_days),
       dates: offer.dates ?? null,
       pricing: offer.pricing ?? null,
