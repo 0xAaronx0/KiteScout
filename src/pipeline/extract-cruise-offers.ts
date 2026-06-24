@@ -372,6 +372,30 @@ async function processProvider(cp: {
     }
   }
 
+  // Lazily-curated homepage hero, reused as a fallback so a provider's offers are
+  // never left completely imageless when their own page yields nothing usable.
+  let homepageFallback: StoredImage[] | null = null;
+  const getHomepageFallback = async (): Promise<StoredImage | null> => {
+    if (homepageFallback === null) {
+      const home = pages[0];
+      const candidates = [
+        ...(home?.html ? discoverImageUrls(home.html, home.url) : []),
+        ...(await getTavilyImages(home.url)),
+      ];
+      homepageFallback = candidates.length > 0
+        ? await curateAndStoreImages({
+            candidateUrls: candidates,
+            providerId: cp.id,
+            slug: '_homepage',
+            sourceUrl: home.url,
+            context: `${name} — homepage header / main hero image (kite cruise operator)`,
+            max: 1,
+          })
+        : [];
+    }
+    return homepageFallback[0] ?? null;
+  };
+
   const usedSlugs = new Set<string>();
   let stored = 0;
 
@@ -431,6 +455,13 @@ async function processProvider(cp: {
           context: ctx,
         });
       }
+    }
+
+    // Never leave an offer completely imageless: fall back to the operator's
+    // homepage hero when its own page yielded nothing usable.
+    if (images.length === 0) {
+      const fb = await getHomepageFallback();
+      if (fb) images = [{ ...fb, sort: 0, fallback: true }];
     }
 
     const row = {

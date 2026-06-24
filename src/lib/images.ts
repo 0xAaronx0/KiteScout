@@ -51,6 +51,8 @@ export interface StoredImage {
   bytes: number;
   caption: string | null;
   sort: number;
+  /** true when this is the operator's homepage hero, used because the offer's own page had no usable image */
+  fallback?: boolean;
 }
 
 // ---------------------------------------------------------------------------
@@ -315,8 +317,10 @@ export async function curateAndStoreImages(opts: {
   slug: string;
   sourceUrl: string;
   context: string;
+  max?: number;
 }): Promise<StoredImage[]> {
   const { candidateUrls, providerId, slug, sourceUrl, context } = opts;
+  const cap = opts.max ?? MAX_STORED;
   if (candidateUrls.length === 0) return [];
 
   // Merge-safe dedup + junk filter (Tavily-sourced URLs bypass discoverImageUrls).
@@ -355,11 +359,11 @@ export async function curateAndStoreImages(opts: {
   let selected: Array<{ img: DownloadedImage; caption: string | null }>;
   const visionPick = USE_VISION_QC ? await visionSelect(downloaded, context) : null;
   if (visionPick && visionPick.length > 0) {
-    selected = visionPick.slice(0, MAX_STORED);
+    selected = visionPick.slice(0, cap);
   } else {
     selected = [...downloaded]
       .sort((a, b) => b.width * b.height - a.width * a.height)
-      .slice(0, MAX_STORED)
+      .slice(0, cap)
       .map(img => ({ img, caption: null }));
   }
 

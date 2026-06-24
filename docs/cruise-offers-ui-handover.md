@@ -84,7 +84,8 @@ Unique on `(cruise_provider_id, slug)`.
   "currency": "EUR", "raw": "from €1,900 p.p. (cabin share)" }
 
 // images[] — see §3; `path` is a STORAGE PATH, not a URL. `sort` = display order
-// (0 = primary); iterate by `sort`, not array order. May be an empty array.
+// (0 = primary); iterate by `sort`, not array order. An image may carry
+// `fallback: true` (operator homepage hero, used when the offer page had no photo).
 [{ "path": "cruise-offers/<providerId>/<slug>/0.webp", "source_url": "https://…",
    "width": 1280, "height": 853, "bytes": 98213,
    "caption": "catamaran at anchor", "sort": 0 }]
@@ -140,7 +141,7 @@ Either keeps the bucket non-public. Do **not** make the bucket public.
 
 This **replaces the old per-card live OG scrape** (`/api/og` + client-side logo filtering in `SwipeCard.tsx`): offers ship pre-curated, compressed, logo-filtered images.
 
-- `images` is **always an array, never null** — but may be **empty** when extraction found no suitable photo (sparse / JS-heavy sites, or "Coming Soon" pages). Check `images.length > 0`, and keep `/api/og` as the fallback only for the empty case.
+- `images` is **always an array, never null**. When an offer's own page yields no usable photo, the pipeline falls back to the operator's **homepage hero image**, flagged **`fallback: true`** on that image — so a cruise is almost never imageless. `images` is empty only in the rare case the homepage had no usable image either; check `images.length > 0` and keep `/api/og` as the last-resort fallback. (A `fallback: true` image is operator-generic, not offer-specific — you may want a subtle "representative image" treatment.)
 - Render images in ascending **`sort`** order (`0` = primary) — it's the stable display sequence; don't rely on array order.
 
 ---
