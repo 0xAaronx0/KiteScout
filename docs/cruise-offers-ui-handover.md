@@ -108,6 +108,8 @@ The business record (name, `website_url`, contact, `description`, etc.) is uncha
 | `reviews_checked_at` | timestamptz | null = not yet checked |
 | `review_match_notes` | text | why the match was accepted (audit trail; not for display) |
 
+**Display:** surface `bstoked_rating` / `tripadvisor_rating` (+ counts) as trust badges linking to the matching `*_url`; expect many `tripadvisor_*` to be null (domain-corroborated only). `review_match_notes` is audit-only — don't show it.
+
 > ⚠️ The old card read `vessel_name / vessel_type / typical_duration_days / price_per_person_eur` from `cruise_providers`. Those are sparse manual-enrichment fields — **prefer `cruise_offers` for vessel/price/duration going forward.**
 
 ### `cruise_locations` (existing — still drives map/search)
@@ -184,7 +186,25 @@ Notes for display **and querying**:
 
 ---
 
-## 5. Out of scope / not built
+## 5. Wind stats (per-country)
+
+A separate, **already-built** enrichment (not part of the offer tables): country-level kite-wind probabilities scraped from bstoked.net, in `web/lib/wind-stats.ts`.
+
+```ts
+import { windMonthsForCountry } from '@/lib/wind-stats';
+
+const months = windMonthsForCountry(offer.country); // number[12] (Jan→Dec), 0–100, or undefined
+```
+
+- Each value is the **percent of "windy days"** (≥3h in a row of ≥12 kn at a good local spot) for that month, January→December.
+- **Country-level, not per-offer/spot** — look it up by `offer.country`. The helper is case-insensitive with a small alias table (`cabo verde`→`Cape Verde`, `uk`→`United Kingdom`, `grenada`→ Grenadines proxy, …).
+- Returns **`undefined`** when bstoked doesn't cover the country — fall back to estimated data (the existing component does this automatically).
+- Render with the existing **`<WindBars seed={provider.id} months={months} />`** (a 12-month strip with the current month highlighted; shows a deterministic mock curve when `months` is absent), or build your own from the array.
+- Auto-generated; regenerate by re-scraping the bstoked map page's `data-data` attribute.
+
+---
+
+## 6. Out of scope / not built
 - No frontend, API routes, or types for offers yet — all yours to design.
 - `price_from_eur` is a heuristic conversion; if you need exact FX, do it at read time from `pricing` + `currency`.
 - **No per-offer reviews** — all review signals (`bstoked_*`, `tripadvisor_*`) are **provider-level**, shared across that provider's offers.
