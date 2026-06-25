@@ -202,6 +202,25 @@ const months = windMonthsForCountry(offer.country); // number[12] (Jan→Dec), 0
 - Render with the existing **`<WindBars seed={provider.id} months={months} />`** (a 12-month strip with the current month highlighted; shows a deterministic mock curve when `months` is absent), or build your own from the array.
 - Auto-generated; regenerate by re-scraping the bstoked map page's `data-data` attribute.
 
+### Also available as a DB table: `wind_stats`
+
+So you can query wind data directly (no need to import the lib). Same numbers as `windMonthsForCountry()`.
+
+| Column | Type | Notes |
+|---|---|---|
+| `country` | text (PK) | bstoked country name; common variants (`usa`, `uk`, `grenada`, …) are included as extra rows |
+| `months` | smallint[] | 12 values, **Jan→Dec**, each `0–100` (% windy days) |
+| `is_alias` | bool | true for the variant rows (same data as their canonical country) |
+| `updated_at` | timestamptz | |
+
+```sql
+select months from wind_stats where lower(country) = lower('Egypt');
+-- months[1] = Jan … months[12] = Dec  (Postgres arrays are 1-indexed;
+-- supabase-js returns a 12-element JS array, [Jan … Dec])
+```
+
+Lookup is case-insensitive via the `lower(country)` index, and the alias rows mean a raw `offer.country` (e.g. "USA", "Cabo Verde") matches without extra mapping. Returns `null`/empty when bstoked doesn't cover the country — fall back to estimated data. The table mirrors `web/lib/wind-stats.ts`; regenerate both together when bstoked data changes.
+
 ---
 
 ## 6. Out of scope / not built
