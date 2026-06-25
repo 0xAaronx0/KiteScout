@@ -23,6 +23,12 @@ const VESSEL_TYPES = [
   'catamaran', 'sailing_yacht', 'motor_yacht', 'gulet', 'dhow', 'liveaboard', 'speedboat', 'other',
 ] as const;
 const BOOKING_MODES = ['whole_boat', 'per_cabin', 'single_spot'] as const;
+const SKILL_LEVELS = ['beginner', 'intermediate', 'advanced'] as const;
+const WATER_CONDITIONS = ['flat', 'choppy', 'waves'] as const;
+const WIND_STRENGTHS = ['light', 'medium', 'strong'] as const;
+const COMFORT_LEVELS = ['budget', 'standard', 'premium', 'luxury'] as const;
+const MEAL_PLANS = ['all_inclusive', 'full_board', 'half_board', 'self_catering'] as const;
+const PRICE_CONFIDENCES = ['high', 'medium', 'low'] as const;
 // Pages that hold a (usually destination-tagged) photo gallery.
 const GALLERY_URL_RE = /\/(gallery|photos?|photo-gallery|media|portfolio)\b/i;
 
@@ -81,6 +87,19 @@ interface ExtractedOffer {
   price_from_eur: number | null;
   currency: string | null;
   summary: string;
+  skill_levels: unknown;
+  water_conditions: unknown;
+  wind_strength: unknown;
+  included_services: unknown;
+  optional_services: unknown;
+  comfort_level: unknown;
+  suitable_for_non_kiters: unknown;
+  family_friendly: unknown;
+  accommodation: unknown;
+  meal_plan: unknown;
+  capacity_guests: unknown;
+  cabin_count: unknown;
+  price_confidence: unknown;
   is_reseller: boolean;
   operated_by: string | null;
   confidence: 'high' | 'medium' | 'low';
@@ -117,6 +136,19 @@ For each offer, extract this exact JSON shape (use null when the site does not s
   "beginner_friendly": true | false | null,
   "kite_lessons": true | false | null,
   "equipment_rental": true | false | null,
+  "skill_levels": subset of ["beginner","intermediate","advanced"] this trip suits (from stated difficulty / coaching), or [],
+  "water_conditions": subset of ["flat","choppy","waves"] ONLY if the page describes the water at the spots, else [],
+  "wind_strength": subset of ["light","medium","strong"] ONLY if the page describes the wind, else [],
+  "included_services": short labels of what's included (e.g. "accommodation","all meals","kite instruction","equipment","airport transfers"), or [],
+  "optional_services": short labels of paid add-ons, or [],
+  "comfort_level": one of ["budget","standard","premium","luxury"] or null,
+  "suitable_for_non_kiters": true | false | null,
+  "family_friendly": true | false | null,
+  "accommodation": "short description of sleeping arrangements (cabin type, ensuite, AC), or null",
+  "meal_plan": one of ["all_inclusive","full_board","half_board","self_catering"] or null,
+  "capacity_guests": integer max guests, or null,
+  "cabin_count": integer number of cabins, or null,
+  "price_confidence": one of ["high","medium","low"] — high = explicit per-tier prices on the page, low = vague/"from"/derived; or null,
   "season_text": "the kite / best-season window, e.g. 'April–October', or null",
   "season_start_month": 1-12 or null,
   "season_end_month": 1-12 or null,
@@ -138,6 +170,8 @@ For each offer, extract this exact JSON shape (use null when the site does not s
 PRICING: capture EVERY pricing tier shown — solo/shared cabin, private cabin, whole boat, etc. — in pricing.options, each with its amount, currency and basis. Prices often live on a dedicated pricing/rates page included in the content below; apply a price block only to the specific offer it belongs to (a pricing page that names a destination or duration applies only to that offer). Report only amounts actually shown — never invent or divide to fabricate a number.
 
 SEASON: for the availability window use the offer's stated best / kite season (e.g. a 'Best Season: Apr–Oct' fact, or 'from April to October'). Do NOT report a generic 'year-round' / 'all year' / 'open all year' phrase as the season when a specific best-season window is given.
+
+CONDITIONS: only fill water_conditions / wind_strength when the page actually describes the spots' water or wind — do NOT guess from the destination; leave [] otherwise (a separate region-level step infers conditions). Infer skill_levels from difficulty / coaching wording. Other attributes (services, comfort_level, meal_plan, accommodation, capacity) — extract only when stated; null / [] otherwise.
 
 RESELLER: many sites resell other operators' cruises as affiliates. If the page indicates the trip is operated by a third party / partner and this site merely books it or earns a commission, set is_reseller=true (and operated_by to the partner's name if stated). Set is_reseller=false only when this operator clearly runs the boat itself.
 
@@ -424,6 +458,26 @@ function cleanBool(b: unknown): boolean | null {
   return typeof b === 'boolean' ? b : null;
 }
 
+function cleanStr(v: unknown): string | null {
+  return typeof v === 'string' && v.trim().length > 0 ? v.trim() : null;
+}
+
+/** Filter to non-empty strings; when `allowed` is given, normalize + keep only allowed values. */
+function cleanStrArray(arr: unknown, allowed?: readonly string[]): string[] {
+  if (!Array.isArray(arr)) return [];
+  const vals = arr
+    .filter((s): s is string => typeof s === 'string' && s.trim().length > 0)
+    .map(s => (allowed ? s.toLowerCase().trim().replace(/[\s-]+/g, '_') : s.trim()));
+  const kept = allowed ? vals.filter(v => (allowed as readonly string[]).includes(v)) : vals;
+  return [...new Set(kept)];
+}
+
+function cleanEnum(v: unknown, allowed: readonly string[]): string | null {
+  if (typeof v !== 'string') return null;
+  const n = v.toLowerCase().trim().replace(/[\s-]+/g, '_');
+  return (allowed as readonly string[]).includes(n) ? n : null;
+}
+
 const MONTH_NAMES = ['', 'January', 'February', 'March', 'April', 'May', 'June',
   'July', 'August', 'September', 'October', 'November', 'December'];
 const MONTH_PAT =
@@ -492,7 +546,9 @@ async function processProvider(cp: {
       const sMonths = bs ? `${bs.start}-${bs.end}` : `${offer.season_start_month}-${offer.season_end_month}`;
       console.log(`   season  : ${sText}  (${sMonths})${bs ? ' [from page]' : ''}`);
       console.log(`   from EUR: ${offer.price_from_eur ?? '-'}  | currency: ${offer.currency ?? '-'}`);
-      console.log(`   options : ${JSON.stringify(pricing?.options ?? [])}`);
+      console.log(`   options : ${JSON.stringify(pricing?.options ?? [])}  priceConf=${cleanEnum(offer.price_confidence, PRICE_CONFIDENCES)}`);
+      console.log(`   attrs   : skill=${JSON.stringify(cleanStrArray(offer.skill_levels, SKILL_LEVELS))} water=${JSON.stringify(cleanStrArray(offer.water_conditions, WATER_CONDITIONS))} wind=${JSON.stringify(cleanStrArray(offer.wind_strength, WIND_STRENGTHS))} comfort=${cleanEnum(offer.comfort_level, COMFORT_LEVELS)} meal=${cleanEnum(offer.meal_plan, MEAL_PLANS)} cap=${cleanInt(offer.capacity_guests)} nonKiter=${cleanBool(offer.suitable_for_non_kiters)} family=${cleanBool(offer.family_friendly)}`);
+      console.log(`   services: incl=${JSON.stringify(cleanStrArray(offer.included_services))} opt=${JSON.stringify(cleanStrArray(offer.optional_services))} | accom=${cleanStr(offer.accommodation) ? '"' + cleanStr(offer.accommodation)!.slice(0, 40) + '"' : '-'}`);
       console.log(`   source  : ${srcUrl}  (text ${src?.text?.length ?? 0} chars)`);
     }
     return offers.length;
@@ -667,6 +723,19 @@ async function processProvider(cp: {
       price_from_eur: cleanInt(offer.price_from_eur),
       currency: offer.currency ?? null,
       summary: offer.summary ?? null,
+      skill_levels: cleanStrArray(offer.skill_levels, SKILL_LEVELS),
+      water_conditions: cleanStrArray(offer.water_conditions, WATER_CONDITIONS),
+      wind_strength: cleanStrArray(offer.wind_strength, WIND_STRENGTHS),
+      included_services: cleanStrArray(offer.included_services),
+      optional_services: cleanStrArray(offer.optional_services),
+      comfort_level: cleanEnum(offer.comfort_level, COMFORT_LEVELS),
+      suitable_for_non_kiters: cleanBool(offer.suitable_for_non_kiters),
+      family_friendly: cleanBool(offer.family_friendly),
+      accommodation: cleanStr(offer.accommodation),
+      meal_plan: cleanEnum(offer.meal_plan, MEAL_PLANS),
+      capacity_guests: cleanInt(offer.capacity_guests),
+      cabin_count: cleanInt(offer.cabin_count),
+      price_confidence: cleanEnum(offer.price_confidence, PRICE_CONFIDENCES),
       is_reseller: offer.is_reseller === true,
       operated_by: typeof offer.operated_by === 'string' ? offer.operated_by : null,
       images,

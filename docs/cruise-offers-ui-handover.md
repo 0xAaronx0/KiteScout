@@ -9,12 +9,9 @@ This is the data the new cruise UI should consume. Backend only — no frontend 
 
 ## 1. Prerequisites / current state
 
-- All three migrations are **already applied** in Supabase (cruise_offers, provider review links, and the `source_text` column):
-  - `supabase/migrations/20260623000000_create_cruise_offers.sql`
-  - `supabase/migrations/20260623000100_add_provider_review_links.sql`
-  - `supabase/migrations/20260623000200_add_cruise_offer_source_text.sql`
-- **Right now only `kitesafaris.com` is populated** — 3 sample offers (Antigua with 5 images + full 4-tier pricing, Greece, Sardinia) plus their images in the private bucket. Enough to build and preview the UI against real data.
-- **The full ~60-provider sweep runs after your sign-off** (`pnpm cli cruise-offers`, then `pnpm cli cruise-reviews`). So treat the table as a representative sample, not the full set, and expect many more rows + variety once it runs.
+- The schema is defined by the migrations in `supabase/migrations/` — `cruise_offers` (+ `source_text`, reseller flags, and the richer attributes below), `cruise_providers` review columns, `provider_pages` (full-text corpus), `region_conditions`, and `wind_stats`. All applied in Supabase.
+- **Only a handful of test providers are populated so far** (kitesafaris, dragonfly, caribbean, goodbreeze, kiteboat, …) — a representative sample to build + preview against; expect many more rows + variety after the full sweep.
+- **The full ~60-provider sweep runs after your sign-off**: `pnpm cli cruise-offers`, then `pnpm cli cruise-reviews`, then `pnpm cli region-conditions` (builds the per-region conditions).
 - Tables are in the same Supabase project the current app already uses.
 
 ---
@@ -45,6 +42,14 @@ Unique on `(cruise_provider_id, slug)`.
 | `beginner_friendly` | bool | **nullable = unknown** (don't treat null as false) |
 | `kite_lessons` | bool | nullable = unknown |
 | `equipment_rental` | bool | nullable = unknown |
+| `skill_levels` | text[] | subset of `beginner` / `intermediate` / `advanced` |
+| `included_services` / `optional_services` | text[] | what's included vs paid add-ons (free-text labels) |
+| `comfort_level` | text | `budget` / `standard` / `premium` / `luxury` |
+| `suitable_for_non_kiters` / `family_friendly` | bool | nullable = unknown |
+| `accommodation` | text | cabin description (type, ensuite, AC…) |
+| `meal_plan` | text | `all_inclusive` / `full_board` / `half_board` / `self_catering` |
+| `capacity_guests` / `cabin_count` | int | |
+| `water_conditions` / `wind_strength` | text[] | **RAW per-page signal only** — for display use `region_conditions` (below), don't read these directly |
 | `season_text` | text | human window, e.g. "June–September" |
 | `season_start_month` / `season_end_month` | smallint | 1–12, for filtering |
 | `duration_days` | int | |
@@ -52,6 +57,7 @@ Unique on `(cruise_provider_id, slug)`.
 | `pricing` | jsonb | structured prices incl. **every tier** in `options[]` — see shape below |
 | `price_from_eur` | int | lowest **genuine per-person** price (never divided from a cabin price); null if none shown → **use for sorting/filtering** |
 | `currency` | text | original quote currency (often USD) |
+| `price_confidence` | text | `high` / `medium` / `low` — confidence in the extracted price (high = explicit per-tier prices) |
 | `summary` | text | AI 2–3 sentence description |
 | `source_text` | text | full readable text of the offer's source subpage; kept for the booking agent to answer free-form questions — **not for direct display** |
 | `images` | jsonb | **array of stored images** — see §3 |
@@ -114,6 +120,29 @@ The business record (name, `website_url`, contact, `description`, etc.) is uncha
 
 ### `cruise_locations` (existing — still drives map/search)
 Per-provider spots with `country/region/spot_name/lat/lng/confidence`. The country-chip search in `web/lib/match-cruise.ts` + `cruise-destinations.ts` still uses this. Offers do not replace it; they enrich each provider.
+
+### `region_conditions` (per-region water/wind — the display source for conditions)
+
+Water/wind are properties of the **region**, so cruises **inherit** them — read conditions from here, matched on the offer's `(country, region)`, **not** from the offer's raw `water_conditions`/`wind_strength`.
+
+| Column | Type | Notes |
+|---|---|---|
+| `region_key` | text (PK) | normalized `"country\|region"` (region `""` when absent) |
+| `country` / `region` | text | |
+| `water_conditions` | text[] | **union**: `flat` / `choppy` / `waves` (a region can have several) |
+| `wind_strength` | text[] | **range**: `light` / `medium` / `strong` |
+| `note` | text | one short traveler-facing sentence |
+| `confidence` | text | `high` / `medium` / `low` — lower when sparse, conflicting, or LLM-inferred |
+| `source_count` | int | providers that reported real conditions (`0` = LLM general-knowledge fallback) |
+
+Lookup for a given offer:
+```sql
+select water_conditions, wind_strength, note, confidence, source_count
+from region_conditions
+where region_key = lower(coalesce(:country,'')) || '|' || lower(coalesce(:region,''));
+```
+
+Built by `pnpm cli region-conditions` — an LLM consensus per region that prefers what providers state and falls back to general kite-knowledge (lower `confidence`, `source_count = 0`) when none do. Use `confidence`/`source_count` to show conditions **softly** when they're inferred rather than provider-stated.
 
 ---
 
