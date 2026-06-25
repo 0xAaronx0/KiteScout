@@ -26,7 +26,7 @@ const TRAP_RE =
 // Pages most likely to carry traveller-relevant info — ranked first, and the
 // only ones worth a (paid) Tavily fallback when the static fetch is thin.
 export const PAGE_VALUE_RE =
-  /(pricing|price|rate|cost|fare|gallery|photo|destination|trip|cruise|safari|liveaboard|itinerary|boat|yacht|fleet|cabin|date|book|tour|package|about|contact|faq|review)/i;
+  /(pricing|price|rate|cost|fare|gallery|photo|destination|trip|cruise|safari|liveaboard|itinerary|boat|yacht|fleet|cabin|date|book|tour|package|about|contact|faq|review|crucero|cruzeiro|kreuzfahrt|croisi|crociera|viaje|viagg|viagem|reise|voyage|oferta|velero|segelt)/i;
 
 function normalizeUrl(u: string): string {
   try {

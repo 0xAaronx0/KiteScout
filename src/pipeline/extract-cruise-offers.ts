@@ -116,6 +116,8 @@ const EXTRACTION_PROMPT = `You are extracting structured KITE-CRUISE OFFERS from
 
 A kite cruise = participants travel by boat (catamaran, gulet, sailing yacht, dhow, motor yacht, liveaboard, etc.) between kiteboarding spots, typically sleeping on board, over multiple days.
 
+The website may be in ANY language (e.g. Spanish "cruceros", German "Kreuzfahrt", French "croisière", Italian "crociera", Portuguese "cruzeiro") — read and extract offers regardless of language, and write all output fields in English.
+
 A single operator may sell SEVERAL distinct offers (different regions, vessels, durations, or seasons). Return one object per genuinely distinct offer. If the site presents a single generic cruise product, return exactly one offer. The SAME boat and itinerary offered both as scheduled/cabin departures AND as a private whole-boat charter is ONE offer — record both ways to book in booking_modes; do NOT split it into separate offers. Offers are distinct only when they differ by region, vessel, or itinerary — not merely by booking mode, departure type, or year. Do NOT invent offers, and do NOT include land-based camps, kite schools, fixed-base lessons, or single day-trips that return to the same harbour each night.
 
 For each offer, extract this exact JSON shape (use null when the site does not state something — never guess):
@@ -177,7 +179,7 @@ RESELLER: many sites resell other operators' cruises as affiliates. If the page 
 
 Confidence: high = explicitly sold as a kite cruise/liveaboard; medium = strongly implied multi-day boat trip; low = inferred from partial info.
 
-Respond with ONLY a JSON array. If no kite-cruise offers exist, respond with [].`;
+Respond with ONLY the JSON array — no preamble, no explanation, no markdown fences. Begin your reply with [ and end with ]. If no kite-cruise offers exist, respond with [].`;
 
 // ---------------------------------------------------------------------------
 // Geocoding (shared throttle + cache), mirrors extract-cruise-locations
@@ -351,9 +353,17 @@ async function storeCorpus(providerId: string, pages: FetchedPage[]): Promise<vo
 // Claude offer extraction
 // ---------------------------------------------------------------------------
 const PRICING_URL_RE = /\/(pricing|prices|rates|fares?|booking)\b/i;
+// Genuine cruise/boat pages (any language) — ranked ABOVE broader trip/safari
+// pages so the real boat-cruise page is never truncated out by, e.g., a pile of
+// land-based "safari" pages competing for the content budget.
+const CRUISE_PAGE_RE = /(cruise|crucero|cruzeiro|kreuzfahrt|croisi|crociera|liveaboard|catamar)/i;
 // Pages that actually define offers — ranked just after pricing so every
 // destination/trip page survives the content budget, ahead of about/contact/faq.
-const OFFER_PAGE_RE = /\/(destinations?|trips?|cruises?|safaris?|liveaboards?|itinerar|packages?|tours?)\b/i;
+// Multilingual cruise/trip stems so non-English sites (ES "cruceros", DE
+// "kreuzfahrt", FR "croisière", IT "crociera", PT "cruzeiro", "viaje"/"reise"…)
+// rank their cruise pages high instead of getting truncated out of the budget.
+const OFFER_PAGE_RE =
+  /(destination|trip|cruise|crucero|cruzeiro|kreuzfahrt|croisi|crociera|safari|liveaboard|itinerar|package|tour|viaje|viagg|viagem|reise|voyage|oferta|velero|segelt)/i;
 
 function buildContent(pages: FetchedPage[], homeUrl: string): string {
   // Fit the most relevant pages into the LLM budget: homepage, then pricing,
@@ -363,9 +373,10 @@ function buildContent(pages: FetchedPage[], homeUrl: string): string {
   const rank = (p: FetchedPage): number => {
     if (p.url.replace(/\/$/, '') === home) return 0;
     if (PRICING_URL_RE.test(p.url)) return 1;
-    if (OFFER_PAGE_RE.test(p.url)) return 2;
-    if (PAGE_VALUE_RE.test(p.url)) return 3;
-    return 4;
+    if (CRUISE_PAGE_RE.test(p.url)) return 2;   // genuine cruise pages first (any language)
+    if (OFFER_PAGE_RE.test(p.url)) return 3;
+    if (PAGE_VALUE_RE.test(p.url)) return 4;
+    return 5;
   };
   const ordered = [...pages].sort((a, b) => rank(a) - rank(b));
 
@@ -381,7 +392,7 @@ function buildContent(pages: FetchedPage[], homeUrl: string): string {
   return combined;
 }
 
-async function extractOffers(
+export async function extractOffers(
   content: string,
   providerName: string,
   pageUrls: string[],
@@ -392,12 +403,14 @@ async function extractOffers(
     const msg = await withRetry(() =>
       anthropic.messages.create({
         model: ANALYSIS_MODEL,
-        max_tokens: 4096,
+        max_tokens: 8192,
         system: [{ type: 'text', text: EXTRACTION_PROMPT, cache_control: { type: 'ephemeral' } }],
-        messages: [{
-          role: 'user',
-          content: `Provider: ${providerName}\nPAGES (use these exact URLs for source_page):\n${pageUrls.join('\n')}\n\nContent:\n${content}`,
-        }],
+        messages: [
+          {
+            role: 'user',
+            content: `Provider: ${providerName}\nPAGES (use these exact URLs for source_page):\n${pageUrls.join('\n')}\n\nContent:\n${content}`,
+          },
+        ],
       }),
       5,    // more patient retries: ride out sporadic 529 overloads during a sweep
       3000,
@@ -408,7 +421,12 @@ async function extractOffers(
     return [];
   }
 
-  const json = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
+  // Extract the JSON array tolerantly — the model sometimes wraps it in prose
+  // ("Looking at the content… [ … ]"), which would break a strict JSON.parse.
+  const cleaned = text.replace(/```/g, '');
+  const start = cleaned.indexOf('[');
+  const end = cleaned.lastIndexOf(']');
+  const json = start >= 0 && end > start ? cleaned.slice(start, end + 1) : cleaned;
   try {
     const parsed = JSON.parse(json);
     if (!Array.isArray(parsed)) return [];
