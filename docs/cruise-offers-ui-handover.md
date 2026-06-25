@@ -11,7 +11,7 @@ This is the data the new cruise UI should consume. Backend only — no frontend 
 
 - The schema is defined by the migrations in `supabase/migrations/` — `cruise_offers` (+ `source_text`, reseller flags, and the richer attributes below), `cruise_providers` review columns, `provider_pages` (full-text corpus), `region_conditions`, and `wind_stats`. All applied in Supabase.
 - **Only a handful of test providers are populated so far** (kitesafaris, dragonfly, caribbean, goodbreeze, kiteboat, …) — a representative sample to build + preview against; expect many more rows + variety after the full sweep.
-- **The full ~60-provider sweep runs after your sign-off**: `pnpm cli cruise-offers`, then `pnpm cli cruise-reviews`, then `pnpm cli region-conditions` (builds the per-region conditions).
+- **The full sweep runs after your sign-off** (95 cruise providers total; ~17 populated so far): `pnpm cli cruise-offers`, then `pnpm cli cruise-reviews`, then `pnpm cli region-conditions` (builds the per-country conditions).
 - Tables are in the same Supabase project the current app already uses.
 
 ---
