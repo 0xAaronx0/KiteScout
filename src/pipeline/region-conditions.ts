@@ -6,11 +6,12 @@ import { withRetry } from '../lib/retry.js';
 // ---------------------------------------------------------------------------
 // Region-level conditions consensus.
 //
-// Water/wind are properties of the REGION, not the individual cruise. We gather
-// the raw per-offer signal (cruise_offers.water_conditions / wind_strength) per
-// (country, region), then an LLM produces a consensus — union of water types,
-// range of wind — preferring provider data and falling back to its own
-// knowledge of the region (with a lower confidence) when providers are silent.
+// Water/wind are broadly consistent within a COUNTRY's kite spots, so we
+// consolidate per country (varied region spellings would otherwise fragment the
+// same place into several low-confidence rows). We gather the raw per-offer
+// signal (cruise_offers.water_conditions / wind_strength), then an LLM produces a
+// consensus — union of water types, range of wind — preferring provider data and
+// falling back to its own knowledge of the country (lower confidence) when silent.
 // ---------------------------------------------------------------------------
 
 const CONCURRENCY = 3;
@@ -24,8 +25,8 @@ interface OfferRow {
   wind_strength: string[] | null;
 }
 
-function regionKey(country: string, region: string | null): string {
-  return `${country.toLowerCase().trim()}|${(region ?? '').toLowerCase().trim()}`;
+function countryKey(country: string): string {
+  return country.toLowerCase().trim();
 }
 
 interface Consensus {
@@ -37,23 +38,23 @@ interface Consensus {
 
 async function consensus(
   country: string,
-  region: string | null,
+  areas: string[],
   reportedWater: string[],
   reportedWind: string[],
   sourceCount: number,
 ): Promise<Consensus> {
   const fallbackConf: 'medium' | 'low' = sourceCount > 1 ? 'medium' : 'low';
-  const where = region ? `${country} / ${region}` : country;
-  const prompt = `You determine the typical kiteboarding CONDITIONS for a region, for a kite-cruise finder.
+  const prompt = `You determine the typical kiteboarding CONDITIONS for a COUNTRY (a kite-cruise finder shows one conditions summary per country).
 
-Region: ${where}
+Country: ${country}
+Kite areas our cruises visit here: ${areas.length ? areas.join(', ') : '(unspecified)'}
 
 What the cruise providers operating here actually state (may be empty):
 - water mentioned: [${reportedWater.join(', ')}]
 - wind mentioned: [${reportedWind.join(', ')}]
 - providers that reported any conditions: ${sourceCount}
 
-Produce a consensus. Water can be MULTIPLE values (a region has varied spots); wind is usually a RANGE. Prefer the providers' stated conditions; if they are sparse or empty, use your own knowledge of this region's typical kite conditions and LOWER the confidence accordingly.
+Produce a country-wide consensus across those kite areas. Water can be MULTIPLE values; wind is usually a RANGE. Prefer the providers' stated conditions; if they are sparse or empty, use your own knowledge of this country's typical kite conditions and LOWER the confidence accordingly.
 
 Respond with ONLY this JSON:
 { "water_conditions": subset of ["flat","choppy","waves"],
@@ -101,13 +102,14 @@ export async function runRegionConditions(): Promise<{ regions: number }> {
     return { regions: 0 };
   }
 
-  // Group offers by (country, region); collect the union of reported conditions.
-  const groups = new Map<string, { country: string; region: string | null; water: Set<string>; wind: Set<string>; sources: number }>();
+  // Group offers by COUNTRY; collect the kite areas + union of reported conditions.
+  const groups = new Map<string, { country: string; areas: Set<string>; water: Set<string>; wind: Set<string>; sources: number }>();
   for (const o of offers as OfferRow[]) {
     if (!o.country) continue;
-    const key = regionKey(o.country, o.region);
+    const key = countryKey(o.country);
     let g = groups.get(key);
-    if (!g) { g = { country: o.country, region: o.region ?? null, water: new Set(), wind: new Set(), sources: 0 }; groups.set(key, g); }
+    if (!g) { g = { country: o.country, areas: new Set(), water: new Set(), wind: new Set(), sources: 0 }; groups.set(key, g); }
+    if (o.region) g.areas.add(o.region);
     const w = Array.isArray(o.water_conditions) ? o.water_conditions : [];
     const wi = Array.isArray(o.wind_strength) ? o.wind_strength : [];
     if (w.length > 0 || wi.length > 0) g.sources++;
@@ -115,18 +117,21 @@ export async function runRegionConditions(): Promise<{ regions: number }> {
     for (const x of wi) g.wind.add(x);
   }
 
-  console.log(`Building conditions for ${groups.size} regions…`);
+  // Full rebuild: clear stale rows (incl. older region-level keys) first.
+  await supabase.from('region_conditions').delete().gte('source_count', 0);
+
+  console.log(`Building conditions for ${groups.size} countries…`);
   const limit = pLimit(CONCURRENCY);
   let done = 0;
   await Promise.all(
     [...groups.entries()].map(([key, g]) =>
       limit(async () => {
-        const c = await consensus(g.country, g.region, [...g.water], [...g.wind], g.sources);
+        const c = await consensus(g.country, [...g.areas], [...g.water], [...g.wind], g.sources);
         const { error: upErr } = await supabase.from('region_conditions').upsert(
           {
             region_key: key,
             country: g.country,
-            region: g.region,
+            region: null,
             water_conditions: c.water,
             wind_strength: c.wind,
             note: c.note,
@@ -138,7 +143,7 @@ export async function runRegionConditions(): Promise<{ regions: number }> {
         );
         if (upErr) console.error(`\n  DB error for ${key}:`, upErr.message);
         done++;
-        process.stdout.write(`\r  ${done}/${groups.size} regions`);
+        process.stdout.write(`\r  ${done}/${groups.size} countries`);
       }),
     ),
   );

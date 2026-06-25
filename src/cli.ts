@@ -277,7 +277,7 @@ async function main(): Promise<void> {
 
     case 'region-conditions': {
       const { regions } = await runRegionConditions();
-      console.log(`Done: conditions built for ${regions} regions.`);
+      console.log(`Done: conditions built for ${regions} countries.`);
       break;
     }
 
@@ -340,7 +340,7 @@ async function main(): Promise<void> {
       console.log('  cruise-locations          Extract validated cruise-only locations for all cruise providers');
       console.log('  cruise-offers             Extract structured cruise offers (+ curated images) for all cruise providers');
       console.log('  cruise-reviews            Match bstoked/TripAdvisor review links (domain-corroborated; --all to re-check)');
-      console.log('  region-conditions         Build per-region water/wind conditions consensus from extracted offers');
+      console.log('  region-conditions         Build per-country water/wind conditions consensus from extracted offers');
       console.log('  monitor [n]               Detect changes on cruise provider sites (flags: --loop --all --baseline-only --interval-days <d>)');
       console.log('  changes [n]               Show recent detected provider changes (default 20; --unseen for new only)');
   console.log('  restore <domain> [...]    Restore wrongly-rejected providers back to status=new');

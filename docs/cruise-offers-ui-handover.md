@@ -127,15 +127,16 @@ The business record (name, `website_url`, contact, `description`, etc.) is uncha
 ### `cruise_locations` (existing — still drives map/search)
 Per-provider spots with `country/region/spot_name/lat/lng/confidence`. The country-chip search in `web/lib/match-cruise.ts` + `cruise-destinations.ts` still uses this. Offers do not replace it; they enrich each provider.
 
-### `region_conditions` (per-region water/wind — the display source for conditions)
+### `region_conditions` (per-**country** water/wind — the display source for conditions)
 
-Water/wind are properties of the **region**, so cruises **inherit** them — read conditions from here, matched on the offer's `(country, region)`, **not** from the offer's raw `water_conditions`/`wind_strength`.
+Water/wind are broadly consistent within a country's kite spots, so they're consolidated **per country** — read conditions from here, matched on the offer's `country`, **not** from the offer's raw `water_conditions`/`wind_strength`.
 
 | Column | Type | Notes |
 |---|---|---|
-| `region_key` | text (PK) | normalized `"country\|region"` (region `""` when absent) |
-| `country` / `region` | text | |
-| `water_conditions` | text[] | **union**: `flat` / `choppy` / `waves` (a region can have several) |
+| `region_key` | text (PK) | `lower(country)` |
+| `country` | text | |
+| `region` | text | currently null (reserved for future sub-region splits) |
+| `water_conditions` | text[] | **union**: `flat` / `choppy` / `waves` (a country can have several) |
 | `wind_strength` | text[] | **range**: `light` / `medium` / `strong` |
 | `note` | text | one short traveler-facing sentence |
 | `confidence` | text | `high` / `medium` / `low` — lower when sparse, conflicting, or LLM-inferred |
@@ -145,10 +146,10 @@ Lookup for a given offer:
 ```sql
 select water_conditions, wind_strength, note, confidence, source_count
 from region_conditions
-where region_key = lower(coalesce(:country,'')) || '|' || lower(coalesce(:region,''));
+where region_key = lower(:country);
 ```
 
-Built by `pnpm cli region-conditions` — an LLM consensus per region that prefers what providers state and falls back to general kite-knowledge (lower `confidence`, `source_count = 0`) when none do. Use `confidence`/`source_count` to show conditions **softly** when they're inferred rather than provider-stated.
+Built by `pnpm cli region-conditions` — an LLM consensus per country (rebuilt from scratch each run) that prefers what providers state and falls back to general kite-knowledge (lower `confidence`, `source_count = 0`) when none do. Use `confidence`/`source_count` to show conditions **softly** when they're inferred rather than provider-stated.
 
 ---
 
