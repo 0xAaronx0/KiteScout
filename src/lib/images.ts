@@ -15,6 +15,7 @@
 // ---------------------------------------------------------------------------
 
 import Anthropic from '@anthropic-ai/sdk';
+import exifReader from 'exif-reader';
 import { parse, type HTMLElement } from 'node-html-parser';
 import sharp from 'sharp';
 import { supabase } from './supabase.js';
@@ -43,6 +44,22 @@ const WEBP_QUALITY = 75;
 const VISION_MAX_IMAGES = 10; // images sent to the vision QC call
 const USE_VISION_QC = true;
 
+// Best-effort image rights/provenance. Most provider photos are web-optimized
+// with EXIF/XMP stripped → `provider_site` with no copyright. The useful signals
+// are the `stock` flag (rights-risky, likely-licensed third-party photos) and
+// any embedded copyright/credit/license that survived.
+export interface ImageRights {
+  status: 'provider_site' | 'stock' | 'credited' | 'licensed';
+  source_host: string | null;
+  copyright: string | null;    // embedded copyright notice, if any
+  credit: string | null;       // photographer / creator, if any
+  license: string | null;      // stated usage terms, if any
+  license_url: string | null;  // CC license URL / web statement, if any
+}
+
+const STOCK_HOST_RE =
+  /(unsplash|pexels|pixabay|shutterstock|istockphoto|gettyimages|adobestock|stock\.adobe|123rf|dreamstime|depositphotos|alamy|freepik|envato)/i;
+
 export interface StoredImage {
   path: string;
   source_url: string;
@@ -51,6 +68,7 @@ export interface StoredImage {
   bytes: number;
   caption: string | null;
   sort: number;
+  rights: ImageRights;
   /** true when this is the operator's homepage hero, used because the offer's own page had no usable image */
   fallback?: boolean;
 }
@@ -218,6 +236,45 @@ interface DownloadedImage {
   buf: Buffer;
   width: number;
   height: number;
+}
+
+function hostOf(u: string): string | null {
+  try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return null; }
+}
+
+/** Best-effort rights from a (pre-compression) image buffer + its source URL. */
+export async function extractImageRights(buf: Buffer, sourceUrl: string): Promise<ImageRights> {
+  const host = hostOf(sourceUrl);
+  let copyright: string | null = null;
+  let credit: string | null = null;
+  let license: string | null = null;
+  let licenseUrl: string | null = null;
+  try {
+    const meta = await sharp(buf).metadata();
+    if (meta.xmp) {
+      const x = meta.xmp.toString('utf8');
+      const m = (re: RegExp): string | null => x.match(re)?.[1]?.trim() || null;
+      copyright = m(/<dc:rights>[\s\S]*?<rdf:li[^>]*>([^<]+)</i);
+      credit = m(/<photoshop:Credit>([^<]+)</i) ?? m(/<dc:creator>[\s\S]*?<rdf:li[^>]*>([^<]+)</i);
+      license = m(/<xmpRights:UsageTerms>[\s\S]*?<rdf:li[^>]*>([^<]+)</i);
+      licenseUrl = m(/<xmpRights:WebStatement[^>]*>([^<]+)</i) ?? m(/<cc:license[^>]*rdf:resource="([^"]+)"/i);
+    }
+    if (meta.exif) {
+      try {
+        const t = exifReader(meta.exif) as { Image?: { Copyright?: unknown; Artist?: unknown } };
+        if (!copyright && typeof t.Image?.Copyright === 'string') copyright = t.Image.Copyright.trim() || null;
+        if (!credit && typeof t.Image?.Artist === 'string') credit = t.Image.Artist.trim() || null;
+      } catch { /* unparseable exif */ }
+    }
+  } catch { /* no readable metadata */ }
+
+  const status: ImageRights['status'] =
+    license || licenseUrl ? 'licensed'
+      : host && STOCK_HOST_RE.test(host) ? 'stock'
+        : copyright || credit ? 'credited'
+          : 'provider_site';
+
+  return { status, source_host: host, copyright, credit, license, license_url: licenseUrl };
 }
 
 async function downloadImage(url: string): Promise<Buffer | null> {
@@ -410,6 +467,7 @@ export async function curateAndStoreImages(opts: {
       bytes: out.byteLength,
       caption,
       sort,
+      rights: await extractImageRights(img.buf, img.sourceUrl),
     });
     sort++;
   }

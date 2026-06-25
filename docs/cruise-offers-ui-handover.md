@@ -92,11 +92,17 @@ Unique on `(cruise_provider_id, slug)`.
   "currency": "EUR", "raw": "from €1,900 p.p. (cabin share)" }
 
 // images[] — see §3; `path` is a STORAGE PATH, not a URL. `sort` = display order
-// (0 = primary); iterate by `sort`, not array order. An image may carry
-// `fallback: true` (operator homepage hero, used when the offer page had no photo).
+// (0 = primary); iterate by `sort`, not array order. `fallback: true` = operator
+// homepage hero (offer page had no photo). `rights` = best-effort licensing:
+//   status: provider_site | stock | credited | licensed
+//   (stock/credited/licensed = NOT clearly the provider's own → rights-risky;
+//    hide or show attribution). copyright/credit/license/license_url are filled
+//    only when embedded EXIF/XMP survived (often null on web-optimized images).
 [{ "path": "cruise-offers/<providerId>/<slug>/0.webp", "source_url": "https://…",
-   "width": 1280, "height": 853, "bytes": 98213,
-   "caption": "catamaran at anchor", "sort": 0 }]
+   "width": 1280, "height": 853, "bytes": 98213, "caption": "catamaran at anchor",
+   "sort": 0,
+   "rights": { "status": "provider_site", "source_host": "example.com",
+     "copyright": null, "credit": null, "license": null, "license_url": null } }]
 ```
 
 ### `cruise_providers` (existing + NEW review columns)
@@ -176,6 +182,7 @@ This **replaces the old per-card live OG scrape** (`/api/og` + client-side logo 
 
 - `images` is **always an array, never null**. When an offer's own page yields no usable photo, the pipeline falls back to the operator's **homepage hero image**, flagged **`fallback: true`** on that image — so a cruise is almost never imageless. `images` is empty only in the rare case the homepage had no usable image either; check `images.length > 0` and keep `/api/og` as the last-resort fallback. (A `fallback: true` image is operator-generic, not offer-specific — you may want a subtle "representative image" treatment.)
 - Render images in ascending **`sort`** order (`0` = primary) — it's the stable display sequence; don't rely on array order.
+- Each image carries **`rights`** (best-effort): `status` ∈ `provider_site` / `stock` / `credited` / `licensed`. Treat **`stock` / `credited` / `licensed` as rights-risky** — the image isn't clearly the operator's own (e.g. a licensed stock photo, or one carrying a third-party photographer credit), so consider hiding it or showing the `credit` / `license` / `license_url`. `provider_site` = from the operator's own site with no third-party signal. (Embedded `copyright`/`credit` are often null because web images are usually metadata-stripped.)
 
 ---
 
