@@ -85,16 +85,20 @@ jobs:
             done
           fi
 
-          # 3. Health-check the live site; require 2 consecutive 200s to ride out the
-          #    brief 502 window while Traefik swaps to the new container.
-          echo "Health-checking https://kitescout.tech …"
+          # 3. Verify the DEPLOYED COMMIT is actually live — not just a 200 from a
+          #    stale image. Poll /api/version until it reports this exact SHA twice
+          #    in a row (rides out the brief Traefik swap window). A stale deploy
+          #    (image not updated — see deploy-gotchas #6) never matches, so it
+          #    fails loudly here instead of passing a homepage health check.
+          echo "Verifying /api/version reports ${GITHUB_SHA} …"
           ok=0
-          for i in $(seq 1 30); do
-            code=$(curl -sS --max-time 10 -o /dev/null -w "%{http_code}" https://kitescout.tech/ || echo "000")
-            echo "  attempt $i: HTTP $code"
-            if [ "$code" = "200" ]; then ok=$((ok + 1)); else ok=0; fi
-            if [ "$ok" -ge 2 ]; then echo "✅ kitescout.tech is healthy."; exit 0; fi
+          for i in $(seq 1 40); do
+            LIVE=$(curl -sS --max-time 10 https://kitescout.tech/api/version \
+              | python3 -c "import sys,json; print(json.load(sys.stdin).get('sha',''))" 2>/dev/null || echo "")
+            echo "  attempt $i: live='${LIVE:0:12}' want='${GITHUB_SHA:0:12}'"
+            if [ "$LIVE" = "${GITHUB_SHA}" ]; then ok=$((ok + 1)); else ok=0; fi
+            if [ "$ok" -ge 2 ]; then echo "✅ deployed commit ${GITHUB_SHA:0:12} is live."; exit 0; fi
             sleep 6
           done
-          echo "::error::Site did not return a stable 200 after redeploy."
+          echo "::error::/api/version never reported ${GITHUB_SHA} — the deploy is STALE (image not updated). See deploy-gotchas #6."
           exit 1

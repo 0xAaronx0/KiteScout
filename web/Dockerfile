@@ -20,6 +20,10 @@ WORKDIR /app
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV HOSTNAME=0.0.0.0
+# Stamp the build commit into the runtime env so /api/version can report which
+# code is actually running — the deploy workflow polls it to catch stale deploys.
+ARG GIT_SHA=dev
+ENV GIT_SHA=${GIT_SHA}
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
