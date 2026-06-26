@@ -5,6 +5,15 @@ World Map" link on the cruise finder). It is **live and data-driven**: a static 
 fetches the current cruise offers from the web app on load, so **newly extracted offers appear
 automatically** — nothing to regenerate or redeploy when the data changes.
 
+> **🤝 Ported to the UI dev's repo (2026-06-26).** The map was handed over to
+> **`MartinMarzi/KiteCruiseScout`** as
+> [PR #30](https://github.com/MartinMarzi/KiteCruiseScout/pull/30) — adapted to that app's
+> conventions (raw-REST Supabase access, zod, `@/features/*`, Leaflet via CDN, reading their
+> `app_cruise_offer_cards` view). The repo-specific handover lives there at
+> `docs/cruise-map-handover.md`. **This doc remains the reference for the KiteScout
+> implementation** (`map.kitescout.tech` — the `src/pipeline/map.ts` shell + `web/` endpoint);
+> the two share the same grouping logic and the busiest-spot placement rule.
+
 > **TL;DR**
 > - **Two pieces:** a static **shell** (`map.html`, served by nginx at `map.kitescout.tech`) +
 >   a live **endpoint** (`GET /api/cruise-map` in the Next app). The shell `fetch()`es the
