@@ -87,7 +87,7 @@ function buildShell(apiUrl: string): string {
   KiteScout &nbsp;·&nbsp; <strong id="count">…</strong> <span id="noun">cruise offers</span>
 </div>
 <div id="toggle-wrap">
-  <label for="view-toggle">Country</label>
+  <label for="view-toggle">Region</label>
   <label class="pill">
     <input type="checkbox" id="view-toggle">
     <span class="pill-track"></span>
