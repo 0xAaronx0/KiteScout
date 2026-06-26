@@ -156,7 +156,7 @@ For each offer, extract this exact JSON shape (use null when the site does not s
   "vessel_type": one of ["catamaran","sailing_yacht","motor_yacht","gulet","dhow","liveaboard","speedboat","other"] or null,
   "booking_modes": subset of ["whole_boat","per_cabin","single_spot"] that this offer supports,
   "sleeps_aboard": true if guests sleep ON the boat between spots | false if they stay in land accommodation (hotels/apartments/resorts/camps) | null if genuinely unclear,
-  "kite_focused": true if KITEBOARDING is a core activity of THIS trip | false if it is a non-kite trip (pure wave-surfing, sightseeing/leisure, sailing-only, diving-only) | null if unclear,
+  "kite_focused": true if KITEBOARDING is a core activity of THIS trip | false if it is a non-kite trip (pure wave-surfing, WINGFOIL/wing-only with no kiteboarding, sightseeing/leisure, sailing-only, diving-only) | null if unclear,
   "beginner_friendly": true | false | null,
   "kite_lessons": true | false | null,
   "equipment_rental": true | false | null,
@@ -458,6 +458,10 @@ export async function extractOffers(
         console.log(`  ↷ skip (land-based, not a cruise): ${o.title.trim()}`);
         return false;
       }
+      // PRODUCT DECISION (2026-06-26): non-kite cruises are excluded, including
+      // WINGFOIL/wing-only cruises (see kite_focused in the prompt). To start
+      // surfacing wing cruises, drop "wingfoil/wing-only" from the prompt's
+      // kite_focused=false list — the model will then mark them kite_focused=true/null.
       if (o.kite_focused === false) {
         console.log(`  ↷ skip (non-kite cruise): ${o.title.trim()}`);
         return false;
