@@ -137,7 +137,12 @@ export async function discoverSiteUrls(
   let urls = await getSitemapUrls(rootDomain);
   let via: 'sitemap' | 'bfs' = 'sitemap';
   if (urls.length < 5) {
-    urls = await bfsUrls(homeUrl, rootDomain, maxPages);
+    // BFS from the site ROOT, not a possibly-deep website_url (e.g.
+    // "/en/camps-and-sail/") whose page links to almost nothing — otherwise a
+    // provider with a deep website_url gets crawled as a single page.
+    let root = `https://${rootDomain}/`;
+    try { root = new URL(homeUrl).origin + '/'; } catch { /* keep default */ }
+    urls = await bfsUrls(root, rootDomain, maxPages);
     via = 'bfs';
   }
 

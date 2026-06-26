@@ -121,6 +121,12 @@ function isStalePastYear(title: string): boolean {
   return years.length > 0 && years.every(y => y < new Date().getFullYear());
 }
 
+// Deterministic land-based catch for titles the model wrongly marks sleeps_aboard:
+// you can't road-trip on a boat. (Other land trips are caught by sleeps_aboard.)
+function isLandByTitle(title: string): boolean {
+  return /\broad[\s-]?trip\b/i.test(title);
+}
+
 const EXTRACTION_PROMPT = `You are extracting structured KITE-CRUISE OFFERS from a kite travel operator's website.
 
 A kite cruise = participants SLEEP ABOARD a boat (catamaran, gulet, sailing yacht, dhow, motor yacht, liveaboard, etc.) that carries them between kiteboarding spots over multiple days. The boat IS the moving accommodation.
@@ -372,14 +378,14 @@ const PRICING_URL_RE = /\/(pricing|prices|rates|fares?|booking)\b/i;
 // Genuine cruise/boat pages (any language) — ranked ABOVE broader trip/safari
 // pages so the real boat-cruise page is never truncated out by, e.g., a pile of
 // land-based "safari" pages competing for the content budget.
-const CRUISE_PAGE_RE = /(cruise|crucero|cruzeiro|kreuzfahrt|croisi|crociera|liveaboard|catamar)/i;
+const CRUISE_PAGE_RE = /(cruise|crucero|cruzeiro|kreuzfahrt|croisi|crociera|liveaboard|catamar|[\s/-]sail|segel)/i;
 // Pages that actually define offers — ranked just after pricing so every
 // destination/trip page survives the content budget, ahead of about/contact/faq.
 // Multilingual cruise/trip stems so non-English sites (ES "cruceros", DE
 // "kreuzfahrt", FR "croisière", IT "crociera", PT "cruzeiro", "viaje"/"reise"…)
 // rank their cruise pages high instead of getting truncated out of the budget.
 const OFFER_PAGE_RE =
-  /(destination|trip|cruise|crucero|cruzeiro|kreuzfahrt|croisi|crociera|safari|liveaboard|itinerar|package|tour|viaje|viagg|viagem|reise|voyage|oferta|velero|segelt)/i;
+  /(destination|trip|cruise|crucero|cruzeiro|kreuzfahrt|croisi|crociera|safari|liveaboard|itinerar|package|tour|viaje|viagg|viagem|reise|voyage|oferta|velero|segel|camp|[\s/-]sail)/i;
 
 function buildContent(pages: FetchedPage[], homeUrl: string): string {
   // Fit the most relevant pages into the LLM budget: homepage, then pricing,
@@ -448,7 +454,7 @@ export async function extractOffers(
     // Drop land-based trips/holidays the model flagged as not sleeping aboard,
     // and archived past-year editions (e.g. "Kitesurf 2018 Cruise").
     .filter(o => {
-      if (o.sleeps_aboard === false) {
+      if (o.sleeps_aboard === false || isLandByTitle(o.title)) {
         console.log(`  ↷ skip (land-based, not a cruise): ${o.title.trim()}`);
         return false;
       }
