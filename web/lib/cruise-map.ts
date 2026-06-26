@@ -122,11 +122,17 @@ export async function buildCruiseMapData(): Promise<CruiseMapData> {
   if (error) throw error;
   const offers = data ?? [];
 
-  // Pass 1: spot layer from named itinerary stops; accumulate each country's
-  // resolved stop coords so a country missing from COORDS can fall back to them.
+  // Pass 1: spot layer from named itinerary stops. Also tally, per country, how
+  // many offers hit each resolved spot — so the COUNTRY marker can sit on the
+  // country's busiest real spot (a Red Sea port, an island anchorage) rather
+  // than the country's geographic centroid. For places like Egypt the centroid
+  // lands in empty desert, far from any cruise; snapping to a real spot is the
+  // same fix we used for the card pins (use the search-relevant spot, not the
+  // generic country location).
   const spot = new Map<string, Group>();
-  const countrySpotCoords = new Map<string, LatLng[]>();
   const placedInSpot = new Set<string>();
+  // country -> (spot label -> { coords, distinct offer ids })
+  const countrySpots = new Map<string, Map<string, { coords: LatLng; offers: Set<string> }>>();
 
   for (const o of offers) {
     const prop = offerProp(o);
@@ -138,21 +144,27 @@ export async function buildCruiseMapData(): Promise<CruiseMapData> {
       addOffer(spot, name, c, o.id, prop);
       placedInSpot.add(o.id);
       if (o.country) {
-        if (!countrySpotCoords.has(o.country)) countrySpotCoords.set(o.country, []);
-        countrySpotCoords.get(o.country)!.push(c);
+        let bySpot = countrySpots.get(o.country);
+        if (!bySpot) { bySpot = new Map(); countrySpots.set(o.country, bySpot); }
+        let entry = bySpot.get(name);
+        if (!entry) { entry = { coords: c, offers: new Set() }; bySpot.set(name, entry); }
+        entry.offers.add(o.id);
       }
     }
   }
 
+  // Country marker → the country's busiest real spot (most offers); the
+  // hardcoded centroid is only a last resort when no spot has coordinates.
   function countryCoord(country: string): LatLng | null {
-    if (COORDS[country]) return COORDS[country];
-    const pts = countrySpotCoords.get(country);
-    if (pts && pts.length) {
-      const lat = pts.reduce((sum, p) => sum + p[0], 0) / pts.length;
-      const lng = pts.reduce((sum, p) => sum + p[1], 0) / pts.length;
-      return [lat, lng];
+    const bySpot = countrySpots.get(country);
+    if (bySpot && bySpot.size) {
+      let best: { coords: LatLng; offers: Set<string> } | null = null;
+      for (const entry of bySpot.values()) {
+        if (!best || entry.offers.size > best.offers.size) best = entry;
+      }
+      if (best) return best.coords;
     }
-    return null;
+    return COORDS[country] ?? null;
   }
 
   // Pass 2: country layer, and keep offers with no resolvable stop visible in
