@@ -12,7 +12,7 @@ automatically** — nothing to regenerate or redeploy when the data changes.
 > `app_cruise_offer_cards` view). The repo-specific handover lives there at
 > `docs/cruise-map-handover.md`. **This doc remains the reference for the KiteScout
 > implementation** (`map.kitescout.tech` — the `src/pipeline/map.ts` shell + `web/` endpoint);
-> the two share the same grouping logic and the busiest-spot placement rule.
+> the two share the same grouping logic and the region-aware placement rule.
 
 > **TL;DR**
 > - **Two pieces:** a static **shell** (`map.html`, served by nginx at `map.kitescout.tech`) +
@@ -37,7 +37,7 @@ map.kitescout.tech (nginx, static)            kitescout.tech (Next app)
 │  Leaflet + CSS + popup code  │   GeoJSON    │  → buildCruiseMapData()       │
 │  const API_URL = "…/api/…"   │ ◀─────────── │  → reads cruise_offers (live) │
 └─────────────────────────────┘              └──────────────────────────────┘
-        ▲ renders 2 layers (Country / Spot toggle), one popup per marker
+        ▲ renders 2 layers (Region / Spot toggle), one popup per marker
 ```
 
 - The shell is **~6 KB and static** — it holds no offer data, just Leaflet setup, styling, the
@@ -54,7 +54,7 @@ map.kitescout.tech (nginx, static)            kitescout.tech (Next app)
 
 | File | Role | Who edits it for the map |
 |---|---|---|
-| [`src/pipeline/map.ts`](../src/pipeline/map.ts) | **The shell.** `buildShell()` returns the full HTML (Leaflet, CSS, popup markup, basemap, the Country/Spot toggle). `generateMap()` writes it to `map.html`. | **Styling / popup layout / basemap.** |
+| [`src/pipeline/map.ts`](../src/pipeline/map.ts) | **The shell.** `buildShell()` returns the full HTML (Leaflet, CSS, popup markup, basemap, the Region/Spot toggle). `generateMap()` writes it to `map.html`. | **Styling / popup layout / basemap.** |
 | [`web/app/api/cruise-map/route.ts`](../web/app/api/cruise-map/route.ts) | The endpoint. Calls `buildCruiseMapData()`, adds CORS + cache headers. | Rarely (headers, caching). |
 | [`web/lib/cruise-map.ts`](../web/lib/cruise-map.ts) | **The data layer.** Queries `cruise_offers`, builds the country + spot GeoJSON, resolves coordinates. | **What each marker/popup contains, grouping, coordinates.** |
 | [`web/lib/cruise-map-coords.ts`](../web/lib/cruise-map-coords.ts) | `COORDS` — hardcoded country/region centroids, used only as a coordinate fallback (see §4). | Add a missing country/region centroid. |
@@ -97,35 +97,44 @@ Each feature:
 }
 ```
 
-The **Country** layer is the default view; the toggle swaps to the **Spot** layer (one marker per
-named itinerary stop). An offer with no resolvable stop still appears in the Spot layer at its
-country's marker, so nothing disappears between views.
+The **Region** layer (the `country` response field — kept that name for compat) is the default
+view: one marker per distinct cruising **area**, region-aware (see §4). The toggle swaps to the
+**Spot** layer (one marker per named itinerary stop).
 
 Excluded by default: `is_reseller = true` offers (affiliate dupes — same rule as the cards).
 
 ---
 
-## 4. Coordinates — and the "don't drop a marker in the middle of the country" rule
+## 4. Marker placement — region-aware overview (the rules to keep)
 
-There is **no runtime geocoding** (the endpoint can't call Nominatim per request). Coordinates
-come from, in order:
+There is **no runtime geocoding** (the endpoint can't call Nominatim per request).
 
-- **Spot markers:** each itinerary stop's own `lat`/`lng` (set by the offers pipeline) →
-  `COORDS[stopName]` → skipped if neither resolves.
-- **Country markers:** the country's **busiest real spot** (the stop with the most offers) →
-  `COORDS[country]` **only** when the country has no geocoded spot at all.
+- **Spot markers:** each itinerary stop's own `lat`/`lng` → `COORDS[stopName]` → skipped if neither.
+- **Region (overview) markers:** the overview is **not** one-per-country. `areaMarkersForCountry()`
+  in [`web/lib/cruise-map.ts`](../web/lib/cruise-map.ts) splits each country into distinct cruising
+  areas:
+  1. **group** offers by a normalized **region key** (lowercase `region`, strip `NOISE` words like
+     *islands/north/sea/coast* and `GENERIC` basin words like *caribbean/mediterranean/aegean*,
+     singularize, first token; Italy folds *Emerald Coast/Costa Smeralda* → `sardinia`);
+  2. **position** each group at its **most-frequent `COORDS`-known spot name** (not the mean of raw
+     coords, which embarkation ports like Athens/Lavrion would poison);
+  3. **distance-merge** groups within **`MERGE_D` = 1.3°**;
+  4. **absorb** un-positionable / non-distinctive offers into the country's largest area;
+     `COORDS[country]` is only a last resort.
 
-> ⚠️ **Why the country marker is a real spot, not a centroid.** A country's geographic centroid
-> often sits nowhere near the cruises — e.g. `COORDS['Egypt']` is in the middle of the desert,
-> while every Egyptian kite cruise is on the Red Sea coast. Snapping the country marker to the
-> country's busiest actual spot keeps it where the cruises are. This mirrors the card-pin fix
-> (commit `99b200f`, "use the search-relevant spot, not the generic country location"). **Don't
-> revert the country layer to `COORDS[country]`-first** — that reintroduces the desert-marker bug.
+> ⚠️ **Two rules keep this correct — don't undo them.** (a) Group by **region key first** (not by
+> raw distance): a Sicily cruise must not collapse onto Sardinia, nor a Petali cruise onto the
+> Cyclades — the split is decided by the *region*, and distance only merges near-identical areas.
+> (b) Position by **spot name** (step 2), which resists poisoned departure-port coordinates.
+> On the live data this yields **Italy → Sardinia + Sicily; Greece → Cyclades + Petali + Ionian;
+> Egypt → one Red Sea marker; every single-area country stays one.** Earlier versions used a single
+> per-country marker (collapsed regions) or pure distance-clustering (couldn't separate Petali);
+> don't regress to either.
 
-Consequence of no runtime geocoding: a handful of obscure stop names with no embedded coords and
-no `COORDS` entry won't get their own **spot** marker (those offers still show under their
-country). To recover one, either ensure the offers pipeline geocodes that `itinerary_spots` entry,
-or add the name to `COORDS`.
+Tuning lives at the top of `web/lib/cruise-map.ts`: the `NOISE`/`GENERIC` word sets and `MERGE_D`.
+The Greece split has only ~0.09° of slack at `MERGE_D = 1.3`, so re-check Greece (Cyclades vs
+Petali) if you raise it. A handful of obscure stop names not in `COORDS` and without coords won't
+get their own **spot** marker; add them to `COORDS` or geocode them in the offers pipeline.
 
 ---
 
