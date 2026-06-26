@@ -116,6 +116,35 @@ function canonicalKey(absUrl: string): string {
   }
 }
 
+/**
+ * Some image CDNs bake a resize transform into the URL, so the discovered URL is
+ * a tiny thumbnail (e.g. Wix `…~mv2.jpg/v1/fill/w_288,h_…/file.jpg`) that fails
+ * our min-size filter. Rewrite known CDNs to the full-resolution original — our
+ * own pipeline downsizes to TARGET_WIDTH afterward. As a bonus this collapses
+ * every size-variant of one photo to a single canonical URL, improving dedup.
+ */
+export function upscaleCdnUrl(absUrl: string): string {
+  try {
+    const u = new URL(absUrl);
+    // Wix: https://static.wixstatic.com/media/<id>~mv2.<ext>/v1/<fill|crop>/…/<file>
+    // → strip everything after the media id, leaving the original full-res image.
+    if (/(^|\.)wixstatic\.com$/i.test(u.hostname)) {
+      const m = u.pathname.match(/^\/media\/[^/]+\.(?:jpe?g|png|webp|gif|avif)/i);
+      if (m) return `${u.protocol}//${u.hostname}${m[0]}`;
+    }
+    // WordPress: media under /wp-content/uploads/ is auto-generated in
+    // "-WIDTHxHEIGHT" thumbnail sizes (e.g. "DSC00785-495x400.jpg" — often just
+    // under our min width); the original, suffix-stripped, is full resolution.
+    if (/\/wp-content\/uploads\//i.test(u.pathname)) {
+      const stripped = u.pathname.replace(/-\d{2,4}x\d{2,4}(\.(?:jpe?g|png|webp|gif|avif))$/i, '$1');
+      if (stripped !== u.pathname) { u.pathname = stripped; return u.href; }
+    }
+    return absUrl;
+  } catch {
+    return absUrl;
+  }
+}
+
 /** Pick the largest URL from a srcset / data-srcset value. */
 function pickFromSrcset(srcset: string): string | null {
   const parts = srcset.split(',').map(s => s.trim()).filter(Boolean);
@@ -167,8 +196,10 @@ export function discoverImageUrls(
   const seen = new Set<string>();
   const push = (raw?: string | null): void => {
     if (!raw) return;
-    const abs = absolutize(raw, baseUrl);
-    if (!abs || JUNK_RE.test(abs)) return;
+    const abs0 = absolutize(raw, baseUrl);
+    if (!abs0) return;
+    const abs = upscaleCdnUrl(abs0);
+    if (JUNK_RE.test(abs)) return;
     const key = canonicalKey(abs);
     if (seen.has(key)) return;
     seen.add(key);
@@ -384,10 +415,12 @@ export async function curateAndStoreImages(opts: {
   const dlCap = opts.maxDownloads ?? MAX_DOWNLOADS;
   if (candidateUrls.length === 0) return [];
 
-  // Merge-safe dedup + junk filter (Tavily-sourced URLs bypass discoverImageUrls).
+  // Merge-safe dedup + junk filter (Tavily-sourced URLs bypass discoverImageUrls,
+  // so upscale CDN thumbnails here too).
   const deduped: string[] = [];
   const seenKeys = new Set<string>();
-  for (const u of candidateUrls) {
+  for (const raw of candidateUrls) {
+    const u = upscaleCdnUrl(raw);
     if (JUNK_RE.test(u)) continue;
     const k = canonicalKey(u);
     if (seenKeys.has(k)) continue;

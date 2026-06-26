@@ -32,6 +32,23 @@ export function collapse(text: string): string {
 }
 
 /**
+ * Strip characters Postgres text/jsonb cannot store. NUL (U+0000) raises
+ * "unsupported Unicode escape sequence" on insert; other C0 control chars are
+ * also unstorable. Tab/newline/carriage-return are kept. Valid UTF-8 (incl.
+ * emoji surrogate pairs) is left intact. Built via char codes to avoid embedding
+ * control-character literals in source.
+ */
+export function sanitizeForPg(text: string): string {
+  let out = '';
+  for (let i = 0; i < text.length; i++) {
+    const c = text.charCodeAt(i);
+    if (c < 32 && c !== 9 && c !== 10 && c !== 13) continue; // drop C0 controls except \t \n \r
+    out += text[i];
+  }
+  return out;
+}
+
+/**
  * Normalize readable text for hashing only: lowercase, collapse whitespace,
  * and remove obviously dynamic tokens that would otherwise cause false-positive
  * change detection (CSRF/session nonces, cache-busting query strings, ISO

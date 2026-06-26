@@ -4,7 +4,7 @@ import { supabase } from '../lib/supabase.js';
 import { anthropic, ANALYSIS_MODEL } from '../lib/anthropic.js';
 import { extract as tavilyExtract, extractImages as tavilyExtractImages } from '../lib/tavily.js';
 import { fetchPageConditional } from '../lib/fetchPage.js';
-import { htmlToText, collapse, contentHash } from '../lib/content.js';
+import { htmlToText, collapse, contentHash, sanitizeForPg } from '../lib/content.js';
 import { withRetry } from '../lib/retry.js';
 import { countryToContinent } from '../lib/continents.js';
 import { discoverImageUrls, curateAndStoreImages, slugify, type StoredImage } from '../lib/images.js';
@@ -30,7 +30,7 @@ const COMFORT_LEVELS = ['budget', 'standard', 'premium', 'luxury'] as const;
 const MEAL_PLANS = ['all_inclusive', 'full_board', 'half_board', 'self_catering'] as const;
 const PRICE_CONFIDENCES = ['high', 'medium', 'low'] as const;
 // Pages that hold a (usually destination-tagged) photo gallery.
-const GALLERY_URL_RE = /\/(gallery|photos?|photo-gallery|media|portfolio)\b/i;
+const GALLERY_URL_RE = /\/(gallery|galerie|galeria|galleria|photos?|fotos?|photo-gallery|media|portfolio|projects?|bilder|impress\w*)\b/i;
 
 // Country -> adjective/demonym, so a gallery image whose only destination clue is
 // alt text like "Greek Aegean" still matches the Greece offer. Best-effort; the
@@ -75,6 +75,8 @@ interface ExtractedOffer {
   vessel_name: string | null;
   vessel_type: string | null;
   booking_modes: string[];
+  sleeps_aboard: boolean | null;
+  kite_focused: boolean | null;
   beginner_friendly: boolean | null;
   kite_lessons: boolean | null;
   equipment_rental: boolean | null;
@@ -112,9 +114,21 @@ interface FetchedPage {
   title: string | null;
 }
 
+// A title is a stale past-year edition only when EVERY year it names is in the
+// past (so "Kitesurf 2018 Cruise" → drop, but "2026 Season" / "2025-2026" stay).
+function isStalePastYear(title: string): boolean {
+  const years = [...title.matchAll(/\b(20\d{2})\b/g)].map(m => Number(m[1]));
+  return years.length > 0 && years.every(y => y < new Date().getFullYear());
+}
+
 const EXTRACTION_PROMPT = `You are extracting structured KITE-CRUISE OFFERS from a kite travel operator's website.
 
-A kite cruise = participants travel by boat (catamaran, gulet, sailing yacht, dhow, motor yacht, liveaboard, etc.) between kiteboarding spots, typically sleeping on board, over multiple days.
+A kite cruise = participants SLEEP ABOARD a boat (catamaran, gulet, sailing yacht, dhow, motor yacht, liveaboard, etc.) that carries them between kiteboarding spots over multiple days. The boat IS the moving accommodation.
+
+CRITICAL — what is NOT a kite cruise (exclude these, even if the page calls it a "safari" or "trip" and even if it visits several spots over many days):
+- Land-based trips/holidays/road-trips where guests sleep in HOTELS, apartments, resorts, or fixed camps on shore (e.g. a "14-day trip along the coast visiting 3 spots" with hotel accommodation, or a "kitesurfing holiday" at one beach).
+- Pure sightseeing/sailing cruises or wave-surf-only (non-kite) trips, unless kiteboarding is genuinely a core activity of the trip.
+If guests do not sleep on the boat, it is NOT a cruise — leave it out.
 
 The website may be in ANY language (e.g. Spanish "cruceros", German "Kreuzfahrt", French "croisière", Italian "crociera", Portuguese "cruzeiro") — read and extract offers regardless of language, and write all output fields in English.
 
@@ -135,6 +149,8 @@ For each offer, extract this exact JSON shape (use null when the site does not s
   "vessel_name": "boat name, or null",
   "vessel_type": one of ["catamaran","sailing_yacht","motor_yacht","gulet","dhow","liveaboard","speedboat","other"] or null,
   "booking_modes": subset of ["whole_boat","per_cabin","single_spot"] that this offer supports,
+  "sleeps_aboard": true if guests sleep ON the boat between spots | false if they stay in land accommodation (hotels/apartments/resorts/camps) | null if genuinely unclear,
+  "kite_focused": true if KITEBOARDING is a core activity of THIS trip | false if it is a non-kite trip (pure wave-surfing, sightseeing/leisure, sailing-only, diving-only) | null if unclear,
   "beginner_friendly": true | false | null,
   "kite_lessons": true | false | null,
   "equipment_rental": true | false | null,
@@ -337,8 +353,8 @@ async function storeCorpus(providerId: string, pages: FetchedPage[]): Promise<vo
     .map(p => ({
       cruise_provider_id: providerId,
       url: p.url,
-      title: p.title,
-      text: p.text,
+      title: p.title ? sanitizeForPg(p.title) : null,
+      text: sanitizeForPg(p.text),
       content_hash: contentHash(p.text),
       fetched_at: new Date().toISOString(),
     }));
@@ -403,7 +419,7 @@ export async function extractOffers(
     const msg = await withRetry(() =>
       anthropic.messages.create({
         model: ANALYSIS_MODEL,
-        max_tokens: 8192,
+        max_tokens: 16000,  // multi-offer providers with rich fields exceed 8192 → truncated JSON
         system: [{ type: 'text', text: EXTRACTION_PROMPT, cache_control: { type: 'ephemeral' } }],
         messages: [
           {
@@ -421,23 +437,71 @@ export async function extractOffers(
     return [];
   }
 
-  // Extract the JSON array tolerantly — the model sometimes wraps it in prose
-  // ("Looking at the content… [ … ]"), which would break a strict JSON.parse.
-  const cleaned = text.replace(/```/g, '');
+  const parsed = parseOfferArray(text);
+  if (parsed.length === 0 && text.includes('{')) {
+    console.error(`  JSON parse salvaged 0 offers for ${providerName}:`, text.slice(0, 160));
+  }
+  return parsed
+    .filter((o): o is ExtractedOffer =>
+      !!o && typeof (o as ExtractedOffer).title === 'string' && (o as ExtractedOffer).title.trim().length > 0 &&
+      ['high', 'medium', 'low'].includes((o as ExtractedOffer).confidence))
+    // Drop land-based trips/holidays the model flagged as not sleeping aboard,
+    // and archived past-year editions (e.g. "Kitesurf 2018 Cruise").
+    .filter(o => {
+      if (o.sleeps_aboard === false) {
+        console.log(`  ↷ skip (land-based, not a cruise): ${o.title.trim()}`);
+        return false;
+      }
+      if (o.kite_focused === false) {
+        console.log(`  ↷ skip (non-kite cruise): ${o.title.trim()}`);
+        return false;
+      }
+      if (isStalePastYear(o.title)) {
+        console.log(`  ↷ skip (archived past-year edition): ${o.title.trim()}`);
+        return false;
+      }
+      return true;
+    })
+    .map(o => ({ ...o, title: o.title.trim() }));
+}
+
+/**
+ * Parse the model's JSON array of offers, tolerating two failure modes seen in
+ * the wild: (1) the array wrapped in prose/markdown fences, and (2) the response
+ * truncated at max_tokens mid-array. On a strict-parse failure we salvage every
+ * COMPLETE top-level {...} object (scanning balanced braces outside strings) and
+ * drop the trailing incomplete one — so one cut-off offer never zeroes the rest.
+ */
+function parseOfferArray(raw: string): unknown[] {
+  const cleaned = raw.replace(/```/g, '');
   const start = cleaned.indexOf('[');
+  if (start < 0) return [];
   const end = cleaned.lastIndexOf(']');
-  const json = start >= 0 && end > start ? cleaned.slice(start, end + 1) : cleaned;
+  const sliced = end > start ? cleaned.slice(start, end + 1) : cleaned.slice(start);
   try {
-    const parsed = JSON.parse(json);
-    if (!Array.isArray(parsed)) return [];
-    return parsed
-      .filter((o): o is ExtractedOffer =>
-        o && typeof o.title === 'string' && o.title.trim().length > 0 &&
-        ['high', 'medium', 'low'].includes(o.confidence))
-      .map(o => ({ ...o, title: o.title.trim() }));
+    const p = JSON.parse(sliced);
+    return Array.isArray(p) ? p : [];
   } catch {
-    console.error(`  JSON parse failed for ${providerName}:`, json.slice(0, 200));
-    return [];
+    const objs: unknown[] = [];
+    let depth = 0, objStart = -1, inStr = false, esc = false;
+    for (let i = start; i < cleaned.length; i++) {
+      const ch = cleaned[i];
+      if (inStr) {
+        if (esc) esc = false;
+        else if (ch === '\\') esc = true;
+        else if (ch === '"') inStr = false;
+        continue;
+      }
+      if (ch === '"') inStr = true;
+      else if (ch === '{') { if (depth === 0) objStart = i; depth++; }
+      else if (ch === '}') {
+        if (depth > 0 && --depth === 0 && objStart >= 0) {
+          try { objs.push(JSON.parse(cleaned.slice(objStart, i + 1))); } catch { /* skip incomplete */ }
+          objStart = -1;
+        }
+      }
+    }
+    return objs;
   }
 }
 
@@ -614,7 +678,9 @@ async function processProvider(cp: {
   let homepageFallback: StoredImage[] | null = null;
   const getHomepageFallback = async (): Promise<StoredImage | null> => {
     if (homepageFallback === null) {
-      const home = pages[0];
+      // pages[] is in crawl-completion order, so pages[0] is not necessarily the
+      // homepage — find it explicitly (fall back to the first crawled page).
+      const home = pages.find(p => p.url.replace(/\/$/, '') === homeUrl.replace(/\/$/, '')) ?? pages[0];
       const candidates = [
         ...(home?.html ? discoverImageUrls(home.html, home.url) : []),
         ...(await getTavilyImages(home.url)),
@@ -680,6 +746,8 @@ async function processProvider(cp: {
 
     // Images: reuse if already stored, else discover (gallery + own page + Tavily) + curate.
     let images: StoredImage[] = existingImages.get(slug) ?? [];
+    const imgCtx = `${offer.title} — kite cruise${offer.country ? ' in ' + offer.country : ''}` +
+      `${offer.region ? ', ' + offer.region : ''}${offer.vessel_type ? ', ' + offer.vessel_type : ''}`;
     if (images.length === 0) {
       // Destination-tagged gallery shots first — they're the most location-specific.
       const tokens = destinationTokens(offer.country ?? null, offer.region ?? null, rawSpots);
@@ -694,15 +762,31 @@ async function processProvider(cp: {
         ? [...(await getSiteImages()), ...tavilyCandidates]
         : [...galleryCandidates, ...staticCandidates, ...tavilyCandidates];
       if (candidates.length > 0) {
-        const ctx = `${offer.title} — kite cruise${offer.country ? ' in ' + offer.country : ''}` +
-          `${offer.region ? ', ' + offer.region : ''}${offer.vessel_type ? ', ' + offer.vessel_type : ''}`;
         images = await curateAndStoreImages({
           candidateUrls: candidates,
           providerId: cp.id,
           slug,
           sourceUrl: srcUrl,
-          context: ctx,
+          context: imgCtx,
           maxDownloads: singleOffer ? 24 : undefined,
+        });
+      }
+    }
+
+    // Multi-offer provider whose destination-scoped pool came up empty (e.g. a
+    // JS/Wix site whose offer page exposes no usable image): widen to the whole
+    // site's boat/location imagery — vision keeps only the relevant shots — so the
+    // offer still gets nice boat + location pics rather than nothing.
+    if (images.length === 0 && !singleOffer) {
+      const wide = [...(await getSiteImages()), ...(await getTavilyImages(srcUrl))];
+      if (wide.length > 0) {
+        images = await curateAndStoreImages({
+          candidateUrls: wide,
+          providerId: cp.id,
+          slug,
+          sourceUrl: srcUrl,
+          context: imgCtx,
+          maxDownloads: 24,
         });
       }
     }
@@ -719,7 +803,7 @@ async function processProvider(cp: {
       title: offer.title,
       slug,
       source_url: srcUrl,
-      source_text: srcPage?.text ?? null,
+      source_text: srcPage?.text ? sanitizeForPg(srcPage.text) : null,
       continent,
       country: offer.country ?? null,
       region: offer.region ?? null,
