@@ -49,6 +49,23 @@ export function sanitizeForPg(text: string): string {
 }
 
 /**
+ * Recursively apply sanitizeForPg to every string in a value (objects, arrays,
+ * nested) so an entire DB row — including jsonb columns like images (EXIF-derived
+ * rights strings are often NUL-terminated), pricing, dates, itinerary_spots — is
+ * safe to upsert. Non-strings pass through unchanged.
+ */
+export function sanitizeDeep<T>(value: T): T {
+  if (typeof value === 'string') return sanitizeForPg(value) as T;
+  if (Array.isArray(value)) return value.map(v => sanitizeDeep(v)) as T;
+  if (value && typeof value === 'object') {
+    const out: Record<string, unknown> = {};
+    for (const [k, v] of Object.entries(value)) out[k] = sanitizeDeep(v);
+    return out as T;
+  }
+  return value;
+}
+
+/**
  * Normalize readable text for hashing only: lowercase, collapse whitespace,
  * and remove obviously dynamic tokens that would otherwise cause false-positive
  * change detection (CSRF/session nonces, cache-busting query strings, ISO

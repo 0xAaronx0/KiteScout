@@ -4,7 +4,7 @@ import { supabase } from '../lib/supabase.js';
 import { anthropic, ANALYSIS_MODEL } from '../lib/anthropic.js';
 import { extract as tavilyExtract, extractImages as tavilyExtractImages } from '../lib/tavily.js';
 import { fetchPageConditional } from '../lib/fetchPage.js';
-import { htmlToText, collapse, contentHash, sanitizeForPg } from '../lib/content.js';
+import { htmlToText, collapse, contentHash, sanitizeForPg, sanitizeDeep } from '../lib/content.js';
 import { withRetry } from '../lib/retry.js';
 import { countryToContinent } from '../lib/continents.js';
 import { discoverImageUrls, curateAndStoreImages, slugify, type StoredImage } from '../lib/images.js';
@@ -846,7 +846,9 @@ async function processProvider(cp: {
 
     const { error } = await supabase
       .from('cruise_offers')
-      .upsert(row, { onConflict: 'cruise_provider_id,slug' });
+      // Deep-sanitize so a NUL/control char in ANY field (incl. jsonb: images
+      // rights, pricing, dates, itinerary_spots) can't fail the upsert.
+      .upsert(sanitizeDeep(row), { onConflict: 'cruise_provider_id,slug' });
     if (error) {
       console.error(`\n  DB error for ${cp.root_domain} / ${slug}:`, error.message);
     } else {
