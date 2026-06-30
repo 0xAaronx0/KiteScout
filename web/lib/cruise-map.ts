@@ -131,6 +131,9 @@ const GENERIC = new Set([
   'antilles', 'aegean',
 ]);
 const MERGE_D = 1.3; // degrees — merge region-groups whose anchors are this close
+// degrees — if a stop's geocoded coords are further than this from the curated
+// COORDS location for that name, treat the geocode as wrong and use COORDS.
+const MISGEOCODE_D = 5;
 
 // Normalize a free-text region to a grouping key, or null when not distinctive.
 function regionKey(o: OfferRow): string | null {
@@ -280,19 +283,6 @@ export async function buildCruiseMapData(): Promise<CruiseMapData> {
   if (error) throw error;
   const offers = data ?? [];
 
-  // Spot layer: one marker per named itinerary stop that has coordinates.
-  const spot = new Map<string, Marker>();
-  for (const o of offers) {
-    const prop = offerProp(o);
-    for (const s of o.itinerary_spots ?? []) {
-      const name = s?.name?.trim();
-      if (!name) continue;
-      const c = embeddedCoords(s) ?? COORDS[name] ?? null;
-      if (!c) continue;
-      addOffer(spot, name, c, o.id, prop);
-    }
-  }
-
   // Area (overview) layer: region-aware, per country.
   const byCountry = new Map<string, OfferRow[]>();
   for (const o of offers) {
@@ -303,6 +293,33 @@ export async function buildCruiseMapData(): Promise<CruiseMapData> {
   const areaMarkers: Marker[] = [];
   for (const [country, countryOffers] of byCountry) {
     areaMarkers.push(...areaMarkersForCountry(country, countryOffers));
+  }
+
+  // Spot layer: one marker per named itinerary stop with coordinates. A stop whose
+  // geocoded coords are far from the curated COORDS location for that name is a
+  // mis-geocode (e.g. "Grenada" → Grenada, Mississippi) and snaps back to COORDS.
+  const spot = new Map<string, Marker>();
+  const placedInSpot = new Set<string>();
+  for (const o of offers) {
+    const prop = offerProp(o);
+    for (const s of o.itinerary_spots ?? []) {
+      const name = s?.name?.trim();
+      if (!name) continue;
+      const emb = embeddedCoords(s);
+      const known = COORDS[name];
+      const c = emb && known && euclid(emb, known) > MISGEOCODE_D ? known : (emb ?? known ?? null);
+      if (!c) continue;
+      addOffer(spot, name, c, o.id, prop);
+      placedInSpot.add(o.id);
+    }
+  }
+  // Region fallback: an offer with no clearly-geocoded stop still appears in the
+  // Spot view, at its area marker's position — so it doesn't silently vanish
+  // (e.g. Kenya/Maldives offers that have no per-stop coordinates).
+  for (const m of areaMarkers) {
+    for (const [id, prop] of m.offers) {
+      if (!placedInSpot.has(id)) addOffer(spot, m.label, m.coords, id, prop);
+    }
   }
 
   const operators = new Set(offers.map(o => providerOf(o)?.id).filter(Boolean)).size;
