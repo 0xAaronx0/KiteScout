@@ -183,7 +183,16 @@ function positionGroup(group: OfferRow[]): LatLng | null {
       means.reduce((s, p) => s + p[1], 0) / means.length,
     ];
   }
-  return null;
+  // Last resort: a COORDS entry for the group's dominant region name. Keeps
+  // coastal cruises whose stops aren't geocoded (e.g. Kenya, Venezuela) off the
+  // inland country centroid.
+  const regionCount = new Map<string, number>();
+  for (const o of group) {
+    const r = o.region?.trim();
+    if (r && COORDS[r]) regionCount.set(r, (regionCount.get(r) ?? 0) + 1);
+  }
+  const region = mostFrequent(regionCount);
+  return region ? COORDS[region] : null;
 }
 
 function cleanLabel(region: string): string {

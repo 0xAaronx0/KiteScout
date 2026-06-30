@@ -99,4 +99,10 @@ export const COORDS: Record<string, [number, number]> = {
   'Turks and Caicos Islands': [21.69, -71.80],
   Caribbean: [15.00, -73.00], Mediterranean: [35.00, 18.00],
   'South America': [-15.00, -60.00], Europe: [50.00, 10.00],
+
+  // Coastal kite areas, used as region fallbacks so offers without geocoded
+  // stops don't land on an inland country centroid (e.g. Kenya, Venezuela).
+  'Kenya South Coast': [-4.28, 39.59], 'Lamu-Kiunga Archipelago': [-2.27, 40.90],
+  'Los Roques Archipelago': [11.85, -66.76], 'San Blas': [9.57, -78.95],
+  'Samaná Peninsula': [19.20, -69.33],
 };

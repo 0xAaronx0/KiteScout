@@ -123,10 +123,6 @@ function makeLayer(geojson) {
     const { label, count, offers } = f.properties;
     const [lng, lat] = f.geometry.coordinates;
     const r = Math.max(6, Math.min(28, 5 + Math.sqrt(count) * 5));
-    const circle = L.circleMarker([lat, lng], {
-      radius: r, fillColor: '#58a6ff', color: '#1f6feb',
-      weight: 1.5, fillOpacity: 0.75,
-    });
     const items = offers.map(o => {
       const title = esc(o.title);
       const head = o.url
@@ -139,11 +135,19 @@ function makeLayer(geojson) {
       if (o.provider) li += '<div class="offer-provider">' + esc(o.provider) + '</div>';
       return li + '</li>';
     }).join('');
-    circle.bindPopup(
+    const popup =
       '<div class="popup-title">' + esc(label) + '&nbsp;<small style="font-weight:400;color:#8b949e">(' + count + ')</small></div>' +
-      '<ul class="popup-list">' + items + '</ul>',
-      { maxWidth: 300 });
-    layer.addLayer(circle);
+      '<ul class="popup-list">' + items + '</ul>';
+    // Repeat each marker onto the adjacent world copies so antimeridian pins
+    // (e.g. Fiji at ~-180°) show wherever the wrapped map shows that longitude.
+    [-360, 0, 360].forEach(off => {
+      const circle = L.circleMarker([lat, lng + off], {
+        radius: r, fillColor: '#58a6ff', color: '#1f6feb',
+        weight: 1.5, fillOpacity: 0.75,
+      });
+      circle.bindPopup(popup, { maxWidth: 300 });
+      layer.addLayer(circle);
+    });
   });
   return layer;
 }
