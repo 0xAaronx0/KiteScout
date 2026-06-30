@@ -12,6 +12,7 @@
 
 import { parse } from 'node-html-parser';
 import { fetchPageConditional } from './fetchPage.js';
+import { renderPage } from './render.js';
 
 const UA =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 ' +
@@ -27,6 +28,16 @@ const TRAP_RE =
 // only ones worth a (paid) Tavily fallback when the static fetch is thin.
 export const PAGE_VALUE_RE =
   /(pricing|price|rate|cost|fare|gallery|photo|destination|trip|cruise|safari|liveaboard|itinerary|boat|yacht|fleet|cabin|date|book|tour|package|about|contact|faq|review|crucero|cruzeiro|kreuzfahrt|croisi|crociera|viaje|viagg|viagem|reise|voyage|oferta|velero|segelt)/i;
+
+// Genuine product / destination / cruise pages — ranked ABOVE everything else so
+// they survive the page cap on blog-heavy sites.
+const PRODUCT_PAGE_RE =
+  /(cruise|crucero|cruzeiro|kreuzfahrt|croisi|crociera|safari|liveaboard|catamar|itinerar|destination|charter|flotille|segel|[\s/_-]sail)/i;
+// Blog posts / SEO articles / legal & info pages — ranked LAST. These pile up on
+// content-marketing sites (e.g. "kite-safari-meaning", "why-...", "/blog/...",
+// "/2007/...") and otherwise crowd genuine cruise pages out of the cap.
+const ARTICLE_PAGE_RE =
+  /\/(blog|news|press|article|stories|story|magazin|guide|faq|terms|privacy|cookie|impressum|datenschutz|jobs)\b|\/20\d\d\/|[\s/_-](why|what|how|when|where|which|meaning|vs|review|reviews|guide|tips|hate|love|truth|conflict|restriction|crypto|reddit|advisor|expensive|possible|sunk)(?=[\s/_-]|$)/i;
 
 function normalizeUrl(u: string): string {
   try {
@@ -125,14 +136,46 @@ async function bfsUrls(homeUrl: string, rootDomain: string, maxPages: number): P
   return [...found];
 }
 
+/** Same-domain, in-scope links found in a chunk of HTML. */
+function linksFromHtml(html: string, baseUrl: string, rootDomain: string): string[] {
+  const out = new Set<string>();
+  for (const a of parse(html).querySelectorAll('a')) {
+    const href = a.getAttribute('href');
+    if (!href) continue;
+    let abs: string;
+    try { abs = new URL(href, baseUrl).href; } catch { continue; }
+    const n = normalizeUrl(abs);
+    if (keepUrl(n, rootDomain)) out.add(n);
+  }
+  return [...out];
+}
+
+/** Same-domain links found on a single page via a plain (static) fetch. */
+async function pageLinks(pageUrl: string, rootDomain: string): Promise<string[]> {
+  const res = await fetchPageConditional(pageUrl);
+  if (res.status !== 'ok' || !res.html) return [];
+  return linksFromHtml(res.html, pageUrl, rootDomain);
+}
+
+/** The last path segment of a URL — its slug ("" for the homepage). */
+function urlSlug(u: string): string {
+  try { return new URL(u).pathname.split('/').filter(Boolean).pop() ?? ''; } catch { return ''; }
+}
+
+/** Short slug matching a product/destination term and not an article → a real offer page. */
+function isProductPage(u: string): boolean {
+  return PRODUCT_PAGE_RE.test(u) && !ARTICLE_PAGE_RE.test(u) && urlSlug(u).split('-').length < 6;
+}
+
 /**
- * Discover the content URLs for a provider site: sitemap-first, BFS fallback.
- * Returns a filtered, prioritised, capped list (homepage + high-value first).
+ * Discover the content URLs for a provider site: sitemap-first, BFS fallback,
+ * plus the homepage's own nav links merged in (catches product pages a
+ * content-marketing sitemap omits). Returns a filtered, prioritised, capped list.
  */
 export async function discoverSiteUrls(
   homeUrl: string,
   rootDomain: string,
-  maxPages = 70,
+  maxPages = 100,
 ): Promise<{ urls: string[]; via: 'sitemap' | 'bfs' }> {
   let urls = await getSitemapUrls(rootDomain);
   let via: 'sitemap' | 'bfs' = 'sitemap';
@@ -150,7 +193,36 @@ export async function discoverSiteUrls(
   const set = new Set(urls.map(normalizeUrl).filter(u => keepUrl(u, rootDomain)));
   set.add(home);
 
-  const score = (u: string): number => (u === home ? 1000 : PAGE_VALUE_RE.test(u) ? 10 : 1);
+  // A sitemap can omit product/destination pages that only live in the nav — e.g.
+  // content-marketing sites whose sitemap is all blog posts (sickdogsurf.com lists
+  // ~100 articles but not its /kite-cruise-<dest>/ pages). Merge the homepage's own
+  // links so those nav-linked pages aren't missed. (BFS already follows links, so
+  // this is only needed when a sitemap was the source.)
+  let root = `https://${rootDomain}/`;
+  try { root = new URL(homeUrl).origin + '/'; } catch { /* keep default */ }
+  if (via === 'sitemap') {
+    for (const l of await pageLinks(root, rootDomain)) set.add(l);
+  }
+  // Still few real product pages? The nav is likely JS-rendered (sickdogsurf's
+  // product menu, and pure SPAs like kitecharters, only exist after JS runs).
+  // Render the homepage and harvest its links too. Gated so sites with a healthy
+  // sitemap/nav never pay the render cost.
+  if ([...set].filter(isProductPage).length < 4) {
+    const html = await renderPage(root);
+    if (html) for (const l of linksFromHtml(html, root, rootDomain)) set.add(l);
+  }
+
+  const score = (u: string): number => {
+    if (u === home) return 1000;
+    // A long, sentence-like slug ("best-time-of-year-to-book-a-kite-safari-in-egypt")
+    // is almost always a blog/SEO article, even when it contains "cruise"/"safari".
+    const longSlug = urlSlug(u).split('-').length >= 6;
+    const article = ARTICLE_PAGE_RE.test(u) || longSlug;
+    if (PRODUCT_PAGE_RE.test(u) && !article) return 100; // genuine product/destination/cruise pages first
+    if (article) return 1;                               // blog/SEO/legal pages last
+    if (PAGE_VALUE_RE.test(u)) return 10;
+    return 5;
+  };
   const sorted = [...set].sort((a, b) => score(b) - score(a));
   return { urls: sorted.slice(0, maxPages), via };
 }

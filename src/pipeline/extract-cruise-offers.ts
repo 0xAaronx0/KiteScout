@@ -9,10 +9,11 @@ import { withRetry } from '../lib/retry.js';
 import { countryToContinent } from '../lib/continents.js';
 import { discoverImageUrls, curateAndStoreImages, slugify, type StoredImage } from '../lib/images.js';
 import { discoverSiteUrls, PAGE_VALUE_RE } from '../lib/crawl.js';
+import { renderPage, closeRenderer } from '../lib/render.js';
 
 const CONCURRENCY = 3;                  // providers in parallel
 const PAGE_CONCURRENCY = 8;             // global page fetches in flight (across providers)
-const MAX_CRAWL_PAGES = 70;             // pages crawled + stored per provider
+const MAX_CRAWL_PAGES = 100;            // pages crawled + stored per provider
 const MAX_CONTENT_CHARS = 60000;        // ranked subset of page text sent to Claude
 const NOMINATIM_DELAY_MS = 1200;
 
@@ -257,7 +258,33 @@ function extractTitle(html: string): string | null {
   return m ? m[1].replace(/\s+/g, ' ').trim() : null;
 }
 
-/** Fetch a page directly; fall back to Tavily text only when allowed (cost control). */
+/**
+ * Minimal content from a page's SSR'd <head> — og:title/description, meta
+ * description, JSON-LD name/description. Lets a JS-only SPA whose <body> is an
+ * empty shell still yield its core pitch (e.g. kitecharters.com's og:description
+ * names the Cyclades / Lagoon 450F charter) without rendering.
+ */
+function ogMetaText(html: string): string {
+  const parts: string[] = [];
+  const grab = (re: RegExp): void => { const m = html.match(re); if (m?.[1]) parts.push(m[1].replace(/\s+/g, ' ').trim()); };
+  grab(/<title[^>]*>([^<]{1,200})<\/title>/i);
+  for (const prop of ['og:title', 'og:description', 'twitter:title', 'twitter:description', 'description']) {
+    grab(new RegExp(`<meta[^>]+(?:property|name)=["']${prop}["'][^>]+content=["']([^"']+)["']`, 'i'));
+    grab(new RegExp(`<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']${prop}["']`, 'i'));
+  }
+  for (const m of html.matchAll(/<script[^>]+application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
+    for (const d of m[1].matchAll(/"(?:name|description)"\s*:\s*"([^"]{3,300})"/g)) parts.push(d[1]);
+  }
+  return [...new Set(parts.map(p => p.trim()).filter(Boolean))].join('. ');
+}
+
+/**
+ * Fetch a page's readable text + HTML. Escalating fallbacks, cheapest first:
+ *   1. plain HTTP fetch (static HTML)
+ *   2. Tavily extract (light JS) — only when allowed (cost control)
+ *   3. og/meta from the SSR'd <head> — for SPA shells with no body text
+ *   4. headless-browser render — true SPAs / JS galleries (only when allowed)
+ */
 async function fetchPage(url: string, allowTavily = true): Promise<FetchedPage | null> {
   const res = await fetchPageConditional(url);
   if (res.status === 'ok' && res.html) {
@@ -266,7 +293,21 @@ async function fetchPage(url: string, allowTavily = true): Promise<FetchedPage |
   }
   if (allowTavily) {
     const md = await tavilyExtract(url);
-    if (md) return { url, html: null, text: collapse(md), title: null };
+    if (md && collapse(md).length > 150) return { url, html: null, text: collapse(md), title: null };
+  }
+  // 3. SPA shell with no body text but SSR'd meta → use og/meta as minimal content.
+  if (res.status === 'ok' && res.html) {
+    const meta = ogMetaText(res.html);
+    if (meta.length > 60) return { url, html: res.html, text: meta, title: extractTitle(res.html) };
+  }
+  // 4. True SPA / JS gallery → render with a headless browser (rendered HTML also
+  //    carries lazy-loaded gallery <img>s for image curation). Gated like Tavily.
+  if (allowTavily) {
+    const rendered = await renderPage(url);
+    if (rendered) {
+      const text = htmlToText(rendered);
+      if (text.length > 150) return { url, html: rendered, text, title: extractTitle(rendered) };
+    }
   }
   return null;
 }
@@ -924,5 +965,6 @@ export async function runExtractCruiseOffers(
   );
 
   console.log();
+  await closeRenderer();
   return { providers: cruiseProviders.length, offers: totalOffers };
 }
