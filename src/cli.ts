@@ -8,7 +8,7 @@ import { runDedupe } from './pipeline/dedupe.js';
 import { generateMap } from './pipeline/map.js';
 import { runVerify } from './pipeline/verify.js';
 import { runExtractCruiseLocations } from './pipeline/extract-cruise-locations.js';
-import { runExtractCruiseOffers } from './pipeline/extract-cruise-offers.js';
+import { runExtractCruiseOffers, runReviewCruiseOffers } from './pipeline/extract-cruise-offers.js';
 import { runExtractCruiseReviews } from './pipeline/extract-cruise-reviews.js';
 import { runRegionConditions } from './pipeline/region-conditions.js';
 import { runMonitor, showChanges, type DetectedChange } from './pipeline/monitor.js';
@@ -265,6 +265,17 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'cruise-diff': {
+      // Before/after review: show what a fresh extraction WOULD change vs the
+      // live DB, without writing. Apply an approved provider with `cruise-offers
+      // --domain <domain>`. Also the retroactive "changed since the sweep" scan.
+      await runReviewCruiseOffers({
+        domain: flagStr('--domain'),
+        limit: positionalLimit(),
+      });
+      break;
+    }
+
     case 'cruise-reviews': {
       const { providers, matched } = await runExtractCruiseReviews({
         all: args.includes('--all'),
@@ -339,6 +350,7 @@ async function main(): Promise<void> {
       console.log('  verify [n]                Re-verify all providers + fill contact gaps (batch n, default 20)');
       console.log('  cruise-locations          Extract validated cruise-only locations for all cruise providers');
       console.log('  cruise-offers             Extract structured cruise offers (+ curated images) for all cruise providers');
+      console.log('  cruise-diff               Review: show what a fresh extraction WOULD change vs the DB (no writes); --domain to scope');
       console.log('  cruise-reviews            Match bstoked/TripAdvisor review links (domain-corroborated; --all to re-check)');
       console.log('  region-conditions         Build per-country water/wind conditions consensus from extracted offers');
       console.log('  monitor [n]               Detect changes on cruise provider sites (flags: --loop --all --baseline-only --interval-days <d>)');

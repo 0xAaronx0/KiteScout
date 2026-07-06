@@ -968,3 +968,190 @@ export async function runExtractCruiseOffers(
   await closeRenderer();
   return { providers: cruiseProviders.length, offers: totalOffers };
 }
+
+// ---------------------------------------------------------------------------
+// Review mode — the before/after gate for re-extraction.
+//
+// Shows what a FRESH extraction would change vs the live DB, WITHOUT writing.
+// A human reviews the diff and applies an approved provider explicitly with
+// `pnpm cli cruise-offers --domain <domain>`. Images/geocoding are derived and
+// intentionally excluded from the diff — this surfaces meaningful offer-data
+// changes (new/removed offers, price/season/duration/vessel/spots/summary).
+// ---------------------------------------------------------------------------
+
+interface ReviewField { field: string; before: unknown; after: unknown; }
+interface OfferDiff { slug: string; title: string; fields: ReviewField[]; }
+interface ProviderReview {
+  domain: string;
+  name: string;
+  added: Array<{ title: string; country: string | null; region: string | null; price: number | null; duration: number | null }>;
+  removed: Array<{ title: string }>;
+  changed: OfferDiff[];
+  unchanged: number;
+  error?: string;
+}
+
+function reviewShape(o: ExtractedOffer, slug: string, sourceUrl: string) {
+  return {
+    slug,
+    sourceUrl,
+    title: o.title,
+    country: o.country ?? null,
+    region: o.region ?? null,
+    price_from_eur: cleanInt(o.price_from_eur),
+    currency: o.currency ?? null,
+    duration_days: cleanInt(o.duration_days),
+    season_text: o.season_text ?? null,
+    vessel_name: cleanStr(o.vessel_name),
+    vessel_type: cleanVesselType(o.vessel_type),
+    booking_modes: cleanBookingModes(o.booking_modes).slice().sort(),
+    summary: o.summary ?? null,
+    spots: (o.itinerary_spots ?? []).map(s => (s.name ?? '').trim()).filter(Boolean),
+  };
+}
+type ReviewRow = ReturnType<typeof reviewShape>;
+
+function dedupSlug(title: string, used: Set<string>): string {
+  let slug = slugify(title);
+  if (used.has(slug)) { let i = 2; while (used.has(`${slug}-${i}`)) i++; slug = `${slug}-${i}`; }
+  used.add(slug);
+  return slug;
+}
+
+function diffOffer(before: ReviewRow, after: ReviewRow): ReviewField[] {
+  const out: ReviewField[] = [];
+  const scalars = ['title','country','region','price_from_eur','currency','duration_days','season_text','vessel_name','vessel_type','summary'] as const;
+  for (const f of scalars) {
+    if ((before[f] ?? null) !== (after[f] ?? null)) out.push({ field: f, before: before[f] ?? null, after: after[f] ?? null });
+  }
+  for (const f of ['booking_modes','spots'] as const) {
+    const b = ((before[f] as string[]) ?? []).join(' | ');
+    const a = ((after[f] as string[]) ?? []).join(' | ');
+    if (b !== a) out.push({ field: f, before: b || '(none)', after: a || '(none)' });
+  }
+  return out;
+}
+
+async function reviewProvider(cp: { id: string; name: string | null; root_domain: string; website_url: string | null }): Promise<ProviderReview> {
+  const name = cp.name ?? cp.root_domain;
+  const review: ProviderReview = { domain: cp.root_domain, name, added: [], removed: [], changed: [], unchanged: 0 };
+  const homeUrl = cp.website_url ?? `https://${cp.root_domain}`;
+
+  const pages = await crawlProvider(homeUrl, cp.root_domain);
+  if (pages.length === 0) { review.error = 'no pages crawled'; return review; }
+  const pageByUrl = new Map(pages.map(p => [p.url, p]));
+  const offers = await extractOffers(buildContent(pages, homeUrl), name, pages.map(p => p.url));
+
+  // Proposed offers — de-duplicated slug (as the write path) + resolved source page.
+  const used = new Set<string>();
+  const proposed: ReviewRow[] = offers.map((o) => {
+    const slug = dedupSlug(o.title, used);
+    const srcUrl = (o.source_page && pageByUrl.has(o.source_page)) ? o.source_page : homeUrl;
+    return reviewShape(o, slug, srcUrl);
+  });
+
+  // Current live offers for this provider.
+  const { data: cur } = await supabase
+    .from('cruise_offers')
+    .select('slug,source_url,title,country,region,price_from_eur,currency,duration_days,season_text,vessel_name,vessel_type,booking_modes,summary,itinerary_spots')
+    .eq('cruise_provider_id', cp.id);
+  const current: ReviewRow[] = (cur ?? []).map(r => ({
+    slug: r.slug, sourceUrl: r.source_url ?? '', title: r.title, country: r.country ?? null, region: r.region ?? null,
+    price_from_eur: r.price_from_eur ?? null, currency: r.currency ?? null, duration_days: r.duration_days ?? null,
+    season_text: r.season_text ?? null, vessel_name: r.vessel_name ?? null, vessel_type: r.vessel_type ?? null,
+    booking_modes: ((r.booking_modes as string[]) ?? []).slice().sort(),
+    summary: r.summary ?? null,
+    spots: ((r.itinerary_spots as Array<{ name?: string }>) ?? []).map(s => (s?.name ?? '').trim()).filter(Boolean),
+  }));
+
+  // Pair current↔proposed. The LLM re-words titles between runs (→ slug churn),
+  // so match by the stable source-page URL first (only when it's unambiguously
+  // 1↔1 for that page), then fall back to slug for the rest.
+  const matchedC = new Set<ReviewRow>();
+  const matchedP = new Set<ReviewRow>();
+  const pairs: Array<[ReviewRow, ReviewRow]> = [];
+  const groupByUrl = (rows: ReviewRow[]): Map<string, ReviewRow[]> => {
+    const m = new Map<string, ReviewRow[]>();
+    for (const r of rows) { if (!r.sourceUrl) continue; (m.get(r.sourceUrl) ?? m.set(r.sourceUrl, []).get(r.sourceUrl)!).push(r); }
+    return m;
+  };
+  const cByUrl = groupByUrl(current);
+  const pByUrl = groupByUrl(proposed);
+  for (const [url, cs] of cByUrl) {
+    const ps = pByUrl.get(url);
+    if (cs.length === 1 && ps && ps.length === 1) { pairs.push([cs[0], ps[0]]); matchedC.add(cs[0]); matchedP.add(ps[0]); }
+  }
+  const cBySlug = new Map(current.filter(r => !matchedC.has(r)).map(r => [r.slug, r]));
+  for (const p of proposed) {
+    if (matchedP.has(p)) continue;
+    const c = cBySlug.get(p.slug);
+    if (c && !matchedC.has(c)) { pairs.push([c, p]); matchedC.add(c); matchedP.add(p); }
+  }
+
+  for (const [c, p] of pairs) {
+    const fields = diffOffer(c, p);
+    if (fields.length) review.changed.push({ slug: p.slug, title: p.title, fields });
+    else review.unchanged++;
+  }
+  for (const p of proposed) if (!matchedP.has(p)) review.added.push({ title: p.title, country: p.country, region: p.region, price: p.price_from_eur, duration: p.duration_days });
+  for (const c of current) if (!matchedC.has(c)) review.removed.push({ title: c.title });
+  return review;
+}
+
+export async function runReviewCruiseOffers(opts: { domain?: string; limit?: number } = {}): Promise<void> {
+  let pq = supabase.from('cruise_providers').select('id, name, root_domain, website_url').in('status', ['new', 'verified']);
+  if (opts.domain) pq = pq.eq('root_domain', opts.domain);
+  if (opts.limit) pq = pq.limit(opts.limit);
+  const { data: providers, error } = await pq;
+  if (error) throw error;
+  if (!providers || providers.length === 0) { console.log('No cruise providers found.'); return; }
+
+  console.log(`Reviewing ${providers.length} provider(s) — what a fresh extraction WOULD change vs the live DB (no writes)…`);
+  const limit = pLimit(CONCURRENCY);
+  const reviews = await Promise.all(
+    providers.map(cp => limit(() => reviewProvider(cp).catch((e): ProviderReview => ({
+      domain: cp.root_domain, name: cp.name ?? cp.root_domain, added: [], removed: [], changed: [], unchanged: 0,
+      error: e instanceof Error ? e.message : String(e),
+    })))),
+  );
+  await closeRenderer();
+
+  const trunc = (v: unknown): string => {
+    const s = typeof v === 'string' ? v : JSON.stringify(v);
+    return s && s.length > 60 ? s.slice(0, 60) + '…' : String(s);
+  };
+  let tAdded = 0, tChanged = 0, tRemoved = 0, tErr = 0, tTouched = 0;
+  const sorted = reviews.sort((a, b) =>
+    (b.added.length + b.removed.length + b.changed.length) - (a.added.length + a.removed.length + a.changed.length));
+  for (const r of sorted) {
+    if (r.error) { console.log(`\n⚠ ${r.name} (${r.domain}) — ${r.error}`); tErr++; continue; }
+    if (r.added.length + r.removed.length + r.changed.length === 0) continue;
+    tTouched++;
+    console.log(`\n━━ ${r.name}  (${r.domain}) ━━`);
+    if (r.added.length) {
+      console.log(`  + NEW (${r.added.length}):`);
+      for (const a of r.added) console.log(`      "${a.title}"  ·  ${a.country ?? '?'}${a.region ? ' / ' + a.region : ''}${a.price ? '  ·  from €' + a.price : ''}${a.duration ? '  ·  ' + a.duration + 'd' : ''}`);
+      tAdded += r.added.length;
+    }
+    if (r.removed.length) {
+      console.log(`  − REMOVED (${r.removed.length})  [pruned on apply]:`);
+      for (const x of r.removed) console.log(`      "${x.title}"`);
+      tRemoved += r.removed.length;
+    }
+    if (r.changed.length) {
+      console.log(`  ~ CHANGED (${r.changed.length}):`);
+      for (const c of r.changed) {
+        console.log(`      "${c.title}"`);
+        for (const f of c.fields) {
+          if (f.field === 'summary') { console.log(`          summary: (text changed)`); continue; }
+          console.log(`          ${f.field}: ${trunc(f.before)} → ${trunc(f.after)}`);
+        }
+      }
+      tChanged += r.changed.length;
+    }
+    if (r.unchanged) console.log(`  = unchanged: ${r.unchanged}`);
+  }
+  console.log(`\n─────────────────────────────────────`);
+  console.log(`Reviewed ${providers.length} provider(s): ${tTouched} with changes · ${tAdded} new · ${tChanged} changed · ${tRemoved} removed · ${tErr} errors`);
+  if (tAdded + tChanged + tRemoved > 0) console.log(`\nApply an approved provider (writes offers + curates images):\n  pnpm cli cruise-offers --domain <domain>`);
+}
