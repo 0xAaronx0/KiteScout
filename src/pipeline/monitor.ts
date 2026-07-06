@@ -103,16 +103,34 @@ async function ensureWatches(): Promise<void> {
     .not('root_domain', 'is', null);
 
   if (!providers?.length) return;
+  const domainById = new Map(providers.map(p => [p.id as string, (p.root_domain as string).toLowerCase()]));
 
-  const { data: existing } = await supabase.from('cruise_watch').select('cruise_provider_id');
-  const have = new Set((existing ?? []).map(r => r.cruise_provider_id as string));
+  // One watch per provider homepage…
+  const toInsert = providers.map(p => ({
+    cruise_provider_id: p.id as string,
+    url: providerUrl(p as { website_url: string | null; root_domain: string }),
+  }));
 
-  const toInsert = providers
-    .filter(p => !have.has(p.id as string))
-    .map(p => ({
-      cruise_provider_id: p.id as string,
-      url: providerUrl(p as { website_url: string | null; root_domain: string }),
-    }));
+  // …plus every offer's source page — exactly the subpages that carry the
+  // cruise/date/price data (self-maintaining: new offers add their page on the
+  // next run). Same-domain guard; trailing slash normalized to match UNIQUE.
+  const { data: offers } = await supabase
+    .from('cruise_offers')
+    .select('cruise_provider_id, source_url')
+    .not('source_url', 'is', null);
+  const seen = new Set(toInsert.map(r => `${r.cruise_provider_id}|${r.url.replace(/\/$/, '')}`));
+  for (const o of offers ?? []) {
+    const pid = o.cruise_provider_id as string;
+    const domain = domainById.get(pid);
+    const url = (o.source_url as string).replace(/\/$/, '');
+    if (!domain || !url) continue;
+    try { if (!new URL(url).hostname.toLowerCase().replace(/^www\./, '').endsWith(domain.replace(/^www\./, ''))) continue; }
+    catch { continue; }
+    const key = `${pid}|${url}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    toInsert.push({ cruise_provider_id: pid, url });
+  }
 
   for (let i = 0; i < toInsert.length; i += 500) {
     await supabase
