@@ -480,8 +480,13 @@ export async function extractOffers(
     );
     text = msg.content[0]?.type === 'text' ? msg.content[0].text : '';
   } catch (err) {
-    console.error(`  Claude error for ${providerName}:`, err);
-    return [];
+    // Rethrow instead of returning [] — an API failure must stay distinguishable
+    // from "site genuinely has no offers". Returning [] here made the review tool
+    // report every existing offer as REMOVED (and an apply would have pruned them).
+    // Callers handle it: the write runner catches per provider (no prune), the
+    // review path marks the provider as errored.
+    console.error(`  Claude error for ${providerName}:`, err instanceof Error ? err.message : err);
+    throw err;
   }
 
   const parsed = parseOfferArray(text);
@@ -1040,7 +1045,15 @@ async function reviewProvider(cp: { id: string; name: string | null; root_domain
   const pages = await crawlProvider(homeUrl, cp.root_domain);
   if (pages.length === 0) { review.error = 'no pages crawled'; return review; }
   const pageByUrl = new Map(pages.map(p => [p.url, p]));
-  const offers = await extractOffers(buildContent(pages, homeUrl), name, pages.map(p => p.url));
+  let offers: ExtractedOffer[];
+  try {
+    offers = await extractOffers(buildContent(pages, homeUrl), name, pages.map(p => p.url));
+  } catch (err) {
+    // Extraction failed (API error etc.) — report it as an error, never as a
+    // diff: a failed run must not masquerade as "all offers removed".
+    review.error = `extraction failed: ${err instanceof Error ? err.message.slice(0, 200) : String(err)}`;
+    return review;
+  }
 
   // Proposed offers — de-duplicated slug (as the write path) + resolved source page.
   const used = new Set<string>();
