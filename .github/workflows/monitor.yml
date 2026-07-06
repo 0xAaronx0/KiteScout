@@ -1,0 +1,61 @@
+name: Cruise provider monitor
+
+# Daily change-detection sweep over all cruise provider websites.
+# Cheap by design: only pages whose content actually changed cost an LLM call.
+# Lives outside web/**, so it never triggers the Docker build/deploy workflow.
+on:
+  schedule:
+    # Every day at 06:00 UTC
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+    inputs:
+      all:
+        description: 'Full sweep — check every page (default). Uncheck to use interval_days.'
+        type: boolean
+        required: false
+        default: true
+      interval_days:
+        description: 'When "all" is off: only re-check pages older than N whole days (integer)'
+        required: false
+        default: '7'
+
+concurrency:
+  group: cruise-provider-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - run: pnpm install
+
+      - name: Run monitor
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          # Scheduled runs do a full daily sweep — cheap (~95 pages; an LLM call
+          # only fires on a page whose content actually changed). A partial
+          # interval-limited pass (--interval-days, integer days) is available on
+          # manual dispatch. NB: interval-days uses a strict cutoff, so on a daily
+          # cron --interval-days 1 would skip pages every other day — hence the
+          # scheduled run always does a full sweep instead.
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ github.event.inputs.all }}" = "true" ]; then
+            pnpm cli monitor --loop --all
+          else
+            pnpm cli monitor --loop --interval-days "${{ github.event.inputs.interval_days || '7' }}"
+          fi
