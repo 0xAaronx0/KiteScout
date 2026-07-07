@@ -996,6 +996,44 @@ interface ProviderReview {
   error?: string;
 }
 
+// Concrete departures, normalized for diffing: one entry per start(–end) date
+// with its status/price. Defensive against LLM-shaped input (`dates` is unknown).
+type NormDate = { key: string; status: string | null; price: number | null };
+function normalizeDates(raw: unknown): NormDate[] {
+  if (!Array.isArray(raw)) return [];
+  const out = new Map<string, NormDate>();
+  for (const d of raw) {
+    if (!d || typeof d !== 'object') continue;
+    const r = d as Record<string, unknown>;
+    const start = typeof r.start_date === 'string' ? r.start_date : null;
+    if (!start) continue;
+    const end = typeof r.end_date === 'string' ? r.end_date : null;
+    const key = end ? `${start}–${end}` : start;
+    out.set(key, {
+      key,
+      status: typeof r.status === 'string' ? r.status : null,
+      price: typeof r.price === 'number' ? r.price : null,
+    });
+  }
+  return [...out.values()].sort((a, b) => a.key.localeCompare(b.key));
+}
+
+// Human-readable departure delta: +added · −removed · status/price flips.
+function datesDelta(before: NormDate[], after: NormDate[]): string | null {
+  const bMap = new Map(before.map(d => [d.key, d]));
+  const aMap = new Map(after.map(d => [d.key, d]));
+  const parts: string[] = [];
+  for (const [k, a] of aMap) if (!bMap.has(k)) parts.push(`+${k}${a.status ? ` (${a.status})` : ''}`);
+  for (const k of bMap.keys()) if (!aMap.has(k)) parts.push(`−${k}`);
+  for (const [k, a] of aMap) {
+    const b = bMap.get(k);
+    if (!b) continue;
+    if ((b.status ?? null) !== (a.status ?? null)) parts.push(`${k}: ${b.status ?? '?'} → ${a.status ?? '?'}`);
+    else if ((b.price ?? null) !== (a.price ?? null)) parts.push(`${k}: ${b.price ?? '?'} → ${a.price ?? '?'}`);
+  }
+  return parts.length ? parts.join('  ·  ') : null;
+}
+
 function reviewShape(o: ExtractedOffer, slug: string, sourceUrl: string) {
   return {
     slug,
@@ -1012,6 +1050,7 @@ function reviewShape(o: ExtractedOffer, slug: string, sourceUrl: string) {
     booking_modes: cleanBookingModes(o.booking_modes).slice().sort(),
     summary: o.summary ?? null,
     spots: (o.itinerary_spots ?? []).map(s => (s.name ?? '').trim()).filter(Boolean),
+    dates: normalizeDates(o.dates),
   };
 }
 type ReviewRow = ReturnType<typeof reviewShape>;
@@ -1034,6 +1073,8 @@ function diffOffer(before: ReviewRow, after: ReviewRow): ReviewField[] {
     const a = ((after[f] as string[]) ?? []).join(' | ');
     if (b !== a) out.push({ field: f, before: b || '(none)', after: a || '(none)' });
   }
+  const dd = datesDelta(before.dates, after.dates);
+  if (dd) out.push({ field: 'dates', before: `${before.dates.length} departure(s)`, after: dd });
   return out;
 }
 
@@ -1066,7 +1107,7 @@ async function reviewProvider(cp: { id: string; name: string | null; root_domain
   // Current live offers for this provider.
   const { data: cur } = await supabase
     .from('cruise_offers')
-    .select('slug,source_url,title,country,region,price_from_eur,currency,duration_days,season_text,vessel_name,vessel_type,booking_modes,summary,itinerary_spots')
+    .select('slug,source_url,title,country,region,price_from_eur,currency,duration_days,season_text,vessel_name,vessel_type,booking_modes,summary,itinerary_spots,dates')
     .eq('cruise_provider_id', cp.id);
   const current: ReviewRow[] = (cur ?? []).map(r => ({
     slug: r.slug, sourceUrl: r.source_url ?? '', title: r.title, country: r.country ?? null, region: r.region ?? null,
@@ -1075,6 +1116,7 @@ async function reviewProvider(cp: { id: string; name: string | null; root_domain
     booking_modes: ((r.booking_modes as string[]) ?? []).slice().sort(),
     summary: r.summary ?? null,
     spots: ((r.itinerary_spots as Array<{ name?: string }>) ?? []).map(s => (s?.name ?? '').trim()).filter(Boolean),
+    dates: normalizeDates(r.dates),
   }));
 
   // Pair current↔proposed. The LLM re-words titles between runs (→ slug churn),
@@ -1157,6 +1199,7 @@ export async function runReviewCruiseOffers(opts: { domain?: string; limit?: num
         console.log(`      "${c.title}"`);
         for (const f of c.fields) {
           if (f.field === 'summary') { console.log(`          summary: (text changed)`); continue; }
+          if (f.field === 'dates') { console.log(`          dates: ${f.after}`); continue; }
           console.log(`          ${f.field}: ${trunc(f.before)} → ${trunc(f.after)}`);
         }
       }
