@@ -11,7 +11,7 @@ import { runExtractCruiseLocations } from './pipeline/extract-cruise-locations.j
 import { runExtractCruiseOffers, runReviewCruiseOffers } from './pipeline/extract-cruise-offers.js';
 import { runExtractCruiseReviews } from './pipeline/extract-cruise-reviews.js';
 import { runRegionConditions } from './pipeline/region-conditions.js';
-import { runMonitor, showChanges, type DetectedChange } from './pipeline/monitor.js';
+import { runMonitor, showChanges, applyApprovedChanges, type DetectedChange } from './pipeline/monitor.js';
 import { supabase } from './lib/supabase.js';
 
 const [command, ...args] = process.argv.slice(2);
@@ -293,6 +293,11 @@ async function main(): Promise<void> {
     }
 
     case 'monitor': {
+      if (args.includes('--apply-approved')) {
+        // Apply user-approved changes (from /changes) via full re-extraction.
+        await applyApprovedChanges(flagValue('--apply-approved-max', 3));
+        break;
+      }
       const monitorBatch = parseInt((args[0] && !args[0].startsWith('-') ? args[0] : '30'), 10);
       await runMonitorLoop(monitorBatch, {
         intervalDays: flagValue('--interval-days', 7),

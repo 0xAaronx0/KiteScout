@@ -108,7 +108,7 @@ interface ExtractedOffer {
   confidence: 'high' | 'medium' | 'low';
 }
 
-interface FetchedPage {
+export interface FetchedPage {
   url: string;
   html: string | null; // raw HTML when fetched directly (needed for image discovery)
   text: string;        // readable text for the LLM / stored corpus
@@ -285,7 +285,7 @@ function ogMetaText(html: string): string {
  *   3. og/meta from the SSR'd <head> — for SPA shells with no body text
  *   4. headless-browser render — true SPAs / JS galleries (only when allowed)
  */
-async function fetchPage(url: string, allowTavily = true): Promise<FetchedPage | null> {
+export async function fetchPage(url: string, allowTavily = true): Promise<FetchedPage | null> {
   const res = await fetchPageConditional(url);
   if (res.status === 'ok' && res.html) {
     const text = htmlToText(res.html);

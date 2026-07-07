@@ -41,6 +41,16 @@ jobs:
 
       - run: pnpm install
 
+      - name: Apply approved changes
+        # Changes the user approved on /changes get a full re-extraction of the
+        # affected provider (capped per run so the job can't overshoot its timeout).
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: pnpm cli monitor --apply-approved
+
       - name: Run monitor
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

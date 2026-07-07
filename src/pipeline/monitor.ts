@@ -2,6 +2,8 @@ import pLimit from 'p-limit';
 import { supabase } from '../lib/supabase.js';
 import { anthropic, EXTRACTION_MODEL } from '../lib/anthropic.js';
 import { extract as tavilyExtract } from '../lib/tavily.js';
+import { applySurgicalToChange } from './surgical.js';
+import { runExtractCruiseOffers } from './extract-cruise-offers.js';
 import { withRetry } from '../lib/retry.js';
 import { fetchPageConditional } from '../lib/fetchPage.js';
 import { htmlToText, collapse, contentHash } from '../lib/content.js';
@@ -345,19 +347,32 @@ export async function runMonitor(
 
         const diff = await runDiff(watch.content_snapshot ?? '', readable);
         if (diff?.significant) {
-          await supabase.from('cruise_changes').insert({
+          const { data: inserted } = await supabase.from('cruise_changes').insert({
             cruise_provider_id: provider.id,
             watch_id: watch.id,
             url: watch.url,
             change_type: diff.changeType,
             summary: diff.summary,
-            details: { offers: diff.offers ?? [], changes: diff.changes ?? [] },
+            // status lives in details (no DDL): pending | auto_applied | approved | applied | dismissed
+            details: { status: 'pending', offers: diff.offers ?? [], changes: diff.changes ?? [] },
             significant: true,
-          });
+          }).select('id').single();
 
           result.significant++;
           result.changes.push({ name: provider.name, url: watch.url, changeType: diff.changeType, summary: diff.summary });
           console.log(`\n  ⚡ ${provider.name ?? watch.url}\n     [${diff.changeType}] ${diff.summary}`);
+
+          // Dates/price-only changes are applied surgically right away (only the
+          // volatile offer fields; identity/content/images untouched) — everything
+          // else stays pending for the /changes approval queue.
+          if (inserted && (diff.changeType === 'dates_change' || diff.changeType === 'price_change')) {
+            try {
+              const outcome = await applySurgicalToChange(inserted.id as string);
+              console.log(`     ↳ surgical: [${outcome.status}] ${outcome.note}`);
+            } catch (err) {
+              console.error(`     ↳ surgical failed (stays pending):`, err instanceof Error ? err.message : err);
+            }
+          }
         }
       }),
     ),
@@ -406,5 +421,45 @@ export async function showChanges(limit = 20, unseenOnly = false): Promise<void>
     console.log(`${flag} ${when}  [${c.change_type}]`);
     console.log(`   ${c.summary}`);
     console.log(`   ${c.url}\n`);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Apply user-approved changes (from the /changes page) via a full re-extraction
+// of the affected provider. Runs in the daily cron before the sweep; capped so
+// a pile of approvals can't blow the job timeout.
+// ---------------------------------------------------------------------------
+export async function applyApprovedChanges(maxProviders = 3): Promise<void> {
+  const { data: rows, error } = await supabase
+    .from('cruise_changes')
+    .select('id, cruise_provider_id, details, cruise_providers!inner(root_domain)')
+    .filter('details->>status', 'eq', 'approved')
+    .order('detected_at', { ascending: true });
+  if (error) throw error;
+  if (!rows || rows.length === 0) { console.log('No approved changes queued.'); return; }
+
+  const byDomain = new Map<string, Array<{ id: string; details: Record<string, unknown> }>>();
+  for (const r of rows) {
+    const domain = (r as unknown as { cruise_providers: { root_domain: string } }).cruise_providers.root_domain;
+    (byDomain.get(domain) ?? byDomain.set(domain, []).get(domain)!)
+      .push({ id: r.id as string, details: (r.details as Record<string, unknown>) ?? {} });
+  }
+
+  const domains = [...byDomain.keys()].slice(0, maxProviders);
+  console.log(`Applying ${domains.length} approved provider(s): ${domains.join(', ')}${byDomain.size > domains.length ? ` (+${byDomain.size - domains.length} deferred to next run)` : ''}`);
+
+  for (const domain of domains) {
+    try {
+      await runExtractCruiseOffers({ domain });
+      for (const row of byDomain.get(domain)!) {
+        await supabase.from('cruise_changes').update({
+          details: { ...row.details, status: 'applied', applied_at: new Date().toISOString() },
+          seen: true,
+        }).eq('id', row.id);
+      }
+      console.log(`  ✓ applied ${domain}`);
+    } catch (err) {
+      console.error(`  ✗ apply failed for ${domain} (stays approved):`, err instanceof Error ? err.message : err);
+    }
   }
 }
