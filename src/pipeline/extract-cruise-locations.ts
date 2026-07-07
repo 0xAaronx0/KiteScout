@@ -3,10 +3,10 @@ import { supabase } from '../lib/supabase.js';
 import { anthropic, ANALYSIS_MODEL } from '../lib/anthropic.js';
 import { extract as tavilyExtract, search as tavilySearch } from '../lib/tavily.js';
 import { withRetry } from '../lib/retry.js';
+import { geocodeLocation } from '../lib/geocode.js';
 
 const CONCURRENCY = 3;
 const MAX_CONTENT_CHARS = 16000;
-const NOMINATIM_DELAY_MS = 1200;
 
 interface CruiseLocation {
   country: string;
@@ -45,50 +45,6 @@ Confidence guide:
 - low: inferred from partial information
 
 Respond with ONLY a JSON array. If no cruise locations are found, respond with [].`;
-
-// ---------------------------------------------------------------------------
-// Geocode a single location via Nominatim (respects 1 req/s rate limit)
-// ---------------------------------------------------------------------------
-const geocodeCache = new Map<string, { lat: number; lng: number } | null>();
-
-async function geocode(
-  spot_name: string | null,
-  region: string | null,
-  country: string,
-): Promise<{ lat: number; lng: number } | null> {
-  const query = [spot_name, region, country].filter(Boolean).join(', ');
-  if (geocodeCache.has(query)) return geocodeCache.get(query)!;
-
-  await new Promise(r => setTimeout(r, NOMINATIM_DELAY_MS));
-
-  try {
-    const url = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=1`;
-    const res = await fetch(url, { headers: { 'User-Agent': 'KiteScout/1.0 kite-cruise-map' } });
-    const data = (await res.json()) as Array<{ lat: string; lon: string }>;
-    if (data[0]) {
-      const coords = { lat: parseFloat(data[0].lat), lng: parseFloat(data[0].lon) };
-      geocodeCache.set(query, coords);
-      return coords;
-    }
-    // Fallback to country only
-    if (spot_name || region) {
-      const url2 = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(country)}&format=json&limit=1`;
-      await new Promise(r => setTimeout(r, NOMINATIM_DELAY_MS));
-      const res2 = await fetch(url2, { headers: { 'User-Agent': 'KiteScout/1.0 kite-cruise-map' } });
-      const data2 = (await res2.json()) as Array<{ lat: string; lon: string }>;
-      if (data2[0]) {
-        const coords = { lat: parseFloat(data2[0].lat), lng: parseFloat(data2[0].lon) };
-        geocodeCache.set(query, coords);
-        return coords;
-      }
-    }
-  } catch {
-    // geocode failure is non-fatal
-  }
-
-  geocodeCache.set(query, null);
-  return null;
-}
 
 // ---------------------------------------------------------------------------
 // Fetch and combine content for a single cruise provider
@@ -219,7 +175,7 @@ export async function runExtractCruiseLocations(): Promise<{
         // Geocode each location
         const withCoords = await Promise.all(
           locations.map(async loc => {
-            const coords = await geocode(loc.spot_name ?? null, loc.region ?? null, loc.country);
+            const coords = await geocodeLocation(loc.spot_name ?? null, loc.region ?? null, loc.country);
             return { ...loc, lat: coords?.lat ?? null, lng: coords?.lng ?? null };
           }),
         );
