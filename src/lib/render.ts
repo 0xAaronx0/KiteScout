@@ -39,7 +39,13 @@ export async function renderPage(url: string): Promise<string | null> {
   if (!browser) return null;
   let ctx: Awaited<ReturnType<Browser['newContext']>> | undefined;
   try {
-    ctx = await browser.newContext({ userAgent: UA, viewport: { width: 1280, height: 1600 } });
+    ctx = await browser.newContext({
+      userAgent: UA,
+      viewport: { width: 1280, height: 1600 },
+      // Prefer the English site version on language-negotiating sites.
+      locale: 'en-US',
+      extraHTTPHeaders: { 'Accept-Language': 'en-US,en;q=0.9,de;q=0.8' },
+    });
     const page = await ctx.newPage();
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 20000 });
     // let client-side rendering + lazy galleries populate

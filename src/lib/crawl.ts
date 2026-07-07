@@ -162,6 +162,52 @@ function urlSlug(u: string): string {
   try { return new URL(u).pathname.split('/').filter(Boolean).pop() ?? ''; } catch { return ''; }
 }
 
+// ---------------------------------------------------------------------------
+// Language-tree preference: crawl the ENGLISH version of a site when it exists.
+// ---------------------------------------------------------------------------
+const LANG_CODES = new Set([
+  'de','fr','es','it','nl','pt','pl','ru','cs','sk','da','sv','nb','no','fi',
+  'tr','el','hu','ro','bg','hr','sl','sr','ar','he','zh','ja','ko','th','uk',
+  'ca','et','lt','lv','is','mk','sq',
+]);
+
+/** Leading language segment of a path (/de/x, /fr-fr/x) → { lang, rest of path }. */
+function langOfPath(pathname: string): { lang: string | null; rest: string } {
+  const m = pathname.match(/^\/([a-z]{2})(?:-[a-z]{2})?(?=\/|$)/i);
+  if (!m) return { lang: null, rest: pathname };
+  const code = m[1].toLowerCase();
+  if (code !== 'en' && !LANG_CODES.has(code)) return { lang: null, rest: pathname };
+  const rest = pathname.slice(m[0].length) || '/';
+  return { lang: code, rest };
+}
+
+/** www-stripped host + trailing-slash-normalized path — equivalence key. */
+function hostPathKey(host: string, path: string): string {
+  return host.replace(/^www\./, '') + (path.replace(/\/$/, '') || '/');
+}
+
+/**
+ * Drop pages from non-English language trees whose English (or language-neutral)
+ * equivalent was also discovered — so multilingual sites get crawled in English.
+ * A page WITHOUT an English/neutral equivalent is always kept (localized slugs,
+ * single-language sites): language preference must never cost coverage.
+ */
+function preferEnglishTree(set: Set<string>): void {
+  const keys = new Set<string>();
+  for (const u of set) {
+    try { const x = new URL(u); keys.add(hostPathKey(x.hostname, x.pathname)); } catch { /* skip */ }
+  }
+  for (const u of [...set]) {
+    let x: URL;
+    try { x = new URL(u); } catch { continue; }
+    const { lang, rest } = langOfPath(x.pathname);
+    if (!lang || lang === 'en') continue;
+    const enEquiv = hostPathKey(x.hostname, `/en${rest === '/' ? '' : rest}`);
+    const neutral = hostPathKey(x.hostname, rest);
+    if (keys.has(enEquiv) || keys.has(neutral)) set.delete(u);
+  }
+}
+
 /** Short slug matching a product/destination term and not an article → a real offer page. */
 function isProductPage(u: string): boolean {
   return PRODUCT_PAGE_RE.test(u) && !ARTICLE_PAGE_RE.test(u) && urlSlug(u).split('-').length < 6;
@@ -212,16 +258,26 @@ export async function discoverSiteUrls(
     if (html) for (const l of linksFromHtml(html, root, rootDomain)) set.add(l);
   }
 
+  // Multilingual sites: crawl the English tree where an equivalent exists.
+  preferEnglishTree(set);
+
+  const nonEnTree = (u: string): boolean => {
+    try { const { lang } = langOfPath(new URL(u).pathname); return lang !== null && lang !== 'en'; }
+    catch { return false; }
+  };
   const score = (u: string): number => {
     if (u === home) return 1000;
     // A long, sentence-like slug ("best-time-of-year-to-book-a-kite-safari-in-egypt")
     // is almost always a blog/SEO article, even when it contains "cruise"/"safari".
     const longSlug = urlSlug(u).split('-').length >= 6;
     const article = ARTICLE_PAGE_RE.test(u) || longSlug;
-    if (PRODUCT_PAGE_RE.test(u) && !article) return 100; // genuine product/destination/cruise pages first
+    // Localized slugs can't be equivalence-matched, so both trees survive; a mild
+    // penalty lets English/neutral pages fill the page cap first.
+    const langPenalty = nonEnTree(u) ? 1 : 0;
+    if (PRODUCT_PAGE_RE.test(u) && !article) return 100 - langPenalty;
     if (article) return 1;                               // blog/SEO/legal pages last
-    if (PAGE_VALUE_RE.test(u)) return 10;
-    return 5;
+    if (PAGE_VALUE_RE.test(u)) return 10 - langPenalty;
+    return 5 - langPenalty;
   };
   const sorted = [...set].sort((a, b) => score(b) - score(a));
   return { urls: sorted.slice(0, maxPages), via };
