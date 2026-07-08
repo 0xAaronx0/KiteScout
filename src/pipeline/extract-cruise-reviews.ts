@@ -442,7 +442,16 @@ async function processProvider(
     }
   }
 
-  if (notes.length > 0) patch.review_match_notes = notes.join(' | ');
+  if (notes.length > 0) {
+    // Merge with notes from other sources' earlier runs: keep segments of
+    // sources this run did NOT cover, replace the ones it did.
+    const { data: cur } = await supabase.from('cruise_providers').select('review_match_notes').eq('id', cp.id).single();
+    const covered = [...opts.sources.map(s => s.label), ...(opts.google ? ['Google'] : [])];
+    const kept = ((cur?.review_match_notes as string | null) ?? '')
+      .split(' | ')
+      .filter(seg => seg.trim() && !covered.some(label => seg.trim().toLowerCase().startsWith(label.toLowerCase() + ':')));
+    patch.review_match_notes = [...kept, ...notes].join(' | ');
+  }
 
   const { error } = await supabase.from('cruise_providers').update(patch).eq('id', cp.id);
   if (error) console.error(`\n  DB error for ${cp.root_domain}:`, error.message);
