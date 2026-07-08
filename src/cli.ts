@@ -281,6 +281,7 @@ async function main(): Promise<void> {
         all: args.includes('--all'),
         domain: flagStr('--domain'),
         limit: positionalLimit(),
+        only: flagStr('--only'), // e.g. --only tripadvisor,google
       });
       console.log(`Done: ${matched} review links matched across ${providers} providers.`);
       break;

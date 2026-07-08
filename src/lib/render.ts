@@ -33,8 +33,17 @@ async function getBrowser(): Promise<Browser | null> {
   return browserPromise;
 }
 
-/** Render a page with JS executed and return its full HTML, or null on any failure. */
-export async function renderPage(url: string): Promise<string | null> {
+export interface RenderCookie { name: string; value: string; domain: string; path?: string }
+
+/**
+ * Render a page with JS executed; returns the HTML plus the FINAL url (after
+ * client/server redirects — e.g. a Google Maps search resolving to a place).
+ * Optional cookies let callers pre-accept consent walls (Google).
+ */
+export async function renderPageEx(
+  url: string,
+  opts: { cookies?: RenderCookie[] } = {},
+): Promise<{ html: string; url: string } | null> {
   const browser = await getBrowser();
   if (!browser) return null;
   let ctx: Awaited<ReturnType<Browser['newContext']>> | undefined;
@@ -46,17 +55,26 @@ export async function renderPage(url: string): Promise<string | null> {
       locale: 'en-US',
       extraHTTPHeaders: { 'Accept-Language': 'en-US,en;q=0.9,de;q=0.8' },
     });
+    if (opts.cookies?.length) {
+      await ctx.addCookies(opts.cookies.map(c => ({ ...c, path: c.path ?? '/' })));
+    }
     const page = await ctx.newPage();
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 20000 });
     // let client-side rendering + lazy galleries populate
     await page.waitForLoadState('networkidle', { timeout: 8000 }).catch(() => { /* best effort */ });
     await page.waitForTimeout(1200);
-    return await page.content();
+    return { html: await page.content(), url: page.url() };
   } catch {
     return null;
   } finally {
     if (ctx) await ctx.close().catch(() => { /* */ });
   }
+}
+
+/** Render a page with JS executed and return its full HTML, or null on any failure. */
+export async function renderPage(url: string): Promise<string | null> {
+  const r = await renderPageEx(url);
+  return r?.html ?? null;
 }
 
 /** Close the shared browser (call once at the end of a run so the process exits). */
