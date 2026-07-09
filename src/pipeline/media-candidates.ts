@@ -104,11 +104,18 @@ type CachedPage = { page: FetchedPage | null; rendered: boolean };
 
 async function collectForOffer(offer: OfferRow, pageCache: Map<string, CachedPage>): Promise<{ images: number; videos: number }> {
   const homeUrl = offer.provider.website_url ?? `https://${offer.provider.root_domain}`;
+  // website_url can point at a DEEP page (makanisafari → /copy-of-makani-safari),
+  // but hero videos live on the site ROOT — always scan the origin too.
+  let rootUrl = `https://${offer.provider.root_domain}`;
+  try { rootUrl = new URL(homeUrl).origin; } catch { /* keep default */ }
 
-  // Pages to scan: offer source page, provider homepage, known gallery pages.
+  // Pages to scan: offer source page, site root, provider page, known gallery pages.
   const pageUrls = new Map<string, string>(); // url → note
   if (offer.source_url) pageUrls.set(offer.source_url.replace(/\/$/, ''), 'offer page');
-  pageUrls.set(homeUrl.replace(/\/$/, ''), 'homepage');
+  pageUrls.set(rootUrl.replace(/\/$/, ''), 'homepage');
+  if (homeUrl.replace(/\/$/, '') !== rootUrl.replace(/\/$/, '')) {
+    pageUrls.set(homeUrl.replace(/\/$/, ''), 'provider page');
+  }
   const { data: pgs } = await supabase.from('provider_pages').select('url').eq('cruise_provider_id', offer.cruise_provider_id);
   // Dedicated destination pages ("/bahamas" for the Bahamas cruise) carry the
   // offer's own gallery even when source_url points at an aggregate listing page.
