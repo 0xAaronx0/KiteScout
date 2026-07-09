@@ -139,6 +139,13 @@ export function upscaleCdnUrl(absUrl: string): string {
       const stripped = u.pathname.replace(/-\d{2,4}x\d{2,4}(\.(?:jpe?g|png|webp|gif|avif))$/i, '$1');
       if (stripped !== u.pathname) { u.pathname = stripped; return u.href; }
     }
+    // Tilda: lazy-load background thumbnails live on thb.tildacdn.net with a
+    // transform segment (…/tild…/-/resize/20x/file.jpg — 20 px wide!); the
+    // original is static.tildacdn.net/tild…/file.jpg (spiritkitecruise.com).
+    if (/(^|\.)thb\.tildacdn\.(net|com)$/i.test(u.hostname)) {
+      const m = u.pathname.match(/^\/(tild[^/]+)\/(?:-\/[^/]+(?:\/[^/]+)*\/)?([^/]+)$/i);
+      if (m) return `https://static.tildacdn.net/${m[1]}/${m[2]}`;
+    }
     return absUrl;
   } catch {
     return absUrl;
