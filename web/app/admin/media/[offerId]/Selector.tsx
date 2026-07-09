@@ -89,9 +89,13 @@ export default function Selector({
         body: JSON.stringify({ offerId, key: adminKey, imageIds: picked, heroVideoId: heroVideo }),
       });
       const j = await res.json();
-      setMsg(res.ok
-        ? `✓ Queued (${j.queued.images} images${j.queued.heroVideo ? ' + hero video' : ''}) — applied by the daily cron or \`pnpm cli cruise-media apply\``
-        : `✗ ${j.error ?? res.status}`);
+      if (res.ok) {
+        // Straight back to the listing overview (fresh server render shows the
+        // "selection queued" status) — saves a click per curated offer.
+        window.location.href = `/admin/media?key=${encodeURIComponent(adminKey)}`;
+        return;
+      }
+      setMsg(`✗ ${j.error ?? res.status}`);
     } catch (e) {
       setMsg(`✗ ${e instanceof Error ? e.message : 'request failed'}`);
     } finally {
