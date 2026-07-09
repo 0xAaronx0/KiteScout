@@ -73,7 +73,7 @@ export async function processAndStoreVideo(sourceUrl: string, path: string): Pro
     const res = await fetch(sourceUrl, {
       headers: { 'User-Agent': UA, Accept: 'video/*,*/*;q=0.8' },
       redirect: 'follow',
-      signal: AbortSignal.timeout(180_000),
+      signal: AbortSignal.timeout(300_000),
     });
     if (!res.ok || !res.body) {
       console.error(`  [video] download failed (${res.status}): ${sourceUrl.slice(0, 80)}`);
