@@ -190,6 +190,7 @@ export function discoverImageUrls(
   html: string,
   baseUrl: string,
   anchorText?: string | null,
+  max: number = MAX_CANDIDATES,
 ): string[] {
   const root = parse(html);
   const urls: string[] = [];
@@ -241,7 +242,7 @@ export function discoverImageUrls(
     if (m?.[2]) push(m[2]);
   }
 
-  return urls.slice(0, MAX_CANDIDATES);
+  return urls.slice(0, max);
 }
 
 // ---------------------------------------------------------------------------

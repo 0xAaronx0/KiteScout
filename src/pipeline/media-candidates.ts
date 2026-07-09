@@ -80,10 +80,24 @@ interface OfferRow {
   id: string;
   slug: string;
   title: string;
+  country: string | null;
+  region: string | null;
   source_url: string | null;
   images: StoredImage[] | null;
   cruise_provider_id: string;
   provider: { root_domain: string; website_url: string | null };
+}
+
+/** Lowercased destination tokens (country/region/title words) for URL matching. */
+function destinationTokens(offer: OfferRow): string[] {
+  const stop = new Set(['kite', 'kitesurf', 'kitesurfing', 'cruise', 'safari', 'catamaran', 'luxury', 'wingfoil', 'island', 'islands', 'week', 'days']);
+  const tokens = new Set<string>();
+  for (const src of [offer.country, offer.region, offer.title]) {
+    for (const t of (src ?? '').toLowerCase().split(/[^a-z]+/)) {
+      if (t.length >= 5 && !stop.has(t)) tokens.add(t);
+    }
+  }
+  return [...tokens];
 }
 
 type CachedPage = { page: FetchedPage | null; rendered: boolean };
@@ -96,9 +110,17 @@ async function collectForOffer(offer: OfferRow, pageCache: Map<string, CachedPag
   if (offer.source_url) pageUrls.set(offer.source_url.replace(/\/$/, ''), 'offer page');
   pageUrls.set(homeUrl.replace(/\/$/, ''), 'homepage');
   const { data: pgs } = await supabase.from('provider_pages').select('url').eq('cruise_provider_id', offer.cruise_provider_id);
+  // Dedicated destination pages ("/bahamas" for the Bahamas cruise) carry the
+  // offer's own gallery even when source_url points at an aggregate listing page.
+  const destTokens = destinationTokens(offer);
   for (const r of pgs ?? []) {
     const u = (r.url as string).replace(/\/$/, '');
-    if (/galer|gallery|fotos|photos|impression|media|video/i.test(u) && !pageUrls.has(u)) pageUrls.set(u, 'gallery page');
+    if (pageUrls.has(u)) continue;
+    if (/galer|gallery|fotos|photos|impression|media|video/i.test(u)) { pageUrls.set(u, 'gallery page'); continue; }
+    let path = '';
+    try { path = new URL(u).pathname.toLowerCase(); } catch { continue; }
+    if (/blog|news|artikel|guide|faq|anniversary/i.test(path)) continue; // articles, not offer pages
+    if (destTokens.some(t => path.includes(t))) pageUrls.set(u, 'destination page');
   }
 
   const rows: Array<{ kind: 'image' | 'video'; url: string; origin: string | null; note: string }> = [];
@@ -130,7 +152,7 @@ async function collectForOffer(offer: OfferRow, pageCache: Map<string, CachedPag
       if (cached.page?.html) videos = discoverVideoUrls(cached.page.html, cached.page.url, note);
     }
 
-    for (const img of discoverImageUrls(cached.page!.html!, cached.page!.url).slice(0, MAX_IMAGE_CANDIDATES)) {
+    for (const img of discoverImageUrls(cached.page!.html!, cached.page!.url, null, MAX_IMAGE_CANDIDATES)) {
       if (EPHEMERAL_HOST_RE.test(img)) continue; // signed IG/FB CDN URLs expire in days
       rows.push({ kind: 'image', url: img, origin: url, note });
     }
@@ -171,7 +193,7 @@ export async function runCollectMediaCandidates(opts: { domain?: string; limit?:
 
   let q = supabase
     .from('cruise_offers')
-    .select('id, slug, title, source_url, images, cruise_provider_id, provider:cruise_providers!inner(root_domain, website_url)');
+    .select('id, slug, title, country, region, source_url, images, cruise_provider_id, provider:cruise_providers!inner(root_domain, website_url)');
   if (opts.domain) q = q.eq('cruise_providers.root_domain', opts.domain);
   if (opts.limit) q = q.limit(opts.limit);
   const { data, error } = await q;
