@@ -439,19 +439,22 @@ export async function fetchPage(url: string, allowTavily = true): Promise<Fetche
     const md = await tavilyExtract(url);
     if (md && collapse(md).length > 150) return { url, html: null, text: collapse(md), title: null };
   }
-  // 3. SPA shell with no body text but SSR'd meta → use og/meta as minimal content.
-  if (res.status === 'ok' && res.html) {
-    const meta = ogMetaText(res.html);
-    if (meta.length > 60) return { url, html: res.html, text: meta, title: extractTitle(res.html) };
-  }
-  // 4. True SPA / JS gallery → render with a headless browser (rendered HTML also
+  // 3. True SPA / JS gallery → render with a headless browser (rendered HTML also
   //    carries lazy-loaded gallery <img>s for image curation). Gated like Tavily.
+  //    MUST come before the og/meta fallback: a SPA's og:description is a two-line
+  //    pitch, while the rendered page carries the real rates/dates/booking options
+  //    (kitecharters.com: cabin €1,950 vs full boat €15,200 only exist rendered).
   if (allowTavily) {
     const rendered = await renderPage(url);
     if (rendered) {
       const text = htmlToText(rendered);
       if (text.length > 150) return { url, html: rendered, text, title: extractTitle(rendered) };
     }
+  }
+  // 4. Last resort: SSR'd og/meta as minimal content (render unavailable/failed).
+  if (res.status === 'ok' && res.html) {
+    const meta = ogMetaText(res.html);
+    if (meta.length > 60) return { url, html: res.html, text: meta, title: extractTitle(res.html) };
   }
   return null;
 }
