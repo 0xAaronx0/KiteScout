@@ -25,10 +25,14 @@ export async function POST(req: NextRequest) {
   if (body.key !== adminKey) return NextResponse.json({ error: 'invalid key' }, { status: 403 });
 
   const offerId = String(body.offerId ?? '');
-  const imageIds = Array.isArray(body.imageIds) ? body.imageIds.map(String).slice(0, 10) : [];
+  const imageIds = Array.isArray(body.imageIds) ? body.imageIds.map(String).slice(0, 12) : [];
   const heroVideoId = body.heroVideoId ? String(body.heroVideoId) : null;
   if (!offerId) return NextResponse.json({ error: 'offerId required' }, { status: 400 });
   if (new Set(imageIds).size !== imageIds.length) return NextResponse.json({ error: 'duplicate image ids' }, { status: 400 });
+  // Combined media cap: images + hero video together ≤ 12.
+  if (imageIds.length + (heroVideoId ? 1 : 0) > 12) {
+    return NextResponse.json({ error: 'max 12 media items (images + hero video combined)' }, { status: 400 });
+  }
 
   const supabase = getSupabase();
 

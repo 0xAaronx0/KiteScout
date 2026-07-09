@@ -28,7 +28,7 @@ import { closeRenderer, renderPageEx } from '../lib/render.js';
 
 const CONCURRENCY = 3;
 const MAX_IMAGE_CANDIDATES = 60; // per offer, keeps the admin UI usable
-const MAX_SELECTED = 10;
+const MAX_SELECTED = 12; // combined cap: images + hero video together
 
 // ---------------------------------------------------------------------------
 // Video candidate extraction

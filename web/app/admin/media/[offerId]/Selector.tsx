@@ -58,7 +58,7 @@ export default function Selector({
   const initial = useMemo(() => {
     const selected = images.filter(c => c.status === 'selected').sort((a, b) => (a.sort ?? 9) - (b.sort ?? 9));
     if (selected.length) return selected.map(c => c.id);
-    return images.filter(c => (c.note ?? '').startsWith('currently live')).slice(0, 10).map(c => c.id);
+    return images.filter(c => (c.note ?? '').startsWith('currently live')).slice(0, 12).map(c => c.id);
   }, [images]);
 
   const [picked, setPicked] = useState<string[]>(initial);
@@ -71,7 +71,7 @@ export default function Selector({
 
   const toggle = (id: string) => {
     setMsg(null);
-    setPicked(p => (p.includes(id) ? p.filter(x => x !== id) : p.length < 10 ? [...p, id] : p));
+    setPicked(p => (p.includes(id) ? p.filter(x => x !== id) : p.length < 12 - (heroVideo ? 1 : 0) ? [...p, id] : p));
   };
   const makeHero = (id: string) => {
     setMsg(null);
@@ -107,7 +107,7 @@ export default function Selector({
     <div>
       <div className="sticky top-[57px] z-10 -mx-6 mb-4 flex flex-wrap items-center gap-3 border-b border-slate-800 bg-slate-950/95 px-6 py-3 backdrop-blur">
         <span className="text-sm">
-          <b className={picked.length >= 5 ? 'text-emerald-400' : 'text-amber-400'}>{picked.length}/10</b> images
+          <b className={picked.length >= 5 ? 'text-emerald-400' : 'text-amber-400'}>{picked.length + (heroVideo ? 1 : 0)}/12</b> media
           {picked.length > 0 && <span className="text-slate-400"> · #1 = hero</span>}
           {heroVideo && <span className="text-slate-400"> · 🎬 hero video set</span>}
         </span>
@@ -138,7 +138,7 @@ export default function Selector({
               return (
                 <button
                   key={v.id}
-                  onClick={() => setHeroVideo(active ? null : v.id)}
+                  onClick={() => { if (!active && picked.length >= 12) { setMsg('✗ max 12 media — remove an image first'); return; } setMsg(null); setHeroVideo(active ? null : v.id); }}
                   title={`${v.url}\n${v.note ?? ''}`}
                   className={`relative h-28 overflow-hidden rounded-lg border text-left ${active ? 'border-emerald-500 ring-2 ring-emerald-500/50' : 'border-slate-800 hover:border-slate-600'}`}
                 >

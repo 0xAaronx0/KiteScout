@@ -45,14 +45,19 @@ export default async function MediaAdminIndex({
   };
 
   const qs = adminKey ? `?key=${encodeURIComponent(adminKey)}` : '';
-  const sorted = [...offers].sort((a, b) => Number(needsWork(b)) - Number(needsWork(a)));
+  // Sorted by destination (country → region → title) so one area is curated in one pass.
+  const sorted = [...offers].sort((a, b) =>
+    (a.country ?? 'zz').localeCompare(b.country ?? 'zz') ||
+    (a.region ?? 'zz').localeCompare(b.region ?? 'zz') ||
+    a.title.localeCompare(b.title),
+  );
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <header className="sticky top-0 z-10 border-b border-slate-800 bg-slate-950/95 px-6 py-4 backdrop-blur">
         <h1 className="text-lg font-bold">🪁 Media Curation — {offers.length} offers</h1>
         <p className="text-xs text-slate-400 mt-0.5">
-          Pick up to 10 listing images (first = hero) and an optional hero video per offer.
+          Pick up to 12 media per offer — images + optional hero video combined (first image = hero).
           {!adminKey && <span className="text-amber-400"> — read-only: append ?key=… to select</span>}
           {selectedRes.error && <span className="text-amber-400"> — candidates table missing: run migration 20260709000000</span>}
         </p>
@@ -80,7 +85,7 @@ export default async function MediaAdminIndex({
                   </td>
                   <td className="py-2 pr-3 text-slate-400">{o.provider?.name ?? o.provider?.root_domain}</td>
                   <td className={`py-2 pr-3 ${imgs.length < 5 || fallback ? 'text-amber-400' : 'text-slate-300'}`}>
-                    {imgs.length}/10{fallback ? ' · fallback' : ''}
+                    {imgs.length}/12{fallback ? ' · fallback' : ''}
                   </td>
                   <td className="py-2 pr-3">{o.hero_video_url ? '🎬' : <span className="text-slate-600">—</span>}</td>
                   <td className="py-2">

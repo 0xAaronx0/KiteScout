@@ -33,8 +33,8 @@ const JUNK_RE =
   /(logo|icon|sprite|favicon|avatar|badge|placeholder|spinner|loader|pixel|tracking|1x1|blank|transparent|cookie|gdpr|banner-ad|food|menu|recipe|breakfast|lunch|dinner|cuisine|cocktail|testimonial|headshot)/i;
 
 const MAX_CANDIDATES = 16; // distinct URLs to consider per page
-const MAX_DOWNLOADS = 20;  // images actually fetched + measured
-const MAX_STORED = 10;     // final cap per offer
+const MAX_DOWNLOADS = 24;  // images actually fetched + measured
+const MAX_STORED = 12;     // final cap per offer
 const MIN_WIDTH = 500;
 const MIN_HEIGHT = 330;
 const MAX_ASPECT = 3.2;    // wider than this → banner strip
@@ -240,6 +240,13 @@ export function discoverImageUrls(
     const style = el.getAttribute('style') ?? '';
     const m = style.match(/background-image\s*:\s*url\((['"]?)(.*?)\1\)/i);
     if (m?.[2]) push(m[2]);
+  }
+  // Lightbox galleries: thumbnails are JS-lazy (no usable <img src>), but each
+  // <a> links the full-res photo (WP galleries — flisvos-sportclub's kite&sail
+  // gallery is 27 such links). The anchor href IS the image.
+  for (const a of scope.querySelectorAll('a')) {
+    const href = a.getAttribute('href');
+    if (href && /\.(jpe?g|png|webp|avif)(\?|$)/i.test(href)) push(href);
   }
 
   return urls.slice(0, max);
