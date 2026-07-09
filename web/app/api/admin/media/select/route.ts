@@ -50,12 +50,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'heroVideoId is not a video candidate of this offer' }, { status: 400 });
   }
 
-  // Reset previous pending selection (keep 'applied' history intact), then mark the new one.
+  // Reset the previous selection COMPLETELY — pending AND applied rows. The
+  // apply CLI rebuilds an offer's images from every sorted selected/applied
+  // candidate (so download-retries don't clobber the set), which means stale
+  // applied rows from an older selection must not linger with a sort value.
   const { error: resetErr } = await supabase
     .from('offer_media_candidates')
     .update({ status: 'candidate', hero: false, sort: null })
     .eq('cruise_offer_id', offerId)
-    .eq('status', 'selected');
+    .in('status', ['selected', 'applied']);
   if (resetErr) return NextResponse.json({ error: resetErr.message }, { status: 500 });
 
   for (let i = 0; i < imageIds.length; i++) {

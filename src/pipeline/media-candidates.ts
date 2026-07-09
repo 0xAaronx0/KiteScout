@@ -269,7 +269,17 @@ export async function runApplySelectedMedia(opts: { domain?: string } = {}): Pro
       ((offer.images as StoredImage[] | null) ?? []).filter(i => i?.source_url).map(i => [i.source_url as string, i]),
     );
 
-    const imgRows = rows.filter(r => r.kind === 'image').sort((a, b) => (a.sort ?? 99) - (b.sort ?? 99)).slice(0, MAX_SELECTED);
+    // The admin's LAST full selection = every sorted image candidate that is
+    // 'selected' (pending) OR already 'applied'. Building from the pending rows
+    // alone made a RETRY of a few failed downloads REPLACE the whole images
+    // array with just those stragglers (sardinia went 10 images → 1).
+    const { data: fullSel } = await supabase
+      .from('offer_media_candidates')
+      .select('id, kind, url, hero, sort, status')
+      .eq('cruise_offer_id', offerId)
+      .in('status', ['selected', 'applied'])
+      .not('sort', 'is', null);
+    const imgRows = (fullSel ?? []).filter(r => r.kind === 'image').sort((a, b) => (a.sort ?? 99) - (b.sort ?? 99)).slice(0, MAX_SELECTED);
     const videoRow = rows.find(r => r.kind === 'video' && r.hero) ?? rows.find(r => r.kind === 'video');
 
     const newImages: StoredImage[] = [];

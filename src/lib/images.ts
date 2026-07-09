@@ -323,12 +323,12 @@ export async function extractImageRights(buf: Buffer, sourceUrl: string): Promis
   return { status, source_host: host, copyright, credit, license, license_url: licenseUrl };
 }
 
-export async function downloadImage(url: string): Promise<Buffer | null> {
+async function fetchImage(url: string): Promise<Buffer | null> {
   try {
     const res = await fetch(url, {
       headers: { 'User-Agent': BROWSER_UA, Accept: 'image/avif,image/webp,image/*,*/*;q=0.8' },
       redirect: 'follow',
-      signal: AbortSignal.timeout(12000),
+      signal: AbortSignal.timeout(25000),
     });
     if (!res.ok) return null;
     const ct = res.headers.get('content-type') ?? '';
@@ -339,6 +339,21 @@ export async function downloadImage(url: string): Promise<Buffer | null> {
   } catch {
     return null;
   }
+}
+
+export async function downloadImage(url: string): Promise<Buffer | null> {
+  // Wix: a bare media URL serves the untouched original (routinely 20+ MB,
+  // ~15 s — timeouts). Ask Wix for a server-side bounded transform instead;
+  // w_1920 is comfortably above our 1280 px target. Fall back to the bare
+  // original if the transform is refused.
+  try {
+    const u = new URL(url);
+    if (/(^|\.)wixstatic\.com$/i.test(u.hostname) && /^\/media\/[^/]+$/.test(u.pathname)) {
+      const bounded = await fetchImage(`${url}/v1/fit/w_1920,h_1920,q_90/img.jpg`);
+      if (bounded) return bounded;
+    }
+  } catch { /* fall through to the plain fetch */ }
+  return fetchImage(url);
 }
 
 // ---------------------------------------------------------------------------
