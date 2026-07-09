@@ -39,10 +39,10 @@ export default async function MediaAdminIndex({
 
   const pendingSel = new Set(((selectedRes.data ?? []) as Array<{ cruise_offer_id: string }>).map(r => r.cruise_offer_id));
 
-  const needsWork = (o: OfferRow) => {
-    const imgs = o.images ?? [];
-    return imgs.length < 5 || imgs.some(i => i.fallback);
-  };
+  // "to be checked": fewer than 8 media items (images + hero video combined)
+  // or still running on a fallback image.
+  const mediaCount = (o: OfferRow) => (o.images?.length ?? 0) + (o.hero_video_url ? 1 : 0);
+  const needsWork = (o: OfferRow) => mediaCount(o) < 8 || (o.images ?? []).some(i => i.fallback);
 
   const qs = adminKey ? `?key=${encodeURIComponent(adminKey)}` : '';
   // Sorted by destination (country → region → title) so one area is curated in one pass.
@@ -84,7 +84,7 @@ export default async function MediaAdminIndex({
                     <span className="block text-xs text-slate-500">{[o.region, o.country].filter(Boolean).join(', ')}</span>
                   </td>
                   <td className="py-2 pr-3 text-slate-400">{o.provider?.name ?? o.provider?.root_domain}</td>
-                  <td className={`py-2 pr-3 ${imgs.length < 5 || fallback ? 'text-amber-400' : 'text-slate-300'}`}>
+                  <td className={`py-2 pr-3 ${imgs.length + (o.hero_video_url ? 1 : 0) < 8 || fallback ? 'text-amber-400' : 'text-slate-300'}`}>
                     {imgs.length}/12{fallback ? ' · fallback' : ''}
                   </td>
                   <td className="py-2 pr-3">{o.hero_video_url ? '🎬' : <span className="text-slate-600">—</span>}</td>
@@ -92,7 +92,7 @@ export default async function MediaAdminIndex({
                     {pendingSel.has(o.id)
                       ? <span className="rounded-full bg-sky-900/60 px-2 py-0.5 text-xs text-sky-300">selection queued</span>
                       : needsWork(o)
-                        ? <span className="rounded-full bg-amber-900/50 px-2 py-0.5 text-xs text-amber-300">needs curation</span>
+                        ? <span className="rounded-full bg-amber-900/50 px-2 py-0.5 text-xs text-amber-300">to be checked</span>
                         : <span className="text-xs text-slate-600">ok</span>}
                   </td>
                 </tr>

@@ -30,6 +30,7 @@ const execFileP = promisify(execFile);
 export const CRUISE_VIDEO_BUCKET = 'cruise-videos';
 const MAX_SOURCE_MB = 400;   // refuse absurd downloads
 const MAX_CLIP_SECONDS = 40; // hero loop length
+const MAX_OUTPUT_MB = 10;    // hard cap — anything above gets trimmed shorter
 const TARGET_WIDTH = 1280;   // ~720p for 16:9
 
 const UA =
@@ -87,20 +88,32 @@ export async function processAndStoreVideo(sourceUrl: string, path: string): Pro
     await pipeline(Readable.fromWeb(res.body as import('stream/web').ReadableStream), createWriteStream(inFile));
 
     // 2. Transcode: 720p H.264, muted, capped loop, moov atom up front.
-    await execFileP(ffmpegPath, [
-      '-y', '-hide_banner', '-loglevel', 'error',
-      '-i', inFile,
-      '-t', String(MAX_CLIP_SECONDS),
-      '-vf', `scale='min(${TARGET_WIDTH},iw)':-2`,
-      '-c:v', 'libx264', '-crf', '27', '-preset', 'veryfast',
-      '-pix_fmt', 'yuv420p',
-      '-an',
-      '-movflags', '+faststart',
-      outFile,
-    ], { timeout: 300_000 });
+    const transcode = (seconds: number, crf: number) =>
+      execFileP(ffmpegPath!, [
+        '-y', '-hide_banner', '-loglevel', 'error',
+        '-i', inFile,
+        '-t', String(seconds),
+        '-vf', `scale='min(${TARGET_WIDTH},iw)':-2`,
+        '-c:v', 'libx264', '-crf', String(crf), '-preset', 'veryfast',
+        '-pix_fmt', 'yuv420p',
+        '-an',
+        '-movflags', '+faststart',
+        outFile,
+      ], { timeout: 300_000 });
+
+    await transcode(MAX_CLIP_SECONDS, 27);
+    let size = (await stat(outFile)).size;
+
+    // Hard 10 MB cap: high-motion clips can exceed it at 40 s — trim the clip
+    // shorter (proportionally to the overshoot) instead of degrading quality.
+    if (size > MAX_OUTPUT_MB * 1048576) {
+      const shorter = Math.max(8, Math.floor(MAX_CLIP_SECONDS * (MAX_OUTPUT_MB / (size / 1048576)) * 0.9));
+      console.log(`  [video] ${Math.round(size / 1048576 * 10) / 10} MB > ${MAX_OUTPUT_MB} MB cap — trimming to ${shorter}s`);
+      await transcode(shorter, 28);
+      size = (await stat(outFile)).size;
+    }
 
     const out = await readFile(outFile);
-    const size = (await stat(outFile)).size;
     if (size < 50_000) {
       console.error(`  [video] transcode produced a suspiciously small file (${size} B) — keeping remote URL`);
       return null;
