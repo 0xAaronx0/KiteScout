@@ -387,6 +387,53 @@ async function matchSource(
 }
 
 // ---------------------------------------------------------------------------
+// Combined average rating (unweighted mean of the sources that exist —
+// review counts are too patchy for weighting). Column added by migration
+// 20260709000000; recompute is probe-gated so older DBs keep working.
+// ---------------------------------------------------------------------------
+let avgRatingColumn: boolean | null = null;
+async function hasAvgRatingColumn(): Promise<boolean> {
+  if (avgRatingColumn === null) {
+    const probe = await supabase.from('cruise_providers').select('avg_rating').limit(1);
+    avgRatingColumn = !probe.error;
+    if (!avgRatingColumn) console.warn('⚠ avg_rating column missing — run migration 20260709000000 to enable combined ratings.');
+  }
+  return avgRatingColumn;
+}
+
+export async function recomputeAvgRating(providerId: string): Promise<number | null> {
+  if (!(await hasAvgRatingColumn())) return null;
+  const { data: row, error } = await supabase
+    .from('cruise_providers')
+    .select('google_rating, tripadvisor_rating, bstoked_rating')
+    .eq('id', providerId)
+    .single();
+  if (error || !row) return null;
+  const ratings = [row.google_rating, row.tripadvisor_rating, row.bstoked_rating]
+    .map(v => (typeof v === 'number' ? v : v !== null && v !== undefined ? parseFloat(String(v)) : NaN))
+    .filter(v => Number.isFinite(v) && v >= 0 && v <= 5);
+  const avg = ratings.length ? Math.round((ratings.reduce((s, v) => s + v, 0) / ratings.length) * 10) / 10 : null;
+  await supabase.from('cruise_providers').update({ avg_rating: avg }).eq('id', providerId);
+  return avg;
+}
+
+/** Backfill/refresh avg_rating for every active provider (no fetching, no LLM). */
+export async function recomputeAllAvgRatings(): Promise<void> {
+  if (!(await hasAvgRatingColumn())) return;
+  const { data: providers, error } = await supabase
+    .from('cruise_providers')
+    .select('id, root_domain')
+    .in('status', ['new', 'verified']);
+  if (error) throw error;
+  let withAvg = 0;
+  for (const p of providers ?? []) {
+    const avg = await recomputeAvgRating(p.id as string);
+    if (avg !== null) withAvg++;
+  }
+  console.log(`avg_rating recomputed for ${providers?.length ?? 0} providers (${withAvg} with at least one rating).`);
+}
+
+// ---------------------------------------------------------------------------
 // Process one provider
 // ---------------------------------------------------------------------------
 async function processProvider(
@@ -471,6 +518,7 @@ async function processProvider(
 
   const { error } = await supabase.from('cruise_providers').update(patch).eq('id', cp.id);
   if (error) console.error(`\n  DB error for ${cp.root_domain}:`, error.message);
+  await recomputeAvgRating(cp.id);
   return found;
 }
 

@@ -308,7 +308,7 @@ export async function extractImageRights(buf: Buffer, sourceUrl: string): Promis
   return { status, source_host: host, copyright, credit, license, license_url: licenseUrl };
 }
 
-async function downloadImage(url: string): Promise<Buffer | null> {
+export async function downloadImage(url: string): Promise<Buffer | null> {
   try {
     const res = await fetch(url, {
       headers: { 'User-Agent': BROWSER_UA, Accept: 'image/avif,image/webp,image/*,*/*;q=0.8' },
@@ -401,6 +401,53 @@ Order them best-first. Respond with ONLY a JSON array: [{"index": <number>, "cap
 // ---------------------------------------------------------------------------
 // Orchestrator: candidate URLs → stored, compressed, curated images
 // ---------------------------------------------------------------------------
+/**
+ * Compress one already-downloaded image and upload it to the private bucket at
+ * `path`. Used by the admin media-curation apply path (human-selected images
+ * skip the vision QC but get the same processing as pipeline-curated ones).
+ */
+export async function processAndStoreImage(
+  buf: Buffer,
+  sourceUrl: string,
+  path: string,
+  sort: number,
+  caption: string | null = null,
+): Promise<StoredImage | null> {
+  let out: Buffer;
+  let outW = 0;
+  let outH = 0;
+  try {
+    out = await sharp(buf)
+      .rotate()
+      .resize({ width: TARGET_WIDTH, withoutEnlargement: true })
+      .webp({ quality: WEBP_QUALITY })
+      .toBuffer();
+    const m = await sharp(out).metadata();
+    outW = m.width ?? 0;
+    outH = m.height ?? 0;
+  } catch {
+    return null;
+  }
+  await ensureCruiseImageBucket();
+  const { error } = await supabase.storage
+    .from(CRUISE_IMAGE_BUCKET)
+    .upload(path, out, { contentType: 'image/webp', upsert: true });
+  if (error) {
+    console.error(`  image upload failed (${path}): ${error.message}`);
+    return null;
+  }
+  return {
+    path,
+    source_url: sourceUrl,
+    width: outW,
+    height: outH,
+    bytes: out.byteLength,
+    caption,
+    sort,
+    rights: await extractImageRights(buf, sourceUrl),
+  };
+}
+
 export async function curateAndStoreImages(opts: {
   candidateUrls: string[];
   providerId: string;

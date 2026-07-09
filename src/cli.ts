@@ -9,7 +9,8 @@ import { generateMap } from './pipeline/map.js';
 import { runVerify } from './pipeline/verify.js';
 import { runExtractCruiseLocations } from './pipeline/extract-cruise-locations.js';
 import { runExtractCruiseOffers, runReviewCruiseOffers } from './pipeline/extract-cruise-offers.js';
-import { runExtractCruiseReviews } from './pipeline/extract-cruise-reviews.js';
+import { runExtractCruiseReviews, recomputeAllAvgRatings } from './pipeline/extract-cruise-reviews.js';
+import { runCollectMediaCandidates, runApplySelectedMedia } from './pipeline/media-candidates.js';
 import { runRegionConditions } from './pipeline/region-conditions.js';
 import { runMonitor, showChanges, applyApprovedChanges, type DetectedChange } from './pipeline/monitor.js';
 import { supabase } from './lib/supabase.js';
@@ -276,7 +277,26 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'cruise-media': {
+      // Media curation: collect candidates → admin selects on /admin/media → apply.
+      const sub = args[0];
+      if (sub === 'collect') {
+        const lim = flagValue('--limit', 0);
+        await runCollectMediaCandidates({ domain: flagStr('--domain'), limit: lim > 0 ? lim : undefined });
+      } else if (sub === 'apply') {
+        await runApplySelectedMedia({ domain: flagStr('--domain') });
+      } else {
+        console.log('Usage: cruise-media collect|apply [--domain <root_domain>] [--limit n]');
+      }
+      break;
+    }
+
     case 'cruise-reviews': {
+      if (args.includes('--recompute-avg')) {
+        // Backfill/refresh the combined avg_rating column only (no fetching).
+        await recomputeAllAvgRatings();
+        break;
+      }
       const { providers, matched } = await runExtractCruiseReviews({
         all: args.includes('--all'),
         domain: flagStr('--domain'),
