@@ -21,6 +21,38 @@ function videoThumb(url: string): { thumb: string | null; label: string } {
   return { thumb: null, label: 'Video file' };
 }
 
+/** Preview tile for a video candidate: platform thumbnail, else a seeked frame
+ *  of the file itself, else a ▶ placeholder — always with a play overlay. */
+function VideoPreview({ url }: { url: string }) {
+  const [broken, setBroken] = useState(false);
+  const { thumb, label } = videoThumb(url);
+  return (
+    <>
+      {broken ? (
+        <div className="flex h-full w-full flex-col items-center justify-center bg-slate-900 text-slate-500">
+          <span className="text-2xl">🎬</span>
+          <span className="mt-1 text-[10px]">{label}</span>
+        </div>
+      ) : thumb ? (
+        <img src={thumb} alt="" className="h-full w-full object-cover" loading="lazy" onError={() => setBroken(true)} />
+      ) : (
+        // #t=0.5 makes browsers seek + paint a real frame instead of a black box.
+        <video
+          src={`${url}#t=0.5`}
+          preload="metadata"
+          muted
+          playsInline
+          className="h-full w-full object-cover"
+          onError={() => setBroken(true)}
+        />
+      )}
+      <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <span className="rounded-full bg-black/55 px-2.5 py-1 text-sm text-white">▶</span>
+      </span>
+    </>
+  );
+}
+
 export default function Selector({
   offerId,
   adminKey,
@@ -108,7 +140,7 @@ export default function Selector({
               no hero video
             </button>
             {videos.map(v => {
-              const { thumb, label } = videoThumb(v.url);
+              const { label } = videoThumb(v.url);
               const active = heroVideo === v.id;
               return (
                 <button
@@ -117,10 +149,8 @@ export default function Selector({
                   title={`${v.url}\n${v.note ?? ''}`}
                   className={`relative h-28 overflow-hidden rounded-lg border text-left ${active ? 'border-emerald-500 ring-2 ring-emerald-500/50' : 'border-slate-800 hover:border-slate-600'}`}
                 >
-                  {thumb
-                    ? <img src={thumb} alt="" className="h-full w-full object-cover" loading="lazy" />
-                    : <video src={v.url} preload="metadata" muted className="h-full w-full object-cover" />}
-                  <span className="absolute bottom-0 left-0 right-0 bg-black/70 px-2 py-0.5 text-[10px] text-slate-200">▶ {label} · {(v.note ?? '').slice(0, 40)}</span>
+                  <VideoPreview url={v.url} />
+                  <span className="absolute bottom-0 left-0 right-0 bg-black/70 px-2 py-0.5 text-[10px] text-slate-200">{label} · {(v.note ?? '').slice(0, 40)}</span>
                   {v.status === 'applied' && <span className="absolute right-1 top-1 rounded bg-emerald-800 px-1.5 text-[10px]">live</span>}
                 </button>
               );

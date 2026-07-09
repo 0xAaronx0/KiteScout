@@ -60,13 +60,20 @@ function normalizeVideoUrl(raw: string): string | null {
   }
 }
 
+// Signed CDN URLs that expire within days — useless as a stored hero video
+// (Instagram/Facebook reels embeds are the common case).
+const EPHEMERAL_HOST_RE = /(cdninstagram\.com|fbcdn\.net)/i;
+
 /** All video candidates in a page's HTML (og:video, <video>/<source>, embeds, links). */
 function discoverVideoUrls(html: string, baseUrl: string, pageNote: string): VideoCandidate[] {
   const out = new Map<string, VideoCandidate>();
   const add = (raw: string | undefined | null, how: string) => {
     if (!raw) return;
+    // Regexes run on raw HTML → decode entities (&amp; in query strings).
+    const decoded = raw.trim().replace(/&amp;/g, '&').replace(/&#38;/g, '&');
     let abs: string;
-    try { abs = new URL(raw.trim(), baseUrl).href; } catch { return; }
+    try { abs = new URL(decoded, baseUrl).href; } catch { return; }
+    if (EPHEMERAL_HOST_RE.test(abs)) return;
     const norm = normalizeVideoUrl(abs);
     if (norm && !out.has(norm)) out.set(norm, { url: norm, note: `${pageNote}: ${how}` });
   };
@@ -119,6 +126,7 @@ async function collectForOffer(offer: OfferRow, pageCache: Map<string, FetchedPa
     pageCache.set(url, cached);
     if (!cached?.html) continue;
     for (const img of discoverImageUrls(cached.html, cached.url).slice(0, MAX_IMAGE_CANDIDATES)) {
+      if (EPHEMERAL_HOST_RE.test(img)) continue; // signed IG/FB CDN URLs expire in days
       rows.push({ kind: 'image', url: img, origin: url, note });
     }
     for (const v of discoverVideoUrls(cached.html, cached.url, note)) {
