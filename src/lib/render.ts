@@ -63,6 +63,13 @@ export async function renderPageEx(
     // let client-side rendering + lazy galleries populate
     await page.waitForLoadState('networkidle', { timeout: 8000 }).catch(() => { /* best effort */ });
     await page.waitForTimeout(1200);
+    // Scroll through the page: lazy galleries (bstoked image-bg, WP lazyload)
+    // only swap their real image URLs in when scrolled into view.
+    for (let i = 0; i < 8; i++) {
+      await page.mouse.wheel(0, 1000).catch(() => { /* */ });
+      await page.waitForTimeout(350);
+    }
+    await page.waitForTimeout(600);
     return { html: await page.content(), url: page.url() };
   } catch {
     return null;
