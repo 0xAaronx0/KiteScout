@@ -6,10 +6,10 @@
 //
 //   1. `pnpm cli cruise-media collect`  — per offer, gather ALL image
 //      candidates (offer page, homepage, gallery pages) and video candidates
-//      (og:video, <video>/<source>, YouTube/Vimeo embeds — esp. homepage hero
-//      videos) into `offer_media_candidates`. Idempotent; never touches rows
-//      the admin already worked on.
-//   2. /admin/media (web) — the admin picks up to 5 images (sort 0 = hero) and
+//      (self-hosted mp4/webm/mov ONLY — og:video, <video>/<source>, file links;
+//      no YouTube/Vimeo/platform embeds) into `offer_media_candidates`.
+//      Idempotent; never touches rows the admin already worked on.
+//   2. /admin/media (web) — the admin picks up to 10 images (sort 0 = hero) and
 //      optionally one hero video → rows become status='selected'.
 //   3. `pnpm cli cruise-media apply` — downloads the selected images,
 //      compresses to WebP, uploads to the private bucket, writes
@@ -28,7 +28,7 @@ import { closeRenderer } from '../lib/render.js';
 
 const CONCURRENCY = 3;
 const MAX_IMAGE_CANDIDATES = 60; // per offer, keeps the admin UI usable
-const MAX_SELECTED = 5;
+const MAX_SELECTED = 10;
 
 // ---------------------------------------------------------------------------
 // Video candidate extraction
@@ -38,22 +38,9 @@ interface VideoCandidate { url: string; note: string }
 function normalizeVideoUrl(raw: string): string | null {
   try {
     const u = new URL(raw);
-    // YouTube: embed/shorts/watch/youtu.be → canonical watch URL
-    if (/(^|\.)youtube(-nocookie)?\.com$/i.test(u.hostname)) {
-      const id = u.pathname.match(/\/(?:embed|shorts|v)\/([\w-]{6,})/)?.[1] ?? u.searchParams.get('v');
-      return id ? `https://www.youtube.com/watch?v=${id}` : null;
-    }
-    if (/(^|\.)youtu\.be$/i.test(u.hostname)) {
-      const id = u.pathname.slice(1).split('/')[0];
-      return id ? `https://www.youtube.com/watch?v=${id}` : null;
-    }
-    // Vimeo: player.vimeo.com/video/ID or vimeo.com/ID
-    if (/(^|\.)vimeo\.com$/i.test(u.hostname)) {
-      const id = u.pathname.match(/\/(?:video\/)?(\d{6,})/)?.[1];
-      return id ? `https://vimeo.com/${id}` : null;
-    }
-    // Direct video files
-    if (/\.(mp4|webm|mov|m3u8)(\?|$)/i.test(u.pathname)) return u.href;
+    // Direct, self-hosted video files ONLY (user decision 2026-07-09): no
+    // YouTube/Vimeo/platform embeds — the app will play plain <video> sources.
+    if (/\.(mp4|webm|mov)(\?|$)/i.test(u.pathname)) return u.href;
     return null;
   } catch {
     return null;
@@ -82,8 +69,7 @@ function discoverVideoUrls(html: string, baseUrl: string, pageNote: string): Vid
   for (const m of html.matchAll(/<meta[^>]+content=["']([^"']+)["'][^>]+property=["']og:video(?::(?:secure_)?url)?["']/gi)) add(m[1], 'og:video');
   for (const m of html.matchAll(/<video[^>]*\ssrc=["']([^"']+)["']/gi)) add(m[1], '<video>');
   for (const m of html.matchAll(/<source[^>]*\ssrc=["']([^"']+)["'][^>]*>/gi)) add(m[1], '<video><source>');
-  for (const m of html.matchAll(/<iframe[^>]*\ssrc=["']([^"']+)["']/gi)) add(m[1], 'embed');
-  for (const m of html.matchAll(/<a[^>]*\shref=["']([^"']*(?:youtube\.com\/watch|youtu\.be\/|vimeo\.com\/\d)[^"']*)["']/gi)) add(m[1], 'link');
+  for (const m of html.matchAll(/<a[^>]*\shref=["']([^"']+\.(?:mp4|webm|mov)(?:\?[^"']*)?)["']/gi)) add(m[1], 'link');
   return [...out.values()];
 }
 

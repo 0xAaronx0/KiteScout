@@ -52,7 +52,7 @@ export default async function MediaAdminIndex({
       <header className="sticky top-0 z-10 border-b border-slate-800 bg-slate-950/95 px-6 py-4 backdrop-blur">
         <h1 className="text-lg font-bold">🪁 Media Curation — {offers.length} offers</h1>
         <p className="text-xs text-slate-400 mt-0.5">
-          Pick the 5 listing images (first = hero) and an optional hero video per offer.
+          Pick up to 10 listing images (first = hero) and an optional hero video per offer.
           {!adminKey && <span className="text-amber-400"> — read-only: append ?key=… to select</span>}
           {selectedRes.error && <span className="text-amber-400"> — candidates table missing: run migration 20260709000000</span>}
         </p>
@@ -80,7 +80,7 @@ export default async function MediaAdminIndex({
                   </td>
                   <td className="py-2 pr-3 text-slate-400">{o.provider?.name ?? o.provider?.root_domain}</td>
                   <td className={`py-2 pr-3 ${imgs.length < 5 || fallback ? 'text-amber-400' : 'text-slate-300'}`}>
-                    {imgs.length}/5{fallback ? ' · fallback' : ''}
+                    {imgs.length}/10{fallback ? ' · fallback' : ''}
                   </td>
                   <td className="py-2 pr-3">{o.hero_video_url ? '🎬' : <span className="text-slate-600">—</span>}</td>
                   <td className="py-2">

@@ -33,8 +33,8 @@ const JUNK_RE =
   /(logo|icon|sprite|favicon|avatar|badge|placeholder|spinner|loader|pixel|tracking|1x1|blank|transparent|cookie|gdpr|banner-ad|food|menu|recipe|breakfast|lunch|dinner|cuisine|cocktail|testimonial|headshot)/i;
 
 const MAX_CANDIDATES = 16; // distinct URLs to consider per page
-const MAX_DOWNLOADS = 14;  // images actually fetched + measured
-const MAX_STORED = 5;      // final cap per offer
+const MAX_DOWNLOADS = 20;  // images actually fetched + measured
+const MAX_STORED = 10;     // final cap per offer
 const MIN_WIDTH = 500;
 const MIN_HEIGHT = 330;
 const MAX_ASPECT = 3.2;    // wider than this → banner strip

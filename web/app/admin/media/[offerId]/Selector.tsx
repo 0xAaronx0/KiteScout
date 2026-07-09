@@ -13,30 +13,19 @@ export interface CandidateView {
   hero: boolean;
 }
 
-function videoThumb(url: string): { thumb: string | null; label: string } {
-  const yt = url.match(/youtube\.com\/watch\?v=([\w-]+)/);
-  if (yt) return { thumb: `https://i.ytimg.com/vi/${yt[1]}/hqdefault.jpg`, label: 'YouTube' };
-  const vm = url.match(/vimeo\.com\/(\d+)/);
-  if (vm) return { thumb: `https://vumbnail.com/${vm[1]}.jpg`, label: 'Vimeo' };
-  return { thumb: null, label: 'Video file' };
-}
-
-/** Preview tile for a video candidate: platform thumbnail, else a seeked frame
- *  of the file itself, else a ▶ placeholder — always with a play overlay. */
+// Only self-hosted video files are collected (no platform embeds), so the
+// preview is a seeked frame of the file itself; #t=0.5 makes browsers paint a
+// real frame instead of a black box.
 function VideoPreview({ url }: { url: string }) {
   const [broken, setBroken] = useState(false);
-  const { thumb, label } = videoThumb(url);
   return (
     <>
       {broken ? (
         <div className="flex h-full w-full flex-col items-center justify-center bg-slate-900 text-slate-500">
           <span className="text-2xl">🎬</span>
-          <span className="mt-1 text-[10px]">{label}</span>
+          <span className="mt-1 text-[10px]">Video file</span>
         </div>
-      ) : thumb ? (
-        <img src={thumb} alt="" className="h-full w-full object-cover" loading="lazy" onError={() => setBroken(true)} />
       ) : (
-        // #t=0.5 makes browsers seek + paint a real frame instead of a black box.
         <video
           src={`${url}#t=0.5`}
           preload="metadata"
@@ -69,7 +58,7 @@ export default function Selector({
   const initial = useMemo(() => {
     const selected = images.filter(c => c.status === 'selected').sort((a, b) => (a.sort ?? 9) - (b.sort ?? 9));
     if (selected.length) return selected.map(c => c.id);
-    return images.filter(c => (c.note ?? '').startsWith('currently live')).slice(0, 5).map(c => c.id);
+    return images.filter(c => (c.note ?? '').startsWith('currently live')).slice(0, 10).map(c => c.id);
   }, [images]);
 
   const [picked, setPicked] = useState<string[]>(initial);
@@ -82,7 +71,7 @@ export default function Selector({
 
   const toggle = (id: string) => {
     setMsg(null);
-    setPicked(p => (p.includes(id) ? p.filter(x => x !== id) : p.length < 5 ? [...p, id] : p));
+    setPicked(p => (p.includes(id) ? p.filter(x => x !== id) : p.length < 10 ? [...p, id] : p));
   };
   const makeHero = (id: string) => {
     setMsg(null);
@@ -114,7 +103,7 @@ export default function Selector({
     <div>
       <div className="sticky top-[57px] z-10 -mx-6 mb-4 flex flex-wrap items-center gap-3 border-b border-slate-800 bg-slate-950/95 px-6 py-3 backdrop-blur">
         <span className="text-sm">
-          <b className={picked.length === 5 ? 'text-emerald-400' : 'text-amber-400'}>{picked.length}/5</b> images
+          <b className={picked.length >= 5 ? 'text-emerald-400' : 'text-amber-400'}>{picked.length}/10</b> images
           {picked.length > 0 && <span className="text-slate-400"> · #1 = hero</span>}
           {heroVideo && <span className="text-slate-400"> · 🎬 hero video set</span>}
         </span>
@@ -140,7 +129,7 @@ export default function Selector({
               no hero video
             </button>
             {videos.map(v => {
-              const { label } = videoThumb(v.url);
+              
               const active = heroVideo === v.id;
               return (
                 <button
@@ -150,7 +139,7 @@ export default function Selector({
                   className={`relative h-28 overflow-hidden rounded-lg border text-left ${active ? 'border-emerald-500 ring-2 ring-emerald-500/50' : 'border-slate-800 hover:border-slate-600'}`}
                 >
                   <VideoPreview url={v.url} />
-                  <span className="absolute bottom-0 left-0 right-0 bg-black/70 px-2 py-0.5 text-[10px] text-slate-200">{label} · {(v.note ?? '').slice(0, 40)}</span>
+                  <span className="absolute bottom-0 left-0 right-0 bg-black/70 px-2 py-0.5 text-[10px] text-slate-200">{(v.note ?? '').slice(0, 48)}</span>
                   {v.status === 'applied' && <span className="absolute right-1 top-1 rounded bg-emerald-800 px-1.5 text-[10px]">live</span>}
                 </button>
               );
