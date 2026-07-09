@@ -196,11 +196,27 @@ async function matchGoogle(
   ownPages: Array<{ url: string; html: string | null }>,
 ): Promise<SourceMatch | null> {
   // Signal 1: the operator's own site links its Google place (strongest).
+  // Guard: such a link can also be a mere LOCATION pin (village/city map link),
+  // not the business profile — accept it only when the place name shares a
+  // token with the provider's name/domain; otherwise fall through to search.
   let placeUrl: string | null = null;
   let selfLinked = false;
+  const nameTokens = `${provider.name} ${provider.root_domain}`
+    .toLowerCase().split(/[^a-z0-9]+/).filter(t => t.length >= 4);
+  const placeNameOf = (u: string): string => {
+    const m = u.match(/\/maps\/place\/([^/@?]+)/);
+    try { return decodeURIComponent((m?.[1] ?? '').replace(/\+/g, ' ')).toLowerCase(); } catch { return ''; }
+  };
   for (const p of ownPages) {
     const l = p.html ? findSelfLinkBy(p.html, p.url, isGoogleMapsLink) : null;
-    if (l) { placeUrl = await resolveGoogleUrl(l); selfLinked = !!placeUrl; if (placeUrl) break; }
+    if (!l) continue;
+    const resolved = await resolveGoogleUrl(l);
+    if (!resolved) continue;
+    const placeName = placeNameOf(resolved);
+    if (!placeName || !nameTokens.some(t => placeName.includes(t))) continue; // location pin, not the business
+    placeUrl = resolved;
+    selfLinked = true;
+    break;
   }
 
   // Signal 2: Google Maps search for the business name (rendered, consent pre-set).
