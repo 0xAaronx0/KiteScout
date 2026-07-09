@@ -25,6 +25,7 @@ import { supabase } from '../lib/supabase.js';
 import { discoverImageUrls, downloadImage, processAndStoreImage, type StoredImage } from '../lib/images.js';
 import { fetchPage, type FetchedPage } from './extract-cruise-offers.js';
 import { closeRenderer, renderPageEx } from '../lib/render.js';
+import { processAndStoreVideo } from '../lib/videos.js';
 
 const CONCURRENCY = 3;
 const MAX_IMAGE_CANDIDATES = 60; // per offer, keeps the admin UI usable
@@ -299,7 +300,16 @@ export async function runApplySelectedMedia(opts: { domain?: string } = {}): Pro
 
     const patch: Record<string, unknown> = {};
     if (newImages.length > 0) patch.images = newImages.map((img, i) => ({ ...img, sort: i }));
-    if (videoRow) { patch.hero_video_url = videoRow.url; appliedIds.push(videoRow.id as string); }
+    if (videoRow) {
+      // Mirror the hero video into our public bucket, streaming-optimized
+      // (720p, muted, faststart) — provider files are 25–130 MB and start
+      // slowly. Falls back to the remote URL if the transcode fails.
+      const vPath = `cruise-offers/${offer.cruise_provider_id}/${offer.slug}/hero-${hash8(videoRow.url as string)}.mp4`;
+      const storedVid = await processAndStoreVideo(videoRow.url as string, vPath);
+      patch.hero_video_url = storedVid?.publicUrl ?? videoRow.url;
+      appliedIds.push(videoRow.id as string);
+      if (storedVid) console.log(`  🎬 ${offer.slug}: hero video → bucket (${Math.round(storedVid.bytes / 1048576 * 10) / 10} MB)`);
+    }
 
     const { error: upErr } = await supabase.from('cruise_offers').update(patch).eq('id', offerId);
     if (upErr) { console.error(`  ✗ ${offer.slug}: ${upErr.message}`); continue; }

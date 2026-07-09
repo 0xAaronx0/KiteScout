@@ -1,0 +1,126 @@
+// ---------------------------------------------------------------------------
+// Hero-video pipeline: mirror provider-hosted MP4s into our own storage,
+// streaming-optimized.
+//
+// Provider videos are routinely 25–130 MB with the MP4 moov atom at the END —
+// the browser must download most of the file before playback starts, which is
+// why hero videos "hang" on a still frame. processAndStoreVideo():
+//
+//   download → ffmpeg (H.264 720p, CRF 27, audio stripped — playback is muted
+//   anyway, capped at 40 s for the loop, `-movflags +faststart` so the moov
+//   atom leads and playback starts instantly) → upload to the PUBLIC
+//   `cruise-videos` bucket → stable public URL for cruise_offers.hero_video_url.
+//
+// Typical result: 2–6 MB. Uses the ffmpeg-static binary (works locally + CI).
+// ---------------------------------------------------------------------------
+
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+import { createWriteStream } from 'node:fs';
+import { mkdtemp, readFile, rm, stat } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { Readable } from 'node:stream';
+import { pipeline } from 'node:stream/promises';
+import ffmpegPath from 'ffmpeg-static';
+import { supabase } from './supabase.js';
+
+const execFileP = promisify(execFile);
+
+export const CRUISE_VIDEO_BUCKET = 'cruise-videos';
+const MAX_SOURCE_MB = 400;   // refuse absurd downloads
+const MAX_CLIP_SECONDS = 40; // hero loop length
+const TARGET_WIDTH = 1280;   // ~720p for 16:9
+
+const UA =
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 ' +
+  '(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
+
+let bucketEnsured = false;
+async function ensureVideoBucket(): Promise<void> {
+  if (bucketEnsured) return;
+  const { data } = await supabase.storage.getBucket(CRUISE_VIDEO_BUCKET);
+  if (!data) {
+    // PUBLIC on purpose: hero_video_url is consumed as a plain URL by the app —
+    // no signing round-trip, and the content is the operators' own marketing.
+    const { error } = await supabase.storage.createBucket(CRUISE_VIDEO_BUCKET, { public: true });
+    if (error && !/already exists/i.test(error.message)) throw error;
+  }
+  bucketEnsured = true;
+}
+
+export interface StoredVideo {
+  publicUrl: string;
+  bytes: number;
+  sourceUrl: string;
+}
+
+/**
+ * Download a provider video, transcode it into a small faststart hero clip and
+ * upload it to the public cruise-videos bucket. Returns null on any failure —
+ * callers keep the original remote URL as fallback.
+ */
+export async function processAndStoreVideo(sourceUrl: string, path: string): Promise<StoredVideo | null> {
+  if (!ffmpegPath) {
+    console.error('  [video] ffmpeg-static binary unavailable — keeping remote URL');
+    return null;
+  }
+  const dir = await mkdtemp(join(tmpdir(), 'kitescout-video-'));
+  const inFile = join(dir, 'in.mp4');
+  const outFile = join(dir, 'out.mp4');
+  try {
+    // 1. Download (streamed to disk — sources can be >100 MB).
+    const res = await fetch(sourceUrl, {
+      headers: { 'User-Agent': UA, Accept: 'video/*,*/*;q=0.8' },
+      redirect: 'follow',
+      signal: AbortSignal.timeout(180_000),
+    });
+    if (!res.ok || !res.body) {
+      console.error(`  [video] download failed (${res.status}): ${sourceUrl.slice(0, 80)}`);
+      return null;
+    }
+    const len = parseInt(res.headers.get('content-length') ?? '0', 10);
+    if (len > MAX_SOURCE_MB * 1048576) {
+      console.error(`  [video] source too large (${Math.round(len / 1048576)} MB): ${sourceUrl.slice(0, 80)}`);
+      return null;
+    }
+    await pipeline(Readable.fromWeb(res.body as import('stream/web').ReadableStream), createWriteStream(inFile));
+
+    // 2. Transcode: 720p H.264, muted, capped loop, moov atom up front.
+    await execFileP(ffmpegPath, [
+      '-y', '-hide_banner', '-loglevel', 'error',
+      '-i', inFile,
+      '-t', String(MAX_CLIP_SECONDS),
+      '-vf', `scale='min(${TARGET_WIDTH},iw)':-2`,
+      '-c:v', 'libx264', '-crf', '27', '-preset', 'veryfast',
+      '-pix_fmt', 'yuv420p',
+      '-an',
+      '-movflags', '+faststart',
+      outFile,
+    ], { timeout: 300_000 });
+
+    const out = await readFile(outFile);
+    const size = (await stat(outFile)).size;
+    if (size < 50_000) {
+      console.error(`  [video] transcode produced a suspiciously small file (${size} B) — keeping remote URL`);
+      return null;
+    }
+
+    // 3. Upload to the public bucket.
+    await ensureVideoBucket();
+    const { error } = await supabase.storage
+      .from(CRUISE_VIDEO_BUCKET)
+      .upload(path, out, { contentType: 'video/mp4', upsert: true });
+    if (error) {
+      console.error(`  [video] upload failed (${path}): ${error.message}`);
+      return null;
+    }
+    const { data } = supabase.storage.from(CRUISE_VIDEO_BUCKET).getPublicUrl(path);
+    return { publicUrl: data.publicUrl, bytes: size, sourceUrl };
+  } catch (err) {
+    console.error(`  [video] ${err instanceof Error ? err.message.slice(0, 120) : err}`);
+    return null;
+  } finally {
+    await rm(dir, { recursive: true, force: true }).catch(() => { /* */ });
+  }
+}
