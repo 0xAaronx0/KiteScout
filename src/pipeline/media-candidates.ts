@@ -24,7 +24,7 @@ import pLimit from 'p-limit';
 import { supabase } from '../lib/supabase.js';
 import { discoverImageUrls, downloadImage, processAndStoreImage, type StoredImage } from '../lib/images.js';
 import { fetchPage, type FetchedPage } from './extract-cruise-offers.js';
-import { closeRenderer } from '../lib/render.js';
+import { closeRenderer, renderPageEx } from '../lib/render.js';
 
 const CONCURRENCY = 3;
 const MAX_IMAGE_CANDIDATES = 60; // per offer, keeps the admin UI usable
@@ -86,7 +86,9 @@ interface OfferRow {
   provider: { root_domain: string; website_url: string | null };
 }
 
-async function collectForOffer(offer: OfferRow, pageCache: Map<string, FetchedPage | null>): Promise<{ images: number; videos: number }> {
+type CachedPage = { page: FetchedPage | null; rendered: boolean };
+
+async function collectForOffer(offer: OfferRow, pageCache: Map<string, CachedPage>): Promise<{ images: number; videos: number }> {
   const homeUrl = offer.provider.website_url ?? `https://${offer.provider.root_domain}`;
 
   // Pages to scan: offer source page, provider homepage, known gallery pages.
@@ -108,14 +110,31 @@ async function collectForOffer(offer: OfferRow, pageCache: Map<string, FetchedPa
   }
 
   for (const [url, note] of pageUrls) {
-    const cached = pageCache.has(url) ? pageCache.get(url)! : await fetchPage(url);
-    pageCache.set(url, cached);
-    if (!cached?.html) continue;
-    for (const img of discoverImageUrls(cached.html, cached.url).slice(0, MAX_IMAGE_CANDIDATES)) {
+    let cached = pageCache.get(url);
+    if (!cached) {
+      cached = { page: await fetchPage(url), rendered: false };
+      pageCache.set(url, cached);
+    }
+    if (!cached.page?.html) continue;
+
+    let videos = discoverVideoUrls(cached.page.html, cached.page.url, note);
+    // Builders like Wix inject the hero video's src only at runtime: the static
+    // HTML has <video> WITHOUT src (aquapandasail). When the page hints at a
+    // video but none was extractable, render once and rescan (also picks up
+    // lazy-loaded gallery images). Rendered HTML replaces the cache entry so
+    // sibling offers of the same provider don't re-render.
+    if (videos.length === 0 && !cached.rendered && /<video[\s>]|video\.wixstatic|data-video/i.test(cached.page.html)) {
+      const r = await renderPageEx(url);
+      cached = { page: r ? { ...cached.page, html: r.html, url: r.url } : cached.page, rendered: true };
+      pageCache.set(url, cached);
+      if (cached.page?.html) videos = discoverVideoUrls(cached.page.html, cached.page.url, note);
+    }
+
+    for (const img of discoverImageUrls(cached.page!.html!, cached.page!.url).slice(0, MAX_IMAGE_CANDIDATES)) {
       if (EPHEMERAL_HOST_RE.test(img)) continue; // signed IG/FB CDN URLs expire in days
       rows.push({ kind: 'image', url: img, origin: url, note });
     }
-    for (const v of discoverVideoUrls(cached.html, cached.url, note)) {
+    for (const v of videos) {
       rows.push({ kind: 'video', url: v.url, origin: url, note: v.note });
     }
   }
@@ -161,12 +180,12 @@ export async function runCollectMediaCandidates(opts: { domain?: string; limit?:
   console.log(`Collecting media candidates for ${offers.length} offer(s)…`);
 
   // Share fetched pages per provider (homepage/gallery reused across offers).
-  const cacheByProvider = new Map<string, Map<string, FetchedPage | null>>();
+  const cacheByProvider = new Map<string, Map<string, CachedPage>>();
   const limit = pLimit(CONCURRENCY);
   let done = 0, ti = 0, tv = 0;
   await Promise.all(offers.map(o => limit(async () => {
     try {
-      const cache = cacheByProvider.get(o.cruise_provider_id) ?? new Map();
+      const cache = cacheByProvider.get(o.cruise_provider_id) ?? new Map<string, CachedPage>();
       cacheByProvider.set(o.cruise_provider_id, cache);
       const { images, videos } = await collectForOffer(o, cache);
       ti += images; tv += videos;
