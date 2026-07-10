@@ -446,6 +446,21 @@ async function processProvider(
   },
   opts: { google: boolean; sources: ReviewSource[] },
 ): Promise<number> {
+  // Manually pinned sources (cruise-reviews --set-url) are authoritative:
+  // skip re-matching them so automated re-runs can never clobber a pin.
+  const { data: cur } = await supabase
+    .from('cruise_providers').select('review_match_notes').eq('id', cp.id).single();
+  const curNotes = (cur?.review_match_notes as string | null) ?? '';
+  const pinned = pinnedLabelsIn(curNotes);
+  const sources = opts.sources.filter(s => !pinned.has(s.label));
+  const google = opts.google && !pinned.has('Google');
+
+  if (sources.length === 0 && !google) {
+    await supabase.from('cruise_providers')
+      .update({ reviews_checked_at: new Date().toISOString() }).eq('id', cp.id);
+    return 0;
+  }
+
   const homeUrl = cp.website_url ?? `https://${cp.root_domain}`;
   const provider = {
     name: cp.name ?? cp.root_domain,
@@ -478,7 +493,7 @@ async function processProvider(
   const notes: string[] = [];
   let found = 0;
 
-  for (const source of opts.sources) {
+  for (const source of sources) {
     const match = await matchSource(source, provider, ownPages);
     if (!match) continue;
     found++;
@@ -494,7 +509,7 @@ async function processProvider(
     }
   }
 
-  if (opts.google) {
+  if (google) {
     const gm = await matchGoogle(provider, ownPages);
     if (gm) {
       found++;
@@ -507,10 +522,9 @@ async function processProvider(
 
   if (notes.length > 0) {
     // Merge with notes from other sources' earlier runs: keep segments of
-    // sources this run did NOT cover, replace the ones it did.
-    const { data: cur } = await supabase.from('cruise_providers').select('review_match_notes').eq('id', cp.id).single();
-    const covered = [...opts.sources.map(s => s.label), ...(opts.google ? ['Google'] : [])];
-    const kept = ((cur?.review_match_notes as string | null) ?? '')
+    // sources this run did NOT cover (incl. pinned ones), replace the rest.
+    const covered = [...sources.map(s => s.label), ...(google ? ['Google'] : [])];
+    const kept = curNotes
       .split(' | ')
       .filter(seg => seg.trim() && !covered.some(label => seg.trim().toLowerCase().startsWith(label.toLowerCase() + ':')));
     patch.review_match_notes = [...kept, ...notes].join(' | ');
@@ -520,6 +534,160 @@ async function processProvider(
   if (error) console.error(`\n  DB error for ${cp.root_domain}:`, error.message);
   await recomputeAvgRating(cp.id);
   return found;
+}
+
+// ---------------------------------------------------------------------------
+// Manual pin: `cruise-reviews --domain <root_domain> --set-url <listing url>`
+// For listings the automated matcher can't find — brand-new/low-SEO pages, or
+// same-named businesses elsewhere that make strict verification refuse (e.g.
+// the Abakiting TA listing vs the unrelated Sardinian abakiting.com school).
+// The human asserts the match; we fetch the listing for rating/count where
+// possible and mark the source "manually pinned" in review_match_notes, which
+// processProvider treats as authoritative (re-runs skip that source).
+// ---------------------------------------------------------------------------
+const PIN_MARKER = 'manually pinned';
+
+/** Labels ("TripAdvisor", "Google", …) whose review_match_notes segment records a manual pin. */
+function pinnedLabelsIn(notes: string | null | undefined): Set<string> {
+  const out = new Set<string>();
+  for (const seg of (notes ?? '').split(' | ')) {
+    const m = seg.trim().match(/^([A-Za-z ]+):/);
+    if (m && seg.toLowerCase().includes(PIN_MARKER)) out.add(m[1].trim());
+  }
+  return out;
+}
+
+/** rating/count from a listing's embedded JSON-LD aggregateRating (TripAdvisor ships one). */
+function parseListingStats(html: string): { rating: number | null; count: number | null } {
+  const blob = html.match(/"aggregateRating"\s*:\s*\{[^{}]*\}/i)?.[0];
+  if (!blob) return { rating: null, count: null };
+  let rating: number | null = null;
+  let count: number | null = null;
+  const r = blob.match(/"ratingValue"\s*:\s*"?([0-5](?:[.,]\d+)?)"?/i);
+  if (r) rating = Math.round(parseFloat(r[1].replace(',', '.')) * 10) / 10;
+  const c = blob.match(/"(?:reviewCount|ratingCount)"\s*:\s*"?(\d[\d,.]*)"?/i);
+  if (c) count = parseInt(c[1].replace(/[,.]/g, ''), 10);
+  if (rating !== null && !(rating >= 0 && rating <= 5)) rating = null;
+  if (count !== null && !(count >= 1 && count <= 1_000_000)) count = null;
+  return { rating, count };
+}
+
+export async function runPinReviewUrl(opts: { domain: string; url: string }): Promise<void> {
+  const domain = opts.domain
+    .replace(/^https?:\/\//i, '').replace(/^www\./i, '').replace(/\/.*$/, '').toLowerCase();
+
+  const host = hostOf(opts.url);
+  const source = host ? SOURCES.find(s => s.hostMatch(host)) : undefined;
+  const google = !source && isGoogleMapsLink(opts.url);
+  if (!source && !google) {
+    throw new Error(`Unsupported review host "${host ?? opts.url}" — expected tripadvisor.*, bstoked.net, or a Google Maps link.`);
+  }
+  const label = source?.label ?? 'Google';
+
+  const { data: cp, error } = await supabase
+    .from('cruise_providers')
+    .select('id, name, root_domain, primary_country, status, review_match_notes')
+    .eq('root_domain', domain)
+    .maybeSingle();
+  if (error) throw error;
+  if (!cp) {
+    // Hyphen variants and same-name businesses make exact misses common — suggest.
+    const norm = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, '');
+    const target = norm(domain.replace(/\.[a-z]+$/i, ''));
+    let hint = '';
+    if (target) {
+      const { data: all } = await supabase.from('cruise_providers').select('root_domain, name, status');
+      const near = (all ?? [])
+        .filter(r => norm(String(r.root_domain)).includes(target) || norm(String(r.name ?? '')).includes(target))
+        .slice(0, 5);
+      if (near.length) {
+        hint = `\nDid you mean: ${near.map(r => `${r.root_domain} (${r.name ?? 'unnamed'}, ${r.status})`).join(', ')}`;
+      }
+    }
+    throw new Error(`No cruise provider with root_domain "${domain}".${hint}`);
+  }
+  if (!['new', 'verified'].includes(String(cp.status))) {
+    console.warn(`⚠ ${cp.root_domain} has status "${cp.status}" — the web app won't show it; pinning anyway.`);
+  }
+  if (google) {
+    const probe = await supabase.from('cruise_providers').select('google_url').limit(1);
+    if (probe.error) throw new Error('google_url column missing — run migration 20260708000000_add_google_reviews.sql first.');
+  }
+
+  // Resolve short Google links (maps.app.goo.gl, g.page) to the full place URL.
+  let url = opts.url.split('#')[0];
+  if (google && host && /maps\.app\.goo\.gl|g\.page|^goo\.gl$/i.test(host)) {
+    url = (await resolveGoogleUrl(url)) ?? url;
+  }
+
+  // Listing → rating/review count. Deterministic parse first (JSON-LD / Maps
+  // markup), Claude only to fill gaps. Best-effort throughout: an unreachable
+  // listing still pins the URL, with stats left null.
+  let rating: number | null = null;
+  let count: number | null = null;
+  const how: string[] = [PIN_MARKER];
+
+  if (google) {
+    const r = await renderPageEx(url, { cookies: GOOGLE_COOKIES });
+    if (r) {
+      ({ rating, count } = parseGoogleRating(r.html));
+      url = cleanMapsUrl(r.url);
+      how.push('stats from rendered Maps page');
+    } else {
+      how.push('listing unreachable at pin time — stats not extracted');
+    }
+  } else {
+    let page = await fetchContent(url);
+    if (!page?.html) {
+      const rendered = await renderPageEx(url);
+      if (rendered) {
+        page = { html: rendered.html, text: htmlToText(rendered.html) };
+      }
+    }
+    if (page?.html) {
+      ({ rating, count } = parseListingStats(page.html));
+      if (rating !== null) how.push('stats from listing JSON-LD');
+    }
+    if ((rating === null || count === null) && page && page.text.length > 120) {
+      const verify = await verifyMatch(
+        source!,
+        { name: cp.name ?? cp.root_domain, root_domain: cp.root_domain, country: cp.primary_country },
+        page.text,
+      );
+      if (verify) {
+        rating ??= verify.rating;
+        count ??= verify.review_count;
+        if (!verify.is_same_operator) {
+          console.warn(`⚠ Claude does not think this listing matches ${cp.root_domain} (${verify.evidence ?? 'no evidence'}) — pinning anyway (manual override).`);
+          how.push(`pinned against model advice: ${verify.evidence ?? 'model disagreed'}`);
+        } else if (verify.evidence) {
+          how.push(verify.evidence);
+        }
+      }
+    }
+    if (!page) how.push('listing unreachable at pin time — stats not extracted');
+  }
+
+  const patch: Record<string, unknown> = { reviews_checked_at: new Date().toISOString() };
+  const prefix = source?.key ?? 'google';
+  patch[`${prefix}_url`] = url;
+  patch[`${prefix}_rating`] = rating;
+  patch[`${prefix}_review_count`] = count;
+
+  // Replace this source's notes segment, keep the others'.
+  const kept = ((cp.review_match_notes as string | null) ?? '')
+    .split(' | ')
+    .filter(seg => seg.trim() && !seg.trim().toLowerCase().startsWith(label.toLowerCase() + ':'));
+  patch.review_match_notes = [...kept, `${label}: ${how.join('; ')}`].join(' | ');
+
+  const { error: upErr } = await supabase.from('cruise_providers').update(patch).eq('id', cp.id);
+  if (upErr) throw upErr;
+  const avg = await recomputeAvgRating(cp.id);
+  await closeRenderer();
+
+  console.log(`Pinned ${label} for ${cp.root_domain} (${cp.name ?? 'unnamed'})`);
+  console.log(`  url    : ${url}`);
+  console.log(`  rating : ${rating ?? '—'}   reviews: ${count ?? '—'}   avg_rating now: ${avg ?? '—'}`);
 }
 
 // ---------------------------------------------------------------------------

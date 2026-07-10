@@ -9,7 +9,7 @@ import { generateMap } from './pipeline/map.js';
 import { runVerify } from './pipeline/verify.js';
 import { runExtractCruiseLocations } from './pipeline/extract-cruise-locations.js';
 import { runExtractCruiseOffers, runReviewCruiseOffers } from './pipeline/extract-cruise-offers.js';
-import { runExtractCruiseReviews, recomputeAllAvgRatings } from './pipeline/extract-cruise-reviews.js';
+import { runExtractCruiseReviews, recomputeAllAvgRatings, runPinReviewUrl } from './pipeline/extract-cruise-reviews.js';
 import { runCollectMediaCandidates, runApplySelectedMedia } from './pipeline/media-candidates.js';
 import { runRegionConditions } from './pipeline/region-conditions.js';
 import { runMonitor, showChanges, applyApprovedChanges, type DetectedChange } from './pipeline/monitor.js';
@@ -297,6 +297,18 @@ async function main(): Promise<void> {
         await recomputeAllAvgRatings();
         break;
       }
+      const setUrl = flagStr('--set-url');
+      if (setUrl) {
+        // Manually pin a listing the automated matcher can't find; pinned
+        // sources are never overwritten by later automated runs.
+        const pinDomain = flagStr('--domain');
+        if (!pinDomain) {
+          console.error('Usage: pnpm cli cruise-reviews --domain <root_domain> --set-url <listing-url>');
+          process.exit(1);
+        }
+        await runPinReviewUrl({ domain: pinDomain, url: setUrl });
+        break;
+      }
       const { providers, matched } = await runExtractCruiseReviews({
         all: args.includes('--all'),
         domain: flagStr('--domain'),
@@ -378,6 +390,7 @@ async function main(): Promise<void> {
       console.log('  cruise-offers             Extract structured cruise offers (+ curated images) for all cruise providers');
       console.log('  cruise-diff               Review: show what a fresh extraction WOULD change vs the DB (no writes); --domain to scope');
       console.log('  cruise-reviews            Match bstoked/TripAdvisor review links (domain-corroborated; --all to re-check)');
+      console.log('                            --domain <d> --set-url <url>  pin a listing manually (re-runs never clobber it)');
       console.log('  region-conditions         Build per-country water/wind conditions consensus from extracted offers');
       console.log('  monitor [n]               Detect changes on cruise provider sites (flags: --loop --all --baseline-only --interval-days <d>)');
       console.log('  changes [n]               Show recent detected provider changes (default 20; --unseen for new only)');
