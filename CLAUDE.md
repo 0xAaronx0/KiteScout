@@ -8,7 +8,7 @@ An AI-powered kite travel assistant. End goal: a user describes a kite trip (des
 
 **Status (2026-06):**
 - **Provider database** — built via the automated discovery pipeline in `src/` (Tavily + Claude), including a cruise-specific layer (`cruise_providers` / `cruise_locations`).
-- **Kite Cruise Finder** — a Next.js 15 app in `web/`, **live at https://kitescout.tech** (the cruise finder is the main app at `/`, with `/cruise` kept as an alias). Searches the cruise tables; users swipe to shortlist. This is the current focus — see the project memory files for the standing scope directive (`scope-cruise-only`).
+- **Kite Cruise Finder** — a Next.js 15 app in `web/`, **live at https://kitescout.bstoked.net** (canonical since 2026-07; `kitescout.tech` is the LEGACY domain — the cruise finder is the main app at `/`, with `/cruise` kept as an alias). Searches the cruise tables; users swipe to shortlist. This is the current focus — see the project memory files for the standing scope directive (`scope-cruise-only`).
 
 ## Tech Stack
 
@@ -42,7 +42,8 @@ supabase/
 
 ## Cruise Finder Web App (`web/`)
 
-A Next.js 15 (App Router, ESM) app — **the live product at https://kitescout.tech**.
+A Next.js 15 (App Router, ESM) app — **the live product at https://kitescout.bstoked.net**
+(all work targets this domain; `kitescout.tech` is legacy).
 
 ```
 web/
@@ -69,6 +70,11 @@ web/
 health-checks the site (Hostinger VPS behind Traefik). Non-`web/**` changes do NOT deploy.
 **Full infra + the recurring build/deploy gotchas live in the project memory files**
 (`vps-deployment`, `deploy-gotchas`) — read them before any deploy work.
+⚠ Domain move: parts of the repo still reference legacy `kitescout.tech` — the deploy health
+check (`.github/workflows/docker-publish.yml`), the Traefik host rule (`deploy/kitescout.compose.yml`),
+`src/pipeline/map.ts`'s default API URL, the `map.kitescout.tech` link in `CruiseFinder.tsx`, and
+`docs/` specs. Migrate them deliberately (DNS/cert state is infra work, see memory files) — do not
+mass-replace.
 
 **Local dev:** `npm --prefix web run dev`. The harness shell exports `ANTHROPIC_API_KEY=""`
 (empty) and Next won't override it, so inject the key when starting dev (see `deploy-gotchas`).
@@ -86,7 +92,8 @@ pnpm cli dedupe           # mark cross-domain duplicate providers
 pnpm cli status           # show counts: queries / URLs / providers
 pnpm cli cruise-locations # extract validated cruise-only spots → cruise_providers / cruise_locations
 pnpm cli cruise-offers    # crawl each cruise provider → structured offers (+ curated images) → cruise_offers
-pnpm cli cruise-reviews   # match bstoked/TripAdvisor review links onto cruise_providers (--all re-checks)
+pnpm cli cruise-reviews   # match bstoked/TripAdvisor review links onto cruise_providers (--all re-checks;
+                          #   --domain <d> --set-url <url> pins a listing manually — re-runs never clobber pins)
 ```
 
 ## Pipeline Architecture
