@@ -4,19 +4,70 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What KiteScout Is
 
-An AI-powered kite travel assistant. End goal: a user describes a kite trip (destination, dates, skill level, budget) and the system searches a curated provider database, shortlists matching camps/tours/rentals, and handles the booking inquiry by emailing providers and relaying their reply.
+An AI-powered kite-cruise travel product. A user describes a kite trip, the system matches a
+curated cruise-provider database and (eventually) handles the booking inquiry by emailing
+providers and relaying their reply.
 
-**Status (2026-06):**
-- **Provider database** — built via the automated discovery pipeline in `src/` (Tavily + Claude), including a cruise-specific layer (`cruise_providers` / `cruise_locations`).
-- **Kite Cruise Finder** — a Next.js 15 app in `web/`, **live at https://kitescout.tech** (the cruise finder is the main app at `/`, with `/cruise` kept as an alias). Searches the cruise tables; users swipe to shortlist. This is the current focus — see the project memory files for the standing scope directive (`scope-cruise-only`).
+## ⚠️ The product, the repos, and how we work (read this first)
+
+**The product is the "Kite Cruise Scout" app — official URL https://kitescout.bstoked.net**
+(a service of Bstoked.net, official since 2026-07-09; the same deployment also answers at
+`kite-cruise-scout.vercel.app`). It is a **separate codebase**: repo **`MartinMarzi/KiteCruiseScout`**
+(private; account `0xAaronx0` has access). **A persistent clone lives at
+`/Users/aaronlindner/KiteCruiseScout`** — use it (always `git fetch origin` first, branch from
+`origin/main`); only if it's missing, `gh repo clone MartinMarzi/KiteCruiseScout`. Scratchpad
+clones vanish between turns and have caused stray-branch accidents — verify `pwd` before every
+git command there.
+
+**Collaboration rule (standing, from Aaron): in `MartinMarzi/KiteCruiseScout` NEVER merge or push
+to `main` — create feature-branch PRs only; Martin reviews, merges, and thereby deploys.** Vercel
+only deploys Martin-authored merges anyway (`0xAaronx0` has no Vercel project access, its commits
+block deployment). Check open PRs before building on top of unmerged work.
+
+**This repo (`0xAaronx0/KiteScout`) is the data platform + admin/ops layer, not the product:**
+- `src/` — discovery/extraction pipelines, cruise-offer extraction, media curation, provider
+  monitoring, reviews (all via `pnpm cli …`). Direct pushes to `main` are fine here (ask Aaron
+  before pushing, as usual).
+- `web/` on **https://kitescout.tech** — serves our **admin surfaces we use daily**
+  (`/admin/media` media curation, `/changes` change-approval queue, both `?key=CHANGES_ADMIN_KEY`)
+  plus the **legacy** swipe-based cruise finder at `/`. **kitescout.tech is no longer the product
+  surface — do not build end-user features here**; keep it alive for admin + as fallback.
+- **Supabase is the shared source of truth.** The KCS app reads `app_cruise_offer_cards`
+  (view over `cruise_offers` + provider rating fields), orders `images` by `sort` ascending,
+  signs each `image.path` from the private `cruise-images` bucket server-side, and plays
+  `hero_video_url` (public `cruise-videos` bucket). **Blast radius: any edit to the cruise
+  tables/buckets is live in the product**, even without touching either codebase.
+
+**KCS app media contract** (confirmed in `src/features/catalog/supabase.ts` +
+`src/features/matching/match-cruise-offers.ts`): to re-curate images reassign `sort`
+(best-first 0..n), keep `path` valid (don't delete bucket objects), `fallback:true` renders as
+"representative provider image"; hero video is prepended as first media; max 12 media rendered.
+The app caches the catalog in memory ~5 min, so DB changes can lag in the UI.
+
+**Status (2026-07-10):**
+- **Cruise data** — ~96 active `cruise_providers`, ~165 `cruise_offers` with structured fields,
+  curated images, hero videos. Email coverage 92/96; reviews: Google 39, TripAdvisor 26, bstoked
+  links; `avg_rating` = mean of the available ratings.
+- **Media curation (active workstream)** — Aaron works through `/admin/media` listing by listing;
+  apply runs via CLI on request or the daily cron. Offers with <8 media are flagged "to be checked".
+- **Monitoring (live)** — daily cron 06:00 UTC (`.github/workflows/monitor.yml`): applies approved
+  changes → applies pending media selections → change-detection sweep. Volatile dates/price changes
+  auto-apply; everything else waits in the `/changes` approval queue. Full re-extraction
+  (`cruise-diff all`) only ~2×/year on request.
+- **Booking email flow** — Phase 1 code built but **gated off** (`NEXT_PUBLIC_BOOKING_ENABLED`),
+  blocked on Postmark account/DNS/env + running migration `20260609000000`. See
+  `docs/booking-email-flow.md`.
+- **Marketing launch** — concept fixed (`docs/marketing-launch-konzept.md`, v3) + provider opt-in
+  mail drafted (unsent); next step on Go = post-queue engine MVP. Posting happens via Bstoked's
+  accounts, EN-only, approval queue.
 
 ## Tech Stack
 
-- **Language:** TypeScript (ESM), Node.js
-- **AI:** Anthropic Claude via `@anthropic-ai/sdk` — Sonnet for high-volume extraction, Opus for analysis
-- **Web search:** Tavily API (search + extract endpoints)
-- **Database:** Supabase Postgres (cloud-hosted)
-- **Runtime:** `tsx` for running TypeScript scripts directly
+- **Language:** TypeScript (ESM), Node.js; `tsx` for running scripts directly
+- **AI:** Anthropic Claude via `@anthropic-ai/sdk` — Sonnet for high-volume extraction, Opus/Sonnet for analysis
+- **Web search:** Tavily API (search + extract); Playwright for JS-rendered pages
+- **Database:** Supabase Postgres + Storage (cloud-hosted)
+- **Media:** sharp (WebP), ffmpeg-static (hero-video transcode 720p/faststart, ≤10 MB)
 
 ## Project Structure
 
@@ -27,106 +78,101 @@ src/
 │   ├── anthropic.ts      # Anthropic client + model constants
 │   ├── tavily.ts         # Tavily search() and extract() wrappers
 │   ├── supabase.ts       # Supabase client (service role key, bypasses RLS)
+│   ├── images.ts         # image discovery + CDN upscaling (Wix/WordPress/Photon/Tilda) + WebP store
+│   ├── videos.ts         # hero-video download → ffmpeg transcode → public bucket
+│   ├── render.ts         # Playwright renderPageEx (scroll-lazy galleries, consent cookies)
+│   ├── geocode.ts        # hardened geocoding ladder with region-bbox gates
 │   └── retry.ts          # withRetry() helper with exponential backoff
 └── pipeline/
-    ├── seed-queries.ts   # Builds and inserts the query matrix into discovery_queries
-    ├── search.ts         # Runs pending queries via Tavily, stores URLs in raw_search_results
-    ├── extract.ts        # Fetches each URL via Tavily extract, classifies with Claude, upserts providers
-    └── dedupe.ts         # Claude-assisted cross-domain duplicate detection
+    ├── seed-queries.ts / search.ts / extract.ts / dedupe.ts   # provider discovery
+    ├── extract-cruise-*.ts       # cruise locations / offers / reviews extraction
+    ├── media-candidates.ts       # cruise-media collect/apply (curation pipeline)
+    └── monitor / diff modules    # provider change detection + surgical apply
 supabase/
-└── migrations/
-    ├── 20260430000000_initial_schema.sql
-    ├── 20260504000000_create_cruise_providers.sql
-    └── 20260505000000_create_cruise_locations.sql
+└── migrations/           # run manually in the Supabase SQL editor (record which are applied)
 ```
 
-## Cruise Finder Web App (`web/`)
+## Admin & Legacy Web App (`web/`)
 
-A Next.js 15 (App Router, ESM) app — **the live product at https://kitescout.tech**.
+Next.js 15 (App Router, ESM), live at **https://kitescout.tech** — admin surfaces + legacy finder.
 
 ```
-web/
-├── app/
-│   ├── page.tsx                  # renders <CruiseFinder/> at /  (also /cruise alias)
-│   ├── layout.tsx                # metadata + viewport (pinned to 1× to stop iOS zoom)
-│   └── api/
-│       ├── cruise-search/        # POST {country} → exact match; POST {destination} → AI parse
-│       ├── cruise-destinations/  # GET: top countries by cruise-provider count (start-page chips)
-│       ├── cruise-provider/      # GET: one provider by id (map deep-link)
-│       └── offer · og · map-pin · availability   # per-card enrichment
-├── components/
-│   ├── CruiseFinder.tsx          # start page + search flow + results header
-│   ├── SwipeDeck.tsx / SwipeCard.tsx   # Tinder-style swipe stack
-│   └── MiniMap · WindBars · Reviews · Availability
-└── lib/
-    ├── match-cruise.ts           # core matching against cruise_locations / cruise_providers
-    ├── cruise-destinations.ts    # start-page country counts (must equal what a chip returns)
-    └── supabase.ts (lazy getSupabase) · types.ts · wind-stats.ts · availability.ts
+web/app/
+├── admin/media/           # media curation index + per-offer selector (?key=CHANGES_ADMIN_KEY)
+├── changes/               # change-approval queue (Approve/Dismiss, ?key=CHANGES_ADMIN_KEY)
+├── status/[token]/        # booking-request status page (booking flow, gated)
+├── page.tsx               # legacy swipe finder (/, /cruise alias)
+└── api/                   # cruise-search · cruise-destinations · offer · availability ·
+                           # admin/media select · changes · booking · webhooks · version
 ```
 
-**Deploy (push-to-deploy):** push to `main` touching `web/**` → GitHub Actions builds & pushes
-`ghcr.io/0xaaronx0/kitescout:latest`, then calls the Hostinger API to recreate the container and
-health-checks the site (Hostinger VPS behind Traefik). Non-`web/**` changes do NOT deploy.
-**Full infra + the recurring build/deploy gotchas live in the project memory files**
-(`vps-deployment`, `deploy-gotchas`) — read them before any deploy work.
+**Deploy (push-to-deploy):** push to `main` touching `web/**` → GitHub Actions builds
+`ghcr.io/0xaaronx0/kitescout:latest`, recreates the container via Hostinger API, health-checks,
+and `/api/version` must show the new SHA. Non-`web/**` changes do NOT deploy.
+**Infra + recurring build/deploy gotchas live in the project memory files** (`vps-deployment`,
+`deploy-gotchas`) — read them before any deploy work.
 
-**Local dev:** `npm --prefix web run dev`. The harness shell exports `ANTHROPIC_API_KEY=""`
-(empty) and Next won't override it, so inject the key when starting dev (see `deploy-gotchas`).
-CI-parity build before pushing: `cd web && mv .env.local .env.local.bak && npm run build; mv .env.local.bak .env.local`.
+**Local dev:** `npm --prefix web run dev` (or the `kitescout-web` launch config). The harness shell
+exports `ANTHROPIC_API_KEY=""` (empty) and Next won't override it — inject the key when starting
+dev (see `deploy-gotchas`). CI-parity build before pushing:
+`cd web && mv .env.local .env.local.bak && npm run build; mv .env.local.bak .env.local`.
 
 ## Commands
 
 ```bash
-pnpm install              # install dependencies
+pnpm install              # install dependencies (pnpm.onlyBuiltDependencies allows ffmpeg-static)
 
-pnpm cli seed             # generate ~4,000 queries (EN + DE, all locations × categories)
-pnpm cli search [n]       # run pending Tavily searches, batch size n (default 50); loops until done
-pnpm cli extract [n]      # extract providers from unprocessed URLs, batch n (default 30); loops until done
-pnpm cli dedupe           # mark cross-domain duplicate providers
-pnpm cli status           # show counts: queries / URLs / providers
-pnpm cli cruise-locations # extract validated cruise-only spots → cruise_providers / cruise_locations
-pnpm cli cruise-offers    # crawl each cruise provider → structured offers (+ curated images) → cruise_offers
-pnpm cli cruise-reviews   # match bstoked/TripAdvisor review links onto cruise_providers (--all re-checks)
+# Provider discovery (historic bulk phase; rarely re-run)
+pnpm cli seed | search [n] | extract [n] | dedupe | status
+
+# Cruise layer
+pnpm cli cruise-locations           # validated cruise spots → cruise_providers / cruise_locations
+pnpm cli cruise-offers              # crawl providers → structured cruise_offers (+ initial images)
+pnpm cli cruise-reviews             # bstoked/TripAdvisor/Google review links + ratings (--all re-checks)
+
+# Media curation (the active loop)
+pnpm cli cruise-media collect [--domain X]   # scrape image/video candidates → offer_media_candidates
+pnpm cli cruise-media apply   [--domain X]   # apply admin selection → buckets + cruise_offers.images
+
+# Monitoring
+pnpm cli monitor                    # daily change detection (also runs in the GitHub cron)
+pnpm cli cruise-diff <domain>|all   # targeted / full before-after re-extraction diff
+pnpm cli changes                    # inspect the change queue (approval happens on /changes)
 ```
 
 ## Pipeline Architecture
 
-The pipeline runs in four sequential stages, each fully resumable (idempotent):
+The discovery pipeline runs in four resumable stages (Seed → Search → Extract → Dedupe) — see
+`src/pipeline/`. Details unchanged since the bulk build; the day-to-day loops now are
+**media curation** (collect → human picks in `/admin/media` → apply) and **monitoring**
+(monitor → surgical auto-apply for dates/price → `/changes` approval for the rest).
 
-1. **Seed** — `buildQueryMatrix()` generates `(EN categories) × (locations)` + `(DE categories) × (locations)` + global queries. Upserts into `discovery_queries` (unique on query + language + engine + page).
-
-2. **Search** — Fetches rows where `executed_at IS NULL`, calls `tavilySearch()` with `search_depth: advanced, max_results: 20`, stores URLs in `raw_search_results`, marks query as executed. Runs in a loop until no pending queries remain.
-
-3. **Extract** — Fetches unprocessed URLs, calls `tavilyExtract()` for full page content (falls back to snippet), sends to Claude Sonnet with a structured extraction prompt. Upserts into `providers` (unique on `root_domain`) and `provider_locations`. Skips URLs whose domain is already in the DB.
-
-4. **Dedupe** — Groups `new` providers by country, sends each group to Claude Opus to identify cross-domain duplicates, marks losers with `status = 'duplicate'`.
+Media-apply invariant (hard-won): an offer's images are rebuilt from **every** sorted
+`selected`/`applied` candidate — a retry of failed downloads must never replace the full set.
+The select API resets both statuses on a new save.
 
 ## Database Schema
 
-Four tables:
+Discovery tables: `providers` (unique `root_domain`), `provider_locations`, `discovery_queries`,
+`raw_search_results`, `provider_pages` (crawled page texts).
 
-| Table | Key | Purpose |
-|---|---|---|
-| `providers` | `root_domain` (unique) | One row per kite business |
-| `provider_locations` | — | Countries/spots where a provider operates |
-| `discovery_queries` | `(query, language, engine, page)` | Search queries and their execution state |
-| `raw_search_results` | `(query_id, url)` | Raw URLs from searches, linked to extracted providers |
-
-`providers.trip_types` is a `TEXT[]` array of: `camp`, `safari`, `cruise`, `tour`, `school`, `lessons`, `rental`, `equipment_rental`.
-
-`providers.status` lifecycle: `new` → `verified` (manual) or `dead` or `duplicate`.
-
-**Cruise layer** (populated by `pnpm cli cruise-locations`; this is what the web app queries):
+**Cruise layer (what the product reads):**
 
 | Table | Purpose |
 |---|---|
-| `cruise_providers` | One row per kite-cruise business; `status` excludes `dead`/`duplicate`. Also holds bstoked/TripAdvisor review links (`bstoked_url`, `tripadvisor_url`, ratings, `review_match_notes`) from `cruise-reviews` |
-| `cruise_locations` | Cruise spots per provider — `country` / `region` / `spot_name` + `lat`/`lng` + `confidence` |
-| `cruise_offers` | One row per distinct cruise **product** (provider → many): location (+`continent`), vessel, `booking_modes`, suitability, season/dates, pricing, `itinerary_spots` (ordered named stops), AI `summary`, and `images` (curated WebP in the private `cruise-images` Supabase bucket; row stores storage paths). Populated by `cruise-offers`. Unique on `(cruise_provider_id, slug)` |
+| `cruise_providers` | One row per kite-cruise business; contact email, review links + ratings (`bstoked_*`, `tripadvisor_*`, `google_*`, `avg_rating`, `review_match_notes`) |
+| `cruise_locations` | Cruise spots per provider — `country`/`region`/`spot_name` + `lat`/`lng` + `confidence` |
+| `cruise_offers` | One row per cruise **product**: location, vessel, `booking_modes`, suitability, season/dates, pricing, `itinerary_spots`, AI `summary`, curated `images` (paths in private `cruise-images` bucket), `hero_video_url` (public `cruise-videos` bucket). Unique on `(cruise_provider_id, slug)` |
+| `offer_media_candidates` | Scraped image/video candidates per offer; `status` candidate→selected→applied (or rejected), `sort` 0 = hero |
+| `cruise_watch` / `cruise_changes` | Monitoring snapshots + detected changes with approval status |
+| `booking_*` tables | Booking email flow (migration exists; feature gated off) |
 
-Matching rule the web app relies on: a country chip = distinct valid providers with a
-`cruise_locations.country` equal to that country (case-insensitive). `match-cruise.ts` and
-`cruise-destinations.ts` must stay in sync so a chip's number equals the cards it shows.
+The KCS app reads the **`app_cruise_offer_cards` view** — when adding offer/provider columns the
+product needs, extend that view via a migration in **both** repos' expectations (view migration
+here, zod schema in KCS).
+
+Matching rule the legacy web app relies on: a country chip = distinct valid providers with a
+matching `cruise_locations.country`; `match-cruise.ts` and `cruise-destinations.ts` must stay in sync.
 
 ## Environment Variables
 
@@ -135,24 +181,24 @@ ANTHROPIC_API_KEY
 TAVILY_API_KEY
 SUPABASE_URL
 SUPABASE_SERVICE_ROLE_KEY   # service role bypasses RLS — only used server-side
+CHANGES_ADMIN_KEY           # gates /admin/media and /changes (set on VPS + web/.env.local)
 ```
 
-## First-Time Setup
+## Working Rules That Bit Us Before
 
-1. Create a free project at [supabase.com](https://supabase.com)
-2. Run `supabase/migrations/20260430000000_initial_schema.sql` in the Supabase SQL editor
-3. Copy `.env.example` → `.env` and fill in all four keys
-4. `pnpm install`
-5. `pnpm cli seed` then `pnpm cli search` then `pnpm cli extract`
+- Always check Supabase reads for `error` — silent empty results have caused wrong conclusions.
+- Migrations are run **manually by Aaron** in the Supabase SQL editor — ask, don't assume applied.
+- TripAdvisor blocks direct fetches (search snippets only); never parse naked numbers from
+  snippets (year-as-count bug). Google review counts need a Places API key.
+- Provider sites: JS-only/SPA galleries need the Playwright render path; CDN thumbnails must go
+  through `upscaleCdnUrl` (Wix, WordPress `-WxH`, Jetpack/Photon `?w=`, Tilda).
+- The 4 providers without email are exhausted research — don't re-scan (see memory
+  `provider-email-coverage`).
 
-## Planned Next Steps
+## Open / Next
 
-**Shipped:** provider DB + cruise tables; the live Cruise Finder web app (search, swipe, mini-map,
-top-destinations start page, per-card offer / reviews / availability / wind strip); push-to-deploy.
-
-**Not yet built:**
-- Admin UI for reviewing, enriching, and verifying provider records
-- Spot characteristics data (flat/wave, beginner/advanced, crowded/remote)
-- Booking request email flow (outbound inquiry + inbound reply relay) — **spec drafted:** `docs/booking-email-flow.md` (full relay via Postmark; ready for a focused build session)
-- User auth and session storage
-- (A general chat interface exists but is retired — cruise is the current focus)
+- Aaron finishes media curation across all listings; apply on request or via cron.
+- Booking flow Phase 0 (Postmark/DNS/env + migration), then un-gate Phase 1; Phases 2–3 unbuilt.
+- Marketing engine MVP (post queue + approval UI) once Aaron gives the Go.
+- Spot characteristics data (flat/wave, skill level) and provider-record verification UI — not built.
+- The old general chat interface is retired — cruise is the product.
