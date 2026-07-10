@@ -146,7 +146,11 @@ export function upscaleCdnUrl(absUrl: string): string {
     // Stripping both yields the full-resolution original.
     if (/^i[0-3]\.wp\.com$/i.test(u.hostname) || /\/wp-content\/uploads\//i.test(u.pathname)) {
       let changed = false;
-      const stripped = u.pathname.replace(/-\d{2,4}x\d{2,4}(\.(?:jpe?g|png|webp|gif|avif))$/i, '$1');
+      // "-WxH" thumbnails, plus theme-resizer variants like "-400x0-c-default"
+      // (height 0 = auto, "-c-<mode>" = crop flag; sea-adventures.com).
+      const stripped = u.pathname
+        .replace(/-\d{2,4}x\d{1,4}-c-[a-z-]+(\.(?:jpe?g|png|webp|gif|avif))$/i, '$1')
+        .replace(/-\d{2,4}x\d{2,4}(\.(?:jpe?g|png|webp|gif|avif))$/i, '$1');
       if (stripped !== u.pathname) { u.pathname = stripped; changed = true; }
       for (const p of ['w', 'h', 'fit', 'resize', 'crop', 'zoom', 'quality']) {
         if (u.searchParams.has(p)) { u.searchParams.delete(p); changed = true; }
