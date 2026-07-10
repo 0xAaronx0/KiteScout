@@ -1,5 +1,11 @@
 # Cruise Offers — UI Handover
 
+> **📜 HISTORICAL SNAPSHOT (2026-06-23) — superseded.** Kept as handover history. The sweep it
+> announces has long run (live: ~98 providers / ~164 offers), the media contract is now
+> **12 media + optional hero video** (not "up to 5 images"), and the product reads the
+> `app_cruise_offer_cards` view, not `cruise_offers` directly. Current truth: `CLAUDE.md` +
+> `docs/supabase-live-state.md`.
+
 Backend for **structured cruise offers + curated images + review links** is built (2026-06-23).
 This is the data the new cruise UI should consume. Backend only — no frontend was written, by design.
 

@@ -1,5 +1,12 @@
 # Cruise World Map — UI Handover
 
+> **📜 PARTIALLY STALE (written 2026-06-26).** Still the reference for the
+> `map.kitescout.tech` implementation, but: the §5 digest-pin deploy caveat describes a bug
+> **fixed 2026-06-26** (compose uses `:latest` + `/api/version` SHA-verify — see memory
+> `deploy-gotchas` #6); and the KCS-side map has evolved past PR #30 (e.g. PR #33 region
+> fallback, PR #60 map preview controls). Current truth: `CLAUDE.md` + KCS
+> `docs/cruise-map-handover.md`.
+
 The standalone interactive map at **https://map.kitescout.tech** (the "Explore the Cruise
 World Map" link on the cruise finder). It is **live and data-driven**: a static Leaflet page
 fetches the current cruise offers from the web app on load, so **newly extracted offers appear

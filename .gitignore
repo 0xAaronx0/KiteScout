@@ -10,6 +10,9 @@ web/.env.local
 web/next-env.d.ts
 web/*.tsbuildinfo
 
+# Ad-hoc scratch/QA scripts (run via `tsx src/_foo.ts`; never imported by tracked code)
+src/_*
+
 # OS / editor junk
 .DS_Store
 **/.DS_Store

@@ -1,6 +1,18 @@
 # Booking Email Flow — Spec
 
-**Status:** planned (not started). This is the implementation brief for a new, focused session.
+**Status (updated 2026-07-10):** Phase 1 code is **built but never committed** — it sits
+untracked/modified in the kitescout worktree (`web/app/api/booking/`, `web/app/status/`,
+`web/components/BookingRequestForm.tsx`, `web/lib/booking-draft.ts`, `web/lib/postmark.ts`,
+migration `20260609000000_create_booking_tables.sql`, plus wiring in `SwipeDeck.tsx`/`types.ts`).
+Frontend CTA is gated by `NEXT_PUBLIC_BOOKING_ENABLED` (off); ⚠️ **the API routes themselves are
+NOT flag-gated** — gate them before this ever ships. The booking migration is **not applied**
+(verified against live Supabase 2026-07-10 — see `docs/supabase-live-state.md`). Blocked on
+Phase 0 (Postmark account/DNS/env) + running the migration.
+**⚠️ Parallel system:** the KCS product app has since built its **own** inquiry-email system
+(**Resend**, not Postmark: `inquiry_batches`/`provider_inquiries` tables — applied live —, gated
+send via `KITESCOUT_ENABLE_REAL_EMAIL_SEND`, reply forwarding, `/internal/inquiries`). It is
+merged and ahead of this spec. Before investing here, decide which system carries the booking
+flow — this spec may be superseded.
 **Owner decision (2026-06-09):** full **relay** model, email provider **Postmark**.
 
 ## 1. Goal
