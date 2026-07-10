@@ -110,6 +110,13 @@ function canonicalKey(absUrl: string): string {
     if (inner) {
       try { return new URL(inner, u.origin).pathname; } catch { return inner; }
     }
+    // Jetpack/Photon proxies origin images at i0–i3.wp.com/<origin-host>/<path>;
+    // key on the origin path so photon- and origin-served variants of one photo
+    // collapse to a single candidate.
+    if (/^i[0-3]\.wp\.com$/i.test(u.hostname)) {
+      const originPath = u.pathname.replace(/^\/[^/]+/, '');
+      if (originPath) return originPath;
+    }
     return u.pathname;
   } catch {
     return absUrl.split('?')[0];
@@ -132,12 +139,19 @@ export function upscaleCdnUrl(absUrl: string): string {
       const m = u.pathname.match(/^\/media\/[^/]+\.(?:jpe?g|png|webp|gif|avif)/i);
       if (m) return `${u.protocol}//${u.hostname}${m[0]}`;
     }
-    // WordPress: media under /wp-content/uploads/ is auto-generated in
-    // "-WIDTHxHEIGHT" thumbnail sizes (e.g. "DSC00785-495x400.jpg" — often just
-    // under our min width); the original, suffix-stripped, is full resolution.
-    if (/\/wp-content\/uploads\//i.test(u.pathname)) {
+    // WordPress media — origin-served or via the Jetpack/Photon CDN
+    // (i0–i3.wp.com/<origin-host>/<path>). Two thumbnail mechanisms, often
+    // combined: "-WIDTHxHEIGHT" filename suffixes and ?w=/?h=/?fit=/?resize=
+    // query transforms (cbcmsailingclub served ?w=336&h=210 gallery thumbs).
+    // Stripping both yields the full-resolution original.
+    if (/^i[0-3]\.wp\.com$/i.test(u.hostname) || /\/wp-content\/uploads\//i.test(u.pathname)) {
+      let changed = false;
       const stripped = u.pathname.replace(/-\d{2,4}x\d{2,4}(\.(?:jpe?g|png|webp|gif|avif))$/i, '$1');
-      if (stripped !== u.pathname) { u.pathname = stripped; return u.href; }
+      if (stripped !== u.pathname) { u.pathname = stripped; changed = true; }
+      for (const p of ['w', 'h', 'fit', 'resize', 'crop', 'zoom', 'quality']) {
+        if (u.searchParams.has(p)) { u.searchParams.delete(p); changed = true; }
+      }
+      if (changed) return u.href;
     }
     // Tilda: lazy-load background thumbnails live on thb.tildacdn.net with a
     // transform segment (…/tild…/-/resize/20x/file.jpg — 20 px wide!); the
@@ -232,6 +246,9 @@ export function discoverImageUrls(
     root;
 
   for (const img of scope.querySelectorAll('img')) {
+    // Jetpack stamps the untouched original on every gallery <img> — push it
+    // FIRST so it claims the canonical key ahead of any resized variant.
+    push(img.getAttribute('data-orig-file'));
     push(img.getAttribute('src'));
     push(img.getAttribute('data-src'));
     push(img.getAttribute('data-lazy-src'));
