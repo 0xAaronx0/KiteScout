@@ -9,10 +9,14 @@ interface OfferRow {
   title: string;
   country: string | null;
   region: string | null;
-  images: Array<{ path: string; fallback?: boolean }> | null;
+  images: Array<{ path: string; fallback?: boolean; width?: number; sort?: number }> | null;
   hero_video_url?: string | null;
   provider: { name: string | null; root_domain: string } | null;
 }
+
+// Below this native width an image never looks sharp in the app's fullscreen
+// gallery (same threshold as the 2026-07-10 quality audit).
+const LOW_RES_WIDTH = 640;
 
 export default async function MediaAdminIndex({
   searchParams,
@@ -23,10 +27,14 @@ export default async function MediaAdminIndex({
   const supabase = getSupabase();
   const adminKey = key && process.env.CHANGES_ADMIN_KEY && key === process.env.CHANGES_ADMIN_KEY ? key : null;
 
+  // Reseller offers are hard-inactive (Aaron, 2026-07-10): the app view excludes
+  // them entirely, so curating their media would be wasted work — hide them here too.
+  const NO_RESELLERS = 'is_reseller.is.null,is_reseller.eq.false';
   const [offersRes, selectedRes] = await Promise.all([
     supabase
       .from('cruise_offers')
       .select('id, title, country, region, images, hero_video_url, provider:cruise_providers!inner(name, root_domain)')
+      .or(NO_RESELLERS)
       .order('title'),
     supabase.from('offer_media_candidates').select('cruise_offer_id').eq('status', 'selected'),
   ]);
@@ -34,7 +42,7 @@ export default async function MediaAdminIndex({
   const heroVideoMissing = !!offersRes.error && /hero_video_url/.test(offersRes.error.message);
   // Graceful before migration 20260709000000: retry without the new column.
   const offers = (offersRes.data ?? (heroVideoMissing
-    ? (await supabase.from('cruise_offers').select('id, title, country, region, images, provider:cruise_providers!inner(name, root_domain)').order('title')).data
+    ? (await supabase.from('cruise_offers').select('id, title, country, region, images, provider:cruise_providers!inner(name, root_domain)').or(NO_RESELLERS).order('title')).data
     : null) ?? []) as unknown as OfferRow[];
 
   const pendingSel = new Set(((selectedRes.data ?? []) as Array<{ cruise_offer_id: string }>).map(r => r.cruise_offer_id));
@@ -77,6 +85,9 @@ export default async function MediaAdminIndex({
             {sorted.map(o => {
               const imgs = o.images ?? [];
               const fallback = imgs.some(i => i.fallback);
+              const lowRes = imgs.filter(i => (i.width ?? Infinity) < LOW_RES_WIDTH);
+              const hero = [...imgs].sort((a, b) => (a.sort ?? 99) - (b.sort ?? 99))[0];
+              const heroLowRes = hero ? (hero.width ?? Infinity) < LOW_RES_WIDTH : false;
               return (
                 <tr key={o.id} className="border-b border-slate-900 hover:bg-slate-900/50">
                   <td className="py-2 pr-3">
@@ -86,6 +97,14 @@ export default async function MediaAdminIndex({
                   <td className="py-2 pr-3 text-slate-400">{o.provider?.name ?? o.provider?.root_domain}</td>
                   <td className={`py-2 pr-3 ${imgs.length + (o.hero_video_url ? 1 : 0) < 8 || fallback ? 'text-amber-400' : 'text-slate-300'}`}>
                     {imgs.length}/12{fallback ? ' · fallback' : ''}
+                    {lowRes.length > 0 && (
+                      <span
+                        className={`ml-1.5 rounded px-1 text-xs ${heroLowRes ? 'bg-red-900/60 text-red-300' : 'bg-amber-900/50 text-amber-300'}`}
+                        title={`${lowRes.length} image(s) below ${LOW_RES_WIDTH}px native width${heroLowRes ? ' — incl. the hero' : ''}`}
+                      >
+                        ⚠ {lowRes.length} low-res
+                      </span>
+                    )}
                   </td>
                   <td className="py-2 pr-3">{o.hero_video_url ? '🎬' : <span className="text-slate-600">—</span>}</td>
                   <td className="py-2">

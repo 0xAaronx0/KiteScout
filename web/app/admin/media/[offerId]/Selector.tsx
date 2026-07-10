@@ -72,6 +72,14 @@ export default function Selector({
     videos.find(v => v.status === 'selected')?.id ?? videos.find(v => v.status === 'applied' && v.hero)?.id ?? null,
   );
   const [broken, setBroken] = useState<Set<string>>(new Set());
+  // Native pixel size per candidate, measured client-side once the preview
+  // loads (candidates carry no dimensions in the DB). Drives the low-res warn.
+  const [dims, setDims] = useState<Record<string, { w: number; h: number }>>({});
+  const measure = (id: string) => (img: HTMLImageElement | null) => {
+    if (img && img.complete && img.naturalWidth) {
+      setDims(d => (d[id] ? d : { ...d, [id]: { w: img.naturalWidth, h: img.naturalHeight } }));
+    }
+  };
   const [saving, setSaving] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
 
@@ -173,16 +181,26 @@ export default function Selector({
                 title={`${c.url}\n${c.note ?? ''}`}
               >
                 <img
+                  ref={measure(c.id)}
                   src={c.displayUrl}
                   alt=""
                   loading="lazy"
                   referrerPolicy="no-referrer"
                   className="h-36 w-full object-cover"
+                  onLoad={e => measure(c.id)(e.currentTarget)}
                   onError={() => setBroken(b => new Set(b).add(c.id))}
                 />
                 {isPicked && (
                   <span className={`absolute left-1 top-1 rounded px-1.5 py-0.5 text-[11px] font-bold ${pos === 0 ? 'bg-amber-400 text-black' : 'bg-emerald-600 text-white'}`}>
                     {pos === 0 ? 'HERO' : `#${pos + 1}`}
+                  </span>
+                )}
+                {dims[c.id] && dims[c.id].w < 800 && (
+                  <span
+                    className={`absolute bottom-1 left-1 rounded px-1.5 py-0.5 text-[10px] font-semibold ${dims[c.id].w < 640 ? 'bg-red-900/90 text-red-200' : 'bg-amber-900/90 text-amber-200'}`}
+                    title={`native ${dims[c.id].w}×${dims[c.id].h}px — looks soft in the fullscreen gallery`}
+                  >
+                    ⚠ {dims[c.id].w}×{dims[c.id].h}
                   </span>
                 )}
                 {(c.note ?? '').startsWith('currently live') && (

@@ -40,7 +40,7 @@ Both repos ship migrations against the **same** Supabase project. Applied = veri
 | `20260624…` (wind_stats, offer attributes, region_conditions) | ✅ | tables → 200 |
 | `20260708000000_add_google_reviews` | ✅ | `google_rating` → 200 |
 | `20260709000000_add_avg_rating_and_media_candidates` | ✅ | `avg_rating` → 200, `offer_media_candidates` → 200 |
-| `20260710160000_add_standardized_prices` | ❌ **NOT applied** (committed in 5a0f93f) | `cruise_offers.price_pp_cabin_eur` → 400. **Safe to apply:** its view definition is a strict superset of the live view (it already contains the hero-video/Google columns KCS added 2026-07-10) and only appends 3 price columns. |
+| `20260710160000_add_standardized_prices` | ❌ **NOT applied** (v2: Preis+Währungs-Paare, KEINE _eur-Spalten mehr; + Reseller-Ausschluss) | Probe: `cruise_offers.price_pp_cabin` → 400. **Safe to apply:** DROP+CREATE view, Bestandsspalten identisch in Name+Reihenfolge, hängt 5 Preisspalten an UND filtert `is_reseller=true` hart aus der View (Aaron 2026-07-10: Reseller inaktiv → View 163→149 Zeilen). |
 
 ### KCS repo (`MartinMarzi/KiteCruiseScout`, `supabase/migrations/`)
 

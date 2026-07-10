@@ -18,6 +18,11 @@
 -- Spalten entfernt — sie waren noch unbefüllt). Der View wird per DROP +
 -- CREATE ersetzt; alle Bestandsspalten behalten Name und Reihenfolge,
 -- neue Spalten hängen am ENDE — bestehende Konsumenten bleiben unberührt.
+--
+-- AUSSERDEM (Aaron, 2026-07-10): Reseller-Angebote sind HART INAKTIV —
+-- die View schließt is_reseller=true jetzt komplett aus (damit raus aus
+-- App-Ergebnissen, Matching UND Karte; aktuell 14 Offers, View 163→149).
+-- Die Admin-Übersicht filtert sie separat (web/app/admin/media).
 -- Safe to re-run.
 -- ============================================================
 
@@ -114,6 +119,8 @@ select
 from public.cruise_offers c
 left join public.cruise_providers p on p.id = c.cruise_provider_id
 where c.duplicate_of is null
-  and coalesce(p.status, 'new') not in ('dead', 'duplicate');
+  and coalesce(p.status, 'new') not in ('dead', 'duplicate')
+  -- Reseller-Angebote hart inaktiv (Aaron 2026-07-10): nie im Produkt zeigen
+  and coalesce(c.is_reseller, false) = false;
 
 revoke all on public.app_cruise_offer_cards from anon, authenticated;
