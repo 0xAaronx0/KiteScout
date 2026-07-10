@@ -1,27 +1,40 @@
 -- ============================================================
--- Standardisierte Anzeige-Preise (Aaron, 2026-07-10)
+-- Standardisierte Anzeige-Preise (Aaron, 2026-07-10, v2)
 -- ============================================================
 -- Die Rohpreise der Provider basieren wild gemischt auf pro-Person/Woche,
 -- pro Nacht, pro Kabine oder Vollcharter. Die App soll nur noch ZWEI
--- normalisierte Ab-Preise zeigen:
---   price_pp_cabin_eur     — Ab-Preis pro Person in (Doppel-)Kabine,
---                            GESAMTER Cruise-Zeitraum, EUR
---   price_charter_week_eur — Ab-Preis ganzes Boot (Vollcharter),
---                            normalisiert auf 7 Tage, EUR
+-- normalisierte Ab-Preise zeigen — IN DER ORIGINALWÄHRUNG des Angebots
+-- (Aaron: keine angebotsseitige Umrechnung; Währungsumrechnung wäre
+-- später höchstens userseitig in der Anzeige):
+--   price_pp_cabin + price_pp_cabin_currency
+--       Ab-Preis pro Person in (Doppel-)Kabine, GESAMTER Cruise-Zeitraum
+--   price_charter_week + price_charter_week_currency
+--       Ab-Preis ganzes Boot (Vollcharter), normalisiert auf 7 Tage
 -- Befüllt vom Backend (Ableitung aus pricing.options + KI-Parse von
 -- pricing.raw mit Plausibilitäts-Gates); NULL = "Price on request".
 -- price_basis_note dokumentiert die Herleitung (Provenance/Review).
 --
--- CREATE OR REPLACE VIEW hängt Spalten nur ans ENDE an — bestehende
--- Konsumenten bleiben unberührt. Safe to re-run.
+-- v2 ersetzt die _eur-Variante von v1 (falls v1 schon lief, werden deren
+-- Spalten entfernt — sie waren noch unbefüllt). Der View wird per DROP +
+-- CREATE ersetzt; alle Bestandsspalten behalten Name und Reihenfolge,
+-- neue Spalten hängen am ENDE — bestehende Konsumenten bleiben unberührt.
+-- Safe to re-run.
 -- ============================================================
 
 alter table public.cruise_offers
-  add column if not exists price_pp_cabin_eur integer,
-  add column if not exists price_charter_week_eur integer,
+  drop column if exists price_pp_cabin_eur,
+  drop column if exists price_charter_week_eur;
+
+alter table public.cruise_offers
+  add column if not exists price_pp_cabin integer,
+  add column if not exists price_pp_cabin_currency text,
+  add column if not exists price_charter_week integer,
+  add column if not exists price_charter_week_currency text,
   add column if not exists price_basis_note text;
 
-create or replace view public.app_cruise_offer_cards
+drop view if exists public.app_cruise_offer_cards;
+
+create view public.app_cruise_offer_cards
 with (security_invoker = true)
 as
 select
@@ -92,9 +105,11 @@ select
   p.google_rating as provider_google_rating,
   p.google_review_count as provider_google_review_count,
   p.avg_rating as provider_avg_rating,
-  -- appended 2026-07-10 (standardisierte Anzeige-Preise)
-  c.price_pp_cabin_eur,
-  c.price_charter_week_eur,
+  -- appended 2026-07-10 (standardisierte Anzeige-Preise, Originalwährung)
+  c.price_pp_cabin,
+  c.price_pp_cabin_currency,
+  c.price_charter_week,
+  c.price_charter_week_currency,
   c.price_basis_note
 from public.cruise_offers c
 left join public.cruise_providers p on p.id = c.cruise_provider_id
