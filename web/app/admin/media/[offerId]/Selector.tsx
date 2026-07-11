@@ -80,6 +80,24 @@ export default function Selector({
       setDims(d => (d[id] ? d : { ...d, [id]: { w: img.naturalWidth, h: img.naturalHeight } }));
     }
   };
+
+  // Display order (Aaron 2026-07-10): picked/live first (in gallery order),
+  // then measured high-res biggest-first, then not-yet-measured (dimensions
+  // only exist once the lazy preview loads), and known low-res at the very
+  // end — tiles settle into place progressively as previews load.
+  const ordered = useMemo(() => {
+    const rank = (c: CandidateView): [number, number] => {
+      const p = picked.indexOf(c.id);
+      if (p >= 0) return [0, p];
+      const d = dims[c.id];
+      if (!d) return [2, 0];
+      return d.w >= 640 ? [1, -d.w] : [3, -d.w];
+    };
+    return images
+      .map((c, i) => ({ c, i, r: rank(c) }))
+      .sort((a, b) => a.r[0] - b.r[0] || a.r[1] - b.r[1] || a.i - b.i)
+      .map(x => x.c);
+  }, [images, picked, dims]);
   const [saving, setSaving] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
 
@@ -169,7 +187,7 @@ export default function Selector({
       <section>
         <h2 className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">Image candidates ({images.length})</h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
-          {images.map(c => {
+          {ordered.map(c => {
             const pos = picked.indexOf(c.id);
             const isPicked = pos >= 0;
             if (broken.has(c.id)) return null;
