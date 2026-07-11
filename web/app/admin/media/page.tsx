@@ -53,11 +53,29 @@ export default async function MediaAdminIndex({
   const needsWork = (o: OfferRow) => mediaCount(o) < 8 || (o.images ?? []).some(i => i.fallback);
 
   const qs = adminKey ? `?key=${encodeURIComponent(adminKey)}` : '';
-  // Sorted by destination (country → region → title) so one area is curated in one pass.
-  const sorted = [...offers].sort((a, b) =>
-    (a.country ?? 'zz').localeCompare(b.country ?? 'zz') ||
-    (a.region ?? 'zz').localeCompare(b.region ?? 'zz') ||
-    a.title.localeCompare(b.title),
+  // Curation state per offer, computed once — drives both row display and ordering.
+  const decorated = offers.map(o => {
+    const imgs = o.images ?? [];
+    const fallback = imgs.some(i => i.fallback);
+    const lowRes = imgs.filter(i => (i.width ?? Infinity) < LOW_RES_WIDTH);
+    const hero = [...imgs].sort((a, b) => (a.sort ?? 99) - (b.sort ?? 99))[0];
+    const heroLowRes = hero ? (hero.width ?? Infinity) < LOW_RES_WIDTH : false;
+    const queued = pendingSel.has(o.id);
+    // Still needs curation attention ("to be checked" or low-res images) and no
+    // fresh selection is already queued for the next apply run.
+    const urgent = !queued && (needsWork(o) || lowRes.length > 0);
+    return { o, imgs, fallback, lowRes, heroLowRes, queued, urgent };
+  });
+  // Destination stays the primary grouping (one area is curated in one pass);
+  // within a destination, offers that still need attention float to the top
+  // (Aaron 2026-07-10) — low-res heroes first, then by low-res count.
+  const sorted = decorated.sort((a, b) =>
+    (a.o.country ?? 'zz').localeCompare(b.o.country ?? 'zz') ||
+    (a.o.region ?? 'zz').localeCompare(b.o.region ?? 'zz') ||
+    Number(b.urgent) - Number(a.urgent) ||
+    Number(b.heroLowRes) - Number(a.heroLowRes) ||
+    b.lowRes.length - a.lowRes.length ||
+    a.o.title.localeCompare(b.o.title),
   );
 
   return (
@@ -82,12 +100,7 @@ export default async function MediaAdminIndex({
             </tr>
           </thead>
           <tbody>
-            {sorted.map(o => {
-              const imgs = o.images ?? [];
-              const fallback = imgs.some(i => i.fallback);
-              const lowRes = imgs.filter(i => (i.width ?? Infinity) < LOW_RES_WIDTH);
-              const hero = [...imgs].sort((a, b) => (a.sort ?? 99) - (b.sort ?? 99))[0];
-              const heroLowRes = hero ? (hero.width ?? Infinity) < LOW_RES_WIDTH : false;
+            {sorted.map(({ o, imgs, fallback, lowRes, heroLowRes, queued }) => {
               return (
                 <tr key={o.id} className="border-b border-slate-900 hover:bg-slate-900/50">
                   <td className="py-2 pr-3">
@@ -108,7 +121,7 @@ export default async function MediaAdminIndex({
                   </td>
                   <td className="py-2 pr-3">{o.hero_video_url ? '🎬' : <span className="text-slate-600">—</span>}</td>
                   <td className="py-2">
-                    {pendingSel.has(o.id)
+                    {queued
                       ? <span className="rounded-full bg-sky-900/60 px-2 py-0.5 text-xs text-sky-300">selection queued</span>
                       : needsWork(o)
                         ? <span className="rounded-full bg-amber-900/50 px-2 py-0.5 text-xs text-amber-300">to be checked</span>
