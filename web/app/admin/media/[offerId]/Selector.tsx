@@ -11,6 +11,7 @@ export interface CandidateView {
   status: string;
   sort: number | null;
   hero: boolean;
+  fallback?: boolean;      // this candidate IS the extraction-time homepage-hero fallback image
 }
 
 // Only self-hosted video files are collected (no platform embeds), so the
@@ -172,7 +173,7 @@ export default function Selector({
                   key={v.id}
                   onClick={() => { if (!active && picked.length >= 12) { setMsg('✗ max 12 media — remove an image first'); return; } setMsg(null); setHeroVideo(active ? null : v.id); }}
                   title={`${v.url}\n${v.note ?? ''}`}
-                  className={`relative h-28 overflow-hidden rounded-lg border text-left ${active ? 'border-emerald-500 ring-2 ring-emerald-500/50' : 'border-slate-800 hover:border-slate-600'}`}
+                  className={`relative h-28 overflow-hidden rounded-lg border text-left ${active ? 'border-emerald-400 ring-4 ring-emerald-400/90' : 'border-slate-800 hover:border-slate-600'}`}
                 >
                   <VideoPreview url={v.url} />
                   <span className="absolute bottom-0 left-0 right-0 bg-black/70 px-2 py-0.5 text-[10px] text-slate-200">{(v.note ?? '').slice(0, 48)}</span>
@@ -194,9 +195,9 @@ export default function Selector({
             return (
               <div
                 key={c.id}
-                className={`group relative cursor-pointer overflow-hidden rounded-lg border ${isPicked ? (pos === 0 ? 'border-amber-400 ring-2 ring-amber-400/60' : 'border-emerald-500 ring-2 ring-emerald-500/50') : 'border-slate-800 hover:border-slate-500'}`}
+                className={`group relative cursor-pointer overflow-hidden rounded-lg border ${isPicked ? (pos === 0 ? 'border-amber-400 ring-4 ring-amber-400/90' : 'border-emerald-400 ring-4 ring-emerald-400/90') : 'border-slate-800 hover:border-slate-500'}`}
                 onClick={() => toggle(c.id)}
-                title={`${c.url}\n${c.note ?? ''}`}
+                title={`${c.url}\n${c.note ?? ''}${c.fallback ? '\nfallback: provider homepage hero (offer page had no photo)' : ''}`}
               >
                 <img
                   ref={measure(c.id)}
@@ -221,7 +222,14 @@ export default function Selector({
                     ⚠ {dims[c.id].w}×{dims[c.id].h}
                   </span>
                 )}
-                {(c.note ?? '').startsWith('currently live') && (
+                {c.fallback ? (
+                  <span
+                    className="absolute right-1 top-1 rounded bg-orange-900/90 px-1.5 py-0.5 text-[10px] text-orange-200"
+                    title="provider homepage hero, stored because the offer page had no usable photo — keeps the offer on 'to be checked'"
+                  >
+                    🏠 fallback
+                  </span>
+                ) : (c.note ?? '').startsWith('currently live') && (
                   <span className="absolute right-1 top-1 rounded bg-sky-900/90 px-1.5 py-0.5 text-[10px] text-sky-200">live</span>
                 )}
                 {isPicked && pos !== 0 && (

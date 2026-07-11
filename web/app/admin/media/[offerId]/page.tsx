@@ -52,9 +52,14 @@ export default async function OfferMediaPage({
     if (img.source_url && signedByPath.has(img.path)) signedBySource.set(img.source_url, signedByPath.get(img.path)!);
   }
 
+  // Candidates that ARE the extraction-time fallback image (provider homepage
+  // hero stored because the offer page had no usable photo) — matched via
+  // source_url, so the selector can badge them.
+  const fallbackSources = new Set(liveImages.filter(i => i.fallback && i.source_url).map(i => i.source_url as string));
   const candidates: CandidateView[] = ((candRes.data ?? []) as Array<{ id: string; kind: 'image' | 'video'; url: string; note: string | null; status: string; sort: number | null; hero: boolean }>).map(c => ({
     ...c,
     displayUrl: signedBySource.get(c.url) ?? c.url,
+    fallback: fallbackSources.has(c.url),
   }));
 
   const provider = offer.provider;
@@ -82,7 +87,7 @@ export default async function OfferMediaPage({
                   {signedByPath.has(img.path)
                     ? <img src={signedByPath.get(img.path)} alt="" className="h-24 rounded-md border border-slate-800 object-cover" />
                     : <div className="flex h-24 w-36 items-center justify-center rounded-md border border-slate-800 text-xs text-slate-600">no preview</div>}
-                  <span className="absolute left-1 top-1 rounded bg-black/70 px-1 text-[10px]">{i === 0 ? 'hero' : `#${i + 1}`}{img.fallback ? ' · fallback' : ''}</span>
+                  <span className="absolute left-1 top-1 rounded bg-black/70 px-1 text-[10px]">{i === 0 ? 'hero' : `#${i + 1}`}{img.fallback ? ' · 🏠 fallback' : ''}</span>
                 </div>
               ))}
             </div>
