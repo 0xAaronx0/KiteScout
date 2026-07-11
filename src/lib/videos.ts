@@ -74,7 +74,9 @@ export async function processAndStoreVideo(sourceUrl: string, path: string): Pro
     const res = await fetch(sourceUrl, {
       headers: { 'User-Agent': UA, Accept: 'video/*,*/*;q=0.8' },
       redirect: 'follow',
-      signal: AbortSignal.timeout(300_000),
+      // 20 min: provider servers can be extremely slow but steady — abakiting
+      // served 26.9 MB at ~45 KB/s (~10 min), which the old 5-min cap aborted.
+      signal: AbortSignal.timeout(1_200_000),
     });
     if (!res.ok || !res.body) {
       console.error(`  [video] download failed (${res.status}): ${sourceUrl.slice(0, 80)}`);
