@@ -128,6 +128,28 @@ export async function processAndStoreVideo(sourceUrl: string, path: string): Pro
       console.error(`  [video] upload failed (${path}): ${error.message}`);
       return null;
     }
+    // 4. Poster still (frame at ~0.5 s) stored next to the video as
+    //    <path minus .mp4>-poster.jpg. The app derives this URL and uses it as
+    //    the <video poster>, so playback starts on an IDENTICAL frame instead
+    //    of flashing an unrelated hero photo (Aaron 2026-07-10). Best-effort —
+    //    a poster failure never fails the video.
+    try {
+      const posterFile = join(dir, 'poster.jpg');
+      await execFileP(ffmpegPath!, [
+        '-y', '-hide_banner', '-loglevel', 'error',
+        '-ss', '0.5', '-i', outFile,
+        '-frames:v', '1', '-q:v', '3',
+        posterFile,
+      ], { timeout: 60_000 });
+      const posterPath = path.replace(/\.mp4$/i, '-poster.jpg');
+      const { error: pErr } = await supabase.storage
+        .from(CRUISE_VIDEO_BUCKET)
+        .upload(posterPath, await readFile(posterFile), { contentType: 'image/jpeg', upsert: true });
+      if (pErr) console.error(`  [video] poster upload failed (${posterPath}): ${pErr.message}`);
+    } catch (err) {
+      console.error(`  [video] poster extraction failed: ${err instanceof Error ? err.message.slice(0, 100) : err}`);
+    }
+
     const { data } = supabase.storage.from(CRUISE_VIDEO_BUCKET).getPublicUrl(path);
     return { publicUrl: data.publicUrl, bytes: size, sourceUrl };
   } catch (err) {
