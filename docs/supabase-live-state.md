@@ -40,7 +40,8 @@ Both repos ship migrations against the **same** Supabase project. Applied = veri
 | `20260624…` (wind_stats, offer attributes, region_conditions) | ✅ | tables → 200 |
 | `20260708000000_add_google_reviews` | ✅ | `google_rating` → 200 |
 | `20260709000000_add_avg_rating_and_media_candidates` | ✅ | `avg_rating` → 200, `offer_media_candidates` → 200 |
-| `20260710160000_add_standardized_prices` | ❌ **NOT applied** (v2: Preis+Währungs-Paare, KEINE _eur-Spalten mehr; + Reseller-Ausschluss) | Probe: `cruise_offers.price_pp_cabin` → 400. **Safe to apply:** DROP+CREATE view, Bestandsspalten identisch in Name+Reihenfolge, hängt 5 Preisspalten an UND filtert `is_reseller=true` hart aus der View (Aaron 2026-07-10: Reseller inaktiv → View 163→149 Zeilen). |
+| `20260710160000_add_standardized_prices` | ✅ **applied 2026-07-10** (v2; live-verifiziert: View 149 Zeilen, 0 Reseller, Preisspalten vorhanden) | 5 Preisspalten (Originalwährung!) + Reseller-Hartfilter in der View. **Backfill gelaufen** (150 Offers geschrieben): 59x pp, 31x charter/Woche, 12x beide, 71x ohne (= Price on request); Herleitung je Offer in `price_basis_note`. |
+| `20260711150000_revoke_anon_table_grants` | ✅ **applied 2026-07-11** (Aaron; Verify-Query danach: `anon_grants = NULL` auf allen Tables) | Defense-in-depth: revoked die inerten anon/authenticated-Default-Grants auf 14 älteren Tables + default privileges. Kein App-Impact (beide Apps nutzen nur service role). |
 
 ### KCS repo (`MartinMarzi/KiteCruiseScout`, `supabase/migrations/`)
 
@@ -77,8 +78,26 @@ Both repos ship migrations against the **same** Supabase project. Applied = veri
 
 - `cruise-images` — **private**; app signs paths server-side (1 h expiry). Never delete objects
   when re-curating; reassign `sort` instead.
-- `cruise-videos` — **public**; `hero_video_url` plays directly.
-  (Bucket visibility is Supabase config, inferred from the signing/non-signing code paths in KCS.)
+- `cruise-videos` — **public** (deliberate: provider marketing clips, no PII; a `<video>` tag
+  can't send auth headers, private would force signed URLs + lose CDN caching); holds the MP4s
+  **and** their `-poster.jpg` stills (`src/lib/videos.ts` uploads both).
+- **Bucket config hardened 2026-07-11** (verified via `GET /storage/v1/bucket`):
+  `cruise-videos` → size limit 15 MB, MIME `['video/mp4','image/jpeg']` (JPEG needed for
+  posters!); `cruise-images` → size limit 5 MB, MIME `['image/webp']`. Guardrail against
+  pipeline bugs — only the service role can write anyway.
+
+## RLS / privacy posture (verified 2026-07-11, SQL-editor probe)
+
+- **All 19 public tables: `rls_enabled = true`, 0 policies → deny-all** for anon/authenticated.
+  Nothing is publicly readable; the apps are unaffected because both use only the service-role
+  key (which bypasses RLS). REST without a key → 401.
+- **No anon grants remain on any table** (since `20260711150000_revoke_anon_table_grants`,
+  applied 2026-07-11): the KCS-era tables never had them; the 14 older tables' inert default
+  grants are revoked, and default privileges block them on future tables.
+- `app_cruise_offer_cards` view: `security_invoker = true` + `REVOKE ALL FROM anon,
+  authenticated` (service role only) — unchanged.
+- Probe SQL for re-verification lives as a comment at the bottom of the
+  `20260711150000` migration file.
 
 ## How to re-verify (the probe pattern)
 
