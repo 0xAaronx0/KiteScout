@@ -482,7 +482,7 @@ export async function processAndStoreImage(
   await ensureCruiseImageBucket();
   const { error } = await supabase.storage
     .from(CRUISE_IMAGE_BUCKET)
-    .upload(path, out, { contentType: 'image/webp', upsert: true });
+    .upload(path, out, { contentType: 'image/webp', upsert: true, cacheControl: '31536000' });
   if (error) {
     console.error(`  image upload failed (${path}): ${error.message}`);
     return null;
@@ -585,7 +585,7 @@ export async function curateAndStoreImages(opts: {
     const path = `cruise-offers/${providerId}/${slug}/${sort}.webp`;
     const { error } = await supabase.storage
       .from(CRUISE_IMAGE_BUCKET)
-      .upload(path, out, { contentType: 'image/webp', upsert: true });
+      .upload(path, out, { contentType: 'image/webp', upsert: true, cacheControl: '31536000' });
     if (error) {
       console.error(`  image upload failed (${path}): ${error.message}`);
       continue;

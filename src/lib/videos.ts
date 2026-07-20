@@ -125,7 +125,7 @@ export async function processAndStoreVideo(sourceUrl: string, path: string): Pro
     await ensureVideoBucket();
     const { error } = await supabase.storage
       .from(CRUISE_VIDEO_BUCKET)
-      .upload(path, out, { contentType: 'video/mp4', upsert: true });
+      .upload(path, out, { contentType: 'video/mp4', upsert: true, cacheControl: '31536000' });
     if (error) {
       console.error(`  [video] upload failed (${path}): ${error.message}`);
       return null;
@@ -146,7 +146,7 @@ export async function processAndStoreVideo(sourceUrl: string, path: string): Pro
       const posterPath = path.replace(/\.mp4$/i, '-poster.jpg');
       const { error: pErr } = await supabase.storage
         .from(CRUISE_VIDEO_BUCKET)
-        .upload(posterPath, await readFile(posterFile), { contentType: 'image/jpeg', upsert: true });
+        .upload(posterPath, await readFile(posterFile), { contentType: 'image/jpeg', upsert: true, cacheControl: '31536000' });
       if (pErr) console.error(`  [video] poster upload failed (${posterPath}): ${pErr.message}`);
     } catch (err) {
       console.error(`  [video] poster extraction failed: ${err instanceof Error ? err.message.slice(0, 100) : err}`);
