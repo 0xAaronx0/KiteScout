@@ -34,7 +34,11 @@ Treat these as NOT significant (significant=false) — they never change the lis
 - Staff/team/crew info, testimonials, reviews, blog posts, news, social feeds
 - Payment/deposit procedure details, contact info, cookie/consent, legal, SEO text
 - Cosmetic wording or whitespace changes
-When unsure whether offer DATA changed, set significant=true.
+- Changes that only affect NON-KITE products (pure dive/scuba trips, yoga
+  retreats, fishing charters, dive-course schedules …) — many providers run
+  mixed fleets; only kite/wing-related cruises matter here. A NEW kite cruise
+  on such a site IS significant.
+When unsure whether kite-offer DATA changed, set significant=true.
 
 Return STRICT JSON only (no markdown, no prose):
 {
@@ -354,14 +358,31 @@ export async function runMonitor(
 
         const diff = await runDiff(watch.content_snapshot ?? '', readable);
         if (diff?.significant) {
+          // A provider with ZERO kite-cruise offers can't affect any listing —
+          // its dates/price/content churn (often dive trips on mixed fleets,
+          // e.g. Alsuraya) is auto-archived. Only a NEW offer stays reviewable:
+          // that's the moment such a provider becomes relevant.
+          let initialStatus = 'pending';
+          if (diff.changeType !== 'new_offer') {
+            const { count: offerCount } = await supabase
+              .from('cruise_offers')
+              .select('id', { count: 'exact', head: true })
+              .eq('cruise_provider_id', provider.id);
+            if ((offerCount ?? 0) === 0) initialStatus = 'irrelevant';
+          }
           const { data: inserted } = await supabase.from('cruise_changes').insert({
             cruise_provider_id: provider.id,
             watch_id: watch.id,
             url: watch.url,
             change_type: diff.changeType,
             summary: diff.summary,
-            // status lives in details (no DDL): pending | auto_applied | approved | applied | dismissed
-            details: { status: 'pending', offers: diff.offers ?? [], changes: diff.changes ?? [] },
+            // status lives in details (no DDL): pending | auto_applied | approved | applied | dismissed | irrelevant | superseded
+            details: {
+              status: initialStatus,
+              offers: diff.offers ?? [],
+              changes: diff.changes ?? [],
+              ...(initialStatus === 'irrelevant' ? { triage: { at: new Date().toISOString(), reason: 'provider has no kite-cruise offers' } } : {}),
+            },
             significant: true,
           }).select('id').single();
 
@@ -553,8 +574,29 @@ export async function rerunChangePreview(changeId: string): Promise<void> {
     .eq('id', changeId);
   if (upErr) throw upErr;
 
+  // The fresh diff compares CURRENT site ↔ CURRENT DB, so it subsumes every
+  // older open change of this provider — fold them into this one.
+  let superseded = 0;
+  if (!plan.review.error) {
+    const { data: siblings } = await supabase
+      .from('cruise_changes')
+      .select('id, details')
+      .eq('cruise_provider_id', provider.id)
+      .neq('id', changeId);
+    for (const sib of siblings ?? []) {
+      const sd = ((sib.details as Record<string, unknown>) ?? {});
+      const st = (sd.status as string) ?? 'pending';
+      if (st !== 'pending' && st !== 'rerun_done') continue;
+      await supabase.from('cruise_changes').update({
+        details: { ...sd, status: 'superseded', superseded_by: changeId, superseded_at: new Date().toISOString() },
+        seen: true,
+      }).eq('id', sib.id);
+      superseded++;
+    }
+  }
+
   const r = plan.review;
   console.log(r.error
     ? `✗ extraction error stored: ${r.error}`
-    : `✓ stored: ${r.changed.length} changed · ${r.added.length} new · ${r.removed.length} removed · ${r.unchanged} unchanged · mode=${rerun.mode} · ${plan.updates.length} surgical update(s) · neue Medien-Kandidaten auf ${mediaNotice.length} Offer(s)`);
+    : `✓ stored: ${r.changed.length} changed · ${r.added.length} new · ${r.removed.length} removed · ${r.unchanged} unchanged · mode=${rerun.mode} · ${plan.updates.length} surgical update(s) · neue Medien-Kandidaten auf ${mediaNotice.length} Offer(s) · ${superseded} ältere Change(s) zusammengefaltet`);
 }

@@ -69,6 +69,7 @@ const STATUS_META: Record<string, { label: string; color: string }> = {
   applied:       { label: 'Applied',      color: 'bg-emerald-50 text-emerald-700' },
   dismissed:     { label: 'Dismissed',    color: 'bg-slate-100 text-slate-500' },
   irrelevant:    { label: 'Site-only — Listing unberührt', color: 'bg-slate-100 text-slate-400' },
+  superseded:    { label: 'Durch Re-run abgedeckt', color: 'bg-slate-100 text-slate-400' },
 };
 
 function effectiveStatus(c: Change): string {
@@ -116,7 +117,7 @@ function ActionForm({ action, id, adminKey, className, children, endpoint = '/ap
 
 function ActionButtons({ change, adminKey }: { change: Change; adminKey: string | null }) {
   const status = effectiveStatus(change);
-  if (!['pending', 'rerun_running', 'rerun_done', 'approved', 'dismissed', 'irrelevant'].includes(status)) return null;
+  if (!['pending', 'rerun_running', 'rerun_done', 'approved', 'dismissed', 'irrelevant', 'superseded'].includes(status)) return null;
 
   if (!adminKey) {
     return <p className="text-xs text-slate-400 mt-1">append <code className="bg-slate-100 px-1 rounded">?key=…</code> to enable actions</p>;
@@ -166,7 +167,7 @@ function ActionButtons({ change, adminKey }: { change: Change; adminKey: string 
           <ActionForm action="dismiss" id={change.id} adminKey={adminKey} className={dismissBtn}>✕ Dismiss</ActionForm>
         </>
       )}
-      {(status === 'approved' || status === 'dismissed' || status === 'irrelevant') && (
+      {(status === 'approved' || status === 'dismissed' || status === 'irrelevant' || status === 'superseded') && (
         <ActionForm action="reopen" id={change.id} adminKey={adminKey} className={dismissBtn}>↩ Reopen</ActionForm>
       )}
       {status === 'pending' && (
