@@ -488,6 +488,42 @@ export async function rerunChangePreview(changeId: string): Promise<void> {
   console.log(`Re-running extraction preview for ${provider.root_domain} (change ${changeId})…`);
 
   const plan = await reviewProviderWithPlan(provider);
+
+  // Media: collect fresh image/video candidates for this provider (purely
+  // additive — the admin's selected/applied curation is never touched) and
+  // report how many NEW candidates appeared per offer, so the admin knows
+  // there is something new to curate. Best-effort: a collect failure must not
+  // fail the diff.
+  let mediaNotice: Array<{ offer_id: string; slug: string; new_images: number; new_videos: number }> = [];
+  try {
+    const { runCollectMediaCandidates } = await import('./media-candidates.js');
+    const { data: provOffers } = await supabase
+      .from('cruise_offers').select('id, slug').eq('cruise_provider_id', provider.id);
+    const ids = (provOffers ?? []).map(o => o.id as string);
+    const countByOffer = async (): Promise<Map<string, { i: number; v: number }>> => {
+      const m = new Map<string, { i: number; v: number }>();
+      if (ids.length === 0) return m;
+      const { data } = await supabase
+        .from('offer_media_candidates').select('cruise_offer_id, kind').in('cruise_offer_id', ids).limit(20000);
+      for (const c of data ?? []) {
+        const e = m.get(c.cruise_offer_id as string) ?? { i: 0, v: 0 };
+        if (c.kind === 'image') e.i++; else e.v++;
+        m.set(c.cruise_offer_id as string, e);
+      }
+      return m;
+    };
+    const before = await countByOffer();
+    await runCollectMediaCandidates({ domain: provider.root_domain });
+    const after = await countByOffer();
+    for (const o of provOffers ?? []) {
+      const b = before.get(o.id as string) ?? { i: 0, v: 0 };
+      const a = after.get(o.id as string) ?? { i: 0, v: 0 };
+      const ni = a.i - b.i, nv = a.v - b.v;
+      if (ni > 0 || nv > 0) mediaNotice.push({ offer_id: o.id as string, slug: o.slug as string, new_images: ni, new_videos: nv });
+    }
+  } catch (err) {
+    console.error(`  media collect during rerun failed (diff unaffected): ${err instanceof Error ? err.message.slice(0, 120) : err}`);
+  }
   await closeRenderer();
 
   const details = ((change.details as Record<string, unknown>) ?? {});
@@ -496,6 +532,7 @@ export async function rerunChangePreview(changeId: string): Promise<void> {
     at: new Date().toISOString(),
     review: plan.review,
     updates: plan.updates,
+    media: { new_candidates: mediaNotice },
     // surgical → approve applies the stored field values instantly in the web
     // route; full → approve queues the existing cron re-extraction (new/removed
     // offers need slugs, geocoding and image curation).
@@ -512,5 +549,5 @@ export async function rerunChangePreview(changeId: string): Promise<void> {
   const r = plan.review;
   console.log(r.error
     ? `✗ extraction error stored: ${r.error}`
-    : `✓ stored: ${r.changed.length} changed · ${r.added.length} new · ${r.removed.length} removed · ${r.unchanged} unchanged · mode=${rerun.mode} · ${plan.updates.length} surgical update(s)`);
+    : `✓ stored: ${r.changed.length} changed · ${r.added.length} new · ${r.removed.length} removed · ${r.unchanged} unchanged · mode=${rerun.mode} · ${plan.updates.length} surgical update(s) · neue Medien-Kandidaten auf ${mediaNotice.length} Offer(s)`);
 }

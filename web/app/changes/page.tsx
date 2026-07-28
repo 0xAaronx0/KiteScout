@@ -28,6 +28,7 @@ interface Change {
         changed?: Array<{ slug: string; current_slug?: string; title: string; fields: Array<{ field: string; before: unknown; after: unknown }> }>;
       };
       updates?: Array<{ slug: string; set: Record<string, unknown> }>;
+      media?: { new_candidates?: Array<{ offer_id: string; slug: string; new_images: number; new_videos: number }> };
     };
   } | null;
   provider: {
@@ -191,11 +192,12 @@ function fmtVal(v: unknown): string {
 }
 
 // Before/after result of a re-run, rendered inline under the change summary.
-function RerunDiff({ change }: { change: Change }) {
+function RerunDiff({ change, adminKey }: { change: Change; adminKey: string | null }) {
   const rerun = change.details?.rerun;
   if (!rerun?.review) return null;
   const r = rerun.review;
   const when = rerun.at ? fmt(rerun.at) : '';
+  const media = rerun.media?.new_candidates ?? [];
 
   if (r.error) {
     return (
@@ -211,6 +213,7 @@ function RerunDiff({ change }: { change: Change }) {
         Re-run vom {when} · Vergleich frische Extraktion ↔ Live-DB
         {typeof r.unchanged === 'number' ? ` · ${r.unchanged} Offer(s) unverändert` : ''}
         {rerun.mode === 'full' && <span className="text-amber-700"> · enthält neue/entfernte Offers → Approve läuft als volle Re-Extraktion</span>}
+        <span className="block text-emerald-700 mt-0.5">🔒 Ausgewählte Bilder &amp; Videos werden durch Approve nie verändert — kuratierte Offers sind auch gegen Entfernen geschützt.</span>
       </p>
       {nothing && (
         <p className="text-emerald-700 font-medium">Keine inhaltlichen Unterschiede — die Live-Daten sind aktuell. (Dismiss ist hier die richtige Aktion.)</p>
@@ -230,6 +233,26 @@ function RerunDiff({ change }: { change: Change }) {
           <p className="font-semibold text-red-700">− Nicht mehr gelistet ({r.removed!.length})</p>
           <ul className="ml-4 list-disc text-slate-700">
             {r.removed!.map((x, i) => <li key={i}>„{x.title}"</li>)}
+          </ul>
+        </div>
+      )}
+      {media.length > 0 && (
+        <div className="rounded-md border border-violet-200 bg-violet-50/60 p-2">
+          <p className="font-semibold text-violet-800">🖼 Neue Medien-Kandidaten gefunden</p>
+          <ul className="ml-4 list-disc text-slate-700">
+            {media.map((m, i) => (
+              <li key={i}>
+                {m.slug}: {m.new_images > 0 ? `+${m.new_images} Bild(er)` : ''}{m.new_images > 0 && m.new_videos > 0 ? ' · ' : ''}{m.new_videos > 0 ? `+${m.new_videos} Video(s)` : ''}
+                {' '}
+                <a
+                  className="text-violet-700 underline hover:text-violet-900"
+                  href={`/admin/media/${m.offer_id}${adminKey ? `?key=${encodeURIComponent(adminKey)}` : ''}`}
+                  target="_blank" rel="noopener noreferrer"
+                >
+                  kuratieren ↗
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       )}
@@ -294,7 +317,7 @@ function ChangeRow({ change, adminKey, highlight }: { change: Change; adminKey: 
             ⚙ {surgical.note}
           </p>
         )}
-        <RerunDiff change={change} />
+        <RerunDiff change={change} adminKey={adminKey} />
         <ActionButtons change={change} adminKey={adminKey} />
       </td>
       <td className="px-4 py-3 text-slate-500 whitespace-nowrap text-xs align-top">{fmt(change.detected_at)}</td>

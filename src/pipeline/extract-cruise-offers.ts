@@ -842,12 +842,47 @@ async function processProvider(cp: {
   // Existing offers for this provider → reuse already-stored images (no re-churn).
   const { data: existing } = await supabase
     .from('cruise_offers')
-    .select('slug, images')
+    .select('id, slug, images, source_url, hero_video_url')
     .eq('cruise_provider_id', cp.id);
   const existingImages = new Map<string, StoredImage[]>();
   for (const row of existing ?? []) {
     if (Array.isArray(row.images) && row.images.length > 0) {
       existingImages.set(row.slug, row.images as StoredImage[]);
+    }
+  }
+
+  // The LLM re-words titles between runs → slug churn would create a NEW row and
+  // prune the old one, silently dropping admin-curated images + hero video.
+  // Two guards:
+  //  (a) slug identity: when an offer's source page maps 1↔1 to exactly one
+  //      existing offer, REUSE that offer's slug (row identity, media survive);
+  //  (b) prune protection: offers with admin-curated media (applied/selected
+  //      candidates or a hero video) are never pruned — worst case a duplicate
+  //      row appears, which is visible and fixable, unlike silent media loss.
+  const existingBySource = new Map<string, string[]>();
+  for (const row of existing ?? []) {
+    const src = (row.source_url as string | null)?.replace(/\/$/, '');
+    if (!src) continue;
+    (existingBySource.get(src) ?? existingBySource.set(src, []).get(src)!).push(row.slug as string);
+  }
+  const curatedSlugs = new Set<string>();
+  for (const row of existing ?? []) {
+    if (row.hero_video_url) curatedSlugs.add(row.slug as string);
+  }
+  {
+    const ids = (existing ?? []).map(r => r.id as string);
+    if (ids.length > 0) {
+      const { data: curated } = await supabase
+        .from('offer_media_candidates')
+        .select('cruise_offer_id')
+        .in('cruise_offer_id', ids)
+        .in('status', ['selected', 'applied'])
+        .limit(2000);
+      const idToSlug = new Map((existing ?? []).map(r => [r.id as string, r.slug as string]));
+      for (const c of curated ?? []) {
+        const slug = idToSlug.get(c.cruise_offer_id as string);
+        if (slug) curatedSlugs.add(slug);
+      }
     }
   }
 
@@ -907,13 +942,30 @@ async function processProvider(cp: {
   const usedSlugs = new Set<string>();
   let stored = 0;
 
+  const resolveSrcUrl = (o: ExtractedOffer): string =>
+    ((o.source_page && pageByUrl.has(o.source_page)) ? o.source_page : homeUrl).replace(/\/$/, '');
+  const proposedPerSource = new Map<string, number>();
+  for (const o of offers) {
+    const u = resolveSrcUrl(o);
+    proposedPerSource.set(u, (proposedPerSource.get(u) ?? 0) + 1);
+  }
+
   for (const offer of offers) {
-    // Unique slug within the provider.
-    let slug = slugify(offer.title);
-    if (usedSlugs.has(slug)) {
-      let i = 2;
-      while (usedSlugs.has(`${slug}-${i}`)) i++;
-      slug = `${slug}-${i}`;
+    // Slug: prefer the EXISTING offer's slug when the source page pairs 1↔1
+    // (keeps row identity across LLM title re-wording → curated media survive);
+    // otherwise derive a unique slug from the title as before.
+    const offerSrc = resolveSrcUrl(offer);
+    const pairedCandidates = existingBySource.get(offerSrc) ?? [];
+    let slug: string;
+    if (pairedCandidates.length === 1 && proposedPerSource.get(offerSrc) === 1 && !usedSlugs.has(pairedCandidates[0])) {
+      slug = pairedCandidates[0];
+    } else {
+      slug = slugify(offer.title);
+      if (usedSlugs.has(slug)) {
+        let i = 2;
+        while (usedSlugs.has(`${slug}-${i}`)) i++;
+        slug = `${slug}-${i}`;
+      }
     }
     usedSlugs.add(slug);
 
@@ -1068,7 +1120,14 @@ async function processProvider(cp: {
   // so re-running the sweep doesn't accumulate duplicate offers. Only runs when
   // we successfully extracted at least one offer (we never wipe on a failed run).
   if (usedSlugs.size > 0) {
-    const list = [...usedSlugs].map(s => `"${s}"`).join(',');
+    const protectedSlugs = (existing ?? [])
+      .map(r => r.slug as string)
+      .filter(sl => !usedSlugs.has(sl) && curatedSlugs.has(sl));
+    if (protectedSlugs.length > 0) {
+      console.warn(`  ⚠ ${cp.root_domain}: NOT pruning ${protectedSlugs.length} offer(s) with admin-curated media despite slug churn: ${protectedSlugs.join(', ')} — reconcile manually`);
+    }
+    const keep = [...usedSlugs, ...protectedSlugs];
+    const list = keep.map(s => `"${s}"`).join(',');
     const { error: pruneErr } = await supabase
       .from('cruise_offers')
       .delete()
