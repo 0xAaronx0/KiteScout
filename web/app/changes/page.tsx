@@ -418,6 +418,12 @@ export default async function ChangesPage({
       </header>
 
       <main className="max-w-5xl mx-auto px-6 py-8">
+        {!adminKey && (
+          <div className="mb-6 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+            🔒 <span className="font-semibold">Read-only-Ansicht</span> — Re-run/Approve/Dismiss sind ausgeblendet.
+            Öffne die Seite mit deinem Admin-Key: <code className="bg-white px-1.5 py-0.5 rounded border border-amber-200">/changes?key=&lt;CHANGES_ADMIN_KEY&gt;</code>
+          </div>
+        )}
         {errorBanner && (
           <div className="mb-6 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
             ⚠ {errorBanner}
