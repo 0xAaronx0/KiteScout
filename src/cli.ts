@@ -330,6 +330,16 @@ async function main(): Promise<void> {
     }
 
     case 'changes': {
+      if (args[0] === 'rerun') {
+        // On-demand preview re-extraction for one /changes row (admin UI button
+        // → rerun-change.yml workflow → here). No offer writes — stores the
+        // before/after diff + surgical apply-plan on the change row.
+        const changeId = args[1];
+        if (!changeId) { console.error('Usage: pnpm cli changes rerun <change-id>'); process.exit(1); }
+        const { rerunChangePreview } = await import('./pipeline/monitor.js');
+        await rerunChangePreview(changeId);
+        break;
+      }
       const changesLimit = parseInt((args[0] && !args[0].startsWith('-') ? args[0] : '20'), 10);
       await showChanges(changesLimit, args.includes('--unseen'));
       break;

@@ -1,0 +1,46 @@
+name: Re-run change preview
+
+# On-demand re-extraction preview for ONE /changes row. Triggered by the
+# "Re-run" button on kitescout.tech/changes (via workflow_dispatch) or manually.
+# Writes NO offers — it stores the before/after diff + surgical apply-plan on
+# the cruise_changes row; the admin then approves on /changes.
+# Lives outside web/**, so it never triggers the Docker build/deploy workflow.
+on:
+  workflow_dispatch:
+    inputs:
+      change_id:
+        description: 'cruise_changes.id to re-run'
+        required: true
+
+concurrency:
+  group: rerun-change-${{ github.event.inputs.change_id }}
+  cancel-in-progress: false
+
+jobs:
+  rerun:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install
+
+      # JS-only provider sites need the Playwright render fallback.
+      - run: pnpm exec playwright install chromium --with-deps
+
+      - name: Re-run extraction preview
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: pnpm cli changes rerun "${{ github.event.inputs.change_id }}"

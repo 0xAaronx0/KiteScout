@@ -1137,7 +1137,7 @@ export async function runExtractCruiseOffers(
 // ---------------------------------------------------------------------------
 
 interface ReviewField { field: string; before: unknown; after: unknown; }
-interface OfferDiff { slug: string; title: string; fields: ReviewField[]; }
+interface OfferDiff { slug: string; current_slug?: string; title: string; fields: ReviewField[]; }
 interface ProviderReview {
   domain: string;
   name: string;
@@ -1203,6 +1203,7 @@ function reviewShape(o: ExtractedOffer, slug: string, sourceUrl: string) {
     summary: o.summary ?? null,
     spots: (o.itinerary_spots ?? []).map(s => (s.name ?? '').trim()).filter(Boolean),
     dates: normalizeDates(o.dates),
+    datesRaw: (o.dates ?? null) as unknown,
   };
 }
 type ReviewRow = ReturnType<typeof reviewShape>;
@@ -1230,13 +1231,27 @@ function diffOffer(before: ReviewRow, after: ReviewRow): ReviewField[] {
   return out;
 }
 
-async function reviewProvider(cp: { id: string; name: string | null; root_domain: string; website_url: string | null }): Promise<ProviderReview> {
+// Fields the /changes approve-apply may write surgically. Everything else
+// (itinerary spots need geocoding, images have their own pipeline) requires the
+// full re-extraction path instead.
+const SURGICAL_APPLY_FIELDS = new Set([
+  'title', 'country', 'region', 'price_from_eur', 'currency', 'duration_days',
+  'season_text', 'vessel_name', 'vessel_type', 'summary', 'booking_modes', 'dates',
+]);
+
+export interface ProviderReviewPlan {
+  review: ProviderReview;
+  /** Surgical write-set per CURRENT offer slug — raw values, ready for a DB update. */
+  updates: Array<{ slug: string; title: string; set: Record<string, unknown> }>;
+}
+
+export async function reviewProviderWithPlan(cp: { id: string; name: string | null; root_domain: string; website_url: string | null }): Promise<ProviderReviewPlan> {
   const name = cp.name ?? cp.root_domain;
   const review: ProviderReview = { domain: cp.root_domain, name, added: [], removed: [], changed: [], unchanged: 0 };
   const homeUrl = cp.website_url ?? `https://${cp.root_domain}`;
 
   const pages = await crawlProvider(homeUrl, cp.root_domain);
-  if (pages.length === 0) { review.error = 'no pages crawled'; return review; }
+  if (pages.length === 0) { review.error = 'no pages crawled'; return { review, updates: [] }; }
   const pageByUrl = new Map(pages.map(p => [p.url, p]));
   let offers: ExtractedOffer[];
   try {
@@ -1245,7 +1260,7 @@ async function reviewProvider(cp: { id: string; name: string | null; root_domain
     // Extraction failed (API error etc.) — report it as an error, never as a
     // diff: a failed run must not masquerade as "all offers removed".
     review.error = `extraction failed: ${err instanceof Error ? err.message.slice(0, 200) : String(err)}`;
-    return review;
+    return { review, updates: [] };
   }
 
   // Proposed offers — de-duplicated slug (as the write path) + resolved source page.
@@ -1269,6 +1284,7 @@ async function reviewProvider(cp: { id: string; name: string | null; root_domain
     summary: r.summary ?? null,
     spots: ((r.itinerary_spots as Array<{ name?: string }>) ?? []).map(s => (s?.name ?? '').trim()).filter(Boolean),
     dates: normalizeDates(r.dates),
+    datesRaw: (r.dates ?? null) as unknown,
   }));
 
   // Pair current↔proposed. The LLM re-words titles between runs (→ slug churn),
@@ -1295,14 +1311,28 @@ async function reviewProvider(cp: { id: string; name: string | null; root_domain
     if (c && !matchedC.has(c)) { pairs.push([c, p]); matchedC.add(c); matchedP.add(p); }
   }
 
+  const updates: ProviderReviewPlan['updates'] = [];
   for (const [c, p] of pairs) {
     const fields = diffOffer(c, p);
-    if (fields.length) review.changed.push({ slug: p.slug, title: p.title, fields });
-    else review.unchanged++;
+    if (fields.length) {
+      review.changed.push({ slug: p.slug, current_slug: c.slug, title: p.title, fields });
+      const set: Record<string, unknown> = {};
+      for (const f of fields) {
+        if (!SURGICAL_APPLY_FIELDS.has(f.field)) continue;
+        if (f.field === 'dates') set.dates = p.datesRaw;
+        else if (f.field === 'booking_modes') set.booking_modes = p.booking_modes;
+        else set[f.field] = (p as unknown as Record<string, unknown>)[f.field] ?? null;
+      }
+      if (Object.keys(set).length) updates.push({ slug: c.slug, title: c.title, set });
+    } else review.unchanged++;
   }
   for (const p of proposed) if (!matchedP.has(p)) review.added.push({ title: p.title, country: p.country, region: p.region, price: p.price_from_eur, duration: p.duration_days });
   for (const c of current) if (!matchedC.has(c)) review.removed.push({ title: c.title });
-  return review;
+  return { review, updates };
+}
+
+async function reviewProvider(cp: { id: string; name: string | null; root_domain: string; website_url: string | null }): Promise<ProviderReview> {
+  return (await reviewProviderWithPlan(cp)).review;
 }
 
 export async function runReviewCruiseOffers(opts: { domain?: string; limit?: number } = {}): Promise<void> {

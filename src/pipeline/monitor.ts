@@ -463,3 +463,54 @@ export async function applyApprovedChanges(maxProviders = 3): Promise<void> {
     }
   }
 }
+
+// ---------------------------------------------------------------------------
+// On-demand re-run preview for one /changes entry (triggered from the admin UI
+// via the rerun-change.yml workflow): re-extract the provider WITHOUT writing
+// any offer, store the before/after diff + a surgical apply-plan on the change
+// row. The admin then approves on /changes — surgical diffs apply instantly in
+// the web route; adds/removals fall back to the proven full re-extraction path.
+// ---------------------------------------------------------------------------
+export async function rerunChangePreview(changeId: string): Promise<void> {
+  const { reviewProviderWithPlan } = await import('./extract-cruise-offers.js');
+  const { closeRenderer } = await import('../lib/render.js');
+
+  const { data: change, error } = await supabase
+    .from('cruise_changes')
+    .select('id, cruise_provider_id, details, cruise_providers!inner(id, name, root_domain, website_url)')
+    .eq('id', changeId)
+    .single();
+  if (error || !change) throw new Error(`change ${changeId} not found: ${error?.message ?? ''}`);
+
+  const provider = (change as unknown as {
+    cruise_providers: { id: string; name: string | null; root_domain: string; website_url: string | null };
+  }).cruise_providers;
+  console.log(`Re-running extraction preview for ${provider.root_domain} (change ${changeId})…`);
+
+  const plan = await reviewProviderWithPlan(provider);
+  await closeRenderer();
+
+  const details = ((change.details as Record<string, unknown>) ?? {});
+  const hasStructural = plan.review.added.length > 0 || plan.review.removed.length > 0;
+  const rerun = {
+    at: new Date().toISOString(),
+    review: plan.review,
+    updates: plan.updates,
+    // surgical → approve applies the stored field values instantly in the web
+    // route; full → approve queues the existing cron re-extraction (new/removed
+    // offers need slugs, geocoding and image curation).
+    mode: plan.review.error ? 'error' : hasStructural ? 'full' : 'surgical',
+  };
+  const status = plan.review.error ? (details.status ?? 'pending') : 'rerun_done';
+
+  const { error: upErr } = await supabase
+    .from('cruise_changes')
+    .update({ details: { ...details, rerun, status } })
+    .eq('id', changeId);
+  if (upErr) throw upErr;
+
+  const r = plan.review;
+  console.log(r.error
+    ? `✗ extraction error stored: ${r.error}`
+    : `✓ stored: ${r.changed.length} changed · ${r.added.length} new · ${r.removed.length} removed · ${r.unchanged} unchanged · mode=${rerun.mode} · ${plan.updates.length} surgical update(s)`);
+}
