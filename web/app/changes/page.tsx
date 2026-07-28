@@ -67,6 +67,7 @@ const STATUS_META: Record<string, { label: string; color: string }> = {
   approved:      { label: 'Approved — applying', color: 'bg-sky-100 text-sky-800' },
   applied:       { label: 'Applied',      color: 'bg-emerald-50 text-emerald-700' },
   dismissed:     { label: 'Dismissed',    color: 'bg-slate-100 text-slate-500' },
+  irrelevant:    { label: 'Site-only — Listing unberührt', color: 'bg-slate-100 text-slate-400' },
 };
 
 function effectiveStatus(c: Change): string {
@@ -114,7 +115,7 @@ function ActionForm({ action, id, adminKey, className, children, endpoint = '/ap
 
 function ActionButtons({ change, adminKey }: { change: Change; adminKey: string | null }) {
   const status = effectiveStatus(change);
-  if (!['pending', 'rerun_running', 'rerun_done', 'approved', 'dismissed'].includes(status)) return null;
+  if (!['pending', 'rerun_running', 'rerun_done', 'approved', 'dismissed', 'irrelevant'].includes(status)) return null;
 
   if (!adminKey) {
     return <p className="text-xs text-slate-400 mt-1">append <code className="bg-slate-100 px-1 rounded">?key=…</code> to enable actions</p>;
@@ -164,7 +165,7 @@ function ActionButtons({ change, adminKey }: { change: Change; adminKey: string 
           <ActionForm action="dismiss" id={change.id} adminKey={adminKey} className={dismissBtn}>✕ Dismiss</ActionForm>
         </>
       )}
-      {(status === 'approved' || status === 'dismissed') && (
+      {(status === 'approved' || status === 'dismissed' || status === 'irrelevant') && (
         <ActionForm action="reopen" id={change.id} adminKey={adminKey} className={dismissBtn}>↩ Reopen</ActionForm>
       )}
       {status === 'pending' && (
@@ -379,7 +380,16 @@ export default async function ChangesPage({
   };
 
   const OPEN_STATUSES = ['pending', 'rerun_running', 'rerun_done'];
-  const pending = changes.filter(c => OPEN_STATUSES.includes(effectiveStatus(c)));
+  // Priorität (Aaron): entfernte Offers zuerst, dann neue, dann Preis/Daten,
+  // Content-Updates zuletzt; innerhalb der Gruppe neueste zuerst.
+  const TYPE_PRIORITY: Record<string, number> = {
+    removed_offer: 0, new_offer: 1, price_change: 2, dates_change: 3, content_update: 4,
+  };
+  const pending = changes
+    .filter(c => OPEN_STATUSES.includes(effectiveStatus(c)))
+    .sort((a, b) =>
+      (TYPE_PRIORITY[a.change_type] ?? 9) - (TYPE_PRIORITY[b.change_type] ?? 9) ||
+      Date.parse(b.detected_at) - Date.parse(a.detected_at));
   const autoApplied = changes.filter(c => effectiveStatus(c) === 'auto_applied');
   const rest = changes.filter(c => ![...OPEN_STATUSES, 'auto_applied'].includes(effectiveStatus(c)));
 

@@ -17,17 +17,24 @@ const DIFF_CHARS = 9000;      // how much old/new text we feed the diff model
 // ---------------------------------------------------------------------------
 const DIFF_PROMPT = `You compare two snapshots of a kite-cruise / liveaboard travel provider's web page (OLD vs NEW) and report only the changes that matter to a traveler.
 
-Treat these as SIGNIFICANT:
-- A new kite cruise / liveaboard / safari / trip / lessons package being offered
+SIGNIFICANT means: the change would alter what a kite-cruise LISTING displays
+(title, destinations/itinerary, price, currency, dates/season/availability,
+vessel, booking options like per-cabin/whole-boat, or the substantive cruise
+description). Concretely SIGNIFICANT:
+- A new kite cruise / liveaboard / safari / trip being offered
 - An offer, trip, or departure that has been removed or sold out
 - A price change (up or down), a discount, or a last-minute deal
 - New dates, a new season, or availability opening/closing
-- A new bookable product or "book now" for kite/snowkite services
+- Itinerary/destination, vessel, or booking-option changes; substantive rewrites
+  of a cruise's description content
 
-Treat these as NOT significant (significant=false):
-- Navigation, footer, cookie/consent banners, legal text
-- Blog posts, news, social feeds, photo galleries, testimonials
-- Cosmetic wording, layout, or whitespace changes
+Treat these as NOT significant (significant=false) — they never change the listing:
+- Buttons, CTAs and links (incl. "Book Now" buttons), menus, navigation, footer
+- Gallery/UI mechanics (filters, clickable images, sliders), styling, layout
+- Staff/team/crew info, testimonials, reviews, blog posts, news, social feeds
+- Payment/deposit procedure details, contact info, cookie/consent, legal, SEO text
+- Cosmetic wording or whitespace changes
+When unsure whether offer DATA changed, set significant=true.
 
 Return STRICT JSON only (no markdown, no prose):
 {
