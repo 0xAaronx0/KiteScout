@@ -16,6 +16,7 @@ interface Change {
     surgical?: { note?: string; updates?: Array<{ slug: string; fields: string[] }>; resolved_at?: string };
     applied_at?: string;
     applied_slugs?: string[];
+    removed_offers?: Array<{ slug: string; title?: string; at?: string }>;
     rerun_requested_at?: string;
     rerun?: {
       at?: string;
@@ -24,7 +25,7 @@ interface Change {
         error?: string;
         unchanged?: number;
         added?: Array<{ title: string; country: string | null; region: string | null; price: number | null; duration: number | null }>;
-        removed?: Array<{ title: string }>;
+        removed?: Array<{ title: string; slug?: string }>;
         changed?: Array<{ slug: string; current_slug?: string; title: string; fields: Array<{ field: string; before: unknown; after: unknown; degraded?: boolean }> }>;
       };
       updates?: Array<{ slug: string; set: Record<string, unknown> }>;
@@ -192,6 +193,26 @@ function fmtVal(v: unknown): string {
   return s.length > 220 ? s.slice(0, 220) + '…' : s;
 }
 
+// Explicit per-offer removal (destructive, admin-armed): deletes the offer +
+// its media candidates. Shown next to removed/changed offers in the diff.
+function RemoveOfferButton({ changeId, slug, adminKey, alreadyRemoved }: {
+  changeId: string; slug?: string; adminKey: string | null; alreadyRemoved: boolean;
+}) {
+  if (alreadyRemoved) return <span className="ml-2 text-[10px] font-semibold text-red-700">✔ entfernt</span>;
+  if (!adminKey || !slug) return null;
+  return (
+    <form method="post" action="/api/changes/resolve" className="inline-block ml-2">
+      <input type="hidden" name="id" value={changeId} />
+      <input type="hidden" name="action" value="remove-offer" />
+      <input type="hidden" name="slug" value={slug} />
+      <input type="hidden" name="key" value={adminKey} />
+      <button type="submit" className="rounded border border-red-300 bg-red-50 px-1.5 py-0.5 text-[10px] font-medium text-red-700 hover:bg-red-100">
+        🗑 Offer aus KiteScout entfernen
+      </button>
+    </form>
+  );
+}
+
 // Before/after result of a re-run, rendered inline under the change summary.
 function RerunDiff({ change, adminKey }: { change: Change; adminKey: string | null }) {
   const rerun = change.details?.rerun;
@@ -233,7 +254,17 @@ function RerunDiff({ change, adminKey }: { change: Change; adminKey: string | nu
         <div>
           <p className="font-semibold text-red-700">− Nicht mehr gelistet ({r.removed!.length})</p>
           <ul className="ml-4 list-disc text-slate-700">
-            {r.removed!.map((x, i) => <li key={i}>„{x.title}"</li>)}
+            {r.removed!.map((x, i) => (
+              <li key={i}>
+                „{x.title}"
+                <RemoveOfferButton
+                  changeId={change.id}
+                  slug={x.slug}
+                  adminKey={adminKey}
+                  alreadyRemoved={(change.details?.removed_offers ?? []).some(ro => ro.slug === x.slug)}
+                />
+              </li>
+            ))}
           </ul>
         </div>
       )}
@@ -259,7 +290,15 @@ function RerunDiff({ change, adminKey }: { change: Change; adminKey: string | nu
       )}
       {(r.changed?.length ?? 0) > 0 && r.changed!.map((c, i) => (
         <div key={i}>
-          <p className="font-semibold text-slate-800">~ „{c.title}"</p>
+          <p className="font-semibold text-slate-800">
+            ~ „{c.title}"
+            <RemoveOfferButton
+              changeId={change.id}
+              slug={c.current_slug}
+              adminKey={adminKey}
+              alreadyRemoved={(change.details?.removed_offers ?? []).some(ro => ro.slug === c.current_slug)}
+            />
+          </p>
           <table className="mt-1 w-full border-collapse">
             <thead>
               <tr className="text-left text-[10px] uppercase tracking-wide text-slate-400">

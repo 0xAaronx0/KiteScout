@@ -41,9 +41,10 @@ export async function POST(req: NextRequest) {
   const id = String(form.get('id') ?? '');
   const action = String(form.get('action') ?? '');
   const key = String(form.get('key') ?? '');
+  const offerSlug = String(form.get('slug') ?? '');
 
   if (key !== adminKey) return NextResponse.json({ error: 'invalid key' }, { status: 403 });
-  if (!id || (!ACTIONS[action] && action !== 'apply-rerun')) {
+  if (!id || (!ACTIONS[action] && action !== 'apply-rerun' && action !== 'remove-offer')) {
     return NextResponse.json({ error: 'invalid id/action' }, { status: 400 });
   }
 
@@ -53,6 +54,33 @@ export async function POST(req: NextRequest) {
   if (readErr || !row) return NextResponse.json({ error: readErr?.message ?? 'not found' }, { status: 404 });
 
   const details = { ...((row.details as Record<string, unknown>) ?? {}) };
+
+  if (action === 'remove-offer') {
+    // Explicit, admin-triggered removal of ONE offer of this change's provider
+    // (e.g. a "removed offer" the re-run confirmed or the admin judges dead).
+    // Deletes the offer row + its media candidates; bucket files stay (cheap,
+    // harmless). NB: a future FULL re-extraction of the provider may re-create
+    // the offer if the site still advertises it.
+    if (!offerSlug) return NextResponse.json({ error: 'slug required' }, { status: 400 });
+    const { data: offer, error: offErr } = await supabase
+      .from('cruise_offers')
+      .select('id, slug, title')
+      .eq('cruise_provider_id', row.cruise_provider_id as string)
+      .eq('slug', offerSlug)
+      .single();
+    if (offErr || !offer) return NextResponse.json({ error: `offer "${offerSlug}" not found for this provider` }, { status: 404 });
+    const { error: candErr } = await supabase
+      .from('offer_media_candidates').delete().eq('cruise_offer_id', offer.id as string);
+    if (candErr) return NextResponse.json({ error: `candidate cleanup failed: ${candErr.message}` }, { status: 500 });
+    const { error: delErr } = await supabase
+      .from('cruise_offers').delete().eq('id', offer.id as string);
+    if (delErr) return NextResponse.json({ error: `delete failed: ${delErr.message}` }, { status: 500 });
+    const removed = Array.isArray(details.removed_offers) ? details.removed_offers as unknown[] : [];
+    details.removed_offers = [...removed, { slug: offer.slug, title: offer.title, at: new Date().toISOString() }];
+    const { error: updErr } = await supabase.from('cruise_changes').update({ details, seen: true }).eq('id', id);
+    if (updErr) return NextResponse.json({ error: updErr.message }, { status: 500 });
+    return new NextResponse(null, { status: 303, headers: { Location: `/changes?key=${encodeURIComponent(key)}` } });
+  }
 
   if (action === 'apply-rerun') {
     // Surgical apply of the re-run preview: write exactly the stored values.

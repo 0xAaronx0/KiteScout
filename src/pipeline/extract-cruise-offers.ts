@@ -1201,7 +1201,7 @@ interface ProviderReview {
   domain: string;
   name: string;
   added: Array<{ title: string; country: string | null; region: string | null; price: number | null; duration: number | null }>;
-  removed: Array<{ title: string }>;
+  removed: Array<{ title: string; slug?: string }>;
   changed: OfferDiff[];
   unchanged: number;
   error?: string;
@@ -1395,7 +1395,7 @@ export async function reviewProviderWithPlan(cp: { id: string; name: string | nu
     } else review.unchanged++;
   }
   for (const p of proposed) if (!matchedP.has(p)) review.added.push({ title: p.title, country: p.country, region: p.region, price: p.price_from_eur, duration: p.duration_days });
-  for (const c of current) if (!matchedC.has(c)) review.removed.push({ title: c.title });
+  for (const c of current) if (!matchedC.has(c)) review.removed.push({ title: c.title, slug: c.slug });
   return { review, updates };
 }
 
