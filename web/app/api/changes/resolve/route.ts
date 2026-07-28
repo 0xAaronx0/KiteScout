@@ -95,5 +95,5 @@ export async function POST(req: NextRequest) {
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
 
   // Back to the dashboard (keep the key so the buttons stay armed).
-  return NextResponse.redirect(new URL(`/changes?key=${encodeURIComponent(key)}`, req.url), 303);
+  return new NextResponse(null, { status: 303, headers: { Location: `/changes?key=${encodeURIComponent(key)}` } });
 }

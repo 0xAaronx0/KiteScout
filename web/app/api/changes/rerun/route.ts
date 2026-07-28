@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
   if (!token) {
     // Human clicks land here from a form POST — answer with a readable banner
     // on the dashboard instead of raw JSON.
-    return NextResponse.redirect(new URL(`/changes?key=${encodeURIComponent(key)}&error=no-token`, req.url), 303);
+    return new NextResponse(null, { status: 303, headers: { Location: `/changes?key=${encodeURIComponent(key)}&error=no-token` } });
   }
 
   const supabase = getSupabase();
@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
   if (gh.status !== 204) {
     const body = await gh.text().catch(() => '');
     console.error(`[changes/rerun] workflow dispatch failed (HTTP ${gh.status}): ${body.slice(0, 300)}`);
-    return NextResponse.redirect(new URL(`/changes?key=${encodeURIComponent(key)}&error=dispatch-${gh.status}`, req.url), 303);
+    return new NextResponse(null, { status: 303, headers: { Location: `/changes?key=${encodeURIComponent(key)}&error=dispatch-${gh.status}` } });
   }
 
   const details = { ...((row.details as Record<string, unknown>) ?? {}) };
@@ -61,5 +61,5 @@ export async function POST(req: NextRequest) {
   const { error } = await supabase.from('cruise_changes').update({ details, seen: true }).eq('id', id);
   if (error) return NextResponse.json({ error: error.message }, { status: 500 });
 
-  return NextResponse.redirect(new URL(`/changes?key=${encodeURIComponent(key)}`, req.url), 303);
+  return new NextResponse(null, { status: 303, headers: { Location: `/changes?key=${encodeURIComponent(key)}` } });
 }
