@@ -25,7 +25,7 @@ interface Change {
         unchanged?: number;
         added?: Array<{ title: string; country: string | null; region: string | null; price: number | null; duration: number | null }>;
         removed?: Array<{ title: string }>;
-        changed?: Array<{ slug: string; current_slug?: string; title: string; fields: Array<{ field: string; before: unknown; after: unknown }> }>;
+        changed?: Array<{ slug: string; current_slug?: string; title: string; fields: Array<{ field: string; before: unknown; after: unknown; degraded?: boolean }> }>;
       };
       updates?: Array<{ slug: string; set: Record<string, unknown> }>;
       media?: { new_candidates?: Array<{ offer_id: string; slug: string; new_images: number; new_videos: number }> };
@@ -213,7 +213,7 @@ function RerunDiff({ change, adminKey }: { change: Change; adminKey: string | nu
         Re-run vom {when} · Vergleich frische Extraktion ↔ Live-DB
         {typeof r.unchanged === 'number' ? ` · ${r.unchanged} Offer(s) unverändert` : ''}
         {rerun.mode === 'full' && <span className="text-amber-700"> · enthält neue/entfernte Offers → Approve läuft als volle Re-Extraktion</span>}
-        <span className="block text-emerald-700 mt-0.5">🔒 Ausgewählte Bilder &amp; Videos werden durch Approve nie verändert — kuratierte Offers sind auch gegen Entfernen geschützt.</span>
+        <span className="block text-emerald-700 mt-0.5">🔒 Ausgewählte Bilder &amp; Videos werden durch Approve nie verändert — kuratierte Offers sind auch gegen Entfernen geschützt. Felder werden nie geleert: fehlt einem Re-run ein Wert, den die DB hat, bleibt der DB-Wert stehen.</span>
       </p>
       {nothing && (
         <p className="text-emerald-700 font-medium">Keine inhaltlichen Unterschiede — die Live-Daten sind aktuell. (Dismiss ist hier die richtige Aktion.)</p>
@@ -273,9 +273,10 @@ function RerunDiff({ change, adminKey }: { change: Change; adminKey: string | nu
                   <td className="pr-2 py-1 font-medium text-slate-600">
                     {f.field}
                     {f.field === 'spots' && <span className="block text-[10px] text-amber-600">nur per voller Re-Extraktion (Geocoding)</span>}
+                    {f.degraded && <span className="block text-[10px] text-red-600">⚠ Feld würde geleert — wird beim Approve NICHT angewendet (vermutlich unvollständiger Crawl)</span>}
                   </td>
                   <td className="pr-2 py-1 text-slate-500 break-words">{fmtVal(f.before)}</td>
-                  <td className="py-1 text-slate-900 break-words">{fmtVal(f.after)}</td>
+                  <td className={`py-1 break-words ${f.degraded ? 'text-slate-400 line-through' : 'text-slate-900'}`}>{fmtVal(f.after)}</td>
                 </tr>
               ))}
             </tbody>

@@ -65,7 +65,11 @@ export async function POST(req: NextRequest) {
     for (const u of updates) {
       const patch: Record<string, unknown> = {};
       for (const [field, value] of Object.entries(u.set ?? {})) {
-        if (APPLY_FIELDS.has(field)) patch[field] = value;
+        if (!APPLY_FIELDS.has(field)) continue;
+        // Never blank a field via approve — empty fresh values are weak-crawl
+        // artifacts (also guards plans stored before this rule existed).
+        if (value === null || value === '' || (Array.isArray(value) && value.length === 0)) continue;
+        patch[field] = value;
       }
       if (!u.slug || Object.keys(patch).length === 0) continue;
       const { error: upErr } = await supabase

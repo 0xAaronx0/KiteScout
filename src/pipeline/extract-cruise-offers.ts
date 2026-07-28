@@ -1195,7 +1195,7 @@ export async function runExtractCruiseOffers(
 // changes (new/removed offers, price/season/duration/vessel/spots/summary).
 // ---------------------------------------------------------------------------
 
-interface ReviewField { field: string; before: unknown; after: unknown; }
+interface ReviewField { field: string; before: unknown; after: unknown; degraded?: boolean; }
 interface OfferDiff { slug: string; current_slug?: string; title: string; fields: ReviewField[]; }
 interface ProviderReview {
   domain: string;
@@ -1278,15 +1278,20 @@ function diffOffer(before: ReviewRow, after: ReviewRow): ReviewField[] {
   const out: ReviewField[] = [];
   const scalars = ['title','country','region','price_from_eur','currency','duration_days','season_text','vessel_name','vessel_type','summary'] as const;
   for (const f of scalars) {
-    if ((before[f] ?? null) !== (after[f] ?? null)) out.push({ field: f, before: before[f] ?? null, after: after[f] ?? null });
+    if ((before[f] ?? null) !== (after[f] ?? null)) {
+      // A fresh crawl returning NOTHING where the DB has a value is far more
+      // often a weak/blocked fetch than a real removal — mark it, never apply.
+      const degraded = (after[f] ?? null) === null && (before[f] ?? null) !== null;
+      out.push({ field: f, before: before[f] ?? null, after: after[f] ?? null, ...(degraded ? { degraded: true } : {}) });
+    }
   }
   for (const f of ['booking_modes','spots'] as const) {
     const b = ((before[f] as string[]) ?? []).join(' | ');
     const a = ((after[f] as string[]) ?? []).join(' | ');
-    if (b !== a) out.push({ field: f, before: b || '(none)', after: a || '(none)' });
+    if (b !== a) out.push({ field: f, before: b || '(none)', after: a || '(none)', ...((!a && b) ? { degraded: true } : {}) });
   }
   const dd = datesDelta(before.dates, after.dates);
-  if (dd) out.push({ field: 'dates', before: `${before.dates.length} departure(s)`, after: dd });
+  if (dd) out.push({ field: 'dates', before: `${before.dates.length} departure(s)`, after: dd, ...((after.dates.length === 0 && before.dates.length > 0) ? { degraded: true } : {}) });
   return out;
 }
 
@@ -1378,6 +1383,10 @@ export async function reviewProviderWithPlan(cp: { id: string; name: string | nu
       const set: Record<string, unknown> = {};
       for (const f of fields) {
         if (!SURGICAL_APPLY_FIELDS.has(f.field)) continue;
+        // Never blank a field: an empty fresh value against a filled DB value
+        // is a weak-crawl artifact until proven otherwise (kite-sail.com even
+        // rejects plain fetches entirely). Shown in the diff, never applied.
+        if (f.degraded) continue;
         if (f.field === 'dates') set.dates = p.datesRaw;
         else if (f.field === 'booking_modes') set.booking_modes = p.booking_modes;
         else set[f.field] = (p as unknown as Record<string, unknown>)[f.field] ?? null;
