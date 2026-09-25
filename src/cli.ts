@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { appendFileSync } from 'node:fs';
+import { appendFileSync, writeFileSync } from 'node:fs';
 import { seedQueries } from './pipeline/seed-queries.js';
 import { runSearch } from './pipeline/search.js';
 import { runExtract } from './pipeline/extract.js';
@@ -13,6 +13,9 @@ import { runExtractCruiseReviews, recomputeAllAvgRatings } from './pipeline/extr
 import { runCollectMediaCandidates, runApplySelectedMedia } from './pipeline/media-candidates.js';
 import { runRegionConditions } from './pipeline/region-conditions.js';
 import { runMonitor, showChanges, applyApprovedChanges, type DetectedChange } from './pipeline/monitor.js';
+import {
+  listBstokedCards, scrapeBstokedListing, seedBstokedListing, packageOffersTableExists,
+} from './pipeline/bstoked-packages.js';
 import { supabase } from './lib/supabase.js';
 
 const [command, ...args] = process.argv.slice(2);
@@ -342,6 +345,46 @@ async function main(): Promise<void> {
       }
       const changesLimit = parseInt((args[0] && !args[0].startsWith('-') ? args[0] : '20'), 10);
       await showChanges(changesLimit, args.includes('--unseen'));
+      break;
+    }
+
+    case 'bstoked-packages': {
+      // bstoked.net camps/tours/accommodation → package_offers (see src/pipeline/bstoked-packages.ts).
+      const sub = args[0];
+      const outFile = flagStr('--out');
+      const refs = args.slice(1).filter(a => !a.startsWith('-') && a !== outFile);
+      if (sub === 'list') {
+        const cards = await listBstokedCards();
+        for (const c of cards) {
+          console.log(`${c.id.padStart(5)}  ${(c.type ?? '?').padEnd(13)} ${c.title.slice(0, 50).padEnd(50)}  ${c.locationLabel}  | ${c.priceLabel ?? '-'}`);
+        }
+        console.log(`\n${cards.length} listings`);
+      } else if ((sub === 'scrape' || sub === 'seed') && refs.length) {
+        const cards = new Map((await listBstokedCards()).map(c => [c.id, c]));
+        const cardFor = (ref: string) =>
+          cards.get(ref) ?? [...cards.values()].find(c => c.path.replace(/\/+$/, '').endsWith(`/${ref}`));
+        if (sub === 'seed' && !(await packageOffersTableExists())) {
+          console.error('package_offers does not exist yet: apply supabase/migrations/20260925120000_create_package_offers.sql first.');
+          process.exit(1);
+        }
+        const scraped = [];
+        for (const ref of refs) {
+          const listing = await scrapeBstokedListing(ref, cardFor(ref));
+          console.error(`  ${listing.source_listing_id} ${listing.package_type}: ${listing.title} - ${listing.image_urls.length} images`);
+          if (sub === 'seed') {
+            const res = await seedBstokedListing(listing);
+            console.error(`    → package_offers ${res.id} (${res.images} images stored)`);
+          }
+          scraped.push(listing);
+        }
+        if (sub === 'scrape') {
+          const json = JSON.stringify(scraped, null, 2);
+          if (outFile) writeFileSync(outFile, json);
+          else console.log(json);
+        }
+      } else {
+        console.log('Usage: bstoked-packages list | scrape <id|slug> … [--out file.json] | seed <id|slug> …');
+      }
       break;
     }
 

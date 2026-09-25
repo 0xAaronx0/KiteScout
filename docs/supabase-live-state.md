@@ -41,6 +41,7 @@ Both repos ship migrations against the **same** Supabase project. Applied = veri
 | `20260708000000_add_google_reviews` | ✅ | `google_rating` → 200 |
 | `20260709000000_add_avg_rating_and_media_candidates` | ✅ | `avg_rating` → 200, `offer_media_candidates` → 200 |
 | `20260710160000_add_standardized_prices` | ✅ **applied 2026-07-10** (v2; live-verifiziert: View 149 Zeilen, 0 Reseller, Preisspalten vorhanden) | 5 Preisspalten (Originalwährung!) + Reseller-Hartfilter in der View. **Backfill gelaufen** (150 Offers geschrieben): 59x pp, 31x charter/Woche, 12x beide, 71x ohne (= Price on request); Herleitung je Offer in `price_basis_note`. |
+| `20260925120000_create_package_offers` | ✅ **applied 2026-09-25** (Aaron; `package_offers` + `app_package_cards` → 200) | New `package_offers` table (camps/tours/accommodation from bstoked) + new view `app_package_cards`. Additive only: no cruise table/view touched (cruise view still 149, cruise_offers 164 after apply). **Seeded 2026-09-25** with 3 examples via `pnpm cli bstoked-packages seed 6980 7893 6951` (camp / tour / accommodation, 12 images each under `cruise-images/packages/`). |
 | `20260711150000_revoke_anon_table_grants` | ✅ **applied 2026-07-11** (Aaron; Verify-Query danach: `anon_grants = NULL` auf allen Tables) | Defense-in-depth: revoked die inerten anon/authenticated-Default-Grants auf 14 älteren Tables + default privileges. Kein App-Impact (beide Apps nutzen nur service role). |
 
 ### KCS repo (`MartinMarzi/KiteCruiseScout`, `supabase/migrations/`)
