@@ -1,11 +1,11 @@
 # Package Offers (camps, tours, accommodation) - UI Handover
 
-**Status 2026-09-25:** backend live in Supabase with **3 example rows, one per new type**. Backend
+**Status 2026-09-26:** backend live in Supabase with **5 example rows, one per type**. Backend
 only, no frontend was written. Source of the data: bstoked.net listings.
 
 > **TL;DR:** Read the new view **`app_package_cards`** (server-only, service-role key), exactly like
-> `app_cruise_offer_cards`. One row per package; `package_type` is `camp`, `tour` or
-> `accommodation`. Images use the **same private `cruise-images` bucket and the same signing** as
+> `app_cruise_offer_cards`. One row per package; `package_type` is `camp`, `tour`,
+> `accommodation`, `experience` or `course`. Images use the **same private `cruise-images` bucket and the same signing** as
 > cruises. Cruises are untouched and stay in `app_cruise_offer_cards`.
 
 ---
@@ -17,8 +17,12 @@ only, no frontend was written. Source of the data: bstoked.net listings.
 | `camp` | `6d45d2b9-e78f-4718-af6a-4df657f1e663` | Kite Camp Essaouira With Daily Coaching (Morocco) | package price (€700 / 6 nights), rating 5.0 (1 review), day-by-day programme, 3 room types |
 | `tour` | `761ff68a-a98e-443d-ad67-3065e6ecc015` | Kitesurf Brazil: 8 Days, 4 Spots, 1 Epic Trip (Ceará) | 2 alternative routes, 4 itinerary stops (2 with coords), no own map pin (see §5) |
 | `accommodation` | `b0b6967f-cd18-4ab9-838f-c0c71bf0a8c4` | Nature Surf House (Tarifa, Spain) | per-night price (€20), 4 room types, extra expenses, YouTube video |
+| `experience` | `2f07762a-eb40-4d26-a306-1d15637b0008` | Premium Kitesurfing Getaway in the North of Qatar | 5-star hotel + kiting, full board, package price (€521 / 5 nights), host currency USD |
+| `course` | `bbb19c98-0fe3-4b03-b746-69fa7a258b47` | Kitesurfing Private and Partner Training (El Gouna, Egypt) | price without unit (`From €44`, `price_unit = other`), 11 optional lesson packages, only 6 images |
 
-All three have 12 images, cancellation tiers, host info and coordinates.
+All have cancellation tiers, host info and coordinates; 12 images each except the course (6).
+bstoked's `experience` is a loose catch-all (hotel getaways, but also boat trips); the example is
+the hotel-plus-kiting kind.
 
 ## 2. Reading
 
@@ -37,7 +41,7 @@ mapping can be reused. **Nullable booleans mean "unknown", not false.**
 | Column | Type | Notes |
 |---|---|---|
 | `offer_id` (=) | uuid | primary key |
-| `package_type` | text | `camp` / `tour` / `accommodation` (`experience` / `course` allowed, none seeded) |
+| `package_type` | text | `camp` / `tour` / `accommodation` / `experience` / `course` |
 | `title` (=), `slug` (=) | text | `slug` is not unique; open listings by `offer_id` |
 | `source`, `source_listing_id`, `source_url` (=) | text | `bstoked`, the bstoked id, the bstoked listing page (see §5 booking) |
 | `continent` (=), `country` (=), `region` (=) | text | |
@@ -128,7 +132,9 @@ There are **no `provider_*` columns**: bstoked does not publish the operator's b
   cruises) plus `wind_probability`.
 - **Text:** `summary`, `conditions_text`, `accommodation`, section and day texts contain `\n`
   paragraph breaks; render them as paragraphs.
-- **Images:** max 12, ordered by `sort`. Same signing code as cruises works unchanged.
+- **Images:** max 12, ordered by `sort` (0 = hero). Same signing code as cruises works unchanged.
+  Order is bstoked's own gallery order, which can open with a hotel photo; the experience example
+  was re-curated by hand so a kite shot is the hero. Expect some heroes to need curation on rollout.
 - **Rating:** `bstoked_rating` + `bstoked_review_count` belong to the listing, not a provider.
   Review texts are not public on bstoked, so there are none.
 
@@ -137,4 +143,6 @@ There are **no `provider_*` columns**: bstoked does not publish the operator's b
 - Full rollout on request: bstoked currently lists 31 camps, 3 tours, 13 accommodations (plus
   4 experiences, 1 course). Seeding more is one command in this repo:
   `pnpm cli bstoked-packages seed <bstoked ids…>` (`list` shows all ids). The row shape stays the same.
+- 3 bstoked listings (7129, 6892, 6903) carry a broken type id (`2088`) on bstoked's side; by their
+  URLs they look like courses. They are skipped until someone confirms the type.
 - Not built yet: per-date room prices, availability, operator identity, review texts.
