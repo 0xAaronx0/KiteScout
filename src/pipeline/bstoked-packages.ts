@@ -169,10 +169,20 @@ export interface ItinerarySpot {
   order: number;
 }
 
+export type PriceUnit = 'package' | 'per_night' | 'per_day' | 'other';
+
+/** A room / unit type. Price = lowest of the monthly samples, per person, 2 guests. */
 export interface Room {
   name: string;
   description: string | null;
   features: string[];
+  price_from: number | null;          // null = price on request (bstoked returned none or €0)
+  price_currency: string | null;
+  price_unit: PriceUnit | null;
+  priced_months: number[];            // months (1-12) in which bstoked returned a price for this room
+  image_sort: number | null;          // sort of this room's captioned photo in `images` (set on seed)
+  /** scrape-time only: the room's first photo on bstoked; replaced by image_sort on seed */
+  photo_url?: string | null;
 }
 
 /** One package_offers row. Same names/meaning as cruise_offers, plus package_type, rooms, price_unit. */
@@ -206,7 +216,7 @@ export interface BstokedListing {
   price_pp_cabin_currency: string | null;
   price_from_eur: number | null;
   currency: string | null;
-  price_unit: 'package' | 'per_night' | 'per_day' | 'other' | null;
+  price_unit: PriceUnit | null;
   price_basis_note: string | null;
   pricing: Record<string, unknown> | null;
   summary: string | null;
@@ -291,6 +301,93 @@ async function routeSpots(
     spots.push({ name, country, region: null, lat: ok ? hit.lat : null, lng: ok ? hit.lng : null, order });
   }
   return spots;
+}
+
+function priceUnitOf(unitText: string): { unit: PriceUnit; nights: number | null; days: number | null } {
+  const u = unitText.replace(/^\/\s*/, '').trim().toLowerCase();
+  const nights = u.match(/^(\d+)\s+nights?\b/)?.[1];
+  const days = u.match(/^(\d+)\s+days?\b/)?.[1];
+  const unit: PriceUnit = nights || days ? 'package'
+    : u.startsWith('per night') ? 'per_night'
+    : u.startsWith('per day') ? 'per_day'
+    : 'other';
+  return { unit, nights: nights ? Number(nights) : null, days: days ? Number(days) : null };
+}
+
+interface RoomQuote { roomId: string | null; name: string; price: number | null; currency: string | null; unit: PriceUnit; photo: string | null }
+
+/**
+ * Room prices are date- and occupancy-dependent on bstoked (booking step "customize").
+ * Sample the 15th of each of the next 12 months, 2 guests, `nights` long; one room's
+ * "from" price is its lowest positive quote.
+ */
+async function sampleRoomQuotes(id: string, nights: number): Promise<Map<number, RoomQuote[]>> {
+  const byMonth = new Map<number, RoomQuote[]>();
+  const now = new Date();
+  for (let k = 1; k <= 12; k++) {
+    const start = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() + k, 15));
+    const end = new Date(start.getTime() + nights * 86_400_000);
+    const d = (x: Date) => x.toISOString().slice(0, 10);
+    const part = await fetchPartial(`/listings/bookcustom/${id}/?start=${d(start)}&end=${d(end)}&Guests=2`);
+    const quotes: RoomQuote[] = (part?.querySelectorAll('#book-accommodations label') ?? []).map(label => {
+      const priceTxt = oneLine(label.querySelector('.w-100 .semi')?.text);
+      const amount = priceTxt ? parsePrice(priceTxt) : null;
+      const photo = label.toString().match(/ac-\d+-[A-Za-z0-9]+\.(?:jpe?g|png|webp)/i)?.[0];
+      return {
+        roomId: label.querySelector('input[name="AId"]')?.getAttribute('value') ?? null,
+        name: oneLine(label.querySelector('h6')?.text),
+        price: amount && amount >= 1 ? Math.round(amount) : null,
+        currency: CURRENCY_BY_SYMBOL[priceTxt.match(/[€$£]/)?.[0] ?? ''] ?? null,
+        unit: priceUnitOf(oneLine(label.querySelector('.w-100 small')?.text)).unit,
+        photo: photo ? `https://bstoked.azureedge.net/${photo}?width=1920` : null,
+      };
+    }).filter(q => q.name);
+    byMonth.set(start.getUTCMonth() + 1, quotes);
+    await new Promise(r => setTimeout(r, 250)); // be gentle with bstoked
+  }
+  return byMonth;
+}
+
+/** Room cards (descriptions + photos) merged with the sampled quotes; keyed by bstoked room id. */
+function buildRooms(roomsP: HTMLElement | null, quotesByMonth: Map<number, RoomQuote[]>): Room[] {
+  const rooms = new Map<string, Room>();
+  for (const card of roomsP?.querySelectorAll('div.card') ?? []) {
+    const body = card.querySelector('.card-body');
+    const name = oneLine(body?.querySelector('h5')?.text);
+    if (!name) continue;
+    const roomId = card.querySelector('[id^="accommodation-c-"]')?.getAttribute('id')?.replace('accommodation-c-', '');
+    const photo = card.toString().match(/ac-\d+-[A-Za-z0-9]+\.(?:jpe?g|png|webp)/i)?.[0];
+    rooms.set(roomId ?? `name:${name.toLowerCase()}`, {
+      name,
+      description: clean(body?.querySelector('.card-text p')?.text) || null,
+      features: body?.querySelectorAll('.card-text p.mb-0').map(p => oneLine(p.text)).filter(Boolean) ?? [],
+      price_from: null, price_currency: null, price_unit: null, priced_months: [], image_sort: null,
+      photo_url: photo ? `https://bstoked.azureedge.net/${photo}?width=1920` : null,
+    });
+  }
+  for (const [month, quotes] of quotesByMonth) {
+    for (const q of quotes) {
+      const key = q.roomId && rooms.has(q.roomId) ? q.roomId
+        : [...rooms.keys()].find(k => rooms.get(k)!.name.toLowerCase() === q.name.toLowerCase()) ?? q.roomId ?? `name:${q.name.toLowerCase()}`;
+      const room = rooms.get(key) ?? {
+        name: q.name, description: null, features: [],
+        price_from: null, price_currency: null, price_unit: null, priced_months: [], image_sort: null, photo_url: null,
+      };
+      room.photo_url ??= q.photo;
+      if (q.price !== null) {
+        if (!room.priced_months.includes(month)) room.priced_months.push(month);
+        if (room.price_from === null || q.price < room.price_from) {
+          room.price_from = q.price;
+          room.price_currency = q.currency;
+          room.price_unit = q.unit;
+        }
+      }
+      rooms.set(key, room);
+    }
+  }
+  return [...rooms.values()]
+    .map(r => ({ ...r, priced_months: r.priced_months.sort((a, b) => a - b) }))
+    .sort((a, b) => (a.price_from ?? Infinity) - (b.price_from ?? Infinity));
 }
 
 export async function scrapeBstokedListing(ref: string, card?: BstokedCard): Promise<BstokedListing> {
@@ -414,11 +511,8 @@ export async function scrapeBstokedListing(ref: string, card?: BstokedCard): Pro
   const serviceCard = (sel: string) =>
     (servicesP?.querySelector(sel)?.querySelectorAll('.py-05') ?? []).map(d => oneLine(d.text)).filter(Boolean);
 
-  const rooms: Room[] = (roomsP?.querySelectorAll('.card-body') ?? []).map(body => ({
-    name: oneLine(body.querySelector('h5')?.text),
-    description: clean(body.querySelector('.card-text p')?.text) || null,
-    features: body.querySelectorAll('.card-text p.mb-0').map(p => oneLine(p.text)).filter(Boolean),
-  })).filter(r => r.name);
+  // room prices: 12 monthly samples of the booking step, as long as the package (else a week)
+  const rooms = buildRooms(roomsP, await sampleRoomQuotes(id, nights ? Number(nights) : days ? Number(days) : 7));
 
   const readDays = (el: HTMLElement) => el.querySelectorAll('.mb-1').map(d => ({
     title: oneLine(d.querySelector('h6')?.text),
@@ -514,43 +608,76 @@ export async function scrapeBstokedListing(ref: string, card?: BstokedCard): Pro
 // ---------------------------------------------------------------------------
 // seed: images → private bucket, row → package_offers (upsert on source_listing_id)
 // ---------------------------------------------------------------------------
+const MIN_GENERAL_IMAGES = 2; // the slider opens with the place, then one captioned photo per room
+
+type PackageImage = StoredImage & { room?: string };
+
+function roomCaption(r: Room): string {
+  if (r.price_from === null) return `${r.name} · price on request`;
+  const unit = r.price_unit === 'per_night' ? ' / night p.p.' : r.price_unit === 'per_day' ? ' / day p.p.' : ' p.p.';
+  return `${r.name} · from ${r.price_currency ?? 'EUR'} ${r.price_from.toLocaleString('en-US')}${unit}`;
+}
+
+async function storeImage(url: string, path: string, sort: number): Promise<PackageImage | null> {
+  const buf = await downloadImage(url);
+  if (!buf) { console.warn(`  image download failed: ${url}`); return null; }
+  return processAndStoreImage(buf, url, path, sort);
+}
+
 export async function seedBstokedListing(
   listing: BstokedListing,
   opts: { refreshImages?: boolean } = {},
-): Promise<{ id: string; images: number; imagesKept: boolean }> {
+): Promise<{ id: string; images: number; roomImages: number; generalKept: boolean }> {
   if (listing.package_type === 'cruise') {
     throw new Error(`${listing.source_listing_id} is a cruise: cruises live in cruise_offers, not package_offers`);
   }
-  // Images are curated state (hero choice, order): keep an existing set unless asked to refresh.
   const { data: existing, error: readErr } = await supabase
     .from('package_offers')
     .select('images')
     .eq('source_listing_id', listing.source_listing_id)
     .maybeSingle();
   if (readErr) throw new Error(`package_offers read failed: ${readErr.message}`);
-  const kept = (existing?.images as StoredImage[] | undefined) ?? [];
+  const before = (existing?.images as PackageImage[] | undefined) ?? [];
+  const dir = `packages/${listing.package_type}/${listing.slug}-${listing.source_listing_id}`;
 
-  let images: StoredImage[] = kept;
-  const imagesKept = kept.length > 0 && !opts.refreshImages;
-  if (!imagesKept) {
-    const dir = `packages/${listing.package_type}/${listing.slug}-${listing.source_listing_id}`;
-    images = [];
-    for (const url of listing.image_urls.slice(0, MAX_IMAGES)) {
-      const buf = await downloadImage(url);
-      if (!buf) { console.warn(`  image download failed: ${url}`); continue; }
-      const stored = await processAndStoreImage(buf, url, `${dir}/${images.length}.webp`, images.length);
-      if (stored) images.push(stored);
+  const withPhoto = listing.rooms.filter(r => r.photo_url).slice(0, MAX_IMAGES - MIN_GENERAL_IMAGES);
+  const generalSlots = MAX_IMAGES - withPhoto.length;
+
+  // General photos are curated state (hero, order): keep them unless asked to refresh.
+  const keptGeneral = before.filter(i => !i.room).sort((a, b) => a.sort - b.sort);
+  const generalKept = keptGeneral.length > 0 && !opts.refreshImages;
+  let general: PackageImage[] = generalKept ? keptGeneral.slice(0, generalSlots) : [];
+  if (!generalKept) {
+    for (const url of listing.image_urls.slice(0, generalSlots)) {
+      const img = await storeImage(url, `${dir}/${general.length}.webp`, general.length);
+      if (img) general.push(img);
     }
+  }
+
+  // One captioned photo per room; reuse an already stored copy of the same source photo.
+  const roomImages: PackageImage[] = [];
+  const rooms: Room[] = listing.rooms.map(r => ({ ...r, image_sort: null }));
+  for (const r of withPhoto) {
+    const url = r.photo_url!;
+    const file = url.match(/(ac-\d+-[A-Za-z0-9]+)\./)?.[1] ?? `room-${roomImages.length}`;
+    const img = before.find(i => i.source_url === url) ?? (await storeImage(url, `${dir}/${file}.webp`, 0));
+    if (!img) continue;
+    roomImages.push({ ...img, room: r.name, caption: roomCaption(r) });
+  }
+  const images: PackageImage[] = [...general, ...roomImages].map((img, sort) => ({ ...img, sort }));
+  for (const room of rooms) {
+    room.image_sort = images.find(i => i.room === room.name)?.sort ?? null;
+    delete room.photo_url;
   }
 
   const { image_urls: _drop, ...row } = listing;
   const { data, error } = await supabase
     .from('package_offers')
-    .upsert({ ...row, images }, { onConflict: 'source_listing_id' })
+    .upsert({ ...row, rooms, images }, { onConflict: 'source_listing_id' })
     .select('id')
     .single();
   if (error) throw new Error(`package_offers upsert failed: ${error.message}`);
-  return { id: data.id as string, images: images.length, imagesKept };
+  return { id: data.id as string, images: images.length, roomImages: roomImages.length, generalKept };
 }
 
 export async function packageOffersTableExists(): Promise<boolean> {

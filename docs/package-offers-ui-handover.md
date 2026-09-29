@@ -1,13 +1,13 @@
 # Package Offers (camps, tours, accommodation, experiences, courses) - UI Handover
 
-**Status 2026-09-29:** live in Supabase with **5 example rows, one per type**. Source: bstoked.net
+**Status 2026-09-29:** live in Supabase with **6 example rows, one per type + a second accommodation with 9 room types**. Source: bstoked.net
 listings. Backend only, no frontend was written.
 
 > **TL;DR:** Read the view **`app_package_cards`** exactly like `app_cruise_offer_cards`. Its first
 > **71 columns are identical to the cruise view** (same names, order and types), so the existing
 > cruise zod schema and mapper accept the rows unchanged (verified against KCS
 > `src/features/catalog/supabase.ts` on `origin/main`). Three package columns are appended:
-> **`package_type`**, **`price_unit`**, **`rooms`**. Images use the same private `cruise-images`
+> **`package_type`**, **`price_unit`**, **`rooms`** (room types with price and a captioned photo, §4). Images use the same private `cruise-images`
 > bucket and signing as cruises.
 
 > **Changed 2026-09-29:** the first version of this view (63 package-specific columns) is gone. If
@@ -21,7 +21,8 @@ listings. Backend only, no frontend was written.
 |---|---|---|---|
 | `camp` | `6d45d2b9-e78f-4718-af6a-4df657f1e663` | Kite Camp Essaouira With Daily Coaching (Morocco) | package price €700 p.p., 7 days, rating 5.0 (1 review), 3 room types |
 | `tour` | `761ff68a-a98e-443d-ad67-3065e6ecc015` | Kitesurf Brazil: 8 Days, 4 Spots, 1 Epic Trip (Ceará) | route with 4 stops, 2 of them with map pins |
-| `accommodation` | `b0b6967f-cd18-4ab9-838f-c0c71bf0a8c4` | Nature Surf House (Tarifa, Spain) | **per-night** price (€20), 4 room types |
+| `accommodation` | `b0b6967f-cd18-4ab9-838f-c0c71bf0a8c4` | Nature Surf House (Tarifa, Spain) | **per-night** price (€20), 4 room types but only 1 priced / with photo |
+| `accommodation` | `24f89eb6-47a7-486f-8a7e-5700de3685cb` | Kenyaways Beach Accommodation and Restaurant (Kenya) | **the room-types example:** 9 rooms, each with photo, caption and price (€34-64 / night p.p.) |
 | `experience` | `2f07762a-eb40-4d26-a306-1d15637b0008` | Premium Kitesurfing Getaway in the North of Qatar | 5-star hotel + kiting, full board, €521 p.p., host currency USD |
 | `course` | `bbb19c98-0fe3-4b03-b746-69fa7a258b47` | Kitesurfing Private and Partner Training (El Gouna, Egypt) | price without unit (`price_unit = other`), only 6 images |
 
@@ -62,7 +63,29 @@ Everything not listed here is filled exactly like for cruises (`title`, `summary
 |---|---|---|
 | `package_type` | `camp` / `tour` / `accommodation` / `experience` / `course` | type badge / filter (already flows into `tripType` via `provider_trip_types`) |
 | `price_unit` | `package` / `per_night` / `per_day` / `other` | the cruise mapper renders `price_pp_cabin` as "from EUR X p.p.". Correct for `package`; for `per_night` show "/ night", for `per_day` "/ day", for `other` just "from EUR X" |
-| `rooms` | `[{ "name", "description", "features": [] }]` | optional list of room / unit types (mainly accommodation); no prices (bstoked prices them per date) |
+| `rooms` | room / unit types, cheapest first (shape below) | "Rooms and prices" list; tapping a room jumps the slider to `image_sort` |
+
+### Rooms and captioned room photos (agreed with Aaron, 2026-09-29)
+
+```jsonc
+// rooms: cheapest first; price = lowest of 12 monthly samples (15th of each month), 2 guests, per person
+[{ "name": "Cult - One Queen double Bed (5ft)",
+   "description": "This is the best room for budget travellers. …",
+   "features": ["Walking distance to spot"],
+   "price_from": 34, "price_currency": "EUR",
+   "price_unit": "per_night",          // or "package" (for the package length), "per_day", "other"
+   "priced_months": [1, 2, 3, …, 12],  // months in which bstoked returned a price for this room
+   "image_sort": 3 }]                  // this room's photo in `images` (null = no photo)
+```
+
+- `images` = general photos first, then **one photo per room** whose `caption` is ready to show:
+  `"Cult - One Queen double Bed (5ft) · from EUR 34 / night p.p."` (or `· price on request`).
+  General photos have `caption = null`. Room photos also carry `"room": "<room name>"` (ignored
+  by the zod schema).
+- The mapper already puts `caption` into the media item's `label`, but the slider only uses it
+  as `aria-label` (`match-card-media.tsx:136`). **UI change: render `label` visibly as a caption
+  when the image has one.**
+- `price_from = null` → "price on request" (bstoked returned no price or €0).
 
 ## 5. Gotchas
 
@@ -75,7 +98,11 @@ Everything not listed here is filled exactly like for cruises (`title`, `summary
   links are not columns; they are in `source_text` (table only, not in the view, like cruises)
   for the Scout chat.
 - **Images:** max 12, ordered by `sort` (0 = hero), bstoked's gallery order; the experience's hero
-  was re-curated by hand. Expect some heroes to need curation on rollout.
+  was re-curated by hand. A room's photo is the host's first photo of that room, which is sometimes
+  the bathroom or the pool rather than the bed; curate where it matters.
+- **bstoked's prices are not always consistent:** for the Qatar experience the headline says
+  "from €521 / 5 nights" while its only room costs €1,291 p.p. in the booking step. We show both as
+  bstoked publishes them.
 
 ## 6. What comes next
 
