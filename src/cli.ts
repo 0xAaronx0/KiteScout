@@ -372,8 +372,8 @@ async function main(): Promise<void> {
           const listing = await scrapeBstokedListing(ref, cardFor(ref));
           console.error(`  ${listing.source_listing_id} ${listing.package_type}: ${listing.title} - ${listing.image_urls.length} images`);
           if (sub === 'seed') {
-            const res = await seedBstokedListing(listing);
-            console.error(`    → package_offers ${res.id} (${res.images} images stored)`);
+            const res = await seedBstokedListing(listing, { refreshImages: args.includes('--refresh-images') });
+            console.error(`    → package_offers ${res.id} (${res.images} images, ${res.imagesKept ? 'kept existing' : 'stored new'})`);
           }
           scraped.push(listing);
         }
@@ -383,7 +383,7 @@ async function main(): Promise<void> {
           else console.log(json);
         }
       } else {
-        console.log('Usage: bstoked-packages list | scrape <id|slug> … [--out file.json] | seed <id|slug> …');
+        console.log('Usage: bstoked-packages list | scrape <id|slug> … [--out file.json] | seed <id|slug> … [--refresh-images]');
       }
       break;
     }

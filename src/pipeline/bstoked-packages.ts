@@ -2,15 +2,17 @@
 // bstoked.net listings (camps, tours, accommodation, …) → package_offers.
 //
 // bstoked is server-rendered: the listing page carries the structured blocks
-// (kite conditions, trip characteristics, prose sections, payment/cancellation
-// policy, rating, lat/lng) and lazy-loads the rest through plain GET partials
-// (/listings/{images,services,accommodations,itinerary,languages,videos,
-// hostdata}/?id=). No JS rendering, no login. Not public: review texts and the
-// host's business identity (first name only).
+// (kite conditions, trip characteristics, prose sections, rating, lat/lng) and
+// lazy-loads the rest through plain GET partials (/listings/{images,services,
+// accommodations,itinerary,languages,videos,hostdata}/?id=). No JS rendering,
+// no login. Not public: review texts and the host's business identity.
+//
+// Rows use the cruise field set (Aaron 2026-09-29): only package_type, rooms and
+// price_unit are package-specific; detail without a column goes into source_text.
 //
 //   pnpm cli bstoked-packages list                 # all listings with type/price
 //   pnpm cli bstoked-packages scrape <id|slug> …    # dry run → JSON on stdout / --out
-//   pnpm cli bstoked-packages seed <id|slug> …      # images → bucket, upsert rows
+//   pnpm cli bstoked-packages seed <id|slug> …      # upsert rows; keeps existing images (--refresh-images)
 // ---------------------------------------------------------------------------
 import { parse, type HTMLElement } from 'node-html-parser';
 import { supabase } from '../lib/supabase.js';
@@ -124,7 +126,6 @@ export interface BstokedCard {
   typeLabel: string;
   title: string;
   locationLabel: string;
-  windProbability: string | null;
   priceLabel: string | null;
 }
 
@@ -139,7 +140,6 @@ export async function listBstokedCards(): Promise<BstokedCard[]> {
       const titleA = card.querySelector('.card-title a');
       const statCols = card.querySelectorAll('.stats .col-3');
       const typeLabel = oneLine(statCols[0]?.querySelector('.text')?.text);
-      const windCol = statCols.find(c => c.querySelector('i.bs-wind'));
       const price = card.querySelector('.price');
       seen.set(id, {
         id,
@@ -148,7 +148,6 @@ export async function listBstokedCards(): Promise<BstokedCard[]> {
         typeLabel,
         title: oneLine(titleA?.text),
         locationLabel: oneLine(card.querySelector('.card-loc a')?.text),
-        windProbability: windCol ? oneLine(windCol.querySelector('.text')?.text) || null : null,
         priceLabel: price ? oneLine(`${price.text} ${price.nextElementSibling?.text ?? ''}`) : null,
       });
       added++;
@@ -159,77 +158,71 @@ export async function listBstokedCards(): Promise<BstokedCard[]> {
 }
 
 // ---------------------------------------------------------------------------
-// listing detail
+// listing detail → a row in the cruise field set (see migration 20260929120000)
 // ---------------------------------------------------------------------------
-export interface CancellationTier {
-  min_days_before: number | null;
-  max_days_before: number | null;
-  refund_pct: number;
+export interface ItinerarySpot {
+  name: string;
+  country: string | null;
+  region: string | null;
+  lat: number | null;
+  lng: number | null;
+  order: number;
 }
 
+export interface Room {
+  name: string;
+  description: string | null;
+  features: string[];
+}
+
+/** One package_offers row. Same names/meaning as cruise_offers, plus package_type, rooms, price_unit. */
 export interface BstokedListing {
   package_type: PackageType;
   title: string;
   slug: string;
-  source: 'bstoked';
   source_listing_id: string;
   source_url: string;
   continent: string | null;
   country: string | null;
   region: string | null;
-  location_label: string | null;
-  lat: number | null;
-  lng: number | null;
-  pickup_location: string | null;
-  itinerary_spots: unknown[];
-  itineraries: { title: string; days: { title: string; text: string }[] }[];
+  departure_port: string | null;
+  itinerary_spots: ItinerarySpot[];
   skill_levels: string[];
   wind_strength: string[];
   water_conditions: string[];
-  spot_conditions: string[];
-  wind_probability: string | null;
-  kite_services: string[];
+  beginner_friendly: boolean | null;
   kite_lessons: boolean | null;
   equipment_rental: boolean | null;
-  conditions_text: string | null;
-  suitable_for: string[];
   suitable_for_non_kiters: boolean | null;
   family_friendly: boolean | null;
-  ambience: string[];
-  experience_types: string[];
-  meal_plan: string | null;
-  dietary_options: string[];
-  flight_search_assistance: boolean | null;
   languages: string[];
   included_services: string[];
   optional_services: string[];
-  extra_expenses: string[];
   accommodation: string | null;
-  rooms: { name: string; description: string | null; features: string[] }[];
-  duration_nights: number | null;
-  price_from: number | null;
-  price_currency: string | null;
+  meal_plan: string | null;
+  rooms: Room[];
+  duration_days: number | null;
+  price_pp_cabin: number | null;
+  price_pp_cabin_currency: string | null;
+  price_from_eur: number | null;
+  currency: string | null;
   price_unit: 'package' | 'per_night' | 'per_day' | 'other' | null;
   price_basis_note: string | null;
   pricing: Record<string, unknown> | null;
-  payment_terms: string | null;
-  deposit_pct: number | null;
-  cancellation_policy: CancellationTier[];
   summary: string | null;
-  description_sections: { heading: string; text: string }[];
-  video_urls: string[];
-  host_name: string | null;
-  host_source_id: string | null;
-  host_member_since: string | null;
-  host_response_rate: number | null;
-  host_response_time: string | null;
-  host_verified: boolean | null;
   bstoked_rating: number | null;
   bstoked_review_count: number | null;
+  /** page text + detail without its own column (day programme, host stats, videos) for the Scout chat */
   source_text: string;
   /** full-size bstoked CDN URLs in host order (first = cover); stored to the bucket on seed */
   image_urls: string[];
 }
+
+// cruise meal_plan vocabulary (KCS mapMealPlan labels these; anything else is shown humanized)
+const MEAL_PLAN: Record<string, string> = {
+  breakfast: 'breakfast', 'half board': 'half_board', 'full board': 'full_board',
+  'all inclusive': 'all_inclusive', 'self catering': 'self_catering',
+};
 
 interface JsonLd { '@type'?: string; [k: string]: unknown }
 
@@ -243,38 +236,22 @@ function readJsonLd(root: HTMLElement): JsonLd[] {
 
 interface StructuredItem { icon: string; label: string; value: string }
 
-/** A page block = a muted label column + `.listing-structured` items + prose paragraphs. */
-function readBlocks(root: HTMLElement): Map<string, { items: StructuredItem[]; prose: string[] }> {
-  const blocks = new Map<string, { items: StructuredItem[]; prose: string[] }>();
+/** A page block = a muted label column + `.listing-structured` items. */
+function readBlocks(root: HTMLElement): Map<string, StructuredItem[]> {
+  const blocks = new Map<string, StructuredItem[]>();
   for (const b of root.querySelectorAll('div.b-b.block')) {
     const label = oneLine(b.querySelector('.col-md-3')?.text).toLowerCase();
     if (!label) continue;
-    const items = b.querySelectorAll('.listing-structured > div').map(item => {
+    blocks.set(label, b.querySelectorAll('.listing-structured > div').map(item => {
       const muted = oneLine(item.querySelector('.text-muted')?.text);
-      const value = oneLine(item.text).replace(muted, '').trim();
       return {
         icon: (item.querySelector('i')?.getAttribute('title') ?? '').toLowerCase(),
         label: muted.replace(/:$/, '').toLowerCase(),
-        value,
+        value: oneLine(item.text).replace(muted, '').trim(),
       };
-    });
-    const prose = b.querySelectorAll('p.line-break').map(p => clean(p.text)).filter(Boolean);
-    blocks.set(label, { items, prose });
+    }));
   }
   return blocks;
-}
-
-function parseCancellation(text: string): CancellationTier[] {
-  const tiers: CancellationTier[] = [];
-  const re =
-    /(\d+)\s*%\s*refund for cancellations\s+(?:of more than\s+(\d+)\s+days|between\s+(\d+)\s+days and\s+(\d+)\s+days|less than\s+(\d+)\s+days)/gi;
-  for (const m of text.matchAll(re)) {
-    const pct = Number(m[1]);
-    if (m[2]) tiers.push({ min_days_before: Number(m[2]), max_days_before: null, refund_pct: pct });
-    else if (m[3]) tiers.push({ min_days_before: Number(m[4]), max_days_before: Number(m[3]), refund_pct: pct });
-    else tiers.push({ min_days_before: 0, max_days_before: Number(m[5]), refund_pct: pct });
-  }
-  return tiers;
 }
 
 function youtubeWatchUrl(src: string): string | null {
@@ -296,18 +273,18 @@ function distanceKm(a: { lat: number; lng: number }, b: { lat: number; lng: numb
  * the geocode lands within MAX_STOP_DISTANCE_KM of the listing's anchor;
  * otherwise the name stays and lat/lng stay null (a wrong pin is worse).
  */
-async function itinerarySpots(
+async function routeSpots(
   route: { days: { title: string }[] } | undefined,
   country: string | null,
   anchor: { lat: number; lng: number } | null,
-): Promise<{ name: string; country: string | null; region: null; lat: number | null; lng: number | null; order: number }[]> {
+): Promise<ItinerarySpot[]> {
   const names: string[] = [];
   for (const d of route?.days ?? []) {
     const place = d.title.replace(/^days?\s*\d+(\s*[-–]\s*\d+)?\s*[-–:]?\s*/i, '').trim();
     if (!place || /^(airport|departures?|arrival|transfer|kitesurfing)\b/i.test(place)) continue;
     for (const n of place.split('/').map(x => x.trim()).filter(Boolean)) if (!names.includes(n)) names.push(n);
   }
-  const spots = [];
+  const spots: ItinerarySpot[] = [];
   for (const [order, name] of names.entries()) {
     const hit = await geocodeSpot(name, null, country);
     const ok = hit && (!anchor || distanceKm(anchor, hit) <= MAX_STOP_DISTANCE_KM);
@@ -346,10 +323,10 @@ export async function scrapeBstokedListing(ref: string, card?: BstokedCard): Pro
 
   const title = oneLine(root.querySelector('header h1')?.text) || oneLine(product?.name);
   // the .lead line also carries the rating widget → take only the location span
-  const location_label = oneLine(root.querySelector('header .lead .text-m')?.text) || card?.locationLabel || null;
+  const locationLabel = oneLine(root.querySelector('header .lead .text-m')?.text) || card?.locationLabel || null;
   let region: string | null = null;
-  if (location_label && country && location_label !== country && location_label.endsWith(`, ${country}`)) {
-    region = location_label.slice(0, -(country.length + 2)).trim() || null;
+  if (locationLabel && country && locationLabel !== country && locationLabel.endsWith(`, ${country}`)) {
+    region = locationLabel.slice(0, -(country.length + 2)).trim() || null;
   }
 
   // ---- coordinates (windy widget; map iframe centre as fallback) ----
@@ -372,39 +349,31 @@ export async function scrapeBstokedListing(ref: string, card?: BstokedCard): Pro
 
   let skill_levels: string[] = [];
   let wind_strength: string[] = [];
-  let spot_conditions: string[] = [];
-  const kite_services: string[] = [];
-  for (const it of cond?.items ?? []) {
+  let spot: string[] = [];
+  const kiteServices: string[] = [];
+  for (const it of cond ?? []) {
     if (it.icon === 'skill level') skill_levels = splitList(it.value).map(s => s.toLowerCase());
     else if (it.label === 'wind') wind_strength = mapList(splitList(it.value), WIND);
-    else if (it.label === 'spot') spot_conditions = mapList(splitList(it.value), SPOT);
-    else if (KITE_SERVICE_BY_TITLE[it.icon]) kite_services.push(KITE_SERVICE_BY_TITLE[it.icon]);
+    else if (it.label === 'spot') spot = mapList(splitList(it.value), SPOT);
+    else if (KITE_SERVICE_BY_TITLE[it.icon]) kiteServices.push(KITE_SERVICE_BY_TITLE[it.icon]);
   }
-  const water_conditions = [...new Set(spot_conditions.map(s => WATER_FROM_SPOT[s]).filter(Boolean))];
+  const water_conditions = [...new Set(spot.map(s => WATER_FROM_SPOT[s]).filter(Boolean))];
 
-  const tripValue = (label: string) => trip?.items.find(i => i.label === label)?.value ?? null;
-  const suitable_for = mapList(splitList(tripValue('suitable for') ?? ''), SUITABLE_FOR);
-  const lower = (s: string | null) => splitList(s ?? '').map(x => x.toLowerCase());
+  const tripValue = (label: string) => trip?.find(i => i.label === label)?.value ?? null;
+  const suitableFor = mapList(splitList(tripValue('suitable for') ?? ''), SUITABLE_FOR);
+  const food = tripValue('food')?.toLowerCase() ?? null;
 
-  // ---- prose sections (The Destination / The Experience / Accommodation / …) ----
-  const sections: { heading: string; text: string }[] = [];
-  for (const b of main.querySelectorAll('div.block.py-1')) {
-    const h = b.querySelector('h4');
-    const body = b.querySelector('.line-break');
-    if (h && body) sections.push({ heading: oneLine(h.text), text: clean(body.text) });
-  }
-  const accSection = sections.find(s => s.heading.toLowerCase() === 'accommodation');
+  // ---- accommodation prose section ----
+  const accBlock = main.querySelectorAll('div.block.py-1')
+    .find(b => oneLine(b.querySelector('h4')?.text).toLowerCase() === 'accommodation');
 
-  // ---- policy + rating + price, from the flattened page text ----
+  // ---- rating + price ----
   const pageText = clean(main.structuredText);
   const flat = pageText.replace(/\s+/g, ' ');
-  const payment_terms = flat.match(/Payment Terms (.+?) Cancellation Policy/)?.[1]?.trim() ?? null;
-  const deposit = payment_terms?.match(/(\d+)\s*%\s*upfront/i)?.[1];
   const ratingEl = main.querySelector('strong.pr-025');
   const reviewCount = flat.match(/\b(\d+) reviews?\b/)?.[1];
 
-  const priceBox = main.querySelector('.d-m-none');
-  const priceRaw = oneLine(priceBox?.text) || null; // "From €1279 / 7 nights"
+  const priceRaw = oneLine(main.querySelector('.d-m-none')?.text) || null; // "From €1279 / 7 nights"
   const unitRaw = (priceRaw?.split('/')[1] ?? '').trim().toLowerCase();
   const nights = unitRaw.match(/^(\d+)\s+nights?$/)?.[1];
   const days = unitRaw.match(/^(\d+)\s+days?$/)?.[1];
@@ -418,15 +387,10 @@ export async function scrapeBstokedListing(ref: string, card?: BstokedCard): Pro
   // number but labels it with the host's own currency (e.g. "USD 1872.0682" next
   // to "From €1872"), so the amount is EUR and only the label is the host's.
   const symbol = priceRaw?.match(/From\s*([€$£])/)?.[1];
-  const price_from = priceRaw ? parsePrice(priceRaw.split('/')[0]) : product?.offers?.price ? parsePrice(product.offers.price) : null;
-  const price_currency = (symbol ? CURRENCY_BY_SYMBOL[symbol] : null) ?? product?.offers?.priceCurrency ?? null;
-  const host_currency = product?.offers?.priceCurrency ?? null;
-
-  // ---- host ----
-  const hostSection = root.querySelector('section#host');
-  const hostLink = hostSection?.querySelector('a[href^="/users/"]') ?? main.querySelector('a.profile-con');
-  const hostName = oneLine(hostSection?.querySelector('img')?.getAttribute('alt')) || null;
-  const memberSince = flat.match(/Member since ([A-Z][a-z]+ \d{4})/)?.[1] ?? null;
+  const amount = priceRaw ? parsePrice(priceRaw.split('/')[0]) : product?.offers?.price ? parsePrice(product.offers.price) : null;
+  const price = amount && amount >= 1 ? Math.round(amount) : null; // the app expects positive integers
+  const currency = (symbol ? CURRENCY_BY_SYMBOL[symbol] : null) ?? product?.offers?.priceCurrency ?? null;
+  const hostCurrency = product?.offers?.priceCurrency ?? null;
 
   // ---- partials ----
   const hostdataPath = html.match(/\/listings\/hostdata\/\?id=\d+/)?.[0];
@@ -447,141 +411,146 @@ export async function scrapeBstokedListing(ref: string, card?: BstokedCard): Pro
     if (!image_urls.includes(url)) image_urls.push(url);
   }
 
-  const video_urls = (videosP?.querySelectorAll('iframe') ?? [])
-    .map(f => youtubeWatchUrl(f.getAttribute('src') ?? ''))
-    .filter((u): u is string => !!u);
-
   const serviceCard = (sel: string) =>
     (servicesP?.querySelector(sel)?.querySelectorAll('.py-05') ?? []).map(d => oneLine(d.text)).filter(Boolean);
 
-  const rooms = (roomsP?.querySelectorAll('.card-body') ?? []).map(body => ({
+  const rooms: Room[] = (roomsP?.querySelectorAll('.card-body') ?? []).map(body => ({
     name: oneLine(body.querySelector('h5')?.text),
     description: clean(body.querySelector('.card-text p')?.text) || null,
     features: body.querySelectorAll('.card-text p.mb-0').map(p => oneLine(p.text)).filter(Boolean),
   })).filter(r => r.name);
 
-  const itineraries = (itineraryP?.querySelectorAll('.tab-pane') ?? []).map(pane => ({
-    title: oneLine(pane.querySelector('h5')?.text),
-    days: pane.querySelectorAll('.mb-1').map(d => ({
-      title: oneLine(d.querySelector('h6')?.text),
-      text: clean(d.querySelector('p')?.text),
-    })).filter(d => d.title || d.text),
-  })).filter(i => i.days.length);
+  const readDays = (el: HTMLElement) => el.querySelectorAll('.mb-1').map(d => ({
+    title: oneLine(d.querySelector('h6')?.text),
+    text: clean(d.querySelector('p')?.text),
+  })).filter(d => d.title || d.text);
+  const itineraries = (itineraryP?.querySelectorAll('.tab-pane') ?? [])
+    .map(pane => ({ title: oneLine(pane.querySelector('h5')?.text), days: readDays(pane) }))
+    .filter(i => i.days.length);
   // single-route listings render without tabs
   if (!itineraries.length && itineraryP) {
-    const days = itineraryP.querySelectorAll('.mb-1').map(d => ({
-      title: oneLine(d.querySelector('h6')?.text),
-      text: clean(d.querySelector('p')?.text),
-    })).filter(d => d.title || d.text);
-    if (days.length) itineraries.push({ title: oneLine(itineraryP.querySelector('h5')?.text), days });
+    const d = readDays(itineraryP);
+    if (d.length) itineraries.push({ title: oneLine(itineraryP.querySelector('h5')?.text), days: d });
   }
 
   const languages = (languagesP?.querySelectorAll('.badge') ?? []).map(b => oneLine(b.text)).filter(Boolean);
-  const hostText = oneLine(hostP?.structuredText);
-  const responseRate = hostText.match(/Response rate:\s*(\d+)%/)?.[1];
+  const videoUrls = (videosP?.querySelectorAll('iframe') ?? [])
+    .map(f => youtubeWatchUrl(f.getAttribute('src') ?? ''))
+    .filter((u): u is string => !!u);
 
-  const pickup_location = tripValue('typical pickup');
+  // ---- map pins: tours get their route stops; everything else one location spot ----
+  const departure_port = tripValue('typical pickup');
   let coords = Number.isFinite(lat) && Number.isFinite(lng) ? { lat, lng } : null;
-  // Multi-stop tours have no map widget: pin them at the (geocoded) pickup.
-  if (!coords && pickup_location) coords = await geocodeSpot(pickup_location, null, country);
-  const itinerary_spots = await itinerarySpots(itineraries[0], country, coords);
+  // Multi-stop tours have no map widget: anchor them at the (geocoded) pickup.
+  if (!coords && departure_port) coords = await geocodeSpot(departure_port, null, country);
+  let itinerary_spots = await routeSpots(itineraries[0], country, coords);
+  if (coords && !itinerary_spots.some(s => s.lat !== null)) {
+    const name = region ?? locationLabel ?? country ?? title;
+    itinerary_spots = [
+      { name, country, region, lat: coords.lat, lng: coords.lng, order: 0 },
+      ...itinerary_spots.map(s => ({ ...s, order: s.order + 1 })),
+    ];
+  }
+
+  // detail without a column of its own stays readable for the Scout chat
+  const hostText = oneLine(hostP?.structuredText);
+  const source_text = [
+    pageText,
+    ...itineraries.map(i => `Itinerary: ${i.title}\n\n${i.days.map(d => `${d.title}\n${d.text}`).join('\n\n')}`),
+    hostText ? `Host: ${hostText}` : '',
+    videoUrls.length ? `Videos: ${videoUrls.join(' ')}` : '',
+  ].filter(Boolean).join('\n\n');
 
   const kiteServicesKnown = cond ? true : null;
   return {
     package_type,
     title,
     slug: slugify(title),
-    source: 'bstoked',
     source_listing_id: id,
     source_url: `${BASE}${card?.path ?? path}`,
     continent: countryToContinent(country),
     country,
     region,
-    location_label,
-    lat: coords?.lat ?? null,
-    lng: coords?.lng ?? null,
-    pickup_location,
+    departure_port,
     itinerary_spots,
-    itineraries,
     skill_levels,
     wind_strength,
     water_conditions,
-    spot_conditions,
-    wind_probability: card?.windProbability ?? null,
-    kite_services,
-    kite_lessons: kiteServicesKnown && kite_services.includes('lessons'),
-    equipment_rental: kiteServicesKnown && kite_services.includes('gear_rental'),
-    conditions_text: cond?.prose.join('\n\n') || null,
-    suitable_for,
-    suitable_for_non_kiters: suitable_for.length ? suitable_for.includes('non_rider') : null,
-    family_friendly: suitable_for.length ? suitable_for.includes('family') : null,
-    ambience: lower(tripValue('ambience')),
-    experience_types: lower(tripValue('experience type')),
-    meal_plan: tripValue('food'),
-    dietary_options: lower(tripValue('available options')),
-    flight_search_assistance: trip ? trip.items.some(i => i.value.toLowerCase() === 'flight search assistance') : null,
+    beginner_friendly: skill_levels.length ? skill_levels.includes('beginner') : null,
+    kite_lessons: kiteServicesKnown && kiteServices.includes('lessons'),
+    equipment_rental: kiteServicesKnown && kiteServices.includes('gear_rental'),
+    suitable_for_non_kiters: suitableFor.length ? suitableFor.includes('non_rider') : null,
+    family_friendly: suitableFor.length ? suitableFor.includes('family') : null,
     languages,
     included_services: serviceCard('#Included-services'),
-    optional_services: serviceCard('#Optional-services'),
-    extra_expenses: serviceCard('#Extra-services'),
-    accommodation: accSection?.text ?? null,
+    // "extra expenses" (not included, paid locally) are optional costs too
+    optional_services: [...new Set([...serviceCard('#Optional-services'), ...serviceCard('#Extra-services')])],
+    accommodation: clean(accBlock?.querySelector('.line-break')?.text) || null,
+    meal_plan: food ? MEAL_PLAN[food] ?? food.replace(/[^a-z]+/g, '_').replace(/^_|_$/g, '') : null,
     rooms,
-    duration_nights: nights ? Number(nights) : null,
-    price_from,
-    price_currency,
+    // cruise convention: duration_days = nights + 1 (the app shows duration_days - 1 nights)
+    duration_days: nights ? Number(nights) + 1 : days ? Number(days) : null,
+    price_pp_cabin: price,
+    price_pp_cabin_currency: price ? currency : null,
+    // sortable trip price only; a per-night or per-lesson rate is not comparable to a trip
+    price_from_eur: price && price_unit === 'package' && currency === 'EUR' ? price : null,
+    currency,
     price_unit,
     price_basis_note: priceRaw
       ? `bstoked "from" price as displayed (${priceRaw})` +
-        (host_currency && host_currency !== price_currency
-          ? `; host prices in ${host_currency}, bstoked converts to ${price_currency} for display (original amount not exposed)`
+        (hostCurrency && hostCurrency !== currency
+          ? `; host prices in ${hostCurrency}, bstoked converts to ${currency} for display (original amount not exposed)`
           : '')
       : null,
-    pricing: priceRaw
-      ? { raw: priceRaw, card_label: card?.priceLabel ?? null, host_currency, duration_days: days ? Number(days) : null }
-      : null,
-    payment_terms,
-    deposit_pct: deposit ? Number(deposit) : null,
-    cancellation_policy: parseCancellation(flat),
+    pricing: priceRaw ? { raw: priceRaw, currency, host_currency: hostCurrency } : null,
     summary,
-    description_sections: sections.filter(s => s !== accSection),
-    video_urls,
-    host_name: hostName,
-    host_source_id: hostLink?.getAttribute('href')?.match(/\/users\/(\d+)/)?.[1] ?? null,
-    host_member_since: memberSince,
-    host_response_rate: responseRate ? Number(responseRate) : null,
-    host_response_time: hostText.match(/Response time:\s*(.+?)\s*Response rate/)?.[1] ?? null,
-    host_verified: hostP ? /Verified host/i.test(hostText) : null,
     bstoked_rating: ratingEl ? parsePrice(ratingEl.text) : null,
     bstoked_review_count: reviewCount ? Number(reviewCount) : ratingEl ? null : 0,
-    source_text: pageText,
+    source_text,
     image_urls,
   };
 }
 
 // ---------------------------------------------------------------------------
-// seed: images → private bucket, row → package_offers (upsert on source id)
+// seed: images → private bucket, row → package_offers (upsert on source_listing_id)
 // ---------------------------------------------------------------------------
-export async function seedBstokedListing(listing: BstokedListing): Promise<{ id: string; images: number }> {
+export async function seedBstokedListing(
+  listing: BstokedListing,
+  opts: { refreshImages?: boolean } = {},
+): Promise<{ id: string; images: number; imagesKept: boolean }> {
   if (listing.package_type === 'cruise') {
     throw new Error(`${listing.source_listing_id} is a cruise: cruises live in cruise_offers, not package_offers`);
   }
-  const dir = `packages/${listing.package_type}/${listing.slug}-${listing.source_listing_id}`;
-  const images: StoredImage[] = [];
-  for (const url of listing.image_urls.slice(0, MAX_IMAGES)) {
-    const buf = await downloadImage(url);
-    if (!buf) { console.warn(`  image download failed: ${url}`); continue; }
-    const stored = await processAndStoreImage(buf, url, `${dir}/${images.length}.webp`, images.length);
-    if (stored) images.push(stored);
+  // Images are curated state (hero choice, order): keep an existing set unless asked to refresh.
+  const { data: existing, error: readErr } = await supabase
+    .from('package_offers')
+    .select('images')
+    .eq('source_listing_id', listing.source_listing_id)
+    .maybeSingle();
+  if (readErr) throw new Error(`package_offers read failed: ${readErr.message}`);
+  const kept = (existing?.images as StoredImage[] | undefined) ?? [];
+
+  let images: StoredImage[] = kept;
+  const imagesKept = kept.length > 0 && !opts.refreshImages;
+  if (!imagesKept) {
+    const dir = `packages/${listing.package_type}/${listing.slug}-${listing.source_listing_id}`;
+    images = [];
+    for (const url of listing.image_urls.slice(0, MAX_IMAGES)) {
+      const buf = await downloadImage(url);
+      if (!buf) { console.warn(`  image download failed: ${url}`); continue; }
+      const stored = await processAndStoreImage(buf, url, `${dir}/${images.length}.webp`, images.length);
+      if (stored) images.push(stored);
+    }
   }
 
   const { image_urls: _drop, ...row } = listing;
   const { data, error } = await supabase
     .from('package_offers')
-    .upsert({ ...row, images, scraped_at: new Date().toISOString() }, { onConflict: 'source,source_listing_id' })
+    .upsert({ ...row, images }, { onConflict: 'source_listing_id' })
     .select('id')
     .single();
   if (error) throw new Error(`package_offers upsert failed: ${error.message}`);
-  return { id: data.id as string, images: images.length };
+  return { id: data.id as string, images: images.length, imagesKept };
 }
 
 export async function packageOffersTableExists(): Promise<boolean> {
