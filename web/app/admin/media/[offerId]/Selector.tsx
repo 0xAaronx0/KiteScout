@@ -229,6 +229,13 @@ export default function Selector({
                   >
                     🏠 fallback
                   </span>
+                ) : (c.note ?? '').startsWith('cabin: ') ? (
+                  <span
+                    className="absolute right-1 top-1 max-w-[70%] truncate rounded bg-violet-900/90 px-1.5 py-0.5 text-[10px] text-violet-200"
+                    title="cabin photo: once selected, apply captions it with this cabin's name and price"
+                  >
+                    🛏 {(c.note ?? '').slice(7)}
+                  </span>
                 ) : (c.note ?? '').startsWith('currently live') && (
                   <span className="absolute right-1 top-1 rounded bg-sky-900/90 px-1.5 py-0.5 text-[10px] text-sky-200">live</span>
                 )}

@@ -20,6 +20,9 @@ import { withRetry } from '../lib/retry.js';
 import { countryToContinent } from '../lib/continents.js';
 import { geocodeSpot } from '../lib/geocode.js';
 import { downloadImage, processAndStoreImage, slugify, type StoredImage } from '../lib/images.js';
+import { roomCaption, type PriceUnit, type Room } from '../lib/rooms.js';
+
+export type { PriceUnit, Room, RoomPriceUnit } from '../lib/rooms.js';
 
 const BASE = 'https://bstoked.net';
 const UA =
@@ -167,22 +170,6 @@ export interface ItinerarySpot {
   lat: number | null;
   lng: number | null;
   order: number;
-}
-
-export type PriceUnit = 'package' | 'per_night' | 'per_day' | 'other';
-
-/** A room / unit type. Price = lowest of the monthly samples, per person, 2 guests. */
-export interface Room {
-  name: string;
-  description: string | null;
-  features: string[];
-  price_from: number | null;          // null = price on request (bstoked returned none or €0)
-  price_currency: string | null;
-  price_unit: PriceUnit | null;
-  priced_months: number[];            // months (1-12) in which bstoked returned a price for this room
-  image_sort: number | null;          // sort of this room's captioned photo in `images` (set on seed)
-  /** scrape-time only: the room's first photo on bstoked; replaced by image_sort on seed */
-  photo_url?: string | null;
 }
 
 /** One package_offers row. Same names/meaning as cruise_offers, plus package_type, rooms, price_unit. */
@@ -385,7 +372,14 @@ function buildRooms(roomsP: HTMLElement | null, quotesByMonth: Map<number, RoomQ
       rooms.set(key, room);
     }
   }
-  return [...rooms.values()]
+  // Hosts list identical units separately ("Double bedroom", "Double bedroom 2", …): keep one.
+  const unique = new Map<string, Room>();
+  for (const r of rooms.values()) {
+    const base = r.name.replace(/\s+\d+$/, '');
+    const key = `${base.toLowerCase()}|${r.price_from}|${r.price_unit}`;
+    if (!unique.has(key)) unique.set(key, { ...r, name: base });
+  }
+  return [...unique.values()]
     .map(r => ({ ...r, priced_months: r.priced_months.sort((a, b) => a - b) }))
     .sort((a, b) => (a.price_from ?? Infinity) - (b.price_from ?? Infinity));
 }
@@ -612,11 +606,6 @@ const MIN_GENERAL_IMAGES = 2; // the slider opens with the place, then one capti
 
 type PackageImage = StoredImage & { room?: string };
 
-function roomCaption(r: Room): string {
-  if (r.price_from === null) return `${r.name} · price on request`;
-  const unit = r.price_unit === 'per_night' ? ' / night p.p.' : r.price_unit === 'per_day' ? ' / day p.p.' : ' p.p.';
-  return `${r.name} · from ${r.price_currency ?? 'EUR'} ${r.price_from.toLocaleString('en-US')}${unit}`;
-}
 
 async function storeImage(url: string, path: string, sort: number): Promise<PackageImage | null> {
   const buf = await downloadImage(url);

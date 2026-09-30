@@ -26,6 +26,7 @@ import { discoverImageUrls, downloadImage, processAndStoreImage, type StoredImag
 import { fetchPage, type FetchedPage } from './extract-cruise-offers.js';
 import { closeRenderer, renderPageEx } from '../lib/render.js';
 import { processAndStoreVideo } from '../lib/videos.js';
+import { roomCaption, type Room } from '../lib/rooms.js';
 
 const CONCURRENCY = 3;
 const MAX_IMAGE_CANDIDATES = 60; // per offer, keeps the admin UI usable
@@ -265,6 +266,11 @@ export async function runApplySelectedMedia(opts: { domain?: string } = {}): Pro
     const domain = (offer as unknown as { provider: { root_domain: string } }).provider.root_domain;
     if (opts.domain && domain !== opts.domain) continue;
 
+    // Cabin types (migration 20260930120000). Read separately and tolerate a missing
+    // column, so this daily cron never breaks on a DB without it.
+    const { data: roomRow, error: roomErr } = await supabase.from('cruise_offers').select('rooms').eq('id', offerId).single();
+    const rooms = (roomErr ? [] : ((roomRow?.rooms as Room[] | null) ?? []));
+
     const current = new Map<string, StoredImage>(
       ((offer.images as StoredImage[] | null) ?? []).filter(i => i?.source_url).map(i => [i.source_url as string, i]),
     );
@@ -275,22 +281,30 @@ export async function runApplySelectedMedia(opts: { domain?: string } = {}): Pro
     // array with just those stragglers (sardinia went 10 images → 1).
     const { data: fullSel } = await supabase
       .from('offer_media_candidates')
-      .select('id, kind, url, hero, sort, status')
+      .select('id, kind, url, hero, sort, status, note')
       .eq('cruise_offer_id', offerId)
       .in('status', ['selected', 'applied'])
       .not('sort', 'is', null);
     const imgRows = (fullSel ?? []).filter(r => r.kind === 'image').sort((a, b) => (a.sort ?? 99) - (b.sort ?? 99)).slice(0, MAX_SELECTED);
     const videoRow = rows.find(r => r.kind === 'video' && r.hero) ?? rows.find(r => r.kind === 'video');
 
-    const newImages: StoredImage[] = [];
+    const newImages: (StoredImage & { room?: string })[] = [];
     const appliedIds: string[] = [];
     let failed = 0;
+
+    // A candidate noted "cabin: <name>" is that cabin's photo: caption it like the packages do.
+    const cabinOf = (note: unknown) => {
+      const name = typeof note === 'string' && note.startsWith('cabin: ') ? note.slice(7) : null;
+      if (!name) return {};
+      const room = rooms.find(rm => rm.name === name);
+      return { room: name, caption: room ? roomCaption(room) : name };
+    };
 
     for (let i = 0; i < imgRows.length; i++) {
       const r = imgRows[i];
       const reuse = current.get(r.url as string);
       if (reuse) {
-        newImages.push({ ...reuse, sort: i });
+        newImages.push({ ...reuse, sort: i, ...cabinOf(r.note) });
         appliedIds.push(r.id as string);
         continue;
       }
@@ -299,7 +313,7 @@ export async function runApplySelectedMedia(opts: { domain?: string } = {}): Pro
       const path = `cruise-offers/${offer.cruise_provider_id}/${offer.slug}/a${i}-${hash8(r.url as string)}.webp`;
       const storedImg = await processAndStoreImage(buf, r.url as string, path, i);
       if (!storedImg) { failed++; continue; }
-      newImages.push(storedImg);
+      newImages.push({ ...storedImg, ...cabinOf(r.note) });
       appliedIds.push(r.id as string);
     }
 
@@ -309,7 +323,16 @@ export async function runApplySelectedMedia(opts: { domain?: string } = {}): Pro
     }
 
     const patch: Record<string, unknown> = {};
-    if (newImages.length > 0) patch.images = newImages.map((img, i) => ({ ...img, sort: i }));
+    if (newImages.length > 0) {
+      patch.images = newImages.map((img, i) => ({ ...img, sort: i }));
+      // link each cabin to its captioned photo (null when not selected)
+      if (rooms.length) {
+        patch.rooms = rooms.map(rm => {
+          const sort = newImages.findIndex(img => img.room === rm.name);
+          return { ...rm, image_sort: sort >= 0 ? sort : null };
+        });
+      }
+    }
     if (videoRow) {
       // Mirror the hero video into our public bucket, streaming-optimized
       // (720p, muted, faststart) — provider files are 25–130 MB and start

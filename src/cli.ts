@@ -1,5 +1,5 @@
 import 'dotenv/config';
-import { appendFileSync, writeFileSync } from 'node:fs';
+import { appendFileSync, readFileSync, writeFileSync } from 'node:fs';
 import { seedQueries } from './pipeline/seed-queries.js';
 import { runSearch } from './pipeline/search.js';
 import { runExtract } from './pipeline/extract.js';
@@ -16,6 +16,7 @@ import { runMonitor, showChanges, applyApprovedChanges, type DetectedChange } fr
 import {
   listBstokedCards, scrapeBstokedListing, seedBstokedListing, packageOffersTableExists,
 } from './pipeline/bstoked-packages.js';
+import { runCruiseRooms } from './pipeline/cruise-rooms.js';
 import { supabase } from './lib/supabase.js';
 
 const [command, ...args] = process.argv.slice(2);
@@ -345,6 +346,20 @@ async function main(): Promise<void> {
       }
       const changesLimit = parseInt((args[0] && !args[0].startsWith('-') ? args[0] : '20'), 10);
       await showChanges(changesLimit, args.includes('--unseen'));
+      break;
+    }
+
+    case 'cruise-rooms': {
+      // Cabin types for cruises → cruise_offers.rooms (see src/pipeline/cruise-rooms.ts).
+      const fromFile = flagStr('--from');
+      const results = await runCruiseRooms({
+        dryRun: args.includes('--dry-run'),
+        offerId: flagStr('--offer'),
+        from: fromFile ? JSON.parse(readFileSync(fromFile, 'utf8')) : undefined,
+        bstokedOnly: args.includes('--bstoked-only'),
+      });
+      const outFile = flagStr('--out');
+      if (outFile) writeFileSync(outFile, JSON.stringify(results, null, 2));
       break;
     }
 

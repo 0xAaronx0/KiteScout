@@ -87,6 +87,23 @@ Everything not listed here is filled exactly like for cruises (`title`, `summary
   when the image has one.**
 - `price_from = null` → "price on request" (bstoked returned no price or €0).
 
+### Cruises have `rooms` too (migration `20260930120000`)
+
+`app_cruise_offer_cards` gets the same `rooms` column appended (column 72), so one UI component
+serves both. For cruises: `price_unit` can also be `per_cabin` (caption "… from EUR 3,200 per
+cabin"); `priced_months` is `[]` unless the cabins came from bstoked. Cabin **photos** are curated
+by Aaron in `/admin/media` (candidates tagged "cabin: <name>"); only then do they appear in
+`images` with a caption and `image_sort` is set, so many cruise cabins start without a photo.
+
+**Cruise cabin prices (Aaron, 2026-09-30):** the provider's own website sets the price (it's the
+source the daily monitor watches). Each priced cabin carries `price_source`:
+`"provider_site"` (from the offer's text) or `"bstoked"` (only for cruises whose website shows no
+price; bstoked data is host-maintained and can be stale). When the website has a price, bstoked
+cabins keep name and photo but `price_from = null` ("price on request"). The card's
+`price_pp_cabin` and the cheapest cabin can still differ (e.g. shared vs private cabin): decide in
+the UI which "from" price the card shows when cabins are present.
+`app_package_cards` was re-created so both views share their first 72 columns.
+
 ## 5. Gotchas
 
 - **Prices:** EUR as bstoked displays them. Never convert. `pricing.host_currency` (e.g. USD) is
