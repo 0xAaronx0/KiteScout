@@ -17,10 +17,9 @@
 // ---------------------------------------------------------------------------
 import pLimit from 'p-limit';
 import { supabase } from '../lib/supabase.js';
-import { anthropic } from '../lib/anthropic.js';
+import { anthropic, CABIN_MODEL } from '../lib/anthropic.js';
 import { scrapeBstokedListing, type Room, type RoomPriceUnit } from './bstoked-packages.js';
 
-const CABIN_MODEL = 'claude-opus-5-5';
 const CONCURRENCY = 4;
 
 // A whole-boat charter is a booking mode (price_charter_week), not a cabin type.
@@ -50,11 +49,9 @@ export interface CabinResult {
   note?: string;
 }
 
-async function loadOffers(onlyId?: string): Promise<OfferRow[]> {
+async function loadOffers(): Promise<OfferRow[]> {
   // The app view decides which offers are live (no resellers / dead / duplicates).
-  let q = supabase.from('app_cruise_offer_cards').select('offer_id, provider_bstoked_url');
-  if (onlyId) q = q.eq('offer_id', onlyId);
-  const { data: cards, error } = await q;
+  const { data: cards, error } = await supabase.from('app_cruise_offer_cards').select('offer_id, provider_bstoked_url');
   if (error) throw new Error(`app_cruise_offer_cards read failed: ${error.message}`);
   const bstoked = new Map((cards ?? []).map(c => [c.offer_id as string, (c.provider_bstoked_url as string | null) ?? null]));
 
@@ -230,10 +227,14 @@ export async function runCruiseRooms(opts: {
   if (opts.from) {
     results = opts.from.filter(r => !opts.offerId || r.offer_id === opts.offerId);
   } else {
-    const offers = await loadOffers(opts.offerId);
+    const all = await loadOffers();
+    const offers = opts.offerId ? all.filter(o => o.id === opts.offerId) : all;
     console.log(`${offers.length} live cruise offer(s)`);
-    const fromBstoked = await bstokedCabins(offers);
-    if (opts.bstokedOnly) return [...fromBstoked.values()];
+    // Matching must see every offer of the provider (a single-offer run would otherwise
+    // skip the ambiguity check against its siblings).
+    const urls = new Set(offers.map(o => o.bstoked_url).filter(Boolean));
+    const fromBstoked = await bstokedCabins(all.filter(o => o.bstoked_url && urls.has(o.bstoked_url)));
+    if (opts.bstokedOnly) return [...fromBstoked.values()].filter(r => offers.some(o => o.id === r.offer_id));
     results = await extractAll(offers, fromBstoked);
   }
   await writeResults(results, opts.dryRun);
