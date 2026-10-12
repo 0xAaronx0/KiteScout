@@ -58,7 +58,7 @@ test('ptk: content', () => {
   assert.equal(contentProblem(c), null);
   assert.equal(c.title, 'Punta Trettu Kitesurf House');
   assert.equal(c.country, 'Italy');
-  assert.equal(c.region, 'Sardinia');
+  assert.equal(c.region, 'Punta Trettu, Sardinia');
   assert.equal(c.spot, 'Punta Trettu');
   assert.equal(c.mealPlan, 'self_catering');
   assert.match(c.summary, /4 independent suites/);

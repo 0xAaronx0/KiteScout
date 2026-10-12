@@ -171,7 +171,7 @@ export function parsePeahiContent(p: PeahiPages): OfferContent {
     summary,
     continent: 'Europe',
     country: 'Italy',
-    region: 'Sicily',
+    region: 'Lo Stagnone, Sicily',
     spot: 'Lo Stagnone',
     // Kallyas Google map on the kite center's home page (checked 2026-10-12)
     spotCoords: coords,

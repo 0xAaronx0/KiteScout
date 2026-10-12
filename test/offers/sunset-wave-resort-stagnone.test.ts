@@ -43,7 +43,7 @@ test('swr: content', async () => {
   assert.equal(contentProblem(c), null);
   assert.equal(c.title, 'Sunset Wave Resort');
   assert.equal(c.country, 'Italy');
-  assert.equal(c.region, 'Sicily');
+  assert.equal(c.region, 'Lo Stagnone, Sicily');
   assert.equal(c.spot, 'Lo Stagnone');
   assert.equal(c.bookingUrl, null);
   assert.match(c.summary, /5 themed rooms \(the largest sleeps 4\) in Contrada Birgi/);

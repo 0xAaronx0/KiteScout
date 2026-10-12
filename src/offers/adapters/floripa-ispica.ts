@@ -189,7 +189,7 @@ export function parseFloripaContent(p: FloripaPages): OfferContent {
     summary,
     continent: 'Europe',
     country: 'Italy',
-    region: 'Sicily',
+    region: 'Ragusa, Sicily',
     spot: 'Santa Maria del Focallo',
     itinerarySpots: [],
     durationDays: null,

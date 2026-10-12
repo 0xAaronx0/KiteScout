@@ -57,7 +57,7 @@ test('khs: content', async () => {
   assert.equal(contentProblem(c), null);
   assert.equal(c.title, 'Kite House Sardinia');
   assert.equal(c.country, 'Italy');
-  assert.equal(c.region, 'Sardinia');
+  assert.equal(c.region, 'Punta Trettu, Sardinia');
   assert.equal(c.spot, 'Punta Trettu');
   assert.equal(c.mealPlan, 'self_catering');
   assert.match(c.summary, /6 km from the Punta Trettu lagoon .* open all year/);

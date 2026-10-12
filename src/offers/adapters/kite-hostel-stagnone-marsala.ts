@@ -181,7 +181,7 @@ export function parseKiteHostelContent(p: KhsPages, today = todayIso()): OfferCo
     summary,
     continent: 'Europe',
     country: 'Italy',
-    region: 'Sicily',
+    region: 'Lo Stagnone, Sicily',
     spot: 'Lo Stagnone',
     itinerarySpots: [],
     durationDays: null,

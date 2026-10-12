@@ -203,6 +203,7 @@ const KNOWN_PINS: Record<string, { lat: number; lng: number }> = {
   'praia do bilene': { lat: -25.2836, lng: 33.275 }, // Uembje lagoon; "Bilene" lands inland
   'bislig beach, bulalacao': { lat: 12.3262, lng: 121.3437 }, // Bulalacao town
   'bulabog beach, boracay': { lat: 11.9637, lng: 121.9303 },
+  'lo stagnone': { lat: 37.865, lng: 12.455 }, // the lagoon; Nominatim lands 40 km north-east near Custonaci
 };
 
 export async function locateSpots(c: OfferContent, stored: unknown): Promise<StoredSpot[]> {

@@ -183,7 +183,7 @@ export function parsePuntaTrettuContent(p: PtkPages, today = todayIso()): OfferC
     summary,
     continent: 'Europe',
     country: 'Italy',
-    region: 'Sardinia',
+    region: 'Punta Trettu, Sardinia',
     spot: 'Punta Trettu',
     itinerarySpots: [],
     durationDays: null,

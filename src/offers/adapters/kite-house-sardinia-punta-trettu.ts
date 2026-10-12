@@ -173,7 +173,7 @@ export function parseKiteHouseSardiniaContent(p: KhsPages): OfferContent {
     summary,
     continent: 'Europe',
     country: 'Italy',
-    region: 'Sardinia',
+    region: 'Punta Trettu, Sardinia',
     spot: 'Punta Trettu',
     itinerarySpots: [],
     durationDays: null,

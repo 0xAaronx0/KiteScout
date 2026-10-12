@@ -53,7 +53,7 @@ test('floripa: content', async () => {
   assert.equal(contentProblem(c), null);
   assert.equal(c.title, 'Floripa Yoga & Kitesurf House');
   assert.equal(c.country, 'Italy');
-  assert.equal(c.region, 'Sicily');
+  assert.equal(c.region, 'Ragusa, Sicily');
   assert.equal(c.spot, 'Santa Maria del Focallo');
   assert.equal(c.mealPlan, 'breakfast');
   assert.equal(c.spotCoords, undefined);

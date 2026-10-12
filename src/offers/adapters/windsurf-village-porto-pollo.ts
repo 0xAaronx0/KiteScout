@@ -278,7 +278,7 @@ export function parseWindsurfVillageContent(p: WvPages): OfferContent {
     summary,
     continent: 'Europe',
     country: 'Italy',
-    region: 'Sardinia',
+    region: 'Porto Pollo, Sardinia',
     spot: 'Porto Pollo',
     itinerarySpots: [],
     durationDays: null,

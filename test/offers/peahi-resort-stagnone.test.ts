@@ -70,7 +70,7 @@ test('peahi: content', async () => {
   assert.equal(c.title, 'Peahi Resort');
   assert.equal(c.kind, 'accommodation');
   assert.equal(c.country, 'Italy');
-  assert.equal(c.region, 'Sicily');
+  assert.equal(c.region, 'Lo Stagnone, Sicily');
   assert.equal(c.spot, 'Lo Stagnone');
   assert.deepEqual(c.spotCoords, { lat: 37.887818, lng: 12.471306 });
   assert.equal(c.mealPlan, 'breakfast');
