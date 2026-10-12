@@ -1,66 +1,17 @@
 import pLimit from 'p-limit';
 import { supabase } from '../lib/supabase.js';
-import { anthropic, EXTRACTION_MODEL } from '../lib/anthropic.js';
 import { extract as tavilyExtract } from '../lib/tavily.js';
-import { applySurgicalToChange } from './surgical.js';
 import { runExtractCruiseOffers } from './extract-cruise-offers.js';
-import { withRetry } from '../lib/retry.js';
 import { fetchPageConditional } from '../lib/fetchPage.js';
 import { htmlToText, collapse, contentHash } from '../lib/content.js';
+import { factsKey, normUrl, siteLossSignal } from './cruise-state.js';
+import { newCtx, observePage, observeSiteLoss, recordSourceGone, type ObserveCtx } from './observe.js';
+import { isAdapterUrl } from '../cruise-adapters/registry.js';
 
 const CONCURRENCY = 3;
-const SNAPSHOT_CHARS = 18000; // stored snapshot used for the next diff
-const DIFF_CHARS = 9000;      // how much old/new text we feed the diff model
-
-// ---------------------------------------------------------------------------
-// Diff prompt — only runs when the content hash actually changed.
-// ---------------------------------------------------------------------------
-const DIFF_PROMPT = `You compare two snapshots of a kite-cruise / liveaboard travel provider's web page (OLD vs NEW) and report only the changes that matter to a traveler.
-
-SIGNIFICANT means: the change would alter what a kite-cruise LISTING displays
-(title, destinations/itinerary, price, currency, dates/season/availability,
-vessel, booking options like per-cabin/whole-boat, or the substantive cruise
-description). Concretely SIGNIFICANT:
-- A new kite cruise / liveaboard / safari / trip being offered
-- An offer, trip, or departure that has been removed or sold out
-- A price change (up or down), a discount, or a last-minute deal
-- New dates, a new season, or availability opening/closing
-- Itinerary/destination, vessel, or booking-option changes; substantive rewrites
-  of a cruise's description content
-
-Treat these as NOT significant (significant=false) — they never change the listing:
-- Buttons, CTAs and links (incl. "Book Now" buttons), menus, navigation, footer
-- Gallery/UI mechanics (filters, clickable images, sliders), styling, layout
-- Staff/team/crew info, testimonials, reviews, blog posts, news, social feeds
-- Payment/deposit procedure details, contact info, cookie/consent, legal, SEO text
-- Cosmetic wording or whitespace changes
-- Changes that only affect NON-KITE products (pure dive/scuba trips, yoga
-  retreats, fishing charters, dive-course schedules …) — many providers run
-  mixed fleets; only kite/wing-related cruises matter here. A NEW kite cruise
-  on such a site IS significant.
-When unsure whether kite-offer DATA changed, set significant=true.
-
-Return STRICT JSON only (no markdown, no prose):
-{
-  "significant": boolean,
-  "changeType": "new_offer" | "price_change" | "dates_change" | "removed_offer" | "content_update" | "none",
-  "summary": "max 160 chars, what changed for a traveler",
-  "offers": [
-    { "name": string|null, "price": string|null, "dates": string|null, "type": string|null, "location": string|null }
-  ],
-  "changes": ["short bullet of each concrete change"]
-}
-
-"offers" = the bookable kite-cruise offers currently visible in the NEW snapshot (best effort; [] if none).
-If nothing traveler-relevant changed, set significant=false and changeType="none".`;
-
-interface DiffResult {
-  significant: boolean;
-  changeType: string;
-  summary: string;
-  offers?: Array<{ name?: string | null; price?: string | null; dates?: string | null; type?: string | null; location?: string | null }>;
-  changes?: string[];
-}
+// Stored snapshot = what the next run's facts filter compares against. As long as the
+// LLM read (60k chars) so a price far down a long page is not invisible to the filter.
+const SNAPSHOT_CHARS = 60000;
 
 interface WatchRow {
   id: string;
@@ -79,6 +30,7 @@ interface ProviderRow {
   name: string | null;
   website_url: string | null;
   root_domain: string;
+  status: string | null;
 }
 
 export interface DetectedChange {
@@ -153,30 +105,6 @@ async function ensureWatches(): Promise<void> {
 }
 
 // ---------------------------------------------------------------------------
-// LLM diff (only on real content change)
-// ---------------------------------------------------------------------------
-async function runDiff(oldText: string, newText: string): Promise<DiffResult | null> {
-  try {
-    const msg = await withRetry(() =>
-      anthropic.messages.create({
-        model: EXTRACTION_MODEL,
-        max_tokens: 700,
-        system: [{ type: 'text', text: DIFF_PROMPT, cache_control: { type: 'ephemeral' } }],
-        messages: [{
-          role: 'user',
-          content: `OLD snapshot:\n${oldText.slice(0, DIFF_CHARS)}\n\n---\n\nNEW snapshot:\n${newText.slice(0, DIFF_CHARS)}`,
-        }],
-      }),
-    );
-    const text = msg.content[0].type === 'text' ? msg.content[0].text : '';
-    const json = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
-    return JSON.parse(json) as DiffResult;
-  } catch {
-    return null;
-  }
-}
-
-// ---------------------------------------------------------------------------
 // Persist watch state after a check.
 // ---------------------------------------------------------------------------
 async function saveWatch(
@@ -233,12 +161,21 @@ async function recordFailure(watch: WatchRow): Promise<void> {
 // Fetch readable page text, preferring the cheap direct path and falling back
 // to Tavily extract for sites that block bots.
 // ---------------------------------------------------------------------------
+/** Tavily watches retry the direct path once a week (spread by watch id): one transient
+ *  failure used to pin a page on Tavily forever (108/200 watches by 2026-10-12), and
+ *  Tavily's render variants caused daily flip-flop "changes". */
+function directRetryDue(watch: WatchRow): boolean {
+  let h = 0;
+  for (const c of watch.id) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+  return (Math.floor(Date.now() / 86_400_000) + h) % 7 === 0;
+}
+
 async function getReadable(watch: WatchRow): Promise<
   | { kind: 'not_modified' }
   | { kind: 'ok'; readable: string; etag: string | null; lastModified: string | null; method: 'direct' | 'tavily' }
-  | { kind: 'fail' }
+  | { kind: 'fail'; httpStatus?: number }
 > {
-  if (watch.fetch_method === 'direct') {
+  if (watch.fetch_method === 'direct' || directRetryDue(watch)) {
     const r = await fetchPageConditional(watch.url, { etag: watch.etag, lastModified: watch.last_modified });
     if (r.status === 'not_modified') return { kind: 'not_modified' };
     if (r.status === 'ok' && r.html) {
@@ -247,6 +184,8 @@ async function getReadable(watch: WatchRow): Promise<
         return { kind: 'ok', readable, etag: r.etag ?? null, lastModified: r.lastModified ?? null, method: 'direct' };
       }
     }
+    // A page that is really gone must not be resurrected by Tavily's cache/soft-404 text.
+    if (r.httpStatus === 404 || r.httpStatus === 410) return { kind: 'fail', httpStatus: r.httpStatus };
     // blocked/error/too-thin → Tavily fallback
     const t = await tavilyExtract(watch.url);
     if (t && collapse(t).length >= 200) {
@@ -268,9 +207,11 @@ async function getReadable(watch: WatchRow): Promise<
 // ---------------------------------------------------------------------------
 export async function runMonitor(
   batchSize = 30,
-  opts: { intervalDays?: number; all?: boolean; baselineOnly?: boolean; cutoffISO?: string } = {},
+  opts: { intervalDays?: number; all?: boolean; baselineOnly?: boolean; cutoffISO?: string; ctx?: ObserveCtx } = {},
 ): Promise<MonitorResult> {
   const intervalDays = opts.intervalDays ?? 7;
+  const ctx = opts.ctx ?? newCtx();
+  const eventsStart = ctx.events.length;
 
   await ensureWatches();
 
@@ -298,10 +239,11 @@ export async function runMonitor(
 
   // Load the cruise providers for these watches
   const providerIds = [...new Set(watches.map(w => w.cruise_provider_id as string))];
-  const { data: providerRows } = await supabase
+  const { data: providerRows, error: provErr } = await supabase
     .from('cruise_providers')
-    .select('id, name, website_url, root_domain')
+    .select('id, name, website_url, root_domain, status')
     .in('id', providerIds);
+  if (provErr) throw provErr;
   const providerMap = new Map<string, ProviderRow>(
     (providerRows ?? []).map(p => [p.id as string, p as ProviderRow]),
   );
@@ -318,6 +260,12 @@ export async function runMonitor(
       limit(async () => {
         const provider = providerMap.get(watch.cruise_provider_id);
         if (!provider) return;
+        // Hidden providers (dead/duplicate) aren't checked; touch the row so the --all loop drains.
+        if (provider.status === 'dead' || provider.status === 'duplicate') {
+          await touchUnchanged(watch, null, null);
+          result.checked++; result.unchanged++; // counted, or a batch of only these would end the --loop
+          return;
+        }
 
         const fetched = await getReadable(watch);
 
@@ -329,6 +277,14 @@ export async function runMonitor(
         if (fetched.kind === 'fail') {
           result.checked++; result.failed++;
           await recordFailure(watch);
+          // An offer's source page answering 404/410 for a week → "offer gone?" review.
+          if (fetched.httpStatus === 404 || fetched.httpStatus === 410) {
+            try {
+              await recordSourceGone(provider, watch.url, fetched.httpStatus, (watch.consecutive_failures ?? 0) + 1, ctx);
+            } catch (err) {
+              console.error(`  gone-check failed for ${watch.url}:`, err instanceof Error ? err.message : err);
+            }
+          }
           return;
         }
 
@@ -343,10 +299,20 @@ export async function runMonitor(
           return;
         }
 
+        // Homepage taken over / parked / unrelated → hidden after a 2nd sighting (observe.ts).
+        // Checked on EVERY homepage read (cheap regex): a hijacked page that then stays
+        // stable never changes its hash again (kitesurfcamp.net, 2026-09).
+        const isHome = normUrl(watch.url) === normUrl(providerUrl(provider));
+        const homeSignal = isHome && !opts.baselineOnly && siteLossSignal(readable) !== null;
+
         // Unchanged content → cheap path, no LLM.
         if (watch.content_hash === hash) {
           await touchUnchanged(watch, etag, lastModified);
           result.checked++; result.unchanged++;
+          if (homeSignal) {
+            try { await observeSiteLoss(provider, watch.url, readable, ctx); }
+            catch (err) { console.error(`  site-loss check failed for ${watch.url}:`, err instanceof Error ? err.message : err); }
+          }
           return;
         }
 
@@ -356,55 +322,29 @@ export async function runMonitor(
 
         if (opts.baselineOnly) return;
 
-        const diff = await runDiff(watch.content_snapshot ?? '', readable);
-        if (diff?.significant) {
-          // A provider with ZERO kite-cruise offers can't affect any listing —
-          // its dates/price/content churn (often dive trips on mixed fleets,
-          // e.g. Alsuraya) is auto-archived. Only a NEW offer stays reviewable:
-          // that's the moment such a provider becomes relevant.
-          let initialStatus = 'pending';
-          if (diff.changeType !== 'new_offer') {
-            const { count: offerCount } = await supabase
-              .from('cruise_offers')
-              .select('id', { count: 'exact', head: true })
-              .eq('cruise_provider_id', provider.id);
-            if ((offerCount ?? 0) === 0) initialStatus = 'irrelevant';
-          }
-          const { data: inserted } = await supabase.from('cruise_changes').insert({
-            cruise_provider_id: provider.id,
-            watch_id: watch.id,
-            url: watch.url,
-            change_type: diff.changeType,
-            summary: diff.summary,
-            // status lives in details (no DDL): pending | auto_applied | approved | applied | dismissed | irrelevant | superseded
-            details: {
-              status: initialStatus,
-              offers: diff.offers ?? [],
-              changes: diff.changes ?? [],
-              ...(initialStatus === 'irrelevant' ? { triage: { at: new Date().toISOString(), reason: 'provider has no kite-cruise offers' } } : {}),
-            },
-            significant: true,
-          }).select('id').single();
-
-          result.significant++;
-          result.changes.push({ name: provider.name, url: watch.url, changeType: diff.changeType, summary: diff.summary });
-          console.log(`\n  ⚡ ${provider.name ?? watch.url}\n     [${diff.changeType}] ${diff.summary}`);
-
-          // Dates/price-only changes are applied surgically right away (only the
-          // volatile offer fields; identity/content/images untouched) — everything
-          // else stays pending for the /changes approval queue.
-          if (inserted && (diff.changeType === 'dates_change' || diff.changeType === 'price_change')) {
-            try {
-              const outcome = await applySurgicalToChange(inserted.id as string);
-              console.log(`     ↳ surgical: [${outcome.status}] ${outcome.note}`);
-            } catch (err) {
-              console.error(`     ↳ surgical failed (stays pending):`, err instanceof Error ? err.message : err);
-            }
-          }
+        // The page text changed. Instead of asking an LLM whether the TEXT diff is
+        // "significant" (→ /changes flood), observe the listing FACTS (observe.ts):
+        try {
+          // 1. Homepage changed: site-loss check (also closes an open alarm when the site is back).
+          if (isHome && await observeSiteLoss(provider, watch.url, readable, ctx)) return;
+          // 2. Testimonials, CTAs, countdowns, render variants: no price/date/availability
+          //    token changed → nothing a listing shows can have changed.
+          if (factsKey((watch.content_snapshot ?? '').slice(0, SNAPSHOT_CHARS)) === factsKey(snapshot)) return;
+          // 3. Pages an adapter reads deterministically are observed in the adapter phase.
+          if (isAdapterUrl(watch.url)) return;
+          // 4. One structured read → per-offer proposals + new products.
+          const before = ctx.events.length;
+          await observePage(provider, watch.url, readable, ctx);
+          result.significant += ctx.events.length - before;
+        } catch (err) {
+          console.error(`  observe failed for ${watch.url}:`, err instanceof Error ? err.message : err);
         }
       }),
     ),
   );
+  for (const e of ctx.events.slice(eventsStart)) {
+    result.changes.push({ name: e.provider, url: e.url, changeType: e.kind, summary: e.summary });
+  }
 
   // Remaining due watches (for the loop). Rows we just processed now have a
   // fresh last_checked_at, so they fall outside the due filter automatically.
@@ -587,6 +527,8 @@ export async function rerunChangePreview(changeId: string): Promise<void> {
       const sd = ((sib.details as Record<string, unknown>) ?? {});
       const st = (sd.status as string) ?? 'pending';
       if (st !== 'pending' && st !== 'rerun_done') continue;
+      // Observation rows (details.kind, observe.ts) are specific decisions, not text diffs.
+      if (sd.kind) continue;
       await supabase.from('cruise_changes').update({
         details: { ...sd, status: 'superseded', superseded_by: changeId, superseded_at: new Date().toISOString() },
         seen: true,

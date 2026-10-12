@@ -14,6 +14,11 @@ import { runCollectMediaCandidates, runApplySelectedMedia } from './pipeline/med
 import { runRegionConditions } from './pipeline/region-conditions.js';
 import { runMonitor, showChanges, applyApprovedChanges, type DetectedChange } from './pipeline/monitor.js';
 import {
+  newCtx, confirmOpenObservations, observeBackfill, observeUrl, revertChange,
+} from './pipeline/observe.js';
+import { runCruiseAdapters } from './cruise-adapters/run.js';
+import { isAdapterUrl } from './cruise-adapters/registry.js';
+import {
   listBstokedCards, scrapeBstokedListing, seedBstokedListing, packageOffersTableExists,
 } from './pipeline/bstoked-packages.js';
 import { runCruiseRooms } from './pipeline/cruise-rooms.js';
@@ -159,9 +164,11 @@ function writeStepSummary(changes: DetectedChange[], totals: { checked: number; 
 
 async function runMonitorLoop(
   batchSize: number,
-  opts: { intervalDays: number; all: boolean; baselineOnly: boolean; loop: boolean },
+  opts: { intervalDays: number; all: boolean; baselineOnly: boolean; loop: boolean; observe: boolean },
 ): Promise<void> {
   const allChanges: DetectedChange[] = [];
+  // One observation context for the sweep + the adapter and confirm phases (src/pipeline/observe.ts).
+  const ctx = newCtx();
   let totalChecked = 0;
   let totalSignificant = 0;
   let lastRemaining = 0;
@@ -176,6 +183,7 @@ async function runMonitorLoop(
       all: opts.all,
       baselineOnly: opts.baselineOnly,
       cutoffISO,
+      ctx,
     });
     totalChecked += r.checked;
     totalSignificant += r.significant;
@@ -188,7 +196,17 @@ async function runMonitorLoop(
     console.log(`  ${r.remaining} page(s) still due…`);
   }
 
-  console.log(`\nMonitoring complete. ${totalChecked} page(s) checked, ${totalSignificant} significant change(s) detected.`);
+  // Adapter phase (deterministic readers, daily) + confirm phase (2nd sighting of open
+  // observations whose page did not change again). Both feed the same state machine.
+  if (opts.observe && !opts.baselineOnly) {
+    const before = ctx.events.length;
+    await runCruiseAdapters(ctx);
+    await confirmOpenObservations(ctx, isAdapterUrl);
+    for (const e of ctx.events.slice(before)) allChanges.push({ name: e.provider, url: e.url, changeType: e.kind, summary: e.summary });
+    totalSignificant += ctx.events.length - before;
+  }
+
+  console.log(`\nMonitoring complete. ${totalChecked} page(s) checked, ${totalSignificant} observation event(s).`);
   if (!opts.loop && lastRemaining > 0) {
     console.log(`  ${lastRemaining} page(s) still due — run again, or pass --loop to drain them all.`);
   }
@@ -329,7 +347,59 @@ async function main(): Promise<void> {
         all: args.includes('--all'),
         baselineOnly: args.includes('--baseline-only'),
         loop: args.includes('--loop'),
+        observe: !args.includes('--no-observe'),
       });
+      break;
+    }
+
+    case 'observe': {
+      // Structured observation outside the daily sweep (src/pipeline/observe.ts):
+      //   observe <url> [--dry-run]                one page → proposals / new products
+      //   observe backfill --domain X [--dry-run]  every source page of one provider
+      //   observe confirm [--dry-run]              2nd-sighting phase only
+      const ctx = newCtx({ dryRun: args.includes('--dry-run') });
+      if (ctx.dryRun) console.log('DRY RUN: no DB writes');
+      if (args[0] === 'confirm') {
+        await confirmOpenObservations(ctx, isAdapterUrl);
+      } else if (args[0] === 'backfill') {
+        const domain = flagStr('--domain');
+        if (!domain) { console.error('Usage: pnpm cli observe backfill --domain <root_domain> [--dry-run]'); process.exit(1); }
+        await observeBackfill(domain, ctx);
+      } else if (args[0]?.startsWith('http')) {
+        await observeUrl(args[0], ctx);
+      } else {
+        console.error('Usage: pnpm cli observe <url> | backfill --domain X | confirm  [--dry-run]');
+        process.exit(1);
+      }
+      console.log(`\n${ctx.events.length} event(s)`);
+      break;
+    }
+
+    case 'cruise-adapters': {
+      // Deterministic cruise readers (src/cruise-adapters/):
+      //   cruise-adapters list | probe [key] (live, no DB) | run [key] [--dry-run]
+      const { CRUISE_ADAPTERS } = await import('./cruise-adapters/registry.js');
+      const key = args[1] && !args[1].startsWith('-') ? args[1] : undefined;
+      if (args[0] === 'list') {
+        for (const a of CRUISE_ADAPTERS) console.log(`${a.key.padEnd(22)} ${a.domain.padEnd(24)} ${a.urls.length} page(s)${a.datesMode === 'merge' ? ' · dates merge' : ''}`);
+      } else if (args[0] === 'probe') {
+        const { probeAdapter } = await import('./cruise-adapters/run.js');
+        for (const a of CRUISE_ADAPTERS.filter(x => !key || x.key === key)) {
+          for (const it of await probeAdapter(a)) {
+            const s = it.state;
+            console.log(`${a.key} ${it.sourceUrl}\n   dates: ${(s.departures ?? []).map(d => `${d.start_date}..${d.end_date ?? '?'}${d.status ? ` ${d.status}` : ''}`).join(', ') || '-'}` +
+              `\n   p.p.: ${s.pricePP ? `${s.pricePP.amount} ${s.pricePP.currency}` : '-'} · charter: ${s.priceCharter ? `${s.priceCharter.amount} ${s.priceCharter.currency}` : '-'}`);
+          }
+        }
+      } else if (args[0] === 'run') {
+        const ctx = newCtx({ dryRun: args.includes('--dry-run') });
+        if (ctx.dryRun) console.log('DRY RUN: no DB writes');
+        const r = await runCruiseAdapters(ctx, key);
+        console.log(`\n${r.ok} adapter(s) ok${r.failed.length ? `, failed: ${r.failed.join(' | ')}` : ''} · ${ctx.events.length} event(s)`);
+      } else {
+        console.error('Usage: pnpm cli cruise-adapters list | probe [key] | run [key] [--dry-run]');
+        process.exit(1);
+      }
       break;
     }
 
@@ -342,6 +412,13 @@ async function main(): Promise<void> {
         if (!changeId) { console.error('Usage: pnpm cli changes rerun <change-id>'); process.exit(1); }
         const { rerunChangePreview } = await import('./pipeline/monitor.js');
         await rerunChangePreview(changeId);
+        break;
+      }
+      if (args[0] === 'revert') {
+        // Undo an auto-applied observation (writes the logged "before" values back).
+        const changeId = args[1];
+        if (!changeId) { console.error('Usage: pnpm cli changes revert <change-id>'); process.exit(1); }
+        await revertChange(changeId);
         break;
       }
       const changesLimit = parseInt((args[0] && !args[0].startsWith('-') ? args[0] : '20'), 10);

@@ -16,6 +16,12 @@ interface Change {
     surgical?: { note?: string; updates?: Array<{ slug: string; fields: string[] }>; resolved_at?: string };
     applied_at?: string;
     applied_slugs?: string[];
+    // observation rows (src/pipeline/observe.ts)
+    kind?: string;
+    violations?: string[];
+    sightings?: number;
+    applied?: { at?: string; slug?: string; title?: string; changes?: Array<{ field: string; before: unknown; after: unknown }> };
+    hidden?: { prev_status?: string; at?: string };
     removed_offers?: Array<{ slug: string; title?: string; at?: string }>;
     rerun_requested_at?: string;
     rerun?: {
@@ -51,12 +57,14 @@ const CHANGE_TYPE_LABELS: Record<string, { label: string; color: string }> = {
   dates_change:   { label: 'Dates change',   color: 'bg-sky-100 text-sky-800' },
   removed_offer:  { label: 'Removed offer',  color: 'bg-red-100 text-red-800' },
   content_update: { label: 'Content update', color: 'bg-slate-100 text-slate-700' },
+  site_lost:      { label: 'Website verloren', color: 'bg-red-200 text-red-900' },
   none:           { label: 'No change',      color: 'bg-slate-50 text-slate-400' },
 };
 
 // Lifecycle of a detected change (stored in details.status):
+//   observed     → hidden (significant=false): a proposal waiting for its 2nd sighting
 //   pending      → needs a human call (approve / dismiss / discuss)
-//   auto_applied → dates/price surgically written to the DB, no approval needed
+//   auto_applied → listing facts confirmed twice and written (before/after logged, revertable)
 //   approved     → queued; the daily cron runs a full re-extraction
 //   applied      → full re-extraction done
 //   dismissed    → deliberately not applied
@@ -64,12 +72,12 @@ const STATUS_META: Record<string, { label: string; color: string }> = {
   pending:       { label: 'Needs review', color: 'bg-amber-100 text-amber-800' },
   rerun_running: { label: 'Re-run läuft…', color: 'bg-violet-100 text-violet-800' },
   rerun_done:    { label: 'Diff bereit',  color: 'bg-sky-100 text-sky-800' },
-  auto_applied:  { label: 'Auto-applied', color: 'bg-emerald-100 text-emerald-800' },
+  auto_applied:  { label: 'Auto-übernommen', color: 'bg-emerald-100 text-emerald-800' },
   approved:      { label: 'Approved — applying', color: 'bg-sky-100 text-sky-800' },
   applied:       { label: 'Applied',      color: 'bg-emerald-50 text-emerald-700' },
   dismissed:     { label: 'Dismissed',    color: 'bg-slate-100 text-slate-500' },
   irrelevant:    { label: 'Site-only — Listing unberührt', color: 'bg-slate-100 text-slate-400' },
-  superseded:    { label: 'Durch Re-run abgedeckt', color: 'bg-slate-100 text-slate-400' },
+  superseded:    { label: 'Abgedeckt (neuerer Eintrag)', color: 'bg-slate-100 text-slate-400' },
 };
 
 function effectiveStatus(c: Change): string {
@@ -117,7 +125,8 @@ function ActionForm({ action, id, adminKey, className, children, endpoint = '/ap
 
 function ActionButtons({ change, adminKey }: { change: Change; adminKey: string | null }) {
   const status = effectiveStatus(change);
-  if (!['pending', 'rerun_running', 'rerun_done', 'approved', 'dismissed', 'irrelevant', 'superseded'].includes(status)) return null;
+  const revertable = status === 'auto_applied' && !!change.details?.applied?.changes?.length;
+  if (!revertable && !['pending', 'rerun_running', 'rerun_done', 'approved', 'dismissed', 'irrelevant', 'superseded'].includes(status)) return null;
 
   if (!adminKey) {
     return <p className="text-xs text-slate-400 mt-1">append <code className="bg-slate-100 px-1 rounded">?key=…</code> to enable actions</p>;
@@ -130,6 +139,24 @@ function ActionButtons({ change, adminKey }: { change: Change; adminKey: string 
   // A running re-run without a result for >15 min counts as stuck — offer a retry.
   const requestedAt = change.details?.rerun_requested_at ? Date.parse(change.details.rerun_requested_at) : null;
   const rerunStuck = status === 'rerun_running' && requestedAt !== null && Date.now() - requestedAt > 15 * 60_000;
+
+  if (revertable) {
+    return (
+      <div className="flex flex-wrap items-center gap-1.5 mt-1.5">
+        <ActionForm action="revert" id={change.id} adminKey={adminKey} className={dismissBtn}>↶ Rückgängig (alte Werte zurück)</ActionForm>
+      </div>
+    );
+  }
+  if (status === 'pending' && change.details?.hidden) {
+    return (
+      <div className="flex flex-wrap items-center gap-1.5 mt-1.5">
+        <ActionForm action="restore-provider" id={change.id} adminKey={adminKey} className={`${btn} border-emerald-300 bg-emerald-50 text-emerald-800 hover:bg-emerald-100`}>
+          ↩ Fehlalarm: Anbieter wieder einblenden
+        </ActionForm>
+        <ActionForm action="dismiss" id={change.id} adminKey={adminKey} className={dismissBtn}>✓ Bestätigt: ausgeblendet lassen</ActionForm>
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-wrap items-center gap-1.5 mt-1.5">
@@ -183,6 +210,30 @@ function ActionButtons({ change, adminKey }: { change: Change; adminKey: string 
           </div>
         </details>
       )}
+    </div>
+  );
+}
+
+// Before/after of an auto-applied observation (both sightings agreed, all rules passed).
+function AppliedDiff({ change }: { change: Change }) {
+  const a = change.details?.applied;
+  if (!a?.changes?.length) return null;
+  return (
+    <div className="mt-2 rounded-lg border border-emerald-200 bg-emerald-50/50 p-2 text-xs">
+      <p className="text-slate-500 mb-1">
+        {a.title ?? a.slug} · übernommen {a.at ? fmt(a.at) : ''} nach {change.details?.sightings ?? 2} identischen Beobachtungen
+      </p>
+      <table className="w-full border-collapse">
+        <tbody>
+          {a.changes.map((c, i) => (
+            <tr key={i} className="align-top border-t border-emerald-100">
+              <td className="pr-2 py-0.5 font-medium text-slate-600 w-40">{c.field}</td>
+              <td className="pr-2 py-0.5 text-slate-500 break-words">{fmtVal(c.before)}</td>
+              <td className="py-0.5 text-slate-900 break-words">{fmtVal(c.after)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
@@ -359,6 +410,12 @@ function ChangeRow({ change, adminKey, highlight }: { change: Change; adminKey: 
             ⚙ {surgical.note}
           </p>
         )}
+        {(change.details?.violations?.length ?? 0) > 0 && status !== 'auto_applied' && (
+          <p className="text-xs mt-1.5 text-amber-800 bg-amber-50 rounded px-2 py-1 inline-block">
+            ⚠ Prüfregel verletzt: {change.details!.violations!.join(' · ')}
+          </p>
+        )}
+        <AppliedDiff change={change} />
         <RerunDiff change={change} adminKey={adminKey} />
         <ActionButtons change={change} adminKey={adminKey} />
       </td>
@@ -393,6 +450,8 @@ export default async function ChangesPage({
         id, detected_at, change_type, summary, url, significant, seen, details,
         provider:cruise_providers ( name, website_url, root_domain )
       `)
+      // hidden observations (significant=false) must not eat the 400-row window
+      .eq('significant', true)
       .order('detected_at', { ascending: false })
       .limit(400),
 
@@ -423,7 +482,7 @@ export default async function ChangesPage({
   // Priorität (Aaron): entfernte Offers zuerst, dann neue, dann Preis/Daten,
   // Content-Updates zuletzt; innerhalb der Gruppe neueste zuerst.
   const TYPE_PRIORITY: Record<string, number> = {
-    removed_offer: 0, new_offer: 1, price_change: 2, dates_change: 3, content_update: 4,
+    site_lost: -1, removed_offer: 0, new_offer: 1, price_change: 2, dates_change: 3, content_update: 4,
   };
   const pending = changes
     .filter(c => OPEN_STATUSES.includes(effectiveStatus(c)))
@@ -441,7 +500,7 @@ export default async function ChangesPage({
           <a href="/" className="text-2xl">🪁</a>
           <div>
             <h1 className="font-bold text-slate-900 text-lg leading-tight">KiteScout — Cruise Provider Monitor</h1>
-            <p className="text-xs text-slate-500">Daily change detection · dates/prices auto-applied · the rest needs your call</p>
+            <p className="text-xs text-slate-500">Täglich: Termine, Preise &amp; Verfügbarkeit werden beobachtet und nach doppelter Bestätigung übernommen · hier landen nur Ausnahmen</p>
           </div>
         </div>
         <div className="flex gap-4 text-sm">
@@ -487,8 +546,8 @@ export default async function ChangesPage({
           </h2>
           {pending.length === 0 ? (
             <div className="bg-white rounded-xl border border-slate-200 p-8 text-center text-slate-400">
-              <p className="font-medium">Nothing waiting on you. 🎉</p>
-              <p className="text-sm mt-1">Dates/price changes are applied automatically; anything else lands here.</p>
+              <p className="font-medium">Nichts zu tun. 🎉</p>
+              <p className="text-sm mt-1">Termine, Preise &amp; Verfügbarkeit laufen automatisch; hier landen nur Ausnahmen.</p>
             </div>
           ) : (
             <div className="bg-white rounded-xl border border-amber-200 overflow-hidden">
@@ -543,11 +602,11 @@ export default async function ChangesPage({
           <div className="bg-white rounded-xl border border-slate-200 divide-y divide-slate-100 text-sm">
             <div className="px-4 py-3 flex gap-3 items-start">
               <span className="mt-0.5">⚙️</span>
-              <p className="text-slate-600"><span className="font-medium text-slate-900">Dates &amp; price changes are applied automatically</span> — only the volatile offer fields (departures, pricing, season) are updated surgically. Titles, images, spots and manual edits are never touched.</p>
+              <p className="text-slate-600"><span className="font-medium text-slate-900">Beobachten statt Text-Diff:</span> Ändern sich auf einer Seite Preis-, Termin- oder Verfügbarkeitsangaben, liest der Monitor die Listing-Fakten strukturiert (Adapter für die lautesten Anbieter, sonst ein LLM-Read) und vergleicht sie mit der DB. Derselbe Vorschlag muss zweimal im Abstand von ≥ 20 h gesehen werden und alle Prüfregeln bestehen (Preissprung ≤ 40 %, gleiche Währung, plausible Preise, nie alle Termine löschen, nie Felder leeren), dann wird er übernommen, mit Vorher/Nachher und <em>Rückgängig</em>. Texte, Titel, Bilder und Spots werden nie angefasst. Testimonials, CTAs, Countdowns und Render-Varianten erzeugen gar keinen Eintrag mehr.</p>
             </div>
             <div className="px-4 py-3 flex gap-3 items-start">
               <span className="mt-0.5">🔎</span>
-              <p className="text-slate-600"><span className="font-medium text-slate-900">Everything else waits here</span> — <em>Re-run</em> re-extrahiert den Provider als Vorschau (~2–4 min, schreibt nichts) und zeigt den Vorher/Nachher-Diff. Erst dein <em>Approve</em> macht ihn live: Feld-Änderungen sofort, neue/entfernte Offers per voller Re-Extraktion im Nacht-Cron. <em>Dismiss</em> archiviert, <em>Discuss</em> liefert einen Claude-Prompt.</p>
+              <p className="text-slate-600"><span className="font-medium text-slate-900">Hier landen nur Ausnahmen:</span> verletzte Prüfregel (Approve wendet den Vorschlag an), neues Produkt, Angebot weg (Quellseite 404/410 seit 7 Checks oder ≥ 7 Tage nicht mehr gelistet), Website verloren (Anbieter wird automatisch ausgeblendet, <em>Fehlalarm</em> blendet wieder ein). <em>Re-run</em> re-extrahiert den Provider als Vorschau (~2–4 min, schreibt nichts) und zeigt den Vorher/Nachher-Diff. Erst dein <em>Approve</em> macht ihn live: Feld-Änderungen sofort, neue/entfernte Offers per voller Re-Extraktion im Nacht-Cron. <em>Dismiss</em> archiviert, <em>Discuss</em> liefert einen Claude-Prompt.</p>
             </div>
             <div className="px-4 py-3 flex gap-3 items-start">
               <span className="mt-0.5">🔐</span>

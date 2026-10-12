@@ -8,6 +8,8 @@ import { getSupabase } from '../../../../lib/supabase';
 //                 (only whitelisted fields, values were stored by the re-run)
 //   dismiss     → won't be applied
 //   reopen      → back to pending
+//   revert      → undo an auto-applied observation (writes its logged "before" values back)
+//   restore-provider → un-hide a provider the monitor hid after a site-loss signal
 // Guarded by CHANGES_ADMIN_KEY (the dashboard itself stays public read-only).
 
 export const dynamic = 'force-dynamic';
@@ -18,11 +20,14 @@ const ACTIONS: Record<string, string> = {
   reopen: 'pending',
 };
 
-// Mirror of SURGICAL_APPLY_FIELDS in src/pipeline/extract-cruise-offers.ts —
-// the only columns an approve may write without a full re-extraction.
+// Mirror of SURGICAL_APPLY_FIELDS in src/pipeline/extract-cruise-offers.ts plus the
+// observation STATE_FIELDS (src/pipeline/cruise-state.ts) — the only columns an
+// approve or a revert may write without a full re-extraction.
 const APPLY_FIELDS = new Set([
   'title', 'country', 'region', 'price_from_eur', 'currency', 'duration_days',
   'season_text', 'vessel_name', 'vessel_type', 'summary', 'booking_modes', 'dates',
+  'price_pp_cabin', 'price_pp_cabin_currency', 'price_charter_week', 'price_charter_week_currency',
+  'season_start_month', 'season_end_month',
 ]);
 
 interface RerunData {
@@ -44,7 +49,7 @@ export async function POST(req: NextRequest) {
   const offerSlug = String(form.get('slug') ?? '');
 
   if (key !== adminKey) return NextResponse.json({ error: 'invalid key' }, { status: 403 });
-  if (!id || (!ACTIONS[action] && action !== 'apply-rerun' && action !== 'remove-offer')) {
+  if (!id || (!ACTIONS[action] && !['apply-rerun', 'remove-offer', 'revert', 'restore-provider'].includes(action))) {
     return NextResponse.json({ error: 'invalid id/action' }, { status: 400 });
   }
 
@@ -82,7 +87,31 @@ export async function POST(req: NextRequest) {
     return new NextResponse(null, { status: 303, headers: { Location: `/changes?key=${encodeURIComponent(key)}` } });
   }
 
-  if (action === 'apply-rerun') {
+  if (action === 'revert') {
+    // Undo an auto-applied observation: the logged "before" values go back (null included —
+    // that is the state before the auto-apply, not a blanking by a weak crawl).
+    const applied = details.applied as { offer_id?: string; changes?: Array<{ field: string; before: unknown }> } | undefined;
+    if (details.status !== 'auto_applied' || !applied?.offer_id || !applied.changes?.length) {
+      return NextResponse.json({ error: 'not an auto-applied observation' }, { status: 409 });
+    }
+    const patch: Record<string, unknown> = {};
+    for (const c of applied.changes) if (APPLY_FIELDS.has(c.field)) patch[c.field] = c.before ?? null;
+    const { error: upErr } = await supabase.from('cruise_offers').update(patch).eq('id', applied.offer_id);
+    if (upErr) return NextResponse.json({ error: `revert failed: ${upErr.message}` }, { status: 500 });
+    details.status = 'dismissed';
+    details.reverted_at = new Date().toISOString();
+    details.resolved_via = 'changes-dashboard (revert)';
+  } else if (action === 'restore-provider') {
+    const hidden = details.hidden as { prev_status?: string } | undefined;
+    if (!hidden) return NextResponse.json({ error: 'this change did not hide a provider' }, { status: 409 });
+    const { error: upErr } = await supabase.from('cruise_providers')
+      .update({ status: hidden.prev_status && hidden.prev_status !== 'dead' ? hidden.prev_status : 'new' })
+      .eq('id', row.cruise_provider_id as string);
+    if (upErr) return NextResponse.json({ error: `restore failed: ${upErr.message}` }, { status: 500 });
+    details.status = 'dismissed';
+    details.restored_at = new Date().toISOString();
+    details.resolved_via = 'changes-dashboard (restore provider)';
+  } else if (action === 'apply-rerun') {
     // Surgical apply of the re-run preview: write exactly the stored values.
     const rerun = details.rerun as RerunData | undefined;
     const updates = rerun?.updates ?? [];
