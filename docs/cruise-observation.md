@@ -31,11 +31,20 @@ countdown noise, Tavily render flip-flops and older entries of the same page).
 
 Rules (`cruise-state.ts`): only the offer's OWN page (or an adapter) may propose its data; written
 fields are only `STATE_FIELDS` (dates, `price_pp_cabin`/`price_charter_week` + currencies in the
-ORIGINAL currency, `price_from_eur` only when EUR, duration, season months); never blanks a field;
-review when a price jumps > 40 %, the currency changes, a price is implausible (same ranges and
-1.5× cross gate as `_price-derive.ts`), all upcoming departures would disappear, or the duration
-jumps. Past departures never count as a change. Free text (title, summary, vessel, season wording)
-is never written. A dismissed proposal is not raised again (same fingerprint).
+ORIGINAL currency, `price_from_eur` only when EUR, duration, season months); never blanks a field.
+- review: price jump ≥ 40 %, currency change, unknown currency, all upcoming departures would
+  disappear (adapters only), duration jump > max(2 days, 50 %)
+- ignored (extraction errors, no write, no review): prices outside the `_price-derive.ts` ranges, a
+  fresh charter < 1.5 × p.p.
+- LLM reads MERGE departures (never remove an upcoming one: JS-rendered dates look like removals);
+  only adapters with a full schedule replace them
+- duration ±1 day is nights-vs-days noise; season months only fill a gap
+- past departures never count; free text (title, summary, vessel) is never written; a dismissed
+  proposal is not raised again (same fingerprint)
+
+Tuning after the first backfill (2026-10-12, d05c422): duration 7 → 8 on four providers, season
+months flipping with "Spring and Autumn", per-night prices, JS-only dates and land camps reported as
+new products were all LLM-read artefacts.
 
 ## Adapters (Variant A: they write through the state machine into `cruise_offers`)
 
