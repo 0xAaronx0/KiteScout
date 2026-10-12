@@ -1,0 +1,52 @@
+
+
+    <div class="block py-1">
+        <div class="pos-r row row-sm" data-provide="columns">
+                <div class="col col-12 col-sm-6">
+                    <div class="card mb-1">
+                                <div class="bg-5 pos-r">
+                                    <div id="accommodation-c-448" class="carousel slide">
+                                        <div class="carousel-inner" role="listbox">
+                                                <div class="carousel-item active">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-448-cmCEJYD2ccO7h6wonI3NmClpQ5puMi25.jpg?width=480);"></figure>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-448-vzAYXkMcf3PgeybwgBsCTNjReyJL5O3n.jpg?width=480);"></figure>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-448-6o6nAkvLeKfyYxIEF5UCpgC4yknKrVFS.jpg?width=480);"></figure>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-448-w9aboPxhl8FkFQgo0T7qo1GgYj1U0U6l.jpg?width=480);"></figure>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-448-GXUmUQZXdgA7nZQViNmQcPGTTPJQeZG3.jpg?width=480);"></figure>
+                                                </div>
+                                        </div>
+                                        <a class="carousel-control-prev bg-g-l" href="#accommodation-c-448" role="button" data-slide="prev">
+                                            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next bg-g-r" href="#accommodation-c-448" role="button" data-slide="next">
+                                            <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                        <div class="card-body">
+                            <h5 class="card-title mb-0 pr-3">
+                                <i class="bs bs-buildings mr-025" title="Apartment"></i>
+                                Studio Inside Orient Bay Resort
+                            </h5>
+                                <div class="card-text mt-1"><p>The studio includes: one king size bed, air conditioning, ceiling fans, a kitchenette with refrigerator all the necessary kitchen tools, a safe, telephone and cable TV. Enjoy your own personal balcony with a view on the garden as well as an outdoor swimming pool.</p>
+<p>Maids services once a week</p>
+</div>
+                                                            <div class="card-text mt-1">
+                                    <i class="bs bs-lg bs-walk float-left mr-05"></i>
+                                    <p class="mb-0 py-025">Walking distance to spot</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>

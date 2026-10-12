@@ -1,0 +1,880 @@
+<!DOCTYPE html><html><head><title>bstoked listing (trimmed fixture)</title></head><body>
+<main id="main" role="main">
+        <!--[if lt IE 10]>
+            <div class="alert alert-warning" role="alert">
+                <div>You are using an outdated browser. Please <a class="alert-link" href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.</div>
+            </div>
+        <![endif]-->
+        
+
+
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Beach Side Villa",
+    "image": "https://bstoked.azureedge.net/l-6807-uk8RwlSaehr6kVjMBaLS9vg1JhglyqbC.jpg?width=960",
+    "description": "Spend your vacation in a deluxe ocean front villa with direct access to one of the most renowned kiteboarding beaches in the Caribbean. With three miles of white sandy beach, turqu",
+    
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "USD",
+            "price": "112.8358",
+            "itemCondition": "http://schema.org/UsedCondition",
+            "availability": "http://schema.org/InStock",
+            "seller": {
+            "@type": "Organization",
+            "name": "TKCA Vacation Rentals"
+            }
+        }
+        }
+</script>
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://bstoked.net/locations/turks-and-caicos-islands/",
+                "name": "Turks and Caicos Islands"
+            }
+        },
+            {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+            "@id": "https://bstoked.net/listings/search/?Types=Accommodation",
+            "name": "Accommodation"
+        }
+    }]
+}
+</script>
+
+
+<header role="banner" class="hero hero-lg v-align block-inverse">
+    <div class="background cursor-pointer" responsive data-slimmage-bg="//bstoked.azureedge.net/l-6807-uk8RwlSaehr6kVjMBaLS9vg1JhglyqbC.jpg?width=1920"></div>
+    
+    <div class="pos-a-b-l bg-g-b f-x py-08 py-lg-2 z-i-2">
+        <div class="container text-white pos-r z-i">
+            <div class="text-r text-r-2">
+                <h1 class="display-4 d-inline v-m mb-0 mr-05 text-break">Beach Side Villa</h1>
+                <div class="dis-i-b v-m text-lg">
+                    <a href="#share-modal" role="button" class="btn btn-sm btn-light rounded-circle text-m-2 p-025 p-md-05" data-toggle="modal" aria-haspopup="true" aria-expanded="false">
+                        <i class="bs bs-share bs-lead text-6 w-1x h-1x v-m"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="lead">
+                    <span class="text-m">Long Bay Beach, Turks and Caicos Islands</span>
+                            </div>
+        </div>
+    </div>
+</header>
+
+
+<div id="share-modal" class="modal fade scale " tabindex="-1" role="dialog" aria-hidden="true">
+    <div role="document" class="modal-dialog modal-sm">
+        <div class="modal-content ">
+            <div class="modal-header ">
+                <h5 class="modal-title  w-100 pl-2 text-center">Share</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="bs bs-cancel-2 text-md"></i>
+                    <span class="sr-only">Close</span>
+                </button>
+            </div>
+            <div class="modal-body pt-0 ">
+                <div class="w-100">
+                    
+
+
+<div class="social social-share">
+    <div class="text-lead text-center">
+        <a class="dropdown-item py-1 b-b" data-network="facebook" rel="nofollow" title="Facebook"
+           href="//www.facebook.com/sharer.php?u=https%3A%2F%2Fbstoked.net%2Flistings%2F6807%2F" target="_blank">
+            <i class="bs bs-facebook mr-08"></i>Facebook
+        </a>
+        <a class="dropdown-item py-1 b-b" data-network="twitter" rel="nofollow" title="Twitter"
+           href="//twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20trip%20-%20https%3A%2F%2Fbstoked.net%2Flistings%2F6807%2F" target="_blank">
+            <i class="bs bs-twitter mr-08"></i>Twitter
+        </a>
+        <a class="dropdown-item py-1 b-b" data-network="pinterest" rel="nofollow" title="Pinterest"
+           href="//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fbstoked.net%2Flistings%2F6807%2F&media=%2F%2Fbstoked.azureedge.net%2Fl-6807-uk8RwlSaehr6kVjMBaLS9vg1JhglyqbC.jpg&description=Check%20out%20this%20amazing%20trip%20-%20https%3A%2F%2Fbstoked.net%2Flistings%2F6807%2F" target="_blank">
+            <i class="bs bs-pinterest mr-08"></i>Pinterest
+        </a>
+        <a class="dropdown-item py-1 b-b" data-network="email" rel="nofollow" title="Email"
+           href="mailto:?subject=Take%20a%20look%20at%20this&body=Check%20out%20this%20amazing%20trip%20-%20https%3A%2F%2Fbstoked.net%2Flistings%2F6807%2F" target="_blank">
+            <i class="bs bs-mail mr-08"></i>Email
+        </a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar navbar-h navbar-light sticky-top bg-0 p-0 b-b scroll-spy">
+    <div class="container w-xs-100 p-0">
+        <ul class="navbar-nav w-100">
+            <li class="nav-item"><a class="nav-link py-1" href="#info">Info</a></li>
+            <li class="nav-item"><a class="nav-link py-1" href="#photos">Photos</a></li>
+            
+                <li class="nav-item d-none d-lg-block"><a class="nav-link py-1" href="#statistics">Stats</a></li>
+            
+                            
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link py-1" href="#location">Location</a></li>
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link py-1" href="#map">Map</a></li>
+                
+            <li class="nav-item d-none d-lg-block"><a class="nav-link py-1" href="#host">Host</a></li>
+
+            <li class="d-flex align-items-center nav-item d-lg-none ml-auto mr-08">
+                        <a href="#login" data-toggle="modal" data-return-action="/wishlists/6807/toggle/?add=True" 
+                           class="wishlist-btn btn bg-1 box-s-2 px-1 rounded-pill text-sm h-bs l-h-1">
+                            <i class="bs bs-heart mr-05"></i>
+                            Save
+                        </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row row-0">
+        <div class="col-12 col-lg-8 col-xl-9 pr-lg-5 fs15px">
+            <section id="summary" class="block">
+                
+
+<div class="row row-sm d-flex align-items-center text-center">
+    <div class="col-md-2 col-sm-3">
+        <a class="nc" href="#host">
+            <div class="dis-i-b pos-r">
+                <div class="img-circle img-circle-xl bg-0 of-h">
+                    <img alt="TKCA Vacation Rentals" src="//bstoked.azureedge.net/u-2040-ualWsZcLU4TzZe3U95KyKQD241L1Tbh4.jpg?width=84" />
+                </div>
+            </div>
+            <div class="pt-05">TKCA Vacation Rentals</div>
+        </a>
+    </div>
+    <div class="col-md-10 col-sm-9 py-1">
+        <div class="row row-sm d-flex align-items-center">
+            <div class="col-xl-4 col-lg-4 col-md-3 col-6 mb-1 m-md-0">
+                <a class="nc" href="/listings/type/accommodation/">
+                    <i class="bs bs-25x bs-home text-6"></i>
+                    <div class="pt-05">Accommodation</div>
+                </a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-3 d-none d-md-block mb-1 m-md-0">
+                        <i class="bs bs-25x bs-bed text-6"></i>
+                        <div class="pt-05">Included</div>
+            </div>
+            
+                <div class="col-xl-4 col-lg-4 col-md-6 col-6 mb-1 m-md-0">
+                        <i class="bs bs-25x text-6 bs-skill-1" title="Not yet independent."></i><i class="bs bs-25x text-6 bs-skill-2" title="Independent and easily riding upwind."></i><i class="bs bs-25x text-6 bs-skill-4" title="Very experienced and capable of riding in any conditions."></i>
+                        <div class="pt-05">Skill level</div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+            </section>
+            <section id="info" class="block py-4 py-lg-3">
+                
+
+
+    <h4 class="mb-08 d-block d-lg-none">Summary</h4>
+    <div class="line-break pb-2">Spend your vacation in a deluxe ocean front villa with direct access to one of the most renowned kiteboarding beaches in the Caribbean. With three miles of white sandy beach, turquoise, fat waters and steady trade winds, Turks and Caicos is the ultimate kite holiday destination. </div>
+
+<div class="b-b block py-2">
+    <div class="row row-sm">
+        <div class="col-md-3 pb-05 semi text-md text-muted">
+            Kitesurf conditions
+        </div>
+        <div class="col-md-9">
+            <div class="listing-structured row">
+                        <div class="col-12 col-md-6">
+                            <i class="bs bs-skill-2 bs-xl float-left text-5" title="Skill level"></i>
+                            <div>
+                                Beginner, Intermediate, Advanced
+                            </div>
+                        </div>
+                
+                                            <div class="col-12 col-md-6">
+                            <i class="bs bs-spot-8 bs-xl float-left text-5" title="Spot conditions"></i>
+                            <div>
+                                <span class="text-muted">Spot:</span>
+                                Shallow, Small waves
+                            </div>
+                        </div>
+                
+                
+                
+<div class="col-12 col-md-6">
+                        <i class="bs bs-storage bs-xl float-left text-5" title="Gear storage"></i>
+                        <div>Gear storage</div>
+                    </div>
+<div class="col-12 col-md-6">
+                        <i class="bs bs-lessons bs-xl float-left text-5" title="Lessons or coaching"></i>
+                        <div>Lessons or coaching</div>
+                    </div>
+<div class="col-12 col-md-6">
+                        <i class="bs bs-guidance bs-xl float-left text-5" title="Spot guidance"></i>
+                        <div>Spot guidance</div>
+                    </div>
+                            </div>
+        </div>
+            <div class="col-12 mt-2">
+                    <div class="max-h125 of-h" id="more0">
+                        <p class="line-break">Long Bay is kiteboarding mecca! It&#x2019;s a favorite for all levels with its immense 20 square kilometers sandy bay, one meter deep as far as the eye can see and ideally located for consistent E-SE trade winds coming directly on shore on side-on. No current, no coral, no breaking waves and no danger. &#xD;&#xA;&#xD;&#xA;The water is always above 80 degrees (26 degrees celsius), no wetsuits required, but do protect your skin with appropriate water clothing. You may bring a variety of boards and kites for the different wind conditions, but it&#x27;s mostly 15-17 knots 80% of the time. You can monitor the current wind conditions on Windguru through a live station on Long Bay Beach.</p>
+                    </div>
+                    <div class="bg-f-b-w mt--3 pos-r pt-3">
+                        <button class="btn btn-link strong px-0" data-toggle-more="#more0" data-remove="true" type="button">More +</button>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<div class="b-b block mb-1 py-2">
+    <div class="row row-sm">
+        <div class="col-md-3 pb-05 semi text-md text-muted">
+            Trip characteristics
+        </div>
+        <div class="col-md-9">
+            <div class="listing-structured row">
+                                                    <div class="col-12 col-md-6">                        
+                        <i class="bs bs-location bs-xl float-left text-5" title="Exact address of meeting point or accommodation"></i>
+                        <div>
+                            <span class="text-muted">Typical Pickup:</span>
+                            Windchaser Villas, Long Bay Hills, Caicos Islands, Turks and Caicos Islands
+                        </div>
+                    </div>
+                                                    <div class="col-12 col-md-6">
+                        <i class="bs bs-couple bs-xl float-left text-5" title="Suitable for"></i>
+                        <div>
+                            <span class="text-muted">Suitable for:</span>
+                            Solo traveler, Group, Family, Non-rider
+                        </div>
+                    </div>
+                <div id="languages" class="col-12 col-md-6">
+                    <i class="bs bs-language bs-xl float-left text-5" title="Languages"></i>
+                    <div>
+                        <div id="listingLanguages" data-ajax-load="GET" data-action="/listings/languages/?id=6807"
+                             data-ajax-update="#listingLanguages" data-ajax-loading="#listingLanguages-loading" data-ajax-failure="$('#languages').remove();" data-ajax-mode="realreplace">
+                            <div id="listingLanguages-loading">
+                                
+    <div class="_loader">
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-0 bg-0 z-i"></div>
+            </div>
+    </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-12 col-md-6">
+                        <i class="bs bs-ambience bs-xl float-left text-5" title="Ambience"></i>
+                        <div>
+                            <span class="text-muted">Ambience:</span> 
+                            Wilderness, Relaxed
+                        </div>
+                    </div>
+                                    <div class="col-12 col-md-6">
+                        <i class="bs bs-three bs-xl float-left text-5" title="Experience Type"></i>
+                        <div>
+                            <span class="text-muted">Experience Type:</span> 
+                            Private
+                        </div>
+                    </div>
+                                            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="block py-1">
+        <div class="max-h200 of-h" id="more1">
+            <h4 class="mb-1">The Destination</h4>
+            <div class="line-break">The Turks and Caicos Islands are located 575 miles southeast from Miami at the end of the Bahamian chain. Long Bay Beach on Providenciales is by far the preferred spot for all riders, beginners or advanced. The wind conditions are almost always perfect - east southeast at 15-17 knots on shore - to ride comfortably and practice your tricks in waters that are clear, clean and shallow.  On a windy day, there might be up to 25 kites and riders but usually, there are fewer people than that. &#xD;&#xA;&#xD;&#xA;Windchaser Villas are right there on the beach, perfect to watch conditions straight from your 2nd floor balcony and to go in and out of the water when you want to go back for a bite at home or relax by the pool.&#xD;&#xA;&#xD;&#xA;All the shops, grocery store, liquor store, duty free stores, bars and restaurants are within an 8 min drive over to the Grace Bay area.</div>
+        </div>
+            <div class="bg-f-b-w mt--3 pos-r pt-3">
+                <button class="btn btn-link strong px-0" data-toggle-more="#more1" data-remove="true" type="button">More +</button>
+            </div>
+    </div>
+
+<div class="block py-1">
+    <div id="more2">
+        <div class="pb-05">
+            <h4 class="mb-1">The Experience</h4>
+                <div class="line-break"><p>Whether you are a couple looking for a romantic getaway, a family wanting some quality time, a watersports or kiteboarding enthusiast or a group of vacationers, we provide the perfect launch pad for an amazing vacation.</p>
+<p>Long Bay beach is perfect for kiteboarders and the non-riders as well. It stretches for miles, is quite peaceful and lacks of any big resorts and crowds.</p>
+<p>We have a private path from the villa to beach (about 500 ft), that's tiled and easy to walk. By the pool are some lockable storage for your gear and we have rinse stations as well. On calmer days, the pool will surely be your hangout spot.</p>
+</div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="block py-1">
+        <div class="max-h200 of-h" id="more3">
+            <h4 class="mb-1">Accommodation</h4>
+            <div class="line-break">A private gated residential development with a direct beach access to the heart of Long Bay Beach (500 ft)&#x2014;with three miles of white sandy beach and warm, astounding turquoise flat water. It&#x2019;s one of the most gorgeous beaches in the Caribbean.&#xD;&#xA;&#xD;&#xA;Our villa is divided into 3 contemporary suites: 2 studios &#x2B; 1 spacious 2 bedroom split on 2 floors. You can choose to rent only a cozy studio for 2 or just a 2 bedroom for some friends and you or the entire 4 bedroom villa (or multiple villas), which is ideal for larger groups and families. We can accommodate up to 40 people on site with ample space, comfort and privacy.&#xD;&#xA;&#xD;&#xA;The entrance, the pool and common grounds are shared with the other guests in that particular villa when renting only parts of it.&#xD;&#xA;&#xD;&#xA;All units all fully equipped with everything you should need. You only need your personal toiletries.</div>
+        </div>
+            <div class="bg-f-b-w mt--3 pos-r pt-3">
+                <button class="btn btn-link strong px-0" data-toggle-more="#more3" data-remove="true" type="button">More +</button>
+            </div>
+    </div>
+
+                    <div id="listingAccommodations" data-observe="true" data-action="/listings/accommodations/?id=6807"
+                         data-ajax-update="#listingAccommodations" data-ajax-loading="#listingAccommodations-loading" data-ajax-mode="realreplace">
+                        <div id="listingAccommodations-loading">
+                            
+    <div class="_loader">
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-0 bg-0 z-i"></div>
+            </div>
+    </div>
+
+                            
+    <div class="row row-md">
+            <div class="col-12 col-md-6 mb-08">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-08 d-none d-md-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+    </div>
+
+                        </div>
+                    </div>
+                                <div id="listingServices" data-observe="true"
+                     data-action="/listings/services/?id=6807&amp;exclude=Optional"
+                     data-ajax-update="#listingServices" data-ajax-loading="#listingServices-loading" data-ajax-mode="realreplace">
+                    <div id="listingServices-loading">
+                        
+    <div class="_loader">
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-0 bg-0 z-i"></div>
+            </div>
+    </div>
+
+                        
+    <div class="row row-md">
+            <div class="col-12 col-md-6 mb-08">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-08 d-none d-md-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+    </div>
+
+                    </div>
+                </div>
+                
+<div class="p-1 bg-1" id="terms">
+    <button class="btn btn-sm bg-t b-0 text-6 u" id="listing-terms-btn" type="button" data-element="toggle" data-element-target="#listing-terms">
+        Host's Payment and Cancellation Policy.
+    </button>
+    <div class="text-sm hidden px-08 py-1" id="listing-terms">
+        <div class="mb-2">
+            <h5 class="mb-05">Payment Terms</h5>
+            <p>
+                50% upfront  and the rest later directly to the host.
+            </p>
+        </div>
+        <div>
+            <h5 class="mb-05">Cancellation Policy</h5>
+            <div>
+                <p><strong>100 %</strong> refund for cancellations of more than <strong>90</strong> days before start</p>
+<p><strong>70%</strong> refund for cancellations between <strong>90</strong> days and <strong>60</strong> days before start</p>
+<p><strong>50%</strong> refund for cancellations between <strong>60</strong> days and <strong>30</strong> days before start</p>
+<div><strong>0%</strong> refund for cancellations less than <strong>30</strong> days before start</div>
+
+            </div>
+        </div>
+            <div class="mt-2">
+                <h5 class="mb-05">Other terms and notes</h5>
+                <p class="line-break">LESSOR&#xD;&#xA;TKCA Vacation Rentals, Providenciales, Turks and Caicos Islands, BWI.&#xD;&#xA;PREMISES&#xD;&#xA;Windchaser Villas (Aliz&#xE9;, Sirocco, Mistral, Bora), 2 Long Bay Beach Drive, Long Bay Hills, Providenciales, Turks and Caicos Islands, including but not limited to structure, contents, patio and stairs adjacent to structure, swimming pool and grounds. Lessor reserves the right to relocate guests in any of these equivalent villas (or upgrade) without notice.&#xD;&#xA;DEPOSIT AMOUNT&#xD;&#xA;A fifty percent (50%) deposit of the total rental fee, in US dollars, shall be paid upon signing the rental agreement. The Deposit amount shall be a credit toward the total Rental Fee due in full sixty (60) days prior to the arrival. If payment is not made, a reminder will be sent via email. After one (1) week, the rental agreement is null and void and the property goes back into the rental market.&#xD;&#xA;OCCUPANCY&#xD;&#xA;The total number of occupants shall not exceed 4 people &#x2B; 2 kids under 12 years old.&#xD;&#xA;The lessor reserves the right to charge the lessee $50 per extra person (&#x2B; 12 yrs old) per day for the length of stay provided occupancy does not exceed maximum stated and/or evict group or all extra persons who were not originally included in rental agreement.&#xD;&#xA;WAIVER OF LIABILITY&#xD;&#xA;Lessee and/or Lessee&#x2019;s guests hereby voluntarily accept all risk of personal injury, death and/or property damage to Lessee and /or Lessee&#x2019;s guests which occur on or about the PREMISES during said term of lease. Lessee further agrees to release and forever hold harmless Lessor and/or Lessor&#x2019;s agents for any bodily injury, death and/or property damage sustained by Lessee and/or Lessee&#x2019;s guests during said term of lease.&#xD;&#xA;INDEMNIFICATION&#xD;&#xA;Lessee agrees to indemnify Lessor for any liabilities, theft, damage, cost or expense whatsoever arising from or related to any potential claim or litigation which may arise out of or in connection with Lessee use and occupancy of the premises during the term of lease and/or Lessee&#x2019;s guests use and occupancy of the premises during said term of lease.&#xD;&#xA;SWIMMING POOL&#xD;&#xA;Lessee understands Lessor provides no lifeguard on premises. Lessee further understands that said use of pool is an inherently dangerous activity and assumes full responsibility for Lessee and/or Lessee&#x2019;s guests own safety during said term of lease.&#xD;&#xA;CHILDREN&#xD;&#xA;Lessee assumes sole responsibility for the proper supervision of any children on the premises during said term of lease. Lessor expressly&#xD;&#xA;disclaims that the premises are suited or otherwise designed for children or young adults who lack the maturity to recognize the inherent risks associated with the use of the swimming pool or the entering of a natural wilderness such as the ocean. Lessee is specifically advised not to allow children to swim or play in the swimming pool or the ocean without adult supervision.&#xD;&#xA;CANCELLATION&#xD;&#xA;In the event Lessee cancels sixty (60) days prior to the commencement of said term of lease, the deposit amount is fully refundable minus applicable banking fees. If Lessee cancels less than sixty (60) days prior to commencement of said term of lease, the rental amount is forfeited. The purchase of travel insurance to cover unexpected cancellations is recommended. Travel insurance provides coverage to protect Lessee from a wide array of unexpected events such as, but not limited to, unpredictable weather, medical or family emergency. Lessee is encouraged to give consideration to the purchase of travel insurance as there are circumstances that can cause renters to cancel or interrupt their stay thereby forfeiting any non-refundable pre-payments or payments made for their trip.&#xD;&#xA;EVICTION, LAW and AGENCY&#xD;&#xA;In the event Lessee breaches any term of this agreement Lessor reserves the right to evict Lessee without notice. No refund will be given to Lessee. Lessee and Lessor agree the laws of Turks and Caicos Islands, British West Indies, shall govern this agreement. Lessor or its designated agent may administer this agreement. Lessee agrees to release and forever hold harmless Lessor&#x2019;s agent.&#xD;&#xA;UTILITIES&#xD;&#xA;The owner will cover up to $25.00/day (forty five US Dollars) for the electricity consumption. On the last day of this rental, the meter will be read and any amount over the allowance will be charged to the lessee, on their credit card, at a rate of $0.50 per KWH.&#xD;&#xA;SEPTIC TANK&#xD;&#xA;Lessee understands that we have septic tanks and that the grey water is reused in landscaping. There is no water treatment filters and facilities on the premises. Lessee therefore agrees to NOT flush anything else than toilet paper. Other hygiene and personal care products block the pipes and destroy the natural bacterial process which then inconveniences all guests on site when it&#x27;s blocked and it overflows.&#xD;&#xA;NON SMOKING / NO ANIMALS ALLOWED&#xD;&#xA;The units are strictly non-smoking and no animals are allowed inside. Lessee will be charged a fine and a cleaning fee of $300.00 (three hundred) US dollars plus fees on their credit card if these rules are not respected.&#xD;&#xA;SECURITY DEPOSIT&#xD;&#xA;A security deposit of US $400 (four hundred US dollars) will be held on the Lessee&#x2019;s credit card upon arrival. Upon departure, the property will be inspected and once verified there are no damages to the property and its contents and no loss of items, the security deposit will be released back to the Lessee&#x2019;s credit card. Report any damages or loss immediately. If not, it will be assumed that damages and/or loss were caused by you and you will be charged accordingly. It is also expected for the lessee to leave the premises in good conditions and relatively clean. Failure to do so may incur extra cleaning charges that will be charged on your credit card after departure.&#xD;&#xA;BED CONFIGURATION - PLEASE CIRCLE YOUR CHOICE&#xD;&#xA;*extra fees apply if you ask for a different configuration once you have checked-in&#xD;&#xA;-2nd bedroom: Twins or King (default); Pack and Plays: 1 or 2; Single Air Mattresses: 1 or 2. Sofa-Bed: yes or no.&#xD;&#xA;PAYMENT, UTILITIES and SECURITY DEPOSIT&#xD;&#xA;We accept Visa and MasterCard credit cards. We DO NOT accept Amex. Mandatory: a credit card number is required for utilities and to hold the&#xD;&#xA;security deposit</p>
+            </div>
+    </div>
+</div>
+            </section>
+            
+            <section id="photos" class="block py-4">
+                <div id="listingPhotos" data-observe="true" data-action="/listings/images/?id=6807"
+                     data-ajax-update="#listingPhotos" data-ajax-loading="#listingPhotos-loading" data-ajax-empty="$('#photos').remove();" data-ajax-mode="realreplace">
+                    <div id="listingPhotos-loading">
+                        
+    <div class="row row-md">
+            <div class="col-12 col-md-6 col-lg-4 mb-08">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-08 d-none d-md-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-08 d-none d-xl-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+    </div>
+
+                    </div>
+                </div>
+            </section>
+            
+            <section id="videos" class="block py-4">
+                <div id="listingVideos" data-observe="true" data-action="/listings/videos/?id=6807"
+                     data-ajax-update="#listingVideos" data-ajax-loading="#listingVideos-loading" data-ajax-empty="$('#videos').remove();console.log(2)" data-ajax-mode="realreplace">
+                    <div id="listingVideos-loading">
+                        
+    <div class="row row-md">
+            <div class="col-12 col-md-6 mb-08">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-08 d-none d-md-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+    </div>
+
+                    </div>
+                </div>
+            </section>
+
+            
+                <section id="statistics" class="block bg-1 py-4 mb-4 pr-1 pl-md-1 b-y">
+                        <div class="pos-r">
+                            <img class="img-res" alt="Stats" src="//bstoked.azureedge.net/a/hidden-statistics.png" />
+                            <div class="f-y py-1 py-sm-2 py-md-6 text-center z-i">
+                                <div class="h5 mb-2">Show spot conditions</div>
+                                <a href="#login" data-toggle="modal" class="btn btn-primary px-3 strong">
+                                    Login
+                                </a>
+                            </div>
+                        </div>
+                </section>
+            
+                    <section class="block">
+                        <div class="mb-4">
+                            
+
+
+                        </div>
+                        <div class="text-center pb-4">
+                            <div class="h5 mb-2">Show full reviews</div>
+                            <a href="#login" data-toggle="modal" class="btn btn-primary px-3 strong">
+                                Login
+                            </a>
+                        </div>
+                    </section>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3 pt-lg-2">
+            
+
+
+<div id="book-sidebar" class="book-sidebar sticky sticky-md-down pt-4 pt-lg-0" data-breakpoint="992">
+    <div class="card p-08 py-lg-1 px-lg-2 bg-0">
+            <div class="d-flex flex-row flex-lg-column align-items-center align-items-lg-baseline container w-100 px-0">
+                <div class="w-100">
+                    <span class="d-m-none">
+                        <span class="text-md">
+                            <strong class="text-m">
+                                From €113
+                            </strong>
+                        </span>
+                        <span class="text-sm text-6">
+                            / 3 nights
+                        </span>
+                    </span>
+                    <span class="d-lg-none pricing-summary">
+                        <span class="text-md">
+                            <strong class="text-m">
+                                From €113
+                            </strong>
+                        </span>
+                        <span class="text-sm text-6">
+                            / 3 nights
+                        </span>
+                    </span>
+                    <hr class="my-08 d-m-none"/>
+                </div>
+                    <div class="pos-r w-100 ml-auto ml-lg-0 text-sm">
+                        <div class="book-details">
+                            
+                        </div>
+                        <div class="text-right">
+                            <div class="pos-r">
+                                <a href="#book-modal" data-toggle="modal" data-backdrop="false" class="btn btn-action w-100 strong px-sm-2 my-lg-1" role="button"
+                                   data-tk="Send-Inquiry_Click" data-tkf="#book">
+                                    Contact Host
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        
+            <div class="d-m-none mb-08">
+                    <a href="#login" data-toggle="modal" data-return-action="/wishlists/6807/toggle/?add=True"
+                       class="wishlist-btn btn btn-block b-xs h-o text-action">
+                        <i class="bs text-md bs-heart mr-08"></i>
+                        Save to Wish list
+                    </a>
+            </div>
+        
+        <div class="mb-08 text-center text-sm d-m-none">
+            <a class="u text-6" href="mailto:kitesurf@bstoked.net" target="_blank" rel="nofollow noopener">Need help?</a>
+        </div>
+        
+            <a class="pos-r d-m-none pt-1 mt-1 b-t nc" target="_blank" rel="noopener" style="display: none;"
+               data-provide="travelcosts" data-breakpoint="992" data-to="Windchaser Villas, Long Bay Hills, Caicos Islands, Turks and Caicos Islands">
+                <div class="d-flex flex-row text-sm text-7">
+                    <div>
+                        <i class="bs bs-md bs-plane"></i>
+                        <strong>
+                            <span class="duration"></span>h
+                        </strong>
+                        from <span class="from"></span>
+                    </div>
+                    <div class="ml-auto">
+                        &#x20AC;<span class="price"></span>
+                    </div>
+                </div>
+                <div class="f-y loading _loader py-025">
+                    <div class="h25 my-025 _l-c _l"></div>
+                </div>
+            </a>
+    </div>
+    <div class="pos-r bg-0 py-1 px-01 d-m-none">
+        
+
+<div class="text-sm">
+    <p class="d-flex flex-row">
+        <i class="bs bs-piggy-bank bs-2x mr-05"></i>
+        <span class="pt-04">
+            No need to look further. Best price guarantee.
+        </span>
+    </p>
+    <p class="d-flex flex-row">
+        <i class="bs bs-takeoff bs-2x mr-05"></i>
+        <span class="pt-04">
+            Flight search support.
+        </span>
+    </p>
+    <p class="d-flex flex-row">
+        <i class="bs bs-user bs-2x mr-05"></i>
+        <span class="pt-04">
+            Direct communication with the host.
+        </span>
+    </p>
+</div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+
+    <section class="block py-0 bg-2" id="location">
+        <div class="container-fluid px-0">
+            
+
+
+<section id="location" class="bg-cover pos-r py-1" responsive data-slimmage-bg="//bstoked.azureedge.net/d-7049-v4YnQqVMisIVdp0qJNmkcfHGNKJRxhn0.jpg?width=1920">
+    <div class="container">
+        <div class="hero-md v-align">
+            <div class="text-0 text-r">
+                <h3 class="display-4 mb-1">Turks and Caicos Islands</h3>
+                <a class="btn btn-primary text-white h-a text-wrap" role="button" href="/locations/turks-and-caicos-islands/">
+                    More about Kitesurfing in Turks and Caicos Islands
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+        </div>
+    </section>
+    <section class="block py-0" id="map">
+        <div>
+            <div class="row row-0">
+                    <div class="col-12 col-lg-6">
+                        
+
+
+
+<div class="h-100 min-h450 bg-1" data-toggle="pointer-events">
+    <iframe src="//www.google.com/maps/embed/v1/view?key=REDACTED&amp;center=21.78566235794231,-72.14690297842026&amp;zoom=15" allowfullscreen height="450" scrolling="yes" class="p-e-d h-100"></iframe>
+</div>
+
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        
+
+
+        <script id="windyScript" async="true" defer="true" type="text/javascript" data-src="//windyapp.co/widget/windy_forecast_async.js"></script>
+        <div class="h-100 bg-1"
+             data-observe="true"
+             data-target="#windyScript"
+             data-windywidget="forecast"
+             data-lat="21.78566235794231"
+             data-lng="-72.14690297842026"
+             data-appid="a0a9d095765c0f16a9d4a4a02f90b54b">
+        </div>
+
+                    </div>
+            </div>
+        </div>
+    </section>
+<section id="host" class="block">
+    <div class="container py-5">
+        
+
+<div class="row">
+    <div class="col-12 col-md-3 col-lg-2 col-xl-1 mb-1">
+        <div class="img-circle img-circle-xl bg-0 of-h">
+            <img alt="TKCA Vacation Rentals" src="//bstoked.azureedge.net/u-2040-ualWsZcLU4TzZe3U95KyKQD241L1Tbh4.jpg?width=84" />
+        </div>
+    </div>
+    <div class="col-12 col-md-9 col-lg-10 col-xl-11 text-md-left mb-4">
+        <div class="mb-1">
+            <h4 class="mb-0">
+                <span class="text-muted">Your Host:</span> <a class="nc" href="/users/2040/">TKCA Vacation Rentals</a>
+            </h4>
+            <div class="text-muted">
+                Member since June 2017
+            </div>
+        </div>
+        <div>
+            <p>
+                <i>
+                    TKCA Vacation Rentals is your host for this experience and will provide you with all the information needed.
+                </i>
+            </p>
+            <div id="listingHost" data-observe="true" 
+                 data-action="/listings/hostdata/?id=2040"
+                 data-ajax-update="#listingHost" data-ajax-loading="#listingHost-loading" data-ajax-mode="realreplace">
+                <div id="listingHost-loading" class="hidden">
+                    
+    <div class="_loader">
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-0 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-50 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-25 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-25 bg-0 z-i"></div>
+            </div>
+    </div>
+
+                </div>
+            </div>
+                    </div>
+    </div>
+</div>
+<div class="row mx-sm-0 bg-1 b-r-2">
+    <div class="col-12 col-md-3 col-lg-2 col-xl-1 my-1">
+        <div class="text-center" style="width: 85px">
+            <i class="bs bs-badge bs-5x"></i>
+        </div>
+    </div>
+    <div class="col-12 col-md-9 col-lg-10 col-xl-11 align-self-center my-2">
+        TKCA Vacation Rentals has been selected as a host by bstoked.
+        We only accept hosts which are trustworthy and have a great quality in service to make sure you get the best experience possible.
+    </div>
+</div>
+    </div>
+</section>
+
+<section id="similar" class="block">
+    <div class="container py-4">
+        <div id="listingSimilar" data-observe="true" 
+             data-action="/listings/similar/?id=6807&amp;locationId=7178&amp;parentId=7049&amp;type=Accommodation&amp;guests=1"
+             data-ajax-update="#listingSimilar" data-ajax-loading="#listingSimilar-loading" data-ajax-failure="$('#similar').remove();" data-ajax-mode="realreplace">
+            <div id="listingSimilar-loading" class="hidden">
+                
+    <div class="row row-md">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-08">
+                <div class="card _loader">
+                    <div class="card-img card-img-sm _l-c _l"></div>
+                    <div class="card-body">
+                        <p class="h-2x _l-c _l"></p>
+                        <div class="_l-c _l mb-05"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-08 d-none d-lg-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-sm _l-c _l"></div>
+                    <div class="card-body">
+                        <p class="h-2x _l-c _l"></p>
+                        <div class="_l-c _l mb-05"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-08 d-none d-xl-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-sm _l-c _l"></div>
+                    <div class="card-body">
+                        <p class="h-2x _l-c _l"></p>
+                        <div class="_l-c _l mb-05"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-08">
+                <div class="card _loader">
+                    <div class="card-img card-img-sm _l-c _l"></div>
+                    <div class="card-body">
+                        <p class="h-2x _l-c _l"></p>
+                        <div class="_l-c _l mb-05"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+ 
+
+<div>
+    <div id="book-modal" class="modal pr-0 bg-s-t p-sm-1 p-md-3 scale" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-full mx-auto" style="max-width:1300px" role="document">
+            <div class="modal-content">
+                <div class="modal-header b-b">
+                    <h4 class="modal-title w-100 text-center px-4">Contact host for availability</h4>
+                    <button type="button" class="pos-f-t-r btn btn-sm btn-circle btn-light box-s-2 my-08 mx-2" data-dismiss="modal" aria-label="Close">
+                        <i class="bs bs-cancel-2 text-md"></i>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="px-1 px-sm-3 py-08 bg-1 b-b" id="book-progress">
+                    <div class="text-sm text-center semi mb-05">
+                        <span data-step="1" class="p-step strong">1. Dates</span>
+                        <i class="bs bs-arrow-right bs-sm mx-05"></i>
+                        <span data-step="2" class="p-step">2. Guests</span>
+                        <i class="bs bs-arrow-right bs-sm mx-05"></i>
+                        <span data-step="3" class="p-step">3. Custom</span>
+                        <i class="bs bs-arrow-right bs-sm mx-05"></i>
+                        <span data-step="4" class="p-step">4. Overview</span>
+                    </div>
+                    <div class="bg-3 progress progress-sm w-100 mr-1">
+                        <div class="progress-bar" style="width: 25%;" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="modal-body px-sm-3 pt-3 pb-6">
+                    <div>
+                        <div class="d-flex flex-row align-items-start">
+                            <form></form>
+                            <div class="d-none d-lg-block card p-2 w350 min-w350 ml-3 mt-4">
+                                <div class="book-details">
+                                        <div class="pb-1 b-b">
+                                            <span class="text-md">
+                                                <strong class="text-m">
+                                                    From €113
+                                                </strong>
+                                            </span>
+                                            <span class="text-sm text-6">
+                                                / 3 nights
+                                            </span>
+                                        </div>
+                                </div>
+                                <div class="mt-2">
+                                    
+
+<div class="text-sm">
+    <p class="d-flex flex-row">
+        <i class="bs bs-piggy-bank bs-2x mr-05"></i>
+        <span class="pt-04">
+            No need to look further. Best price guarantee.
+        </span>
+    </p>
+    <p class="d-flex flex-row">
+        <i class="bs bs-takeoff bs-2x mr-05"></i>
+        <span class="pt-04">
+            Flight search support.
+        </span>
+    </p>
+    <p class="d-flex flex-row">
+        <i class="bs bs-user bs-2x mr-05"></i>
+        <span class="pt-04">
+            Direct communication with the host.
+        </span>
+    </p>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="optionalServices-modal" class="modal fade bg-s-t" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="bs bs-cancel-2 text-lg"></i>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div id="listingIncludedServices" data-observe="true" data-action="/listings/services/?id=6807&amp;types=Included"
+                         data-ajax-update="#listingIncludedServices" data-ajax-loading="#listingIncludedServices-loading" data-ajax-mode="realreplace">
+                        <div id="listingIncludedServices-loading">
+                            
+    <div class="_loader">
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-0 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-50 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-25 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-25 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-0 bg-0 z-i"></div>
+            </div>
+    </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+</body></html>

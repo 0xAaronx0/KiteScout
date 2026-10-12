@@ -1,0 +1,935 @@
+<!DOCTYPE html><html><head><title>bstoked listing (trimmed fixture)</title></head><body>
+<header role="banner" class="hero hero-lg v-align block-inverse">
+    <div class="background cursor-pointer" responsive data-slimmage-bg="//bstoked.azureedge.net/l-6831-hZ2yocwzhiviqHNfZfbCA9m2IbyVZLG2.jpg?width=1920"></div>
+    
+    <div class="pos-a-b-l bg-g-b f-x py-08 py-lg-2 z-i-2">
+        <div class="container text-white pos-r z-i">
+            <div class="text-r text-r-2">
+                <h1 class="display-4 d-inline v-m mb-0 mr-05 text-break">Oceanside Studio Accomodation</h1>
+                <div class="dis-i-b v-m text-lg">
+                    <a href="#share-modal" role="button" class="btn btn-sm btn-light rounded-circle text-m-2 p-025 p-md-05" data-toggle="modal" aria-haspopup="true" aria-expanded="false">
+                        <i class="bs bs-share bs-lead text-6 w-1x h-1x v-m"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="lead">
+                    <span class="text-m">Saint Martin, Caribbean</span>
+                            </div>
+        </div>
+    </div>
+</header>
+<main id="main" role="main">
+        <!--[if lt IE 10]>
+            <div class="alert alert-warning" role="alert">
+                <div>You are using an outdated browser. Please <a class="alert-link" href="http://browsehappy.com/" target="_blank">upgrade your browser</a> to improve your experience.</div>
+            </div>
+        <![endif]-->
+        
+
+
+
+
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "name": "Oceanside Studio Accomodation",
+    "image": "https://bstoked.azureedge.net/l-6831-hZ2yocwzhiviqHNfZfbCA9m2IbyVZLG2.jpg?width=960",
+    "description": "Enjoy a 7 night stay in one of our top floor studios located in the Orient Beach Resort just two minutes walk from a kite boarding paradise. Ride with the sea turtles and rays in t",
+    
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "EUR",
+            "price": "47.5000",
+            "itemCondition": "http://schema.org/UsedCondition",
+            "availability": "http://schema.org/InStock",
+            "seller": {
+            "@type": "Organization",
+            "name": "emmanuel"
+            }
+        }
+        }
+</script>
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "https://bstoked.net/locations/caribbean/",
+                "name": "Caribbean"
+            }
+        },
+            {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+            "@id": "https://bstoked.net/listings/search/?Types=Accommodation",
+            "name": "Accommodation"
+        }
+    }]
+}
+</script>
+
+
+<header role="banner" class="hero hero-lg v-align block-inverse">
+    <div class="background cursor-pointer" responsive data-slimmage-bg="//bstoked.azureedge.net/l-6831-hZ2yocwzhiviqHNfZfbCA9m2IbyVZLG2.jpg?width=1920"></div>
+    
+    <div class="pos-a-b-l bg-g-b f-x py-08 py-lg-2 z-i-2">
+        <div class="container text-white pos-r z-i">
+            <div class="text-r text-r-2">
+                <h1 class="display-4 d-inline v-m mb-0 mr-05 text-break">Oceanside Studio Accomodation</h1>
+                <div class="dis-i-b v-m text-lg">
+                    <a href="#share-modal" role="button" class="btn btn-sm btn-light rounded-circle text-m-2 p-025 p-md-05" data-toggle="modal" aria-haspopup="true" aria-expanded="false">
+                        <i class="bs bs-share bs-lead text-6 w-1x h-1x v-m"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="lead">
+                    <span class="text-m">Saint Martin, Caribbean</span>
+                            </div>
+        </div>
+    </div>
+</header>
+
+
+<div id="share-modal" class="modal fade scale " tabindex="-1" role="dialog" aria-hidden="true">
+    <div role="document" class="modal-dialog modal-sm">
+        <div class="modal-content ">
+            <div class="modal-header ">
+                <h5 class="modal-title  w-100 pl-2 text-center">Share</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <i class="bs bs-cancel-2 text-md"></i>
+                    <span class="sr-only">Close</span>
+                </button>
+            </div>
+            <div class="modal-body pt-0 ">
+                <div class="w-100">
+                    
+
+
+<div class="social social-share">
+    <div class="text-lead text-center">
+        <a class="dropdown-item py-1 b-b" data-network="facebook" rel="nofollow" title="Facebook"
+           href="//www.facebook.com/sharer.php?u=https%3A%2F%2Fbstoked.net%2Flistings%2F6831%2F" target="_blank">
+            <i class="bs bs-facebook mr-08"></i>Facebook
+        </a>
+        <a class="dropdown-item py-1 b-b" data-network="twitter" rel="nofollow" title="Twitter"
+           href="//twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20trip%20-%20https%3A%2F%2Fbstoked.net%2Flistings%2F6831%2F" target="_blank">
+            <i class="bs bs-twitter mr-08"></i>Twitter
+        </a>
+        <a class="dropdown-item py-1 b-b" data-network="pinterest" rel="nofollow" title="Pinterest"
+           href="//www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fbstoked.net%2Flistings%2F6831%2F&media=%2F%2Fbstoked.azureedge.net%2Fl-6831-hZ2yocwzhiviqHNfZfbCA9m2IbyVZLG2.jpg&description=Check%20out%20this%20amazing%20trip%20-%20https%3A%2F%2Fbstoked.net%2Flistings%2F6831%2F" target="_blank">
+            <i class="bs bs-pinterest mr-08"></i>Pinterest
+        </a>
+        <a class="dropdown-item py-1 b-b" data-network="email" rel="nofollow" title="Email"
+           href="mailto:?subject=Take%20a%20look%20at%20this&body=Check%20out%20this%20amazing%20trip%20-%20https%3A%2F%2Fbstoked.net%2Flistings%2F6831%2F" target="_blank">
+            <i class="bs bs-mail mr-08"></i>Email
+        </a>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar navbar-h navbar-light sticky-top bg-0 p-0 b-b scroll-spy">
+    <div class="container w-xs-100 p-0">
+        <ul class="navbar-nav w-100">
+            <li class="nav-item"><a class="nav-link py-1" href="#info">Info</a></li>
+            <li class="nav-item"><a class="nav-link py-1" href="#photos">Photos</a></li>
+            
+                <li class="nav-item d-none d-lg-block"><a class="nav-link py-1" href="#statistics">Stats</a></li>
+            
+                            
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link py-1" href="#location">Location</a></li>
+                    <li class="nav-item d-none d-lg-block"><a class="nav-link py-1" href="#map">Map</a></li>
+                
+            <li class="nav-item d-none d-lg-block"><a class="nav-link py-1" href="#host">Host</a></li>
+
+            <li class="d-flex align-items-center nav-item d-lg-none ml-auto mr-08">
+                        <a href="#login" data-toggle="modal" data-return-action="/wishlists/6831/toggle/?add=True" 
+                           class="wishlist-btn btn bg-1 box-s-2 px-1 rounded-pill text-sm h-bs l-h-1">
+                            <i class="bs bs-heart mr-05"></i>
+                            Save
+                        </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row row-0">
+        <div class="col-12 col-lg-8 col-xl-9 pr-lg-5 fs15px">
+            <section id="summary" class="block">
+                
+
+<div class="row row-sm d-flex align-items-center text-center">
+    <div class="col-md-2 col-sm-3">
+        <a class="nc" href="#host">
+            <div class="dis-i-b pos-r">
+                <div class="img-circle img-circle-xl bg-0 of-h">
+                    <img alt="emmanuel" src="//bstoked.azureedge.net/u-2071-0HIJpGXOhfe8fn4vo9Te2CShIWzdg0Qw.jpg?width=84" />
+                </div>
+            </div>
+            <div class="pt-05">emmanuel</div>
+        </a>
+    </div>
+    <div class="col-md-10 col-sm-9 py-1">
+        <div class="row row-sm d-flex align-items-center">
+            <div class="col-xl-4 col-lg-4 col-md-3 col-6 mb-1 m-md-0">
+                <a class="nc" href="/listings/type/accommodation/">
+                    <i class="bs bs-25x bs-home text-6"></i>
+                    <div class="pt-05">Accommodation</div>
+                </a>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-3 d-none d-md-block mb-1 m-md-0">
+                        <i class="bs bs-25x bs-bed text-6"></i>
+                        <div class="pt-05">Included</div>
+            </div>
+            
+                <div class="col-xl-4 col-lg-4 col-md-6 col-6 mb-1 m-md-0">
+                        <i class="bs bs-25x text-6 bs-skill-1" title="Not yet independent."></i><i class="bs bs-25x text-6 bs-skill-2" title="Independent and easily riding upwind."></i><i class="bs bs-25x text-6 bs-skill-4" title="Very experienced and capable of riding in any conditions."></i>
+                        <div class="pt-05">Skill level</div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+            </section>
+            <section id="info" class="block py-4 py-lg-3">
+                
+
+
+    <h4 class="mb-08 d-block d-lg-none">Summary</h4>
+    <div class="line-break pb-2">Enjoy a 7 night stay in one of our top floor studios located in the Orient Beach Resort just two minutes walk from a kite boarding paradise. Ride with the sea turtles and rays in the crystal clear waters while surfing the waves, shredding the lagoon or learning to foil in the deep ocean waters.</div>
+
+<div class="b-b block py-2">
+    <div class="row row-sm">
+        <div class="col-md-3 pb-05 semi text-md text-muted">
+            Kitesurf conditions
+        </div>
+        <div class="col-md-9">
+            <div class="listing-structured row">
+                        <div class="col-12 col-md-6">
+                            <i class="bs bs-skill-2 bs-xl float-left text-5" title="Skill level"></i>
+                            <div>
+                                Beginner, Intermediate, Advanced
+                            </div>
+                        </div>
+                
+                                            <div class="col-12 col-md-6">
+                            <i class="bs bs-spot-8 bs-xl float-left text-5" title="Spot conditions"></i>
+                            <div>
+                                <span class="text-muted">Spot:</span>
+                                Flat, Small waves, Choppy
+                            </div>
+                        </div>
+                
+                
+                
+<div class="col-12 col-md-6">
+                        <i class="bs bs-equipment bs-xl float-left text-5" title="Gear rental"></i>
+                        <div>Gear rental</div>
+                    </div>
+<div class="col-12 col-md-6">
+                        <i class="bs bs-storage bs-xl float-left text-5" title="Gear storage"></i>
+                        <div>Gear storage</div>
+                    </div>
+<div class="col-12 col-md-6">
+                        <i class="bs bs-lessons bs-xl float-left text-5" title="Lessons or coaching"></i>
+                        <div>Lessons or coaching</div>
+                    </div>
+<div class="col-12 col-md-6">
+                        <i class="bs bs-guidance bs-xl float-left text-5" title="Spot guidance"></i>
+                        <div>Spot guidance</div>
+                    </div>
+<div class="col-12 col-md-6">
+                        <i class="bs bs-rescue bs-xl float-left text-5" title="Rescue service"></i>
+                        <div>Rescue service</div>
+                    </div>
+                            </div>
+        </div>
+            <div class="col-12 mt-2">
+                    <div class="max-h125 of-h" id="more0">
+                        <p class="line-break">The kite spot is for advanced riders, as it is necessary to ride upwind 80m in order to reach the kiting area. Riders are required to stay outside the swimming area which is indicated with yellow markers. &#xD;&#xA;&#xD;&#xA;The bay is 1.5 miles wide offering flat water, chop and swell. The flat water and waves can be found close to Green Cay Island.  During high season, this area can get crowded with jet skis, boats and parasails. The launching area is located between Kakao and Bikini Beach. The waters are crystal clear with sea turtles and rays playing close to Marine Park. &#xD;&#xA;&#xD;&#xA;The wind is consistent year round with an average of 13-18 knots. A quiver of 10m and 14m would be perfect for the conditions. The water is warm with no wetsuit needed, though a rash guard for sun protection is necessary. &#xD;&#xA;&#xD;&#xA;The conditions are perfect for all riding type. Enjoy flat water in the lagoon, wave riding at the reef, long swell in the bay and deep water for foiling.</p>
+                    </div>
+                    <div class="bg-f-b-w mt--3 pos-r pt-3">
+                        <button class="btn btn-link strong px-0" data-toggle-more="#more0" data-remove="true" type="button">More +</button>
+                    </div>
+            </div>
+    </div>
+</div>
+
+<div class="b-b block mb-1 py-2">
+    <div class="row row-sm">
+        <div class="col-md-3 pb-05 semi text-md text-muted">
+            Trip characteristics
+        </div>
+        <div class="col-md-9">
+            <div class="listing-structured row">
+                                                    <div class="col-12 col-md-6">                        
+                        <i class="bs bs-location bs-xl float-left text-5" title="Exact address of meeting point or accommodation"></i>
+                        <div>
+                            <span class="text-muted">Typical Pickup:</span>
+                            Collectivit&#xE9; de Saint-Martin, Saint-Martin
+                        </div>
+                    </div>
+                                                    <div class="col-12 col-md-6">
+                        <i class="bs bs-couple bs-xl float-left text-5" title="Suitable for"></i>
+                        <div>
+                            <span class="text-muted">Suitable for:</span>
+                            Solo traveler, Group, Family, Non-rider
+                        </div>
+                    </div>
+                <div id="languages" class="col-12 col-md-6">
+                    <i class="bs bs-language bs-xl float-left text-5" title="Languages"></i>
+                    <div>
+                        <div id="listingLanguages" data-ajax-load="GET" data-action="/listings/languages/?id=6831"
+                             data-ajax-update="#listingLanguages" data-ajax-loading="#listingLanguages-loading" data-ajax-failure="$('#languages').remove();" data-ajax-mode="realreplace">
+                            <div id="listingLanguages-loading">
+                                
+    <div class="_loader">
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-0 bg-0 z-i"></div>
+            </div>
+    </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="col-12 col-md-6">
+                        <i class="bs bs-ambience bs-xl float-left text-5" title="Ambience"></i>
+                        <div>
+                            <span class="text-muted">Ambience:</span> 
+                            Wilderness, Relaxed
+                        </div>
+                    </div>
+                                    <div class="col-12 col-md-6">
+                        <i class="bs bs-three bs-xl float-left text-5" title="Experience Type"></i>
+                        <div>
+                            <span class="text-muted">Experience Type:</span> 
+                            Private
+                        </div>
+                    </div>
+                                            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="block py-1">
+        <div class="max-h200 of-h" id="more1">
+            <h4 class="mb-1">The Destination</h4>
+            <div class="line-break">St Martin is known for its dry climate and sunny weather. Because of the weather, the wind conditions are consistent year round. With crystal clear and warm waters, the ocean is an amazing playground for everyone!&#xD;&#xA;&#xD;&#xA;The island is half Dutch and half French offering a wonderful multi-cultural atmosphere. Enjoy the French cuisine and duty free shops on the French side and bustling nightlife and casinos on the Dutch side. &#xD;&#xA;&#xD;&#xA;Unlike most kiteboarding destinations, the wind is consistent around 13-18 knots the whole year. Morning is always the best time to ride until about 11am, and picks up again around 3pm each day.&#xD;&#xA;&#xD;&#xA;The spot offers conditions for all riding types: flat water in the lagoon, wave riding on the reef, long swell outside the bay and deep water for foil boarding.</div>
+        </div>
+            <div class="bg-f-b-w mt--3 pos-r pt-3">
+                <button class="btn btn-link strong px-0" data-toggle-more="#more1" data-remove="true" type="button">More +</button>
+            </div>
+    </div>
+
+<div class="block py-1">
+    <div class="max-h200 of-h" id="more2">
+        <div class="pb-05">
+            <h4 class="mb-1">The Experience</h4>
+                <div class="line-break"><p>St Martin is a small island making it easy to organise last minute activities. Take an evening off kiteboarding and enjoy the other activities the island has to offer.</p>
+<p>Explore the water and wildlife in other ways including hobie cat rentals, sea kayaking, snorkelling around Orient Bay, surfing, SUP or take a boat excursion to Anguilla, St Barthelemy.</p>
+<p>Visit the landscapes, historic sites and traditional buildings on a hiking tour, bike ride, quad bike tour or on horseback. Explore the mountain trails and visit the butterfly farm or the Loterie Farm.</p>
+<p>Markets and duty free shopping are a popular attractions in Marigot and Philipsburg.</p>
+</div>
+        </div>
+                <div class="pb-05">
+                    <h5 class="mb-08 mt-1">Kite trip to Anguilla</h5>
+                    <div class="line-break"><p>We offer weekly day trips to Anguilla, joining one of these trips is a must!</p>
+<p>We will depart from the Vela centre at 8:30am by motorboat, arriving at Cove Bay, Anguilla at 9:30am. Here we have the morning hours to kite. In the afternoon we will have lunch and then enjoy an amazing downwinder to Prickly Pear or go visit Sandy Island. We will return to Orient Bay by 4pm.</p>
+<p>This trip if perfect for intermediate riders (must ride upwind), non-riders and kids welcome.</p>
+<p>We also offer this trip to another location on Anguilla, Savannah Bay with the options of going to Scrub Island. Savannah Bay is a beautiful wave spot, Scrub Island is also a wave spot with slightly lighter wind.</p>
+<p>This trip is for advanced riders only.</p>
+</div>
+                </div>
+                <div class="pb-05">
+                    <h5 class="mb-08 mt-1">Getting there</h5>
+                    <div class="line-break"><p>Airport Arrival:</p>
+<p>You'll fly into St Martin's Juliana International Airport (SXM). When you arrive at the airport you will go through immigration and pick up any checked luggage in baggage claim. </p>
+<p>Taxis / Transfers:</p>
+<p>We suggest that you use taxi service to reach your hotel. Taxi drivers are very familiar with the location of all properties. It takes about 35 minutes and costs about $40 per taxi to the hotels along Orient Bay.</p>
+</div>
+                </div>
+    </div>
+        <div class="bg-f-b-w mt--3 pos-r pt-3">
+            <button class="btn btn-link strong px-0" data-toggle-more="#more2" data-remove="true" type="button">More +</button>
+        </div>
+</div>
+
+
+    <div class="block py-1">
+        <div id="more3">
+            <h4 class="mb-1">Accommodation</h4>
+            <div class="line-break">Our studios are located on the windward coast of Saint-Martin, just two minutes walk from the beach. The rooms are on the top floor of the Orient Beach Resort surrounded by tropical plants and colourful vegetation. </div>
+        </div>
+    </div>
+
+                    <div id="listingAccommodations" data-observe="true" data-action="/listings/accommodations/?id=6831"
+                         data-ajax-update="#listingAccommodations" data-ajax-loading="#listingAccommodations-loading" data-ajax-mode="realreplace">
+                        <div id="listingAccommodations-loading">
+                            
+    <div class="_loader">
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-0 bg-0 z-i"></div>
+            </div>
+    </div>
+
+                            
+    <div class="row row-md">
+            <div class="col-12 col-md-6 mb-08">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-08 d-none d-md-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+    </div>
+
+                        </div>
+                    </div>
+                                <div id="listingServices" data-observe="true"
+                     data-action="/listings/services/?id=6831&amp;exclude=Optional"
+                     data-ajax-update="#listingServices" data-ajax-loading="#listingServices-loading" data-ajax-mode="realreplace">
+                    <div id="listingServices-loading">
+                        
+    <div class="_loader">
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-0 bg-0 z-i"></div>
+            </div>
+    </div>
+
+                        
+    <div class="row row-md">
+            <div class="col-12 col-md-6 mb-08">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-08 d-none d-md-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+    </div>
+
+                    </div>
+                </div>
+                
+<div class="p-1 bg-1" id="terms">
+    <button class="btn btn-sm bg-t b-0 text-6 u" id="listing-terms-btn" type="button" data-element="toggle" data-element-target="#listing-terms">
+        Host's Payment and Cancellation Policy.
+    </button>
+    <div class="text-sm hidden px-08 py-1" id="listing-terms">
+        <div class="mb-2">
+            <h5 class="mb-05">Payment Terms</h5>
+            <p>
+                100% upfront .
+            </p>
+        </div>
+        <div>
+            <h5 class="mb-05">Cancellation Policy</h5>
+            <div>
+                <p><strong>100 %</strong> refund for cancellations of more than <strong>60</strong> days before start</p>
+<p><strong>70%</strong> refund for cancellations between <strong>60</strong> days and <strong>30</strong> days before start</p>
+<p><strong>30%</strong> refund for cancellations between <strong>30</strong> days and <strong>7</strong> days before start</p>
+<div><strong>0%</strong> refund for cancellations less than <strong>7</strong> days before start</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+            </section>
+            
+            <section id="photos" class="block py-4">
+                <div id="listingPhotos" data-observe="true" data-action="/listings/images/?id=6831"
+                     data-ajax-update="#listingPhotos" data-ajax-loading="#listingPhotos-loading" data-ajax-empty="$('#photos').remove();" data-ajax-mode="realreplace">
+                    <div id="listingPhotos-loading">
+                        
+    <div class="row row-md">
+            <div class="col-12 col-md-6 col-lg-4 mb-08">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-08 d-none d-md-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 mb-08 d-none d-xl-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+    </div>
+
+                    </div>
+                </div>
+            </section>
+            
+            <section id="videos" class="block py-4">
+                <div id="listingVideos" data-observe="true" data-action="/listings/videos/?id=6831"
+                     data-ajax-update="#listingVideos" data-ajax-loading="#listingVideos-loading" data-ajax-empty="$('#videos').remove();console.log(2)" data-ajax-mode="realreplace">
+                    <div id="listingVideos-loading">
+                        
+    <div class="row row-md">
+            <div class="col-12 col-md-6 mb-08">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 mb-08 d-none d-md-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-md _l-c _l"></div>
+                </div>
+            </div>
+    </div>
+
+                    </div>
+                </div>
+            </section>
+
+            
+                <section id="statistics" class="block bg-1 py-4 mb-4 pr-1 pl-md-1 b-y">
+                        <div class="pos-r">
+                            <img class="img-res" alt="Stats" src="//bstoked.azureedge.net/a/hidden-statistics.png" />
+                            <div class="f-y py-1 py-sm-2 py-md-6 text-center z-i">
+                                <div class="h5 mb-2">Show spot conditions</div>
+                                <a href="#login" data-toggle="modal" class="btn btn-primary px-3 strong">
+                                    Login
+                                </a>
+                            </div>
+                        </div>
+                </section>
+            
+                    <section class="block">
+                        <div class="mb-4">
+                            
+
+
+                        </div>
+                        <div class="text-center pb-4">
+                            <div class="h5 mb-2">Show full reviews</div>
+                            <a href="#login" data-toggle="modal" class="btn btn-primary px-3 strong">
+                                Login
+                            </a>
+                        </div>
+                    </section>
+        </div>
+        <div class="col-12 col-lg-4 col-xl-3 pt-lg-2">
+            
+
+
+<div id="book-sidebar" class="book-sidebar sticky sticky-md-down pt-4 pt-lg-0" data-breakpoint="992">
+    <div class="card p-08 py-lg-1 px-lg-2 bg-0">
+            <div class="d-flex flex-row flex-lg-column align-items-center align-items-lg-baseline container w-100 px-0">
+                <div class="w-100">
+                    <span class="d-m-none">
+                        <span class="text-md">
+                            <strong class="text-m">
+                                From €48
+                            </strong>
+                        </span>
+                        <span class="text-sm text-6">
+                            / per night
+                        </span>
+                    </span>
+                    <span class="d-lg-none pricing-summary">
+                        <span class="text-md">
+                            <strong class="text-m">
+                                From €48
+                            </strong>
+                        </span>
+                        <span class="text-sm text-6">
+                            / per night
+                        </span>
+                    </span>
+                    <hr class="my-08 d-m-none"/>
+                </div>
+                    <div class="pos-r w-100 ml-auto ml-lg-0 text-sm">
+                        <div class="book-details">
+                            
+                        </div>
+                        <div class="text-right">
+                            <div class="pos-r">
+                                <a href="#book-modal" data-toggle="modal" data-backdrop="false" class="btn btn-action w-100 strong px-sm-2 my-lg-1" role="button"
+                                   data-tk="Send-Inquiry_Click" data-tkf="#book">
+                                    Contact Host
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        
+            <div class="d-m-none mb-08">
+                    <a href="#login" data-toggle="modal" data-return-action="/wishlists/6831/toggle/?add=True"
+                       class="wishlist-btn btn btn-block b-xs h-o text-action">
+                        <i class="bs text-md bs-heart mr-08"></i>
+                        Save to Wish list
+                    </a>
+            </div>
+        
+        <div class="mb-08 text-center text-sm d-m-none">
+            <a class="u text-6" href="mailto:kitesurf@bstoked.net" target="_blank" rel="nofollow noopener">Need help?</a>
+        </div>
+        
+            <a class="pos-r d-m-none pt-1 mt-1 b-t nc" target="_blank" rel="noopener" style="display: none;"
+               data-provide="travelcosts" data-breakpoint="992" data-to="Collectivit&#xE9; de Saint-Martin, Saint-Martin">
+                <div class="d-flex flex-row text-sm text-7">
+                    <div>
+                        <i class="bs bs-md bs-plane"></i>
+                        <strong>
+                            <span class="duration"></span>h
+                        </strong>
+                        from <span class="from"></span>
+                    </div>
+                    <div class="ml-auto">
+                        &#x20AC;<span class="price"></span>
+                    </div>
+                </div>
+                <div class="f-y loading _loader py-025">
+                    <div class="h25 my-025 _l-c _l"></div>
+                </div>
+            </a>
+    </div>
+    <div class="pos-r bg-0 py-1 px-01 d-m-none">
+        
+
+<div class="text-sm">
+    <p class="d-flex flex-row">
+        <i class="bs bs-piggy-bank bs-2x mr-05"></i>
+        <span class="pt-04">
+            No need to look further. Best price guarantee.
+        </span>
+    </p>
+        <p class="d-flex flex-row">
+            <i class="bs bs-shield bs-2x mr-05"></i>
+            <span class="pt-025">
+                Moderate cancellation policy. Don't wait with the booking as spots are limited – secure yours well in
+                advance.
+            </span>
+        </p>
+    <p class="d-flex flex-row">
+        <i class="bs bs-takeoff bs-2x mr-05"></i>
+        <span class="pt-04">
+            Flight search support.
+        </span>
+    </p>
+    <p class="d-flex flex-row">
+        <i class="bs bs-user bs-2x mr-05"></i>
+        <span class="pt-04">
+            Direct communication with the host.
+        </span>
+    </p>
+</div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+
+    <section class="block py-0 bg-2" id="location">
+        <div class="container-fluid px-0">
+            
+
+
+<section id="location" class="bg-cover pos-r py-1" responsive data-slimmage-bg="//bstoked.azureedge.net/d-7199-DPMdsz6XkQ8tUuJ5tRFAutwelivZG8om.jpg?width=1920">
+    <div class="container">
+        <div class="hero-md v-align">
+            <div class="text-0 text-r">
+                <h3 class="display-4 mb-1">Caribbean</h3>
+                <a class="btn btn-primary text-white h-a text-wrap" role="button" href="/locations/caribbean/">
+                    More about Kitesurfing in Caribbean
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+        </div>
+    </section>
+    <section class="block py-0" id="map">
+        <div>
+            <div class="row row-0">
+                    <div class="col-12 col-lg-6">
+                        
+
+
+
+<div class="h-100 min-h450 bg-1" data-toggle="pointer-events">
+    <iframe src="//www.google.com/maps/embed/v1/view?key=REDACTED&amp;center=18.086863321704502,-63.01855444908142&amp;zoom=17" allowfullscreen height="450" scrolling="yes" class="p-e-d h-100"></iframe>
+</div>
+
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        
+
+
+        <script id="windyScript" async="true" defer="true" type="text/javascript" data-src="//windyapp.co/widget/windy_forecast_async.js"></script>
+        <div class="h-100 bg-1"
+             data-observe="true"
+             data-target="#windyScript"
+             data-windywidget="forecast"
+             data-lat="18.086863321704502"
+             data-lng="-63.01855444908142"
+             data-appid="a0a9d095765c0f16a9d4a4a02f90b54b">
+        </div>
+
+                    </div>
+            </div>
+        </div>
+    </section>
+<section id="host" class="block">
+    <div class="container py-5">
+        
+
+<div class="row">
+    <div class="col-12 col-md-3 col-lg-2 col-xl-1 mb-1">
+        <div class="img-circle img-circle-xl bg-0 of-h">
+            <img alt="emmanuel" src="//bstoked.azureedge.net/u-2071-0HIJpGXOhfe8fn4vo9Te2CShIWzdg0Qw.jpg?width=84" />
+        </div>
+    </div>
+    <div class="col-12 col-md-9 col-lg-10 col-xl-11 text-md-left mb-4">
+        <div class="mb-1">
+            <h4 class="mb-0">
+                <span class="text-muted">Your Host:</span> <a class="nc" href="/users/2071/">emmanuel</a>
+            </h4>
+            <div class="text-muted">
+                Member since June 2017
+            </div>
+        </div>
+        <div>
+            <p>
+                <i>
+                    emmanuel is your host for this experience and will provide you with all the information needed.
+                </i>
+            </p>
+            <div id="listingHost" data-observe="true" 
+                 data-action="/listings/hostdata/?id=2071"
+                 data-ajax-update="#listingHost" data-ajax-loading="#listingHost-loading" data-ajax-mode="realreplace">
+                <div id="listingHost-loading" class="hidden">
+                    
+    <div class="_loader">
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-0 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-50 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-25 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-25 bg-0 z-i"></div>
+            </div>
+    </div>
+
+                </div>
+            </div>
+                    </div>
+    </div>
+</div>
+<div class="row mx-sm-0 bg-1 b-r-2">
+    <div class="col-12 col-md-3 col-lg-2 col-xl-1 my-1">
+        <div class="text-center" style="width: 85px">
+            <i class="bs bs-badge bs-5x"></i>
+        </div>
+    </div>
+    <div class="col-12 col-md-9 col-lg-10 col-xl-11 align-self-center my-2">
+        emmanuel has been selected as a host by bstoked.
+        We only accept hosts which are trustworthy and have a great quality in service to make sure you get the best experience possible.
+    </div>
+</div>
+    </div>
+</section>
+
+<section id="similar" class="block">
+    <div class="container py-4">
+        <div id="listingSimilar" data-observe="true" 
+             data-action="/listings/similar/?id=6831&amp;locationId=6976&amp;parentId=7199&amp;type=Accommodation&amp;guests=1"
+             data-ajax-update="#listingSimilar" data-ajax-loading="#listingSimilar-loading" data-ajax-failure="$('#similar').remove();" data-ajax-mode="realreplace">
+            <div id="listingSimilar-loading" class="hidden">
+                
+    <div class="row row-md">
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-08">
+                <div class="card _loader">
+                    <div class="card-img card-img-sm _l-c _l"></div>
+                    <div class="card-body">
+                        <p class="h-2x _l-c _l"></p>
+                        <div class="_l-c _l mb-05"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-08 d-none d-lg-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-sm _l-c _l"></div>
+                    <div class="card-body">
+                        <p class="h-2x _l-c _l"></p>
+                        <div class="_l-c _l mb-05"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-08 d-none d-xl-block">
+                <div class="card _loader">
+                    <div class="card-img card-img-sm _l-c _l"></div>
+                    <div class="card-body">
+                        <p class="h-2x _l-c _l"></p>
+                        <div class="_l-c _l mb-05"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-08">
+                <div class="card _loader">
+                    <div class="card-img card-img-sm _l-c _l"></div>
+                    <div class="card-body">
+                        <p class="h-2x _l-c _l"></p>
+                        <div class="_l-c _l mb-05"></div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+ 
+
+<div>
+    <div id="book-modal" class="modal pr-0 bg-s-t p-sm-1 p-md-3 scale" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-full mx-auto" style="max-width:1300px" role="document">
+            <div class="modal-content">
+                <div class="modal-header b-b">
+                    <h4 class="modal-title w-100 text-center px-4">Contact host for availability</h4>
+                    <button type="button" class="pos-f-t-r btn btn-sm btn-circle btn-light box-s-2 my-08 mx-2" data-dismiss="modal" aria-label="Close">
+                        <i class="bs bs-cancel-2 text-md"></i>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="px-1 px-sm-3 py-08 bg-1 b-b" id="book-progress">
+                    <div class="text-sm text-center semi mb-05">
+                        <span data-step="1" class="p-step strong">1. Dates</span>
+                        <i class="bs bs-arrow-right bs-sm mx-05"></i>
+                        <span data-step="2" class="p-step">2. Guests</span>
+                        <i class="bs bs-arrow-right bs-sm mx-05"></i>
+                        <span data-step="3" class="p-step">3. Custom</span>
+                        <i class="bs bs-arrow-right bs-sm mx-05"></i>
+                        <span data-step="4" class="p-step">4. Overview</span>
+                    </div>
+                    <div class="bg-3 progress progress-sm w-100 mr-1">
+                        <div class="progress-bar" style="width: 25%;" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+                <div class="modal-body px-sm-3 pt-3 pb-6">
+                    <div>
+                        <div class="d-flex flex-row align-items-start">
+                            <form></form>
+                            <div class="d-none d-lg-block card p-2 w350 min-w350 ml-3 mt-4">
+                                <div class="book-details">
+                                        <div class="pb-1 b-b">
+                                            <span class="text-md">
+                                                <strong class="text-m">
+                                                    From €48
+                                                </strong>
+                                            </span>
+                                            <span class="text-sm text-6">
+                                                / per night
+                                            </span>
+                                        </div>
+                                </div>
+                                <div class="mt-2">
+                                    
+
+<div class="text-sm">
+    <p class="d-flex flex-row">
+        <i class="bs bs-piggy-bank bs-2x mr-05"></i>
+        <span class="pt-04">
+            No need to look further. Best price guarantee.
+        </span>
+    </p>
+        <p class="d-flex flex-row">
+            <i class="bs bs-shield bs-2x mr-05"></i>
+            <span class="pt-025">
+                Moderate cancellation policy. Don't wait with the booking as spots are limited – secure yours well in
+                advance.
+            </span>
+        </p>
+    <p class="d-flex flex-row">
+        <i class="bs bs-takeoff bs-2x mr-05"></i>
+        <span class="pt-04">
+            Flight search support.
+        </span>
+    </p>
+    <p class="d-flex flex-row">
+        <i class="bs bs-user bs-2x mr-05"></i>
+        <span class="pt-04">
+            Direct communication with the host.
+        </span>
+    </p>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="optionalServices-modal" class="modal fade bg-s-t" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="bs bs-cancel-2 text-lg"></i>
+                        <span class="sr-only">Close</span>
+                    </button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div id="listingIncludedServices" data-observe="true" data-action="/listings/services/?id=6831&amp;types=Included"
+                         data-ajax-update="#listingIncludedServices" data-ajax-loading="#listingIncludedServices-loading" data-ajax-mode="realreplace">
+                        <div id="listingIncludedServices-loading">
+                            
+    <div class="_loader">
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-0 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-50 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-25 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-25 bg-0 z-i"></div>
+            </div>
+            <div class="_l-c _l mb-1">
+                <div class="pos-a-t-r h-100 w-0 bg-0 z-i"></div>
+            </div>
+    </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+</body></html>

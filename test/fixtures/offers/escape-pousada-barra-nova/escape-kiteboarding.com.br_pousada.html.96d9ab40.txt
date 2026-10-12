@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GYKE2FLKVG"></script>
+  <script></script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pousada | Escape Kiteboarding — Barra Nova, Ceará</title>
+  <meta name="description" content="Acomodações da Escape Kiteboarding Pousada em Barra Nova, Ceará: 12 quartos com vista para a lagoa ou jardim, café da manhã incluso, a 76km de Fortaleza.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://escape-kiteboarding.com.br/pousada.html">
+  <meta property="og:title" content="Pousada | Escape Kiteboarding">
+  <meta property="og:description" content="12 quartos com vista para a lagoa ou jardim, café da manhã incluso.">
+  <meta property="og:image" content="https://escape-kiteboarding.com.br/og-cover.jpg">
+  <meta property="og:url" content="https://escape-kiteboarding.com.br/pousada.html">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="cur-text"></div>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Navegação principal">
+  <a href="index.html" class="nav-logo" aria-label="Escape Kiteboarding">ESCAPE <em>KITE</em></a>
+
+  <ul class="nav-main" role="list" id="nav-links">
+    <li><a href="index.html" data-page="home"><span data-i18n="pousada.home" class="il">Home</span></a></li>
+    <li><a href="pousada.html" data-page="pousada" class="active"><span data-i18n="pousada.pousada" class="il">Pousada</span></a></li>
+    <li><a href="restaurante.html" data-page="restaurante"><span data-i18n="pousada.restaurante" class="il">Restaurante</span></a></li>
+    <li><a href="galeria.html" data-page="galeria"><span data-i18n="pousada.galeria" class="il">Galeria</span></a></li>
+    <li><a href="blog.html" data-page="blog"><span data-i18n="pousada.blog" class="il">Blog</span></a></li>
+    <li><a href="como-chegar.html" data-page="como-chegar"><span data-i18n="pousada.como-chegar" class="il">Como Chegar</span></a></li>
+    <li><a href="faq.html" data-page="faq"><span data-i18n="pousada.faq" class="il">FAQ</span></a></li>
+    <li><a href="contato.html" data-page="contato"><span data-i18n="pousada.contato" class="il">Contato</span></a></li>
+  </ul>
+
+  <div class="nav-right">
+    <ul class="nav-lang" role="list" aria-label="Idioma">
+      <li><button onclick="setLang('pt')" id="lb-pt" class="active" aria-label="Português" aria-pressed="true">PT</button></li>
+      <li><button onclick="setLang('en')" id="lb-en" aria-label="English" aria-pressed="false">EN</button></li>
+      <li><button onclick="setLang('de')" id="lb-de" aria-label="Deutsch" aria-pressed="false">DE</button></li>
+    </ul>
+    <button class="nav-burger" id="burger" aria-label="Menu" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div id="mobile-drawer" aria-hidden="true" inert>
+  <a href="index.html"><span data-i18n="pousada.home" class="il">Home</span></a>
+  <a href="pousada.html"><span data-i18n="pousada.pousada" class="il">Pousada</span></a>
+  <a href="restaurante.html"><span data-i18n="pousada.restaurante" class="il">Restaurante</span></a>
+  <a href="galeria.html"><span data-i18n="pousada.galeria" class="il">Galeria</span></a>
+  <a href="blog.html"><span data-i18n="pousada.blog" class="il">Blog</span></a>
+  <a href="como-chegar.html"><span data-i18n="pousada.como-chegar" class="il">Como Chegar</span></a>
+  <a href="faq.html"><span data-i18n="pousada.faq" class="il">FAQ</span></a>
+  <a href="contato.html"><span data-i18n="pousada.contato" class="il">Contato</span></a>
+</div>
+
+<!-- APP -->
+<div id="app">
+    <div class="page active" id="page-pousada">
+    <header class="cin-header">
+      <div class="cin-bg loaded" id="pd-hero-bg" aria-hidden="true" style="background-image:url(img/gallery_04.jpg)"></div>
+      <div class="cin-overlay" aria-hidden="true"></div>
+      <div class="cin-watermark" aria-hidden="true">POUSADA</div>
+      <div class="cin-inner">
+        <p class="cin-eyebrow">
+          <span data-i18n="pousada.hospedagem" class="il">Hospedagem</span>
+        </p>
+        <h1 class="cin-title">
+          <span data-i18n="pousada.pousada-escape">POUSADA<br><em>ESCAPE</em></span>
+        </h1>
+        <p class="cin-lead">
+          <span data-i18n="pousada.acorde-com-a-lagoa-pela-janela">Acorde com a lagoa pela janela. Cada quarto foi pensado para quem quer o máximo de conforto depois de um dia intenso no kite.</span>
+        </p>
+      </div>
+    </header>
+    <div class="cin-body cin-body-pad" style="background:var(--deep);">
+
+      <!-- Slider de fotos da pousada -->
+      <div class="slider-wrap rv d3" style="margin-top:40px;">
+        <div class="slider-track" id="pousada-slider">
+          <div class="slide">
+            <div class="slide-visual" style="background:#0d3352;padding:0;">
+              <img src="img/inline_00.jpg" alt="Vista da lagoa" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+              <div class="slide-overlay">
+                <div class="slide-text">
+                  <div class="slide-title"><span data-i18n="pousada.vista-da-lagoa">VISTA DA LAGOA</span></div>
+                  <div class="slide-desc"><span data-i18n="pousada.cada-manha-comeca-com-este-panorama">Cada manhã começa com este panorama.</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-visual" style="background:#1a1208;padding:0;">
+              <img loading="lazy" src="img/inline_01.jpg" alt="Área comum com redes" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+              <div class="slide-overlay">
+                <div class="slide-text">
+                  <div class="slide-title"><span data-i18n="pousada.the-drift">THE DRIFT</span></div>
+                  <div class="slide-desc"><span data-i18n="pousada.redes-mesa-de-refeicao-e-varanda">Redes, mesa de refeição e varanda com vista para a lagoa.</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-visual" style="background:#0a1f35;padding:0;">
+              <img loading="lazy" src="img/inline_02.jpg" alt="The Lagoon Pool" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">
+              <div class="slide-overlay">
+                <div class="slide-text">
+                  <div class="slide-title"><span data-i18n="pousada.the-lagoon-pool">THE LAGOON POOL</span></div>
+                  <div class="slide-desc"><span data-i18n="pousada.piscina-com-por-do-sol-entre">Piscina com pôr do sol entre os coqueiros.</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn" onclick="slideNav('pousada-slider',-1)" aria-label="Slide anterior">‹</button>
+          <button class="slider-btn" onclick="slideNav('pousada-slider',1)" aria-label="Próximo slide">›</button>
+          <div class="slider-dots" id="pousada-dots">
+            <button class="s-dot on" aria-label="Slide 1"></button>
+            <button class="s-dot" aria-label="Slide 2"></button>
+            <button class="s-dot" aria-label="Slide 3"></button>
+          </div>
+          <span class="slider-label"><span data-i18n="pousada.fotos-da-pousada" class="il">Fotos da pousada</span></span>
+        </div>
+      </div>
+
+      <!-- Disponibilidade -->
+      <div class="av-section rv d2">
+        <div class="pd-rooms-hd" style="margin-top:40px;">
+          <div>
+            <div class="pd-rooms-hd-title"><span data-i18n="pousada.disponibilidade" class="il">DISPONIBILIDADE</span></div>
+            <div class="pd-rooms-hd-sub"><span data-i18n="pousada.selecione-uma-data-no-calendario" class="il">Selecione uma data no calendário para ver os quartos livres</span></div>
+          </div>
+        </div>
+        <div class="av-wrap" id="av-wrap">
+          <div class="av-cal">
+            <div class="av-cal-nav">
+              <button class="av-cal-btn" id="av-prev" type="button" aria-label="Mês anterior">‹</button>
+              <div class="av-cal-label" id="av-month-label"></div>
+              <button class="av-cal-btn" id="av-next" type="button" aria-label="Próximo mês">›</button>
+            </div>
+            <div class="av-cal-weekdays" id="av-weekdays"></div>
+            <div class="av-cal-grid" id="av-grid"></div>
+            <div class="av-cal-legend">
+              <span class="av-legend-item"><span class="av-dot av-dot-free"></span><span data-i18n="pousada.tem-quartos-livres" class="il">Tem quartos livres</span></span>
+              <span class="av-legend-item"><span class="av-dot av-dot-full"></span><span data-i18n="pousada.lotado" class="il">Lotado</span></span>
+            </div>
+          </div>
+          <div class="av-panel" id="av-panel">
+            <div class="av-panel-empty" id="av-panel-empty"><span data-i18n="pousada.clique-em-um-dia-do-calendario" class="il">Clique em um dia do calendário</span></div>
+            <div class="av-panel-content" id="av-panel-content" style="display:none;">
+              <div class="av-panel-date" id="av-panel-date"></div>
+              <div class="av-rooms-list" id="av-rooms-list"></div>
+            </div>
+          </div>
+        </div>
+        <div class="av-fallback" id="av-fallback" style="display:none;">
+          <span data-i18n="pousada.nao-foi-possivel-carregar-o-calendario" class="il">Não foi possível carregar o calendário agora.</span>
+          <a href="https://wa.me/5585999271489" target="_blank" rel="noopener" class="btn btn-gold" data-cursor="WhatsApp" style="margin-top:14px;">
+            <span data-i18n="pousada.consulte-disponibilidade-pelo-whatsapp-2" class="il">Consulte disponibilidade pelo WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Rooms section header + filter -->
+      <div class="pd-rooms-hd rv">
+        <div>
+          <div class="pd-rooms-hd-title"><span data-i18n="pousada.acomodacoes" class="il">ACOMODAÇÕES</span></div>
+          <div class="pd-rooms-hd-sub"><span data-i18n="pousada.12-quartos-clique-para-ver-precos" class="il">12 quartos · clique para ver detalhes</span></div>
+        </div>
+        <div class="pd-quickinfo">
+          <div><small style="font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);">Check-in</small><b>14h</b></div>
+          <div><small style="font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);">Check-out</small><b>12h</b></div>
+          <div><small style="font-size:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);"><span data-i18n="pousada.cafe" class="il">Café</span></small><b><span data-i18n="pousada.incluso" class="il">Incluso</span></b></div>
+        </div>
+      </div>
+
+      <!-- Filter bar -->
+      <div class="pd-filter rv d1">
+        <button class="pd-filter-btn active" onclick="window._rmFilter(this,'all')"><span data-i18n="pousada.todos" class="il">Todos</span></button>
+        <button class="pd-filter-btn" onclick="window._rmFilter(this,'mar')"><span data-i18n="pousada.vista-mar-lagoa" class="il">Vista Mar / Lagoa</span></button>
+        <button class="pd-filter-btn" onclick="window._rmFilter(this,'jardim')"><span data-i18n="pousada.jardim" class="il">Jardim</span></button>
+      </div>
+
+      <!-- Room cards — 12 quartos accordion -->
+      <div class="rooms-layout" id="pd-rooms-container" data-pd-loaded="1" style="margin-top:0;">
+
+        <!-- QUT 1 — Família, Lagoa/Mar, 6 pax -->
+        <div class="room-card rv" onclick="rmOpen(this)" data-vista="mar" data-quarto="01">
+          <div class="room-thumb" style="background:linear-gradient(160deg,#0a2a45 0%,#1a4d6e 60%,#0d3352 100%);">
+                        <img src="fotos/qut01.png" alt="Quarto 1" loading="lazy">
+<div class="room-thumb-overlay"></div>
+            <div class="rm-vista">Lagoa / Mar</div>
+          </div>
+          <div class="room-info">
+            <div class="room-name">FAMÍLIA 1</div>
+            <div class="rm-cap">até 6 hóspedes</div>
+            <div class="room-amenities" style="margin-top:14px;"><span class="room-tag">Frigobar</span><span class="room-tag">Ducha ♨</span><span class="room-tag">WiFi</span><span class="room-tag">AC</span></div>
+          </div>
+          <div class="rm-open-hint">
+            <span><span data-i18n="pousada.ver-detalhes" class="il">Ver detalhes</span></span>
+            <svg></svg>
+          </div>
+          <div class="rm-details">
+            <div class="rm-price-table">
+              <div class="rm-price-row rm-alta" style="justify-content:center;"><span data-i18n="pousada.consulte-disponibilidade-e-valores" class="il">Consulte disponibilidade e valores</span></div>
+            </div>
+            <div class="rm-info-row">
+              <div class="rm-info-cell"><small>Check-in</small><strong>14h</strong></div>
+              <div class="rm-info-cell"><small>Check-out</small><strong>12h</strong></div>
+              <div class="rm-info-cell"><small><span data-i18n="pousada.cafe" class="il">Café</span></small><strong><span data-i18n="pousada.incluso-2" class="il">Incluso</span></strong></div>
+            </div>
+            <a href="#" class="rm-cta" onclick="window._rmReserve(event)"><span data-i18n="pousada.reservar-este-quarto" class="il">Reservar este quarto</span></a>
+          </div>
+        </div>
+
+        <!-- QUT 2 — Suíte, Lagoa/Mar, 3 pax -->
+        <div class="room-card rv d1" onclick="rmOpen(this)" data-vista="mar" data-quarto="02">
+          <div class="room-thumb" style="background:linear-gradient(160deg,#0a2a45 0%,#1a4d6e 60%,#0d3352 100%);">
+                        <img src="fotos/qut02.png" alt="Quarto 2" loading="lazy">
+<div class="room-thumb-overlay"></div>
+            <div class="rm-vista">Lagoa / Mar</div>
+          </div>
+          <div class="room-info">
+            <div class="room-name">SUÍTE 2</div>
+            <div class="rm-cap">até 3 hóspedes</div>
+            <div class="room-amenities" style="margin-top:14px;"><span class="room-tag">AC</span><span class="room-tag">Frigobar</span><span class="room-tag">Ducha ♨</span><span class="room-tag">WiFi</span></div>
+          </div>
+          <div class="rm-open-hint">
+            <span><span data-i18n="pousada.ver-detalhes" class="il">Ver detalhes</span></span>
+            <svg></svg>
+          </div>
+          <div class="rm-details">
+            <div class="rm-price-table">
+              <div class="rm-price-row rm-alta" style="justify-content:center;"><span data-i18n="pousada.consulte-disponibilidade-e-valores" class="il">Consulte disponibilidade e valores</span></div>
+            </div>
+            <div class="rm-info-row">
+              <div class="rm-info-cell"><small>Check-in</small><strong>14h</strong></div>
+              <div class="rm-info-cell"><small>Check-out</small><strong>12h</strong></div>
+              <div class="rm-info-cell"><small><span data-i18n="pousada.cafe" class="il">Café</span></small><strong><span data-i18n="pousada.incluso-2" class="il">Incluso</span></strong></div>
+            </div>
+            <a href="#" class="rm-cta" onclick="window._rmReserve(event)"><span data-i18n="pousada.reservar-este-quarto" class="il">Reservar este quarto</span></a>
+          </div>
+        </div>
+
+        <!-- QUT 3 — Suíte, Lagoa/Mar, 3 pax -->
+        <div class="room-card rv d2" onclick="rmOpen(this)" data-vista="mar" data-quarto="03">
+          <div class="room-thumb" style="background:linear-gradient(160deg,#0a2a45 0%,#1a4d6e 60%,#0d3352 100%);">
+                        <img src="fotos/qut03.png" alt="Quarto 3" loading="lazy">
+<div class="room-thumb-overlay"></div>
+            <div class="rm-vista">Lagoa / Mar</div>
+          </div>
+          <div class="room-info">
+            <div class="room-name">SUÍTE 3</div>
+            <div class="rm-cap">até 3 hóspedes</div>
+            <div class="room-amenities" style="margin-top:14px;"><span class="room-tag">Frigobar</span><span class="room-tag">Ducha ♨</span><span class="room-tag">WiFi</span><span class="room-tag">AC</span></div>
+          </div>
+          <div class="rm-open-hint">
+            <span><span data-i18n="pousada.ver-detalhes" class="il">Ver detalhes</span></span>
+            <svg></svg>
+          </div>
+          <div class="rm-details">
+            <div class="rm-price-table">
+              <div class="rm-price-row rm-alta" style="justify-content:center;"><span data-i18n="pousada.consulte-disponibilidade-e-valores" class="il">Consulte disponibilidade e valores</span></div>
+            </div>
+            <div class="rm-info-row">
+              <div class="rm-info-cell"><small>Check-in</small><strong>14h</strong></div>
+              <div class="rm-info-cell"><small>Check-out</small><strong>12h</strong></div>
+              <div class="rm-info-cell"><small><span data-i18n="pousada.cafe" class="il">Café</span></small><strong><span data-i18n="pousada.incluso-2" class="il">Incluso</span></strong></div>
+            </div>
+            <a href="#" class="rm-cta" onclick="window._rmReserve(event)"><span data-i18n="pousada.reservar-este-quarto" class="il">Reservar este quarto</span></a>
+          </div>
+        </div>
+
+        <!-- QUT 4 — Família, Lagoa/Mar, 4 pax -->
+        <div class="room-card rv d3" onclick="rmOpen(this)" data-vista="mar" data-quarto="04">
+          <div class="room-thumb" style="background:linear-gradient(160deg,#0a2a45 0%,#1a4d6e 60%,#0d3352 100%);">
+                        <img src="fotos/qut04.png" alt="Quarto 4" loading="lazy">
+<div class="room-thumb-overlay"></div>
+            <div class="rm-vista">Lagoa / Mar</div>
+          </div>
+          <div class="room-info">
+            <div class="room-name">FAMÍLIA 4</div>
+            <div class="rm-cap">até 4 hóspedes</div>
+            <div class="room-amenities" style="margin-top:14px;"><span class="room-tag">Frigobar</span><span class="room-tag">Ducha ♨</span><span class="room-tag">WiFi</span><span class="room-tag">AC</span></div>
+          </div>
+          <div class="rm-open-hint">
+            <span><span data-i18n="pousada.ver-detalhes" class="il">Ver detalhes</span></span>
+            <svg></svg>
+          </div>
+          <div class="rm-details">
+            <div class="rm-price-table">
+              <div class="rm-price-row rm-alta" style="justify-content:center;"><span data-i18n="pousada.consulte-disponibilidade-e-valores" class="il">Consulte disponibilidade e valores</span></div>
+            </div>
+            <div class="rm-info-row">
+              <div class="rm-info-cell"><small>Check-in</small><strong>14h</strong></div>
+              <div class="rm-info-cell"><small>Check-out</small><strong>12h</strong></div>
+              <div class="rm-info-cell"><small><span data-i18n="pousada.cafe" class="il">Café</span></small><strong><span data-i18n="pousada.incluso-2" class="il">Incluso</span></strong></div>
+            </div>
+            <a href="#" class="rm-cta" onclick="window._rmReserve(event)"><span data-i18n="pousada.reservar-este-quarto" class="il">Reservar este quarto</span></a>
+          </div>
+        </div>
+
+        <!-- QUT 5 — Suíte, Frente Jardim, 3 pax -->
+        <div class="room-card rv" onclick="rmOpen(this)" data-vista="jardim" data-quarto="05">
+          <div class="room-thumb" style="background:linear-gradient(160deg,#0d2e1a 0%,#1a4d2e 60%,#0d3020 100%);">
+                        <img src="fotos/qut05.jpg" alt="Quarto 5" loading="lazy">
+<div class="room-thumb-overlay"></div>
+            <div class="rm-vista">Frente Jardim</div>
+          </div>
+          <div class="room-info">
+            <div class="room-name">SUÍTE 5</div>
+            <div class="rm-cap">até 3 hóspedes</div>
+            <div class="room-amenities" style="margin-top:14px;"><span class="room-tag">Frigobar</span><span class="room-tag">Ducha ♨</span><span class="room-tag">WiFi</span><span class="room-tag">AC</span></div>
+          </div>
+          <div class="rm-open-hint">
+            <span><span data-i18n="pousada.ver-detalhes" class="il">Ver detalhes</span></span>
+            <svg></svg>
+          </div>
+          <div class="rm-details">
+            <div class="rm-price-table">
+              <div class="rm-price-row rm-alta" style="justify-content:center;"><span data-i18n="pousada.consulte-disponibilidade-e-valores" class="il">Consulte disponibilidade e valores</span></div>
+            </div>
+            <div class="rm-info-row">
+              <div class="rm-info-cell"><small>Check-in</small><strong>14h</strong></div>
+              <div class="rm-info-cell"><small>Check-out</small><strong>12h</strong></div>
+              <div class="rm-info-cell"><small><span data-i18n="pousada.cafe" class="il">Café</span></small><strong><span data-i18n="pousada.incluso-2" class="il">Incluso</span></strong></div>
+            </div>
+            <a href="#" class="rm-cta" onclick="window._rmReserve(event)"><span data-i18n="pousada.reservar-este-quarto" class="il">Reservar este quarto</span></a>
+          </div>
+        </div>
+
+        <!-- QUT 6 — Suíte, Frente Jardim, 3 pax -->
+        <div class="room-card rv d1" onclick="rmOpen(this)" data-vista="jardim" data-quarto="06">
+          <div class="room-thumb" style="background:linear-gradient(160deg,#0d2e1a 0%,#1a4d2e 60%,#0d3020 100%);">
+                        <img src="fotos/qut06.jpg" alt="Quarto 6" loading="lazy">
+<div class="room-thumb-overlay"></div>
+            <div class="rm-vista">Frente Jardim</div>
+          </div>
+          <div class="room-info">
+            <div class="room-name">SUÍTE 6</div>
+            <div class="rm-cap">até 3 hóspedes</div>
+            <div class="room-amenities" style="margin-top:14px;"><span class="room-tag">Frigobar</span><span class="room-tag">Ducha ♨</span><span class="room-tag">WiFi</span><span class="room-tag">AC</span></div>
+          </div>
+          <div class="rm-open-hint">
+            <span><span data-i18n="pousada.ver-detalhes" class="il">Ver detalhes</span></span>
+            <svg></svg>
+          </div>
+          <div class="rm-details">
+            <div class="rm-price-table">
+              <div class="rm-price-row rm-alta" style="justify-content:center;"><span data-i18n="pousada.consulte-disponibilidade-e-valores" class="il">Consulte disponibilidade e valores</span></div>
+            </div>
+            <div class="rm-info-row">
+              <div class="rm-info-cell"><small>Check-in</small><strong>14h</strong></div>
+              <div class="rm-info-cell"><small>Check-out</small><strong>12h</strong></div>
+              <div class="rm-info-cell"><small><span data-i18n="pousada.cafe" class="il">Café</span></small><strong><span data-i18n="pousada.incluso-2" class="il">Incluso</span></strong></div>
+            </div>
+            <a href="#" class="rm-cta" onclick="window._rmReserve(event)"><span data-i18n="pousada.reservar-este-quarto" class="il">Reservar este quarto</span></a>
+          </div>
+        </div>
+
+        <!-- QUT 7 — Suíte, Jardim, 2 pax -->
+        <div class="room-card rv d2" onclick="rmOpen(this)" data-vista="jardim" data-quarto="07">
+          <div class="room-thumb" style="background:linear-gradient(160deg,#0d2e1a 0%,#1a4d2e 60%,#0d3020 100%);">
+            <div class="room-thumb-overlay"></div>
+            <div class="rm-vista">Jardim</div>
+          </div>
+          <div class="room-info">
+            <div class="room-name">SUÍTE 7</div>
+            <div class="rm-cap">até 2 hóspedes</div>
+            <div class="room-amenities" style="margin-top:14px;"><span class="room-tag">Frigobar</span><span class="room-tag">Ducha ♨</span><span class="room-tag">WiFi</span><span class="room-tag">AC</span></div>
+          </div>
+          <div class="rm-open-hint">
+            <span><span data-i18n="pousada.ver-detalhes" class="il">Ver detalhes</span></span>
+            <svg></svg>
+          </div>
+          <div class="rm-details">
+            <div class="rm-price-table">
+              <div class="rm-price-row rm-alta" style="justify-content:center;"><span data-i18n="pousada.consulte-disponibilidade-e-valores" class="il">Consulte disponibilidade e valores</span></div>
+            </div>
+            <div class="rm-info-row">
+              <div class="rm-info-cell"><small>Check-in</small><strong>14h</strong></div>
+              <div class="rm-info-cell"><small>Check-out</small><strong>12h</strong></div>
+              <div class="rm-info-cell"><small><span data-i18n="pousada.cafe" class="il">Café</span></small><strong><span data-i18n="pousada.incluso-2" class="il">Incluso</span></strong></div>
+            </div>
+            <a href="#" class="rm-cta" onclick="window._rmReserve(event)"><span data-i18n="pousada.reservar-este-quarto" class="il">Reservar este quarto</span></a>
+          </div>
+        </div>
+
+        <!-- QUT 8 — Família, Lateral Lagoa/Mar, 4 pax -->
+        <div class="room-card rv d3" onclick="rmOpen(this)" data-vista="mar" data-quarto="08">
+          <div class="room-thumb" style="background:linear-gradient(160deg,#0a2a45 0%,#1a4d6e 60%,#0d3352 100%);">
+                        <img src="fotos/qut08.png" alt="Quarto 8" loading="lazy">
+<div class="room-thumb-overlay"></div>
+            <div class="rm-vista">Lateral Lagoa / Mar</div>
+          </div>
+          <div class="room-info">
+            <div class="room-name">FAMÍLIA 8</div>
+            <div class="rm-cap">até 4 hóspedes</div>
+            <div class="room-amenities" style="margin-top:14px;"><span class="room-tag">Frigobar</span><span class="room-tag">Ducha ♨</span><span class="room-tag">WiFi</span><span class="room-tag">AC</span></div>
+          </div>
+          <div class="rm-open-hint">
+            <span><span data-i18n="pousada.ver-detalhes" class="il">Ver detalhes</span></span>
+            <svg></svg>
+          </div>
+          <div class="rm-details">
+            <div class="rm-price-table">
+              <div class="rm-price-row rm-alta" style="justify-content:center;"><span data-i18n="pousada.consulte-disponibilidade-e-valores" class="il">Consulte disponibilidade e valores</span></div>
+            </div>
+            <div class="rm-info-row">
+              <div class="rm-info-cell"><small>Check-in</small><strong>14h</strong></div>
+              <div class="rm-info-cell"><small>Check-out</small><strong>12h</strong></div>
+              <div class="rm-info-cell"><small><span data-i18n="pousada.cafe" class="il">Café</span></small><strong><span data-i18n="pousada.incluso-2" class="il">Incluso</span></strong></div>
+            </div>
+            <a href="#" class="rm-cta" onclick="window._rmReserve(event)"><span data-i18n="pousada.reservar-este-quarto" class="il">Reservar este quarto</span></a>
+          </div>
+        </div>
+
+        <!-- QUT 9 — Família, Lateral Mar/Lagoa, 4 pax -->
+        <div class="room-card rv" onclick="rmOpen(this)" data-vista="mar" data-quarto="09">
+          <div class="room-thumb" style="background:linear-gradient(160deg,#0a2a45 0%,#1a4d6e 60%,#0d3352 100%);">
+                        <img src="fotos/qut09.png" alt="Quarto 9" loading="lazy">
+<div class="room-thumb-overlay"></div>
+            <div class="rm-vista">Lateral Mar / Lagoa</div>
+          </div>
+          <div class="room-info">
+            <div class="room-name">FAMÍLIA 9</div>
+            <div class="rm-cap">até 4 hóspedes</div>
+            <div class="room-amenities" style="margin-top:14px;"><span class="room-tag">Frigobar</span><span class="room-tag">Ducha ♨</span><span class="room-tag">WiFi</span><span class="room-tag">AC</span></div>
+          </div>
+          <div class="rm-open-hint">
+            <span><span data-i18n="pousada.ver-detalhes" class="il">Ver detalhes</span></span>
+            <svg></svg>
+          </div>
+          <div class="rm-details">
+            <div class="rm-price-table">
+              <div class="rm-price-row rm-alta" style="justify-content:center;"><span data-i18n="pousada.consulte-disponibilidade-e-valores" class="il">Consulte disponibilidade e valores</span></div>
+            </div>
+            <div class="rm-info-row">
+              <div class="rm-info-cell"><small>Check-in</small><strong>14h</strong></div>
+              <div class="rm-info-cell"><small>Check-out</small><strong>12h</strong></div>
+              <div class="rm-info-cell"><small><span data-i18n="pousada.cafe" class="il">Café</span></small><strong><span data-i18n="pousada.incluso-2" class="il">Incluso</span></strong></div>
+            </div>
+            <a href="#" class="rm-cta" onclick="window._rmReserve(event)"><span data-i18n="pousada.reservar-este-quarto" class="il">Reservar este quarto</span></a>
+          </div>
+        </div>
+
+        <!-- QUT 10 — Suíte, Mar/Lagoa, 3 pax -->
+        <div class="room-card rv d1" onclick="rmOpen(this)" data-vista="mar" data-quarto="10">
+          <div class="room-thumb" style="background:linear-gradient(160deg,#0a2a45 0%,#1a4d6e 60%,#0d3352 100%);">
+                        <img src="fotos/qut10.jpg" alt="Quarto 10" loading="lazy">
+<div class="room-thumb-overlay"></div>
+            <div class="rm-vista">Vista Mar / Lagoa</div>
+          </div>
+          <div class="room-info">
+            <div class="room-name">SUÍTE 10</div>
+            <div class="rm-cap">até 3 hóspedes</div>
+            <div class="room-amenities" style="margin-top:14px;"><span class="room-tag">Frigobar</span><span class="room-tag">Ducha ♨</span><span class="room-tag">WiFi</span></div>
+          </div>
+          <div class="rm-open-hint">
+            <span><span data-i18n="pousada.ver-detalhes" class="il">Ver detalhes</span></span>
+            <svg></svg>
+          </div>
+          <div class="rm-details">
+            <div class="rm-price-table">
+              <div class="rm-price-row rm-alta" style="justify-content:center;"><span data-i18n="pousada.consulte-disponibilidade-e-valores" class="il">Consulte disponibilidade e valores</span></div>
+            </div>
+            <div class="rm-info-row">
+              <div class="rm-info-cell"><small>Check-in</small><strong>14h</strong></div>
+              <div class="rm-info-cell"><small>Check-out</small><strong>12h</strong></div>
+              <div class="rm-info-cell"><small><span data-i18n="pousada.cafe" class="il">Café</span></small><strong><span data-i18n="pousada.incluso-2" class="il">Incluso</span></strong></div>
+            </div>
+            <a href="#" class="rm-cta" onclick="window._rmReserve(event)"><span data-i18n="pousada.reservar-este-quarto" class="il">Reservar este quarto</span></a>
+          </div>
+        </div>
+
+        <!-- QUT 11 — Suíte, Mar/Lagoa 2º Andar, 3 pax -->
+        <div class="room-card rv d2" onclick="rmOpen(this)" data-vista="mar" data-quarto="11">
+          <div class="room-thumb" style="background:linear-gradient(160deg,#0a2a45 0%,#1a4d6e 60%,#0d3352 100%);">
+                        <img src="fotos/qut11.jpg" alt="Quarto 11" loading="lazy">
+<div class="room-thumb-overlay"></div>
+            <div class="rm-vista">Mar / Lagoa · 2º Andar</div>
+          </div>
+          <div class="room-info">
+            <div class="room-name">SUÍTE 11</div>
+            <div class="rm-cap">até 3 hóspedes</div>
+            <div class="room-amenities" style="margin-top:14px;"><span class="room-tag">Frigobar</span><span class="room-tag">Ducha ♨</span><span class="room-tag">WiFi</span><span class="room-tag">AC</span></div>
+          </div>
+          <div class="rm-open-hint">
+            <span><span data-i18n="pousada.ver-detalhes" class="il">Ver detalhes</span></span>
+            <svg></svg>
+          </div>
+          <div class="rm-details">
+            <div class="rm-price-table">
+              <div class="rm-price-row rm-alta" style="justify-content:center;"><span data-i18n="pousada.consulte-disponibilidade-e-valores" class="il">Consulte disponibilidade e valores</span></div>
+            </div>
+            <div class="rm-info-row">
+              <div class="rm-info-cell"><small>Check-in</small><strong>14h</strong></div>
+              <div class="rm-info-cell"><small>Check-out</small><strong>12h</strong></div>
+              <div class="rm-info-cell"><small><span data-i18n="pousada.cafe" class="il">Café</span></small><strong><span data-i18n="pousada.incluso-2" class="il">Incluso</span></strong></div>
+            </div>
+            <a href="#" class="rm-cta" onclick="window._rmReserve(event)"><span data-i18n="pousada.reservar-este-quarto" class="il">Reservar este quarto</span></a>
+          </div>
+        </div>
+
+        <!-- QUT 12 — Família, Frente Jardim, 6 pax -->
+        <div class="room-card rv d3" onclick="rmOpen(this)" data-vista="jardim" data-quarto="12">
+          <div class="room-thumb" style="background:linear-gradient(160deg,#0d2e1a 0%,#1a4d2e 60%,#0d3020 100%);">
+                        <img src="fotos/qut12.jpg" alt="Quarto 12" loading="lazy">
+<div class="room-thumb-overlay"></div>
+            <div class="rm-vista">Frente Jardim</div>
+          </div>
+          <div class="room-info">
+            <div class="room-name">FAMÍLIA 12</div>
+            <div class="rm-cap">até 6 hóspedes</div>
+            <div class="room-amenities" style="margin-top:14px;"><span class="room-tag">Frigobar</span><span class="room-tag">Ducha ♨</span><span class="room-tag">WiFi</span></div>
+          </div>
+          <div class="rm-open-hint">
+            <span><span data-i18n="pousada.ver-detalhes" class="il">Ver detalhes</span></span>
+            <svg></svg>
+          </div>
+          <div class="rm-details">
+            <div class="rm-price-table">
+              <div class="rm-price-row rm-alta" style="justify-content:center;"><span data-i18n="pousada.consulte-disponibilidade-e-valores" class="il">Consulte disponibilidade e valores</span></div>
+            </div>
+            <div class="rm-info-row">
+              <div class="rm-info-cell"><small>Check-in</small><strong>14h</strong></div>
+              <div class="rm-info-cell"><small>Check-out</small><strong>12h</strong></div>
+              <div class="rm-info-cell"><small><span data-i18n="pousada.cafe" class="il">Café</span></small><strong><span data-i18n="pousada.incluso-2" class="il">Incluso</span></strong></div>
+            </div>
+            <a href="#" class="rm-cta" onclick="window._rmReserve(event)"><span data-i18n="pousada.reservar-este-quarto" class="il">Reservar este quarto</span></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ESTRUTURA / FACILITIES -->
+      <div id="pd-estrutura" style="scroll-margin-top:80px;">
+
+        <h2 class="s-label rv" style="margin-top:64px;">
+          <span data-i18n="pousada.estrutura-experiencias" class="il">Estrutura & Experiências</span>
+        </h2>
+
+        <!-- BLOCK 01: Água & Conforto — foto esquerda -->
+        <div class="pd-est-block rv d1">
+          <div class="pd-est-photo loaded" id="pd-est-photo-1" aria-hidden="true" style="background-image:url(img/pousada_lagoon_pool.jpg)">
+            <div class="pd-est-num" aria-hidden="true">01</div>
+          </div>
+          <div class="pd-est-items">
+            <p class="pd-est-eyebrow">
+              <span data-i18n="pousada.agua-conforto">Água & Conforto</span>
+            </p>
+            <div class="pd-est-item">
+              <div class="pd-est-icon">🏊</div>
+              <div>
+                <div class="pd-est-name">THE LAGOON POOL</div>
+                <div class="pd-est-desc">
+                  <span data-i18n="pousada.piscina-com-vista-para-a-lagoa">Piscina com vista para a lagoa. O lugar perfeito para descansar entre sessões ou curtir o day use.</span>
+                </div>
+              </div>
+            </div>
+            <div class="pd-est-item">
+              <div class="pd-est-icon">🌿</div>
+              <div>
+                <div class="pd-est-name">THE DRIFT</div>
+                <div class="pd-est-desc">
+                  <span data-i18n="pousada.lounge-de-descanso-com-redes-e">Lounge de descanso com redes e área sombreada. Para quem quer deixar o vento levar.</span>
+                </div>
+              </div>
+            </div>
+            <div class="pd-est-item">
+              <div class="pd-est-icon">🌅</div>
+              <div>
+                <div class="pd-est-name">THE WIND DECK</div>
+                <div class="pd-est-desc">
+                  <span data-i18n="pousada.deck-panoramico-com-vista-360-da">Deck panorâmico com vista 360° da lagoa. O spot mais instagramável da pousada ao pôr do sol.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BLOCK 02: Kite & Experiências — foto direita -->
+        <div class="pd-est-block rv d2">
+          <div class="pd-est-items">
+            <p class="pd-est-eyebrow">
+              <span data-i18n="pousada.kite-experiencias">Kite & Experiências</span>
+            </p>
+            <div class="pd-est-item">
+              <div class="pd-est-icon">🪁</div>
+              <div>
+                <div class="pd-est-name">THE QUIVER</div>
+                <div class="pd-est-desc">
+                  <span data-i18n="pousada.galpao-exclusivo-para-guardar-equipamentos-de">Galpão exclusivo para guardar equipamentos de kite com segurança. Compressor de ar disponível.</span>
+                </div>
+              </div>
+            </div>
+            <div class="pd-est-item">
+              <div class="pd-est-icon">🔥</div>
+              <div>
+                <div class="pd-est-name">THE PIT STOP</div>
+                <div class="pd-est-desc">
+                  <span data-i18n="pousada.area-de-churrasco-com-estrutura-completa">Área de churrasco com estrutura completa. O ritual perfeito depois de um dia épico no kite.</span>
+                </div>
+              </div>
+            </div>
+            <div class="pd-est-item">
+              <div class="pd-est-icon">📸</div>
+              <div>
+                <div class="pd-est-name">THE SPOT</div>
+                <div class="pd-est-desc">
+                  <span data-i18n="pousada.entrada-principal-e-areas-instagramaveis-espalhada">Entrada principal e áreas instagramáveis espalhadas pela pousada. Cada ângulo é uma foto.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pd-est-photo loaded" id="pd-est-photo-2" aria-hidden="true" style="background-image:url(img/pousada_aerial_spot.jpg)">
+            <div class="pd-est-num" aria-hidden="true">02</div>
+          </div>
+        </div>
+
+      </div><!-- /#pd-estrutura -->
+
+      <!-- Day Use & Extras -->
+      <div style="margin-top:32px;border:1px solid rgba(200,145,42,.2);padding:28px;display:flex;gap:32px;flex-wrap:wrap;align-items:center;" class="rv">
+        <div>
+          <div style="font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">
+            <span data-i18n="pousada.tambem-disponivel">Também disponível</span>
+          </div>
+          <div style="font-family:var(--f-display);font-size:clamp(20px,3vw,32px);letter-spacing:.06em;color:var(--white);">
+            <span data-i18n="pousada.day-use-passeio-de-barco-buggy">DAY USE · PASSEIO DE BARCO · BUGGY</span>
+          </div>
+          <div style="font-size:12px;color:var(--dim);margin-top:10px;line-height:1.7;">
+            <span data-i18n="pousada.cafe-da-manha-incluso-opcional-consulte">Café da manhã incluso (opcional) · Consulte disponibilidade via WhatsApp</span>
+          </div>
+        </div>
+        <a href="https://wa.me/5585999271489" class="btn btn-gold" data-cursor="WhatsApp" style="flex-shrink:0;">
+          <span><span data-i18n="pousada.consultar" class="il">Consultar</span></span>
+        </a>
+      </div>
+
+      <!-- Counters -->
+      <div class="counter-grid rv" style="margin-top:56px;">
+        <div class="counter-item">
+          <div class="counter-val" data-count="4" data-suffix="">0</div>
+          <div class="counter-label"><span data-i18n="pousada.tipos-de-hospedagem">Tipos de hospedagem</span></div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-val" data-count="300" data-suffix="+">0</div>
+          <div class="counter-label"><span data-i18n="pousada.hospedes-por-ano">Hóspedes por ano</span></div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-val" data-count="98" data-suffix="%">0</div>
+          <div class="counter-label"><span data-i18n="pousada.satisfacao-dos-hospedes">Satisfação dos hóspedes</span></div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-val" data-count="5" data-suffix="★">0</div>
+          <div class="counter-label"><span data-i18n="pousada.avaliacao-media">Avaliação média</span></div>
+        </div>
+      </div>
+
+      <div style="margin-top:40px;display:flex;gap:16px;flex-wrap:wrap;" class="rv">
+        <a href="https://wa.me/5585999271489" class="btn btn-gold" data-cursor="Reservar" aria-label="Reservar quarto">
+          <span><span data-i18n="pousada.reservar-via-whatsapp" class="il">Reservar via WhatsApp</span></span>
+        </a>
+        <a href="contato.html" class="btn btn-outline" data-cursor="Formulário">
+          <span><span data-i18n="pousada.formulario-de-reserva" class="il">Formulário de reserva</span></span>
+        </a>
+      </div>
+
+    </div>
+
+    <div id="pd-politicas-section" style="background:var(--deep);padding:60px clamp(20px,6vw,80px);border-top:1px solid rgba(200,145,42,.1);">
+      <p class="s-label rv" style="justify-content:center;margin-bottom:20px;"><span data-i18n="pousada.informacoes">Informações</span></p>
+      <h2 class="rv" data-i18n="pousada.politicas-e-servicos" style="font-family:var(--f-display);font-size:clamp(28px,4vw,46px);letter-spacing:.05em;color:var(--foam);text-align:center;margin-bottom:48px;">POLÍTICAS &amp; SERVIÇOS</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,380px),1fr));gap:1px;background:rgba(26,61,92,.2);max-width:1100px;margin:0 auto;">
+        <div class="rv" style="background:var(--void);padding:24px 28px;">
+          <div style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;">Check-in / Check-out</div>
+          <div style="font-size:13px;color:var(--foam);line-height:1.65;">14:00h  /  12:00h</div>
+        </div>
+        <div class="rv" style="background:var(--void);padding:24px 28px;">
+          <div data-i18n="pousada.cancelamento" style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;">Cancelamento</div>
+          <div data-i18n="pousada.cancelar-a-reserva-apenas-com-7-dias-de-antecedencia" style="font-size:13px;color:var(--foam);line-height:1.65;">Cancelar a reserva apenas com 7 dias de antecedência devolve 50%; após 7 dias, não é reembolsável.</div>
+        </div>
+        <div class="rv" style="background:var(--void);padding:24px 28px;">
+          <div data-i18n="pousada.formas-de-pagamento" style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;">Formas de pagamento</div>
+          <div data-i18n="pousada.pix-cartao-credito-debito-dinheiro-paypal" style="font-size:13px;color:var(--foam);line-height:1.65;">PIX &nbsp;·&nbsp; Cartão de crédito &nbsp;·&nbsp; Cartão de débito &nbsp;·&nbsp; Dinheiro &nbsp;·&nbsp; PayPal/Wise</div>
+        </div>
+        <div class="rv" style="background:var(--void);padding:24px 28px;">
+          <div data-i18n="pousada.criancas" style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;">Crianças</div>
+          <div data-i18n="pousada.criancas-ate-5-anos-nao-pagam" style="font-size:13px;color:var(--foam);line-height:1.65;">Crianças até 5 anos não pagam</div>
+        </div>
+        <div class="rv" style="background:var(--void);padding:24px 28px;">
+          <div data-i18n="pousada.idiomas" style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;">Idiomas</div>
+          <div data-i18n="pousada.portugues-ingles-espanhol-alemao" style="font-size:13px;color:var(--foam);line-height:1.65;">Português &nbsp;·&nbsp; Inglês &nbsp;·&nbsp; Espanhol &nbsp;·&nbsp; Alemão</div>
+        </div>
+        <div class="rv" style="background:var(--void);padding:24px 28px;">
+          <div data-i18n="pousada.pets" style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;">Pets</div>
+          <div data-i18n="pousada.aceita-mediante-consulta-taxa-sob-consulta" style="font-size:13px;color:var(--foam);line-height:1.65;">Aceita mediante consulta &nbsp;·&nbsp; Taxa sob consulta</div>
+        </div>
+        <div class="rv" style="background:var(--void);padding:24px 28px;">
+          <div data-i18n="pousada.galpao-de-kite-the-quiver" style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;">Galpão de kite (The Quiver)</div>
+          <div data-i18n="pousada.sob-consulta" style="font-size:13px;color:var(--foam);line-height:1.65;">Sob consulta</div>
+        </div>
+        <div class="rv" style="background:var(--void);padding:24px 28px;">
+          <div data-i18n="pousada.the-pit-stop-churrasco" style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:7px;">The Pit Stop (churrasco)</div>
+          <div data-i18n="pousada.sob-reserva-taxa-sob-consulta-capacidade-7-pessoas" style="font-size:13px;color:var(--foam);line-height:1.65;">Sob reserva &nbsp;·&nbsp; Taxa sob consulta &nbsp;·&nbsp; Capacidade: 7 pessoas</div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /page-pousada -->
+</div><!-- /app -->
+
+<!-- ROOM MODAL -->
+<div id="rm-modal" style="display:none;">
+  <div id="rm-modal-inner">
+    <div id="rm-modal-head">
+      <div>
+        <div id="rm-modal-title"></div>
+        <div id="rm-modal-sub"></div>
+      </div>
+      <button id="rm-modal-close" onclick="rmClose()" aria-label="Fechar">&#x2715;</button>
+    </div>
+    <div id="rm-modal-body"></div>
+  </div>
+</div>
+
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script></script>
+</body>
+</html>

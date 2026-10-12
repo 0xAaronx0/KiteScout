@@ -1,0 +1,39 @@
+
+
+
+    <div>
+        <div class="gallery" data-provide="gallery">
+            <div class="row">
+                        <div class="col-12 col-xl-6">
+                            <a class="photo" href="//bstoked.azureedge.net/l-6831-vyF9Lp6wVj9kpX1NlHwXfp5JlOOmrVyE.jpeg?width=1920" data-thumb="//bstoked.azureedge.net/l-6831-vyF9Lp6wVj9kpX1NlHwXfp5JlOOmrVyE.jpeg?width=320" data-sub-html="Kite trip" target="_blank" rel="noopener" style="background-image: url(//bstoked.azureedge.net/l-6831-vyF9Lp6wVj9kpX1NlHwXfp5JlOOmrVyE.jpeg?width=480);"></a>
+                        </div>
+                        <div class="col-12 col-xl-6 d-none d-xl-block">
+                            <a class="photo" href="//bstoked.azureedge.net/l-6831-98RdmBrm2LeUWd9RxUZaxSzP9ANhBRCD.JPG?width=1920" data-thumb="//bstoked.azureedge.net/l-6831-98RdmBrm2LeUWd9RxUZaxSzP9ANhBRCD.JPG?width=320" data-sub-html="Swimming pool" target="_blank" rel="noopener" style="background-image: url(//bstoked.azureedge.net/l-6831-98RdmBrm2LeUWd9RxUZaxSzP9ANhBRCD.JPG?width=480);"></a>
+                        </div>
+                        <div class="sm col-6 col-md-4">
+                            <a class="photo" href="//bstoked.azureedge.net/l-6831-pKXo6zzuw81rZthl06I3xDj9dCEmhNtE.JPG?width=1920" data-thumb="//bstoked.azureedge.net/l-6831-pKXo6zzuw81rZthl06I3xDj9dCEmhNtE.JPG?width=320" data-sub-html="Swimming pool" target="_blank" rel="noopener" style="background-image: url(//bstoked.azureedge.net/l-6831-pKXo6zzuw81rZthl06I3xDj9dCEmhNtE.JPG?width=480);">
+                            </a>
+                        </div>
+                        <div class="sm col-6 col-md-4 d-none d-md-block">
+                            <a class="photo" href="//bstoked.azureedge.net/l-6831-SSHrQpOFamjc9cHRLkUfqiTsrdjdw19a.JPG?width=1920" data-thumb="//bstoked.azureedge.net/l-6831-SSHrQpOFamjc9cHRLkUfqiTsrdjdw19a.JPG?width=320" data-sub-html="2 beds" target="_blank" rel="noopener" style="background-image: url(//bstoked.azureedge.net/l-6831-SSHrQpOFamjc9cHRLkUfqiTsrdjdw19a.JPG?width=480);">
+                            </a>
+                        </div>
+                        <div class="sm col-6 col-md-4">
+                            <a class="photo" href="//bstoked.azureedge.net/l-6831-5FeLzIvTVZrT155vPWsy9NM6GkVrsftw.JPG?width=1920" data-thumb="//bstoked.azureedge.net/l-6831-5FeLzIvTVZrT155vPWsy9NM6GkVrsftw.JPG?width=320" data-sub-html="Bathroom" target="_blank" rel="noopener" style="background-image: url(//bstoked.azureedge.net/l-6831-5FeLzIvTVZrT155vPWsy9NM6GkVrsftw.JPG?width=480);">
+                                    <div class="v-align text-center">
+                                        <div class="text-0 lead bg-s-t rounded u">
+                                            See all photos
+                                        </div>
+                                    </div>
+                            </a>
+                        </div>
+            </div>
+                <a href="//bstoked.azureedge.net/l-6831-JR2cCkem5EGEczGlBZAaE2lvLd6g6HRp.JPG?width=1920" data-thumb="//bstoked.azureedge.net/l-6831-JR2cCkem5EGEczGlBZAaE2lvLd6g6HRp.JPG?width=320" data-sub-html="Studio Orient bay" target="_blank" rel="noopener" hidden></a>
+                <a href="//bstoked.azureedge.net/l-6831-GNWNbNnh0J8EaTsstNqiGo09YLXOWi2R.jpg?width=1920" data-thumb="//bstoked.azureedge.net/l-6831-GNWNbNnh0J8EaTsstNqiGo09YLXOWi2R.jpg?width=320" data-sub-html="Orient bay view" target="_blank" rel="noopener" hidden></a>
+                <a href="//bstoked.azureedge.net/l-6831-KavedOkykjp3B0bR4mkS0QBUF3eDteYK.jpg?width=1920" data-thumb="//bstoked.azureedge.net/l-6831-KavedOkykjp3B0bR4mkS0QBUF3eDteYK.jpg?width=320" data-sub-html="Kitesurfing lessons Orient beach" target="_blank" rel="noopener" hidden></a>
+                <a href="//bstoked.azureedge.net/l-6831-kpNoPRnaHKBZYOXqtHFb35POK75eYY7H.jpg?width=1920" data-thumb="//bstoked.azureedge.net/l-6831-kpNoPRnaHKBZYOXqtHFb35POK75eYY7H.jpg?width=320" data-sub-html="Kitesurfing Rental Orient beach" target="_blank" rel="noopener" hidden></a>
+                <a href="//bstoked.azureedge.net/l-6831-ZfJiCAQX5y4uM0ShOjHFo1Ff980hQipg.jpg?width=1920" data-thumb="//bstoked.azureedge.net/l-6831-ZfJiCAQX5y4uM0ShOjHFo1Ff980hQipg.jpg?width=320" data-sub-html="Kite downwinders" target="_blank" rel="noopener" hidden></a>
+                <a href="//bstoked.azureedge.net/l-6831-fv833XWmfRZFxTGX5ghBdSogsnaLkM33.jpg?width=1920" data-thumb="//bstoked.azureedge.net/l-6831-fv833XWmfRZFxTGX5ghBdSogsnaLkM33.jpg?width=320" data-sub-html="Kitesurfing Orient beach" target="_blank" rel="noopener" hidden></a>
+                <a href="//bstoked.azureedge.net/l-6831-hZ2yocwzhiviqHNfZfbCA9m2IbyVZLG2.jpg?width=1920" data-thumb="//bstoked.azureedge.net/l-6831-hZ2yocwzhiviqHNfZfbCA9m2IbyVZLG2.jpg?width=320" data-sub-html="Kite lessons" target="_blank" rel="noopener" hidden></a>
+        </div>
+    </div>

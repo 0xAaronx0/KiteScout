@@ -1,0 +1,102 @@
+
+
+    <div class="block py-1">
+        <div class="pos-r row row-sm" data-provide="columns">
+                <div class="col col-12 col-sm-6">
+                    <div class="card mb-1">
+                                <div class="bg-5 pos-r">
+                                    <div id="accommodation-c-1522" class="carousel slide">
+                                        <div class="carousel-inner" role="listbox">
+                                                <div class="carousel-item active">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-1522-fIrsA2BkHCK9LYF2y93GFCpzhxZ2FqRS.jpg?width=480);"></figure>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-1522-DimJVjGZdgyahPpKBZhPdd1DGHxBYhee.jpg?width=480);"></figure>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-1522-mesWBoDMheqQQSxoF3BIPmejYpi6kG7C.JPG?width=480);"></figure>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-1522-o1Rmzc78M5KISmD9tDKqf8LpS8SsulTe.JPG?width=480);"></figure>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-1522-PHUYAlVILgu0LttKhsWUrzO8sGU0igBv.JPG?width=480);"></figure>
+                                                </div>
+                                        </div>
+                                        <a class="carousel-control-prev bg-g-l" href="#accommodation-c-1522" role="button" data-slide="prev">
+                                            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next bg-g-r" href="#accommodation-c-1522" role="button" data-slide="next">
+                                            <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                        <div class="card-body">
+                            <h5 class="card-title mb-0 pr-3">
+                                <i class="bs bs-bungalow mr-025" title="Bungalow"></i>
+                                Studio with Ocean views
+                            </h5>
+                                <div class="card-text mt-1"><p>Our newly remodeled studios are located right behind the launching area.</p>
+<p>Enjoy hot water, your private kitchen and fridge and a comfy bed.</p>
+<p>You will be able to take a break from kiting and relax on your private terrace.</p>
+</div>
+                                                            <div class="card-text mt-1">
+                                    <i class="bs bs-lg bs-walk float-left mr-05"></i>
+                                    <p class="mb-0 py-025">Walking distance to spot</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-12 col-sm-6">
+                    <div class="card mb-1">
+                                <div class="bg-5 pos-r">
+                                    <div id="accommodation-c-1523" class="carousel slide">
+                                        <div class="carousel-inner" role="listbox">
+                                                <div class="carousel-item active">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-1523-cfOnmRJN5lciuyIcpRQmGph0z89LCKtm.JPG?width=480);"></figure>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-1523-aGWUx5rMrdPmAnOSpqfJRZTAE08ej1Xi.JPG?width=480);"></figure>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-1523-sq9eUNMwYuGbcQU34lBvmTvZ62JPa81s.JPG?width=480);"></figure>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-1523-zhaPAWhOMfWNCxDWCPcpkMTtIgVeLIxo.JPG?width=480);"></figure>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <figure class="bg-cover card-img card-img-md mb-0 w-100" style="background-image: url(//bstoked.azureedge.net/ac-1523-QT4DXgHAaV3xj7EX9f9RLn11XvKaVXoC.JPG?width=480);"></figure>
+                                                </div>
+                                        </div>
+                                        <a class="carousel-control-prev bg-g-l" href="#accommodation-c-1523" role="button" data-slide="prev">
+                                            <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next bg-g-r" href="#accommodation-c-1523" role="button" data-slide="next">
+                                            <span aria-hidden="true" class="carousel-control-next-icon"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                        <div class="card-body">
+                            <h5 class="card-title mb-0 pr-3">
+                                <i class="bs bs-tent mr-025" title="Tent"></i>
+                                Glamping
+                            </h5>
+                                <div class="card-text mt-1"><p>As close to nature as it gets.
+Our super comfortable tents come with real beds, light and are placed on a wooden deck.
+Of course we also have free-Wifi in this area and the rest of the premises.</p>
+<p>They are located in the shade of an alley of trees and nicely ventilated by the breeze.</p>
+<p>You share the bathroom with other glampers and are just steps away from the launch area, the restaurant and beach club.</p>
+</div>
+                                                            <div class="card-text mt-1">
+                                    <i class="bs bs-lg bs-walk float-left mr-05"></i>
+                                    <p class="mb-0 py-025">Walking distance to spot</p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>

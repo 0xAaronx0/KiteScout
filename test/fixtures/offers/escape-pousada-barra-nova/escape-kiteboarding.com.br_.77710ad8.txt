@@ -1,0 +1,763 @@
+<!-- Escape Kiteboarding Pousada — v2.26.4 -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="google-site-verification" content="vcFYPVd_d9tmXYvZVocqhiGYorftGFZVogSAwZWPZPA" />
+  <meta name="msvalidate.01" content="BA80A3FB7A26713E32DC1BD508671B0D" />
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GYKE2FLKVG"></script>
+  <script></script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape Kiteboarding Pousada | Barra Nova, Ceará – Brasil</title>
+  <meta name="description" content="Pousada e escola de kitesurf em Barra Nova, Ceará. Lagoa de água plana, ventos 15-25 nós, aulas para todos os níveis. A 76km de Fortaleza.">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="kitesurf Ceará, pousada kitesurf Barra Nova, wingfoil Ceará, kiteboarding Brazil, pousada Cascavel, lagoa plana kitesurf, flat water lagoon Ceará, spot kitesurf Ceará, Kiteschule Brasilien, wingfoil Brazil, transfer Fortaleza Barra Nova">
+  <meta name="geo.region" content="BR-CE">
+  <meta name="geo.placename" content="Barra Nova, Cascavel, Ceará, Brasil">
+  <meta name="geo.position" content="-4.1006;-38.1539">
+  <meta name="ICBM" content="-4.1006, -38.1539">
+  <link rel="canonical" href="https://escape-kiteboarding.com.br/">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Escape Kiteboarding Pousada",
+    "description": "Pousada e escola de kitesurf em Barra Nova, Ceará, Brasil. Lagoa de água plana, ventos 18–25 nós de julho a dezembro, 12 quartos, café da manhã incluso.",
+    "url": "https://escape-kiteboarding.com.br",
+    "telephone": "+5585999271489",
+    "email": "contato@escapekite.com.br",
+    "image": "https://escape-kiteboarding.com.br/og-cover.jpg",
+    "numberOfRooms": 12,
+    "checkinTime": "14:00",
+    "checkoutTime": "12:00",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua da Praia S/N, Barra Nova, Jacarecoara",
+      "addressLocality": "Cascavel",
+      "addressRegion": "Ceará",
+      "postalCode": "62850-000",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -4.1006,
+      "longitude": -38.1539
+    },
+    "sameAs": [
+      "https://www.instagram.com/escape.kiteboarding"
+    ],
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuito",       "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Ar-condicionado",      "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Piscina",              "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Estacionamento grátis","value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Café da manhã incluso","value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Restaurante",          "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Guarda-equipamentos",  "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Transfer aeroporto",   "value": true}
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "296",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  }
+  </script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+  <link rel="dns-prefetch" href="https://maps.google.com">
+  <link rel="dns-prefetch" href="https://www.google.com">
+  <link rel="dns-prefetch" href="https://embed.windy.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+
+  <!-- ── Open Graph / Social ─────────────────── -->
+  <meta property="og:type"        content="website">
+  <meta property="og:site_name"   content="Escape Kiteboarding Pousada">
+  <meta property="og:title"       content="Escape Kiteboarding Pousada | Barra Nova, Ceará – Brasil">
+  <meta property="og:description" content="Pousada e escola de kitesurf em Barra Nova, Ceará. Lagoa de água plana, ventos 15-25 nós, aulas para todos os níveis. A 76km de Fortaleza.">
+  <meta property="og:url"         content="https://escape-kiteboarding.com.br/">
+  <meta property="og:image"       content="https://escape-kiteboarding.com.br/og-cover.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height"content="630">
+  <meta property="og:locale"      content="pt_BR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:locale:alternate" content="de_DE">
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Escape Kiteboarding Pousada | Barra Nova, Ceará – Brasil">
+  <meta name="twitter:description" content="Pousada e escola de kitesurf em Barra Nova, Ceará. Lagoa de água plana, ventos 15-25 nós, aulas para todos os níveis. A 76km de Fortaleza.">
+  <meta name="twitter:image"       content="https://escape-kiteboarding.com.br/og-cover.jpg">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="cur-text"></div>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Navegação principal">
+  <a href="index.html" class="nav-logo" aria-label="Escape Kiteboarding">ESCAPE <em>KITE</em></a>
+
+  <ul class="nav-main" role="list" id="nav-links">
+    <li><a href="index.html" data-page="home" class="active"><span data-i18n="pousada.home" class="il">Home</span></a></li>
+    <li><a href="pousada.html" data-page="pousada"><span data-i18n="pousada.pousada" class="il">Pousada</span></a></li>
+    <li><a href="restaurante.html" data-page="restaurante"><span data-i18n="pousada.restaurante" class="il">Restaurante</span></a></li>
+    <li><a href="galeria.html" data-page="galeria"><span data-i18n="pousada.galeria" class="il">Galeria</span></a></li>
+    <li><a href="blog.html" data-page="blog"><span data-i18n="pousada.blog" class="il">Blog</span></a></li>
+    <li><a href="como-chegar.html" data-page="como-chegar"><span data-i18n="pousada.como-chegar" class="il">Como Chegar</span></a></li>
+    <li><a href="faq.html" data-page="faq"><span data-i18n="pousada.faq" class="il">FAQ</span></a></li>
+    <li><a href="contato.html" data-page="contato"><span data-i18n="pousada.contato" class="il">Contato</span></a></li>
+  </ul>
+
+  <div class="nav-right">
+    <ul class="nav-lang" role="list" aria-label="Idioma">
+      <li><button onclick="setLang('pt')" id="lb-pt" class="active" aria-label="Português" aria-pressed="true">PT</button></li>
+      <li><button onclick="setLang('en')" id="lb-en" aria-label="English" aria-pressed="false">EN</button></li>
+      <li><button onclick="setLang('de')" id="lb-de" aria-label="Deutsch" aria-pressed="false">DE</button></li>
+    </ul>
+    <button class="nav-burger" id="burger" aria-label="Menu" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div id="mobile-drawer" aria-hidden="true" inert>
+  <a href="index.html"><span data-i18n="pousada.home" class="il">Home</span></a>
+  <a href="pousada.html"><span data-i18n="pousada.pousada" class="il">Pousada</span></a>
+  <a href="restaurante.html"><span data-i18n="pousada.restaurante" class="il">Restaurante</span></a>
+  <a href="galeria.html"><span data-i18n="pousada.galeria" class="il">Galeria</span></a>
+  <a href="blog.html"><span data-i18n="pousada.blog" class="il">Blog</span></a>
+  <a href="como-chegar.html"><span data-i18n="pousada.como-chegar" class="il">Como Chegar</span></a>
+  <a href="faq.html"><span data-i18n="pousada.faq" class="il">FAQ</span></a>
+  <a href="contato.html"><span data-i18n="pousada.contato" class="il">Contato</span></a>
+</div>
+
+<!-- APP -->
+<div id="app">
+
+  <!-- ══════════════════════════════════════════════
+       PAGE: HOME
+  ══════════════════════════════════════════════════ -->
+  <div class="page active" id="page-home">
+    <div class="snap-container" id="home-snap">
+
+      <!-- SNAP 1: HERO -->
+      <section class="snap-section" aria-labelledby="hero-title">
+        <!-- Primeira imagem do slideshow direto no HTML (não injetada via JS) -- Lighthouse apontou
+             "LCP request discovery: false" porque o slideshow inteiro era montado por JS, atrasando o
+             início do download da imagem em ~6.4s (o navegador só descobre a URL quando o JS roda).
+             Com a img real aqui, o preload scanner já baixa em paralelo com o parse do HTML.
+             fetchpriority="high" também resolve o "fetchpriority=high should be applied" do mesmo audit.
+             O JS do slideshow (abaixo, window.addEventListener('load', ...)) detecta que o slide 0 já
+             existe no DOM e não cria duplicata -- só anexa os slides 1-4 pra continuar a rotação.
+             <picture>/<source webp> -- economiza ~24% (gallery_00: 205KB→155KB) sem exigir JS; navegador
+             sem suporte a WebP (raro hoje em dia) cai sozinho pro <img> JPG abaixo, sem nenhum código extra. -->
+        <div class="hero-slide-bg" id="hero-slide-bg"><picture>
+          <source type="image/webp" srcset="img/gallery_00.webp">
+          <img src="img/gallery_00.jpg" alt="Sessão na lagoa" class="active" fetchpriority="high" data-caption-pt="Sessão na lagoa" data-caption-en="Lagoon kite session" data-caption-de="Kite-Session auf der Lagune">
+        </picture></div>
+        <div class="hero-slide-overlay" aria-hidden="true"></div>
+        <div class="hero-bg" id="hero-bg"></div>
+
+        <div class="hero-particles" id="particles" aria-hidden="true"></div>
+
+        <div class="wind-lines" aria-hidden="true" id="wind-lines"></div>
+
+        <!-- Kite 1 -->
+        <div class="kite-wrap" style="top:18%;left:62%;animation-duration:5s;" aria-hidden="true">
+          <svg></svg>
+        </div>
+        <!-- Kite 2 -->
+        <div class="kite-wrap" style="top:30%;left:76%;animation-duration:7s;animation-delay:-.5s;" aria-hidden="true">
+          <svg></svg>
+        </div>
+
+        <div class="hero-lagoon" aria-hidden="true">
+          <div class="lagoon-lines"></div>
+        </div>
+
+        <div class="hero-content">
+          <p class="hero-eyebrow">
+            <span data-i18n="index.barra-nova-ceara-brasil" class="il">Barra Nova · Ceará · Brasil</span>
+          </p>
+
+          <h1 class="hero-title" id="hero-title">
+            <span class="outline">ESCAPE</span><br>
+            <span class="gold">KITE</span>
+          </h1>
+
+          <p class="hero-sub">
+            <span data-i18n="index.o-lugar-secreto-do-havai-do">O lugar secreto do Havaí do Kitesurfe</span>
+          </p>
+
+          <div class="hero-stats" aria-label="Dados do spot">
+            <div class="h-stat">
+              <span class="h-stat-n" data-count="18">0</span>
+              <span class="h-stat-l"><span data-i18n="index.nos-minimo" class="il">Nós mínimo</span></span>
+            </div>
+            <div class="h-divider" aria-hidden="true"></div>
+            <div class="h-stat">
+              <span class="h-stat-n" data-count="800" data-suffix="m">0</span>
+              <span class="h-stat-l"><span data-i18n="index.lagoa" class="il">Lagoa</span></span>
+            </div>
+            <div class="h-divider" aria-hidden="true"></div>
+            <div class="h-stat">
+              <span class="h-stat-n" data-count="76" data-suffix="km">0</span>
+              <span class="h-stat-l"><span data-i18n="index.de-fortaleza" class="il">de Fortaleza</span></span>
+            </div>
+            <div class="h-divider" aria-hidden="true"></div>
+            <div class="h-stat">
+              <span class="h-stat-n" data-count="300" data-suffix="+">0</span>
+              <span class="h-stat-l"><span data-i18n="index.dias-de-vento-ano" class="il">Dias de vento/ano</span></span>
+            </div>
+          </div>
+
+          <div class="hero-cta">
+            <a href="https://wa.me/5585999271489" class="btn btn-gold" data-cursor="WhatsApp" aria-label="Reservar via WhatsApp">
+              <svg></svg>
+              <span><span data-i18n="index.reservar" class="il">Reservar</span></span>
+            </a>
+            <a href="galeria.html" class="btn btn-outline" data-cursor="Galeria">
+              <span><span data-i18n="index.ver-galeria" class="il">Ver Galeria</span></span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-scroll" aria-hidden="true">
+          <div class="scroll-line"></div>
+          <span class="scroll-label">scroll</span>
+        </div>
+
+        <div class="hero-slide-dots" id="hero-slide-dots" aria-hidden="true"></div>
+        <div class="hero-slide-caption" id="hero-slide-caption" aria-hidden="true"></div>
+      </section>
+
+      <!-- SNAP 2: SPOT TEASER -->
+      <section class="snap-section spot-snap" aria-labelledby="spot-title">
+        <div class="spot-left">
+          <div class="spot-photo-bg" id="spot-photo-bg" aria-hidden="true"></div>
+          <div class="spot-photo-overlay" aria-hidden="true"></div>
+          <div class="spot-circles" aria-hidden="true">
+            <div class="s-circle" style="width:180px;height:180px;animation-duration:4s;animation-delay:0s;"></div>
+            <div class="s-circle" style="width:280px;height:280px;animation-duration:4s;animation-delay:.8s;"></div>
+            <div class="s-circle" style="width:380px;height:380px;animation-duration:4s;animation-delay:1.6s;"></div>
+          </div>
+          <div class="spot-left-inner rv">
+            <div class="spot-big-num">800</div>
+            <div class="spot-unit" data-i18n="index.metros-unidade">METROS</div>
+            <div class="spot-sub-label">
+              <span data-i18n="index.de-agua-plana-barra-nova-ce">de água plana · Barra Nova, CE</span>
+            </div>
+          </div>
+        </div>
+        <div class="spot-right">
+          <p class="s-label rv"><span data-i18n="index.o-spot" class="il">O Spot</span></p>
+          <h2 class="s-title rv d1" id="spot-title">
+            <span data-i18n="index.a-lagoa-secreta">A LAGOA<br>SECRETA</span>
+          </h2>
+          <p class="s-lead rv d2" style="margin-top:20px;">
+            <span data-i18n="index.ventos-constantes-agua-plana-zero-multidao">Ventos constantes. Água plana. Zero multidão.</span>
+          </p>
+          <p class="s-body rv d3" style="margin-top:16px;">
+            <span data-i18n="index.a-lagoa-de-barra-nova-e">A lagoa de Barra Nova é protegida por um banco de areia que separa o mar aberto das águas calmas — 800×200m ideais para iniciantes e veteranos. A temporada vai de julho a dezembro com ventos de 15 a 25 nós.</span>
+          </p>
+          <div class="rv d4" style="margin-top:28px;">
+          </div>
+        </div>
+      </section>
+
+      <!-- SNAP WIND WIDGET -->
+      <section class="snap-section has-section-bg" style="background:var(--void);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px clamp(20px,7vw,120px);" aria-labelledby="wind-title">
+        <div class="section-bg" id="bg-wind"></div>
+        <p class="s-label rv" style="justify-content:center;">
+          <span data-i18n="index.condicoes-ao-vivo" class="il">Condições ao vivo</span>
+        </p>
+        <h2 class="s-title rv d1" id="wind-title" style="font-size:clamp(40px,7vw,100px);text-align:center;margin-bottom:8px;">
+          <span data-i18n="index.vento-agora">VENTO<br><span style="color:var(--gold-hi);">AGORA</span></span>
+        </h2>
+        <p class="s-body rv d2" style="text-align:center;max-width:48ch;margin-bottom:32px;">
+          <span data-i18n="index.barra-nova-ce-previsao-em-tempo">Barra Nova, CE — previsão em tempo real via Windguru. Temporada principal: julho a dezembro.</span>
+        </p>
+        <!-- Windguru embed para Barra Nova / Fortim CE -->
+        <div style="width:100%;max-width:860px;border:1px solid rgba(200,145,42,.2);overflow:hidden;border-radius:2px;" class="rv d3">
+          <iframe id="windguru-frame"
+            src="https://embed.windy.com/embed2.html?lat=-4.10&lon=-38.15&detailLat=-4.10&detailLon=-38.15&zoom=10&level=surface&overlay=wind&menu=&message=true&marker=true&calendar=now&pressure=&type=map&location=coordinates&detail=true&metricWind=kt&metricTemp=%C2%B0C&radarRange=-1"
+            width="100%" height="420" frameborder="0" scrolling="no"
+            title="Previsão de vento Barra Nova"
+            loading="lazy">
+          </iframe>
+        </div>
+
+        <!-- Calendário de vento mensal -->
+        <div style="width:100%;max-width:860px;margin-top:32px;" class="rv d4">
+          <p class="s-label" style="margin-bottom:16px;justify-content:center;">
+            <span data-i18n="index.media-historica-por-mes-nos" class="il">Média histórica por mês (nós)</span>
+          </p>
+          <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:4px;align-items:end;height:120px;">
+            <div id="wc-jan" class="wind-bar" data-knots="10" title="Jan: ~10 nós"></div>
+            <div id="wc-feb" class="wind-bar" data-knots="9"  title="Fev: ~9 nós"></div>
+            <div id="wc-mar" class="wind-bar" data-knots="8"  title="Mar: ~8 nós"></div>
+            <div id="wc-apr" class="wind-bar" data-knots="9"  title="Abr: ~9 nós"></div>
+            <div id="wc-may" class="wind-bar" data-knots="11" title="Mai: ~11 nós"></div>
+            <div id="wc-jun" class="wind-bar" data-knots="14" title="Jun: ~14 nós"></div>
+            <div id="wc-jul" class="wind-bar" data-knots="20" title="Jul: ~20 nós" style="border-color:rgba(200,145,42,.7);"></div>
+            <div id="wc-aug" class="wind-bar" data-knots="22" title="Ago: ~22 nós" style="border-color:rgba(200,145,42,.7);"></div>
+            <div id="wc-sep" class="wind-bar" data-knots="21" title="Set: ~21 nós" style="border-color:rgba(200,145,42,.7);"></div>
+            <div id="wc-oct" class="wind-bar" data-knots="20" title="Out: ~20 nós" style="border-color:rgba(200,145,42,.7);"></div>
+            <div id="wc-nov" class="wind-bar" data-knots="18" title="Nov: ~18 nós" style="border-color:rgba(200,145,42,.7);"></div>
+            <div id="wc-dec" class="wind-bar" data-knots="15" title="Dez: ~15 nós" style="border-color:rgba(200,145,42,.7);"></div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:4px;margin-top:6px;">
+            <div style="text-align:center;font-size:9px;color:var(--dim);" data-i18n="index.mes-abrev-jan">Jan</div>
+            <div style="text-align:center;font-size:9px;color:var(--dim);" data-i18n="index.mes-abrev-fev">Fev</div>
+            <div style="text-align:center;font-size:9px;color:var(--dim);" data-i18n="index.mes-abrev-mar">Mar</div>
+            <div style="text-align:center;font-size:9px;color:var(--dim);" data-i18n="index.mes-abrev-abr">Abr</div>
+            <div style="text-align:center;font-size:9px;color:var(--dim);" data-i18n="index.mes-abrev-mai">Mai</div>
+            <div style="text-align:center;font-size:9px;color:var(--dim);" data-i18n="index.mes-abrev-jun">Jun</div>
+            <div style="text-align:center;font-size:9px;color:var(--dim);color:var(--gold);" data-i18n="index.mes-abrev-jul">Jul</div>
+            <div style="text-align:center;font-size:9px;color:var(--gold);" data-i18n="index.mes-abrev-ago">Ago</div>
+            <div style="text-align:center;font-size:9px;color:var(--gold);" data-i18n="index.mes-abrev-set">Set</div>
+            <div style="text-align:center;font-size:9px;color:var(--gold);" data-i18n="index.mes-abrev-out">Out</div>
+            <div style="text-align:center;font-size:9px;color:var(--gold);" data-i18n="index.mes-abrev-nov">Nov</div>
+            <div style="text-align:center;font-size:9px;color:var(--dim);" data-i18n="index.mes-abrev-dez">Dez</div>
+          </div>
+          <div style="margin-top:12px;display:flex;gap:20px;justify-content:center;font-size:10px;letter-spacing:.1em;">
+            <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border:1px solid rgba(200,145,42,.7);display:inline-block;"></span><span style="color:var(--gold);" data-i18n="index.temporada-principal-legenda">Temporada principal</span></span>
+            <span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border:1px solid rgba(106,143,168,.3);display:inline-block;"></span><span style="color:var(--dim);" data-i18n="index.baixa-temporada-legenda">Baixa temporada</span></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- SNAP BLOG -->
+      <section class="snap-section blog-snap has-section-bg" style="flex-direction:column;align-items:stretch;justify-content:center;background:var(--deep);border-top:1px solid rgba(200,145,42,.08);padding:56px clamp(20px,7vw,120px) 48px;overflow:hidden;height:100vh;" aria-label="Blog">
+        <div class="section-bg" id="bg-blog"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:32px;flex-wrap:wrap;gap:16px;">
+          <div>
+            <p class="s-label" style="margin-bottom:8px;">
+              <span data-i18n="index.do-blog" class="il">Do Blog</span>
+            </p>
+            <h2 style="font-family:var(--f-display);font-size:clamp(32px,5vw,64px);letter-spacing:.06em;color:var(--white);">
+              <span data-i18n="index.guia-do-spot">GUIA DO SPOT</span>
+            </h2>
+            <p style="margin-top:14px;font-size:13px;letter-spacing:.04em;">
+              <a href="kite-barra-nova.html" data-href-pt="kite-barra-nova.html" data-href-en="en/kitesurfing-barra-nova-brazil.html" data-href-de="de/kitesurfen-barra-nova-brasilien.html" style="color:var(--gold-hi);text-decoration:underline;text-underline-offset:3px;"><span data-i18n="pillar.guia-kite">Guia completo: kitesurf em Barra Nova</span></a>
+              <span style="color:var(--dim);margin:0 10px;" aria-hidden="true">·</span>
+              <a href="barra-nova-ceara.html" style="color:var(--gold-hi);text-decoration:underline;text-underline-offset:3px;"><span data-i18n="pillar.guia-barra-nova">Barra Nova, Cascavel: o que fazer</span></a>
+            </p>
+          </div>
+          <button onclick="window.location.href='blog.html'" class="btn" style="font-size:10px;padding:10px 20px;border:1px solid rgba(200,145,42,.3);color:var(--gold);background:none;cursor:pointer;letter-spacing:.15em;flex-shrink:0;">
+            <span data-i18n="index.ver-todos">VER TODOS →</span>
+          </button>
+        </div>
+        <div class="article-carousel" style="padding:0 40px;">
+          <button class="carousel-btn prev" onclick="slideBlog(-1)" aria-label="Anterior">‹</button>
+          <div class="article-track" id="home-article-track"></div>
+          <button class="carousel-btn next" onclick="slideBlog(1)" aria-label="Próximo">›</button>
+        </div>
+      </section>
+
+      <!-- SNAP 3: EXPERIENCE CARDS -->
+      <section class="snap-section exp-snap has-section-bg" aria-label="Experiências">
+        <div class="section-bg" id="bg-exp"></div>
+        <div class="exp-card rv" data-cursor="Pousada">
+          <div class="exp-card-bg" id="exp-bg-1" aria-hidden="true"></div>
+          <div class="exp-num" aria-hidden="true">01</div>
+          <div class="exp-icon" aria-hidden="true">
+            <svg></svg>
+          </div>
+          <div class="exp-title">
+            <span data-i18n="index.pousada-2">POUSADA</span>
+          </div>
+          <div class="exp-desc">
+            <span data-i18n="index.quartos-com-vista-para-a-lagoa">Quartos com vista para a lagoa. Café da manhã incluso.</span>
+          </div>
+          <a href="pousada.html" class="exp-link">
+            <span data-i18n="index.ver-quartos" class="il">Ver quartos</span>
+          </a>
+        </div>
+        <div class="exp-card rv d2" data-cursor="Gastronomia">
+          <div class="exp-card-bg" id="exp-bg-2" aria-hidden="true"></div>
+          <div class="exp-num" aria-hidden="true">02</div>
+          <div class="exp-icon" aria-hidden="true">
+            <svg></svg>
+          </div>
+          <div class="exp-title">
+            <span data-i18n="index.gastronomia">GASTRONOMIA</span>
+          </div>
+          <div class="exp-desc">
+            <span data-i18n="index.cafe-da-manha-pizzaria-bar-e">Café da manhã, pizzaria, bar e churrasco com vista para a lagoa.</span>
+          </div>
+          <a href="restaurante.html" class="exp-link">
+            <span data-i18n="index.conhecer" class="il">Conhecer</span>
+          </a>
+        </div>
+        <div class="exp-card rv d3" data-cursor="Estrutura">
+          <div class="exp-card-bg" id="exp-bg-3" aria-hidden="true"></div>
+          <div class="exp-num" aria-hidden="true">03</div>
+          <div class="exp-icon" aria-hidden="true">
+            <svg></svg>
+          </div>
+          <div class="exp-title">
+            <span data-i18n="index.estrutura">ESTRUTURA</span>
+          </div>
+          <div class="exp-desc">
+            <span data-i18n="index.pool-quiver-wind-deck-pit-stop">Pool · Quiver · Wind Deck · Pit Stop · The Drift</span>
+          </div>
+          <a href="pousada.html#pd-estrutura" class="exp-link">
+            <span data-i18n="index.ver-estrutura" class="il">Ver estrutura</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- SNAP 4: GOOGLE REVIEWS -->
+      <section class="snap-section gr-snap" aria-labelledby="gr-title">
+
+        <!-- LEFT: score agregado -->
+        <div class="gr-left">
+          <div class="gr-google-logo rv">
+            <svg></svg>
+            <span class="gr-google-wordmark">Google</span>
+          </div>
+          <div class="gr-score-big rv d1">4.6</div>
+          <div class="gr-stars-agg rv d2" aria-label="4.6 de 5 estrelas">★★★★★</div>
+          <div class="gr-count rv d3">
+            <span data-i18n="index.296-avaliacoes-verificadas">296 avaliações verificadas</span>
+          </div>
+          <a href="https://www.google.com/maps/place/?q=place_id:0x7b89ab5b89e67bd:0xb59ba2f2f6ce618f"
+             target="_blank" rel="noopener noreferrer" class="gr-view-all rv d4"
+             aria-label="Ver todas as avaliações no Google">
+            <span data-i18n="index.ver-todas-no-google">Ver todas no Google</span>
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <!-- RIGHT: carousel -->
+        <div class="gr-right">
+          <p class="s-label rv" style="justify-content:flex-start;">
+            <span data-i18n="index.o-que-nossos-hospedes-dizem" class="il">O que nossos hóspedes dizem</span>
+          </p>
+          <h2 class="s-title rv d1" id="gr-title" style="font-size:clamp(38px,5.5vw,76px);line-height:.9;">
+            <span data-i18n="index.avaliacoes-reais">AVALIAÇÕES<br><span style="color:var(--gold-hi);">REAIS</span></span>
+          </h2>
+
+          <div class="gr-track-wrap rv d2">
+            <div class="gr-track" id="gr-track">
+
+              <!-- ① Sarah Barkway -->
+              <div class="gr-card active-r" data-review-idx="0">
+                <div class="gr-card-header">
+                  <div class="gr-avatar" style="background:#1a7a6e;" aria-hidden="true">S</div>
+                  <div class="gr-name-wrap">
+                    <div class="gr-name">Sarah Barkway</div>
+                    <div class="gr-reviewer-sub">10 reviews · 🇬🇧 United Kingdom</div>
+                  </div>
+                  <span class="gr-photo-badge" title="2 photos on Google">📷 2</span>
+                </div>
+                <div class="gr-stars-row">
+                  <span class="gr-stars" aria-label="5 stars">★★★★★</span>
+                  <span class="gr-date">1 year ago · Couple</span>
+                </div>
+                <p class="gr-text">"We just spent 10 days at Escape and had an excellent stay! The location is right on the kitesurf spot and the hospitality exceptional. Super friendly staff, and delicious food and drinks. When you aren't kiting you can watch from the veranda or sit by the swimming pool."</p>
+                <div class="gr-tags">
+                  <span class="gr-tag">Rooms 5/5</span>
+                  <span class="gr-tag">Service 5/5</span>
+                  <span class="gr-tag">Location 5/5</span>
+                  <span class="gr-tag">Great value</span>
+                </div>
+                <svg></svg>
+              </div>
+
+              <!-- ② Marcellus -->
+              <div class="gr-card" data-review-idx="1">
+                <div class="gr-card-header">
+                  <div class="gr-avatar" style="background:#7b4f1a;" aria-hidden="true">M</div>
+                  <div class="gr-name-wrap">
+                    <div class="gr-name">Marcellus</div>
+                    <div class="gr-reviewer-sub">Local Guide · 462 reviews · 🌍</div>
+                  </div>
+                </div>
+                <div class="gr-stars-row">
+                  <span class="gr-stars" aria-label="5 stars">★★★★★</span>
+                  <span class="gr-date">6 years ago · Holiday</span>
+                </div>
+                <p class="gr-text">"Pure magic, spectacular place and people. Not to say to everybody — but it is paradise, an oasis to lose yourself."</p>
+                <div class="gr-tags">
+                  <span class="gr-tag">Rooms 5/5</span>
+                  <span class="gr-tag">Service 5/5</span>
+                  <span class="gr-tag">Location 5/5</span>
+                </div>
+                <svg></svg>
+              </div>
+
+              <!-- ③ Kevin Matthey -->
+              <div class="gr-card" data-review-idx="2">
+                <div class="gr-card-header">
+                  <div class="gr-avatar" style="background:#2e5ea8;" aria-hidden="true">K</div>
+                  <div class="gr-name-wrap">
+                    <div class="gr-name">Kevin Matthey</div>
+                    <div class="gr-reviewer-sub">10 reviews · 🇨🇭 Switzerland</div>
+                  </div>
+                  <span class="gr-photo-badge" title="4 photos on Google">📷 4</span>
+                </div>
+                <div class="gr-stars-row">
+                  <span class="gr-stars" aria-label="5 stars">★★★★★</span>
+                  <span class="gr-date">1 year ago · Couple</span>
+                </div>
+                <p class="gr-text">"Great place to stay, super friendly, the food is amazing. For kitesurfing it's perfect — right on the spot and the lagoon is perfect for learning and practicing new tricks. Highly recommend!"</p>
+                <div class="gr-tags">
+                  <span class="gr-tag">Service 5/5</span>
+                  <span class="gr-tag">Location 5/5</span>
+                  <span class="gr-tag">Great value</span>
+                </div>
+                <svg></svg>
+              </div>
+
+              <!-- ④ Conor Dermot Yearsley -->
+              <div class="gr-card" data-review-idx="3">
+                <div class="gr-card-header">
+                  <div class="gr-avatar" style="background:#1a6e3a;" aria-hidden="true">C</div>
+                  <div class="gr-name-wrap">
+                    <div class="gr-name">Conor Dermot Yearsley</div>
+                    <div class="gr-reviewer-sub">12 reviews · 🇮🇪 Ireland</div>
+                  </div>
+                </div>
+                <div class="gr-stars-row">
+                  <span class="gr-stars" aria-label="5 stars">★★★★★</span>
+                  <span class="gr-date">6 years ago · Solo</span>
+                </div>
+                <p class="gr-text">"Everything about this place is awesome — location right on the spot, amazing homemade food, great Beach Bar Caipis! Daniel, Christoph &amp; staff are really helpful and friendly. Gear rental at a good price, chilled atmosphere. Will be back next year!"</p>
+                <div class="gr-tags">
+                  <span class="gr-tag">Service 5/5</span>
+                  <span class="gr-tag">Location 5/5</span>
+                </div>
+                <svg></svg>
+              </div>
+
+              <!-- ⑤ Tomer Fayer -->
+              <div class="gr-card" data-review-idx="4">
+                <div class="gr-card-header">
+                  <div class="gr-avatar" style="background:#c86020;" aria-hidden="true">T</div>
+                  <div class="gr-name-wrap">
+                    <div class="gr-name">Tomer Fayer</div>
+                    <div class="gr-reviewer-sub">Local Guide · 72 reviews · 🇮🇱 Israel</div>
+                  </div>
+                  <span class="gr-photo-badge" title="4 photos on Google">📷 4</span>
+                </div>
+                <div class="gr-stars-row">
+                  <span class="gr-stars" aria-label="5 stars">★★★★★</span>
+                  <span class="gr-date">7 years ago</span>
+                </div>
+                <p class="gr-text">"Best Pousada in Barra Nova. Beachfront, great food and hospitality. Very friendly and have kite gear rent. Highly recommend!"</p>
+                <div class="gr-tags">
+                  <span class="gr-tag">Best in Barra Nova</span>
+                  <span class="gr-tag">Beachfront</span>
+                </div>
+                <svg></svg>
+              </div>
+
+              <!-- ⑥ Sergey Bakaev -->
+              <div class="gr-card" data-review-idx="5">
+                <div class="gr-card-header">
+                  <div class="gr-avatar" style="background:#7b2d8b;" aria-hidden="true">S</div>
+                  <div class="gr-name-wrap">
+                    <div class="gr-name">Sergey Bakaev</div>
+                    <div class="gr-reviewer-sub">Local Guide · 24 reviews · 🇷🇺 Russia</div>
+                  </div>
+                  <span class="gr-photo-badge" title="1 photo on Google">📷 1</span>
+                </div>
+                <div class="gr-stars-row">
+                  <span class="gr-stars" aria-label="5 stars">★★★★★</span>
+                  <span class="gr-date">6 years ago</span>
+                </div>
+                <p class="gr-text">"Amazing atmosphere, super friendly staff, rich breakfast and unique conditions to do kitesurfing. Highly recommended."</p>
+                <div class="gr-tags">
+                  <span class="gr-tag">Breakfast</span>
+                  <span class="gr-tag">Atmosphere</span>
+                  <span class="gr-tag">Kitesurfing</span>
+                </div>
+                <svg></svg>
+              </div>
+
+            </div><!-- /gr-track -->
+          </div><!-- /gr-track-wrap -->
+
+          <div class="gr-nav" id="gr-nav" role="tablist" aria-label="Reviews"></div>
+        </div><!-- /gr-right -->
+
+      </section>
+
+      <!-- Google Reviews Expanded Overlay -->
+      <div id="gr-overlay" role="dialog" aria-modal="true" aria-labelledby="gr-exp-name-el">
+        <div class="gr-expanded" id="gr-expanded-card">
+          <button class="gr-exp-close" id="gr-exp-close" aria-label="Fechar">✕</button>
+          <div class="gr-exp-header">
+            <div class="gr-exp-avatar" id="gr-exp-avatar"></div>
+            <div>
+              <div class="gr-exp-name" id="gr-exp-name-el"></div>
+              <div class="gr-exp-sub"  id="gr-exp-sub"></div>
+            </div>
+          </div>
+          <div class="gr-exp-stars" id="gr-exp-stars">★★★★★</div>
+          <p class="gr-exp-text" id="gr-exp-text"></p>
+          <div class="gr-exp-tags" id="gr-exp-tags"></div>
+          <div class="gr-exp-footer">
+            <span class="gr-exp-date" id="gr-exp-date"></span>
+            <a href="https://www.google.com/maps/place/?q=place_id:0x7b89ab5b89e67bd:0xb59ba2f2f6ce618f"
+               target="_blank" rel="noopener noreferrer" class="gr-exp-link">
+              <svg></svg>
+              Ver no Google
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SNAP 5: INSTAGRAM -->
+      <section class="snap-section ig-snap" aria-label="Instagram @escape_pousada">
+        <div class="ig-header rv">
+          <div class="ig-badge">
+            <svg></svg>
+            <span>Instagram</span>
+          </div>
+          <div class="ig-handle">@escape_pousada</div>
+          <p class="ig-sub">
+            <span data-i18n="index.lagoa-vento-e-vida-boa-acompanhe" class="il">Lagoa, vento e vida boa — acompanhe o dia a dia do spot</span>
+          </p>
+        </div>
+        <div class="ig-grid rv d2">
+          <a class="ig-item" href="https://www.instagram.com/escape_pousada" target="_blank" rel="noopener noreferrer" aria-label="Instagram @escape_pousada">
+            <div class="ig-photo" id="ig-p1"></div>
+            <div class="ig-overlay"><svg></svg></div>
+            <div class="ig-item-label"><span data-i18n="index.lagoa-pousada" class="il">Lagoa · Pousada</span></div>
+          </a>          <a class="ig-item" href="https://www.instagram.com/escape_pousada" target="_blank" rel="noopener noreferrer" aria-label="Instagram @escape_pousada">
+            <div class="ig-photo" id="ig-p2"></div>
+            <div class="ig-overlay"><svg></svg></div>
+            <div class="ig-item-label"><span data-i18n="index.o-spot-2" class="il">O spot</span></div>
+          </a>          <a class="ig-item" href="https://www.instagram.com/escape_pousada" target="_blank" rel="noopener noreferrer" aria-label="Instagram @escape_pousada">
+            <div class="ig-photo" id="ig-p3"></div>
+            <div class="ig-overlay"><svg></svg></div>
+            <div class="ig-item-label"><span data-i18n="index.escola-de-kite" class="il">Escola de kite</span></div>
+          </a>          <a class="ig-item" href="https://www.instagram.com/escape_pousada" target="_blank" rel="noopener noreferrer" aria-label="Instagram @escape_pousada">
+            <div class="ig-photo" id="ig-p4"></div>
+            <div class="ig-overlay"><svg></svg></div>
+            <div class="ig-item-label"><span data-i18n="index.sessao-na-lagoa" class="il">Sessão na lagoa</span></div>
+          </a>          <a class="ig-item" href="https://www.instagram.com/escape_pousada" target="_blank" rel="noopener noreferrer" aria-label="Instagram @escape_pousada">
+            <div class="ig-photo" id="ig-p5"></div>
+            <div class="ig-overlay"><svg></svg></div>
+            <div class="ig-item-label"><span data-i18n="index.acao-no-vento" class="il">Ação no vento</span></div>
+          </a>          <a class="ig-item" href="https://www.instagram.com/escape_pousada" target="_blank" rel="noopener noreferrer" aria-label="Instagram @escape_pousada">
+            <div class="ig-photo" id="ig-p6"></div>
+            <div class="ig-overlay"><svg></svg></div>
+            <div class="ig-item-label"><span data-i18n="index.por-do-sol" class="il">Pôr do sol</span></div>
+          </a>        </div>
+        <div class="ig-footer rv d3">
+          <a class="ig-btn" href="https://www.instagram.com/escape_pousada" target="_blank" rel="noopener noreferrer">
+            <svg></svg>
+            <span data-i18n="index.seguir-no-instagram" class="il">Seguir no Instagram</span>
+          </a>
+          <a class="ig-handle-link" href="https://www.instagram.com/escape_pousada" target="_blank" rel="noopener noreferrer">@escape_pousada</a>
+        </div>
+      </section>
+
+
+      <!-- SNAP 6: CTA -->
+      <section class="snap-section cta-snap" aria-labelledby="cta-title">
+        <div class="cta-photo-bg" id="cta-photo-bg" aria-hidden="true"></div>
+        <div class="cta-photo-overlay" aria-hidden="true"></div>
+        <div class="cta-bg-text" aria-hidden="true">ESCAPE</div>
+        <div class="cta-content">
+          <div class="rv" style="display:flex;justify-content:center;">
+            <span class="urgency-pill">
+              <span class="urgency-dot" aria-hidden="true"></span>
+              <span data-i18n="index.alta-temporada-jul-dez-vagas-limitadas" class="il">Alta temporada: jul–dez · vagas limitadas</span>
+            </span>
+          </div>
+          <p class="s-label rv" style="justify-content:center;">
+            <span data-i18n="index.pronto-para-voar" class="il">Pronto para voar?</span>
+          </p>
+          <h2 class="cta-title rv d1" id="cta-title">
+            <span data-i18n="index.venha-para-barra-nova">VENHA PARA<br>BARRA NOVA</span>
+          </h2>
+          <p class="s-body rv d2" style="margin:20px auto 0;text-align:center;">
+            <span data-i18n="index.respondemos-em-portugues-ingles-e-alemao">Respondemos em português, inglês e alemão.</span>
+          </p>
+          <div class="cta-channels rv d3">
+            <a href="https://wa.me/5585999271489" class="btn btn-wa" data-cursor="WhatsApp" aria-label="WhatsApp">
+              <svg></svg>
+              <span>+55 (85) 99927-1489</span>
+            </a>
+            <a href="contato.html" class="btn btn-outline" data-cursor="Formulário">
+              <span><span data-i18n="index.formulario-de-contato" class="il">Formulário de contato</span></span>
+            </a>
+          </div>
+          <div class="flags-strip rv d4" aria-label="Países de origem dos hóspedes">
+            <span title="Brasil">🇧🇷</span>
+            <span title="Germany">🇩🇪</span>
+            <span title="Switzerland">🇨🇭</span>
+            <span title="United Kingdom">🇬🇧</span>
+            <span title="France">🇫🇷</span>
+            <span title="Ireland">🇮🇪</span>
+            <span title="United States">🇺🇸</span>
+            <span title="Australia">🇦🇺</span>
+            <span title="Israel">🇮🇱</span>
+            <span title="Russia">🇷🇺</span>
+            <span class="flags-strip-label">
+              <span data-i18n="index.hospedes-esta-temporada-de-todo-o" class="il">Hóspedes esta temporada · de todo o mundo</span>
+            </span>
+          </div>
+        </div>
+      </section>
+
+    </div><!-- /snap-container -->
+  </div><!-- /page-home -->
+
+
+
+
+  
+
+
+
+
+
+
+
+  <!-- ══════════════════════════════════════════════
+       PAGE: DOWNWINDER
+  ══════════════════════════════════════════════════ -->
+
+
+
+
+
+
+
+  <!-- ══════════════════════════════════════════
+       PAGE: WINGFOIL (v2.5.0)
+  ══════════════════════════════════════════════ -->
+
+
+
+</div><!-- /app -->
+
+<!-- ═══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════════ -->
+<script src="js/translations.js"></script>
+<script src="js/blog-static-urls.js"></script>
+<script src="js/main.js"></script>
+<script></script>
+</body>
+</html>

@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GYKE2FLKVG"></script>
+  <script></script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Escape Kiteboarding — Barra Nova, Ceará</title>
+  <meta name="description" content="Perguntas frequentes sobre a Escape Kiteboarding Pousada: reservas, hospedagem, como chegar, atividades e clima em Barra Nova, Ceará.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://escape-kiteboarding.com.br/faq.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como faço minha reserva?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Via WhatsApp ou pelo formulário de contato neste site. Confirmamos disponibilidade em até 24 horas e enviamos as instruções de pagamento para garantir a data."}
+      },
+      {
+        "@type": "Question",
+        "name": "Quais formas de pagamento são aceitas?",
+        "acceptedAnswer": {"@type": "Answer", "text": "PIX, transferência bancária, cartão de crédito e dinheiro. Para hóspedes internacionais, aceitamos transferência bancária via SWIFT/SEPA ou Wise (TransferWise)."}
+      },
+      {
+        "@type": "Question",
+        "name": "Qual é a política de cancelamento?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Até 7 dias antes do check-in: reembolso integral. Entre 3 e 7 dias: reembolso de 50%. Menos de 72 horas ou não comparecimento: sem reembolso."}
+      },
+      {
+        "@type": "Question",
+        "name": "É necessário pagar antecipadamente?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Solicitamos um sinal de 30% do valor total para confirmar a reserva. O saldo restante é quitado no momento do check-in."}
+      },
+      {
+        "@type": "Question",
+        "name": "Qual é a estadia mínima?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Mínimo de 2 noites. Durante a alta temporada (julho a dezembro) pode ser exigido mínimo de 3 noites."}
+      },
+      {
+        "@type": "Question",
+        "name": "Crianças são bem-vindas?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sim. Crianças até 6 anos ficam gratuitamente no quarto dos pais, sem necessidade de cama adicional. A piscina deve ser utilizada sob supervisão de adultos."}
+      },
+      {
+        "@type": "Question",
+        "name": "Quais são os horários de check-in e check-out?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Check-in a partir das 14h00. Check-out até as 12h00 (meio-dia). Late check-out está sujeito à disponibilidade e pode ter custo adicional."}
+      },
+      {
+        "@type": "Question",
+        "name": "O café da manhã está incluso?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sim, o café da manhã regional está incluso na diária e é servido das 7h30 às 9h na área de convivência da pousada."}
+      },
+      {
+        "@type": "Question",
+        "name": "Tem Wi-Fi e ar-condicionado?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sim. Wi-Fi gratuito em todas as áreas da pousada. Todos os quartos têm ar-condicionado individual."}
+      },
+      {
+        "@type": "Question",
+        "name": "Posso guardar meu equipamento de kite ou wingfoil?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sim. Temos The Quiver, nosso galpão seguro e dedicado ao armazenamento de equipamentos náuticos e de kite."}
+      },
+      {
+        "@type": "Question",
+        "name": "Há horário de silêncio?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sim. Das 22h às 8h pedimos silêncio para garantir o descanso de todos os hóspedes, conforme as normas municipais vigentes."}
+      },
+      {
+        "@type": "Question",
+        "name": "Vocês aceitam animais de estimação?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Animais de estimação são aceitos mediante consulta prévia e disponibilidade de acomodação adequada."}
+      },
+      {
+        "@type": "Question",
+        "name": "Como chegar de Fortaleza?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Barra Nova fica a aproximadamente 76 km do aeroporto de Fortaleza (FOR), cerca de 1h de carro pela rodovia CE-040."}
+      },
+      {
+        "@type": "Question",
+        "name": "A pousada oferece transfer do aeroporto?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sim, organizamos transfer privativo do Aeroporto Internacional de Fortaleza (FOR) até a pousada. Reserve com antecedência via WhatsApp."}
+      },
+      {
+        "@type": "Question",
+        "name": "Qual endereço usar no GPS?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Use Barra Nova, Cascavel, CE no Google Maps ou Waze. Ao confirmar sua reserva, enviamos o pin exato de localização da pousada."}
+      },
+      {
+        "@type": "Question",
+        "name": "Tem estacionamento na pousada?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sim, estacionamento gratuito disponível para todos os hóspedes."}
+      },
+      {
+        "@type": "Question",
+        "name": "Preciso saber kitesurf para me hospedar?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Não. A pousada recebe hóspedes de todos os perfis. O kite é parte do ambiente e da cultura local, mas não é obrigatório praticá-lo para desfrutar da estadia."}
+      },
+      {
+        "@type": "Question",
+        "name": "Vocês oferecem aulas de kitesurf?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Nosso instrutor certificado IKO está temporariamente indisponível. Siga nossas redes sociais ou entre em contato para saber quando as aulas retornam."}
+      },
+      {
+        "@type": "Question",
+        "name": "Tem wingfoil e passeio de barco disponíveis?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sim para ambos. Wingfoil e passeio de barco pela lagoa e pelo rio estão disponíveis para hóspedes, sujeitos a condições climáticas e reserva prévia."}
+      },
+      {
+        "@type": "Question",
+        "name": "O day use está disponível para não hóspedes?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sim, oferecemos day use sujeito a disponibilidade. Inclui acesso às áreas comuns, piscina e decks."}
+      },
+      {
+        "@type": "Question",
+        "name": "Qual é a melhor época para kitesurf?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Julho a dezembro — os ventos alisei sopram de forma consistente, com médias de 18 a 25 nós. Agosto e setembro são os meses de pico. A lagoa de Barra Nova é protegida do swell oceânico, ideal para riders de todos os níveis."}
+      },
+      {
+        "@type": "Question",
+        "name": "Qual é a temperatura no Ceará?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Temperatura média de 28–32°C o ano todo, com água do mar em torno de 26–28°C. O clima é tropical semiárido — quente e majoritariamente ensolarado em qualquer época."}
+      },
+      {
+        "@type": "Question",
+        "name": "Tem período chuvoso?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sim. Fevereiro a maio é o período de maior precipitação (inverno cearense). De junho a janeiro prevalece o tempo seco com sol intenso e o vento forte — período ideal para kite e wingfoil."}
+      },
+      {
+        "@type": "Question",
+        "name": "Posso praticar kite fora da temporada principal?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Sim. Os ventos são mais fracos fora da temporada (10–15 nós), o que é ideal para iniciantes e para prática de wingfoil. A lagoa está disponível o ano inteiro."}
+      }
+    ]
+  }
+  </script>
+
+  <meta property="og:title" content="FAQ | Escape Kiteboarding">
+  <meta property="og:description" content="Perguntas frequentes sobre reservas, hospedagem, como chegar, atividades e clima.">
+  <meta property="og:image" content="https://escape-kiteboarding.com.br/og-cover.jpg">
+  <meta property="og:url" content="https://escape-kiteboarding.com.br/faq.html">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="cur-text"></div>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Navegação principal">
+  <a href="index.html" class="nav-logo" aria-label="Escape Kiteboarding">ESCAPE <em>KITE</em></a>
+
+  <ul class="nav-main" role="list" id="nav-links">
+    <li><a href="index.html" data-page="home"><span data-i18n="pousada.home" class="il">Home</span></a></li>
+    <li><a href="pousada.html" data-page="pousada"><span data-i18n="pousada.pousada" class="il">Pousada</span></a></li>
+    <li><a href="restaurante.html" data-page="restaurante"><span data-i18n="pousada.restaurante" class="il">Restaurante</span></a></li>
+    <li><a href="galeria.html" data-page="galeria"><span data-i18n="pousada.galeria" class="il">Galeria</span></a></li>
+    <li><a href="blog.html" data-page="blog"><span data-i18n="pousada.blog" class="il">Blog</span></a></li>
+    <li><a href="como-chegar.html" data-page="como-chegar"><span data-i18n="pousada.como-chegar" class="il">Como Chegar</span></a></li>
+    <li><a href="faq.html" data-page="faq" class="active"><span data-i18n="pousada.faq" class="il">FAQ</span></a></li>
+    <li><a href="contato.html" data-page="contato"><span data-i18n="pousada.contato" class="il">Contato</span></a></li>
+  </ul>
+
+  <div class="nav-right">
+    <ul class="nav-lang" role="list" aria-label="Idioma">
+      <li><button onclick="setLang('pt')" id="lb-pt" class="active" aria-label="Português" aria-pressed="true">PT</button></li>
+      <li><button onclick="setLang('en')" id="lb-en" aria-label="English" aria-pressed="false">EN</button></li>
+      <li><button onclick="setLang('de')" id="lb-de" aria-label="Deutsch" aria-pressed="false">DE</button></li>
+    </ul>
+    <button class="nav-burger" id="burger" aria-label="Menu" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div id="mobile-drawer" aria-hidden="true" inert>
+  <a href="index.html"><span data-i18n="pousada.home" class="il">Home</span></a>
+  <a href="pousada.html"><span data-i18n="pousada.pousada" class="il">Pousada</span></a>
+  <a href="restaurante.html"><span data-i18n="pousada.restaurante" class="il">Restaurante</span></a>
+  <a href="galeria.html"><span data-i18n="pousada.galeria" class="il">Galeria</span></a>
+  <a href="blog.html"><span data-i18n="pousada.blog" class="il">Blog</span></a>
+  <a href="como-chegar.html"><span data-i18n="pousada.como-chegar" class="il">Como Chegar</span></a>
+  <a href="faq.html"><span data-i18n="pousada.faq" class="il">FAQ</span></a>
+  <a href="contato.html"><span data-i18n="pousada.contato" class="il">Contato</span></a>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <div class="page active" id="page-faq">
+
+    <div class="fq-hero">
+      <div class="fq-hero-bg loaded" id="fq-hero-bg" aria-hidden="true" style="background-image:url(img/pousada_lagoa_pier.jpg)"></div>
+      <div class="fq-hero-overlay" aria-hidden="true"></div>
+      <div class="cin-watermark" aria-hidden="true">FAQ</div>
+      <div class="fq-hero-inner">
+        <p class="s-label rv" style="margin-bottom:10px;">
+          <span data-i18n="faq.perguntas-frequentes" class="il">Perguntas Frequentes</span>
+        </p>
+        <h1 class="rv d1" style="font-family:var(--f-display);font-size:clamp(48px,8vw,110px);letter-spacing:.06em;color:var(--white);line-height:.9;margin-bottom:12px;">FAQ</h1>
+        <p class="rv d2" style="font-size:13px;color:var(--dim);max-width:52ch;">
+          <span data-i18n="faq.tudo-o-que-voce-precisa-saber">Tudo o que você precisa saber antes de reservar. Não encontrou sua resposta? Fale conosco.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="fq-body">
+
+      <!-- Tabs -->
+      <div class="fq-tabs" role="tablist">
+        <button class="fq-tab active" role="tab" aria-selected="true"  onclick="fqTab(this,'reservas')">
+          <span data-i18n="faq.reservas">Reservas</span>
+        </button>
+        <button class="fq-tab" role="tab" aria-selected="false" onclick="fqTab(this,'hospedagem')">
+          <span data-i18n="faq.hospedagem-2">Hospedagem</span>
+        </button>
+        <button class="fq-tab" role="tab" aria-selected="false" onclick="fqTab(this,'chegada')">
+          <span data-i18n="faq.chegada-2">Chegada</span>
+        </button>
+        <button class="fq-tab" role="tab" aria-selected="false" onclick="fqTab(this,'atividades')">
+          <span data-i18n="faq.atividades">Atividades</span>
+        </button>
+        <button class="fq-tab" role="tab" aria-selected="false" onclick="fqTab(this,'clima')">
+          <span data-i18n="faq.clima">Clima</span>
+        </button>
+      </div>
+
+      <!-- ── RESERVAS ── -->
+      <div class="fq-group active" data-cat="reservas">
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.como-faco-minha-reserva">Como faço minha reserva?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.via-whatsapp-ou-pelo-formulario-de">Via WhatsApp ou pelo formulário de contato neste site. Confirmamos disponibilidade em até 24 horas e enviamos as instruções de pagamento para garantir a data.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.quais-formas-de-pagamento-sao-aceitas">Quais formas de pagamento são aceitas?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.pix-transferencia-bancaria-cartao-de-credito">PIX, transferência bancária, cartão de crédito e dinheiro. Para hóspedes internacionais, aceitamos transferência bancária via SWIFT/SEPA ou Wise (TransferWise).</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.qual-e-a-politica-de-cancelamento">Qual é a política de cancelamento?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.ate-7-dias-antes-do-check">
+                <strong style="color:var(--white);">Até 7 dias antes do check-in:</strong> reembolso integral (direito garantido pelo Código de Defesa do Consumidor, Art. 49, para reservas online).<br>
+                <strong style="color:var(--white);">Entre 3 e 7 dias:</strong> reembolso de 50% do valor pago.<br>
+                <strong style="color:var(--white);">Menos de 72 horas ou não comparecimento:</strong> sem reembolso.
+              </span>
+              <div class="fq-note">
+                <span>ℹ</span>
+                <span>
+                  <span data-i18n="faq.em-casos-de-forca-maior-documentados">Em casos de força maior documentados (doença, emergência), analisamos individualmente. Fale conosco.</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.e-necessario-pagar-antecipadamente">É necessário pagar antecipadamente?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.solicitamos-um-sinal-de-30-do">Solicitamos um sinal de 30% do valor total para confirmar a reserva. O saldo restante é quitado no momento do check-in.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.qual-e-a-estadia-minima">Qual é a estadia mínima?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.minimo-de-2-noites-durante-a">Mínimo de 2 noites. Durante a alta temporada (julho a dezembro) pode ser exigido mínimo de 3 noites. Consulte disponibilidade ao reservar.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.criancas-sao-bem-vindas">Crianças são bem-vindas?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.sim-criancas-ate-6-anos-ficam">Sim. Crianças até 6 anos ficam gratuitamente no quarto dos pais, sem necessidade de cama adicional. Entre 7 e 11 anos, consulte condições especiais ao reservar. A piscina deve ser utilizada sob supervisão de adultos.</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /reservas -->
+
+      <!-- ── HOSPEDAGEM ── -->
+      <div class="fq-group" data-cat="hospedagem">
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.quais-sao-os-horarios-de-check">Quais são os horários de check-in e check-out?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.check-in-a-partir-das-14h00">Check-in a partir das 14h00. Check-out até as 12h00 (meio-dia). Late check-out está sujeito à disponibilidade e pode ter custo adicional — consulte com antecedência.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.o-cafe-da-manha-esta-incluso">O café da manhã está incluso?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.sim-o-cafe-da-manha-regional">Sim, o café da manhã regional está incluso na diária e é servido das 7h30 às 9h na área de convivência da pousada.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.tem-wi-fi-e-ar-condicionado">Tem Wi-Fi e ar-condicionado?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.sim-wi-fi-gratuito-em-todas">Sim. Wi-Fi gratuito em todas as áreas da pousada. Todos os quartos têm ar-condicionado individual.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.posso-guardar-meu-equipamento-de-kite">Posso guardar meu equipamento de kite ou wingfoil?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.sim-temos-the-quiver-nosso-galpao">Sim. Temos <strong style="color:var(--white);">The Quiver</strong>, nosso galpão seguro e dedicado ao armazenamento de equipamentos náuticos e de kite.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.ha-horario-de-silencio">Há horário de silêncio?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.sim-das-22h-as-8h-pedimos">Sim. Das 22h às 8h pedimos silêncio para garantir o descanso de todos os hóspedes, conforme as normas municipais vigentes.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.voces-aceitam-animais-de-estimacao">Vocês aceitam animais de estimação?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.animais-de-estimacao-sao-aceitos-mediante">Animais de estimação são aceitos mediante consulta prévia e disponibilidade de acomodação adequada. Por favor, informe ao fazer a reserva para verificarmos as condições.</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /hospedagem -->
+
+      <!-- ── CHEGADA ── -->
+      <div class="fq-group" data-cat="chegada">
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.como-chegar-de-fortaleza">Como chegar de Fortaleza?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.barra-nova-fica-a-76-km">Barra Nova fica a ~76 km do aeroporto de Fortaleza (FOR), aproximadamente 1h de carro pela rodovia CE-040. Temos um guia completo com todas as opções de transfer — <a href="como-chegar.html">consulte a página Como Chegar</a>.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.a-pousada-oferece-transfer-do-aeroporto">A pousada oferece transfer do aeroporto?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.sim-organizamos-transfer-privativo-do-aeroporto">Sim, organizamos transfer privativo do Aeroporto Internacional de Fortaleza (FOR) até a pousada. Reserve com antecedência via WhatsApp para garantir disponibilidade na sua data de chegada.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.qual-endereco-usar-no-gps">Qual endereço usar no GPS?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.use-barra-nova-cascavel-ce-no">Use "Barra Nova, Cascavel, CE" no Google Maps ou Waze. Ao confirmar sua reserva, enviamos o pin exato de localização da pousada.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.tem-estacionamento-na-pousada">Tem estacionamento na pousada?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.sim-estacionamento-gratuito-disponivel-para-todos">Sim, estacionamento gratuito disponível para todos os hóspedes.</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /chegada -->
+
+      <!-- ── ATIVIDADES ── -->
+      <div class="fq-group" data-cat="atividades">
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.preciso-saber-kitesurf-para-me-hospedar">Preciso saber kitesurf para me hospedar?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.nao-a-pousada-recebe-hospedes-de">Não. A pousada recebe hóspedes de todos os perfis. O kite é parte do ambiente e da cultura local, mas não é obrigatório praticá-lo para desfrutar da estadia.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.voces-oferecem-aulas-de-kitesurf">Vocês oferecem aulas de kitesurf?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.nosso-instrutor-certificado-iko-esta-temporariamen">Nosso instrutor certificado IKO está temporariamente indisponível. Siga nossas redes sociais ou entre em contato para saber quando as aulas retornam.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.tem-wingfoil-e-passeio-de-barco">Tem wingfoil e passeio de barco disponíveis?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.sim-para-ambos-wingfoil-e-passeio">Sim para ambos. Wingfoil e passeio de barco pela lagoa e pelo rio estão disponíveis para hóspedes, sujeitos a condições climáticas e reserva prévia. Consulte ao reservar.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.o-day-use-esta-disponivel-para">O day use está disponível para não hóspedes?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.sim-oferecemos-day-use-sujeito-a">Sim, oferecemos day use sujeito a disponibilidade. Inclui acesso às áreas comuns, piscina e decks. Consulte valores e horários pelo WhatsApp.</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /atividades -->
+
+      <!-- ── CLIMA ── -->
+      <div class="fq-group" data-cat="clima">
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.qual-e-a-melhor-epoca-para">Qual é a melhor época para kitesurf?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.julho-a-dezembro-os-ventos-alisei">Julho a dezembro — os ventos alisei sopram de forma consistente, com médias de 18 a 25 nós. Agosto e setembro são os meses de pico. A lagoa de Barra Nova é protegida do swell oceânico, ideal para riders de todos os níveis.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.qual-e-a-temperatura-no-ceara">Qual é a temperatura no Ceará?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.temperatura-media-de-28-32-c">Temperatura média de 28–32°C o ano todo, com água do mar em torno de 26–28°C. O clima é tropical semiárido — quente e majoritariamente ensolarado em qualquer época.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.tem-periodo-chuvoso">Tem período chuvoso?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.sim-fevereiro-a-maio-e-o">Sim. Fevereiro a maio é o período de maior precipitação (inverno cearense). De junho a janeiro prevalece o tempo seco com sol intenso e o vento forte característico da região — período ideal para kite e wingfoil.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="fq-item">
+          <button class="fq-question" onclick="fqToggle(this)" aria-expanded="false">
+            <span class="fq-q-text">
+              <span data-i18n="faq.posso-praticar-kite-fora-da-temporada">Posso praticar kite fora da temporada principal?</span>
+            </span>
+            <span class="fq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="fq-answer" role="region">
+            <div class="fq-answer-inner">
+              <span data-i18n="faq.sim-os-ventos-sao-mais-fracos">Sim. Os ventos são mais fracos fora da temporada (10–15 nós), o que é ideal para iniciantes e para prática de wingfoil. A lagoa está disponível o ano inteiro.</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /clima -->
+
+      <!-- CTA -->
+      <div class="fq-cta rv">
+        <div>
+          <p style="font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">
+            <span data-i18n="faq.nao-encontrou-sua-resposta">Não encontrou sua resposta?</span>
+          </p>
+          <p style="font-family:var(--f-display);font-size:clamp(20px,3vw,32px);letter-spacing:.05em;color:var(--white);">
+            <span data-i18n="faq.fale-diretamente-conosco">Fale diretamente conosco</span>
+          </p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://wa.me/5585999271489" class="btn btn-wa" target="_blank" rel="noopener" data-cursor="WhatsApp" style="gap:12px;">
+            <svg></svg>
+            WhatsApp
+          </a>
+          <a href="contato.html" class="btn btn-outline" data-cursor="Contato" style="font-size:10px;letter-spacing:.15em;">
+            <span data-i18n="faq.formulario">Formulário</span>
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /fq-body -->
+  </div><!-- /page-faq -->
+</div><!-- /app -->
+
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script></script>
+</body>
+</html>

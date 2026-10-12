@@ -1,0 +1,25 @@
+
+
+    <div class="block py-1">
+        <h4 class="mb-1">Services</h4>
+        <div class="row row-sm" data-provide="columns">
+                    <div class="col-12 col-sm-6 col">
+                        <div class="card pos-r of-h mb-1 p-1" id="Optional-services">
+                            <h5 class="mb-1">
+                                Additional services
+                            </h5>
+                                    <h6 class="mt-2">Lessons &amp; Coaching</h6>
+                                    <div class="py-05 b-b">
+                                        Kite Lessons with KiteSurf TCI
+                                    </div>
+                                    <h6 class="mt-2">Other</h6>
+                                    <div class="py-05 b-b">
+                                        Housekeeping Service 
+                                    </div>
+                                    <div class="py-05 b-b">
+                                        Pre - Stocking Services 
+                                    </div>
+                        </div>
+                    </div>
+        </div>
+    </div>

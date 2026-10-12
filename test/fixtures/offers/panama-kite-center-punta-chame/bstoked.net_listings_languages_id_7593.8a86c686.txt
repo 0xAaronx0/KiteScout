@@ -1,0 +1,13 @@
+
+        <span class="badge badge-secondary mb-01">
+            German
+        </span>
+        <span class="badge badge-secondary mb-01">
+            English
+        </span>
+        <span class="badge badge-secondary mb-01">
+            Spanish
+        </span>
+        <span class="badge badge-secondary mb-01">
+            Portuguese
+        </span>

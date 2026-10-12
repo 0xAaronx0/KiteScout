@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GYKE2FLKVG"></script>
+  <script></script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria | Escape Kiteboarding — Barra Nova, Ceará</title>
+  <meta name="description" content="Fotos da Escape Kiteboarding Pousada e do spot de kitesurf em Barra Nova, Ceará: lagoa, pousada, kite, pôr do sol.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://escape-kiteboarding.com.br/galeria.html">
+  <meta property="og:title" content="Galeria | Escape Kiteboarding">
+  <meta property="og:description" content="Fotos da pousada e do spot de kitesurf em Barra Nova, Ceará.">
+  <meta property="og:image" content="https://escape-kiteboarding.com.br/og-cover.jpg">
+  <meta property="og:url" content="https://escape-kiteboarding.com.br/galeria.html">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cur-dot"></div>
+<div id="cur-ring"></div>
+<div id="cur-text"></div>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizar imagem">
+  <button class="lb-close" onclick="closeLightbox()" aria-label="Fechar">&#x2715;</button>
+  <button class="lb-arrow lb-prev" onclick="lbNav(-1)" aria-label="Anterior">&#x2039;</button>
+  <button class="lb-arrow lb-next" onclick="lbNav(1)" aria-label="Pr&#xf3;xima">&#x203A;</button>
+  <div class="lb-content">
+    <div class="lb-img" id="lb-img"></div>
+    <div class="lb-caption" id="lb-caption"></div>
+  </div>
+  <div class="lb-counter" id="lb-counter"></div>
+</div>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Navegação principal">
+  <a href="index.html" class="nav-logo" aria-label="Escape Kiteboarding">ESCAPE <em>KITE</em></a>
+
+  <ul class="nav-main" role="list" id="nav-links">
+    <li><a href="index.html" data-page="home"><span data-i18n="pousada.home" class="il">Home</span></a></li>
+    <li><a href="pousada.html" data-page="pousada"><span data-i18n="pousada.pousada" class="il">Pousada</span></a></li>
+    <li><a href="restaurante.html" data-page="restaurante"><span data-i18n="pousada.restaurante" class="il">Restaurante</span></a></li>
+    <li><a href="galeria.html" data-page="galeria" class="active"><span data-i18n="pousada.galeria" class="il">Galeria</span></a></li>
+    <li><a href="blog.html" data-page="blog"><span data-i18n="pousada.blog" class="il">Blog</span></a></li>
+    <li><a href="como-chegar.html" data-page="como-chegar"><span data-i18n="pousada.como-chegar" class="il">Como Chegar</span></a></li>
+    <li><a href="faq.html" data-page="faq"><span data-i18n="pousada.faq" class="il">FAQ</span></a></li>
+    <li><a href="contato.html" data-page="contato"><span data-i18n="pousada.contato" class="il">Contato</span></a></li>
+  </ul>
+
+  <div class="nav-right">
+    <ul class="nav-lang" role="list" aria-label="Idioma">
+      <li><button onclick="setLang('pt')" id="lb-pt" class="active" aria-label="Português" aria-pressed="true">PT</button></li>
+      <li><button onclick="setLang('en')" id="lb-en" aria-label="English" aria-pressed="false">EN</button></li>
+      <li><button onclick="setLang('de')" id="lb-de" aria-label="Deutsch" aria-pressed="false">DE</button></li>
+    </ul>
+    <button class="nav-burger" id="burger" aria-label="Menu" onclick="toggleMobile()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div id="mobile-drawer" aria-hidden="true" inert>
+  <a href="index.html"><span data-i18n="pousada.home" class="il">Home</span></a>
+  <a href="pousada.html"><span data-i18n="pousada.pousada" class="il">Pousada</span></a>
+  <a href="restaurante.html"><span data-i18n="pousada.restaurante" class="il">Restaurante</span></a>
+  <a href="galeria.html"><span data-i18n="pousada.galeria" class="il">Galeria</span></a>
+  <a href="blog.html"><span data-i18n="pousada.blog" class="il">Blog</span></a>
+  <a href="como-chegar.html"><span data-i18n="pousada.como-chegar" class="il">Como Chegar</span></a>
+  <a href="faq.html"><span data-i18n="pousada.faq" class="il">FAQ</span></a>
+  <a href="contato.html"><span data-i18n="pousada.contato" class="il">Contato</span></a>
+</div>
+
+<!-- APP -->
+<div id="app">
+  <div class="page active" id="page-galeria">
+    <header class="cin-header">
+      <div class="cin-bg loaded" id="gl-hero-bg" aria-hidden="true" style="background-image:url(img/gallery_02.jpg)"></div>
+      <div class="cin-overlay" aria-hidden="true"></div>
+      <div class="cin-watermark" aria-hidden="true">GALERIA</div>
+      <div class="cin-inner">
+        <p class="cin-eyebrow">
+          <span data-i18n="pousada.galeria" class="il">Galeria</span>
+        </p>
+        <h1 class="cin-title">
+          <span data-i18n="galeria.o-spot-em-imagens">O SPOT<br><em>EM IMAGENS</em></span>
+        </h1>
+        <p class="cin-lead">
+          <span data-i18n="galeria.clique-em-qualquer-imagem-para-abrir">Clique em qualquer imagem para abrir em tela cheia.</span>
+        </p>
+      </div>
+    </header>
+    <div class="cin-body" style="background:var(--void);padding:clamp(32px,5vw,60px) clamp(20px,5vw,80px) 80px;">
+
+      <div class="gallery-grid tall rv d2">
+
+        <div class="g-item tall-1" onclick="openLightbox(0)" data-cursor="Ver foto" tabindex="0" role="button" aria-label="Lagoa de Barra Nova">
+          <div class="g-item-inner" style="height:100%;background:#0d3352;">
+            <img loading="lazy" src="img/inline_03.jpg" alt="Lagoa de Barra Nova com kite" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.lagoa-de-barra-nova">Lagoa de Barra Nova</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+
+        <div class="g-item" onclick="openLightbox(1)" data-cursor="Ver foto" tabindex="0" role="button" aria-label="The Lagoon Pool">
+          <div class="g-item-inner" style="background:#0d3352;">
+            <img loading="lazy" src="img/inline_04.jpg" alt="The Lagoon Pool ao pôr do sol" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="g-overlay"><div class="g-caption">The Lagoon Pool</div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+
+        <div class="g-item" onclick="openLightbox(2)" data-cursor="Ver foto" tabindex="0" role="button" aria-label="Pôr do sol na lagoa">
+          <div class="g-item-inner" style="background:#3d1a08;">
+            <img loading="lazy" src="img/inline_05.jpg" alt="Pôr do sol na lagoa" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.por-do-sol-dourado">Pôr do sol dourado</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+
+        <div class="g-item wide-1" onclick="openLightbox(3)" data-cursor="Ver foto" tabindex="0" role="button" aria-label="The Drift — redes com vista">
+          <div class="g-item-inner" style="background:#061824;">
+            <img loading="lazy" src="img/inline_06.jpg" alt="The Drift — redes com vista para o mar" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="g-overlay"><div class="g-caption">The Drift</div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+
+        <div class="g-item" onclick="openLightbox(4)" data-cursor="Ver foto" tabindex="0" role="button" aria-label="Pousada Escape">
+          <div class="g-item-inner" style="background:#1a2e1a;">
+            <img loading="lazy" src="img/inline_07.jpg" alt="Fachada Pousada Escape Kiteboarding" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.pousada-escape-2">Pousada Escape</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+
+        <div class="g-item" onclick="openLightbox(5)" data-cursor="Ver foto" tabindex="0" role="button" aria-label="The Lagoon Pool">
+          <div class="g-item-inner" style="background:#0a2a3d;">
+            <img loading="lazy" src="img/inline_08.jpg" alt="The Drift — varanda com redes" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="g-overlay"><div class="g-caption">The Drift — Varanda</div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+
+        <div class="g-item" onclick="openLightbox(6)" data-cursor="Ver foto" tabindex="0" role="button" aria-label="Mesa de jantar">
+          <div class="g-item-inner" style="background:#0a1f35;">
+            <img loading="lazy" src="img/inline_09.jpg" alt="Mesa de jantar" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.sala-de-jantar">Sala de jantar</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+
+        <div class="g-item" onclick="openLightbox(7)" data-cursor="Ver foto" tabindex="0" role="button" aria-label="Lounge interior">
+          <div class="g-item-inner" style="background:#2e1a08;">
+            <img loading="lazy" src="img/inline_10.jpg" alt="The Drift — lounge interior" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="g-overlay"><div class="g-caption">The Drift — Lounge</div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+
+        <div class="g-item" onclick="openLightbox(8)" data-cursor="Ver foto" tabindex="0" role="button" aria-label="Corredor da pousada">
+          <div class="g-item-inner" style="background:#05080d;">
+            <img loading="lazy" src="img/inline_11.jpg" alt="Corredor da pousada à noite" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.corredores-da-pousada">Corredores da pousada</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+
+        <div class="g-item" onclick="openLightbox(9)" data-cursor="Ver foto" tabindex="0" role="button" aria-label="Arte na parede">
+          <div class="g-item-inner" style="background:#1a1a0a;">
+            <img loading="lazy" src="img/inline_12.jpg" alt="Decoração artística — The Spot" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="g-overlay"><div class="g-caption">The Spot</div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+
+        <div class="g-item" onclick="openLightbox(10)" data-cursor="Ver foto" tabindex="0" role="button" aria-label="Lagoa ao pôr do sol">
+          <div class="g-item-inner" style="background:#1a0d2e;">
+            <img loading="lazy" src="img/inline_13.jpg" alt="Lagoa ao pôr do sol" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.lagoa-ao-por-do-sol">Lagoa ao pôr do sol</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+
+        <div class="g-item" onclick="openLightbox(11)" data-cursor="Ver foto" tabindex="0" role="button" aria-label="The Pit Stop">
+          <div class="g-item-inner" style="background:#2e1a08;">
+            <img loading="lazy" src="img/inline_14.jpg" alt="The Pit Stop — gastronomia" style="width:100%;height:100%;object-fit:cover;">
+          </div>
+          <div class="g-overlay"><div class="g-caption">The Pit Stop</div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+
+        <div class="g-item" onclick="openLightbox(12)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_15.jpg" alt="Varanda com redes e kite" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.the-drift-kite-no-ceu">The Drift — kite no céu</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(13)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_16.jpg" alt="Vista aérea Escape Pousada" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.vista-aerea-do-spot">Vista aérea do spot</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(14)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_17.jpg" alt="The Lagoon Pool coqueiros" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.the-lagoon-pool-2">The Lagoon Pool</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(15)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_18.jpg" alt="The Wind Deck varanda" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.the-wind-deck">The Wind Deck</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(16)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_19.jpg" alt="Fachada noturna" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.fachada-a-noite">Fachada à noite</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(17)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_20.jpg" alt="Barco pôr do sol dourado" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.passeio-de-barco">Passeio de barco</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(18)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_21.jpg" alt="Kiter manobra lagoa" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.kitesurf-na-lagoa">Kitesurf na lagoa</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(19)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_22.jpg" alt="Vista aérea noturna" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.barra-nova-a-noite">Barra Nova à noite</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(20)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_23.jpg" alt="Barco no rio Choró" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.rio-jaguaribe-ao-por-do-sol">Rio Choró ao pôr do sol</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(21)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_24.jpg" alt="Redes amarelas varanda" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.the-drift-2">The Drift</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(22)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_25.jpg" alt="Piscina coqueiros vento" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.the-lagoon-pool-2">The Lagoon Pool</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(23)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_26.jpg" alt="Rede laranja vento" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.the-drift-2">The Drift</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(24)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_27.jpg" alt="Caiaque pôr do sol" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.caiaque-ao-por-do-sol">Caiaque ao pôr do sol</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(25)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_28.jpg" alt="Fachada vista do rio" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.pousada-vista-do-rio">Pousada vista do rio</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(26)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_29.jpg" alt="Vista lagoa da varanda" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.vista-da-lagoa-2">Vista da lagoa</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(27)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_30.jpg" alt="Yoga ao pôr do sol no gramado da pousada" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.yoga-ao-por-do-sol">Yoga ao pôr do sol</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(28)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_31.jpg" alt="Salto de kitesurf contra o céu azul" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.salto-de-kitesurf">Salto de kitesurf</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(29)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_32.jpg" alt="Kitesurfista em ação na água" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.acao-no-kitesurf">Ação no kitesurf</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(30)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_33.jpg" alt="Silhueta de kitesurfista saltando ao entardecer" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.kite-ao-entardecer">Kite ao entardecer</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(31)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_34.jpg" alt="Interior do restaurante The Pit Stop decorado para festa junina" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.the-pit-stop-decoracao-junina">The Pit Stop — decoração junina</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(32)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_35.jpg" alt="Postura de guerreiro em ioga ao pôr do sol" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.guerreiro-ao-por-do-sol">Guerreiro ao pôr do sol</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(33)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_36.jpg" alt="Kitesurfista distante com kite em forma de lua sobre a lagoa" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.kite-sobre-a-lagoa">Kite sobre a lagoa</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(34)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_37.jpg" alt="Cuia de mate numa varanda de madeira com vista para a lagoa" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.mate-com-vista-para-a-lagoa">Mate com vista para a lagoa</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+        <div class="g-item" onclick="openLightbox(35)" data-cursor="Ver foto" tabindex="0" role="button">
+          <div class="g-item-inner" style="padding:0;background:#0a1020;"><img src="img/inline_38.jpg" alt="Manobra de kitesurf no ar" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>
+          <div class="g-overlay"><div class="g-caption"><span data-i18n="galeria.manobra-de-kitesurf">Manobra de kitesurf</span></div></div>
+          <div class="g-open-btn" aria-hidden="true">&#x2295;</div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div><!-- /page-galeria -->
+</div><!-- /app -->
+
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script></script>
+</body>
+</html>
