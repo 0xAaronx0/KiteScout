@@ -1,0 +1,3068 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://www.toowettoshred.com/xmlrpc.php" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+
+	<script id="diviarea-loader">window.DiviPopupData=window.DiviAreaConfig={"zIndex":1000000,"animateSpeed":400,"triggerClassPrefix":"show-popup-","idAttrib":"data-popup","modalIndicatorClass":"is-modal","blockingIndicatorClass":"is-blocking","defaultShowCloseButton":true,"withCloseClass":"with-close","noCloseClass":"no-close","triggerCloseClass":"close","singletonClass":"single","darkModeClass":"dark","noShadowClass":"no-shadow","altCloseClass":"close-alt","popupSelector":".et_pb_section.popup","initializeOnEvent":"et_pb_after_init_modules","popupWrapperClass":"area-outer-wrap","fullHeightClass":"full-height","openPopupClass":"da-overlay-visible","overlayClass":"da-overlay","exitIndicatorClass":"on-exit","hoverTriggerClass":"on-hover","clickTriggerClass":"on-click","onExitDelay":2000,"notMobileClass":"not-mobile","notTabletClass":"not-tablet","notDesktopClass":"not-desktop","baseContext":"body","activePopupClass":"is-open","closeButtonClass":"da-close","withLoaderClass":"with-loader","debug":false,"ajaxUrl":"https:\/\/www.toowettoshred.com\/wp-admin\/admin-ajax.php","sys":[]};var divimode_loader=function(){"use strict";!function(t){t.DiviArea=t.DiviPopup={loaded:!1};var n=t.DiviArea,i=n.Hooks={},o={};function r(t,n,i){var r,e,c;if("string"==typeof t)if(o[t]){if(n)if((r=o[t])&&i)for(c=r.length;c--;)(e=r[c]).callback===n&&e.context===i&&(r[c]=!1);else for(c=r.length;c--;)r[c].callback===n&&(r[c]=!1)}else o[t]=[]}function e(t,n,i,r){if("string"==typeof t){var e={callback:n,priority:i,context:r},c=o[t];c?(c.push(e),c=function(t){var n,i,o,r,e=t.length;for(r=1;r<e;r++)for(n=t[r],i=r;i>0;i--)(o=t[i-1]).priority>n.priority&&(t[i]=o,t[i-1]=n);return t}(c)):c=[e],o[t]=c}}function c(t,n,i){"string"==typeof n&&(n=[n]);var r,e,c=[];for(r=0;r<n.length;r++)Array.prototype.push.apply(c,o[n[r]]);for(e=0;e<c.length;e++){var a=void 0;c[e]&&"function"==typeof c[e].callback&&("filter"===t?void 0!==(a=c[e].callback.apply(c[e].context,i))&&(i[0]=a):c[e].callback.apply(c[e].context,i))}if("filter"===t)return i[0]}i.silent=function(){return i},n.removeFilter=i.removeFilter=function(t,n){r(t,n)},n.removeAction=i.removeAction=function(t,n){r(t,n)},n.applyFilters=i.applyFilters=function(t){for(var n=[],i=arguments.length-1;i-- >0;)n[i]=arguments[i+1];return c("filter",t,n)},n.doAction=i.doAction=function(t){for(var n=[],i=arguments.length-1;i-- >0;)n[i]=arguments[i+1];c("action",t,n)},n.addFilter=i.addFilter=function(n,i,o,r){e(n,i,parseInt(o||10,10),r||t)},n.addAction=i.addAction=function(n,i,o,r){e(n,i,parseInt(o||10,10),r||t)},n.addActionOnce=i.addActionOnce=function(n,i,o,c){e(n,i,parseInt(o||10,10),c||t),e(n,(function(){r(n,i)}),1+parseInt(o||10,10),c||t)}}(window);return{}}();
+</script><script type="text/javascript">
+			let jqueryParams=[],jQuery=function(r){return jqueryParams=[...jqueryParams,r],jQuery},$=function(r){return jqueryParams=[...jqueryParams,r],$};window.jQuery=jQuery,window.$=jQuery;let customHeadScripts=!1;jQuery.fn=jQuery.prototype={},$.fn=jQuery.prototype={},jQuery.noConflict=function(r){if(window.jQuery)return jQuery=window.jQuery,$=window.jQuery,customHeadScripts=!0,jQuery.noConflict},jQuery.ready=function(r){jqueryParams=[...jqueryParams,r]},$.ready=function(r){jqueryParams=[...jqueryParams,r]},jQuery.load=function(r){jqueryParams=[...jqueryParams,r]},$.load=function(r){jqueryParams=[...jqueryParams,r]},jQuery.fn.ready=function(r){jqueryParams=[...jqueryParams,r]},$.fn.ready=function(r){jqueryParams=[...jqueryParams,r]};</script>
+<!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
+<title>Kitesurf Camp Brazil: October &amp; November 2026</title>
+<meta name="description" content="Kitesurf Camp Brazil, 11 or 15 days. Discover lagoons, spots &amp; downwinders in paradise. Fully arranged, all the adventure. 21 Oct - 11days / 6 Nov - 11/15days"/>
+<meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+<link rel="canonical" href="https://www.toowettoshred.com/camps/kitesurf-camp-brazil/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Kitesurf Camp Brazil: October &amp; November 2026" />
+<meta property="og:description" content="Kitesurf Camp Brazil, 11 or 15 days. Discover lagoons, spots &amp; downwinders in paradise. Fully arranged, all the adventure. 21 Oct - 11days / 6 Nov - 11/15days" />
+<meta property="og:url" content="https://www.toowettoshred.com/camps/kitesurf-camp-brazil/" />
+<meta property="og:site_name" content="Too Wet to Shred" />
+<meta property="article:publisher" content="https://facebook.com/toowettoshred" />
+<meta property="og:updated_time" content="2026-06-07T08:17:27+02:00" />
+<meta property="og:image" content="https://www.toowettoshred.com/wp-content/uploads/P2040240-1024x689.jpg" />
+<meta property="og:image:secure_url" content="https://www.toowettoshred.com/wp-content/uploads/P2040240-1024x689.jpg" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="689" />
+<meta property="og:image:alt" content="Kite camp brazil" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="article:published_time" content="2025-07-21T16:12:07+02:00" />
+<meta property="article:modified_time" content="2026-06-07T08:17:27+02:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Kitesurf Camp Brazil: October &amp; November 2026" />
+<meta name="twitter:description" content="Kitesurf Camp Brazil, 11 or 15 days. Discover lagoons, spots &amp; downwinders in paradise. Fully arranged, all the adventure. 21 Oct - 11days / 6 Nov - 11/15days" />
+<meta name="twitter:image" content="https://www.toowettoshred.com/wp-content/uploads/P2040240-1024x689.jpg" />
+<meta name="twitter:label1" content="Time to read" />
+<meta name="twitter:data1" content="39 minutes" />
+<script type="application/ld+json" class="rank-math-schema">{"@context":"https://schema.org","@graph":[{"@type":["TravelAgency","Organization"],"@id":"https://www.toowettoshred.com/#organization","name":"Too Wet To Shred","url":"https://www.toowettoshred.com","sameAs":["https://facebook.com/toowettoshred","https://instagram.com/toowettoshred"],"email":"never@toowettoshred.com","logo":{"@type":"ImageObject","@id":"https://www.toowettoshred.com/#logo","url":"https://www.toowettoshred.com/wp-content/uploads/Logo-TWTS-20232-1.png","contentUrl":"https://www.toowettoshred.com/wp-content/uploads/Logo-TWTS-20232-1.png","caption":"Too Wet to Shred","inLanguage":"en-US","width":"3750","height":"3750"},"openingHours":["Mo,Tu,We,Th,Fr,Sa,Su 09:00-17:00"],"description":"Too Wet To Shred organizes luxury kitesurf camps, retreats and safaris worldwide. Join us in Portugal, Morocco, Greece, Egypt, Kenya, Spain, Brazil &amp; South Africa","image":{"@id":"https://www.toowettoshred.com/#logo"}},{"@type":"WebSite","@id":"https://www.toowettoshred.com/#website","url":"https://www.toowettoshred.com","name":"Too Wet to Shred","alternateName":"TWTS","publisher":{"@id":"https://www.toowettoshred.com/#organization"},"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://www.toowettoshred.com/wp-content/uploads/P2040240-scaled.jpg","url":"https://www.toowettoshred.com/wp-content/uploads/P2040240-scaled.jpg","width":"2560","height":"1722","caption":"Kite camp brazil","inLanguage":"en-US"},{"@type":"WebPage","@id":"https://www.toowettoshred.com/camps/kitesurf-camp-brazil/#webpage","url":"https://www.toowettoshred.com/camps/kitesurf-camp-brazil/","name":"Kitesurf Camp Brazil: October &amp; November 2026","datePublished":"2025-07-21T16:12:07+02:00","dateModified":"2026-06-07T08:17:27+02:00","isPartOf":{"@id":"https://www.toowettoshred.com/#website"},"primaryImageOfPage":{"@id":"https://www.toowettoshred.com/wp-content/uploads/P2040240-scaled.jpg"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://www.toowettoshred.com/author/margot/","name":"Margot","url":"https://www.toowettoshred.com/author/margot/","image":{"@type":"ImageObject","@id":"https://secure.gravatar.com/avatar/43a86ac350a508e64affa65ed483e06f64ea7dd61404303c99621ab327fe1a09?s=96&amp;d=mm&amp;r=g","url":"https://secure.gravatar.com/avatar/43a86ac350a508e64affa65ed483e06f64ea7dd61404303c99621ab327fe1a09?s=96&amp;d=mm&amp;r=g","caption":"Margot","inLanguage":"en-US"},"sameAs":["https://www.toowettoshred.com"],"worksFor":{"@id":"https://www.toowettoshred.com/#organization"}},{"@type":"Article","headline":"Kitesurf Camp Brazil: October &amp; November 2026","keywords":"kitesurf camp brazil","datePublished":"2025-07-21T16:12:07+02:00","dateModified":"2026-06-07T08:17:27+02:00","author":{"@id":"https://www.toowettoshred.com/author/margot/","name":"Margot"},"publisher":{"@id":"https://www.toowettoshred.com/#organization"},"description":"Kitesurf Camp Brazil, 11 or 15 days. Discover lagoons, spots &amp; downwinders in paradise. Fully arranged, all the adventure. 21 Oct - 11days / 6 Nov - 11/15days","name":"Kitesurf Camp Brazil: October &amp; November 2026","@id":"https://www.toowettoshred.com/camps/kitesurf-camp-brazil/#richSnippet","isPartOf":{"@id":"https://www.toowettoshred.com/camps/kitesurf-camp-brazil/#webpage"},"image":{"@id":"https://www.toowettoshred.com/wp-content/uploads/P2040240-scaled.jpg"},"inLanguage":"en-US","mainEntityOfPage":{"@id":"https://www.toowettoshred.com/camps/kitesurf-camp-brazil/#webpage"}}]}</script>
+<!-- /Rank Math WordPress SEO plugin -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="- Never Too Wet to Shred - &raquo; Feed" href="https://www.toowettoshred.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="- Never Too Wet to Shred - &raquo; Comments Feed" href="https://www.toowettoshred.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.toowettoshred.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.toowettoshred.com%2Fcamps%2Fkitesurf-camp-brazil%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.toowettoshred.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.toowettoshred.com%2Fcamps%2Fkitesurf-camp-brazil%2F&#038;format=xml" />
+<meta content="Divi v.4.27.6" name="generator"/>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:root { --wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='css-divi-area-css' href='https://www.toowettoshred.com/wp-content/plugins/popups-for-divi/styles/front.min.css?ver=3.2.8' media='all' />
+<style id="css-divi-area-inline-css">
+.et_pb_section.popup{display:none}
+/*# sourceURL=css-divi-area-inline-css */
+</style>
+<link rel='stylesheet' id='css-divi-area-popuphidden-css' href='https://www.toowettoshred.com/wp-content/plugins/popups-for-divi/styles/front-popuphidden.min.css?ver=3.2.8' media='all' />
+<link rel='stylesheet' id='et-divi-open-sans-css' href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&#038;subset=latin,latin-ext&#038;display=swap' media='all' />
+<link rel='stylesheet' id='et-builder-googlefonts-cached-css' href='https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&#038;subset=latin,latin-ext&#038;display=swap' media='all' />
+<link rel='stylesheet' id='divi-style-css' href='https://www.toowettoshred.com/wp-content/themes/Divi/style-static.min.css?ver=4.27.6' media='all' />
+<script id="dap-ie-js" src="https://www.toowettoshred.com/wp-content/plugins/popups-for-divi/scripts/ie-compat.min.js?ver=3.2.8"></script>
+<link rel="https://api.w.org/" href="https://www.toowettoshred.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.toowettoshred.com/wp-json/wp/v2/pages/10431" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.toowettoshred.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.0.7" />
+<link rel='shortlink' href='https://www.toowettoshred.com/?p=10431' />
+<meta name="generator" content="Site Kit by Google 1.187.0" /><!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '402404268154930');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=402404268154930&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HW1K2929K1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HW1K2929K1');
+</script>
+
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/e0402d5b3a73987c803c72232/b0bd2913d16e4980e0d5b2359.js");</script>
+
+<meta name="facebook-domain-verification" content="wur0mugdf42r6msygltikp9oby3d5x" />
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '320778413062157');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=320778413062157&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-42171723-2">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-42171723-2');
+</script>
+
+<meta name="facebook-domain-verification" content="nl6jh3gvql5mxnsr45vie2cz2pq2tg" /><style>[class*=" icon-oc-"],[class^=icon-oc-]{speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-oc-one-com-white-32px-fill:before{content:"901"}.icon-oc-one-com:before{content:"900"}#one-com-icon,.toplevel_page_onecom-wp .wp-menu-image{speak:none;display:flex;align-items:center;justify-content:center;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.onecom-wp-admin-bar-item>a,.toplevel_page_onecom-wp>.wp-menu-name{font-size:16px;font-weight:400;line-height:1}.toplevel_page_onecom-wp>.wp-menu-name img{width:69px;height:9px;}.wp-submenu-wrap.wp-submenu>.wp-submenu-head>img{width:88px;height:auto}.onecom-wp-admin-bar-item>a img{height:7px!important}.onecom-wp-admin-bar-item>a img,.toplevel_page_onecom-wp>.wp-menu-name img{opacity:.8}.onecom-wp-admin-bar-item.hover>a img,.toplevel_page_onecom-wp.wp-has-current-submenu>.wp-menu-name img,li.opensub>a.toplevel_page_onecom-wp>.wp-menu-name img{opacity:1}#one-com-icon:before,.onecom-wp-admin-bar-item>a:before,.toplevel_page_onecom-wp>.wp-menu-image:before{content:'';position:static!important;background-color:rgba(240,245,250,.4);border-radius:102px;width:18px;height:18px;padding:0!important}.onecom-wp-admin-bar-item>a:before{width:14px;height:14px}.onecom-wp-admin-bar-item.hover>a:before,.toplevel_page_onecom-wp.opensub>a>.wp-menu-image:before,.toplevel_page_onecom-wp.wp-has-current-submenu>.wp-menu-image:before{background-color:#76b82a}.onecom-wp-admin-bar-item>a{display:inline-flex!important;align-items:center;justify-content:center}#one-com-logo-wrapper{font-size:4em}#one-com-icon{vertical-align:middle}.imagify-welcome{display:none !important;}
+		</style><style type="text/css" id="et-bloom-custom-css">
+					.et_bloom .et_bloom_optin_5 .et_bloom_form_content { background-color: #5c929b !important; } .et_bloom .et_bloom_optin_5 .et_bloom_form_container .et_bloom_form_header { background-color: #ffffff !important; } .et_bloom .et_bloom_optin_5 .wedge_edge .triangle { fill: #ffffff} .et_bloom .et_bloom_optin_5 .et_bloom_form_content button { background-color: #8bb3ba !important; } .et_bloom .et_bloom_optin_5 .et_bloom_form_content .et_bloom_fields i { color: #8bb3ba !important; } .et_bloom .et_bloom_optin_5 .et_bloom_form_content .et_bloom_custom_field_radio i:before { background: #8bb3ba !important; } .et_bloom .et_bloom_optin_5 .et_bloom_border_solid { border-color: #42318f !important } .et_bloom .et_bloom_optin_5 .et_bloom_form_content button { background-color: #8bb3ba !important; } .et_bloom .et_bloom_optin_5 .et_bloom_form_container h2, .et_bloom .et_bloom_optin_5 .et_bloom_form_container h2 span, .et_bloom .et_bloom_optin_5 .et_bloom_form_container h2 strong { font-family: "Oswald", Helvetica, Arial, Lucida, sans-serif; }.et_bloom .et_bloom_optin_5 .et_bloom_form_container p, .et_bloom .et_bloom_optin_5 .et_bloom_form_container p span, .et_bloom .et_bloom_optin_5 .et_bloom_form_container p strong, .et_bloom .et_bloom_optin_5 .et_bloom_form_container form input, .et_bloom .et_bloom_optin_5 .et_bloom_form_container form button span { font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif; } 
+				</style><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<!-- Google Tag Manager snippet added by Site Kit -->
+<script>
+			( function( w, d, s, l, i ) {
+				w[l] = w[l] || [];
+				w[l].push( {'gtm.start': new Date().getTime(), event: 'gtm.js'} );
+				var f = d.getElementsByTagName( s )[0],
+					j = d.createElement( s ), dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore( j, f );
+			} )( window, document, 'script', 'dataLayer', 'GTM-NKKLBV33' );
+			
+</script>
+
+<!-- End Google Tag Manager snippet added by Site Kit -->
+<meta name="facebook-domain-verification" content="tdkh4f5twuflolec7o3n0tqpbabqbn">
+<link rel="icon" href="https://www.toowettoshred.com/wp-content/uploads/cropped-Logo_Sity-ID-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.toowettoshred.com/wp-content/uploads/cropped-Logo_Sity-ID-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.toowettoshred.com/wp-content/uploads/cropped-Logo_Sity-ID-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.toowettoshred.com/wp-content/uploads/cropped-Logo_Sity-ID-270x270.png" />
+<link rel="stylesheet" id="et-core-unified-10431-cached-inline-styles" href="https://www.toowettoshred.com/wp-content/et-cache/10431/et-core-unified-10431.min.css?ver=1790892204" /><link rel="stylesheet" id="et-core-unified-deferred-10431-cached-inline-styles" href="https://www.toowettoshred.com/wp-content/et-cache/10431/et-core-unified-deferred-10431.min.css?ver=1790892204" /><style id="wp-block-paragraph-inline-css">
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://www.toowettoshred.com/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<style id="wp-block-columns-inline-css">
+.wp-block-columns{box-sizing:border-box;display:flex;flex-wrap:wrap!important}@media (min-width:782px){.wp-block-columns{flex-wrap:nowrap!important}}.wp-block-columns{align-items:normal!important}.wp-block-columns.are-vertically-aligned-top{align-items:flex-start}.wp-block-columns.are-vertically-aligned-center{align-items:center}.wp-block-columns.are-vertically-aligned-bottom{align-items:flex-end}@media (max-width:781px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:100%!important}}@media (min-width:782px){.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column[style*=flex-basis]{flex-grow:0}}.wp-block-columns.is-not-stacked-on-mobile{flex-wrap:nowrap!important}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column{flex-basis:0;flex-grow:1}.wp-block-columns.is-not-stacked-on-mobile>.wp-block-column[style*=flex-basis]{flex-grow:0}:where(.wp-block-columns){margin-bottom:1.75em}:where(.wp-block-columns.has-background){padding:1.25em 2.375em}.wp-block-column{flex-grow:1;min-width:0;overflow-wrap:break-word;word-break:break-word}.wp-block-column.is-vertically-aligned-top{align-self:flex-start}.wp-block-column.is-vertically-aligned-center{align-self:center}.wp-block-column.is-vertically-aligned-bottom{align-self:flex-end}.wp-block-column.is-vertically-aligned-stretch{align-self:stretch}.wp-block-column.is-vertically-aligned-bottom,.wp-block-column.is-vertically-aligned-center,.wp-block-column.is-vertically-aligned-top{width:100%}
+/*# sourceURL=https://www.toowettoshred.com/wp-includes/blocks/columns/style.min.css */
+</style>
+<style id="wp-block-group-inline-css">
+.wp-block-group{box-sizing:border-box}:where(.wp-block-group.wp-block-group-is-layout-constrained){position:relative}
+/*# sourceURL=https://www.toowettoshred.com/wp-includes/blocks/group/style.min.css */
+</style>
+<link rel='stylesheet' id='et-gf-oswald-css' href='https://fonts.googleapis.com/css?family=Oswald:400,300,700&#038;subset=latin,latin-ext' media='all' />
+<link rel='stylesheet' id='et-gf-open-sans-css' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&#038;ver=1.3.12' media='all' />
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+/*wp_block_styles_on_demand_placeholder:6ac8c95601e9d*/
+/*# sourceURL=wp-block-library-inline-css */
+</style>
+<style id="core-block-supports-inline-css">
+.wp-container-core-columns-is-layout-8f761849{flex-wrap:nowrap;}
+/*# sourceURL=core-block-supports-inline-css */
+</style>
+<link rel='stylesheet' id='et_bloom-css-css' href='https://www.toowettoshred.com/wp-content/plugins/bloom/css/style.css?ver=1.3.12' media='all' />
+
+</head>
+<body class="wp-singular page-template-default page page-id-10431 page-child parent-pageid-12 wp-theme-Divi cookies-not-set et_bloom et_pb_button_helper_class et_fullwidth_nav et_fullwidth_secondary_nav et_fixed_nav et_show_nav et_secondary_nav_enabled et_primary_nav_dropdown_animation_expand et_secondary_nav_dropdown_animation_fade et_header_style_split et_pb_footer_columns_1_4__3_4 et_cover_background et_pb_gutter et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
+		<!-- Google Tag Manager (noscript) snippet added by Site Kit -->
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKKLBV33" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<!-- End Google Tag Manager (noscript) snippet added by Site Kit -->
+		<script class="divioverlays-globalresponsivevalues">var dov_globalresponsivevalues = { min_width:769, max_width:980, tablet_width:768, phone_width:400 };</script>	<div id="page-container">
+
+					<div id="top-header">
+			<div class="container clearfix">
+
+			
+				<div id="et-info">
+									<span id="et-info-phone">+316 33 02 30 99</span>
+				
+									<a href="mailto:never@toowettoshred.com"><span id="et-info-email">never@toowettoshred.com</span></a>
+				
+								</div>
+
+			
+				<div id="et-secondary-menu">
+								</div>
+
+			</div>
+		</div>
+		
+	
+			<header id="main-header" data-height-onload="121">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="https://www.toowettoshred.com/">
+						<img src="https://www.toowettoshred.com/wp-content/uploads/cropped-Logo_Sity-ID.png" width="512" height="512" alt="- Never Too Wet to Shred -" id="logo" data-height-percentage="60" />
+					</a>
+				</div>
+							<div id="et-top-navigation" data-height="121" data-fixed-height="42">
+											<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav"><li id="menu-item-1804" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1804"><a href="https://www.toowettoshred.com/">Home</a></li>
+<li id="menu-item-1803" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1803"><a href="https://www.toowettoshred.com/camps/">Camps</a>
+<ul class="sub-menu">
+	<li id="menu-item-6362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6362"><a href="https://www.toowettoshred.com/camps/kitesurf-safari-egypt/">Egypt &#8211; Kitesurf Safari</a></li>
+	<li id="menu-item-10964" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10964"><a href="https://www.toowettoshred.com/camps/kite-camp-greece/">Greece &#8211; Kitesurf Camp</a></li>
+	<li id="menu-item-10497" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10431 current_page_item menu-item-10497"><a href="https://www.toowettoshred.com/camps/kitesurf-camp-brazil/" aria-current="page">Brazil &#8211; Kitesurf Camp</a></li>
+	<li id="menu-item-10135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10135"><a href="https://www.toowettoshred.com/camps/kite-camp-kenya/">Kenya &#8211; Kitesurf Camp &#038; Safari</a></li>
+	<li id="menu-item-9788" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9788"><a href="https://www.toowettoshred.com/camps/kitesurf-camp-dakhla/">Dakhla &#8211; Kitesurf Camp</a></li>
+	<li id="menu-item-10200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10200"><a href="https://www.toowettoshred.com/camps/kitesurfcamptarifa/">Tarifa &#8211; Kite Retreat</a></li>
+	<li id="menu-item-1979" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1979"><a href="https://www.toowettoshred.com/camps/kite-surf-camp/">Portugal &#8211; Kitesurf Camp</a></li>
+	<li id="menu-item-1799" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1799"><a href="https://www.toowettoshred.com/camps/ladieskitecamp/">Portugal &#8211; Kite Retreat</a></li>
+</ul>
+</li>
+<li id="menu-item-9242" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9242"><a href="https://www.toowettoshred.com/kite-villa-capetown/">Kite Villa</a></li>
+<li id="menu-item-1801" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1801"><a href="https://www.toowettoshred.com/contact/">Contact</a>
+<ul class="sub-menu">
+	<li id="menu-item-1802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1802"><a href="https://www.toowettoshred.com/ourphilosophy/">The Philosophy</a></li>
+	<li id="menu-item-2243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2243"><a href="https://www.toowettoshred.com/about/">About</a></li>
+	<li id="menu-item-3607" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3607"><a href="https://www.toowettoshred.com/shop/">Shop</a></li>
+</ul>
+</li>
+<li id="menu-item-10223" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10223"><a href="https://bookings.toowettoshred.com/en">BOOK NOW</a></li>
+</ul>						</nav>
+					
+					
+					
+					
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>				</div> <!-- #et-top-navigation -->
+			</div> <!-- .container -->
+					</header> <!-- #main-header -->
+			<div id="et-main-area">
+	
+<div id="main-content">
+
+
+			
+				<article id="post-10431" class="post-10431 page type-page status-publish has-post-thumbnail hentry">
+
+				
+					<div class="entry-content">
+					<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0 et_pb_with_background et_pb_fullwidth_section et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_fullwidth_code et_pb_fullwidth_code_0">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><!-- ============================================================
+     TWTS Brazil — HERO HEADER
+     Plak deze code in: Divi > Code module > bovenaan de pagina
+     ============================================================ -->
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&#038;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gagalin&#038;display=swap" rel="stylesheet">
+
+<style>
+.bz-hero {
+  font-family: 'Montserrat', sans-serif;
+  background: transparent;
+  padding: 56px 24px 44px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin: 0 -100px; /* compenseert Divi kolom padding */
+}
+
+/* Gradient overlay — werkt op elke foto, licht of donker */
+.bz-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.42) 100%);
+  z-index: 0;
+}
+
+.bz-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.bz-eye {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #7ab8bf;
+  margin: 0 0 14px;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.8);
+}
+
+.bz-title {
+  font-family: 'Gagalin', 'Montserrat', sans-serif;
+  font-size: 72px;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+}
+
+.bz-sub {
+  font-size: 16px;
+  color: #9ecdd3;
+  letter-spacing: 0.04em;
+  margin: 0 0 16px;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+}
+
+.bz-icons {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.bz-icon {
+  font-size: 14px;
+  color: #7ab8bf;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* De twee reiskaarten */
+.bz-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  max-width: 520px;
+  margin: 0 auto 28px;
+}
+
+.bz-card {
+  border-radius: 14px;
+  padding: 18px 18px 16px;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+/* Oktober — beschikbaar */
+.bz-card.avail {
+  background: rgba(92,146,155,0.15);
+  border: 1px solid #5C929B;
+}
+.bz-card.avail:hover {
+  background: rgba(92,146,155,0.25);
+}
+
+/* November — waitlist */
+.bz-card.wait {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.bz-card.wait:hover {
+  background: rgba(255,255,255,0.10);
+}
+
+.bz-card-month {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #7ab8bf;
+  margin: 0 0 5px;
+}
+
+.bz-card-date {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 2px;
+}
+
+.bz-card-dur {
+  font-size: 13px;
+  color: #9ecdd3;
+  margin: 0 0 12px;
+}
+
+/* Stop-lijst met bolletjes */
+.bz-stops {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+}
+
+.bz-stops li {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  font-size: 12px;
+  color: #9ecdd3;
+  line-height: 1.4;
+  padding: 2px 0;
+}
+
+.bz-stops li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #5C929B;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.bz-stops li.last::before {
+  background: #9b1163;
+}
+
+.bz-stops li.ext {
+  color: rgba(158,205,211,0.85);
+  font-size: 12px;
+}
+
+.bz-stops li.ext::before {
+  background: #9b1163;
+  opacity: 0.4;
+}
+
+/* Onderste rij: badge + knop */
+.bz-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.bz-badge {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.bz-badge.ok {
+  background: rgba(92,146,155,0.25);
+  color: #9ecdd3;
+  border: 0.5px solid #5C929B;
+}
+
+.bz-badge.wl {
+  background: rgba(155,17,99,0.2);
+  color: #e07bbb;
+  border: 0.5px solid #9b1163;
+}
+
+.bz-btn {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.bz-btn.ok {
+  background: #5C929B;
+  color: #ffffff;
+}
+
+.bz-btn.wl {
+  background: rgba(255,255,255,0.08);
+  color: #9ecdd3;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.bz-btn.ok:hover { background: #4a7d86; }
+.bz-btn.wl:hover { background: rgba(255,255,255,0.14); }
+
+/* Scroll hint onderaan */
+.bz-scroll {
+  font-size: 10px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* iPad staand (portrait) — tot 768px */
+@media (max-width: 768px) {
+  .bz-hero { margin: 0 -40px; padding: 48px 24px 36px; }
+  .bz-title { font-size: 48px; }
+  .bz-sub { font-size: 14px; }
+  .bz-inner { max-width: 100%; }
+  .bz-cards { max-width: 100%; grid-template-columns: 1fr 1fr; }
+  .bz-icons { gap: 14px; flex-direction: row; justify-content: center; }
+  .bz-icon { font-size: 13px; }
+}
+
+/* iPad liggend (landscape) — 769px tot 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .bz-hero { margin: 0 -60px; padding: 52px 28px 40px; }
+  .bz-title { font-size: 54px; }
+  .bz-inner { max-width: 640px; }
+  .bz-cards { max-width: 580px; }
+}
+
+/* Telefoon — tot 500px */
+@media (max-width: 500px) {
+  .bz-hero { margin: 0; padding: 32px 16px 24px; }
+  .bz-inner { max-width: 100%; }
+  .bz-eye { font-size: 10px; letter-spacing: 0.1em; margin-bottom: 8px; }
+  .bz-title { font-size: 38px; line-height: 1.1; margin-bottom: 6px; }
+  .bz-sub { font-size: 12px; letter-spacing: 0.01em; margin-bottom: 12px; }
+  .bz-icons { gap: 14px; flex-direction: row; flex-wrap: nowrap; justify-content: center; margin-bottom: 20px; }
+  .bz-icon { font-size: 11px; }
+  .bz-cards { grid-template-columns: 1fr 1fr; gap: 8px; margin: 0 auto 16px; max-width: 100%; }
+  .bz-card { padding: 12px 11px 10px; border-radius: 12px; }
+  .bz-card-month { font-size: 9px; letter-spacing: 0.1em; margin-bottom: 3px; }
+  .bz-card-date { font-size: 20px; margin-bottom: 1px; }
+  .bz-card-dur { font-size: 10px; margin-bottom: 8px; }
+  .bz-stops { margin-bottom: 10px; }
+  .bz-stops li { font-size: 10px; gap: 5px; padding: 1px 0; }
+  .bz-stops li::before { width: 4px; height: 4px; margin-top: 4px; }
+  .bz-card-bottom { flex-direction: column; align-items: flex-start; gap: 5px; }
+  .bz-badge { font-size: 9px; padding: 2px 8px; }
+  .bz-btn { font-size: 10px; padding: 5px 11px; }
+  .bz-scroll { font-size: 9px; margin-top: 4px; }
+}
+</style>
+
+<div class="bz-hero">
+  <div class="bz-inner">
+
+    <p class="bz-eye">Too Wet To Shred · Brazil 2026</p> 
+    <h1 class="bz-title">Kite Camp Brazil</h1>
+    <p class="bz-sub">Lagoons · downwinders · kitesurf paradise · 11 or 15 days</p> 
+
+    <div class="bz-icons">
+      <span class="bz-icon">🌬 20–35 knots daily</span>
+      <span class="bz-icon">👥 Max 12 riders</span>
+      <span class="bz-icon">📍 4–5 stops</span>
+    </div>
+
+    <div class="bz-cards">
+
+      <!-- OKTOBER kaart — "View route" scrolt naar de toggle -->
+      <a class="bz-card avail" href="#brazil-route" onclick="if(window.twtsCamp)twtsCamp('oct')">
+        <p class="bz-card-month">October 2026</p> 
+        <p class="bz-card-date">21 Oct</p> 
+        <p class="bz-card-dur">11 days · 4 stops</p> 
+        <ul class="bz-stops">
+          <li>Cumbuco</li>
+          <li>Icaráí de Amontada</li>
+          <li>Ilha do Guajiru</li>
+          <li class="last">Jericoacoara</li>
+        </ul>
+        <div class="bz-card-bottom">
+          <span class="bz-badge ok">Spots available</span>
+          <span class="bz-btn ok">View route ↓</span>
+        </div>
+      </a>
+
+      <!-- NOVEMBER kaart — knop opent mailto voor waitlist -->
+      <div class="bz-card wait">
+        <p class="bz-card-month">November 2026</p> 
+        <p class="bz-card-date">6 Nov</p> 
+        <p class="bz-card-dur">11 or 15 days · 4–5 stops</p> 
+        <ul class="bz-stops">
+          <li>Cumbuco</li>
+          <li>Ilha do Guajiru</li>
+          <li>Jericoacoara</li>
+          <li>Barra Grande</li>
+          <li class="last ext">Mácapa <span style="opacity:0.6">(15d only)</span></li>
+        </ul>
+        <div class="bz-card-bottom">
+          <span class="bz-badge wl">Waitlist only</span>
+          <a class="bz-btn wl"
+             href="mailto:never@toowettoshred.com?subject=Waitlist%20Brazil%20November%20%E2%80%9926">
+            Join waitlist
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="bz-scroll">⌄ Scroll to discover</p> 
+
+  </div>
+</div></div>
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_1 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0 et_animated">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: left;">The ultimate Brazil Adventure<br /><span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">Let&#8217;s experience</span></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_justified et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><strong>Get ready for an incredible 11 or 15-day kitesurfing adventure along Brazil&#8217;s stunning coastline!</strong><br />Dive into the excitement of exploring iconic lagoons and legendary downwinders as we chase the wind and discover paradise while working on new tricks.<br />We&#8217;ll visit the top kiteboarding spots including Cumbuco, Ilha de Guajiru, Jericoacoara, and many more. <br />Prepare for daily kitesurf sessions, awesome group energy, recharging yoga classes, sunset fun, and unforgettable downwind experiences.<br />This journey is perfect for intermediate to advanced riders looking to elevate their skills, explore new locations, and enjoy the ultimate kiteboarding escape.</p>
+<p>We don&#8217;t do daily downwinders but stay at each location around 3 days. The best setup for those whole love lagoon sessions, daily kiting, a few good downwinders &amp; the choice to either chill, kite, dance, explore or drink caipirinhas. Your holiday &#8211; your choice.</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_2 et_clickable  et_pb_text_align_justified et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><strong>Limited availability, don&#8217;t miss out!</strong></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_justified et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Wondering if our Kite Camp is right for you? Got questions about fitting in or the wind? Drop us a message and let&#8217;s chat! We&#8217;re here to help you decide with ease!</div>
+			</div><div class="et_pb_module et_pb_divider et_pb_divider_0 et_pb_divider_position_ et_pb_space"><div class="et_pb_divider_internal"></div></div>
+			</div><div class="et_pb_column et_pb_column_1_2 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0 et_pb_image_sticky">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img fetchpriority="high" decoding="async" width="1807" height="2560" src="https://www.toowettoshred.com/wp-content/uploads/DSC05017-scaled.jpg" alt="" title="DSC05017" srcset="https://www.toowettoshred.com/wp-content/uploads/DSC05017-scaled.jpg 1807w, https://www.toowettoshred.com/wp-content/uploads/DSC05017-1280x1813.jpg 1280w, https://www.toowettoshred.com/wp-content/uploads/DSC05017-980x1388.jpg 980w, https://www.toowettoshred.com/wp-content/uploads/DSC05017-480x680.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1807px, 100vw" class="wp-image-11232" /></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_1">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Let us take care of you<br /><span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">included </span></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><ul>
+<li>11 or 15 nights</li>
+<li>Good accommodations</li>
+<li>Comfortable transfers</li>
+<li>Kite kite kite (16 to 34 knots)</li>
+<li>Lagoon sessions</li>
+<li>Breakfasts + 5x group dinner</li>
+<li>Beach assistance &amp; help</li>
+<li>3x downwinder</li>
+<li>Trick coaching</li>
+<li>2x yoga session</li>
+<li>Airport pick up &amp; drop off</li>
+<li>Photo proof</li>
+</ul></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_6  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Your to do<br /><span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">Not included</span></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_7  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><ul>
+<li>Your flight to Fortaleza</li>
+<li>Your visa (no need for EU)</li>
+<li>Drinks &amp; meals (5x included)</li>
+<li>Travel/Sports insurance (obligatory)</li>
+</ul></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_8  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Room options<br /><span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">Flex/Triple/Twin</span></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_9 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>optional<br /><span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">Add-ons</span></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_10  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><ul>
+<li>Full rental pack (Kites, bar, board): €575</li>
+</ul></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_11 et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>arrival<br /><span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">About your flights</span></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_12  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><strong>Arrive</strong> to Fortaleza airport on check-in day or join us in Cumbuco for the first night.</p>
+<p><strong>YAY</strong>: Your boardbag won&#8217;t be too heavy as you don&#8217;t need a wetsuit.</p>
+<p><strong>Departure: </strong>Your adventure with us ends in Jericoacoara, Barra Grande or Macapa. We check out in the morning &amp; transfer you to the airport or Cumbuco that day. Book a flight for the evening or the next day. The transfers are shared and not flexible in the dates.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_3 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_2">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div id="packs" class="et_pb_module et_pb_text et_pb_text_13  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Spots, days &amp; route<br /><span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">Choose your route</span></p></div>
+			</div><div class="et_pb_module et_pb_code et_pb_code_0">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><!-- ============================================================
+     TWTS Brazil — HORIZONTALE TIJDLIJN
+     Vervangt de verticale toggle (2_TOGGLE_route.html)
+     Plak deze code in: Divi > Code module
+     De anchor #brazil-route koppelt de "View route" knop in de header
+     ============================================================ -->
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&#038;display=swap" rel="stylesheet">
+
+<div id="brazil-route"></div>
+
+<style>
+.tl-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  padding: 8px 0 24px;
+}
+
+.tl-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.tl-tb {
+  display: flex;
+  border: 2.5px solid #5C929B;
+  border-radius: 60px;
+  overflow: hidden;
+}
+
+.tl-tbtn {
+  padding: 18px 36px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #5C929B;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.tl-tbtn.act {
+  background: #5C929B;
+  color: #fff;
+}
+
+.tl-meta {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.tl-chip {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+  background: #EDF4F5;
+  color: #3a7680;
+  border: 0.5px solid #5C929B;
+}
+
+.tl-chip.wl {
+  background: #fceef7;
+  color: #9b1163;
+  border-color: #9b1163;
+}
+
+.tl-road {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.tl-line {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #c5dde0;
+  z-index: 0;
+}
+
+.tl-stops {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+}
+
+.tl-stop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+}
+
+.tl-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #c5dde0;
+  border: 2px solid #fff;
+  margin-bottom: 10px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.tl-stop.act .tl-dot { background: #5C929B; transform: scale(1.35); }
+.tl-stop.mac .tl-dot { background: #c9a0b8; }
+.tl-stop.mac.act .tl-dot { background: #9b1163; }
+
+.tl-days {
+  font-size: 14px;
+  color: #5C929B;
+  font-weight: 600;
+  margin-bottom: 4px;
+  letter-spacing: 0.03em;
+}
+
+.tl-stop.mac .tl-days { color: #9b1163; }
+
+.tl-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  line-height: 1.3;
+  max-width: 90px;
+}
+
+.tl-stop.act .tl-name { color: #5C929B; }
+.tl-stop.mac.act .tl-name { color: #9b1163; }
+
+.tl-detail {
+  background: #fff;
+  border: 0.5px solid #c5dde0;
+  border-radius: 14px;
+  padding: 24px 26px;
+  min-height: 140px;
+}
+
+.tl-detail.mac { border-color: #c9a0b8; }
+
+.tl-d-days {
+  font-size: 12px;
+  font-weight: 500;
+  color: #9b1163;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 5px;
+}
+
+.tl-d-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a3a3f;
+  margin: 0 0 5px;
+}
+
+.tl-d-dist {
+  font-size: 13px;
+  color: #bbb;
+  margin: 0 0 12px;
+}
+
+.tl-d-text {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.65;
+  margin: 0 0 12px;
+}
+
+.tl-d-wind {
+  font-size: 13px;
+  color: #9b1163;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.tl-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tl-tag {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 0.5px solid #5C929B;
+  color: #3a7680;
+  background: #EDF4F5;
+}
+
+.tl-tag.m {
+  border-color: #9b1163;
+  color: #9b1163;
+  background: #fceef7;
+}
+
+/* iPad staand — stops iets kleiner */
+@media (max-width: 768px) {
+  .tl-tbtn { font-size: 15px; padding: 14px 20px; }
+  .tl-days { font-size: 12px; }
+  .tl-name { font-size: 11px; max-width: 70px; }
+  .tl-d-title { font-size: 20px; }
+  .tl-d-text { font-size: 14px; }
+  .tl-detail { padding: 18px 20px; }
+}
+
+/* Telefoon — toggle en stops gestapeld */
+@media (max-width: 520px) {
+  .tl-tb { flex-direction: column; border-radius: 14px; }
+  .tl-tbtn { font-size: 14px; padding: 12px 20px; text-align: center; }
+  .tl-days { font-size: 11px; }
+  .tl-name { font-size: 10px; max-width: 60px; }
+  .tl-dot { width: 12px; height: 12px; }
+  .tl-line { top: 17px; }
+  .tl-chip { font-size: 11px; }
+  .tl-d-title { font-size: 18px; }
+  .tl-d-text { font-size: 13px; }
+  .tl-detail { padding: 16px; }
+}
+</style>
+
+<div class="tl-wrap">
+
+  <div class="tl-toggle">
+    <div class="tl-tb">
+      <button class="tl-tbtn act" onclick="tlTrip('oct')" id="tl-btn-oct">October &middot; 21 Oct &middot; 11 days</button>
+      <button class="tl-tbtn" onclick="tlTrip('nov')" id="tl-btn-nov">November &middot; 6 Nov &middot; 11 or 15 days</button>
+    </div>
+  </div>
+
+  <!-- Meta chips -->
+  <div class="tl-meta" id="tl-meta-oct">
+    <span class="tl-chip">Spots available</span>
+    <span class="tl-chip">Cumbuco &rarr; Jericoacoara</span>
+    <span class="tl-chip">4 stops</span>
+  </div>
+  <div class="tl-meta" id="tl-meta-nov" style="display:none">
+    <span class="tl-chip wl">Waitlist only</span>
+    <span class="tl-chip">Cumbuco &rarr; Barra Grande / M&aacute;capa</span>
+    <span class="tl-chip">4&ndash;5 stops</span>
+  </div>
+
+  <!-- Oktober tijdlijn -->
+  <div class="tl-road" id="tl-road-oct">
+    <div class="tl-line"></div>
+    <div class="tl-stops">
+      <div class="tl-stop act" onclick="tlStop('oct',0)">
+        <div class="tl-dot"></div>
+        <div class="tl-days">Day 1&ndash;2</div>
+        <div class="tl-name">Cumbuco</div>
+      </div>
+      <div class="tl-stop" onclick="tlStop('oct',1)">
+        <div class="tl-dot"></div>
+        <div class="tl-days">Day 3&ndash;5</div>
+        <div class="tl-name">Icar&aacute;&iacute; de Amontada</div>
+      </div>
+      <div class="tl-stop" onclick="tlStop('oct',2)">
+        <div class="tl-dot"></div>
+        <div class="tl-days">Day 6&ndash;9</div>
+        <div class="tl-name">Ilha do Guajiru</div>
+      </div>
+      <div class="tl-stop" onclick="tlStop('oct',3)">
+        <div class="tl-dot"></div>
+        <div class="tl-days">Day 10&ndash;11</div>
+        <div class="tl-name">Jericoacoara</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- November tijdlijn -->
+  <div class="tl-road" id="tl-road-nov" style="display:none">
+    <div class="tl-line"></div>
+    <div class="tl-stops">
+      <div class="tl-stop act" onclick="tlStop('nov',0)">
+        <div class="tl-dot"></div>
+        <div class="tl-days">Day 1&ndash;2</div>
+        <div class="tl-name">Cumbuco</div>
+      </div>
+      <div class="tl-stop" onclick="tlStop('nov',1)">
+        <div class="tl-dot"></div>
+        <div class="tl-days">Day 3&ndash;5</div>
+        <div class="tl-name">Ilha do Guajiru</div>
+      </div>
+      <div class="tl-stop" onclick="tlStop('nov',2)">
+        <div class="tl-dot"></div>
+        <div class="tl-days">Day 6&ndash;7</div>
+        <div class="tl-name">Jericoacoara</div>
+      </div>
+      <div class="tl-stop" onclick="tlStop('nov',3)">
+        <div class="tl-dot"></div>
+        <div class="tl-days">Day 8&ndash;11</div>
+        <div class="tl-name">Barra Grande</div>
+      </div>
+      <div class="tl-stop mac" onclick="tlStop('nov',4)">
+        <div class="tl-dot"></div>
+        <div class="tl-days">Day 12&ndash;15</div>
+        <div class="tl-name">M&aacute;capa (15d)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detail paneel -->
+  <div id="tl-detail"></div>
+
+</div>
+
+<script>
+var tlData = {
+  oct: [
+    {days:'Day 1&ndash;2', title:'Cumbuco', dist:'Fortaleza &rarr; Cumbuco &middot; 30 km &middot; 40 min', text:'Your first taste of Brazil, only 40 minutes from the airport. Palmtrees, coconuts, caipirinhas and all the Brazilian vibes to warm up after the flight.', wind:'Wind: 15&ndash;25 knots, steady side-onshore', tags:['Ocean sessions','Arrival','Easy living'], mac:false},
+    {days:'Day 3&ndash;5', title:'Icar&aacute;&iacute; de Amontada', dist:'Cumbuco &rarr; Icar&aacute;&iacute; &middot; 200 km &middot; 3 hours', text:'A lovely fisherman town with cruisy conditions, cool downwinders, beach rides and a lagoon a short ferry ride away. Our beautiful pousada is beach front.', wind:'Wind: 18&ndash;28 knots, cruisy and consistent', tags:['Freeride ocean','Lagoon day','Downwinder','Good restaurants'], mac:false},
+    {days:'Day 6&ndash;9', title:'Ilha do Guajiru', dist:'Icar&aacute;&iacute; &rarr; Ilha do Guajiru &middot; 65 km &middot; 1 hour', text:'One of the biggest lagoons in Brazil. Shallow, warm, flat water as far as you can ride. Long sessions = huge progression. Launching your kite right in front of our stay.', wind:'Wind: 20&ndash;30 knots, all day long', tags:['Waist-deep lagoon','Trick progression','Best downwinder'], mac:false},
+    {days:'Day 10&ndash;11', title:'Jericoacoara', dist:'Ilha do Guajiru &rarr; Jericoacoara &middot; 95 km &middot; &plusmn;2 hours', text:'Our final stop &mdash; dunes, sandy streets, caipirinha bars, vibrant nightlife and beautiful sunsets. We go on a downwinder and ride the lagoon of Guri&uacute;. The perfect finale.', wind:'Wind: 25&ndash;35 knots, powerful and steady', tags:['Epic downwinders','Dune sunsets','Nightlife'], mac:false}
+  ],
+  nov: [
+    {days:'Day 1&ndash;2', title:'Cumbuco', dist:'Fortaleza &rarr; Cumbuco &middot; 30 km &middot; 40 min', text:'Your first taste of Brazil, only 40 minutes from the airport. Palmtrees, coconuts, caipirinhas and all the Brazilian vibes to warm up after the flight.', wind:'Wind: 15&ndash;25 knots, steady side-onshore', tags:['Ocean sessions','Brazil vibes','Easy living'], mac:false},
+    {days:'Day 3&ndash;5', title:'Ilha do Guajiru', dist:'Cumbuco &rarr; Ilha do Guajiru &middot; 195 km &middot; &plusmn;2.5 hours', text:'One of the biggest lagoons in Brazil. Shallow, warm, flat water as far as you can ride. Long sessions = huge progression. Launching your kite right in front of our stay.', wind:'Wind: 15&ndash;30 knots, all day long &middot; morning & sunset sessions', tags:['Waist-deep lagoon','Trick progression','Favorite downwinder'], mac:false},
+    {days:'Day 6&ndash;7', title:'Jericoacoara', dist:'Ilha do Guajiru &rarr; Jericoacoara &middot; 90 km &middot; &plusmn;2 hours', text:'Dunes, sandy streets, caipirinha bars, vibrant nightlife and beautiful sunsets. Downwinder to the lagoon of Guri&uacute; &mdash; strong winds and lots of air time.', wind:'Wind: 25&ndash;35 knots, powerful and steady', tags:['Epic downwinders','Dune sunsets','Nightlife'], mac:false},
+    {days:'Day 8&ndash;11', title:'Barra Grande', dist:'Jericoacoara &rarr; Barra Grande &middot; 175 km &middot; &plusmn;3 hours', text:'A hidden gem and the perfect ending. Relaxed fishing village with beautiful flat-water lagoons. Soak in the last Brazil sunsets.', wind:'Wind: 15&ndash;30 knots, smooth and consistent', tags:['Ocean + flat lagoon','Relaxed vibes','Mangrove sessions'], mac:false},
+    {days:'Day 12&ndash;15', title:'M&aacute;capa', dist:'Barra Grande &rarr; M&aacute;capa &middot; 4 nights', text:"The ultimate extension. M&aacute;capa's lagoon offers the perfect playground for insane progression. Including a day-trip to Delta do Parna&iacute;ba &mdash; cruise the delta by boat and kite.", wind:'', tags:['Extra stop','Delta do Parna&iacute;ba','15-day pack'], mac:true}
+  ]
+};
+
+var tlCur = {trip:'oct', stop:0};
+
+function tlRender() {
+  var s = tlData[tlCur.trip][tlCur.stop];
+  var tags = s.tags.map(function(t) {
+    return '<span class="tl-tag' + (s.mac ? ' m' : '') + '">' + t + '</span>';
+  }).join('');
+  document.getElementById('tl-detail').innerHTML =
+    '<div class="tl-detail' + (s.mac ? ' mac' : '') + '">' +
+    '<p class="tl-d-days">' + s.days + '</p> ' +
+    '<p class="tl-d-title">' + s.title + '</p> ' +
+    '<p class="tl-d-dist">' + s.dist + '</p> ' +
+    '<p class="tl-d-text">' + s.text + '</p> ' +
+    (s.wind ? '<p class="tl-d-wind">' + s.wind + '</p> ' : '') +
+    '<div class="tl-tags">' + tags + '</div>' +
+    '</div>';
+}
+
+function tlStop(trip, idx) {
+  tlCur.stop = idx;
+  document.querySelectorAll('#tl-road-' + trip + ' .tl-stop').forEach(function(el, i) {
+    el.classList.toggle('act', i === idx);
+  });
+  tlRender();
+}
+
+function tlTrip(trip) {
+  tlCur.trip = trip;
+  tlCur.stop = 0;
+  ['oct','nov'].forEach(function(t) {
+    document.getElementById('tl-road-' + t).style.display = t === trip ? 'block' : 'none';
+    document.getElementById('tl-meta-' + t).style.display = t === trip ? 'flex' : 'none';
+  });
+  document.getElementById('tl-btn-oct').className = 'tl-tbtn' + (trip === 'oct' ? ' act' : '');
+  document.getElementById('tl-btn-nov').className = 'tl-tbtn' + (trip === 'nov' ? ' act' : '');
+  document.querySelectorAll('#tl-road-' + trip + ' .tl-stop').forEach(function(el, i) {
+    el.classList.toggle('act', i === 0);
+  });
+  tlRender();
+}
+
+tlRender();
+</script></div>
+			</div><div class="et_pb_module et_pb_divider_1 et_pb_space et_pb_divider_hidden"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_code et_pb_code_1">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><style>
+  
+.show-testimonial {
+visibility: visible !important;
+opacity: 1 !important;
+top: 0 !important;
+}
+ 
+.testimonial-active {
+transform: translateX(-10%);
+}
+ 
+[id*="testimonial-person"]{
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+transition: all 0.5s ease;
+ 
+cursor: context-menu;
+}
+ 
+[id*="testimonial-copy"] {
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+transition: all 0.3s ease;
+ 
+position: absolute!important;
+top: -100px;
+bottom: auto;
+left: 0;
+right: auto;
+ 
+visibility: hidden;
+opacity: 0;
+}
+
+</style>
+
+<script>
+
+jQuery(function($){
+$(document).ready(function(){
+ 
+$('#testimonial-person-1').addClass('testimonial-active');
+ 
+$('[id*="testimonial-person"]').hover(function() {
+ 
+var $selector = $(this).attr('id').replace('person', 'copy');
+var $testimonial = $('#' + $selector);
+ 
+$('[id*="testimonial-copy"]').removeClass('show-testimonial');
+$testimonial.addClass('show-testimonial');
+ 
+$('[id*="testimonial-person"]').removeClass('testimonial-active');
+$(this).addClass('testimonial-active');
+ 
+});
+ 
+});
+});
+  </script>
+</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div id="rooms" class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_14  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: center;">Rooms &amp; Style<br /><span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">choose your stay</span></p></div>
+			</div><div class="et_pb_module et_pb_code et_pb_code_2">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><!-- ============================================================
+     TWTS Brazil — ROOMS & STYLE
+     Plak deze code in: Divi > Code module
+     ============================================================ -->
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&#038;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gagalin&#038;display=swap" rel="stylesheet">
+
+<style>
+.rm-wrap {
+  font-family: 'Montserrat', sans-serif;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 8px 0 24px;
+}
+
+/* Faciliteiten banner */
+.rm-facilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.rm-fac {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: #EDF4F5;
+  color: #3a7680;
+  border: 0.5px solid #5C929B;
+}
+
+/* Duur toggle */
+.rm-toggle-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.rm-toggle-label {
+  font-size: 14px;
+  color: #888;
+}
+
+.rm-toggle {
+  display: flex;
+  border: 1.5px solid #5C929B;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.rm-tbtn {
+  padding: 10px 22px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #5C929B;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.rm-tbtn.act {
+  background: #5C929B;
+  color: #fff;
+}
+
+/* Kamergrid */
+.rm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.rm-card {
+  background: #fff;
+  border: 0.5px solid #c5dde0;
+  border-radius: 14px;
+  padding: 16px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.2s;
+}
+
+.rm-card:hover { opacity: 0.9; }
+
+.rm-card-type {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5C929B;
+  margin: 0;
+}
+
+.rm-card-title {
+  font-family: 'Gagalin', 'Montserrat', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #1a3a3f;
+  margin: 0 0 3px;
+  line-height: 1.2;
+}
+
+.rm-card-beds {
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 6px;
+}
+
+.rm-card-desc {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.55;
+  margin: 0 0 6px;
+  flex: 1;
+}
+
+.rm-divider {
+  height: 0.5px;
+  background: #e0ecee;
+  margin: 8px 0 6px;
+}
+
+.rm-card-price-label {
+  font-size: 11px;
+  color: #999;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: 0 0 1px;
+}
+
+.rm-card-price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a3a3f;
+  margin: 0;
+}
+
+.rm-card-price span {
+  font-size: 13px;
+  font-weight: 400;
+  color: #777;
+}
+
+.rm-card-note {
+  font-size: 12px;
+  color: #5C929B;
+  margin: 3px 0 0;
+}
+
+.rm-card-code {
+  font-size: 12px;
+  color: #777;
+  margin: 3px 0 0;
+}
+
+.rm-card-code strong {
+  color: #1a3a3f;
+  font-weight: 600;
+}
+
+/* Kaart kleuren */
+.rm-card.c-teal   { background: #EDF4F5; border-color: #b0d4da; }
+.rm-card.c-pink   { background: #f2c4e3; border-color: #e0a0cc; }
+.rm-card.c-yellow { background: #fdf3d0; border-color: #e8d98a; }
+.rm-card.c-blue   { background: #d4eaf7; border-color: #a8cfe8; }
+
+.rm-card.c-teal .rm-card-type   { color: #3a7680; }
+.rm-card.c-pink .rm-card-type   { color: #9b1163; }
+.rm-card.c-yellow .rm-card-type { color: #8a6d00; }
+.rm-card.c-blue .rm-card-type   { color: #1a5f8a; }
+
+.rm-card.c-teal .rm-card-title   { color: #1a3a3f; }
+.rm-card.c-pink .rm-card-title   { color: #6b0040; }
+.rm-card.c-yellow .rm-card-title { color: #5c4800; }
+.rm-card.c-blue .rm-card-title   { color: #0d3d5c; }
+
+.rm-card.c-teal .rm-card-price   { color: #1a3a3f; }
+.rm-card.c-pink .rm-card-price   { color: #6b0040; }
+.rm-card.c-yellow .rm-card-price { color: #5c4800; }
+.rm-card.c-blue .rm-card-price   { color: #0d3d5c; }
+
+.rm-card.c-teal .rm-divider   { background: #b0d4da; }
+.rm-card.c-pink .rm-divider   { background: #e0a0cc; }
+.rm-card.c-yellow .rm-divider { background: #e8d98a; }
+.rm-card.c-blue .rm-divider   { background: #a8cfe8; }
+@media (max-width: 1024px) {
+  .rm-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .rm-card-title { font-size: 24px; }
+}
+
+/* iPad staand — 1 kolom */
+@media (max-width: 768px) {
+  .rm-grid { grid-template-columns: 1fr; gap: 12px; }
+  .rm-card { padding: 20px 18px; }
+  .rm-card-title { font-size: 24px; }
+  .rm-card-price { font-size: 26px; }
+  .rm-facilities { gap: 6px; }
+  .rm-fac { font-size: 13px; }
+  .rm-toggle-label { font-size: 13px; }
+  .rm-tbtn { font-size: 13px; padding: 8px 18px; }
+}
+
+/* Telefoon — 1 kolom */
+@media (max-width: 480px) {
+  .rm-grid { grid-template-columns: 1fr; gap: 10px; }
+  .rm-wrap { padding: 4px 0 16px; }
+  .rm-facilities { gap: 6px; margin-bottom: 20px; }
+  .rm-fac { font-size: 12px; }
+  .rm-toggle-wrap { flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .rm-card { padding: 18px 16px; }
+  .rm-card-title { font-size: 22px; }
+  .rm-card-price { font-size: 24px; }
+  .rm-card-desc { font-size: 13px; }
+}
+</style>
+
+<div class="rm-wrap">
+
+  <!-- Faciliteiten -->
+  <div class="rm-facilities">
+    <span class="rm-fac">🚿 Shower & toilet</span>
+    <span class="rm-fac">🛁 Towels included</span>
+    <span class="rm-fac">🧹 Daily cleaning</span>
+    <span class="rm-fac">❄️ Air conditioning</span>
+  </div>
+
+  <!-- Duur toggle -->
+  <div class="rm-toggle-wrap">
+    <span class="rm-toggle-label">Show prices for:</span>
+    <div class="rm-toggle">
+      <button class="rm-tbtn act" onclick="rmDuur('11')">11 days</button>
+      <button class="rm-tbtn" onclick="rmDuur('15')">15 days</button>
+    </div>
+  </div>
+
+  <!-- Kamers -->
+  <div class="rm-grid">
+
+    <!-- Twin Room -->
+    <div class="rm-card c-teal">
+      <p class="rm-card-type">Twin</p> 
+      <p class="rm-card-title">Twin Room</p> 
+      <p class="rm-card-beds">2 single beds</p> 
+      <p class="rm-card-desc">Perfect for solo travellers or friends who want their own space.</p> 
+      <div class="rm-divider"></div>
+      <p class="rm-card-price-label">From</p> 
+      <p class="rm-card-price">
+        <span class="rm-p11">€2,025</span>
+        <span class="rm-p15" style="display:none">€2,675</span>
+        <span> p.p.</span>
+      </p> 
+    </div>
+
+    <!-- Double Room -->
+    <div class="rm-card c-yellow">
+      <p class="rm-card-type">Double</p> 
+      <p class="rm-card-title">Double Room</p> 
+      <p class="rm-card-beds">1 double bed</p> 
+      <p class="rm-card-desc">For couples or close friends. Cosy and private.</p> 
+      <div class="rm-divider"></div>
+      <p class="rm-card-price-label">From</p> 
+      <p class="rm-card-price">
+        <span class="rm-p11">€1,950</span>
+        <span class="rm-p15" style="display:none">€2,625</span>
+        <span> p.p.</span>
+      </p> 
+      <p class="rm-card-code">Booking code: <strong>doubletrouble</strong></p> 
+    </div>
+
+    <!-- Triple Room -->
+    <div class="rm-card c-yellow">
+      <p class="rm-card-type">Triple · Female</p> 
+      <p class="rm-card-title">Triple Room</p> 
+      <p class="rm-card-beds">3 separate beds</p> 
+      <p class="rm-card-desc">Save some cash & make friends.</p> 
+      <div class="rm-divider"></div>
+      <p class="rm-card-price-label">From</p> 
+      <p class="rm-card-price">
+        <span class="rm-p11">€1,825</span>
+        <span class="rm-p15" style="display:none">€2,400</span>
+        <span> p.p.</span>
+      </p> 
+    </div>
+
+    <!-- Flex Room -->
+    <div class="rm-card c-teal">
+      <p class="rm-card-type">Flex · Mixed</p> 
+      <p class="rm-card-title">Flex Room</p> 
+      <p class="rm-card-beds">Varies</p> 
+      <p class="rm-card-desc">The most budget friendly option, for flexible travellers that don’t mind a change of room type along the way.</p> 
+      <div class="rm-divider"></div>
+      <p class="rm-card-price-label">From</p> 
+      <p class="rm-card-price">
+        <span class="rm-p11">€1,725</span>
+        <span class="rm-p15" style="display:none">€2,325</span>
+        <span> p.p.</span>
+      </p> 
+    </div>
+
+  </div>
+</div>
+
+<script>
+function rmDuur(d) {
+  document.querySelectorAll('.rm-p11').forEach(function(el){ el.style.display = d === '11' ? 'inline' : 'none'; });
+  document.querySelectorAll('.rm-p15').forEach(function(el){ el.style.display = d === '15' ? 'inline' : 'none'; });
+  document.querySelectorAll('.rm-tbtn').forEach(function(btn){ btn.classList.remove('act'); });
+  document.querySelectorAll('.rm-tbtn')[d === '11' ? 0 : 1].classList.add('act');
+}
+</script></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_5 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_4 et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_5 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_1 et_animated et-waypoint">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="1920" height="2560" src="https://www.toowettoshred.com/wp-content/uploads/DSC05169-scaled.jpg" alt="" title="DSC05169" srcset="https://www.toowettoshred.com/wp-content/uploads/DSC05169-scaled.jpg 1920w, https://www.toowettoshred.com/wp-content/uploads/DSC05169-1280x1707.jpg 1280w, https://www.toowettoshred.com/wp-content/uploads/DSC05169-980x1307.jpg 980w, https://www.toowettoshred.com/wp-content/uploads/DSC05169-480x640.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1920px, 100vw" class="wp-image-11235" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_5 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_2 et_animated et-waypoint">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="1707" height="2560" src="https://www.toowettoshred.com/wp-content/uploads/P2030638-scaled.jpg" alt="" title="P2030638" srcset="https://www.toowettoshred.com/wp-content/uploads/P2030638-scaled.jpg 1707w, https://www.toowettoshred.com/wp-content/uploads/P2030638-1280x1920.jpg 1280w, https://www.toowettoshred.com/wp-content/uploads/P2030638-980x1470.jpg 980w, https://www.toowettoshred.com/wp-content/uploads/P2030638-480x720.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1707px, 100vw" class="wp-image-10470" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_5 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_3 et_animated et-waypoint">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="1920" height="2560" src="https://www.toowettoshred.com/wp-content/uploads/DSC04609-scaled.jpg" alt="Kitegirl jumping" title="DSC04609" srcset="https://www.toowettoshred.com/wp-content/uploads/DSC04609-scaled.jpg 1920w, https://www.toowettoshred.com/wp-content/uploads/DSC04609-1280x1707.jpg 1280w, https://www.toowettoshred.com/wp-content/uploads/DSC04609-980x1307.jpg 980w, https://www.toowettoshred.com/wp-content/uploads/DSC04609-480x640.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1920px, 100vw" class="wp-image-11222" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_5 et_pb_column_10  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_4 et_animated et-waypoint">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="1920" height="2560" src="https://www.toowettoshred.com/wp-content/uploads/DSC04879-scaled.jpg" alt="" title="DSC04879" srcset="https://www.toowettoshred.com/wp-content/uploads/DSC04879-scaled.jpg 1920w, https://www.toowettoshred.com/wp-content/uploads/DSC04879-1280x1707.jpg 1280w, https://www.toowettoshred.com/wp-content/uploads/DSC04879-980x1307.jpg 980w, https://www.toowettoshred.com/wp-content/uploads/DSC04879-480x640.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1920px, 100vw" class="wp-image-11227" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_5 et_pb_column_11  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_5 et_animated et-waypoint">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="1920" height="2560" src="https://www.toowettoshred.com/wp-content/uploads/DSC04531-scaled.jpg" alt="" title="DSC04531" srcset="https://www.toowettoshred.com/wp-content/uploads/DSC04531-scaled.jpg 1920w, https://www.toowettoshred.com/wp-content/uploads/DSC04531-1280x1707.jpg 1280w, https://www.toowettoshred.com/wp-content/uploads/DSC04531-980x1307.jpg 980w, https://www.toowettoshred.com/wp-content/uploads/DSC04531-480x640.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1920px, 100vw" class="wp-image-11219" /></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_5">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_12  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_button_module_wrapper et_pb_button_0_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_0 et_animated et_pb_bg_layout_dark" href="https://bookings.toowettoshred.com/en/product/kitesurf-camp-brazil" target="_blank" data-icon="">BOOK NOW</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_6 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_6">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_13  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div id="packs" class="et_pb_module et_pb_text et_pb_text_15  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Lessons or gear<br /><span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">Packs &amp; Add-ons</span></p></div>
+			</div><div class="et_pb_module et_pb_code et_pb_code_3">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><!-- ============================================================
+     TWTS Brazil — PACKS & ADD-ONS
+     Plak deze code in: Divi > Code module
+     ============================================================ -->
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&#038;display=swap" rel="stylesheet">
+
+<style>
+.pk-wrap {
+  font-family: 'Montserrat', sans-serif;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 8px 0 24px;
+}
+
+.pk-eyebrow { display: none; }
+.pk-heading { display: none; }
+
+/* Grid: kaarten links, detail rechts */
+.pk-grid {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+/* Linkse kaartenkolom */
+.pk-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pk-card {
+  border-radius: 14px;
+  padding: 20px 22px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: opacity 0.2s, border-color 0.2s;
+}
+
+.pk-card.teal {
+  background: #5C929B;
+}
+
+.pk-card.pink {
+  background: #c9a0b8;
+}
+
+.pk-card.active-teal {
+  border-color: #1a3a3f;
+}
+
+.pk-card.active-pink {
+  border-color: #7a3560;
+}
+
+.pk-card:hover { opacity: 0.9; }
+
+.pk-card-title {
+  font-family: 'Gagalin', 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 6px;
+  letter-spacing: 0.03em;
+}
+
+.pk-card-sub {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+}
+
+.pk-card-price {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  margin: 6px 0 0;
+}
+
+/* Rechtse detailpaneel */
+.pk-detail {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 0.5px solid #d0e4e7;
+  padding: 28px 28px 24px;
+  min-height: 280px;
+}
+
+.pk-detail-title {
+  font-family: 'Gagalin', 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #1a3a3f;
+  margin: 0 0 6px;
+}
+
+.pk-detail-tagline {
+  font-size: 13px;
+  color: #5C929B;
+  margin: 0 0 20px;
+}
+
+.pk-detail-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #1a3a3f;
+  margin: 0 0 10px;
+}
+
+.pk-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+}
+
+.pk-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+  padding: 4px 0;
+}
+
+.pk-list li::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #5C929B;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.pk-list li.pink-dot::before {
+  background: #c9a0b8;
+}
+
+.pk-list li.indent {
+  padding-left: 20px;
+  font-size: 13px;
+  color: #777;
+}
+
+.pk-list li.indent::before {
+  width: 4px;
+  height: 4px;
+  background: #c9a0b8;
+  margin-top: 7px;
+}
+
+.pk-detail-note {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.65;
+  margin: 0;
+  padding-top: 14px;
+  border-top: 0.5px solid #e8f0f1;
+}
+
+.pk-detail-note em {
+  font-style: normal;
+  color: #5C929B;
+  font-weight: 500;
+}
+
+/* Paneelwisseling */
+.pk-pane { display: none; }
+.pk-pane.active { display: block; }
+
+/* iPad liggend — tot 1024px */
+@media (max-width: 1024px) {
+  .pk-grid { grid-template-columns: 220px 1fr; }
+  .pk-card-title { font-size: 18px; }
+}
+
+/* iPad staand — tot 768px: kaarten boven detail */
+@media (max-width: 768px) {
+  .pk-grid { grid-template-columns: 1fr; gap: 12px; }
+  .pk-cards { flex-direction: row; gap: 12px; }
+  .pk-card { flex: 1; padding: 16px 16px; }
+  .pk-card-title { font-size: 17px; }
+  .pk-detail { padding: 22px 20px; min-height: auto; }
+  .pk-detail-title { font-size: 24px; }
+}
+
+/* Telefoon — tot 480px: kaarten gestapeld */
+@media (max-width: 480px) {
+  .pk-cards { flex-direction: column; gap: 10px; }
+  .pk-card { padding: 16px 18px; }
+  .pk-card-title { font-size: 18px; }
+  .pk-detail { padding: 18px 16px; }
+  .pk-detail-title { font-size: 22px; }
+  .pk-detail-tagline { font-size: 12px; }
+  .pk-list li { font-size: 13px; }
+  .pk-detail-note { font-size: 12px; }
+}
+</style>
+
+<!-- Gagalin laden als die nog niet op de pagina staat -->
+<link href="https://fonts.googleapis.com/css2?family=Gagalin&#038;display=swap" rel="stylesheet">
+
+<div class="pk-wrap">
+
+  <p class="pk-eyebrow">Lessons or gear</p> 
+  <h2 class="pk-heading">Packs & Add-ons</h2>
+
+  <div class="pk-grid">
+
+    <!-- Kaarten links -->
+    <div class="pk-cards">
+
+      <div class="pk-card teal active-teal" onclick="pkShow('advanced')">
+        <p class="pk-card-title">Advanced</p> 
+        <p class="pk-card-sub">Standard Pack — Always included</p> 
+      </div>
+
+      <div class="pk-card pink" onclick="pkShow('plus')">
+        <p class="pk-card-title">Advanced+ Pack</p> 
+        <p class="pk-card-sub">Full gear rental option</p> 
+        <p class="pk-card-price">€575</p> 
+      </div>
+
+    </div>
+
+    <!-- Detail rechts -->
+    <div class="pk-detail">
+
+      <!-- Advanced pane -->
+      <div class="pk-pane active" id="pk-advanced">
+        <p class="pk-detail-title">Independent Riders</p> 
+        <p class="pk-detail-tagline">This pack is always included for all (independent) riders</p> 
+        <p class="pk-detail-label">Including:</p> 
+        <ul class="pk-list">
+          <li>Spot introduction & beach assistance</li>
+          <li>Group coaching & tips</li>
+          <li>Downwinders</li>
+          <li>Photo proof</li>
+        </ul>
+        <p class="pk-detail-note">During the camp you can always ask for help.</p> 
+      </div>
+
+      <!-- Advanced+ pane -->
+      <div class="pk-pane" id="pk-plus">
+        <p class="pk-detail-title">Advanced+ Gear</p> 
+        <p class="pk-detail-tagline">€575 — Travel light, ride hard</p> 
+        <p class="pk-detail-label">Including:</p> 
+        <ul class="pk-list">
+          <li class="pink-dot">Everything in the standard Advanced pack</li>
+          <li class="pink-dot">Gear rental, adapting to your level</li>
+        </ul>
+        <p class="pk-detail-note">Do you like to travel light? Well here you go — just bring your swimsuit, harness & sunscreen!<br /><br /><em>(Or leave everything at home... except the sunscreen. Always bring sunscreen.)</em></p> 
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+function pkShow(pack) {
+  document.querySelectorAll('.pk-pane').forEach(function(p){ p.classList.remove('active'); });
+  document.getElementById('pk-' + pack).classList.add('active');
+  document.querySelectorAll('.pk-card').forEach(function(c){ c.classList.remove('active-teal','active-pink'); });
+  if(pack === 'advanced') {
+    document.querySelectorAll('.pk-card.teal')[0].classList.add('active-teal');
+  } else {
+    document.querySelectorAll('.pk-card.pink')[0].classList.add('active-pink');
+  }
+}
+</script></div>
+			</div><div class="et_pb_module et_pb_divider_2 et_pb_space et_pb_divider_hidden"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_code et_pb_code_4">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><style>
+  
+.show-testimonial {
+visibility: visible !important;
+opacity: 1 !important;
+top: 0 !important;
+}
+ 
+.testimonial-active {
+transform: translateX(-10%);
+}
+ 
+[id*="testimonial-person"]{
+-webkit-transition: all 0.5s ease;
+-moz-transition: all 0.5s ease;
+-o-transition: all 0.5s ease;
+-ms-transition: all 0.5s ease;
+transition: all 0.5s ease;
+ 
+cursor: context-menu;
+}
+ 
+[id*="testimonial-copy"] {
+-webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+transition: all 0.3s ease;
+ 
+position: absolute!important;
+top: -100px;
+bottom: auto;
+left: 0;
+right: auto;
+ 
+visibility: hidden;
+opacity: 0;
+}
+
+</style>
+
+<script>
+
+jQuery(function($){
+$(document).ready(function(){
+ 
+$('#testimonial-person-1').addClass('testimonial-active');
+ 
+$('[id*="testimonial-person"]').hover(function() {
+ 
+var $selector = $(this).attr('id').replace('person', 'copy');
+var $testimonial = $('#' + $selector);
+ 
+$('[id*="testimonial-copy"]').removeClass('show-testimonial');
+$testimonial.addClass('show-testimonial');
+ 
+$('[id*="testimonial-person"]').removeClass('testimonial-active');
+$(this).addClass('testimonial-active');
+ 
+});
+ 
+});
+});
+  </script>
+</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_7 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_7">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_14  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_16  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Are you Ready to join?<br />
+<span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">Follow your to do list</span></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_8 et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_1_4 et_pb_column_15  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_0 et_animated et_clickable et_pb_section_video_on_hover  et_pb_text_align_center  et_pb_blurb_position_top et_pb_bg_layout_light" data-background-layout="light" data-background-layout-hover="light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					
+					<div class="et_pb_blurb_container">
+						<h2 class="et_pb_module_header"><a href="https://bookings.toowettoshred.com/en/product/kitesurf-camp-brazil" data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;Book your spot&quot;,&quot;hover&quot;:&quot;Fill in the booking form&quot;}},&quot;slug&quot;:&quot;et_pb_blurb&quot;}">Book your spot</a></h2>
+						<div class="et_pb_blurb_description" data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;&quot;,&quot;hover&quot;:&quot;&lt;p&gt;HERE&lt;\/p&gt;&quot;}},&quot;slug&quot;:&quot;et_pb_blurb&quot;}"></div>
+					</div>
+				</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_16  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_1 et_animated et_pb_section_video_on_hover  et_pb_text_align_center  et_pb_blurb_position_top et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					
+					<div class="et_pb_blurb_container">
+						<h2 class="et_pb_module_header"><span data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;Get insured&quot;,&quot;hover&quot;:&quot;For extreme\/ water sports&quot;}},&quot;slug&quot;:&quot;et_pb_blurb&quot;}">Get insured</span></h2>
+						
+					</div>
+				</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_17  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_2 et_animated et_pb_section_video_on_hover  et_pb_text_align_center  et_pb_blurb_position_top et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					
+					<div class="et_pb_blurb_container">
+						<h2 class="et_pb_module_header"><span data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;Book your flight&quot;,&quot;hover&quot;:&quot;To Fortaleza &quot;}},&quot;slug&quot;:&quot;et_pb_blurb&quot;}">Book your flight</span></h2>
+						
+					</div>
+				</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_18  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_3 et_animated et_pb_section_video_on_hover  et_pb_text_align_center  et_pb_blurb_position_top et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					
+					<div class="et_pb_blurb_container">
+						<h2 class="et_pb_module_header"><span data-et-multi-view="{&quot;schema&quot;:{&quot;content&quot;:{&quot;desktop&quot;:&quot;enjoy!&quot;,&quot;hover&quot;:&quot;Eat  sleep kite repeat&quot;}},&quot;slug&quot;:&quot;et_pb_blurb&quot;}">enjoy!</span></h2>
+						
+					</div>
+				</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_9">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_19  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_17  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">What&#8217;s not included<br />
+<span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">Something to keep in mind</span></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_18  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>We go up to the North of the region &#8211; this means we are not nearby the airport when the camp ends. The transfer from our last location to the airport takes around 4 to 7 hours by car (depending on your final destination).</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_8 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_10">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_20  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div id="program" class="et_pb_module et_pb_text et_pb_text_19  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>What to expect<br /><span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">program &amp; spot</span></p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_row et_pb_row_11 et_animated et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_3_5 et_pb_column_21  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_code et_pb_code_5">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><!-- ============================================================
+     TWTS Brazil — PROGRAM & SPOT TOGGLE
+     Plak deze code in: Divi > Code module
+     ============================================================ -->
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&#038;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gagalin&#038;display=swap" rel="stylesheet">
+
+<style>
+.ps-wrap {
+  font-family: 'Montserrat', sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 8px 0 24px;
+}
+
+/* Tab balk */
+.ps-tabs {
+  display: flex;
+  border-bottom: 2px solid #5C929B;
+  margin-bottom: 28px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.ps-tab {
+  padding: 12px 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5C929B;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.ps-tab:hover {
+  background: #EDF4F5;
+}
+
+.ps-tab.act {
+  background: #5C929B;
+  color: #fff;
+  border-bottom-color: #5C929B;
+}
+
+/* Pane */
+.ps-pane {
+  display: none;
+  animation: ps-fade 0.2s ease;
+}
+
+.ps-pane.active {
+  display: block;
+}
+
+@keyframes ps-fade {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Tekst stijlen */
+.ps-intro {
+  font-size: 14px;
+  font-style: italic;
+  color: #888;
+  margin: 0 0 16px;
+  line-height: 1.6;
+}
+
+.ps-body {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 0 20px;
+}
+
+.ps-day {
+  background: #fff;
+  border: 0.5px solid #c5dde0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 10px;
+}
+
+.ps-day-title {
+  font-family: 'Gagalin', 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #1a3a3f;
+  margin: 0 0 8px;
+}
+
+.ps-day-body {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.75;
+  margin: 0;
+  white-space: pre-line;
+}
+
+/* Wind tabel */
+.ps-sizes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.ps-size {
+  background: #EDF4F5;
+  border: 0.5px solid #5C929B;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.ps-size-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #5C929B;
+  margin: 0 0 5px;
+}
+
+.ps-size-val {
+  font-family: 'Gagalin', 'Montserrat', sans-serif;
+  font-size: 17px;
+  color: #1a3a3f;
+  margin: 0;
+}
+
+/* Spots chips */
+.ps-spot-highlight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.ps-spot-chip {
+  font-size: 13px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+.ps-spot-chip.both {
+  background: #EDF4F5;
+  color: #3a7680;
+  border: 0.5px solid #5C929B;
+}
+
+.ps-spot-chip.oct {
+  background: #fdf3d0;
+  color: #5c4800;
+  border: 0.5px solid #c9a000;
+}
+
+.ps-spot-chip.nov {
+  background: #f2c4e3;
+  color: #6b0040;
+  border: 0.5px solid #9b1163;
+}
+
+.ps-spot-legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.ps-legend-item {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.ps-legend-item.both { color: #3a7680; }
+.ps-legend-item.oct  { color: #8a6d00; }
+.ps-legend-item.nov  { color: #9b1163; }
+
+/* Weather cards */
+.ps-weather-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.ps-weather-card {
+  background: #fdf3d0;
+  border: 0.5px solid #e8d98a;
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.ps-weather-card.blue {
+  background: #d4eaf7;
+  border-color: #a8cfe8;
+}
+
+.ps-weather-icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.ps-weather-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8a6d00;
+  margin: 0 0 4px;
+}
+
+.ps-weather-card.blue .ps-weather-label {
+  color: #1a5f8a;
+}
+
+.ps-weather-val {
+  font-family: 'Gagalin', 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: #5c4800;
+  margin: 0 0 4px;
+}
+
+.ps-weather-card.blue .ps-weather-val {
+  color: #0d3d5c;
+}
+
+.ps-weather-note {
+  font-size: 12px;
+  color: #7a5f00;
+  margin: 0;
+}
+
+.ps-weather-card.blue .ps-weather-note {
+  color: #1a5f8a;
+}
+
+.ps-wetsuit {
+  background: #f2c4e3;
+  border: 0.5px solid #e0a0cc;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-top: 10px;
+}
+
+.ps-wetsuit-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b0040;
+  margin: 0 0 6px;
+}
+
+.ps-wetsuit-body {
+  font-size: 13px;
+  color: #5a0035;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ps-tab { font-size: 12px; padding: 10px 16px; }
+  .ps-sizes { grid-template-columns: 1fr; }
+  .ps-weather-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .ps-tab { font-size: 11px; padding: 9px 12px; letter-spacing: 0.06em; }
+  .ps-day { padding: 14px 16px; }
+  .ps-day-title { font-size: 16px; }
+}
+</style>
+
+<div class="ps-wrap">
+
+  <!-- Tab balk -->
+  <div class="ps-tabs">
+    <button class="ps-tab act" onclick="psShow('program')">Program</button>
+    <button class="ps-tab" onclick="psShow('where')">Where</button>
+    <button class="ps-tab" onclick="psShow('wind')">Wind</button>
+    <button class="ps-tab" onclick="psShow('spots')">Spots</button>
+    <button class="ps-tab" onclick="psShow('weather')">Weather</button>
+  </div>
+
+  <!-- PROGRAM -->
+  <div class="ps-pane active" id="ps-program">
+    <p class="ps-intro">This is an example of what the camp’s program could be — but it changes with the wind.</p> 
+    <p class="ps-body">We start with your airport transfer from Fortaleza to Cumbuco. Your room is ready from 4pm. Already in the area? Join us!</p> 
+
+    <div class="ps-day">
+      <p class="ps-day-title">Arrival day</p> 
+      <p class="ps-day-body">Settle in, unpack and recharge. First dinner together, get to know each other & relax. Maybe a first session. No other plans yet.</p> 
+    </div>
+
+    <div class="ps-day">
+      <p class="ps-day-title">A typical kite day</p> 
+      <p class="ps-day-body">8:00 AM — Breakfast
+10:00 AM — Kite kite kite (eat something) kite kite
+7:00 PM — Sunset drink at the beach bar
+8:00 PM — Dinner time</p> 
+    </div>
+
+    <div class="ps-day">
+      <p class="ps-day-title">Some days</p> 
+      <p class="ps-day-body">Morning yoga • group clinic (basics + higher jumps) • local restaurant dinner • spontaneous party vibes</p> 
+    </div>
+
+    <div class="ps-day">
+      <p class="ps-day-title">Moving & departure days</p> 
+      <p class="ps-day-body">Early breakfast → drive to the next spot → kite on arrival → late açaí → dinner & caipirinhas. Last day: early breakfast, naps in the car, memories & happy goodbyes back to Fortaleza.</p> 
+    </div>
+  </div>
+
+  <!-- WHERE -->
+  <div class="ps-pane" id="ps-where">
+    <p class="ps-body">We travel along Brazil’s stunning northeast coastline, passing through cute fishing villages, world-class lagoon spots and doing awesome downwinders along the way.</p> 
+
+    <div class="ps-day">
+      <p class="ps-day-title">October route — 11 days</p> 
+      <p class="ps-day-body">Fortaleza → Cumbuco → Icaráí de Amontada → Ilha do Guajiru → Jericoacoara → back to Fortaleza</p> 
+    </div>
+
+    <div class="ps-day">
+      <p class="ps-day-title">November route — 11 or 15 days</p> 
+      <p class="ps-day-body">Fortaleza → Cumbuco → Ilha do Guajiru → Jericoacoara → Barra Grande → (Mácapa — 15 days only) → back to Fortaleza</p> 
+    </div>
+
+    <p class="ps-body" style="margin-top:16px;">Every route takes you through a different side of Brazil — from mellow ocean spots to the powerful wind corridor around Jeri. Each stop has its own character, its own lagoon and its own pace.</p> 
+  </div>
+
+  <!-- WIND -->
+  <div class="ps-pane" id="ps-wind">
+    <p class="ps-body">Brazil is known for its daily consistent winds. No need to worry — it’s there. From 16 to 32 knots depending on the spot. We start easy in Taiba with cruisy 16–20 knots, building up to 25–32 knots around Jeri.</p> 
+
+    <p class="ps-body" style="font-weight:500; color:#1a3a3f; margin-bottom:8px;">Advised kite sizes:</p> 
+    <div class="ps-sizes">
+      <div class="ps-size">
+        <p class="ps-size-label">45–60 kg</p> 
+        <p class="ps-size-val">6 / 8 / 11 m²</p> 
+      </div>
+      <div class="ps-size">
+        <p class="ps-size-label">60–80 kg</p> 
+        <p class="ps-size-val">7 / 9 / 12 m²</p> 
+      </div>
+      <div class="ps-size">
+        <p class="ps-size-label">80–100 kg</p> 
+        <p class="ps-size-val">8 / 10 / 13 m²</p> 
+      </div>
+    </div>
+  </div>
+
+  <!-- SPOTS -->
+  <div class="ps-pane" id="ps-spots">
+    <p class="ps-body">We get the best of both worlds during this camp — all the prime kite lagoons plus the adventure of Brazil’s legendary downwinders. You’ll ride around 10 different spots. We’re curious which one was your favourite. 😉</p> 
+
+    <div class="ps-spot-legend">
+      <span class="ps-legend-item both">● Both trips</span>
+      <span class="ps-legend-item oct">● October only</span>
+      <span class="ps-legend-item nov">● November only</span>
+    </div>
+
+    <div class="ps-spot-highlight">
+      <span class="ps-spot-chip both">🌊 Cumbuco</span>
+      <span class="ps-spot-chip oct">🏄 Icaráí de Amontada</span>
+      <span class="ps-spot-chip both">🏞 Ilha do Guajiru</span>
+      <span class="ps-spot-chip oct">🌿 Patos</span>
+      <span class="ps-spot-chip both">💨 Jericoacoara</span>
+      <span class="ps-spot-chip both">🌀 Guriú lagoon</span>
+      <span class="ps-spot-chip nov">🌴 Barra Grande</span>
+      <span class="ps-spot-chip nov">🗺 Mácapa</span>
+      <span class="ps-spot-chip nov">⛵ Delta do Parnaíba</span>
+      <span class="ps-spot-chip both">🏄 Downwinders galore</span>
+    </div>
+  </div>
+
+  <!-- WEATHER -->
+  <div class="ps-pane" id="ps-weather">
+    <p class="ps-body">Brazil’s coastline is a green & warm paradise. Daily temperatures around 28°C with a water temperature of 27°C. No wetsuit needed — just sun protection and swimwear.</p> 
+
+    <div class="ps-weather-grid">
+      <div class="ps-weather-card">
+        <div class="ps-weather-icon">☀️</div>
+        <p class="ps-weather-label">Air temperature</p> 
+        <p class="ps-weather-val">28°C</p> 
+        <p class="ps-weather-note">Warm & sunny all day</p> 
+      </div>
+      <div class="ps-weather-card blue">
+        <div class="ps-weather-icon">🌊</div>
+        <p class="ps-weather-label">Water temperature</p> 
+        <p class="ps-weather-val">27°C</p> 
+        <p class="ps-weather-note">No wetsuit needed</p> 
+      </div>
+    </div>
+
+    <div class="ps-wetsuit" style="margin-top:14px;">
+      <p class="ps-wetsuit-label">☀️ What to bring</p> 
+      <p class="ps-wetsuit-body">Sunglasses, good sunscreen & a sunhat are a must.
+• Lycra / rash vest for sun protection
+• Legging or yoga pants to protect your legs
+• 1mm shorty for sunset sessions (or if you always run cold)
+• No full wetsuit needed!</p> 
+    </div>
+  </div>
+
+</div>
+
+<script>
+function psShow(tab) {
+  document.querySelectorAll('.ps-pane').forEach(function(p) { p.classList.remove('active'); });
+  document.querySelectorAll('.ps-tab').forEach(function(t) { t.classList.remove('act'); });
+  document.getElementById('ps-' + tab).classList.add('active');
+  event.currentTarget.classList.add('act');
+}
+</script></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_2_5 et_pb_column_22  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_6">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="1365" height="2048" src="https://www.toowettoshred.com/wp-content/uploads/20251108-untitled-03760.jpg" alt="Kite Cruise boat" title="20251108-untitled-03760" srcset="https://www.toowettoshred.com/wp-content/uploads/20251108-untitled-03760.jpg 1365w, https://www.toowettoshred.com/wp-content/uploads/20251108-untitled-03760-1280x1920.jpg 1280w, https://www.toowettoshred.com/wp-content/uploads/20251108-untitled-03760-980x1470.jpg 980w, https://www.toowettoshred.com/wp-content/uploads/20251108-untitled-03760-480x720.jpg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1365px, 100vw" class="wp-image-11238" data-et-multi-view="{&quot;schema&quot;:{&quot;attrs&quot;:{&quot;desktop&quot;:{&quot;src&quot;:&quot;https:\/\/www.toowettoshred.com\/wp-content\/uploads\/20251108-untitled-03760.jpg&quot;,&quot;alt&quot;:&quot;Kite Cruise boat&quot;,&quot;title&quot;:&quot;20251108-untitled-03760&quot;,&quot;class&quot;:&quot;wp-image-11238&quot;,&quot;srcset&quot;:&quot;https:\/\/www.toowettoshred.com\/wp-content\/uploads\/20251108-untitled-03760.jpg 1365w, https:\/\/www.toowettoshred.com\/wp-content\/uploads\/20251108-untitled-03760-1280x1920.jpg 1280w, https:\/\/www.toowettoshred.com\/wp-content\/uploads\/20251108-untitled-03760-980x1470.jpg 980w, https:\/\/www.toowettoshred.com\/wp-content\/uploads\/20251108-untitled-03760-480x720.jpg 480w&quot;,&quot;sizes&quot;:&quot;(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 1365px, 100vw&quot;},&quot;hover&quot;:{&quot;src&quot;:&quot;https:\/\/www.toowettoshred.com\/wp-content\/uploads\/Dakhla-6.jpg&quot;,&quot;srcset&quot;:&quot;https:\/\/www.toowettoshred.com\/wp-content\/uploads\/Dakhla-6.jpg 2380w, https:\/\/www.toowettoshred.com\/wp-content\/uploads\/Dakhla-6-1280x1280.jpg 1280w, https:\/\/www.toowettoshred.com\/wp-content\/uploads\/Dakhla-6-980x980.jpg 980w, https:\/\/www.toowettoshred.com\/wp-content\/uploads\/Dakhla-6-480x480.jpg 480w&quot;,&quot;sizes&quot;:&quot;(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) and (max-width: 1280px) 1280px, (min-width: 1281px) 2380px, 100vw&quot;}}},&quot;slug&quot;:&quot;et_pb_image&quot;}" /></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_9 et_clickable et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_12">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_23  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_20 et_clickable  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Book</p></div>
+			</div><div class="et_pb_module et_pb_divider_3 et_clickable et_pb_space et_pb_divider_hidden"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_21 et_clickable  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>your</p></div>
+			</div><div class="et_pb_module et_pb_divider_4 et_pb_space et_pb_divider_hidden"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_22 et_clickable  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Camp</p></div>
+			</div><div class="et_pb_module et_pb_divider_5 et_pb_space et_pb_divider_hidden"><div class="et_pb_divider_internal"></div></div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_10 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_13">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_24  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_23  et_pb_text_align_center et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: left;">Quality &amp; Care<br />
+<span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">Why us?!</span></p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_24  et_pb_text_align_justified et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><strong>We&#8217;ll take great care of you!<br /></strong><strong></strong><span style="font-size: 16px;"><br />We arrange everything for you and make sure you know when to be where. </span></p>
+<p>Our aim is to bring the right people to the right place. To be at the right spot for the wind and maximize your time on the water.   </p>
+<p><span style="font-size: 16px;">We value respect &amp; kindness and ask you to treat your kite buddies and staff with that same manner. We are not a party-camp, but will host some party nights and can get you to the party if you want a bit more.</span></p>
+<p>Ps. If you let us do our thing, you will get to do your thing in the best way possible 🙂<br />Pss: We host kitesurfers from all over the world. Come with an open heart and you will make kite friends for life! <em></em></p></div>
+			</div><div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_1 et_animated et_pb_bg_layout_dark" href="https://bookings.toowettoshred.com/en/product/kitesurf-camp-brazil" data-icon="">I&#039;m joining!</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div id="faq" class="et_pb_section et_pb_section_11 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_14">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_25  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_25  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">FAQ<br />
+<span style="color: #333333; font-family: Gagalin, Helvetica, Arial, Lucida, sans-serif; font-size: 26px;">For the kitesurf camp&nbsp;</span></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div><div class="et_pb_with_border et_pb_row et_pb_row_15">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_26  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_toggle et_pb_toggle_0 et_pb_toggle_item  et_pb_text_align_center et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">Can I come all by myself?</h5>
+				<div class="et_pb_toggle_content clearfix"><p><strong>Yes</strong> Please do! Most of our guest are &#8216;solo&#8217; travellers at the beginning of the week. You will make friends here before you know it 🙂</p></div>
+			</div><div class="et_pb_module et_pb_toggle et_pb_toggle_1 et_pb_toggle_item  et_pb_text_align_center et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What wetsuit do I need?</h5>
+				<div class="et_pb_toggle_content clearfix"><p>You won&#8217;t really need a wetsuit but if you are planning on pulling big loops &amp; stay for all the sunset sessions &#8211; a 1 mm butt protection shorty will be useful. </p></div>
+			</div><div class="et_pb_module et_pb_toggle et_pb_toggle_2 et_pb_toggle_item  et_pb_text_align_center et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">I have a special diet. Can I join?</h5>
+				<div class="et_pb_toggle_content clearfix"><p>Yes, but if you have a serious allergy, please contact us before booking. Brazil is not the easiest to travel with a special diet. We like to keep the expectations fair. </p>
+<p>It is veggie friendly (not perfect, but acceptable) and lot&#8217;s of healthy choices for those that want to stay fit.</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_27  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_toggle et_pb_toggle_3 et_pb_toggle_item  et_pb_text_align_center et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">Can I book private lessons?</h5>
+				<div class="et_pb_toggle_content clearfix"><p>Mmmm. If you need a refresher this can be arranged but we prefer you are independent already to get the most out of the experience. Maybe you can take some lessons before joining? We can help with that. </p></div>
+			</div><div class="et_pb_module et_pb_toggle et_pb_toggle_4 et_pb_toggle_item  et_pb_text_align_center et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">What does a typical day look like?</h5>
+				<div class="et_pb_toggle_content clearfix"><p>Hmmmm, it could be:</p>
+<p>8 AM Breakfast<br />10 AM Yoga<br />11 AM First session before Acai<br />2 PM lunch time!<br />3 PM After lunch party on the water, are you ready?</p>
+<p>7 PM Sunset drinks<br />8 PM dinner time<br />10 PM sleep / party / party in bed<br /><em><br />(Some nights everyone is so tired and just wants to sleep at 10. It&#8217;s funny what kiting does to you..)</em></p></div>
+			</div><div class="et_pb_module et_pb_toggle et_pb_toggle_5 et_pb_toggle_item  et_pb_text_align_center et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">My flight arrives after midnight..</h5>
+				<div class="et_pb_toggle_content clearfix"><p>No problem! We will arrange your airport pick up and bring you to Taiba. But you will miss out on the first group dinner.. </p>
+<p>For your departure please make sure you book the right dates!</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_28  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_toggle et_pb_toggle_6 et_pb_toggle_item  et_pb_text_align_center et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">Do I bring my own gear?</h5>
+				<div class="et_pb_toggle_content clearfix"><p>Yes. That is the easiest &amp; most comfy for this trip. </p>
+<p>If for whatever reason you cannot bring your gear or really want to travel light; please let us know well in advance and book the Advanced+rental pack.</p></div>
+			</div><div class="et_pb_module et_pb_toggle et_pb_toggle_7 et_pb_toggle_item  et_pb_text_align_center et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">Do I bring sunscreen?</h5>
+				<div class="et_pb_toggle_content clearfix"><b>Absolutely!</b></p>
+<p><b> </b></p>
+<p><b></b>Loads. Bring sunscreen for your face &amp; hands to keep you protected. Zinc might be good option. The more the better 😉</div>
+			</div><div class="et_pb_module et_pb_toggle et_pb_toggle_8 et_pb_toggle_item  et_pb_text_align_center et_pb_toggle_close">
+				
+				
+				
+				
+				<h5 class="et_pb_toggle_title">Can I prepare myself for the sessions?</h5>
+				<div class="et_pb_toggle_content clearfix"><p><b>Yess!</b></p>
+<p><b></b>Go get that body moving! How do you prepare for 14 days of kiting non-stop? Work that body. Strong abs will help for all the tricks you want to try. Go go!</p>
+<p>Duotone has a great library of video&#8217;s (for all levels), so if you want to mentally prepare for some new tricks, have a look <a href="https://youtube.com/playlist?list=PLwYlLMr01z4EmqeIMMBo0JaP8K-0qG-9R" target="_blank" rel="noopener">HERE</a> </p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</div>
+	<span class="et_bloom_bottom_trigger"></span>					</div>
+
+				
+				</article>
+
+			
+
+</div>
+
+
+	<span class="et_pb_scroll_top et-pb-icon"></span>
+
+
+			<footer id="main-footer">
+				
+<div class="container">
+	<div id="footer-widgets" class="clearfix">
+		<div class="footer-widget"><div id="text-7" class="fwidget et_pb_widget widget_text"><h4 class="title">Our Policy</h4>			<div class="textwidget"><p><a href="https://www.toowettoshred.com/terms-conditions/">Terms &amp; Conditions</a><br />
+<a href="https://www.toowettoshred.com/privacy-policy/">Privacy Policy</a></p>
+<p>&nbsp;</p>
+</div>
+		</div></div><div class="footer-widget"><div id="block-32" class="fwidget et_pb_widget widget_block">
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-8f761849 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:100%">
+<div class="wp-block-group is-layout-flow wp-block-group-is-layout-flow"></div>
+</div>
+</div>
+</div><div id="block-27" class="fwidget et_pb_widget widget_block widget_text">
+<p class="wp-block-paragraph"></p>
+</div><div id="block-37" class="fwidget et_pb_widget widget_block"><!-- TrustBox script -->
+<script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+<!-- End TrustBox script --></div></div>	</div>
+</div>
+
+
+		
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				<ul class="et-social-icons">
+
+	<li class="et-social-icon et-social-facebook">
+		<a href="#toowettoshred" class="icon">
+			<span>Facebook</span>
+		</a>
+	</li>
+	<li class="et-social-icon et-social-instagram">
+		<a href="#toowettoshred" class="icon">
+			<span>Instagram</span>
+		</a>
+	</li>
+
+</ul><div id="footer-info">© Margot Zoer  2019-2026 - 
+KVK 17237506 0000 </div>					</div>
+				</div>
+			</footer>
+		</div>
+
+
+	</div>
+
+	<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/Divi/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+<div class="et_bloom_flyin et_bloom_optin et_bloom_resize et_bloom_flyin_right et_bloom_optin_5 et_bloom_auto_popup et_bloom_auto_close" data-delay="20" data-cookie_duration="5">
+							<div class="et_bloom_form_container et_bloom_form_right with_edge wedge_edge et_bloom_with_border et_bloom_border_solid et_bloom_border_position_top_bottom et_bloom_rounded et_bloom_form_text_dark et_bloom_animation_fadein et_flyin_2_fields">
+								
+			<div class="et_bloom_form_container_wrapper clearfix">
+				<div class="et_bloom_header_outer">
+					<div class="et_bloom_form_header et_bloom_header_text_dark">
+						<img width="610" height="610" src="https://www.toowettoshred.com/wp-content/uploads/21-1-610x610.jpg" class="et_bloom_hide_mobile et_bloom_image_slideup et_bloom_image" alt="" decoding="async" />
+						<div class="et_bloom_form_text">
+						<h2 style="text-align: center;">Join the adventure!</h2><p style="text-align: center;"><span style="color: #000000;"><strong>Sign up to our mailing list</strong> and get the latest news, inspiration & the <strong>best</strong> <strong>deals</strong> we offer. </span><br /><span style="color: #000000;">We show up in your inbox once a month, not too bad right?</span><br /> <br /><span style="color: #000000;"><strong>Are you ready for the ride?! </strong></span></p>
+					</div>
+						
+					</div>
+				</div>
+				<div class="et_bloom_form_content et_bloom_2_fields">
+					
+					<svg class="triangle et_bloom_default_edge" xmlns="http://www.w3.org/2000/svg" version="1.1" width="20" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+						<path d="M0 0 L0 100 L100 50 Z" fill=""></path>
+					</svg><svg class="triangle et_bloom_responsive_edge" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="20" viewBox="0 0 100 100" preserveAspectRatio="none">
+							<path d="M0 0 L50 100 L100 0 Z" fill=""></path>
+						</svg>
+					<form method="post" class="clearfix">
+						<div class="et_bloom_fields">
+							<p class="et_bloom_popup_input et_bloom_subscribe_name">
+								<input placeholder="Name" maxlength="50">
+							</p>
+							<p class="et_bloom_popup_input et_bloom_subscribe_email">
+								<input placeholder="Email">
+							</p>
+							
+							<button data-optin_id="optin_5" data-service="mailerlite" data-list_id="162002943846909816" data-page_id="10431" data-account="tech@toowettoshredcom" data-ip_address="true" class="et_bloom_submit_subscription">
+								<span class="et_bloom_subscribe_loader"></span>
+								<span class="et_bloom_button_text et_bloom_button_text_color_light">Subscribe!</span>
+							</button>
+						</div>
+					</form>
+					<div class="et_bloom_success_container">
+						<span class="et_bloom_success_checkmark"></span>
+					</div>
+					<h2 class="et_bloom_success_message">Oh YAAHS! We'll keep you updated. Hope to see you soon on the water!</h2>
+					
+				</div>
+			</div>
+			<span class="et_bloom_close_button"></span>
+							</div>
+						</div>	<script type="text/javascript">
+				var et_animation_data = [{"class":"et_pb_row_0","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"30%","speed_curve":"ease-in-out"},{"class":"et_pb_image_1","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_image_2","style":"fade","repeat":"once","duration":"1250ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_image_3","style":"fade","repeat":"once","duration":"850ms","delay":"400ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_image_4","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_image_5","style":"fade","repeat":"once","duration":"750ms","delay":"800ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_0","style":"fade","repeat":"once","duration":"1850ms","delay":"1150ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_0","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_1","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_2","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_3","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_row_11","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"50%","speed_curve":"ease-in-out"},{"class":"et_pb_button_1","style":"fade","repeat":"once","duration":"1850ms","delay":"1150ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"}];
+					var et_link_options_data = [{"class":"et_pb_text_2","url":"#level","target":"_self"},{"class":"et_pb_text_9","url":"#beers","target":"_self"},{"class":"et_pb_text_11","url":"#beers","target":"_self"},{"class":"et_pb_blurb_0","url":"https:\/\/bookings.toowettoshred.com\/en\/product\/kitesurf-camp-brazil","target":"_self"},{"class":"et_pb_section_9","url":"https:\/\/www.toowettoshred.com\/book-dakhla\/","target":"_self"},{"class":"et_pb_text_20","url":"https:\/\/bookings.toowettoshred.com\/en\/product\/kitesurf-camp-brazil","target":"_blank"},{"class":"et_pb_divider_3","url":"https:\/\/www.toowettoshred.com\/book-your-kite-safari\/","target":"_self"},{"class":"et_pb_text_21","url":"https:\/\/bookings.toowettoshred.com\/en\/product\/kitesurf-camp-brazil","target":"_self"},{"class":"et_pb_text_22","url":"https:\/\/bookings.toowettoshred.com\/en\/product\/kitesurf-camp-brazil","target":"_self"}];
+			</script>
+	<script id="jquery-core-js" src="https://www.toowettoshred.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.toowettoshred.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="jquery-js-after">
+jqueryParams.length&&$.each(jqueryParams,function(e,r){if("function"==typeof r){var n=String(r);n.replace("$","jQuery");var a=new Function("return "+n)();$(document).ready(a)}});
+//# sourceURL=jquery-js-after
+</script>
+<script id="js-divi-area-js" src="https://www.toowettoshred.com/wp-content/plugins/popups-for-divi/scripts/front.min.js?ver=3.2.8"></script>
+<script id="divi-custom-script-js-extra">
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https://www.toowettoshred.com/wp-admin/admin-ajax.php","images_uri":"https://www.toowettoshred.com/wp-content/themes/Divi/images","builder_images_uri":"https://www.toowettoshred.com/wp-content/themes/Divi/includes/builder/images","et_frontend_nonce":"a1845c9d44","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"243bb79608","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"10431","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":"https://www.toowettoshred.com/wp-content/themes/Divi/includes/builder/frontend-builder/assets/vendors","accent_color":"#9b1163","waypoints_options":[]};
+var et_pb_box_shadow_elements = [];
+//# sourceURL=divi-custom-script-js-extra
+</script>
+<script id="divi-custom-script-js" src="https://www.toowettoshred.com/wp-content/themes/Divi/js/scripts.min.js?ver=4.27.6"></script>
+<script id="fitvids-js" src="https://www.toowettoshred.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.fitvids.js?ver=4.27.6"></script>
+<script async data-wp-strategy="async" fetchpriority="low" id="comment-reply-js" src="https://www.toowettoshred.com/wp-includes/js/comment-reply.min.js?ver=7.0.7"></script>
+<script id="jquery-mobile-js" src="https://www.toowettoshred.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.mobile.js?ver=4.27.6"></script>
+<script id="magnific-popup-js" src="https://www.toowettoshred.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/magnific-popup.js?ver=4.27.6"></script>
+<script id="easypiechart-js" src="https://www.toowettoshred.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/easypiechart.js?ver=4.27.6"></script>
+<script id="salvattore-js" src="https://www.toowettoshred.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/salvattore.js?ver=4.27.6"></script>
+<script id="et-core-common-js" src="https://www.toowettoshred.com/wp-content/themes/Divi/core/admin/js/common.js?ver=4.27.6"></script>
+<script id="et_bloom-uniform-js-js" src="https://www.toowettoshred.com/wp-content/plugins/bloom/js/jquery.uniform.min.js?ver=1.3.12"></script>
+<script id="et_bloom-custom-js-js-extra">
+var bloomSettings = {"ajaxurl":"https://www.toowettoshred.com/wp-admin/admin-ajax.php","pageurl":"https://www.toowettoshred.com/camps/kitesurf-camp-brazil/","stats_nonce":"02d8076e8e","subscribe_nonce":"d996268580","is_user_logged_in":"not_logged"};
+//# sourceURL=et_bloom-custom-js-js-extra
+</script>
+<script id="et_bloom-custom-js-js" src="https://www.toowettoshred.com/wp-content/plugins/bloom/js/custom.js?ver=1.3.12"></script>
+<script id="et_bloom-idle-timer-js-js" src="https://www.toowettoshred.com/wp-content/plugins/bloom/js/idle-timer.min.js?ver=1.3.12"></script>
+<script id="et-builder-modules-script-motion-js-extra">
+var et_pb_motion_elements = {"desktop":[{"id":".et_pb_text_8","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_text","trigger_start":"top","trigger_end":"middle"},{"id":".et_pb_row_8","start":0,"midStart":17,"midEnd":35,"end":100,"startValue":35,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_row","trigger_start":"top","trigger_end":"middle"},{"id":".et_pb_text_20","start":0,"midStart":41,"midEnd":50,"end":100,"startValue":8,"midValue":0,"endValue":0,"resolver":"translateX","module_type":"et_pb_text","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_text_21","start":0,"midStart":41,"midEnd":50,"end":100,"startValue":-8,"midValue":0,"endValue":0,"resolver":"translateX","module_type":"et_pb_text","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_text_22","start":0,"midStart":41,"midEnd":50,"end":100,"startValue":8,"midValue":0,"endValue":0,"resolver":"translateX","module_type":"et_pb_text","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_0","start":0,"midStart":24,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_1","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_2","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_3","start":0,"midStart":24,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_4","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_5","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_6","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_7","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_8","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"}],"tablet":[{"id":".et_pb_text_8","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_text","trigger_start":"top","trigger_end":"middle"},{"id":".et_pb_row_8","start":0,"midStart":17,"midEnd":35,"end":100,"startValue":35,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_row","trigger_start":"top","trigger_end":"middle"},{"id":".et_pb_text_20","start":0,"midStart":41,"midEnd":50,"end":100,"startValue":8,"midValue":0,"endValue":0,"resolver":"translateX","module_type":"et_pb_text","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_text_21","start":0,"midStart":41,"midEnd":50,"end":100,"startValue":-8,"midValue":0,"endValue":0,"resolver":"translateX","module_type":"et_pb_text","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_text_22","start":0,"midStart":41,"midEnd":50,"end":100,"startValue":8,"midValue":0,"endValue":0,"resolver":"translateX","module_type":"et_pb_text","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_0","start":0,"midStart":24,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_1","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_2","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_3","start":0,"midStart":24,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_4","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_5","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_6","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_7","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_8","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"}],"phone":[{"id":".et_pb_text_8","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_text","trigger_start":"top","trigger_end":"middle"},{"id":".et_pb_row_8","start":0,"midStart":17,"midEnd":35,"end":100,"startValue":35,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_row","trigger_start":"top","trigger_end":"middle"},{"id":".et_pb_text_20","start":0,"midStart":41,"midEnd":50,"end":100,"startValue":8,"midValue":0,"endValue":0,"resolver":"translateX","module_type":"et_pb_text","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_text_21","start":0,"midStart":41,"midEnd":50,"end":100,"startValue":-8,"midValue":0,"endValue":0,"resolver":"translateX","module_type":"et_pb_text","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_text_22","start":0,"midStart":41,"midEnd":50,"end":100,"startValue":8,"midValue":0,"endValue":0,"resolver":"translateX","module_type":"et_pb_text","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_0","start":0,"midStart":24,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_1","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_2","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_3","start":0,"midStart":24,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_4","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_5","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_6","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_7","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"},{"id":".et_pb_toggle_8","start":0,"midStart":50,"midEnd":50,"end":100,"startValue":0,"midValue":100,"endValue":100,"resolver":"opacity","module_type":"et_pb_toggle","trigger_start":"middle","trigger_end":"middle"}]};
+//# sourceURL=et-builder-modules-script-motion-js-extra
+</script>
+<script id="et-builder-modules-script-motion-js" src="https://www.toowettoshred.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/motion-effects.js?ver=4.27.6"></script>
+<script id="et-builder-modules-script-sticky-js-extra">
+var et_pb_sticky_elements = [];
+//# sourceURL=et-builder-modules-script-sticky-js-extra
+</script>
+<script id="et-builder-modules-script-sticky-js" src="https://www.toowettoshred.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/sticky-elements.js?ver=4.27.6"></script>
+<script id="ocvars">var ocSiteMeta = {plugins: {"a3e4aa5d9179da09d8af9b6802f861a8": 1,"a3fe9dc9824eccbd72b7e5263258ab2c": 0}}</script></body>
+</html>

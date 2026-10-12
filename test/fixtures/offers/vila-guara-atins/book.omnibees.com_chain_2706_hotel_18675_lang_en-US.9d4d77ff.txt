@@ -1,0 +1,2103 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
+    <meta name="csrf-token" content="5Kk6Z6w25O6sX1xDVyMhgcvOrmlbnYLKaX04SXE1" />
+    <meta name="description" content="Your unforgettable experience in Atins begins at Vila Guará! Facing the beach, our guesthouse combines rustic charm with comfort and a welcoming...">
+
+    <title>Pousada Vila Guará | Pousada Vila Guara</title>
+
+    <!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://book.omnibees.com/chain/9888/hotel/18675">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pousada Vila Guará | Pousada Vila Guara">
+<meta property="og:description" content="Your unforgettable experience in Atins begins at Vila Guará! Facing the beach, our guesthouse combines rustic charm with comfort and a welcoming...">
+<meta property="og:image" content="https://media.omnibees.com/Images/18675/Property/1200x630/1192215.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" content="book.omnibees.com">
+<meta name="twitter:url" content="https://book.omnibees.com/chain/9888/hotel/18675">
+<meta name="twitter:title" content="Pousada Vila Guará | Pousada Vila Guara">
+<meta name="twitter:description" content="Your unforgettable experience in Atins begins at Vila Guará! Facing the beach, our guesthouse combines rustic charm with comfort and a welcoming...">
+<meta name="twitter:image" content="https://media.omnibees.com/Images/18675/Property/1200x630/1192215.jpg">
+    
+        <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://book.omnibees.com/chain/9888/hotel/18675">
+            <link rel="alternate" hreflang="pt-BR" href="https://book.omnibees.com/chain/9888/hotel/18675?lang=pt-BR">
+            <link rel="alternate" hreflang="es-ES" href="https://book.omnibees.com/chain/9888/hotel/18675?lang=es-ES">
+            <link rel="alternate" hreflang="en-US" href="https://book.omnibees.com/chain/9888/hotel/18675?lang=en-US">
+        <link rel="alternate" hreflang="x-default" href="https://book.omnibees.com/chain/9888/hotel/18675">
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Pousada Vila Guará",
+    "description": "Your unforgettable experience in Atins begins at Vila Guará! Facing the beach, our guesthouse combines rustic charm with comfort and a welcoming...",
+    "url": "https://book.omnibees.com/chain/9888/hotel/18675",
+    "image": "https://media.omnibees.com/Images/18675/Property/1192215.jpg",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "RUA BEIRA MAR SN ",
+        "addressLocality": "Barreirinhas",
+        "addressRegion": "Maranhao",
+        "postalCode": "65590000",
+        "addressCountry": "BR"
+    },
+    "telephone": "+98992325200",
+    "checkinTime": "14:00",
+    "checkoutTime": "10:30"
+}
+    </script>
+
+
+          <link rel="icon" href="https://media.omnibees.com/BEImages/28318.png">
+    
+    <link rel="preload" href="/v4/css/fonts/manrope-v3-latin-ext_latin-200.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+    <link rel="preload" href="/v4/css/fonts/manrope-v3-latin-ext_latin-300.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+    <link rel="preload" href="/v4/css/fonts/manrope-v3-latin-ext_latin-regular.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+    <link rel="preload" href="/v4/css/fonts/manrope-v3-latin-ext_latin-500.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+    <link rel="preload" href="/v4/css/fonts/manrope-v3-latin-ext_latin-600.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+    <link rel="preload" href="/v4/css/fonts/manrope-v3-latin-ext_latin-700.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+    <link rel="preload" href="/v4/css/fonts/manrope-v3-latin-ext_latin-800.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+
+    <!--  *************************************** MATERIAL.IO *************************************************** -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- ******************************************************************************************************** -->
+
+    
+
+    <!-- Favicon Placeholder -->
+    
+
+    <link rel="preconnect" href="https://maps.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preload" as="style" href="https://book.omnibees.com/build/assets/css/hotel-landing-v4-CZUtBbFR.css" /><link rel="stylesheet" href="https://book.omnibees.com/build/assets/css/hotel-landing-v4-CZUtBbFR.css" />
+            
+      
+      <style>
+        :root{
+          --be-text-color:             #273240;
+          --be-cal-primary:            #bc2b3a;
+          --be-cal-primary-text:       #FFFFFF;
+          --be-cal-primary-hover:      #aa2735;
+          --be-cal-primary-text-muted: rgba(255, 255, 255, 0.82);
+        }
+
+        .primary_button_v4 {
+          background-color: #bc2b3a!important;
+          color: #FFFFFF!important;
+          border: 1px solid #bc2b3a!important;
+          transition: 0.15s ease-in-out;
+        }
+
+        .primary_button_v4:hover {
+          background-color: #aa2735!important;
+          border: 1px solid #aa2735!important;
+        }
+
+        .primary_button_v4:disabled, .primary_button_v4:disabled:hover {
+          background-color: #E6E6E6!important;
+          color: #fff!important;
+          border: 1px solid #E6E6E6!important;
+          cursor: not-allowed;
+        }
+
+        .rate_plan_name_v4 {
+          color: #bc2b3a!important;
+        }
+
+        .basket-arrow-right-dates_v4 .b, .basket-arrow-right-dates_v4 .c {
+          stroke: #bc2b3a!important;
+        }
+
+        html, body {margin: 0; padding: 0; font-family: 'Manrope', sans-serif;}
+       
+        .custom-bg-as-text{color:#FFFFFF !important;}
+        
+        .custom-action-bg{background:#bc2b3a !important;}
+        .custom-action-text{color:#FFFFFF !important;}
+        .custom-action-border{border-color:#bc2b3a !important;}
+        .custom-action-border-top{border-top-color:#bc2b3a !important;}
+        .custom-action-border-bottom{border-bottom-color:#bc2b3a !important;}
+        .custom-action-bg-as-text{color:#bc2b3a !important;}
+        .custom-action-bg-as-border{border-color:#bc2b3a !important;}
+        .custom-action-bg[disabled]{background: #b9c2d3 !important;}
+
+        /* start 4.1 changes */
+        /* principal colors*/
+        .custom-bg-color{background:#FFFFFF !important;}
+        .custom-text-color{color:#273240 !important;}
+
+        .custom-bg-text-color{
+          background:#FFFFFF !important;
+          color:#273240 !important;
+        }
+
+        /* Button colors */ 
+        .custom-button-bg-color{background:#bc2b3a !important;}
+        .custom-button-text-color{color:#FFFFFF !important;}
+        .custom-button-colors{
+          background:#bc2b3a !important;
+          color:#FFFFFF !important;
+        }
+
+        /*svg colors*/
+        .arrow-right-dates_v4 .b, .arrow-right-dates_v4 .c {
+          stroke:#273240 !important;
+        }
+        .change_selected_icon .b, .change_selected_icon .c {
+          stroke:#FFFFFF !important;
+        }
+
+        .custom-icons-path-color svg path{
+          fill:#273240 !important;
+          opacity: 1 !important;
+        }
+
+        .custom-icons-stroke-color svg line{
+          stroke:#273240 !important;
+        }
+
+        /*artifacts*/
+        .custom-bg-as-text-color{
+          background-color: #273240 !important;
+          opacity: 0.2 !important;
+        }
+
+        @media (max-width: 1279px) {
+
+          .custom-text-color-search-mobile{color:#273240 !important;}
+          .custom-bg-color-search-bar-mobile{background-color: #FFFFFF !important;}
+
+          .promo_code_holder .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .mdc-checkbox__background,
+          .mobile-i-have-a-code .mdc-checkbox .mdc-checkbox__native-control:enabled:not(:checked):not(:indeterminate):not([data-indeterminate="true"]) ~ .mdc-checkbox__background {
+            border-width: 1px !important;
+            border-color: #273240 !important;
+            background-color: #FFFFFF!important;
+          }
+
+          .promo_code_holder .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background,
+          .mobile-i-have-a-code .mdc-checkbox .mdc-checkbox__native-control:enabled:checked~.mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control:enabled:indeterminate~.mdc-checkbox__background, .mdc-checkbox .mdc-checkbox__native-control[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+            border-width: 1px !important;
+            border-color: #273240 !important;
+            background:#bc2b3a !important;
+
+          }
+
+          .promo_code_holder .mdc-checkbox .mdc-checkbox__native-control:enabled ~ .mdc-checkbox__background .mdc-checkbox__checkmark,
+          .mobile-i-have-a-code .mdc-checkbox .mdc-checkbox__native-control:enabled ~ .mdc-checkbox__background .mdc-checkbox__checkmark {
+            color: #FFFFFF !important;
+            width: 15px !important;
+            height: 15px !important;
+          }
+        }
+        
+
+        /*end 4.1 changes*/ 
+        /* placeholder color */
+
+        input[id^="hotels"]::-webkit-input-placeholder { color: #ffffff;opacity: 1;}
+        input[id^="hotels"]::-moz-placeholder {  color: #ffffff; opacity: 1;}
+        input[id^="hotels"]:-ms-input-placeholder { color: #ffffff;opacity: 1;}
+        input[id^="hotels"]:-moz-placeholder {  color: #ffffff; opacity: 1;}
+
+        /*THE REMOVE BUTTON,INVERTED COLORS*/
+        .custom-action-bg-remove{background:#FFFFFF !important;}
+        .custom-action-bg-remove:hover{background:#bc2b3a!important;}
+        .custom-action-text-remove{color:#bc2b3a !important;}
+        .custom-action-text-remove:hover{color:#FFFFFF!important;}
+        .custom-action-border-remove{border-color:#bc2b3a;}
+        .custom-action-border-remove:hover{border-color:#bc2b3a!important;}
+        button.custom-action-bg:hover{color:#FFFFFF !important;}
+        /* ADVANCED SEARCH + AGENDAR STEP 3 BUTTON TEXT COLOR */
+        .custom-action-bg-advanced:hover{
+          background: #bc2b3a !important;
+        }
+        .custom-action-text-advanced {
+          color:#bc2b3a !important;
+        }
+        .custom-action-text-advanced:hover {
+          color: #FFFFFF !important;
+        }
+
+        .menu_item:hover,.menu_item:focus,.menu_current{
+          color:#bc2b3a !important;
+        }
+        .menu_current {
+          border-bottom-color: #bc2b3a !important;              
+        }
+
+        .checkbox-custom:checked + .checkbox-custom-label:before {
+          background-color: #bc2b3a !important;
+          border: 2px solid #bc2b3a !important;      
+        }
+        .radio-custom:checked + .radio-custom-label:after {
+          background-color: #bc2b3a;
+        }
+        .custom-svg-color {
+          fill:#FFFFFF !important;
+        }
+        /* FOR STEP 4 CUSTOM COLORS */
+        .custom-hotel-svg-color {
+          fill:#bc2b3a !important;
+        }
+        a[aria-expanded = "true"] h5 {
+          color:#bc2b3a !important;
+        }
+        a[aria-expanded = "true"] h5 .dropdown-icon path {
+          fill:#bc2b3a !important;
+        }
+        .custom-hotel-text {
+          color:#bc2b3a !important;
+        }
+        /* Background for banners on step 2 */
+        .custom-banner-bg {
+          background-color: rgba(188, 43, 58, 0.1)!important;
+        }
+        .menu_icon[data-active="true"] path{
+          fill:#bc2b3a;
+        }
+        /* Css for secondary buttons */
+        .custom-secondary-text {
+          color:#bc2b3a !important;
+        }
+        .custom-secondary-text:hover {
+          color:#ffffff !important;
+        }
+        .custom-secondary-border {
+          border:1px solid #bc2b3a !important;
+        }
+        .custom-secondary-border:hover {
+          border-color:#bc2b3a !important;          
+        }
+        .custom-secondary-bg {
+          background-color: white;
+        }
+        .custom-secondary-bg:hover {
+          background:#bc2b3a !important;
+        }
+        
+        /*ROOM MODAL ICON HOVER COLOR*/
+
+        .amenity-room-tooltip:hover #Path_2170 {
+          fill:#bc2b3a !important;
+        }
+
+        .amenity-room-tooltip:hover svg g path {
+          fill:#bc2b3a !important;
+        }
+
+        /* pay button on step 1 */
+
+        .custom-pay-text:hover{
+          color: #bc2b3a !important;
+        }
+
+        .custom-pay-background:hover{
+          background: #bc2b3a;
+        }
+
+        .hotel-name-link:hover svg path {
+          fill: #bc2b3a !important;          
+        }
+
+        .custom-pay-border:hover {
+          border: 1px solid #bc2b3a !important;
+        }
+
+        .custom-hotel-name:hover {
+          color: #bc2b3a !important;
+        }
+
+        .chain-result-button:hover svg path {
+          fill: #bc2b3a !important;
+        }
+
+        .custom-policy-room-header {
+          color:#bc2b3a !important;
+        }
+
+        /* Button Step 1 Map Opener */
+        .custom-map-button {
+          color: #bc2b3a !important;
+          border: 1px solid #bc2b3a !important;
+        }
+
+        .custom-map-button svg path {
+          fill: #bc2b3a !important;;
+        }
+
+        @media(max-width: 992px) {
+          .menu_item:hover, .menu_item:focus, .menu_current{
+            border-left:2px solid #bc2b3a;
+          }
+        }
+
+        .rate_plan:hover {
+          border-left: 3px solid #bc2b3a!important;
+          background-color: #FCFCFC !important;
+        }
+
+        .rate_plan[data-quantity="0"] {
+          border-left: 3px solid #fff;
+          background-color: #fff;
+        }
+
+        .rate_plan {
+          border-left: 3px solid #bc2b3a;
+          background-color: #FCFCFC;
+        }
+
+        @media(max-width: 1279px) {
+          .rate_plan:hover {
+            border-left: 1px solid rgba(39, 50, 64, 0.15)!important;
+            background-color: #fff!important;
+          }
+
+          .rate_plan[data-quantity="0"] {
+            border: 1px solid rgba(39, 50, 64, 0.15);
+            background-color: #fff;
+          }
+
+          .rate_plan {
+            border: 1px solid rgba(83, 172, 42, 0.5);
+            background-color: #fff;
+          }
+
+          .rate_los_restricted:hover, .rate_closed:hover {
+            border-left: unset!important;
+            background-color: #f5f5f5!important;
+          }
+        }
+
+      </style>
+    
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-5DJ8M9XX"></script>  
+ 
+
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5DJ8M9XX');</script>
+
+
+<script></script>    
+
+
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){window.dataLayer.push(arguments);}
+              gtag("js", new Date());
+              gtag("config", "GTM-5DJ8M9XX", {
+                  "hotel_id": "18675",
+                  "hotel_chain_id": "9888",
+                  "hotel_name": "Pousada Vila Guará",
+                  "chain_name": "Pousada Vila Guara",
+                  "category": "Hotel",
+                  "country": "Brazil",
+                  "version_be": "4"
+              });
+            </script>
+
+
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5SDMCJH');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Start Asksuite Pixel -->
+    <script src="https://pixel.asksuite.com/asktag.js"></script>
+    <!-- End Asksuite Pixel -->
+</head><body onresize="if (typeof myResolution === 'function') myResolution()" data-currency="16">
+    <script type="text/javascript">var hotel_folders_decoded = {"18675":{"IsPropertyFolder":false,"PropertyFolderUID":-1,"Sequence":1,"Property_UID":18675,"Property_Name":"Pousada Vila Guar\u00e1","PropertySequence":1}}</script>
+<section class="section1 header-top "  data-template-version="4"  >
+	<input type="hidden" id="display-tax-option" value="Not Applicable">
+	
+	<input type="hidden" id="price-display-mode" value="per-night">
+			<input type="hidden" id="CookiesData"
+	data-hotel-name="Pousada Vila Guará"
+	data-company-name="ATINS SUSTENTAVEL PARTICIPACOES LTDA"
+	data-address-line="RUA BEIRA MAR SN "
+	data-city-name="Barreirinhas"
+	data-postal-code="65590000"
+	data-country-name="Brasil"
+	data-email="admin@vilaguara.com">
+		<div class="container top_menu">
+		<div class="logo" data-chain="9888" data-hotelid="18675">
+							<a href="https://book.omnibees.com/hotel/18675?lang=en-US&amp;currencyId=16">
+					<img src="https://media.omnibees.com/BEImages/28316.png" alt="Logo Pousada Vila Guará">
+				</a>
+						<div class="mobile-icons">
+								<button class="menu_icon mobile_search">
+					<svg xmlns="http://www.w3.org/2000/svg" width="17.49" height="17.49" viewBox="0 0 17.49 17.49" >
+					 	<path id="icon_Search" d="M15.5,14h-.79l-.28-.27a6.51,6.51,0,1,0-.7.7l.27.28v.79l5,4.99L20.49,19Zm-6,0A4.5,4.5,0,1,1,14,9.5,4.494,4.494,0,0,1,9.5,14Z" transform="translate(-3 -3)" fill="#454950"/>
+					</svg>
+				</button>
+				
+				<button class="menu_icon mobile_login" data-toggle="false">
+					<svg id="user_3_" data-name="user (3)" xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" >
+						<defs>
+						    <style>
+						      .cls-1 {
+						        fill: #fd4700;
+						      }
+						    </style>
+					  	</defs>
+						<g id="Grupo_4348" data-name="Grupo 4348" transform="translate(0)">
+							<path id="Caminho_2490" data-name="Caminho 2490" class="cls-1" d="M35.849,27.151a20.919,20.919,0,0,0-7.98-5.005,12.141,12.141,0,1,0-13.738,0A21.033,21.033,0,0,0,0,42H3.281a17.719,17.719,0,1,1,35.437,0H42A20.863,20.863,0,0,0,35.849,27.151ZM21,21a8.859,8.859,0,1,1,8.859-8.859A8.869,8.869,0,0,1,21,21Z" transform="translate(0)"/>
+						</g>
+					</svg>
+				</button>
+
+				<button class="menu_icon mobile_sandwich" data-toggle="false">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24.5" height="17" viewBox="0 0 24.5 17" >
+					  <path id="Path_2509" data-name="Path 2509" d="M94.608,188.331a.988.988,0,0,1-1,.978H75.228a.978.978,0,1,1,0-1.956H93.613A.987.987,0,0,1,94.608,188.331Zm-19.38,8.5H93.613a.978.978,0,1,0,0-1.956H75.228a.978.978,0,1,0,0,1.956Zm18.385-17H75.228a.979.979,0,1,0,0,1.957H93.613a.979.979,0,1,0,0-1.957Zm-22.51,0a.979.979,0,1,0,1,.978A.988.988,0,0,0,71.1,179.831Zm0,17a.978.978,0,1,0-.995-.978A.989.989,0,0,0,71.1,196.831Zm0-9.477a.978.978,0,1,0,1,.977A.987.987,0,0,0,71.1,187.354Z" transform="translate(-70.108 -179.831)" fill="#8c99af"/>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<div class="menu_items">
+
+			<div id="menu_items">
+				<div class="drops">
+					
+					<div id="history_div"
+						data-room="Room"
+						data-rooms="Rooms"
+						data-guest="Guest"
+						data-guests="Guests">
+						
+						<img id="history" alt="history" class="icon-history" src="https://book.omnibees.com/v4/icons/search_history_v4.svg">
+						My searches
+						<div class="history_search_drope" data-all-hotels-string="All Hotels" data-empty-search-string="You don't have any recent searches."></div>
+					</div>
+
+											<div class="package_menu_out_of_box">
+															<a class="menu_link menu_package_link" href="https://book.omnibees.com/hotel/18675/packages?lang=en-US&amp;currencyId=16">
+									<span class="svg-icon package-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 14C19 11.7345 17.7901 10.6222 16.3965 9.22852C15.7076 8.53957 14.9753 7.77875 14.4229 6.79102C13.9807 6.00053 13.6602 5.07759 13.5459 3.94141C11.1916 5.77097 10.0519 8.11973 9.49316 11.5801C9.46557 11.75 9.35297 11.8941 9.19434 11.9609C9.03541 12.0278 8.85284 12.0076 8.71191 11.9082C8.14886 11.5113 7.55383 10.8979 7.06641 10.2324C6.78542 9.84878 6.53004 9.43091 6.33301 9.01173C5.6274 10.0969 5 11.8998 5 14C5 15.4874 5.42399 17.2451 6.49902 18.6191C7.55837 19.9731 9.28405 21 12 21C13.8467 21 15.5963 20.4075 16.8779 19.2529C18.1511 18.1058 19 16.3705 19 14ZM20 14C20 16.629 19.0486 18.6432 17.5469 19.9961C16.0535 21.3415 14.0532 22 12 22C8.99585 22 6.97148 20.8465 5.71094 19.2354C4.46617 17.6443 4 15.6522 4 14C4 11.1932 5.03094 8.76204 6.14648 7.64649L6.19727 7.60157C6.32223 7.50659 6.4864 7.475 6.63965 7.51954C6.81482 7.57049 6.94859 7.71354 6.98828 7.89161C7.1026 8.40411 7.43058 9.03514 7.87402 9.64063C8.12052 9.9772 8.39243 10.2905 8.66309 10.5576C9.37243 7.02148 10.8097 4.52614 13.7227 2.58399C13.8761 2.48171 14.0738 2.47257 14.2363 2.55958C14.3986 2.64666 14.5 2.81579 14.5 3.00001C14.5 4.41657 14.823 5.45719 15.2959 6.30274C15.7747 7.15876 16.4175 7.83544 17.1035 8.52149C18.4599 9.87787 20 11.2659 20 14Z" fill="#273240"/></svg></span>
+									<span class="menu_link_text">Special Offers</span>
+								</a>
+													</div>
+									    						<div id="first_div">
+																																							
+							<div id="lang_curr" data-lang="1" data-curr="16" data-locale="en" data-code="en-US" data-symbol="R$">
+
+								<img id="flag" alt="flag" class="icon-flag" src="https://book.omnibees.com/icons/lang_en-us_v4.svg">
+								
+								<span id="language">English / </span>
+
+																											<span id="currency-symbol">R$</span>
+																									<div class="mobile-hamburger-holder"></div>
+							</div>
+
+							<div class="drop_lang mob-menu-toggle">	
+								<hr class="lang_curr_border"> 
+								<hr class="drop_lang_border">						
+								
+															
+
+								<div class="language-bar">
+									<p class="language-title">Language</p>
+
+																			
+											<div class="language-header" data-string="en-US">
+												<div>
+													<img src="https://book.omnibees.com/icons/lang_en-us_v4.svg" alt="">
+													<span>English</span>
+												</div>
+												<span class="mobile-change-language">Change</span>
+											</div>
+
+											
+											<img src="https://book.omnibees.com/icons/lang_en-us_v4.svg" class="mobile-flag" alt="">
+
+											
+									<ul class="language-menu">
+																					<li class="language-menu-item" data-icon="https://book.omnibees.com/icons/lang_en-us_v4.svg" data-translate="English" data-string="en-US" data-lang="1"  data-selected="true" >
+												<div>
+													<img src="https://book.omnibees.com/icons/lang_en-us_v4.svg" alt="">
+													<span>English</span>		
+												</div>
+												
+											</li>
+																					<li class="language-menu-item" data-icon="https://book.omnibees.com/icons/lang_es-es_v4.svg" data-translate="Español" data-string="es-ES" data-lang="3" >
+												<div>
+													<img src="https://book.omnibees.com/icons/lang_es-es_v4.svg" alt="">
+													<span>Español</span>		
+												</div>
+												
+											</li>
+																					<li class="language-menu-item" data-icon="https://book.omnibees.com/icons/lang_pt-br_v4.svg" data-translate="Português , BR" data-string="pt-BR" data-lang="8" >
+												<div>
+													<img src="https://book.omnibees.com/icons/lang_pt-br_v4.svg" alt="">
+													<span>Português , BR</span>		
+												</div>
+												
+											</li>
+																			</ul>
+
+									
+									<select name="mob-lang" id="mob-lang">
+																					<option value="en-US"  selected >
+												<img src="https://book.omnibees.com/icons/lang_en-us_v4.svg" alt="">
+												English
+											</option>
+
+																					<option value="es-ES" >
+												<img src="https://book.omnibees.com/icons/lang_es-es_v4.svg" alt="">
+												Español
+											</option>
+
+																					<option value="pt-BR" >
+												<img src="https://book.omnibees.com/icons/lang_pt-br_v4.svg" alt="">
+												Português - BR
+											</option>
+
+																			</select>
+
+									<span class="mobile-change-language">Change</span>
+
+								</div>
+
+								<div class="currency-bar">
+
+									<p id="currency" class="currency-title">Currency</p>
+
+																														<div class="currency-header" data-curr="16">
+												<div>
+													<span class="currency-header-symbol">BRL</span>
+													<span class="currency-header-name">Brazil Real</span>
+												</div>
+
+												<span class="mobile-change-currency">Change</span>
+
+											</div>
+
+											<span class="currency-header-symbol">R$</span>
+
+											
+									<ul class="currency-menu">
+																					<li class="currency-menu-item" data-symbol="BRL" data-name="Brazil Real" data-curr="16">
+												<div>
+												<span class="currency-menu-symbol">BRL</span>
+												<span class="currency-menu-name">Brazil Real</span>
+												</div>
+											</li>
+																			</ul>
+
+									
+									<select name="mob-curr" id="mob-curr">
+																				R$
+											<option value="16"  selected 
+												>Brazil Real (R$)</option>
+																			</select>
+
+									<span class="mobile-change-language">Change</span>
+								</div>
+
+								<button id="save_lang_curr" class="btn btn-ic primary_button_v4">Save</button>
+
+								<div class="links_menu_mobile">
+
+									<div class="menu_item menu_home_mobile " id="chain_home" data-chain="9888">
+																					<a class="menu_link menu_home_link" href="https://book.omnibees.com/hotel/18675?lang=en-US&amp;currencyId=16">
+												<span class="menu_icon_holder">
+													<span class="svg-icon home-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_15405" data-name="Group 15405" transform="translate(-32 -240)">
+    <g id="Group_7484" data-name="Group 7484" transform="translate(-2508 -10237)">
+      <rect id="Rectangle_3037" data-name="Rectangle 3037" width="24" height="24" transform="translate(2540 10477)" fill="#273240" opacity="0"/>
+      <g id="Icon_feather-home" data-name="Icon feather-home" transform="translate(2539.5 10477.111)">
+        <path id="Path_10242" data-name="Path 10242" d="M4.5,9.222,12.5,3l8,6.222V19a1.778,1.778,0,0,1-1.778,1.778H6.278A1.778,1.778,0,0,1,4.5,19Z" fill="none" stroke="#273240" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+        <path id="Path_10243" data-name="Path 10243" d="M13.5,26.889V18h5.333v8.889" transform="translate(-3.667 -6.111)" fill="none" stroke="#273240" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>
+</span>
+												</span>
+												<span class="menu_link_text">Home</span>
+											</a>
+																			</div>
+
+																			<div class="menu_item menu_package_mobile ">
+											
+																							<a class="menu_link menu_package_link" href="https://book.omnibees.com/hotel/18675/packages?lang=en-US&amp;currencyId=16">
+													<span class="menu_icon_holder">
+														<span class="svg-icon package-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 14C19 11.7345 17.7901 10.6222 16.3965 9.22852C15.7076 8.53957 14.9753 7.77875 14.4229 6.79102C13.9807 6.00053 13.6602 5.07759 13.5459 3.94141C11.1916 5.77097 10.0519 8.11973 9.49316 11.5801C9.46557 11.75 9.35297 11.8941 9.19434 11.9609C9.03541 12.0278 8.85284 12.0076 8.71191 11.9082C8.14886 11.5113 7.55383 10.8979 7.06641 10.2324C6.78542 9.84878 6.53004 9.43091 6.33301 9.01173C5.6274 10.0969 5 11.8998 5 14C5 15.4874 5.42399 17.2451 6.49902 18.6191C7.55837 19.9731 9.28405 21 12 21C13.8467 21 15.5963 20.4075 16.8779 19.2529C18.1511 18.1058 19 16.3705 19 14ZM20 14C20 16.629 19.0486 18.6432 17.5469 19.9961C16.0535 21.3415 14.0532 22 12 22C8.99585 22 6.97148 20.8465 5.71094 19.2354C4.46617 17.6443 4 15.6522 4 14C4 11.1932 5.03094 8.76204 6.14648 7.64649L6.19727 7.60157C6.32223 7.50659 6.4864 7.475 6.63965 7.51954C6.81482 7.57049 6.94859 7.71354 6.98828 7.89161C7.1026 8.40411 7.43058 9.03514 7.87402 9.64063C8.12052 9.9772 8.39243 10.2905 8.66309 10.5576C9.37243 7.02148 10.8097 4.52614 13.7227 2.58399C13.8761 2.48171 14.0738 2.47257 14.2363 2.55958C14.3986 2.64666 14.5 2.81579 14.5 3.00001C14.5 4.41657 14.823 5.45719 15.2959 6.30274C15.7747 7.15876 16.4175 7.83544 17.1035 8.52149C18.4599 9.87787 20 11.2659 20 14Z" fill="#273240"/></svg></span>
+													</span>
+													<span class="menu_link_text">Special Offers</span>
+												</a>
+																					</div>
+																	</div>
+							</div>
+						</div>
+					
+					<div class="mobile-login-close-icon"></div>
+
+					<div class="second_div myaccount-menu-holder">
+							
+							<div id="login" data-status="false">
+								<span class="svg-icon login-icon desktop"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_56_9)">
+<path d="M17.287 9.0332C18.2196 9.0332 19.1312 9.30973 19.9065 9.82782C20.6819 10.3459 21.2862 11.0823 21.6431 11.9439C22 12.8054 22.0934 13.7534 21.9114 14.6681C21.7295 15.5827 21.2804 16.4228 20.621 17.0822C19.9616 17.7416 19.1215 18.1907 18.2069 18.3726C17.2923 18.5545 16.3442 18.4612 15.4827 18.1043C14.6211 17.7474 13.8847 17.1431 13.3666 16.3677C12.8486 15.5923 12.572 14.6807 12.572 13.7482C12.5733 12.4981 13.0705 11.2996 13.9545 10.4157C14.8384 9.53171 16.0369 9.03453 17.287 9.0332ZM17.287 16.9632C17.9229 16.9632 18.5445 16.7746 19.0732 16.4214C19.6019 16.0681 20.014 15.566 20.2573 14.9785C20.5006 14.3911 20.5643 13.7446 20.4402 13.121C20.3162 12.4973 20.01 11.9245 19.5604 11.4749C19.1107 11.0252 18.5379 10.719 17.9142 10.595C17.2906 10.4709 16.6442 10.5346 16.0567 10.7779C15.4692 11.0213 14.9671 11.4333 14.6138 11.962C14.2606 12.4907 14.072 13.1123 14.072 13.7482C14.0728 14.6006 14.4118 15.4179 15.0146 16.0207C15.6173 16.6234 16.4346 16.9624 17.287 16.9632Z" fill="#2C2F33"/>
+<path d="M10.0001 26.9631C9.93039 26.963 9.86106 26.9533 9.79407 26.9341C9.60287 26.8794 9.44121 26.751 9.34464 26.5772C9.24806 26.4034 9.22446 26.1983 9.27906 26.0071C9.77476 24.3013 10.8084 22.8015 12.226 21.7311C13.6824 20.6278 15.461 20.034 17.2881 20.0411C19.1137 20.0338 20.8911 20.6266 22.3471 21.7281C23.7639 22.7969 24.7978 24.2944 25.295 25.9981C25.3222 26.0928 25.3305 26.1919 25.3194 26.2898C25.3083 26.3877 25.278 26.4824 25.2303 26.5686C25.1826 26.6548 25.1183 26.7307 25.0412 26.792C24.9642 26.8534 24.8758 26.8989 24.7811 26.9261C24.6864 26.9533 24.5873 26.9616 24.4894 26.9504C24.3915 26.9393 24.2968 26.9091 24.2106 26.8613C24.1244 26.8136 24.0485 26.7494 23.9871 26.6723C23.9258 26.5952 23.8802 26.5068 23.8531 26.4121C23.4462 25.0206 22.6009 23.7976 21.4431 22.9251C20.2471 22.0209 18.7873 21.5347 17.2881 21.5411C15.8133 21.5351 14.3762 22.0071 13.1923 22.8866C12.0084 23.766 11.1413 25.0054 10.7211 26.4191C10.6763 26.5758 10.5817 26.7136 10.4516 26.8118C10.3215 26.9099 10.163 26.963 10.0001 26.9631Z" fill="#2C2F33"/>
+</g>
+<defs>
+<clipPath id="clip0_56_9">
+<rect width="36" height="36" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+</span> 
+								<span class="login-span">My account</span>
+							</div>
+						
+							<div class="mob-menu-toggle drop_login">
+								<div class="menu_item account-link">
+									<a class="menu_link my-bookings-link" href="https://mybookings.omnibees.com/login?c=9888&amp;q=18675&amp;m=16&amp;l=1" target="_blank">
+										<span class="menu_icon_holder">
+											<span class="svg-icon account-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.499 6H19.277C19.8663 6.00079 20.4313 6.23526 20.848 6.65198C21.2647 7.0687 21.4992 7.63367 21.5 8.223V17.776C21.4995 18.3655 21.2651 18.9307 20.8484 19.3477C20.4316 19.7646 19.8665 19.9992 19.277 20H4.723C4.13367 19.9992 3.5687 19.7647 3.15198 19.348C2.73526 18.9313 2.50079 18.3663 2.5 17.777V8.223C2.50079 7.63367 2.73526 7.0687 3.15198 6.65198C3.5687 6.23526 4.13367 6.00079 4.723 6H9.49902V4.5C9.49902 4.36739 9.5517 4.24021 9.64547 4.14645C9.73924 4.05268 9.86642 4 9.99902 4H14.999C15.1316 4 15.2588 4.05268 15.3526 4.14645C15.4463 4.24021 15.499 4.36739 15.499 4.5V6ZM14.499 6V5H10.499V6H14.499ZM20.1409 18.6416C19.9114 18.8708 19.6004 18.9997 19.276 19H17.5V7H19.277C19.6012 7.00053 19.912 7.12955 20.1412 7.35879C20.3704 7.58804 20.4995 7.8988 20.5 8.223V17.777C20.4995 18.1014 20.3703 18.4123 20.1409 18.6416ZM16.5 7H7.5V19H16.5V7ZM6.5 7V19H4.723C4.39863 18.9995 4.08771 18.8703 3.85844 18.6409C3.62917 18.4114 3.50026 18.1004 3.5 17.776V8.223C3.50053 7.8988 3.62955 7.58804 3.85879 7.35879C4.08803 7.12955 4.3988 7.00053 4.723 7H6.5Z" fill="#273240"/>
+</svg>
+</span> 
+										</span>
+										<span class="menu_link_text">My Bookings</span>								
+									</a>
+								</div>
+							</div>						
+							
+					</div>
+
+					<!-- hamburger in desktop -->
+					<div class="hamburger-menu-holder"> 
+						<img src="/icons/hamburger_menu_desktop_icon.svg" alt="Menu">
+					</div>
+
+
+					<!-- Hamburger menu -->
+					<div class="menu mob-menu-toggle drop_menu">
+
+						<div class="menu_item menu_home_mobile " id="chain_home" data-chain="9888">
+							
+															<a class="menu_link menu_home_link" href="https://book.omnibees.com/hotel/18675?lang=en-US&amp;currencyId=16">
+									<span class="menu_icon_holder">
+										<img src="https://book.omnibees.com/v4/icons/menu-home.svg" alt="home">
+									</span>
+									<span class="menu_link_text">Home</span>
+								</a>
+							
+						</div>
+
+													<div class="menu_item menu_package_mobile ">
+								
+																	<a class="menu_link menu_package_link" href="https://book.omnibees.com/hotel/18675/packages?lang=en-US&amp;currencyId=16">
+										<span class="menu_icon_holder">
+											<span class="svg-icon package-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 14C19 11.7345 17.7901 10.6222 16.3965 9.22852C15.7076 8.53957 14.9753 7.77875 14.4229 6.79102C13.9807 6.00053 13.6602 5.07759 13.5459 3.94141C11.1916 5.77097 10.0519 8.11973 9.49316 11.5801C9.46557 11.75 9.35297 11.8941 9.19434 11.9609C9.03541 12.0278 8.85284 12.0076 8.71191 11.9082C8.14886 11.5113 7.55383 10.8979 7.06641 10.2324C6.78542 9.84878 6.53004 9.43091 6.33301 9.01173C5.6274 10.0969 5 11.8998 5 14C5 15.4874 5.42399 17.2451 6.49902 18.6191C7.55837 19.9731 9.28405 21 12 21C13.8467 21 15.5963 20.4075 16.8779 19.2529C18.1511 18.1058 19 16.3705 19 14ZM20 14C20 16.629 19.0486 18.6432 17.5469 19.9961C16.0535 21.3415 14.0532 22 12 22C8.99585 22 6.97148 20.8465 5.71094 19.2354C4.46617 17.6443 4 15.6522 4 14C4 11.1932 5.03094 8.76204 6.14648 7.64649L6.19727 7.60157C6.32223 7.50659 6.4864 7.475 6.63965 7.51954C6.81482 7.57049 6.94859 7.71354 6.98828 7.89161C7.1026 8.40411 7.43058 9.03514 7.87402 9.64063C8.12052 9.9772 8.39243 10.2905 8.66309 10.5576C9.37243 7.02148 10.8097 4.52614 13.7227 2.58399C13.8761 2.48171 14.0738 2.47257 14.2363 2.55958C14.3986 2.64666 14.5 2.81579 14.5 3.00001C14.5 4.41657 14.823 5.45719 15.2959 6.30274C15.7747 7.15876 16.4175 7.83544 17.1035 8.52149C18.4599 9.87787 20 11.2659 20 14Z" fill="#273240"/></svg></span>
+										</span>
+										<span class="menu_link_text">Special Offers</span>
+									</a>
+															</div>
+
+															<div class="menu_item menu_package_mobile ">
+									
+																			<a class="menu_link menu_package_link" href="https://book.omnibees.com/hotel/18675/packages?lang=en-US&amp;currencyId=16">
+											<span class="menu_icon_holder">
+												<span class="svg-icon package-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 14C19 11.7345 17.7901 10.6222 16.3965 9.22852C15.7076 8.53957 14.9753 7.77875 14.4229 6.79102C13.9807 6.00053 13.6602 5.07759 13.5459 3.94141C11.1916 5.77097 10.0519 8.11973 9.49316 11.5801C9.46557 11.75 9.35297 11.8941 9.19434 11.9609C9.03541 12.0278 8.85284 12.0076 8.71191 11.9082C8.14886 11.5113 7.55383 10.8979 7.06641 10.2324C6.78542 9.84878 6.53004 9.43091 6.33301 9.01173C5.6274 10.0969 5 11.8998 5 14C5 15.4874 5.42399 17.2451 6.49902 18.6191C7.55837 19.9731 9.28405 21 12 21C13.8467 21 15.5963 20.4075 16.8779 19.2529C18.1511 18.1058 19 16.3705 19 14ZM20 14C20 16.629 19.0486 18.6432 17.5469 19.9961C16.0535 21.3415 14.0532 22 12 22C8.99585 22 6.97148 20.8465 5.71094 19.2354C4.46617 17.6443 4 15.6522 4 14C4 11.1932 5.03094 8.76204 6.14648 7.64649L6.19727 7.60157C6.32223 7.50659 6.4864 7.475 6.63965 7.51954C6.81482 7.57049 6.94859 7.71354 6.98828 7.89161C7.1026 8.40411 7.43058 9.03514 7.87402 9.64063C8.12052 9.9772 8.39243 10.2905 8.66309 10.5576C9.37243 7.02148 10.8097 4.52614 13.7227 2.58399C13.8761 2.48171 14.0738 2.47257 14.2363 2.55958C14.3986 2.64666 14.5 2.81579 14.5 3.00001C14.5 4.41657 14.823 5.45719 15.2959 6.30274C15.7747 7.15876 16.4175 7.83544 17.1035 8.52149C18.4599 9.87787 20 11.2659 20 14Z" fill="#273240"/></svg></span>
+											</span>
+											<span class="menu_link_text">Special Offers</span>
+										</a>
+																	</div>
+																		</div>
+
+					<div id="mobile-search-button">
+						<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+							<g id="Group_13236" data-name="Group 13236" transform="translate(-488.775 -323.211)">
+							  	<rect id="Rectangle_4028" data-name="Rectangle 4028" width="36" height="36" transform="translate(488.776 323.212)" fill="rgba(255,255,255,0)"/>
+							<g id="Group_7820" data-name="Group 7820">
+								<g id="Ellipse_203" data-name="Ellipse 203">
+								  	<ellipse id="Ellipse_205" data-name="Ellipse 205" cx="6.188" cy="6.2" rx="6.188" ry="6.2" transform="translate(498.526 333.462)" fill="none" stroke="#273240" stroke-width="1.5"/>
+								</g>
+									<line id="Line_1648" data-name="Line 1648" x2="5.672" y2="5.167" transform="translate(509.354 343.795)" fill="none" stroke="#273240" stroke-linecap="round" stroke-width="1.5"/>
+							  	</g>
+							</g>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="body-overlay-mobile"></div>
+</section>
+<input type="hidden" id="defaultAdults" value="2"></input>
+<div class="header-top-spacer"></div>
+
+    <section class="section2 header-search-bar custom-bg-color chainresults ">
+    <div class="hotel_search_preview_holder">
+        <div class="container contain">
+            <div class="hotel_search_preview">
+                <div class="destination_preview">
+                    <span class="preview_header custom-text-color">Destination</span>
+                    <span class="preview_value custom-text-color">
+                                                    All Hotels                                                <div class="hotel-name-white-gradient"> </div>
+                    </span>
+                </div>
+                
+                <div class="dates_selected_preview_holder">
+                    <div class="search-vertical-divider custom-bg-as-text-color hide-mobile"></div>
+                    <div class="dates_preview">
+                        <span class="checkin_preview">
+                            <span class="preview_header custom-text-color">Check-in</span>
+                            <span class="preview_value custom-text-color">09 Oct</span>
+                        </span>
+                        <svg class="arrow-right-dates_v4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                            <defs>
+                                <style>
+                                    .a{fill:#fff;}.b,.c{fill:none;stroke:#273240;stroke-linecap:round;stroke-width:1.5px;}.b{stroke-linejoin:round;}
+                                </style>
+                            </defs>
+                            <g transform="translate(151 262) rotate(180)">
+                                <rect class="a" width="16" height="16" transform="translate(135 246)"/>
+                                <g transform="translate(150 259) rotate(180)">
+                                    <path class="b" d="M4312.563,10990.207l4.563,4.828-4.562,4.172" transform="translate(-4304.125 -10990.207)"/>
+                                    <path class="c" d="M4315.25,10994.979h-11" transform="translate(-4303.25 -10990.295)"/>
+                                </g>
+                            </g>
+                        </svg>
+                        <span class="checkout_preview">
+                            <span class="preview_header custom-text-color">Check-out</span>
+                            <span class="preview_value custom-text-color">10 Oct</span>
+                        </span>
+                        
+                    </div>
+                    <div class="search-vertical-divider custom-bg-as-text-color"></div>
+                    <div class="selected_preview">
+                        <span class="nights_preview">
+                            <span class="preview_header custom-text-color">Nights</span>
+                            <span class="preview_value custom-text-color">1</span>
+                        </span>
+                        <span class="rooms_preview">
+                            <span class="preview_header custom-text-color">Rooms</span>
+                            <span class="preview_value custom-text-color">
+                                                                    1
+                                                            </span>
+                        </span>
+                        <span class="guests_preview">
+                            <span class="preview_header guest_text custom-text-color">Guests</span>
+                            <span class="preview_value custom-text-color">
+                                                                    2
+                                                            </span>
+                        </span>
+                    </div>
+                    <button class="change_selected secundary_button_v4 custom-button-colors">
+                        <svg class="change_selected_icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:#fff;opacity:0;}.b{fill:none;stroke:#273240;stroke-linecap:round;stroke-width:1.5px;}</style></defs><g transform="translate(12030 20724)"><rect class="a" width="24" height="24" transform="translate(-12030 -20724)"/><g transform="translate(-12026 -20720)"><circle class="b" cx="6.5" cy="6.5" r="6.5"/></g><line class="b" x2="5.5" y2="5" transform="translate(-12014 -20709.5)"/></g></svg>
+                        <div class="hide-mobile">Modify</div>
+                    </button>
+                </div>
+                
+
+            </div>
+        </div>
+    </div>
+  
+     
+ 
+
+
+            
+            <div id="becalendar-mount"
+                data-label-footer-select-checkin="Select dates"
+                data-label-footer-select-checkout="Select dates"
+                data-label-footer-checkout-date="Check-out date"
+                data-label-footer-night="Night"
+                data-label-footer-nights="Nights"
+                data-label-footer-confirm="Apply"
+                data-label-footer-legend-min-stay="Minimum nights"
+                data-label-feedback-closed-arrival="Closed on arrival"
+                data-label-feedback-closed-departure="Closed on departure"
+                data-label-feedback-min-stay-nights="Minimum {n} nights"
+                data-label-feedback-max-stay-night="Maximum {n} night"
+                data-label-feedback-max-stay-nights="Maximum {n} nights"
+                data-label-feedback-stay-through-night="Required stay {n} night"
+                data-label-feedback-stay-through-nights="Required stay {n} nights"
+                data-label-feedback-blocked-range="No availability"
+                data-label-tooltip-checkin="Check-in"
+                data-label-tooltip-checkout="Check-out"
+                data-label-tooltip-unavailable="Unavailable"
+                data-label-tooltip-night="{n} night"
+                data-label-tooltip-nights="{n} nights"></div>
+
+
+    <div class="hotel_search_holder custom-bg-color  single_hotel_inputs ">
+        <div class="container contain">
+            <form name="hotel_search" id="hotel_search" class="mob-menu-toggle custom-bg-color" action="https://book.omnibees.com/chainresults">
+    <div class="mobile-close-hotel-search custom-bg-color">
+        <span class="svg-icon mobile-close-filter custom-icons-stroke-color"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="Group_10810" data-name="Group 10810" transform="translate(-939 -130)">
+    <rect id="Rectangle_5338" data-name="Rectangle 5338" width="24" height="24" transform="translate(939 130)" fill="none" opacity="0"/>
+    <line id="Line_2502" data-name="Line 2502" y2="23" transform="translate(959.264 134) rotate(45)" fill="none" stroke="#273240" stroke-linecap="round" stroke-width="1.5"/>
+    <line id="Line_2503" data-name="Line 2503" y2="23" transform="translate(959.264 150.264) rotate(135)" fill="none" stroke="#273240" stroke-linecap="round" stroke-width="1.5"/>
+  </g>
+</svg>
+</span>
+        <div class="search-horizontal-divider custom-bg-as-text-color"></div>
+    </div>                
+
+    <div class="destination" id="autocomplete">
+
+        <p class="input-title custom-text-color">
+             
+                Hotel 
+                    </p>
+
+        
+                    <div class="input-overlay"></div>
+        
+        <input id="hotels" type="text"  class="single-hotel custom-text"  spellcheck="false" autocomplete="off" placeholder="All Hotels" >
+        <input type="hidden" class="chain_id" name="c" value="9888">
+        <input type="hidden" name="q" id="hotel_code" value="18675">
+        <input type="hidden" name="hotel_folder" id="hotel_folder" value="">
+        <input type="hidden" name="NRooms" id="NRooms" value="1">
+
+        <div class="hotels_dropdown custom-text">
+            <div class="mobile-close-hotels-dropdown-holder">
+                <span class="select-hotel">Select destination or hotel</span>
+                <img class="mobile-close-hotels-dropdown" src="https://book.omnibees.com/v4/icons/cross_v4.svg" alt="">
+            </div>
+            <div class="mobile-search-hotels-input-holder">
+                <input class="mobile-search-hotels-input" type="text" name="" placeholder="Enter the name or city of the hotel" id="search-hotels-input">
+            </div>
+            <div class="all_hotel_holder">
+                <div class="hotels_all custom-text" data-id="0">
+                    All Hotels                </div>
+            </div>
+            
+            <div class="hotels_folder custom-text" hidden></div>
+            <div class="hotels_hotel custom-text" data-id="" hidden></div>
+        </div>
+
+    </div>
+
+    <div class="stay_date" id="dates">
+
+        
+        <p class="input-title custom-text-color">
+            Check-in / Check-out
+            <span class="number_of_nights">1 Nights</span>
+        </p>
+
+        
+
+        <div id="calendar_dates"  class="single_hotel_inputs" > 
+            <div id="calendar_dates_start" > 
+                <div class="cdsp"> </div>
+                <span id="show_checkin"> 9 Oct 2026</span>
+                <div class="cdsn"></div>
+            </div>
+            <div id="calendar_dates_end" > 
+                <div class="cdep"> </div>
+                <span id="show_checkout">  10 Oct 2026</span>
+                <div class="cden"></div>
+            </div>
+        </div>
+
+        <input type="hidden" name="CheckIn" id="date_from" value="09102026">
+        <input type="hidden" name="CheckOut" id="date_to" value="10102026">
+
+
+    </div>
+
+    <div class="guests_number" id="guests_div">
+
+        <p class="input-title custom-text-color">Rooms and guests</p>
+        <div class="input-overlay"></div>
+        <input type="text" id="guests"
+        data-room="Room"
+        data-rooms="Rooms"
+        data-guest="Guest"
+        data-guests="Guests"
+        data-remove-room="Remove room"
+        data-max-adults="" 
+        data-max-children="" 
+        data-max-children-age="12"
+        readonly>
+
+        <input type="hidden" id="ad" name="ad" value="2">
+        <input type="hidden" id="ch" name="ch" value="">
+        <input type="hidden" id="ag" name="ag" value="">
+
+        <div id="occupancy_dropdown" class="position-absolute custom-text">
+            <div class="add-room-holder d-none">
+                <p class="add-room-title select-room-title custom-text-color-search-mobile">
+                    
+                    
+                    No of Rooms                </p>
+                <div class="select-room-buttons">
+                    <button class="select-button select-button-minus select-room-minus secundary_button_v4" type="button" disabled>
+                        <span>
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15.758 15.758"><defs><style>.a{fill:#273240;}</style></defs><path class="a" d="M.731.125A.429.429,0,0,0,.125.731L10.411,11.016a.429.429,0,0,0,.607-.606Z" transform="translate(0 7.879) rotate(-45)"/></svg>
+                        </span>
+                    </button>
+                    <span class="select-value select-room-value custom-text-color-search-mobile">1</span>
+                    <button class="select-button select-button-plus select-room-plus secundary_button_v4" type="button">
+                        <span>
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15.556 15.556"><defs><style>.a{fill:#273240;}</style></defs><path class="a" d="M6.1,5.5,10.875.722a.423.423,0,0,0-.6-.6L5.5,4.9.722.124a.423.423,0,0,0-.6.6L4.9,5.5.124,10.278a.423.423,0,0,0,.6.6L5.5,6.1l4.777,4.778a.423.423,0,0,0,.6-.6L6.1,5.5Z" transform="translate(0 7.778) rotate(-45)"/></svg>
+                        </span>
+                    </button>
+                </div>                          
+            </div>                        
+            <div class="select-room-holder custom-bg-color-search-bar-mobile">
+                <div class="select-room" data-room-counter="0">
+                    <p class="select-room-title custom-text-color-search-mobile d-none">Room <span class="select-room-counter">1</span></p>
+                    <div class="select-guests-holder">
+                        <div class="select-adults-holder">
+                            <div class="select-adults-title custom-text-color-search-mobile">Adults</div>
+                            <div class="select-adults-buttons custom-text-color">
+                                <button class="select-button select-button-minus select-adult-minus secundary_button_v4" type="button">
+                                    <span>
+                                             
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15.758 15.758"><defs><style>.a{fill:#273240;}</style></defs><path class="a" d="M.731.125A.429.429,0,0,0,.125.731L10.411,11.016a.429.429,0,0,0,.607-.606Z" transform="translate(0 7.879) rotate(-45)"/></svg>                                       
+                                    </span>                                                
+                                </button>
+                                <span class="select-value select-adults-value custom-text-color-search-mobile">2</span>
+                                <button class="select-button select-button-plus select-adult-plus secundary_button_v4" type="button">
+                                    <span>
+                                          
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15.556 15.556"><defs><style>.a{fill:#273240;}</style></defs><path class="a" d="M6.1,5.5,10.875.722a.423.423,0,0,0-.6-.6L5.5,4.9.722.124a.423.423,0,0,0-.6.6L4.9,5.5.124,10.278a.423.423,0,0,0,.6.6L5.5,6.1l4.777,4.778a.423.423,0,0,0,.6-.6L6.1,5.5Z" transform="translate(0 7.778) rotate(-45)"/></svg>
+                                    </span>                                                
+                                </button>
+                            </div>
+                        </div>
+                        <div class="select-child-holder ">
+                            <div class="select-child-title custom-text-color-search-mobile">
+                            <span>Children</span>
+                            <span class="select-child-title-max-age custom-text-color-search-mobile text-opacity-80">
+                                0 to 
+                                17 Years 
+                            </span>
+                            </div>
+                            <div class="select-child-buttons">
+                                <button class="select-button select-button-minus select-child-minus secundary_button_v4" type="button" disabled>
+                                    <span>
+                                        
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15.758 15.758"><defs><style>.a{fill:#273240;}</style></defs><path class="a" d="M.731.125A.429.429,0,0,0,.125.731L10.411,11.016a.429.429,0,0,0,.607-.606Z" transform="translate(0 7.879) rotate(-45)"/></svg>                                              
+                                    </span>                                                
+                                </button>
+                                <span class="select-value select-child-value custom-text-color-search-mobile">0</span>
+                                <button class="select-button select-button-plus select-child-plus secundary_button_v4" type="button">
+                                    <span>
+                                        
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15.556 15.556"><defs><style>.a{fill:#273240;}</style></defs><path class="a" d="M6.1,5.5,10.875.722a.423.423,0,0,0-.6-.6L5.5,4.9.722.124a.423.423,0,0,0-.6.6L4.9,5.5.124,10.278a.423.423,0,0,0,.6.6L5.5,6.1l4.777,4.778a.423.423,0,0,0,.6-.6L6.1,5.5Z" transform="translate(0 7.778) rotate(-45)"/></svg>
+                                    </span>
+                                </button>                             
+                            </div>                          
+                        </div>
+                        <div class="select-child-ages-holder " data-children-empty-value="Age">
+                            <div class="select-child-ages-clone ">
+
+                                <p class="select-child-ages-title custom-text-color-search-mobile">Child <span class="select-child-ages-number"></span></p>
+                                <select class="select-child-ages-input-clone" data-default="Age">
+                                    <option data-value="/" selected>Age</option>
+                                                                            <option data-value="0">
+                                            0 Years                                        </option>
+                                                                            <option data-value="1">
+                                            1 Year                                        </option>
+                                                                            <option data-value="2">
+                                            2 Years                                        </option>
+                                                                            <option data-value="3">
+                                            3 Years                                        </option>
+                                                                            <option data-value="4">
+                                            4 Years                                        </option>
+                                                                            <option data-value="5">
+                                            5 Years                                        </option>
+                                                                            <option data-value="6">
+                                            6 Years                                        </option>
+                                                                            <option data-value="7">
+                                            7 Years                                        </option>
+                                                                            <option data-value="8">
+                                            8 Years                                        </option>
+                                                                            <option data-value="9">
+                                            9 Years                                        </option>
+                                                                            <option data-value="10">
+                                            10 Years                                        </option>
+                                                                            <option data-value="11">
+                                            11 Years                                        </option>
+                                                                            <option data-value="12">
+                                            12 Years                                        </option>
+                                                                            <option data-value="13">
+                                            13 Years                                        </option>
+                                                                            <option data-value="14">
+                                            14 Years                                        </option>
+                                                                            <option data-value="15">
+                                            15 Years                                        </option>
+                                                                            <option data-value="16">
+                                            16 Years                                        </option>
+                                                                            <option data-value="17">
+                                            17 Years                                        </option>
+                                     
+                                </select>
+
+                                <p class="incorect-age"> Mandatory </p>
+                            </div>                                                                                                                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-ic select-occupancy-apply primary_button_v4" type="button">
+                <span>
+                    Apply                </span>
+                <span class="select-occupancy-apply-info">
+                    <span class="select-occupancy-apply-info-rooms" data-rooms="1">1</span>
+                    <span class="select-occupancy-apply-info-rooms-string"></span>
+                    ,
+                    <span class="select-occupancy-apply-info-guests" data-guests="1">1</span>
+                    <span class="select-occupancy-apply-info-guests-string"></span>
+                </span>                            
+            </button>          
+        </div>
+        <div class="search-horizontal-divider custom-bg-as-text-color"></div>
+        <div class="incorect-age-popup"> Select child age </div>
+
+    </div>
+    <div class="promo_code position-relative promo_code_holder">
+
+        <div class="mdc-touch-target-wrapper mobile-i-have-a-code">
+            <div class="mdc-checkbox mdc-checkbox--touch">
+                <input type="checkbox" class="mdc-checkbox__native-control" id="mobile-code-checkbox">
+                    <div class="mdc-checkbox__background">
+                    <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                        <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"></path>
+                    </svg>
+                    <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+            </div>
+        </div>
+
+        <p class="input-title custom-text-color">I have a code</p>
+
+        <input type="text" id="promo_code" placeholder="My code" value="" readonly>
+
+
+        
+        <div id="promo_code_dropdown" class="position-absolute custom-bg-color-search-bar-mobile">
+            <div class="mb-3 mt-2">
+                <p class="input-title custom-text-color-search-mobile">Promo code</p>
+                <input type="text" id="Code" name="Code" value="">
+            </div>
+            <div class="mb-3">
+                <p class="input-title custom-text-color-search-mobile">Group code</p>
+                <input type="text" id="group_code" name="group_code" value="">
+            </div>
+            <button id="promo_code_apply" class="btn-ic primary_button_v4">
+                    Apply            </button>
+        </div>
+        
+
+    </div>
+                    
+    <input type="hidden" name="lang" value="en-US">                
+    <input type="hidden" name="currencyId" value="16">
+            <input type="hidden" name="version" value="4">
+            <div class="search">
+
+        <button class="search-button primary_button_v4" type="submit" id="btn-search">Search</button>
+
+        <button type="button" class="mobile-submit btn primary_button_v4">Search</button>
+
+        <div id="new_criteria_popup"> Changed your stay details.  </br> Search again!! </div>
+
+    </div>
+
+    
+    
+
+</form>            <script> var hotel_folders = [{"IsPropertyFolder":false,"PropertyFolderUID":-1,"Sequence":1,"Property_UID":18675,"Property_Name":"Pousada Vila Guar\u00e1","PropertySequence":1}]; </script>
+        </div>
+    </div>
+
+
+</section>
+
+<!-- <div class="header-search-bar-spacer"></div> -->
+
+
+
+    <div class="header-search-bar-spacer"></div>
+
+    <div id="step-results-center" class="load-surface">
+    <section class="grey-background hotel-landing-page">
+        
+                    <div class="container contain hotel-landing__header">
+                <div class="bread-results">
+                    <section class="breadcrumb breadcrumbs container contain">
+                                    <a 
+                    class="index_redirect"
+                    href="https://book.omnibees.com/hotel/18675?lang=en-US&amp;currencyId=16">
+                    Home
+                </a>
+                <span class="breadcrumb-separator">/</span> 
+                                                <a 
+                    class=""
+                    href="https://book.omnibees.com/hotel/18675/hotels?lang=en-US&amp;currencyId=16">
+                    Hotels &amp; Destinations
+                </a>
+                <span class="breadcrumb-separator">/</span> 
+                                                Pousada Vila Guará
+                        </section>
+                </div>
+
+                <div id="share-component" class="share-modal-holder">
+            <div class="share-modal-text">
+            <img class="click-for-share" src="https://book.omnibees.com/../v4/icons/share_blue_mobile_v4.svg" alt="share-email">
+            <span class="share-title-mobile click-for-share">Share hotel</span>
+        </div>
+    
+        <div class="share-modal">
+            <div class="share-modal-header">
+                <span>Share hotel</span>
+                <img class="share-modal-close close" 
+                    src="https://book.omnibees.com/../v4/icons/cross_v4.svg" 
+                    alt="close">
+            </div>
+
+            <div class="share-modal-body">
+
+                
+
+                <!-- Copy Link -->
+                <div class="share-link share-modal-action" 
+                    data-network="copyLink" 
+                    data-url="https://book.omnibees.com/chain/9888/hotel/18675?lang=en-US">
+                    <img src="https://book.omnibees.com/../v4/icons/copy-share-V4.svg" alt="Copy Link">
+                    <span>Copy link</span>
+                </div>
+
+                <!-- WhatsApp -->
+                <div class="share-link share-modal-action" 
+                    data-network="whatsapp" 
+                    data-url="https://book.omnibees.com/chain/9888/hotel/18675?lang=en-US">
+                    <img src="https://book.omnibees.com/../v4/icons/whatsapp-share-V4.svg" alt="WhatsApp">
+                    <span>WhatsApp</span>
+                </div>
+
+                <!-- Facebook -->
+                <div class="share-link share-modal-action" 
+                    data-network="facebook" 
+                    data-url="https://book.omnibees.com/chain/9888/hotel/18675?lang=en-US">
+                    <img src="https://book.omnibees.com/../v4/icons/facebook-share-V4.svg" alt="Facebook">
+                    <span>Facebook</span>
+                </div>
+
+                <!-- Messenger -->
+                <div class="share-link share-modal-action" 
+                    data-network="messenger" 
+                    data-url="https://book.omnibees.com/chain/9888/hotel/18675?lang=en-US">
+                    <img src="https://book.omnibees.com/../v4/icons/messenger-share-V4.svg" alt="Messenger">
+                    <span>Messenger</span>
+                </div>
+
+                <!-- Email -->
+                <div class="share-link share-modal-action" 
+                    data-network="email" 
+                    data-url="https://book.omnibees.com/chain/9888/hotel/18675?lang=en-US">
+                    <img src="https://book.omnibees.com/../v4/icons/email-share-V4.svg" alt="Email">
+                    <span>Email</span>
+                </div>
+
+                <!-- LinkedIn -->
+                <div class="share-link share-modal-action" 
+                    data-network="linkedin" 
+                    data-url="https://book.omnibees.com/chain/9888/hotel/18675?lang=en-US">
+                    <img src="https://book.omnibees.com/../v4/icons/linkedin-share-V4.svg" alt="LinkedIn">
+                    <span>LinkedIn</span>
+                </div>
+
+                <!-- Twitter -->
+                <div class="share-link share-modal-action" 
+                    data-network="twitter" 
+                    data-url="https://book.omnibees.com/chain/9888/hotel/18675?lang=en-US">
+                    <img src="https://book.omnibees.com/../v4/icons/twitter-share-V4.svg" alt="Twitter">
+                    <span>X</span>
+                </div>
+
+            </div>
+        </div>
+</div>
+            </div>
+        
+        
+        
+        
+        <div class="container contain hotel-landing__content">
+
+        
+                
+        <section class="hotel-landing__section hotel-landing__hero">
+            <div class="hotel-landing__info">
+                
+                <div class="hotel-landing__stars-row">
+                                            <div class="stars_icons">
+                                                            <img src="https://book.omnibees.com/icons/star.svg" alt="star">
+                                                            <img src="https://book.omnibees.com/icons/star.svg" alt="star">
+                                                            <img src="https://book.omnibees.com/icons/star.svg" alt="star">
+                                                    </div>
+                    
+                                            <div class="hotel-landing__tripadvisor">
+    <div class="icon-share__holder__rating">
+        <div id="TA_socialButtonBubbles391" class="TA_socialButtonBubbles"></div>
+        <script src="https://www.tripadvisor.com/WidgetEmbed-socialButtonBubbles?amp;locationId=13203732&amp;color=green&amp;size=rect&amp;uniq=391&amp;lang=en-US&amp;display_version=2"></script>
+    </div>
+
+    <div id="TA_selfserveprop66" class="TA_selfserveprop">
+        <ul id="IrnoPwIxOIVu" class="TA_links EkrCpkEY82">
+            <li id="LsD0QDMt" class="wopCPH49NZ">
+                <a target="_blank" href="https://www.tripadvisor.com.br/"><img src="https://www.tripadvisor.com.br/img/cdsi/img2/branding/150_logo-11900-2.png" alt="TripAdvisor"/></a>
+            </li>
+        </ul>
+    </div>
+    <script src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=66&amp;locationId=13203732&amp;lang=en-US-PT&amp;rating=true&amp;nreviews=5&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=false&amp;border=true&amp;display_version=2"></script>
+</div>
+                                    </div>
+
+                <h1 class="hotel-landing__name">Pousada Vila Guará</h1>
+
+                <div class="hotel-landing__address">
+                    <img src="https://book.omnibees.com/icons/location_map_icon.svg" alt="location">
+                    <span>RUA BEIRA MAR SN , Barreirinhas 65590000</span>
+                    <a class="hotel-landing__map-link location_maps" data-bs-toggle="modal" data-bs-target="#hotel_map">
+                        See on Map                    </a>
+                </div>
+
+                <div class="hotel-landing__description">
+                    Your unforgettable experience in Atins begins at Vila Guará!
+Facing the beach, our guesthouse combines rustic charm with comfort and a welcoming atmosphere. Here you'll find everything you need to relax and connect with nature: a spacious garden, a bar and restaurant serving creative regional cuisine, a spa with invigorating massages, and even a fully equipped kitesurfing school—perfect for those who want to learn or already practice the sport.
+
+Cozy and sustainable chalets
+Designed to take advantage of natural ventilation, our chalets do not have air conditioning, but they do have fans and mosquito nets on all beds. Each one features a private balcony, minibar, wardrobe, bathroom with hot shower, free amenities, and Wi-Fi.
+
+All accommodations include a delicious full breakfast to help you start the day with energy.
+
+Private location: beachfront and with easy access to Lençóis Maranhenses National Park.
+
+The nearest airport is in São Luís, Maranhão.
+
+If you're looking for tranquility, nature, and a touch of adventure, Vila Guará is the ideal place for your stay in Atins!
+                </div>
+            </div>
+
+            <div class="hotel-landing__gallery-col">
+                <div class="hotel-landing__gallery">
+                    <div class="gallery-opener v4" data-desktop-gallery-modal-id="desktop-hotel-gallery-modal-18675">
+                        <div class="gallery-container hotel-landing-image-gallery">
+            <div class="be-slider hotel-landing-image-gallery"
+            data-id="18675"
+            data-trigger-gallery-modal-on-click=true
+            data-disable-gallery-modal-triggers-on-desktop=true
+            data-gallery-modal-id=desktop-hotel-gallery-modal-18675
+            data-thumbnails=true
+            
+            
+            
+            
+            
+            
+            data-width=600
+            data-height=400
+            data-show-counter="1"
+            data-prev-slide-label="Previous slide"
+            data-next-slide-label="Next slide"
+            data-go-to-slide-label="Go to slide"
+            style=""
+        >
+            <div class="be-slider-wrapper">
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192215.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192215.jpg"  alt="Photo 1 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192216.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192216.jpg"  alt="Photo 2 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192217.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192217.jpg"  alt="Photo 3 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192218.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192218.jpg"  alt="Photo 4 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192219.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192219.jpg"  alt="Photo 5 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192220.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192220.jpg"  alt="Photo 6 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192221.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192221.jpg"  alt="Photo 7 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192222.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192222.jpg"  alt="Photo 8 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192223.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192223.jpg"  alt="Photo 9 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192224.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192224.jpg"  alt="Photo 10 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192225.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192225.jpg"  alt="Photo 11 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192226.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192226.jpg"  alt="Photo 12 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192227.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192227.jpg"  alt="Photo 13 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192228.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192228.jpg"  alt="Photo 14 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192229.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192229.jpg"  alt="Photo 15 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192230.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192230.jpg"  alt="Photo 16 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192231.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192231.jpg"  alt="Photo 17 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192232.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192232.jpg"  alt="Photo 18 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192233.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192233.jpg"  alt="Photo 19 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192234.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192234.jpg"  alt="Photo 20 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/1192235.jpg"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192235.jpg"  alt="Photo 21 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/5266548.png"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266548.png"  alt="Photo 22 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/5266547.png"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266547.png"  alt="Photo 23 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/5266546.png"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266546.png"  alt="Photo 24 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/5266543.png"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266543.png"  alt="Photo 25 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/5266544.png"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266544.png"  alt="Photo 26 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/5266545.png"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266545.png"  alt="Photo 27 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/5266542.png"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266542.png"  alt="Photo 28 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/5266540.png"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266540.png"  alt="Photo 29 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/600x400/5266541.png"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266541.png"  alt="Photo 30 of Pousada Vila Guará">
+                    </div>
+                            </div>
+            <div id="white-overlay"></div>
+<div class="loader-container  mobile" style="--loader-dot-color: #273240; --loader-dot-size: 16px; --loader-dot-spacing: 8px; --loader-top: 35%">
+    <div class="loader-dots">
+        <div class="loader-dot moving-dot"></div>
+        <div class="loader-dot fixed-dot"></div>
+        <div class="loader-dot fixed-dot"></div>
+        <div class="loader-dot fixed-dot"></div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none"><defs><filter id="gooey"><feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" /></filter></defs></svg>
+    </div>
+        </div>
+    </div>
+                    </div>
+                </div>
+
+                <div class="modal full-image-gallery-modal fade " id="desktop-hotel-gallery-modal-18675" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="desktop-hotel-gallery-modal-18675-title" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+        <div class="modal-content full-gallery-content">
+            <div class="modal-header full-gallery-header">
+                <div class="container full-gallery-header-container">
+                    <div class="full-gallery-title-container">
+                        <h5 id="desktop-hotel-gallery-modal-18675-title" class="full-gallery-title ">Pousada Vila Guará</h5>
+                    </div>
+                    <div class="modal-fullscreen-close-container">
+                        <button type="button" class="close popup-button close-modal" aria-label="Close"  data-bs-dismiss="modal" >
+                            <span class="svg-icon modal-close-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.264 4L4.00052 20.2635" stroke="black" stroke-width="1.5" stroke-linecap="round"/><path d="M20.264 20.264L4.00052 4.00058" stroke="black" stroke-width="1.5" stroke-linecap="round"/></svg>
+</span>
+                        </button>
+                    </div>   
+                </div>
+            </div>
+            <div class="modal-body full-gallery-body">  
+                <div class="container full-gallery-body-container">
+                    <div class="gallery-container default-desktop-image-gallery-modal">
+            <div class="be-slider default-desktop-image-gallery-modal"
+            data-id="desktop-hotel-gallery-modal-18675"
+            
+            
+            
+            data-thumbnails=true
+            data-thumbnails-count=11
+            data-navigation-inside=true
+            data-navigation-show-on-hover=true
+            
+            
+            
+            data-is-fullscreen-gallery=true
+            
+            data-show-counter="false"
+            data-prev-slide-label="Previous slide"
+            data-next-slide-label="Next slide"
+            data-go-to-slide-label="Go to slide"
+            style=""
+        >
+            <div class="be-slider-wrapper">
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192215.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192215.jpg"  alt="Photo 1 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192216.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192216.jpg"  alt="Photo 2 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192217.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192217.jpg"  alt="Photo 3 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192218.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192218.jpg"  alt="Photo 4 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192219.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192219.jpg"  alt="Photo 5 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192220.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192220.jpg"  alt="Photo 6 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192221.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192221.jpg"  alt="Photo 7 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192222.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192222.jpg"  alt="Photo 8 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192223.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192223.jpg"  alt="Photo 9 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192224.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192224.jpg"  alt="Photo 10 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192225.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192225.jpg"  alt="Photo 11 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192226.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192226.jpg"  alt="Photo 12 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192227.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192227.jpg"  alt="Photo 13 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192228.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192228.jpg"  alt="Photo 14 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192229.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192229.jpg"  alt="Photo 15 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192230.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192230.jpg"  alt="Photo 16 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192231.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192231.jpg"  alt="Photo 17 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192232.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192232.jpg"  alt="Photo 18 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192233.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192233.jpg"  alt="Photo 19 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192234.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192234.jpg"  alt="Photo 20 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/1192235.jpg?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/1192235.jpg"  alt="Photo 21 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/5266548.png?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266548.png"  alt="Photo 22 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/5266547.png?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266547.png"  alt="Photo 23 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/5266546.png?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266546.png"  alt="Photo 24 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/5266543.png?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266543.png"  alt="Photo 25 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/5266544.png?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266544.png"  alt="Photo 26 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/5266545.png?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266545.png"  alt="Photo 27 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/5266542.png?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266542.png"  alt="Photo 28 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/5266540.png?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266540.png"  alt="Photo 29 of Pousada Vila Guará">
+                    </div>
+                                    <div class="be-slide">
+                        <img data-src="https://media.omnibees.com/Images/18675/Property/0x657/5266541.png?sizeCat=Keepratio"  data-thumb-src="https://media.omnibees.com/Images/18675/Property/105x70/5266541.png"  alt="Photo 30 of Pousada Vila Guará">
+                    </div>
+                            </div>
+            <div id="white-overlay"></div>
+<div class="loader-container  mobile" style="--loader-dot-color: #273240; --loader-dot-size: 16px; --loader-dot-spacing: 8px; --loader-top: 35%">
+    <div class="loader-dots">
+        <div class="loader-dot moving-dot"></div>
+        <div class="loader-dot fixed-dot"></div>
+        <div class="loader-dot fixed-dot"></div>
+        <div class="loader-dot fixed-dot"></div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none"><defs><filter id="gooey"><feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur" /><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" /></filter></defs></svg>
+    </div>
+        </div>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                
+                <div class="hotel-landing__price-row">
+                    
+                                            <div class="hotel-landing__price-block">
+                            <div class="hotel-landing__price-label">Daily price starting from:</div>
+                            <div class="hotel-landing__price-value">
+                                <span class="hotel-landing__price"><span class="currency_symbol_price">R$</span> 1,425.<span class="decimal_value_price">20</span></span>
+                                <span class="hotel-landing__price-per-night">/night</span>
+                            </div>
+                                                            <div class="hotel-landing__price-taxes">Taxes and fees not included</div>
+                                                    </div>
+                    
+                    <a href="https://book.omnibees.com/hotelresults?q=18675&amp;c=9888&amp;lang=1&amp;currencyId=16&amp;version=4" class="hotel-landing__cta-reserve">
+                        Book Now                    </a>
+                </div>
+            </div>
+        </section>
+
+            
+                            <section class="hotel-landing__section hotel-landing__amenities-icons">
+                    <h2 class="hotel-landing__section-title">The hotel offers</h2>
+                    <div class="amenities_wrap">
+                                                    <div class="amenity_icons">
+                                <span class="amenity_icons_svg" role="img" aria-label="High Speed Internet Access"
+                                      style="--icon-url: url('/icons/wifi_v4.svg');"></span>
+                                <div class="amenity_icons_text">High Speed Internet Access</div>
+                            </div>
+                                                    <div class="amenity_icons">
+                                <span class="amenity_icons_svg" role="img" aria-label="Parking Free"
+                                      style="--icon-url: url('/icons/parking_free_v4.svg');"></span>
+                                <div class="amenity_icons_text">Parking Free</div>
+                            </div>
+                                                    <div class="amenity_icons">
+                                <span class="amenity_icons_svg" role="img" aria-label="SPA"
+                                      style="--icon-url: url('/icons/spa_v4.svg');"></span>
+                                <div class="amenity_icons_text">SPA</div>
+                            </div>
+                                                    <div class="amenity_icons">
+                                <span class="amenity_icons_svg" role="img" aria-label="Free Wifi"
+                                      style="--icon-url: url('/icons/free_wifi_v4.svg');"></span>
+                                <div class="amenity_icons_text">Free Wifi</div>
+                            </div>
+                                                    <div class="amenity_icons">
+                                <span class="amenity_icons_svg" role="img" aria-label="Pet friendly"
+                                      style="--icon-url: url('/icons/pets_allowed_v4.svg');"></span>
+                                <div class="amenity_icons_text">Pet friendly</div>
+                            </div>
+                                            </div>
+                </section>
+            
+            
+                            <section class="hotel-landing__section hotel-landing__amenities-list">
+                    <div id="amenities-component" class="amenity-group-wrap">
+            <div class="mobile_hotel_description_holder">
+            <p class="mobile_hotel_description_title">About the Hotel</p>
+            <div class="mobile_hotel_description_long">
+                
+            </div>
+        </div>
+    
+            <div class="amenity-group-single">
+            <div class="amenity-group">
+                <p class="amenity-category v4">
+                    <span class="amenity-category-text">General Services</span>
+                                    </p>
+
+                <div class="amenity-items">
+                                            <p class="amenity-item">Cribs available on request</p>
+                                            <p class="amenity-item">Major credit cards accepted</p>
+                                            <p class="amenity-item">Multilingual staff</p>
+                                            <p class="amenity-item">Daily Housekeeping</p>
+                                            <p class="amenity-item">High Speed Internet Access</p>
+                                            <p class="amenity-item">Parking Free</p>
+                                            <p class="amenity-item">Concierge</p>
+                                            <p class="amenity-item">Tourism Office</p>
+                                            <p class="amenity-item">Wireless Internet</p>
+                                            <p class="amenity-item">Free Wifi</p>
+                                            <p class="amenity-item">Direct access to the beach</p>
+                                            <p class="amenity-item">Pet friendly</p>
+                                    </div>
+            </div>
+        </div>
+            <div class="amenity-group-single">
+            <div class="amenity-group">
+                <p class="amenity-category v4">
+                    <span class="amenity-category-text">Restaurant &amp; Bars</span>
+                                    </p>
+
+                <div class="amenity-items">
+                                            <p class="amenity-item">Bar Club</p>
+                                            <p class="amenity-item">Restaurant</p>
+                                            <p class="amenity-item">Public Restaurant</p>
+                                            <p class="amenity-item">Cocktail Service</p>
+                                    </div>
+            </div>
+        </div>
+            <div class="amenity-group-single">
+            <div class="amenity-group">
+                <p class="amenity-category v4">
+                    <span class="amenity-category-text">Wellness &amp; Sports</span>
+                                    </p>
+
+                <div class="amenity-items">
+                                            <p class="amenity-item">SPA</p>
+                                            <p class="amenity-item">Massage</p>
+                                            <p class="amenity-item">Watersports</p>
+                                            <p class="amenity-item">Massages upon Request </p>
+                                    </div>
+            </div>
+        </div>
+    </div>                </section>
+            
+            
+                            <section class="hotel-landing__section hotel-landing__hours">
+                    <div class="hotels_schedules-info info">
+    
+            <div id="check_in" class="hotels_schedules-holder">
+            <div class="hotels_schedules-text">
+                Check-in Hours
+            </div>
+            <div class="hotels_schedules-time">
+                Check-in from 2:00 PM
+            </div>
+            <div class="hotels_schedules-time">
+                Check-out until 10:30 AM
+            </div>
+        </div>
+            <div id="reception" class="hotels_schedules-holder">
+            <div class="hotels_schedules-text">
+                Reception Hours
+            </div>
+            <div class="hotels_schedules-time">
+                Open from 7:00 AM
+            </div>
+            <div class="hotels_schedules-time">
+                To 8:00 PM
+            </div>
+        </div>
+            <div id="breakfast" class="hotels_schedules-holder">
+            <div class="hotels_schedules-text">
+                Breakfast Hours
+            </div>
+            <div class="hotels_schedules-time">
+                From 7:30 AM
+            </div>
+            <div class="hotels_schedules-time">
+                To 10:00 AM
+            </div>
+        </div>
+    
+    </div>                </section>
+                     
+
+        </div>
+
+        
+        
+        
+                    <section class="container contain hotel-landing__rooms">
+                <h2 class="hotel-landing__section-title">Room Types</h2>
+                <div class="hotel-landing__rooms-grid">
+                                                                            <div class="hotel-landing__room-card">
+                                <div class="hotel-landing__room-photo">
+                                    <img src="https://media.omnibees.com/Images/18675/RoomTypes/280x180/1439287.jpg"
+                                         onerror="this.onerror=null;this.src='/img/placeholderNewWhite.svg';"
+                                         alt="Pond of Pousada Vila Guará">
+                                </div>
+                                <div class="hotel-landing__room-body">
+                                    <div class="hotel-landing__room-name">Pond</div>
+
+                                                                            <div class="hotel-landing__room-occupancy">
+                                            <img src="https://book.omnibees.com/v4/icons/dados_icon_v4.svg" alt="">
+                                            <span>Maximum 3</span>
+                                        </div>
+                                    
+                                                                            <div class="hotel-landing__room-view">
+                                            
+                                            <img src="https://book.omnibees.com/v4/icons/view_icon_v4.svg" alt="">
+                                            <span>Garden View</span>
+                                        </div>
+                                    
+                                    <a href="https://book.omnibees.com/hotel/18675/room/110847" class="hotel-landing__room-cta custom-action-bg custom-action-text custom-action-border">
+                                        Show prices                                    </a>
+                                </div>
+                            </div>
+                                                                                <div class="hotel-landing__room-card">
+                                <div class="hotel-landing__room-photo">
+                                    <img src="https://media.omnibees.com/Images/18675/RoomTypes/280x180/1439282.jpg"
+                                         onerror="this.onerror=null;this.src='/img/placeholderNewWhite.svg';"
+                                         alt="Dune of Pousada Vila Guará">
+                                </div>
+                                <div class="hotel-landing__room-body">
+                                    <div class="hotel-landing__room-name">Dune</div>
+
+                                                                            <div class="hotel-landing__room-occupancy">
+                                            <img src="https://book.omnibees.com/v4/icons/dados_icon_v4.svg" alt="">
+                                            <span>Maximum 4</span>
+                                        </div>
+                                    
+                                                                            <div class="hotel-landing__room-view">
+                                            
+                                            <img src="https://book.omnibees.com/v4/icons/view_icon_v4.svg" alt="">
+                                            <span>Garden View</span>
+                                        </div>
+                                    
+                                    <a href="https://book.omnibees.com/hotel/18675/room/110846" class="hotel-landing__room-cta custom-action-bg custom-action-text custom-action-border">
+                                        Show prices                                    </a>
+                                </div>
+                            </div>
+                                                                                <div class="hotel-landing__room-card">
+                                <div class="hotel-landing__room-photo">
+                                    <img src="https://media.omnibees.com/Images/18675/RoomTypes/280x180/1192213.jpg"
+                                         onerror="this.onerror=null;this.src='/img/placeholderNewWhite.svg';"
+                                         alt="Kite House of Pousada Vila Guará">
+                                </div>
+                                <div class="hotel-landing__room-body">
+                                    <div class="hotel-landing__room-name">Kite House</div>
+
+                                                                            <div class="hotel-landing__room-occupancy">
+                                            <img src="https://book.omnibees.com/v4/icons/dados_icon_v4.svg" alt="">
+                                            <span>Maximum 8</span>
+                                        </div>
+                                    
+                                                                            <div class="hotel-landing__room-view">
+                                            
+                                            <img src="https://book.omnibees.com/v4/icons/view_icon_v4.svg" alt="">
+                                            <span>Garden View</span>
+                                        </div>
+                                    
+                                    <a href="https://book.omnibees.com/hotel/18675/room/110848" class="hotel-landing__room-cta custom-action-bg custom-action-text custom-action-border">
+                                        Show prices                                    </a>
+                                </div>
+                            </div>
+                                            </div>
+                </section>
+                </section>
+    </div>
+
+    
+    <div class="modal fade" id="hotel_map" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <span class="close-modal" data-bs-dismiss="modal" aria-label="Close">
+                    <span class="svg-icon close-map modal-close-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.264 4L4.00052 20.2635" stroke="black" stroke-width="1.5" stroke-linecap="round"/><path d="M20.264 20.264L4.00052 4.00058" stroke="black" stroke-width="1.5" stroke-linecap="round"/></svg>
+</span>
+                </span>
+                
+                <div id="map-wrap" class="hotel_info_details"
+                     data-long="-42.747480261799026"
+                     data-lat="-2.5682887987535787">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="above-footer"></div>
+
+<section class="footer">
+
+	<div class="container contain ">
+
+		<div class="footer-address-and-phone">
+
+			
+				<div class="footer-info">
+
+											
+						<span class="footer-info-email">
+							<img src="https://book.omnibees.com/icons/envelope-icon.svg" alt="contact">
+							
+							<span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b8dad7d7d3d1d6dff8ced1d4d9dfcdd9cad996dbd7d5">[email&#160;protected]</a></span>
+						</span>
+
+					
+										
+						<span>
+							<img src="https://book.omnibees.com/icons/icons_White/iconWhite_Footer_Contact.svg" alt="contact"> 
+							<span>98992325200</span>
+						</span>
+
+					
+				</div>
+
+			
+			<div class="footer-hotel-name-year">
+				
+					<span>© 2026 Pousada Vila Guará. </span> 
+								
+				<span>All rights reserved.</span> 
+			</div>
+
+		</div>
+
+					<div class="footer-powered">
+				Powered by <img src="https://book.omnibees.com/icons/omnibees-logo.svg" alt="omnibees"> 
+			</div>
+			</div>
+
+</section>
+
+
+<div class="modal show session-expired-modal" id="session-expired" role="dialog" aria-hidden="true" >
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<img src="/icons/icons_GreyLight/iconGreyLight_Xclose.svg" alt="">
+			</button>
+
+			<div class="d-flex cancel-popup__contain session-expired__contain">
+				<div class="d-flex justify-content-center cancel-popup__holder" >
+					<div class="cancel-modal__icon"><img src="/icons/icon_Modal_Warning.svg" alt=""></div>
+				</div>									
+				<div>
+					<div>
+						<h5>Your search has expired!</h5>
+
+						<p>Please start a new booking process.</p>
+										
+					</div>
+				</div>
+			
+			</div>
+			<div class="session-expired-button-holder">
+				<button data-dismiss="modal" aria-label="Close" class="btn btn-ic custom-action-text cancel-popup-button session-expired-button" data-toggle="modal" data-target="session-expired">
+						OK				</button>							
+			</div>
+					
+							
+		</div>
+	</div>
+</div>
+
+
+<div class="modal show privacy-modal" id="privacy-modal" role="dialog" aria-hidden="true" >
+	<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <img src="/icons/icons_GreyLight/iconGreyLight_Xclose.svg" alt="">
+                </button>
+
+				<div class="d-flex cancel-popup__contain session-expired__contain">
+					<div class="d-flex justify-content-center cancel-popup__holder" >
+						<p class="terms-content"> 
+							No privacy policy available.						</p>
+
+					</div>	
+				</div>
+
+			</div>
+	</div>
+</div>
+
+
+<!-- Session timeout countdown Modal -->
+<div class="modal fade" id="session_timeout_countdown" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+		    <span class='close-modal' data-bs-dismiss="modal" aria-label="Close">
+				<img src="https://book.omnibees.com/v4/icons/cross_white_v4.svg" class="close_icon" alt="">
+			</span>
+			<div class="session_timeout_time">
+				<span id="timer">05:00</span>
+			</div>
+			<div class="session_timeout_message1">Your search is about to expire.</div>
+			<div class="session_timeout_message2">Book now before it's too late.</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Session timeout Modal -->
+<div class="modal fade" id="session_timeout" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+		    <span class='close-modal' data-bs-dismiss="modal" aria-label="Close">
+				<img src="https://book.omnibees.com/v4/icons/cross_white_v4.svg" class="close_icon" alt="">
+			</span>
+			<div class="session_timeout_time">
+				
+			</div>
+			<div class="session_timeout_message1">Your search has expired!</div>
+			<button type="button" class="primary_button_v4 button-session-restart" data-bs-dismiss="modal">Update your results</button>
+					
+					</div>
+	</div>
+</div>
+
+<!-- Partial payments modal -->
+<div class="modal fade" id="modal-partial-payments-info" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<span class='close-modal' data-bs-dismiss="modal" aria-label="Close">
+		<img src="https://book.omnibees.com/v4/icons/cross_white_v4.svg" class="close_icon" alt="">
+	</span>
+	<div class="modal-dialog modal-lg modal-dialog-centered justify-content-center">
+		<div class="modal-content partial-payments-modal">
+			<div class="w-100" id="partial-payments-info"></div>
+		</div>
+	</div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+  var body = {};
+  body.chainId = "9888";
+  body.chainName = "Pousada Vila Guara";
+  body.propertyId = "18675";
+  body.hotelName = "Pousada Vila Guará";
+  body.versionBE = "4";
+  body.isRemark = "";
+  body.lang = "en-US";
+</script>
+    
+    <script src="https://book.omnibees.com/js/vendor/jquery.min.js"></script>
+    <script src="https://book.omnibees.com/v4/js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="https://book.omnibees.com/js/vendor/moment.min.js"></script>
+    <script src="https://book.omnibees.com/js/vendor/moment.tz.js"></script>
+    <script src="/js/main.js?version=1.0.0.507"></script>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DJ8M9XX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <script src="/v4/js/autocomplete-hotels_v4.js?version=1.0.0.507"></script>
+    <script src="/v4/js/main_v4.js?version=1.0.0.507"></script>
+    <script>
+        const mapsKey = "REDACTED_THIRD_PARTY_MAPS_KEY";
+    </script>
+    <script src="/v4/js/google-maps_v4.js?version=1.0.0.507"></script>
+
+    
+    <script>
+        (function () {
+            // Collapse/expand the hotel detail block via the chevron on the hotel name
+            document.addEventListener('click', function (e) {
+                // Ignore clicks inside the TripAdvisor widget — those should open the reviews
+                // popup, not toggle the mobile-header collapse.
+                if (e.target.closest('.hotel-landing__tripadvisor')) return;
+                var toggle = e.target.closest('.hotel-landing__name-toggle');
+                if (!toggle) return;
+                toggle.classList.toggle('open');
+                var block = document.querySelector('.hotel-landing__collapsible');
+                if (block) block.classList.toggle('open');
+            });
+
+            // "Sobre o Hotel" accordion (the description block has no handler in main.js)
+            document.addEventListener('click', function (e) {
+                var title = e.target.closest('.mobile_hotel_description_title');
+                if (!title) return;
+                title.classList.toggle('open-bg-image');
+                var body = title.parentElement.querySelector('.mobile_hotel_description_long');
+                if (body) body.classList.toggle('show');
+            });
+
+            // Sticky search bar — detect the real "stuck" state via a sentinel just above the
+            // holder. main_v4.js sets full-width padding inline based on a hardcoded scroll
+            // threshold (440px) which is wrong on the LP; this observer toggles a class only
+            // when the bar is actually pinned to the top.
+            var sentinel = document.querySelector('.lp-search-bar-sentinel');
+            var holder = document.querySelector('.mobile_hotel_search_bar_holder');
+            if (sentinel && holder && 'IntersectionObserver' in window) {
+                new IntersectionObserver(function (entries) {
+                    holder.classList.toggle('is-stuck', !entries[0].isIntersecting);
+                }, { threshold: 0 }).observe(sentinel);
+            }
+        })();
+    </script>
+    <script src="/v4/js/occupancy-select_v4.js?version=1.0.0.507"></script>
+    <script src="/v4/js/BECalendar.js?version=1.0.0.507"></script>
+    <script src="/v4/js/becalendar_init_v4.js?version=1.0.0.507"></script>
+    <script src="/v4/js/search-history_v4.js?version=1.0.0.507"></script>
+<script>
+if (typeof $ !== 'undefined') {
+    
+    $.ajaxSetup({
+        headers: {
+        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },error: function(jqXHR, textStatus, errorThrown) {
+            if (jqXHR.status === 419) {
+                if ($('#session_timeout').length>0) {
+                    $('#session_timeout').modal('show');
+                }else if($('#session-expired').length>0) {
+                    $('#session-expired').modal('show'); 
+                }
+            }
+            if (jqXHR.status === 500) {
+                let url = new URL(window.location.href);
+                let doReload = false;
+                let pathname = this.url;
+                if (
+                    pathname.includes('step2save') ||
+                    pathname.includes('step3save') ||
+                    pathname.includes('step4save') ||
+                    pathname.includes('step2payment')
+                ) {
+                    doReload = true;
+                }
+            
+                if (doReload) {
+                
+                    var errredir = url.searchParams.get('errredir');
+                    if (errredir !== null && !isNaN(errredir)) {
+                        errredir = parseInt(errredir);
+                        errredir += 1; 
+                    } else {
+                        errredir = 1;
+                    }
+                
+                    url.searchParams.set("errredir", errredir);
+                    window.location.href = url.toString();
+                }
+            }
+        }
+    });
+}
+</script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"0d6c797e535c43b1840096b99c85b628","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

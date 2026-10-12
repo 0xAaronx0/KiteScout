@@ -403,6 +403,37 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'offers': {
+      // provider-site offer adapters → package_offers + slots (see src/offers/ingest.ts).
+      const { adapters, adapterByKey } = await import('./offers/registry.js');
+      const { runAdapters, slotTablesExist } = await import('./offers/ingest.js');
+      const sub = args[0];
+      const outArg = flagStr('--out');
+      const refs = args.slice(1).filter(a => !a.startsWith('-') && a !== outArg);
+      const pick = refs.length === 0 || refs.includes('all') ? adapters
+        : refs.map(r => adapterByKey(r) ?? (() => { throw new Error(`unknown adapter: ${r}`); })());
+      if (sub === 'list') {
+        for (const a of adapters) console.log(`${a.key.padEnd(34)} ${a.kind.padEnd(13)} ${a.slotMethod.padEnd(14)} ${a.url}`);
+        console.log(`\n${adapters.length} adapters; slot store: ${(await slotTablesExist()) ? 'offer_slots' : 'package_offers.pricing (migration 20261009120000 not applied)'}`);
+      } else if (sub === 'probe' || sub === 'ingest') {
+        const reports = await runAdapters(pick, {
+          mode: args.includes('--slots') ? 'slots' : 'full',
+          dryRun: sub === 'probe' || args.includes('--dry-run'),
+          refreshImages: args.includes('--refresh-images'),
+        });
+        const out = flagStr('--out');
+        if (out) writeFileSync(out, JSON.stringify(reports, null, 2));
+        for (const r of reports.filter(r => r.slotError)) console.log(`  ${r.key}: listed without slots - ${r.slotError}`);
+        const bad = reports.filter(r => r.status === 'error').length;
+        const blocked = reports.filter(r => r.status === 'blocked').length;
+        console.log(`\n${reports.length - bad - blocked}/${reports.length} ok${blocked ? `, ${blocked} blocked by host` : ''}${bad ? `, ${bad} failed` : ''}`);
+        if (bad) process.exitCode = 1;
+      } else {
+        console.log('Usage: offers list | probe [key…|all] [--slots] [--out f.json] | ingest [key…|all] [--slots] [--dry-run] [--refresh-images] [--out f.json]');
+      }
+      break;
+    }
+
     case 'restore': {
       const domains = args.filter(a => !a.startsWith('-'));
       if (domains.length === 0) {

@@ -172,7 +172,11 @@ export function upscaleCdnUrl(absUrl: string): string {
 
 /** Pick the largest URL from a srcset / data-srcset value. */
 function pickFromSrcset(srcset: string): string | null {
-  const parts = srcset.split(',').map(s => s.trim()).filter(Boolean);
+  // split after a width/density descriptor ("… 800w, …"); plain ", " otherwise. A bare ","
+  // must not split: Wix URLs carry commas inside the path (…/usm_0.66_1.00_0.01,enc_avif,…).
+  const parts = (/\s\d+(?:\.\d+)?[wx]\s*,/.test(srcset)
+    ? srcset.split(/(?<=\s\d+(?:\.\d+)?[wx])\s*,\s*/)
+    : srcset.split(/,\s+/)).map(s => s.trim()).filter(Boolean);
   let best: { url: string; w: number } | null = null;
   for (const p of parts) {
     const [url, desc] = p.split(/\s+/);
@@ -380,9 +384,22 @@ export async function downloadImage(url: string): Promise<Buffer | null> {
 // ---------------------------------------------------------------------------
 // Claude-vision QC: pick the best ≤5 and reject logos/UI/unrelated
 // ---------------------------------------------------------------------------
+/** What the vision QC should look for; defaults to the kite-cruise wording. */
+export interface VisionBrief {
+  /** e.g. "kite-cruise offer", "kite guesthouse", "guided kite tour" */
+  offerLabel: string;
+  /** the motifs to keep, e.g. "the HOUSE/rooms, the kite SPOT, people kiting" */
+  wanted: string;
+}
+const CRUISE_BRIEF: VisionBrief = {
+  offerLabel: 'kite-cruise offer',
+  wanted: 'the BOAT/vessel, the kite SPOTS or destination scenery, or people kiting / sailing on this trip',
+};
+
 async function visionSelect(
   images: DownloadedImage[],
   context: string,
+  brief: VisionBrief = CRUISE_BRIEF,
 ): Promise<Array<{ img: DownloadedImage; caption: string | null }> | null> {
   const batch = [...images]
     .sort((a, b) => b.width * b.height - a.width * a.height)
@@ -406,11 +423,11 @@ async function visionSelect(
   }
   if (used.length === 0) return null;
 
-  const prompt = `You are curating photos for this kite-cruise offer:
+  const prompt = `You are curating photos for this ${brief.offerLabel}:
 ${context}
 
-From the numbered images above, pick up to ${MAX_STORED} that best depict the BOAT/vessel, the kite SPOTS or destination scenery, or people kiting / sailing on this trip.
-REJECT: logos, icons, UI screenshots, maps or charts, text graphics, stock illustrations, headshots / portraits, payment or partner badges, and anything unrelated to this cruise.
+From the numbered images above, pick up to ${MAX_STORED} that best depict ${brief.wanted}.
+REJECT: logos, icons, UI screenshots, maps or charts, text graphics, stock illustrations, headshots / portraits, payment or partner badges, and anything unrelated to this offer.
 Order them best-first. Respond with ONLY a JSON array: [{"index": <number>, "caption": "<max 8 word description>"}]. If none are suitable, respond with [].`;
   blocks.push({ type: 'text', text: prompt });
 
@@ -507,8 +524,13 @@ export async function curateAndStoreImages(opts: {
   context: string;
   max?: number;
   maxDownloads?: number;
+  /** bucket folder; default `cruise-offers/<providerId>/<slug>` */
+  pathPrefix?: string;
+  /** vision QC wording; default = kite cruise */
+  brief?: VisionBrief;
 }): Promise<StoredImage[]> {
   const { candidateUrls, providerId, slug, sourceUrl, context } = opts;
+  const prefix = opts.pathPrefix ?? `cruise-offers/${providerId}/${slug}`;
   const cap = opts.max ?? MAX_STORED;
   const dlCap = opts.maxDownloads ?? MAX_DOWNLOADS;
   if (candidateUrls.length === 0) return [];
@@ -549,7 +571,7 @@ export async function curateAndStoreImages(opts: {
 
   // 2. Select the keepers.
   let selected: Array<{ img: DownloadedImage; caption: string | null }>;
-  const visionPick = USE_VISION_QC ? await visionSelect(downloaded, context) : null;
+  const visionPick = USE_VISION_QC ? await visionSelect(downloaded, context, opts.brief) : null;
   if (visionPick && visionPick.length > 0) {
     selected = visionPick.slice(0, cap);
   } else {
@@ -582,7 +604,7 @@ export async function curateAndStoreImages(opts: {
     } catch {
       continue;
     }
-    const path = `cruise-offers/${providerId}/${slug}/${sort}.webp`;
+    const path = `${prefix}/${sort}.webp`;
     const { error } = await supabase.storage
       .from(CRUISE_IMAGE_BUCKET)
       .upload(path, out, { contentType: 'image/webp', upsert: true, cacheControl: '31536000' });
