@@ -443,14 +443,24 @@ export default async function ChangesPage({
   // key renders the page read-only (the API rejects it anyway).
   const adminKey = key && process.env.CHANGES_ADMIN_KEY && key === process.env.CHANGES_ADMIN_KEY ? key : null;
 
-  const [changesRes, statsRes] = await Promise.all([
-    supabase
-      .from('cruise_changes')
-      .select(`
+  const COLUMNS = `
         id, detected_at, change_type, summary, url, significant, seen, details,
         provider:cruise_providers ( name, website_url, root_domain )
-      `)
-      // hidden observations (significant=false) must not eat the 400-row window
+      `;
+  const [openRes, changesRes, statsRes] = await Promise.all([
+    // Every open entry, however old: the queue holds only exceptions now, an old one
+    // must never fall out of the history window below.
+    supabase
+      .from('cruise_changes')
+      .select(COLUMNS)
+      .eq('significant', true)
+      .or('details->>status.in.(pending,rerun_running,rerun_done),details->>status.is.null')
+      .order('detected_at', { ascending: false }),
+
+    supabase
+      .from('cruise_changes')
+      .select(COLUMNS)
+      // hidden observations (significant=false) must not eat the history window
       .eq('significant', true)
       .order('detected_at', { ascending: false })
       .limit(400),
@@ -463,10 +473,13 @@ export default async function ChangesPage({
   // Surface query failures in the server log so a real outage isn't silently
   // rendered as an empty "no changes yet" state. (Stats assume < ~1000 watch
   // rows — PostgREST's default page size; fine for the current provider set.)
+  if (openRes.error) console.error('[/changes] open cruise_changes query failed:', openRes.error.message);
   if (changesRes.error) console.error('[/changes] cruise_changes query failed:', changesRes.error.message);
   if (statsRes.error) console.error('[/changes] cruise_watch query failed:', statsRes.error.message);
 
-  const changes = ((changesRes.data ?? []) as unknown as Change[]).filter(c => c.significant);
+  const seenIds = new Set<string>();
+  const changes = ([...(openRes.data ?? []), ...(changesRes.data ?? [])] as unknown as Change[])
+    .filter(c => c.significant && !seenIds.has(c.id) && seenIds.add(c.id));
 
   const today = new Date();
   today.setHours(0, 0, 0, 0);
