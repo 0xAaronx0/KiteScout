@@ -185,12 +185,24 @@ function slotJson(s: Slot) {
 // The KCS map pins an offer only from itinerary_spots with lat/lng. Route stops if the adapter
 // has them, else its one spot. Order: known pin, stored coordinates, geocoder.
 
-/** Route stops the geocoder places wrongly (checked 2026-10-12); keys are lower-case stop names. */
+/** Stops and spots the geocoder places wrongly or not at all (checked 2026-10-12); keys are lower-case names. */
 const KNOWN_PINS: Record<string, { lat: number; lng: number }> = {
   // "Jericoacoara, Ceará" resolves to the municipality, 11 km inland; this is the village
   jericoacoara: { lat: -2.7952, lng: -40.5152 },
   // end of the Dakhla downwind; Nominatim returns a Dakhla street and a namesake in southern Morocco
   lagouira: { lat: 20.8333, lng: -17.0833 },
+  // spot names the geocoder cannot place (checked 2026-10-12); simpler place names or the sources noted
+  'namotu island': { lat: -17.8442, lng: 177.1834 },
+  'ilha do guajiru': { lat: -2.88086, lng: -39.91218 }, // 7 Beaufort's own map pin in the village
+  "emerald sea (mer d'emeraude), babaomby": { lat: -12.233, lng: 49.35 }, // Ramena, the boat departure (Wikipedia)
+  'mambrui, malindi': { lat: -3.1145, lng: 40.158 },
+  'foum labouir, dakhla': { lat: 23.7673, lng: -15.9198 }, // Foum El Bouir, Atlantic side
+  alvor: { lat: 37.1291, lng: -8.5929 }, // "Alvor, Algarve" does not resolve, "Alvor, Portugal" does
+  'my hoa lagoon': { lat: 11.599942, lng: 109.145992 }, // kitejungle spot guide; Nominatim lands near Saigon
+  'sur masirah, masirah island': { lat: 20.612, lng: 58.8752 },
+  'praia do bilene': { lat: -25.2836, lng: 33.275 }, // Uembje lagoon; "Bilene" lands inland
+  'bislig beach, bulalacao': { lat: 12.3262, lng: 121.3437 }, // Bulalacao town
+  'bulabog beach, boracay': { lat: 11.9637, lng: 121.9303 },
 };
 
 export async function locateSpots(c: OfferContent, stored: unknown): Promise<StoredSpot[]> {
