@@ -85,3 +85,30 @@ test('end to end: adapter state vs the DB row of 2026-10-12 → the expected pro
   ] };
   assert.equal(proposeUpdate(dive, items.find(i => i.sourceUrl.endsWith('/kite-dive'))!.state, { authoritative: true, today: TODAY }), null);
 });
+
+test('sickdogsurf: year-less weekly table gets the right years (handover 2026-10-12: was written as 2025)', async () => {
+  const { sickdogsurf, parseSdsSchedule } = await import('../../src/cruise-adapters/adapters/sickdogsurf.js');
+  const [item] = await sickdogsurf.fetchStates();
+  const deps = item.state.departures!;
+  assert.equal(deps.length, 33);
+  assert.deepEqual([deps[0].start_date, deps[0].end_date, deps[0].status, deps[0].price], ['2026-10-17', '2026-10-24', 'available', 900]);
+  assert.equal(deps[1].status, 'sold_out');
+  assert.equal(deps[4].status, 'few_spots');                                         // "1050€ - Last Cabin"
+  assert.deepEqual([deps[6].start_date, deps[6].end_date], ['2026-12-26', '2027-01-02']); // crosses the year
+  assert.equal(deps[7].start_date, '2027-03-06');                                     // second table rolls the year
+  assert.deepEqual([deps[32].start_date, deps[32].end_date], ['2027-08-28', '2027-09-04']);
+  assert.deepEqual(item.state.pricePP, { amount: 900, currency: 'EUR' });
+  // a heading without a season year → nothing (never guess a year)
+  assert.deepEqual(parseSdsSchedule('<p>WEEKS BOAT PRICE PER PERSON October 17 - 24 Heaven Liberty 900€</p>'), []);
+});
+
+test('golden-dolphin: dive safaris in "Upcoming trips" never become kite departures', async () => {
+  const { goldenDolphin, parseGdTrips } = await import('../../src/cruise-adapters/adapters/golden-dolphin.js');
+  const { readFileSync, readdirSync } = await import('node:fs');
+  const dir = join(import.meta.dirname, '../fixtures/cruise');
+  const html = readFileSync(join(dir, readdirSync(dir).find(f => f.startsWith('www.golden-dolphin'))!), 'utf8');
+  assert.equal(parseGdTrips(html).length, 3);
+  const [item] = await goldenDolphin.fetchStates();
+  assert.equal(item.state.departures, null, 'no kite trip scheduled → states nothing');
+  assert.ok(isAdapterUrl('https://golden-dolphin.net/'), 'the LLM no longer reads this page');
+});

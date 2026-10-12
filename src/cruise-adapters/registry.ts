@@ -5,8 +5,10 @@ import type { CruiseAdapter } from './types.js';
 import { kiteAndIslands } from './adapters/kite-and-islands.js';
 import { kiteSafariSeason } from './adapters/kite-safari-season.js';
 import { kite2sail } from './adapters/kite2sail.js';
+import { sickdogsurf } from './adapters/sickdogsurf.js';
+import { goldenDolphin } from './adapters/golden-dolphin.js';
 
-export const CRUISE_ADAPTERS: CruiseAdapter[] = [kiteAndIslands, kiteSafariSeason, kite2sail];
+export const CRUISE_ADAPTERS: CruiseAdapter[] = [kiteAndIslands, kiteSafariSeason, kite2sail, sickdogsurf, goldenDolphin];
 
 const covered = new Set(CRUISE_ADAPTERS.flatMap(a => a.urls.map(normUrl)));
 export function isAdapterUrl(url: string): boolean {
