@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+ <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<!-- This site is optimized with the Yoast SEO plugin v27.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Contato - Amigos do Vento | Pousada e Kitepoint em Touros RN</title>
+	<link rel="canonical" href="https://amigosdovento.com/contact/" />
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Contato - Amigos do Vento | Pousada e Kitepoint em Touros RN" />
+	<meta property="og:description" content="Amigos do Vento Pousada Entre em contato Venha aproveitar o melhor de TOUROS &#8211; RN. Fale conosco! Entre em contato, faça sua reserva, receba todo o suporte ou tire suas dúvidas com a nossa equipe. Email reservas@amigosdovento.com Celular + 55 (84) 99468-6352 Localização Avenida Andre Gomes de Souza Touros RN Cep 59584 000 Perguntas Frequentes Informações importantes para sua estadia e experiência na nossa pousada. O que está incluso na reserva? A hospedagem inclui chalé completo com ar-condicionado, banheiro privativo, varanda, Wi-Fi e café da manhã. O espaço é pensado para oferecer conforto e praticidade para sua estadia, de frente para o mar. O restaurante faz parte da diária? O café da manhã já está incluso na hospedagem. O restaurante funciona no local oferecendo outras refeições e consumo à parte, tanto para hóspedes quanto para visitantes. Como funcionam as aulas e a estrutura do kitepoint? O Amigos do Vento conta com kitepoint estruturado em frente à pousada. Oferecemos aulas com instrutores e estrutura para quem deseja aprender, evoluir ou já pratica kitesurf. As aulas e demais serviços relacionados ao esporte são contratados à parte. É possível aproveitar a pousada mesmo sem praticar kitesurf? Sim. Apesar da forte ligação com o kite, a pousada também é ideal para quem busca tranquilidade, contato com a natureza e praias mais sossegadas, sendo uma excelente opção para descanso e lazer." />
+	<meta property="og:url" content="https://amigosdovento.com/contact/" />
+	<meta property="og:site_name" content="Amigos do Vento | Pousada e Kitepoint em Touros RN" />
+	<meta property="article:modified_time" content="2026-02-26T21:27:23+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Est. tempo de leitura" />
+	<meta name="twitter:data1" content="1 minuto" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/amigosdovento.com\/contact\/","url":"https:\/\/amigosdovento.com\/contact\/","name":"Contato - Amigos do Vento | Pousada e Kitepoint em Touros RN","isPartOf":{"@id":"https:\/\/amigosdovento.com\/#website"},"datePublished":"2022-02-24T15:48:15+00:00","dateModified":"2026-02-26T21:27:23+00:00","breadcrumb":{"@id":"https:\/\/amigosdovento.com\/contact\/#breadcrumb"},"inLanguage":"pt-BR","potentialAction":[{"@type":"ReadAction","target":["https:\/\/amigosdovento.com\/contact\/"]}]},{"@type":"BreadcrumbList","@id":"https:\/\/amigosdovento.com\/contact\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https:\/\/amigosdovento.com\/"},{"@type":"ListItem","position":2,"name":"Contato"}]},{"@type":"WebSite","@id":"https:\/\/amigosdovento.com\/#website","url":"https:\/\/amigosdovento.com\/","name":"Amigos do Vento | Pousada e Kitepoint em Touros RN","description":"Chalés pé na areia, kitepoint, restaurante e hospedagem em Touros, Rio Grande do Norte, ao lado de São Miguel do Gostoso.","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/amigosdovento.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"pt-BR"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+<link rel="alternate" type="application/rss+xml" title="Feed para Amigos do Vento | Pousada e Kitepoint em Touros RN &raquo;" href="https://amigosdovento.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Amigos do Vento | Pousada e Kitepoint em Touros RN &raquo;" href="https://amigosdovento.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://amigosdovento.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Famigosdovento.com%2Fcontact%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://amigosdovento.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Famigosdovento.com%2Fcontact%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css"></style>
+<style id="wp-emoji-styles-inline-css"></style>
+<style id="classic-theme-styles-inline-css"></style>
+<style id="global-styles-inline-css"></style>
+<link rel='stylesheet' id='elementor-frontend-css' href='https://amigosdovento.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.3.4' media='all' />
+<style id="elementor-frontend-inline-css"></style>
+<link rel='stylesheet' id='widget-image-css' href='https://amigosdovento.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=4.3.4' media='all' />
+<link rel='stylesheet' id='e-animation-grow-css' href='https://amigosdovento.com/wp-content/plugins/elementor/assets/lib/animations/styles/e-animation-grow.min.css?ver=4.3.4' media='all' />
+<link rel='stylesheet' id='widget-social-icons-css' href='https://amigosdovento.com/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=4.3.4' media='all' />
+<link rel='stylesheet' id='e-apple-webkit-css' href='https://amigosdovento.com/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=4.3.4' media='all' />
+<link rel='stylesheet' id='elementor-post-873-css' href='https://amigosdovento.com/wp-content/uploads/elementor/css/post-873.css?ver=1791750928' media='all' />
+<link rel='stylesheet' id='elementor-post-668-css' href='https://amigosdovento.com/wp-content/uploads/elementor/css/post-668.css?ver=1791747926' media='all' />
+<link rel='stylesheet' id='elementor-post-676-css' href='https://amigosdovento.com/wp-content/uploads/elementor/css/post-676.css?ver=1791747926' media='all' />
+<link rel='stylesheet' id='royal-elementor-kit-style-css' href='https://amigosdovento.com/wp-content/themes/royal-elementor-kit/style.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='qlwapp-frontend-css' href='https://amigosdovento.com/wp-content/plugins/wp-whatsapp-chat/build/frontend/css/style.css?ver=8.6.6' media='all' />
+<link rel='stylesheet' id='elementor-post-159-css' href='https://amigosdovento.com/wp-content/uploads/elementor/css/post-159.css?ver=1791747926' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://amigosdovento.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=4.3.4' media='all' />
+<link rel='stylesheet' id='widget-divider-css' href='https://amigosdovento.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=4.3.4' media='all' />
+<link rel='stylesheet' id='widget-icon-box-css' href='https://amigosdovento.com/wp-content/plugins/elementor/assets/css/widget-icon-box.min.css?ver=4.3.4' media='all' />
+<link rel='stylesheet' id='e-animation-slideInLeft-css' href='https://amigosdovento.com/wp-content/plugins/elementor/assets/lib/animations/styles/slideInLeft.min.css?ver=4.3.4' media='all' />
+<link rel='stylesheet' id='widget-google_maps-css' href='https://amigosdovento.com/wp-content/plugins/elementor/assets/css/widget-google_maps.min.css?ver=4.3.4' media='all' />
+<link rel='stylesheet' id='e-animation-slideInRight-css' href='https://amigosdovento.com/wp-content/plugins/elementor/assets/lib/animations/styles/slideInRight.min.css?ver=4.3.4' media='all' />
+<link rel='stylesheet' id='e-animation-zoomIn-css' href='https://amigosdovento.com/wp-content/plugins/elementor/assets/lib/animations/styles/zoomIn.min.css?ver=4.3.4' media='all' />
+<link rel='stylesheet' id='wpr-animations-css-css' href='https://amigosdovento.com/wp-content/plugins/royal-elementor-addons/assets/css/lib/animations/wpr-animations.min.css?ver=1.7.1068' media='all' />
+<link rel='stylesheet' id='wpr-link-animations-css-css' href='https://amigosdovento.com/wp-content/plugins/royal-elementor-addons/assets/css/lib/animations/wpr-link-animations.min.css?ver=1.7.1068' media='all' />
+<link rel='stylesheet' id='wpr-loading-animations-css-css' href='https://amigosdovento.com/wp-content/plugins/royal-elementor-addons/assets/css/lib/animations/loading-animations.min.css?ver=1.7.1068' media='all' />
+<link rel='stylesheet' id='wpr-button-animations-css-css' href='https://amigosdovento.com/wp-content/plugins/royal-elementor-addons/assets/css/lib/animations/button-animations.min.css?ver=1.7.1068' media='all' />
+<link rel='stylesheet' id='wpr-text-animations-css-css' href='https://amigosdovento.com/wp-content/plugins/royal-elementor-addons/assets/css/lib/animations/text-animations.min.css?ver=1.7.1068' media='all' />
+<link rel='stylesheet' id='wpr-lightgallery-css-css' href='https://amigosdovento.com/wp-content/plugins/royal-elementor-addons/assets/css/lib/lightgallery/lightgallery.min.css?ver=1.7.1068' media='all' />
+<link rel='stylesheet' id='wpr-addons-css-css' href='https://amigosdovento.com/wp-content/plugins/royal-elementor-addons/assets/css/frontend.min.css?ver=1.7.1068' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css' href='https://amigosdovento.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=1.7.1068' media='all' />
+<link rel='stylesheet' id='elementor-gf-poppins-css' href='https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-gf-montserrat-css' href='https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-gf-inter-css' href='https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-gf-manrope-css' href='https://fonts.googleapis.com/css?family=Manrope:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-gf-raleway-css' href='https://fonts.googleapis.com/css?family=Raleway:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-gf-opensans-css' href='https://fonts.googleapis.com/css?family=Open+Sans:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-gf-roboto-css' href='https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-gf-robotoslab-css' href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<script id="jquery-core-js" data-cfasync="false" src="https://amigosdovento.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" data-cfasync="false" src="https://amigosdovento.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<link rel="https://api.w.org/" href="https://amigosdovento.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://amigosdovento.com/wp-json/wp/v2/pages/873" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://amigosdovento.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.0.7" />
+<link rel='shortlink' href='https://amigosdovento.com/?p=873' />
+<meta name="ti-site-data" content="eyJyIjoiMTowITc6MCEzMDowIiwibyI6Imh0dHBzOlwvXC9hbWlnb3Nkb3ZlbnRvLmNvbT90aS1vbmxpbmUtdXNlcnMtZ29vZ2xlPTEmYW1wO3A9JTJGY29udGFjdCUyRiZhbXA7X3dwbm9uY2U9ODhiMzQ3OTAzZiJ9" /><meta name="generator" content="Elementor 4.3.4; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+ <style></style>
+ <style id="custom-background-css"></style>
+<link rel="icon" href="https://amigosdovento.com/wp-content/uploads/2018/07/cropped-logo-login-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://amigosdovento.com/wp-content/uploads/2018/07/cropped-logo-login-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://amigosdovento.com/wp-content/uploads/2018/07/cropped-logo-login-180x180.png" />
+<meta name="msapplication-TileImage" content="https://amigosdovento.com/wp-content/uploads/2018/07/cropped-logo-login-270x270.png" />
+<style id="wpr_lightbox_styles"></style>	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
+<body class="wp-singular page-template page-template-elementor_canvas page page-id-873 custom-background wp-embed-responsive wp-theme-royal-elementor-kit elementor-default elementor-template-canvas elementor-kit-159 elementor-page elementor-page-873">
+	<style></style> <div data-elementor-type="wp-post" data-elementor-id="668" class="elementor elementor-668">
+ <section class="elementor-section elementor-top-section elementor-element elementor-element-6b14429 elementor-section-boxed elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no" data-id="6b14429" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+ <div class="elementor-background-overlay"></div>
+ <div class="elementor-container elementor-column-gap-default">
+ <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-405a0455" data-id="405a0455" data-element_type="column" data-e-type="column">
+ <div class="elementor-widget-wrap elementor-element-populated">
+ <div class="elementor-element elementor-element-7f1913f elementor-widget-mobile__width-initial elementor-widget elementor-widget-image" data-id="7f1913f" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+ <a href="https://amigosdovento.com/">
+ <img width="320" height="72" src="http://amigosdovento.com/wp-content/uploads/2018/07/logo-login.png" class="attachment-large size-large wp-image-35" alt="" srcset="http://amigosdovento.com/wp-content/uploads/2018/07/logo-login.png 320w, http://amigosdovento.com/wp-content/uploads/2018/07/logo-login-300x68.png 300w" sizes="(max-width: 320px) 100vw, 320px" /> </a>
+ </div>
+ </div>
+ </div>
+ <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-405829a6" data-id="405829a6" data-element_type="column" data-e-type="column">
+ <div class="elementor-widget-wrap elementor-element-populated">
+ <div class="elementor-element elementor-element-57bfcb4c wpr-main-menu-align-center wpr-pointer-line-fx wpr-pointer-fx-none wpr-main-menu-align--tabletcenter wpr-mobile-toggle-v4 elementor-widget-mobile__width-initial wpr-pointer-underline wpr-sub-icon-caret-down wpr-sub-menu-fx-fade wpr-nav-menu-bp-mobile wpr-mobile-menu-full-width wpr-mobile-menu-item-align-center wpr-sub-divider-yes elementor-widget elementor-widget-wpr-nav-menu" data-id="57bfcb4c" data-element_type="widget" data-e-type="widget" data-settings="{&quot;menu_layout&quot;:&quot;horizontal&quot;}" data-widget_type="wpr-nav-menu.default">
+ <nav class="wpr-nav-menu-container wpr-nav-menu-horizontal" data-trigger="hover" data-consider-header="" data-scroll-speed="500"><ul id="menu-1-57bfcb4c" class="wpr-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-878"><a href="https://amigosdovento.com/" class="wpr-menu-item wpr-pointer-item">Início</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-874"><a href="https://amigosdovento.com/sobre/" class="wpr-menu-item wpr-pointer-item">Sobre</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-875"><a href="https://amigosdovento.com/regiao/" class="wpr-menu-item wpr-pointer-item">Região</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-873 current_page_item menu-item-876"><a href="https://amigosdovento.com/contact/" aria-current="page" class="wpr-menu-item wpr-pointer-item wpr-active-menu-item">Contato</a></li>
+</ul></nav><nav class="wpr-mobile-nav-menu-container"><div class="wpr-mobile-toggle-wrap"><div class="wpr-mobile-toggle"><span class="wpr-mobile-toggle-line"></span><span class="wpr-mobile-toggle-line"></span><span class="wpr-mobile-toggle-line"></span></div></div><ul id="mobile-menu-2-57bfcb4c" class="wpr-mobile-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-878"><a href="https://amigosdovento.com/" class="wpr-mobile-menu-item">Início</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-874"><a href="https://amigosdovento.com/sobre/" class="wpr-mobile-menu-item">Sobre</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-875"><a href="https://amigosdovento.com/regiao/" class="wpr-mobile-menu-item">Região</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-873 current_page_item menu-item-876"><a href="https://amigosdovento.com/contact/" aria-current="page" class="wpr-mobile-menu-item wpr-active-menu-item">Contato</a></li>
+</ul></nav> </div>
+ </div>
+ </div>
+ <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-45eb8de8 elementor-hidden-mobile" data-id="45eb8de8" data-element_type="column" data-e-type="column">
+ <div class="elementor-widget-wrap elementor-element-populated">
+ <div class="elementor-element elementor-element-b0d845b e-grid-align-right elementor-shape-rounded elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="b0d845b" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
+ <div class="elementor-social-icons-wrapper elementor-grid" role="list">
+ <span class="elementor-grid-item" role="listitem">
+ <a class="elementor-icon elementor-social-icon elementor-social-icon-whatsapp elementor-animation-grow elementor-repeater-item-e9756c8" href="https://wa.me/5584994686352?text=Ol%C3%A1%2C%20vi%20o%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20saber%20sobre%20datas%20dispon%C3%ADveis" target="_blank">
+ <span class="elementor-screen-only">Whatsapp</span>
+ <svg></svg> </a>
+ </span>
+ <span class="elementor-grid-item" role="listitem">
+ <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-grow elementor-repeater-item-b2c3f2e" href="https://www.instagram.com/amigosdoventochalesekitepoint/" target="_blank">
+ <span class="elementor-screen-only">Instagram</span>
+ <svg></svg> </a>
+ </span>
+ <span class="elementor-grid-item" role="listitem">
+ <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-grow elementor-repeater-item-2f307f6" href="https://www.facebook.com/pousadaamigosdovento" target="_blank">
+ <span class="elementor-screen-only">Facebook-f</span>
+ <svg></svg> </a>
+ </span>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ </div>
+ <div data-elementor-type="wp-page" data-elementor-id="873" class="elementor elementor-873">
+ <section class="elementor-section elementor-top-section elementor-element elementor-element-5f34d2b elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no" data-id="5f34d2b" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+ <div class="elementor-background-overlay"></div>
+ <div class="elementor-container elementor-column-gap-default">
+ <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fb237cd" data-id="fb237cd" data-element_type="column" data-e-type="column">
+ <div class="elementor-widget-wrap elementor-element-populated">
+ <div class="elementor-element elementor-element-169cc44 elementor-widget elementor-widget-heading" data-id="169cc44" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+ <h2 class="elementor-heading-title elementor-size-default">Amigos do Vento Pousada</h2> </div>
+ <div class="elementor-element elementor-element-b3d367f elementor-widget elementor-widget-heading" data-id="b3d367f" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+ <h2 class="elementor-heading-title elementor-size-default">Entre em contato</h2> </div>
+ <div class="elementor-element elementor-element-3f8110c elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="3f8110c" data-element_type="widget" data-e-type="widget" data-widget_type="divider.default">
+ <div class="elementor-divider">
+ <span class="elementor-divider-separator">
+ </span>
+ </div>
+ </div>
+ <div class="elementor-element elementor-element-7ee8bf6 elementor-widget elementor-widget-text-editor" data-id="7ee8bf6" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+ <p>Venha aproveitar o melhor de TOUROS &#8211; RN.</p> </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <div class="elementor-element elementor-element-22aa7e19 e-flex e-con-boxed wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no e-con e-parent" data-id="22aa7e19" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+ <div class="e-con-inner">
+ <div class="elementor-element elementor-element-13a540b4 e-flex e-con-boxed wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no elementor-invisible e-con e-child" data-id="13a540b4" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation&quot;:&quot;slideInLeft&quot;}">
+ <div class="e-con-inner">
+ <div class="elementor-element elementor-element-4417001 elementor-widget elementor-widget-heading" data-id="4417001" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+ <h2 class="elementor-heading-title elementor-size-default">Fale conosco!</h2> </div>
+ <div class="elementor-element elementor-element-55767e85 elementor-widget elementor-widget-text-editor" data-id="55767e85" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+ <p>Entre em contato, faça sua reserva, receba todo o suporte ou tire suas dúvidas com a nossa equipe.</p> </div>
+ <div class="elementor-element elementor-element-38a4e9e7 elementor-view-stacked elementor-shape-square elementor-widget__width-initial elementor-widget-mobile__width-initial elementor-position-inline-start elementor-mobile-position-inline-start elementor-widget elementor-widget-icon-box" data-id="38a4e9e7" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+ <div class="elementor-icon-box-wrapper">
+ <div class="elementor-icon-box-icon">
+ <span class="elementor-icon">
+ <svg></svg> </span>
+ </div>
+ <div class="elementor-icon-box-content">
+ <h3 class="elementor-icon-box-title">
+ <span >
+ Email </span>
+ </h3>
+ <p class="elementor-icon-box-description">
+ reservas@amigosdovento.com </p>
+ </div>
+ </div>
+ </div>
+ <div class="elementor-element elementor-element-8fcbdac elementor-view-stacked elementor-shape-square elementor-widget__width-initial elementor-widget-mobile__width-initial elementor-position-inline-start elementor-mobile-position-inline-start elementor-widget elementor-widget-icon-box" data-id="8fcbdac" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+ <div class="elementor-icon-box-wrapper">
+ <div class="elementor-icon-box-icon">
+ <a href="https://wa.me/5584994686352?text=Ol%C3%A1%2C%20vi%20o%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20saber%20sobre%20datas%20dispon%C3%ADveis" class="elementor-icon" tabindex="-1" aria-label="Celular">
+ <svg></svg> </a>
+ </div>
+ <div class="elementor-icon-box-content">
+ <h3 class="elementor-icon-box-title">
+ <a href="https://wa.me/5584994686352?text=Ol%C3%A1%2C%20vi%20o%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20saber%20sobre%20datas%20dispon%C3%ADveis" >
+ Celular </a>
+ </h3>
+ <p class="elementor-icon-box-description">
+ + 55 (84) 99468-6352 </p>
+ </div>
+ </div>
+ </div>
+ <div class="elementor-element elementor-element-29371cd elementor-view-stacked elementor-shape-square elementor-widget__width-initial elementor-widget-mobile__width-initial elementor-position-inline-start elementor-mobile-position-inline-start elementor-widget elementor-widget-icon-box" data-id="29371cd" data-element_type="widget" data-e-type="widget" data-widget_type="icon-box.default">
+ <div class="elementor-icon-box-wrapper">
+ <div class="elementor-icon-box-icon">
+ <span class="elementor-icon">
+ <svg></svg> </span>
+ </div>
+ <div class="elementor-icon-box-content">
+ <h3 class="elementor-icon-box-title">
+ <span >
+ Localização </span>
+ </h3>
+ <p class="elementor-icon-box-description">
+ Avenida Andre Gomes de Souza 
+Touros RN
+Cep 59584 000 </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="elementor-element elementor-element-11df77e3 elementor-hidden-tablet elementor-hidden-mobile e-flex e-con-boxed wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no elementor-invisible e-con e-child" data-id="11df77e3" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;slideInRight&quot;}">
+ <div class="e-con-inner">
+ <div class="elementor-element elementor-element-6788587 elementor-widget elementor-widget-google_maps" data-id="6788587" data-element_type="widget" data-e-type="widget" data-widget_type="google_maps.default">
+ <div class="elementor-custom-embed">
+ <iframe loading="lazy"
+ src="https://maps.google.com/maps?q=AMigos%20do%20vento%2C%20Touros%20-%20RN&#038;t=m&#038;z=15&#038;output=embed&#038;iwloc=near"
+ title="AMigos do vento, Touros - RN"
+ aria-label="AMigos do vento, Touros - RN"
+ ></iframe>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="elementor-element elementor-element-adb6e5a e-con-full elementor-hidden-desktop e-flex wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no elementor-invisible e-con e-child" data-id="adb6e5a" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;slideInRight&quot;}">
+ <div class="elementor-element elementor-element-67e0822 elementor-widget elementor-widget-google_maps" data-id="67e0822" data-element_type="widget" data-e-type="widget" data-widget_type="google_maps.default">
+ <div class="elementor-custom-embed">
+ <iframe loading="lazy"
+ src="https://maps.google.com/maps?q=AMigos%20do%20vento%2C%20Touros%20-%20RN&#038;t=m&#038;z=15&#038;output=embed&#038;iwloc=near"
+ title="AMigos do vento, Touros - RN"
+ aria-label="AMigos do vento, Touros - RN"
+ ></iframe>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="elementor-element elementor-element-750fd92 e-flex e-con-boxed wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no e-con e-parent" data-id="750fd92" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+ <div class="e-con-inner">
+ <div class="elementor-element elementor-element-23c5608d e-flex e-con-boxed wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no elementor-invisible e-con e-child" data-id="23c5608d" data-element_type="container" data-e-type="container" data-settings="{&quot;animation&quot;:&quot;zoomIn&quot;}">
+ <div class="e-con-inner">
+ <div class="elementor-element elementor-element-68ce035 wpr-dual-heading-icon-top elementor-widget elementor-widget-wpr-dual-color-heading" data-id="68ce035" data-element_type="widget" data-e-type="widget" data-widget_type="wpr-dual-color-heading.default">
+ <div class="wpr-dual-heading-wrap">
+ <div class="wpr-dual-title-wrap">
+ <h2 class="wpr-dual-title">
+ <span class="first">Perguntas</span>
+ <span class="second">Frequentes</span>
+ </h2>
+ </div>
+ </div>
+ </div>
+ <div class="elementor-element elementor-element-49d33fef elementor-widget elementor-widget-text-editor" data-id="49d33fef" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+ <p>Informações importantes para sua estadia e experiência na nossa pousada.</p> </div>
+ <div class="elementor-element elementor-element-7ef742ed wpr-advanced-accordion-icon-no-box elementor-widget elementor-widget-wpr-advanced-accordion" data-id="7ef742ed" data-element_type="widget" data-e-type="widget" data-settings="{&quot;active_item&quot;:1}" data-widget_type="wpr-advanced-accordion.default">
+ <div class="wpr-advanced-accordion" data-accordion-type="accordion" data-active-index="1" data-accordion-trigger="click" data-interaction-speed="0.4">
+ <div class="wpr-accordion-item-wrap">
+ <button class="wpr-acc-button">
+ <span class="wpr-acc-item-title">
+ <span class="wpr-title-icon">
+ </span>
+ <span class="wpr-acc-title-text">O que está incluso na reserva?</span>
+ </span>
+ <span class="wpr-toggle-icon wpr-ti-close"><svg></svg></span>
+ <span class="wpr-toggle-icon wpr-ti-open"><svg></svg></span>
+ </button>
+ <div class="wpr-acc-panel">
+ <div class="wpr-acc-panel-content"><p>A hospedagem inclui chalé completo com ar-condicionado, banheiro privativo, varanda, Wi-Fi e café da manhã. O espaço é pensado para oferecer conforto e praticidade para sua estadia, de frente para o mar.</p></div>
+ </div>
+ </div>
+ <div class="wpr-accordion-item-wrap">
+ <button class="wpr-acc-button">
+ <span class="wpr-acc-item-title">
+ <span class="wpr-title-icon">
+ </span>
+ <span class="wpr-acc-title-text">O restaurante faz parte da diária?</span>
+ </span>
+ <span class="wpr-toggle-icon wpr-ti-close"><svg></svg></span>
+ <span class="wpr-toggle-icon wpr-ti-open"><svg></svg></span>
+ </button>
+ <div class="wpr-acc-panel">
+ <div class="wpr-acc-panel-content"><p>O café da manhã já está incluso na hospedagem. O restaurante funciona no local oferecendo outras refeições e consumo à parte, tanto para hóspedes quanto para visitantes.</p></div>
+ </div>
+ </div>
+ <div class="wpr-accordion-item-wrap">
+ <button class="wpr-acc-button">
+ <span class="wpr-acc-item-title">
+ <span class="wpr-title-icon">
+ </span>
+ <span class="wpr-acc-title-text">Como funcionam as aulas e a estrutura do kitepoint?</span>
+ </span>
+ <span class="wpr-toggle-icon wpr-ti-close"><svg></svg></span>
+ <span class="wpr-toggle-icon wpr-ti-open"><svg></svg></span>
+ </button>
+ <div class="wpr-acc-panel">
+ <div class="wpr-acc-panel-content"><p data-start="894" data-end="1144">O Amigos do Vento conta com kitepoint estruturado em frente à pousada. Oferecemos aulas com instrutores e estrutura para quem deseja aprender, evoluir ou já pratica kitesurf. As aulas e demais serviços relacionados ao esporte são contratados à parte.</p></div>
+ </div>
+ </div>
+ <div class="wpr-accordion-item-wrap">
+ <button class="wpr-acc-button">
+ <span class="wpr-acc-item-title">
+ <span class="wpr-title-icon">
+ </span>
+ <span class="wpr-acc-title-text">É possível aproveitar a pousada mesmo sem praticar kitesurf?</span>
+ </span>
+ <span class="wpr-toggle-icon wpr-ti-close"><svg></svg></span>
+ <span class="wpr-toggle-icon wpr-ti-open"><svg></svg></span>
+ </button>
+ <div class="wpr-acc-panel">
+ <div class="wpr-acc-panel-content"><p>Sim. Apesar da forte ligação com o kite, a pousada também é ideal para quem busca tranquilidade, contato com a natureza e praias mais sossegadas, sendo uma excelente opção para descanso e lazer.</p></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <style></style> <div data-elementor-type="wp-post" data-elementor-id="676" class="elementor elementor-676">
+ <section class="elementor-section elementor-top-section elementor-element elementor-element-197ef08f elementor-section-full_width elementor-section-height-default elementor-section-height-default wpr-particle-no wpr-jarallax-no wpr-parallax-no wpr-sticky-section-no wpr-column-slider-no wpr-equal-height-no" data-id="197ef08f" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+ <div class="elementor-background-overlay"></div>
+ <div class="elementor-container elementor-column-gap-default">
+ <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5d0776da" data-id="5d0776da" data-element_type="column" data-e-type="column">
+ <div class="elementor-widget-wrap elementor-element-populated">
+ <div class="elementor-element elementor-element-3ab7cffa wpr-main-menu-align-center wpr-pointer-line-fx wpr-pointer-fx-none wpr-main-menu-align--tabletcenter wpr-mobile-toggle-v4 wpr-pointer-underline wpr-sub-icon-caret-down wpr-sub-menu-fx-fade wpr-nav-menu-bp-mobile wpr-mobile-menu-full-width wpr-mobile-menu-item-align-center wpr-sub-divider-yes elementor-widget elementor-widget-wpr-nav-menu" data-id="3ab7cffa" data-element_type="widget" data-e-type="widget" data-settings="{&quot;menu_layout&quot;:&quot;horizontal&quot;}" data-widget_type="wpr-nav-menu.default">
+ <nav class="wpr-nav-menu-container wpr-nav-menu-horizontal" data-trigger="hover" data-consider-header="" data-scroll-speed="500"><ul id="menu-1-3ab7cffa" class="wpr-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-878"><a href="https://amigosdovento.com/" class="wpr-menu-item wpr-pointer-item">Início</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-874"><a href="https://amigosdovento.com/sobre/" class="wpr-menu-item wpr-pointer-item">Sobre</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-875"><a href="https://amigosdovento.com/regiao/" class="wpr-menu-item wpr-pointer-item">Região</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-873 current_page_item menu-item-876"><a href="https://amigosdovento.com/contact/" aria-current="page" class="wpr-menu-item wpr-pointer-item wpr-active-menu-item">Contato</a></li>
+</ul></nav><nav class="wpr-mobile-nav-menu-container"><div class="wpr-mobile-toggle-wrap"><div class="wpr-mobile-toggle"><span class="wpr-mobile-toggle-line"></span><span class="wpr-mobile-toggle-line"></span><span class="wpr-mobile-toggle-line"></span></div></div><ul id="mobile-menu-2-3ab7cffa" class="wpr-mobile-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-878"><a href="https://amigosdovento.com/" class="wpr-mobile-menu-item">Início</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-874"><a href="https://amigosdovento.com/sobre/" class="wpr-mobile-menu-item">Sobre</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-875"><a href="https://amigosdovento.com/regiao/" class="wpr-mobile-menu-item">Região</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-873 current_page_item menu-item-876"><a href="https://amigosdovento.com/contact/" aria-current="page" class="wpr-mobile-menu-item wpr-active-menu-item">Contato</a></li>
+</ul></nav> </div>
+ <div class="elementor-element elementor-element-732b9e2c elementor-shape-rounded elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="732b9e2c" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
+ <div class="elementor-social-icons-wrapper elementor-grid" role="list">
+ <span class="elementor-grid-item" role="listitem">
+ <a class="elementor-icon elementor-social-icon elementor-social-icon-whatsapp elementor-animation-grow elementor-repeater-item-e9756c8" href="https://wa.me/5584994686352?text=Ol%C3%A1%2C%20vi%20o%20site%20de%20voc%C3%AAs%20e%20gostaria%20de%20saber%20sobre%20datas%20dispon%C3%ADveis" target="_blank">
+ <span class="elementor-screen-only">Whatsapp</span>
+ <svg></svg> </a>
+ </span>
+ <span class="elementor-grid-item" role="listitem">
+ <a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-animation-grow elementor-repeater-item-b2c3f2e" href="https://www.instagram.com/amigosdoventochalesekitepoint/" target="_blank">
+ <span class="elementor-screen-only">Instagram</span>
+ <svg></svg> </a>
+ </span>
+ <span class="elementor-grid-item" role="listitem">
+ <a class="elementor-icon elementor-social-icon elementor-social-icon-facebook-f elementor-animation-grow elementor-repeater-item-2f307f6" href="https://www.facebook.com/pousadaamigosdovento" target="_blank">
+ <span class="elementor-screen-only">Facebook-f</span>
+ <svg></svg> </a>
+ </span>
+ </div>
+ </div>
+ <div class="elementor-element elementor-element-7f1fa44 elementor-widget elementor-widget-text-editor" data-id="7f1fa44" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+ <p>© 2026 Todos os direitos reservados &#8211; Criado por <span style="color: #ccd3d3;">webug.com.br</span></p> </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ </div>
+ <script type="speculationrules"></script>
+ <script></script>
+ <div
+ class="qlwapp"
+ style="--qlwapp-scheme-font-family:inherit;--qlwapp-scheme-font-size:18px;--qlwapp-scheme-icon-size:60px;--qlwapp-scheme-icon-font-size:24px;--qlwapp-scheme-box-max-height:400px;--qlwapp-scheme-brand:#25d366;--qlwapp-scheme-text:#ffffff;--qlwapp-scheme-text-secondary:#303030;--qlwapp-scheme-contact-role-color:inherit;--qlwapp-scheme-contact-name-color:inherit;--qlwapp-scheme-contact-availability-color:inherit;--qlwapp-scheme-box-message-word-break:break-all;--qlwapp-button-notification-bubble-animation:none;"
+ data-contacts="[{&quot;id&quot;:1,&quot;bot_id&quot;:&quot;&quot;,&quot;order&quot;:0,&quot;active&quot;:1,&quot;chat&quot;:1,&quot;avatar&quot;:&quot;https:\/\/www.gravatar.com\/avatar\/00000000000000000000000000000000&quot;,&quot;type&quot;:&quot;phone&quot;,&quot;phone&quot;:&quot;5584994686352&quot;,&quot;group&quot;:&quot;https:\/\/chat.whatsapp.com\/EQuPUtcPzEdIZVlT8JyyNw&quot;,&quot;firstname&quot;:&quot;John&quot;,&quot;lastname&quot;:&quot;Doe&quot;,&quot;label&quot;:&quot;Ajuda&quot;,&quot;message&quot;:&quot;Ol\u00e1, vi o site de voc\u00eas e gostaria de saber sobre datas dispon\u00edveis.&quot;,&quot;timefrom&quot;:&quot;00:00&quot;,&quot;timeto&quot;:&quot;00:00&quot;,&quot;timezone&quot;:&quot;America\/Sao_Paulo&quot;,&quot;visibility&quot;:&quot;readonly&quot;,&quot;timedays&quot;:[],&quot;whatsapp_link_type&quot;:&quot;web&quot;,&quot;display&quot;:{&quot;entries&quot;:{&quot;post&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;page&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;taxonomies&quot;:{&quot;category&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;target&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;devices&quot;:&quot;all&quot;}}]"
+ data-primary-contact="{&quot;id&quot;:1,&quot;bot_id&quot;:&quot;&quot;,&quot;order&quot;:0,&quot;active&quot;:1,&quot;chat&quot;:1,&quot;avatar&quot;:&quot;https:\/\/www.gravatar.com\/avatar\/00000000000000000000000000000000&quot;,&quot;type&quot;:&quot;phone&quot;,&quot;phone&quot;:&quot;5584994686352&quot;,&quot;group&quot;:&quot;https:\/\/chat.whatsapp.com\/EQuPUtcPzEdIZVlT8JyyNw&quot;,&quot;firstname&quot;:&quot;John&quot;,&quot;lastname&quot;:&quot;Doe&quot;,&quot;label&quot;:&quot;Ajuda&quot;,&quot;message&quot;:&quot;Ol\u00e1, vi o site de voc\u00eas e gostaria de saber sobre datas dispon\u00edveis.&quot;,&quot;timefrom&quot;:&quot;00:00&quot;,&quot;timeto&quot;:&quot;00:00&quot;,&quot;timezone&quot;:&quot;America\/Sao_Paulo&quot;,&quot;visibility&quot;:&quot;readonly&quot;,&quot;timedays&quot;:[],&quot;whatsapp_link_type&quot;:&quot;web&quot;,&quot;display&quot;:{&quot;entries&quot;:{&quot;post&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;page&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;taxonomies&quot;:{&quot;category&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;target&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;devices&quot;:&quot;all&quot;}}"
+ data-display="{&quot;devices&quot;:&quot;all&quot;,&quot;entries&quot;:{&quot;post&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]},&quot;page&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;taxonomies&quot;:{&quot;category&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}},&quot;target&quot;:{&quot;include&quot;:1,&quot;ids&quot;:[]}}"
+ data-button="{&quot;layout&quot;:&quot;bubble&quot;,&quot;box&quot;:&quot;no&quot;,&quot;position&quot;:&quot;bottom-right&quot;,&quot;text&quot;:&quot;&quot;,&quot;icon&quot;:&quot;qlwapp-whatsapp-icon&quot;,&quot;developer&quot;:&quot;no&quot;,&quot;rounded&quot;:&quot;yes&quot;,&quot;animation_name&quot;:&quot;&quot;,&quot;animation_delay&quot;:&quot;&quot;,&quot;notification_bubble&quot;:&quot;none&quot;,&quot;notification_bubble_animation&quot;:&quot;none&quot;,&quot;timefrom&quot;:&quot;00:00&quot;,&quot;timeto&quot;:&quot;00:00&quot;,&quot;timedays&quot;:[],&quot;timezone&quot;:&quot;&quot;,&quot;visibility&quot;:&quot;readonly&quot;}"
+ data-box="{&quot;enable&quot;:&quot;yes&quot;,&quot;auto_open&quot;:&quot;no&quot;,&quot;auto_delay_open&quot;:1000,&quot;lazy_load&quot;:&quot;no&quot;,&quot;allow_outside_close&quot;:&quot;no&quot;,&quot;header&quot;:&quot;\n\t\t\t\t\t\t\t\t&lt;p style=\&quot;line-height: 1;text-align: start\&quot;&gt;&lt;span style=\&quot;font-size: 12px;vertical-align: bottom;letter-spacing: -0.2px;opacity: 0.8;margin: 5px 0 0 1px\&quot;&gt;Powered by&lt;\/span&gt;&lt;\/p&gt;\n\t\t\t\t\t\t\t\t&lt;p style=\&quot;line-height: 1;text-align: start\&quot;&gt;&lt;a style=\&quot;font-size: 24px;line-height: 34px;font-weight: bold;text-decoration: none;color: white\&quot; href=\&quot;https:\/\/quadlayers.com\/products\/whatsapp-chat\/?utm_source=qlwapp_plugin&amp;utm_medium=header&amp;utm_campaign=social-chat\&quot; target=\&quot;_blank\&quot; rel=\&quot;noopener\&quot;&gt;Social Chat&lt;\/a&gt;&lt;\/p&gt;&quot;,&quot;footer&quot;:&quot;&lt;p style=\&quot;text-align: start;\&quot;&gt;Need help? Our team is just a message away&lt;\/p&gt;&quot;,&quot;response&quot;:&quot;Escreva sua mensagem&quot;,&quot;consent_message&quot;:&quot;I accept cookies and privacy policy.&quot;,&quot;consent_enabled&quot;:&quot;no&quot;}"
+ data-scheme="{&quot;font_family&quot;:&quot;inherit&quot;,&quot;font_size&quot;:&quot;18&quot;,&quot;icon_size&quot;:&quot;60&quot;,&quot;icon_font_size&quot;:&quot;24&quot;,&quot;box_max_height&quot;:&quot;400&quot;,&quot;brand&quot;:&quot;#25d366&quot;,&quot;text&quot;:&quot;#ffffff&quot;,&quot;text_secondary&quot;:&quot;#303030&quot;,&quot;link&quot;:&quot;&quot;,&quot;message&quot;:&quot;&quot;,&quot;label&quot;:&quot;&quot;,&quot;name&quot;:&quot;&quot;,&quot;contact_role_color&quot;:&quot;inherit&quot;,&quot;contact_name_color&quot;:&quot;inherit&quot;,&quot;contact_availability_color&quot;:&quot;inherit&quot;,&quot;box_message_word_break&quot;:&quot;break-all&quot;}"
+ data-i18n="{&quot;Available on %s&quot;:&quot;Available on %s&quot;,&quot;Available from %1$s to %2$s&quot;:&quot;Available from %1$s to %2$s&quot;,&quot;Online&quot;:&quot;Online&quot;,&quot;Offline&quot;:&quot;Offline&quot;,&quot;Sunday&quot;:&quot;Sunday&quot;,&quot;Monday&quot;:&quot;Monday&quot;,&quot;Tuesday&quot;:&quot;Tuesday&quot;,&quot;Wednesday&quot;:&quot;Wednesday&quot;,&quot;Thursday&quot;:&quot;Thursday&quot;,&quot;Friday&quot;:&quot;Friday&quot;,&quot;Saturday&quot;:&quot;Saturday&quot;,&quot;Send&quot;:&quot;Send&quot;,&quot;No contacts found.&quot;:&quot;No contacts found.&quot;,&quot;Chatbot conversation&quot;:&quot;Chatbot conversation&quot;,&quot;New message notification&quot;:&quot;New message notification&quot;,&quot;I accept cookies and privacy policy.&quot;:&quot;I accept cookies and privacy policy.&quot;}"
+ >
+ </div>
+ <script id="elementor-webpack-runtime-js" src="https://amigosdovento.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.3.4"></script>
+<script id="elementor-frontend-modules-js" src="https://amigosdovento.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.3.4"></script>
+<script id="jquery-ui-core-js" src="https://amigosdovento.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"></script>
+<script id="elementor-frontend-js-before"></script>
+<script id="elementor-frontend-js" src="https://amigosdovento.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.3.4"></script>
+<script id="wpr-particles-js" src="https://amigosdovento.com/wp-content/plugins/royal-elementor-addons/assets/js/lib/particles/particles.js?ver=3.0.6"></script>
+<script id="wpr-jarallax-js" src="https://amigosdovento.com/wp-content/plugins/royal-elementor-addons/assets/js/lib/jarallax/jarallax.min.js?ver=1.12.7"></script>
+<script id="wpr-parallax-hover-js" src="https://amigosdovento.com/wp-content/plugins/royal-elementor-addons/assets/js/lib/parallax/parallax.min.js?ver=1.0"></script>
+<script id="qlwapp-frontend-js" src="https://amigosdovento.com/wp-content/plugins/wp-whatsapp-chat/build/frontend/js/index.js?ver=4d0d0215220cbbbf5423"></script>
+<script id="wpr-popup-scroll-js-js" src="https://amigosdovento.com/wp-content/plugins/royal-elementor-addons/assets/js/lib/perfect-scrollbar/perfect-scrollbar.min.js?ver=0.4.9"></script>
+<script id="wpr-addons-js-js-extra"></script>
+<script id="wpr-addons-js-js" data-cfasync="false" src="https://amigosdovento.com/wp-content/plugins/royal-elementor-addons/assets/js/frontend.min.js?ver=1.7.1068"></script>
+<script id="wpr-modal-popups-js-js" src="https://amigosdovento.com/wp-content/plugins/royal-elementor-addons/assets/js/modal-popups.min.js?ver=1.7.1068"></script>
+<script id="wp-emoji-settings" type="application/json"></script>
+<script type="module"></script>
+	</body>
+</html>

@@ -1,0 +1,874 @@
+<!doctype html><html><head><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Taiga Tarifa Valdevaqueros | Web Oficial | Tarifa",
+    "identifier": "taiga-valdevaqueros",
+    "makesOffer": {
+        "@type": [
+            "Offer",
+            "LodgingReservation"
+        ],
+        "identifier": "5169409641414656_6182054360252416_4997257902424064",
+        "checkinTime": "2026-10-17T15:00:00",
+        "checkoutTime": "2026-10-24T11:00:00",
+        "availability": "https://schema.org/InStock",
+        "price": 262.8,
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+            "@type": "CompoundPriceSpecification",
+            "price": 262.8,
+            "priceCurrency": "EUR",
+            "valueAddedTaxIncluded": true,
+            "priceComponent": [
+                {
+                    "@type": "UnitPriceSpecification",
+                    "name": "Base rate",
+                    "price": 217.19,
+                    "priceCurrency": "EUR"
+                },
+                {
+                    "@type": "UnitPriceSpecification",
+                    "name": "Tax",
+                    "price": 45.61,
+                    "priceCurrency": "EUR",
+                    "priceComponentType": "GenericTax"
+                }
+            ]
+        },
+        "name": "¡Descuento No Reembolsable! - Sólo Alojamiento"
+    },
+    "containsPlace": [
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Glamping Bruma",
+            "description": "Glamping Bruma",
+            "image": "https://cdn2.paraty.es/taiga-valdevaqueros/images/079f953ae4e2eab",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5169409641414656_6182054360252416_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 262.8,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 262.8,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 217.19,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 45.61,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! - Sólo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5169409641414656_6205423981953024_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 289.8,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 289.8,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 239.5,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 50.3,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Sólo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Glamping Siroa",
+            "description": "Glamping Siroa",
+            "image": "https://cdn2.paraty.es/taiga-valdevaqueros/images/65ca4b8b56b4245",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5929209086083072_6182054360252416_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 262.8,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 262.8,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 217.19,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 45.61,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! - Sólo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5929209086083072_6205423981953024_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 294.3,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 294.3,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 243.22,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 51.08,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Sólo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Tiny Home Brisa",
+            "description": "Tiny Home Brisa",
+            "image": "https://cdn2.paraty.es/taiga-valdevaqueros/images/3cab6aab08c8eb1",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "6310429661855744_6182054360252416_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 373.5,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 373.5,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 308.68,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 64.82,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! - Sólo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "6310429661855744_6205423981953024_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 414.9,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 414.9,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 342.89,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 72.01,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Sólo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Bungalow 6-7",
+            "description": "Bungalow 6-7",
+            "image": "https://cdn2.paraty.es/taiga-valdevaqueros/images/45e0e432e2f0a32",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5692628005814272_6182054360252416_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 406.8,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 406.8,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 336.2,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 70.6,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! - Sólo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5692628005814272_6205423981953024_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 452.7,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 452.7,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 374.13,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 78.57,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Sólo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Tiny Home Duna",
+            "description": "Tiny Home Duna",
+            "image": "https://cdn2.paraty.es/taiga-valdevaqueros/images/b8847cedecd654b",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5698233613418496_6182054360252416_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 427.5,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 427.5,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 353.31,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 74.19,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! - Sólo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5698233613418496_6205423981953024_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 473.4,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 473.4,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 391.24,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 82.16,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Sólo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Bungalow Superior 13",
+            "description": "Bungalow Superior 13",
+            "image": "https://cdn2.paraty.es/taiga-valdevaqueros/images/271eae78d8dff26",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "4593437124853760_6182054360252416_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 440.1,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 440.1,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 363.72,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 76.38,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! - Sólo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "4593437124853760_6205423981953024_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 490.5,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 490.5,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 405.37,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 85.13,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Sólo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Bungalow Superior 14",
+            "description": "Bungalow Superior 14",
+            "image": "https://cdn2.paraty.es/taiga-valdevaqueros/images/eddb6ac84284cc2",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "6475094677258240_6182054360252416_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 440.1,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 440.1,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 363.72,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 76.38,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! - Sólo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "6475094677258240_6205423981953024_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 490.5,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 490.5,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 405.37,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 85.13,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Sólo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Bungalow Superior 11",
+            "description": "Bungalow Superior 11",
+            "image": "https://cdn2.paraty.es/taiga-valdevaqueros/images/f460ad164a589fe",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5902470276448256_6182054360252416_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 440.1,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 440.1,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 363.72,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 76.38,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! - Sólo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5902470276448256_6205423981953024_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 490.5,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 490.5,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 405.37,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 85.13,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Sólo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Casa Vacacional",
+            "description": "Casa Vacacional",
+            "image": "https://cdn2.paraty.es/taiga-valdevaqueros/images/4900a07ef0ba8ce",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "6377200494313472_6182054360252416_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 511.2,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 511.2,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 422.48,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 88.72,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! - Sólo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "6377200494313472_6205423981953024_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 565.2,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 565.2,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 467.11,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 98.09,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Sólo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Tiny Home Aura",
+            "description": "Tiny Home Aura",
+            "image": "https://cdn2.paraty.es/taiga-valdevaqueros/images/d546f4263745f60",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5290609608753152_6182054360252416_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 521.1,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 521.1,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 430.66,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 90.44,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! - Sólo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5290609608753152_6205423981953024_4997257902424064",
+                    "checkinTime": "2026-10-17T15:00:00",
+                    "checkoutTime": "2026-10-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 576.0,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 576.0,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 476.03,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 99.97,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Sólo Alojamiento"
+                }
+            ]
+        }
+    ]
+}
+</script></head><body><!-- trimmed: engine answer reduced to its JSON-LD --></body></html>

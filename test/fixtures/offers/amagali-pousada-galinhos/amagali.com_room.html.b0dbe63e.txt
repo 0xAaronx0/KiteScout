@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="utf-8" />
+ <title>Pousada Amagali</title>
+ <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+ <meta content="" name="keywords" />
+ <meta content="" name="description" />
+ <!-- Favicon -->
+ <link href="img/logo.png" rel="icon" />
+ <!-- Google Web Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link
+ href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+ rel="stylesheet"
+ />
+ <!-- Icon Font Stylesheet -->
+ <link
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+ rel="stylesheet"
+ />
+ <link
+ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+ rel="stylesheet"
+ />
+ <!-- Libraries Stylesheet -->
+ <link href="lib/animate/animate.min.css" rel="stylesheet" />
+ <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+ <link
+ href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+ rel="stylesheet"
+ />
+ <!-- Customized Bootstrap Stylesheet -->
+ <link href="css/bootstrap.min.css" rel="stylesheet" />
+ <!-- Template Stylesheet -->
+ <link href="css/style.css" rel="stylesheet" />
+ </head>
+ <body>
+ <a
+ target="_blank"
+ href="https://api.whatsapp.com/send?l=pt&phone=558499452-1317&text=Olá, gostaria de saber mais sobre serviços da Pousada Amagali!"
+ ><img
+ src="img/wpp.png"
+ style="
+ height: 64px;
+ position: fixed;
+ bottom: 25px;
+ left: 25px;
+ z-index: 99999;
+ "
+ data-selector="img"
+ /></a>
+ <div class="bg-white p-0">
+ <!-- Spinner Start -->
+ <div
+ id="spinner"
+ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+ >
+ <div
+ class="spinner-border text-primary"
+ style="width: 3rem; height: 3rem"
+ role="status"
+ >
+ <span class="sr-only">Loading...</span>
+ </div>
+ </div>
+ <!-- Spinner End -->
+ <!-- Header Start -->
+ <div class="container-fluid bg-white px-0 nav_">
+ <div class="row gx-0">
+ <div class="col-lg-3 bg-white d-none d-lg-block logo_nav">
+ <a
+ href="index.html"
+ class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center"
+ >
+ <img
+ class="logo_"
+ src="img/download-removebg-preview.png"
+ alt=""
+ />
+ </a>
+ </div>
+ <div class="col-lg-9">
+ <div class="row gx-0 bg-dark d-none d-lg-flex color_">
+ <div class="col-lg-7 px-5 text-start">
+ <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+ <i class="fa fa-envelope text-white me-2"></i>
+ <p class="mb-0 text-white">info@amagali.com</p>
+ </div>
+ <div class="h-100 d-inline-flex align-items-center py-2">
+ <i class="fa fa-phone-alt text-white me-2"></i>
+ <p class="mb-0 text-white">+55 84 99452-1317</p>
+ </div>
+ </div>
+ <div class="col-lg-5 px-5 text-end">
+ <div class="d-inline-flex align-items-center py-2">
+ <a
+ class="me-3 text-white"
+ href="https://api.whatsapp.com/send?l=pt&phone=558499452-1317&text=Olá, gostaria de saber mais sobre serviços da Pousada Amagali!"
+ ><i class="fab fa-whatsapp"></i
+ ></a>
+ <a
+ class="me-3 text-white"
+ href="https://www.instagram.com/amagalipousada/"
+ ><i class="fab fa-instagram"></i
+ ></a>
+ </div>
+ </div>
+ </div>
+ <nav
+ class="navbar navbar-expand-lg bg-white navbar-dark p-3 p-lg-0"
+ >
+ <a href="index.html" class="navbar-brand d-block d-lg-none">
+ <img
+ class="logo_"
+ src="img/download-removebg-preview.png"
+ alt=""
+ />
+ </a>
+ <button
+ type="button"
+ class="navbar-toggler"
+ data-bs-toggle="collapse"
+ data-bs-target="#navbarCollapse"
+ >
+ <span class="navbar-toggler-icon"></span>
+ </button>
+ <div
+ class="collapse navbar-collapse justify-content-between"
+ id="navbarCollapse"
+ >
+ <div class="navbar-nav mr-auto py-0 d-flex align-items-center">
+ <a href="index.html" class="nav-item nav-link">início</a>
+ <a href="index.html#about" class="nav-item nav-link">Sobre</a>
+ <!-- <a href="service.html" class="nav-item nav-link"></a> -->
+ <a href="room.html" class="nav-item nav-link active"
+ >Quartos</a
+ >
+ <a href="index.html#service" class="nav-item nav-link"
+ >Serviços</a
+ >
+ <a href="passeios.html" class="nav-item nav-link">Turismo</a>
+ <a href="index.html#contact" class="nav-item nav-link"
+ >Contato</a
+ >
+ <a
+ href="#"
+ onclick="doGTranslate('pt|en');return false;"
+ title="English"
+ class="gflag nturl ml-2"
+ style="background-position: -0px -0px"
+ ><img
+ src="./img/icon/united-states.png"
+ height="23"
+ width="23"
+ style="margin-right: 10px"
+ alt="English"
+ /></a>
+ <a
+ href="#"
+ onclick="doGTranslate('pt|es');return false;"
+ title="Spanish"
+ class="gflag nturl ml-2"
+ style="background-position: -600px -200px"
+ ><img
+ src="./img/icon/flag.png"
+ height="23"
+ width="23"
+ style="margin-right: 10px"
+ alt="Spanish"
+ /></a>
+ </div>
+ <a
+ href="https://book.omnibees.com/hotel/18649?currencyId=16&lang=pt-BR"
+ class="btn btn-primary rounded-0 d-none d-lg-block"
+ >Faça sua Reserva<i class="fa fa-arrow-right ms-3"></i
+ ></a>
+ </div>
+ </nav>
+ </div>
+ </div>
+ </div>
+ <!-- Header End -->
+ <!-- Page Header Start -->
+ <div
+ class="container-fluid page-header p-0"
+ style="background-image: url(img/carousel-1.jpg)"
+ >
+ <div class="container-fluid page-header-inner">
+ <div class="container text-center">
+ <h1 class="display-3 text-white mb-3 animated slideInDown">
+ Quartos
+ </h1>
+ <nav aria-label="breadcrumb">
+ <ol class="breadcrumb justify-content-center text-uppercase">
+ <li class="breadcrumb-item"><a href="#">Início</a></li>
+ <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
+ <li
+ class="breadcrumb-item text-white active"
+ aria-current="page"
+ >
+ Quartos
+ </li>
+ </ol>
+ </nav>
+ </div>
+ </div>
+ </div>
+ <!-- Page Header End -->
+ <!-- Booking Start -->
+ <!-- <div
+ class="container-fluid booking pb-5 wow fadeIn"
+ data-wow-delay="0.1s"
+ >
+ <div class="container">
+ <div class="bg-white shadow" style="padding: 35px">
+ <form id="formJuridic">
+ <div class="row g-2">
+ <div class="col-md-10">
+ <div class="row g-2">
+ <div class="col-md-2 form-group">
+ <label for="name">Nome</label>
+ <input
+ type="text"
+ id="name"
+ class="form-control"
+ placeholder="Digite..."
+ required
+ />
+ </div>
+ <div class="col-md-2">
+ <label for="phone">Telefone</label>
+ <input
+ name="telefone"
+ type="text"
+ id="phone"
+ class="form-control"
+ placeholder="(__) _____-____"
+ data-slots="_"
+ />
+ </div>
+ <div class="col-md-2">
+ <label for="checkout">Check in</label>
+ <input
+ type="date"
+ class="form-control"
+ id="book_pick_date"
+ name="date"
+ />
+ </div>
+ <div class="col-md-2">
+ <label for="checkin">Check out</label>
+ <input
+ type="date"
+ class="form-control"
+ id="book_off_date"
+ name="date"
+ />
+ </div>
+ <div class="col-md-2">
+ <label for="checkin">Selecione</label>
+ <select class="form-select" id="adult">
+ <option value="1">Adulto 1</option>
+ <option value="2">Adulto 2</option>
+ <option value="3">Adulto 3</option>
+ <option value="1">Adulto 4</option>
+ <option value="2">Adulto 5</option>
+ <option value="3">Adulto 6</option>
+ </select>
+ </div>
+ <div class="col-md-2">
+ <label for="checkin">Selecione</label>
+ <select class="form-select" id="kid">
+ <option value="1">Criança 1</option>
+ <option value="2">Criança 2</option>
+ <option value="3">Criança 3</option>
+ <option value="1">Criança 4</option>
+ <option value="2">Criança 5</option>
+ <option value="3">Criança 6</option>
+ </select>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-2">
+ <button
+ id="buttonSend"
+ class="btn btn-primary2 w-100 mt-4"
+ type="submit"
+ >
+ <span style="display: none" id="circle">
+ <svg></svg>
+ </span>
+ <span id="text-form"> Enviar </span>
+ </button>
+ </div>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div> -->
+ <!-- Booking End -->
+ <section class="py-5">
+ <div class="container mb-5" id="charme">
+ <div class="row g-5 align-items-center col-lg-12">
+ <div class="col-lg-6">
+ <h3 style="color: #30528a; font-weight: 500; text-align: center">
+ Chalé Charme Casal
+ </h3>
+ <div class="col-lg-6 p-0 order-lg-1 order-md-1">
+ <div class="room__text">
+ <!-- <h2><sup>$</sup>299<span>/day</span></h2> -->
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px"> Frigobar</span><br />
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px"
+ >Ar condicionado e Ventilador de Teto</span
+ ><br />
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px">TV LCD 32", SKY</span><br />
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px">Um Banheiro com Chuveiro</span
+ ><br />
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px">Cama Box King size</span
+ ><br /><br />
+ </div>
+ </div>
+ <div class="col-lg-12 text_room">
+ <p>
+ Chalé Charme casal tem uma área de 30m2. Eles estão
+ localizados ao lado da piscina em construções individualizadas
+ que oferece maior privacidade. A partir do terraço de 15m2,
+ possuem deslumbrantes vista sobre o braço de mar. A rede está
+ disponível para um cochilo na sombra. Estão equipados com um
+ frigobar, ar condicionado e ventilador de teto, cama King
+ size, TV LCD 32", SKY , maquina de café expresso, chaleira
+ elétrica, um banheiro com chuveiro, secador de cabelo,
+ frigobar. A água é aquecida por um sistema de energia solar. O
+ chalé Família com dois quartos tem uma cama de King size no
+ quarto principal e duas camas de solteiro no segundo quarto e
+ compartilham o mesmo banheiro.
+ </p>
+ </div>
+ <a
+ class="btn btn-primary py-3 px-5 mt-2 mb-5"
+ href="https://api.whatsapp.com/send?l=pt&phone=558499452-1317&text=Olá, gostaria de saber mais sobre o Chalé Charme Casal!"
+ >Saiba Mais</a
+ >
+ </div>
+ <div class="col-lg-6">
+ <div class="row">
+ <div class="room__pic__slider owl-carousel">
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Chalé\ Charme\ Casal/Fachada chalé.jpg"
+ style="
+ background-image: url('img/quartos/Chalé\ Charme\ Casal/Fachada chalé.jpg');
+ "
+ ></div>
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Chalé\ Charme\ Casal/Chalé.jpg"
+ style="
+ background-image: url('img/quartos/Chalé\ Charme\ Casal/Chalé.jpg');
+ "
+ ></div>
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Chalé\ Charme\ Casal/fachadaaa1.jpg"
+ style="
+ background-image: url('img/quartos/Chalé\ Charme\ Casal/fachadaaa1.jpg');
+ "
+ ></div>
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Chalé\ Charme\ Casal/Chalé Charme 1.jpg"
+ style="
+ background-image: url('img/quartos/Chalé\ Charme\ Casal/Chalé Charme 1.jpg');
+ "
+ ></div>
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Chalé\ Charme\ Casal/banheiro.jpg"
+ style="
+ background-image: url('img/quartos/Chalé\ Charme\ Casal/banheiro.jpg');
+ "
+ ></div>
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Chalé\ Charme\ Casal/Fachada Chalé Amar.jpg"
+ style="
+ background-image: url('img/quartos/Chalé\ Charme\ Casal/Fachada Chalé Amar.jpg');
+ "
+ ></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="bg_rooms" id="roof">
+ <div class="container mb-5">
+ <div class="row g-5 align-items-center col-lg-12">
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="room__pic__slider owl-carousel">
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Roof\ Top/AP Roof Top 1.jpg"
+ style="
+ background-image: url('img/quartos/Apartamento\ Roof\ Top/AP Roof Top 1.jpg');
+ "
+ ></div>
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Roof\ Top/AP Roof Top 2.jpg"
+ style="
+ background-image: url('img/quartos/Apartamento\ Roof\ Top/AP Roof Top 2.jpg');
+ "
+ ></div>
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Roof\ Top/AP Roof Top 3.jpg"
+ style="
+ background-image: url('img/quartos/Apartamento\ Roof\ Top/AP Roof Top 3.jpg');
+ "
+ ></div>
+ <!-- <div class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Roof\ Top/AP Roof Top 4.jpg"
+ style="background-image: url('img/quartos/Apartamento\ Roof\ Top/AP Roof Top 4.jpg');">
+ </div> -->
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Roof\ Top/AP Roof Top 6.jpg"
+ style="
+ background-image: url('img/quartos/Apartamento\ Roof\ Top/AP Roof Top 6.jpg');
+ "
+ ></div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-6">
+ <h3
+ style="color: #30528a; font-weight: 500; text-align: center"
+ >
+ Apartamento Roof Top
+ </h3>
+ <div class="col-lg-6 p-0 order-lg-1 order-md-1 col-md-6">
+ <div class="room__text">
+ <!-- <h2><sup>$</sup>299<span>/day</span></h2> -->
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px"> Frigobar</span><br />
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px">Ar condicionado</span><br />
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px">TV LCD 32", SKY</span><br />
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px">Um Banheiro com Chuveiro</span
+ ><br />
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px">Cama Queen Size</span
+ ><br /><br />
+ </div>
+ </div>
+ <div class="col-lg-12 text_room">
+ <p>
+ Apartamento de 25 m2 são situados no terraço, com vista
+ deslumbrante sobre o braço de mar, localizado no 2° andar do
+ prédio principal. Com belos materiais naturais. Eles têm um
+ terraço de 15 m2 com rede e vista panorâmica do braço de
+ mar, uma cama queen size, um banheiro com chuveiro, e ar
+ condicionado, uma TV LCD 32 “, SKY, frigobar. A água é
+ aquecida por um sistema de energia solar. Este quarto não
+ acomoda crianças.
+ </p>
+ </div>
+ <a
+ class="btn btn-primary py-3 px-5 mt-2 mb-5"
+ href="https://api.whatsapp.com/send?l=pt&phone=558499452-1317&text=Olá, gostaria de saber mais sobre o Apartamento Roof Top!"
+ >Saiba Mais</a
+ >
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="container mb-5" id="classic">
+ <div class="row g-5 align-items-center col-lg-12">
+ <div class="col-lg-6">
+ <h3 style="color: #30528a; font-weight: 500; text-align: center">
+ Apartamento Classic
+ </h3>
+ <div class="col-lg-6 p-0 order-lg-1 order-md-1 col-md-6">
+ <div class="room__text">
+ <!-- <h2><sup>$</sup>299<span>/day</span></h2> -->
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px"> Frigobar</span><br />
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px"
+ >Ar condicionado e Ventilador de Teto</span
+ ><br />
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px">TV LCD 32", SKY</span><br />
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px">Um Banheiro com Chuveiro</span
+ ><br />
+ <i class="fa-solid fa-check"></i>
+ <span style="font-size: 20px">Cama Queen Size</span
+ ><br /><br />
+ </div>
+ </div>
+ <div class="col-lg-12 text_room">
+ <p>
+ Apartamento de 30 m2 são projetados com belos materiais
+ naturais. Eles têm uma varanda com rede e vista do braço de
+ mar, um banheiro com chuveiro, com ar condicionado, ventilador
+ teto, cama queen size, TV LCD 32 “, SKY, frigobar. A água é
+ aquecida por um sistema de energia solar. Localizados no
+ prédio principal sendo 6 unidades no térreo e 6 unidades no 1°
+ andar. A pedido, uma cama extra para uma pessoa pode ser
+ adicionada com custo adicional.
+ </p>
+ </div>
+ <a
+ class="btn btn-primary py-3 px-5 mt-2 mb-5"
+ href="https://api.whatsapp.com/send?l=pt&phone=558499452-1317&text=Olá, gostaria de saber mais sobre o Apartamento Classic!"
+ >Saiba Mais</a
+ >
+ </div>
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="room__pic__slider owl-carousel">
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Classic/AP Classic para casal 1 andar.jpg"
+ style="
+ background-image: url('img/quartos/Apartamento\ Classic/AP Classic para casal 1 andar.jpg');
+ "
+ ></div>
+ <!-- <div class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Classic/AP Classic casal 5jpg.jpg"
+ style="background-image: url('img/quartos/Apartamento\ Classic/AP Classic casal 5jpg.jpg');">
+ </div> -->
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Classic/AP Classic espelho.jpg"
+ style="
+ background-image: url('img/quartos/Apartamento\ Classic/AP Classic espelho.jpg');
+ "
+ ></div>
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Classic/AP Classic para Casal 1.jpg"
+ style="
+ background-image: url('img/quartos/Apartamento\ Classic/AP Classic para Casal 1.jpg');
+ "
+ ></div>
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Classic/AP Classic quadruplo 2.jpg"
+ style="
+ background-image: url('img/quartos/Apartamento\ Classic/AP Classic quadruplo 2.jpg');
+ "
+ ></div>
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Classic/AP Classic quadruplo 3.jpg"
+ style="
+ background-image: url('img/quartos/Apartamento\ Classic/AP Classic quadruplo 3.jpg');
+ "
+ ></div>
+ <!-- <div class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Classic/AP Classic quadruplo 4.jpg"
+ style="background-image: url('img/quartos/Apartamento\ Classic/AP Classic quadruplo 4.jpg');">
+ </div> -->
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Classic/AP Classic quadruplo.jpg"
+ style="
+ background-image: url('img/quartos/Apartamento\ Classic/AP Classic quadruplo.jpg');
+ "
+ ></div>
+ <!-- <div class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Classic/AP Classic Triplo 1.jpg"
+ style="background-image: url('img/quartos/Apartamento\ Classic/AP Classic Triplo 1.jpg');">
+ </div> -->
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Classic/AP Classic triplo.jpg"
+ style="
+ background-image: url('img/quartos/Apartamento\ Classic/AP Classic triplo.jpg');
+ "
+ ></div>
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Classic/AP Classic.jpg"
+ style="
+ background-image: url('img/quartos/Apartamento\ Classic/AP Classic.jpg');
+ "
+ ></div>
+ <div
+ class="room__pic__item set-bg"
+ data-setbg="img/quartos/Apartamento\ Classic/Banheiro AP Classic 1.jpg"
+ style="
+ background-image: url('img/quartos/Apartamento\ Classic/Banheiro AP Classic 1.jpg');
+ "
+ ></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- <div class="bg_rooms" id="vila">
+ <div class="container mb-5">
+ <div class="row g-5 align-items-center col-lg-12">
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="room__pic__slider owl-carousel">
+ <div class="room__pic__item set-bg"
+ data-setbg="img/quartos/Vila/Facha Quartos vila 1.jpg"
+ style="background-image: url('img/quartos/Vila/Facha Quartos vila 1.jpg');">
+ </div>
+ <div class="room__pic__item set-bg"
+ data-setbg="img/quartos/Vila/banheiro.jpg"
+ style="background-image: url('img/quartos/Vila/banheiro.jpg');">
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-6">
+ <h3 style="color: #30528a; font-weight: 500; text-align: center;">Quartos "Vila"</h3>
+ <div class="col-lg-6 p-0 order-lg-1 order-md-1 col-md-6">
+ <div class="room__text">
+ <h2><sup>$</sup>299<span>/day</span></h2>
+ <i class="fa-solid fa-check"></i> <span style="font-size: 20px;">
+ Frigobar</span><br>
+ <i class="fa-solid fa-check"></i> <span style="font-size: 20px;">Ar condicionado e
+ Ventilador de
+ Teto</span><br>
+ <i class="fa-solid fa-check"></i> <span style="font-size: 20px;">Um Banheiro com
+ Chuveiro</span><br>
+ <i class="fa-solid fa-check"></i> <span style="font-size: 20px;">Cama Box
+ Casal</span><br><br>
+ </div>
+ </div>
+ <div class="col-lg-12 text_room">
+ <p>Quartos "Vila" tem uma área de 20m2. Eles estão localizados em prédio anexo a 90
+ metros
+ do caminho de outras habitações (prédio principal). A partir do terraço de 15m2,
+ possuem
+ deslumbrantes vistas sobre o mar, coqueiral e jardim.
+ A rede está disponível para um cochilo na sombra. Os quartos estão equipados com uma
+ cama box casal, um frigobar, ar condicionado e ventilador de teto, e um banheiro com
+ chuveiro. A água é aquecida por um sistema de energia solar.
+ </p>
+ </div>
+ <a class="btn btn-primary py-3 px-5 mt-2 mb-5" href="">Saiba Mais</a>
+ </div>
+ </div>
+ </div>
+ </div> -->
+ <!-- <div class="container" id="villa">
+ <div class="row g-5 align-items-center col-lg-12">
+ <div class="col-lg-6">
+ <h3 style="color: #30528a; font-weight: 500; text-align: center;">Quarto “Villa Família"</h3>
+ <div class="col-lg-6 p-0 order-lg-1 order-md-1 col-md-6">
+ <div class="room__text">
+ <h2><sup>$</sup>299<span>/day</span></h2>
+ <i class="fa-solid fa-check"></i> <span style="font-size: 20px;"> Frigobar</span><br>
+ <i class="fa-solid fa-check"></i> <span style="font-size: 20px;">Ar condicionado e
+ Ventilador de
+ Teto</span><br>
+ <i class="fa-solid fa-check"></i> <span style="font-size: 20px;">Um Banheiro com
+ Chuveiro</span><br>
+ <i class="fa-solid fa-check"></i> <span style="font-size: 20px;">Cama Box</span><br><br>
+ </div>
+ </div>
+ <div class="col-lg-12 text_room">
+ <p>Quarto “Villa Família" tem uma área de 40m2. Eles estão localizados em prédio anexo a 90
+ metros do caminho de outras habitações (prédio principal). A partir do terraço de 15m2,
+ possuem deslumbrantes vistas sobre o mar, coqueiral e jardim.
+ A rede está disponível para um cochilo na sombra.
+ Os quartos estão equipados com uma cama boa casal, um frigobar, ar condicionado e
+ ventilador de teto e um banheiro com chuveiro para os dois quartos, sendo um quarto cama
+ de casal e o outro com duas camas de solteiro. A água é aquecida por um sistema de
+ energia solar.
+ </p>
+ </div>
+ <a class="btn btn-primary py-3 px-5 mt-2 mb-5" href="">Saiba Mais</a>
+ </div>
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="room__pic__slider owl-carousel">
+ <div class="room__pic__item set-bg"
+ data-setbg="img/quartos/Vila/Facha Quartos vila 1.jpg"
+ style="background-image: url('img/quartos/Vila/Facha Quartos vila 1.jpg');">
+ </div>
+ <div class="room__pic__item set-bg"
+ data-setbg="img/quartos/Vila/banheiro.jpg"
+ style="background-image: url('img/quartos/Vila/banheiro.jpg');">
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div> -->
+ </section>
+ <!-- Service Start -->
+ <div class="container-xxl py-5">
+ <div class="container">
+ <div
+ class="text-center mx-auto mb-5 wow fadeInUp"
+ data-wow-delay="0.1s"
+ style="max-width: 600px"
+ >
+ <!-- <h6 class="text-primary">Our Services</h6> -->
+ <h1 class="mb-4">Sustentabilidade</h1>
+ </div>
+ <div class="row g-4">
+ <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
+ <div class="service-item rounded overflow-hidden">
+ <img class="img-fluid" src="img/img-600x400-1.jpg" alt="" />
+ <div class="position-relative pt-0">
+ <div class="service-icon">
+ <i class="fa fa-solar-panel fa-3x"></i>
+ </div>
+ <h4 class="mb-3">Iluminação</h4>
+ <p class="text_sust">
+ Todas as lâmpadas são Led, pois são mais econômicas. Os
+ colaboradores são treinados para que não deixem luzes acesas
+ desnecessariamente. Nos quartos, pedimos para que os
+ hóspedes apaguem ar condicionar e luz antes de sair.
+ </p>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+ <div class="service-item rounded overflow-hidden">
+ <img class="img-fluid" src="img/img-600x400-2.jpg" alt="" />
+ <div class="position-relative pt-0">
+ <div class="service-icon">
+ <i class="fa-solid fa-faucet-drip fa-3x"></i>
+ </div>
+ <h4 class="mb-3">Água</h4>
+ <p class="text_sust">
+ Em Galinhos não temos fornecimento de água portável, sendo o
+ acesso via poços artesianos, sendo a água salobra, a sua
+ escassez no município faz dela um bem precioso. Todos as
+ acomodações tem vaso sanitário com caixa acoplada que tem
+ menos consumo. Nossa equipe é treina para evitar o
+ desperdício.
+ </p>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+ <div class="service-item rounded overflow-hidden">
+ <img class="img-fluid" src="img/img-600x400-3.jpg" alt="" />
+ <div class="position-relative pt-0">
+ <div class="service-icon">
+ <i class="fa-solid fa-trash-can fa-3x"></i>
+ </div>
+ <h4 class="mb-3">Coleta seletiva</h4>
+ <p class="text_sust">
+ Incentivamos os hóspedes a praticarem a coleta seletiva.
+ Disponibilizando lixeiras diferenciadas pela pousada.
+ Realizamos a seleção do lixo antes da coleta pela prefeitura
+ semanalmente.
+ </p>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+ <div class="service-item rounded overflow-hidden">
+ <img class="img-fluid" src="img/img-600x400-6.jpg" alt="" />
+ <div class="position-relative pt-0">
+ <div class="service-icon">
+ <i class="fa-solid fa-bolt fa-3x"></i>
+ </div>
+ <h4 class="mb-3">Eletroportáteis e eletrodomésticos</h4>
+ <p class="text_sust">
+ Temos produtos com baixo consumo de energia. Mantemos o
+ frigobar dos quartos sem uso, vazios, limpos e desligados.
+ </p>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
+ <div class="service-item rounded overflow-hidden">
+ <img class="img-fluid" src="img/img-600x400-4.jpg" alt="" />
+ <div class="position-relative pt-0">
+ <div class="service-icon">
+ <i class="fa-solid fa-recycle fa-3x"></i>
+ </div>
+ <h4 class="mb-3">Material reciclável</h4>
+ <p class="text_sust">
+ Na decoração, optamos por artesanatos locais feitos com
+ material reciclado ou ecologicamente correto.
+ </p>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
+ <div class="service-item rounded overflow-hidden">
+ <img class="img-fluid" src="img/img-600x400-5.jpg" alt="" />
+ <div class="position-relative pt-0">
+ <div class="service-icon">
+ <i class="fa-solid fa-tree fa-3x"></i>
+ </div>
+ <h4 class="mb-3">Madeira</h4>
+ <p class="text_sust">
+ Só utilizamos madeira de reflorestamento e devidamente
+ certificada em construções e/ou reformas.
+ </p>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+ <div class="service-item rounded overflow-hidden">
+ <img class="img-fluid" src="img/img-600x400-6.jpg" alt="" />
+ <div class="position-relative pt-0">
+ <div class="service-icon">
+ <i class="fa-solid fa-solar-panel fa-3x"></i>
+ </div>
+ <h4 class="mb-3">Energia solar</h4>
+ <p class="text_sust">
+ Temos nossa geradora de energia solar que fornecer até 90%
+ do consumo mensal.
+ </p>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.5s">
+ <div class="service-item rounded overflow-hidden">
+ <img class="img-fluid" src="img/img-600x400-6.jpg" alt="" />
+ <div class="position-relative pt-0">
+ <div class="service-icon">
+ <i class="fa-solid fa-cart-flatbed fa-3x"></i>
+ </div>
+ <h4 class="mb-3">Toalhas e lençóis</h4>
+ <p class="text_sust">
+ Damos ao hóspede a opção de escolha se ele quer que a toalha
+ seja trocada, bem como o lençol, todos os dias. Assim
+ reduzimos o consumo de água, consumo de produtos nocivos ao
+ meio ambiente.
+ </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- Service End -->
+ <!-- Latest Blog Section End -->
+ <!-- <section>
+ <div class="bg-g py-5">
+ <div class="container">
+ <div class="row g-5 align-items-center">
+ <div class="col-lg-6">
+ <h2 class="mb-5 text-center" style="color: #003277;">Chalé Charme Casal</h2>
+ <p class="mb-4 text_about text-dark mt-5">
+ Chalé Charme casal tem uma área de 30m2. Eles estão localizados ao lado da piscina em
+ construções individualizadas que oferece maior privacidade.
+ A partir do terraço de 15m2, possuem deslumbrantes vista sobre o braço de mar.
+ A rede está disponível para um cochilo na sombra.<br><br>
+ Equipados com:<br>
+ <i class="fa-solid fa-check"></i> Frigobar<br>
+ <i class="fa-solid fa-check"></i> Ar
+ condicionado e Ventilador de Teto<br>
+ <i class="fa-solid fa-check"></i> Cama King size<br>
+ <i class="fa-solid fa-check"></i> TV LCD 32", SKY<br>
+ <i class="fa-solid fa-check"></i> Maquina de Café
+ Expresso<br>
+ <i class="fa-solid fa-check"></i> Chaleira Elétrica<br>
+ <i class="fa-solid fa-check"></i> Um Banheiro com Chuveiro<br>
+ <i class="fa-solid fa-check"></i> Secador de Cabelo<br>
+ <i class="fa-solid fa-check"></i> Um Banheiro com Chuveiro<br><br>
+ A água é aquecida por um sistema de energia solar.<br>
+ O chalé Família com dois quartos tem uma cama de King size no quarto principal e duas
+ camas de solteiro no segundo quarto e compartilham o mesmo banheiro.
+ </p>
+ </div>
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="col-6 text-end">
+ <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"
+ src="img/service/canoa1.png" style="margin-top: 25%;">
+ </div>
+ <div class="col-6 text-start">
+ <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s"
+ src="img/service/canoa2.png">
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="container-xxl py-5">
+ <div class="container">
+ <div class="row g-5 align-items-center">
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="col-6 text-end">
+ <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"
+ src="img/service/buggy1.jpg">
+ </div>
+ <div class="col-6 text-start">
+ <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s"
+ src="img/service/buggy2.png" style="margin-top: 25%;">
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-6">
+ <h2 class="mb-5 text-center" style="color: #003277;">Apartamento Roof Top</h2>
+ <p class="mb-4 text_about text-dark mt-5">
+ Apartamento de 25 m2 são situados no terraço, com vista deslumbrante sobre o braço de
+ mar, localizado no 2° andar do prédio principal. Com belos materiais naturais. Eles têm
+ um terraço de 15 m2 com rede e vista panorâmica do braço de mar.<br><br>
+ Equipados com:<br>
+ <i class="fa-solid fa-check"></i> Frigobar<br>
+ <i class="fa-solid fa-check"></i> Ar-condicionado<br>
+ <i class="fa-solid fa-check"></i> Cama Queen Size<br>
+ <i class="fa-solid fa-check"></i> TV LCD 32", SKY<br>
+ <i class="fa-solid fa-check"></i> Um Banheiro com Chuveiro e Ventilador de Teto<br><br>
+ A água é aquecida por um sistema de energia solar.<br>
+ Este quarto não acomoda crianças.
+ </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="bg-g py-5">
+ <div class="container">
+ <div class="row g-5 align-items-center">
+ <div class="col-lg-6">
+ <h2 class="mb-5 text-center" style="color: #003277;">Apartamento Classic</h2>
+ <p class="mb-4 text_about text-dark mt-5">
+ Apartamento de 30 m2 são projetados com belos materiais naturais. Eles têm uma varanda
+ com rede e vista do braço de mar.<br><br>
+ Equipados com:<br>
+ <i class="fa-solid fa-check"></i> Frigobar<br>
+ <i class="fa-solid fa-check"></i> Ar-condicionado<br>
+ <i class="fa-solid fa-check"></i> Cama Queen Size<br>
+ <i class="fa-solid fa-check"></i> TV LCD 32", SKY<br>
+ <i class="fa-solid fa-check"></i> Um Banheiro com Chuveiro<br><br>
+ A água é aquecida por um sistema de energia solar.<br>
+ Este quarto não acomoda crianças.
+ Localizados no prédio principal sendo 6 unidades no térreo e 6 unidades no 1° andar.<br>
+ A pedido, uma cama extra para uma pessoa pode ser adicionada com custo adicional.
+ </p>
+ </div>
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="col-6 text-end">
+ <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"
+ src="img/service/caiaque1.jpg" style="margin-top: 25%;">
+ </div>
+ <div class="col-6 text-start">
+ <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s"
+ src="img/service/caiaque2.png">
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="container-xxl py-5">
+ <div class="container">
+ <div class="row g-5 align-items-center mb-5">
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="col-6 text-end">
+ <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"
+ src="img/service/pordosol1.jpg">
+ </div>
+ <div class="col-6 text-start">
+ <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s"
+ src="img/service/pordosol2.jpg" style="margin-top: 25%;">
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-6">
+ <h2 class="mb-5 text-center" style="color: #003277;">Quartos "Vila"</h2>
+ <p class="mb-4 text_about text-dark mt-5">
+ Quartos "Vila" tem uma área de 20m2. Eles estão localizados em prédio anexo a 90 metros
+ do caminho de outras habitações (prédio principal). A partir do terraço de 15m2, possuem
+ deslumbrantes vistas sobre o mar, coqueiral e jardim.
+ A rede está disponível para um cochilo na sombra.
+ <br><br>
+ Equipados com:<br>
+ <i class="fa-solid fa-check"></i> Frigobar<br>
+ <i class="fa-solid fa-check"></i> Ar-condicionado e Ventilador de Teto<br>
+ <i class="fa-solid fa-check"></i> Cama Box Casal<br>
+ <i class="fa-solid fa-check"></i> TV LCD 32", SKY<br>
+ <i class="fa-solid fa-check"></i> Um Banheiro com Chuveiro<br><br>
+ A água é aquecida por um sistema de energia solar.<br>
+ </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="bg-g py-5">
+ <div class="container">
+ <div class="row g-5 align-items-center">
+ <div class="col-lg-6">
+ <h2 class="mb-5 text-center" style="color: #003277;">Quarto “Villa Família"</h2>
+ <p class="mb-4 text_about text-dark mt-5">
+ Quarto “Villa Família" tem uma área de 40m2. Eles estão localizados em prédio anexo a 90
+ metros do caminho de outras habitações (prédio principal). A partir do terraço de 15m2,
+ possuem deslumbrantes vistas sobre o mar, coqueiral e jardim.
+ A rede está disponível para um cochilo na sombra.
+ <br><br>
+ Equipados com:<br>
+ <i class="fa-solid fa-check"></i> Frigobar<br>
+ <i class="fa-solid fa-check"></i> Ar-condicionado e Ventilador de Teto<br>
+ <i class="fa-solid fa-check"></i> Cama Box<br>
+ <i class="fa-solid fa-check"></i> TV LCD 32", SKY<br>
+ <i class="fa-solid fa-check"></i> Um Banheiro com Chuveiro<br><br>
+ Um quarto com cama de casal e o outro com duas camas de solteiro.
+ A água é aquecida por um sistema de energia solar.<br>
+ </p>
+ </div>
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="col-6 text-end">
+ <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.1s"
+ src="img/service/caiaque1.jpg" style="margin-top: 25%;">
+ </div>
+ <div class="col-6 text-start">
+ <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s"
+ src="img/service/caiaque2.png">
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <section>
+ <div class="py-5">
+ <h1 class="col-lg-12 text-center mb-5">Restaurante</h1>
+ <div class="container">
+ <div class="row g-5 align-items-center">
+ <div class="col-lg-6">
+ <h2 class="mb-5 text-center" style="color: #003277;">Café da Manhã</h2>
+ <p class="mb-4 text_about text-dark mt-5">
+ Nosso restaurante contempla todas as refeições, acreditamos no bem estar entre o corpo e
+ mente através da alimentação. O visual deslumbrante da vista para o braço de mar garante
+ deliciosas receitas preparadas exclusivamente para você começar o dia de forma nutritiva
+ e saudável. Se procura privacidade para começar sua manhã, solicite o café da manhã para
+ ser servido em seu quarto, mediante pedido antecipado.
+ </p>
+ </div>
+ <div class="col-lg-6">
+ <div class="row">
+ <h2 class="mb-5 text-center" style="color: #003277;">Almoço e Jantar</h2>
+ <p class="mb-4 text_about text-dark mt-5">
+ Nosso restaurante oferece um menu inspirado na culinária regional e internacional,
+ um festival colorido e saboroso de especiarias aromáticas, ervas, frutos do mar como
+ principal inspiração. Temos uma variedade de drinks, coquetéis, além de uma carta de
+ vinhos especialmente elaborada para você.
+ *Os pratos serão enviados depois, pois irão sofrer algumas alterações.
+ </p>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section> -->
+ <!-- Footer Start -->
+ <div class="section-footer">
+ <section class="">
+ <div class="container">
+ <div class="row">
+ <div class="col-12 text-center">
+ <div class="widget-a">
+ <div class="w-header-a">
+ <img
+ class="mb-4"
+ src="./img/logo1.png"
+ style="width: 150px"
+ alt=""
+ />
+ <!-- <script type="text/javascript" src="https://form.jotform.com/jsform/222304669118657"></script> -->
+ </div>
+ <div class="w-footer-a">
+ <ul class="list-unstyled">
+ <li class="color-a">
+ <!-- <span class="color-text-a itens-footer2">Número:</span> -->
+ <i class="bi bi-whatsapp footer-icon-color ms-3"></i>
+ <span class="itens-footer"
+ ><b>+55 84 99452-1317</b></span
+ >
+ </li>
+ <li class="color-a">
+ <!-- <span class="color-text-a itens-footer2">Email:</span> -->
+ <i class="bi bi-envelope footer-icon-color ms-3"></i>
+ <span class="itens-footer"
+ ><b>info@amagali.com</b></span
+ >
+ </li>
+ </ul>
+ </div>
+ </div>
+ <div class="container">
+ <div class="row">
+ <div class="col-12 text-center mb-0">
+ <div class="widget-a">
+ <div class="w-header-a">
+ <h4 class="itens-footer"><b>Links úteis</b></h4>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-12">
+ <nav class="nav-footer">
+ <ul class="list-inline itens-footer">
+ <li class="list-inline-item">
+ <a class="itens-footer" href="index.html"
+ ><b>Início</b></a
+ >
+ </li>
+ <li class="list-inline-item">
+ <a class="itens-footer" href="index.html#about"
+ ><b>Sobre</b></a
+ >
+ </li>
+ <li class="list-inline-item">
+ <a class="itens-footer" href="index.html#service"
+ ><b>Serviços</b></a
+ >
+ </li>
+ <!-- <li class="list-inline-item">
+ <a class="itens-footer" href="index.html#project"><b>Projetos</b></a>
+ </li> -->
+ <li class="list-inline-item">
+ <a class="itens-footer" href="index.html#contact"
+ ><b>Contato</b></a
+ >
+ </li>
+ <li class="list-inline-item">
+ <a
+ class="itens-footer"
+ href="cookies.html"
+ target="_blank"
+ ><b>Política de Cookies</b></a
+ >
+ </li>
+ <div class="socials-a">
+ <ul class="list-inline">
+ <li class="list-inline-item">
+ <a
+ class="itens-footer2"
+ target="_blank"
+ href="https://api.whatsapp.com/send?l=pt&phone=55558499452-1317&text=Olá, gostaria de saber mais sobre serviços da Pousada Amagali!"
+ >
+ <i class="fa-brands fa-whatsapp"></i>
+ </a>
+ </li>
+ <li class="list-inline-item">
+ <a
+ class="itens-footer2"
+ target="_blank"
+ href="https://www.instagram.com/amagalipousada/"
+ >
+ <i class="fa-brands fa-instagram"></i>
+ </a>
+ </li>
+ <!-- <li class="list-inline-item">
+ <a class="itens-footer2" target="_blank" href="https://www.linkedin.com/in/vialconex-minera%C3%A7%C3%A3o-consultoria-ambiental-e-florestal-8b227523b/">
+ <i class="fa-brands fa-linkedin"></i>
+ </a>
+ </li> -->
+ </ul>
+ </div>
+ </ul>
+ </nav>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <footer>
+ <div class="container">
+ <div class="row">
+ <div class="col-12 text-center">
+ <div class="copyright-footer">
+ <p class="copyright color-text-a text-white">
+ &copy;<a class="itens-footer_cli"><b>Amagali</b></a> All
+ Right Reserved.
+ </p>
+ </div>
+ <div class="credits">
+ <a
+ class="itens-footer_cli"
+ href="https://venxtecnologia.com.br/"
+ ><b>Venx Tecnologia&copy;</b></a
+ >
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ </div>
+ <!-- Back to Top -->
+ <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+ ><i class="bi bi-arrow-up"></i
+ ></a>
+ </div>
+ <!-- JavaScript Libraries -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="lib/wow/wow.min.js"></script>
+ <script src="lib/easing/easing.min.js"></script>
+ <script src="lib/waypoints/waypoints.min.js"></script>
+ <script src="lib/counterup/counterup.min.js"></script>
+ <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+ <script src="lib/tempusdominus/js/moment.min.js"></script>
+ <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+ <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+ <script
+ src="https://kit.fontawesome.com/d6d3e12fa0.js"
+ crossorigin="anonymous"
+ ></script>
+ <!-- Template Javascript -->
+ <script src="js/main.js"></script>
+ </body>
+</html>

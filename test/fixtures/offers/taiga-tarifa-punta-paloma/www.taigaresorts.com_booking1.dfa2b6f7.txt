@@ -1,0 +1,542 @@
+<!doctype html><html><head><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Taiga Tarifa Punta Paloma | Web Oficial | Tarifa",
+    "identifier": "q10-teacampa",
+    "makesOffer": {
+        "@type": [
+            "Offer",
+            "LodgingReservation"
+        ],
+        "identifier": "5752965465899008_4737895602585600_6489768783249408",
+        "checkinTime": "2027-04-17T15:00:00",
+        "checkoutTime": "2027-04-24T11:00:00",
+        "availability": "https://schema.org/InStock",
+        "price": 405.0,
+        "priceCurrency": "EUR",
+        "priceSpecification": {
+            "@type": "CompoundPriceSpecification",
+            "price": 405.0,
+            "priceCurrency": "EUR",
+            "valueAddedTaxIncluded": true,
+            "priceComponent": [
+                {
+                    "@type": "UnitPriceSpecification",
+                    "name": "Base rate",
+                    "price": 334.71,
+                    "priceCurrency": "EUR"
+                },
+                {
+                    "@type": "UnitPriceSpecification",
+                    "name": "Tax",
+                    "price": 70.29,
+                    "priceCurrency": "EUR",
+                    "priceComponentType": "GenericTax"
+                }
+            ]
+        },
+        "name": "¡Descuento No Reembolsable! | Un cambio de fechas posible - Solo Alojamiento"
+    },
+    "containsPlace": [
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Glamping Tent Breña",
+            "description": "Glamping Tent Breña",
+            "image": "https://cdn2.paraty.es/q10-teacampa/images/4c3c7257a7335a5",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5752965465899008_4737895602585600_6489768783249408",
+                    "checkinTime": "2027-04-17T15:00:00",
+                    "checkoutTime": "2027-04-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 405.0,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 405.0,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 334.71,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 70.29,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! | Un cambio de fechas posible - Solo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5752965465899008_5706059750572032_6489768783249408",
+                    "checkinTime": "2027-04-17T15:00:00",
+                    "checkoutTime": "2027-04-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 459.0,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 459.0,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 379.34,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 79.66,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Solo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Glamping Tent Janda",
+            "description": "Glamping Tent Janda",
+            "image": "https://cdn2.paraty.es/q10-teacampa/images/f50daae209c205a",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5691206453428224_4737895602585600_6489768783249408",
+                    "checkinTime": "2027-04-17T15:00:00",
+                    "checkoutTime": "2027-04-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 483.0,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 483.0,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 399.17,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 83.83,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! | Un cambio de fechas posible - Solo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5691206453428224_5706059750572032_6489768783249408",
+                    "checkinTime": "2027-04-17T15:00:00",
+                    "checkoutTime": "2027-04-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 552.0,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 552.0,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 456.2,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 95.8,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Solo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Glamping Tent Algaida",
+            "description": "Glamping Tent Algaida",
+            "image": "https://cdn2.paraty.es/q10-teacampa/images/e6d9585a60cb191",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "6250391398252544_4737895602585600_6489768783249408",
+                    "checkinTime": "2027-04-17T15:00:00",
+                    "checkoutTime": "2027-04-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 522.0,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 522.0,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 431.4,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 90.6,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! | Un cambio de fechas posible - Solo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "6250391398252544_5706059750572032_6489768783249408",
+                    "checkinTime": "2027-04-17T15:00:00",
+                    "checkoutTime": "2027-04-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 599.0,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 599.0,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 495.04,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 103.96,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Solo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Glamping Tent Tamaral",
+            "description": "Glamping Tent Tamaral",
+            "image": "https://cdn2.paraty.es/q10-teacampa/images/740e6b9b267564c",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5642340328800256_4737895602585600_6489768783249408",
+                    "checkinTime": "2027-04-17T15:00:00",
+                    "checkoutTime": "2027-04-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 566.0,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 566.0,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 467.77,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 98.23,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! | Un cambio de fechas posible - Solo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5642340328800256_5706059750572032_6489768783249408",
+                    "checkinTime": "2027-04-17T15:00:00",
+                    "checkoutTime": "2027-04-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 645.0,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 645.0,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 533.06,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 111.94,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Solo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Glamping Tent Premium Sauceda",
+            "description": "Glamping Tent Premium Sauceda",
+            "image": "https://cdn2.paraty.es/q10-teacampa/images/de4c72f9c26bbca",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5727962448003072_4737895602585600_6489768783249408",
+                    "checkinTime": "2027-04-17T15:00:00",
+                    "checkoutTime": "2027-04-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 748.0,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 748.0,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 618.18,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 129.82,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! | Un cambio de fechas posible - Solo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5727962448003072_5706059750572032_6489768783249408",
+                    "checkinTime": "2027-04-17T15:00:00",
+                    "checkoutTime": "2027-04-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 848.0,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 848.0,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 700.83,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 147.17,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Solo Alojamiento"
+                }
+            ]
+        },
+        {
+            "@type": [
+                "HotelRoom",
+                "Product"
+            ],
+            "name": "Glamping Tent Premium Cala",
+            "description": "Glamping Tent Premium Cala",
+            "image": "https://cdn2.paraty.es/q10-teacampa/images/e85ae9a2f3d89e5",
+            "occupancy": {
+                "@type": "QuantitativeValue",
+                "value": 2
+            },
+            "offers": [
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5649281625096192_4737895602585600_6489768783249408",
+                    "checkinTime": "2027-04-17T15:00:00",
+                    "checkoutTime": "2027-04-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 909.0,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 909.0,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 751.24,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 157.76,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "¡Descuento No Reembolsable! | Un cambio de fechas posible - Solo Alojamiento"
+                },
+                {
+                    "@type": [
+                        "Offer",
+                        "LodgingReservation"
+                    ],
+                    "identifier": "5649281625096192_5706059750572032_6489768783249408",
+                    "checkinTime": "2027-04-17T15:00:00",
+                    "checkoutTime": "2027-04-24T11:00:00",
+                    "availability": "https://schema.org/InStock",
+                    "price": 1034.0,
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "CompoundPriceSpecification",
+                        "price": 1034.0,
+                        "priceCurrency": "EUR",
+                        "valueAddedTaxIncluded": true,
+                        "priceComponent": [
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Base rate",
+                                "price": 854.55,
+                                "priceCurrency": "EUR"
+                            },
+                            {
+                                "@type": "UnitPriceSpecification",
+                                "name": "Tax",
+                                "price": 179.45,
+                                "priceCurrency": "EUR",
+                                "priceComponentType": "GenericTax"
+                            }
+                        ]
+                    },
+                    "name": "Tarifa Flexible - Solo Alojamiento"
+                }
+            ]
+        }
+    ]
+}
+</script></head><body><!-- trimmed: engine answer reduced to its JSON-LD --></body></html>

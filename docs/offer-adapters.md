@@ -163,6 +163,29 @@ Ctoutvert / SecureHoliday (embedded API key + faked referer), Compusoft (would n
 Per-listing photo floor: `OfferAdapter.imageMinSize` (Wadi Lahami, whose operator only publishes 460 px photos;
 it now also uses 2560 px photos from the on-site kite center's own website).
 
+## Stays round 4: Tarifa and Brazil off the hotspots (2026-10-12, night)
+
+33 adapters, built by agents and verified by the lead (fixture probe, own tests, secret scan, live ingest, pin
+check). Tarifa (15): the kite schools' own houses in town (Kitefun, High Flyers, Freeride's Surfers Residence and
+Hostal Africa, Lazy Kite, Rebels' Lion Hostel, Matos apartments, The Wild House via Matos) and the hotels and
+campsites at Los Lances / Valdevaqueros / Punta Paloma (100% Fun, Arte Vida, both TAIGA sites, Camping Tarifa,
+Copacabana, Dunas). Brazil (18): Ceará beyond Cumbuco (Praia de Patos, Praia do Farol, Icaraí de Amontada,
+Fortim, Paracuru), Rio Grande do Norte (Touros, Barra do Cunhaú, Sibaúma, São Miguel do Gostoso, Galinhos),
+Tutóia (MA), Búzios, Ilhabela and Ibiraquera.
+
+Live engines added: Paraty Tech (TAIGA; the site's own anonymous form POST to /booking1, one 7-night sample per
+month, 12 POSTs per property per run) and Omnibees for 7 more hotels (shared engine; Jaguaribe Lodge and
+Jaguaríndia, Filho do Vento, Kilombo, Amagali, Oiti, Villa Rasa). Omnibees results fixtures are compacted to the
+rate-plan elements (the parser output is unchanged).
+
+Not used: Smoobu (bot challenge, High Flyers), Mirai (index-price 403; api.mirai.com needs a Basic-auth credential
+baked into the widget), Thelis (robots `Disallow: /`), HSystem. Camping Tarifa's nginx cache answers gzip/br
+requests with its robots.txt for every URL; the adapter asks for identity encoding (a broken cache, not a block).
+
+Pins: the geocoder picked namesakes far away (Valdevaqueros in Zamora, Punta Paloma on Fuerteventura, Praia do
+Farol in Pará) or municipality centroids inland (Touros, Icaraí de Amontada); these are in `KNOWN_PINS` now.
+Package images are stripped of `\u0000` before the jsonb write (it failed one listing).
+
 ## Refresh strategy (recommendation)
 
 - Booking-engine / Shopify / app JSON: daily `--slots` (in the 06:00 UTC monitor cron, job `offer-slots`,

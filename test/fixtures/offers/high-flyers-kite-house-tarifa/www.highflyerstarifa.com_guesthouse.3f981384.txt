@@ -1,0 +1,333 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      class="">
+<head>
+    <meta charset="utf-8">
+<script type="text/javascript"></script>
+<!-- Injecting site-wide to the head -->
+<script type="text/javascript" id="d_track_campaign" data-entry-referrer data-utm-cookies></script>
+<script type="text/javascript" ></script>
+<!-- End Injecting site-wide to the head -->
+<meta name="d-service-worker" content="register">
+<link rel="canonical" href="https://www.highflyerstarifa.com/guesthouse">
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Guesthouse
+</title>
+<link rel="icon" type="image/x-icon" href="https://de.cdn-website.com/4dff6c3a885c43daaa7b1b9e6445a736/site_favicon_16_1784712352916.ico"/>
+<script id='d-js-dmapi'></script>
+<script id="d-js-load-css"></script>
+<script data-role="deferred-init" type="text/javascript"></script>
+<style id="forceCssIncludes"></style>
+<style id="cssVariables" type="text/css"></style>
+<style></style>
+<style></style>
+<style id="pageAdditionalWidgetsCss" type="text/css"></style>
+<style id="customWidgetStyle" type="text/css"></style>
+<style id="innerPagesStyle" type="text/css"></style>
+<style id="globalCssTheme" type="text/css"></style>
+<style id="globalCss" type="text/css"></style>
+<style id="responsiveGlobalCss" type="text/css">.k{background-image: url(data:,)}.k{background-image: url(data:,)}.k{background-image: url(data:,)}.k{background-image: url(data:,)}.k{background-image: url(data:,)}</style>
+<style id="headerCss" type="text/css"></style>
+<style id="headerDeviceCss" type="text/css"></style>
+<style
+        id="additionalGlobalCss" type="text/css"
+></style>
+<style id="pagestyle" type="text/css"></style>
+<style id="pagestyleDevice" type="text/css"></style>
+ <style data-page-uuid="380827ac35174a91bc70897741ecda9f" id="grid-styles-common-28653f6d-380827ac35174a91bc70897741ecda9f"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-common-flex-footer-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-common-flex-header-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-common-f1662c2a-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-common-8a15d2c2-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-common-63a049320d35b55b4ef2a372-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-common-6406026c90e1521f6ecb0eca-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-common-8e42e1de-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-common-d86a47eb-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-common-52fcd3b9-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-desktop-flex-header-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-tablet_implicit-flex-header-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="380827ac35174a91bc70897741ecda9f" id="grid-styles-tablet-28653f6d-380827ac35174a91bc70897741ecda9f"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-tablet-flex-footer-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-tablet-flex-header-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-tablet-f1662c2a-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-tablet-63a049320d35b55b4ef2a372-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-tablet-6406026c90e1521f6ecb0eca-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-tablet-8e42e1de-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-tablet-d86a47eb-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-tablet-52fcd3b9-388d93662c2245b0893af309bc75bc53"></style> 
+<style id="globalFontSizeStyle" type="text/css"></style>
+<style id="pageFontSizeStyle" type="text/css"></style>
+<style id="hideAnimFix"></style>
+<style id="fontFallbacks"></style>
+<link rel="alternate" hreflang="es" href="https://www.highflyerstarifa.com/es/guesthouse" />
+<link rel="alternate" hreflang="en" href="https://www.highflyerstarifa.com/guesthouse" />
+<link rel="alternate" hreflang="x-default" href="https://www.highflyerstarifa.com/guesthouse" />
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.highflyerstarifa.com/guesthouse">
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:image" content="https://le-de.cdn-website.com/4dff6c3a885c43daaa7b1b9e6445a736/dms3rep/multi/opt/Bean+bags+and+castle-1920w.jpg"/>
+  <meta property="og:image" content="https://le-de.cdn-website.com/4dff6c3a885c43daaa7b1b9e6445a736/dms3rep/multi/opt/Bean+bags+and+castle-1920w.jpg"/>
+<!-- SYS- RVVfUFJPRFVDVElPTg== -->
+</head>
+<body id="dmRoot" data-page-alias="guesthouse"  class="dmRoot fix-mobile-scrolling flex-site dmResellerSite "
+      style="padding:0;margin:0;"
+     data-flex-site >
+<div id="dm" class='dmwr'>
+    <div class="dm_wrapper -var5 null ">
+         <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="FlexHeader" data-responsive-name="FlexLayout" class="runtime-module-container dm-bfs dm-layout-sec hasAnimations hasStickyHeader inMiniHeaderMode rows-1200 page-34b404a7 page-8107503f hamburger-reverse dmPageBody d-page-1716942098 inputs-css-clean dmDHeader" id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner" data-auto="page-inner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div id="site_content"> <div id="dmFlexHeaderContainer" class="flex_hfcontainer"> <div id="flex-header" data-variation-id="variation0" data-sticky="true" role="banner"> <div data-auto="flex-section" id="1315811880" data-flex-id="f1662c2a" data-layout-section="" data-page-element-type="section" data-page-element-id="1287786335"> <div class="flex-widgets-container" id="1211628193"></div> 
+ <section id="d80ff9aa" class="flex-element section" data-auto="flex-element-section"> <div id="8e7471d7" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="37be9513" class="flex-element group" data-auto="flex-element-group"> <div id="7618b183" class="flex-element group" data-auto="flex-element-group"> <div id="9aa11497" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="1012353433"> <div class="imageWidget align-center u_1012353433" data-element-type="image" data-widget-type="image" id="1012353433" data-binding=""> <a href="/" id="1930511739" file="false"><img src="https://le-de.cdn-website.com/4dff6c3a885c43daaa7b1b9e6445a736/dms3rep/multi/opt/HighFlyers_KiteHouse_LOGO_CMYK-1920w.jpg" alt="" id="1802927812" class="" data-dm-image-path="https://de.cdn-website.com/4dff6c3a885c43daaa7b1b9e6445a736/dms3rep/multi/HighFlyers_KiteHouse_LOGO_CMYK.jpg" width="591" height="592" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+</div> 
+ <div id="f27751da" class="flex-element group" data-auto="flex-element-group"> <div id="63e4b790" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ONELinksMenu" data-hidden-on-tablet="" data-hidden-on-mobile="" data-external-id="1836483380"> <nav class="effect-bottom2 u_1836483380 main-navigation unifiednav dmLinksMenu" data-auto="links-menu" role="navigation" layout-main="horizontal_nav_layout_1" layout-sub="submenu_horizontal_1" data-show-vertical-sub-items="HOVER" id="1836483380" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container unav-top  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="home"> <span class="nav-item-text " data-link-text="
+         Home
+        " data-auto="page-text-style">Home<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/guesthouse" class="unifiednav__item unav-item unav-top-item  dmNavItemSelected    " target="" data-target-page-alias="book-now" aria-current="page" data-auto="selected-page"> <span class="nav-item-text " data-link-text="Guesthouse" data-auto="page-text-style">Guesthouse<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/kitesurfcamps" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="kitesurfcamps"> <span class="nav-item-text " data-link-text="Kitesurf Camps" data-auto="page-text-style">Kitesurf Camps<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/new-page09b1e3bb" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="new-page09b1e3bb"> <span class="nav-item-text " data-link-text="About us" data-auto="page-text-style">About us<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/new-page" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="new-page"> <span class="nav-item-text " data-link-text="Contact" data-auto="page-text-style">Contact<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+ <div id="ecc30ab1" class="flex-element group" data-auto="flex-element-group"> <div id="8be6182a" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet="" data-external-id="1377100858"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1377100858" file="false" href="/" data-element-type="dButtonLinkId" id="1377100858"> <span class="iconBg" aria-hidden="true" id="1471284468"> <span class="icon hasFontIcon icon-star" id="1951860071"></span> 
+</span> 
+ <span class="text" id="1378083387">Contact us</span> 
+</a> 
+</div> 
+ <div id="a36e3d6c" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="graphic" data-hidden-on-desktop="" data-hidden-on-tablet="" data-hidden-on-mobile="" data-external-id="1367915668"> <div class="graphicWidget" data-element-type="graphic" data-widget-type="graphic" id="1367915668"> <svg></svg> 
+</div> 
+</div> 
+</div> 
+ <div id="ac4064b2" class="flex-element group" data-auto="flex-element-group" data-hidden-on-desktop=""> <div id="a75cffc9" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="hamburgerButton" data-hidden-on-desktop="" data-external-id="1293705192"> <button class="hamburgerButton" data-element-type="hamburgerButton" id="1293705192" aria-label="Open menu" aria-controls="hamburger-drawer" aria-expanded="false"> <svg></svg> 
+</button> 
+</div> 
+</div> 
+ <div id="619740ca" class="flex-element group" data-auto="flex-element-group"> <div id="e034db74" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="multilingual" data-external-id="1033414832"> <div id="1033414832" class="multilingualWidget dropdown flag-only" data-auto="multilingual-widget" dmle_extension="multilingual" data-element-type="multilingual" data-display="dropdown" icon="false" surround="false"> <div class="desktopMultilingual"> <div class="language current-language" data-auto="multilingual-current-language"> <a href="/guesthouse" data-disable-ajax-navigation="true"><img src="https://dd-cdn.multiscreensite.com/flags/flags_iso/32/us.png" alt="English" data-code="" onerror="handleImageLoadError(this)"/> <span class="name">English</span> 
+ <span class="short-label">en</span> 
+ <div class="dm-icon dm-icon-chevron-down"></div> 
+</a> 
+</div> 
+ <div class="language other-languages" data-auto="multilingual-other-languages"> <a href="/es/guesthouse" data-code="" data-disable-ajax-navigation="true"><img src="https://dd-cdn.multiscreensite.com/flags/flags_iso/32/es.png" alt="Español" onerror="handleImageLoadError(this)"/> <span class="name">Espa&ntilde;ol</span> 
+ <span class="short-label">es</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+ <div id="hamburger-drawer" class="hamburger-drawer layout-drawer" layout="5ff40d2f36ae4e5ea1bc96b2e2fcf67e===header" data-origin="top" data-auto-height="true"> <div data-layout-section="" data-auto="flex-section" id="1073327761" data-flex-id="8a15d2c2"> <div class="flex-widgets-container" id="1689169650"></div> 
+ <section id="1b6f885f" class="flex-element section" data-auto="flex-element-section"> <div id="1732daad" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="fb1ce72a" class="flex-element group" data-auto="flex-element-group"> <div id="e368942a" class="flex-element group" data-auto="flex-element-group"> <div id="6d79979a" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="hamburgerButton" data-external-id="1021548843"> <button class="hamburgerButton" data-element-type="hamburgerButton" id="1021548843" aria-label="Close menu" aria-controls="hamburger-drawer" aria-expanded="false"> <svg></svg> 
+</button> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1099442592" data-flex-id="63a049320d35b55b4ef2a372" data-layout-section=""> <div class="flex-widgets-container" id="1247649854"></div> 
+ <section id="63a049320d35b55b4ef2a373" class="flex-element section" data-auto="flex-element-section"> <div id="63a049320d35b55b4ef2a376" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="63a049320d35b55b4ef2a377" class="flex-element group" data-auto="flex-element-group"> <div id="63a049320d35b55b4ef2a374" class="flex-element group" data-auto="flex-element-group"> <div id="63a049ca0d35b55b4ef2a5c3" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ONELinksMenu" data-external-id="1998592992"> <nav class="u_1998592992 effect-bottom main-navigation unifiednav dmLinksMenu" data-auto="links-menu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="" data-show-vertical-sub-items="HIDE" id="1998592992" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container unav-top  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="home"> <span class="nav-item-text " data-link-text="
+         Home
+        " data-auto="page-text-style">Home<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/guesthouse" class="unifiednav__item unav-item unav-top-item  dmNavItemSelected    " target="" data-target-page-alias="guesthouse" aria-current="page" data-auto="selected-page"> <span class="nav-item-text " data-link-text="Guesthouse" data-auto="page-text-style">Guesthouse<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/kitesurfcamps" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="kitesurfcamps"> <span class="nav-item-text " data-link-text="Kitesurf Camps" data-auto="page-text-style">Kitesurf Camps<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/new-page09b1e3bb" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="new-page09b1e3bb"> <span class="nav-item-text " data-link-text="About us" data-auto="page-text-style">About us<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/new-page" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="new-page"> <span class="nav-item-text " data-link-text="Contact" data-auto="page-text-style">Contact<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1029527021" data-flex-id="6406026c90e1521f6ecb0eca" data-layout-section=""> <div class="flex-widgets-container" id="1659590659"></div> 
+ <section id="6406026c90e1521f6ecb0ec9" class="flex-element section" data-auto="flex-element-section"> <div id="6406026c90e1521f6ecb0ecb" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="6406026c90e1521f6ecb0ecc" class="flex-element group" data-auto="flex-element-group"> <div id="6406026c90e1521f6ecb0ecd" class="flex-element group" data-auto="flex-element-group"></div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+ <div class="layout-drawer-overlay" id="layout-drawer-overlay"></div> 
+</div> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_guesthouse dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper" data-auto="all-wrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent" role="main"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl" id="1716942098"> <div data-layout-section="" data-auto="flex-section" id="1875022438" data-flex-id="28653f6d"> <div class="flex-widgets-container" id="1204394908"></div> 
+ <section id="7615afcd" class="flex-element section" data-auto="flex-element-section"> <div id="1d339635" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="1ef2aa35" class="flex-element group" data-auto="flex-element-group"> <div id="039c94c1" class="flex-element group" data-auto="flex-element-group"> <div id="widget_eu3" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="445325440"> <div id="445325440" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-445325440" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer jKjUdt"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer hzjFXA"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-65765" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><img data-grab="slide-media" src="https://le-de.cdn-website.com/4dff6c3a885c43daaa7b1b9e6445a736/dms3rep/multi/opt/Rm+4+from+desk%28Jonatan%29-1920w.jpg" class="sc-fqkvVR kmKOkQ"/><div data-grab="slide-overlay" class="sc-gEvEer cYOjo"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-49003" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer cYOjo"></div></div><div class="sc-gEvEer hITJxk  d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 2" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-46109" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer cYOjo"></div></div><div class="sc-gEvEer hITJxk  d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 3" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-54106" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer cYOjo"></div></div><div class="sc-gEvEer hITJxk  d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 4" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-59444" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer gqOcpU"></div><div data-grab="slide-overlay" class="sc-gEvEer cYOjo"></div></div><div class="sc-gEvEer hITJxk  d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-bullets-base-container" data-grab="pagination-container" class="sc-gEvEer jaQWIi"><button data-grab="pagination-button-bullet active" data-auto="pagination-button-bullet 0 active" aria-label="go to slide 1" type="button" class="sc-jlZhew kApPWo"></button><button data-grab="pagination-button-bullet" data-auto="pagination-button-bullet 1" aria-label="go to slide 2" type="button" class="sc-jlZhew fCzLJV"></button><button data-grab="pagination-button-bullet" data-auto="pagination-button-bullet 2" aria-label="go to slide 3" type="button" class="sc-jlZhew fCzLJV"></button><button data-grab="pagination-button-bullet" data-auto="pagination-button-bullet 3" aria-label="go to slide 4" type="button" class="sc-jlZhew fCzLJV"></button><button data-grab="pagination-button-bullet" data-auto="pagination-button-bullet 4" aria-label="go to slide 5" type="button" class="sc-jlZhew fCzLJV"></button></div></div></div><script data-role="hydration">;window?.waitForDeferred?.('ssrLibrariesLoaded', () => {window.SSRRuntime.RuntimeReactHelpers.initiateWidget({"type":"SSR_IMAGE_SLIDER","props":{"layout":"LAYOUT_1","autoPagination":{"on":true,"intervalInSeconds":7,"pauseOnHover":false},"slidesData":[{"uuid":"65765","title":"","media":{"imgSrc":"https://le-de.cdn-website.com/4dff6c3a885c43daaa7b1b9e6445a736/dms3rep/multi/opt/Rm+4+from+desk%28Jonatan%29-1920w.jpg","alt":null,"vidSrc":null,"lazy":false,"type":"IMAGE"},"button":{"text":"Button"},"showButton":false,"imgCssObjectPositionValue":"50% 0%"},{"uuid":"49003","title":"","media":{"imgSrc":"https://le-de.cdn-website.com/4dff6c3a885c43daaa7b1b9e6445a736/dms3rep/multi/opt/DSC08265-1920w.jpg","alt":null,"vidSrc":null,"lazy":false,"type":"IMAGE"},"button":{"text":"Button"},"showButton":false},{"uuid":"46109","title":"","media":{"imgSrc":"https://le-de.cdn-website.com/4dff6c3a885c43daaa7b1b9e6445a736/dms3rep/multi/opt/Azotea+sun-0c01ce93-1920w.jpg","alt":null,"vidSrc":null,"lazy":false,"type":"IMAGE"},"button":{"text":"Button"},"showButton":false},{"uuid":"54106","media":{"imgSrc":"https://le-de.cdn-website.com/4dff6c3a885c43daaa7b1b9e6445a736/dms3rep/multi/opt/Rm+4+desk+-+window+%28Jonatan%29-HDR-1920w.jpg","alt":null,"vidSrc":null,"lazy":false,"type":"IMAGE"},"button":{"text":"Button"},"showButton":false},{"uuid":"59444","media":{"imgSrc":"https://le-de.cdn-website.com/4dff6c3a885c43daaa7b1b9e6445a736/dms3rep/multi/opt/DSC08300-1920w.jpg","alt":null,"vidSrc":null,"lazy":false,"type":"IMAGE"},"button":{"text":"Button"},"showButton":false,"imgCssObjectPositionValue":"50% 0%"}],"paginationType":null,"animationType":"slide","contentAnimationTypeCssClass":"fadeInUp","bindingSource":null,"paginationShow":"always","arrowStyle":"arrow_thin","slotsInFrame":null,"_styles":{"slide_title":{"common":{"fontWeight":"700"}},"layoutSpecificStyles":{}},"widgetId":"445325440"},"id":"445325440"}, false)});</script></span></div> 
+</div> 
+ <div id="widget_v0t" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="custom" lock-element-for-editing="true" data-external-id="1915330644"> <div class="widget-8cd8a8 dmCustomWidget" data-lazy-load="true" data-title="" id="1915330644" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="8cd8a850338d41da9f0ecac6aff23787" data-widget-version="32" data-widget-config="eyJiZWRyb29tcyI6bnVsbCwibWF4TnVtYmVyT2ZHdWVzdHMiOm51bGwsImJvb2tCdXR0b24iOm51bGwsImJhdGhyb29tcyI6bnVsbCwidmlld01vcmVCdXR0b24iOm51bGx9"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer flex_hfcontainer"> <div id="flex-footer" role="contentinfo"> <div data-layout-section="" data-auto="flex-section" id="1737901890" data-flex-id="8e42e1de"> <div class="flex-widgets-container" id="1799556969"></div> 
+ <section id="ca3f5510" class="flex-element section" data-auto="flex-element-section"> <div id="6416bb4b" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="077f8e9d" class="flex-element group" data-auto="flex-element-group"> <div id="72f8dab1" class="flex-element group" data-auto="flex-element-group" data-hidden-on-tablet=""> <div id="widget_dtj" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="1302123793"> <div class="imageWidget align-center" data-element-type="image" data-widget-type="image" id="1302123793"><img src="https://le-de.cdn-website.com/4dff6c3a885c43daaa7b1b9e6445a736/dms3rep/multi/opt/HighFlyers_KiteHouse_LOGO_RGB_CIRCLE-1920w.png" alt="" id="1456606871" class="" width="354" height="354" data-dm-image-path="https://de.cdn-website.com/4dff6c3a885c43daaa7b1b9e6445a736/dms3rep/multi/HighFlyers_KiteHouse_LOGO_RGB_CIRCLE.png" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+ <div id="98018ad4" class="flex-element group" data-auto="flex-element-group"> <div id="0663fe75" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1110115138"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1110115138" style=""> <h6><a href="/new-page09b1e3bb" runtime_url="/new-page09b1e3bb" type="page" style="color: var(--color_3); display: unset; font-weight: bold;"><strong>About us</strong></a></h6> 
+</div> 
+</div> 
+ <div id="97aa2a7f" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1706257105"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1706257105" style=""> <h6><a href="/house-rules" runtime_url="/house-rules" type="page" style="color: var(--color_3); display: initial;">House rules</a></h6> 
+</div> 
+</div> 
+ <div id="dd650c68" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1193884172"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1193884172" style=""> <h6><a href="/terms---conditions" runtime_url="/terms---conditions" type="page" style="color: var(--color_3); display: unset;">Terms &amp; conditions</a></h6> 
+</div> 
+</div> 
+ <div id="31597da8" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1182562767"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1182562767" style=""> <h6><a href="/new-page70a58969" runtime_url="/new-page70a58969" type="page" style="display: unset; color: var(--color_3);">Privacy policy</a></h6> 
+</div> 
+</div> 
+ <div id="360527eb" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1452659595"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1452659595" style=""> <h6><a href="/kitesurfcamps" runtime_url="/cancellation-policy" type="page" style="display: unset; color: var(--color_3);">Cancellation policy</a></h6> 
+</div> 
+</div> 
+</div> 
+ <div id="a29b7b51" class="flex-element group" data-auto="flex-element-group"> <div id="75620882" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1633145888"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1633145888" style=""> <h6><a href="/new-page" runtime_url="/new-page" type="page" style="display: unset; font-weight: bold; color: var(--color_3);"><strong>Contact</strong></a></h6> 
+</div> 
+</div> 
+ <div id="widget_cf9" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1970206576"> <div class="dmNewParagraph u_1970206576" data-element-type="paragraph" data-version="5" id="1970206576" data-binding="W3siYmluZGluZ05hbWUiOiJ0ZXh0IiwidmFsdWUiOiJTVEFUSUNfUEFHRV9DT0xMRUNUSU9OLntcImNuXCI6XCJ3ZWJzaXRlY29udGVudFwiLFwiZm5cIjpcImNvbnRhY3RGdWxsTmFtZVwifSJ9XQ==" data-diy-text="">Kevin Mitchem</div> 
+</div> 
+ <div id="701ecf9f" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1353877854"> <div class="dmNewParagraph u_1353877854" data-element-type="paragraph" data-version="5" id="1353877854" style="" data-binding="W3siYmluZGluZ05hbWUiOiJ0ZXh0IiwidmFsdWUiOiJTVEFUSUNfUEFHRV9DT0xMRUNUSU9OLntcImNuXCI6XCJ3ZWJzaXRlY29udGVudFwiLFwiZm5cIjpcImNvbnRhY3RDb21wYW55TmFtZVwifSJ9XQ==" data-diy-text="">High Flyers Tarifa</div> 
+</div> 
+ <div id="72b595a7" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1718971146"> <div class="dmNewParagraph u_1718971146" data-element-type="paragraph" data-version="5" id="1718971146" style="" data-binding="W3siYmluZGluZ05hbWUiOiJ0ZXh0IiwidmFsdWUiOiJTVEFUSUNfUEFHRV9DT0xMRUNUSU9OLntcImNuXCI6XCJ3ZWJzaXRlY29udGVudFwiLFwiZm5cIjpcImNvbnRhY3RQaG9uZVwifSJ9XQ==" data-diy-text="">676286118</div> 
+</div> 
+ <div id="04e67feb" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1118356945"> <div class="dmNewParagraph u_1118356945" data-element-type="paragraph" data-version="5" id="1118356945" style="" data-binding="W3siYmluZGluZ05hbWUiOiJ0ZXh0IiwidmFsdWUiOiJTVEFUSUNfUEFHRV9DT0xMRUNUSU9OLntcImNuXCI6XCJ3ZWJzaXRlY29udGVudFwiLFwiZm5cIjpcImNvbnRhY3RFbWFpbFwifSJ9XQ==" data-diy-text="">highflyerstarifa@gmail.com</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1570648642" data-flex-id="d86a47eb" data-layout-section=""> <div class="flex-widgets-container" id="1742200172"></div> 
+ <section id="876e3d90" class="flex-element section" data-auto="flex-element-section"> <div id="1c667d6d" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid="" lock-element-for-editing="true"> <div id="b99ec92b" class="flex-element group" data-auto="flex-element-group"> <div id="a4215776" class="flex-element group" data-auto="flex-element-group"> <div id="widget_ihg" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1382295404"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1382295404" style=""> <h6 class="text-align-center"><span style="display: unset;">Copyright &copy;2024&nbsp; |&nbsp; &nbsp;Powered by&nbsp;</span><a href="https://smoobu.com/" target="_blank" runtime_url="https://smoobu.com/" type="url" style="display: unset; color: var(--color_3);">Smoobu</a></h6> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+</div> 
+ <div id="dmFlexStickyContainer" class="flex_hfcontainer"> <div id="flex-sticky"> <div data-layout-section="" data-auto="flex-section" id="1691394132" data-flex-id="52fcd3b9"> <div class="flex-widgets-container" id="1585626873"></div> 
+ <section id="caa42067" class="flex-element section" data-auto="flex-element-section"> <div id="59d132ee" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="88b752ea" class="flex-element group" data-auto="flex-element-group"> <div id="c7cccae1" class="flex-element group" data-auto="flex-element-group"> <div id="f2a52f09" class="flex-element inner-grid" data-auto="flex-element-inner-grid"></div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+    </div>
+</div>
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-mobile_implicit-flex-header-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="380827ac35174a91bc70897741ecda9f" id="grid-styles-mobile-28653f6d-380827ac35174a91bc70897741ecda9f"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-mobile-flex-footer-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-mobile-flex-header-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-mobile-f1662c2a-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-mobile-8a15d2c2-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-mobile-63a049320d35b55b4ef2a372-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-mobile-6406026c90e1521f6ecb0eca-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-mobile-8e42e1de-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-mobile-d86a47eb-388d93662c2245b0893af309bc75bc53"></style> 
+ <style data-page-uuid="388d93662c2245b0893af309bc75bc53" data-is-header="true" id="grid-styles-mobile-52fcd3b9-388d93662c2245b0893af309bc75bc53"></style> 
+<script></script>
+<script></script>
+<script></script>
+<script type="text/javascript"></script>
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+<script></script>
+<script id='d-js-params'></script>
+<script src="https://static.cdn-website.com/mnlt/production/6839/_dm/s/rt/dist/scripts/d-js-runtime-flex-package.min.js"  id="d-js-core" defer></script>
+<script></script>
+<div style="display:none;" id="P6iryBW0Wu"></div>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" data-auto="pswp-close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" data-auto="pswp-share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="fb-root"
+        data-locale="en"></div>
+<!-- Alias: 4dff6c3a885c43daaa7b1b9e6445a736 -->
+<script type="text/javascript"></script>
+<div><script type="text/javascript"></script>
+        <script id="ssr-static" fetchpriority="low" type="module"  src="https://de-ms-cdn.multiscreensite.com/runtime-react/4285/res/js/runtime-react.js"></script></div><!--  Site Wide Html Markup -->
+<!--  Site Wide Html Markup -->
+</body>
+</html>

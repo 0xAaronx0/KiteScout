@@ -1,0 +1,581 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt"
+ class="ios-preview-native-scroll">
+<head>
+ <meta charset="utf-8">
+<script type="text/javascript"></script>
+<!-- Injecting site-wide to the head -->
+<script type="text/javascript" id="d_track_campaign" data-entry-referrer data-utm-cookies></script>
+<script type="text/javascript" ></script>
+<!-- End Injecting site-wide to the head -->
+<meta name="d-service-worker" content="register">
+<link rel="canonical" href="https://www.pousadaraia1.com.br/atividades">
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon"
+ href="https://irp.cdn-website.com/05334b84/dms3rep/multi/favicon-c0ab9d2b.png"/>
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/05334b84/site_favicon_16_1788442927689.ico"/>
+<link rel="preconnect" href="https://irp.cdn-website.com"/>
+<link rel="preconnect" href="https://irp.cdn-website.com" crossorigin/>
+<link rel="preconnect" href="https://static.cdn-website.com"/>
+<script id='d-js-dmapi'></script>
+<script id="d-js-load-css"></script>
+<script data-role="deferred-init" type="text/javascript"></script>
+<style id="forceCssIncludes"></style>
+<style id="cssVariables" type="text/css"></style>
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;subset=latin-ext&amp;display=swap" />
+<link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/6834/_dm/s/rt/dist/css/d-css-runtime-flex-new-nav.min.css" />
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/46b5e33ebd291a81ad22d0609e408710.css" id="widgetCSS" />
+<style></style>
+<style></style>
+<style id="pageAdditionalWidgetsCss" type="text/css"></style>
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/05334b84/files/05334b84_1.min.css?v=15" id="siteGlobalCss" />
+<style id="customWidgetStyle" type="text/css"></style>
+<style id="innerPagesStyle" type="text/css"></style>
+<style
+ id="additionalGlobalCss" type="text/css"
+></style>
+<style id="pagestyle" type="text/css"></style>
+<style id="pagestyleDevice" type="text/css"></style>
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-common-8ff991ca-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-common-63d24979f4a54e38542a8ab9-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-common-82df0b55-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-common-119b02f4-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-common-940b3800-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-common-49082dd2-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-common-66013d53-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-common-957f9d03-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-common-e1578c74-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-flex-footer-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-flex-header-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-common-flex-header-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-c093187e-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-295296ff-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-18f5ea00-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-63a049320d35b55b4ef2a372-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-6406026c90e1521f6ecb0eca-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-63da2bddeae8da42b2353671-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-d99bab6d-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-0c09f7a7-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-desktop-flex-header-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-desktop-6406026c90e1521f6ecb0eca-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet_implicit-flex-header-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-tablet-8ff991ca-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-tablet-63d24979f4a54e38542a8ab9-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-tablet-82df0b55-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-tablet-119b02f4-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-tablet-940b3800-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-tablet-49082dd2-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-tablet-66013d53-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-tablet-957f9d03-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-tablet-e1578c74-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-flex-footer-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-flex-header-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-c093187e-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-295296ff-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-18f5ea00-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-63a049320d35b55b4ef2a372-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-6406026c90e1521f6ecb0eca-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-63da2bddeae8da42b2353671-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-d99bab6d-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-0c09f7a7-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+<style id="globalFontSizeStyle" type="text/css"></style>
+<style id="pageFontSizeStyle" type="text/css"></style>
+<style id="hideAnimFix"></style>
+<style id="fontFallbacks"></style>
+ <link type="application/rss+xml" rel="alternate" href="https://www.pousadaraia1.com.br/feed/rss2"/>
+ <link type="application/atom+xml" rel="alternate" href="https://www.pousadaraia1.com.br/feed/atom"/>
+ <meta property="og:type" content="website"/>
+ <meta property="og:url" content="https://www.pousadaraia1.com.br/atividades"/>
+ <meta property="og:image" content="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/seo-1920w.jpg"/>
+ <title>
+ Descubra Todas as Atividades Que em Ibiraquera, SC | Pousada Raia 1
+ </title>
+ <meta name="keywords" content="santa catarina, ibiraquera, pousada, pousada raia 1, atividades, kitesurf, windsurf, stand up paddle, sup , surf"/>
+ <meta name="description" content="Descubra Todas as Atividades e Esportes Que Podem Ser Praticados em Ibiraquera, sc"/>
+ <meta name="twitter:card" content="summary"/>
+ <meta name="twitter:title" content="Descubra Todas as Atividades Que em Ibiraquera, SC | Pousada Raia 1"/>
+ <meta name="twitter:description" content="Descubra Todas as Atividades e Esportes Que Podem Ser Praticados em Ibiraquera, sc"/>
+ <meta property="og:description" content="Descubra Todas as Atividades e Esportes Que Podem Ser Praticados em Ibiraquera, sc"/>
+ <meta property="og:title" content="Descubra Todas as Atividades Que em Ibiraquera, SC | Pousada Raia 1"/>
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+<body id="dmRoot" data-page-alias="atividades" class="dmRoot fix-mobile-scrolling flex-site dmResellerSite "
+ style="padding:0;margin:0;"
+ data-flex-site >
+<div id="dm" class='dmwr'>
+ <div class="dm_wrapper -var5 null ">
+ <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="FlexHeader" data-responsive-name="FlexLayout" class="runtime-module-container dm-bfs dm-layout-sec hasAnimations hasStickyHeader inMiniHeaderMode rows-1200 hamburger-reverse dmPageBody d-page-1716942098 inputs-css-clean dmDHeader" id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner" data-auto="page-inner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div id="site_content"> <div id="dmFlexHeaderContainer" class="flex_hfcontainer"> <div id="flex-header" data-variation-id="variation0" class="" data-sticky="true" data-changeable-on-scroll="true" data-changeable-on-scroll-properties="|text-color|navigation-links-color|" data-only-nav-sections-visible="true" data-overlapping-common="true" role="banner"> <div data-auto="flex-section" id="1990152846" data-flex-id="c093187e" data-layout-section="" data-page-element-type="section" data-page-element-id="1475755753" class="hotel-info" data-custom-class-name="hotel-info" data-hidden-on-tablet="true" data-hidden-on-mobile="true"> <div class="flex-widgets-container" id="1140644136"></div> 
+ <section id="1c1481e3" class="flex-element section" data-auto="flex-element-section"> <div id="603c3bb7" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="9dc5a074" class="flex-element group" data-auto="flex-element-group" data-hidden-on-tablet="" data-hidden-on-mobile=""> <div id="88e69a6f" class="flex-element group" data-auto="flex-element-group"></div> 
+ <div id="780d21df" class="flex-element group" data-auto="flex-element-group" data-hidden-on-tablet="" data-hidden-on-mobile=""> <div id="group_msd" class="flex-element group" data-auto="flex-element-group"> <div id="widget_b8g" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="graphic" data-keep-proportion="true" data-external-id="791276173"> <div class="graphicWidget graphicWidgetV2 graphicWidgetV3 u_791276173" data-element-type="graphic" data-widget-type="graphic" id="791276173"> <svg></svg> 
+</div> 
+</div> 
+ <div id="592603b5" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1863917876"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1863917876" style="" data-diy-text=""><p style="--font-unit: 1px;" class="text-align-center"><a href="https://api.whatsapp.com/send?l=pt_BR&phone=5548991213065" target="_blank" runtime_url="https://api.whatsapp.com/send?l=pt_BR&phone=5548991213065" type="url" style="color: rgb(255, 255, 255); display: initial;">55 (48) 99121-3065</a></p></div> 
+</div> 
+</div> 
+ <div id="widget_rtg" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="socialhub" data-external-id="3586008638"> <div class="align-center text-align-center u_3586008638 dmSocialHub gapSpacing" id="3586008638" dmle_extension="social_hub" data-element-type="social_hub" data-binding="W3siYmluZGluZ05hbWUiOiJzb2NpYWwiLCJ2YWx1ZSI6ImNvbnRlbnRfbGlicmFyeS5nbG9iYWwuc29jaWFsIn1d" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv " data-auto="social-hub-inner"> <a href="https://facebook.com/Raia1Pousada" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style9" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://instagram.com/pousadaraia1ibiraquera" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style9" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://wa.me/5548991213065" target="_blank" dm_dont_rewrite_url="true" aria-label="whatsapp" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Whatsapp&apos;)"> <span class="dmSocialWhatsapp dm-social-icons-whatsapp oneIcon socialHubIcon style9" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="764397de" class="flex-element group" data-auto="flex-element-group" data-hidden-on-desktop=""> <div id="00ca91b4" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="hamburgerButton" data-external-id="1998777521"> <button class="hamburgerButton" data-element-type="hamburgerButton" id="1998777521" aria-controls="hamburger-drawer" aria-expanded="false" aria-label="Open menu"> <svg></svg> 
+</button> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1652594516" data-flex-id="295296ff" data-layout-section="" data-page-element-type="section" data-page-element-id="1475755753" class="navbar-section" data-custom-class-name="navbar-section"> <div class="flex-widgets-container" id="1832314796"></div> 
+ <section id="82faadce" class="flex-element section" data-auto="flex-element-section"> <div id="6c405017" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="073117d5" class="flex-element group" data-auto="flex-element-group"> <div id="375113d2" class="flex-element group navbar-logo-column" data-auto="flex-element-group"> <div id="3dbef8e4" class="flex-element widget-wrapper navbar-logo" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="1935499080"> <div class="imageWidget align-center u_1935499080" data-element-type="image" data-widget-type="image" id="1935499080" data-binding="W3siYmluZGluZ05hbWUiOiJpbWFnZSIsInZhbHVlIjoic2l0ZV9pbWFnZXMubG9nbyJ9XQ=="> <a href="/" id="1319215371" file="false"><img src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/logo-1920w.png" alt="" id="1963335214" class="" data-dm-image-path="https://irp.cdn-website.com/05334b84/dms3rep/multi/logo.png" width="32" height="9" data-diy-image="" onerror="handleImageLoadError(this)"/><img src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/6c0a2d9e9e774182a4784304e7884a09-1920w.png" class="logo-on-scroll v2" fetchpriority="low" aria-hidden="true" id="1292062462" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+ <div id="group_rdp" class="flex-element group navbar-icons-column" data-auto="flex-element-group" data-hidden-on-desktop=""> <div id="41767835" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="hamburgerButton" data-external-id="1684538438"> <button class="hamburgerButton" data-element-type="hamburgerButton" id="1684538438" aria-controls="hamburger-drawer" aria-expanded="false" aria-label="Open menu"> <svg></svg> 
+</button> 
+</div> 
+ <div id="24fc843a" class="flex-element widget-wrapper navbar-mobile-calendar-icon" data-auto="flex-element-widget-wrapper" data-keep-proportion="true" data-widget-type="graphic" data-external-id="1167581400"> <div class="graphicWidget graphicWidgetV2 graphicWidgetV3 u_1167581400" data-element-type="graphic" data-widget-type="graphic" id="1167581400" data-layout="graphic-style-3"> <a href="https://hbook.hsystem.com.br/booking?companyId=5e0f8c0cab41d40cc85f6c3e" id="1829054622" file="false" class="" target="_blank"> <svg></svg> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="bd9f0e42" class="flex-element group navbar-links" data-auto="flex-element-group" data-hidden-on-tablet="" data-hidden-on-mobile=""> <div id="d750c691" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ONELinksMenu" data-hidden-on-tablet="" data-hidden-on-mobile="" data-external-id="1424810530"> <nav class="effect-bottom2 u_1424810530 main-navigation unifiednav dmLinksMenu" data-auto="links-menu" role="navigation" layout-main="horizontal_nav_layout_1" layout-sub="submenu_horizontal_1" data-show-vertical-sub-items="HOVER" id="1424810530" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container unav-top " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_00 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="INÍCIO" data-auto="page-text-style">IN&Iacute;CIO<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/acomodacoes" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_010101441442 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="ACOMODAÇÕES" data-auto="page-text-style">ACOMODA&Ccedil;&Otilde;ES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/ibiraquera" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_010101488361 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="IBIRAQUERA" data-auto="page-text-style">IBIRAQUERA<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/atividades" class="unifiednav__item unav-item unav-top-item dmNavItemSelected dmUDNavigationItem_010101153683 " target="" data-target-page-alias="" aria-current="page" data-auto="selected-page"> <span class="nav-item-text " data-link-text="ATIVIDADES" data-auto="page-text-style">ATIVIDADES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/fale-conosco" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_010101152840 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="CONTATO" data-auto="page-text-style">CONTATO<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+ <div id="6392140c" class="flex-element group" data-auto="flex-element-group" data-hidden-on-desktop="" data-hidden-on-tablet="" data-hidden-on-mobile=""></div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+ <div id="hamburger-drawer" class="hamburger-drawer layout-drawer" layout="5ff40d2f36ae4e5ea1bc96b2e2fcf67e===header" data-origin="top" data-auto-height="true"> <div data-layout-section="" data-auto="flex-section" id="1558513594" data-flex-id="18f5ea00" class=""> <div class="flex-widgets-container" id="1554675836"></div> 
+ <section id="f6054f97" class="flex-element section" data-auto="flex-element-section"> <div id="ef8b5b8a" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="a1f8711f" class="flex-element group" data-auto="flex-element-group"> <div id="9d047ce9" class="flex-element group" data-auto="flex-element-group"> <div id="widget_1fr" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="538822133"> <div class="imageWidget align-center" data-element-type="image" data-widget-type="image" id="538822133" data-binding="W3siYmluZGluZ05hbWUiOiJpbWFnZSIsInZhbHVlIjoic2l0ZV9pbWFnZXMubG9nbyJ9XQ=="> <a href="/" id="1639978839"><img src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/logo-1920w.png" alt="" id="1168557513" data-diy-image="" data-dm-image-path="https://irp.cdn-website.com/05334b84/dms3rep/multi/logo.png" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+</div> 
+ <div id="group_4fe" class="flex-element group" data-auto="flex-element-group"> <div id="12a003a5" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="hamburgerButton" data-external-id="1717245942"> <button class="hamburgerButton" data-element-type="hamburgerButton" id="1717245942" aria-controls="hamburger-drawer" aria-expanded="false" aria-label="Close menu"> <svg></svg> 
+</button> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1099442592" data-flex-id="63a049320d35b55b4ef2a372" data-layout-section=""> <div class="flex-widgets-container" id="1247649854"></div> 
+ <section id="63a049320d35b55b4ef2a373" class="flex-element section" data-auto="flex-element-section"> <div id="63a049320d35b55b4ef2a376" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="63a049320d35b55b4ef2a377" class="flex-element group" data-auto="flex-element-group"> <div id="63a049320d35b55b4ef2a374" class="flex-element group" data-auto="flex-element-group"> <div id="63a049ca0d35b55b4ef2a5c3" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ONELinksMenu" data-external-id="1998592992"> <nav class="u_1998592992 effect-background main-navigation unifiednav dmLinksMenu" data-auto="links-menu" role="navigation" layout-main="vertical_nav_layout_3" layout-sub="" data-show-vertical-sub-items="HIDE" id="1998592992" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container unav-top " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_00 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="INÍCIO" data-auto="page-text-style">IN&Iacute;CIO<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/acomodacoes" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_010101441442 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="ACOMODAÇÕES" data-auto="page-text-style">ACOMODA&Ccedil;&Otilde;ES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/ibiraquera" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_010101488361 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="IBIRAQUERA" data-auto="page-text-style">IBIRAQUERA<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/atividades" class="unifiednav__item unav-item unav-top-item dmNavItemSelected dmUDNavigationItem_010101153683 " target="" data-target-page-alias="" aria-current="page" data-auto="selected-page"> <span class="nav-item-text " data-link-text="ATIVIDADES" data-auto="page-text-style">ATIVIDADES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/fale-conosco" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_010101152840 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="CONTATO" data-auto="page-text-style">CONTATO<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1029527021" data-flex-id="6406026c90e1521f6ecb0eca" data-layout-section="" class="" data-hidden-on-tablet="true" data-hidden-on-mobile="true"> <div class="flex-widgets-container" id="1659590659"></div> 
+ <section id="6406026c90e1521f6ecb0ec9" class="flex-element section" data-auto="flex-element-section"> <div id="6406026c90e1521f6ecb0ecb" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="6406026c90e1521f6ecb0ecc" class="flex-element group" data-auto="flex-element-group" data-hidden-on-desktop="" data-hidden-on-tablet="" data-hidden-on-mobile=""> <div id="6406026c90e1521f6ecb0ecd" class="flex-element group" data-auto="flex-element-group"> <div id="widget_s4l" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1287536004"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1287536004" style=""> <h4 style="line-height: 2;" class="m-text-align-left"><span style="display: unset; color: var(--color_1);">Get in touch</span></h4> 
+<p style="line-height: 2;" class="m-text-align-left"><span style="display: unset; color: var(--color_1);">555-555-5555</span></p><p style="line-height: 2;" class="m-text-align-left"><span style="display: unset; color: var(--color_1);">mymail@mailservice.com</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+ <div class="layout-drawer-overlay" id="layout-drawer-overlay"></div> 
+</div> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_atividades dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper" data-auto="all-wrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent" role="main"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl" id="1716942098"> <div data-auto="flex-section" id="1637116070" data-flex-id="8ff991ca" data-layout-section="" data-page-element-type="section" data-page-element-id="1461948817"> <div class="flex-widgets-container" id="1478285170"></div> 
+ <section id="ad091e15" class="flex-element section" data-auto="flex-element-section"> <div id="19bdff12" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="d6bf3498" class="flex-element group" data-auto="flex-element-group"> <div id="e19b6e51" class="flex-element group" data-auto="flex-element-group"> <div id="15ceaa38" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="custom" data-hidden-on-tablet="" data-hidden-on-mobile="" data-external-id="1526077526"> <div class="widget-54be00 u_1526077526 dmCustomWidget" data-lazy-load="true" data-title="" id="1526077526" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="54be00a7a1b74cdfa3fbc1bc65d9e75d" data-widget-version="34" data-widget-config="eyJ1bmRlZmluZWQiOiIjMWYyOTM3IiwiY29tcGFueUlkIjoiNWUwZjhjMGNhYjQxZDQwY2M4NWY2YzNlIiwiY2hhaW5JZCI6IiIsIm1vbnRoc1RvTG9hZCI6IjMiLCJtYXhBZHVsdHMiOiI2IiwiZGVmYXVsdEFkdWx0cyI6IjIiLCJtYXhDaGlsZHJlbiI6IjQiLCJtaW5EYXlzU3RheSI6IjEiLCJlbmFibGVTdGlja3lCb3R0b20iOnRydWUsImNoZWNrSW5QbGFjZWhvbGRlciI6IkRhdGEgZGUgZW50cmFkYSIsImNoZWNrT3V0UGxhY2Vob2xkZXIiOiJEYXRhIGRlIHNhw61kYSIsImNoaWxkcmVuQWdlc0xhYmVsIjoiSWRhZGUgZGFzIGNyaWFuw6dhcyIsInNob3dQcm9tb0NvZGUiOnRydWUsInByb21vUGxhY2Vob2xkZXIiOiJQcm9tb8Onw6NvIiwiYnV0dG9uVGV4dCI6IkNPTlNVTFRBUiBWQUxPUkVTIiwibGFuZ3VhZ2UiOiJwdCIsInRvcERpc3RhbmNlIjoiMTYwIiwiYmFyV2lkdGhQeCI6Ijk2MCIsImJhckhlaWdodCI6IjkwIiwiYmFyUGFkZGluZ0hvcml6b250YWwiOiI2NSIsImJhckJvcmRlclJhZGl1cyI6IjYiLCJmaWVsZEZvbnRTaXplIjoiMTQiLCJmaWVsZFBhZGRpbmciOiIyMCIsImZpZWxkc0dhcCI6IjEiLCJpbnB1dEJvcmRlclJhZGl1cyI6IjAiLCJidXR0b25Cb3JkZXJSYWRpdXMiOiIwIiwiY2FsZW5kYXJJY29uQ29sb3IiOiJ2YXIoLS1jb2xvcl8xKSIsImNhbGVuZGFySGVhZGVyQmciOiJ2YXIoLS1jb2xvcl8xKSIsImNhbGVuZGFyRGF5QmciOiIjZDdkZGJlIiwiY2FsZW5kYXJEYXlIb3ZlckJnIjoicmdiYSgxODQsIDEzNCwgMTEsIDAuMSkiLCJjYWxlbmRhckJvcmRlckNvbG9yIjoiI2QxZDVkYiIsImNhbGVuZGFyU2VsZWN0ZWREYXlCZyI6InZhcigtLWNvbG9yXzEpIn0="> <script src="https://cdn.tailwindcss.com"></script> 
+ <div class="hotel-booking-widget-hero" style="--top-distance: 160px; --bar-height: 90px; --bar-padding-horizontal: 65px; --field-font-size: 14px; --field-padding: 20px; --fields-gap: 1px; --input-border-radius: 0px; --button-border-radius: 0px; --bar-border-radius: 6px; --max-children: 4; --calendar-icon-color: var(--color_1); --calendar-day-bg: #d7ddbe; --calendar-day-hover-bg: rgba(184, 134, 11, 0.1); --calendar-border-color: #d1d5db; --calendar-selected-day-bg: var(--color_1); --calendar-header-bg: var(--color_1);"> <div class="booking-bar-hero" data-enable-sticky="true"> <div class="booking-bar-content-hero"> <form id="bookingForm" class="booking-form-hero"> <div class="form-field-hero"> <div class="input-wrapper-hero"><input type="text" id="checkInDate" class="date-input-hero" placeholder="Data de entrada" readonly="" aria-label="Data de entrada" data-placeholder-original="Data de entrada"/> <svg></svg> 
+</div> 
+</div> 
+ <div class="form-field-hero"> <div class="input-wrapper-hero"><input type="text" id="checkOutDate" class="date-input-hero" placeholder="Data de saída" readonly="" aria-label="Data de saída" data-placeholder-original="Data de saída"/> <svg></svg> 
+</div> 
+</div> 
+ <div class="form-field-hero"> <select id="adultsSelect" class="select-hero"></select> 
+</div> 
+ <div id="childrenFieldWrapper" class="form-field-hero children-field-wrapper"> <select id="childrenSelect" class="select-hero"></select> 
+</div> 
+ <div id="agesFieldWrapper" class="form-field-hero children-field-wrapper hidden"><input type="text" id="childrenAges" class="text-input-hero ages-display" placeholder="Idades" readonly="" aria-label="Idades" data-placeholder-original="Idades"/></div> 
+ <div class="form-field-hero"><input type="text" id="promoCode" class="text-input-hero" placeholder="Promoção" aria-label="Promoção" data-placeholder-original="Promoção"/></div> 
+ <button type="submit" class="submit-btn-hero">CONSULTAR VALORES</button> 
+</form> 
+</div> 
+ <div id="calendarModal" class="calendar-modal-hero hidden"> <div class="calendar-content-hero"> <div class="calendar-header-hero"> <button type="button" id="prevMonth" class="nav-btn-hero">&lsaquo;</button> 
+ <h3 id="currentMonth" class="month-title-hero"></h3> 
+ <button type="button" id="nextMonth" class="nav-btn-hero">&rsaquo;</button> 
+</div> 
+ <div id="calendarGrid" class="calendar-grid-hero"></div> 
+ <div id="calendarTooltip" class="calendar-tooltip-hero hidden"></div> 
+</div> 
+</div> 
+ <div id="childrenAgesPopup" class="children-popup-hero children-field-wrapper hidden"> <div class="children-popup-content-hero"> <h4 class="popup-title-hero">Idade das crian&ccedil;as</h4> 
+ <div id="childrenAgesFields" class="children-ages-grid-hero"></div> 
+ <button type="button" id="closeChildrenPopup" class="popup-close-btn-hero">OK</button> 
+</div> 
+</div> 
+</div> 
+ <div id="loadingIndicator" class="loading-overlay-hero hidden"> <div class="spinner-hero"></div> 
+ <p class="loading-text-hero">Carregando disponibilidade...</p> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1641784833" data-flex-id="63d24979f4a54e38542a8ab9" data-layout-section=""> <div class="flex-widgets-container" id="1835502329"></div> 
+ <section id="63d24979f4a54e38542a8aba" class="flex-element section" data-auto="flex-element-section"> <div id="63d24979f4a54e38542a8abe" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="63d24979f4a54e38542a8abc" class="flex-element group" data-auto="flex-element-group"> <div id="63d24979f4a54e38542a8abb" class="flex-element group" data-auto="flex-element-group"> <div id="widget_s09" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="2812640486"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="2812640486" style=""> <h1 class="text-align-center" style=""><span style="display: unset; color: var(--color_1);">Descubra as Melhores Atividades em Ibiraquera, SC</span></h1> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-layout-section="" data-auto="flex-section" id="1226867592" data-flex-id="82df0b55"> <div class="flex-widgets-container" id="1478608493"></div> 
+ <section id="10cdcdc1" class="flex-element section" data-auto="flex-element-section"> <div id="0f4d375d" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="4f63debd" class="flex-element group" data-auto="flex-element-group"> <div id="d933a260" class="flex-element group" data-auto="flex-element-group"> <div id="widget_2a6" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="2491607134"> <div id="2491607134" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-2491607134" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer dLfMks"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-14033" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/surf1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+</div> 
+ <div id="1da8b90d" class="flex-element group" data-auto="flex-element-group"> <div id="widget_4p1" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1173475368"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1173475368" style=""> <h2 class="text-align-left m-text-align-center" style="line-height: 1.1;"><span style="display: unset;">Surf</span></h2> 
+</div> 
+</div> 
+ <div id="widget_ud2" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="3571939641"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="3571939641" style=""><p class="text-align-left m-text-align-center"><span style="display: unset;">Praticado o ano inteiro. Ondas longas e perfeitas durante o outono e primavera.</span></p><p class="text-align-left m-text-align-center"><span style="display: unset;">Aulas com Ling, somente na alta temporada: (48) 99973.7439.</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-layout-section="" data-auto="flex-section" id="1606019320" data-flex-id="119b02f4"> <div class="flex-widgets-container" id="1126847093"></div> 
+ <section id="050b8c04" class="flex-element section" data-auto="flex-element-section"> <div id="f25150c8" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="d3350d80" class="flex-element group" data-auto="flex-element-group"> <div id="416330de" class="flex-element group" data-auto="flex-element-group"> <div id="d55ca06a" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1878275263"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1878275263" style=""> <h2 class="text-align-left m-text-align-center" style="line-height: 1.1;"><span style="display: unset;">Windsurf</span></h2> 
+</div> 
+</div> 
+ <div id="6a3fcc32" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1776037578"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1776037578" style=""><p class="text-align-left m-text-align-center"><span style="display: unset;">Temporada forte na primavera, com ventos entre 15 a 35 n&oacute;s, vento nordeste. Aulas com Felipe Hoffman: (48) 99957.2028.</span></p></div> 
+</div> 
+</div> 
+ <div id="76bd81a6" class="flex-element group" data-auto="flex-element-group"> <div id="7c96552d" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1463495004"> <div id="1463495004" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1463495004" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer faSOpW"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-14033" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/ws1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-64385" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 2" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-45584" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 3" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-33910" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 4" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-53949" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 5" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-15678" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 6" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-16720" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-layout-section="" data-auto="flex-section" id="1617347082" data-flex-id="940b3800"> <div class="flex-widgets-container" id="1544198256"></div> 
+ <section id="98d4cd08" class="flex-element section" data-auto="flex-element-section"> <div id="3eb77d0e" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="877bcd03" class="flex-element group" data-auto="flex-element-group"> <div id="703043ef" class="flex-element group" data-auto="flex-element-group"> <div id="025a1fec" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1269871964"> <div id="1269871964" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1269871964" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer diYMmP"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-14033" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/ks1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-71337" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 2" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-95075" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 3" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-95889" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+</div> 
+ <div id="97fecc7e" class="flex-element group" data-auto="flex-element-group"> <div id="5d0c237b" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1034063214"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1034063214" style=""> <h2 class="text-align-left m-text-align-center" style="line-height: 1.1;"><span style="display: unset;">KiteSurf</span></h2> 
+</div> 
+</div> 
+ <div id="8348316b" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1343232623"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1343232623" style=""><p class="text-align-left m-text-align-center"><span style="display: unset;">Praticado tanto no mar como na lagoa, agradando aos iniciantes e aos mais experientes kitesurfistas. Aulas com Ling: (48) 99973.7439 ou Alexandre Takeo: (48) 999618.0661. Instagram: @takeosurf.</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-layout-section="" data-auto="flex-section" id="1227556753" data-flex-id="49082dd2"> <div class="flex-widgets-container" id="1061378737"></div> 
+ <section id="59450b3e" class="flex-element section" data-auto="flex-element-section"> <div id="871049a2" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="b4ded7b7" class="flex-element group" data-auto="flex-element-group"> <div id="1c9f8a17" class="flex-element group" data-auto="flex-element-group"> <div id="7b098b77" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1094702789"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1094702789" style=""> <h2 class="text-align-left m-text-align-center" style="line-height: 1.1;"><span style="display: unset;">Stand Up Palddle</span></h2> 
+</div> 
+</div> 
+ <div id="5c85a45b" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1452880828"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1452880828" style=""><p class="text-align-left m-text-align-center"><span style="display: unset;">Indicado para todas as idades, seja surfando as ondas ou remando na lagoa. Aluguel com Ibiraquera Adventure: (48) 99111.4433.</span></p></div> 
+</div> 
+</div> 
+ <div id="80426ef3" class="flex-element group" data-auto="flex-element-group"> <div id="1e05a25b" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1033272200"> <div id="1033272200" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1033272200" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer dLfMks"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-14033" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/sup-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-layout-section="" data-auto="flex-section" id="1014614393" data-flex-id="66013d53"> <div class="flex-widgets-container" id="1845578138"></div> 
+ <section id="fb993c42" class="flex-element section" data-auto="flex-element-section"> <div id="d19fdea1" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="ac803722" class="flex-element group" data-auto="flex-element-group"> <div id="b6271af2" class="flex-element group" data-auto="flex-element-group"> <div id="6681b75a" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1733795782"> <div id="1733795782" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1733795782" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer jaislF"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-14033" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/cc1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-65917" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+</div> 
+ <div id="71a200e3" class="flex-element group" data-auto="flex-element-group"> <div id="7ebd6b31" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1865940769"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1865940769" style=""> <h2 class="text-align-left" style="line-height: 1.1;"><span style="display: unset;">Cavalgadas e Caminhadas</span></h2> 
+</div> 
+</div> 
+ <div id="1d5a058d" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1976352088"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1976352088" style=""><p class="text-align-left m-text-align-center"><span style="display: unset;">Passeios por trilhas onde realmente se constata a beleza do lugar. Passeios a cavalo com a L&uacute; (48) 99189.2830.</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-layout-section="" data-auto="flex-section" id="1605879240" data-flex-id="957f9d03"> <div class="flex-widgets-container" id="1688584406"></div> 
+ <section id="c7c38b9e" class="flex-element section" data-auto="flex-element-section"> <div id="dabe8eed" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="54d3e263" class="flex-element group" data-auto="flex-element-group"> <div id="b59818db" class="flex-element group" data-auto="flex-element-group"> <div id="15514167" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1314359965"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1314359965" style=""> <h2 class="text-align-left m-text-align-center" style="line-height: 1.1;"><span style="display: unset;">Observa&ccedil;&atilde;o de Baleias e Golfinhos</span></h2> 
+</div> 
+</div> 
+ <div id="47455961" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1426658439"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1426658439" style=""><p class="text-align-left m-text-align-center"><span style="display: unset;">Passeios por exuberantes praias, acompanhado por guias credenciados e capacitados. Baleia Franca: de julho a meados de novembro. Com AGTA: (48) 99948.2224/99977.6352.</span></p></div> 
+</div> 
+</div> 
+ <div id="a143e036" class="flex-element group" data-auto="flex-element-group"> <div id="1f6efd31" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1151687419"> <div id="1151687419" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1151687419" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer gDtRCy"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-14033" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/ob1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-33389" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 2" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-77848" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-layout-section="" data-auto="flex-section" id="1133779930" data-flex-id="e1578c74"> <div class="flex-widgets-container" id="1522718296"></div> 
+ <section id="f854addb" class="flex-element section" data-auto="flex-element-section"> <div id="d13334e8" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="c81ee2fa" class="flex-element group" data-auto="flex-element-group"> <div id="474b6b08" class="flex-element group" data-auto="flex-element-group"> <div id="8cd0bc90" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1801078339"> <div id="1801078339" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1801078339" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer jaislF"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-14033" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/paraquedismo1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-54960" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer dFlTLH"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+</div> 
+ <div id="79255701" class="flex-element group" data-auto="flex-element-group"> <div id="a3b599a9" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1374139058"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1374139058" style=""> <h2 class="text-align-left m-text-align-center" style="line-height: 1.1;"><span style="display: unset;">Salto de Paraquedas</span></h2> 
+</div> 
+</div> 
+ <div id="47bf51b8" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1773406943"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1773406943" style=""><p class="text-align-left m-text-align-center"><span style="display: unset;">Salto duplo e Curso solo. com Sky Zimba: (48) 99151.1551 www.skyzimba.com.br.</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer flex_hfcontainer"> <div id="flex-footer" role="contentinfo"> <div data-auto="flex-section" id="1755561873" data-flex-id="63da2bddeae8da42b2353671" data-layout-section=""> <div class="flex-widgets-container" id="1245219930"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1635589435" style=""> <h2 class="text-align-center m-text-align-left"><span style="display: unset;">We got it.</span></h2> 
+</div> 
+ <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1601984432" style=""><p class="text-align-center m-text-align-left"><span style="display: unset;">Thank you for contacting us.</span><span style="display: initial;"><br/></span><span style="display: unset;">We&rsquo;ll get back to you as soon as possible.</span></p></div> 
+ <div class="imageWidget align-center" data-element-type="image" data-widget-type="image" id="1244959944"><img src="https://irp.cdn-website.com/md/dmtmpl/568c0c6e-69c3-4303-86b9-d4c4466351d1/dms3rep/multi/opt/gestures+_+hand-+gesture-+fingers-+hand+gesture-+motion-+heart-+love-+romance-+romantic-1920w.png" alt="" id="1250950855" class="" width="1000" height="1000" data-dm-image-path="https://irp.cdn-website.com/md/dmtmpl/568c0c6e-69c3-4303-86b9-d4c4466351d1/dms3rep/multi/gestures+_+hand-+gesture-+fingers-+hand+gesture-+motion-+heart-+love-+romance-+romantic.png" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <section id="63da2bddeae8da42b2353670" class="flex-element section" data-auto="flex-element-section"> <div id="63da2bddeae8da42b2353672" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="63da2bddeae8da42b2353673" class="flex-element group" data-auto="flex-element-group"> <div id="63da2bf2eae8da42b23538a2" class="flex-element group" data-auto="flex-element-group"> <div id="63da2bf2eae8da42b23538a3" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1721508574"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1721508574" style=""> <h3 class="text-align-left t-text-align-center m-text-align-center"><span style="display: unset; color: var(--color_3);">Informa&ccedil;&otilde;es</span></h3> 
+</div> 
+</div> 
+ <div id="a54b0a22" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1219477337"> <div class="dmNewParagraph u_1219477337" data-element-type="paragraph" data-version="5" id="1219477337" style="" data-binding="W3siYmluZGluZ05hbWUiOiJ0ZXh0IiwidmFsdWUiOiJjb250ZW50X2xpYnJhcnkuZ2xvYmFsIn1d" data-diy-text="">Av. Jovino Tom&eacute; Marques - Lot. Praia de Ibiraquera, Imbituba - SC, Brasil</div> 
+</div> 
+ <div id="5f902a69" class="flex-element group" data-auto="flex-element-group"> <div id="721761a4" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1423546722"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1423546722" style=""><p class="m-size-14 m-text-align-center t-text-align-center"><span class="m-font-size-14" m-font-size-set="true" style="display: initial; color: var(--color_3);">WhatsApp: +55 (48) 99121-3065</span></p></div> 
+</div> 
+</div> 
+ <div id="2a26acb2" class="flex-element group" data-auto="flex-element-group"> <div id="4923b0b4" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1830301393"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1830301393" style=""><p class="t-text-align-center m-text-align-center m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="color: var(--color_3); display: initial;">Email:</span></p></div> 
+</div> 
+ <div id="076a3350" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1247273698"> <div class="dmNewParagraph u_1247273698" data-element-type="paragraph" data-version="5" id="1247273698" style="" data-diy-text="" data-binding="W3siYmluZGluZ05hbWUiOiJ0ZXh0IiwidmFsdWUiOiJjb250ZW50X2xpYnJhcnkuZ2xvYmFsLmVtYWlsLnJlc2VydmFzIn1d">reservaspousadaraia1@gmail.com</div> 
+</div> 
+</div> 
+</div> 
+ <div id="63da2bfbeae8da42b2353a45" class="flex-element group" data-auto="flex-element-group"> <div id="widget_76s" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="2951709664"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="2951709664" style=""> <h3 class="text-align-center"><span style="display: unset; color: var(--color_3);">M&iacute;dias Sociais</span></h3> 
+</div> 
+</div> 
+ <div id="63da2bfbeae8da42b2353a44" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="socialhub" data-external-id="1069507160"> <div class="u_1069507160 align-center text-align-center dmSocialHub gapSpacing" id="1069507160" dmle_extension="social_hub" data-element-type="social_hub" data-binding="W3siYmluZGluZ05hbWUiOiJzb2NpYWwiLCJ2YWx1ZSI6ImNvbnRlbnRfbGlicmFyeS5nbG9iYWwuc29jaWFsIn1d" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv " data-auto="social-hub-inner"> <a href="https://facebook.com/Raia1Pousada" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style6" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://instagram.com/pousadaraia1ibiraquera" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style6" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://wa.me/5548991213065" target="_blank" dm_dont_rewrite_url="true" aria-label="whatsapp" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Whatsapp&apos;)"> <span class="dmSocialWhatsapp dm-social-icons-whatsapp oneIcon socialHubIcon style6" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="93d05efa" class="flex-element group" data-auto="flex-element-group"> <div id="a4dc0ea0" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1775562065"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1775562065" style=""> <h3 class="text-align-left m-text-align-center t-text-align-center"><span style="color: var(--color_3); display: unset;">Newsletter</span></h3> 
+</div> 
+</div> 
+ <div id="widget_6nf" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="604830869"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="604830869" style=""><p class="text-align-left m-text-align-center t-text-align-center"><span style="color: var(--color_3); display: unset;">Receba nossas novidades e promo&ccedil;&otilde;es direto em seu e-mail!</span></p></div> 
+</div> 
+ <form id="36789aab" class="flex-element group form-widget" data-auto="flex-element-group" data-element-type="advancedForm" data-container-ignore-link="true" form-id="advanced_form_3d38d324"> <div id="ee9cca4c" class="flex-element group form-step" data-auto="flex-element-group" data-fields-step="true" data-is-first-step="true" data-is-last-step="true"> <div id="947022fa" class="flex-element group" data-auto="flex-element-group"> <div id="10425284" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="advancedformtextinput" data-external-id="1533493740"> <div class="default u_1533493740 advanced-form-field" data-auto="advanced-form-field" data-field-id="1533493740" data-label="Email" id="1533493740" dmle_extension="advancedformtextinput" data-element-type="advancedformtextinput" icon="false" surround="false" label="Email" placeholder="Cadastre-se!" isrequired="false" showlabel="false" type="EMAIL"><input id="input-1533493740" placeholder="Cadastre-se!" name="1533493740" class="advanced-form-input" aria-label="Email" value="" type="email" data-placeholder-original="Cadastre-se!"/> <span class="error-message" data-error="required" id="1533493740-error-required" aria-live="polite">Insira um e-mail</span> 
+ <span class="error-message" data-error="format" id="1533493740-error-format" aria-live="polite">Use um endere&ccedil;o com (@) e (.)</span> 
+</div> 
+</div> 
+</div> 
+ <div id="9c8fe50c" class="flex-element group" data-auto="flex-element-group"> <div id="68447b2c" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="advancedformbutton" data-external-id="1276780260"> <a data-auto="advanced-form-back-button" class="advanced-form-button flexButton back-button dmWidget dmNoMark dmWwr default" href="" contenteditable="false" id="1276780260" dmle_extension="advancedformbutton" data-element-type="advancedformbutton" icon="false" surround="false" label="Back" type="BACK" role="button"> <span class="iconBg" data-auto="button-icon-bg" aria-hidden="true"> <span class="icon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Back</span> 
+</a> 
+</div> 
+ <div id="88c3eda8" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="advancedformbutton" data-external-id="1877767281"> <a data-auto="advanced-form-submit-button" class="u_1877767281 advanced-form-button flexButton submit-button dmWidget dmNoMark dmWwr" href="" contenteditable="false" id="1877767281" dmle_extension="advancedformbutton" data-element-type="advancedformbutton" icon="false" surround="false" label="OK" role="button"> <span class="iconBg" data-auto="button-icon-bg" aria-hidden="true"> <span class="icon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text"> <span class="next-label">Pr&oacute;ximo</span> 
+ <span class="submit-label">OK</span> 
+</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div id="3b5dc700" class="flex-element group form-step hidden-step" data-auto="flex-element-group" data-error-step="true"> <div id="4d99bdb4" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="1638784794"> <div class="imageWidget align-center" data-element-type="image" data-widget-type="image" id="1638784794"><img src="https://irp.cdn-website.com/md/dmtmpl/568c0c6e-69c3-4303-86b9-d4c4466351d1/dms3rep/multi/opt/error+_+pipe-+pipes-+leak-+leakage-+steam-+plumbing-1920w.png" alt="" id="1426371645" class="" width="1000" height="1000" data-dm-image-path="https://irp.cdn-website.com/md/dmtmpl/568c0c6e-69c3-4303-86b9-d4c4466351d1/dms3rep/multi/error+_+pipe-+pipes-+leak-+leakage-+steam-+plumbing.png" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div id="e40c623c" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1827552572"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1827552572" style=""> <h2 class="text-align-center m-text-align-center"><span style="display: unset;">That didn&rsquo;t work.</span></h2> 
+</div> 
+</div> 
+ <div id="39e3d6a6" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1999550673"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1999550673" style=""><p class="text-align-center m-text-align-center"><span style="display: unset;">The form wasn&rsquo;t sent. Please try again.</span></p></div> 
+</div> 
+</div> 
+</form> 
+ <div class="captcha-placeholder" data-sitekey="6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME" data-script-src="https://www.google.com/recaptcha/api.js?render=explicit"></div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1919369504" data-flex-id="d99bab6d" data-layout-section=""> <div class="flex-widgets-container" id="1413422893"></div> 
+ <section id="3fa2b2f5" class="flex-element section" data-auto="flex-element-section"> <div id="ff162d4d" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="fa167c55" class="flex-element group" data-auto="flex-element-group"> <div id="246d6780" class="flex-element group" data-auto="flex-element-group"> <div id="widget_cd0" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="3304217014"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="3304217014" style=""><p class="text-align-center t-size-14 m-size-14 size-14 m-text-align-center"><span class="font-size-14 t-font-size-14 m-font-size-14" style="color: var(--color_3); display: unset;">Desenvolvido por:</span></p></div> 
+</div> 
+ <div id="ffe2d275" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="custom" data-external-id="1154172307"> <div class="u_1154172307 widget-1f5975 dmCustomWidget" data-lazy-load="" data-title="" id="1154172307" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="1f5975986930429f819d4cd2154b5c4a" data-widget-version="25" data-widget-config="eyJyZXZlcnNlRmxhZyI6ZmFsc2UsImNvcHlyaWdodFRleHQiOiI8cCBjbGFzcz1cInJ0ZUJsb2NrXCI+PGEgdmFsdWU9XCJodHRwczovL3d3dy5oc3lzdGVtLmNvbS5iclwiIGxhYmVsPVwiXCIgdHlwZT1cInVybFwiIGhyZWY9XCJodHRwczovL3d3dy5oc3lzdGVtLmNvbS5iclwiIHRhcmdldD1cIl9ibGFua1wiIGRhdGEtcnVudGltZS11cmw9XCJodHRwczovL3d3dy5oc3lzdGVtLmNvbS5iclwiPkhTeXN0ZW08L2E+IHwgVG9kb3Mgb3MgZGlyZWl0b3MgcmVzZXJ2YWRvczwvcD4ifQ=="> <div class="copyright"> <div>&copy; 2026&nbsp;</div> 
+ <div><p class="rteBlock"><a value="https://www.hsystem.com.br" label="" type="url" href="https://www.hsystem.com.br" target="_blank" data-runtime-url="https://www.hsystem.com.br">HSystem</a>| Todos os direitos reservados</p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+</div> 
+ <div id="dmFlexStickyContainer" class="flex_hfcontainer"> <div id="flex-sticky"> <div data-layout-section="" data-auto="flex-section" id="1145631551" data-flex-id="0c09f7a7"> <div class="flex-widgets-container" id="1592711489"> <div class="dmNewParagraph u_1406598808" data-element-type="paragraph" data-version="5" id="1406598808" style=""><p class="text-align-center t-text-align-center"><span style="display: initial; color: rgb(255, 255, 255); font-weight: normal;">P&Aacute;GINA DE DETALHE DE ACOMODA&Ccedil;&Otilde;ES TER&Aacute; VALOR ADICIONAL</span></p></div> 
+</div> 
+ <section id="4db974ad" class="flex-element section" data-auto="flex-element-section"> <div id="7c182684" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="86775d1e" class="flex-element group" data-auto="flex-element-group"> <div id="741de74a" class="flex-element group" data-auto="flex-element-group"> <div id="fa3c604b" class="flex-element inner-grid" data-auto="flex-element-inner-grid"> <div id="widget_g87" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="custom" data-hidden-on-desktop="" data-external-id="3984775100"> <div class="widget-b4e918 dmCustomWidget" data-lazy-load="true" data-title="" id="3984775100" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="b4e9189fc76a4743b30f58939b8219ce" data-widget-version="4" data-widget-config="eyJsaW5rUmVzZXJ2YSI6eyJ2YWx1ZSI6Imh0dHBzOi8vaGJvb2suaHN5c3RlbS5jb20uYnIvYm9va2luZz9jb21wYW55SWQ9NWUwZjhjMGNhYjQxZDQwY2M4NWY2YzNlIiwibGFiZWwiOiIiLCJ0eXBlIjoidXJsIiwiaHJlZiI6Imh0dHBzOi8vaGJvb2suaHN5c3RlbS5jb20uYnIvYm9va2luZz9jb21wYW55SWQ9NWUwZjhjMGNhYjQxZDQwY2M4NWY2YzNlIiwicmF3X3VybCI6Imh0dHBzOi8vaGJvb2suaHN5c3RlbS5jb20uYnIvYm9va2luZz9jb21wYW55SWQ9NWUwZjhjMGNhYjQxZDQwY2M4NWY2YzNlIiwidGFyZ2V0IjoiX2JsYW5rIiwicmVsIjpudWxsfSwic3VidGl0bGUiOiJNZW5vciBwcmXDp28gcGVsbyBub3NzbyBzaXRlISIsImNvckRvVGV4dG8iOiIjZmZmZmZmIiwiY29yRGVGdW5kbyI6InZhcigtLWNvbG9yXzEpIiwidGl0bGUiOiJSZXNlcnZlIE9ubGluZSEifQ=="> <div id="HSystemSearchBox_Popup" style="--corDeFundo: var(--color_1); --corDoTexto:#ffffff;"> <div class="HSystemSearchBox_Popup_Title"> <span class="titlePopUp">Reserve Online!</span> 
+<br/> <span class="subTitlePopUp">Menor pre&ccedil;o pelo nosso site!</span> 
+</div> 
+ <div class="HSystemSearchBox_Popup_Image"> <a href="https://hbook.hsystem.com.br/booking?companyId=5e0f8c0cab41d40cc85f6c3e" target="_blank"> <svg></svg> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ </div>
+</div>
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile_implicit-flex-header-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-mobile-8ff991ca-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-mobile-63d24979f4a54e38542a8ab9-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-mobile-82df0b55-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-mobile-119b02f4-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-mobile-940b3800-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-mobile-49082dd2-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-mobile-66013d53-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-mobile-957f9d03-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="6e059b184c9b41159f58160d097b34a9" id="grid-styles-mobile-e1578c74-6e059b184c9b41159f58160d097b34a9"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-flex-footer-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-flex-header-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-c093187e-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-295296ff-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-18f5ea00-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-63a049320d35b55b4ef2a372-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-6406026c90e1521f6ecb0eca-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-63da2bddeae8da42b2353671-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-d99bab6d-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-0c09f7a7-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script type="text/javascript"></script>
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+<script></script>
+<script id='d-js-params'></script>
+<script src="https://static.cdn-website.com/mnlt/production/6834/_dm/s/rt/dist/scripts/d-js-runtime-flex-package.min.js" id="d-js-core" defer></script>
+<script></script>
+<script type="text/javascript" id="d_track_sp"></script>
+<div style="display:none;" id="P6iryBW0Wu"></div>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+ <div class="pswp__bg"></div>
+ <div class="pswp__scroll-wrap">
+ <div class="pswp__container">
+ <div class="pswp__item"></div>
+ <div class="pswp__item"></div>
+ <div class="pswp__item"></div>
+ </div>
+ <div class="pswp__ui pswp__ui--hidden">
+ <div class="pswp__top-bar">
+ <div class="pswp__counter"></div>
+ <button class="pswp__button pswp__button--close" data-auto="pswp-close" title="Fechar (Esc)"></button>
+ <button class="pswp__button pswp__button--share" data-auto="pswp-share" title="Compartilhar"></button>
+ <button class="pswp__button pswp__button--fs" title="Alternar tela cheia "></button>
+ <button class="pswp__button pswp__button--zoom" title="Aumentar/diminuir zoom"></button>
+ <div class="pswp__preloader">
+ <div class="pswp__preloader__icn">
+ <div class="pswp__preloader__cut">
+ <div class="pswp__preloader__donut"></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+ <div class="pswp__share-tooltip"></div> 
+ </div>
+ <button class="pswp__button pswp__button--arrow--left" title="Anterior (seta para esquerda)">
+ </button>
+ <button class="pswp__button pswp__button--arrow--right" title="Próximo (seta para a direita)">
+ </button>
+ <div class="pswp__caption">
+ <div class="pswp__caption__center"></div>
+ </div>
+ </div>
+ </div>
+</div>
+<div id="fb-root"
+ data-locale="pt_PT"></div>
+<!-- Alias: 05334b84 -->
+<script id="d_track_personalization"></script>
+<script type="text/javascript"></script>
+<div><script type="text/javascript"></script>
+ <script id="ssr-static" fetchpriority="low" type="module" src="https://ms-cdn.multiscreensite.com/runtime-react/4280/res/js/runtime-react.js"></script></div><!-- Begin Body End Markup -->
+<!-- Global site tag (gtag.js) - Google Analytics Hweb 06/05/22 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HHED1TYKV"></script>
+<script></script><!-- End Body End Markup -->
+<!-- Site Wide Html Markup -->
+<!-- Site Wide Html Markup -->
+</body>
+</html>

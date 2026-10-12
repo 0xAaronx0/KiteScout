@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+ <meta name="csrf-token" content="sWOTqcnNQRa52RTLSriQ0tya7wsBZ6IH4DJpbpWG" />
+ <meta name="description" content="Oiti Beach Resort Tutoia">
+ <title>Oiti Beach Resort Tutoia</title>
+ <!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Oiti Beach Resort Tutoia">
+<meta property="og:description" content="Tutoia, Brazil">
+<meta property="og:image" content="https://media.omnibees.com/Images/19145/Property/1200x630/2193320.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:domain" content="book.omnibees.com">
+<meta name="twitter:url" content="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+<meta name="twitter:title" content="Oiti Beach Resort Tutoia">
+<meta name="twitter:description" content="Tutoia, Brazil">
+<meta name="twitter:image" content="https://media.omnibees.com/Images/19145/Property/1200x630/2193320.jpg">
+ <link rel="stylesheet" type="text/css" href="/v3/css/fonts_v3_css.css?version=1.0.0.507">
+ <link rel="icon" href="https://media.omnibees.com/BEImages/28125.png">
+ <link rel="stylesheet" type="text/css" href="https://book.omnibees.com/v3/css/vendor/bootstrap.min.css"> 
+ <link rel="stylesheet" type="text/css" href="/v3/css/header.css?version=1.0.0.507">
+ <link rel="stylesheet" type="text/css" href="/v3/css/footer.css?version=1.0.0.507">
+ <link rel="stylesheet" type="text/css" href="/v3/css/zcalendar_css.css?version=1.0.0.507">
+ <link rel="stylesheet" type="text/css" href="/v3/css/main_css.css?version=1.0.0.507">
+ <link rel="preload" href="/v3/css/fonts/roboto-v20-latin_latin-ext-300.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+ <link rel="preload" href="/v3/css/fonts/roboto-v20-latin_latin-ext-regular.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+ <link rel="preload" href="/v3/css/fonts/roboto-v20-latin_latin-ext-500.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+ <link rel="preload" href="/v3/css/fonts/roboto-v20-latin_latin-ext-700.woff2" crossorigin="anonymous" as="font" type="font/woff2">
+ <link rel="preconnect" href="https://maps.gstatic.com">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="stylesheet" type="text/css" href="/css/style.css?version=1.0.0.507">
+	<link rel="stylesheet" type="text/css" href="/v3/css/hotel_search_bar.css?version=1.0.0.507">
+	<link rel="stylesheet" type="text/css" href="/v3/css/singleHotel.css?version=1.0.0.507">
+ <style></style>
+ <script></script>
+ <script></script>
+ <!-- Google Tag Manager -->
+ <script></script>
+ <!-- End Google Tag Manager -->
+ <!-- Start Asksuite Pixel -->
+ <script src="https://pixel.asksuite.com/asktag.js"></script>
+ <!-- End Asksuite Pixel -->
+</head><body onresize="if (typeof myResolution === 'function') myResolution()">
+	<header class="section1 header-top" data-template-version="3" >
+	<div class="container contain">
+ <div class="row">
+ <div class="col-12 col-lg-3 logo">
+ <a href="https://book.omnibees.com/hotel/19145?lang=en-US&amp;currencyId=16">
+ <img src="https://media.omnibees.com/BEImages/28123.png" alt="logo">
+ </a>
+ <div class="mobile-icons">
+ <button class="menu_icon mobile_search">
+ <span class="svg-icon search-icon"><svg></svg>
+</span>
+ </button>
+ <button class="menu_icon mobile_login" data-toggle="false">
+ <span class="svg-icon account-icon"><svg></svg>
+</span>
+ </button>
+ <button class="menu_icon mobile_sandwich" data-toggle="false">
+ <span class="svg-icon menu-icon"><svg></svg>
+</span>
+ </button>
+ </div>
+ </div>
+ <div class="col-12 col-lg-9 menu_items">
+ <div id="menu_items">
+ <div class="package_menu_out_of_box">
+ <a class="menu_link menu_package_link" href="https://book.omnibees.com/hotel/19145/packages?lang=en-US&amp;currencyId=16">
+ <span class="svg-icon package-icon"><svg></svg></span>
+ <span class="menu_link_text">Special Offers</span>
+ </a>
+ </div>
+ <div class="drops">
+ <div id="first_div">
+ <div id="lang_curr" data-lang="1" data-curr="16" data-locale="en" data-code="en-US" data-symbol="R$">
+ <img id="flag" alt="flag" class="icon-flag" src="https://book.omnibees.com/icons/lang_en-us_v4.svg">
+ <span id="language">English /</span>
+ <span id="currency-symbol">R$</span>
+ </div>
+ <div class="drop_lang mob-menu-toggle">	
+ <hr class="lang_curr_border"> 
+ <hr class="drop_lang_border"> 
+ <p>Language</p>
+ <span class="icon-holder">
+ <img alt="selected language icon" id="languages-icon">
+ <select id="languages" class="btn-ic">
+ <option data-icon="https://book.omnibees.com/icons/lang_en-us_v4.svg" data-string="en-US" data-lang="1" selected >English</option>
+ <option data-icon="https://book.omnibees.com/icons/lang_es-es_v4.svg" data-string="es-ES" data-lang="3" >Español</option>
+ <option data-icon="https://book.omnibees.com/icons/lang_fr-fr_v4.svg" data-string="fr-FR" data-lang="2" >Français</option>
+ <option data-icon="https://book.omnibees.com/icons/lang_pt-br_v4.svg" data-string="pt-BR" data-lang="8" >Português , BR</option>
+ </select>
+ </span>
+ <p id="currency">Currency</p>
+ <select id="currencies" class="btn-ic">
+ <option data-curr="16" selected >Brazil Real (R$)</option>
+ </select>
+ <button id="save_lang_curr" class="btn btn-ic custom-action-bg custom-action-border custom-action-text">Save</button>
+ </div>
+ </div>
+ <div class="second_div myaccount-menu-holder">
+ <div id="login" data-status="false">
+ <span class="svg-icon login-icon desktop"><svg></svg>
+</span> 
+ <span class="login-span">My account</span>
+ </div>
+ <div class="mob-menu-toggle drop_login">
+ <div class="menu_item account-link">
+ <a class="menu_link my-bookings-link" href="https://mybookings.omnibees.com/login?c=10117&amp;q=19145&amp;m=16&amp;l=1" target="_blank">
+ <span class="menu_icon_holder">
+ <span class="svg-icon "><svg></svg>
+</span> 
+ </span>
+ <span class="menu_link_text">My Bookings</span> 
+ </a>
+ </div>
+ </div> 
+ </div>	
+ <div class="hamburger-menu-holder"> 
+ <img src="/icons/hamburger_menu_desktop_icon.svg" alt="Menu">
+ </div>
+ <div class="menu mob-menu-toggle drop_menu">
+ <div class="navigation-text-holder">
+ <span class="navigation-text">Browse</span>
+ <hr class="navigation-text-line">
+ </div>
+ <div class="menu_item menu_home_mobile " id="chain_home" data-chain="10117">
+ <a class="menu_link menu_home_link" href="https://book.omnibees.com/chain/10117?lang=en-US&amp;currencyId=16">
+ <span class="menu_icon_holder">
+ <span class="svg-icon home-icon"><svg></svg></span>
+ </span>
+ <span class="menu_link_text">Home</span>
+ </a>
+ </div>
+ <div class="menu_item menu_package_mobile ">
+ <a class="menu_link menu_package_link" href="https://book.omnibees.com/hotel/19145/packages?q=19145&amp;lang=en-US&amp;currencyId=16">
+ <span class="menu_icon_holder">
+ <span class="svg-icon package-icon"><svg></svg></span>
+ </span>
+ <span class="menu_link_text">Special Offers</span>
+ </a>
+ </div>
+ <div class="menu_item menu_incentives_mobile ">
+ <a class="menu_link menu_incentive_link" href="https://book.omnibees.com/hotel/19145/incentives?q=19145&amp;lang=en-US&amp;currencyId=16">
+ <span class="menu_icon_holder">
+ <span class="svg-icon incentives-icon"><svg></svg></span>
+ </span>
+ <span class="menu_link_text">Incentives</span>
+ </a>
+ </div>
+ <div class="menu_item menu_gallery_mobile ">
+ <div class="gallery-opener hamburguer-menu menu_item" data-desktop-gallery-modal-id="modal-gallery-single-hotel">
+ <a class="menu_link menu_gallery_link" 1>
+ <span class="menu_icon_holder">
+ <span class="svg-icon gallery-icon"><svg></svg>
+</span>
+ </span>
+ <span class="menu_link_text gallery_text">Gallery</span>
+ </a>
+ </div>
+ </div>
+ <div class="menu_item menu_contacts_mobile last">
+ <a class="menu_link menu_contacts_link" href="https://book.omnibees.com/hotel/19145/contacts?lang=en-US&amp;currencyId=16">
+ <span class="menu_icon_holder">
+ <span class="svg-icon phone-icon"><svg></svg>
+</span>
+ </span>
+ <span class="menu_link_text">Contacts</span>
+ </a>
+ </div> 
+</div>
+<div id="gallery-LP-modal">
+ <div class="modal full-image-gallery-modal fade " id="modal-gallery-single-hotel" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modal-gallery-single-hotel-title" aria-hidden="true">
+ <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+ <div class="modal-content full-gallery-content">
+ <div class="modal-header full-gallery-header">
+ <div class="container full-gallery-header-container">
+ <div class="full-gallery-title-container">
+ <h5 id="modal-gallery-single-hotel-title" class="full-gallery-title v3">Oiti Beach Resort Tutoia</h5>
+ </div>
+ <div class="modal-fullscreen-close-container">
+ <button type="button" class="close popup-button close-modal" aria-label="Close" onclick="if (typeof toggleGalleryModal === 'function') toggleGalleryModal('modal-gallery-single-hotel', 'rooms_modal')" >
+ <span class="svg-icon modal-close-icon"><svg></svg>
+</span>
+ </button>
+ </div> 
+ </div>
+ </div>
+ <div class="modal-body full-gallery-body"> 
+ <div class="container full-gallery-body-container">
+ <div class="gallery-container default-desktop-image-gallery-modal">
+ <div class="be-slider default-desktop-image-gallery-modal"
+ data-id="modal-gallery-single-hotel"
+ data-thumbnails=true
+ data-thumbnails-count=11
+ data-navigation-inside=true
+ data-navigation-show-on-hover=true
+ data-is-fullscreen-gallery=true
+ data-show-counter="false"
+ data-prev-slide-label="Previous slide"
+ data-next-slide-label="Next slide"
+ data-go-to-slide-label="Go to slide"
+ style=""
+ >
+ <div class="be-slider-wrapper">
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2193320.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2193320.jpg" alt="img_2940 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249465.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249465.jpg" alt="358379f3-3453-4ec0-8c0d-94f706da57b9.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249470.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249470.jpg" alt="c6687233-5df0-4304-b832-d9f6a9641c6e.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249471.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249471.jpg" alt="3fca4117-2fb9-4fa8-b6d1-6e5d7ad4c2a3.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249472.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249472.jpg" alt="61eeb7d1-496e-408c-bc33-4f76684ac586.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249474.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249474.jpg" alt="257b6be5-5427-4961-9e55-b9f4e326db03.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249475.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249475.jpg" alt="dfa29e23-6f3c-4e2a-8743-b7dc87dc96e3.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249476.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249476.jpg" alt="a344a497-e0c2-4039-8716-50cd4b8b33eb.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249482.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249482.jpg" alt="9e54acc3-5d7f-44c6-a17e-b3234f88a9b7.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249484.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249484.jpg" alt="b0e1eb5b-63e0-4a71-a53c-3b3520e5d810.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249485.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249485.jpg" alt="12971156-db2e-47f5-814a-97217cab749e.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249487.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249487.jpg" alt="d003553a-4f19-4cbd-b06e-be55b17196a5.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249488.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249488.jpg" alt="ff94bbf1-dd51-4b89-b893-486f4d5fe8d7.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249489.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249489.jpg" alt="302f19cc-6cbd-4e53-9a97-5fd8783de305.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249491.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249491.jpg" alt="4e048860-869c-4a48-845d-51b8d8a5b745.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249496.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249496.jpg" alt="c6d0b069-4020-4333-a202-5aadb3a36f60.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249498.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249498.jpg" alt="7f0ac74b-22ed-42e0-93f8-010576a1479b.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249504.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249504.jpg" alt="cdc0ac7d-e1e9-430c-92b5-59af28f9aaef.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249505.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249505.jpg" alt="28b2e561-762a-4fdd-bc2a-305e3db66169.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249506.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249506.jpg" alt="52f80c35-9e10-426f-b972-bf0c5b14a8e5.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327855.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327855.jpg" alt="image00001.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327857.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327857.jpg" alt="image00008.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327858.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327858.jpg" alt="image00009.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327853.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327853.jpg" alt="image00013.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327862.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327862.jpg" alt="image00015.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327854.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327854.jpg" alt="image00016.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327859.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327859.jpg" alt="image00018.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327869.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327869.jpg" alt="image00020.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327864.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327864.jpg" alt="image00030.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327873.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327873.jpg" alt="image00039.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2193329.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2193329.jpg" alt="img_2809 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327876.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327876.jpg" alt="image00051.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327875.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327875.jpg" alt="image00053.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327856.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327856.jpg" alt="image00054.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327877.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327877.jpg" alt="image00057.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327863.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327863.jpg" alt="image00064.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327872.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327872.jpg" alt="image00072.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327865.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327865.jpg" alt="image00074.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1355734.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1355734.jpg" alt="superior casal tpl - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1355736.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1355736.jpg" alt="deluxe ou luxo casal red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1355735.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1355735.jpg" alt="luxo casal .jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2181823.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2181823.jpg" alt="135a9260-red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2181822.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2181822.jpg" alt="135a9141 - superior red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2181824.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2181824.jpg" alt="dsc09694 - rede.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249490.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249490.jpg" alt="ecd2952b-c42d-43e8-ad79-6a9b03e1b107.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327868.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327868.jpg" alt="image00046.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2193364.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2193364.jpg" alt="img_2959red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2193383.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2193383.jpg" alt="img_2775red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/2180081.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/2180081.jpg" alt="dsc09694 - rede.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/2180080.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/2180080.jpg" alt="img_3617 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/2180082.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/2180082.jpg" alt="dsc09701-red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1375871.jpeg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1375871.jpeg" alt="img_0426.jpeg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1375575.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1375575.jpg" alt="135a9317 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1375577.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1375577.jpg" alt="135a9330 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1375578.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1375578.jpg" alt="135a9343 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1375579.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1375579.jpg" alt="135a9328 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1355522.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1355522.jpg" alt="luxo casal .jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1355523.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1355523.jpg" alt="luxo casal 2.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1256337.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1256337.jpg" alt="513526183.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1256340.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1256340.jpg" alt="513526175.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1255849.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1255849.jpg" alt="img_1001.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1355533.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1355533.jpg" alt="luxo casal .jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1355534.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1355534.jpg" alt="deluxe ou luxo casal red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1255848.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1255848.jpg" alt="gopr0248.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1375497.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1375497.jpg" alt="135a9551 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1375506.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1375506.jpg" alt="135a9555 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1375499.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1375499.jpg" alt="135a9343 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1375500.jpeg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1375500.jpeg" alt="img_0426.jpeg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1355530.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1355530.jpg" alt="classic tpl casal+ solteirp- red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1355532.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1355532.jpg" alt="classic red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1327881.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1327881.jpg" alt="image00030.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1355524.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1355524.jpg" alt="superior triplo .jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1355525.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1355525.jpg" alt="superior triplo casal + solteiro - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1355526.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1355526.jpg" alt="superior casal tpl - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1255837.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1255837.jpg" alt="gopr0248.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1416494.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1416494.jpg" alt="135a9147 - classic red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1416495.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1416495.jpg" alt="135a9149 - classic red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1416496.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1416496.jpg" alt="135a9201- classic red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1416497.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1416497.jpg" alt="135a9128 - classic red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1416597.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1416597.jpg" alt="135a9187 - superior red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1416598.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1416598.jpg" alt="135a9141 - superior red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1416599.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1416599.jpg" alt="135a9197- superior red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/RoomTypes/0x657/1416601.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/RoomTypes/105x70/1416601.jpg" alt="135a9128 - classic red.jpg">
+ </div>
+ </div>
+ <div id="white-overlay"></div>
+<div class="loader-container mobile" style="--loader-dot-color: #1C2631; --loader-dot-size: 16px; --loader-dot-spacing: 8px; --loader-top: calc(50% - 110px)">
+ <div class="loader-dots">
+ <div class="loader-dot moving-dot"></div>
+ <div class="loader-dot fixed-dot"></div>
+ <div class="loader-dot fixed-dot"></div>
+ <div class="loader-dot fixed-dot"></div>
+ </div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
+ </div> 
+ </div>
+ </div>
+ </div>
+	</div>
+	<input type="hidden" id="defaultAdults" value="2"></input>
+ <input type="hidden" id="CookiesData"
+	data-hotel-name="Oiti Beach Resort Tutoia"
+	data-company-name="OITI BEACH RESORT TUTOIA LTDA"
+	data-address-line="Rua Principal, nº 10. Praia São José. 65580-000 "
+	data-city-name="Tutoia"
+	data-postal-code="65580-000"
+	data-country-name="Brasil"
+	data-email="reservas@oitibeach.com.br">
+ <div class="body-overlay-mobile"></div>
+	</header>
+	<section class="section2 custom-bg header-search-bar mob-menu-toggle">
+ <div class="search-bar-header">
+ <p class="search-bar-header-title">Change Search</p>
+ <div class="search-bar-header-close">
+ <div class="mobile-search-close-button mobile-dropdown-close-button" for="header-search-bar"><span class="svg-icon hotel-search-close-icon"><svg></svg>
+</span></div>
+ </div>
+ </div>
+ <div class="container contain single_hotel_search_bar ">
+ <div class="row">
+ <form name="hotel_search" id="hotel_search" class="mob-menu-toggle" action="https://book.omnibees.com/chainresults">
+ <div class="destination" id="autocomplete">
+ <p class="input-title custom-text">
+ Hotel </p>
+ <div class="searchbar-fieldset">
+ <div class="input-overlay"></div>
+ <span class="svg-icon search-icon"><svg></svg>
+</span>
+ <input id="hotels" for="desktop-hotels-dropdown" type="text" class=" single-hotel custom-text " spellcheck="false" autocomplete="off" placeholder="All Hotels">
+ </div>
+ <input type="hidden" name="c" value="10117">
+ <input type="hidden" name="q" id="hotel_code" value="">
+ <input type="hidden" name="hotel_folder" id="hotel_folder" value="">
+ <input type="hidden" name="NRooms" id="NRooms" value="1">
+ <div class="hotels_dropdown desktop-hotels-dropdown">
+ <div class="hotels_all all-hotels" data-id="0">All Hotels</div>
+ <div class="hotels_folder hotels-folder" hidden></div>
+ <div class="hotels_hotel hotel" data-id="" hidden></div>
+ </div>
+ </div>
+ <div class="stay_date searchbar-fieldset" id="dates">
+ <p class="input-title custom-text">Dates of Stay</p> 
+ <div class="searchbar-fieldset">
+ <span class="svg-icon calendar-icon"><svg></svg>
+</span>
+ <input class="calendarToggle" id="calendar_dates" type="text" value="12/10/2026 - 13/10/2026" readonly >
+ </div>
+ <input type="hidden" name="CheckIn" id="date_from" value="12102026">
+ <input type="hidden" name="CheckOut" id="date_to" value="13102026">
+ </div>
+ <div id="search_scroller">
+ <div class="guests_number" id="guests_div">
+ <div class="incorect-age-popup">Select child age</div>
+ <p class="input-title custom-text">Room and Guests</p>
+ <div class="input-overlay"></div>
+ <input type="text" id="guests"
+ data-room="Room"
+ data-rooms="Rooms"
+ data-guest="Guest"
+ data-guests="Guests"
+ data-remove-room="Remove room"
+ data-max-adults="" 
+ data-max-children=""
+ data-max-children-age="5" readonly>
+ <input type="hidden" id="ad" name="ad" value="2">
+ <input type="hidden" id="ch" name="ch" value="">
+ <input type="hidden" id="ag" name="ag" value="">
+ <div id="occupancy_dropdown" class="position-absolute">
+ <div class="add-room-holder d-none">
+ <p class="add-room-title select-room-title">Number of Rooms</p>
+ <div class="select-room-buttons">
+ <button class="select-button select-button-minus select-room-minus" type="button" disabled>
+ <span class="svg-icon minus-icon"><svg></svg></span>
+ </button>
+ <span class="select-value select-room-value">1</span>
+ <button class="select-button select-button-plus select-room-plus" type="button">
+ <span class="svg-icon plus-icon"><svg></svg></span>
+ </button>
+ </div> 
+ </div> 
+ <div class="select-room-holder">
+ <div class="select-room" data-room-counter="0">
+ <p class="select-room-title">Room <span class="select-room-counter">1</span></p>
+ <div class="select-guests-holder">
+ <div class="select-adults-holder">
+ <div class="select-adults-title">Nº of Adults</div>
+ <div class="select-adults-buttons">
+ <button class="select-button select-button-minus select-adult-minus" type="button" >
+ <span class="svg-icon minus-icon"><svg></svg></span> 
+ </button>
+ <span class="select-value select-adults-value">2</span>
+ <button class="select-button select-button-plus select-adult-plus" type="button">
+ <span class="svg-icon plus-icon"><svg></svg></span> 
+ </button>
+ </div>
+ </div>
+ <div class="select-child-holder ">
+ <div class="select-child-title">
+ <span>Nº of Children</span>
+ <span class="select-child-title-max-age">
+ 0 to 
+ <span class="children_max_age_string">17</span> Years </span>
+ </div>
+ <div class="select-child-buttons">
+ <button class="select-button select-button-minus select-child-minus" type="button" disabled>
+ <span class="svg-icon minus-icon"><svg></svg></span> 
+ </button>
+ <span class="select-value select-child-value">0</span>
+ <button class="select-button select-button-plus select-child-plus" type="button" >
+ <span class="svg-icon plus-icon"><svg></svg></span>
+ </button> 
+ </div> 
+ </div>
+ <div class="select-child-ages-holder " data-children-empty-value="Age">
+ <div class="select-child-ages-clone ">
+ <p class="select-child-ages-title">Child <span class="select-child-ages-number"></span></p>
+ <select class="select-child-ages-input-clone" data-string-sing="Year" data-string-plu="Years">
+ <option data-value="/" selected>Age</option>
+ <option data-value="0">
+ 0 Years </option>
+ <option data-value="1">
+ 1 Year </option>
+ <option data-value="2">
+ 2 Years </option>
+ <option data-value="3">
+ 3 Years </option>
+ <option data-value="4">
+ 4 Years </option>
+ <option data-value="5">
+ 5 Years </option>
+ <option data-value="6">
+ 6 Years </option>
+ <option data-value="7">
+ 7 Years </option>
+ <option data-value="8">
+ 8 Years </option>
+ <option data-value="9">
+ 9 Years </option>
+ <option data-value="10">
+ 10 Years </option>
+ <option data-value="11">
+ 11 Years </option>
+ <option data-value="12">
+ 12 Years </option>
+ <option data-value="13">
+ 13 Years </option>
+ <option data-value="14">
+ 14 Years </option>
+ <option data-value="15">
+ 15 Years </option>
+ <option data-value="16">
+ 16 Years </option>
+ <option data-value="17">
+ 17 Years </option>
+ </select>
+ <div class="incorect-age"><div><span class="svg-icon warning-icon"><svg></svg> </span><span>Incorrect Age</span></div></div>
+ <p class="incorect-age">Incorrect Age</p>
+ </div> 
+ </div>
+ <div class="age-invalid"><p><span class="svg-icon warning-icon"><svg></svg> </span><span>Required Fields</span></p></div>
+ <hr class="select-room-divider">
+ </div>
+ </div>
+ </div>
+ <div class="select-occupancy-bottom">
+ <button class="btn-ic custom-action-bg custom-action-text select-occupancy-apply" type="button">
+ <span>
+ Apply </span>
+ <span class="select-occupancy-apply-info">
+ <span class="select-occupancy-apply-info-rooms" data-rooms="1">1</span>
+ <span class="select-occupancy-apply-info-rooms-string"></span>
+ <span class="select-occupancy-apply-info-rooms-comma">,</span>
+ <span class="select-occupancy-apply-info-guests" data-guests="1">1</span>
+ <span class="select-occupancy-apply-info-guests-string"></span>
+ </span>
+ </button>
+ </div> 
+ </div>
+ </div>
+ <div class="promo_code">
+ <div class="promocode-checkbox">
+ <div class="mobile-i-have-a-code">
+ <input type="checkbox" class="" id="promo_code_mobile"> <span id="promo_code_mobile_visual"> </span>
+ </div>
+ <p class="input-title custom-text"> I have a code</p>
+ </div>
+ <input type="text" id="promo_code" placeholder="" value="" readonly>
+ <img src="https://book.omnibees.com/icons/indexIcons/iconPromo.svg" class="search-menu-icon search-menu-promo">
+ <div id="promo_code_dropdown" class="position-absolute">
+ <div class="mb-3 mt-2">
+ <p class="input-title">Promo code</p>
+ <input type="text" id="Code" name="Code" value="">
+ </div>
+ <div class="mb-3">
+ <p class="input-title">Group code</p>
+ <input type="text" id="group_code" name="group_code" value="">
+ </div>
+ <div class="text-right">
+ <button id="promo_code_apply" class="custom-action-bg custom-action-text btn-ic">APPLY</button>
+ </div>
+ </div>
+ </div>
+ </div> 
+ <input type="hidden" name="lang" value="en-US"> 
+ <input type="hidden" name="currencyId" value="16">
+ <div class="search" id="search">
+ <button type="submit" id="btn-search" class="btn btn-ic custom-action-bg custom-action-text custom-action-border search-button">SEARCH</button>
+ <button type="button" class="btn btn-ic custom-action-bg custom-action-text custom-action-border mobile-search-button">SEARCH</button>
+ <div id="new_criteria_popup"> Changed your stay details. </br> Search again!! </div>
+ </div>
+ </form> 
+ <script></script>
+ </div>
+ </div>
+ <div id="mobile-search-dropdown" class="hotel-search-wrap">
+ <div class="hotel-search">
+ <div class="hotel-search-header">
+ <div class="hotel-search-header-top">
+ <span class="hotel-search-title"> Hotel </span>
+ <div class="mobile-search-close-button" for="hotel-search-wrap"><span class="svg-icon hotel-search-close-icon"><svg></svg>
+</span></div>
+ </div>
+ <div class="hotel-search-field">
+ <div class="input-overlay"></div>
+ <span class="clear-search-field-icon hidden" for="mobile-hotels"><span class="svg-icon clear-search-field-icon-svg"><svg></svg>
+</span></span>
+ <span class="search-field-icon" for="mobile-hotels"><span class="svg-icon search-field-icon-svg"><svg></svg>
+</span></span>
+ <input id="mobile-hotels" type="text" for="hotel-search-container" class=" single-hotel custom-text " placeholder="Search by Destination or Hotel" spellcheck="false" autocomplete="off">
+ </div>
+ </div>
+ <div class="hotel-search-body">
+ <div class="hotel-search-container">
+ <div class="all-hotels searchable-item" data-id="0">All Hotels</div>
+ <div class="hotels-folder searchable-item" hidden></div>
+ <div class="hotel searchable-item" data-id="" hidden></div>
+ </div>
+ <div class="no-results">No Destination or Hotel Found</div>
+ </div>
+ </div>
+ </div>
+ <div class="zcalendar-wrap d-none">
+ <div class="zcalendar-header">
+ <div class="zcalendar-top">
+ <span class="zcalendar-title">Dates of Stay</span>
+ <div class="zcalendar-close-button mobile-dropdown-close-button" for="zcalendar-wrap"><span class="svg-icon zcalendar-close-icon"><svg></svg>
+</span></div>
+ </div>
+ <div class="mobile-weekdays">
+ <div>
+ <span>sun</span>
+ <span>mon</span>
+ <span>tue</span>
+ <span>wed</span>
+ <span>thu</span>
+ <span>fri</span>
+ <span>sat</span>
+ </div>
+ </div>
+ </div>
+ <div class="zcalendar-container">
+ <div class="zcalendar" style="display: block !important;"
+ data-restrictions="Days with restrictions"
+ data-promotional="Offers for you"
+ data-promo="Special Offer"
+ data-unavilable="*Price for&lt;span class=&quot;bottom-label-number&quot;&gt; 2 &lt;/span&gt;&lt;span class=&quot;bottom-label-adults&quot;&gt;adults&lt;/span&gt; / 1 night"
+ data-lang="en-US"
+ data-night="Night"
+ data-nights="Nights"
+ data-notavailable="No availability"
+ data-closedonarrival="Closed on arrival"
+ data-closedondeparture="Closed on departure"
+ data-minimum-string="Minimum"
+ data-maximum-string="Maximum"
+ data-adult="adult"
+ data-adults="adults">
+ </div>
+ </div>
+ <div class="calendar-bottom">
+ <div class='mobile-accept-dates'>
+ <div class="mobile-dates-info">
+ <span class='mobile-accept-dates-from-to'>
+ <span class="start-date-week-day">Mon</span>
+ <span class="date-comma">, </span>
+ <span class="start-date-day-month">12 Oct</span>
+ <span class="separator"> - </span>
+ <span class="end-date-week-day">Tue</span>
+ <span class="date-comma">, </span>
+ <span class="end-date-day-month">13 Oct</span>
+ <span class='mobile-accept-dates-number'>(<span class='number_of_nights-mobile'>
+ 1
+ Night </span>)</span>
+ </span>
+ </div>
+ <button type="button" id="mobile-accept-date" for="zcalendar-wrap" class="btn btn-ic custom-action-bg custom-action-text custom-action-border">Apply</button>
+ </div>
+ <div class="calendar-info">
+ </div>
+ </div>
+ </div>
+</section>
+<div class="mobile-search-bar-container custom-bg">
+ <div id="mobile-search-bar" class="mobile-search-bar">
+ <div class="date-preview">
+ <span class="preview-heading custom-text">Check-in</span>
+ <div class="preview-content custom-text">
+ <span id="mobile_search_checkin" class="custom-text">12 Oct</span>
+ </div>
+ </div>
+ <span class="svg-icon arrow-right-icon custom-text-stroke"><svg></svg>
+</span>
+ <div class="date-preview">
+ <span class="preview-heading custom-text">Check-out</span>
+ <div class="preview-content custom-text">
+ <span id="mobile_search_checkout" class="custom-text">13 Oct</span>
+ </div>
+ </div>
+ <div class="separator"></div>
+ <div class="nights-preview custom-text">
+ <span class="preview-heading custom-text">Nights</span>
+ <span id="mobile_search_nights" class="preview-content custom-text">1</span>
+ </div>
+ <div class="rooms-preview custom-text">
+ <span class="preview-heading custom-textg">Rooms</span>
+ <span id="mobile_search_rooms_quant" class="preview-content custom-text">1</span>
+ </div>
+ <div class="guests-preview custom-text">
+ <span class="preview-heading custom-text">Guests</span>
+ <span id="mobile_search_guests" class="preview-content custom-text">2</span>
+ </div>
+ <button class="custom-action-bg custom-action-border custom-action-text mob-btn-search">
+ <span class="svg-icon search-icon-button"><svg></svg>
+</span>
+ <span class="search-button-label">Edit</span>
+ </button>
+ </div>
+</div>
+	<section class="breadcrumb breadcrumbs container contain">
+ <a 
+ class="index_redirect"
+ href="https://book.omnibees.com/chain/10117?lang=en-US&amp;currencyId=16">
+ Home
+ </a>
+ <span class="breadcrumb-separator">/</span> 
+ <a 
+ class=""
+ href="https://book.omnibees.com/chain/10117/hotels?lang=en-US&amp;currencyId=16">
+ Hotels &amp; Destinations
+ </a>
+ <span class="breadcrumb-separator">/</span> 
+ Oiti Beach Resort Tutoia
+ </section>
+	<section class="section3 load-surface single-hotel-padding">
+ <div class="container contain white-bg">
+ <div class="row" id="hotel-card-info">
+	<div class="col-sm-12 col-lg-6 col-md-6 col-paddless" id="hotel-name-star">
+ <div class="data-hotel-id" id="hotel" data-hotel-id="19145">
+ <p id="hotel_name">Oiti Beach Resort Tutoia</p>
+ <a class="icon-share__link icon-share__review icon-share__review__phone">
+ <img src="/icons/icon_UserRating.svg">
+ <span class="icon-share__link__text icon-share__link__text__phone">8.5</span>
+ </a>
+ <p id="hotel_stars">
+ <img src="/icons/v3/star_rating_hotel.svg"> <img src="/icons/v3/star_rating_hotel.svg"> <img src="/icons/v3/star_rating_hotel.svg"> <img src="/icons/v3/star_rating_hotel.svg"> </p>
+ </div>
+ </div>
+	<div class="col-6 col-md-6 share-icons">
+ <div id="share-component" class="share-modal-holder">
+ <div class="share_dropdown_icon">
+ <img class="click-for-share" src="/icons/v3/shared-filled.svg" alt="share-email">
+ </div>
+ <div class="share-modal">
+ <div class="share-modal-header">
+ <span>Share hotel</span>
+ <img class="share-modal-close close" 
+ src="/v4/icons/cross_v4.svg" 
+ alt="close">
+ </div>
+ <div class="share-modal-content">
+ <!-- Copy Link -->
+ <div class="share-link share-modal-item icon-share__link" 
+ data-network="copyLink" 
+ data-url="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+ <img src="https://book.omnibees.com/icons/v3/copy_link.svg" alt="Copy Link">
+ <span>Copy link</span>
+ </div>
+ <!-- WhatsApp -->
+ <div class="share-link share-modal-item icon-share__link" 
+ data-network="whatsapp" 
+ data-url="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+ <img src="https://book.omnibees.com/icons/icon_Share_WhatsApp.svg" alt="WhatsApp">
+ <span>WhatsApp</span>
+ </div>
+ <!-- Facebook -->
+ <div class="share-link share-modal-item icon-share__link" 
+ data-network="facebook" 
+ data-url="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+ <img src="https://book.omnibees.com/icons/icon_Share_Facebook.svg" alt="Facebook">
+ <span>Facebook</span>
+ </div>
+ <!-- Messenger -->
+ <div class="share-link share-modal-item icon-share__link" 
+ data-network="messenger" 
+ data-url="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+ <img src="https://book.omnibees.com/icons/icon_Share_Messenger.svg" alt="Messenger">
+ <span>Messenger</span>
+ </div>
+ <!-- Email -->
+ <div class="share-link share-modal-item icon-share__link" 
+ data-network="email" 
+ data-url="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+ <img src="https://book.omnibees.com/icons/icon_Share_email.svg" alt="Email">
+ <span>Email</span>
+ </div>
+ <!-- LinkedIn -->
+ <div class="share-link share-modal-item icon-share__link" 
+ data-network="linkedin" 
+ data-url="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+ <img src="https://book.omnibees.com/icons/icon_Share_LinkedIn.svg" alt="LinkedIn">
+ <span>LinkedIn</span>
+ </div>
+ <!-- Twitter -->
+ <div class="share-link share-modal-item icon-share__link" 
+ data-network="twitter" 
+ data-url="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+ <img src="https://book.omnibees.com/icons/icon_Share_Twitter.svg" alt="Twitter">
+ <span>X</span>
+ </div>
+ </div>
+ </div>
+</div>
+	</div>
+	<div class="col-lg-12 col-paddless">
+ <div id="hotel_location">
+ <span class="hotel_location_icon"><img src="/icons/icons_GreyDark/iconGreyDark_Contact_Location.svg" alt="location"></span>
+ <span class="hotel_location_text">
+ <span class="hotel_location_text_address">Rua Principal, nº 10. Praia São José. 65580-000 </span>
+ <span class="comma">,&nbsp;</span><span class="hotel_location_text_city">Tutoia</span>
+ <span class="comma">,&nbsp;</span>
+ <span class="hotel_location_text_postalcode">&nbsp;65580-000</span>
+ <span class="hotel_location_text_country">
+ <span class="comma">,&nbsp;</span>
+ Brasil
+ </span>
+ &nbsp;
+ <span data-toggle="modal" data-target=".modal-map" id="center_hotel" class="google_map" role="button" data-title="Oiti Beach Resort Tutoia" data-lat="-2.7547796" data-lng="-42.2749507">(<span class="see-map-text">See on Map</span>)</span>
+ </span>
+ </div>
+	</div>
+</div>
+<div class="mobile-galery">	
+	<div class="gallery-contain-left">
+ <div class="hotel-image-container">
+ <div class="gallery-opener" data-desktop-gallery-modal-id="desktop-gallery-modal-hotel" > 
+ <div class="gallery-container default-desktop-image-gallery">
+ <div class="be-slider default-desktop-image-gallery"
+ data-id="19145"
+ data-thumbnails=false
+ data-width=512
+ data-height=341
+ data-show-counter="1"
+ data-prev-slide-label="Previous slide"
+ data-next-slide-label="Next slide"
+ data-go-to-slide-label="Go to slide"
+ style=""
+ >
+ <div class="be-slider-wrapper">
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/2193320.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2193320.jpg" alt="img_2940 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249465.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249465.jpg" alt="358379f3-3453-4ec0-8c0d-94f706da57b9.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249470.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249470.jpg" alt="c6687233-5df0-4304-b832-d9f6a9641c6e.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249471.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249471.jpg" alt="3fca4117-2fb9-4fa8-b6d1-6e5d7ad4c2a3.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249472.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249472.jpg" alt="61eeb7d1-496e-408c-bc33-4f76684ac586.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249474.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249474.jpg" alt="257b6be5-5427-4961-9e55-b9f4e326db03.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249475.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249475.jpg" alt="dfa29e23-6f3c-4e2a-8743-b7dc87dc96e3.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249476.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249476.jpg" alt="a344a497-e0c2-4039-8716-50cd4b8b33eb.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249482.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249482.jpg" alt="9e54acc3-5d7f-44c6-a17e-b3234f88a9b7.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249484.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249484.jpg" alt="b0e1eb5b-63e0-4a71-a53c-3b3520e5d810.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249485.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249485.jpg" alt="12971156-db2e-47f5-814a-97217cab749e.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249487.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249487.jpg" alt="d003553a-4f19-4cbd-b06e-be55b17196a5.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249488.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249488.jpg" alt="ff94bbf1-dd51-4b89-b893-486f4d5fe8d7.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249489.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249489.jpg" alt="302f19cc-6cbd-4e53-9a97-5fd8783de305.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249491.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249491.jpg" alt="4e048860-869c-4a48-845d-51b8d8a5b745.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249496.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249496.jpg" alt="c6d0b069-4020-4333-a202-5aadb3a36f60.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249498.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249498.jpg" alt="7f0ac74b-22ed-42e0-93f8-010576a1479b.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249504.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249504.jpg" alt="cdc0ac7d-e1e9-430c-92b5-59af28f9aaef.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249505.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249505.jpg" alt="28b2e561-762a-4fdd-bc2a-305e3db66169.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249506.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249506.jpg" alt="52f80c35-9e10-426f-b972-bf0c5b14a8e5.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327855.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327855.jpg" alt="image00001.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327857.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327857.jpg" alt="image00008.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327858.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327858.jpg" alt="image00009.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327853.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327853.jpg" alt="image00013.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327862.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327862.jpg" alt="image00015.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327854.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327854.jpg" alt="image00016.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327859.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327859.jpg" alt="image00018.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327869.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327869.jpg" alt="image00020.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327864.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327864.jpg" alt="image00030.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327873.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327873.jpg" alt="image00039.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/2193329.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2193329.jpg" alt="img_2809 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327876.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327876.jpg" alt="image00051.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327875.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327875.jpg" alt="image00053.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327856.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327856.jpg" alt="image00054.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327877.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327877.jpg" alt="image00057.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327863.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327863.jpg" alt="image00064.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327872.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327872.jpg" alt="image00072.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327865.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327865.jpg" alt="image00074.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1355734.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1355734.jpg" alt="superior casal tpl - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1355736.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1355736.jpg" alt="deluxe ou luxo casal red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1355735.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1355735.jpg" alt="luxo casal .jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/2181823.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2181823.jpg" alt="135a9260-red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/2181822.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2181822.jpg" alt="135a9141 - superior red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/2181824.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2181824.jpg" alt="dsc09694 - rede.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1249490.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249490.jpg" alt="ecd2952b-c42d-43e8-ad79-6a9b03e1b107.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/1327868.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327868.jpg" alt="image00046.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/2193364.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2193364.jpg" alt="img_2959red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/512x341/2193383.jpg" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2193383.jpg" alt="img_2775red.jpg">
+ </div>
+ </div>
+ <div id="white-overlay"></div>
+<div class="loader-container mobile" style="--loader-dot-color: #1C2631; --loader-dot-size: 16px; --loader-dot-spacing: 8px; --loader-top: calc(50% - 110px)">
+ <div class="loader-dots">
+ <div class="loader-dot moving-dot"></div>
+ <div class="loader-dot fixed-dot"></div>
+ <div class="loader-dot fixed-dot"></div>
+ <div class="loader-dot fixed-dot"></div>
+ </div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="photo-placeholder">
+ <div class="gallery-opener" data-mobile-gallery-modal-id="mobile-gallery-modal-hotel" data-desktop-gallery-modal-id="desktop-gallery-modal-hotel" ></div>
+ <span class="svg-icon photo-placeholder"><svg></svg>
+</span>
+ </div>
+ </div>
+ <div class="modal full-image-gallery-modal fade " id="desktop-gallery-modal-hotel" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="desktop-gallery-modal-hotel-title" aria-hidden="true">
+ <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+ <div class="modal-content full-gallery-content">
+ <div class="modal-header full-gallery-header">
+ <div class="container full-gallery-header-container">
+ <div class="full-gallery-title-container">
+ <h5 id="desktop-gallery-modal-hotel-title" class="full-gallery-title v3">Oiti Beach Resort Tutoia</h5>
+ </div>
+ <div class="modal-fullscreen-close-container">
+ <button type="button" class="close popup-button close-modal" aria-label="Close" data-bs-dismiss="modal" >
+ <span class="svg-icon modal-close-icon"><svg></svg>
+</span>
+ </button>
+ </div> 
+ </div>
+ </div>
+ <div class="modal-body full-gallery-body"> 
+ <div class="container full-gallery-body-container">
+ <div class="gallery-container default-desktop-image-gallery-modal">
+ <div class="be-slider default-desktop-image-gallery-modal"
+ data-id="desktop-gallery-modal-hotel"
+ data-thumbnails=true
+ data-thumbnails-count=11
+ data-navigation-inside=true
+ data-navigation-show-on-hover=true
+ data-is-fullscreen-gallery=true
+ data-show-counter="false"
+ data-prev-slide-label="Previous slide"
+ data-next-slide-label="Next slide"
+ data-go-to-slide-label="Go to slide"
+ style=""
+ >
+ <div class="be-slider-wrapper">
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2193320.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2193320.jpg" alt="img_2940 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249465.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249465.jpg" alt="358379f3-3453-4ec0-8c0d-94f706da57b9.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249470.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249470.jpg" alt="c6687233-5df0-4304-b832-d9f6a9641c6e.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249471.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249471.jpg" alt="3fca4117-2fb9-4fa8-b6d1-6e5d7ad4c2a3.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249472.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249472.jpg" alt="61eeb7d1-496e-408c-bc33-4f76684ac586.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249474.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249474.jpg" alt="257b6be5-5427-4961-9e55-b9f4e326db03.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249475.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249475.jpg" alt="dfa29e23-6f3c-4e2a-8743-b7dc87dc96e3.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249476.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249476.jpg" alt="a344a497-e0c2-4039-8716-50cd4b8b33eb.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249482.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249482.jpg" alt="9e54acc3-5d7f-44c6-a17e-b3234f88a9b7.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249484.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249484.jpg" alt="b0e1eb5b-63e0-4a71-a53c-3b3520e5d810.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249485.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249485.jpg" alt="12971156-db2e-47f5-814a-97217cab749e.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249487.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249487.jpg" alt="d003553a-4f19-4cbd-b06e-be55b17196a5.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249488.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249488.jpg" alt="ff94bbf1-dd51-4b89-b893-486f4d5fe8d7.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249489.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249489.jpg" alt="302f19cc-6cbd-4e53-9a97-5fd8783de305.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249491.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249491.jpg" alt="4e048860-869c-4a48-845d-51b8d8a5b745.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249496.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249496.jpg" alt="c6d0b069-4020-4333-a202-5aadb3a36f60.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249498.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249498.jpg" alt="7f0ac74b-22ed-42e0-93f8-010576a1479b.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249504.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249504.jpg" alt="cdc0ac7d-e1e9-430c-92b5-59af28f9aaef.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249505.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249505.jpg" alt="28b2e561-762a-4fdd-bc2a-305e3db66169.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249506.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249506.jpg" alt="52f80c35-9e10-426f-b972-bf0c5b14a8e5.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327855.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327855.jpg" alt="image00001.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327857.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327857.jpg" alt="image00008.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327858.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327858.jpg" alt="image00009.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327853.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327853.jpg" alt="image00013.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327862.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327862.jpg" alt="image00015.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327854.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327854.jpg" alt="image00016.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327859.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327859.jpg" alt="image00018.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327869.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327869.jpg" alt="image00020.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327864.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327864.jpg" alt="image00030.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327873.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327873.jpg" alt="image00039.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2193329.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2193329.jpg" alt="img_2809 - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327876.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327876.jpg" alt="image00051.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327875.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327875.jpg" alt="image00053.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327856.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327856.jpg" alt="image00054.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327877.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327877.jpg" alt="image00057.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327863.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327863.jpg" alt="image00064.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327872.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327872.jpg" alt="image00072.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327865.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327865.jpg" alt="image00074.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1355734.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1355734.jpg" alt="superior casal tpl - red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1355736.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1355736.jpg" alt="deluxe ou luxo casal red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1355735.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1355735.jpg" alt="luxo casal .jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2181823.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2181823.jpg" alt="135a9260-red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2181822.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2181822.jpg" alt="135a9141 - superior red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2181824.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2181824.jpg" alt="dsc09694 - rede.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1249490.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1249490.jpg" alt="ecd2952b-c42d-43e8-ad79-6a9b03e1b107.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/1327868.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/1327868.jpg" alt="image00046.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2193364.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2193364.jpg" alt="img_2959red.jpg">
+ </div>
+ <div class="be-slide">
+ <img data-src="https://media.omnibees.com/Images/19145/Property/0x657/2193383.jpg?sizeCat=Keepratio" data-thumb-src="https://media.omnibees.com/Images/19145/Property/105x70/2193383.jpg" alt="img_2775red.jpg">
+ </div>
+ </div>
+ <div id="white-overlay"></div>
+<div class="loader-container mobile" style="--loader-dot-color: #1C2631; --loader-dot-size: 16px; --loader-dot-spacing: 8px; --loader-top: calc(50% - 110px)">
+ <div class="loader-dots">
+ <div class="loader-dot moving-dot"></div>
+ <div class="loader-dot fixed-dot"></div>
+ <div class="loader-dot fixed-dot"></div>
+ <div class="loader-dot fixed-dot"></div>
+ </div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+</div>
+	</div>
+	<div class="gallery-contain-right">
+ <div class="gallery-contain-right-grid">
+ <div class="gallery-opener" data-desktop-gallery-modal-id="desktop-gallery-modal-hotel"></div>
+ <div class="img-div" role="button">
+ <div class="grid-images">	
+ <img class="grid-image" data-src="https://media.omnibees.com/Images/19145/Property/240x162/1249465.jpg" alt="thumbnail" lazy="true">
+ </div> 
+ </div> 
+ <div class="img-div" role="button">
+ <div class="grid-images">	
+ <img class="grid-image" data-src="https://media.omnibees.com/Images/19145/Property/240x162/1249470.jpg" alt="thumbnail" lazy="true">
+ </div> 
+ </div> 
+ <div class="img-div" role="button">
+ <div class="grid-images">	
+ <img class="grid-image" data-src="https://media.omnibees.com/Images/19145/Property/240x162/1249471.jpg" alt="thumbnail" lazy="true">
+ </div> 
+ </div> 
+ <div class="img-div" role="button">
+ <div class="grid-images">	
+ <img class="grid-image" data-src="https://media.omnibees.com/Images/19145/Property/240x162/1249472.jpg" alt="thumbnail" lazy="true">
+ </div> 
+ </div> 
+ </div>
+	</div>
+	</div>
+	<div class="row hotel-divider" id="hotel-divider">
+ <p class="hotel-amenities-title">Main Amenities</p>
+ <div class="col-lg-12 amenities amenities-container">
+ <div class="amenity text-center"> 
+ <div class="amenity-icon">
+ <img src="/icons/parking_free_v4.svg" alt="Parking Free">
+ </div>
+ Parking Free
+ </div>
+ <div class="amenity text-center"> 
+ <div class="amenity-icon">
+ <img src="/icons/spa_v4.svg" alt="SPA">
+ </div>
+ SPA
+ </div>
+ <div class="amenity text-center"> 
+ <div class="amenity-icon">
+ <img src="/icons/swimming_pool_v4.svg" alt="Swimming-Pool">
+ </div>
+ Swimming-Pool
+ </div>
+ <div class="amenity text-center"> 
+ <div class="amenity-icon">
+ <img src="/icons/swimming_out_v4.svg" alt="Outdoor Swimming-Pool">
+ </div>
+ Outdoor Swimming-Pool
+ </div>
+ <div class="amenity text-center"> 
+ <div class="amenity-icon">
+ <img src="/icons/free_wifi_v4.svg" alt="Free Wifi">
+ </div>
+ Free Wifi
+ </div>
+ </div>
+	</div>
+ <hr>
+ <div class="hotel-margin hotel-info-contain">
+ <div class="room-info-holder">
+ <div class="hotel-info-holder">
+ <p class="hotel-title">The Hotel</p>
+ <div class="more-about-hotel-holder">
+ <p class="hotel-info hotel-info-resize" id="hotel-info">
+ Facing the beachfront, Oiti Beach Resort Tutoia offers 4-star accommodation in Tutóia and features an outdoor swimming pool, a fitness center and a garden. The property offers room service and free WiFi throughout. There is a restaurant serving Brazilian cuisine, and free private parking is available (subject to availability). All rooms have a work desk. Rooms at Oiti Beach Resort Tutoia feature a private bathroom with a shower and free toiletries, a flat-screen TV and air conditioning, and some include a patio. Additionally, accommodation includes bed linen and towels. Oiti Beach Resort Tutoia serves a buffet or continental breakfast.</p>
+ <div class="more-about-hotel more-about-hotel-toggle"> 
+ <button class="more-info-button" onclick="toggleText()"><span class="more-info-text">LER MAIS</span><img class="more-info-arrow" src="https://book.omnibees.com/icons/icons_GreyDarkest/iconGreyDarkest_ArrowDown.svg"> </button> 
+ </div>
+ </div> 
+ </div>
+ </div>
+ <div class="info">
+ <div id="check_in">
+ <p class="info-title info-first">Check-in Hours</p>
+ <p class="info-hours">
+ Check-in from 
+ 2:00 PM
+ </p>
+ <p class="info-hours">Check-out until 
+ 12:00 PM
+ </p>
+ </div>
+ <div id="reception">
+ <p class="info-title">Reception Hours</p>
+ <p class="info-hours">
+ Open from 
+ 12:00 AM
+ </p>
+ <p class="info-hours">
+ To 
+ 12:00 AM
+ </p>
+ </div>
+ <div id="breakfast">
+ <p class="info-title">Breakfast Hours</p>
+ <p class="info-hours">
+ From 
+ 7:00 AM
+ </p>
+ <p class="info-hours">
+ To 
+ 10:00 AM
+ </p>
+ </div>
+ <div id="closed">
+ </div>
+ <button id="book-hotel" class="btn btn-ic book">BOOK NOW</button>
+ <input type="hidden" id="hotel_id" value="19145">
+ </div>
+ </div>
+ <hr class="hotel-spacer">
+ <div class="amenity-group-wrap">
+ <div class="amenity-group-single">
+ <div class="amenity-group">
+ <p class="amenity-category"><span class="amenity-category-text">General Services</span><img class="single-hotel-arrow" src="https://book.omnibees.com/icons/icons_GreyDarkest/iconGreyDarkest_ArrowDown.svg"></p>
+ <div class="amenity-items">
+ <p class="amenity-item"> ✓ Cribs available on request</p>
+ <p class="amenity-item"> ✓ Handicapped rooms</p>
+ <p class="amenity-item"> ✓ Major credit cards accepted</p>
+ <p class="amenity-item"> ✓ Daily Housekeeping</p>
+ <p class="amenity-item"> ✓ Business Center</p>
+ <p class="amenity-item"> ✓ 24 hours Front Desk</p>
+ <p class="amenity-item"> ✓ Parking Free</p>
+ <p class="amenity-item"> ✓ Free Wifi</p>
+ <p class="amenity-item"> ✓ Direct access to the beach</p>
+ </div>
+ </div>
+ </div>
+ <div class="amenity-group-single">
+ <div class="amenity-group">
+ <p class="amenity-category"><span class="amenity-category-text">Restaurant &amp; Bars</span><img class="single-hotel-arrow" src="https://book.omnibees.com/icons/icons_GreyDarkest/iconGreyDarkest_ArrowDown.svg"></p>
+ <div class="amenity-items">
+ <p class="amenity-item"> ✓ Bar Club</p>
+ <p class="amenity-item"> ✓ Restaurant</p>
+ <p class="amenity-item"> ✓ Pool&#039;s Bar</p>
+ </div>
+ </div>
+ </div>
+ <div class="amenity-group-single">
+ <div class="amenity-group">
+ <p class="amenity-category"><span class="amenity-category-text">Wellness &amp; Sports</span><img class="single-hotel-arrow" src="https://book.omnibees.com/icons/icons_GreyDarkest/iconGreyDarkest_ArrowDown.svg"></p>
+ <div class="amenity-items">
+ <p class="amenity-item"> ✓ SPA</p>
+ <p class="amenity-item"> ✓ Swimming-Pool</p>
+ <p class="amenity-item"> ✓ Outdoor Swimming-Pool</p>
+ </div>
+ </div>
+ </div>
+ <div class="amenity-group-single">
+ <div class="amenity-group">
+ <p class="amenity-category"><span class="amenity-category-text">Events &amp; Conferences</span><img class="single-hotel-arrow" src="https://book.omnibees.com/icons/icons_GreyDarkest/iconGreyDarkest_ArrowDown.svg"></p>
+ <div class="amenity-items">
+ <p class="amenity-item"> ✓ Breakouts</p>
+ </div>
+ </div>
+ </div>
+ </div>
+ <hr class="room-spacer">
+ <div class="" id="room_types">
+ <div class="">
+ <p class="hotel-title">Room Types</p>
+ </div>
+ <div class="room-holder">
+ <div class="rooms">
+ <div class="card text-center">
+ <img src="https://media.omnibees.com/Images/19145/RoomTypes/240x162/2180081.jpg" class="card-img-top room-image" onError="this.onerror=null;this.src='/img/placeholderNewWhite.svg';" alt="Classic Triple Twin" />
+ <div class="card-body">
+ <h5 class="card-title single-room-title">
+ Classic Triple Twin
+ </h5>
+ <div class="single-room-icon-desc">
+ <div class="room-icon-holder"> 
+ <div class="icons">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adult">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adult">
+ </div>
+ <span class="icon_description">Max. PAX</span>
+ </div>
+ <div class="room-view-type-holder">
+ <span class="view-bed-type view-bed-type-room">
+ <img class="room-bed-icons view-bed-icon" src="/icons/icons_GreyDarkest/iconGreyDarkest_View_Various.svg"> 
+ <span class="room-bed-name icon_description">
+ Various views
+ </span>
+ </span>
+ </div> 
+ </div>
+ <a href="https://book.omnibees.com/hotel/19145/room/114316" class="room-button btn btn-ic custom-action-bg custom-action-border custom-action-text">SHOW PRICES</a>
+ </div>
+ </div>
+ </div>
+ <div class="rooms">
+ <div class="card text-center">
+ <img src="https://media.omnibees.com/Images/19145/RoomTypes/240x162/1375575.jpg" class="card-img-top room-image" onError="this.onerror=null;this.src='/img/placeholderNewWhite.svg';" alt="Superior Triple Single" />
+ <div class="card-body">
+ <h5 class="card-title single-room-title">
+ Superior Triple Single
+ </h5>
+ <div class="single-room-icon-desc">
+ <div class="room-icon-holder"> 
+ <div class="icons">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adult">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adult">
+ </div>
+ <span class="icon_description">Max. PAX</span>
+ </div>
+ <div class="room-view-type-holder">
+ <span class="view-bed-type view-bed-type-room">
+ <img class="room-bed-icons view-bed-icon" src="/icons/icons_GreyDarkest/iconGreyDarkest_View_Various.svg"> 
+ <span class="room-bed-name icon_description">
+ Various views
+ </span>
+ </span>
+ </div> 
+ </div>
+ <a href="https://book.omnibees.com/hotel/19145/room/114317" class="room-button btn btn-ic custom-action-bg custom-action-border custom-action-text">SHOW PRICES</a>
+ </div>
+ </div>
+ </div>
+ <div class="rooms">
+ <div class="card text-center">
+ <img src="https://media.omnibees.com/Images/19145/RoomTypes/240x162/1355522.jpg" class="card-img-top room-image" onError="this.onerror=null;this.src='/img/placeholderNewWhite.svg';" alt="Luxury Couple" />
+ <div class="card-body">
+ <h5 class="card-title single-room-title">
+ Luxury Couple
+ </h5>
+ <div class="single-room-icon-desc">
+ <div class="room-icon-holder"> 
+ <div class="icons">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adult">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adult">
+ </div>
+ <span class="icon_description">Max. PAX</span>
+ </div>
+ <div class="room-view-type-holder">
+ <span class="view-bed-type view-bed-type-room">
+ <img class="room-bed-icons view-bed-icon" src="/icons/icons_GreyDarkest/iconGreyDarkest_View_Various.svg"> 
+ <span class="room-bed-name icon_description">
+ Various views
+ </span>
+ </span>
+ </div> 
+ </div>
+ <a href="https://book.omnibees.com/hotel/19145/room/114319" class="room-button btn btn-ic custom-action-bg custom-action-border custom-action-text">SHOW PRICES</a>
+ </div>
+ </div>
+ </div>
+ <div class="rooms">
+ <div class="card text-center">
+ <img src="https://media.omnibees.com/Images/19145/RoomTypes/240x162/1255849.jpg" class="card-img-top room-image" onError="this.onerror=null;this.src='/img/placeholderNewWhite.svg';" alt="Deluxe Double (Sea View)" />
+ <div class="card-body">
+ <h5 class="card-title single-room-title">
+ Deluxe Double (Sea View)
+ </h5>
+ <div class="single-room-icon-desc">
+ <div class="room-icon-holder"> 
+ <div class="icons">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adult">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adult">
+ </div>
+ <span class="icon_description">Max. PAX</span>
+ </div>
+ <div class="room-view-type-holder">
+ <span class="view-bed-type view-bed-type-room">
+ <img class="room-bed-icons view-bed-icon" src="/icons/icons_GreyDarkest/iconGreyDarkest_View_Ocean.svg"> 
+ <span class="room-bed-name icon_description">
+ Sea view
+ </span>
+ </span>
+ </div> 
+ </div>
+ <a href="https://book.omnibees.com/hotel/19145/room/114321" class="room-button btn btn-ic custom-action-bg custom-action-border custom-action-text">SHOW PRICES</a>
+ </div>
+ </div>
+ </div>
+ <div class="rooms">
+ <div class="card text-center">
+ <img src="https://media.omnibees.com/Images/19145/RoomTypes/240x162/1375497.jpg" class="card-img-top room-image" onError="this.onerror=null;this.src='/img/placeholderNewWhite.svg';" alt="Classic Couple" />
+ <div class="card-body">
+ <h5 class="card-title single-room-title">
+ Classic Couple
+ </h5>
+ <div class="single-room-icon-desc">
+ <div class="room-icon-holder"> 
+ <div class="icons">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adult">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adult">
+ </div>
+ <span class="icon_description">Max. PAX</span>
+ </div>
+ <div class="room-view-type-holder">
+ </div> 
+ </div>
+ <a href="https://book.omnibees.com/hotel/19145/room/121607" class="room-button btn btn-ic custom-action-bg custom-action-border custom-action-text">SHOW PRICES</a>
+ </div>
+ </div>
+ </div>
+ <div class="rooms">
+ <div class="card text-center">
+ <img src="https://media.omnibees.com/Images/19145/RoomTypes/240x162/1355530.jpg" class="card-img-top room-image" onError="this.onerror=null;this.src='/img/placeholderNewWhite.svg';" alt="Classic Triple Couple" />
+ <div class="card-body">
+ <h5 class="card-title single-room-title">
+ Classic Triple Couple
+ </h5>
+ <div class="single-room-icon-desc">
+ <div class="room-icon-holder"> 
+ <div class="icons">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adults"><span class="plural">x3</span>
+ </div>
+ <span class="icon_description">Max. PAX</span>
+ </div>
+ <div class="room-view-type-holder">
+ <span class="view-bed-type view-bed-type-room">
+ <img class="room-bed-icons view-bed-icon" src="/icons/icons_GreyDarkest/iconGreyDarkest_View_Various.svg"> 
+ <span class="room-bed-name icon_description">
+ Various views
+ </span>
+ </span>
+ </div> 
+ </div>
+ <a href="https://book.omnibees.com/hotel/19145/room/114284" class="room-button btn btn-ic custom-action-bg custom-action-border custom-action-text">SHOW PRICES</a>
+ </div>
+ </div>
+ </div>
+ <div class="rooms">
+ <div class="card text-center">
+ <img src="https://media.omnibees.com/Images/19145/RoomTypes/240x162/1355524.jpg" class="card-img-top room-image" onError="this.onerror=null;this.src='/img/placeholderNewWhite.svg';" alt="Superior Triple Double" />
+ <div class="card-body">
+ <h5 class="card-title single-room-title">
+ Superior Triple Double
+ </h5>
+ <div class="single-room-icon-desc">
+ <div class="room-icon-holder"> 
+ <div class="icons">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adults"><span class="plural">x3</span>
+ </div>
+ <span class="icon_description">Max. PAX</span>
+ </div>
+ <div class="room-view-type-holder">
+ <span class="view-bed-type view-bed-type-room">
+ <img class="room-bed-icons view-bed-icon" src="/icons/icons_GreyDarkest/iconGreyDarkest_View_Various.svg"> 
+ <span class="room-bed-name icon_description">
+ Various views
+ </span>
+ </span>
+ </div> 
+ </div>
+ <a href="https://book.omnibees.com/hotel/19145/room/114318" class="room-button btn btn-ic custom-action-bg custom-action-border custom-action-text">SHOW PRICES</a>
+ </div>
+ </div>
+ </div>
+ <div class="rooms">
+ <div class="card text-center">
+ <img src="https://media.omnibees.com/Images/19145/RoomTypes/240x162/1416494.jpg" class="card-img-top room-image" onError="this.onerror=null;this.src='/img/placeholderNewWhite.svg';" alt="Classic Quadruple" />
+ <div class="card-body">
+ <h5 class="card-title single-room-title">
+ Classic Quadruple
+ </h5>
+ <div class="single-room-icon-desc">
+ <div class="room-icon-holder"> 
+ <div class="icons">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adults"><span class="plural">x4</span>
+ </div>
+ <span class="icon_description">Max. PAX</span>
+ </div>
+ <div class="room-view-type-holder">
+ <span class="view-bed-type view-bed-type-room">
+ <img class="room-bed-icons view-bed-icon" src="/icons/icons_GreyDarkest/iconGreyDarkest_View_Various.svg"> 
+ <span class="room-bed-name icon_description">
+ Various views
+ </span>
+ </span>
+ </div> 
+ </div>
+ <a href="https://book.omnibees.com/hotel/19145/room/124013" class="room-button btn btn-ic custom-action-bg custom-action-border custom-action-text">SHOW PRICES</a>
+ </div>
+ </div>
+ </div>
+ <div class="rooms">
+ <div class="card text-center">
+ <img src="https://media.omnibees.com/Images/19145/RoomTypes/240x162/1416597.jpg" class="card-img-top room-image" onError="this.onerror=null;this.src='/img/placeholderNewWhite.svg';" alt="Superior Quadruple" />
+ <div class="card-body">
+ <h5 class="card-title single-room-title">
+ Superior Quadruple
+ </h5>
+ <div class="single-room-icon-desc">
+ <div class="room-icon-holder"> 
+ <div class="icons">
+ <img class="adults" src="https://book.omnibees.com/icons/icons_GreyDark/iconGreyDark_Pax_1Adult.svg" alt="adults"><span class="plural">x4</span>
+ </div>
+ <span class="icon_description">Max. PAX</span>
+ </div>
+ <div class="room-view-type-holder">
+ <span class="view-bed-type view-bed-type-room">
+ <img class="room-bed-icons view-bed-icon" src="/icons/icons_GreyDarkest/iconGreyDarkest_View_Various.svg"> 
+ <span class="room-bed-name icon_description">
+ Various views
+ </span>
+ </span>
+ </div> 
+ </div>
+ <a href="https://book.omnibees.com/hotel/19145/room/124014" class="room-button btn btn-ic custom-action-bg custom-action-border custom-action-text">SHOW PRICES</a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-12 icon-share__holder__phone">
+ <div>
+ <span class="icon-share__text icon-share__text__phone">SHARE</span>
+ <div class="icon-share__links">
+ <a class="icon-share__link" data-network="facebook" data-url="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+ <img src="/icons/icon_Share_Facebook.svg">
+ </a>
+ <a class="icon-share__link" data-network="linkedin" data-url="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+ <img src="/icons/icon_Share_LinkedIn.svg">
+ </a>
+ <a class="icon-share__link" data-network="twitter" data-url="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+ <img src="/icons/icon_Share_Twitter.svg">
+ </a>
+ <a class="icon-share__link" data-network="messenger" data-url="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+ <img src="/icons/icon_Share_Messenger.svg">
+ </a>
+ <a class="icon-share__link" data-network="whatsapp" data-url="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+ <img src="/icons/icon_Share_WhatsApp.svg">
+ </a>
+ <a class="icon-share__link" data-network="email" data-url="https://book.omnibees.com/chain/10117/hotel/19145?lang=en-US">
+ <img src="/icons/icon_Share_email.svg">
+ </a>
+ </div> 
+ </div> 
+ </div> 
+ </div>
+	</section> 
+	<div class="modal fade bd-example-modal-lg modal-map" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="true">
+ <button type="button" class="close btn-ic popup-button map-button-desktop" data-dismiss="modal" aria-label="Close">
+ <span aria-hidden="true"><img src="/icons/icons_White/iconWhite_Xclose.svg" class="close_icon" alt=""></span>
+ </button>
+ <span class="map-modal-elipse" data-dismiss="modal">
+ <button type="button" class="close btn-ic popup-button map-button-phone" aria-label="Close">
+ <span aria-hidden="true"><img src="/icons/icons_White/iconWhite_Xclose.svg" class="close_icon responsive_close_icon" alt=""></span>
+ </button>
+ </span> 
+ <div class="modal-dialog modal-lg modal-dialog-centered map-phone-container">
+ <div class="modal-content">
+ <div class="map-title"></div>
+ <div id="map-modal" data-key="REDACTED"></div>
+ </div>
+ </div>
+ </div>
+ <div id="white-overlay"></div>
+<div class="loader-container page-loader mobile" style="--loader-dot-color: #1C2631; --loader-dot-size: 16px; --loader-dot-spacing: 8px; --loader-top: calc(50% - 110px)">
+ <div class="loader-dots">
+ <div class="loader-dot moving-dot"></div>
+ <div class="loader-dot fixed-dot"></div>
+ <div class="loader-dot fixed-dot"></div>
+ <div class="loader-dot fixed-dot"></div>
+ </div>
+ <svg></svg>
+ <div class="search-loading-message" data-index-text="Welcome! Getting ready for your journey." data-chainresults-text="Searching for accommodations." data-hotelresults-text="Seeking the best prices." data-extras-text="Listing our Extras." data-bookdetails-text="Organizing your reservation.">
+ Seeking the best prices. </div>
+ </div>
+ <footer class="footer">
+ <div class="footer-container">
+ <div class="footer-content ">
+ <div class="footer-contact-info">
+ <div class="email">
+ <span class="svg-icon "><svg></svg>
+</span>
+ <a href="/cdn-cgi/l/email-protection#57253224322521362417383e233e353236343f7934383a793525"><span class="__cf_email__" data-cfemail="cbb9aeb8aeb9bdaab88ba4a2bfa2a9aeaaa8a3e5a8a4a6e5a9b9">[email&#160;protected]</span></a>
+ </div>
+ <div class="phone">
+ <span class="svg-icon "><svg></svg>
+</span>
+ <a href="tel:98 98556-9690">98 98556-9690</a>
+ </div>
+ </div>
+ <div class="copyright-info">
+ <span class="footer-hotel-name">&copy; 2026 Oiti Beach Resort Tutoia.</span>
+ <span class="footer-description">All rights reserved.</span>
+ </div>
+ </div>
+ <div class="footer-credits">
+ <small class="powered-by">Powered by</small>
+ <img src="https://book.omnibees.com/icons/omnibees-logo.svg" class="omnibees-logo" alt="Omnibees">
+ </div>
+ </div>
+</footer>
+<div class="modal show session-expired-modal session-expired-modal-property" id="session-expired" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+ <div class="modal-content">
+ <h5>Your search has expired!</h5>
+ <p class="button-session-restart" data-dismiss="modal">Update your results</p>	
+ </div>
+	</div>
+</div>
+<div class="modal show privacy-modal" id="privacy-modal" role="dialog" aria-hidden="true" >
+	<div class="modal-dialog modal-dialog-centered">
+ <div class="modal-content">
+ <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+ <img src="/icons/icons_GreyLight/iconGreyLight_Xclose.svg" alt="">
+ </button>
+ <div class="d-flex cancel-popup__contain session-expired__contain">
+ <div class="d-flex justify-content-center cancel-popup__holder" >
+ <p class="terms-content"> 
+ No privacy policy available. </p>
+ </div>	
+ </div>
+ </div>
+	</div>
+</div>
+<div class="modal fade" id="modal-partial-payments-info" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered justify-content-center">
+ <div class="modal-content partial-payments-modal">
+ <button type="button" class="close btn-ic popup-button modal-button-desktop" data-dismiss="modal" aria-label="Close">
+ <span aria-hidden="true"><img src="/icons/icons_White/iconWhite_Xclose.svg" class="close_icon" alt=""></span>
+ </button>
+ <span class="modal-elipse" data-dismiss="modal">
+ <button type="button" class="close btn-ic popup-button modal-button-phone" aria-label="Close">
+ <span aria-hidden="true"><img src="/icons/icons_White/iconWhite_Xclose.svg" class="close_icon responsive_close_icon" alt=""></span>
+ </button>
+ </span> 
+ <div class="w-100" id="partial-payments-info"></div>
+ </div>
+	</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript"></script>	
+	<script src="https://book.omnibees.com/js/vendor/jquery.min.js"></script>	
+	<script src="https://book.omnibees.com/v3/js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+ <script src="https://book.omnibees.com/js/vendor/moment.min.js"></script>
+ <script src="https://book.omnibees.com/js/vendor/moment.tz.js"></script>
+	<script></script>
+	<script src="/v3/js/autocomplete-hotels.js?version=1.0.0.507"></script>
+	<script src="/v3/js/occupancy-select.js?version=1.0.0.507"></script>
+	<script src="/v3/js/main.js?version=1.0.0.507"></script>
+	<script src="/js/main.js?version=1.0.0.507"></script>
+	<script src="/v3/js/zcalendar.js?version=1.0.0.507"></script>
+	<script src="/v3/js/google-maps.js?version=1.0.0.507"></script>
+<script></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"0d6c797e535c43b1840096b99c85b628","spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

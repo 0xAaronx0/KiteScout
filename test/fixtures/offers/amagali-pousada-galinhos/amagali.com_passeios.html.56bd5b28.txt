@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="utf-8" />
+ <title>Pontos Turísticos E Passeios - Amagali</title>
+ <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+ <meta content="" name="keywords" />
+ <meta content="" name="description" />
+ <!-- Favicon -->
+ <link href="img/logo.png" rel="icon" />
+ <!-- Google Web Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link
+ href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+ rel="stylesheet"
+ />
+ <!-- Icon Font Stylesheet -->
+ <link
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+ rel="stylesheet"
+ />
+ <link
+ href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+ rel="stylesheet"
+ />
+ <!-- Libraries Stylesheet -->
+ <link href="lib/animate/animate.min.css" rel="stylesheet" />
+ <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+ <link
+ href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+ rel="stylesheet"
+ />
+ <!-- Customized Bootstrap Stylesheet -->
+ <link href="css/bootstrap.min.css" rel="stylesheet" />
+ <!-- Template Stylesheet -->
+ <link href="css/style.css" rel="stylesheet" />
+ </head>
+ <body>
+ <a
+ target="_blank"
+ href="https://api.whatsapp.com/send?l=pt&phone=558499452-1317&text=Olá, gostaria de saber mais sobre serviços da Pousada Amagali!"
+ ><img
+ src="img/wpp.png"
+ style="
+ height: 64px;
+ position: fixed;
+ bottom: 25px;
+ left: 25px;
+ z-index: 99999;
+ "
+ data-selector="img"
+ /></a>
+ <div class="bg-white p-0">
+ <!-- Spinner Start -->
+ <div
+ id="spinner"
+ class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+ >
+ <div
+ class="spinner-border text-primary"
+ style="width: 3rem; height: 3rem"
+ role="status"
+ >
+ <span class="sr-only">Loading...</span>
+ </div>
+ </div>
+ <!-- Spinner End -->
+ <!-- Header Start -->
+ <div class="container-fluid bg-white px-0 nav_">
+ <div class="row gx-0">
+ <div class="col-lg-3 bg-white d-none d-lg-block logo_nav">
+ <a
+ href="index.html"
+ class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center"
+ >
+ <img
+ class="logo_"
+ src="img/download-removebg-preview.png"
+ alt=""
+ />
+ </a>
+ </div>
+ <div class="col-lg-9">
+ <div class="row gx-0 bg-dark d-none d-lg-flex color_">
+ <div class="col-lg-7 px-5 text-start">
+ <div class="h-100 d-inline-flex align-items-center py-2 me-4">
+ <i class="fa fa-envelope text-white me-2"></i>
+ <p class="mb-0 text-white">info@amagali.com.br</p>
+ </div>
+ <div class="h-100 d-inline-flex align-items-center py-2">
+ <i class="fa fa-phone-alt text-white me-2"></i>
+ <p class="mb-0 text-white">+55 84 99452-1317</p>
+ </div>
+ </div>
+ <div class="col-lg-5 px-5 text-end">
+ <div class="d-inline-flex align-items-center py-2">
+ <a
+ class="me-3 text-white"
+ href="https://api.whatsapp.com/send?l=pt&phone=558499452-1317&text=Olá, gostaria de saber mais sobre serviços da Pousada Amagali!"
+ ><i class="fab fa-whatsapp"></i
+ ></a>
+ <a
+ class="me-3 text-white"
+ href="https://www.instagram.com/amagalipousada/"
+ ><i class="fab fa-instagram"></i
+ ></a>
+ </div>
+ </div>
+ </div>
+ <nav
+ class="navbar navbar-expand-lg bg-white navbar-dark p-3 p-lg-0"
+ >
+ <a href="index.html" class="navbar-brand d-block d-lg-none">
+ <img
+ class="logo_"
+ src="img/download-removebg-preview.png"
+ alt=""
+ />
+ </a>
+ <button
+ type="button"
+ class="navbar-toggler"
+ data-bs-toggle="collapse"
+ data-bs-target="#navbarCollapse"
+ >
+ <span class="navbar-toggler-icon"></span>
+ </button>
+ <div
+ class="collapse navbar-collapse justify-content-between"
+ id="navbarCollapse"
+ >
+ <div class="navbar-nav mr-auto py-0 d-flex align-items-center">
+ <a href="index.html" class="nav-item nav-link">início</a>
+ <a href="index.html#about" class="nav-item nav-link">Sobre</a>
+ <!-- <a href="service.html" class="nav-item nav-link"></a> -->
+ <a href="room.html" class="nav-item nav-link">Quartos</a>
+ <a href="index.html#service" class="nav-item nav-link"
+ >Serviços</a
+ >
+ <a href="passeios.html" class="nav-item nav-link active"
+ >Turismo</a
+ >
+ <a href="index.html#contact" class="nav-item nav-link"
+ >Contato</a
+ >
+ <a
+ href="#"
+ onclick="doGTranslate('pt|en');return false;"
+ title="English"
+ class="gflag nturl ml-2"
+ style="background-position: -0px -0px"
+ ><img
+ src="./img/icon/united-states.png"
+ height="23"
+ width="23"
+ style="margin-right: 10px"
+ alt="English"
+ /></a>
+ <a
+ href="#"
+ onclick="doGTranslate('pt|es');return false;"
+ title="Spanish"
+ class="gflag nturl ml-2"
+ style="background-position: -600px -200px"
+ ><img
+ src="./img/icon/flag.png"
+ height="23"
+ width="23"
+ style="margin-right: 10px"
+ alt="Spanish"
+ /></a>
+ </div>
+ <a
+ href="https://book.omnibees.com/hotel/18649?currencyId=16&lang=pt-BR"
+ class="btn btn-primary rounded-0 d-none d-lg-block"
+ >Faça sua Reserva<i class="fa fa-arrow-right ms-3"></i
+ ></a>
+ </div>
+ </nav>
+ </div>
+ </div>
+ </div>
+ <!-- Header End -->
+ <!-- Page Header Start -->
+ <div class="container-fluid page-header mb-5 p-0">
+ <div class="container-fluid page-header-inner pagetwo py-5">
+ <div class="container text-center pb-5">
+ <h1 class="text-white mb-3 animated slideInDown">
+ Pontos Turísticos/Passeios
+ </h1>
+ <nav aria-label="breadcrumb">
+ <ol class="breadcrumb justify-content-center text-uppercase">
+ <li class="breadcrumb-item"><a href="index.html">Início</a></li>
+ <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
+ <li
+ class="breadcrumb-item text-white active"
+ aria-current="page"
+ >
+ Pontos Turísticos e Passeios
+ </li>
+ </ol>
+ </nav>
+ </div>
+ </div>
+ </div>
+ <!-- Page Header End -->
+ <!-- Booking Start -->
+ <div class="py-5">
+ <div class="container">
+ <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+ <h6 class="section-title text-center text-primary text-uppercase">
+ Pontos turísticos/Passeios
+ </h6>
+ <h1 class="mb-5">
+ Temos a natureza como o principal atrativo<br /><span
+ class="text-primary text-uppercase"
+ >
+ da nossa península!
+ </span>
+ </h1>
+ </div>
+ <div class="row g-5">
+ <div class="col-lg-6 mt-5">
+ <div class="row g-3">
+ <div class="col-6 text-end">
+ <img
+ class="img-fluid rounded w-75 wow zoomIn"
+ data-wow-delay="0.1s"
+ src="img/turismo/IMG-6336 (2).jpg"
+ style="margin-top: 25%"
+ />
+ </div>
+ <div class="col-6 text-start">
+ <img
+ class="img-fluid rounded w-100 wow zoomIn"
+ data-wow-delay="0.3s"
+ src="img/turismo/IMG-6337 (2).jpg"
+ />
+ </div>
+ <div class="col-6 text-end">
+ <img
+ class="img-fluid rounded w-50 wow zoomIn"
+ data-wow-delay="0.5s"
+ src="img/turismo/IMG-6338 (2).jpg"
+ />
+ </div>
+ <div class="col-6 text-start">
+ <img
+ class="img-fluid rounded w-75 wow zoomIn"
+ data-wow-delay="0.7s"
+ src="img/turismo/IMG-6339 (2).jpg"
+ />
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-6">
+ <div class="wow fadeInUp" data-wow-delay="0.2s">
+ <form>
+ <div class="row g-3">
+ <div class="col-md-12">
+ <h6 class="text_passeios">
+ <i class="fa-solid fa-sun"></i> O Farol de Galinhos
+ possui um pôr-do-sol incrível, já conhecido por muitos e
+ que recebeu vários cliques. E é uma estrutura de
+ alvenaria pintada em branco e vermelho, e tem uma altura
+ de aproximadamente 15 metros. Durante o dia, sua
+ presença majestosa já é impressionante, mas é à noite
+ que ele realmente ganha destaque.<br /><br />
+ <i class="fa-solid fa-sun"></i> A Lagoa do Capim
+ encontram-se lagoas, onde o braço de mar encontra as
+ dunas, a alta salinidade proporciona uma flutuação
+ agradável. Suas águas calmas e cristalinas convidam a um
+ mergulho refrescante, enquanto suas margens oferecem
+ espaço para momentos de contemplação e descanso.
+ <br /><br />
+ <i class="fa-solid fa-sun"></i> As Salinas encantam com
+ suas montanhas brancas contrastam com a beleza dos
+ braços-de-mar e mangues. Sendo possível ir apenas de
+ barco. Explorar as Salinas de Galinhos é mergulhar em um
+ mundo de paisagens únicas. Os tanques de sal formam um
+ cenário impressionante, com suas cores brilhantes e
+ reflexos que se estendem até onde a vista alcança.<br /><br />
+ <i class="fa-solid fa-sun"></i> As belas Dunas de Galos
+ com suas areias finas e brancas e com suas formas
+ ondulantes e areias douradas, oferecem um cenário
+ perfeito para os amantes da natureza e da aventura.
+ Explorar as dunas é uma experiência emocionante.
+ <br />
+ </h6>
+ </div>
+ <div class="col-12">
+ <!-- <a href="index.html#booking"><button class="btn btn-primary w-100 py-3"
+ type="submit">Reservar Agora</button></a> -->
+ <a
+ class="btn btn-primary w-100 py-3"
+ target="_blank"
+ href="https://book.omnibees.com/hotel/18649?currencyId=16&lang=pt-BR"
+ >Reservar Agora</a
+ >
+ </div>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <!-- Booking End -->
+ <section>
+ <h1 class="mb-5 mt-5 text-center" style="color: #003277">
+ Fique por dentro de todos os<br />a Passeios que a<span
+ class="text-primary text-uppercase"
+ >
+ Pousada Amagali</span
+ >
+ oferece
+ </h1>
+ <div class="bg-g py-5">
+ <div class="container">
+ <div class="row g-5 align-items-center">
+ <div class="col-lg-6">
+ <h2 class="mb-5 text-center" style="color: #003277">
+ Passeio de Canoa
+ </h2>
+ <p class="mb-4 text_about text-dark mt-5">
+ Um giro ecológico e exótico em nosso paraíso, uma experiência
+ única, extração e degustação de ostras selvagens nos
+ manguezais, apreciar nossas salinas e se encantar de nossas
+ belezas naturais apreciando belas dunas.<br />
+ Canoa ecológico com degustação de ostras, frutas e ceviche.
+ </p>
+ <ul class="text-dark text_about">
+ <li>
+ Passeios ecológicos com um tour na eco-gastronomia no
+ paraíso de Galinhos/RN
+ </li>
+ <li>Passeios exclusivos para casais, amigos e família.</li>
+ <li>Através de agendamentos com antecedência</li>
+ </ul>
+ <p class="text-dark text_about">
+ ROTEIRO:<br />
+ Saída de barco para o manguezal, salina, dunas do capim,
+ parada para o almoço nas dunas de galos e dunas do André. O
+ tempo do passeio tem duração de 4 horas e percorre 16 km da
+ saída ao destino final.
+ </p>
+ <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Saiba Mais</a> -->
+ </div>
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="col-6 text-end">
+ <img
+ class="img-fluid rounded w-100 wow zoomIn"
+ data-wow-delay="0.1s"
+ src="img/service/canoa1.png"
+ style="margin-top: 25%"
+ />
+ </div>
+ <div class="col-6 text-start">
+ <img
+ class="img-fluid rounded w-100 wow zoomIn"
+ data-wow-delay="0.3s"
+ src="img/service/canoa2.png"
+ />
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="container-xxl py-5">
+ <div class="container">
+ <div class="row g-5 align-items-center">
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="col-6 text-end">
+ <img
+ class="img-fluid rounded w-100 wow zoomIn"
+ data-wow-delay="0.1s"
+ src="img/service/buggy1.jpg"
+ />
+ </div>
+ <div class="col-6 text-start">
+ <img
+ class="img-fluid rounded w-100 wow zoomIn"
+ data-wow-delay="0.3s"
+ src="img/service/buggy2.png"
+ style="margin-top: 25%"
+ />
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-6">
+ <h2 class="mb-5 text-center" style="color: #003277">
+ Passeio de Buggy
+ </h2>
+ <p class="mb-4 text_about text-dark mt-5">
+ Aventura, emoção e muita diversão, uma experiência única de
+ encanto sobre nossas dunas e belas praias com direito a
+ paradas para o desfrute de nossos principais pontos
+ turísticos.
+ </p>
+ <ul class="text-dark text_about">
+ <li>
+ Passeios com um tour pelos principais pontos turísticos de
+ Galinhos
+ </li>
+ <li>Passeios exclusivos para casais, amigos e família</li>
+ <li>
+ Através de agendamentos com antecedência com a associação de
+ bugueiros
+ </li>
+ </ul>
+ <p class="text-dark text_about">
+ ROTEIRO:<br />
+ Saída da pousada com paradas pré determinadas - , praia do
+ farol, Galos, dunas do capim, dunas de galos e dunas do André.
+ O tempo do passeio tem duração de 2 horas
+ </p>
+ <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Saiba Mais</a> -->
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="bg-g py-5">
+ <div class="container">
+ <div class="row g-5 align-items-center">
+ <div class="col-lg-6">
+ <h2 class="mb-5 text-center" style="color: #003277">
+ Passeio e Trilha de caiaque
+ </h2>
+ <p class="mb-4 text_about text-dark mt-5">
+ Esporte com Natureza é a combinação perfeita, desfrute de
+ nossas belezas naturais sobre as águas em nosso passeio de
+ caiaque, uma experiência incrível sobre as águas de sal do
+ nosso paraíso, conheça nossas trilhas e se encante.
+ </p>
+ <ul class="text-dark text_about">
+ <li>
+ Trilhas aquáticas em caiaque - R$ 70,00 por pessoa Passeios
+ com um tour pelas águas de Galinhos - uma experiência única
+ </li>
+ <li>Passeios exclusivos para casais, amigos e família</li>
+ <li>Através de agendamentos com antecedência</li>
+ </ul>
+ <br />
+ <p class="text-dark text_about">
+ ROTEIRO:<br />
+ Saída da pousada com paradas pré determinadas - você escolhe a
+ trilha O tempo do passeio tem duração de 3 horas.
+ </p>
+ <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Saiba Mais</a> -->
+ </div>
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="col-6 text-end">
+ <img
+ class="img-fluid rounded w-100 wow zoomIn"
+ data-wow-delay="0.1s"
+ src="img/service/caiaque1.jpg"
+ style="margin-top: 25%"
+ />
+ </div>
+ <div class="col-6 text-start">
+ <img
+ class="img-fluid rounded w-100 wow zoomIn"
+ data-wow-delay="0.3s"
+ src="img/service/caiaque2.png"
+ />
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="container-xxl py-5">
+ <div class="container">
+ <div class="row g-5 align-items-center mb-5">
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="col-6 text-end">
+ <img
+ class="img-fluid rounded w-100 wow zoomIn"
+ data-wow-delay="0.1s"
+ src="img/service/pordosol1.jpg"
+ />
+ </div>
+ <div class="col-6 text-start">
+ <img
+ class="img-fluid rounded w-100 wow zoomIn"
+ data-wow-delay="0.3s"
+ src="img/service/pordosol2.jpg"
+ style="margin-top: 25%"
+ />
+ </div>
+ </div>
+ </div>
+ <div class="col-lg-6">
+ <h2 class="mb-5 text-center" style="color: #003277">
+ Charrete pôr do sol no farol
+ </h2>
+ <p class="mb-4 text_about text-dark mt-5">
+ Ir ao encontro do por do sol na Praia do Farol é um programa
+ imperdível em Galinhos. Passeios exclusivos para casais,
+ amigos e família.
+ </p>
+ <ul class="text-dark text_about">
+ <li>Passeios exclusivos para casais, amigos e família</li>
+ <li>
+ Através de agendamentos com antecedência com a associação de
+ charreteiros.
+ </li>
+ </ul>
+ <p class="text-dark text_about">
+ ROTEIRO:<br />
+ Saída da pousada por volta das 16:30h e retornar para a
+ pousada. O tempo do passeio tem duração de 1:30 hora e
+ percorre 3 km pela praia.
+ </p>
+ <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Saiba Mais</a> -->
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <section class="bg-outras">
+ <div class="bg-g py-5">
+ <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+ <h6
+ class="section-title2 text-center text-primary text-uppercase mb-5"
+ style="color: #002f72 !important"
+ >
+ Outras Atividades
+ </h6>
+ </div>
+ <div class="container mt-5">
+ <div class="row g-5 align-items-center">
+ <div class="col-lg-6">
+ <h4 class="mt-3" style="color: #003277">Massagem Relaxante</h4>
+ <ul class="text-dark text_about mb-5">
+ <li>Serviço realizado por parceiros</li>
+ <li>Através de agendamentos com antecedência na recepção</li>
+ <li>O tempo de duração de 50 minutos</li>
+ </ul>
+ <h4 class="" style="color: #003277">Aula de Yoga</h4>
+ <ul class="text-dark text_about">
+ <li>Serviço realizado por parceiros</li>
+ <li>Através de agendamentos com antecedência na recepção</li>
+ <li>O tempo de duração de 1 hora</li>
+ </ul>
+ <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Saiba Mais</a> -->
+ </div>
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div class="col-6 text-end">
+ <img
+ class="img-fluid rounded w-100 wow zoomIn"
+ data-wow-delay="0.1s"
+ src="img/Massagem 1.jpg"
+ style="margin-top: 25%"
+ />
+ </div>
+ <div class="col-6 text-start">
+ <img
+ class="img-fluid rounded w-100 wow zoomIn"
+ data-wow-delay="0.3s"
+ src="img/Espaco Yoga.jpg"
+ />
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="container mt-5 p-5">
+ <div class="row g-5 align-items-center">
+ <div class="col-lg-6">
+ <div class="">
+ <h4 class="mt-3 mb-3 text-center" style="color: #003277">
+ Kitesurf
+ </h4>
+ <p class="text_about">
+ A PENÍNSULA DO VENTO A 165 quilômetros ao norte de Natal,
+ Galinhos é um pedacinho do paraíso para as férias de kitesurf
+ no Brasil, localizada em uma península arenosa entre uma braço
+ de mar e o Oceano Atlântico. Esta pequena vila bucólica seduz
+ pelos seus recantos e pelas dunas envolventes que deslizam por
+ praias desertas. No ritmo da vida mais lento, você saboreia a
+ recepção calorosa das famílias. Alegria e uma forte mudança de
+ cenário garantida!
+ <br />
+ Devido à sua localização geográfica excepcional, o spot é
+ versátil: kitesurfistas de todos os níveis encontrarão o que
+ procuram e poderão navegar em 4 spots diferentes de acordo com
+ o seu nível e prática.
+ <br />
+ O vento sopra constante o ano todo em Galinhos. Os melhores
+ meses para kitesurf são de outubro a março. Neste momento, os
+ ventos do nordeste sopram com uma força de 20 a 30 nós.
+ </p>
+ <span class="text_about">Temporadas e Sport</span>
+ <ul class="text_about">
+ <li>Novembro a março: 3 Sport</li>
+ </ul>
+ <span class="text_about"
+ >Praia de Galinhos, praia do presídio, Lagoa do Capim.</span
+ >
+ <ul class="text_about">
+ <li>Julho a outubro: 3 Sport</li>
+ </ul>
+ <span class="text_about"
+ >Em frente à pousada Amagali no braço do mar, praia do
+ presídio, Lagoa do Capim. O acesso ao Sport pode ser com Barco
+ para Presídio, Charrete e buggy para os demais.</span
+ >
+ <!-- <a class="btn btn-primary py-3 px-5 mt-3" href="">Saiba Mais</a> -->
+ </div>
+ </div>
+ <div class="col-lg-6">
+ <div class="row g-3">
+ <div
+ class="img-fluid rounded pt-lg-0 contentd-flex align-items-center text-center"
+ >
+ <img class="img_kit" src="img/service/kitsurf1.jpg" alt="" />
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!-- About End -->
+ </div>
+ <!-- Footer Start -->
+ <div class="section-footer">
+ <section class="">
+ <div class="container">
+ <div class="row">
+ <div class="col-12 text-center">
+ <div class="widget-a">
+ <div class="w-header-a">
+ <img
+ class="mb-4"
+ src="./img/logo1.png"
+ style="width: 150px"
+ alt=""
+ />
+ <!-- <script type="text/javascript" src="https://form.jotform.com/jsform/222304669118657"></script> -->
+ </div>
+ <div class="w-footer-a">
+ <ul class="list-unstyled">
+ <li class="color-a">
+ <!-- <span class="color-text-a itens-footer2">Número:</span> -->
+ <i class="bi bi-whatsapp footer-icon-color ms-3"></i>
+ <span class="itens-footer"><b>+55 84 99452-1317</b></span>
+ </li>
+ <li class="color-a">
+ <!-- <span class="color-text-a itens-footer2">Email:</span> -->
+ <i class="bi bi-envelope footer-icon-color ms-3"></i>
+ <span class="itens-footer"><b>info@amagali.com</b></span>
+ </li>
+ </ul>
+ </div>
+ </div>
+ <div class="container">
+ <div class="row">
+ <div class="col-12 text-center mb-0">
+ <div class="widget-a">
+ <div class="w-header-a">
+ <h4 class="itens-footer"><b>Links úteis</b></h4>
+ </div>
+ </div>
+ </div>
+ <div class="col-md-12">
+ <nav class="nav-footer">
+ <ul class="list-inline itens-footer">
+ <li class="list-inline-item">
+ <a class="itens-footer" href="index.html"
+ ><b>Início</b></a
+ >
+ </li>
+ <li class="list-inline-item">
+ <a class="itens-footer" href="index.html#about"
+ ><b>Sobre</b></a
+ >
+ </li>
+ <li class="list-inline-item">
+ <a class="itens-footer" href="index.html#service"
+ ><b>Serviços</b></a
+ >
+ </li>
+ <!-- <li class="list-inline-item">
+ <a class="itens-footer" href="index.html#project"><b>Projetos</b></a>
+ </li> -->
+ <li class="list-inline-item">
+ <a class="itens-footer" href="index.html#contact"
+ ><b>Contato</b></a
+ >
+ </li>
+ <li class="list-inline-item">
+ <a
+ class="itens-footer"
+ href="cookies.html"
+ target="_blank"
+ ><b>Política de Cookies</b></a
+ >
+ </li>
+ <div class="socials-a">
+ <ul class="list-inline">
+ <li class="list-inline-item">
+ <a
+ class="itens-footer2"
+ target="_blank"
+ href="https://api.whatsapp.com/send?l=pt&phone=55558499452-1317&text=Olá, gostaria de saber mais sobre serviços da Pousada Amagali!"
+ >
+ <i class="fa-brands fa-whatsapp"></i>
+ </a>
+ </li>
+ <li class="list-inline-item">
+ <a
+ class="itens-footer2"
+ target="_blank"
+ href="https://www.instagram.com/amagalipousada/"
+ >
+ <i class="fa-brands fa-instagram"></i>
+ </a>
+ </li>
+ <!-- <li class="list-inline-item">
+ <a class="itens-footer2" target="_blank" href="https://www.linkedin.com/in/vialconex-minera%C3%A7%C3%A3o-consultoria-ambiental-e-florestal-8b227523b/">
+ <i class="fa-brands fa-linkedin"></i>
+ </a>
+ </li> -->
+ </ul>
+ </div>
+ </ul>
+ </nav>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <footer>
+ <div class="container">
+ <div class="row">
+ <div class="col-12 text-center">
+ <div class="copyright-footer">
+ <p class="copyright color-text-a text-white">
+ &copy;<a class="itens-footer_cli"><b>Amagali</b></a> All Right
+ Reserved.
+ </p>
+ </div>
+ <div class="credits">
+ <a
+ class="itens-footer_cli"
+ href="https://venxtecnologia.com.br/"
+ ><b>Venx Tecnologia&copy;</b></a
+ >
+ </div>
+ </div>
+ </div>
+ </div>
+ </footer>
+ </div>
+ <!-- Back to Top -->
+ <div>
+ <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+ ><i class="bi bi-arrow-up"></i
+ ></a>
+ </div>
+ <!-- JavaScript Libraries -->
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="lib/wow/wow.min.js"></script>
+ <script src="lib/easing/easing.min.js"></script>
+ <script src="lib/waypoints/waypoints.min.js"></script>
+ <script src="lib/counterup/counterup.min.js"></script>
+ <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+ <script src="lib/tempusdominus/js/moment.min.js"></script>
+ <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+ <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+ <script
+ src="https://kit.fontawesome.com/d6d3e12fa0.js"
+ crossorigin="anonymous"
+ ></script>
+ <!-- Template Javascript -->
+ <script src="js/main.js"></script>
+ </body>
+</html>

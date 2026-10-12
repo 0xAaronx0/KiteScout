@@ -1,0 +1,654 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt"
+ class="ios-preview-native-scroll">
+<head>
+ <meta charset="utf-8">
+<script type="text/javascript"></script>
+<!-- Injecting site-wide to the head -->
+<script type="text/javascript" id="d_track_campaign" data-entry-referrer data-utm-cookies></script>
+<script type="text/javascript" ></script>
+<!-- End Injecting site-wide to the head -->
+<meta name="d-service-worker" content="register">
+<link rel="canonical" href="https://www.pousadaraia1.com.br/acomodacoes">
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon"
+ href="https://irp.cdn-website.com/05334b84/dms3rep/multi/favicon-c0ab9d2b.png"/>
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/05334b84/site_favicon_16_1788442927689.ico"/>
+<link rel="preconnect" href="https://irp.cdn-website.com"/>
+<link rel="preconnect" href="https://irp.cdn-website.com" crossorigin/>
+<link rel="preconnect" href="https://static.cdn-website.com"/>
+<script id='d-js-dmapi'></script>
+<script id="d-js-load-css"></script>
+<script data-role="deferred-init" type="text/javascript"></script>
+<style id="forceCssIncludes"></style>
+<style id="cssVariables" type="text/css"></style>
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;subset=latin-ext&amp;display=swap" />
+<link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/6831/_dm/s/rt/dist/css/d-css-runtime-flex-new-nav.min.css" />
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/46b5e33ebd291a81ad22d0609e408710.css" id="widgetCSS" />
+<style></style>
+<style></style>
+<style id="pageAdditionalWidgetsCss" type="text/css"></style>
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/05334b84/files/05334b84_1.min.css?v=15" id="siteGlobalCss" />
+<style id="customWidgetStyle" type="text/css"></style>
+<style id="innerPagesStyle" type="text/css"></style>
+<style
+ id="additionalGlobalCss" type="text/css"
+></style>
+<style id="pagestyle" type="text/css"></style>
+<style id="pagestyleDevice" type="text/css"></style>
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-common-aa7b8343-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-common-4c807e51-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-common-061de8b2-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-common-e9848efa-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-common-41660c63-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-common-7161fa0b-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-common-b1219ffa-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-flex-footer-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-flex-header-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-common-flex-header-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-c093187e-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-295296ff-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-18f5ea00-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-63a049320d35b55b4ef2a372-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-6406026c90e1521f6ecb0eca-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-63da2bddeae8da42b2353671-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-d99bab6d-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-common-0c09f7a7-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-desktop-flex-header-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-desktop-6406026c90e1521f6ecb0eca-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet_implicit-flex-header-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-tablet-aa7b8343-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-tablet-4c807e51-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-tablet-061de8b2-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-tablet-e9848efa-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-tablet-41660c63-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-tablet-7161fa0b-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-tablet-b1219ffa-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-flex-footer-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-flex-header-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-c093187e-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-295296ff-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-18f5ea00-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-63a049320d35b55b4ef2a372-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-6406026c90e1521f6ecb0eca-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-63da2bddeae8da42b2353671-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-d99bab6d-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-tablet-0c09f7a7-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+<style id="globalFontSizeStyle" type="text/css"></style>
+<style id="pageFontSizeStyle" type="text/css"></style>
+<style id="hideAnimFix"></style>
+<style id="fontFallbacks"></style>
+ <link type="application/rss+xml" rel="alternate" href="https://www.pousadaraia1.com.br/feed/rss2"/>
+ <link type="application/atom+xml" rel="alternate" href="https://www.pousadaraia1.com.br/feed/atom"/>
+ <meta property="og:type" content="website"/>
+ <meta property="og:url" content="https://www.pousadaraia1.com.br/acomodacoes"/>
+ <meta property="og:image" content="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/seo-1920w.jpg"/>
+ <title>
+ Acomodações Na Praia de Ibiraquera, SC | Pousada Raia 1
+ </title>
+ <meta name="keywords" content="santa catarina, ibiraquera, pousada, pousada raia 1, acomodação"/>
+ <meta name="description" content="Conheça Nossas Confortáveis Acomodações e Escolha a Melhor Para você viver Dias Incríveis em Ibiraquera, SC. Melhor Preço Pelo Site."/>
+ <meta name="twitter:card" content="summary"/>
+ <meta name="twitter:title" content="Acomodações Na Praia de Ibiraquera, SC | Pousada Raia 1"/>
+ <meta name="twitter:description" content="Conheça Nossas Confortáveis Acomodações e Escolha a Melhor Para você viver Dias Incríveis em Ibiraquera, SC. Melhor Preço Pelo Site."/>
+ <meta property="og:description" content="Conheça Nossas Confortáveis Acomodações e Escolha a Melhor Para você viver Dias Incríveis em Ibiraquera, SC. Melhor Preço Pelo Site."/>
+ <meta property="og:title" content="Acomodações Na Praia de Ibiraquera, SC | Pousada Raia 1"/>
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+<body id="dmRoot" data-page-alias="acomodacoes" class="dmRoot fix-mobile-scrolling flex-site dmResellerSite "
+ style="padding:0;margin:0;"
+ data-flex-site >
+<div id="dm" class='dmwr'>
+ <div class="dm_wrapper -var5 null ">
+ <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="FlexHeader" data-responsive-name="FlexLayout" class="runtime-module-container dm-bfs dm-layout-sec hasAnimations hasStickyHeader inMiniHeaderMode rows-1200 hamburger-reverse dmPageBody d-page-1716942098 inputs-css-clean dmDHeader" id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner" data-auto="page-inner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div id="site_content"> <div id="dmFlexHeaderContainer" class="flex_hfcontainer"> <div id="flex-header" data-variation-id="variation0" class="" data-sticky="true" data-changeable-on-scroll="true" data-changeable-on-scroll-properties="|text-color|navigation-links-color|" data-only-nav-sections-visible="true" data-overlapping-common="true" role="banner"> <div data-auto="flex-section" id="1990152846" data-flex-id="c093187e" data-layout-section="" data-page-element-type="section" data-page-element-id="1475755753" class="hotel-info" data-custom-class-name="hotel-info" data-hidden-on-tablet="true" data-hidden-on-mobile="true"> <div class="flex-widgets-container" id="1140644136"></div> 
+ <section id="1c1481e3" class="flex-element section" data-auto="flex-element-section"> <div id="603c3bb7" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="9dc5a074" class="flex-element group" data-auto="flex-element-group" data-hidden-on-tablet="" data-hidden-on-mobile=""> <div id="88e69a6f" class="flex-element group" data-auto="flex-element-group"></div> 
+ <div id="780d21df" class="flex-element group" data-auto="flex-element-group" data-hidden-on-tablet="" data-hidden-on-mobile=""> <div id="group_msd" class="flex-element group" data-auto="flex-element-group"> <div id="widget_b8g" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="graphic" data-keep-proportion="true" data-external-id="791276173"> <div class="graphicWidget graphicWidgetV2 graphicWidgetV3 u_791276173" data-element-type="graphic" data-widget-type="graphic" id="791276173"> <svg></svg> 
+</div> 
+</div> 
+ <div id="592603b5" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1863917876"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1863917876" style="" data-diy-text=""><p style="--font-unit: 1px;" class="text-align-center"><a href="https://api.whatsapp.com/send?l=pt_BR&phone=5548991213065" target="_blank" runtime_url="https://api.whatsapp.com/send?l=pt_BR&phone=5548991213065" type="url" style="color: rgb(255, 255, 255); display: initial;">55 (48) 99121-3065</a></p></div> 
+</div> 
+</div> 
+ <div id="widget_rtg" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="socialhub" data-external-id="3586008638"> <div class="align-center text-align-center u_3586008638 dmSocialHub gapSpacing" id="3586008638" dmle_extension="social_hub" data-element-type="social_hub" data-binding="W3siYmluZGluZ05hbWUiOiJzb2NpYWwiLCJ2YWx1ZSI6ImNvbnRlbnRfbGlicmFyeS5nbG9iYWwuc29jaWFsIn1d" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv " data-auto="social-hub-inner"> <a href="https://facebook.com/Raia1Pousada" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style9" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://instagram.com/pousadaraia1ibiraquera" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style9" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://wa.me/5548991213065" target="_blank" dm_dont_rewrite_url="true" aria-label="whatsapp" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Whatsapp&apos;)"> <span class="dmSocialWhatsapp dm-social-icons-whatsapp oneIcon socialHubIcon style9" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="764397de" class="flex-element group" data-auto="flex-element-group" data-hidden-on-desktop=""> <div id="00ca91b4" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="hamburgerButton" data-external-id="1998777521"> <button class="hamburgerButton" data-element-type="hamburgerButton" id="1998777521" aria-controls="hamburger-drawer" aria-expanded="false" aria-label="Open menu"> <svg></svg> 
+</button> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1652594516" data-flex-id="295296ff" data-layout-section="" data-page-element-type="section" data-page-element-id="1475755753" class="navbar-section" data-custom-class-name="navbar-section"> <div class="flex-widgets-container" id="1832314796"></div> 
+ <section id="82faadce" class="flex-element section" data-auto="flex-element-section"> <div id="6c405017" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="073117d5" class="flex-element group" data-auto="flex-element-group"> <div id="375113d2" class="flex-element group navbar-logo-column" data-auto="flex-element-group"> <div id="3dbef8e4" class="flex-element widget-wrapper navbar-logo" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="1935499080"> <div class="imageWidget align-center u_1935499080" data-element-type="image" data-widget-type="image" id="1935499080" data-binding="W3siYmluZGluZ05hbWUiOiJpbWFnZSIsInZhbHVlIjoic2l0ZV9pbWFnZXMubG9nbyJ9XQ=="> <a href="/" id="1319215371" file="false"><img src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/logo-1920w.png" alt="" id="1963335214" class="" data-dm-image-path="https://irp.cdn-website.com/05334b84/dms3rep/multi/logo.png" width="32" height="9" data-diy-image="" onerror="handleImageLoadError(this)"/><img src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/6c0a2d9e9e774182a4784304e7884a09-1920w.png" class="logo-on-scroll v2" fetchpriority="low" aria-hidden="true" id="1292062462" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+ <div id="group_rdp" class="flex-element group navbar-icons-column" data-auto="flex-element-group" data-hidden-on-desktop=""> <div id="41767835" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="hamburgerButton" data-external-id="1684538438"> <button class="hamburgerButton" data-element-type="hamburgerButton" id="1684538438" aria-controls="hamburger-drawer" aria-expanded="false" aria-label="Open menu"> <svg></svg> 
+</button> 
+</div> 
+ <div id="24fc843a" class="flex-element widget-wrapper navbar-mobile-calendar-icon" data-auto="flex-element-widget-wrapper" data-keep-proportion="true" data-widget-type="graphic" data-external-id="1167581400"> <div class="graphicWidget graphicWidgetV2 graphicWidgetV3 u_1167581400" data-element-type="graphic" data-widget-type="graphic" id="1167581400" data-layout="graphic-style-3"> <a href="https://hbook.hsystem.com.br/booking?companyId=5e0f8c0cab41d40cc85f6c3e" id="1829054622" file="false" class="" target="_blank"> <svg></svg> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="bd9f0e42" class="flex-element group navbar-links" data-auto="flex-element-group" data-hidden-on-tablet="" data-hidden-on-mobile=""> <div id="d750c691" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ONELinksMenu" data-hidden-on-tablet="" data-hidden-on-mobile="" data-external-id="1424810530"> <nav class="effect-bottom2 u_1424810530 main-navigation unifiednav dmLinksMenu" data-auto="links-menu" role="navigation" layout-main="horizontal_nav_layout_1" layout-sub="submenu_horizontal_1" data-show-vertical-sub-items="HOVER" id="1424810530" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container unav-top " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_00 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="INÍCIO" data-auto="page-text-style">IN&Iacute;CIO<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/acomodacoes" class="unifiednav__item unav-item unav-top-item dmNavItemSelected dmUDNavigationItem_010101441442 " target="" data-target-page-alias="" aria-current="page" data-auto="selected-page"> <span class="nav-item-text " data-link-text="ACOMODAÇÕES" data-auto="page-text-style">ACOMODA&Ccedil;&Otilde;ES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/ibiraquera" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_010101488361 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="IBIRAQUERA" data-auto="page-text-style">IBIRAQUERA<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/atividades" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_010101153683 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="ATIVIDADES" data-auto="page-text-style">ATIVIDADES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/fale-conosco" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_010101152840 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="CONTATO" data-auto="page-text-style">CONTATO<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+ <div id="6392140c" class="flex-element group" data-auto="flex-element-group" data-hidden-on-desktop="" data-hidden-on-tablet="" data-hidden-on-mobile=""></div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+ <div id="hamburger-drawer" class="hamburger-drawer layout-drawer" layout="5ff40d2f36ae4e5ea1bc96b2e2fcf67e===header" data-origin="top" data-auto-height="true"> <div data-layout-section="" data-auto="flex-section" id="1558513594" data-flex-id="18f5ea00" class=""> <div class="flex-widgets-container" id="1554675836"></div> 
+ <section id="f6054f97" class="flex-element section" data-auto="flex-element-section"> <div id="ef8b5b8a" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="a1f8711f" class="flex-element group" data-auto="flex-element-group"> <div id="9d047ce9" class="flex-element group" data-auto="flex-element-group"> <div id="widget_1fr" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="538822133"> <div class="imageWidget align-center" data-element-type="image" data-widget-type="image" id="538822133" data-binding="W3siYmluZGluZ05hbWUiOiJpbWFnZSIsInZhbHVlIjoic2l0ZV9pbWFnZXMubG9nbyJ9XQ=="> <a href="/" id="1639978839"><img src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/logo-1920w.png" alt="" id="1168557513" data-diy-image="" data-dm-image-path="https://irp.cdn-website.com/05334b84/dms3rep/multi/logo.png" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+</div> 
+ <div id="group_4fe" class="flex-element group" data-auto="flex-element-group"> <div id="12a003a5" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="hamburgerButton" data-external-id="1717245942"> <button class="hamburgerButton" data-element-type="hamburgerButton" id="1717245942" aria-controls="hamburger-drawer" aria-expanded="false" aria-label="Close menu"> <svg></svg> 
+</button> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1099442592" data-flex-id="63a049320d35b55b4ef2a372" data-layout-section=""> <div class="flex-widgets-container" id="1247649854"></div> 
+ <section id="63a049320d35b55b4ef2a373" class="flex-element section" data-auto="flex-element-section"> <div id="63a049320d35b55b4ef2a376" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="63a049320d35b55b4ef2a377" class="flex-element group" data-auto="flex-element-group"> <div id="63a049320d35b55b4ef2a374" class="flex-element group" data-auto="flex-element-group"> <div id="63a049ca0d35b55b4ef2a5c3" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ONELinksMenu" data-external-id="1998592992"> <nav class="u_1998592992 effect-background main-navigation unifiednav dmLinksMenu" data-auto="links-menu" role="navigation" layout-main="vertical_nav_layout_3" layout-sub="" data-show-vertical-sub-items="HIDE" id="1998592992" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container unav-top " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_00 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="INÍCIO" data-auto="page-text-style">IN&Iacute;CIO<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/acomodacoes" class="unifiednav__item unav-item unav-top-item dmNavItemSelected dmUDNavigationItem_010101441442 " target="" data-target-page-alias="" aria-current="page" data-auto="selected-page"> <span class="nav-item-text " data-link-text="ACOMODAÇÕES" data-auto="page-text-style">ACOMODA&Ccedil;&Otilde;ES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/ibiraquera" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_010101488361 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="IBIRAQUERA" data-auto="page-text-style">IBIRAQUERA<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/atividades" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_010101153683 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="ATIVIDADES" data-auto="page-text-style">ATIVIDADES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/fale-conosco" class="unifiednav__item unav-item unav-top-item dmUDNavigationItem_010101152840 " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="CONTATO" data-auto="page-text-style">CONTATO<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1029527021" data-flex-id="6406026c90e1521f6ecb0eca" data-layout-section="" class="" data-hidden-on-tablet="true" data-hidden-on-mobile="true"> <div class="flex-widgets-container" id="1659590659"></div> 
+ <section id="6406026c90e1521f6ecb0ec9" class="flex-element section" data-auto="flex-element-section"> <div id="6406026c90e1521f6ecb0ecb" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="6406026c90e1521f6ecb0ecc" class="flex-element group" data-auto="flex-element-group" data-hidden-on-desktop="" data-hidden-on-tablet="" data-hidden-on-mobile=""> <div id="6406026c90e1521f6ecb0ecd" class="flex-element group" data-auto="flex-element-group"> <div id="widget_s4l" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1287536004"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1287536004" style=""> <h4 style="line-height: 2;" class="m-text-align-left"><span style="display: unset; color: var(--color_1);">Get in touch</span></h4> 
+<p style="line-height: 2;" class="m-text-align-left"><span style="display: unset; color: var(--color_1);">555-555-5555</span></p><p style="line-height: 2;" class="m-text-align-left"><span style="display: unset; color: var(--color_1);">mymail@mailservice.com</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+ <div class="layout-drawer-overlay" id="layout-drawer-overlay"></div> 
+</div> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_acomodacoes dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper" data-auto="all-wrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent" role="main"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl" id="1716942098"> <div data-auto="flex-section" id="1272519831" data-flex-id="aa7b8343" data-layout-section="" data-page-element-type="section" data-page-element-id="1814512908"> <div class="flex-widgets-container" id="1201703620"></div> 
+ <section id="ff040c06" class="flex-element section" data-auto="flex-element-section"> <div id="8b8cdb05" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="ec29f036" class="flex-element group" data-auto="flex-element-group"> <div id="3b5e057a" class="flex-element group" data-auto="flex-element-group"> <div id="38573772" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="custom" data-hidden-on-tablet="" data-hidden-on-mobile="" data-external-id="1198723390"> <div class="widget-54be00 u_1198723390 dmCustomWidget" data-lazy-load="true" data-title="" id="1198723390" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="54be00a7a1b74cdfa3fbc1bc65d9e75d" data-widget-version="34" data-widget-config="eyJ1bmRlZmluZWQiOiIjMWYyOTM3IiwiY29tcGFueUlkIjoiNWUwZjhjMGNhYjQxZDQwY2M4NWY2YzNlIiwiY2hhaW5JZCI6IiIsIm1vbnRoc1RvTG9hZCI6IjMiLCJtYXhBZHVsdHMiOiI2IiwiZGVmYXVsdEFkdWx0cyI6IjIiLCJtYXhDaGlsZHJlbiI6IjQiLCJtaW5EYXlzU3RheSI6IjEiLCJlbmFibGVTdGlja3lCb3R0b20iOnRydWUsImNoZWNrSW5QbGFjZWhvbGRlciI6IkRhdGEgZGUgZW50cmFkYSIsImNoZWNrT3V0UGxhY2Vob2xkZXIiOiJEYXRhIGRlIHNhw61kYSIsImNoaWxkcmVuQWdlc0xhYmVsIjoiSWRhZGUgZGFzIGNyaWFuw6dhcyIsInNob3dQcm9tb0NvZGUiOnRydWUsInByb21vUGxhY2Vob2xkZXIiOiJQcm9tb8Onw6NvIiwiYnV0dG9uVGV4dCI6IkNPTlNVTFRBUiBWQUxPUkVTIiwibGFuZ3VhZ2UiOiJwdCIsInRvcERpc3RhbmNlIjoiMTYwIiwiYmFyV2lkdGhQeCI6Ijk2MCIsImJhckhlaWdodCI6IjkwIiwiYmFyUGFkZGluZ0hvcml6b250YWwiOiI2NSIsImJhckJvcmRlclJhZGl1cyI6IjYiLCJmaWVsZEZvbnRTaXplIjoiMTQiLCJmaWVsZFBhZGRpbmciOiIyMCIsImZpZWxkc0dhcCI6IjEiLCJpbnB1dEJvcmRlclJhZGl1cyI6IjAiLCJidXR0b25Cb3JkZXJSYWRpdXMiOiIwIiwiY2FsZW5kYXJJY29uQ29sb3IiOiJ2YXIoLS1jb2xvcl8xKSIsImNhbGVuZGFySGVhZGVyQmciOiJ2YXIoLS1jb2xvcl8xKSIsImNhbGVuZGFyRGF5QmciOiIjZDdkZGJlIiwiY2FsZW5kYXJEYXlIb3ZlckJnIjoicmdiYSgxODQsIDEzNCwgMTEsIDAuMSkiLCJjYWxlbmRhckJvcmRlckNvbG9yIjoiI2QxZDVkYiIsImNhbGVuZGFyU2VsZWN0ZWREYXlCZyI6InZhcigtLWNvbG9yXzEpIn0="> <script src="https://cdn.tailwindcss.com"></script> 
+ <div class="hotel-booking-widget-hero" style="--top-distance: 160px; --bar-height: 90px; --bar-padding-horizontal: 65px; --field-font-size: 14px; --field-padding: 20px; --fields-gap: 1px; --input-border-radius: 0px; --button-border-radius: 0px; --bar-border-radius: 6px; --max-children: 4; --calendar-icon-color: var(--color_1); --calendar-day-bg: #d7ddbe; --calendar-day-hover-bg: rgba(184, 134, 11, 0.1); --calendar-border-color: #d1d5db; --calendar-selected-day-bg: var(--color_1); --calendar-header-bg: var(--color_1);"> <div class="booking-bar-hero" data-enable-sticky="true"> <div class="booking-bar-content-hero"> <form id="bookingForm" class="booking-form-hero"> <div class="form-field-hero"> <div class="input-wrapper-hero"><input type="text" id="checkInDate" class="date-input-hero" placeholder="Data de entrada" readonly="" aria-label="Data de entrada" data-placeholder-original="Data de entrada"/> <svg></svg> 
+</div> 
+</div> 
+ <div class="form-field-hero"> <div class="input-wrapper-hero"><input type="text" id="checkOutDate" class="date-input-hero" placeholder="Data de saída" readonly="" aria-label="Data de saída" data-placeholder-original="Data de saída"/> <svg></svg> 
+</div> 
+</div> 
+ <div class="form-field-hero"> <select id="adultsSelect" class="select-hero"></select> 
+</div> 
+ <div id="childrenFieldWrapper" class="form-field-hero children-field-wrapper"> <select id="childrenSelect" class="select-hero"></select> 
+</div> 
+ <div id="agesFieldWrapper" class="form-field-hero children-field-wrapper hidden"><input type="text" id="childrenAges" class="text-input-hero ages-display" placeholder="Idades" readonly="" aria-label="Idades" data-placeholder-original="Idades"/></div> 
+ <div class="form-field-hero"><input type="text" id="promoCode" class="text-input-hero" placeholder="Promoção" aria-label="Promoção" data-placeholder-original="Promoção"/></div> 
+ <button type="submit" class="submit-btn-hero">CONSULTAR VALORES</button> 
+</form> 
+</div> 
+ <div id="calendarModal" class="calendar-modal-hero hidden"> <div class="calendar-content-hero"> <div class="calendar-header-hero"> <button type="button" id="prevMonth" class="nav-btn-hero">&lsaquo;</button> 
+ <h3 id="currentMonth" class="month-title-hero"></h3> 
+ <button type="button" id="nextMonth" class="nav-btn-hero">&rsaquo;</button> 
+</div> 
+ <div id="calendarGrid" class="calendar-grid-hero"></div> 
+ <div id="calendarTooltip" class="calendar-tooltip-hero hidden"></div> 
+</div> 
+</div> 
+ <div id="childrenAgesPopup" class="children-popup-hero children-field-wrapper hidden"> <div class="children-popup-content-hero"> <h4 class="popup-title-hero">Idade das crian&ccedil;as</h4> 
+ <div id="childrenAgesFields" class="children-ages-grid-hero"></div> 
+ <button type="button" id="closeChildrenPopup" class="popup-close-btn-hero">OK</button> 
+</div> 
+</div> 
+</div> 
+ <div id="loadingIndicator" class="loading-overlay-hero hidden"> <div class="spinner-hero"></div> 
+ <p class="loading-text-hero">Carregando disponibilidade...</p> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1096247779" data-flex-id="4c807e51" data-layout-section=""> <div class="flex-widgets-container" id="1961705319"></div> 
+ <section id="20e78d2c" class="flex-element section" data-auto="flex-element-section"> <div id="7069a920" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="3992c5f2" class="flex-element group" data-auto="flex-element-group"> <div id="51c6a927" class="flex-element group" data-auto="flex-element-group"> <div id="widget_t0s" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="2153448554"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="2153448554" style=""> <h1 class="text-align-center" style="line-height: 1.1;"><span style="display: unset; color: var(--color_1);">Nossas Acomoda&ccedil;&otilde;es</span><span style="display: initial;"><br/></span></h1> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1736891766" data-flex-id="061de8b2" data-layout-section=""> <div class="flex-widgets-container" id="1575510137"></div> 
+ <section id="310fbc02" class="flex-element section" data-auto="flex-element-section"> <div id="2438bc5f" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="9d9c62f4" class="flex-element group" data-auto="flex-element-group"> <div id="3bc02ee4" class="flex-element group" data-auto="flex-element-group"> <div id="widget_pes" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="633796679"> <div id="633796679" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-633796679" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer diYMmP"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-54469" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/u1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-59961" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 2" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-34120" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 3" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-62053" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+ <div id="group_rmf" class="flex-element group" data-auto="flex-element-group"> <div id="group_r1a" class="flex-element group" data-auto="flex-element-group"> <div id="3f2418b2" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1690015692"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1690015692" style=""> <h2 class="text-align-left" style="line-height: 1.1;"><span style="display: initial;">SUPER LUXO (1)<br/></span></h2> 
+</div> 
+</div> 
+</div> 
+ <div id="5af593eb" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1528721931"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1528721931" style=""><p class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">De frente para o mar e com um visual privil&eacute;giado, a Su&iacute;te 1 Super Luxo oferece uma experi&ecirc;ncia &uacute;nica: uma vista para&nbsp; contemplar de todos &acirc;ngulos, at&eacute; dentro da banheira.</span></p> <ul class="defaultList bullet"><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">&nbsp;Cama King-size com roupas de cama e banho</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;"> <span style="display: initial;">Mezanino com dois colch&otilde;es extras</span> 
+</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">TV 42&quot; Smart</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Ar-condicionado split</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Banheiro com ducha aquecida por energia solar</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Banheira de hidromassagem dupla</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Frigobar</span></li><li style="line-height: 1.5;" class="text-align-justify"><span style="display: initial;">Sacada privativa com rede e vista para o mar</span></li><li style="line-height: 1.5;" class="text-align-justify"><span style="display: initial;">Cadeiras de praia</span></li><li style="line-height: 1.5;" class="text-align-justify"><span style="display: initial;">Guarda-sol</span></li></ul> 
+<p class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;"><span style="display: initial;">&nbsp; &nbsp; &nbsp;</span> 
+</span></p></div> 
+</div> 
+</div> 
+ <div id="widget_cbs" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1301864889"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton button_2 u_1301864889" file="false" href="https://hbook.hsystem.com.br/booking?companyId=5e0f8c0cab41d40cc85f6c3e" data-element-type="dButtonLinkId" id="1301864889" target="_blank"> <span class="iconBg" aria-hidden="true" id="1147050345"> <span class="icon hasFontIcon icon-star" id="1342591349"></span> 
+</span> 
+ <span class="text" id="1535113904">RESERVAR</span> 
+</a> 
+</div> 
+</div> 
+ <div id="681eb3c8" class="flex-element group" data-auto="flex-element-group"> <div id="943968be" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1252703099"> <div id="1252703099" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1252703099" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer diYMmP"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-54469" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/l1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-71964" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 2" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-20182" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 3" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-91561" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+ <div id="8350972f" class="flex-element group" data-auto="flex-element-group"> <div id="94ce449c" class="flex-element group" data-auto="flex-element-group"> <div id="dc6a547f" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1702906697"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1702906697" style=""> <h2 class="text-align-left" style="line-height: 1.1;"><span style="display: initial;">LUXO (2 OU 3)<br/></span></h2> 
+</div> 
+</div> 
+</div> 
+ <div id="898a749d" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1751456010"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1751456010" style=""><p class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">No segundo piso, de frente para o mar, as Su&iacute;tes 2 e 3 oferecem conforto e uma espetacular vista para o mar e a lagoa.</span></p> <ul class="defaultList bullet"><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Cama King-size com roupas de cama e banho</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;"><span style="display: initial;">Mezanino com dois colch&otilde;es extras</span> 
+</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">TV 42&quot; Smart</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Ar-condicionado</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Banheiro com ducha aquecida por energia solar</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Frigobar</span></li><li style="line-height: 1.5;" class="text-align-justify"><span style="display: initial;"><span style="display: initial;">Sacada privativa com rede</span> 
+</span></li><li style="line-height: 1.5;" class="text-align-justify"><span style="display: initial;">Cadeiras de praia</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Guarda-sol</span></li></ul> 
+<p><span style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+ <div id="03b06031" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1718242586"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton button_2 u_1718242586" file="false" href="https://hbook.hsystem.com.br/booking?companyId=5e0f8c0cab41d40cc85f6c3e" data-element-type="dButtonLinkId" id="1718242586" target="_blank"> <span class="iconBg" aria-hidden="true" id="1172592524"> <span class="icon hasFontIcon icon-star" id="1674590790"></span> 
+</span> 
+ <span class="text" id="1402920408">RESERVAR</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1175471324" data-flex-id="e9848efa" data-layout-section=""> <div class="flex-widgets-container" id="1711720079"></div> 
+ <section id="fb30eda1" class="flex-element section" data-auto="flex-element-section"> <div id="4097e318" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="c11e2e29" class="flex-element group" data-auto="flex-element-group"> <div id="69a3e313" class="flex-element group" data-auto="flex-element-group"> <div id="82676b29" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1010520855"> <div id="1010520855" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1010520855" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer gDtRCy"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-54469" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/sl1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-70882" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 2" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-88603" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+ <div id="818746ce" class="flex-element group" data-auto="flex-element-group"> <div id="a281349d" class="flex-element group" data-auto="flex-element-group"> <div id="725db0f5" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1420040276"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1420040276" style=""> <h2 class="text-align-left" style="line-height: 1.1;"><span style="display: initial;">SUPER LUXO (4)<br/></span></h2> 
+</div> 
+</div> 
+</div> 
+ <div id="d50ace90" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1382615319"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1382615319" style=""><p class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">No segundo piso, de frente para o mar, a Su&iacute;te 4 Super Luxo oferece conforto, privacidade e uma bela vista para o mar e a lagoa.</span></p> <ul class="defaultList bullet"><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Cama King-size com roupas de cama e banho</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;"><span style="display: initial;">Mezanino separado do quarto, com dois colch&otilde;es extras</span> 
+</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">TV 42&quot; Smart</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Ar-condicionado</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Banheiro com ducha aquecida por energia solar</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Banheira de hidromassagem dupla</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Frigobar</span></li><li style="line-height: 1.5;" class="text-align-justify"><span style="display: initial;"><span style="display: initial;">Sacada privativa com rede</span> 
+</span></li><li style="line-height: 1.5;" class="text-align-justify"><span style="display: initial;">Cadeiras de praia</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Guarda-sol</span></li></ul> 
+<p><span style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+ <div id="b3a2f7ba" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1374327808"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton button_2 u_1374327808" file="false" href="https://hbook.hsystem.com.br/booking?companyId=5e0f8c0cab41d40cc85f6c3e" data-element-type="dButtonLinkId" id="1374327808" target="_blank"> <span class="iconBg" aria-hidden="true" id="1031615768"> <span class="icon hasFontIcon icon-star" id="1187731181"></span> 
+</span> 
+ <span class="text" id="1492237174">RESERVAR</span> 
+</a> 
+</div> 
+</div> 
+ <div id="6cf30d1a" class="flex-element group" data-auto="flex-element-group"> <div id="48b8a071" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1999159940"> <div id="1999159940" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1999159940" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer faSOpW"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-54469" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/ls1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-276" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 2" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-21003" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 3" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-85386" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 4" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-47025" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 5" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-47258" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 6" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-59392" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+ <div id="15f96f5d" class="flex-element group" data-auto="flex-element-group"> <div id="476b84cc" class="flex-element group" data-auto="flex-element-group"> <div id="c1244650" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1106901620"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1106901620" style=""> <h2 class="text-align-left" style="line-height: 1.1;"><span style="display: initial;">LUXO (5 e 6)<br/></span></h2> 
+</div> 
+</div> 
+</div> 
+ <div id="cb17ba64" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1389382921"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1389382921" style=""><p class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">No segundo piso, de frente para o mar, as Su&iacute;tes 5 e 6 oferecem conforto e praticidade, com uma espetacular vista para o mar e a lagoa.</span></p> <ul class="defaultList bullet"><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Cama King-size com roupas de cama e banho</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Mezanino com duas camas extras</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">TV 42&quot; Smart</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Ar-condicionado</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Banheiro com ducha aquecida por energia solar</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Frigobar</span></li><li style="line-height: 1.5;" class="text-align-justify"><span style="display: initial;"><span style="display: initial;">Sacada privativa com rede</span> 
+</span></li><li style="line-height: 1.5;" class="text-align-justify"><span style="display: initial;">Cadeiras de praia</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Guarda-sol<br/></span></li></ul> 
+<p class="text-align-justify" style="line-height: 1.5;"><strong style="display: initial;">Observa&ccedil;&otilde;es:</strong></p> <ul class="defaultList bullet"><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Su&iacute;te 5: mezanino com espa&ccedil;o mais compacto.</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Su&iacute;te 6: mezanino com duas camas de solteiro.</span></li></ul> 
+<p><span style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+ <div id="b2f5f9e6" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1001112051"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton button_2 u_1001112051" file="false" href="https://hbook.hsystem.com.br/booking?companyId=5e0f8c0cab41d40cc85f6c3e" data-element-type="dButtonLinkId" id="1001112051" target="_blank"> <span class="iconBg" aria-hidden="true" id="1896296451"> <span class="icon hasFontIcon icon-star" id="1686116156"></span> 
+</span> 
+ <span class="text" id="1801039929">RESERVAR</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1823814232" data-flex-id="41660c63" data-layout-section=""> <div class="flex-widgets-container" id="1132299052"></div> 
+ <section id="b5cd295c" class="flex-element section" data-auto="flex-element-section"> <div id="d72d4dac" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="ec06d92b" class="flex-element group" data-auto="flex-element-group"> <div id="9e6fb465" class="flex-element group" data-auto="flex-element-group"> <div id="41f92d7a" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1238874730"> <div id="1238874730" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1238874730" ><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"></div><script data-role="hydration"></script></span></div> 
+</div> 
+ <div id="71206d71" class="flex-element group" data-auto="flex-element-group"> <div id="819c8c12" class="flex-element group" data-auto="flex-element-group"> <div id="0400a240" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1189063373"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1189063373" style=""> <h2 class="text-align-left" style="line-height: 1.1;">T&iacute;tulo Novo</h2> 
+</div> 
+</div> 
+</div> 
+ <div id="e9590ab3" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1212136984"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1212136984" style=""><p style="--font-unit: 0.08110cqw;">Par&aacute;grafo Novo</p></div> 
+</div> 
+</div> 
+ <div id="6b42f5ba" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1001763094"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton button_2 u_1001763094" file="false" href="https://hbook.hsystem.com.br/booking?companyId=5e0f8c0cab41d40cc85f6c3e" data-element-type="dButtonLinkId" id="1001763094" target="_blank"> <span class="iconBg" aria-hidden="true" id="1693044553"> <span class="icon hasFontIcon icon-star" id="1150225995"></span> 
+</span> 
+ <span class="text" id="1373862295">RESERVAR</span> 
+</a> 
+</div> 
+</div> 
+ <div id="fac44186" class="flex-element group" data-auto="flex-element-group"> <div id="75e45153" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1070006941"> <div id="1070006941" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1070006941" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer gDtRCy"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-54469" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/s1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-78488" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 2" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-75847" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+ <div id="35783f82" class="flex-element group" data-auto="flex-element-group"> <div id="b08e383c" class="flex-element group" data-auto="flex-element-group"> <div id="1d396959" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1927951521"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1927951521" style=""> <h2 class="text-align-left" style="line-height: 1.1;"><span style="display: initial;">STANDARD (8)<br/></span></h2> 
+</div> 
+</div> 
+</div> 
+ <div id="52551f93" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1109391032"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1109391032" style=""><p class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Localizada no segundo piso, voltada para o jardim e sem vista para o mar, a Su&iacute;te 8 oferece um ambiente confort&aacute;vel e funcional para sua estadia.</span></p> <ul class="defaultList bullet"><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Cama King-size com roupas de cama e banho</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Bicama no mesmo ambiente</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;"><span style="display: initial;">TV 32&quot;</span> 
+</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Ar-condicionado</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Banheiro com ducha aquecida por eletricidade</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Mini cozinha equipada com geladeira, pia, fog&atilde;o de indu&ccedil;&atilde;o e utens&iacute;lios b&aacute;sicos</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Vista para o jardim</span></li></ul> 
+<p><span style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+ <div id="6185993b" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1880069280"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton button_2 u_1880069280" file="false" href="https://hbook.hsystem.com.br/booking?companyId=5e0f8c0cab41d40cc85f6c3e" data-element-type="dButtonLinkId" id="1880069280" target="_blank"> <span class="iconBg" aria-hidden="true" id="1767532937"> <span class="icon hasFontIcon icon-star" id="1059589738"></span> 
+</span> 
+ <span class="text" id="1585833427">RESERVAR</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1055172331" data-flex-id="7161fa0b" data-layout-section=""> <div class="flex-widgets-container" id="1580269165"></div> 
+ <section id="b53f29cb" class="flex-element section" data-auto="flex-element-section"> <div id="7fb34432" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="ee781375" class="flex-element group" data-auto="flex-element-group"> <div id="fc4f6e99" class="flex-element group" data-auto="flex-element-group"> <div id="1c8d457a" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1809351396"> <div id="1809351396" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1809351396" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer hxHoZd"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-54469" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/ss1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-39835" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 2" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-4241" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 3" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-19380" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 4" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-46601" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 5" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-76556" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+ <div id="32211a0b" class="flex-element group" data-auto="flex-element-group"> <div id="a1d12153" class="flex-element group" data-auto="flex-element-group"> <div id="f6ab7218" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1777268614"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1777268614" style=""> <h2 class="text-align-left" style="line-height: 1.1;"><span style="display: initial;">STANDARD (9)<br/></span></h2> 
+</div> 
+</div> 
+</div> 
+ <div id="2f2604fb" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1832571105"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1832571105" style=""><p class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Localizada no terceiro piso, voltada para o jardim e sem vista para o mar, a Su&iacute;te 9 oferece um ambiente confort&aacute;vel e funcional para sua estadia.</span></p> <ul class="defaultList bullet"><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Cama King-size co roupas de cama e banho</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Bicama no mesmo ambiente</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">TV 32&quot;</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Ar-condicionado</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Banheiro com ducha aquecida por eletricidade</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Mini cozinha equipada com frigobar, pia, fog&atilde;o de indu&ccedil;&atilde;o e utens&iacute;lios b&aacute;sicos</span></li><li class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Sacada privativa com rede e vista para o jardim</span></li></ul> 
+<p><span style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+ <div id="413335f3" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1048106728"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton button_2 u_1048106728" file="false" href="https://hbook.hsystem.com.br/booking?companyId=5e0f8c0cab41d40cc85f6c3e" data-element-type="dButtonLinkId" id="1048106728" target="_blank"> <span class="iconBg" aria-hidden="true" id="1699874238"> <span class="icon hasFontIcon icon-star" id="1286034150"></span> 
+</span> 
+ <span class="text" id="1207777601">RESERVAR</span> 
+</a> 
+</div> 
+</div> 
+ <div id="8f3f4186" class="flex-element group" data-auto="flex-element-group"> <div id="f9df1a92" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1740788800"> <div id="1740788800" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1740788800" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer RerkX"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-54469" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/af1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-7347" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 2" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-6055" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 3" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-95182" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 4" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-14745" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 5" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-60840" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 6" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-22442" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 7" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-38985" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 8" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-97583" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 9" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-74407" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 10" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-65838" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 11" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-82863" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 12" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-88161" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+ <div id="163ed6f1" class="flex-element group" data-auto="flex-element-group"> <div id="90722b17" class="flex-element group" data-auto="flex-element-group"> <div id="0a23f0eb" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1740187818"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1740187818" style=""> <h2 class="text-align-left" style="line-height: 1.1;"><span style="display: initial;">APTO FAMILIA (10)<br/></span></h2> 
+</div> 
+</div> 
+</div> 
+ <div id="eae381af" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1443901409"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1443901409" style=""><p class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Localizado no segundo piso, voltado para o jardim e sem vista para o mar, o Apartamento 10 oferece conforto e espa&ccedil;o para acomodar uma fam&iacute;lia de at&eacute; 6 pessoas.</span></p> <ul class="defaultList bullet"><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">Dois quartos,&nbsp; com cama King-size, roupas de cama e banho</span></li><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">Sala com duas camas extras</span></li><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">Sala e cozinha integradas com geladeira, forno, micro-ondas, pia, fog&atilde;o de indu&ccedil;&atilde;o e utens&iacute;lios b&aacute;sicos</span></li><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">TV de 42&quot; Smart</span></li><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">Ar-condicionado em todos os c&ocirc;modos</span></li><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">Banheiro com ducha aquecida por eletricidade</span></li><li style="line-height: 1.5; direction: ltr;" class="text-align-justify"><span style="display: initial;">Ampla sacada privativa com rede</span></li><li style="line-height: 1.5; direction: ltr;" class="text-align-justify"><span style="display: initial;">Cadeiras de praia</span></li><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">Guarda-sol<br/></span></li></ul> 
+<p class="text-align-justify"><span style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+ <div id="aeb4e347" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1978189824"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton button_2 u_1978189824" file="false" href="https://hbook.hsystem.com.br/booking?companyId=5e0f8c0cab41d40cc85f6c3e" data-element-type="dButtonLinkId" id="1978189824" target="_blank"> <span class="iconBg" aria-hidden="true" id="1688044810"> <span class="icon hasFontIcon icon-star" id="1920259027"></span> 
+</span> 
+ <span class="text" id="1202649138">RESERVAR</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1219051969" data-flex-id="b1219ffa" data-layout-section=""> <div class="flex-widgets-container" id="1992513327"></div> 
+ <section id="e8c571b3" class="flex-element section" data-auto="flex-element-section"> <div id="6fa7b8a0" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="d2939ef9" class="flex-element group" data-auto="flex-element-group"> <div id="68435772" class="flex-element group" data-auto="flex-element-group"> <div id="c59a7316" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ssrimageslider" data-external-id="1097260847"> <div id="1097260847" dmle_extension="ssrimageslider" data-element-type="ssrimageslider" class=""><span id="ssrWrap-1097260847" ><style data-styled="true" data-styled-version="5.3.11"></style><div style="height:100%;overflow:hidden" data-auto="slider-wrapper" class="sc-gEvEer d-ext-mediaSlider-slidesContainer"><div data-auto="actual-slider" class="sc-gEvEer cdOmrK"><div data-auto="slider-slides-container" class="sc-gEvEer fOgKIx"><div class="sc-gEvEer bcOvLo"><div data-auto="slider-filmRole" class="sc-gEvEer faSOpW"><div data-auto="slideSlot 0 slideSlotActive" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide--active"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-54469" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><img data-grab="slide-media" src="https://irp.cdn-website.com/05334b84/dms3rep/multi/opt/tf1-1920w.jpg" class="sc-fqkvVR fECgwp"/><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer fcgCjo animated fadeInUp d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 1" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-83271" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 2" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-36655" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 3" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-78549" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 4" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-80860" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 5" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-74685" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div><div data-auto="slideSlot 6" class="sc-gEvEer bElkjm d-ext-mediaSlider-slidesContainer__slide"><div class="sc-gEvEer edjuHe"><div data-auto="ssr-slide-42577" class="sc-gEvEer clxWl"><div data-grab="slide-media-container" class="sc-gEvEer iGqueL"><div data-grab="slide-media" class="sc-gEvEer eHyebB"></div><div data-grab="slide-overlay" class="sc-gEvEer gYpBap"></div></div><div class="sc-gEvEer hITJxk d-ext-mediaSlider-slide__contentContainer" data-grab="slideContentContainer"></div></div></div></div></div></div></div><div data-auto="pagination-arrows" data-grab="pagination-container" class="sc-gEvEer duZSac"><button data-grab="pagination-button-arrow" aria-label="back" data-auto="RuntimeSlider-navigation-back" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-left" aria-hidden="true"></div></div></button><button data-grab="pagination-button-arrow" aria-label="next" data-auto="RuntimeSlider-navigation-next" type="button" class="sc-jlZhew cMsIBV"><div class="sc-gEvEer dgjlXT"><div class="sc-gEvEer icon-angle-right" aria-hidden="true"></div></div></button></div></div></div><script data-role="hydration"></script></span></div> 
+</div> 
+ <div id="dd34296f" class="flex-element group" data-auto="flex-element-group"> <div id="53448777" class="flex-element group" data-auto="flex-element-group"> <div id="a5526927" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1746047026"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1746047026" style=""> <h2 class="text-align-left" style="line-height: 1.1;"><span style="display: initial;">LUXO (7)<br/></span></h2> 
+</div> 
+</div> 
+</div> 
+ <div id="439b2425" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1778710732"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1778710732" style=""><p class="text-align-justify" style="line-height: 1.5;"><span style="display: initial;">Localizada no t&eacute;rreo e de frente para o mar, esta acomoda&ccedil;&atilde;o oferece praticidade e conforto, com um ambiente agrad&aacute;vel para sua estadia.</span></p> <ul class="defaultList bullet"><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">Cama King-size com roupas de cama e banho</span></li><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">Bicama no mesmo ambiente, acomodando mais duas pessoas</span></li><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">TV de 42&quot; Smart</span></li><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">Ar-condicionado</span></li><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">Ventilador de teto</span></li><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">Banheiro com ducha aquecida por energia solar</span></li><li style="line-height: 1.5; direction: ltr;" class="text-align-justify"><span style="display: initial;">Cozinha equipada com fog&atilde;o a g&aacute;s de 4 bocas, frigobar e utens&iacute;lios b&aacute;sicos para cozinhar</span></li><li style="line-height: 1.5; direction: ltr;" class="text-align-justify"><span style="display: initial;">Cadeiras de praia</span></li><li class="text-align-justify" style="line-height: 1.5; direction: ltr;"><span style="display: initial;">Guarda-sol<br/></span></li></ul> 
+<p><span style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+ <div id="15fdcbb6" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1415655374"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton button_2 u_1415655374" file="false" href="https://hbook.hsystem.com.br/booking?companyId=5e0f8c0cab41d40cc85f6c3e" data-element-type="dButtonLinkId" id="1415655374" target="_blank"> <span class="iconBg" aria-hidden="true" id="1673235343"> <span class="icon hasFontIcon icon-star" id="1973521399"></span> 
+</span> 
+ <span class="text" id="1699387543">RESERVAR</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer flex_hfcontainer"> <div id="flex-footer" role="contentinfo"> <div data-auto="flex-section" id="1755561873" data-flex-id="63da2bddeae8da42b2353671" data-layout-section=""> <div class="flex-widgets-container" id="1245219930"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1635589435" style=""> <h2 class="text-align-center m-text-align-left"><span style="display: unset;">We got it.</span></h2> 
+</div> 
+ <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1601984432" style=""><p class="text-align-center m-text-align-left"><span style="display: unset;">Thank you for contacting us.</span><span style="display: initial;"><br/></span><span style="display: unset;">We&rsquo;ll get back to you as soon as possible.</span></p></div> 
+ <div class="imageWidget align-center" data-element-type="image" data-widget-type="image" id="1244959944"><img src="https://irp.cdn-website.com/md/dmtmpl/568c0c6e-69c3-4303-86b9-d4c4466351d1/dms3rep/multi/opt/gestures+_+hand-+gesture-+fingers-+hand+gesture-+motion-+heart-+love-+romance-+romantic-1920w.png" alt="" id="1250950855" class="" width="1000" height="1000" data-dm-image-path="https://irp.cdn-website.com/md/dmtmpl/568c0c6e-69c3-4303-86b9-d4c4466351d1/dms3rep/multi/gestures+_+hand-+gesture-+fingers-+hand+gesture-+motion-+heart-+love-+romance-+romantic.png" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <section id="63da2bddeae8da42b2353670" class="flex-element section" data-auto="flex-element-section"> <div id="63da2bddeae8da42b2353672" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="63da2bddeae8da42b2353673" class="flex-element group" data-auto="flex-element-group"> <div id="63da2bf2eae8da42b23538a2" class="flex-element group" data-auto="flex-element-group"> <div id="63da2bf2eae8da42b23538a3" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1721508574"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1721508574" style=""> <h3 class="text-align-left t-text-align-center m-text-align-center"><span style="display: unset; color: var(--color_3);">Informa&ccedil;&otilde;es</span></h3> 
+</div> 
+</div> 
+ <div id="a54b0a22" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1219477337"> <div class="dmNewParagraph u_1219477337" data-element-type="paragraph" data-version="5" id="1219477337" style="" data-binding="W3siYmluZGluZ05hbWUiOiJ0ZXh0IiwidmFsdWUiOiJjb250ZW50X2xpYnJhcnkuZ2xvYmFsIn1d" data-diy-text="">Av. Jovino Tom&eacute; Marques - Lot. Praia de Ibiraquera, Imbituba - SC, Brasil</div> 
+</div> 
+ <div id="5f902a69" class="flex-element group" data-auto="flex-element-group"> <div id="721761a4" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1423546722"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1423546722" style=""><p class="m-size-14 m-text-align-center t-text-align-center"><span class="m-font-size-14" m-font-size-set="true" style="display: initial; color: var(--color_3);">WhatsApp: +55 (48) 99121-3065</span></p></div> 
+</div> 
+</div> 
+ <div id="2a26acb2" class="flex-element group" data-auto="flex-element-group"> <div id="4923b0b4" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1830301393"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1830301393" style=""><p class="t-text-align-center m-text-align-center m-size-14"><span class="m-font-size-14" m-font-size-set="true" style="color: var(--color_3); display: initial;">Email:</span></p></div> 
+</div> 
+ <div id="076a3350" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1247273698"> <div class="dmNewParagraph u_1247273698" data-element-type="paragraph" data-version="5" id="1247273698" style="" data-diy-text="" data-binding="W3siYmluZGluZ05hbWUiOiJ0ZXh0IiwidmFsdWUiOiJjb250ZW50X2xpYnJhcnkuZ2xvYmFsLmVtYWlsLnJlc2VydmFzIn1d">reservaspousadaraia1@gmail.com</div> 
+</div> 
+</div> 
+</div> 
+ <div id="63da2bfbeae8da42b2353a45" class="flex-element group" data-auto="flex-element-group"> <div id="widget_76s" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="2951709664"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="2951709664" style=""> <h3 class="text-align-center"><span style="display: unset; color: var(--color_3);">M&iacute;dias Sociais</span></h3> 
+</div> 
+</div> 
+ <div id="63da2bfbeae8da42b2353a44" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="socialhub" data-external-id="1069507160"> <div class="u_1069507160 align-center text-align-center dmSocialHub gapSpacing" id="1069507160" dmle_extension="social_hub" data-element-type="social_hub" data-binding="W3siYmluZGluZ05hbWUiOiJzb2NpYWwiLCJ2YWx1ZSI6ImNvbnRlbnRfbGlicmFyeS5nbG9iYWwuc29jaWFsIn1d" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv " data-auto="social-hub-inner"> <a href="https://facebook.com/Raia1Pousada" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style6" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://instagram.com/pousadaraia1ibiraquera" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style6" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://wa.me/5548991213065" target="_blank" dm_dont_rewrite_url="true" aria-label="whatsapp" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Whatsapp&apos;)"> <span class="dmSocialWhatsapp dm-social-icons-whatsapp oneIcon socialHubIcon style6" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="93d05efa" class="flex-element group" data-auto="flex-element-group"> <div id="a4dc0ea0" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1775562065"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1775562065" style=""> <h3 class="text-align-left m-text-align-center t-text-align-center"><span style="color: var(--color_3); display: unset;">Newsletter</span></h3> 
+</div> 
+</div> 
+ <div id="widget_6nf" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="604830869"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="604830869" style=""><p class="text-align-left m-text-align-center t-text-align-center"><span style="color: var(--color_3); display: unset;">Receba nossas novidades e promo&ccedil;&otilde;es direto em seu e-mail!</span></p></div> 
+</div> 
+ <form id="36789aab" class="flex-element group form-widget" data-auto="flex-element-group" data-element-type="advancedForm" data-container-ignore-link="true" form-id="advanced_form_3d38d324"> <div id="ee9cca4c" class="flex-element group form-step" data-auto="flex-element-group" data-fields-step="true" data-is-first-step="true" data-is-last-step="true"> <div id="947022fa" class="flex-element group" data-auto="flex-element-group"> <div id="10425284" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="advancedformtextinput" data-external-id="1533493740"> <div class="default u_1533493740 advanced-form-field" data-auto="advanced-form-field" data-field-id="1533493740" data-label="Email" id="1533493740" dmle_extension="advancedformtextinput" data-element-type="advancedformtextinput" icon="false" surround="false" label="Email" placeholder="Cadastre-se!" isrequired="false" showlabel="false" type="EMAIL"><input id="input-1533493740" placeholder="Cadastre-se!" name="1533493740" class="advanced-form-input" aria-label="Email" value="" type="email" data-placeholder-original="Cadastre-se!"/> <span class="error-message" data-error="required" id="1533493740-error-required" aria-live="polite">Insira um e-mail</span> 
+ <span class="error-message" data-error="format" id="1533493740-error-format" aria-live="polite">Use um endere&ccedil;o com (@) e (.)</span> 
+</div> 
+</div> 
+</div> 
+ <div id="9c8fe50c" class="flex-element group" data-auto="flex-element-group"> <div id="68447b2c" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="advancedformbutton" data-external-id="1276780260"> <a data-auto="advanced-form-back-button" class="advanced-form-button flexButton back-button dmWidget dmNoMark dmWwr default" href="" contenteditable="false" id="1276780260" dmle_extension="advancedformbutton" data-element-type="advancedformbutton" icon="false" surround="false" label="Back" type="BACK" role="button"> <span class="iconBg" data-auto="button-icon-bg" aria-hidden="true"> <span class="icon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Back</span> 
+</a> 
+</div> 
+ <div id="88c3eda8" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="advancedformbutton" data-external-id="1877767281"> <a data-auto="advanced-form-submit-button" class="u_1877767281 advanced-form-button flexButton submit-button dmWidget dmNoMark dmWwr" href="" contenteditable="false" id="1877767281" dmle_extension="advancedformbutton" data-element-type="advancedformbutton" icon="false" surround="false" label="OK" role="button"> <span class="iconBg" data-auto="button-icon-bg" aria-hidden="true"> <span class="icon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text"> <span class="next-label">Pr&oacute;ximo</span> 
+ <span class="submit-label">OK</span> 
+</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div id="3b5dc700" class="flex-element group form-step hidden-step" data-auto="flex-element-group" data-error-step="true"> <div id="4d99bdb4" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="1638784794"> <div class="imageWidget align-center" data-element-type="image" data-widget-type="image" id="1638784794"><img src="https://irp.cdn-website.com/md/dmtmpl/568c0c6e-69c3-4303-86b9-d4c4466351d1/dms3rep/multi/opt/error+_+pipe-+pipes-+leak-+leakage-+steam-+plumbing-1920w.png" alt="" id="1426371645" class="" width="1000" height="1000" data-dm-image-path="https://irp.cdn-website.com/md/dmtmpl/568c0c6e-69c3-4303-86b9-d4c4466351d1/dms3rep/multi/error+_+pipe-+pipes-+leak-+leakage-+steam-+plumbing.png" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div id="e40c623c" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1827552572"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1827552572" style=""> <h2 class="text-align-center m-text-align-center"><span style="display: unset;">That didn&rsquo;t work.</span></h2> 
+</div> 
+</div> 
+ <div id="39e3d6a6" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1999550673"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1999550673" style=""><p class="text-align-center m-text-align-center"><span style="display: unset;">The form wasn&rsquo;t sent. Please try again.</span></p></div> 
+</div> 
+</div> 
+</form> 
+ <div class="captcha-placeholder" data-sitekey="6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME" data-script-src="https://www.google.com/recaptcha/api.js?render=explicit"></div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1919369504" data-flex-id="d99bab6d" data-layout-section=""> <div class="flex-widgets-container" id="1413422893"></div> 
+ <section id="3fa2b2f5" class="flex-element section" data-auto="flex-element-section"> <div id="ff162d4d" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="fa167c55" class="flex-element group" data-auto="flex-element-group"> <div id="246d6780" class="flex-element group" data-auto="flex-element-group"> <div id="widget_cd0" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="3304217014"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="3304217014" style=""><p class="text-align-center t-size-14 m-size-14 size-14 m-text-align-center"><span class="font-size-14 t-font-size-14 m-font-size-14" style="color: var(--color_3); display: unset;">Desenvolvido por:</span></p></div> 
+</div> 
+ <div id="ffe2d275" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="custom" data-external-id="1154172307"> <div class="u_1154172307 widget-1f5975 dmCustomWidget" data-lazy-load="" data-title="" id="1154172307" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="1f5975986930429f819d4cd2154b5c4a" data-widget-version="25" data-widget-config="eyJyZXZlcnNlRmxhZyI6ZmFsc2UsImNvcHlyaWdodFRleHQiOiI8cCBjbGFzcz1cInJ0ZUJsb2NrXCI+PGEgdmFsdWU9XCJodHRwczovL3d3dy5oc3lzdGVtLmNvbS5iclwiIGxhYmVsPVwiXCIgdHlwZT1cInVybFwiIGhyZWY9XCJodHRwczovL3d3dy5oc3lzdGVtLmNvbS5iclwiIHRhcmdldD1cIl9ibGFua1wiIGRhdGEtcnVudGltZS11cmw9XCJodHRwczovL3d3dy5oc3lzdGVtLmNvbS5iclwiPkhTeXN0ZW08L2E+IHwgVG9kb3Mgb3MgZGlyZWl0b3MgcmVzZXJ2YWRvczwvcD4ifQ=="> <div class="copyright"> <div>&copy; 2026&nbsp;</div> 
+ <div><p class="rteBlock"><a value="https://www.hsystem.com.br" label="" type="url" href="https://www.hsystem.com.br" target="_blank" data-runtime-url="https://www.hsystem.com.br">HSystem</a>| Todos os direitos reservados</p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+</div> 
+ <div id="dmFlexStickyContainer" class="flex_hfcontainer"> <div id="flex-sticky"> <div data-layout-section="" data-auto="flex-section" id="1145631551" data-flex-id="0c09f7a7"> <div class="flex-widgets-container" id="1592711489"> <div class="dmNewParagraph u_1406598808" data-element-type="paragraph" data-version="5" id="1406598808" style=""><p class="text-align-center t-text-align-center"><span style="display: initial; color: rgb(255, 255, 255); font-weight: normal;">P&Aacute;GINA DE DETALHE DE ACOMODA&Ccedil;&Otilde;ES TER&Aacute; VALOR ADICIONAL</span></p></div> 
+</div> 
+ <section id="4db974ad" class="flex-element section" data-auto="flex-element-section"> <div id="7c182684" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="86775d1e" class="flex-element group" data-auto="flex-element-group"> <div id="741de74a" class="flex-element group" data-auto="flex-element-group"> <div id="fa3c604b" class="flex-element inner-grid" data-auto="flex-element-inner-grid"> <div id="widget_g87" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="custom" data-hidden-on-desktop="" data-external-id="3984775100"> <div class="widget-b4e918 dmCustomWidget" data-lazy-load="true" data-title="" id="3984775100" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="b4e9189fc76a4743b30f58939b8219ce" data-widget-version="4" data-widget-config="eyJsaW5rUmVzZXJ2YSI6eyJ2YWx1ZSI6Imh0dHBzOi8vaGJvb2suaHN5c3RlbS5jb20uYnIvYm9va2luZz9jb21wYW55SWQ9NWUwZjhjMGNhYjQxZDQwY2M4NWY2YzNlIiwibGFiZWwiOiIiLCJ0eXBlIjoidXJsIiwiaHJlZiI6Imh0dHBzOi8vaGJvb2suaHN5c3RlbS5jb20uYnIvYm9va2luZz9jb21wYW55SWQ9NWUwZjhjMGNhYjQxZDQwY2M4NWY2YzNlIiwicmF3X3VybCI6Imh0dHBzOi8vaGJvb2suaHN5c3RlbS5jb20uYnIvYm9va2luZz9jb21wYW55SWQ9NWUwZjhjMGNhYjQxZDQwY2M4NWY2YzNlIiwidGFyZ2V0IjoiX2JsYW5rIiwicmVsIjpudWxsfSwic3VidGl0bGUiOiJNZW5vciBwcmXDp28gcGVsbyBub3NzbyBzaXRlISIsImNvckRvVGV4dG8iOiIjZmZmZmZmIiwiY29yRGVGdW5kbyI6InZhcigtLWNvbG9yXzEpIiwidGl0bGUiOiJSZXNlcnZlIE9ubGluZSEifQ=="> <div id="HSystemSearchBox_Popup" style="--corDeFundo: var(--color_1); --corDoTexto:#ffffff;"> <div class="HSystemSearchBox_Popup_Title"> <span class="titlePopUp">Reserve Online!</span> 
+<br/> <span class="subTitlePopUp">Menor pre&ccedil;o pelo nosso site!</span> 
+</div> 
+ <div class="HSystemSearchBox_Popup_Image"> <a href="https://hbook.hsystem.com.br/booking?companyId=5e0f8c0cab41d40cc85f6c3e" target="_blank"> <svg></svg> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ </div>
+</div>
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile_implicit-flex-header-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-mobile-aa7b8343-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-mobile-4c807e51-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-mobile-061de8b2-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-mobile-e9848efa-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-mobile-41660c63-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-mobile-7161fa0b-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="b90ea72f041448d3a21c4898c7f1bc67" id="grid-styles-mobile-b1219ffa-b90ea72f041448d3a21c4898c7f1bc67"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-flex-footer-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-flex-header-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-c093187e-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-295296ff-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-18f5ea00-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-63a049320d35b55b4ef2a372-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-6406026c90e1521f6ecb0eca-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-63da2bddeae8da42b2353671-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-d99bab6d-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+ <style data-page-uuid="9deca7b41b3240bd9c86a7fef5e2cafc" data-is-header="true" id="grid-styles-mobile-0c09f7a7-9deca7b41b3240bd9c86a7fef5e2cafc"></style> 
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script type="text/javascript"></script>
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+<script></script>
+<script id='d-js-params'></script>
+<script src="https://static.cdn-website.com/mnlt/production/6831/_dm/s/rt/dist/scripts/d-js-runtime-flex-package.min.js" id="d-js-core" defer></script>
+<script></script>
+<script type="text/javascript" id="d_track_sp"></script>
+<div style="display:none;" id="P6iryBW0Wu"></div>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+ <div class="pswp__bg"></div>
+ <div class="pswp__scroll-wrap">
+ <div class="pswp__container">
+ <div class="pswp__item"></div>
+ <div class="pswp__item"></div>
+ <div class="pswp__item"></div>
+ </div>
+ <div class="pswp__ui pswp__ui--hidden">
+ <div class="pswp__top-bar">
+ <div class="pswp__counter"></div>
+ <button class="pswp__button pswp__button--close" data-auto="pswp-close" title="Fechar (Esc)"></button>
+ <button class="pswp__button pswp__button--share" data-auto="pswp-share" title="Compartilhar"></button>
+ <button class="pswp__button pswp__button--fs" title="Alternar tela cheia "></button>
+ <button class="pswp__button pswp__button--zoom" title="Aumentar/diminuir zoom"></button>
+ <div class="pswp__preloader">
+ <div class="pswp__preloader__icn">
+ <div class="pswp__preloader__cut">
+ <div class="pswp__preloader__donut"></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+ <div class="pswp__share-tooltip"></div> 
+ </div>
+ <button class="pswp__button pswp__button--arrow--left" title="Anterior (seta para esquerda)">
+ </button>
+ <button class="pswp__button pswp__button--arrow--right" title="Próximo (seta para a direita)">
+ </button>
+ <div class="pswp__caption">
+ <div class="pswp__caption__center"></div>
+ </div>
+ </div>
+ </div>
+</div>
+<div id="fb-root"
+ data-locale="pt_PT"></div>
+<!-- Alias: 05334b84 -->
+<script id="d_track_personalization"></script>
+<script type="text/javascript"></script>
+<div><script type="text/javascript"></script>
+ <script id="ssr-static" fetchpriority="low" type="module" src="https://ms-cdn.multiscreensite.com/runtime-react/4279/res/js/runtime-react.js"></script></div><!-- Begin Body End Markup -->
+<!-- Global site tag (gtag.js) - Google Analytics Hweb 06/05/22 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6HHED1TYKV"></script>
+<script></script><!-- End Body End Markup -->
+<!-- Site Wide Html Markup -->
+<!-- Site Wide Html Markup -->
+</body>
+</html>

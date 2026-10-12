@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head><!-- Google Tag Manager -->
+<script></script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Villas and bungalows with ocean and palm grove views, private pools and up to 130 m² of space. Comfort, privacy and nature in Fortim, Ceará. Book online.">
+<title>Accommodations | Luxury Villas and Bungalows at Jaguaríndia</title>
+<meta property="og:title"       content="Accommodations | Luxury Villas and Bungalows at Jaguaríndia">
+<meta property="og:description" content="Villas and bungalows with ocean and palm grove views, private pools and up to 130 m² of space. Comfort, privacy and nature in Fortim, Ceará. Book online.">
+<meta property="og:image"       content="https://www.jaguarindiavillage.com/assets/images/og-default.jpg">
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://www.jaguarindiavillage.com/acomodacoes">
+<link rel="canonical" href="https://www.jaguarindiavillage.com/acomodacoes">
+<link rel="icon" href="https://www.jaguarindiavillage.com/favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Cormorant+Garant:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.jaguarindiavillage.com/dist/site.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.3/dist/cdn.min.js"></script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager (noscript) -->
+<div id="page-transition">
+    <img src="https://www.jaguarindiavillage.com/assets/images/layout/logo-2.png" alt="" class="pt-logo">
+</div>
+<div x-data="{ langOpen: false, menuOpen: false }"
+     style="position:absolute;top:0;left:0;right:0;z-index:40;">
+<header class="bg-transparent max-w-[1440px] mx-auto">
+    <div class="md:hidden max-w-7xl mx-auto px-4 py-[18px] grid grid-cols-[minmax(68px,1fr)_auto_minmax(68px,1fr)] items-center">
+        <div class="relative justify-self-start">
+            <button type="button"
+                    @click="langOpen = !langOpen"
+                    :aria-expanded="langOpen"
+                    aria-controls="mobile-language-menu"
+                    aria-label="Selecionar idioma"
+                    class="min-h-11 -ml-3 px-3 flex items-center gap-1 text-[11px] font-medium tracking-[0.14em] uppercase text-white hover:opacity-70 transition-opacity">
+                EN                <svg></svg>
+            </button>
+            <div id="mobile-language-menu"
+                 x-show="langOpen"
+                 @click.outside="langOpen = false"
+                 x-transition
+                 class="absolute left-0 mt-1 bg-site border border-brand/20 shadow-sm z-50 grid grid-cols-2 w-[136px] p-1"
+                 style="display:none">
+                                <a href="?lang=pt"
+                   class="flex items-center gap-1.5 px-2 py-2 group transition-opacity hover:opacity-70">
+                    <span class="fi fi-br rounded-sm opacity-70 group-hover:opacity-100 transition-all duration-150 group-hover:scale-110" style="width:18px;height:13px;"></span>
+                    <span class="text-[10px] font-medium tracking-widest text-brand">PT</span>
+                </a>
+                                <a href="?lang=en"
+                   class="flex items-center gap-1.5 px-2 py-2 group transition-opacity opacity-30 pointer-events-none">
+                    <span class="fi fi-gb rounded-sm opacity-70 group-hover:opacity-100 transition-all duration-150 group-hover:scale-110" style="width:18px;height:13px;"></span>
+                    <span class="text-[10px] font-medium tracking-widest text-brand">EN</span>
+                </a>
+                                <a href="?lang=es"
+                   class="flex items-center gap-1.5 px-2 py-2 group transition-opacity hover:opacity-70">
+                    <span class="fi fi-es rounded-sm opacity-70 group-hover:opacity-100 transition-all duration-150 group-hover:scale-110" style="width:18px;height:13px;"></span>
+                    <span class="text-[10px] font-medium tracking-widest text-brand">ES</span>
+                </a>
+                                <a href="?lang=fr"
+                   class="flex items-center gap-1.5 px-2 py-2 group transition-opacity hover:opacity-70">
+                    <span class="fi fi-fr rounded-sm opacity-70 group-hover:opacity-100 transition-all duration-150 group-hover:scale-110" style="width:18px;height:13px;"></span>
+                    <span class="text-[10px] font-medium tracking-widest text-brand">FR</span>
+                </a>
+                            </div>
+        </div>
+        <a href="https://www.jaguarindiavillage.com/?lang=en"
+           class="justify-self-center -translate-x-2"
+           aria-label="Jaguarindia Village — Home">
+            <img src="https://www.jaguarindiavillage.com/assets/images/layout/logo-white.svg"
+                 alt="Jaguarindia Village"
+                 class="w-auto max-h-[80px] object-contain">
+        </a>
+        <button type="button"
+                @click="menuOpen = true"
+                :aria-expanded="menuOpen"
+                aria-label="Menu"
+                class="justify-self-end min-h-11 -mr-3 px-3 flex items-center gap-1.5 text-[11px] font-medium tracking-[0.14em] uppercase text-white hover:opacity-70 transition-opacity">
+            Menu            <svg></svg>
+        </button>
+    </div>
+    <div class="hidden max-w-7xl mx-auto px-6 py-[40px] md:grid grid-cols-[1fr_auto_1fr] items-center">
+        <div class="hidden md:flex items-center gap-3 justify-self-start">
+            <a href="https://www.instagram.com/jaguarindiavillage" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Jaguarindia Village">
+                <img src="https://www.jaguarindiavillage.com/assets/icons/instagram-white.svg" alt="Instagram" class="w-[30px] h-[30px] hover:opacity-70 transition-opacity">
+            </a>
+            <a href="https://open.spotify.com/user/31vjk2qnobbuaicovfhfor6bz3ae?si=1ea22c92423447ca" target="_blank" rel="noopener noreferrer" aria-label="Spotify do Jaguarindia Village">
+                <img src="https://www.jaguarindiavillage.com/assets/icons/spotify-white.svg" alt="Spotify" class="w-[30px] h-[30px] hover:opacity-70 transition-opacity">
+            </a>
+                    </div>
+        <div class="flex justify-center justify-self-center">
+            <a href="https://www.jaguarindiavillage.com/?lang=en">
+                <img src="https://www.jaguarindiavillage.com/assets/images/layout/logo-white.svg"
+                     alt="Jaguarindia Village"
+                     class="max-h-[80px] md:max-h-[230px] w-auto object-contain max-w-[100px] md:max-w-[230px]">
+            </a>
+        </div>
+        <div class="relative flex items-center gap-4 md:gap-6 justify-self-end">
+            <div class="absolute -top-[50px] md:-top-[77px] right-0">
+                <button @click="langOpen = !langOpen"
+                        class="flex items-center gap-1 text-xs font-medium tracking-widest uppercase text-white hover:opacity-70 transition-opacity">
+                    EN                    <svg></svg>
+                </button>
+                <div x-show="langOpen"
+                     @click.outside="langOpen = false"
+                     x-transition
+                     class="absolute right-0 mt-2 bg-site border border-brand/20 shadow-sm z-50 grid grid-cols-2 w-[130px] p-1"
+                     style="display:none">
+                                        <a href="?lang=pt"
+                       class="flex items-center gap-1.5 px-2 py-2 group transition-opacity hover:opacity-70">
+                        <span class="fi fi-br rounded-sm opacity-70 group-hover:opacity-100 transition-all duration-150 group-hover:scale-110" style="width:18px;height:13px;"></span>
+                        <span class="text-[10px] font-medium tracking-widest text-brand">PT</span>
+                    </a>
+                                        <a href="?lang=en"
+                       class="flex items-center gap-1.5 px-2 py-2 group transition-opacity opacity-30 pointer-events-none">
+                        <span class="fi fi-gb rounded-sm opacity-70 group-hover:opacity-100 transition-all duration-150 group-hover:scale-110" style="width:18px;height:13px;"></span>
+                        <span class="text-[10px] font-medium tracking-widest text-brand">EN</span>
+                    </a>
+                                        <a href="?lang=es"
+                       class="flex items-center gap-1.5 px-2 py-2 group transition-opacity hover:opacity-70">
+                        <span class="fi fi-es rounded-sm opacity-70 group-hover:opacity-100 transition-all duration-150 group-hover:scale-110" style="width:18px;height:13px;"></span>
+                        <span class="text-[10px] font-medium tracking-widest text-brand">ES</span>
+                    </a>
+                                        <a href="?lang=fr"
+                       class="flex items-center gap-1.5 px-2 py-2 group transition-opacity hover:opacity-70">
+                        <span class="fi fi-fr rounded-sm opacity-70 group-hover:opacity-100 transition-all duration-150 group-hover:scale-110" style="width:18px;height:13px;"></span>
+                        <span class="text-[10px] font-medium tracking-widest text-brand">FR</span>
+                    </a>
+                                    </div>
+            </div>
+            <button @click="menuOpen = true"
+                    class="flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-white hover:opacity-70 transition-opacity">
+                Menu                <svg></svg>
+            </button>
+            <a href="https://book.omnibees.com/hotelresults?q=13994" target="_blank" rel="noopener noreferrer"
+               class="hidden md:inline-block btn-primary px-5 py-2.5 text-xs">
+                Book Online            </a>
+        </div>
+    </div>
+</header>
+<div x-show="menuOpen"
+     @keydown.escape.window="menuOpen = false"
+     x-transition:enter="transition-opacity duration-200 ease-out"
+     x-transition:enter-start="opacity-0"
+     x-transition:enter-end="opacity-100"
+     x-transition:leave="transition-opacity duration-150 ease-in"
+     x-transition:leave-start="opacity-100"
+     x-transition:leave-end="opacity-0"
+     class="fixed inset-0 bg-brand z-50 overflow-y-auto"
+     style="display:none">
+    <div class="min-h-full flex flex-col px-8 md:px-16 py-10">
+        <div class="flex justify-end mb-10 md:mb-16">
+            <button @click="menuOpen = false"
+                    class="text-white/60 hover:text-white transition-colors text-sm font-light tracking-widest uppercase flex items-center gap-2">
+                Close                <svg></svg>
+            </button>
+        </div>
+        <nav class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-y-6 md:gap-y-8 gap-x-20 content-center">
+                        <a href="https://www.jaguarindiavillage.com/?lang=en"
+               class="menu-nav-item text-xl md:text-3xl font-light tracking-[0.15em] uppercase text-white/80 hover:text-white hover:translate-x-1 transition-all duration-200"
+               style="animation-delay: 0ms">
+                Home            </a>
+                        <a href="https://www.jaguarindiavillage.com/sobre?lang=en"
+               class="menu-nav-item text-xl md:text-3xl font-light tracking-[0.15em] uppercase text-white/80 hover:text-white hover:translate-x-1 transition-all duration-200"
+               style="animation-delay: 40ms">
+                About Jaguarindia            </a>
+                        <a href="https://www.jaguarindiavillage.com/acomodacoes?lang=en"
+               class="menu-nav-item text-xl md:text-3xl font-light tracking-[0.15em] uppercase text-white/80 hover:text-white hover:translate-x-1 transition-all duration-200"
+               style="animation-delay: 80ms">
+                Accommodations            </a>
+                        <a href="https://www.jaguarindiavillage.com/gastronomia?lang=en"
+               class="menu-nav-item text-xl md:text-3xl font-light tracking-[0.15em] uppercase text-white/80 hover:text-white hover:translate-x-1 transition-all duration-200"
+               style="animation-delay: 120ms">
+                Gastronomy            </a>
+                        <a href="https://www.jaguarindiavillage.com/spa?lang=en"
+               class="menu-nav-item text-xl md:text-3xl font-light tracking-[0.15em] uppercase text-white/80 hover:text-white hover:translate-x-1 transition-all duration-200"
+               style="animation-delay: 160ms">
+                Spa            </a>
+                        <a href="https://www.jaguarindiavillage.com/experiencias?lang=en"
+               class="menu-nav-item text-xl md:text-3xl font-light tracking-[0.15em] uppercase text-white/80 hover:text-white hover:translate-x-1 transition-all duration-200"
+               style="animation-delay: 200ms">
+                Experiences            </a>
+                        <a href="https://www.jaguarindiavillage.com/especiais?lang=en"
+               class="menu-nav-item text-xl md:text-3xl font-light tracking-[0.15em] uppercase text-white/80 hover:text-white hover:translate-x-1 transition-all duration-200"
+               style="animation-delay: 240ms">
+                Specials            </a>
+                        <a href="https://www.jaguarindiavillage.com/eventos?lang=en"
+               class="menu-nav-item text-xl md:text-3xl font-light tracking-[0.15em] uppercase text-white/80 hover:text-white hover:translate-x-1 transition-all duration-200"
+               style="animation-delay: 280ms">
+                Events            </a>
+                        <a href="https://www.jaguarindiavillage.com/o-destino?lang=en"
+               class="menu-nav-item text-xl md:text-3xl font-light tracking-[0.15em] uppercase text-white/80 hover:text-white hover:translate-x-1 transition-all duration-200"
+               style="animation-delay: 320ms">
+                The Destination            </a>
+                        <a href="https://www.jaguarindiavillage.com/kitesurf?lang=en"
+               class="menu-nav-item text-xl md:text-3xl font-light tracking-[0.15em] uppercase text-white/80 hover:text-white hover:translate-x-1 transition-all duration-200"
+               style="animation-delay: 360ms">
+                Kitesurf            </a>
+                        <a href="https://www.jaguarindiavillage.com/contato?lang=en"
+               class="menu-nav-item text-xl md:text-3xl font-light tracking-[0.15em] uppercase text-white/80 hover:text-white hover:translate-x-1 transition-all duration-200"
+               style="animation-delay: 400ms">
+                Reservations            </a>
+                    </nav>
+        <div class="mt-10 md:mt-16 pt-8 border-t border-white/20 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center gap-5">
+                <a href="https://www.instagram.com/jaguarindiavillage" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="https://www.jaguarindiavillage.com/assets/icons/icone-instagram.png" alt="Instagram" class="w-6 h-6 opacity-60 hover:opacity-100 transition-opacity">
+                </a>
+                                <a href="https://open.spotify.com/user/31vjk2qnobbuaicovfhfor6bz3ae?si=1ea22c92423447ca" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+                    <img src="https://www.jaguarindiavillage.com/assets/icons/icone-spotify.png" alt="Spotify" class="w-6 h-6 opacity-60 hover:opacity-100 transition-opacity">
+                </a>
+            </div>
+            <a href="https://book.omnibees.com/hotelresults?q=13994" target="_blank" rel="noopener noreferrer"
+               class="menu-nav-item bg-white text-brand border border-white text-xs font-medium tracking-widest uppercase px-10 py-4 hover:bg-transparent hover:text-white hover:border-white/40 transition-colors duration-200"
+               style="animation-delay: 440ms">
+                Book Online            </a>
+            <a href="mailto:reservas@jaguarindiavillage.com"
+               class="text-xs font-light tracking-wider text-white/50 hover:text-white/80 transition-colors">
+                reservas@jaguarindiavillage.com
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+<a href="https://wa.me/5588981450841?text=Hello%21%20I%20came%20from%20the%20Jaguarindia%20Village%20website%20and%20would%20like%20more%20information."
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="WhatsApp — Jaguarindia Village"
+   x-data="{ visible: false }"
+   x-init="visible = window.scrollY > 10"
+   @scroll.window="visible = window.scrollY > 10"
+   :class="visible ? 'wa-visible' : ''"
+   class="wa-float-btn">
+    <img src="https://www.jaguarindiavillage.com/assets/icons/whatsapp-button.svg" alt="" width="70" height="70">
+</a>
+<div style="width:100%;">
+<div style="position:relative;overflow:hidden;width:100%;height:100vh;max-height:100vh;">
+                <img src="https://www.jaguarindiavillage.com/assets/images/topo/topo-acomodacoes.jpg"
+             alt="Accommodations"
+             style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">
+                <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.52) 100%);pointer-events:none;"></div>
+                <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;">
+                        <h1 style="color:#fff;font-family:'Artographie',sans-serif;font-weight:300;font-style:normal;text-transform:uppercase;font-size:clamp(1.75rem,3.5vw,3rem);margin:0;text-align:center;">
+                Accommodations            </h1>
+                                </div>
+    </div>
+</div>
+<main class="section-gap-b">
+<section class="section-gap">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-3xl mx-auto flex flex-col gap-4">
+            <h2 class="font-normal text-[30px] uppercase leading-tight tracking-normal text-[#1a1a1a] text-center" style="font-family:'Artographie',sans-serif;">
+                Retreats Designed<br>to Slow You Down            </h2>
+                        <div class="flex flex-col gap-5">
+                                <p class="font-sans font-light text-[16px] text-center text-[#3a3a3a] [&_strong]:font-semibold [&_strong]:text-[#1a1a1a]">
+                    Our accommodations blend comfort, privacy and the lightness of natural architecture, creating spacious, luminous spaces integrated with the surroundings. Here, every detail has been crafted so that you rest without rushing, feel the silence of the place, and live days guided by a new rhythm.                </p>
+                            </div>
+        </div>
+    </div>
+</section>
+<section class="section-gap">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
+                        <div class="flex flex-col h-full" data-reveal="rise">
+                <div class="overflow-hidden" style="max-height:420px;">
+                    <img src="https://www.jaguarindiavillage.com/assets/images/acomodacoes/villa-jardim/1.jpg"
+                         alt="Villa Jardim"
+                         class="w-full h-[420px] object-cover">
+                </div>
+                <div class="pt-5 flex flex-col gap-3 flex-1">
+                    <h3 class="font-sans font-semibold text-[14px] uppercase text-[#1a1a1a]">
+                        Villa Jardim                    </h3>
+                    <p class="font-sans font-light text-[16px] text-[#3a3a3a] flex-1">
+                        Two suites, living room and spacious veranda with modern, clean décor. Ground floor with coconut grove views — 120 m² for up to 4 guests.                    </p>
+                    <div class="flex gap-3 mt-2">
+                        <a href="https://www.jaguarindiavillage.com/villa-jardim?lang=en"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase border border-[#9C2E22] text-[#9C2E22] bg-transparent hover:bg-[#9C2E22] hover:text-white transition-colors duration-200">
+                            Details                        </a>
+                        <a href="https://book.omnibees.com/hotelresults?q=13994" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase bg-[#9C2E22] text-white border border-[#9C2E22] hover:bg-transparent hover:text-[#9C2E22] transition-colors duration-200">
+                            Book                        </a>
+                    </div>
+                </div>
+            </div>
+                        <div class="flex flex-col h-full" data-reveal="rise">
+                <div class="overflow-hidden" style="max-height:420px;">
+                    <img src="https://www.jaguarindiavillage.com/assets/images/acomodacoes/villa-jardim-superior/1.jpg"
+                         alt="Villa Jardim Superior"
+                         class="w-full h-[420px] object-cover">
+                </div>
+                <div class="pt-5 flex flex-col gap-3 flex-1">
+                    <h3 class="font-sans font-semibold text-[14px] uppercase text-[#1a1a1a]">
+                        Villa Jardim Superior                    </h3>
+                    <p class="font-sans font-light text-[16px] text-[#3a3a3a] flex-1">
+                        Two suites, living room and spacious veranda with modern, clean décor. Elevated coconut grove views — 120 m² for up to 4 guests.                    </p>
+                    <div class="flex gap-3 mt-2">
+                        <a href="https://www.jaguarindiavillage.com/villa-jardim-superior?lang=en"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase border border-[#9C2E22] text-[#9C2E22] bg-transparent hover:bg-[#9C2E22] hover:text-white transition-colors duration-200">
+                            Details                        </a>
+                        <a href="https://book.omnibees.com/hotelresults?q=13994" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase bg-[#9C2E22] text-white border border-[#9C2E22] hover:bg-transparent hover:text-[#9C2E22] transition-colors duration-200">
+                            Book                        </a>
+                    </div>
+                </div>
+            </div>
+                        <div class="flex flex-col h-full" data-reveal="rise">
+                <div class="overflow-hidden" style="max-height:420px;">
+                    <img src="https://www.jaguarindiavillage.com/assets/images/acomodacoes/grand-villa-jardim/1.jpg"
+                         alt="Grand Villa Jardim"
+                         class="w-full h-[420px] object-cover">
+                </div>
+                <div class="pt-5 flex flex-col gap-3 flex-1">
+                    <h3 class="font-sans font-semibold text-[14px] uppercase text-[#1a1a1a]">
+                        Grand Villa Jardim                    </h3>
+                    <p class="font-sans font-light text-[16px] text-[#3a3a3a] flex-1">
+                        Three accommodations, spacious veranda and modern décor with regional touches. Ground floor with garden and coconut grove views — 130 m² for up to 6 guests.                    </p>
+                    <div class="flex gap-3 mt-2">
+                        <a href="https://www.jaguarindiavillage.com/grand-villa-jardim?lang=en"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase border border-[#9C2E22] text-[#9C2E22] bg-transparent hover:bg-[#9C2E22] hover:text-white transition-colors duration-200">
+                            Details                        </a>
+                        <a href="https://book.omnibees.com/hotelresults?q=13994" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase bg-[#9C2E22] text-white border border-[#9C2E22] hover:bg-transparent hover:text-[#9C2E22] transition-colors duration-200">
+                            Book                        </a>
+                    </div>
+                </div>
+            </div>
+                        <div class="flex flex-col h-full" data-reveal="rise">
+                <div class="overflow-hidden" style="max-height:420px;">
+                    <img src="https://www.jaguarindiavillage.com/assets/images/acomodacoes/grand-villa-jardim-superior/1.jpg"
+                         alt="Grand Villa Jardim Superior"
+                         class="w-full h-[420px] object-cover">
+                </div>
+                <div class="pt-5 flex flex-col gap-3 flex-1">
+                    <h3 class="font-sans font-semibold text-[14px] uppercase text-[#1a1a1a]">
+                        Grand Villa Jardim Superior                    </h3>
+                    <p class="font-sans font-light text-[16px] text-[#3a3a3a] flex-1">
+                        Three accommodations, spacious veranda and stunning views of the coconut grove garden. Upper floor — 130 m² for up to 6 guests.                    </p>
+                    <div class="flex gap-3 mt-2">
+                        <a href="https://www.jaguarindiavillage.com/grand-villa-jardim-superior?lang=en"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase border border-[#9C2E22] text-[#9C2E22] bg-transparent hover:bg-[#9C2E22] hover:text-white transition-colors duration-200">
+                            Details                        </a>
+                        <a href="https://book.omnibees.com/hotelresults?q=13994" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase bg-[#9C2E22] text-white border border-[#9C2E22] hover:bg-transparent hover:text-[#9C2E22] transition-colors duration-200">
+                            Book                        </a>
+                    </div>
+                </div>
+            </div>
+                        <div class="flex flex-col h-full" data-reveal="rise">
+                <div class="overflow-hidden" style="max-height:420px;">
+                    <img src="https://www.jaguarindiavillage.com/assets/images/acomodacoes/bangalo-coqueiral/1.jpg"
+                         alt="Bangalô Coqueiral"
+                         class="w-full h-[420px] object-cover">
+                </div>
+                <div class="pt-5 flex flex-col gap-3 flex-1">
+                    <h3 class="font-sans font-semibold text-[14px] uppercase text-[#1a1a1a]">
+                        Bangalô Coqueiral                    </h3>
+                    <p class="font-sans font-light text-[16px] text-[#3a3a3a] flex-1">
+                        Sea and coconut grove views, veranda and 75 m² of comfort — a luxury bungalow ideal for up to 2 guests with total privacy.                    </p>
+                    <div class="flex gap-3 mt-2">
+                        <a href="https://www.jaguarindiavillage.com/bangalo-coqueiral?lang=en"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase border border-[#9C2E22] text-[#9C2E22] bg-transparent hover:bg-[#9C2E22] hover:text-white transition-colors duration-200">
+                            Details                        </a>
+                        <a href="https://book.omnibees.com/hotelresults?q=13994" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase bg-[#9C2E22] text-white border border-[#9C2E22] hover:bg-transparent hover:text-[#9C2E22] transition-colors duration-200">
+                            Book                        </a>
+                    </div>
+                </div>
+            </div>
+                        <div class="flex flex-col h-full" data-reveal="rise">
+                <div class="overflow-hidden" style="max-height:420px;">
+                    <img src="https://www.jaguarindiavillage.com/assets/images/acomodacoes/bangalo-familia/1.jpg"
+                         alt="Bangalô Família"
+                         class="w-full h-[420px] object-cover">
+                </div>
+                <div class="pt-5 flex flex-col gap-3 flex-1">
+                    <h3 class="font-sans font-semibold text-[14px] uppercase text-[#1a1a1a]">
+                        Bangalô Família                    </h3>
+                    <p class="font-sans font-light text-[16px] text-[#3a3a3a] flex-1">
+                        Two suites, veranda and rustic-contemporary décor with coconut grove views — 105 m² for up to 4 guests, perfect for families or groups.                    </p>
+                    <div class="flex gap-3 mt-2">
+                        <a href="https://www.jaguarindiavillage.com/bangalo-familia?lang=en"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase border border-[#9C2E22] text-[#9C2E22] bg-transparent hover:bg-[#9C2E22] hover:text-white transition-colors duration-200">
+                            Details                        </a>
+                        <a href="https://book.omnibees.com/hotelresults?q=13994" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase bg-[#9C2E22] text-white border border-[#9C2E22] hover:bg-transparent hover:text-[#9C2E22] transition-colors duration-200">
+                            Book                        </a>
+                    </div>
+                </div>
+            </div>
+                        <div class="flex flex-col h-full" data-reveal="rise">
+                <div class="overflow-hidden" style="max-height:420px;">
+                    <img src="https://www.jaguarindiavillage.com/assets/images/acomodacoes/bangalo-coqueiral-piscina/1.jpg"
+                         alt="Bangalô Coqueiral &amp; Pool"
+                         class="w-full h-[420px] object-cover">
+                </div>
+                <div class="pt-5 flex flex-col gap-3 flex-1">
+                    <h3 class="font-sans font-semibold text-[14px] uppercase text-[#1a1a1a]">
+                        Bangalô Coqueiral &amp; Pool                    </h3>
+                    <p class="font-sans font-light text-[16px] text-[#3a3a3a] flex-1">
+                        Private pool, coconut grove views and 100 m² of comfort and style — an exclusive bungalow for up to 2 guests.                    </p>
+                    <div class="flex gap-3 mt-2">
+                        <a href="https://www.jaguarindiavillage.com/bangalo-coqueiral-piscina?lang=en"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase border border-[#9C2E22] text-[#9C2E22] bg-transparent hover:bg-[#9C2E22] hover:text-white transition-colors duration-200">
+                            Details                        </a>
+                        <a href="https://book.omnibees.com/hotelresults?q=13994" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase bg-[#9C2E22] text-white border border-[#9C2E22] hover:bg-transparent hover:text-[#9C2E22] transition-colors duration-200">
+                            Book                        </a>
+                    </div>
+                </div>
+            </div>
+                        <div class="flex flex-col h-full" data-reveal="rise">
+                <div class="overflow-hidden" style="max-height:420px;">
+                    <img src="https://www.jaguarindiavillage.com/assets/images/acomodacoes/bangalo-familia-piscina/1.jpg"
+                         alt="Bangalô Família &amp; Pool"
+                         class="w-full h-[420px] object-cover">
+                </div>
+                <div class="pt-5 flex flex-col gap-3 flex-1">
+                    <h3 class="font-sans font-semibold text-[14px] uppercase text-[#1a1a1a]">
+                        Bangalô Família &amp; Pool                    </h3>
+                    <p class="font-sans font-light text-[16px] text-[#3a3a3a] flex-1">
+                        Two suites, private pool and sea and coconut grove views across 130 m² — ideal for up to 4 guests with comfort, privacy and plenty of style.                    </p>
+                    <div class="flex gap-3 mt-2">
+                        <a href="https://www.jaguarindiavillage.com/bangalo-familia-piscina?lang=en"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase border border-[#9C2E22] text-[#9C2E22] bg-transparent hover:bg-[#9C2E22] hover:text-white transition-colors duration-200">
+                            Details                        </a>
+                        <a href="https://book.omnibees.com/hotelresults?q=13994" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase bg-[#9C2E22] text-white border border-[#9C2E22] hover:bg-transparent hover:text-[#9C2E22] transition-colors duration-200">
+                            Book                        </a>
+                    </div>
+                </div>
+            </div>
+                        <div class="flex flex-col h-full" data-reveal="rise">
+                <div class="overflow-hidden" style="max-height:420px;">
+                    <img src="https://www.jaguarindiavillage.com/assets/images/acomodacoes/bangalo-oceano/1.jpg"
+                         alt="Bangalô Oceano"
+                         class="w-full h-[420px] object-cover">
+                </div>
+                <div class="pt-5 flex flex-col gap-3 flex-1">
+                    <h3 class="font-sans font-semibold text-[14px] uppercase text-[#1a1a1a]">
+                        Bangalô Oceano                    </h3>
+                    <p class="font-sans font-light text-[16px] text-[#3a3a3a] flex-1">
+                        Panoramic sea views, generous veranda and rustic-contemporary décor across 75 m² — a luxury bungalow for up to 2 guests.                    </p>
+                    <div class="flex gap-3 mt-2">
+                        <a href="https://www.jaguarindiavillage.com/bangalo-oceano?lang=en"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase border border-[#9C2E22] text-[#9C2E22] bg-transparent hover:bg-[#9C2E22] hover:text-white transition-colors duration-200">
+                            Details                        </a>
+                        <a href="https://book.omnibees.com/hotelresults?q=13994" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase bg-[#9C2E22] text-white border border-[#9C2E22] hover:bg-transparent hover:text-[#9C2E22] transition-colors duration-200">
+                            Book                        </a>
+                    </div>
+                </div>
+            </div>
+                        <div class="flex flex-col h-full" data-reveal="rise">
+                <div class="overflow-hidden" style="max-height:420px;">
+                    <img src="https://www.jaguarindiavillage.com/assets/images/acomodacoes/bangalo-oceano-piscina/1.jpg"
+                         alt="Bangalô Oceano &amp; Pool"
+                         class="w-full h-[420px] object-cover">
+                </div>
+                <div class="pt-5 flex flex-col gap-3 flex-1">
+                    <h3 class="font-sans font-semibold text-[14px] uppercase text-[#1a1a1a]">
+                        Bangalô Oceano &amp; Pool                    </h3>
+                    <p class="font-sans font-light text-[16px] text-[#3a3a3a] flex-1">
+                        Sea views, private pool and modern-rustic style. Almost on the sand — 100 m² for up to 2 guests with privacy and comfort.                    </p>
+                    <div class="flex gap-3 mt-2">
+                        <a href="https://www.jaguarindiavillage.com/bangalo-oceano-piscina?lang=en"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase border border-[#9C2E22] text-[#9C2E22] bg-transparent hover:bg-[#9C2E22] hover:text-white transition-colors duration-200">
+                            Details                        </a>
+                        <a href="https://book.omnibees.com/hotelresults?q=13994" target="_blank" rel="noopener noreferrer"
+                           class="inline-block px-6 py-2.5 text-[11px] font-medium tracking-wide uppercase bg-[#9C2E22] text-white border border-[#9C2E22] hover:bg-transparent hover:text-[#9C2E22] transition-colors duration-200">
+                            Book                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<footer class="bg-brand text-white">
+    <div class="max-w-7xl mx-auto px-6 py-14">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-xs font-medium tracking-widest uppercase mb-4">
+                        <a href="https://www.jaguarindiavillage.com/contato?lang=en"
+                           class="hover:text-white/70 transition-colors">
+                            Contact Us                        </a>
+                    </h3>
+                    <ul class="space-y-1.5 text-sm">
+                        <li>
+                            <span class="font-semibold">Phone:</span>
+                            <a href="tel:+5588981450841" class="font-light hover:text-white/70 transition-colors"> +55 (88) 9 8145-0841</a>
+                        </li>
+                        <li>
+                            <span class="font-semibold">WhatsApp:</span>
+                            <a href="https://wa.me/5588981450841" target="_blank" rel="noopener noreferrer"
+                               class="font-light hover:text-white/70 transition-colors"> +55 (88) 9 8145-0841</a>
+                        </li>
+                        <li>
+                            <span class="font-semibold">Email:</span>
+                            <a href="mailto:reservas@jaguarindiavillage.com"
+                               class="font-light hover:text-white/70 transition-colors"> reservas@jaguarindiavillage.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xs font-medium tracking-widest uppercase mb-4">
+                        <a href="https://www.jaguarindiavillage.com/o-destino?lang=en"
+                           class="hover:text-white/70 transition-colors">
+                            Where We Are                        </a>
+                    </h3>
+                    <address class="not-italic text-sm leading-relaxed">
+                        <span class="font-semibold">Address:</span>
+                        <span class="font-light"> Praia Canoé · Fortim<br>Ceará · ZIP Code 62815-000 · Brazil</span>
+                    </address>
+                </div>
+                <div>
+                    <a href="https://docs.google.com/forms/d/1lCeJ47S8yvmlCdFIAmv_prSTm1V9fNSnpWedAOnyIZA/viewform?src=direto&sck&edit_requested=true"
+                       target="_blank" rel="noopener noreferrer"
+                       class="text-xs font-medium tracking-widest uppercase link-underline hover:text-white/70 transition-colors duration-200">
+                        Work With Us                    </a>
+                </div>
+            </div>
+            <div class="space-y-8">
+                <div>
+                    <h3 class="text-xs font-medium tracking-widest uppercase mb-6">Follow Jaguarindia</h3>
+                    <div class="flex items-center gap-4">
+                        <a href="https://www.instagram.com/jaguarindiavillage" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Jaguarindia Village">
+                            <img src="https://www.jaguarindiavillage.com/assets/icons/icone-instagram.png" alt="Instagram" class="w-[30px] h-[30px] hover:opacity-80 transition-opacity">
+                        </a>
+                                                <a href="https://open.spotify.com/user/31vjk2qnobbuaicovfhfor6bz3ae?si=1ea22c92423447ca" target="_blank" rel="noopener noreferrer" aria-label="Spotify do Jaguarindia Village">
+                            <img src="https://www.jaguarindiavillage.com/assets/icons/icone-spotify.png" alt="Spotify" class="w-[30px] h-[30px] hover:opacity-80 transition-opacity">
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xs font-medium tracking-widest uppercase mb-4">Subscribe</h3>
+                    <p class="text-sm font-light text-white/80 leading-relaxed mb-5">
+                        Receive exclusive news, updates, and offers to make the most of your stay.                    </p>
+                    <div x-data="newsletter('https://www.jaguarindiavillage.com/newsletter.php', '1061aaa8a667aa9d9f8e2c1c58dacf9be2bd776d64c717ffe875bbbd9aca81e4', &quot;Sending...&quot;, &quot;Subscribe&quot;)">
+                        <form @submit.prevent="submit" novalidate>
+                            <div class="flex flex-col gap-2">
+                                <input type="email"
+                                       x-model="email"
+                                       placeholder="Enter your email address"
+                                       required
+                                       :disabled="sent"
+                                       class="w-full bg-white/10 border border-white/30 px-4 py-2.5 text-sm font-light text-white placeholder-white/50 focus:outline-none focus:border-white transition-colors disabled:opacity-50">
+                                <button type="submit"
+                                        :disabled="loading || sent"
+                                        class="btn-primary w-[132px] h-[46px] flex items-center justify-center disabled:opacity-60">
+                                    <span x-text="loading ? labelLoading : labelBtn"></span>
+                                </button>
+                            </div>
+                        </form>
+                        <p x-show="message"
+                           x-text="message"
+                           :class="sent ? 'text-green-300' : 'text-red-300'"
+                           class="mt-3 text-xs font-light"
+                           style="display:none"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-start justify-center lg:justify-end">
+                <img src="https://www.jaguarindiavillage.com/assets/images/layout/logo.png"
+                     alt="Jaguarindia Village"
+                     class="max-w-[261px] max-h-[254px] w-full object-contain">
+            </div>
+        </div>
+        <div class="mt-12 pt-8 border-t border-white">
+            <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+                                                            <img src="https://www.jaguarindiavillage.com/assets/images/layout/jaguaribe-lodge-kite.png"
+                             alt="Jaguaribe Lodge &amp; Kite"
+                             class="max-w-[100px] object-contain opacity-70 hover:opacity-100 transition-opacity">
+                                                                                <img src="https://www.jaguarindiavillage.com/assets/images/layout/vila-selvagem.png"
+                             alt="Vila Selvagem"
+                             class="max-w-[100px] object-contain opacity-70 hover:opacity-100 transition-opacity">
+                                                                                <img src="https://www.jaguarindiavillage.com/assets/images/layout/jaguaribe-kite.png"
+                             alt="Jaguaribe Kite"
+                             class="max-w-[100px] object-contain opacity-70 hover:opacity-100 transition-opacity">
+                                                                                <img src="https://www.jaguarindiavillage.com/assets/images/layout/blta.png"
+                             alt="Brazilian Luxury Travel Association"
+                             class="max-w-[100px] object-contain opacity-70 hover:opacity-100 transition-opacity">
+                                                                                <img src="https://www.jaguarindiavillage.com/assets/images/layout/conde-nast-johansens.png"
+                             alt="Condé Nast Johansens"
+                             class="max-w-[100px] object-contain opacity-70 hover:opacity-100 transition-opacity">
+                                                                                <img src="https://www.jaguarindiavillage.com/assets/images/layout/michelin-guide.png"
+                             alt="Michelin Guide"
+                             class="max-w-[100px] object-contain opacity-70 hover:opacity-100 transition-opacity">
+                                                                                <img src="https://www.jaguarindiavillage.com/assets/images/layout/tablet-hotels.png"
+                             alt="Tablet Hotels"
+                             class="max-w-[100px] object-contain opacity-70 hover:opacity-100 transition-opacity">
+                                                                                <img src="https://www.jaguarindiavillage.com/assets/images/layout/tripadvisor.png"
+                             alt="Tripadvisor"
+                             class="max-w-[100px] object-contain opacity-70 hover:opacity-100 transition-opacity">
+            </div>
+        </div>
+    </div>
+    <div class="bg-site py-4 flex justify-center">
+        <a href="https://webz.com.br" target="_blank" rel="noopener noreferrer">
+            <img src="https://www.jaguarindiavillage.com/assets/images/layout/logo-webz.png"
+                 alt="Webz"
+                 class="max-w-[60px] max-h-[14px] object-contain hover:opacity-30 transition-opacity">
+        </a>
+    </div>
+</footer>
+<script src="https://www.jaguarindiavillage.com/js/main.js"></script>
+</body>
+</html>

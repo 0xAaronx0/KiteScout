@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="alternate" href="https://www.cantodasaguas.com/" hreflang="pt" />
+<link rel="alternate" href="https://www.cantodasaguas.com/fr/accueil/" hreflang="fr" />
+<link rel="alternate" href="https://www.cantodasaguas.com/en/home-en/" hreflang="en" />
+	<!-- This site is optimized with the Yoast SEO plugin v27.2 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Canto das Aguas Pousada - Icarai de Amontada (Icaraizinho) Brasil</title>
+	<meta name="description" content="Our hotel (pousada) is located at the tip of the Icarai de Amontada village on Icaraizinho beach, a superb bay which is also an exceptional spot for practicing wing and kite surfing" />
+	<link rel="canonical" href="https://www.cantodasaguas.com/en/home-en/" />
+	<meta property="og:locale" content="en_GB" />
+	<meta property="og:locale:alternate" content="pt_BR" />
+	<meta property="og:locale:alternate" content="fr_FR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Canto das Aguas Pousada - Icarai de Amontada (Icaraizinho) Brasil" />
+	<meta property="og:description" content="The Canto das Águas Inn has a privileged location, by the sea, with a breathtaking view of the bay of Icaraizinho de Amontada. We offer our guests accommodations that combine comfort with simplicity, with excellent service and value for money." />
+	<meta property="og:url" content="https://www.cantodasaguas.com/en/home-en/" />
+	<meta property="og:site_name" content="Pousada Canto das Águas - Icaraí de Amontada - Brasil" />
+	<meta property="article:publisher" content="https://www.facebook.com/casacantodasaguas.com.br/" />
+	<meta property="article:modified_time" content="2026-04-07T10:28:27+00:00" />
+	<meta property="og:image" content="https://www.cantodasaguas.com/wp-content/uploads/2021/12/ico-en.jpg" />
+	<meta property="og:image:width" content="760" />
+	<meta property="og:image:height" content="520" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:description" content="The Canto das Águas Inn has a privileged location, by the sea, with a breathtaking view of the bay of Icaraizinho de Amontada. We offer our guests accommodations that combine comfort with simplicity, with excellent service and value for money." />
+	<meta name="twitter:image" content="https://www.cantodasaguas.com/wp-content/uploads/2021/12/ico-en.jpg" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.cantodasaguas.com/en/home-en/","url":"https://www.cantodasaguas.com/en/home-en/","name":"Canto das Aguas Pousada - Icarai de Amontada (Icaraizinho) Brasil","isPartOf":{"@id":"https://www.cantodasaguas.com/en/home-en/#website"},"about":{"@id":"https://www.cantodasaguas.com/en/home-en/#organization"},"primaryImageOfPage":{"@id":"https://www.cantodasaguas.com/en/home-en/#primaryimage"},"image":{"@id":"https://www.cantodasaguas.com/en/home-en/#primaryimage"},"thumbnailUrl":"https://www.cantodasaguas.com/wp-content/uploads/2026/04/youtube.png","datePublished":"2021-11-24T16:18:29+00:00","dateModified":"2026-04-07T10:28:27+00:00","description":"Our hotel (pousada) is located at the tip of the Icarai de Amontada village on Icaraizinho beach, a superb bay which is also an exceptional spot for practicing wing and kite surfing","breadcrumb":{"@id":"https://www.cantodasaguas.com/en/home-en/#breadcrumb"},"inLanguage":"en-GB","potentialAction":[{"@type":"ReadAction","target":["https://www.cantodasaguas.com/en/home-en/"]}]},{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://www.cantodasaguas.com/en/home-en/#primaryimage","url":"https://www.cantodasaguas.com/wp-content/uploads/2026/04/youtube.png","contentUrl":"https://www.cantodasaguas.com/wp-content/uploads/2026/04/youtube.png"},{"@type":"BreadcrumbList","@id":"https://www.cantodasaguas.com/en/home-en/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Início"}]},{"@type":"WebSite","@id":"https://www.cantodasaguas.com/en/home-en/#website","url":"https://www.cantodasaguas.com/en/home-en/","name":"Pousada Canto das Águas - Icaraí de Amontada - Brasil","description":"","publisher":{"@id":"https://www.cantodasaguas.com/en/home-en/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.cantodasaguas.com/en/home-en/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-GB"},{"@type":"Organization","@id":"https://www.cantodasaguas.com/en/home-en/#organization","name":"Pousada Canto das Águas - Icaraí de Amontada - Brasil","url":"https://www.cantodasaguas.com/en/home-en/","logo":{"@type":"ImageObject","inLanguage":"en-GB","@id":"https://www.cantodasaguas.com/en/home-en/#/schema/logo/image/","url":"https://www.cantodasaguas.com/wp-content/uploads/2021/11/ico.jpg","contentUrl":"https://www.cantodasaguas.com/wp-content/uploads/2021/11/ico.jpg","width":760,"height":520,"caption":"Pousada Canto das Águas - Icaraí de Amontada - Brasil"},"image":{"@id":"https://www.cantodasaguas.com/en/home-en/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/casacantodasaguas.com.br/","https://www.instagram.com/pousadacantodasaguas.br/"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+<link rel="alternate" type="application/rss+xml" title="Pousada Canto das Águas - Icaraí de Amontada - Brasil &raquo; Feed" href="https://www.cantodasaguas.com/en/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Pousada Canto das Águas - Icaraí de Amontada - Brasil &raquo; Comments Feed" href="https://www.cantodasaguas.com/en/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.cantodasaguas.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cantodasaguas.com%2Fen%2Fhome-en%2F&#038;lang=en" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.cantodasaguas.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.cantodasaguas.com%2Fen%2Fhome-en%2F&#038;format=xml&#038;lang=en" />
+<style id='wp-img-auto-sizes-contain-inline-css'></style>
+<style id='classic-theme-styles-inline-css'></style>
+<style id='joinchat-button-style-inline-css'></style>
+<style id='global-styles-inline-css'></style>
+<link rel='stylesheet' id='hello-elementor-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/e72z1bt5/hqsqc.css' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/g544mzuq/hqsqc.css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/dq6do5uh/hqsqc.css' media='all' />
+<style id='elementor-frontend-inline-css'>.x{background-image:url(https://www.cantodasaguas.com/wp-content/uploads/2026/04/deck.jpg)}.x{background-image:url(https://www.cantodasaguas.com/wp-content/uploads/2026/04/pool.jpg)}.x{background-image:url(https://www.cantodasaguas.com/wp-content/uploads/2026/04/terracce.jpg)}.x{background-image:url(https://www.cantodasaguas.com/wp-content/uploads/2026/04/team.jpg)}.x{background-image:url(https://www.cantodasaguas.com/wp-content/uploads/2026/04/WING.png)}.x{background-image:url(https://www.cantodasaguas.com/wp-content/uploads/2026/04/sky-view.jpg)}</style>
+<link rel='stylesheet' id='widget-heading-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/e46e6hcy/hqsqc.css' media='all' />
+<link rel='stylesheet' id='widget-nav-menu-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/eu2zy1hc/hqsqc.css' media='all' />
+<link rel='stylesheet' id='widget-image-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/dh6nd41x/hqsqc.css' media='all' />
+<link rel='stylesheet' id='widget-icon-list-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/kztjxotp/hqsqc.css' media='all' />
+<link rel='stylesheet' id='widget-social-icons-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/ma5m4wpp/hqsqc.css' media='all' />
+<link rel='stylesheet' id='e-apple-webkit-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/o55d79g/hqsqc.css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/7im1cf45/hqsqc.css' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/8j3vnzrc/hqsqc.css' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/djkfekwi/hqsqc.css' media='all' />
+<link rel='stylesheet' id='e-animation-fadeInLeft-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/6vqvma7j/hqsqc.css' media='all' />
+<link rel='stylesheet' id='swiper-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/6olgbq4z/hqsqc.css' media='all' />
+<link rel='stylesheet' id='e-swiper-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/8xatoz4x/hqsqc.css' media='all' />
+<link rel='stylesheet' id='widget-slides-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/2qunkulv/hqsqc.css' media='all' />
+<link rel='stylesheet' id='widget-video-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/q6udlir8/hqsqc.css' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-roboto-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/12vbmop7/hqsqc.css' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/q96udss3/hqsqc.css' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-poppins-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/mcio8k2q/hqsqc.css' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/6zqm7s12/hqsqc.css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/erknvt8y/hqsqc.css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-brands-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/8ayizgy5/hqsqc.css' media='all' />
+<script src="https://www.cantodasaguas.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://www.cantodasaguas.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="https://www.cantodasaguas.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=4.0.0" id="font-awesome-4-shim-js"></script>
+<link rel="https://api.w.org/" href="https://www.cantodasaguas.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.cantodasaguas.com/wp-json/wp/v2/pages/734" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.cantodasaguas.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.4" />
+<link rel='shortlink' href='https://www.cantodasaguas.com/' />
+<meta name="generator" content="Elementor 4.0.0; features: additional_custom_breakpoints; settings: css_print_method-internal, google_font-enabled, font_display-auto">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-214161027-1"></script>
+<script></script>
+<style></style>
+<meta name="keywords" content="pousada, pusada, ceara, brésil, brazil, icarai, icaraizinho, icarai de amontada, wing, wingfoil, foil kite, kitesurf, strapless, praia, beriamar, beria-mar, plage, bord de plage, beachfront, frontbeach, front beach"/>
+			<style></style>
+			<link rel="icon" href="https://www.cantodasaguas.com/wp-content/uploads/2021/11/cropped-ico-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://www.cantodasaguas.com/wp-content/uploads/2021/11/cropped-ico-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.cantodasaguas.com/wp-content/uploads/2021/11/cropped-ico-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://www.cantodasaguas.com/wp-content/uploads/2021/11/cropped-ico-270x270.jpg" />
+</head>
+<body class="home wp-singular page-template-default page page-id-734 wp-theme-hello-elementor elementor-default elementor-kit-5 elementor-page elementor-page-734">
+<a class="skip-link screen-reader-text" href="#content">
+	Skip to content</a>
+		<header data-elementor-type="header" data-elementor-id="1798" class="elementor elementor-1798 elementor-location-header" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-e14f72a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e14f72a" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation_mobile&quot;:&quot;none&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-f8126cd" data-id="f8126cd" data-element_type="column" data-e-type="column" data-settings="{&quot;animation_mobile&quot;:&quot;none&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-04bd8c3 elementor-widget elementor-widget-heading" data-id="04bd8c3" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">BEACHFRONT &amp; NEXT TO THE VILLAGE</p>				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ff5bb60" data-id="ff5bb60" data-element_type="column" data-e-type="column" data-settings="{&quot;animation_mobile&quot;:&quot;none&quot;}">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4933fb6 elementor-nav-menu__align-end elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-id="4933fb6" data-element_type="widget" data-e-type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;}}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+				<ul id="menu-1-4933fb6" class="elementor-nav-menu"><li class="lang-item lang-item-3 lang-item-pt lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-1275-pt"><a href="https://www.cantodasaguas.com/" lang="pt-BR" hreflang="pt-BR" class="elementor-item"><img src="/wp-content/polylang/pt_BR.png" alt="Português" /></a></li>
+<li class="lang-item lang-item-7 lang-item-fr menu-item menu-item-type-custom menu-item-object-custom menu-item-1275-fr"><a href="https://www.cantodasaguas.com/fr/accueil/" lang="fr-FR" hreflang="fr-FR" class="elementor-item"><img src="/wp-content/polylang/fr_FR.png" alt="Français" /></a></li>
+<li class="lang-item lang-item-5 lang-item-en current-lang menu-item menu-item-type-custom menu-item-object-custom current_page_item menu-item-home menu-item-1275-en"><a href="https://www.cantodasaguas.com/en/home-en/" lang="en-GB" hreflang="en-GB" class="elementor-item"><img src="/wp-content/polylang/en_GB.png" alt="English" /></a></li>
+</ul>			</nav>
+						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-4933fb6" class="elementor-nav-menu"><li class="lang-item lang-item-3 lang-item-pt lang-item-first menu-item menu-item-type-custom menu-item-object-custom menu-item-1275-pt"><a href="https://www.cantodasaguas.com/" lang="pt-BR" hreflang="pt-BR" class="elementor-item" tabindex="-1"><img src="/wp-content/polylang/pt_BR.png" alt="Português" /></a></li>
+<li class="lang-item lang-item-7 lang-item-fr menu-item menu-item-type-custom menu-item-object-custom menu-item-1275-fr"><a href="https://www.cantodasaguas.com/fr/accueil/" lang="fr-FR" hreflang="fr-FR" class="elementor-item" tabindex="-1"><img src="/wp-content/polylang/fr_FR.png" alt="Français" /></a></li>
+<li class="lang-item lang-item-5 lang-item-en current-lang menu-item menu-item-type-custom menu-item-object-custom current_page_item menu-item-home menu-item-1275-en"><a href="https://www.cantodasaguas.com/en/home-en/" lang="en-GB" hreflang="en-GB" class="elementor-item" tabindex="-1"><img src="/wp-content/polylang/en_GB.png" alt="English" /></a></li>
+</ul>			</nav>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-0eb3c3e elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="0eb3c3e" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c99410e" data-id="c99410e" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-b2e1d2e elementor-widget elementor-widget-image" data-id="b2e1d2e" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://www.cantodasaguas.com">
+							<img src="https://www.cantodasaguas.com/wp-content/uploads/elementor/thumbs/Logo2-1-pet38v4lopcizs8cocmaeg05mjsu7yodnl6kky02rk.png" title="Pousada Canto das Águas" alt="Pousada Canto das Águas" loading="lazy" />								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-e2c2633" data-id="e2c2633" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-dac2571 elementor-nav-menu__align-end elementor-nav-menu--stretch elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="dac2571" data-element_type="widget" data-e-type="widget" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+				<ul id="menu-1-dac2571" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-734 current_page_item menu-item-776"><a href="https://www.cantodasaguas.com/en/home-en/" aria-current="page" class="elementor-item elementor-item-active">HOME</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-772"><a href="https://www.cantodasaguas.com/en/rooms/" class="elementor-item">ROOMS</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1976"><a href="https://www.cantodasaguas.com/en/leasures/" class="elementor-item">TRIPS</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1977"><a href="https://www.cantodasaguas.com/en/kite-wing-en/" class="elementor-item">WING &#038; KITE</a></li>
+<li class="reservejaazul menu-item menu-item-type-post_type menu-item-object-page menu-item-1978"><a href="https://www.cantodasaguas.com/en/reserve/" class="elementor-item">Reserve</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-dac2571" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-734 current_page_item menu-item-776"><a href="https://www.cantodasaguas.com/en/home-en/" aria-current="page" class="elementor-item elementor-item-active" tabindex="-1">HOME</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-772"><a href="https://www.cantodasaguas.com/en/rooms/" class="elementor-item" tabindex="-1">ROOMS</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1976"><a href="https://www.cantodasaguas.com/en/leasures/" class="elementor-item" tabindex="-1">TRIPS</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1977"><a href="https://www.cantodasaguas.com/en/kite-wing-en/" class="elementor-item" tabindex="-1">WING &#038; KITE</a></li>
+<li class="reservejaazul menu-item menu-item-type-post_type menu-item-object-page menu-item-1978"><a href="https://www.cantodasaguas.com/en/reserve/" class="elementor-item" tabindex="-1">Reserve</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</header>
+<main id="content" class="site-main post-734 page type-page status-publish hentry" role="main">
+		<div class="page-content">
+				<div data-elementor-type="wp-page" data-elementor-id="734" class="elementor elementor-734" data-elementor-post-type="page">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-ceb577a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ceb577a" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-610bc9f" data-id="610bc9f" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-10f1c30 elementor--h-position-center elementor--v-position-middle elementor-arrows-position-inside elementor-widget elementor-widget-slides" data-id="10f1c30" data-element_type="widget" data-e-type="widget" data-widget_type="slides.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-swiper">
+					<div class="elementor-slides-wrapper elementor-main-swiper swiper" role="region" aria-roledescription="carousel" aria-label="Slides" dir="ltr" data-animation="fadeInLeft">
+				<div class="swiper-wrapper elementor-slides">
+										<div class="elementor-repeater-item-c41cde0 swiper-slide" role="group" aria-roledescription="slide"><div class="swiper-slide-bg" role="img" aria-label="deck"></div><div class="swiper-slide-inner" ><div class="swiper-slide-contents"></div></div></div><div class="elementor-repeater-item-72ac666 swiper-slide" role="group" aria-roledescription="slide"><div class="swiper-slide-bg" role="img" aria-label="pool"></div><div class="swiper-slide-inner" ><div class="swiper-slide-contents"></div></div></div><div class="elementor-repeater-item-20b8134 swiper-slide" role="group" aria-roledescription="slide"><div class="swiper-slide-bg" role="img" aria-label="terracce"></div><div class="swiper-slide-inner" ><div class="swiper-slide-contents"></div></div></div><div class="elementor-repeater-item-4e63dd1 swiper-slide" role="group" aria-roledescription="slide"><div class="swiper-slide-bg" role="img" aria-label="team"></div><div class="swiper-slide-inner" ><div class="swiper-slide-contents"></div></div></div><div class="elementor-repeater-item-646775d swiper-slide" role="group" aria-roledescription="slide"><div class="swiper-slide-bg" role="img" aria-label="WING"></div><div class="swiper-slide-inner" ><div class="swiper-slide-contents"></div></div></div><div class="elementor-repeater-item-7093f33 swiper-slide" role="group" aria-roledescription="slide"><div class="swiper-slide-bg" role="img" aria-label="sky-view"></div><div class="swiper-slide-inner" ><div class="swiper-slide-contents"></div></div></div>				</div>
+															<div class="elementor-swiper-button elementor-swiper-button-prev" role="button" tabindex="0" aria-label="Previous slide">
+							<i aria-hidden="true" class="eicon-chevron-left"></i>						</div>
+						<div class="elementor-swiper-button elementor-swiper-button-next" role="button" tabindex="0" aria-label="Next slide">
+							<i aria-hidden="true" class="eicon-chevron-right"></i>						</div>
+																	</div>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-7a6df02 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7a6df02" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation_mobile&quot;:&quot;none&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-6582e98" data-id="6582e98" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-ce459d4 elementor-widget elementor-widget-heading" data-id="ce459d4" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Canto das Aguas, Pousada - Icarai de Amontada (Icaraizinho) Brasil</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-7531a4d elementor-widget elementor-widget-text-editor" data-id="7531a4d" data-element_type="widget" data-e-type="widget" id="texto" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><span style="color: #2f73b7;"><strong>Our values:</strong></span></p><ul><li>A unique location on the beach in the center of Icaraizinho Bay and next to the village.</li><li>A space of calm, tranquility and security. A beautiful lawn, a private and protected swimming pool, a large deck with easy access to the beach and the sea allow everyone and especially families with or without children and couples to feel perfectly at ease here.</li><li>Kite – Wing – Foil : special place with landing zone, compressor and storage space. We have our own Wing school : <a href="https://icaraiwingacademy.com/en/" target="_blank" rel="noopener">Icarai Wing Academy</a>.</li><li>The boss is Nacélio, with his team in place since 2011, he does everything to meet your expectations and provide you with a happy stay.</li><li>All the comfort (large bedrooms, private bathroom, TV, air conditioning) at a reasonable price.</li></ul>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-60eacae" data-id="60eacae" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-792eb0d elementor-widget elementor-widget-video" data-id="792eb0d" data-element_type="widget" data-e-type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/youtu.be\/K4lq7z_d7sk&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-wrapper elementor-open-inline">
+			<div class="elementor-video"></div>		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-074e4da elementor-widget elementor-widget-text-editor" data-id="074e4da" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h4>For the Wingers:</h4>								</div>
+				</div>
+				<div class="elementor-element elementor-element-4c4dfab elementor-widget elementor-widget-video" data-id="4c4dfab" data-element_type="widget" data-e-type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=EYHLQfyCy7g&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;}" data-widget_type="video.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-wrapper elementor-open-inline">
+			<div class="elementor-video"></div>		</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-7841101 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7841101" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;animation_mobile&quot;:&quot;none&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-694a53d" data-id="694a53d" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2b43397 elementor-widget elementor-widget-heading" data-id="2b43397" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">More images:</h2>				</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-29a296d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="29a296d" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-05ef659" data-id="05ef659" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-cabd51e elementor-widget elementor-widget-text-editor" data-id="cabd51e" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h2><a href="https://www.youtube.com/@pousadacantodasaguas.oficial" target="_blank" rel="noopener">YouTube</a></h2>								</div>
+				</div>
+				<div class="elementor-element elementor-element-8fa673a elementor-widget elementor-widget-image" data-id="8fa673a" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://www.youtube.com/@pousadacantodasaguas.oficial/playlists" target="_blank">
+							<img decoding="async" width="195" height="195" src="https://www.cantodasaguas.com/wp-content/uploads/2026/04/youtube.png" class="attachment-large size-large wp-image-2759" alt="" srcset="https://www.cantodasaguas.com/wp-content/uploads/2026/04/youtube.png 195w, https://www.cantodasaguas.com/wp-content/uploads/2026/04/youtube-150x150.png 150w" sizes="(max-width: 195px) 100vw, 195px" />								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a6bc90b" data-id="a6bc90b" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a0f0c55 elementor-widget elementor-widget-text-editor" data-id="a0f0c55" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h2><a href="https://www.instagram.com/pousadacantodasaguas.oficial/" target="_blank" rel="noopener">Instagram</a></h2>								</div>
+				</div>
+				<div class="elementor-element elementor-element-c658e0e elementor-widget elementor-widget-image" data-id="c658e0e" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://www.instagram.com/pousadacantodasaguas.oficial/" target="_blank">
+							<img decoding="async" width="195" height="195" src="https://www.cantodasaguas.com/wp-content/uploads/2026/04/instagram.png" class="attachment-large size-large wp-image-2758" alt="" srcset="https://www.cantodasaguas.com/wp-content/uploads/2026/04/instagram.png 195w, https://www.cantodasaguas.com/wp-content/uploads/2026/04/elementor/thumbs/instagram-rldr95202ztbg8wsh6od3o35xzirruxx6w5n7t7mn0.png 150w, https://www.cantodasaguas.com/wp-content/uploads/2026/04/elementor/thumbs/instagram-rldr951zylxoag3f1al8w27bu93lwomclpp4lo5wmw.png 140w, https://www.cantodasaguas.com/wp-content/uploads/2026/04/elementor/thumbs/instagram-rldr951zwezupjoqbcjos99esdw0z3gkb4gvaln1mu.png 135w, https://www.cantodasaguas.com/wp-content/uploads/2026/04/elementor/thumbs/instagram-rldr951zu8214na1lei4ogbhqiog1ias0j8lzj46ms.png 130w" sizes="(max-width: 195px) 100vw, 195px" />								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-f9f7568 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f9f7568" data-element_type="section" data-e-type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e453732" data-id="e453732" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-52e8949 elementor-widget elementor-widget-shortcode" data-id="52e8949" data-element_type="widget" data-e-type="widget" data-widget_type="shortcode.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-shortcode">[trustindex no-registration=tripadvisor]</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+				<div class="post-tags">
+					</div>
+			</div>
+	<section id="comments" class="comments-area">
+</section><!-- .comments-area -->
+</main>
+			<footer data-elementor-type="footer" data-elementor-id="1806" class="elementor elementor-1806 elementor-location-footer" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-b436938 elementor-section-height-min-height elementor-section-items-top elementor-reverse-mobile elementor-section-boxed elementor-section-height-default" data-id="b436938" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-3e9bc24" data-id="3e9bc24" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a18d0a5 elementor-widget elementor-widget-heading" data-id="a18d0a5" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Contact</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-ac76686 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="ac76686" data-element_type="widget" data-e-type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<a href="https://www.cantodasaguas.com/en/reserve/">
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-envelope"></i>						</span>
+										<span class="elementor-icon-list-text">cantodasaguas.br@gmail.com</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://api.whatsapp.com/send?phone=5588981319175">
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fab fa-whatsapp-square"></i>						</span>
+										<span class="elementor-icon-list-text">WhatsApp : +55 88 98131-9175</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://api.whatsapp.com/send?phone=33609101680">
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-phone-square-alt"></i>						</span>
+										<span class="elementor-icon-list-text">Contact France : +33 (0)6 09 10 16 80 (WhatsApp)</span>
+											</a>
+									</li>
+								<li class="elementor-icon-list-item">
+											<a href="https://goo.gl/maps/7qGgd6oPHEDAPST88" target="_blank">
+												<span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-map-marker-alt"></i>						</span>
+										<span class="elementor-icon-list-text">Visit us</span>
+											</a>
+									</li>
+						</ul>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-b244a17" data-id="b244a17" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-b219735 elementor-widget elementor-widget-heading" data-id="b219735" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Follow us</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-f92bc5f elementor-shape-square e-grid-align-left e-grid-align-mobile-left elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="f92bc5f" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-c1613c3" href="https://www.instagram.com/pousadacantodasaguas.br/" target="_blank">
+						<span class="elementor-screen-only">Instagram</span>
+						<i aria-hidden="true" class="fab fa-instagram"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-b090fde" href="https://www.facebook.com/casacantodasaguas.com.br" target="_blank">
+						<span class="elementor-screen-only">Facebook</span>
+						<i aria-hidden="true" class="fab fa-facebook"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-6c5e3af" href="https://www.youtube.com/@pousadacantodasaguasbresil2316" target="_blank">
+						<span class="elementor-screen-only">Youtube</span>
+						<i aria-hidden="true" class="fab fa-youtube"></i>					</a>
+				</span>
+					</div>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-741e4a7" data-id="741e4a7" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-978f4c3 elementor-widget elementor-widget-heading" data-id="978f4c3" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default"><a href="/en/home-en/">ROOMS</a></h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-1b8a6bf elementor-align-left elementor-widget elementor-widget-button" data-id="1b8a6bf" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://www.cantodasaguas.com/en/reserve/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Reserve</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				<div class="elementor-element elementor-element-156a95e elementor-align-left elementor-widget elementor-widget-button" data-id="156a95e" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://www.cantodasaguas.com/en/payment/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Payment</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</footer>
+<script type="speculationrules"></script>
+<div class="joinchat joinchat--right" data-settings='{"telephone":"5588981319175","mobile_only":false,"button_delay":2,"whatsapp_web":false,"qr":false,"message_views":2,"message_delay":10,"message_badge":false,"message_send":"Olá. Estou vindo do site e gostaria de mais informações.","message_hash":"f89f5f6e"}' hidden aria-hidden="false">
+	<div class="joinchat__button" role="button" tabindex="0" aria-label="Em que posso ajudar? Open chat">
+									<div class="joinchat__tooltip" aria-hidden="true"><div>Em que posso ajudar?</div></div>
+			</div>
+					<div class="joinchat__chatbox" role="dialog" aria-labelledby="joinchat__label" aria-modal="true">
+			<div class="joinchat__header">
+				<div id="joinchat__label">
+											<span>Atendimento On-line</span>
+									</div>
+				<div class="joinchat__close" role="button" tabindex="0" aria-label="Close"></div>
+			</div>
+			<div class="joinchat__scroll">
+				<div class="joinchat__content">
+					<div class="joinchat__chat"><div class="joinchat__bubble">Olá! Podemos te ajudar?</div></div>
+					<div class="joinchat__open" role="button" tabindex="0">
+													<div class="joinchat__open__text">Iniciar conversa</div>
+												<svg></svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+			<script></script>
+			<link rel='stylesheet' id='joinchat-css' href='//www.cantodasaguas.com/wp-content/cache/wpfc-minified/32qf8078/hqsqc.css' media='all' />
+<style id='joinchat-inline-css'></style>
+<script id="pll_cookie_script-js-after"></script>
+<script src="https://www.cantodasaguas.com/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=1.0.0" id="hello-theme-frontend-js"></script>
+<script src="https://www.cantodasaguas.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=4.0.0" id="elementor-webpack-runtime-js"></script>
+<script src="https://www.cantodasaguas.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=4.0.0" id="elementor-frontend-modules-js"></script>
+<script src="https://www.cantodasaguas.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script id="elementor-frontend-js-before"></script>
+<script src="https://www.cantodasaguas.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.0.0" id="elementor-frontend-js"></script>
+<script src="https://www.cantodasaguas.com/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1" id="smartmenus-js"></script>
+<script src="https://www.cantodasaguas.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+<script src="https://www.cantodasaguas.com/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5" id="swiper-js"></script>
+<script src="https://www.cantodasaguas.com/wp-content/plugins/creame-whatsapp-me/public/js/joinchat.min.js?ver=6.0.10" id="joinchat-js" defer data-wp-strategy="defer" fetchpriority="low"></script>
+<script src="https://www.cantodasaguas.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=4.0.0" id="elementor-pro-webpack-runtime-js"></script>
+<script src="https://www.cantodasaguas.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script src="https://www.cantodasaguas.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after"></script>
+<script id="elementor-pro-frontend-js-before"></script>
+<script src="https://www.cantodasaguas.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=4.0.0" id="elementor-pro-frontend-js"></script>
+<script src="https://www.cantodasaguas.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=4.0.0" id="pro-elements-handlers-js"></script>
+</body>
+</html><!-- WP Fastest Cache file was created in 0.558 seconds, on 12 de October de 2026 @ 17:58 -->

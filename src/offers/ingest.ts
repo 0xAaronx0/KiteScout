@@ -204,6 +204,15 @@ const KNOWN_PINS: Record<string, { lat: number; lng: number }> = {
   'bislig beach, bulalacao': { lat: 12.3262, lng: 121.3437 }, // Bulalacao town
   'bulabog beach, boracay': { lat: 11.9637, lng: 121.9303 },
   'lo stagnone': { lat: 37.865, lng: 12.455 }, // the lagoon; Nominatim lands 40 km north-east near Custonaci
+  // Itarema / Amontada (Ceará) beaches, from the OSM hamlets: "Praia do Farol" alone resolves to Mosqueiro, Pará,
+  // "Praia de Patos" finds nothing, "Icaraí de Amontada" lands 4.5 km inland
+  'praia do farol': { lat: -2.8741, lng: -39.9409 },
+  'praia de patos': { lat: -3.0055, lng: -39.7486 },
+  'icaraí de amontada': { lat: -3.0248, lng: -39.6467 },
+  touros: { lat: -5.1999, lng: -35.4595 }, // the beach town; the geocoder returns the municipality, 18 km inland
+  // Tarifa (OSM): "Valdevaqueros" alone resolves to a village in Zamora, "Punta Paloma" to Fuerteventura
+  valdevaqueros: { lat: 36.0662, lng: -5.6814 },
+  'punta paloma': { lat: 36.0594, lng: -5.7111 },
 };
 
 export async function locateSpots(c: OfferContent, stored: unknown): Promise<StoredSpot[]> {
@@ -458,7 +467,9 @@ async function runAdapterInner(
           minSize: a.imageMinSize,
         });
         if (images.length === 0) rep.notes.push('no usable images found');
-        const { error: iErr } = await supabase.from('package_offers').update({ images }).eq('id', offerId);
+        // jsonb rejects \u0000 ("unsupported Unicode escape sequence"); strip it from every string in the image records
+        const clean = JSON.parse(JSON.stringify(images, (_k, v) => typeof v === 'string' ? v.replace(/\u0000/g, '') : v)) as StoredImage[];
+        const { error: iErr } = await supabase.from('package_offers').update({ images: clean }).eq('id', offerId);
         if (iErr) throw new Error(`images update failed: ${iErr.message}`);
         rep.images = images.length;
       } else {

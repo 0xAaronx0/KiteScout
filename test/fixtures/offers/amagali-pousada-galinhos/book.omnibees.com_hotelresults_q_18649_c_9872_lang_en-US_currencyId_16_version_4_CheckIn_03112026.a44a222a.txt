@@ -1,0 +1,54 @@
+<html><body><!-- compacted fixture: rate plans + room_left only -->
+<div class="rate_plan roomrateinfo rateplan_step2 "
+ data-modal-source="true" 
+ data-has-loyalty="true"
+ data-policy="General Cancellation Policy"
+ data-rate-name="Best Available Rate"
+ data-price="769.5"
+ data-price-public="855"
+ data-rating="3"
+ data-quantity="0"
+ data-max-quantity="2"
+ data-country="40"
+ data-board="Breakfast"
+ data-name="Roof Top Apartment"
+ data-rph="0"
+ data-payments="[1]"
+ data-currency="16"
+ data-price-before-discount="1710"
+ data-total-price-after-tax="1539"
+ data-total-price-after-tax-public="1710"
+ data-roomrate-uid='110703-403500-2-0-' data-room-id='110703' data-rate-id='403500' data-room-name='Roof Top Apartment' data-adults='2' data-children='0' data-children-ages='' data-occupancy-label='2 adults' data-occupancy-info='' data-occupancy-info-key='' data-room-ordinal='' data-nights='2' data-start='2026-11-03' data-end='2026-11-05' data-cancelation-policy-message='Free cancellation' data-daily-rates='[{"day":"Tue,03 Nov","value":"<span class=\"currency_symbol_price\"><\/span> 769.<span class=\"decimal_value_price\">50<\/span>","publicValue":"<span class=\"currency_symbol_price\"><\/span> 855.<span class=\"decimal_value_price\">00<\/span>"},{"day":"Wed,04 Nov","value":"<span class=\"currency_symbol_price\"><\/span> 769.<span class=\"decimal_value_price\">50<\/span>","publicValue":"<span class=\"currency_symbol_price\"><\/span> 855.<span class=\"decimal_value_price\">00<\/span>"}]' data-included-meals='{&quot;Breakfast&quot;:true,&quot;Lunch&quot;:false,&quot;Dinner&quot;:false,&quot;MealPlanIndicator&quot;:true,&quot;MealPlanCode&quot;:3,&quot;ID&quot;:76645,&quot;Name&quot;:&quot;Breakfast&quot;,&quot;Description&quot;:&quot;Breakfast&quot;,&quot;Price&quot;:{&quot;AmountBeforeTax&quot;:0,&quot;AmountAfterTax&quot;:0,&quot;CurrencyCode&quot;:16,&quot;Original&quot;:{&quot;AmountBeforeTax&quot;:0,&quot;AmountAfterTax&quot;:0,&quot;CurrencyCode&quot;:16}},&quot;ServicePricingType&quot;:21}' data-included-extras='[{&quot;RatePlanInclusionDesciption&quot;:{&quot;Name&quot;:&quot;Parking&quot;,&quot;Language&quot;:1,&quot;Description&quot;:&quot;We have private parking for traction vehicles that have access to the beach at low tide via the city of Cai\u00e7ara do Norte or via the Salina Diamante Branco trail. Access to Galinhos is via Pratagil, where there is free public parking with 24-hour security guards. Ordinary vehicles must be left there, then you must take the boat to make the 10-minute crossing. The crossing costs per person or per boat.&quot;},&quot;ID&quot;:77131},{&quot;RatePlanInclusionDesciption&quot;:{&quot;Name&quot;:&quot;WiFi&quot;,&quot;Language&quot;:1,&quot;Description&quot;:&quot;WiFi&quot;},&quot;ID&quot;:77127}]' data-included-text='Included' data-stay-text='Entire Stay' data-total-price-before-tax='1539' data-total-price-before-tax-public='1710' data-offers='' data-promo-code='' data-promo-discount='' data-group-code='' data-offers-discount='' data-taxes='[]' data-total-taxes-loyalty='' data-total-taxes='' data-country-hide-taxes-message='false' data-total-price-after-tax='1539' data-total-price-after-tax-public='1710' data-partial-payments='' data-rate-currency='16' data-rate-currency-symbol='R$' data-rate-currency-string-symbol='BRL' data-rate-currency-name='Brazil Real' data-original-price-before-tax='1539' data-original-price-before-tax-public='1710' data-original-price-after-tax='1539' data-original-price-after-tax-public='1710' data-loyalty-level-id='454'
+ data-breakfast="true"
+ data-extras="[]"
+ data-free-cancel="true"
+ ></div>
+<span class="room_left">
+ There are 2 rooms left </span>
+<div class="rate_plan roomrateinfo rateplan_step2 "
+ data-modal-source="true" 
+ data-has-loyalty="true"
+ data-policy="General Cancellation Policy"
+ data-rate-name="Best Available Rate"
+ data-price="1368"
+ data-price-public="1520"
+ data-rating="3"
+ data-quantity="0"
+ data-max-quantity="1"
+ data-country="40"
+ data-board="Breakfast"
+ data-name="Charming Family Chalet with 2 Bedrooms (4 Adults)"
+ data-rph="0"
+ data-payments="[1]"
+ data-currency="16"
+ data-price-before-discount="3040"
+ data-total-price-after-tax="2736"
+ data-total-price-after-tax-public="3040"
+ data-roomrate-uid='110701-403500-2-0-' data-room-id='110701' data-rate-id='403500' data-room-name='Charming Family Chalet with 2 Bedrooms (4 Adults)' data-adults='2' data-children='0' data-children-ages='' data-occupancy-label='2 adults' data-occupancy-info='' data-occupancy-info-key='' data-room-ordinal='' data-nights='2' data-start='2026-11-03' data-end='2026-11-05' data-cancelation-policy-message='Free cancellation' data-daily-rates='[{"day":"Tue,03 Nov","value":"<span class=\"currency_symbol_price\"><\/span> 1,368.<span class=\"decimal_value_price\">00<\/span>","publicValue":"<span class=\"currency_symbol_price\"><\/span> 1,520.<span class=\"decimal_value_price\">00<\/span>"},{"day":"Wed,04 Nov","value":"<span class=\"currency_symbol_price\"><\/span> 1,368.<span class=\"decimal_value_price\">00<\/span>","publicValue":"<span class=\"currency_symbol_price\"><\/span> 1,520.<span class=\"decimal_value_price\">00<\/span>"}]' data-included-meals='{&quot;Breakfast&quot;:true,&quot;Lunch&quot;:false,&quot;Dinner&quot;:false,&quot;MealPlanIndicator&quot;:true,&quot;MealPlanCode&quot;:3,&quot;ID&quot;:76645,&quot;Name&quot;:&quot;Breakfast&quot;,&quot;Description&quot;:&quot;Breakfast&quot;,&quot;Price&quot;:{&quot;AmountBeforeTax&quot;:0,&quot;AmountAfterTax&quot;:0,&quot;CurrencyCode&quot;:16,&quot;Original&quot;:{&quot;AmountBeforeTax&quot;:0,&quot;AmountAfterTax&quot;:0,&quot;CurrencyCode&quot;:16}},&quot;ServicePricingType&quot;:21}' data-included-extras='[{&quot;RatePlanInclusionDesciption&quot;:{&quot;Name&quot;:&quot;Parking&quot;,&quot;Language&quot;:1,&quot;Description&quot;:&quot;We have private parking for traction vehicles that have access to the beach at low tide via the city of Cai\u00e7ara do Norte or via the Salina Diamante Branco trail. Access to Galinhos is via Pratagil, where there is free public parking with 24-hour security guards. Ordinary vehicles must be left there, then you must take the boat to make the 10-minute crossing. The crossing costs per person or per boat.&quot;},&quot;ID&quot;:77131},{&quot;RatePlanInclusionDesciption&quot;:{&quot;Name&quot;:&quot;WiFi&quot;,&quot;Language&quot;:1,&quot;Description&quot;:&quot;WiFi&quot;},&quot;ID&quot;:77127}]' data-included-text='Included' data-stay-text='Entire Stay' data-total-price-before-tax='2736' data-total-price-before-tax-public='3040' data-offers='' data-promo-code='' data-promo-discount='' data-group-code='' data-offers-discount='' data-taxes='[]' data-total-taxes-loyalty='' data-total-taxes='' data-country-hide-taxes-message='false' data-total-price-after-tax='2736' data-total-price-after-tax-public='3040' data-partial-payments='' data-rate-currency='16' data-rate-currency-symbol='R$' data-rate-currency-string-symbol='BRL' data-rate-currency-name='Brazil Real' data-original-price-before-tax='2736' data-original-price-before-tax-public='3040' data-original-price-after-tax='2736' data-original-price-after-tax-public='3040' data-loyalty-level-id='454'
+ data-breakfast="true"
+ data-extras="[]"
+ data-free-cancel="true"
+ ></div>
+<span class="room_left">
+ There is 1 room left </span>
+</body></html>
