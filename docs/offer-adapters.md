@@ -2,7 +2,9 @@
 
 Status 2026-10-09: 15 test adapters (5 accommodation, 5 tour, 5 camp), 14 ingested into the live
 `package_offers` (BookSurfCamps blocked). The KCS app reads them only with
-`KITESCOUT_ENABLE_CATALOG_EXPANSION=true` (Production: off). All 20 package rows (6 bstoked + 14 site)
+`KITESCOUT_ENABLE_CATALOG_EXPANSION=true` - ON in Production since KCS PR #170 (live map 2026-10-12: 169
+offers = 149 cruises + 20 packages). Their `itinerary_spots` carry no lat/lng yet, so the 14 site
+offers are listed under "offers without coordinates" on the map. All 20 package rows (6 bstoked + 14 site)
 parse through KCS `origin/main` `loadCatalogOfferCatalog` (checked 2026-10-09).
 
 ## Model (ported from kiezdad / kiezkind)

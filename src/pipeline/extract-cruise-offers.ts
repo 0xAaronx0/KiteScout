@@ -10,6 +10,7 @@ import { countryToContinent } from '../lib/continents.js';
 import { discoverImageUrls, curateAndStoreImages, slugify, type StoredImage } from '../lib/images.js';
 import { discoverSiteUrls, PAGE_VALUE_RE } from '../lib/crawl.js';
 import { renderPage, closeRenderer } from '../lib/render.js';
+import { mergeItinerarySpots } from '../lib/itinerary-spots.js';
 
 const CONCURRENCY = 3;                  // providers in parallel
 const PAGE_CONCURRENCY = 8;             // global page fetches in flight (across providers)
@@ -842,7 +843,7 @@ async function processProvider(cp: {
   // Existing offers for this provider → reuse already-stored images (no re-churn).
   const { data: existing } = await supabase
     .from('cruise_offers')
-    .select('id, slug, images, source_url, hero_video_url')
+    .select('id, slug, images, source_url, hero_video_url, itinerary_spots')
     .eq('cruise_provider_id', cp.id);
   const existingImages = new Map<string, StoredImage[]>();
   for (const row of existing ?? []) {
@@ -994,6 +995,10 @@ async function processProvider(cp: {
       const missing = spots.filter(sp => sp.lat == null).map(sp => sp.name);
       console.log(`   spots   : geocoded ${hit}/${spots.length}${missing.length ? `  (no coords: ${missing.join(', ')})` : ''}`);
     }
+    // A re-run must not take an offer off the map: keep stored coordinates it can't reproduce.
+    const storedSpots = (existing ?? []).find(r => r.slug === slug)?.itinerary_spots;
+    const { spots: keptSpots, note: spotNote } = mergeItinerarySpots(spots, storedSpots);
+    if (spotNote) console.log(`   spots   : ${spotNote}`);
 
     // Resolve the offer's source page (used for images + the stored source_text).
     const srcUrl = (offer.source_page && pageByUrl.has(offer.source_page))
@@ -1069,7 +1074,7 @@ async function processProvider(cp: {
       region: offer.region ?? null,
       countries: Array.isArray(offer.countries) ? offer.countries.filter(c => typeof c === 'string') : [],
       departure_port: offer.departure_port ?? null,
-      itinerary_spots: spots,
+      itinerary_spots: keptSpots,
       vessel_name: offer.vessel_name ?? null,
       vessel_type: cleanVesselType(offer.vessel_type),
       booking_modes: cleanBookingModes(offer.booking_modes),
