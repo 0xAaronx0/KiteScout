@@ -2,6 +2,7 @@ name: Cruise provider monitor
 
 # Daily change-detection sweep over all cruise provider websites.
 # Cheap by design: only pages whose content actually changed cost an LLM call.
+# Job offer-slots: daily price/availability refresh of the stay/tour/camp adapters.
 # Lives outside web/**, so it never triggers the Docker build/deploy workflow.
 on:
   schedule:
@@ -80,3 +81,33 @@ jobs:
           else
             pnpm cli monitor --loop --interval-days "${{ github.event.inputs.interval_days || '7' }}"
           fi
+
+  offer-slots:
+    # Daily price/availability refresh of the provider-site offer adapters (stays, tours,
+    # camps) → offer_slots / offer_slot_history (see docs/offer-adapters.md). Own job so
+    # a failing adapter never skips the cruise steps and vice versa. Hosts that block us
+    # report "blocked" and keep exit 0; only a real adapter error turns the job red.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install
+
+      - name: Refresh offer slots
+        # Same import-graph caveat as the media step: src/cli.ts loads tavily.ts eagerly.
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: pnpm cli offers ingest all --slots

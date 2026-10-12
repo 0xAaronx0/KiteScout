@@ -28,10 +28,10 @@ parse through KCS `origin/main` `loadCatalogOfferCatalog` (checked 2026-10-09).
 pnpm cli offers list                         # adapters + where slots are stored
 pnpm cli offers probe [key|all] [--slots]    # live run, NO DB writes
 pnpm cli offers ingest [key|all]             # full: content + images (first time) + slots
-pnpm cli offers ingest all --slots           # daily price/availability refresh
+pnpm cli offers ingest all --slots           # daily price/availability refresh (cron: monitor.yml job offer-slots, 06:00 UTC)
 pnpm cli offers ingest <key> --refresh-images
 npx tsx src/offers/probe-one.ts src/offers/adapters/<key>.ts   # one adapter, no DB
-npx tsx --test test/offers/*.test.ts         # 73 tests (fixtures, no network)
+npx tsx --test test/offers/*.test.ts         # 79 tests (fixtures, no network)
 ```
 
 ## Bands, not months (2026-10-12)
@@ -81,8 +81,8 @@ BRL 2,580.72; Kite Village 05.-12.12.: Bungalow EUR 770).
 
 ## Refresh strategy (recommendation)
 
-- Booking-engine / Shopify / app JSON: daily `--slots`; twice daily in the last 30 days before a
-  departure. Never show a cached nightly price as final: link out with "from X, checked DATE".
+- Booking-engine / Shopify / app JSON: daily `--slots` (in the 06:00 UTC monitor cron, job `offer-slots`,
+  since 2026-10-12); twice daily in the last 30 days before a departure. Never show a cached nightly price as final: link out with "from X, checked DATE".
 - Inquiry-only pages: weekly; the content hash of the extracted block (not the whole page) decides
   whether anything changed. Only 1 of 8 static pages sends `Last-Modified`, so conditional GET is not
   enough.
