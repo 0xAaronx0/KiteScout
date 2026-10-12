@@ -1,0 +1,765 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>7Beaufort</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/psstyle.css">
+			<link rel="stylesheet" href="endpoints/public/kiteschool.css">
+	
+</head>
+
+<body>
+<div class="bg-primary" id="header">
+
+	<nav class="navbar navbar-light navbar-expand-lg text-secondary container">
+		<a href="landingpage.html"><img src="images/logo-dark.png" width="200" /></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse ml-lg-4" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto font-weight-bold font-medium">
+				<li class="nav-item ml-lg-2"><a class="nav-link text-secondary" href="landingpage.html">Home</a></li>
+				<li class="nav-item ml-lg-2"><a class="nav-link text-secondary" href="rooms.html">Rooms</a></li>
+				<li class="nav-item ml-lg-2"><a class="nav-link text-secondary" href="restaurant.html">Restaurant</a></li>
+				<div class="dropdown ml-lg-2">
+					<button class="btn dropdown-toggle nav-link text-secondary fw-bold kitesurfDropdown" type="button" id="menuDropdown" data-toggle="dropdown"
+					arial-haspopup="true" aria-expanded="false">
+						Kitesurf
+					</button>
+					<div class="dropdown-menu" aria-labelledby="menuDropdown">
+						<li class="nav-item ml-lg-2"><a class="nav-link active" href="kiteschool.html">Kiteschool</a></li>
+						<li class="nav-item ml-lg-2"><a class="nav-link text-secondary" href="kitespot.html">Kitespot</a></li>
+						<li class="nav-item ml-lg-2"><a class="nav-link text-secondary" href="downwind.html">Downwind</a></li>
+					</div>
+				</div>
+				<li class="nav-item ml-lg-2"><a class="nav-link text-secondary" href="contact.html">Contact</a></li>
+				<li class="nav-item ml-lg-2">
+					<a href="traveldates.html" class="btn btn-outline-secondary font-weight-bold xl-ml-2">
+						Booking
+					</a>
+				</li>
+			</ul>
+			<div class="d-flex align-items-center justify-content-center mt-3 mt-lg-0">
+				<a href="https://wa.me/5588998241591" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp text-secondary" style="font-size: 22px;"></i></a>
+				
+								<div class="dropdown ml-2">
+					<button id="selectedLangBtn" class="btn d-flex align-items-center" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img id="selectedFlag" src="images/flags/uk.png" width="24" alt="language">
+					</button>
+					<div class="dropdown-menu dropdown-menu-right">
+													<a class="dropdown-item d-flex align-items-center" href="#" data-lang="de" data-flag="images/flags/germany.png">
+								<img src="images/flags/germany.png" width="24" class="mr-2 mb-1"> Deutsch
+							</a>
+																			<a class="dropdown-item d-flex align-items-center" href="#" data-lang="en" data-flag="images/flags/uk.png">
+								<img src="images/flags/uk.png" width="24" class="mr-2 mb-1"> English
+							</a>
+																			<a class="dropdown-item d-flex align-items-center" href="#" data-lang="pt" data-flag="images/flags/brazil.png">
+								<img src="images/flags/brazil.png" width="24" class="mr-2 mb-1"> Português
+							</a>
+																			<a class="dropdown-item d-flex align-items-center" href="#" data-lang="es" data-flag="images/flags/spain.png">
+								<img src="images/flags/spain.png" width="24" class="mr-2 mb-1"> Español
+							</a>
+											</div>
+				</div>
+
+								<i id="loadingHeader" class="fa-solid fa-spinner fa-spin d-none mr-2"></i>
+
+								<div id="dropdownHeader" class="dropdown">
+					<button id="userMenuBtn" class="btn d-flex align-items-center" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<i class="fa-solid fa-user text-secondary" style="font-size: 22px;"></i>
+											</button>
+					<div class="dropdown-menu dropdown-menu-right">
+													<div class="d-flex align-items-center nav-item ml-lg-2">
+								<a class="w-100 nav-link text-secondary" href="customerident.html"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
+							</div>
+						
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</nav>
+</div>
+
+<div id="content" class="position-relative">
+
+<video width="100%" autoplay muted loop>
+  <source src="./images/kiteschool/video-7beaufort.mp4" type="video/mp4">
+</video>
+
+<div class="bg-primary">
+  <div class="container text-secondary py-5">
+
+    <div class="row">
+      <h1 class="col-12 mb-3 text-left">Kite school Ilha do Guajiru.</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <p class="psjustify" >Welcome to the kite school of 7 Beaufort Brasil. On Ilha do Guajiru - your VDWS-certified kite school for unforgettable experiences on the water! Whether you're just starting with kitesurfing or are already an experienced kiter, you'll find everything you need for your perfect kite day with us. We offer professional kite lessons for all levels based on recognized VDWS standards. Our experienced instructors ensure you make quick progress safely and with fun.</p>
+      </div>
+
+      <div class="col-md-6">
+        <p class="mb-3 psjustify">For the perfect kite day, we offer not only state-of-the-art kite equipment rental with the newest Core kites, but also a comfortable beach boy service on the shore, so you can focus completely on the wind and water.</p>
+        <p class="mb-3">Ready for your kite adventure in Ilha do Guajiru?</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="bg-white">
+  <div class="container text-secondary py-5">
+
+		    <div class="row d-flex align-items-center">
+      <div class="col-md-6 text-center">
+        <a href="https://www.vdws.de/" target="_blank">
+          <img src="images/kiteschool/vdws.png" class="img-fluid w-75" />
+        </a>
+      </div>
+
+      <div class="col-md-6">
+        <h1 class="text-left mb-3">VDWS kite school.</h1>
+        <p class="psjustify" >Our kite school in Ilha do Guajiru is VDWS-certified and offers everything you'd expect from a modern kite station. You'll have access to trained instructors who will passionately and joyfully help you get started with your new sport, regain confidence after a long break, or boost you to the next level with intensive courses. Additionally, you'll benefit from other VDWS advantages like the VDWS Safety Tool and premium insurance when renting kite equipment, so you can kite worry-free even if something goes wrong.</p>
+      </div>
+    </div>
+
+				<div class="row d-flex align-items-center mt-5">
+
+      <div class="col-md-6">
+        <h1 class="text-left mb-3">VDWS License.</h1>
+        <p class="psjustify" >At our VDWS-licensed school, we also conduct VDWS kite license certifications. The card helps you when renting equipment or documenting your VDWS kite training to local authorities. Requirements include participating in one of our kite courses and passing a theoretical test. The training is based on materials provided by VDWS. The VDWS skill-level system consists of 7 levels plus a theory step. For the 'classic' basic certification, Level 5 and the theory level are required. You can also upgrade your existing VDWS license level.</p>
+      </div>
+
+			<div class="col-md-6 text-center">
+        <img src="images/kiteschool/lizenz.png" class="img-fluid w-75" />
+      </div>
+    </div>
+
+		    <div class="row d-flex align-items-center mt-5">
+      <div class="col-md-6 text-center">
+        <img src="images/kiteschool/core.png" class="img-fluid w-75" />
+      </div>
+
+      <div class="col-md-6">
+        <h1 class="text-left mb-3">Core Material.</h1>
+        <p class="psjustify">In our kite school, you can test or rent the latest Core equipment - right on site! We've been working with Core Kites for years and offer a wide selection of kites like the XR and NEXUS - perfect for every riding style. We update our inventory every season so you're always on the water with the newest gear. In addition to Core kites, we outfit you with premium equipment from ION, Nobile and Future. This way, you're always perfectly equipped to get the most out of your kite adventure!</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="bg-white">
+	<div class="container py-5">
+
+		<div class="row text-center">
+			<div class="col-md-4">
+				<img src="images/kiteschool/highlight-01.jpg" class="img-fluid">
+			</div>
+			<div class="col-md-4 mt-3 mt-md-0">
+				<img src="images/kiteschool/highlight-02.jpg" class="img-fluid">
+			</div>
+			<div class="col-md-4 mt-3 mt-md-0">
+				<img src="images/kiteschool/highlight-03.jpg" class="img-fluid">
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<div class="bg-primary">
+  <div class="container text-secondary py-5">
+
+    <div class="row">
+      <h1 class="col-12 mb-3 text-left">Kite courses.</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mb-3 psjustify">Our two shallow, spacious training areas combined with our dedicated, experienced and certified instructors provide the perfect conditions to start your exciting kiteboarding journey. With constant winds from morning until late at night, only you - and maybe your stamina - decide how much time you want to spend on the water! Here you're guaranteed to succeed - even if you haven't managed it elsewhere!</p>
+			<p class="psjustify">You've already mastered your first meters and now want to really go big or finally learn that specific trick?</p>
+      </div>
+
+      <div class="col-md-6">
+        <p class="mb-3 psjustify">Our instructors will be happy to support you with this too. To ensure you get the maximum learning success, all our courses - unlike most kite schools - typically take place as private lessons. This allows the instructor to fully adapt to your learning pace and individual needs.</p>
+        <p class="mb-3 psjustify">No mass processing here, no fixed schedules – we adapt entirely to you and your wishes.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="bg-white">
+  <div class="container py-5">
+
+				<div class="row d-flex align-items-start justify-content-center g-1">
+
+						<div class="card card-container">
+				<div class="card-header bg-secondary text-white font-weight-bold py-4" style="border-radius: 0;">Beginner Basic</div>
+				<div class="card-body bg-white text-secondary">
+					<div style="height: 310px;">
+						<ul class="list-unstyled mb-4">
+	<li><i class="fa-solid fa-check text-secondary"></i> Theoretical foundations</li>
+	<li><i class="fa-solid fa-check text-secondary"></i> Safety systems</li>
+	<li><i class="fa-solid fa-check text-secondary"></i> Kite setup and takedown</li>
+	<li><i class="fa-solid fa-check text-secondary"></i> Controlled launching and landing</li>
+	<li><i class="fa-solid fa-check text-secondary"></i> First flight exercises</li>
+	<li><i class="fa-solid fa-check text-secondary"></i> Safe kite control</li>
+	<li><i class="fa-solid fa-check text-secondary"></i> Bodydragging</li>
+	<li><i class="fa-solid fa-check text-secondary"></i> First water start exercises</li>
+</ul>
+					</div>
+					<div class="d-flex align-items-center justify-content-center mb-2">
+						<i class="fa-regular fa-clock font-medium mr-2"></i> 6 hours
+					</div>
+					<div class="d-flex align-items-center justify-content-center mb-3">
+						<i class="bi bi-backpack me-2"></i> Including Equipment
+					</div>
+
+					<form action="#" id="course_1Form" method="post" class="pricing-section d-none">
+						<div class="alert alert-success alert-success d-none" role="alert" id="course_1Success" data-md5="f51791ad1cfb063787917146a19cb823"><i class="fa-solid fa-circle-check fa-lg pr-1 text-success"></i> <span id="course_1SuccessText"></span></div><div class="alert alert-info alert-info d-none" role="alert" id="course_1Info" data-md5="b12561db93fa6a66e937ca538c0d86f4"><i class="fa-solid fa-circle-info fa-lg pr-1 text-primary"></i> <span id="course_1InfoText"></span></div><div class="alert alert-warning alert-warning d-none" role="alert" id="course_1Exception" data-md5="c4b5554787b4ed02928dd7728c365aeb"><i class="fa-solid fa-triangle-exclamation fa-lg pr-1 text-warning"></i> <span id="course_1ExceptionText"></span></div><div class="alert alert-danger alert-danger d-none" role="alert" id="course_1Error" data-md5="af89eef3e6e9d4941d58b8aaa29baaa9"><i class="fa-solid fa-xmark fa-lg pr-1 text-danger"></i> <span id="course_1ErrorText"></span></div>						<input class="form-control" id='Type' name='Type' type='hidden' value='course'>						<input class="form-control" id='bftccontingent_CourseType' name='bftccontingent_CourseType' type='hidden' value='BeginnerBasics'>
+						<div class="d-none mb-3 goToCartBtn">
+							<a href="kitecourse.html" class="btn btn-outline-secondary"><i class="fas fa-shopping-cart mr-1"></i> Go to cart</a>
+						</div>
+
+						<div class="row mb-2">
+							<div class="col-12">
+								<div class="form-group"><label for="bftccontingent_DateFrom">From</label><input class="form-control" id='bftccontingent_DateFrom' name='bftccontingent_DateFrom' type='date' min='2026-10-12' required></div>							</div>
+							<div class="col-12">
+								<div class="form-group"><label for="bftccontingent_DateTo">To</label><input class="form-control" id='bftccontingent_DateTo' name='bftccontingent_DateTo' type='date' min='2026-10-12' required></div>							</div>
+							<div class="col-12 price-card">
+								<div class="form-group"><label for="myGroupSize">Number of students</label><select class="form-control " data-live-search="false" data-live-search-placeholder="" id='myGroupSize' name='myGroupSize' data-translate='true' required >
+						<option value="Individual lessons" data-content='Individual lessons' >Individual lessons</option><option value="2 Students per Teacher" data-content='2 Students per Teacher' >2 Students per Teacher</option>			</select></div>								<p class="text-secondary text-center font-weight-bold font-big mb-0 price-1 d-none individual">366 €</p>
+								<p class="text-secondary text-center font-weight-bold font-big mb-0 price-2 d-none couple">264 €</p>
+							</div>
+						</div>
+
+						<div class="d-flex justify-content-center mt-1 mb-3">
+							<button type="button" class="btn btn-primary submitBtn">Add</button>
+						</div>
+					</form>
+
+					<a class="toggle-pricing">
+						<div class="text-center text-secondary">
+							<i class="fa-solid fa-angle-down font-big"></i>
+							<p class="mb-0">Prices &amp; more</p>
+						</div>
+					</a>
+
+				</div>
+			</div>
+
+						<div class="card card-container">
+				<div class="card-header bg-secondary text-white font-weight-bold py-4" style="border-radius: 0;">Complete Beginner</div>
+				<div class="card-body bg-white text-secondary">
+					<div style="height: 310px;">
+						<ul class="list-unstyled mb-4">
+	<li><i class="fa-solid fa-check text-secondary"></i> All contents from Beginner/Basic</li>
+	<li><i class="fa-solid fa-check text-secondary"></i> Self-rescue measures</li>
+	<li><i class="fa-solid fa-check text-secondary"></i> Kite relaunch in water</li>
+	<li><i class="fa-solid fa-check text-secondary"></i> Upwind bodydragging</li>
+	<li><i class="fa-solid fa-check text-secondary"></i> Water start and riding in both directions</li>
+	<li><i class="fa-solid fa-check text-secondary"></i> Right-of-way rules</li>
+</ul>
+					</div>
+					<div class="d-flex align-items-center justify-content-center mb-2">
+						<i class="fa-regular fa-clock font-medium mr-2"></i> 10 hours
+					</div>
+					<div class="d-flex align-items-center justify-content-center mb-3">
+						<i class="bi bi-backpack me-2"></i> Including Equipment
+					</div>
+
+					<form action="#" id="course_2Form" method="post" class="pricing-section d-none">
+						<div class="alert alert-success alert-success d-none" role="alert" id="course_2Success" data-md5="b6317e4039e0c9b7ceb240860ee44313"><i class="fa-solid fa-circle-check fa-lg pr-1 text-success"></i> <span id="course_2SuccessText"></span></div><div class="alert alert-info alert-info d-none" role="alert" id="course_2Info" data-md5="88da12711b5f9344e61c4533108403a7"><i class="fa-solid fa-circle-info fa-lg pr-1 text-primary"></i> <span id="course_2InfoText"></span></div><div class="alert alert-warning alert-warning d-none" role="alert" id="course_2Exception" data-md5="acee3c2a4c6667335328d2de8838999a"><i class="fa-solid fa-triangle-exclamation fa-lg pr-1 text-warning"></i> <span id="course_2ExceptionText"></span></div><div class="alert alert-danger alert-danger d-none" role="alert" id="course_2Error" data-md5="ed7e29f83662fc4c3a595b335dd6c8de"><i class="fa-solid fa-xmark fa-lg pr-1 text-danger"></i> <span id="course_2ErrorText"></span></div>						<input class="form-control" id='Type' name='Type' type='hidden' value='course'>						<input class="form-control" id='bftccontingent_CourseType' name='bftccontingent_CourseType' type='hidden' value='CompleteBeginner'>
+						<div class="d-none mb-3 goToCartBtn">
+							<a href="kitecourse.html" class="btn btn-outline-secondary"><i class="fas fa-shopping-cart mr-1"></i> Go to cart</a>
+						</div>
+						
+						<div class="row mb-2">
+							<div class="col-12">
+								<div class="form-group"><label for="bftccontingent_DateFrom">From</label><input class="form-control" id='bftccontingent_DateFrom' name='bftccontingent_DateFrom' type='date' min='2026-10-12' required></div>							</div>
+							<div class="col-12">
+								<div class="form-group"><label for="bftccontingent_DateTo">To</label><input class="form-control" id='bftccontingent_DateTo' name='bftccontingent_DateTo' type='date' min='2026-10-12' required></div>							</div>
+							<div class="col-12 price-card">
+								<div class="form-group"><label for="myGroupSize">Number of students</label><select class="form-control " data-live-search="false" data-live-search-placeholder="" id='myGroupSize' name='myGroupSize' data-translate='true' required >
+						<option value="Individual lessons" data-content='Individual lessons' >Individual lessons</option><option value="2 Students per Teacher" data-content='2 Students per Teacher' >2 Students per Teacher</option>			</select></div>								<p class="text-secondary text-center font-weight-bold font-big mb-0 price-1 d-none">560 €</p>
+								<p class="text-secondary text-center font-weight-bold font-big mb-0 price-2 d-none">370 €</p>
+							</div>
+						</div>
+
+						<div class="d-flex justify-content-center mt-1 mb-3">
+							<button type="button" class="btn btn-primary submitBtn">Add</button>
+						</div>
+					</form>
+
+					<a class="toggle-pricing">
+						<div class="text-center text-secondary">
+							<i class="fa-solid fa-angle-down font-big"></i>
+							<p class="mb-0">Prices &amp; more</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+						<div class="card card-container">
+				<div class="card-header bg-secondary text-white font-weight-bold py-4" style="border-radius: 0;">Refresher</div>
+				<div class="card-body bg-white text-secondary">
+					<div style="height: 310px;">
+						<ul class="list-unstyled mb-4">
+	<li> We give you back the confidence after a long break. The training contents are individually tailored to your needs and wishes.</li>
+</ul>
+					</div>
+					<div class="d-flex align-items-center justify-content-center mb-2">
+						<i class="fa-regular fa-clock font-medium mr-2"></i> 3 hours
+					</div>
+					<div class="d-flex align-items-center justify-content-center mb-3">
+						<i class="bi bi-backpack me-2"></i> Including Equipment
+					</div>
+
+					<form action="#" id="course_3Form" method="post" class="pricing-section d-none">
+						<div class="alert alert-success alert-success d-none" role="alert" id="course_3Success" data-md5="7c8894bfb5efe0da769dec515741933c"><i class="fa-solid fa-circle-check fa-lg pr-1 text-success"></i> <span id="course_3SuccessText"></span></div><div class="alert alert-info alert-info d-none" role="alert" id="course_3Info" data-md5="07d48426f007cf82a8ae0e1418abbe2b"><i class="fa-solid fa-circle-info fa-lg pr-1 text-primary"></i> <span id="course_3InfoText"></span></div><div class="alert alert-warning alert-warning d-none" role="alert" id="course_3Exception" data-md5="df4a0bb889f12dc2f58ad56febcb2829"><i class="fa-solid fa-triangle-exclamation fa-lg pr-1 text-warning"></i> <span id="course_3ExceptionText"></span></div><div class="alert alert-danger alert-danger d-none" role="alert" id="course_3Error" data-md5="c04f8d1b908b20dbfc543ad50abdfa0f"><i class="fa-solid fa-xmark fa-lg pr-1 text-danger"></i> <span id="course_3ErrorText"></span></div>						<input class="form-control" id='Type' name='Type' type='hidden' value='course'>						<input class="form-control" id='bftccontingent_CourseType' name='bftccontingent_CourseType' type='hidden' value='Recycling'>
+						<div class="d-none mb-3 goToCartBtn">
+							<a href="kitecourse.html" class="btn btn-outline-secondary"><i class="fas fa-shopping-cart mr-1"></i> Go to cart</a>
+						</div>
+
+						<div class="row mb-2">
+							<div class="col-12">
+								<div class="form-group"><label for="bftccontingent_DateFrom">From</label><input class="form-control" id='bftccontingent_DateFrom' name='bftccontingent_DateFrom' type='date' min='2026-10-12' required></div>							</div>
+							<div class="col-12">
+								<div class="form-group"><label for="bftccontingent_DateTo">To</label><input class="form-control" id='bftccontingent_DateTo' name='bftccontingent_DateTo' type='date' min='2026-10-12' required></div>							</div>
+							<div class="col-12 price-card">
+								<div class="form-group"><label for="myGroupSize">Number of students</label><select class="form-control " data-live-search="false" data-live-search-placeholder="" id='myGroupSize' name='myGroupSize' data-translate='true' required >
+						<option value="Individual lessons" data-content='Individual lessons' >Individual lessons</option><option value="2 Students per Teacher" data-content='2 Students per Teacher' >2 Students per Teacher</option>			</select></div>								<p class="text-secondary text-center font-weight-bold font-big mb-0 price-1 d-none">189 €</p>
+								<p class="text-secondary text-center font-weight-bold font-big mb-0 price-2 d-none">135 €</p>
+							</div>
+						</div>
+
+						<div class="d-flex justify-content-center mt-1 mb-3">
+							<button type="button" class="btn btn-primary submitBtn">Add</button>
+						</div>
+					</form>
+
+					<a class="toggle-pricing">
+						<div class="text-center text-secondary">
+							<i class="fa-solid fa-angle-down font-big"></i>
+							<p class="mb-0">Prices &amp; more</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+				<div class="row d-flex align-items-start justify-content-center g-1 mt-3">
+
+						<div class="card card-container">
+				<div class="card-header bg-secondary text-white font-weight-bold py-4" style="border-radius: 0;">Advanced</div>
+				<div class="card-body bg-white text-secondary">
+					<div style="height: 270px;">
+						<ul class="list-unstyled mb-4">
+    <li><i class="fa-solid fa-check text-secondary"></i> Controlled riding and gaining height</li>
+    <li><i class="fa-solid fa-check text-secondary"></i> Speed control while riding</li>
+    <li><i class="fa-solid fa-check text-secondary"></i> Various direction changes <small class='text-muted'>(Transition)</small></li>
+    <li><i class="fa-solid fa-check text-secondary"></i> Independent kitesurfing</li>
+</ul>
+					</div>
+					<div class="d-flex align-items-center justify-content-center mb-2">
+						<i class="fa-regular fa-clock font-medium mr-2"></i> 6 hours
+					</div>
+					<div class="d-flex align-items-center justify-content-center mb-3">
+						<i class="bi bi-backpack me-2"></i> Including Equipment
+					</div>
+
+					<form action="#" id="course_4Form" method="post" class="pricing-section d-none">
+						<div class="alert alert-success alert-success d-none" role="alert" id="course_4Success" data-md5="3a14918dddcf1fa64721628453ec5e1e"><i class="fa-solid fa-circle-check fa-lg pr-1 text-success"></i> <span id="course_4SuccessText"></span></div><div class="alert alert-info alert-info d-none" role="alert" id="course_4Info" data-md5="316de6cc63a789aa55fa87115a5491ee"><i class="fa-solid fa-circle-info fa-lg pr-1 text-primary"></i> <span id="course_4InfoText"></span></div><div class="alert alert-warning alert-warning d-none" role="alert" id="course_4Exception" data-md5="76f78076d294c2e06c992863fcda65b2"><i class="fa-solid fa-triangle-exclamation fa-lg pr-1 text-warning"></i> <span id="course_4ExceptionText"></span></div><div class="alert alert-danger alert-danger d-none" role="alert" id="course_4Error" data-md5="22575769553a1635d1d083d590a620b1"><i class="fa-solid fa-xmark fa-lg pr-1 text-danger"></i> <span id="course_4ErrorText"></span></div>						<input class="form-control" id='Type' name='Type' type='hidden' value='course'>						<input class="form-control" id='bftccontingent_CourseType' name='bftccontingent_CourseType' type='hidden' value='Advanced'>
+						<div class="d-none mb-3 goToCartBtn">
+							<a href="kitecourse.html" class="btn btn-outline-secondary"><i class="fas fa-shopping-cart mr-1"></i> Go to cart</a>
+						</div>
+
+						<div class="row mb-2">
+							<div class="col-12">
+								<div class="form-group"><label for="bftccontingent_DateFrom">From</label><input class="form-control" id='bftccontingent_DateFrom' name='bftccontingent_DateFrom' type='date' min='2026-10-12' required></div>							</div>
+							<div class="col-12">
+								<div class="form-group"><label for="bftccontingent_DateTo">To</label><input class="form-control" id='bftccontingent_DateTo' name='bftccontingent_DateTo' type='date' min='2026-10-12' required></div>							</div>
+							<div class="col-12 price-card">
+								<div class="form-group"><label for="myGroupSize">Number of students</label><select class="form-control " data-live-search="false" data-live-search-placeholder="" id='myGroupSize' name='myGroupSize' data-translate='true' required >
+						<option value="Individual lessons" data-content='Individual lessons' >Individual lessons</option><option value="2 Students per Teacher" data-content='2 Students per Teacher' >2 Students per Teacher</option>			</select></div>								<p class="text-secondary text-center font-weight-bold font-big mb-0 price-1 d-none">366 €</p>
+								<p class="text-secondary text-center font-weight-bold font-big mb-0 price-2 d-none">264 €</p>
+							</div>
+						</div>
+
+						<div class="d-flex justify-content-center mt-1 mb-3">
+							<button type="button" class="btn btn-primary submitBtn">Add</button>
+						</div>
+					</form>
+
+					<a class="toggle-pricing">
+						<div class="text-center text-secondary">
+							<i class="fa-solid fa-angle-down font-big"></i>
+							<p class="mb-0">Prices &amp; more</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+						<div class="card card-container">
+				<div class="card-header bg-secondary text-white font-weight-bold py-4" style="border-radius: 0;">Advanced Complete</div>
+				<div class="card-body bg-white text-secondary">
+					<div style="height: 270px;">
+						<ul class="list-unstyled mb-4">
+    <li><i class="fa-solid fa-check text-secondary"></i> All contents of the Advanced course</li>
+    <li><i class="fa-solid fa-check text-secondary"></i> Switch</li>
+    <li><i class="fa-solid fa-check text-secondary"></i> Various turning maneuvers</li>
+    <li><i class="fa-solid fa-check text-secondary"></i> Jump technique theory and first jumps</li>
+</ul>
+					</div>
+					<div class="d-flex align-items-center justify-content-center mb-2">
+						<i class="fa-regular fa-clock font-medium mr-2"></i> 10 hours
+					</div>
+					<div class="d-flex align-items-center justify-content-center mb-3">
+						<i class="bi bi-backpack me-2"></i> Including Equipment
+					</div>
+
+					<form action="#" id="course_5Form" method="post" class="pricing-section d-none">
+						<div class="alert alert-success alert-success d-none" role="alert" id="course_5Success" data-md5="1268883af8014d39062384e77b19775b"><i class="fa-solid fa-circle-check fa-lg pr-1 text-success"></i> <span id="course_5SuccessText"></span></div><div class="alert alert-info alert-info d-none" role="alert" id="course_5Info" data-md5="e110d7f6fab13bbad9a9ed7ea719cbec"><i class="fa-solid fa-circle-info fa-lg pr-1 text-primary"></i> <span id="course_5InfoText"></span></div><div class="alert alert-warning alert-warning d-none" role="alert" id="course_5Exception" data-md5="51eb5561f9ebcb033f766b3b94026214"><i class="fa-solid fa-triangle-exclamation fa-lg pr-1 text-warning"></i> <span id="course_5ExceptionText"></span></div><div class="alert alert-danger alert-danger d-none" role="alert" id="course_5Error" data-md5="482ab1df3137ba9302eea23bf571e326"><i class="fa-solid fa-xmark fa-lg pr-1 text-danger"></i> <span id="course_5ErrorText"></span></div>						<input class="form-control" id='Type' name='Type' type='hidden' value='course'>						<input class="form-control" id='bftccontingent_CourseType' name='bftccontingent_CourseType' type='hidden' value='CompleteAdvanced'>
+						<div class="d-none mb-3 goToCartBtn">
+							<a href="kitecourse.html" class="btn btn-outline-secondary"><i class="fas fa-shopping-cart mr-1"></i> Go to cart</a>
+						</div>
+
+						<div class="row mb-2">
+							<div class="col-12">
+								<div class="form-group"><label for="bftccontingent_DateFrom">From</label><input class="form-control" id='bftccontingent_DateFrom' name='bftccontingent_DateFrom' type='date' min='2026-10-12' required></div>							</div>
+							<div class="col-12">
+								<div class="form-group"><label for="bftccontingent_DateTo">To</label><input class="form-control" id='bftccontingent_DateTo' name='bftccontingent_DateTo' type='date' min='2026-10-12' required></div>							</div>
+							<div class="col-12 price-card">
+								<div class="form-group"><label for="myGroupSize">Number of students</label><select class="form-control " data-live-search="false" data-live-search-placeholder="" id='myGroupSize' name='myGroupSize' data-translate='true' required >
+						<option value="Individual lessons" data-content='Individual lessons' >Individual lessons</option><option value="2 Students per Teacher" data-content='2 Students per Teacher' >2 Students per Teacher</option>			</select></div>								<p class="text-secondary text-center font-weight-bold font-big mb-0 price-1 d-none">560 €</p>
+								<p class="text-secondary text-center font-weight-bold font-big mb-0 price-2 d-none">370 €</p>
+							</div>
+						</div>
+
+						<div class="d-flex justify-content-center mt-1 mb-3">
+							<button type="button" class="btn btn-primary submitBtn">Add</button>
+						</div>
+					</form>
+
+					<a class="toggle-pricing">
+						<div class="text-center text-secondary">
+							<i class="fa-solid fa-angle-down font-big"></i>
+							<p class="mb-0">Prices &amp; more</p>
+						</div>
+					</a>
+				</div>
+			</div>
+
+						<div class="card card-container">
+				<div class="card-header bg-secondary text-white font-weight-bold py-4" style="border-radius: 0;">Intensive Course</div>
+				<div class="card-body bg-white text-secondary">
+					<div style="height: 270px;">
+						<ul class="list-unstyled mb-4">
+    <li> Do you want to achieve maximum learning progress or master a specific trick? Private lessons are the fastest and most effective way for you. The training content is customized according to your goals.</li>
+</ul>
+					</div>
+					<div class="d-flex align-items-center justify-content-center mb-2">
+						<i class="fa-regular fa-clock font-medium mr-2"></i> 6 hours
+					</div>
+					<div class="d-flex align-items-center justify-content-center mb-3">
+						<i class="bi bi-backpack me-2"></i> Including Equipment
+					</div>
+
+					<form action="#" id="course_6Form" method="post" class="pricing-section d-none">
+						<div class="alert alert-success alert-success d-none" role="alert" id="course_6Success" data-md5="4eb2a95f4c5486aff2bcd24ce0918613"><i class="fa-solid fa-circle-check fa-lg pr-1 text-success"></i> <span id="course_6SuccessText"></span></div><div class="alert alert-info alert-info d-none" role="alert" id="course_6Info" data-md5="9e0d8ec32c1c4f7367da8653c65204e4"><i class="fa-solid fa-circle-info fa-lg pr-1 text-primary"></i> <span id="course_6InfoText"></span></div><div class="alert alert-warning alert-warning d-none" role="alert" id="course_6Exception" data-md5="52a1f203b3489378a07972f5c3149fc5"><i class="fa-solid fa-triangle-exclamation fa-lg pr-1 text-warning"></i> <span id="course_6ExceptionText"></span></div><div class="alert alert-danger alert-danger d-none" role="alert" id="course_6Error" data-md5="f8c4743f7f21a35f42b472dca51de075"><i class="fa-solid fa-xmark fa-lg pr-1 text-danger"></i> <span id="course_6ErrorText"></span></div>						<input class="form-control" id='Type' name='Type' type='hidden' value='course'>						<input class="form-control" id='bftccontingent_CourseType' name='bftccontingent_CourseType' type='hidden' value='IntensiveCourse'>
+						<div class="d-none mb-3 goToCartBtn">
+							<a href="kitecourse.html" class="btn btn-outline-secondary"><i class="fas fa-shopping-cart mr-1"></i> Go to cart</a>
+						</div>
+
+						<div class="row mb-2">
+							<div class="col-12">
+								<div class="form-group"><label for="bftccontingent_DateFrom">From</label><input class="form-control" id='bftccontingent_DateFrom' name='bftccontingent_DateFrom' type='date' min='2026-10-12' required></div>							</div>
+							<div class="col-12">
+								<div class="form-group"><label for="bftccontingent_DateTo">To</label><input class="form-control" id='bftccontingent_DateTo' name='bftccontingent_DateTo' type='date' min='2026-10-12' required></div>							</div>
+							<div class="col-12 price-card">
+								<div class="form-group"><label for="myGroupSize">Number of students</label><select class="form-control " data-live-search="false" data-live-search-placeholder="" id='myGroupSize' name='myGroupSize' data-translate='true' required >
+						<option value="Individual lessons" data-content='Individual lessons' >Individual lessons</option><option value="2 Students per Teacher" data-content='2 Students per Teacher' >2 Students per Teacher</option>			</select></div>								<p class="text-secondary text-center font-weight-bold font-big mb-0 price-1 d-none">366 €</p>
+								<p class="text-secondary text-center font-weight-bold font-big mb-0 price-2 d-none">264 €</p>
+							</div>
+						</div>
+
+						<div class="d-flex justify-content-center mt-1 mb-3">
+							<button type="button" class="btn btn-primary submitBtn">Add</button>
+						</div>
+					</form>
+
+					<a class="toggle-pricing">
+						<div class="text-center text-secondary">
+							<i class="fa-solid fa-angle-down font-big"></i>
+							<p class="mb-0">Prices &amp; more</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+
+  </div>
+</div>
+
+<div class="bg-primary">
+  <div class="container text-secondary py-5">
+
+    <div class="row">
+      <h1 class="col-12 mb-3 text-left">Kite rental.</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mb-3 psjustify">Save yourself the extra packing stress. Which sizes should I bring? My board bag is already too heavy again! Maybe I should get a new harness after all? The dragging around and the annoying check-in plus extra fees.</p>
+				<p class="psjustify" >With our very affordable rental prices, it's hardly worth bringing your own gear on your trip.</p>
+      </div>
+
+      <div class="col-md-6">
+        <p class="mb-3 psjustify">To guarantee you maximum fun and learning success, we equip our station exclusively with the newest and most suitable gear. We update our equipment every season, so you’ll always ride with the latest kites and boards.</p>
+        <p class="psjustify" >With the latest kites from Core, and boards from Core, Future, and Nobile, we’re always able to provide you with the perfect gear for your needs.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="bg-white">
+  <div class="container py-5">
+
+	<div class="row d-flex align-items-start justify-content-center g-1">
+
+                <div class="card card-container">
+          <div class="card-header bg-secondary text-white font-weight-bold py-4" style="border-radius: 0;">Complete equipment</div>
+          <div class="card-body bg-white text-secondary">
+            <div style="height: 235px;">
+              <ul class="list-unstyled mb-4">
+    <li><i class="fa-solid fa-check text-secondary"></i> Kite</li>
+    <li><i class="fa-solid fa-check text-secondary"></i> Bar</li>
+    <li><i class="fa-solid fa-check text-secondary"></i> Board</li>
+    <li><i class="fa-solid fa-check text-secondary"></i> Harness</li>
+    <li><i class="fa-solid fa-check text-secondary"></i> Leash</li>
+    <li><i class="fa-solid fa-check text-secondary"></i> Helmet</li>
+    <li><i class="fa-solid fa-check text-secondary"></i> Neoprene shoes</li>
+    <li><i class="fa-solid fa-check text-secondary"></i> Impact vest / Life jacket</li>
+</ul>
+            </div>
+
+                        <form action="#" id="equipment_1Form" method="post" class="equipment-form pricing-section d-none">
+              <div class="alert alert-success alert-success d-none" role="alert" id="equipment_1Success" data-md5="7fe078dd43093b8a5bfbfeb634156cef"><i class="fa-solid fa-circle-check fa-lg pr-1 text-success"></i> <span id="equipment_1SuccessText"></span></div><div class="alert alert-info alert-info d-none" role="alert" id="equipment_1Info" data-md5="58c948b1740e5162f6b42f0ebdb21a38"><i class="fa-solid fa-circle-info fa-lg pr-1 text-primary"></i> <span id="equipment_1InfoText"></span></div><div class="alert alert-warning alert-warning d-none" role="alert" id="equipment_1Exception" data-md5="e7259f32ad2606190c7cb73dec5c8298"><i class="fa-solid fa-triangle-exclamation fa-lg pr-1 text-warning"></i> <span id="equipment_1ExceptionText"></span></div><div class="alert alert-danger alert-danger d-none" role="alert" id="equipment_1Error" data-md5="babd2490caeda8bff7f7e835f71dde80"><i class="fa-solid fa-xmark fa-lg pr-1 text-danger"></i> <span id="equipment_1ErrorText"></span></div>              <input class="form-control" id='Type' name='Type' type='hidden' value='equipment'>							<input class="form-control" id='equipmentTypeId' name='equipmentTypeId' type='hidden' value='1279'>							<input class="form-control" id='equipmentTypeLabel' name='equipmentTypeLabel' type='hidden' value='Komplett'>              <div class="row mb-2">
+                <div class="col-12">
+                  <div class="form-group"><label for="dateFrom">Arrival date</label><input class="form-control" id='dateFrom' name='dateFrom' type='date' min='2026-10-12' required></div>                </div>
+                <div class="col-12">
+                  <div class="form-group"><label for="dateTo">Departure date</label><input class="form-control" id='dateTo' name='dateTo' type='date' min='2026-10-12' required></div>                </div>
+
+                <div class="col-12 text-center mb-2 mt-1 equipmentLoading d-none">
+                  <i class="fa-solid fa-spinner fa-spin font-big"></i>
+                </div>
+
+                <div class="col-12 price-card">
+                  <p class="text-secondary text-center font-weight-bold font-big mb-0 price-3 price-preview d-none"> €</p>
+                  <div class="text-center mt-1 mb-1 days-preview-container d-none">
+                    <span class="days-preview"></span><span> Days</span>
+                  </div>
+                </div>
+                
+              </div>
+              
+              <div class="d-flex justify-content-center mt-1 mb-3">
+                <button type="button" class="btn btn-primary searchBtn">Check Price</button>
+                <button type="button" class="btn btn-primary submitBtn d-none">Add</button>
+              </div>
+            </form>
+
+            <a class="toggle-pricing">
+              <div class="text-center text-secondary">
+                <i class="fa-solid fa-angle-down font-big"></i>
+                <p class="mb-0">Prices &amp; more</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+                <div class="card card-container">
+          <div class="card-header bg-secondary text-white font-weight-bold py-4" style="border-radius: 0;">Kite & Bar</div>
+          <div class="card-body bg-white text-secondary">
+            <div style="height: 235px;">
+              <ul class="list-unstyled mb-4\">
+ <li>Only missing the right kite? With us, you rent the newest Core kites - Pace, XR and NEXUS.</li>
+ <li><i class="fa-solid fa-check text-secondary mt-3\"></i> Kite</li>
+ <li><i class="fa-solid fa-check text-secondary"></i> Bar</li>
+</ul>
+            </div>
+
+                        <form action="#" id="equipment_2Form" method="post" class="equipment-form pricing-section d-none">
+              <div class="alert alert-success alert-success d-none" role="alert" id="equipment_2Success" data-md5="22e988092ae1640bb6235b9bfa9ecbd6"><i class="fa-solid fa-circle-check fa-lg pr-1 text-success"></i> <span id="equipment_2SuccessText"></span></div><div class="alert alert-info alert-info d-none" role="alert" id="equipment_2Info" data-md5="abcdf89ad8e1fe47867c55efc6e29d4f"><i class="fa-solid fa-circle-info fa-lg pr-1 text-primary"></i> <span id="equipment_2InfoText"></span></div><div class="alert alert-warning alert-warning d-none" role="alert" id="equipment_2Exception" data-md5="0d644f57b7f288ed555897bd6513c7a2"><i class="fa-solid fa-triangle-exclamation fa-lg pr-1 text-warning"></i> <span id="equipment_2ExceptionText"></span></div><div class="alert alert-danger alert-danger d-none" role="alert" id="equipment_2Error" data-md5="92be2309ab838810df6b1b634427f375"><i class="fa-solid fa-xmark fa-lg pr-1 text-danger"></i> <span id="equipment_2ErrorText"></span></div>              <input class="form-control" id='Type' name='Type' type='hidden' value='equipment'>							<input class="form-control" id='equipmentTypeId' name='equipmentTypeId' type='hidden' value='3479'>							<input class="form-control" id='equipmentTypeLabel' name='equipmentTypeLabel' type='hidden' value='Kiteonly'>              <div class="row mb-2">
+                <div class="col-12">
+                  <div class="form-group"><label for="dateFrom">Arrival date</label><input class="form-control" id='dateFrom' name='dateFrom' type='date' min='2026-10-12' required></div>                </div>
+                <div class="col-12">
+                  <div class="form-group"><label for="dateTo">Departure date</label><input class="form-control" id='dateTo' name='dateTo' type='date' min='2026-10-12' required></div>                </div>
+
+                <div class="col-12 text-center mb-2 mt-1 equipmentLoading d-none">
+                  <i class="fa-solid fa-spinner fa-spin font-big"></i>
+                </div>
+
+                <div class="col-12 price-card">
+                  <p class="text-secondary text-center font-weight-bold font-big mb-0 price-3 price-preview d-none"> €</p>
+                  <div class="text-center mt-1 mb-1 days-preview-container d-none">
+                    <span class="days-preview"></span><span> Days</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="d-flex justify-content-center mt-1 mb-3">
+                <button type="button" class="btn btn-primary searchBtn">Check Price</button>
+                <button type="button" class="btn btn-primary submitBtn d-none">Add</button>
+              </div>
+            </form>
+
+            <a class="toggle-pricing">
+              <div class="text-center text-secondary">
+                <i class="fa-solid fa-angle-down font-big"></i>
+                <p class="mb-0">Prices &amp; more</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+                <div class="card card-container">
+          <div class="card-header bg-secondary text-white font-weight-bold py-4" style="border-radius: 0;">Board</div>
+          <div class="card-body bg-white text-secondary">
+            <div style="height: 235px;">
+              <ul class="list-unstyled mb-4">
+    <li>Want to try different boards? With us, you can rent boards from top brands like Nobile, Future, F-One, and more.</li>
+    <li><i class="fa-solid fa-check text-secondary mt-3"></i> Board</li>
+</ul>
+            </div>
+
+                        <form action="#" id="equipment_3Form" method="post" class="equipment-form pricing-section d-none">
+              <div class="alert alert-success alert-success d-none" role="alert" id="equipment_3Success" data-md5="b3b15c82d3deafc7d0fd756731edfd22"><i class="fa-solid fa-circle-check fa-lg pr-1 text-success"></i> <span id="equipment_3SuccessText"></span></div><div class="alert alert-info alert-info d-none" role="alert" id="equipment_3Info" data-md5="c63daf5fe91dca2e3793462d68c4a0c0"><i class="fa-solid fa-circle-info fa-lg pr-1 text-primary"></i> <span id="equipment_3InfoText"></span></div><div class="alert alert-warning alert-warning d-none" role="alert" id="equipment_3Exception" data-md5="039b316084c959d2b6e6bdf46737bb7a"><i class="fa-solid fa-triangle-exclamation fa-lg pr-1 text-warning"></i> <span id="equipment_3ExceptionText"></span></div><div class="alert alert-danger alert-danger d-none" role="alert" id="equipment_3Error" data-md5="e3e204ac024bc7be8b272c206e4250f8"><i class="fa-solid fa-xmark fa-lg pr-1 text-danger"></i> <span id="equipment_3ErrorText"></span></div>              <input class="form-control" id='Type' name='Type' type='hidden' value='equipment'>							<input class="form-control" id='equipmentTypeId' name='equipmentTypeId' type='hidden' value='3811'>							<input class="form-control" id='equipmentTypeLabel' name='equipmentTypeLabel' type='hidden' value='Board'>              <div class="row mb-2">
+                <div class="col-12">
+                  <div class="form-group"><label for="dateFrom">Arrival date</label><input class="form-control" id='dateFrom' name='dateFrom' type='date' min='2026-10-12' required></div>                </div>
+                <div class="col-12">
+                  <div class="form-group"><label for="dateTo">Departure date</label><input class="form-control" id='dateTo' name='dateTo' type='date' min='2026-10-12' required></div>                </div>
+
+                <div class="col-12 text-center mb-2 mt-1 equipmentLoading d-none">
+                  <i class="fa-solid fa-spinner fa-spin font-big"></i>
+                </div>
+
+                <div class="col-12 price-card">
+                  <p class="text-secondary text-center font-weight-bold font-big mb-0 price-3 price-preview d-none"> €</p>
+                  <div class="text-center mt-1 mb-1 days-preview-container d-none">
+                    <span class="days-preview"></span><span> Days</span>
+                  </div>
+                </div>
+
+              </div>
+              
+              <div class="d-flex justify-content-center mt-1 mb-3">
+                <button type="button" class="btn btn-primary searchBtn">Check Price</button>
+                <button type="button" class="btn btn-primary submitBtn d-none">Add</button>
+              </div>
+            </form>
+
+            <a class="toggle-pricing">
+              <div class="text-center text-secondary">
+                <i class="fa-solid fa-angle-down font-big"></i>
+                <p class="mb-0">Prices &amp; more</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+<div class="bg-primary mb-5">
+  <div class="container text-secondary py-5">
+
+    <div class="row">
+      <h1 class="col-12 mb-3 text-left">Storage & station utilisation.</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <p class="psjustify" >For storage and station use, including Beach Boy service, compressor, lawn area, launch/landing assistance, showers, storage, etc., you’ll pay a daily rate or a discounted weekly package.</p>
+      </div>
+
+      <div class="col-md-6 d-flex align-items-start">
+				<i class="fa-solid fa-lightbulb font-big mr-2 mt-2"></i>
+        <p class="font-weight-bold mb-0 psjustfy">For our hotel guests, this is of course complimentary, and each room has its own equipment box in the kite storage area.</p>
+      </div>
+    </div>
+
+  </div>
+</div></div>
+
+<button id="btnTop" class="btn btn-primary rounded-circle shadow position-fixed">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-md modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="alert alert-success fade show alert-success m-0 d-none" role="alert" id="feedbackSuccess" data-md5="f0950076121d9c58428032c6c10a54f9"><i class="fa-solid fa-circle-check fa-lg pr-1 text-success"></i> <span id="feedbackSuccessText"></span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>			<div class="alert alert-info fade show alert-info m-0 d-none" role="alert" id="feedbackInfo" data-md5="110268a63cca45e8e3d390f7e41d8e9d"><i class="fa-solid fa-circle-info fa-lg pr-1 text-primary"></i> <span id="feedbackInfoText"></span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>			<div class="alert alert-warning fade show alert-warning m-0 d-none" role="alert" id="feedbackException" data-md5="8f88a697bd7815b7a9e186191b1a12fa"><i class="fa-solid fa-triangle-exclamation fa-lg pr-1 text-warning"></i> <span id="feedbackExceptionText"></span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>			<div class="alert alert-danger fade show alert-danger m-0 d-none" role="alert" id="feedbackError" data-md5="577d69e6f0e0bc8bb1b901d120d1dbda"><i class="fa-solid fa-xmark fa-lg pr-1 text-danger"></i> <span id="feedbackErrorText"></span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>		</div>
+	</div>
+</div>  <footer class="bg-primary text-white font-weight-bold" id="footer">
+    <div class="container py-4">
+      <div class="row justify-content-between align-items-center">
+        
+        <!-- Left column -->
+        <div class="col-md-3 mb-3 mb-md-0">
+          <ul class="list-unstyled">
+            <li><a href="legalnotice.html" class="text-white text-decoration-none">Legal Notice</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+            <li><a href="traveldates.html" class="text-white text-decoration-none">Booking</a></li>
+            <li><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Centered column -->
+        <div class="col-md-6 mb-3 mb-md-0 text-center">
+          <p class="font-weight-bold">&copy; 7 Beaufort Brasil 2025</p>
+        </div>
+
+        <!-- Right column -->
+        <div class="col-md-3 text-center text-lg-right">
+          <p class="mb-1">Follow Us</p>
+          <a href="https://www.instagram.com/7bft_brasil/" class="text-white me-2"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="https://www.facebook.com/7beaufortbrasil" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/additional-methods.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-select.min.js"></script>
+  <script src="js/jquery.serializeToJSON.min.js"></script>
+  <script src="js/psscript.js"></script>
+  <script src="js/psmodal.js"></script>
+  <script src="js/pssearch.js"></script>
+  <script src="js/psupload.js"></script>
+        <script src="endpoints/public/cart.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/reservationScript.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</body>
+</html>

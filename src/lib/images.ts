@@ -30,7 +30,8 @@ const BROWSER_UA =
 
 // Filenames that are almost never a real offer photo.
 const JUNK_RE =
-  /(logo|icon|sprite|favicon|avatar|badge|placeholder|spinner|loader|pixel|tracking|1x1|blank|transparent|cookie|gdpr|banner-ad|food|menu|recipe|breakfast|lunch|dinner|cuisine|cocktail|testimonial|headshot)/i;
+  // "logo" only as its own word: "site-logo.png" is junk, "logos-beach-village-studio.jpg" (LOGOS Beach Village) is not
+  /((?<![a-z])logo(?![a-z])|icon|sprite|favicon|avatar|badge|placeholder|spinner|loader|pixel|tracking|1x1|blank|transparent|cookie|gdpr|banner-ad|food|menu|recipe|breakfast|lunch|dinner|cuisine|cocktail|testimonial|headshot)/i;
 
 const MAX_CANDIDATES = 16; // distinct URLs to consider per page
 const MAX_DOWNLOADS = 24;  // images actually fetched + measured

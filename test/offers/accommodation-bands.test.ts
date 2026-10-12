@@ -26,8 +26,9 @@ test('vila-guara: daily calendar -> bands with exact limits, min stay and status
   // a price change mid-month starts a new band: 13-14 Oct at 1044.10 between 1425.20 days
   const oct13 = slots.find(s => s.startDate === '2026-10-13')!;
   assert.deepEqual([oct13.endDate, oct13.price], ['2026-10-14', 1044.1]);
-  // "Close" days are not bookable
-  assert.ok(slots.some(s => s.availability === 'sold_out' && s.availabilityText?.includes('Close')));
+  // "Close" days are not bookable: the hotel is not selling them (closed), which is not "booked up"
+  assert.ok(slots.some(s => s.availability === 'closed' && s.availabilityText?.includes('Close')));
+  assert.ok(!slots.some(s => s.availability === 'sold_out' && s.availabilityText?.includes('Close')));
 });
 
 test('kite-village: night states -> bands per room product, nights before today dropped', () => {

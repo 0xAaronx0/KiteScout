@@ -1,0 +1,4293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+<!-- 
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2026 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at https://typo3.org/
+-->
+
+
+<title>KBC: Pousada Maré Alta — Kitesurf Accommodation, Parajuru Brazil</title>
+<meta name="generator" content="TYPO3 CMS">
+<meta name="description" content="Pousada Maré Alta in Parajuru, Brazil: 8 rooms with private bathroom right at the kitesurf spot. Pool, breakfast and kite school on site. Book your room now.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="INDEX,FOLLOW">
+<meta property="og:title" content="Pousada Maré Alta — right at the kitesurf spot, Parajuru, Brazil">
+<meta property="og:description" content="Eight rooms with private bathroom, a pool and sun terrace, right on the grounds of KBC Parajuru. Two minutes from bed to the kitesurf spot, breakfast included.">
+<meta property="og:image" content="https://www.kiteboarding-club.com/fileadmin/_processed_/1/9/csm_csm_kbc_brazil_pousada_pool_01_c5c247b64d.jpg">
+<meta property="og:image:url" content="https://www.kiteboarding-club.com/fileadmin/_processed_/1/9/csm_csm_kbc_brazil_pousada_pool_01_c5c247b64d.jpg">
+<meta property="og:image:width" content="1141">
+<meta property="og:image:height" content="599">
+<meta property="og:image:alt" content="Kitesurf Hotel Parajuru in Brazil, Pousada Maré Alta, Stella Stegmann swimming in the pool in a bikini, celebrities in Brazil">
+<meta name="twitter:card" content="summary">
+<meta name="language" content="en">
+<meta name="publisher" content="Kiteboarding Club">
+<meta name="facebook-domain-verification" content="o10xbfqglio4h4gf1b1d5j407tqp9a">
+
+<link rel="stylesheet" href="/typo3temp/assets/compressed/merged-8f19bcff292422ade2d890dc666e3e03-29bbdc0abeac211c1719a9a6c78c0faf.css?1787061268" media="all">
+
+<link rel="stylesheet" href="/typo3temp/assets/compressed/0ffdb636b324b60ebdf626e1bb3eafee-47c5df08eba752a8937ccd3580dc8291.css?1778246590" media="all">
+<link rel="stylesheet" href="/typo3temp/assets/compressed/merged-8081297fe885d4323039ce35e12878ae-29e2e580d80e7602533cba86a47ff255.css?1788081683" media="all">
+<link rel="stylesheet" href="/typo3temp/assets/compressed/merged-a7d125bd351b534a668f576167161369-b53f448983ed4e7cd6bbf3e1193d0968.css?1788081683" media="print">
+<link media="all" href="/vendor/quellenform/t3x-iconpack/Resources/Public/Css/IconpackTransforms.min.css?1776073147" rel="stylesheet" >
+
+
+
+
+
+
+<style></style>    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preload" href="/typo3conf/ext/kbc/Resources/Public/Fonts/pt-sans-v9-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/typo3conf/ext/kbc/Resources/Public/Fonts/pt-sans-v9-latin-700.woff2" as="font" type="font/woff2" crossorigin><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta name="apple-mobile-web-app-title" content="KBC"><script></script><script data-ignore="1" data-cookieconsent="statistics" type="text/plain"></script><link rel="dns-prefetch" href="https://www.googletagmanager.com" /><link rel="preconnect" href="https://www.googletagmanager.com" /><script data-ignore="1" ></script><script data-ignore="1" data-cookieconsent="statistics" type="text/plain"></script><script data-ignore="1" data-cookieconsent="marketing" type="text/plain"></script><meta property="og:site_name" content="KBC" /><meta property="og:type" content="website" /><meta property="og:locale" content="en_US" /><meta property="fb:admins" content="100001026641167" /><meta property="fb:admins" content="543031521" /><meta property="fb:app_id" content="181558791908239" /><meta name="p:domain_verify" content="c3a99bf461e1236d78b43d647a768ce7"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.kiteboarding-club.com/#organization",
+      "name": "Kiteboarding Club",
+      "alternateName": "KBC",
+      "url": "https://www.kiteboarding-club.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.kiteboarding-club.com/typo3conf/ext/kbc/Resources/Public/Images/logo.webp",
+        "width": 200,
+        "height": 258
+      },
+      "description": "Kitesurf Reisen zu den schönsten Spots weltweit. Kitesurfen und Wingfoilen lernen an professionellen Kiteschulen.",
+      "foundingDate": "2003",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+49-234-36718800",
+        "contactType": "customer service",
+        "availableLanguage": ["German", "English", "Dutch", "French", "Spanish", "Portuguese", "Italian"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/KBCworld/",
+        "https://www.instagram.com/kiteboardingclub/",
+        "https://www.youtube.com/c/KiteboardingClub",
+        "https://de.pinterest.com/kbcworldwide/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.kiteboarding-club.com/#website",
+      "url": "https://www.kiteboarding-club.com",
+      "name": "Kiteboarding Club",
+      "publisher": {
+        "@id": "https://www.kiteboarding-club.com/#organization"
+      },
+      "inLanguage": ["de-DE", "en-US", "nl-NL", "fr-FR", "es-ES", "pt-BR", "it-IT"]
+    },
+    {
+      "@type": ["LocalBusiness", "SportsActivityLocation"],
+      "@id": "https://www.kiteboarding-club.com/#localbusiness",
+      "name": "Kiteboarding Club",
+      "image": "https://www.kiteboarding-club.com/typo3conf/ext/kbc/Resources/Public/Images/logo.webp",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bochum",
+        "addressCountry": "DE"
+      },
+      "telephone": "+49-234-36718800",
+      "url": "https://www.kiteboarding-club.com",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "07:30",
+        "closes": "12:30"
+      }
+    }
+  ]
+}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":"1","item":"https://www.kiteboarding-club.com/en/","name":"KBC"},{"@type":"ListItem","position":"2","item":"https://www.kiteboarding-club.com/en/","name":"destinations"},{"@type":"ListItem","position":"3","item":"https://www.kiteboarding-club.com/en/brazil/","name":"Worldwide"},{"@type":"ListItem","position":"4","item":"https://www.kiteboarding-club.com/en/brazil/","name":"BRAZIL | Brazil"},{"@type":"ListItem","position":"5","item":"https://www.kiteboarding-club.com/en/pousada/","name":"Pousada Maré Alta"}]}</script><script src="https://kbc.kitehub.eu/scripts/booking/3"></script><script src="https://kbc.kitehub.eu/scripts/booking/5"></script>
+<link rel="canonical" href="https://www.kiteboarding-club.com/en/pousada/">
+
+<link rel="alternate" hreflang="de-DE" href="https://www.kiteboarding-club.com/pousada/">
+<link rel="alternate" hreflang="en-US" href="https://www.kiteboarding-club.com/en/pousada/">
+<link rel="alternate" hreflang="nl-NL" href="https://www.kiteboarding-club.com/nl/brazil/pousada-mare-alta-accommodatie-voor-kitesurfers-in-parajuru-brazilie/">
+<link rel="alternate" hreflang="fr-FR" href="https://www.kiteboarding-club.com/fr/pousada/">
+<link rel="alternate" hreflang="es-ES" href="https://www.kiteboarding-club.com/es/pousada/">
+<link rel="alternate" hreflang="pt-BR" href="https://www.kiteboarding-club.com/pt/pousada/">
+<link rel="alternate" hreflang="it-IT" href="https://www.kiteboarding-club.com/it/brazil/pousada-mare-alta-alloggio-per-kitesurf-a-parajuru-brasile/">
+<link rel="alternate" hreflang="x-default" href="https://www.kiteboarding-club.com/pousada/">
+</head>
+<body>
+
+	<header id="_top" class="bboking">
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<div class="topnav">
+					<div class="d-flex">
+						<ul class="nav">
+							<li><a href="/en/kbcfriends/">KBCfriends</a></li><li><a href="/en/jobs/" title="Jobs for kitesurf instructors at KBC">Jobs</a></li>
+						</ul>
+						<div id="hotlinebox">
+							<div class="tx-dce-container">
+    
+	
+    <span class="toggle-action" style="color: #25D366"><i class="fa fa-whatsapp" aria-hidden="true"></i></span>
+			
+	<div id="hotline" class="dropdown">
+		
+				
+				<span class="hotline">WhatsApp</span> <a href="https://wa.me/+5585996012006" class="tel" tabIndex="-1" rel="nofollow">+5585996012006</a>
+		
+	</div>
+
+
+
+</div>
+
+						</div>
+					</div>
+					<div id="lang">
+						
+
+<ul>
+    
+        
+        
+        
+        
+        
+        
+                
+                        <li class="switch">
+                            <a href="/pousada/">
+                                <img class="img-responsive" src="/vendor/kbc/kbc/Resources/Public/Images/Flags/de.webp?1788081665" alt="Deutsch" width="32" height="32">
+                            </a>
+                        </li>
+                    
+            
+        
+    
+        
+        
+        
+        
+            
+        
+        
+        
+                
+                        <li class="active">
+                            <img class="img-responsive" src="/vendor/kbc/kbc/Resources/Public/Images/Flags/gb.webp?1788081665" alt="English" width="32" height="32">
+                        </li>
+                    
+            
+        
+    
+        
+        
+        
+        
+        
+        
+                
+                        <li class="switch">
+                            <a href="/nl/brazil/pousada-mare-alta-accommodatie-voor-kitesurfers-in-parajuru-brazilie/">
+                                <img class="img-responsive" src="/vendor/kbc/kbc/Resources/Public/Images/Flags/nl.webp?1788081665" alt="Nederlands" width="32" height="32">
+                            </a>
+                        </li>
+                    
+            
+        
+    
+        
+        
+        
+        
+        
+        
+                
+                        <li class="switch">
+                            <a href="/fr/pousada/">
+                                <img class="img-responsive" src="/vendor/kbc/kbc/Resources/Public/Images/Flags/fr.webp?1788081665" alt="Français" width="32" height="32">
+                            </a>
+                        </li>
+                    
+            
+        
+    
+        
+        
+        
+        
+        
+        
+                
+                        <li class="switch">
+                            <a href="/es/pousada/">
+                                <img class="img-responsive" src="/vendor/kbc/kbc/Resources/Public/Images/Flags/es.webp?1788081665" alt="Español" width="32" height="32">
+                            </a>
+                        </li>
+                    
+            
+        
+    
+        
+        
+        
+        
+        
+            
+        
+        
+                
+                        <li class="switch">
+                            <a href="/pt/pousada/">
+                                <img class="img-responsive" src="/vendor/kbc/kbc/Resources/Public/Images/Flags/br.webp?1788081665" alt="Portuguese" width="32" height="32">
+                            </a>
+                        </li>
+                    
+            
+        
+    
+        
+        
+        
+        
+        
+        
+                
+                        <li class="switch">
+                            <a href="/it/brazil/pousada-mare-alta-alloggio-per-kitesurf-a-parajuru-brasile/">
+                                <img class="img-responsive" src="/vendor/kbc/kbc/Resources/Public/Images/Flags/it.webp?1788081665" alt="Italian" width="32" height="32">
+                            </a>
+                        </li>
+                    
+            
+        
+    
+</ul>
+
+
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" aria-label="Navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					<a href="/en/" title="To home page"><img src="/vendor/kbc/kbc/Resources/Public/Images/logo.webp" width="300" height="104"  id="logo"  alt="Kiteboarding Club" ></a>
+				</div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown active"><a href="/en/" class="pid1794 dropdown-toggle disabled" data-toggle="dropdown" title="Choose your kitesurf and wingfoil holiday destination at the best kitesurf and wingfoil spots worldwide at KBC">destinations</a><div class="dropdown-menu"><ul class="second-level"><li class="dropdown"><a href="/en/el-gouna/" class="dropdown-toggle disabled" data-toggle="dropdown" title="Kitesurf and Wingschools, centers and events in Egypt at the Red Sea">Egypt</a><ul class="dropdown-menu third-level"><li class="dropdown"><a href="/en/el-gouna/" class="dropdown-toggle disabled" data-toggle="dropdown" title="KBC Club El Gouna - Learn kitesurfing &amp; Wingfoil at the kiteschool in Egypt at the Red Sea">EL GOUNA | Red Sea</a><ul class="fourth-level"><li><a href="/en/el-gouna/#kitesurf" title="Kitesurfing instruction at our kitesurf school in El Gouna">Kitesurf</a></li><li><a href="/en/el-gouna/#wingfoil" title="Wingfoil instruction at our school in El Gouna">Wingfoil</a></li><li><a href="/en/el-gouna/#webcam" title="Webcam am Kiteboarding Club El Gouna in Ägypten">Webcam</a></li><li><a href="/en/el-gouna/restaurant/" title="Buzzha Beach Restaurant">Restaurant</a></li></ul></li><li class="dropdown"><a href="/en/ras-soma/" class="dropdown-toggle disabled" data-toggle="dropdown" title="Kitesurf and Wingfoil School Ras Soma in Somabay at the Red Sea">RAS SOMA | Red Sea</a><ul class="fourth-level"><li><a href="/en/ras-soma/#kitesurf" title="Kitesurf &amp; Wingfoil">Kitesurf &amp; Wingfoil</a></li><li><a href="/en/ras-soma/#steigenberger" title="Steigenberger Hotel">Steigenberger Hotel</a></li></ul></li></ul></li><li class="dropdown"><a href="/en/pocket-wing-dakhla/" class="dropdown-toggle disabled" data-toggle="dropdown" title="Learn kitesurfing and wingfoiling at the KBC schools, trips and camps in Dakhla in Morocco">Morocco</a><ul class="dropdown-menu third-level"><li class="dropdown"><a href="/en/newspiritdakhla/" class="dropdown-toggle disabled" data-toggle="dropdown" title="Kitesurf and wingfoil school New Spirit Dakhla on the Dakhla lagoon">NEW SPIRIT DAKHLA | West Lagoon</a><ul class="fourth-level"><li><a href="/en/newspiritdakhla/#c30457" title="New Spirit Dakhla Kitesurf and Wingfoil School">Kitesurf &amp; Wingfoil</a></li><li><a href="/en/newspiritdakhla/#hotel" title="New Spirit Dakhla Bungalow Hotel">Bungalow Hotel</a></li></ul></li><li class="dropdown"><a href="/en/dakhla/" class="dropdown-toggle disabled" data-toggle="dropdown" title="Kitesurfen, Wingfoil und Parawing lernen an der Kiteschule in Dakhla mit Kitereisen nach Marokko |">DAKHLA | East Lagoon</a><ul class="fourth-level"><li><a href="/en/dakhla/#courses" title="Learn kitesurfing and wingfoiling at the KBC wingfoil and kiteschool in Dakhla in Morocco">Kitesurf &amp; Wingfoil</a></li><li><a href="/en/dakhla/#hotel" title="Hotel Dakhla Club right on the kitespot of KBC Dakhla">Hotel Dakhla Club</a></li></ul></li><li class="dropdown"><a href="/en/lagune-dakhla/" class="dropdown-toggle disabled" data-toggle="dropdown" title="Dakhla Lagoon in Morocco">&gt; Compare the 2 Centers in Dakhla</a><ul class="fourth-level"><li><a href="/en/lagune-dakhla/#center">Dakhlas Kite &amp; Wingfoil Center</a></li></ul></li></ul></li><li class="dropdown active"><a href="/en/brazil/" class="dropdown-toggle disabled" data-toggle="dropdown" title="Learn kitesurfing and wingfoiling, schools, trips and camps worldwide from KBC">Worldwide</a><ul class="dropdown-menu third-level"><li class="dropdown active"><a href="/en/brazil/" class="dropdown-toggle disabled" data-toggle="dropdown" title="KBC Parajuru: Kiteschool, Kite &amp; Wingfoil, Course, Camps and Rental  | close to Fortaleza, Brazil">BRAZIL | Brazil</a><ul class="fourth-level"><li><a href="/en/brazil/#kitesurf" title="Kitesurf and wingfoil courses at the kite and wingfoil school in Parajuru in Brazil">Kitesurf &amp; Wingfoil</a></li><li><a href="/en/pousada/" title="Pousada Maré Alta – Kitesurf Hotel Parajuru, Brasilien">Pousada Maré Alta</a></li></ul></li><li class="dropdown"><a href="/en/sicily/" class="dropdown-toggle disabled" data-toggle="dropdown" title="KBC Sicily: Kiteschool, Kitecourse, Kiterental &amp; Wingfoil | Lo Stagnone, Sicily">SICILY | Italy</a><ul class="fourth-level"><li><a href="/en/sicily/#courses" title="Kitesurf and wingfoil Instructions in Sicily in Lo Stagnone in Italy">Kitesurf &amp; Wingfoil</a></li><li><a href="/en/villavajarassa/" title="Accommodations for kitesurfers in Sicily">Villa Vajarassa</a></li></ul></li><li class="dropdown"><a href="/en/tarifa/" class="dropdown-toggle disabled" data-toggle="dropdown" title="Learn kitesurfing at the kiteschool KBC Tarifa in Spain">TARIFA | Spain</a><ul class="fourth-level"><li><a href="/en/tarifa/#courses" title="Courses at KBC Tarifa">Kitesurfing</a></li><li><a href="/en/tarifa/#guesthouse" title="Accomodation High Flyers Guesthouse at KBC Tarifa">Unterkunft</a></li></ul></li><li class="dropdown"><a href="/en/sal/" class="dropdown-toggle disabled" data-toggle="dropdown" title="Kitesurf &amp; Wingfoil School Surf Hub on Sal | Cape Verde |">SAL | Cape Verde</a><ul class="fourth-level"><li><a href="/en/sal/#courses" title="Kitesurf &amp; Wingfoil school at Sal, Cape Verde">Kitesurf &amp; Wingfoil</a></li><li><a href="/en/sal/#surf" title="Surfing at the surfschool Surfhub on Sal at Cape Verde">Surf</a></li></ul></li></ul></li><li class="dropdown"><a href="/en/brouwersdam/" class="dropdown-toggle disabled" data-toggle="dropdown" title="Kitesurfing and wingfoil holidays, kitesurf and wingfoil schools, kite and wingfoil camps and kitesurfing and Wingfoil courses in Holland at the kiteboarding Club">Netherlands</a><ul class="dropdown-menu third-level"><li class="dropdown"><a href="/en/brouwersdam/" class="dropdown-toggle disabled" data-toggle="dropdown" title="Learn kitesurfing at the professional kiteschool KBC Brouwersdam in the south of Holland at the Northern Sea.">BROUWERSDAM | North Sea</a><ul class="fourth-level"><li><a href="/en/brouwersdam/#kitesurf" title="Learn kitesurfing and wingfoil in the kite courses at the kite school at Brouwersdam">Kitesurf &amp; Wingfoil</a></li><li><a href="http://www.campingdehogeblok.nl/" target="_blank" rel="noreferrer" title="Accommodation at the kiteschool at Brouwersdam">Camping de Hoge Blok</a></li></ul></li><li class="dropdown"><a href="/en/holland/" class="dropdown-toggle disabled" data-toggle="dropdown" title="Learn kitesurfing and wingfoil safely at the KBC Kitesurfing School on the IJsselmeer in Hindeloopen, Holland |">HINDELOOPEN | IJsselmeer</a><ul class="fourth-level"><li><a href="/en/holland/#kitesurf" title="Learn kitesurfing and wingfoiling in the Netherlands at the Ijsselmeer at KBC Hindeloopen">Kitesurf &amp; Wingfoil</a></li><li><a href="/en/holland/#camping" title="Accommodation at Camping Hindeloopen at the kiteschool in the Netherlands">Camping Welgelegen</a></li></ul></li></ul></li></ul></div></li><li><a href="/en/events/" class="pid1747" title="Book Kitesurf &amp; Wingfoil Events and Camps worldwide">Events</a></li><li><a href="/en/kitesurfen/" class="pid1993" title="Learn kitesurfing at the best kitesurf schools worldwide">Kitesurf</a></li><li><a href="/en/wingfoilschool/" class="pid2005" title="Learn to wingfoil – beginner courses at the wingfoil school in The Netherlands, El Gouna, Ras Soma, Dakhla, Sicily and Brazil">wingfoil</a></li><li><a href="/en/kids/" class="pid3283" title="Kitesurfing and wingfoiling courses for children and kids">Kids</a></li><li><a href="https://www.kbc-shop.com/" target="_blank" class="pid1956" rel="noreferrer" title="Kites, wings, boards and everything for kitesurfing and wingfoiling, second hand gear  in the store of the">Shop</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+				<div class="booking">
+					<div class="tx-dce-pi1">
+    
+	<div class="booking-modal kitesurf">
+		<!-- Button trigger modal -->
+		<button type="button" class="button btn btn-primary kitesurf" data-toggle="modal" data-target="#modal-booking">
+			<p><strong>ADVICE</strong><br>&amp; <strong>BOOKING</strong></p>
+		</button>
+
+		<!-- Modal -->
+		<div class="modal kitesurf" id="modal-booking" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+					</div>
+					<div class="modal-body">
+						<h2>Book Accommodation &amp; Water Sports</h2>
+<p>Here you can quickly and easily book all courses, rentals, services, and your accommodation at Pousada Maré Alta online.</p>
+<p><a href="https://www.myleao.com/station/4/en" target="_top" class="button" title="Accommodation, kitesurfing, and wingfoiling at KBC Parajuru"><strong>BOOK KITESURFING &amp; ACCOMMODATION</strong></a></p>
+<h2>Request a travel quote</h2>
+<p>The <strong>team at sun + fun</strong>, our expert partner for kitesurfing trips worldwide, will put together a complete package for you that includes flights, accommodation, and kitesurfing services.</p>
+<p><a href="/en/offer/" target="_new" class="internal-link fancyframe"><strong>Request a travel quote</strong></a></p>
+<h2>Questions about KBC Parajuru?</h2>
+<p>Station Manager Valber and his team are here to help:&nbsp;</p>
+<p><strong>WhatsApp</strong> <a href="https://wa.me/+5585996012006" target="_blank" rel="noreferrer">+55-85 99601 2006</a></p>
+<p><a href="mailto:parajuru@KBC-World.com?subject=Meine%20Frage%20an%20den%20KBC%20Parajuru" class="internal-link fancyframe" title="Email to KBC Parajuru"><strong>parajuru@KBC-World.com</strong></a></p>
+					</div>
+					<div class="modal-footer">
+						
+							<img class="schmuckbild img-responsive" loading="lazy" src="/fileadmin/_processed_/9/e/csm_KBC_Team_Valber_a4f4374cfd.png" width="800" height="991" alt="Valber, kitesurfing instructor wearing blue CKBC t-shirt for kiteboarding and water sports lessons" />
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+				</div>
+			</div>
+        </nav>  
+		<link rel="preload" as="image" imagesrcset="/fileadmin/_processed_/5/4/csm_Pousada-Mare-Alta_Parajuru_1920_58a2593a65.jpg 768w, /fileadmin/_processed_/5/4/csm_Pousada-Mare-Alta_Parajuru_1920_e99eb9858c.jpg 1200w" imagesizes="100vw" fetchpriority="high">
+	
+	<div class="homepage-hero-module">
+		
+		<div class="video-container">
+			
+				<div class="filter"></div>
+			
+			
+				<video loop muted playsinline preload="none" class="fillWidth" width="100%" height="100%" id="video" poster="/fileadmin/_processed_/5/4/csm_Pousada-Mare-Alta_Parajuru_1920_58a2593a65.jpg" data-poster-lg="/fileadmin/_processed_/5/4/csm_Pousada-Mare-Alta_Parajuru_1920_e99eb9858c.jpg">
+			
+
+				
+					<source data-src='/fileadmin/user_upload/Contentpictures/Parajuru/Pousada/Pousada-Mare-Alta_Parajuru_1920.mp4' type="video/mp4" data-device="desktop" />
+				
+				
+					<source data-src='/fileadmin/user_upload/Contentpictures/Parajuru/Pousada/Pousada-Mare-Alta_Parajuru_1920.webm' type="video/webm" data-device="desktop" />
+				
+				
+					<source data-src='/fileadmin/user_upload/Contentpictures/Parajuru/Pousada/Pousada-Mare-Alta_Parajuru_1024.mp4' type="video/mp4" data-device="tablet" />
+				
+				
+					<source data-src='/fileadmin/user_upload/Contentpictures/Parajuru/Pousada/Pousada-Mare-Alta_Parajuru_1024.webm' type="video/webm" data-device="tablet" />
+				
+				
+					<source data-src='/fileadmin/user_upload/Contentpictures/Parajuru/Pousada/Pousada-Mare-Alta_Parajuru_640.mp4' type="video/mp4" data-device="smartphone" />
+				
+				
+					<source data-src='/fileadmin/user_upload/Contentpictures/Parajuru/Pousada/Pousada-Mare-Alta_Parajuru_640.webm' type="video/webm" data-device="smartphone" />
+				
+
+			</video>
+			<script></script>
+		</div>
+		<div class="overlay">
+			
+				
+						<h1 class="headline">Pousada Maré Alta – Parajurus Kitesurfing &amp; Wingfoiling Hostel, Brazil</h1>
+					
+			
+			
+		</div>
+	</div> 
+    </header>
+        
+    <main class="container">
+   		
+    
+
+            <div id="c18123" class="frame frame-default frame-type-1col frame-layout-0">
+                
+                    <a id="c18128"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    
+    
+
+            <div id="c18125" class="frame frame-default frame-type-text frame-layout-0">
+                
+                    <a id="c18126"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+
+
+                
+                
+
+    <p>Pousada Maré Alta is a wonderful place to stay in Parajuru on Brazil’s northeast coast—right on the grounds of KBC Parajuru. Eight rooms with private bathrooms, a pool nestled among palm trees, and breakfast served in the on-site Maré Alta restaurant. It’s just a two-minute walk from your bed to the kite spot. Guests staying here have access to accommodations, a kite school, and the kite spot all on one property.</p>
+<p><strong>✔︎ 8 rooms</strong> – each with its own open-air bathroom<br><strong>✔︎ Pool and sun deck</strong> in the enchanting garden<br><strong>✔︎ Breakfast buffet</strong> at the Maré Alta restaurant included<br><strong>✔︎ </strong>Right on the Parajuru kite spot — <strong>free storage</strong> at the KBC Center<br><strong>✔︎ Air conditioning, Wi-Fi,</strong> and <strong>daily housekeeping</strong><br><strong>✔︎ </strong>Family- and child-friendly<br><strong>✔︎ </strong>Kite season from July to February with consistent trade winds</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+<section id="gallery">
+        <div class="slick-slider preview">
+        	
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Contentpictures/Parajuru/pousada-parajuru-brasilien-galerie_chillout.jpg" width="940" height="630" alt="Relaxing hammock overlooking pool at Kiteboarding Club KBC Parajuru - tropical kitesurfing resort in Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Contentpictures/Parajuru/pousada-parajuru-brasilien-galerie_aerial.jpg" width="940" height="630" alt="Aerial view of Kiteboarding Club KBC Parajuru beachfront location in Ceará, Brazil - premier kitesurfing destination" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Contentpictures/Parajuru/pousada-parajuru-brasilien-galerie_pool.jpg" width="940" height="630" alt="Luxury pool deck at Kiteboarding Club KBC Parajuru - Premium kitesurf resort accommodation in Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Contentpictures/Parajuru/pousada-parajuru-brasilien-galerie_garten.jpg" width="940" height="630" alt="Kiteboarding Club KBC Parajuru resort with swimming pool, palm trees and thatched roof buildings in Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Contentpictures/Parajuru/galerie_pousada-mare-alta_schlafzimmer.jpg" width="940" height="630" alt="Pousada Maré Alta Bedroom Brazil - Kiteboarding Club Parajuru" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Contentpictures/Parajuru/pousada-parajuru-brasilien-galerie_terrasse.jpg" width="940" height="630" alt="Tropical palm-thatched accommodation at Kiteboarding Club KBC Parajuru with hammock and outdoor lounge area" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Contentpictures/Parajuru/pousada-parajuru-brasilien-galerie_massage.jpg" width="940" height="630" alt="Outdoor massage therapy at KBC Kitesurf Center Parajuru - relaxation after kiteboarding sessions in Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Contentpictures/Parajuru/galerie_pousada_bathroom.jpg" width="940" height="630" alt="Pousada Maré Alta Bathroom - KBC Parajuru Brazil Kitesurfing Accommodation" /></div>
+            
+        </div>
+    </section><nav id="myAffix" class="affix-navbar affix-top kitesurf">
+          <div id="navbar-secondary" class="">
+               <ul class="nav">
+                  	
+						<li><a href="#c18146">&gt;&gt; Choose and book a room</a></li>
+					
+               </ul>
+			</div>
+        </nav>
+    
+
+            <div id="c18146" class="frame frame-default frame-type-1col frame-layout-0">
+                
+                    <a id="c18170"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h2 id="" class="ce-headline-center">
+                Rooms
+                
+            </h2>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    
+    
+
+            <div id="c990418" class="frame frame-default frame-type-2col frame-layout-0">
+                
+                    <a id="c990462"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            
+                
+                    
+    
+
+            <div id="c990419" class="frame frame-default frame-type-text frame-layout-0">
+                
+                    <a id="c990463"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <p>Eight rooms, all on the ground floor, nestled within the tropical gardens. Each room features a covered terrace with a seating area and a hammock. Inside, natural ventilation and air conditioning ensure comfortable temperatures, along with a TV, refrigerator, and electric kettle.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            
+                
+                    
+    
+
+            <div id="c990420" class="frame frame-default frame-type-text frame-layout-0">
+                
+                    <a id="c990464"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <p>Your private outdoor bathroom is equipped with a toilet, sink, and hot-water shower—and can optionally include a whirlpool tub. Towels and soap are provided, and the bathroom is cleaned daily.<br>Each apartment is named after one of our KBC locations—a tribute to the Geschwister kite schools around the world:</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    </div>
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c18145" class="frame frame-default frame-type-image frame-layout-0">
+                
+                    <a id="c990465"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <div class="ce-image ce-center ce-above">
+        
+
+    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+        
+            <div class="ce-outer">
+                <div class="ce-inner">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    <a href="/fileadmin/_processed_/1/5/csm_KBC_BR_Pousada-Mare-Alta-Plan_87e2c20cd1.jpg" class="fancy" rel="fancy[18145]">
+                        
+<img class="image-embed-item" alt="Pousada Maré Alta Parajuru - Accommodation at Kiteboarding Club Brazil" src="/fileadmin/_processed_/1/5/csm_KBC_BR_Pousada-Mare-Alta-Plan_7b9d9666f7.jpg" width="1140" height="687" loading="lazy" />
+
+
+                    </a>
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+                </div>
+            </div>
+        
+    </div>
+
+
+
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c990433" class="frame frame-default frame-type-2col frame-layout-0">
+                
+                    <a id="c990466"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            
+                
+                    
+    
+
+            <div id="c990423" class="frame frame-default frame-type-1col frame-layout-0">
+                
+                    <a id="c990467"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    <section id="gallery">
+        <div class="slick-slider preview">
+        	
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare-Alta_Room_Double_1.jpg" width="1000" height="670" alt="Pousada Maré Alta – Kitesurfing Accommodations in Parajuru, Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare-Alta_Room_Double_4.jpg" width="1000" height="670" alt="Pousada Maré Alta – Kitesurfing Accommodations in Parajuru, Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare-Alta_Room_Double_3.jpg" width="1000" height="670" alt="Pousada Maré Alta – Kitesurfing Accommodations in Parajuru, Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare-Alta_Room_Double_2.jpg" width="1000" height="670" alt="Pousada Maré Alta – Kitesurfing Accommodations in Parajuru, Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare-Alta_Room_Double_6.jpg" width="1000" height="670" alt="Pousada Maré Alta – Kitesurfing Lodging in Parajuru, Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare-Alta_Room_Double_7.jpg" width="1000" height="670" alt="Pousada Maré Alta – Kitesurfing Accommodations in Parajuru, Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare-Alta_Room_Double_5.jpg" width="1000" height="670" alt="Pousada Maré Alta – Kitesurfing Accommodations in Parajuru, Brazil" /></div>
+            
+        </div>
+    </section>
+                
+                    
+    
+
+            <div id="c990427" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                    <a id="c990469"></a>
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h3 id="" class="">
+                &quot;El Gouna&quot; Two-Bedroom Apartment
+                
+            </h3>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-center ce-above">
+        
+            
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <p><i>(3–6 guests)</i><br>One king-size bed and three single beds in two separate rooms, plus a sofa seating area (which can be converted into a bed).<br>Ideal for families or small groups.</p><table class="contenttable"><tbody><tr><td><strong>Guests</strong></td><td><strong>Price per night</strong></td><td>&nbsp;</td></tr><tr><td>2 people + 1 child</td><td>155 euros</td><td><a href="https://www.myleao.com/product/39572" target="_blank" class="button" rel="noreferrer">Book</a></td></tr><tr><td>3 people</td><td>170 euros</td><td><a href="https://www.myleao.com/product/14977" target="_blank" class="button" rel="noreferrer">book</a></td></tr><tr><td>4 people</td><td>205 euros</td><td><a href="https://www.myleao.com/product/13458" target="_blank" class="button" rel="noreferrer">book</a></td></tr><tr><td>5 people</td><td>240 euros</td><td><a href="https://www.myleao.com/product/13516" target="_blank" class="button" rel="noreferrer">book</a></td></tr><tr><td>6 people</td><td>275 euros</td><td><a href="https://www.myleao.com/product/13574" target="_blank" class="button" rel="noreferrer">book</a></td></tr><tr><td>7 people</td><td>310 euros</td><td><a href="https://www.myleao.com/product/13632" target="_blank" class="button" rel="noreferrer">book</a></td></tr></tbody></table>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            
+                
+                    
+    
+
+            <div id="c990428" class="frame frame-default frame-type-1col frame-layout-0">
+                
+                    <a id="c990470"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    <section id="gallery">
+        <div class="slick-slider preview">
+        	
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_4.jpg" width="1000" height="670" alt="Parajuru Kitesurf Hotel in Brazil, Pousada Maré Alta, double room with private bathroom and palm trees" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_3.jpg" width="1000" height="670" alt="Parajuru Kitesurf Hotel in Brazil, Pousada Maré Alta, double room with private bathroom and palm trees" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_7.jpg" width="1000" height="670" alt="Parajuru Kitesurf Hotel in Brazil, Pousada Maré Alta," /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_2.jpg" width="1000" height="670" alt="Kitesurf Hotel Parajuru in Brazil, Pousada Maré Alta, double room with bathroom" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_6.jpg" width="1000" height="670" alt="Parajuru Kitesurf Hotel in Brazil, Pousada Maré Alta," /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_1.jpg" width="1000" height="670" alt="Kitesurf Hotel Parajuru in Brazil, Pousada Maré Alta, double room with private bathroom" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_5.jpg" width="1000" height="670" alt="Parajuru Kitesurf Hotel in Brazil, Pousada Maré Alta," /></div>
+            
+        </div>
+    </section>
+                
+                    
+    
+
+            <div id="c990429" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                    <a id="c990472"></a>
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h3 id="" class="">
+                &quot;Hindeloopen&quot; &amp; &quot;Brouwersdam&quot; Apartments
+                
+            </h3>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-center ce-above">
+        
+            
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <p><i>(1–2 guests)</i><br>One king-size bed.<br>Compact and quiet—the perfect choice for couples or solo travelers.</p><table class="contenttable"><tbody><tr><td><strong>Guests</strong></td><td><strong>Price per night</strong></td><td>&nbsp;</td></tr><tr><td>1 person</td><td>95 euros</td><td><a href="https://www.myleao.com/product/13300" target="_blank" class="button" rel="noreferrer">Book</a></td></tr><tr><td>2 people</td><td>130 euros</td><td><a href="https://www.myleao.com/product/13343" target="_blank" class="button" rel="noreferrer">book</a></td></tr></tbody></table>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    </div>
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c990434" class="frame frame-custom-21 frame-type-2col frame-layout-0">
+                
+                    <a id="c990473"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            
+                
+                    
+    
+
+            <div id="c990435" class="frame frame-custom-11 frame-type-1col frame-layout-0">
+                
+                    <a id="c990474"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    <section id="gallery">
+        <div class="slick-slider preview">
+        	
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_1.jpg" width="1000" height="670" alt="Kitesurf Hotel Parajuru in Brazil, Pousada Maré Alta, double room with private bathroom" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_5.jpg" width="1000" height="670" alt="Parajuru Kitesurf Hotel in Brazil, Pousada Maré Alta," /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_3.jpg" width="1000" height="670" alt="Parajuru Kitesurf Hotel in Brazil, Pousada Maré Alta, double room with private bathroom and palm trees" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_4.jpg" width="1000" height="670" alt="Parajuru Kitesurf Hotel in Brazil, Pousada Maré Alta, double room with private bathroom and palm trees" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_2.jpg" width="1000" height="670" alt="Kitesurf Hotel Parajuru in Brazil, Pousada Maré Alta, double room with bathroom" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_7.jpg" width="1000" height="670" alt="Parajuru Kitesurf Hotel in Brazil, Pousada Maré Alta," /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_BH_6.jpg" width="1000" height="670" alt="Parajuru Kitesurf Hotel in Brazil, Pousada Maré Alta," /></div>
+            
+        </div>
+    </section>
+                
+                    
+    
+
+            <div id="c990436" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                    <a id="c990476"></a>
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h3 id="" class="">
+                &quot;Tarifa&quot; &amp; &quot;Portugal&quot; Apartments
+                
+            </h3>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-center ce-above">
+        
+            
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <p><i>1–3 guests</i><br>: One king-size bed and one single bed. Plenty of space for three, without compromising on comfort.<br>The Portugal Room is wheelchair accessible.</p><table class="contenttable"><tbody><tr><td><strong>People</strong></td><td><strong>Price per night</strong></td><td>&nbsp;</td></tr><tr><td>1 person</td><td>95 euros</td><td><a href="https://www.myleao.com/product/13042" target="_blank" class="button" rel="noreferrer">Book</a></td></tr><tr><td>2 people</td><td>130 euros</td><td><a href="https://www.myleao.com/product/13085" target="_blank" class="button" rel="noreferrer">Book</a></td></tr><tr><td>3 people</td><td>165 euros</td><td><a href="https://www.myleao.com/product/13128" target="_blank" class="button" rel="noreferrer">book</a></td></tr></tbody></table>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            
+                
+                    
+    
+
+            <div id="c990438" class="frame frame-custom-11 frame-type-1col frame-layout-0">
+                
+                    <a id="c990477"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    <section id="gallery">
+        <div class="slick-slider preview">
+        	
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_DSS_4.jpg" width="1000" height="670" alt="Pousada Maré Alta – Kitesurfing Accommodations in Parajuru, Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_DSS_1.jpg" width="1000" height="670" alt="Pousada Maré Alta – Kitesurfing Accommodation in Parajuru, Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_DSS_2.jpg" width="1000" height="670" alt="Pousada Maré Alta – Kitesurfing Accommodations in Parajuru, Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_DSS_5.jpg" width="1000" height="670" alt="Pousada Maré Alta – Kitesurfing Accommodations in Parajuru, Brazil" /></div>
+            
+                <div><img class="img-responsive" src="/fileadmin/user_upload/Pousada_Mare_Room_DSS_3.jpg" width="1000" height="670" alt="Pousada Maré Alta – Kitesurfing Accommodations in Parajuru, Brazil" /></div>
+            
+        </div>
+    </section>
+                
+                    
+    
+
+            <div id="c990439" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                    <a id="c990479"></a>
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h3 id="" class="">
+                &quot;Sal,&quot; &quot;Sicily,&quot; and &quot;Dakhla&quot; Apartments
+                
+            </h3>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-center ce-above">
+        
+            
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <p><i>1–3 guests</i><br>: One king-size bed and one single sofa bed. The open-air bathroom also features a whirlpool tub.</p><table class="contenttable"><tbody><tr><td><strong>Guests</strong></td><td><strong>Price per night</strong></td><td>&nbsp;</td></tr><tr><td>1 person</td><td>115 euros</td><td><a href="https://www.myleao.com/product/13704" target="_blank" class="button" rel="noreferrer">Book</a></td></tr><tr><td>2 people</td><td>150 euros</td><td><a href="https://www.myleao.com/product/13790" target="_blank" class="button" rel="noreferrer">book</a></td></tr><tr><td>3 people</td><td>185 euros</td><td><a href="https://www.myleao.com/product/13876" target="_blank" class="button" rel="noreferrer">book</a></td></tr></tbody></table>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    </div>
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c990453" class="frame frame-default frame-type-2col frame-layout-0">
+                
+                    <a id="c990480"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            
+                
+                    
+    
+
+            <div id="c18627" class="frame frame-default frame-type-text frame-layout-0 frame-space-before-medium">
+                
+                    <a id="c18629"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            
+                
+
+
+
+
+    
+            <h1 id="" class="">
+                Breakfast included
+                
+            </h1>
+        
+
+
+
+            
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+
+    <p>All prices include the daily breakfast buffet from 7:30 a.m. to 10:30 a.m.</p>
+<p>Prices are valid from February 1, 2026, through January 31, 2027 (subject to change).</p>
+<h3>Discounts</h3>
+<p>The longer you stay at Poudasa Maré Alta, the cheaper it gets:<br>5% discount for 15–20 days, 8% discount for 22–29 days, 10% discount for more than 30 days</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            
+                
+                    
+    
+
+            <div id="c990454" class="frame frame-default frame-type-text frame-layout-0 frame-space-before-medium">
+                
+                    <a id="c990455"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <h3><strong>General Cancellation Policy/Cancellation Fees</strong></h3>
+<p>22+ days before scheduled arrival: free<br>21–8 days: 25%<br>8–1 day: 50%<br>On the day of arrival or later: 100%<br>&nbsp;</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    </div>
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c18137" class="frame frame-custom-21 frame-type-2col frame-layout-0">
+                
+                    <a id="c18163"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+
+
+                
+                
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            
+                
+                    <div class="box">
+		
+			<div class="teaser-image-wrap">
+				
+						
+							
+									<img class="img-responsive" alt="Breakfast at Pousada Maré Alta Parajuru" loading="lazy" src="/fileadmin/user_upload/Contentpictures/pics/kbc_brazil_pousada_breakfast_01.jpg" width="738" height="540" />
+								
+						
+					
+				
+			</div>
+		
+		
+
+		<div class="text-wrap">
+			<h3>Breakfast included</h3>
+			<p>Breakfast is served every morning from 7:30 to 10:30 at the Maré Alta Restaurant. The continental buffet features seasonal tropical fruit, fresh rolls, pastries, cold cuts, cheese, jams, and honey. It also includes espresso, latte macchiato, hot chocolate, tea, fresh-squeezed juices, and açaí bowls. Omelets, pancakes, and regional specialties are prepared fresh to order.</p>
+<p>Breakfast at Pousada Maré Alta is included.</p>
+			
+					
+				
+		</div>		
+
+	</div>
+                
+                    <div class="box">
+		
+			<div class="teaser-image-wrap">
+				
+						
+							
+									<img class="img-responsive" alt="Churrasco nights: a variety of meats on meter-long skewers, served with farofa, macaxeira, and beijão" loading="lazy" src="/fileadmin/user_upload/Contentpictures/Parajuru/Pousada/pousada-mare-alta_parajuru-brasilien-restaurant.jpg" width="738" height="540" />
+								
+						
+					
+				
+			</div>
+		
+		
+
+		<div class="text-wrap">
+			<h3>Maré Alta Restaurant</h3>
+			<p>For lunch and dinner, the à la carte restaurant Maré Alta serves Brazilian and international dishes. The highlight of the week is Valber’s churrasco evenings: various cuts of meat on meter-long skewers, served with farofa, macaxeira, and beijão—a slice of Brazilian culinary culture that’s a must-try.&nbsp;</p>
+<p>Pizza nights, sushi evenings, and BBQs round out the program.</p>
+			
+					
+				
+		</div>		
+
+	</div>
+                
+                    
+    
+
+            <div id="c18142" class="frame frame-default frame-type-teaser-box frame-layout-0">
+                
+                    <a id="c18160"></a>
+                
+                
+                    
+
+
+
+                
+                
+    
+
+                
+    
+        
+            
+            
+            
+                    
+                    <div class="box">
+                        
+                        
+                            
+                            <div class="teaser-image-wrap">
+                                
+                                        
+                                                <img class="img-responsive" alt="Kitesurf Hotel Parajuru in Brazil, Pousada Maré Alta, Stella Stegmann swimming in the pool in a bikini, celebrities in Brazil" loading="lazy" src="/fileadmin/_processed_/1/9/csm_csm_kbc_brazil_pousada_pool_01_5dae245e9b.jpg" width="800" height="536" />
+                                            
+                                    
+                                
+                            </div>
+                        
+
+                        
+                        
+
+                        <div class="text-wrap">
+                            <h3>Pool</h3>
+                            <p>A beautiful pool with sun loungers, next to the covered chillout and stretching area. A perfect place to relax for the whole family. Additional open-air lounge area with seating, billiards and table tennis. With us everyone will find their favorite place.</p>
+                        </div>
+                    </div>
+                
+        
+    
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            
+                
+                    <div class="box">
+		
+			<div class="teaser-image-wrap">
+				
+						
+							
+									<img class="img-responsive" alt="All rooms have a private en-suite bathroom and a small outdoor garden. All bathrooms are spacious and equipped with a toilet, sink, soap, towels, and a shower with hot water. The Dakhla, Sicily, and Sal apartments feature a comfortable whirlpool tub." loading="lazy" src="/fileadmin/user_upload/Contentpictures/pics/pousada-parajuru-profil-bad_01.jpg" width="738" height="540" />
+								
+						
+					
+				
+			</div>
+		
+		
+
+		<div class="text-wrap">
+			<h3>Bathroom</h3>
+			<p>All rooms have a private en-suite bathroom and a small outdoor garden.<br>All bathrooms are spacious and equipped with a toilet, sink, soap, towels, and a hot-water shower. The Dakhla, Sicily, and Sal apartments feature a comfortable whirlpool tub.</p>
+			
+					
+				
+		</div>		
+
+	</div>
+                
+                    <div class="box">
+		
+			<div class="teaser-image-wrap">
+				
+						<a href="/en/brazil/" target="_blank" title="More about KBC Parajuru">
+							
+									<img class="img-responsive" alt="Accommodation right on the Parajuru kite spot" loading="lazy" src="/fileadmin/user_upload/Contentpictures/Parajuru/kbc_Parajuru_kitebeach_Aerial_2.jpg" width="750" height="503" />
+								
+						</a>
+					
+				
+			</div>
+		
+		
+
+		<div class="text-wrap">
+			<h3>Right next to the Parajuru kite spot</h3>
+			<p>Pousada Maré Alta is located on the grounds of KBC Parajuru. It’s just a few steps from your room to the kite gear, and less than a minute from the gear to the water. The spot in Parajuru offers flat water behind the sandbar for beginners, a wide lagoon for learning, and open waves for advanced riders—all complemented by consistent trade winds between July and February.</p>
+<p>Guests staying at the Pousada receive free storage and equipment service at KBC Parajuru. Your gear stays safe on-site, and the walk to the water is always short.</p>
+			
+					<a href="/en/brazil/" target="_blank" title="More about KBC Parajuru" class="internal-link kitesurf">More about KBC Parajuru</a>
+				
+		</div>		
+
+	</div>
+                
+                    <div class="box">
+		
+			<div class="teaser-image-wrap">
+				
+						
+							
+									<img class="img-responsive" alt="If you&#039;re staying at Pousada Maré Alta, there&#039;s no storage fee at KBC Parajuru. Learn more about KBC Parajuru" loading="lazy" src="/fileadmin/user_upload/Contentpictures/pics/KBC_Parajuru_free_Storage_2020_01.jpg" width="738" height="540" />
+								
+						
+					
+				
+			</div>
+		
+		
+
+		<div class="text-wrap">
+			<h3>Free for you</h3>
+			<p>If you're staying at Pousada Maré Alta, there's no storage fee at KBC Parajuru.</p>
+			
+					
+				
+		</div>		
+
+	</div>
+                
+                    <div class="box">
+		
+			<div class="teaser-image-wrap">
+				
+						<a href="mailto:Parajuru@Kiteboarding-Club.com?bcc=Wedding%20in%20Brazil" title="Request by email">
+							
+									<img class="img-responsive" alt="The team at Pousada Maré Alta organizes dream weddings featuring a romantic beach ceremony, live music, beautiful decorations, and a lively celebration with Brazilian delicacies and drinks.   Of course, you can also celebrate other occasions here, such as events, birthdays, or pool parties. And your guests can stay right on the premises." loading="lazy" src="/fileadmin/user_upload/Contentpictures/pics/Wedding_Brazil_kitesurf_Parajuru_01.jpg" width="738" height="540" />
+								
+						</a>
+					
+				
+			</div>
+		
+		
+
+		<div class="text-wrap">
+			<h3>Beach wedding under the palm trees</h3>
+			<p>The team at Pousada Maré Alta organizes dream weddings featuring a romantic beach ceremony, live music, beautiful decorations, and a lively celebration with Brazilian delicacies and drinks.&nbsp;</p>
+<p>Of course, you can also celebrate other occasions here, such as events, birthdays, or pool parties. And your guests can stay right on-site.</p>
+			
+					<a href="mailto:Parajuru@Kiteboarding-Club.com?bcc=Wedding%20in%20Brazil" title="Request by email" class="internal-link kitesurf">Request by email</a>
+				
+		</div>		
+
+	</div>
+                
+            
+        </div>
+    </div>
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c42915" class="frame frame-custom-21 frame-type-2col frame-layout-0">
+                
+                    <a id="c42916"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            
+                
+                    
+    
+
+            <div id="c42918" class="frame frame-default frame-type-googlereviews_reviewlist frame-layout-0">
+                
+                    <a id="c42919"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h3 id="" class="ce-headline-center">
+                Google Reviews
+                
+            </h3>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+
+    
+    <div id="tx-google-reviews">
+    
+    <div class="simple-google-reviews">
+        
+            
+<div class="place-info col-sm-12">
+    <strong class="name">Pousada Maré Alta Brasil</strong>
+    <div class="star-rating">
+        <span class="general-rating">4.9</span>
+        <span class="stars stars-5">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+    </div>
+    <p class="reviews-count">
+        <small>
+            Based on 35 reviews
+        </small>
+    </p>
+</div>
+
+        
+        
+    </div>
+
+</div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+            
+                
+                    
+    
+
+            <div id="c42922" class="frame frame-default frame-type-html frame-layout-0">
+                
+                    <a id="c42923"></a>
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    <div id="TA_excellent12" class="TA_excellent" align="center">
+  <ul id="TA_13309841_EN" class="TA_links">
+    <li>
+      <a target="_blank" href="https://www.tripadvisor.com/Attraction_Review-d13309841-Reviews.html">
+        <img src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="TripAdvisor"/>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<script async
+  src="https://www.jscache.com/wejs?wtype=excellent&uniq=12&locationId=13309841&lang=en&display_version=2"></script>
+
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    </div>
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c990328" class="frame frame-default frame-type-shortcut frame-layout-0">
+                
+                    <a id="c990485"></a>
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c990701" class="frame frame-default frame-type-shortcut frame-layout-0">
+                
+                    <a id="c990703"></a>
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    
+    
+
+            <div id="c15541" class="frame frame-custom-20 frame-type-1col frame-layout-0">
+                
+                    <a id="c17016"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h2 id="anreise" class="">
+                Arrival
+                
+            </h2>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    
+    
+
+            <div id="c16249" class="frame frame-default frame-type-tabs-dynamic frame-layout-0">
+                
+                    <a id="c17015"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+    
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            
+                <li role="presentation" class="active">
+                    <a href="#tab0-16249" aria-controls="tab0" role="tab" data-toggle="tab">
+                        Flight
+                    </a>
+                </li>
+            
+                <li role="presentation" class="">
+                    <a href="#tab1-16249" aria-controls="tab1" role="tab" data-toggle="tab">
+                        Transfers
+                    </a>
+                </li>
+            
+                <li role="presentation" class="">
+                    <a href="#tab2-16249" aria-controls="tab2" role="tab" data-toggle="tab">
+                        Book transfer
+                    </a>
+                </li>
+            
+        </ul>
+
+        <!-- Tab content -->
+        <div class="tab-content">
+            
+                <div role="tabpanel" class="tab-pane active" id="tab0-16249">
+                    
+    
+
+            <div id="c16240" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                    <a id="c17055"></a>
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-left ce-above">
+        
+            
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <p>Parajuru is located in the state of Ceará, about 130 kilometers east of Fortaleza on Brazil’s northeast coast. The nearest international airport is Fortaleza (FOR). The nearest airport is <strong>Fortaleza</strong>. It is served by flights from many major airports in Germany (Frankfurt, Bremen, Dresden, Düsseldorf, Friedrichshafen, Münster/Osnabrück, Hanover), Switzerland (Basel), and Austria (Graz), for example by Condor and TAP.&nbsp;</p>
+<p>The flight time is approximately 9–10 hours.&nbsp;</p>
+<p>The drive from Fortaleza to Parajuru takes about 90 minutes. Our transfer service will be happy to pick you up from the airport. You can book the transfer service right away.</p>
+<p><a href="/en/brazil/#c15543" class="internal-link fancyframe" target="fancyframe">We’ll find the best travel package for you.</a></p>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                </div>
+            
+                <div role="tabpanel" class="tab-pane " id="tab1-16249">
+                    
+    
+
+            <div id="c16239" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                    <a id="c17054"></a>
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-left ce-above">
+        
+            
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <p><strong>Pick-up from the</strong> airportWe <br>are happy to organize your transfer from the airport to Parajuru. The transfer service driver will be waiting for you at the exit of the arrivals hall. He will be carrying a sign with your name on it. He will take you and, if necessary, your equipment safely to the station or hotel, whichever you prefer. With us, you will usually reach your destination in about 1 1/2 hours in an air-conditioned car or minibus.&nbsp;</p>
+<p><strong>Return trip to </strong><br><strong>the</strong> airportFor the return trip, you can be picked up either at the kiteboarding club or at a hotel of your choice.<br>&nbsp;</p>
+<h3>Transfers to popular destinations</h3>
+<p><span class="table-styled">Our driver will also be happy to take you to the most popular destinations nearby:</span></p>
+<p><span class="table-styled"><strong>Ilha do </strong></span><br><span class="table-styled"><strong>GuajiruQuiet</strong></span> kite paradise with a large lagoon – perfect for kitesurfing, wing foiling, and relaxing days by the water.</p>
+<p><span class="table-styled"><strong>Pontal</strong></span>Small<br>, authentic spot with constant wind, popular with kitesurfers away from the crowds.</p>
+<p><span class="table-styled"><strong>Canoa </strong></span><br><span class="table-styled"><strong>QuebradaLively</strong></span> seaside resort with red cliffs, a beautiful beach promenade, bars, restaurants, and nightlife.</p>
+<p><span class="table-styled"><strong>Icaraí</strong></span>Relaxed<br> coastal town near Fortaleza, known for its beaches, sunsets, and good kiting.</p>
+<p><span class="table-styled"><strong>Jericoacoara</strong></span>I<span class="table-styled"><strong>conic</strong></span><br> natural paradise with dunes, lagoons, and strong winds – a top destination for kiters, adventurers, and sunsets.</p>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                </div>
+            
+                <div role="tabpanel" class="tab-pane " id="tab2-16249">
+                    
+    
+
+            <div id="c16238" class="frame frame-default frame-type-list frame-layout-0">
+                
+                    <a id="c17053"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+
+
+                
+                
+
+    
+        
+	<div class="tx-leaoconnector">
+		
+
+
+
+
+<div class="leao-category-wrapper" id="leao-category-wrapper">
+	
+		<div class="leao-category leao-pricelist" id="leao-category_408">
+			<h3>Airport transfer</h3>
+			<table class="leao-category-table" id="leao-category-table_408">
+			
+				<tr>
+					<td class="leao-category-product-name leao-pricelist-text" id="leao-category-product-name_10379">
+						<a href="https://myleao.com/product/10379/en" target="_blank">Airport Shuttle for up to 4 person</a>
+						<div class="leao-category-product-short_description" id="leao-category-product-short_description_10379">Airport transfer Fortaleza - Parajuru (price for one way with max 4 person)</div>
+					</td>
+					<td style="text-align: right;" class="leao-category-product-price leao-pricelist-amount" id="leao-category-product-price_10379">
+						<a href="https://myleao.com/product/10379/en" target="_blank">104€</a>
+					</td>
+					<td>
+						<a href="https://myleao.com/product/10379/en" class="button leao-category-product-btn_book" id="leao-category-product-btn_book_10379" target="_blank" data-tagname="Airport transfer" data-productname="Airport Shuttle for up to 4 person">Book</a>
+					</td>
+				</tr>
+			
+				<tr>
+					<td class="leao-category-product-name leao-pricelist-text" id="leao-category-product-name_23114">
+						<a href="https://myleao.com/product/23114/en" target="_blank">Airport Transfer for 5 or more person</a>
+						<div class="leao-category-product-short_description" id="leao-category-product-short_description_23114">Airport transfer Fortaleza - Parajuru (One Way in bus with 5 or up to 12 person - price per bus)</div>
+					</td>
+					<td style="text-align: right;" class="leao-category-product-price leao-pricelist-amount" id="leao-category-product-price_23114">
+						<a href="https://myleao.com/product/23114/en" target="_blank">175€</a>
+					</td>
+					<td>
+						<a href="https://myleao.com/product/23114/en" class="button leao-category-product-btn_book" id="leao-category-product-btn_book_23114" target="_blank" data-tagname="Airport transfer" data-productname="Airport Transfer for 5 or more person">Book</a>
+					</td>
+				</tr>
+			
+			</table>
+		</div>
+	
+</div>
+
+
+<script></script>
+
+
+	</div>
+
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                </div>
+            
+        </div>
+    
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c18151" class="frame frame-custom-21 frame-type-1col frame-layout-0">
+                
+                    <a id="c18172"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h2 id="" class="">
+                Pousada Maré Alta Map
+                
+            </h2>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    
+    
+
+            <div id="c18150" class="frame frame-default frame-type-html frame-layout-0">
+                
+                    <a id="c18171"></a>
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5492.016070980939!2d-37.85485253201058!3d-4.37862506055142!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9fc821428658275a!2sKiteboarding+Club+Parajuru!5e1!3m2!1sde!2sde!4v1565941755177!5m2!1sde!2sde" width="100%" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c990329" class="frame frame-default frame-type-1col frame-layout-0 frame-space-before-extra-large frame-space-after-large">
+                
+                    <a id="c990330"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h2 id="" class="">
+                What our guests say
+                
+            </h2>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    
+    
+
+            <div id="c990333" class="frame frame-default frame-type-tabs-dynamic frame-layout-0">
+                
+                    <a id="c990334"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+    
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            
+                <li role="presentation" class="active">
+                    <a href="#tab0-990333" aria-controls="tab0" role="tab" data-toggle="tab">
+                        Google Reviews
+                    </a>
+                </li>
+            
+                <li role="presentation" class="">
+                    <a href="#tab1-990333" aria-controls="tab1" role="tab" data-toggle="tab">
+                        Tripadvisor
+                    </a>
+                </li>
+            
+        </ul>
+
+        <!-- Tab content -->
+        <div class="tab-content">
+            
+                <div role="tabpanel" class="tab-pane active" id="tab0-990333">
+                    
+    
+
+            <div id="c990341" class="frame frame-custom-21 frame-type-googlereviews_reviewlist frame-layout-0">
+                
+                    <a id="c990342"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+
+
+                
+                
+
+    
+    <div id="tx-google-reviews">
+    
+    <div class="simple-google-reviews">
+        
+            
+<div class="place-info col-sm-12">
+    <strong class="name">Pousada Maré Alta Brasil</strong>
+    <div class="star-rating">
+        <span class="general-rating">4.9</span>
+        <span class="stars stars-5">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </span>
+    </div>
+    <p class="reviews-count">
+        <small>
+            Based on 35 reviews
+        </small>
+    </p>
+</div>
+
+        
+        
+            
+                    <div class="row google-reviews-tiles">
+                        
+                            
+<div class="col-xs-12 col-sm-6 col-md-4 mb-4">
+    <div class="google-review-tile">
+        <div class="review-header">
+            
+                <div class="review-avatar">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjX5KK8iA9J0nv1KEShcnqtGCgyRBFOkYXZJEi0cuVEFudcLOB1mgg=s128-c0x00000000-cc-rp-mo-ba2" width="50" alt="Hanna Magalhaes" loading="lazy" />
+                </div>
+            
+            <div class="review-meta">
+                <strong class="author-name">Hanna Magalhaes</strong>
+                <div class="star-rating">
+                    <span class="stars stars-5">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </div>
+                <span class="date">
+                    23.09.2026
+                </span>
+            </div>
+        </div>
+        <p class="review-text">Excelente fim de semana com amigos na pousada! Uma estrutura excelente, quartos confortáveis e agradáveis, que além de funcionais, tem uma linda decoração. A anfitrião e a equipe super solícitos, proativos e prestativos. Café da manhã gostoso, restaurante também. A equipe na escola de kite também...</p>
+    </div>
+</div>
+
+
+                        
+                            
+<div class="col-xs-12 col-sm-6 col-md-4 mb-4">
+    <div class="google-review-tile">
+        <div class="review-header">
+            
+                <div class="review-avatar">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocKX0BfmR9cAlLtw_WfN7wIgIfrAeQ1y3Q2TleYJRdFdDNp9Rw=s128-c0x00000000-cc-rp-mo" width="50" alt="Corentin Luce" loading="lazy" />
+                </div>
+            
+            <div class="review-meta">
+                <strong class="author-name">Corentin Luce</strong>
+                <div class="star-rating">
+                    <span class="stars stars-5">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </div>
+                <span class="date">
+                    05.09.2026
+                </span>
+            </div>
+        </div>
+        <p class="review-text">Absolutely perfect! 👌 The host and crew are attentive and friendly. The restaurant has a great menu, and everything we tried was excellent. The place is charming, clean, and beautiful, just like the room we stayed in. A perfect combo to feel at home instantly. The kite school has top equipment with...</p>
+    </div>
+</div>
+
+
+                        
+                            
+<div class="col-xs-12 col-sm-6 col-md-4 mb-4">
+    <div class="google-review-tile">
+        <div class="review-header">
+            
+                <div class="review-avatar">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjUT-fz4TJtK8tzSoRiRH2TLzZ6QPBdAelrk8YR6_ZA_7oT7sEb9Gw=s128-c0x00000000-cc-rp-mo-ba3" width="50" alt="Rodrigo Cristiano Diniz Silva" loading="lazy" />
+                </div>
+            
+            <div class="review-meta">
+                <strong class="author-name">Rodrigo Cristiano Diniz Silva</strong>
+                <div class="star-rating">
+                    <span class="stars stars-5">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </div>
+                <span class="date">
+                    16.06.2026
+                </span>
+            </div>
+        </div>
+        <p class="review-text"></p>
+    </div>
+</div>
+
+
+                        
+                            
+<div class="col-xs-12 col-sm-6 col-md-4 mb-4">
+    <div class="google-review-tile">
+        <div class="review-header">
+            
+                <div class="review-avatar">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocJ_qlVIFhaFK4qjNSPebb_6TpU_WZWdjdejx799nYmcaC48sg=s128-c0x00000000-cc-rp-mo-ba2" width="50" alt="Henrique Sena" loading="lazy" />
+                </div>
+            
+            <div class="review-meta">
+                <strong class="author-name">Henrique Sena</strong>
+                <div class="star-rating">
+                    <span class="stars stars-5">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </div>
+                <span class="date">
+                    13.06.2026
+                </span>
+            </div>
+        </div>
+        <p class="review-text"></p>
+    </div>
+</div>
+
+
+                        
+                            
+<div class="col-xs-12 col-sm-6 col-md-4 mb-4">
+    <div class="google-review-tile">
+        <div class="review-header">
+            
+                <div class="review-avatar">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocLLmYeabVO0H0F2hnX4gzCVch5M1lPr1H8lP6uPwXo6q85qxQ=s128-c0x00000000-cc-rp-mo-ba2" width="50" alt="Ricardo Costa" loading="lazy" />
+                </div>
+            
+            <div class="review-meta">
+                <strong class="author-name">Ricardo Costa</strong>
+                <div class="star-rating">
+                    <span class="stars stars-5">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </div>
+                <span class="date">
+                    11.02.2026
+                </span>
+            </div>
+        </div>
+        <p class="review-text">Pousada voltada ao Kitesurf, com escolinha para aulas e professores capacitados.
+Local paradisíaco.</p>
+    </div>
+</div>
+
+
+                        
+                        
+                            <div class="col-xs-12 col-sm-6 col-md-4 mb-4">
+                                <div class="google-review-tile all-reviews-tile">
+                                    <a href="https://maps.app.goo.gl/siEqTU3jzEr1XnLb7" class="all-reviews-link">Mehr Reviews....</a>
+                                </div>
+                            </div>
+                        
+                    </div>
+                
+        
+    </div>
+
+</div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                </div>
+            
+                <div role="tabpanel" class="tab-pane " id="tab1-990333">
+                    
+    
+
+            <div id="c990337" class="frame frame-custom-21 frame-type-html frame-layout-0">
+                
+                    <a id="c990338"></a>
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    <div id="TA_selfserveprop81" class="TA_selfserveprop" align="center">
+  <ul id="TA_13309841_EN" class="TA_links">
+    <li>
+      <a target="_blank" href="https://www.tripadvisor.com/Hotel_Review-d13309841-Reviews.html">
+        <img src="https://www.tripadvisor.com/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_secondary_registered-11900-2.svg" alt="TripAdvisor"/>
+      </a>
+    </li>
+  </ul>
+</div>
+<script async
+  src="https://www.jscache.com/wejs?wtype=selfserveprop&uniq=81&locationId=13309841&lang=en_US&rating=true&nreviews=4&writereviewlink=true&popIdx=true&iswide=true&border=true&display_version=2"
+  data-loadtrk onload="this.loadtrk=true"></script>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                </div>
+            
+        </div>
+    
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c990702" class="frame frame-default frame-type-text frame-layout-0">
+                
+                    <a id="c990704"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h2 id="" class="">
+                Frequently Asked Questions About Kitesurfing in Brazil and Accommodations
+                
+            </h2>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+
+    <h3><strong>When is the best time for kitesurfing in Parajuru?</strong>&nbsp;</h3>
+<p>The peak season runs from July to February. During these months, the trade winds blow steadily at 15 to 25 knots, and on many days even stronger. The months with the most consistent winds are September, October, and November.</p>
+<h3><strong>How far is the pousada from the kite spot?</strong>&nbsp;</h3>
+<p>Pousada Maré Alta is located right on the grounds of KBC Parajuru. It’s a one-minute walk from your room to the center, and just a few minutes’ walk to the water.</p>
+<h3><strong>Is the Pousada suitable for families with children?</strong>&nbsp;</h3>
+<p>Yes. The El Gouna double apartment can accommodate up to seven people, the KBC kite school offers its own courses for children and teens, and the pool is accessible to the whole family.</p>
+<h3><strong>Can I rent kite and wingfoil equipment on-site?</strong>&nbsp;</h3>
+<p>Yes. KBC Parajuru offers kites, boards, wings, and foils from all major brands for rental. Guests of the Pousada pay no storage or service fees.</p>
+<h3><strong>How do I get from Fortaleza to Parajuru?</strong>&nbsp;</h3>
+<p>Fortaleza Airport (FOR) is about 130 kilometers away; the transfer takes 2 to 2.5 hours, depending on traffic. We can arrange a transfer directly from the airport upon request.</p>
+<h3><strong>What languages are spoken locally?</strong>&nbsp;</h3>
+<p>The team speaks Portuguese, Polish, and English.<br>&nbsp;</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c18199" class="frame frame-custom-66 frame-type-shortcut frame-layout-0">
+                
+                    <a id="c18204"></a>
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    
+    
+
+            <div id="c15543" class="frame frame-custom-21 frame-type-1col frame-layout-0">
+                
+                    <a id="c17012"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h2 id="" class="">
+                Advice &amp; Booking
+                
+            </h2>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    
+    
+
+            <div id="c16119" class="frame frame-default frame-type-3col frame-layout-0">
+                
+                    <a id="c17011"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 col-md-4 equal-height">
+            
+                
+                    
+    
+
+            <div id="c23115" class="frame frame-default frame-type-teaser-box frame-layout-0">
+                
+                    <a id="c23116"></a>
+                
+                
+                    
+
+
+
+                
+                
+    
+
+                
+    
+        
+            
+            
+            
+                    
+                    <div class="box">
+                        
+                        
+                            
+                            <div class="teaser-image-wrap">
+                                
+                                        
+                                                <img class="img-responsive" alt="Parajuru kiteboarding resort with green roofs, palm garden and beach - perfect kitesurfing travel destination Brazil" loading="lazy" src="/fileadmin/user_upload/Contentpictures/pics/KBC_Parajuru_buchen.jpg" width="738" height="540" />
+                                            
+                                    
+                                
+                            </div>
+                        
+
+                        
+                        
+
+                        <div class="text-wrap">
+                            <h3>Book kite services individually</h3>
+                            <p><strong>Do you already know exactly which package options and rooms you want to book?</strong></p>
+<p>Here you can quickly and easily book all services at KBC Parajuru and Pousada Maré Alta directly.</p>
+<p><a href="https://www.myleao.com/station/4/en" target="_blank" class="button" title="Book now" rel="noreferrer"><strong>Book Kitesurfing &amp; Accommodation</strong></a></p>
+<p><a href="mailto:Parajuru@Kiteboarding-Club.com?bcc=KBC%20Parajuru%20-%20My%20questions" class="internal-link fancyframe" target="fancyframe">If you have any questions, just ask the team</a>:<br><a href="mailto:parajuru@KBC-World.comparajuru@KBC-World.com" class="internal-link fancyframe" target="fancyframe">parajuru@KBC-World.com</a><br>&nbsp;</p>
+                        </div>
+                    </div>
+                
+        
+    
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 equal-height">
+            
+                
+                    
+    
+
+            <div id="c18998" class="frame frame-default frame-type-teaser-box frame-layout-0">
+                
+                    <a id="c18999"></a>
+                
+                
+                    
+
+
+
+                
+                
+    
+
+                
+    
+        
+            
+            
+            
+                    
+                    <div class="box">
+                        
+                        
+                            
+                            <div class="teaser-image-wrap">
+                                
+                                        
+                                                <img class="img-responsive" alt="KBC Team Parajuru Valber - Kitesurfing Brazil Ceará Destination" loading="lazy" src="/fileadmin/user_upload/Contentpictures/Parajuru/KBC_Team_Valber_Parajuru.jpg" width="738" height="540" />
+                                            
+                                    
+                                
+                            </div>
+                        
+
+                        
+                        
+
+                        <div class="text-wrap">
+                            <h3>KBC Parajuru</h3>
+                            <p><strong>Do you have any questions about the centre, the spot and the activities on site?</strong></p>
+<p>Valber and the local team will be happy to answer your questions about the centre, the spot and the activities on site. They have detailed insider knowledge about the region.</p>
+<p><strong>Whatsapp Chat</strong> <a href="https://wa.me/+5585996012006" target="_blank" rel="noreferrer"><strong>+55-85 99601 2006</strong></a></p>
+<p><a href="mailto:parajuru@KBC-World.com" class="internal-link fancyframe" target="fancyframe"><strong>parajuru@KBC-World.com</strong></a></p>
+                        </div>
+                    </div>
+                
+        
+    
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+        <div class="col-xs-12 col-sm-4 col-md-4 equal-height">
+            
+                
+                    
+    
+
+            <div id="c47173" class="frame frame-default frame-type-1col frame-layout-0">
+                
+                    <a id="c47174"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    
+    
+
+            <div id="c16120" class="frame frame-default frame-type-shortcut frame-layout-0">
+                
+                    <a id="c17010"></a>
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    
+    
+
+            <div id="c14933" class="frame frame-default frame-type-teaser-box frame-layout-0">
+                
+                    <a id="c16614"></a>
+                
+                
+                    
+
+
+
+                
+                
+    
+
+                
+    
+        
+            
+            
+            
+                    
+                    <div class="box">
+                        
+                        
+                            
+                            <div class="teaser-image-wrap">
+                                
+                                        
+                                                <img class="img-responsive" alt="KBC consultation by the Sun + Fun Sports Travel Team" loading="lazy" src="/fileadmin/user_upload/Contentpictures/Kontakt/kbc_Kontakt-Berater.jpg" width="738" height="540" />
+                                            
+                                    
+                                
+                            </div>
+                        
+
+                        
+                        
+
+                        <div class="text-wrap">
+                            <h3>Travel offer from the experts</h3>
+                            <p><strong>Would you like a complete package including flights, accommodation, and kite services?</strong></p>
+<p>The sun + fun team is our partner for sports trips worldwide and will put together a customized vacation for you with additional services such as sports, rental cars, and more—at the best price. <a href="/en/offer/" target="fancyframe" class="fancyframe"><strong>saf@kbc-world.com</strong></a></p>
+<p><a href="/en/offer/" class="button fancyframe" target="fancyframe"><strong>Request travel offer</strong></a></p>
+                        </div>
+                    </div>
+                
+        
+    
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31404" class="frame frame-default frame-type-shortcut frame-layout-0">
+                
+                    <a id="c993916"></a>
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    
+    
+
+            <div id="c31387" class="frame frame-custom-20 frame-type-text frame-layout-0 frame-space-after-medium">
+                
+                    <a id="c31389"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <p class="align-center"><strong>We arrange water sports activities worldwide, but we are not a tour operator ourselves. The contract is concluded directly with the respective provider.</strong></p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    </div>
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c18211" class="frame frame-default frame-type-header frame-layout-0 frame-space-before-large frame-space-after-extra-large">
+                
+                    <a id="c18212"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h3 id="" class="ce-headline-center">
+                <a href="/en/brazil/">&lt;&lt; Back to KBC Parajuru</a>
+                
+            </h3>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+   
+    </main>
+    
+    <footer class="container">
+  		
+    
+
+            <div id="c16885" class="frame frame-default frame-type-header frame-layout-0 frame-space-before-medium">
+                
+                    <a id="c16974"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h3 id="" class="ce-headline-center">
+                <a href="#_top">▲ Back to top ▲</a>
+                
+            </h3>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c43210" class="frame frame-default frame-type-div frame-layout-0 frame-space-before-extra-large frame-space-after-extra-large">
+                
+                    <a id="c44998"></a>
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    <hr class="ce-div" />
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+<div class="row"><div class="col-xs-12 col-sm-6 col-md-6">
+    
+
+            <div id="c14890" class="frame frame-newsletter frame-type-html frame-layout-0">
+                
+                    <a id="c43155"></a>
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    <iframe width="100%" height="450" src="https://e0982042.sibforms.com/v2/serve/MUIFACA8BIntil6hBfZeQVE5icBQnffoScOsVFwZ8D08ajiTvRGHYc6R2sbwJbwJk3jDZ-D-GAH4uPwgMm09GJ5DoUGg-M_XD_iCAuy7VMTZ9V4BS-qGmYu4Agkb4qb5wz5905i4jvBYZg35No4HNsL-hJqHuHkLmJiyrqet9P2vCV1ml3tG0U3h3Vhxa7dpmY-jNcZ9lFXXv_OYWw==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c993475" class="frame frame-default frame-type-div frame-layout-0 frame-space-before-extra-large frame-space-after-extra-large">
+                
+                    <a id="c993476"></a>
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    <hr class="ce-div" />
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c14891" class="frame frame-social-media frame-type-html frame-layout-0">
+                
+                    <a id="c14892"></a>
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    <h2>Follow us</h2>
+<br>
+<a href="https://www.instagram.com/kiteboardingclub" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+<a href="https://www.facebook.com/kbcworld" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+<a href="https://www.pinterest.de/KBCworldwide/" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+<a href="https://www.youtube.com/@KBC-WORLD" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+<br><br><br><br>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+</div><div class="col-xs-12 col-sm-6 col-md-6">
+    
+
+            <div id="c15569" class="frame frame-default frame-type-text frame-layout-0">
+                
+                    <a id="c17052"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h4 id="" class="">
+                Contact KBC Parajuru
+                
+            </h4>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+
+    <p><strong>Kiteboarding Club Parajuru</strong><br>Beberibe - Ceará, 62840-000 (Brazil)</p>
+<p><a href="mailto:brazil@kiteboarding-club.com" class="mail" title="E-mail to KBC Parajuru"><strong>brazil@kiteboarding-club.com</strong></a></p>
+<p>Whatsapp <a href="https://wa.me/+558596012006" target="_blank" rel="noreferrer"><strong>+55-85 9601 2006</strong></a></p>
+<p>Please send us a WhatsApp message.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c15570" class="frame frame-default frame-type-html frame-layout-0">
+                
+                    <a id="c993917"></a>
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27410.982912135718!2d-37.86153956790569!3d-4.3709432621531334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7b85a6093b1a48d%3A0x9fc821428658275a!2sKiteboarding%20Club%20Parajuru!5e1!3m2!1sde!2sde!4v1688465842609!5m2!1sde!2sde" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+</div></div>
+   		<div class="musthave">
+   			<ul><li><a href="/en/imprint/">Imprint</a></li><li><a href="/en/terms-and-conditions/" title="Terms and Conditions of the">Terms and Conditions</a></li><li><a href="/en/data-privacy-protection/" title="Data Privacy Protection of">Data Privacy Protection</a></li><li><a href="/en/sitemap/" title="These pages you&#039;ll find on the website of">Sitemap</a></li><li><a href="/en/kbcfriends/" title="KBC Friends">KBC Friends</a></li><li><a href="/en/jobs/" title="Jobs für Kitesurf und Wingfoil an den KBC World Kiteschulen und Wingfoilschulen">Jobs</a></li><li><a href="/en/contact/">Contact</a></li><li><a href="/en/magazine/">KBC Magazine</a></li><li id="cookie-revoke"><a href="javascript:window.DPCookieConsent.popup.revoke();">Cookies</a></li></ul>
+			<p class="copy"> &copy; 2026 Kiteboarding Club. All rights reserved.</p>
+		</div>
+    </footer>
+
+
+<script src="/typo3temp/assets/compressed/merged-76c4a542cca150e6003c344a0e58823c-6bba59947666eb358164d80bee91e141.js?1788081683"></script>
+
+
+<script src="/typo3temp/assets/compressed/merged-905541e5f145b320f020106e3d9424c6-704cb1fe7839c4d2db5c1936efa8857f.js?1778246590"></script>
+<script src="/typo3temp/assets/compressed/merged-47cf2d212fc4306c6b7f754c5a4f533c-ab61fe2be30d05708d9deacd4bf1f118.js?1788081683"></script>
+<script src="/typo3temp/assets/compressed/Form.min-f6ba5c31e84704bb12a45f9d7bc31787.js?1788081683" defer="defer"></script>
+
+
+
+<script src="/typo3conf/ext/site_feedback/Resources/Public/Js/feedback-widget.js?v=3"></script><!--
+  ~ Copyright (c) 2021.
+  ~
+  ~ @category   TYPO3
+  ~
+  ~ @copyright  2021 Dirk Persky (https://github.com/DirkPersky)
+  ~ @author     Dirk Persky <info@dp-wired.de>
+  ~ @license    MIT
+  -->
+
+
+
+
+
+<!-- Begin Cookie Consent plugin by Dirk Persky - https://github.com/DirkPersky/typo3-dp_cookieconsent -->
+<script type="text/plain" data-ignore="1" data-dp-cookieDesc="layout"></script>
+<script type="text/plain" data-ignore="1" data-dp-cookieSelect="layout"></script>
+<script type="text/plain" data-ignore="1" data-dp-cookieRevoke="layout"></script>
+<script type="text/plain" data-ignore="1" data-dp-cookieIframe="layout"></script>
+<script data-ignore="1"></script>
+<!-- End Cookie Consent plugin -->
+
+
+
+</body>
+</html>

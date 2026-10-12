@@ -91,6 +91,54 @@ Added 2026-10-12 (Aaron: land-based trips found by the cruise monitor go to the 
 `/Remoteislands`); the newest pages are the source, and three Kenya photos shown on every page are kept
 off the Namibia tour. Not ingested: `/safari-2027---2-nights` (wildlife safari, no kiting).
 
+## Stays round 2 (2026-10-12)
+
+**Data rule (Aaron 2026-10-12):** data always from the provider's own website or its own booking engine.
+bstoked, BookSurfCamps, Kayak, Airbnb, Booking.com, Hostelworld, KiteWorldWide and similar platforms are
+only hints for finding a provider. All 6 bstoked package rows are `is_active=false`. Three were rebuilt
+from the providers' own sites (`kenyaways-diani`, `kitesurfmaroc-essaouira`, `kitetribe-el-gouna`). Two
+have no own website (Nature Surf House, Premium Kite Qatar). Ventus was a duplicate.
+
+30 new adapters from the 60-stay research list (artifact "KiteScout Stays & Tours") plus the bstoked
+replacements; 33 of the 60 stays are now in the catalog. Shared code: `src/offers/engines/omnibees.ts`
+(Vila Guará, BGK, Rancho do Peixe). Omnibees "Close" days are `closed`, not `sold_out`. OfferKind
+gained `course` and `experience`.
+
+Live engines: Omnibees (3), Leão (Kite Village, Maré Alta), BedBooking (Vila Vento, public widget JSON).
+The others read price tables (bands with real season limits; a year-less table takes the year from the
+page's own dateModified or a dated PDF link) or are content only ("price on request").
+
+Engines we do not use (blocked, or they need a session, token, signed header or spoofed Origin; never bypass):
+
+| Engine | Seen at | Why not |
+|---|---|---|
+| Cloudbeds `/booking/*` | Keros Blue, Kite Lodge Brazil, Flag Beach, Blue Dream | 403 to non-browser clients |
+| Guesty | Portal do Vento | login token + signed header built in the browser |
+| Beddy | Floripa, Peahi | Cloudflare Turnstile |
+| WebHotelier | Anapnoe (Paros) | 403, even robots.txt |
+| Amenitiz | AlvorKiteCenter | 403 |
+| SabeeApp | Baja Joe's | per-request HMAC from a client secret |
+| HotelRunner | New Spirit Dakhla | needs the browser app's session |
+| Wix Hotels | 35 Knots | signed visitor-token handshake |
+| Foco Multimídia | Kitejuba | answers only with the site's Origin header |
+| Beds24 / resrv.direct | Kite da Mary / Studios Vrettos | "service unavailable" to our UA |
+| freetobook | Kenyaways | robots.txt disallows everything |
+| Leão availability | LOGOS Rhodes | HTTP 500 without the form session |
+
+Skipped from the list:
+- Blocked: Addict Tarifa, Line Up Fuerteventura, Panama Kite Center, Isola dei Gabbiani.
+- No own website: Coco Knots, Pousada Kite Guajiru, Kite Hostel Stagnone, GKS Kite House.
+- No 2026/27 evidence: Lineup Taíba, Beekite, Casa de João, Urla Surf House, Urla Kite Camp, AlvorKiteCenter, Sorrento,
+  No 22 Riders' Inn, Santa Kite, 35 Knots, White Wind, Kite Hostel Sicily, Peahi.
+- Kite link too thin on the own site: Portal do Kite, Buzio Beach, Kite da Mary.
+- For sale without visibly open 2026/27 bookings: Guacamaya, Blue Dream.
+- Not built for a technical reason: Kitejuba (spoofed Origin required).
+
+Shared-helper follow-ups the agents duplicated locally: block-text splitter (`visible()` / `*Lines`), memoised
+page fetch, Crawl-delay in http.ts (Baja Joe's, Sakalava ask for 10 s), Google Maps embed / place-link
+coordinates, Wix image + location readers, a Leão engine module (Kite Village + Maré Alta), a binary fetch for
+PDF rate sheets (Kenyaways prices are hand-read constants guarded by the linked file names), fixture trim script.
+
 ## Refresh strategy (recommendation)
 
 - Booking-engine / Shopify / app JSON: daily `--slots` (in the 06:00 UTC monitor cron, job `offer-slots`,

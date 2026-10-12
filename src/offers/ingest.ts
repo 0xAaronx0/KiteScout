@@ -64,6 +64,14 @@ const BRIEFS: Record<OfferKind, VisionBrief> = {
     offerLabel: 'kite camp package (lessons + stay)',
     wanted: 'people KITING or in lessons, the kite SPOT, the camp accommodation, the group',
   },
+  course: {
+    offerLabel: 'kitesurf course / lessons',
+    wanted: 'students and instructors in LESSONS on the water or beach, the kite SPOT, the school station',
+  },
+  experience: {
+    offerLabel: 'kite getaway / experience package',
+    wanted: 'people KITING, the kite SPOT, the accommodation and activities that are part of the package',
+  },
 };
 
 function sha(v: unknown): string {
@@ -244,7 +252,8 @@ function roomsWithPrices(c: OfferContent, slots: Slot[], today: string) {
       name: r.name, description: r.description, features: r.features,
       price_from: min?.price ?? null, price_currency: min?.currency ?? null,
       price_unit: min ? (min.priceUnit === 'per_week' ? 'other' : min.priceUnit) : null,
-      price_source: 'provider_site', priced_months: months, image_sort: null,
+      // basis of price_from (room / person / group); KCS shows it as "per room" etc.
+      price_source: 'provider_site', price_basis: min?.priceBasis ?? null, priced_months: months, image_sort: null,
     };
   });
 }

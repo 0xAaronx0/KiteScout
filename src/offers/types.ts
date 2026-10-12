@@ -10,7 +10,7 @@
 // ---------------------------------------------------------------------------
 
 /** Product types we ingest through adapters (package_offers.package_type). */
-export type OfferKind = 'accommodation' | 'tour' | 'camp';
+export type OfferKind = 'accommodation' | 'tour' | 'camp' | 'course' | 'experience';
 
 /** Availability of one slot. Ordered roughly from best to worst. */
 export const AVAILABILITY = [

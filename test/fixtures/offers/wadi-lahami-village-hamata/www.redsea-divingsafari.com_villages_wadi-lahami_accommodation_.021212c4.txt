@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Wadi Lahami Village in Hamata, Deep South, Red Sea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="facebook-domain-verification" content="so9nfa3s51gt82dz010t4g34bgax6v" />
+    <!-- open graph -->
+    <meta />
+    <!-- /open graph -->
+    <style type="text/css"></style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="/bundles/masterCss?v=5" rel="stylesheet"/>
+    <link href="/Content/main-fr.css" rel="stylesheet" />
+    <link href="/Content/mmenu.min.css" rel="stylesheet" />
+    <link href="/Content/cookies_eu.css" rel="stylesheet" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+        <script src="/Scripts/html5shiv.js"></script>
+        <script src="/Scripts/respond.js"></script>
+    <![endif]-->
+    <script src="/Scripts/jquery-2.1.0.min.js"></script>
+    <meta name="description" content="South of Hamata in the Deep South of the Egyptian Red Sea coast line with its pristine coral reefs and world class Fury Shoals reefs. " />
+</head>
+<body>
+    <main id="form1">
+        <header class="site-header">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <h1>
+                            <a class="navbar-brand" href="/about">
+                                <img src="/images/logo.png" class="visible-lg visible-md" alt="Red Sea Diving Safari" />
+                                <img src="/images/logo-small.png" class="visible-sm visible-xs logo-small" alt="Red Sea Diving Safari" />
+                            </a>
+                        </h1>
+                        <a href="#mobileMenu" id="my-button" class="navbar-toggle">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="" id="rsds-navbar-collapse">
+    <a href="#register-popup" class="btn book-button open-popup hidden-xs border-radius-right no-margin-left border-left-light">Register</a>
+    <a href="#login-popup" class="btn book-button open-popup hidden-xs border-radius-left no-margin-right">Login</a>
+    <a href="#register-popup" class="btn book-button btn-block open-popup visible-xs">Register</a>
+    <a href="#login-popup" class="btn book-button btn-block open-popup visible-xs">Login</a>
+<a href="/Booking" class="btn book-button hidden-xs no-margin-right">Book Now</a>
+<a href="/Booking" class="btn book-button btn-block visible-xs">Book Now</a>
+<div class="clearfix"></div>
+<ul id="ulMenu" class="nav navbar-nav hidden-xs" style="padding-top: 30px;">
+    <li class=""><a href="/">Home</a></li>
+    <li class=""><a href="/Villages">Villages</a></li>
+    <li class="dropdown active">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Accommodation<span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+                <li><a href="/villages/marsa-shagra/accommodation/">Marsa Shagra</a></li>
+                <li><a href="/villages/marsa-nakari/accommodation/">Marsa Nakari</a></li>
+                <li><a href="/villages/wadi-lahami/accommodation/">Wadi Lahami</a></li>
+        </ul>
+    </li>
+    <li class="dropdown ">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Diving  <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="/diving">Scuba Diving</a></li>
+            <li><a href="/diving/tec-diving">Tec Diving</a></li>
+            <li><a href="/diving/free-diving">Free Diving</a></li>
+            <li><a href="/diving/e-learning">E-learning</a></li>
+            <li><a href="/diving/idc">IDC Courses</a></li>
+            <li><a href="/dive-sites">Dive Sites</a></li>
+        </ul>
+    </li>
+    <li class="">
+        <a href="/activities">Activities</a>
+    </li>
+    <li class="">
+        <a href="/eco-efforts">Eco Efforts</a>
+    </li>
+    <li class="">
+        <a href="/News">News</a>
+    </li>
+    <li class="">
+        <a href="/price-lists">Prices</a>
+    </li>
+    <li class="">
+        <a href="/Workshops">WorkShops</a>
+    </li>
+    <li class="">
+        <a href="/Gallery">Gallery</a>
+    </li>
+</ul>
+<!------------- jquery m-menu------------->
+<div id="mobileMenu">
+    <ul>
+        <li class=""><a href="/">Home</a></li>
+        <li class=""><a href="/Villages">Villages</a></li>
+        <li class=" active">
+            <a href="#">Accommodation</a>
+            <ul>
+                    <li><a href="/villages/marsa-shagra/accommodation/">Marsa Shagra</a></li>
+                    <li><a href="/villages/marsa-nakari/accommodation/">Marsa Nakari</a></li>
+                    <li><a href="/villages/wadi-lahami/accommodation/">Wadi Lahami</a></li>
+            </ul>
+        </li>
+        <li class=" ">
+            <a href="#">Diving  </a>
+            <ul>
+                <li><a href="/diving">Scuba Diving</a></li>
+                <li><a href="/diving/tec-diving">Tec Diving</a></li>
+                <li><a href="/diving/free-diving">Free Diving</a></li>
+                <li><a href="/diving/e-learning">E-learning</a></li>
+                <li><a href="/dive-sites">Dive Sites</a></li>
+            </ul>
+        </li>
+        <li class="">
+            <a href="/activities">Activities</a>
+        </li>
+        <li class="">
+            <a href="/eco-efforts">Eco Efforts</a>
+        </li>
+        <li class="">
+            <a href="/News">News</a>
+        </li>
+        <li class="">
+            <a href="/price-lists">Prices</a>
+        </li>
+        <li class="">
+            <a href="/Workshops">WorkShops</a>
+        </li>
+        <li class="">
+            <a href="/Gallery">Gallery</a>
+        </li>
+        <li>
+            <a href="/ContactUs">
+                Contact Us
+            </a>
+        </li>
+    </ul>
+</div>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
+            </nav>
+        </header>
+        <div>
+            <div class="container">
+                            </div>
+<section class="featured-inner image-background text-center multi-featured">
+    <img src="/Photos/banners/DJI_0213_1_ce72a_lg.jpg" alt="DISCOVER THE WONDERS OF THE RED SEA FROM OUR THREE LOCATIONS" />
+    <div class="container">
+        <h2>DISCOVER THE WONDERS OF THE RED SEA FROM OUR THREE LOCATIONS</h2>
+        <br />
+        <p>
+            Select a village or combine more than one for the complete adventure
+        </p>
+    </div>
+</section>
+    <section class="circle-tabs gray-bg">
+        <div class="container">
+                <aside class="col-md-4 col-sm-4 col-xs-4 ">
+                    <a href="/villages/marsa-shagra/accommodation/">
+                        <img class="img-circle" src="/Photos/Villages/DJI_0263_Square_89a05_lg.jpg" alt="Marsa Shagra" />
+                        <h3>Marsa Shagra</h3>
+                        <p class="hidden-xs">A beautiful house reef and easy access to Elphinstone reef</p>
+                    </a>
+                </aside>
+                <aside class="col-md-4 col-sm-4 col-xs-4 ">
+                    <a href="/villages/marsa-nakari/accommodation/">
+                        <img class="img-circle" src="/Photos/Villages/DJI_0880_Square_08332_lg.jpg" alt="Marsa Nakari" />
+                        <h3>Marsa Nakari</h3>
+                        <p class="hidden-xs">Natural charm &amp; intimate setting beside Dolphin House Reef</p>
+                    </a>
+                </aside>
+                <aside class="col-md-4 col-sm-4 col-xs-4 active">
+                    <a href="/villages/wadi-lahami/accommodation/">
+                        <img class="img-circle" src="/Photos/Villages/DJI_0119_square_cb3ac_lg.jpg" alt="Wadi Lahami" />
+                        <h3>Wadi Lahami</h3>
+                        <p class="hidden-xs">For the true explorer, in the Red Sea&#39;s Deep South</p>
+                    </a>
+                </aside>
+        </div>
+    </section>
+    <section class="activities" style="padding-top: 10px;">
+        <div class="container">
+            <div class="col-md-10 col-sm-6 activities-brief" style="padding: 0;">
+                <h3 style="color: rgb(191, 158, 114);">Wadi Lahami Accommodation</h3>
+                    <p>
+                        Wadi Lahami offers 2 different accommodation categories; there is something for everyone's taste and budget. <br>
+                    </p>
+            </div>
+            <div class="col-md-2" style="padding-top: 14px;">
+                <a href="/villages/wadi-lahami" #accommodation" class="btn btn-primary btn-block" style="padding: 10px 0px;">Back To Village</a>
+            </div>
+                <div class="row accommodation-setion" id="accommodation12">
+                    <aside class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            <div class="activities-gallery">
+                                    <a class="rsImg" data-rsbigimg="/Photos/accommodation/P1108681_28329_lg.jpg" href="/Photos/accommodation/P1108681_28329_lg.jpg">
+                                        <div class="img">
+                                            <img class="rsTmb" src="/Photos/accommodation/P1108681_28329_lg.jpg" alt="Royal Tent" />
+                                        </div>
+                                    </a>
+                                    <a class="rsImg" data-rsbigimg="/Photos/accommodation/P1108666_1203a_lg.jpg" href="/Photos/accommodation/P1108666_1203a_lg.jpg">
+                                        <div class="img">
+                                            <img class="rsTmb" src="/Photos/accommodation/P1108666_1203a_lg.jpg" alt="Royal Tent" />
+                                        </div>
+                                    </a>
+                                    <a class="rsImg" data-rsbigimg="/Photos/accommodation/P1108735_7210b_lg.jpg" href="/Photos/accommodation/P1108735_7210b_lg.jpg">
+                                        <div class="img">
+                                            <img class="rsTmb" src="/Photos/accommodation/P1108735_7210b_lg.jpg" alt="Royal Tent" />
+                                        </div>
+                                    </a>
+                                    <a class="rsImg" data-rsbigimg="/Photos/accommodation/P1108843_8b574_lg.jpg" href="/Photos/accommodation/P1108843_8b574_lg.jpg">
+                                        <div class="img">
+                                            <img class="rsTmb" src="/Photos/accommodation/P1108843_8b574_lg.jpg" alt="Royal Tent" />
+                                        </div>
+                                    </a>
+                                    <a class="rsImg" data-rsbigimg="/Photos/accommodation/P1108592_2ffa8_lg.jpg" href="/Photos/accommodation/P1108592_2ffa8_lg.jpg">
+                                        <div class="img">
+                                            <img class="rsTmb" src="/Photos/accommodation/P1108592_2ffa8_lg.jpg" alt="Royal Tent" />
+                                        </div>
+                                    </a>
+                                    <a class="rsImg" data-rsbigimg="/Photos/accommodation/DJI_0086_6122f_lg.jpg" href="/Photos/accommodation/DJI_0086_6122f_lg.jpg">
+                                        <div class="img">
+                                            <img class="rsTmb" src="/Photos/accommodation/DJI_0086_6122f_lg.jpg" alt="Royal Tent" />
+                                        </div>
+                                    </a>
+                            </div>
+                    </aside>
+                    <aside class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h3 class="padding-sm">Royal Tent</h3>
+                            </div>
+                            <div class="col-sm-3 col-sm-offset-1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p>The Royal Tent is our most popular accommodation option and an integral part of our minimal impact concept. The interior is 5x5 meters and well furnished with a minibar, fan, bean bag chairs and table, and a seating area just a few meters from the mangroves in front of the sea. Royal Tents are available with a double bed or two singles and share a communal bathroom facility.<span class="s1">&nbsp;</span></p>
+<p><span class="s1">Amenities:</span></p><ul><li>Fan</li><li>Mini fridge</li><li>Lighting</li><li>Electricity plugs</li><li>Safe box available in reception</li><li>Hand-made furnitures</li><li>Beanbag chairs &amp; table</li><li>Outside seating</li><li>Guaranteed sea view</li><li>Sunrise view</li><li>Towels for showering provided</li><li>Shower gel &amp; handwash provided in public bathrooms</li><li>Frequent public bathroom cleaning</li><li>Daily housekeeping service</li>
+</ul>
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="row accommodation-setion" id="accommodation13">
+                    <aside class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            <div class="activities-gallery">
+                                    <a class="rsImg" data-rsbigimg="/Photos/accommodation/P9101647_SOG-crop_49b53_lg.jpg" href="/Photos/accommodation/P9101647_SOG-crop_49b53_lg.jpg">
+                                        <div class="img">
+                                            <img class="rsTmb" src="/Photos/accommodation/P9101647_SOG-crop_49b53_lg.jpg" alt="Deluxe Chalet" />
+                                        </div>
+                                    </a>
+                                    <a class="rsImg" data-rsbigimg="/Photos/accommodation/IMG_6862_SOG-crop_d5ac8_lg.jpg" href="/Photos/accommodation/IMG_6862_SOG-crop_d5ac8_lg.jpg">
+                                        <div class="img">
+                                            <img class="rsTmb" src="/Photos/accommodation/IMG_6862_SOG-crop_d5ac8_lg.jpg" alt="Deluxe Chalet" />
+                                        </div>
+                                    </a>
+                                    <a class="rsImg" data-rsbigimg="/Photos/accommodation/IMG_6869_SOG-crop_7b12d_lg.jpg" href="/Photos/accommodation/IMG_6869_SOG-crop_7b12d_lg.jpg">
+                                        <div class="img">
+                                            <img class="rsTmb" src="/Photos/accommodation/IMG_6869_SOG-crop_7b12d_lg.jpg" alt="Deluxe Chalet" />
+                                        </div>
+                                    </a>
+                                    <a class="rsImg" data-rsbigimg="/Photos/accommodation/IMG_6878-HDR_SOG-crop_bbbe0_lg.jpg" href="/Photos/accommodation/IMG_6878-HDR_SOG-crop_bbbe0_lg.jpg">
+                                        <div class="img">
+                                            <img class="rsTmb" src="/Photos/accommodation/IMG_6878-HDR_SOG-crop_bbbe0_lg.jpg" alt="Deluxe Chalet" />
+                                        </div>
+                                    </a>
+                                    <a class="rsImg" data-rsbigimg="/Photos/accommodation/IMG_7435_GN-crop_08735_lg.jpg" href="/Photos/accommodation/IMG_7435_GN-crop_08735_lg.jpg">
+                                        <div class="img">
+                                            <img class="rsTmb" src="/Photos/accommodation/IMG_7435_GN-crop_08735_lg.jpg" alt="Deluxe Chalet" />
+                                        </div>
+                                    </a>
+                                    <a class="rsImg" data-rsbigimg="/Photos/accommodation/P9101620_SOG_dbe41_lg.jpg" href="/Photos/accommodation/P9101620_SOG_dbe41_lg.jpg">
+                                        <div class="img">
+                                            <img class="rsTmb" src="/Photos/accommodation/P9101620_SOG_dbe41_lg.jpg" alt="Deluxe Chalet" />
+                                        </div>
+                                    </a>
+                                    <a class="rsImg" data-rsbigimg="/Photos/accommodation/P8091171_SOG_e9234_lg.jpg" href="/Photos/accommodation/P8091171_SOG_e9234_lg.jpg">
+                                        <div class="img">
+                                            <img class="rsTmb" src="/Photos/accommodation/P8091171_SOG_e9234_lg.jpg" alt="Deluxe Chalet" />
+                                        </div>
+                                    </a>
+                            </div>
+                    </aside>
+                    <aside class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <h3 class="padding-sm">Deluxe Chalet</h3>
+                            </div>
+                            <div class="col-sm-3 col-sm-offset-1">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <p style="">The Deluxe Chalet is our finest room standard overlooking the spectacular mountains on one side and the Red Sea on the other. There are terraces on either side with breathtaking views and every room enjoys an unobstructed sea view. The Deluxe Chalets are 5x8 meters and feature either double bed or singles and feature wardrobe, side &amp; dressing table, AC, digital safe, mini-bar, water kettle with coffee and tea. Deluxe Chalets feature en-suite bathroom and towels are provided for showering and for the beach.</p><p style="">Amenities:</p><ul style=""><li>AC</li><li>Mini fridge</li><li>Kettle with tea &amp; coffee</li><li>Safe box available in reception</li><li>Wardrobe</li><li>Side &amp; dressing table</li><li>Outside seating</li><li>Two terraces - one with mountain view, one with sea view</li><li>Sunrise &amp; sunset view</li><li>En-suite bathroom</li><li>Towels for showering and for the beach provided</li><li>Daily housekeeping service</li></ul><ul>
+</ul>
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="clearfix"></div>
+                </div>
+        </div>
+    </section>
+        </div>
+        <footer class="site-footer">
+            <section class="footer">
+                <div class="container">
+                    <div class="row">
+<aside class="col-md-3 col-sm-6">
+    <h3>Follow Us</h3>
+    <ul class="social-links">
+            <li><a target="_blank" class="facebook" href="https://www.facebook.com/the.ecodiving.adventure "></a></li>
+                    <li><a target="_blank" class="youtube" href="https://youtube.com/redseadivingsafari"></a></li>
+                    <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/company/red-sea-diving-safari/">
+            <img src="/images/icons/linkedin.png" /></a></li>
+                    <li>
+                <a target="_blank" class="insta" href="https://www.instagram.com/redsea.divingsafari/">
+                    <img src="/images/icons/instagram.png" />
+                </a>
+            </li>
+    </ul>
+        <a target="_blank" href="http://tripadvisor.com/">
+            <img src="/images/trip-advisor-logo.png" alt="Trip Advisor" />
+        </a>
+</aside>
+<aside class="col-md-3 col-sm-6">
+    <h3>Marsa Alam Weather</h3>
+    <weather id="weatherGadget" class="padding-all-md " ng-controller="weatherController"
+             data-api-key="8f392ebd9732c6e3f593b7cc420be6e5" data-city-id="352736" data-icon-pack="dark-gray"
+             data-additional-info="false" data-days-count="0" data-language-id="en">
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-xs-4">
+                <img src="{{imgFullPath}}" alt="{{weatherCondition}}" />
+                <br />
+                <span class="text-center text-sm">
+                    {{weatherCondition}}
+                </span>
+            </div>
+            <div class="col-xs-8">
+                Air Temp:
+                <span class="text-4lg text-temp text-italic">
+                    {{weatherTemp}}
+                    <sup>℃</sup>
+                </span>
+            </div>
+            <div class="col-xs-8" style="margin-top: 20px;">
+                Water Temp:
+                <span class="text-4lg text-temp text-italic">
+                    28
+                    <sup>℃</sup>
+                </span>
+            </div>
+        </div>
+    </weather>
+</aside>
+<input type="hidden" value="17:57" id="local-date" />
+<aside class="col-md-6 col-sm-12 newsletter">
+    <h3>Join our newsletter</h3>
+    <br />
+    <div id="joinNewsLetterForm" class="validationEngineContainer">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <input class="validate[required]" id="joinNewsLetterNameTxt" name="Name" placeholder="Name" type="text" value="" />
+            </div>
+            <div class="col-sm-6 col-xs-12">
+                <input class="validate[required ,custom[email]]" id="joinNewsLetterEmailTxt" name="Email" placeholder="Email" type="email" value="" />
+            </div>
+        </div>
+        <small>if you like to stop receiving our newsletter, please <a href="#" id="unsubscribeNewsLetter">click here</a></small>
+        <input class="btn" type="submit" value="Join" id="joinNewsLetterBtn" />
+    </div>
+</aside>
+                    </div>
+                </div>
+            </section>
+            <section class="copyrights">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6 col-xs-12">Copyright &copy; 2026 Red Sea Diving Safari. All Rights Reserved <br />Powered by <a href="https://innovixsolutions.com" target="_blank" title="Innoviative web solutions and graphic design">Innovix Solutions</a></div>
+                        <div class="col-md-8 col-sm-6 col-xs-12">
+                            <nav class="footer-nav">
+                                <a href=/faqs>FAQs</a>
+                                <a href=/terms-and-conditions>Terms&amp;Conditions</a>
+                                <a href=/careers>Careers</a>
+                                <a href=/agents/users/login>Agents</a>
+                                <a href="/about">About RSDS</a>
+                                <a href=/contact-us>Contact Us</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <div class="cookies-eu">
+    <span class="cookies-eu-content-holder">This website uses cookies to ensure you get the best experience.</span>
+    <span class="cookies-eu-button-holder">
+        <button class="cookies-eu-ok">OK</button>
+        <a href="https://www.redsea-divingsafari.com/terms-and-conditions" class="cookies-eu-link">Learn more</a>
+    </span>
+</div>
+        <div id="popups-container">
+<div id="register-popup" class="white-popup mfp-hide text-center">
+    <p>Register</p>
+    <div class="popup-wrapper">
+        <div id="register-form" class="validationEngineContainer">
+            <div class="multi">
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="firstname"></label>
+                    <input class="validate[required, maxSize[50]]" id="FirstName" name="FirstName" type="text" value="" />
+                </div>
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="lastname">Last Name:</label>
+                    <input class="validate[required, maxSize[50]]" id="LastName" name="LastName" type="text" value="" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="multi">
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="pass">Password:</label>
+                    <input class="validate[required,minSize[6]]" id="Password" name="Password" type="password" />
+                </div>
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="confirmpass">Confirm Password:</label>
+                    <input class="validate[required,equals[Password]]" id="ConfirmPassword" name="ConfirmPassword" type="password" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input class="validate[required, custom[email]]" id="Email" name="Email" type="text" value="" />
+            </div>
+            <div class="multi">
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="phone">Phone:</label>
+                    <input class="validate[custom[phone]]" id="Phone" name="Phone" type="text" value="" />
+                </div>
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="country">Country:</label>
+                    <select class="form-control validate[required]" data-width="100%" id="CountryId" name="CountryId"><option value="">...Select...</option>
+<option value="3">Afghanistan</option>
+<option value="6">Albania</option>
+<option value="60">Algeria</option>
+<option value="12">American Samoa</option>
+<option value="1">Andorra</option>
+<option value="9">Angola</option>
+<option value="5">Anguilla</option>
+<option value="10">Antarctica</option>
+<option value="4">Antigua and Barbuda</option>
+<option value="11">Argentina</option>
+<option value="7">Armenia</option>
+<option value="15">Aruba</option>
+<option value="14">Australia</option>
+<option value="13">Austria</option>
+<option value="16">Azerbaijan</option>
+<option value="30">Bahamas</option>
+<option value="23">Bahrain</option>
+<option value="19">Bangladesh</option>
+<option value="18">Barbados</option>
+<option value="34">Belarus</option>
+<option value="20">Belgium</option>
+<option value="35">Belize</option>
+<option value="25">Benin</option>
+<option value="26">Bermuda</option>
+<option value="31">Bhutan</option>
+<option value="28">Bolivia</option>
+<option value="17">Bosnia and Herzegovina</option>
+<option value="33">Botswana</option>
+<option value="32">Bouvet Island</option>
+<option value="29">Brazil</option>
+<option value="102">British Indian Ocean Territory</option>
+<option value="27">Brunei Darussalam</option>
+<option value="22">Bulgaria</option>
+<option value="21">Burkina Faso</option>
+<option value="24">Burundi</option>
+<option value="112">Cambodia</option>
+<option value="45">Cameroon</option>
+<option value="36">Canada</option>
+<option value="51">Cape Verde</option>
+<option value="119">Cayman Islands</option>
+<option value="39">Central African Republic</option>
+<option value="205">Chad</option>
+<option value="44">Chile</option>
+<option value="46">China</option>
+<option value="52">Christmas Island</option>
+<option value="37">Cocos (Keeling) Islands</option>
+<option value="47">Colombia</option>
+<option value="114">Comoros</option>
+<option value="40">Congo</option>
+<option value="38">Congo, the Democratic Republic of the</option>
+<option value="43">Cook Islands</option>
+<option value="48">Costa Rica</option>
+<option value="42">Cote D Ivoire</option>
+<option value="95">Croatia</option>
+<option value="50">Cuba</option>
+<option value="53">Cyprus</option>
+<option value="54">Czech Republic</option>
+<option value="57">Denmark</option>
+<option value="56">Djibouti</option>
+<option value="58">Dominica</option>
+<option value="59">Dominican Republic</option>
+<option value="61">Ecuador</option>
+<option value="63">Egypt</option>
+<option value="201">El Salvador</option>
+<option value="85">Equatorial Guinea</option>
+<option value="65">Eritrea</option>
+<option value="62">Estonia</option>
+<option value="67">Ethiopia</option>
+<option value="70">Falkland Islands (Malvinas)</option>
+<option value="72">Faroe Islands</option>
+<option value="69">Fiji</option>
+<option value="68">Finland</option>
+<option value="73">France</option>
+<option value="78">French Guiana</option>
+<option value="168">French Polynesia</option>
+<option value="206">French Southern Territories</option>
+<option value="74">Gabon</option>
+<option value="82">Gambia</option>
+<option value="77">Georgia</option>
+<option value="55">Germany</option>
+<option value="79">Ghana</option>
+<option value="80">Gibraltar</option>
+<option value="86">Greece</option>
+<option value="81">Greenland</option>
+<option value="76">Grenada</option>
+<option value="84">Guadeloupe</option>
+<option value="89">Guam</option>
+<option value="88">Guatemala</option>
+<option value="83">Guinea</option>
+<option value="90">Guinea-Bissau</option>
+<option value="91">Guyana</option>
+<option value="96">Haiti</option>
+<option value="93">Heard Island and Mcdonald Islands</option>
+<option value="226">Holy See (Vatican City State)</option>
+<option value="94">Honduras</option>
+<option value="92">Hong Kong</option>
+<option value="97">Hungary</option>
+<option value="105">Iceland</option>
+<option value="101">India</option>
+<option value="98">Indonesia</option>
+<option value="104">Iran, Islamic Republic of</option>
+<option value="103">Iraq</option>
+<option value="99">Ireland</option>
+<option value="100">Israel</option>
+<option value="106">Italy</option>
+<option value="107">Jamaica</option>
+<option value="109">Japan</option>
+<option value="108">Jordan</option>
+<option value="120">Kazakhstan</option>
+<option value="110">Kenya</option>
+<option value="113">Kiribati</option>
+<option value="116">Korea, Democratic Peoples Republic of</option>
+<option value="117">Korea, Republic of</option>
+<option value="118">Kuwait</option>
+<option value="111">Kyrgyzstan</option>
+<option value="121">Lao Peoples Democratic Republic</option>
+<option value="130">Latvia</option>
+<option value="122">Lebanon</option>
+<option value="127">Lesotho</option>
+<option value="126">Liberia</option>
+<option value="131">Libyan Arab Jamahiriya</option>
+<option value="124">Liechtenstein</option>
+<option value="128">Lithuania</option>
+<option value="129">Luxembourg</option>
+<option value="141">Macao</option>
+<option value="137">Macedonia, the Former Yugoslav Republic of</option>
+<option value="135">Madagascar</option>
+<option value="149">Malawi</option>
+<option value="151">Malaysia</option>
+<option value="148">Maldives</option>
+<option value="138">Mali</option>
+<option value="146">Malta</option>
+<option value="136">Marshall Islands</option>
+<option value="143">Martinique</option>
+<option value="144">Mauritania</option>
+<option value="147">Mauritius</option>
+<option value="236">Mayotte</option>
+<option value="150">Mexico</option>
+<option value="71">Micronesia, Federated States of</option>
+<option value="134">Moldova, Republic of</option>
+<option value="133">Monaco</option>
+<option value="140">Mongolia</option>
+<option value="145">Montserrat</option>
+<option value="132">Morocco</option>
+<option value="152">Mozambique</option>
+<option value="139">Myanmar</option>
+<option value="153">Namibia</option>
+<option value="162">Nauru</option>
+<option value="161">Nepal</option>
+<option value="159">Netherlands</option>
+<option value="8">Netherlands Antilles</option>
+<option value="154">New Caledonia</option>
+<option value="164">New Zealand</option>
+<option value="158">Nicaragua</option>
+<option value="155">Niger</option>
+<option value="157">Nigeria</option>
+<option value="163">Niue</option>
+<option value="156">Norfolk Island</option>
+<option value="142">Northern Mariana Islands</option>
+<option value="160">Norway</option>
+<option value="165">Oman</option>
+<option value="171">Pakistan</option>
+<option value="178">Palau</option>
+<option value="176">Palestinian Territory, Occupied</option>
+<option value="166">Panama</option>
+<option value="169">Papua New Guinea</option>
+<option value="179">Paraguay</option>
+<option value="167">Peru</option>
+<option value="170">Philippines</option>
+<option value="174">Pitcairn</option>
+<option value="172">Poland</option>
+<option value="177">Portugal</option>
+<option value="175">Puerto Rico</option>
+<option value="180">Qatar</option>
+<option value="181">Reunion</option>
+<option value="182">Romania</option>
+<option value="183">Russian Federation</option>
+<option value="184">Rwanda</option>
+<option value="191">Saint Helena</option>
+<option value="115">Saint Kitts and Nevis</option>
+<option value="123">Saint Lucia</option>
+<option value="173">Saint Pierre and Miquelon</option>
+<option value="227">Saint Vincent and the Grenadines</option>
+<option value="234">Samoa</option>
+<option value="196">San Marino</option>
+<option value="200">Sao Tome and Principe</option>
+<option value="185">Saudi Arabia</option>
+<option value="197">Senegal</option>
+<option value="49">Serbia and Montenegro</option>
+<option value="187">Seychelles</option>
+<option value="195">Sierra Leone</option>
+<option value="190">Singapore</option>
+<option value="194">Slovakia</option>
+<option value="192">Slovenia</option>
+<option value="186">Solomon Islands</option>
+<option value="198">Somalia</option>
+<option value="237">South Africa</option>
+<option value="87">South Georgia and the South Sandwich Islands</option>
+<option value="66">Spain</option>
+<option value="125">Sri Lanka</option>
+<option value="188">Sudan</option>
+<option value="199">Suriname</option>
+<option value="193">Svalbard and Jan Mayen</option>
+<option value="203">Swaziland</option>
+<option value="189">Sweden</option>
+<option value="41">Switzerland</option>
+<option value="202">Syrian Arab Republic</option>
+<option value="218">Taiwan, Province of China</option>
+<option value="209">Tajikistan</option>
+<option value="219">Tanzania, United Republic of</option>
+<option value="208">Thailand</option>
+<option value="211">Timor-Leste</option>
+<option value="207">Togo</option>
+<option value="210">Tokelau</option>
+<option value="214">Tonga</option>
+<option value="216">Trinidad and Tobago</option>
+<option value="213">Tunisia</option>
+<option value="215">Turkey</option>
+<option value="212">Turkmenistan</option>
+<option value="204">Turks and Caicos Islands</option>
+<option value="217">Tuvalu</option>
+<option value="221">Uganda</option>
+<option value="220">Ukraine</option>
+<option value="2">United Arab Emirates</option>
+<option value="75">United Kingdom</option>
+<option value="223">United States</option>
+<option value="222">United States Minor Outlying Islands</option>
+<option value="224">Uruguay</option>
+<option value="225">Uzbekistan</option>
+<option value="232">Vanuatu</option>
+<option value="228">Venezuela</option>
+<option value="231">Viet Nam</option>
+<option value="229">Virgin Islands, British</option>
+<option value="230">Virgin Islands, U.s.</option>
+<option value="233">Wallis and Futuna</option>
+<option value="64">Western Sahara</option>
+<option value="235">Yemen</option>
+<option value="238">Zambia</option>
+<option value="239">Zimbabwe</option>
+</select>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <div class="">
+                    <input type="checkbox" name="SubscribeNewsLetter" id="checkBoxSubscribeNewsLetter" style="float:left;" />
+                    <label class="squarecheck-label" for="subscribe"> Subscribe to our newsletter</label>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="multi">
+                <div class="form-group col-md-6 col-sm-6 text-left">
+                    <input class="reset-form" id="reset" type="reset" value="Clear all fields" />
+                </div>
+                <div class="form-group col-md-6 col-sm-6 text-right">
+                    <input class="btn btn-send" id="register-submit" type="submit" value="Submit" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript"></script>
+<div id="login-popup" class="white-popup mfp-hide text-center">
+    <p id="form-title">Login</p>
+    <div class="popup-wrapper">
+        <div id="login-form" class="validationEngineContainer">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input class="validate[required,custom[email]]" id="UserName" name="UserName" type="text" value="" />
+            </div>
+            <div class="form-group">
+                <div>
+                    <label for="email">Password:</label>
+                    <input class="validate[required]" id="Password" name="Password" type="password" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="multi">
+                <div class="form-group col-md-12">
+                    <input class="btn btn-send pull-left" id="login-submit" type="button" value="Submit" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="pull-left">Forget your password? No worries click <a style="cursor:pointer;" id="lnk-reset-password">here</a></span> <br/>
+                    <span class="pull-left">Don't have an account yet ? <a href="#register-popup" class="open-popup">Create an account</a> </span>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div id="forget-password-form" class="validationEngineContainer" style="display:none;">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                    <input class="validate[required,custom[email]]" id="txt-email" name="UserName" type="text" value="" />
+            </div>
+            <div class="multi">
+                <div class="form-group col-md-12">
+                    <input class="btn btn-send pull-left" id="forget-password-submit" type="button" value="Submit" />
+                    <input class="btn btn-send pull-left" id="cancel-forget-password" type="button" value="Cancel" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript"></script>
+<div id="dive-site-details" class="dive-site-popup mfp-hide">
+    <div class="popup-wrapper">
+        <div>
+            <div class="dive-site-entry">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="title" id="dive-site-title"></p>
+                    </div>
+                </div>
+                <div>
+                    <div class="img">
+                        <img src="" id="dive-site-image" alt="" />
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-xs-8">
+                                    <p class="padding-nm text-justify" id="dive-site-description"></p>
+                                </div>
+                                <div class="col-xs-4 data">
+                                    <table class="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    Access
+                                                </td>
+                                              <td id="dive-site-access"></td>
+                                            </tr>
+                                            <tr >
+                                                <td>
+                                                    Minimum Divers
+                                                </td>
+                                                <td id="dive-site-min-divers"></td>
+                                            </tr>
+                                            <tr id="dive-site-min-qualifications-tr">
+                                                <td>
+                                                    Minimum Qualification
+                                                </td>
+                                                <td id="dive-site-min-qualifications"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Depth Range
+                                                </td>
+                                                <td id="dive-site-depth-range"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="vacancy-apply-popup" class="white-popup mfp-hide text-center">
+    <p>Vacancy Apply</p>
+    <div class="popup-wrapper">
+<form action="/careers/apply/" class="validationEngineContainer" enctype="multipart/form-data" id="vacancy-apply-form" method="post">            <div class="multi">
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="firstname"> First Name: </label>
+                    <input class="validate[required, maxSize[50]]" id="FirstName" name="FirstName" type="text" value="" />
+                </div>
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="lastname"> Last Name:</label>
+                    <input class="validate[required, maxSize[50]]" id="LastName" name="LastName" type="text" value="" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <label for="email"> Email:</label>
+                <input class="validate[required, custom[email]]" id="Email" name="Email" type="text" value="" />
+            </div>
+            <div class="form-group">
+                <label for="email">Select Vacancy:</label>
+                <select class=" form-control validate[required]" id="Vacancy" name="Vacancy"><option value="">...Select Vacancy...</option>
+<option value="Reservations Agent - Marsa Alam">Reservations Agent - Marsa Alam</option>
+<option value="Personal Assistant - Executive Office">Personal Assistant - Executive Office</option>
+<option value="Yoga Instructor">Yoga Instructor</option>
+<option value="Early Childhood Educator (Ages 3–6)">Early Childhood Educator (Ages 3–6)</option>
+<option value="AIDA Free Diving Instructor">AIDA Free Diving Instructor</option>
+</select>
+            </div>
+            <div class="form-group">
+                <label for="email">Upload your CV: </label>
+                <input class="validate[required,custom[validateMIME[application/msword|application/pdf|application/vnd.openxmlformats-officedocument.wordprocessingml.document]]]" id="File" name="File" type="file" value="" />
+                <span class="note" style="float:left;font-size: 8pt;">Allowed file types are pdf, doc and docx  </span>
+                <div class="clearfix"></div>
+            </div>
+            <div class="multi">
+                <div class="form-group reset-btn col-lg-7" id="dvCaptchaError">
+                    <div class="g-recaptcha" id="dvCaptcha"
+                         data-sitekey="6Le6iqYrAAAAAMXlNZr6VpLm8mMUwzd4MBrbSooS">
+                    </div>
+                </div>
+                <div class="form-group col-md-6 col-sm-6 text-right">
+                    <input class="btn btn-send" id="btnSend2" onclick="return validateForm('#vacancy-apply-form');" type="submit" value="Submit" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+</form>    </div>
+</div>
+<div id="upload-video-popup" class="white-popup mfp-hide">
+<form action="" id="upload-video-form" method="post">    <p> Upload Your Video Info</p>
+        <div class="popup-wrapper">
+            <div class="form-group">
+                <label for="upload">Video Title </label>
+                <input class="form-control validate[required]" id="Name" name="Name" type="text" value="" />
+            </div>
+            <div class="form-group">
+                <label for="notes">Short Introduction:</label>
+                <textarea class="form-control validate[required,maxSize[500]]" cols="" id="ShortIntroduction" name="ShortIntroduction" rows="5">
+</textarea>
+            </div>
+            <div class="form-group">
+                <label for="notes">Youtube Video Url:</label>
+                <input class="form-control validate[required,maxSize[200]]" id="VideoUrl" name="VideoUrl" type="text" value="" />
+            </div>
+            <div class="form-group">
+                <label class="squarecheck-label" for="subscribe">
+                    <input id="subscribe" type="checkbox" value="" name="bo7bo7" class="validate[required]" />
+                    I agree to RSDS video competition <a target="_blank">terms and conditions</a>
+                </label>
+                <div class="clearfix"></div>
+            </div>
+            <div class="multi">
+                <div class="form-group col-md-6 col-sm-6 text-right">
+                    <input class="btn btn-send" id="submit" type="submit" value="Submit" onclick=" return validateForm('#upload-video-form'); " />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+</form></div>
+<div id="booking-enquiry-popup" class="white-popup mfp-hide text-center">
+    <p>Booking Inquiry</p>
+    <div class="popup-wrapper">
+        <div id="booking-enquiry-form" class="validationEngineContainer">         
+            <input id="BookingEmail" name="BookingEmail" type="hidden" value="" />
+            <input id="BookingItem" name="BookingItem" type="hidden" value="" />
+            <div class="row">
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="firstname">Name:</label>
+                    <input class="validate[required, maxSize[100]] form-control" id="Name" name="Name" type="text" value="" />
+                </div>
+                <div class="form-group col-md-6 col-sm-6">
+                    <label for="lastname">Email:</label>
+                    <input class="validate[required, custom[email]] form-control" id="Email" name="Email" type="text" value="" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12 col-sm-12">
+                    <label>Date:</label>
+                    <input class="validate[required] enquiry-datepicker form-control booking-date" id="booking-date" name="Date" type="text" value="" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-12 col-sm-12">
+                    <label for="phone">Message:</label>
+                    <textarea class="validate[required, maxSize[500]] form-control" cols="20" id="Message" name="Message" rows="2" style="height: 100px;">
+</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 col-sm-6 text-left">
+                    <input class="reset-form" id="booking-enquiry-form-reset" type="reset" value="X Clear all fields" />
+                </div>
+                <div class="form-group col-md-6 col-sm-6 text-right">
+                    <input class="btn btn-send" id="booking-enquiry-submit" type="submit" value="Submit" />
+                </div>
+            </div>
+            <div class="row" id="booking-note-div">
+                <div class="col-xs-12">
+                    <div class="alert alert-warning" role="alert">
+                        <small id="booking-note-text"></small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript"></script>
+<div id="workshop-booking-enquiry-popup" class="white-popup mfp-hide text-center">
+    <p>Booking Inquiry</p>
+    <div class="popup-wrapper">
+        <div id="workshop-booking-enquiry-form" class="validationEngineContainer">
+            <div class="booking-form">
+                <input id="Workshop" name="Workshop" type="hidden" value="" />
+                <div class="row">
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label>First name:</label>
+                        <input class="form-control validate[required]" id="FirstName" name="FirstName" type="text" value="" />
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label>Last name:</label>
+                        <input class="form-control validate[required]" id="LastName" name="LastName" type="text" value="" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label>Address:</label>
+                        <input class="form-control validate[required]" id="Address" name="Address" type="text" value="" />
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label>Country:</label>
+                        <select class="form-control validate[required]" data-width="70%" id="CountryName" name="CountryName"><option value="">...Select...</option>
+<option value="Afghanistan">Afghanistan</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="American Samoa">American Samoa</option>
+<option value="Andorra">Andorra</option>
+<option value="Angola">Angola</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antarctica">Antarctica</option>
+<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+<option value="Argentina">Argentina</option>
+<option value="Armenia">Armenia</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+<option value="Austria">Austria</option>
+<option value="Azerbaijan">Azerbaijan</option>
+<option value="Bahamas">Bahamas</option>
+<option value="Bahrain">Bahrain</option>
+<option value="Bangladesh">Bangladesh</option>
+<option value="Barbados">Barbados</option>
+<option value="Belarus">Belarus</option>
+<option value="Belgium">Belgium</option>
+<option value="Belize">Belize</option>
+<option value="Benin">Benin</option>
+<option value="Bermuda">Bermuda</option>
+<option value="Bhutan">Bhutan</option>
+<option value="Bolivia">Bolivia</option>
+<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+<option value="Botswana">Botswana</option>
+<option value="Bouvet Island">Bouvet Island</option>
+<option value="Brazil">Brazil</option>
+<option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+<option value="Brunei Darussalam">Brunei Darussalam</option>
+<option value="Bulgaria">Bulgaria</option>
+<option value="Burkina Faso">Burkina Faso</option>
+<option value="Burundi">Burundi</option>
+<option value="Cambodia">Cambodia</option>
+<option value="Cameroon">Cameroon</option>
+<option value="Canada">Canada</option>
+<option value="Cape Verde">Cape Verde</option>
+<option value="Cayman Islands">Cayman Islands</option>
+<option value="Central African Republic">Central African Republic</option>
+<option value="Chad">Chad</option>
+<option value="Chile">Chile</option>
+<option value="China">China</option>
+<option value="Christmas Island">Christmas Island</option>
+<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+<option value="Colombia">Colombia</option>
+<option value="Comoros">Comoros</option>
+<option value="Congo">Congo</option>
+<option value="Congo, the Democratic Republic of the">Congo, the Democratic Republic of the</option>
+<option value="Cook Islands">Cook Islands</option>
+<option value="Costa Rica">Costa Rica</option>
+<option value="Cote D Ivoire">Cote D Ivoire</option>
+<option value="Croatia">Croatia</option>
+<option value="Cuba">Cuba</option>
+<option value="Cyprus">Cyprus</option>
+<option value="Czech Republic">Czech Republic</option>
+<option value="Denmark">Denmark</option>
+<option value="Djibouti">Djibouti</option>
+<option value="Dominica">Dominica</option>
+<option value="Dominican Republic">Dominican Republic</option>
+<option value="Ecuador">Ecuador</option>
+<option value="Egypt">Egypt</option>
+<option value="El Salvador">El Salvador</option>
+<option value="Equatorial Guinea">Equatorial Guinea</option>
+<option value="Eritrea">Eritrea</option>
+<option value="Estonia">Estonia</option>
+<option value="Ethiopia">Ethiopia</option>
+<option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+<option value="Faroe Islands">Faroe Islands</option>
+<option value="Fiji">Fiji</option>
+<option value="Finland">Finland</option>
+<option value="France">France</option>
+<option value="French Guiana">French Guiana</option>
+<option value="French Polynesia">French Polynesia</option>
+<option value="French Southern Territories">French Southern Territories</option>
+<option value="Gabon">Gabon</option>
+<option value="Gambia">Gambia</option>
+<option value="Georgia">Georgia</option>
+<option value="Germany">Germany</option>
+<option value="Ghana">Ghana</option>
+<option value="Gibraltar">Gibraltar</option>
+<option value="Greece">Greece</option>
+<option value="Greenland">Greenland</option>
+<option value="Grenada">Grenada</option>
+<option value="Guadeloupe">Guadeloupe</option>
+<option value="Guam">Guam</option>
+<option value="Guatemala">Guatemala</option>
+<option value="Guinea">Guinea</option>
+<option value="Guinea-Bissau">Guinea-Bissau</option>
+<option value="Guyana">Guyana</option>
+<option value="Haiti">Haiti</option>
+<option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+<option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+<option value="Honduras">Honduras</option>
+<option value="Hong Kong">Hong Kong</option>
+<option value="Hungary">Hungary</option>
+<option value="Iceland">Iceland</option>
+<option value="India">India</option>
+<option value="Indonesia">Indonesia</option>
+<option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+<option value="Iraq">Iraq</option>
+<option value="Ireland">Ireland</option>
+<option value="Israel">Israel</option>
+<option value="Italy">Italy</option>
+<option value="Jamaica">Jamaica</option>
+<option value="Japan">Japan</option>
+<option value="Jordan">Jordan</option>
+<option value="Kazakhstan">Kazakhstan</option>
+<option value="Kenya">Kenya</option>
+<option value="Kiribati">Kiribati</option>
+<option value="Korea, Democratic Peoples Republic of">Korea, Democratic Peoples Republic of</option>
+<option value="Korea, Republic of">Korea, Republic of</option>
+<option value="Kuwait">Kuwait</option>
+<option value="Kyrgyzstan">Kyrgyzstan</option>
+<option value="Lao Peoples Democratic Republic">Lao Peoples Democratic Republic</option>
+<option value="Latvia">Latvia</option>
+<option value="Lebanon">Lebanon</option>
+<option value="Lesotho">Lesotho</option>
+<option value="Liberia">Liberia</option>
+<option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+<option value="Liechtenstein">Liechtenstein</option>
+<option value="Lithuania">Lithuania</option>
+<option value="Luxembourg">Luxembourg</option>
+<option value="Macao">Macao</option>
+<option value="Macedonia, the Former Yugoslav Republic of">Macedonia, the Former Yugoslav Republic of</option>
+<option value="Madagascar">Madagascar</option>
+<option value="Malawi">Malawi</option>
+<option value="Malaysia">Malaysia</option>
+<option value="Maldives">Maldives</option>
+<option value="Mali">Mali</option>
+<option value="Malta">Malta</option>
+<option value="Marshall Islands">Marshall Islands</option>
+<option value="Martinique">Martinique</option>
+<option value="Mauritania">Mauritania</option>
+<option value="Mauritius">Mauritius</option>
+<option value="Mayotte">Mayotte</option>
+<option value="Mexico">Mexico</option>
+<option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+<option value="Moldova, Republic of">Moldova, Republic of</option>
+<option value="Monaco">Monaco</option>
+<option value="Mongolia">Mongolia</option>
+<option value="Montserrat">Montserrat</option>
+<option value="Morocco">Morocco</option>
+<option value="Mozambique">Mozambique</option>
+<option value="Myanmar">Myanmar</option>
+<option value="Namibia">Namibia</option>
+<option value="Nauru">Nauru</option>
+<option value="Nepal">Nepal</option>
+<option value="Netherlands">Netherlands</option>
+<option value="Netherlands Antilles">Netherlands Antilles</option>
+<option value="New Caledonia">New Caledonia</option>
+<option value="New Zealand">New Zealand</option>
+<option value="Nicaragua">Nicaragua</option>
+<option value="Niger">Niger</option>
+<option value="Nigeria">Nigeria</option>
+<option value="Niue">Niue</option>
+<option value="Norfolk Island">Norfolk Island</option>
+<option value="Northern Mariana Islands">Northern Mariana Islands</option>
+<option value="Norway">Norway</option>
+<option value="Oman">Oman</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Palau">Palau</option>
+<option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+<option value="Panama">Panama</option>
+<option value="Papua New Guinea">Papua New Guinea</option>
+<option value="Paraguay">Paraguay</option>
+<option value="Peru">Peru</option>
+<option value="Philippines">Philippines</option>
+<option value="Pitcairn">Pitcairn</option>
+<option value="Poland">Poland</option>
+<option value="Portugal">Portugal</option>
+<option value="Puerto Rico">Puerto Rico</option>
+<option value="Qatar">Qatar</option>
+<option value="Reunion">Reunion</option>
+<option value="Romania">Romania</option>
+<option value="Russian Federation">Russian Federation</option>
+<option value="Rwanda">Rwanda</option>
+<option value="Saint Helena">Saint Helena</option>
+<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+<option value="Saint Lucia">Saint Lucia</option>
+<option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+<option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+<option value="Samoa">Samoa</option>
+<option value="San Marino">San Marino</option>
+<option value="Sao Tome and Principe">Sao Tome and Principe</option>
+<option value="Saudi Arabia">Saudi Arabia</option>
+<option value="Senegal">Senegal</option>
+<option value="Serbia and Montenegro">Serbia and Montenegro</option>
+<option value="Seychelles">Seychelles</option>
+<option value="Sierra Leone">Sierra Leone</option>
+<option value="Singapore">Singapore</option>
+<option value="Slovakia">Slovakia</option>
+<option value="Slovenia">Slovenia</option>
+<option value="Solomon Islands">Solomon Islands</option>
+<option value="Somalia">Somalia</option>
+<option value="South Africa">South Africa</option>
+<option value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
+<option value="Spain">Spain</option>
+<option value="Sri Lanka">Sri Lanka</option>
+<option value="Sudan">Sudan</option>
+<option value="Suriname">Suriname</option>
+<option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+<option value="Swaziland">Swaziland</option>
+<option value="Sweden">Sweden</option>
+<option value="Switzerland">Switzerland</option>
+<option value="Syrian Arab Republic">Syrian Arab Republic</option>
+<option value="Taiwan, Province of China">Taiwan, Province of China</option>
+<option value="Tajikistan">Tajikistan</option>
+<option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+<option value="Thailand">Thailand</option>
+<option value="Timor-Leste">Timor-Leste</option>
+<option value="Togo">Togo</option>
+<option value="Tokelau">Tokelau</option>
+<option value="Tonga">Tonga</option>
+<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+<option value="Tunisia">Tunisia</option>
+<option value="Turkey">Turkey</option>
+<option value="Turkmenistan">Turkmenistan</option>
+<option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+<option value="Tuvalu">Tuvalu</option>
+<option value="Uganda">Uganda</option>
+<option value="Ukraine">Ukraine</option>
+<option value="United Arab Emirates">United Arab Emirates</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="United States">United States</option>
+<option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+<option value="Uruguay">Uruguay</option>
+<option value="Uzbekistan">Uzbekistan</option>
+<option value="Vanuatu">Vanuatu</option>
+<option value="Venezuela">Venezuela</option>
+<option value="Viet Nam">Viet Nam</option>
+<option value="Virgin Islands, British">Virgin Islands, British</option>
+<option value="Virgin Islands, U.s.">Virgin Islands, U.s.</option>
+<option value="Wallis and Futuna">Wallis and Futuna</option>
+<option value="Western Sahara">Western Sahara</option>
+<option value="Yemen">Yemen</option>
+<option value="Zambia">Zambia</option>
+<option value="Zimbabwe">Zimbabwe</option>
+</select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label>Mobile:</label>
+                        <input class="form-control validate[required]" id="Mobile" name="Mobile" type="text" value="" />
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6">
+                        <label>Email:</label>
+                        <input class="form-control validate[required ,custom[email]]" id="Email" name="Email" type="text" value="" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12 col-sm-12">
+                        <label>Message:</label>
+                        <textarea class="form-control validate[required]" cols="10" id="Message" name="Message" rows="7">
+</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-6 col-sm-6 text-left">
+                    <input class="reset-form" id="workshop-booking-enquiry-form-reset" type="reset" value="X Clear all fields" />
+                </div>
+                <div class="form-group col-md-6 col-sm-6 text-right">
+                    <input class="btn btn-send" id="workshop-booking-enquiry-submit" type="submit" value="Submit" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript"></script>
+        </div>
+        <script src="/Scripts/mmenu.min.js"></script>
+        <script src="/Scripts/common.js"></script>
+        <script src="/Scripts/cookies/jquery.cookie.js"></script>
+        <script src="/Scripts/cookies/cookies_eu.js"></script>
+    <script type="text/javascript"></script>
+        <script></script>
+        <script src="/Scripts/angular.min.js"></script>
+        <script src="/Scripts/weather.js?v=01"></script>
+    </main>
+    <!-- //analytics code -->
+    <script></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" data-cf-beacon='{"version":"2024.11.0","token":"71c710e3755a496f82098d473965e7e6","r":1,"spa":2}' crossorigin="anonymous"></script>
+<script></script></body>
+</html>

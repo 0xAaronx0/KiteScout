@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="de">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>7Beaufort</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="css/all.min.css">
+	<link rel="stylesheet" href="css/psstyle.css">
+			<link rel="stylesheet" href="endpoints/public/rooms.css">
+	
+</head>
+
+<body>
+<div class="bg-primary" id="header">
+
+	<nav class="navbar navbar-light navbar-expand-lg text-secondary container">
+		<a href="landingpage.html"><img src="images/logo-dark.png" width="200" /></a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse ml-lg-4" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto font-weight-bold font-medium">
+				<li class="nav-item ml-lg-2"><a class="nav-link text-secondary" href="landingpage.html">Home</a></li>
+				<li class="nav-item ml-lg-2"><a class="nav-link active" href="rooms.html">Rooms</a></li>
+				<li class="nav-item ml-lg-2"><a class="nav-link text-secondary" href="restaurant.html">Restaurant</a></li>
+				<div class="dropdown ml-lg-2">
+					<button class="btn dropdown-toggle nav-link text-secondary fw-bold kitesurfDropdown" type="button" id="menuDropdown" data-toggle="dropdown"
+					arial-haspopup="true" aria-expanded="false">
+						Kitesurf
+					</button>
+					<div class="dropdown-menu" aria-labelledby="menuDropdown">
+						<li class="nav-item ml-lg-2"><a class="nav-link text-secondary" href="kiteschool.html">Kiteschool</a></li>
+						<li class="nav-item ml-lg-2"><a class="nav-link text-secondary" href="kitespot.html">Kitespot</a></li>
+						<li class="nav-item ml-lg-2"><a class="nav-link text-secondary" href="downwind.html">Downwind</a></li>
+					</div>
+				</div>
+				<li class="nav-item ml-lg-2"><a class="nav-link text-secondary" href="contact.html">Contact</a></li>
+				<li class="nav-item ml-lg-2">
+					<a href="traveldates.html" class="btn btn-outline-secondary font-weight-bold xl-ml-2">
+						Booking
+					</a>
+				</li>
+			</ul>
+			<div class="d-flex align-items-center justify-content-center mt-3 mt-lg-0">
+				<a href="https://wa.me/5588998241591" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp text-secondary" style="font-size: 22px;"></i></a>
+				
+								<div class="dropdown ml-2">
+					<button id="selectedLangBtn" class="btn d-flex align-items-center" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<img id="selectedFlag" src="images/flags/uk.png" width="24" alt="language">
+					</button>
+					<div class="dropdown-menu dropdown-menu-right">
+													<a class="dropdown-item d-flex align-items-center" href="#" data-lang="de" data-flag="images/flags/germany.png">
+								<img src="images/flags/germany.png" width="24" class="mr-2 mb-1"> Deutsch
+							</a>
+																			<a class="dropdown-item d-flex align-items-center" href="#" data-lang="en" data-flag="images/flags/uk.png">
+								<img src="images/flags/uk.png" width="24" class="mr-2 mb-1"> English
+							</a>
+																			<a class="dropdown-item d-flex align-items-center" href="#" data-lang="pt" data-flag="images/flags/brazil.png">
+								<img src="images/flags/brazil.png" width="24" class="mr-2 mb-1"> Português
+							</a>
+																			<a class="dropdown-item d-flex align-items-center" href="#" data-lang="es" data-flag="images/flags/spain.png">
+								<img src="images/flags/spain.png" width="24" class="mr-2 mb-1"> Español
+							</a>
+											</div>
+				</div>
+
+								<i id="loadingHeader" class="fa-solid fa-spinner fa-spin d-none mr-2"></i>
+
+								<div id="dropdownHeader" class="dropdown">
+					<button id="userMenuBtn" class="btn d-flex align-items-center" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+													<i class="fa-solid fa-user text-secondary" style="font-size: 22px;"></i>
+											</button>
+					<div class="dropdown-menu dropdown-menu-right">
+													<div class="d-flex align-items-center nav-item ml-lg-2">
+								<a class="w-100 nav-link text-secondary" href="customerident.html"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
+							</div>
+						
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</nav>
+</div>
+
+<div id="content" class="position-relative">
+
+<img src="images/rooms/main.jpg" class="img-fluid" width="100%">
+
+<div class="bg-secondary">
+  <div class="container text-white py-5">
+
+    <div class="row">
+      <div class="col-12 mb-3">
+        <h1 class="text-left">Rooms.</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mb-3 psjustify">We offer various room categories to suit every individual taste. Whether you prefer a family room, double room with sea view, twin room, or a budget-friendly dorm bed - everyone will find their perfect accommodation here. Each room is uniquely decorated and equipped with WiFi and either a fan or air conditioning. In all rooms, you can freely choose between double beds or single beds. Our room rates include a breakfast buffet and use of the kite station - separate storage, compressor, outdoor showers, large pool, beachboy service, and expansive lawn area for launching and landing right by the water at the widest point of the lagoon.</p>
+      </div>
+
+      <div class="col-md-6">
+        <p class="mb-3 psjustify">The separate kite storage and daily transfers to the low-tide kite spot are already included in the price. Our pousada also features a swimming pool, cozy hammocks, a co-working space with lagoon views, a pool table, foosball table, and a large restaurant and bar area. We also have a projector for live sports broadcasts. Free WiFi is available throughout the entire property. We look forward to welcoming you to Ilha do Guajiru. By the way: We source 100% of our electricity from our own solar energy system.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <div class="container border border-primary p-4 my-4 room-wrapper" data-images='["images\/rooms\/deluxe\/deluxe-01.jpg","images\/rooms\/deluxe\/deluxe-02.jpg","images\/rooms\/deluxe\/deluxe-03.jpg","images\/rooms\/deluxe\/deluxe-04.jpg","images\/rooms\/deluxe\/deluxe-05.jpg","images\/rooms\/deluxe\/deluxe-06.jpg","images\/rooms\/deluxe\/deluxe-07.jpg","images\/rooms\/deluxe\/deluxe-08.jpg","images\/rooms\/deluxe\/deluxe-09.jpg","images\/rooms\/deluxe\/deluxe-10.jpg","images\/rooms\/deluxe\/deluxe-11.jpg","images\/rooms\/deluxe\/deluxe-12.jpg"]'>
+
+    <div class="row align-items-start mb-4 px-4">
+    <div class="col-md-6">
+      <h1 class="text-secondary mb-0 text-left">Deluxe.</h1>
+    </div>
+    <div class="col-md-6 text-md-end">
+      <p class="mb-2 text-secondary fw-semibold">
+        Room with sea view, spacious terrace, air conditioning, minibar, hot shower, and desk.
+      </p>
+      <div class="text-right">
+        <a href="traveldates.html" class="btn btn-outline-secondary font-weight-bold">Book now</a>
+        <button class="btn btn-outline-secondary font-weight-bold btonSeeMorephotos">View more photos</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="row px-4">
+    <div class="col-md-6 mb-3">
+      <img src=images/rooms/deluxe/deluxe-01.jpg class="w-100 h-100 object-fit-cover pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/deluxe/deluxe-01.jpg">
+    </div>
+
+        <div class="col-md-6">
+      <div class="row">
+        <div class="col-6">
+          <img src=images/rooms/deluxe/deluxe-02.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/deluxe/deluxe-02.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/deluxe/deluxe-03.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/deluxe/deluxe-03.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/deluxe/deluxe-04.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/deluxe/deluxe-04.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/deluxe/deluxe-05.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/deluxe/deluxe-05.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <a class="toggle-preise">
+    <div class="text-center text-secondary mt-2">
+      <i class="fa-solid fa-arrow-down toggle-arrow"></i>
+      <p class="mb-0">Prices &amp; more</p>
+    </div>
+  </a>
+
+    <div class="preise-section container mt-4 d-none">
+    <div class="table-responsive">
+      <table
+        class="table table-borderless text-center align-middle"
+        style="width: 100%; border-collapse: separate; border-spacing: 0px 8px;"
+      >
+        <colgroup>
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th class="text-secondary text-left font-big" style="vertical-align: unset !important;">
+              Price:
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 1<br>
+              <p class="font-weight-normal mt-2 mb-0">01.07 - 24.09</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Main season<br>
+              <p class="font-weight-normal mt-2 mb-0">
+                25.09 - 05.12 | 25.12 - 05.01
+              </p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Mid season<br>
+              <p class="font-weight-normal mt-2 mb-0">06.12 - 24.12</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 2<br>
+              <p class="font-weight-normal mt-2 mb-0">06.01 - 31.01</p>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">1 Bed, 1 Person</th>
+            <td class="bg-primary">125 €</td>
+            <td class="bg-primary">165 €</td>
+            <td class="bg-primary">155 €</td>
+            <td class="bg-primary">110 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">1 Bed, 2 Persons</th>
+            <td class="bg-primary">140 €</td>
+            <td class="bg-primary">180 €</td>
+            <td class="bg-primary">170 €</td>
+            <td class="bg-primary">125 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">3 Beds, 3 Persons</th>
+            <td class="bg-primary">180 €</td>
+            <td class="bg-primary">225 €</td>
+            <td class="bg-primary">215 €</td>
+            <td class="bg-primary">155 €</td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
+  </div>
+ </div>  <div class="container border border-primary p-4 my-4 room-wrapper" data-images='["images\/rooms\/family\/family-01.jpg","images\/rooms\/family\/family-02.jpg","images\/rooms\/family\/family-03.jpg","images\/rooms\/family\/family-04.jpg","images\/rooms\/family\/family-05.jpg","images\/rooms\/family\/family-06.jpg","images\/rooms\/family\/family-07.jpg","images\/rooms\/family\/family-08.jpg","images\/rooms\/family\/family-09.jpg","images\/rooms\/family\/family-10.jpg","images\/rooms\/family\/family-11.jpg","images\/rooms\/family\/family-12.jpg","images\/rooms\/family\/family-13.jpg"]'>
+
+    <div class="row align-items-start mb-4 px-4">
+    <div class="col-md-6">
+      <h1 class="text-secondary mb-0 text-left">Deluxe <br> Family.</h1>
+    </div>
+    <div class="col-md-6 text-md-end">
+      <p class="mb-2 text-secondary fw-semibold">
+        Room with 2 separate sleeping areas - one with sea view, spacious terrace, air conditioning, minibar, hot shower, and desk.
+      </p>
+      <div class="text-right">
+        <a href="traveldates.html" class="btn btn-outline-secondary font-weight-bold">Book now</a>
+        <button class="btn btn-outline-secondary font-weight-bold btonSeeMorephotos">View more photos</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="row px-4">
+    <div class="col-md-6 mb-3">
+      <img src=images/rooms/family/family-01.jpg class="w-100 h-100 object-fit-cover pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/family/family-01.jpg">
+    </div>
+
+        <div class="col-md-6">
+      <div class="row">
+        <div class="col-6">
+          <img src=images/rooms/family/family-02.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/family/family-02.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/family/family-03.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/family/family-03.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/family/family-04.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/family/family-04.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/family/family-05.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/family/family-05.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <a class="toggle-preise">
+    <div class="text-center text-secondary mt-2">
+      <i class="fa-solid fa-arrow-down toggle-arrow"></i>
+      <p class="mb-0">Prices &amp; more</p>
+    </div>
+  </a>
+
+    <div class="preise-section container mt-4 d-none">
+    <div class="table-responsive">
+      <table
+        class="table table-borderless text-center align-middle"
+        style="width: 100%; border-collapse: separate; border-spacing: 0px 8px;"
+      >
+        <colgroup>
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th class="text-secondary text-left font-big" style="vertical-align: unset !important;">
+              Price:
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 1<br>
+              <p class="font-weight-normal mt-2 mb-0">01.07 - 24.09</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Main season<br>
+              <p class="font-weight-normal mt-2 mb-0">
+                25.09 - 05.12 | 25.12 - 05.01
+              </p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Mid season<br>
+              <p class="font-weight-normal mt-2 mb-0">06.12 - 24.12</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 2<br>
+              <p class="font-weight-normal mt-2 mb-0">06.01 - 31.01</p>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">2 Beds, 2 Persons</th>
+            <td class="bg-primary">170 €</td>
+            <td class="bg-primary">210 €</td>
+            <td class="bg-primary">200 €</td>
+            <td class="bg-primary">150 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">3 Beds, 3 Persons</th>
+            <td class="bg-primary">210 €</td>
+            <td class="bg-primary">255 €</td>
+            <td class="bg-primary">245 €</td>
+            <td class="bg-primary">180 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">4 Beds, 4 Persons</th>
+            <td class="bg-primary">250 €</td>
+            <td class="bg-primary">300 €</td>
+            <td class="bg-primary">290 €</td>
+            <td class="bg-primary">210 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">5 Beds, 5 Persons</th>
+            <td class="bg-primary">290 €</td>
+            <td class="bg-primary">345 €</td>
+            <td class="bg-primary">335 €</td>
+            <td class="bg-primary">240 €</td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
+  </div>
+ </div>  <div class="container border border-primary p-4 my-4 room-wrapper" data-images='["images\/rooms\/superior\/superior-01.jpg","images\/rooms\/superior\/superior-02.jpg","images\/rooms\/superior\/superior-03.jpg","images\/rooms\/superior\/superior-04.jpg","images\/rooms\/superior\/superior-05.jpg","images\/rooms\/superior\/superior-06.jpg","images\/rooms\/superior\/superior-07.jpg","images\/rooms\/superior\/superior-08.jpg","images\/rooms\/superior\/superior-09.jpg","images\/rooms\/superior\/superior-10.jpg","images\/rooms\/superior\/superior-11.jpg","images\/rooms\/superior\/superior-12.jpg","images\/rooms\/superior\/superior-13.jpg","images\/rooms\/superior\/superior-14.jpg","images\/rooms\/superior\/superior-15.jpg","images\/rooms\/superior\/superior-16.jpg","images\/rooms\/superior\/superior-17.jpg","images\/rooms\/superior\/superior-18.jpg","images\/rooms\/superior\/superior-19.jpg","images\/rooms\/superior\/superior-20.jpg","images\/rooms\/superior\/superior-21.jpg","images\/rooms\/superior\/superior-22.jpg","images\/rooms\/superior\/superior-23.jpg"]'>
+
+    <div class="row align-items-start mb-4 px-4">
+    <div class="col-md-6">
+      <h1 class="text-secondary mb-0 text-left">Superior.</h1>
+    </div>
+    <div class="col-md-6 text-md-end">
+      <p class="mb-2 text-secondary fw-semibold">
+        Room with garden view, air conditioning, minibar and hot shower.
+      </p>
+      <div class="text-right">
+        <a href="traveldates.html" class="btn btn-outline-secondary font-weight-bold">Book now</a>
+        <button class="btn btn-outline-secondary font-weight-bold btonSeeMorephotos">View more photos</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="row px-4">
+    <div class="col-md-6 mb-3">
+      <img src=images/rooms/superior/superior-01.jpg class="w-100 h-100 object-fit-cover pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/superior/superior-01.jpg">
+    </div>
+
+        <div class="col-md-6">
+      <div class="row">
+        <div class="col-6">
+          <img src=images/rooms/superior/superior-02.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/superior/superior-02.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/superior/superior-03.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/superior/superior-03.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/superior/superior-04.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/superior/superior-04.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/superior/superior-05.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/superior/superior-05.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <a class="toggle-preise">
+    <div class="text-center text-secondary mt-2">
+      <i class="fa-solid fa-arrow-down toggle-arrow"></i>
+      <p class="mb-0">Prices &amp; more</p>
+    </div>
+  </a>
+
+    <div class="preise-section container mt-4 d-none">
+    <div class="table-responsive">
+      <table
+        class="table table-borderless text-center align-middle"
+        style="width: 100%; border-collapse: separate; border-spacing: 0px 8px;"
+      >
+        <colgroup>
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th class="text-secondary text-left font-big" style="vertical-align: unset !important;">
+              Price:
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 1<br>
+              <p class="font-weight-normal mt-2 mb-0">01.07 - 24.09</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Main season<br>
+              <p class="font-weight-normal mt-2 mb-0">
+                25.09 - 05.12 | 25.12 - 05.01
+              </p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Mid season<br>
+              <p class="font-weight-normal mt-2 mb-0">06.12 - 24.12</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 2<br>
+              <p class="font-weight-normal mt-2 mb-0">06.01 - 31.01</p>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">1 Bed, 1 Person</th>
+            <td class="bg-primary">95 €</td>
+            <td class="bg-primary">125 €</td>
+            <td class="bg-primary">115 €</td>
+            <td class="bg-primary">85 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">1 Bed, 2 Persons</th>
+            <td class="bg-primary">105 €</td>
+            <td class="bg-primary">135 €</td>
+            <td class="bg-primary">125 €</td>
+            <td class="bg-primary">95 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">3 Beds, 3 Persons</th>
+            <td class="bg-primary">135 €</td>
+            <td class="bg-primary">170 €</td>
+            <td class="bg-primary">160 €</td>
+            <td class="bg-primary">120 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">4 Beds, 4 Persons</th>
+            <td class="bg-primary">165 €</td>
+            <td class="bg-primary">205 €</td>
+            <td class="bg-primary">195 €</td>
+            <td class="bg-primary">145 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">5 Beds, 5 Persons</th>
+            <td class="bg-primary">195 €</td>
+            <td class="bg-primary">240 €</td>
+            <td class="bg-primary">230 €</td>
+            <td class="bg-primary">170 €</td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
+  </div>
+ </div>  <div class="container border border-primary p-4 my-4 room-wrapper" data-images='["images\/rooms\/classicplus\/classicplus-01.jpg","images\/rooms\/classicplus\/classicplus-02.jpg","images\/rooms\/classicplus\/classicplus-03.jpg","images\/rooms\/classicplus\/classicplus-04.jpg","images\/rooms\/classicplus\/classicplus-05.jpg","images\/rooms\/classicplus\/classicplus-06.jpg","images\/rooms\/classicplus\/classicplus-07.jpg"]'>
+
+    <div class="row align-items-start mb-4 px-4">
+    <div class="col-md-6">
+      <h1 class="text-secondary mb-0 text-left">Classic Plus.</h1>
+    </div>
+    <div class="col-md-6 text-md-end">
+      <p class="mb-2 text-secondary fw-semibold">
+        Cozy rooms in the livingly back part of the guesthouse with air conditioning, minibar and hot shower.
+      </p>
+      <div class="text-right">
+        <a href="traveldates.html" class="btn btn-outline-secondary font-weight-bold">Book now</a>
+        <button class="btn btn-outline-secondary font-weight-bold btonSeeMorephotos">View more photos</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="row px-4">
+    <div class="col-md-6 mb-3">
+      <img src=images/rooms/classicplus/classicplus-01.jpg class="w-100 h-100 object-fit-cover pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/classicplus/classicplus-01.jpg">
+    </div>
+
+        <div class="col-md-6">
+      <div class="row">
+        <div class="col-6">
+          <img src=images/rooms/classicplus/classicplus-02.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/classicplus/classicplus-02.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/classicplus/classicplus-03.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/classicplus/classicplus-03.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/classicplus/classicplus-04.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/classicplus/classicplus-04.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/classicplus/classicplus-05.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/classicplus/classicplus-05.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <a class="toggle-preise">
+    <div class="text-center text-secondary mt-2">
+      <i class="fa-solid fa-arrow-down toggle-arrow"></i>
+      <p class="mb-0">Prices &amp; more</p>
+    </div>
+  </a>
+
+    <div class="preise-section container mt-4 d-none">
+    <div class="table-responsive">
+      <table
+        class="table table-borderless text-center align-middle"
+        style="width: 100%; border-collapse: separate; border-spacing: 0px 8px;"
+      >
+        <colgroup>
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th class="text-secondary text-left font-big" style="vertical-align: unset !important;">
+              Price:
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 1<br>
+              <p class="font-weight-normal mt-2 mb-0">01.07 - 24.09</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Main season<br>
+              <p class="font-weight-normal mt-2 mb-0">
+                25.09 - 05.12 | 25.12 - 05.01
+              </p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Mid season<br>
+              <p class="font-weight-normal mt-2 mb-0">06.12 - 24.12</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 2<br>
+              <p class="font-weight-normal mt-2 mb-0">06.01 - 31.01</p>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">1 Bed, 1 Person</th>
+            <td class="bg-primary">??? €</td>
+            <td class="bg-primary">100 €</td>
+            <td class="bg-primary">95 €</td>
+            <td class="bg-primary">70 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">1 Bed, 2 Persons</th>
+            <td class="bg-primary">??? €</td>
+            <td class="bg-primary">110 €</td>
+            <td class="bg-primary">105 €</td>
+            <td class="bg-primary">80 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">3 Beds, 3 Persons</th>
+            <td class="bg-primary">115 €</td>
+            <td class="bg-primary">140 €</td>
+            <td class="bg-primary">135 €</td>
+            <td class="bg-primary">100 €</td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
+  </div>
+ </div>  <div class="container border border-primary p-4 my-4 room-wrapper" data-images='["images\/rooms\/classic\/classic-01.jpg","images\/rooms\/classic\/classic-02.jpg","images\/rooms\/classic\/classic-03.jpg","images\/rooms\/classic\/classic-04.jpg","images\/rooms\/classic\/classic-05.jpg","images\/rooms\/classic\/classic-06.jpg","images\/rooms\/classic\/classic-07.jpg","images\/rooms\/classic\/classic-08.jpg","images\/rooms\/classic\/classic-09.jpg","images\/rooms\/classic\/classic-10.jpg","images\/rooms\/classic\/classic-11.jpg","images\/rooms\/classic\/classic-12.jpg"]'>
+
+    <div class="row align-items-start mb-4 px-4">
+    <div class="col-md-6">
+      <h1 class="text-secondary mb-0 text-left">Classic.</h1>
+    </div>
+    <div class="col-md-6 text-md-end">
+      <p class="mb-2 text-secondary fw-semibold">
+        Cozy, simple rooms with garden view, fan, minibar and hot shower.
+      </p>
+      <div class="text-right">
+        <a href="traveldates.html" class="btn btn-outline-secondary font-weight-bold">Book now</a>
+        <button class="btn btn-outline-secondary font-weight-bold btonSeeMorephotos">View more photos</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="row px-4">
+    <div class="col-md-6 mb-3">
+      <img src=images/rooms/classic/classic-01.jpg class="w-100 h-100 object-fit-cover pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/classic/classic-01.jpg">
+    </div>
+
+        <div class="col-md-6">
+      <div class="row">
+        <div class="col-6">
+          <img src=images/rooms/classic/classic-02.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/classic/classic-02.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/classic/classic-03.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/classic/classic-03.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/classic/classic-04.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/classic/classic-04.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/classic/classic-05.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/classic/classic-05.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <a class="toggle-preise">
+    <div class="text-center text-secondary mt-2">
+      <i class="fa-solid fa-arrow-down toggle-arrow"></i>
+      <p class="mb-0">Prices &amp; more</p>
+    </div>
+  </a>
+
+    <div class="preise-section container mt-4 d-none">
+    <div class="table-responsive">
+      <table
+        class="table table-borderless text-center align-middle"
+        style="width: 100%; border-collapse: separate; border-spacing: 0px 8px;"
+      >
+        <colgroup>
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th class="text-secondary text-left font-big" style="vertical-align: unset !important;">
+              Price:
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 1<br>
+              <p class="font-weight-normal mt-2 mb-0">01.07 - 24.09</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Main season<br>
+              <p class="font-weight-normal mt-2 mb-0">
+                25.09 - 05.12 | 25.12 - 05.01
+              </p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Mid season<br>
+              <p class="font-weight-normal mt-2 mb-0">06.12 - 24.12</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 2<br>
+              <p class="font-weight-normal mt-2 mb-0">06.01 - 31.01</p>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">1 Bed, 1 Person</th>
+            <td class="bg-primary">65 €</td>
+            <td class="bg-primary">85 €</td>
+            <td class="bg-primary">80 €</td>
+            <td class="bg-primary">60 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">1 Bed, 2 Persons</th>
+            <td class="bg-primary">75 €</td>
+            <td class="bg-primary">95 €</td>
+            <td class="bg-primary">90 €</td>
+            <td class="bg-primary">70 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">3 Beds, 3 Persons</th>
+            <td class="bg-primary">100 €</td>
+            <td class="bg-primary">125 €</td>
+            <td class="bg-primary">120 €</td>
+            <td class="bg-primary">90 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">4 Beds, 4 Persons</th>
+            <td class="bg-primary">125 €</td>
+            <td class="bg-primary">155 €</td>
+            <td class="bg-primary">150 €</td>
+            <td class="bg-primary">110 €</td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
+  </div>
+ </div>  <div class="container border border-primary p-4 my-4 room-wrapper" data-images='["images\/rooms\/gardenhouse\/gardenhouse-01.jpg","images\/rooms\/gardenhouse\/gardenhouse-02.jpg","images\/rooms\/gardenhouse\/gardenhouse-03.jpg","images\/rooms\/gardenhouse\/gardenhouse-04.jpg","images\/rooms\/gardenhouse\/gardenhouse-05.jpg","images\/rooms\/gardenhouse\/gardenhouse-06.jpg","images\/rooms\/gardenhouse\/gardenhouse-07.jpg","images\/rooms\/gardenhouse\/gardenhouse-08.jpg","images\/rooms\/gardenhouse\/gardenhouse-09.jpg","images\/rooms\/gardenhouse\/gardenhouse-10.jpg","images\/rooms\/gardenhouse\/gardenhouse-11.jpg","images\/rooms\/gardenhouse\/gardenhouse-12.jpg"]'>
+
+    <div class="row align-items-start mb-4 px-4">
+    <div class="col-md-6">
+      <h1 class="text-secondary mb-0 text-left">Gardenhouse.</h1>
+    </div>
+    <div class="col-md-6 text-md-end">
+      <p class="mb-2 text-secondary fw-semibold">
+        Room with garden view, spacious terrace, air conditioning, minibar and hot shower. Located on the other side of the street; approx. 50 meters from the main building.
+      </p>
+      <div class="text-right">
+        <a href="traveldates.html" class="btn btn-outline-secondary font-weight-bold">Book now</a>
+        <button class="btn btn-outline-secondary font-weight-bold btonSeeMorephotos">View more photos</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="row px-4">
+    <div class="col-md-6 mb-3">
+      <img src=images/rooms/gardenhouse/gardenhouse-01.jpg class="w-100 h-100 object-fit-cover pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/gardenhouse/gardenhouse-01.jpg">
+    </div>
+
+        <div class="col-md-6">
+      <div class="row">
+        <div class="col-6">
+          <img src=images/rooms/gardenhouse/gardenhouse-02.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/gardenhouse/gardenhouse-02.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/gardenhouse/gardenhouse-03.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/gardenhouse/gardenhouse-03.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/gardenhouse/gardenhouse-04.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/gardenhouse/gardenhouse-04.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/gardenhouse/gardenhouse-05.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/gardenhouse/gardenhouse-05.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <a class="toggle-preise">
+    <div class="text-center text-secondary mt-2">
+      <i class="fa-solid fa-arrow-down toggle-arrow"></i>
+      <p class="mb-0">Prices &amp; more</p>
+    </div>
+  </a>
+
+    <div class="preise-section container mt-4 d-none">
+    <div class="table-responsive">
+      <table
+        class="table table-borderless text-center align-middle"
+        style="width: 100%; border-collapse: separate; border-spacing: 0px 8px;"
+      >
+        <colgroup>
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th class="text-secondary text-left font-big" style="vertical-align: unset !important;">
+              Price:
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 1<br>
+              <p class="font-weight-normal mt-2 mb-0">01.07 - 24.09</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Main season<br>
+              <p class="font-weight-normal mt-2 mb-0">
+                25.09 - 05.12 | 25.12 - 05.01
+              </p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Mid season<br>
+              <p class="font-weight-normal mt-2 mb-0">06.12 - 24.12</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 2<br>
+              <p class="font-weight-normal mt-2 mb-0">06.01 - 31.01</p>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">1 Bed, 1 Person</th>
+            <td class="bg-primary">80 €</td>
+            <td class="bg-primary">105 €</td>
+            <td class="bg-primary">100 €</td>
+            <td class="bg-primary">75 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">1 Bed, 2 Persons</th>
+            <td class="bg-primary">90 €</td>
+            <td class="bg-primary">115 €</td>
+            <td class="bg-primary">110 €</td>
+            <td class="bg-primary">85 €</td>
+          </tr>
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">3 Beds, 3 Persons</th>
+            <td class="bg-primary">120 €</td>
+            <td class="bg-primary">150 €</td>
+            <td class="bg-primary">145 €</td>
+            <td class="bg-primary">110 €</td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
+  </div>
+ </div>  <div class="container border border-primary p-4 my-4 room-wrapper" data-images='["images\/rooms\/dormbett\/dormbett-01.jpg","images\/rooms\/dormbett\/dormbett-02.jpg","images\/rooms\/dormbett\/dormbett-03.jpg","images\/rooms\/dormbett\/dormbett-04.jpg","images\/rooms\/dormbett\/dormbett-05.jpg","images\/rooms\/dormbett\/dormbett-06.jpg"]'>
+
+    <div class="row align-items-start mb-4 px-4">
+    <div class="col-md-6">
+      <h1 class="text-secondary mb-0 text-left">Dorm.</h1>
+    </div>
+    <div class="col-md-6 text-md-end">
+      <p class="mb-2 text-secondary fw-semibold">
+        Mixed dormitory for four people with two bunk beds, air conditioning, lockers for valuables and a shared bathroom.
+      </p>
+      <div class="text-right">
+        <a href="traveldates.html" class="btn btn-outline-secondary font-weight-bold">Book now</a>
+        <button class="btn btn-outline-secondary font-weight-bold btonSeeMorephotos">View more photos</button>
+      </div>
+    </div>
+  </div>
+
+    <div class="row px-4">
+    <div class="col-md-6 mb-3">
+      <img src=images/rooms/dormbett/dormbett-01.jpg class="w-100 h-100 object-fit-cover pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/dormbett/dormbett-01.jpg">
+    </div>
+
+        <div class="col-md-6">
+      <div class="row">
+        <div class="col-6">
+          <img src=images/rooms/dormbett/dormbett-02.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/dormbett/dormbett-02.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/dormbett/dormbett-03.jpg class="w-100 mb-4 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/dormbett/dormbett-03.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/dormbett/dormbett-04.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/dormbett/dormbett-04.jpg">
+        </div>
+        <div class="col-6">
+          <img src=images/rooms/dormbett/dormbett-05.jpg class="w-100 pointer img-gallery" data-toggle="modal" data-target="#imageModal" data-img="images/rooms/dormbett/dormbett-05.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <a class="toggle-preise">
+    <div class="text-center text-secondary mt-2">
+      <i class="fa-solid fa-arrow-down toggle-arrow"></i>
+      <p class="mb-0">Prices &amp; more</p>
+    </div>
+  </a>
+
+    <div class="preise-section container mt-4 d-none">
+    <div class="table-responsive">
+      <table
+        class="table table-borderless text-center align-middle"
+        style="width: 100%; border-collapse: separate; border-spacing: 0px 8px;"
+      >
+        <colgroup>
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+          <col style="width:20%">
+        </colgroup>
+
+        <thead>
+          <tr>
+            <th class="text-secondary text-left font-big" style="vertical-align: unset !important;">
+              Price:
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 1<br>
+              <p class="font-weight-normal mt-2 mb-0">01.07 - 24.09</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Main season<br>
+              <p class="font-weight-normal mt-2 mb-0">
+                25.09 - 05.12 | 25.12 - 05.01
+              </p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Mid season<br>
+              <p class="font-weight-normal mt-2 mb-0">06.12 - 24.12</p>
+            </th>
+            <th class="bg-secondary text-white border">
+              Low season 2<br>
+              <p class="font-weight-normal mt-2 mb-0">06.01 - 31.01</p>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+                  <tr class="table-info mb-2">
+            <th class="bg-primary">1 Bed, 1 Person</th>
+            <td class="bg-primary">40 €</td>
+            <td class="bg-primary">40 €</td>
+            <td class="bg-primary">40 €</td>
+            <td class="bg-primary">40 €</td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </div>
+  </div>
+ </div>
+<div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content bg-transparent border-0">
+
+      <button type="button" class="close position-absolute text-white" data-dismiss="modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="roomCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+        <div class="carousel-inner" id="carouselImages"></div>
+
+        <a class="carousel-control-prev" href="#roomCarousel" role="button" data-slide="prev">
+          <i class="fa-solid fa-chevron-left text-white"></i>
+        </a>
+
+        <a class="carousel-control-next" href="#roomCarousel" role="button" data-slide="next">
+          <i class="fa-solid fa-chevron-right text-white"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<button id="btnTop" class="btn btn-primary rounded-circle shadow position-fixed">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" data-backdrop="static" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-md modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="alert alert-success fade show alert-success m-0 d-none" role="alert" id="feedbackSuccess" data-md5="f0950076121d9c58428032c6c10a54f9"><i class="fa-solid fa-circle-check fa-lg pr-1 text-success"></i> <span id="feedbackSuccessText"></span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>			<div class="alert alert-info fade show alert-info m-0 d-none" role="alert" id="feedbackInfo" data-md5="110268a63cca45e8e3d390f7e41d8e9d"><i class="fa-solid fa-circle-info fa-lg pr-1 text-primary"></i> <span id="feedbackInfoText"></span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>			<div class="alert alert-warning fade show alert-warning m-0 d-none" role="alert" id="feedbackException" data-md5="8f88a697bd7815b7a9e186191b1a12fa"><i class="fa-solid fa-triangle-exclamation fa-lg pr-1 text-warning"></i> <span id="feedbackExceptionText"></span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>			<div class="alert alert-danger fade show alert-danger m-0 d-none" role="alert" id="feedbackError" data-md5="577d69e6f0e0bc8bb1b901d120d1dbda"><i class="fa-solid fa-xmark fa-lg pr-1 text-danger"></i> <span id="feedbackErrorText"></span><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>		</div>
+	</div>
+</div>  <footer class="bg-primary text-white font-weight-bold" id="footer">
+    <div class="container py-4">
+      <div class="row justify-content-between align-items-center">
+        
+        <!-- Left column -->
+        <div class="col-md-3 mb-3 mb-md-0">
+          <ul class="list-unstyled">
+            <li><a href="legalnotice.html" class="text-white text-decoration-none">Legal Notice</a></li>
+            <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+            <li><a href="traveldates.html" class="text-white text-decoration-none">Booking</a></li>
+            <li><a href="aboutus.html" class="text-white text-decoration-none">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Centered column -->
+        <div class="col-md-6 mb-3 mb-md-0 text-center">
+          <p class="font-weight-bold">&copy; 7 Beaufort Brasil 2025</p>
+        </div>
+
+        <!-- Right column -->
+        <div class="col-md-3 text-center text-lg-right">
+          <p class="mb-1">Follow Us</p>
+          <a href="https://www.instagram.com/7bft_brasil/" class="text-white me-2"><i class="fab fa-instagram fa-lg"></i></a>
+          <a href="https://www.facebook.com/7beaufortbrasil" class="text-white"><i class="fab fa-facebook fa-lg"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/additional-methods.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-select.min.js"></script>
+  <script src="js/jquery.serializeToJSON.min.js"></script>
+  <script src="js/psscript.js"></script>
+  <script src="js/psmodal.js"></script>
+  <script src="js/pssearch.js"></script>
+  <script src="js/psupload.js"></script>
+        <script src="endpoints/public/rooms.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/reservationScript.js"></script>
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</body>
+</html>

@@ -19,7 +19,7 @@ export function contentProblem(c: OfferContent): string | null {
   if (c.durationDays !== null && (!Number.isInteger(c.durationDays) || c.durationDays < 1 || c.durationDays > 60)) {
     return `durationDays implausible (${c.durationDays})`;
   }
-  if (c.kind !== 'accommodation' && c.durationDays === null) return 'tour/camp without durationDays';
+  if ((c.kind === 'tour' || c.kind === 'camp' || c.kind === 'experience') && c.durationDays === null) return `${c.kind} without durationDays`;
   if (c.spotCoords && !(Math.abs(c.spotCoords.lat) <= 90 && Math.abs(c.spotCoords.lng) <= 180)) return 'spotCoords out of range';
   return null;
 }
