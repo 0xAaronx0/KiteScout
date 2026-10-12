@@ -157,6 +157,7 @@ export function parseMichaelsContent(p: MkvPages): OfferContent {
     country: 'Greece',
     region: 'Dodecanese',
     spot: 'Fanes, Rhodes',
+    spotCoords: { lat: 36.3504, lng: 27.9827 }, // Fanes village (geocoder misses "Fanes, Rhodes")
     itinerarySpots: [],
     durationDays: null,
     // home page: "Whether you're a beginner or seasoned pro" (2026-10-09)

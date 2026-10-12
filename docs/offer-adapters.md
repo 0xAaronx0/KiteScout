@@ -3,8 +3,9 @@
 Status 2026-10-09: 15 test adapters (5 accommodation, 5 tour, 5 camp), 14 ingested into the live
 `package_offers` (BookSurfCamps blocked). The KCS app reads them only with
 `KITESCOUT_ENABLE_CATALOG_EXPANSION=true` - ON in Production since KCS PR #170 (live map 2026-10-12: 169
-offers = 149 cruises + 20 packages). Their `itinerary_spots` carry no lat/lng yet, so the 14 site
-offers are listed under "offers without coordinates" on the map. All 20 package rows (6 bstoked + 14 site)
+offers = 149 cruises + 20 packages). A full ingest geocodes `itinerary_spots` (the KCS map pins only
+located spots): adapter `spotCoords` / `KNOWN_PINS` in `ingest.ts` first, then stored coordinates, then
+Nominatim. Live map after the backfill 2026-10-12: 166/169 mapped. All 20 package rows (6 bstoked + 14 site)
 parse through KCS `origin/main` `loadCatalogOfferCatalog` (checked 2026-10-09).
 
 ## Model (ported from kiezdad / kiezkind)
@@ -33,7 +34,7 @@ pnpm cli offers ingest [key|all]             # full: content + images (first tim
 pnpm cli offers ingest all --slots           # daily price/availability refresh (cron: monitor.yml job offer-slots, 06:00 UTC)
 pnpm cli offers ingest <key> --refresh-images
 npx tsx src/offers/probe-one.ts src/offers/adapters/<key>.ts   # one adapter, no DB
-npx tsx --test test/offers/*.test.ts         # 79 tests (fixtures, no network)
+npx tsx --test test/offers/*.test.ts         # 83 tests (fixtures, no network)
 ```
 
 ## Bands, not months (2026-10-12)

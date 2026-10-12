@@ -168,6 +168,8 @@ export function parseLakeUnitedContent(html: string, url = LAKEUNITED_URL): Offe
     country: 'Tunisia',
     region: 'Medenine (Djerba / Zarzis)',
     spot: 'Djerba lagoon',
+    // lagoon between Djerba and the mainland at the El Kantara causeway (geocoder has no "Djerba lagoon")
+    spotCoords: { lat: 33.6802, lng: 10.9156 },
     itinerarySpots: [],
     durationDays: nights + 1,
     skillLevels: /for all levels|beginner,? intermediate,? (and|or) advanced/i.test(text) ? ['beginner', 'intermediate', 'advanced'] : [],

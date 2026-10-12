@@ -179,6 +179,8 @@ export function parseAlgarveContent(html: string, url = ALGARVE_URL): OfferConte
     region: place?.addressRegion ?? 'Algarve',
     // page: "Ria de Alvor Lagoon ... Primary kite spot" (deep-water days at Meia Praia), 2026-10-09
     spot: /Ria de Alvor/i.test(pageText) ? `Ria de Alvor lagoon, ${place?.addressLocality ?? 'Lagos'}` : (place?.addressLocality ?? 'Lagos'),
+    // Nominatim has no "Ria de Alvor lagoon, Lagos"; "Ria de Alvor" alone resolves here (2026-10-12)
+    spotCoords: /Ria de Alvor/i.test(pageText) ? { lat: 37.1403, lng: -8.6113 } : null,
     itinerarySpots: [],
     durationDays: Number.isFinite(nights) ? nights + 1 : 8,
     skillLevels: skillLevels.length ? skillLevels : ['beginner'],

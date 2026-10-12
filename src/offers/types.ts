@@ -102,6 +102,8 @@ export interface OfferContent {
   region: string | null;
   /** where it happens (accommodation/camp: the spot; tour: start point) */
   spot: string | null;
+  /** map pin for `spot` when the geocoder cannot place it (the KCS map only pins located spots) */
+  spotCoords?: { lat: number; lng: number } | null;
   itinerarySpots: ItinerarySpot[];
   durationDays: number | null;  // tours/camps: nights + 1; accommodation: null
   skillLevels: string[];        // 'beginner' | 'intermediate' | 'advanced'

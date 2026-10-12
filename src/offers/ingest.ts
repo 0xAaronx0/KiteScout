@@ -12,6 +12,8 @@
 import { createHash } from 'node:crypto';
 import { supabase } from '../lib/supabase.js';
 import { curateAndStoreImages, slugify, type StoredImage, type VisionBrief } from '../lib/images.js';
+import { geocodeSpot } from '../lib/geocode.js';
+import { mergeItinerarySpots, type StoredSpot } from '../lib/itinerary-spots.js';
 import { checkSlots, contentProblem } from './validate.js';
 import { BlockedByHost, countRequests } from './http.js';
 import { isBookable, type OfferAdapter, type OfferContent, type OfferKind, type Slot } from './types.js';
@@ -171,8 +173,37 @@ function slotJson(s: Slot) {
   };
 }
 
+// --- map pins --------------------------------------------------------------------------
+// The KCS map pins an offer only from itinerary_spots with lat/lng. Route stops if the adapter
+// has them, else its one spot. Order: known pin, stored coordinates, geocoder.
+
+/** Route stops the geocoder places wrongly (checked 2026-10-12); keys are lower-case stop names. */
+const KNOWN_PINS: Record<string, { lat: number; lng: number }> = {
+  // "Jericoacoara, Ceará" resolves to the municipality, 11 km inland; this is the village
+  jericoacoara: { lat: -2.7952, lng: -40.5152 },
+  // end of the Dakhla downwind; Nominatim returns a Dakhla street and a namesake in southern Morocco
+  lagouira: { lat: 20.8333, lng: -17.0833 },
+};
+
+export async function locateSpots(c: OfferContent, stored: unknown): Promise<StoredSpot[]> {
+  const named = c.itinerarySpots.length
+    ? c.itinerarySpots
+    : c.spot ? [{ name: c.spot, country: c.country, region: c.region, order: 1 }] : [];
+  const known = new Map((Array.isArray(stored) ? stored as StoredSpot[] : [])
+    .filter(s => s && typeof s.lat === 'number' && typeof s.lng === 'number')
+    .map(s => [s.name.trim().toLowerCase(), s] as const));
+  const out: StoredSpot[] = [];
+  for (const s of named) {
+    const pinned = (!c.itinerarySpots.length && c.spotCoords ? c.spotCoords : null) ?? KNOWN_PINS[s.name.trim().toLowerCase()] ?? null;
+    const prev = known.get(s.name.trim().toLowerCase());
+    const g = pinned ?? (prev ? { lat: prev.lat!, lng: prev.lng! } : await geocodeSpot(s.name, s.region, s.country));
+    out.push({ name: s.name, country: s.country, region: s.region, lat: g?.lat ?? null, lng: g?.lng ?? null, order: s.order });
+  }
+  return mergeItinerarySpots(out, stored).spots;
+}
+
 // --- content row ---------------------------------------------------------------------
-function contentRow(a: OfferAdapter, c: OfferContent, operatorId: string) {
+function contentRow(a: OfferAdapter, c: OfferContent, operatorId: string, spots: StoredSpot[]) {
   return {
     package_type: c.kind,
     title: c.title,
@@ -182,7 +213,7 @@ function contentRow(a: OfferAdapter, c: OfferContent, operatorId: string) {
     continent: c.continent,
     country: c.country,
     region: c.region,
-    itinerary_spots: c.itinerarySpots.map(s => ({ name: s.name, country: s.country, region: s.region, order: s.order })),
+    itinerary_spots: spots,
     skill_levels: c.skillLevels,
     kite_lessons: c.kiteLessons,
     equipment_rental: c.equipmentRental,
@@ -341,7 +372,7 @@ async function runAdapterInner(
     rep.operatorId = operatorId;
     const listingId = SOURCE_PREFIX + a.key;
     const { data: existing, error: rErr } = await supabase
-      .from('package_offers').select('id,images,pricing,rooms').eq('source_listing_id', listingId).maybeSingle();
+      .from('package_offers').select('id,images,pricing,rooms,itinerary_spots').eq('source_listing_id', listingId).maybeSingle();
     if (rErr) throw new Error(`package_offers read failed: ${rErr.message}`);
     if (!existing && !content) throw new Error('offer not ingested yet: run a full ingest first');
     offerId = (existing?.id as string | undefined) ?? null;
@@ -383,7 +414,9 @@ async function runAdapterInner(
     };
 
     if (content) {
-      const row = { ...contentRow(a, content, operatorId), ...priceCols, rooms: roomsWithPrices(content, slots, today) };
+      const spots = await locateSpots(content, existing?.itinerary_spots);
+      if (!spots.some(s => s.lat !== null)) rep.notes.push('no map pin: spot could not be geocoded');
+      const row = { ...contentRow(a, content, operatorId, spots), ...priceCols, rooms: roomsWithPrices(content, slots, today) };
       const { data: up, error: upErr } = await supabase
         .from('package_offers').upsert(row, { onConflict: 'source_listing_id' }).select('id').single();
       if (upErr) throw new Error(`package_offers upsert failed: ${upErr.message}`);

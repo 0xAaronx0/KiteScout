@@ -20,6 +20,7 @@ export function contentProblem(c: OfferContent): string | null {
     return `durationDays implausible (${c.durationDays})`;
   }
   if (c.kind !== 'accommodation' && c.durationDays === null) return 'tour/camp without durationDays';
+  if (c.spotCoords && !(Math.abs(c.spotCoords.lat) <= 90 && Math.abs(c.spotCoords.lng) <= 180)) return 'spotCoords out of range';
   return null;
 }
 

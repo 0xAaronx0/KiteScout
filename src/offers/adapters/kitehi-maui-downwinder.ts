@@ -96,6 +96,8 @@ export function parseKitehiContent(aboutHtml: string, locationsHtml: string): Of
     country: 'United States',
     region: 'Hawaii',
     spot: 'North Shore, Maui',
+    // Kanaha Beach Park; "North Shore, Maui" geocodes inland near Makawao
+    spotCoords: { lat: 20.9005, lng: -156.4388 },
     itinerarySpots: [],           // route not published (FareHarbor only)
     durationDays: 1,
     skillLevels: ['intermediate', 'advanced'], // inferred: a downwinder needs independent riders
