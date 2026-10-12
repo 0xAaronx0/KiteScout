@@ -81,6 +81,15 @@ BRL 2,580.72; Kite Village 05.-12.12.: Bungalow EUR 770).
 | camp | lakeunited-djerba | dated weeks in page text | no (inquiry) |
 | camp | bsc-atlanticzin-essaouira | BookSurfCamps calendar attribute | BLOCKED (Cloudflare 403); platform owner Tripaneer reportedly bankrupt 2026-10-01 |
 | camp | kite-sisters-brazil | dated weeks + "SOLD OUT" text | status words |
+| tour | theriderexperience-los-roques | page dates + booking deadline; prices = constants from the info PDF (released while the page links it) | limited, closed after the deadline |
+| tour | surfariafrika-primal-explorer | group-size price table (+ budget version), "Dates: TBC" | no (on request) |
+| tour | surfariafrika-downwinder-xl | site-wide "Roadtrip / Downwinder xl 31 - 9 FEBRUARI 2027" card + "cost … sharing / single" | no (on request) |
+| tour | surfariafrika-namibia-downwinder | itinerary only, the page prints no price | no (on request, low confidence) |
+
+Added 2026-10-12 (Aaron: land-based trips found by the cruise monitor go to the package catalog, not
+`cruise_offers`). Surfari Afrika keeps older parallel pages of the same products (`/project-page`,
+`/Remoteislands`); the newest pages are the source, and three Kenya photos shown on every page are kept
+off the Namibia tour. Not ingested: `/safari-2027---2-nights` (wildlife safari, no kiting).
 
 ## Refresh strategy (recommendation)
 

@@ -15,6 +15,8 @@ import { lakeunitedDjerba } from './adapters/lakeunited-djerba.js';
 import { michaelsKiteVacanciesRhodes } from './adapters/michaels-kite-vacancies-rhodes.js';
 import { panamaKiteHouse } from './adapters/panama-kite-house.js';
 import { realLaVentanaSupercamp } from './adapters/real-la-ventana-supercamp.js';
+import { surfariafrikaDownwinderXl, surfariafrikaNamibiaDownwinder, surfariafrikaPrimalExplorer } from './adapters/surfariafrika.js';
+import { theriderexperienceLosRoques } from './adapters/theriderexperience-los-roques.js';
 import { toowettoshredBrazil } from './adapters/toowettoshred-brazil.js';
 import { ventusBrazilRoutes } from './adapters/ventus-brazil-routes.js';
 import { vilaGuaraAtins } from './adapters/vila-guara-atins.js';
@@ -32,6 +34,10 @@ export const adapters: OfferAdapter[] = [
   michaelsKiteVacanciesRhodes,
   panamaKiteHouse,
   realLaVentanaSupercamp,
+  surfariafrikaDownwinderXl,
+  surfariafrikaNamibiaDownwinder,
+  surfariafrikaPrimalExplorer,
+  theriderexperienceLosRoques,
   toowettoshredBrazil,
   ventusBrazilRoutes,
   vilaGuaraAtins,
