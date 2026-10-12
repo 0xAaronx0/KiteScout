@@ -77,6 +77,8 @@ export interface Proposal {
   changes: FieldChange[];
   /** rule violations → manual review instead of auto-apply */
   violations: string[];
+  /** observed values dropped as implausible (extraction errors, never written, never reviewed) */
+  ignored: string[];
   fingerprint: string;
   changeType: 'price_change' | 'dates_change';
   summary: string;
@@ -154,7 +156,8 @@ function futureKey(deps: Departure[], today: string): string {
 // --- proposal ---------------------------------------------------------------------------
 
 function jumpTooBig(before: number | null, after: number): boolean {
-  return before !== null && before > 0 && Math.abs(after - before) / before > MAX_PRICE_JUMP;
+  // boundary exclusive: a jump of exactly 40 % already goes to review
+  return before !== null && before > 0 && Math.abs(after - before) / before >= MAX_PRICE_JUMP;
 }
 
 /**
@@ -175,9 +178,15 @@ export function proposeUpdate(
   const set: Record<string, unknown> = {};
   const changes: FieldChange[] = [];
   const violations: string[] = [];
+  const ignored: string[] = [];
   const put = (field: string, before: unknown, after: unknown): void => {
     set[field] = after;
     changes.push({ field, before, after });
+  };
+  const unput = (field: string): void => {
+    delete set[field];
+    const i = changes.findIndex(c => c.field === field);
+    if (i >= 0) changes.splice(i, 1);
   };
 
   // ── departures ──
@@ -224,12 +233,14 @@ export function proposeUpdate(
     if (pp && pp.amount > 0) {
       const cur = normCurrency(pp.currency);
       const amount = Math.round(pp.amount);
-      if (cur && (amount !== offer.price_pp_cabin || cur !== offer.price_pp_cabin_currency)) {
-        const eq = eurEq({ amount, currency: cur });
+      const eq = cur ? eurEq({ amount, currency: cur }) : null;
+      // An implausible value is an extraction error (per-night price, deposit, component): drop it.
+      const implausible = eq !== null && (eq < PP_RANGE[0] || eq > PP_RANGE[1]);
+      if (implausible) ignored.push(`Preis p.P. ${amount} ${cur} unplausibel`);
+      if (cur && !implausible && (amount !== offer.price_pp_cabin || cur !== offer.price_pp_cabin_currency)) {
         if (eq === null) violations.push(`Währung ${cur} unbekannt (Plausibilität nicht prüfbar)`);
-        else if (eq < PP_RANGE[0] || eq > PP_RANGE[1]) violations.push(`Preis p.P. ${amount} ${cur} unplausibel`);
         if (offer.price_pp_cabin_currency && cur !== offer.price_pp_cabin_currency) violations.push(`Währung p.P. ${offer.price_pp_cabin_currency} → ${cur}`);
-        else if (jumpTooBig(offer.price_pp_cabin, amount)) violations.push(`Preis p.P. ${offer.price_pp_cabin} → ${amount} ${cur} (> ${MAX_PRICE_JUMP * 100} %)`);
+        else if (jumpTooBig(offer.price_pp_cabin, amount)) violations.push(`Preis p.P. ${offer.price_pp_cabin} → ${amount} ${cur} (≥ ${MAX_PRICE_JUMP * 100} %)`);
         if (amount !== offer.price_pp_cabin) put('price_pp_cabin', offer.price_pp_cabin, amount);
         if (cur !== offer.price_pp_cabin_currency) put('price_pp_cabin_currency', offer.price_pp_cabin_currency, cur);
         // price_from_eur (budget filter) only follows when no conversion is needed.
@@ -243,12 +254,13 @@ export function proposeUpdate(
       const cur = normCurrency(ch.currency);
       const days = ch.days ?? obs.durationDays ?? offer.duration_days;
       const weekly = Math.round(days && days > 0 ? (ch.amount * 7) / days : ch.amount);
-      if (cur && (weekly !== offer.price_charter_week || cur !== offer.price_charter_week_currency)) {
-        const eq = eurEq({ amount: weekly, currency: cur });
+      const eq = cur ? eurEq({ amount: weekly, currency: cur }) : null;
+      const implausible = eq !== null && (eq < CHARTER_RANGE[0] || eq > CHARTER_RANGE[1]);
+      if (implausible) ignored.push(`Charter/Woche ${weekly} ${cur} unplausibel`);
+      if (cur && !implausible && (weekly !== offer.price_charter_week || cur !== offer.price_charter_week_currency)) {
         if (eq === null) violations.push(`Währung ${cur} unbekannt (Plausibilität nicht prüfbar)`);
-        else if (eq < CHARTER_RANGE[0] || eq > CHARTER_RANGE[1]) violations.push(`Charter/Woche ${weekly} ${cur} unplausibel`);
         if (offer.price_charter_week_currency && cur !== offer.price_charter_week_currency) violations.push(`Währung Charter ${offer.price_charter_week_currency} → ${cur}`);
-        else if (jumpTooBig(offer.price_charter_week, weekly)) violations.push(`Charter/Woche ${offer.price_charter_week} → ${weekly} ${cur} (> ${MAX_PRICE_JUMP * 100} %)`);
+        else if (jumpTooBig(offer.price_charter_week, weekly)) violations.push(`Charter/Woche ${offer.price_charter_week} → ${weekly} ${cur} (≥ ${MAX_PRICE_JUMP * 100} %)`);
         if (weekly !== offer.price_charter_week) put('price_charter_week', offer.price_charter_week, weekly);
         if (cur !== offer.price_charter_week_currency) put('price_charter_week_currency', offer.price_charter_week_currency, cur);
       }
@@ -262,21 +274,28 @@ export function proposeUpdate(
     if (('price_pp_cabin' in set || 'price_charter_week' in set) && ppAfter && ppCur && chAfter && chCur) {
       const a = eurEq({ amount: ppAfter, currency: ppCur });
       const b = eurEq({ amount: chAfter, currency: chCur });
-      if (a !== null && b !== null && b < 1.5 * a) violations.push('Charter/Woche < 1,5 × Preis p.P.');
+      if (a !== null && b !== null && b < 1.5 * a) {
+        // like the price backfill: a freshly read charter value that contradicts p.p. is the weaker one
+        if ('price_charter_week' in set) {
+          ignored.push(`Charter/Woche ${chAfter} ${chCur} < 1,5 × Preis p.P.`);
+          unput('price_charter_week'); unput('price_charter_week_currency');
+        } else violations.push('Charter/Woche < 1,5 × Preis p.P.');
+      }
     }
 
-    // ── duration ──
+    // ── duration: ±1 day is the nights-vs-days ambiguity ("7 nights" = 7 or 8 days), never a change ──
     const dur = obs.durationDays;
-    if (dur && Number.isInteger(dur) && dur >= 1 && dur <= 60 && dur !== offer.duration_days) {
-      const before = offer.duration_days;
-      if (before && Math.abs(dur - before) > Math.max(2, before * 0.5)) violations.push(`Dauer ${before} → ${dur} Tage`);
-      put('duration_days', before, dur);
+    const durBefore = offer.duration_days;
+    if (dur && Number.isInteger(dur) && dur >= 1 && dur <= 60 && (durBefore === null || Math.abs(dur - durBefore) >= 2)) {
+      if (durBefore && Math.abs(dur - durBefore) > Math.max(2, durBefore * 0.5)) violations.push(`Dauer ${durBefore} → ${dur} Tage`);
+      put('duration_days', durBefore, dur);
     }
 
-    // ── season: only when the MONTHS change (the wording alone is LLM noise) ──
+    // ── season: fill a gap only. Months are an interpretation ("Spring and Autumn" → 3 or 9),
+    //    re-reads would flip them; the real schedule lives in the departures. ──
     const sm = obs.seasonStartMonth, em = obs.seasonEndMonth;
     const okMonth = (m: number | null): m is number => typeof m === 'number' && Number.isInteger(m) && m >= 1 && m <= 12;
-    if (okMonth(sm) && okMonth(em) && (sm !== offer.season_start_month || em !== offer.season_end_month)) {
+    if (okMonth(sm) && okMonth(em) && offer.season_start_month === null && offer.season_end_month === null) {
       if (sm !== offer.season_start_month) put('season_start_month', offer.season_start_month, sm);
       if (em !== offer.season_end_month) put('season_end_month', offer.season_end_month, em);
       if (obs.seasonText && obs.seasonText !== offer.season_text) put('season_text', offer.season_text, obs.seasonText);
@@ -289,6 +308,7 @@ export function proposeUpdate(
     set,
     changes,
     violations,
+    ignored,
     fingerprint: fingerprint(set),
     changeType: priceTouched ? 'price_change' : 'dates_change',
     summary: summarize(changes, today),
@@ -375,5 +395,5 @@ export function titleMatches(a: string, b: string): boolean {
   if (ta.size === 0 || tb.size === 0) return false;
   let inter = 0;
   for (const t of ta) if (tb.has(t)) inter++;
-  return inter / Math.min(ta.size, tb.size) >= 0.6;
+  return inter / Math.min(ta.size, tb.size) >= 0.5;
 }

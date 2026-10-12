@@ -95,7 +95,7 @@ Rules:
 - "price_pp": the cheapest price per PERSON for the WHOLE trip in a shared/double cabin. A price for a cabin of 2 → divide by 2. Per-night/per-day prices → multiply only when the trip length is explicit, else null. Never deposits, add-ons, single supplements, or a sum of separately listed components (base boat €1450 + lessons €700 → 1450).
 - "price_charter": the cheapest WHOLE-BOAT/private-charter price and the number of days it covers.
 - "duration_days": days of the trip (7 nights = 8 days) when stated.
-- "other_products": kite/wing cruises or kite safaris presented on this page that are NONE of the listed offers (a new trip, destination or season product). Not dive/yoga/fishing-only trips, not extra departures of a listed offer. [] if none.
+- "other_products": multi-day kite/wing trips where the guests LIVE ON BOARD (kite cruise, liveaboard, kite safari on a yacht or catamaran) presented on this page that are NONE of the listed offers (a new trip, destination or boat). NOT land-based camps, kite schools, lessons, accommodation, road trips or downwinders without living aboard; not dive/yoga/fishing-only trips; not extra departures of a listed offer; not products whose dates are all in the past. The same product in two languages counts once. [] if none.
 Respond ONLY with the JSON object.`;
 
 interface LlmOffer {
@@ -246,6 +246,7 @@ export async function observeOffers(
       kind: 'offer_state', status: 'observed', offer_id: offer.id, slug: offer.slug, title: offer.title, source,
       authoritative: true, fingerprint: proposal.fingerprint, proposal: { set: proposal.set },
       changes: proposal.changes, violations: proposal.violations,
+      ignored: proposal.ignored,
       first_seen_at: ctx.now.toISOString(), last_seen_at: ctx.now.toISOString(), sightings: 1,
     };
     if (open) {
@@ -451,7 +452,9 @@ export async function observePage(provider: ProviderRef, url: string, text: stri
   const read = await llmRead(url, text, offers, new Set(own.map(o => o.slug)));
   if (!read) { console.error(`  LLM read failed: ${url}`); return; }
   // Only an offer's OWN page may propose its data (a homepage teaser never overrides it).
-  await observeOffers(provider, url, 'llm', own.filter(o => read.states.has(o.slug)).map(o => ({ offer: o, state: read.states.get(o.slug)! })), ctx);
+  // An LLM read never REMOVES upcoming departures ('merge'): dates rendered by JS, collapsed
+  // sections or a thin Tavily text look exactly like a removal. Only adapters may remove.
+  await observeOffers(provider, url, 'llm', own.filter(o => read.states.has(o.slug)).map(o => ({ offer: o, state: read.states.get(o.slug)! })), ctx, 'merge');
   await observeNewProducts(provider, url, read.others, offers, ctx);
 }
 

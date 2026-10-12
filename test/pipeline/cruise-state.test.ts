@@ -79,16 +79,26 @@ test('price within 40 % → auto; above → review; currency change → review',
   assert.equal(ok.changeType, 'price_change');
 
   const jump = proposeUpdate(offer(), obs({ pricePP: { amount: 3500, currency: 'EUR' } }), AUTH)!;
-  assert.ok(jump.violations.some(v => /> 40 %/.test(v)));
+  assert.ok(jump.violations.some(v => /≥ 40 %/.test(v)));
+  // exactly 40 % (egyptkitesurfingcruise 1000 → 1400, two prices on one page) → review
+  const edge = proposeUpdate(offer({ price_pp_cabin: 1000 }), obs({ pricePP: { amount: 1400, currency: 'EUR' } }), AUTH)!;
+  assert.ok(edge.violations.length > 0);
 
   const fx = proposeUpdate(offer(), obs({ pricePP: { amount: 2300, currency: 'USD' } }), AUTH)!;
   assert.ok(fx.violations.some(v => /Währung/.test(v)));
   assert.equal(fx.set.price_from_eur, undefined, 'no conversion into price_from_eur');
 });
 
-test('implausible price and unknown currency → review', () => {
-  const low = proposeUpdate(offer({ price_pp_cabin: null, price_pp_cabin_currency: null }), obs({ pricePP: { amount: 140, currency: 'EUR' } }), AUTH)!;
-  assert.ok(low.violations.some(v => /unplausibel/.test(v)));
+test('implausible price is dropped (no write, no review); unknown currency → review', () => {
+  // kitesurfnmate: €140 per night read as a trip price
+  const low = proposeUpdate(offer({ price_pp_cabin: null, price_pp_cabin_currency: null }), obs({ pricePP: { amount: 140, currency: 'EUR' } }), AUTH);
+  assert.equal(low, null);
+  const withDates = proposeUpdate(offer({ price_pp_cabin: null, price_pp_cabin_currency: null }), obs({
+    pricePP: { amount: 140, currency: 'EUR' },
+    departures: [{ start_date: '2027-04-17', end_date: null, price: null, currency: null, status: 'available' }],
+  }), AUTH)!;
+  assert.deepEqual(Object.keys(withDates.set), ['dates']);
+  assert.ok(withDates.ignored.some(v => /unplausibel/.test(v)));
   const xyz = proposeUpdate(offer({ price_pp_cabin: null, price_pp_cabin_currency: null }), obs({ pricePP: { amount: 900, currency: 'XYZ' } }), AUTH)!;
   assert.ok(xyz.violations.some(v => /unbekannt/.test(v)));
 });
@@ -97,20 +107,35 @@ test('charter normalized to 7 days and cross-gated against p.p.', () => {
   const p = proposeUpdate(offer(), obs({ priceCharter: { amount: 14000, currency: 'EUR', days: 14 } }), AUTH)!;
   assert.equal(p.set.price_charter_week, 7000);
   assert.deepEqual(p.violations, []);
-  const cheap = proposeUpdate(offer(), obs({ priceCharter: { amount: 2800, currency: 'EUR', days: 7 } }), AUTH)!;
-  assert.ok(cheap.violations.some(v => /1,5/.test(v)));
+  // a freshly read charter that contradicts p.p. is dropped, like the price backfill does
+  const cheap = proposeUpdate(offer(), obs({ priceCharter: { amount: 2800, currency: 'EUR', days: 7 } }), AUTH);
+  assert.equal(cheap, null);
+  // egyptkitesurfingcruise: charter 875 → implausible, dropped
+  assert.equal(proposeUpdate(offer(), obs({ priceCharter: { amount: 875, currency: 'EUR', days: 7 } }), AUTH), null);
 });
 
-test('season wording alone is noise; month change is applied', () => {
+test('season months only fill a gap (re-reads of "Spring and Autumn" flip them)', () => {
   assert.equal(proposeUpdate(offer(), obs({ seasonStartMonth: 6, seasonEndMonth: 11, seasonText: 'Jun to Nov' }), AUTH), null);
-  const p = proposeUpdate(offer(), obs({ seasonStartMonth: 4, seasonEndMonth: 11, seasonText: 'April-November' }), AUTH)!;
+  assert.equal(proposeUpdate(offer(), obs({ seasonStartMonth: 3, seasonEndMonth: 11, seasonText: 'Every Spring and Fall' }), AUTH), null);
+  const p = proposeUpdate(offer({ season_start_month: null, season_end_month: null }), obs({ seasonStartMonth: 4, seasonEndMonth: 11, seasonText: 'April-November' }), AUTH)!;
   assert.equal(p.set.season_start_month, 4);
   assert.equal(p.set.season_text, 'April-November');
 });
 
-test('duration jump needs review, small change is fine', () => {
-  assert.deepEqual(proposeUpdate(offer(), obs({ durationDays: 7 }), AUTH)!.violations, []);
+test('duration: ±1 day is nights-vs-days noise; a gap is filled; a big jump needs review', () => {
+  assert.equal(proposeUpdate(offer(), obs({ durationDays: 7 }), AUTH), null);
+  assert.equal(proposeUpdate(offer({ duration_days: 7 }), obs({ durationDays: 8 }), AUTH), null);
+  assert.equal(proposeUpdate(offer({ duration_days: null }), obs({ durationDays: 6 }), AUTH)!.set.duration_days, 6);
+  assert.deepEqual(proposeUpdate(offer({ duration_days: 8 }), obs({ durationDays: 6 }), AUTH)!.violations, []);
   assert.ok(proposeUpdate(offer(), obs({ durationDays: 15 }), AUTH)!.violations.length > 0);
+});
+
+test('merge mode (every LLM read): never removes an upcoming departure, even on the own page', () => {
+  // windseekers: dates load via JS, the read sees none of the two upcoming departures
+  const o = obs({ departures: [{ start_date: '2027-03-01', end_date: null, price: null, currency: null, status: 'available' }] });
+  const p = proposeUpdate(offer(), o, { authoritative: true, today: TODAY, datesMode: 'merge' })!;
+  assert.deepEqual((p.set.dates as Array<{ start_date: string }>).map(d => d.start_date), ['2026-06-06', '2026-11-07', '2027-03-01']);
+  assert.deepEqual(p.violations, []);
 });
 
 test('fingerprint is key-order independent', () => {
