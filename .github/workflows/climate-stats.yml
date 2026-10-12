@@ -40,7 +40,11 @@ jobs:
       - run: pnpm install
 
       - name: Refresh climate per offer
+        # TAVILY/OPENROUTER keys are not used by climate-stats, but src/cli.ts's static
+        # import graph pulls in src/lib/tavily.ts, which throws at module load if absent.
         env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           # optional: commercial Open-Meteo key (customer-* hosts); free tier is used without it
