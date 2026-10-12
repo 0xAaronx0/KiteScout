@@ -511,6 +511,19 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'climate-stats': {
+      // UV + air/water temperature per offer spot -> offer_climate_stats (weekly GitHub Action).
+      const { runClimateStats } = await import('./pipeline/climate-stats.js');
+      const max = flagStr('--max-fetch');
+      const r = await runClimateStats({ dryRun: args.includes('--dry-run'), maxFetch: max ? Number(max) : undefined });
+      console.log(`${r.offers} offers -> ${r.rowsWritten} rows written${args.includes('--dry-run') ? ' (dry run)' : ''}, ${r.rowsDeleted} stale rows deleted, ${r.cellsFetched} new climate cells fetched`);
+      if (r.unknownPorts.length) console.log(`Unknown departure ports (add to climate_port_points; first itinerary spot used meanwhile):\n  ${r.unknownPorts.join('\n  ')}`);
+      if (r.noPoint.length) console.log(`No point (no port, no itinerary coordinates):\n  ${r.noPoint.join('\n  ')}`);
+      if (r.deferred.length) console.log(`Deferred to next run (${r.deferred.length}):\n  ${r.deferred.join('\n  ')}`);
+      if (r.stoppedBy) console.log(`Open-Meteo quota reached: ${r.stoppedBy}`);
+      break;
+    }
+
     case 'restore': {
       const domains = args.filter(a => !a.startsWith('-'));
       if (domains.length === 0) {

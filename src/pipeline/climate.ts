@@ -1,0 +1,210 @@
+// Climate per offer spot (UV, air temperature, water temperature) — pure helpers.
+// No Supabase import here so the logic is unit-testable; the runner lives in
+// climate-stats.ts. Tables: climate_points (cache per 0.1° cell),
+// climate_port_points (hand-geocoded departure ports), offer_climate_stats
+// (one row per offer) — see migration 20261012190000_create_offer_climate_stats.
+
+export type OfferType = 'cruise' | 'tour' | 'camp' | 'accommodation' | 'course' | 'experience' | string;
+export type PointBasis = 'departure_port' | 'start_point' | 'location' | 'first_itinerary_spot';
+
+export interface OfferRef {
+  offer_id: string;
+  offer_table: 'cruise_offers' | 'package_offers';
+  offer_type: OfferType;
+  title?: string | null;
+  country: string | null;
+  departure_port: string | null;
+  itinerary_spots: unknown;
+}
+
+export interface PortPoint { departure_port: string; country: string; lat: number; lng: number; name: string }
+
+export interface ResolvedPoint {
+  basis: PointBasis;
+  name: string | null;
+  lat: number;
+  lng: number;
+  /** set when a cruise/tour had a departure_port we could not resolve */
+  unknownPort?: string;
+}
+
+export interface ClimateCell {
+  lat10: number;
+  lng10: number;
+  sample_lat: number;
+  sample_lng: number;
+  elevation_m: number | null;
+  uv_months: number[];
+  uv_clear_sky_months: number[];
+  air_temp_max_months: number[];
+  air_temp_min_months: number[];
+  water_temp_months: number[] | null;
+}
+
+/** Tolerance for re-using a cached cell (degrees, per axis) — matches the migration. */
+export const CELL_TOLERANCE = 0.075;
+
+const usesPort = (t: OfferType) => t === 'cruise' || t === 'tour';
+
+function firstSpot(spots: unknown): { lat: number; lng: number; name: string | null } | null {
+  if (!Array.isArray(spots) || spots.length === 0) return null;
+  const s = spots[0] as Record<string, unknown>;
+  const lat = typeof s.lat === 'number' ? s.lat : s.lat != null ? Number(s.lat) : NaN;
+  const lng = typeof s.lng === 'number' ? s.lng : s.lng != null ? Number(s.lng) : NaN;
+  if (!Number.isFinite(lat) || !Number.isFinite(lng)) return null;
+  return { lat, lng, name: typeof s.name === 'string' ? s.name : null };
+}
+
+/**
+ * Point rule (Aaron, 2026-10-12): cruise -> departure port, tour -> start point
+ * (both = departure_port, resolved via climate_port_points), everything else ->
+ * location (itinerary_spots[0]). Cruises/tours fall back to their first itinerary spot.
+ */
+export function resolvePoint(o: OfferRef, ports: Map<string, PortPoint>): ResolvedPoint | null {
+  let unknownPort: string | undefined;
+  if (usesPort(o.offer_type) && o.departure_port) {
+    const p = ports.get(portKey(o.departure_port, o.country));
+    if (p) {
+      return { basis: o.offer_type === 'cruise' ? 'departure_port' : 'start_point', name: p.name, lat: p.lat, lng: p.lng };
+    }
+    unknownPort = o.departure_port;
+  }
+  const s = firstSpot(o.itinerary_spots);
+  if (!s) return null;
+  return {
+    basis: usesPort(o.offer_type) ? 'first_itinerary_spot' : 'location',
+    name: s.name, lat: s.lat, lng: s.lng,
+    ...(unknownPort ? { unknownPort } : {}),
+  };
+}
+
+export const portKey = (port: string, country: string | null) => `${port}\u0000${country ?? ''}`;
+
+/** round half away from zero, like Postgres round(numeric) */
+export const round10 = (x: number) => Math.sign(x) * Math.round(Math.abs(x) * 10);
+
+/** Nearest cached cell within CELL_TOLERANCE on both axes, else null. */
+export function findCell<T extends { lat10: number; lng10: number }>(cells: T[], lat: number, lng: number): T | null {
+  let best: T | null = null;
+  let bestD = Infinity;
+  for (const c of cells) {
+    const dLat = Math.abs(c.lat10 / 10 - lat);
+    const dLng = Math.abs(c.lng10 / 10 - lng);
+    if (dLat > CELL_TOLERANCE + 1e-9 || dLng > CELL_TOLERANCE + 1e-9) continue;
+    const d = dLat * dLat + dLng * dLng;
+    if (d < bestD) { bestD = d; best = c; }
+  }
+  return best;
+}
+
+const r1 = (x: number) => Math.round(x * 10) / 10;
+const month = (iso: string) => Number(iso.slice(5, 7)) - 1;
+
+/** hourly series -> per month: mean of the daily maximum (local time stamps). */
+export function monthlyMeanOfDailyMax(time: string[], values: (number | null)[]): number[] {
+  const day = new Map<string, number>();
+  time.forEach((t, i) => {
+    const v = values[i];
+    if (v == null) return;
+    const d = t.slice(0, 10);
+    const cur = day.get(d);
+    if (cur === undefined || v > cur) day.set(d, v);
+  });
+  return monthlyMean([...day.entries()]);
+}
+
+/** hourly series -> per month: mean of daily means; null if any month has < minDays days. */
+export function monthlyMeanOfDailyMean(time: string[], values: (number | null)[], minDays = 20): number[] | null {
+  const day = new Map<string, [number, number]>();
+  time.forEach((t, i) => {
+    const v = values[i];
+    if (v == null) return;
+    const d = t.slice(0, 10);
+    const cur = day.get(d) ?? [0, 0];
+    cur[0] += v; cur[1]++;
+    day.set(d, cur);
+  });
+  const perMonth = Array.from({ length: 12 }, () => 0);
+  for (const d of day.keys()) perMonth[month(d)]++;
+  if (perMonth.some(n => n < minDays)) return null;
+  return monthlyMean([...day.entries()].map(([d, [s, n]]) => [d, s / n] as [string, number]));
+}
+
+/** daily series -> per month mean. */
+export function monthlyMean(entries: [string, number][]): number[] {
+  const acc = Array.from({ length: 12 }, () => [0, 0]);
+  for (const [d, v] of entries) { const m = month(d); acc[m][0] += v; acc[m][1]++; }
+  if (acc.some(a => a[1] === 0)) throw new Error('climate: a month has no data');
+  return acc.map(([s, n]) => r1(s / n));
+}
+
+// ---------------------------------------------------------------- fetching
+
+export class RateLimitError extends Error {
+  constructor(msg: string, readonly scope: 'minute' | 'hour' | 'day') { super(msg); }
+}
+
+type FetchJson = (url: string) => Promise<any>;
+
+/** Open-Meteo hosts; with OPEN_METEO_API_KEY the commercial customer-* hosts are used. */
+export function openMeteoUrl(api: 'air-quality' | 'archive' | 'marine', params: Record<string, string | number>, apiKey?: string): string {
+  const host = {
+    'air-quality': 'air-quality-api.open-meteo.com/v1/air-quality',
+    archive: 'archive-api.open-meteo.com/v1/archive',
+    marine: 'marine-api.open-meteo.com/v1/marine',
+  }[api];
+  const qs = new URLSearchParams(Object.entries(params).map(([k, v]) => [k, String(v)]));
+  if (apiKey) qs.set('apikey', apiKey);
+  return `https://${apiKey ? 'customer-' : ''}${host}?${qs}`;
+}
+
+/** Calls fetchJson; waits out per-minute limits, throws RateLimitError for hourly/daily ones. */
+export async function getWithLimits(fetchJson: FetchJson, url: string, sleep = (ms: number) => new Promise(r => setTimeout(r, ms))): Promise<any> {
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const r = await fetchJson(url);
+    if (!r?.error) return r;
+    const reason = String(r.reason ?? 'unknown error');
+    if (/minutely/i.test(reason)) { await sleep(65_000); continue; }
+    if (/hourly/i.test(reason)) throw new RateLimitError(reason, 'hour');
+    if (/daily/i.test(reason)) throw new RateLimitError(reason, 'day');
+    throw new Error(`open-meteo: ${reason}`);
+  }
+  throw new RateLimitError('open-meteo: minutely limit persists', 'minute');
+}
+
+/** Fetches all five monthly series for one point (sample = the offer's own coordinate). */
+export async function fetchCellClimate(
+  lat: number, lng: number,
+  opts: { fetchJson: FetchJson; apiKey?: string; elevation?: number | null; sleep?: (ms: number) => Promise<unknown> },
+): Promise<Omit<ClimateCell, 'lat10' | 'lng10'>> {
+  const get = (u: string) => getWithLimits(opts.fetchJson, u, opts.sleep as any);
+  const la = Number(lat.toFixed(4)), lo = Number(lng.toFixed(4));
+  const uv = await get(openMeteoUrl('air-quality', {
+    latitude: la, longitude: lo, hourly: 'uv_index,uv_index_clear_sky',
+    start_date: '2023-01-01', end_date: '2025-12-31', timezone: 'auto', domains: 'cams_global',
+  }, opts.apiKey));
+  const air = await get(openMeteoUrl('archive', {
+    latitude: la, longitude: lo, daily: 'temperature_2m_max,temperature_2m_min',
+    start_date: '2016-01-01', end_date: '2025-12-31', timezone: 'auto',
+    ...(opts.elevation != null ? { elevation: opts.elevation } : {}),
+  }, opts.apiKey));
+  const sea = await get(openMeteoUrl('marine', {
+    latitude: la, longitude: lo, hourly: 'sea_surface_temperature',
+    start_date: '2023-01-01', end_date: '2025-12-31', timezone: 'auto', cell_selection: 'sea',
+  }, opts.apiKey)).catch((e: unknown) => {
+    if (e instanceof RateLimitError) throw e;
+    return null; // no sea cell nearby -> water temp stays NULL
+  });
+
+  const t: string[] = air.daily.time;
+  return {
+    sample_lat: la,
+    sample_lng: lo,
+    elevation_m: opts.elevation ?? null,
+    uv_months: monthlyMeanOfDailyMax(uv.hourly.time, uv.hourly.uv_index),
+    uv_clear_sky_months: monthlyMeanOfDailyMax(uv.hourly.time, uv.hourly.uv_index_clear_sky),
+    air_temp_max_months: monthlyMean(t.map((d, i) => [d, air.daily.temperature_2m_max[i]] as [string, number]).filter(([, v]) => v != null)),
+    air_temp_min_months: monthlyMean(t.map((d, i) => [d, air.daily.temperature_2m_min[i]] as [string, number]).filter(([, v]) => v != null)),
+    water_temp_months: sea?.hourly ? monthlyMeanOfDailyMean(sea.hourly.time, sea.hourly.sea_surface_temperature) : null,
+  };
+}

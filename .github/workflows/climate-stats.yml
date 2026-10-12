@@ -1,0 +1,53 @@
+name: Offer climate stats
+
+# Weekly refresh of offer_climate_stats (UV, air temperature, water temperature per
+# offer spot). New offers and moved pins (e.g. corrected accommodation locations) get
+# their spot's climate; only cells not yet cached in climate_points hit Open-Meteo.
+# Unknown departure ports are listed in the log -> add them to climate_port_points.
+# Lives outside web/**, so it never triggers the Docker build/deploy workflow.
+on:
+  schedule:
+    # Mondays 05:00 UTC (before the daily monitor at 06:00)
+    - cron: '0 5 * * 1'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run (no writes)'
+        type: boolean
+        required: false
+        default: false
+
+concurrency:
+  group: offer-climate-stats
+  cancel-in-progress: false
+
+jobs:
+  climate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install
+
+      - name: Refresh climate per offer
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # optional: commercial Open-Meteo key (customer-* hosts); free tier is used without it
+          OPEN_METEO_API_KEY: ${{ secrets.OPEN_METEO_API_KEY }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            pnpm cli climate-stats --dry-run
+          else
+            pnpm cli climate-stats
+          fi
