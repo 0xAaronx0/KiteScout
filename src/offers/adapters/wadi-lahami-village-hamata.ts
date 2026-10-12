@@ -21,6 +21,15 @@
 //   bands that ended before today are dropped.
 // Known limits: discounts (triple -5 EUR pp/day, 2+ weeks, 4+ weeks), child rates, the mandatory
 //   environmental fee and transfers are kept in sourceText only (Slot has no stay-length field).
+// Photos (2026-10-12): the operator's pages only carry 150-460 px photos. Larger ones come from the kite
+//   center on site, Wadi Lahami Kitesurfing Center (wadilahamikitesurfing.com, robots.txt "Allow: /"; its
+//   /lodge-restaurant/ page describes Wadi Lahami Village as one of the 3 RSDS villages, its footer links
+//   redsea-divingsafari.com): WL_KITE_CENTER_PHOTOS, picked by hand, mostly 2560 px, appended after the
+//   operator's photos. Eight of them are the same shots the operator shows small (checked side by side);
+//   the small operator copies are dropped so the large ones get a download slot (the ingest measures only
+//   the first 24 candidates). Not used: the operator's Flickr (live.staticflickr.com answers 403 to our
+//   UA), Facebook (login wall, expiring CDN links), the YouTube thumbnail (text overlay), a photo credited
+//   to an outside photographer, dive and desert-trip photos.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, collapse, iso, meta, parse, parseAmount, todayIso } from '../parse.js';
@@ -31,6 +40,42 @@ export const WL_VILLAGE_URL = `${SITE}/villages/wadi-lahami/`;
 export const WL_ROOMS_URL = `${SITE}/villages/wadi-lahami/accommodation/`;
 export const WL_PRICES_URL = `${SITE}/price-lists/wadi-lahami`;
 const BOOKING_URL = `${SITE}/Booking`;
+
+// --- larger photos from the kite center on site ------------------------------------------------
+const WLK = 'https://wadilahamikitesurfing.com/wp-content/uploads';
+/**
+ * Photos published by Wadi Lahami Kitesurfing Center on its own site, read 2026-10-12 (stable WordPress
+ * upload URLs, sizes as measured that day). `twin` = camera file stem of the same photo on the
+ * operator's site (150-460 px there); that small copy is left out of the candidates. Order = priority:
+ * the first 14 fit the ingest's 24-download cap next to the operator's remaining 10; the last 4 are spares.
+ */
+export const WL_KITE_CENTER_PHOTOS: Array<{ url: string; shows: string; twin?: string }> = [
+  // /lodge-restaurant/
+  { url: `${WLK}/2025/05/DJI_0119-scaled.jpg`, shows: 'aerial: village, lagoon, mangroves (2560x1705)', twin: 'DJI_0119' },
+  { url: `${WLK}/2025/05/DJI_0164-scaled.jpg`, shows: 'aerial: chalets and tents by the sea (2560x1706)' },
+  { url: `${WLK}/2025/05/P1108735-scaled.jpg`, shows: 'Royal Tent, outside (2560x1707)', twin: 'P1108735' },
+  { url: `${WLK}/2025/05/P1108666-scaled.jpg`, shows: 'Royal Tent, double bed (2560x1707)', twin: 'P1108666' },
+  { url: `${WLK}/2025/05/P1108843-scaled.jpg`, shows: 'Royal Tent, two single beds (2560x1707)', twin: 'P1108843' },
+  { url: `${WLK}/2025/05/P1108768.jpg`, shows: 'Royal Tent, front (1024x683)', twin: 'P1108768' },
+  { url: `${WLK}/2025/05/P1108872-scaled.jpg`, shows: 'Deluxe Chalets, outside (2560x1707)' },
+  { url: `${WLK}/2023/07/IMG_6862_SOG.jpg`, shows: 'Deluxe Chalet, room (900x600)', twin: 'IMG_6862' },
+  { url: `${WLK}/2023/07/P8091171_SOG.jpg`, shows: 'Deluxe Chalets at dusk (896x600)', twin: 'P8091171' },
+  // /center/
+  { url: `${WLK}/2025/05/DJI_0537_GN-scaled.jpg`, shows: 'aerial: kite center on the beach (2560x1705)' },
+  { url: `${WLK}/2025/05/P1005648_1-scaled.jpg`, shows: 'kite center lounge, Yellow Penguin bar (2560x1707)', twin: 'P1005648' },
+  // home page
+  { url: `${WLK}/2025/05/DJI_0103-scaled.jpg`, shows: 'aerial: lagoon with kiters (2560x1705)' },
+  { url: `${WLK}/2025/05/P1079838-scaled.jpg`, shows: 'kite launch in the lagoon (2560x1707)' },
+  { url: `${WLK}/2025/05/DJI_0016-scaled.jpg`, shows: 'aerial: kite center and bay (2560x1705)' },
+  // spares (beyond the download cap while the operator list has 10 photos)
+  { url: `${WLK}/2025/05/DJI_0134-scaled.jpg`, shows: 'aerial: Royal Tents (2560x1705)' },          // /lodge-restaurant/
+  { url: `${WLK}/2025/05/P1097161-scaled.jpg`, shows: 'kites on the water (2560x1707)' },           // home page
+  { url: `${WLK}/2025/05/IMG_2897-scaled.jpg`, shows: 'kites on the beach (2560x1706)' },           // home page
+  { url: `${WLK}/2025/05/P1109115-scaled.jpg`, shows: 'restaurant terrace (2560x1707)' },           // /lodge-restaurant/
+];
+/** Camera file stem of a photo URL ("P1108666_1203a_lg.jpg" / "P1108666-scaled.jpg" -> "P1108666"). */
+const photoStem = (url: string): string | null =>
+  decodeURIComponent(url.split('/').pop() ?? '').match(/^(P\d{7}|DJI_\d{4}|IMG_\d{4})/)?.[1] ?? null;
 
 export interface WlRate { unit: string; occupancy: number; high: number | null; low: number | null }
 export interface WlPeriod {
@@ -230,18 +275,22 @@ export function parseWadiLahamiContent(p: WlPages): OfferContent {
   const rentalBrands = kite.find(x => /Rental Equipment/i.test(x.table))?.table.match(/brands:\s*([^)]+)/i)?.[1] ?? null;
   const notes = lines(p.prices).filter(l => /discount|Children 0-5|Environmental Fee|full-board basis/i.test(l)).slice(0, 8);
 
+  // operator photos first, minus the ones the kite center publishes larger (WL_KITE_CENTER_PHOTOS twins)
+  const twins = new Set(WL_KITE_CENTER_PHOTOS.flatMap(x => (x.twin ? [x.twin] : [])));
+  const isTwin = (u: string): boolean => twins.has(photoStem(u) ?? '');
   const imgs: string[] = [];
   const og = meta(p.village, 'og:image');
-  if (og) imgs.push(new URL(og, SITE).toString());
+  if (og && !isTwin(og)) imgs.push(new URL(og, SITE).toString());
   for (const html of [p.rooms, p.village]) {
     for (const m of html.matchAll(/<img\b[^>]*>/g)) {
       const src = m[0].match(/src="(\/Photos\/[^"]+)"/)?.[1];
       const alt = m[0].match(/alt="([^"]*)"/)?.[1] ?? '';
-      if (!src || /\/banners\//.test(src) || /Marsa (Shagra|Nakari)/i.test(alt)) continue;
+      if (!src || /\/banners\//.test(src) || /Marsa (Shagra|Nakari)/i.test(alt) || isTwin(src)) continue;
       const u = encodeURI(new URL(src, SITE).toString().replace(/%20/g, ' '));
       if (!imgs.includes(u)) imgs.push(u);
     }
   }
+  for (const x of WL_KITE_CENTER_PHOTOS) if (!imgs.includes(x.url)) imgs.push(x.url);
 
   const minRate = period ? Math.min(...period.rates.flatMap(r => [r.high, r.low]).filter((x): x is number => x !== null)) : null;
   const summary = [
@@ -297,6 +346,8 @@ export function parseWadiLahamiContent(p: WlPages): OfferContent {
 
 // --- adapter ----------------------------------------------------------------------------------
 export const wadiLahamiVillageHamata: OfferAdapter = {
+  // the operator's site only has 460x306 photos; Aaron 2026-10-12: list them anyway (default floor 500x330)
+  imageMinSize: { width: 450, height: 300 },
   key: 'wadi-lahami-village-hamata',
   name: 'Wadi Lahami Village',
   kind: 'accommodation',

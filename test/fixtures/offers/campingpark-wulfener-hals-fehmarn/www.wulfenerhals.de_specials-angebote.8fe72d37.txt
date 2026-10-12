@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Specials &amp; Angebote - Campingpark Wulfener Hals</title>
+<base href="https://www.wulfenerhals.de/">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Attraktive Angebote f&uuml;r Fr&uuml;hbucher, Gruppen und Langzeitaufenthalte am Wulfener Hals. Egal ob Standplatz oder Mietwohnwagen, buche unsere Specials und spare bis zu 48% gegen&uuml;ber des Pauschalpreises.">
+<meta name="theme-color" content="#1a406b">
+<meta id="page-cache-id" name="page-cache-id" content="/specials-angebote?cacheRefresh=1">
+<meta property="og:image" content="https://www.wulfenerhals.de/files/bilder/startseite/Luftaufnahme_WH_Bruecke.jpg">
+<meta property="og:title" content="Specials &amp; Angebote - Campingpark Wulfener Hals">
+<meta property="og:description" content="Attraktive Angebote f&uuml;r Fr&uuml;hbucher, Gruppen und Langzeitaufenthalte am Wulfener Hals. Egal ob Standplatz oder Mietwohnwagen, buche unsere Specials und spare bis zu 48% gegen&uuml;ber des Pauschalpreises.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Specials &amp; Angebote - Campingpark Wulfener Hals">
+<link rel="stylesheet" href="assets/colorbox/css/colorbox.min.css?v=2d7cb6b8"><link rel="stylesheet" href="assets/swipe/css/swipe.min.css?v=693e5985"><link rel="stylesheet" href="files/secra-theme/less-css/styles.min.css?v=77f8c384"><script src="assets/jquery/js/jquery.min.js?v=2e868dd8"></script><script src="https://www.wulfenerhals.de/bundles/contaotranslator/js/translator.js"></script>
+<script></script>
+</head>
+<body id="top">
+<input type="hidden" id="pageTranslationLanguage" value="en">
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KFPC86" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<header id="header" itemscope itemtype="http://schema.org/WPHeader">
+<div class="header-content grid-spaceBetween-middle">
+<div class="ce_hyperlink logo block">
+<figure class="image_container">
+<a href="./" class="hyperlink_img">
+<img src="files/bilder/logos-auszeichnungen/Logo_Wulfener_Hals_2022_neg.svg" alt="">
+<span class="link-text">./</span></a>
+</figure>
+</div>
+<div class="ce_hyperlink logo logo-collapsed block">
+<figure class="image_container">
+<a href="./" class="hyperlink_img">
+<img src="files/bilder/logos-auszeichnungen/Logo_Wulfener_Hals_2022_neg.svg" alt="">
+<span class="link-text">./</span></a>
+</figure>
+</div>
+<ul class="header-links">
+<li class="booking"><a class="booking-button" href="/suchen-buchen" aria-label="Suchen &amp; buchen"><i class="fad fa-bed"></i><span>Search &amp; Book</span></a></li>
+<li class="phone"><a href="tel:+49437186280" aria-label="Telefon"><i class="fad fa-phone"></i><span>&ensp;04371 - 8628-0</span></a></li>
+<li class="mail"><a href="mailto:info@wulfenerhals.de" aria-label="E-Mail"><i class="fad fa-envelope"></i><span>&ensp;info@wulfenerhals.de</span></a></li>
+<li class="search"><a href="/suche" aria-label="Suche"><i class="fad fa-search"></i><span>&ensp;Search</span></a></li>
+<li class="login"><a href="/compusoft-login" aria-label="Login"><i class="fad fa-key"></i><span>&ensp;Log In</span></a></li>
+</ul><span class="translate-switch__wrapper">
+<form>
+<select id="language-selector" onchange="changeLanguage()">
+<option value="de">DE</option>
+<option value="en">EN</option>
+</select>
+</form>
+<script></script>
+</span>
+<button class="nav-toggle" title="Men&uuml; &ouml;ffnen"><span>Menu</span><i class="fad fa-bars"></i></button>
+<nav class="mod_navigation navigation-main block" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<button class="nav-close" title="close"><i class="fal fa-times"></i></button>
+<a href="specials-angebote?cacheRefresh=1#skipNavigation22" class="invisible">Skip navigation</a>
+<ul class="level_1">
+<li class="submenu first"><a href="campingplatz" title="Camping Ferienpark" class="submenu first" aria-haspopup="true" itemprop="url"><span itemprop="name">Camping Resort</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="first"><a href="campingplatz" title="Campingpark auf Fehmarn" class="first" itemprop="url"><span itemprop="name">Campground</span></a>
+</li>
+<li><a href="lageplan" title="Lageplan des Ferien- und Campingparks an der Ostsee" itemprop="url"><span itemprop="name">Site Map</span></a>
+</li>
+<li><a href="wohnmobilpark" title="Wohnmobilpark an der Ostsee auf der Insel Fehmarn" itemprop="url"><span itemprop="name">RV Park</span></a>
+</li>
+<li><a href="leadingpark" title="Leadingpark an der Ostsee auf der Insel Fehmarn" itemprop="url"><span itemprop="name">Leadingpark</span></a>
+</li>
+<li class="submenu"><a href="ausstattung" title="Ausstattung Camping- und Ferienpark Fehmarn" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Features</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="sanitaergebaeude" title="Sanit&auml;rgeb&auml;ude im Ferien- und Campingpark Fehmarn" class="first" itemprop="url"><span itemprop="name">Restroom Building</span></a>
+</li>
+<li><a href="kinderbad" title="Kinderbad auf dem Campingplatz auf Fehmarn" itemprop="url"><span itemprop="name">Children's Pool</span></a>
+</li>
+<li><a href="mietbaeder" title="Mietb&auml;der im Camping- und Ferienpark auf Fehmarn" itemprop="url"><span itemprop="name">Rental Bathrooms</span></a>
+</li>
+<li><a href="supermarkt-shop" title="Supermarkt &amp; Freizeit-Shop im Camping- und Ferienpark" itemprop="url"><span itemprop="name">Supermarket &amp; Store</span></a>
+</li>
+<li class="last"><a href="wlan-sky-tv" title="Digitales TV und Sky-TV im Camping- und Ferienpark" class="last" itemprop="url"><span itemprop="name">WLAN &amp; Sky-TV</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu last"><a href="gastronomie" title="Restaurants und Gastronomie im Camping- und Ferienpark" class="submenu last" aria-haspopup="true" itemprop="url"><span itemprop="name">Gastronomy</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="restaurant-seeblick" title="Restaurant Seeblick auf Fehmarn" class="first" itemprop="url"><span itemprop="name">Seeblick Restaurant</span></a>
+</li>
+<li><a href="restaurant-wulfener-hals" title="Die Pizzeria am Wulfener Hals" itemprop="url"><span itemprop="name">Pizzeria at the "Wulfener Hals"</span></a>
+</li>
+<li><a href="hotelrestaurant" title="Restaurant Golf &acute;n Wave" itemprop="url"><span itemprop="name">Golf 'n Wave Restaurant</span></a>
+</li>
+<li><a href="golfbar" title="Die Golfbar am Camping und Ferienpark Wulfener Hals" itemprop="url"><span itemprop="name">Golf Bar</span></a>
+</li>
+<li class="last"><a href="bistro" title="Bistro im Camping- und Ferienpark auf Fehmarn" class="last" itemprop="url"><span itemprop="name">Bistro</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="mietwohnwagen" title="Unsere Unterk&uuml;nfte" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Accommodations</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="submenu first"><a href="mietwohnwagen" title="Mietwohnwagen auf Fehmarn" class="submenu first" aria-haspopup="true" itemprop="url"><span itemprop="name">Rental Trailers</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="season-camper" title="Dethleff Season Camper" class="first" itemprop="url"><span itemprop="name">Season Camper</span></a>
+</li>
+<li class="last"><a href="weitere-mietwohnwagen" title="Weitere Mietwohnwagen auf Fehmarn" class="last" itemprop="url"><span itemprop="name">More Rental Trailers</span></a>
+</li>
+</ul>
+</li>
+<li><a href="ferienhaeuser-im-baltic-park" title="Ferienh&auml;user im Balticpark Wulfener Hals auf Fehmarn" itemprop="url"><span itemprop="name">Baltic-Park Vacation Homes</span></a>
+</li>
+<li><a href="ferienhaeuser-im-duenenpark" title="Ferienh&auml;user im D&uuml;nenpark auf Fehmarn" itemprop="url"><span itemprop="name">D&uuml;nenpark Vacation Homes</span></a>
+</li>
+<li><a href="mobilheimpark" title="Mobilheime mieten" itemprop="url"><span itemprop="name">Mobile Home Park</span></a>
+</li>
+<li><a href="strandbungalow" title="Strandbungalow am Wulfener Hals" itemprop="url"><span itemprop="name">Beach Bungalow</span></a>
+</li>
+<li class="submenu"><a href="ferienwohnungen" title="Ferienwohnungen auf Fehmarn" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Vacation Rentals</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="ferienwohnungen-am-strand" title="Ferienwohnungen am Strand" class="first" itemprop="url"><span itemprop="name">at the beach</span></a>
+</li>
+<li><a href="ferienwohnungen-am-pool" title="Ferienwohnungen am Pool" itemprop="url"><span itemprop="name">by the pool</span></a>
+</li>
+<li><a href="ferienwohnungen-am-golfpark" title="Ferienwohnungen am Golfpark auf Fehmarn" itemprop="url"><span itemprop="name">at the Golf Park</span></a>
+</li>
+<li class="last"><a href="http://www.fehmarn-ferienwohnung.info" title="Ferienwohnung in Burg" class="last" target="_blank" rel="noreferrer noopener" itemprop="url"><span itemprop="name">in Burg</span></a>
+</li>
+</ul>
+</li>
+<li><a href="schlafstrandkorb" title="Schlafstrandkorb" itemprop="url"><span itemprop="name">Beach Chair for Sleeping</span></a>
+</li>
+<li><a href="http://www.hotel-sonneninsel-fehmarn.de/" title="Hotel Avendorf" target="_blank" rel="noreferrer noopener" itemprop="url"><span itemprop="name">Hotel Sonneninsel Avendorf</span></a>
+</li>
+<li class="last"><a href="golfnwave" title="Pakete" class="last" itemprop="url"><span itemprop="name">Golf&acute;n Wave Aktivresort</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="strand-meer" title="Strand &amp; Freizeit" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Beach &amp; Leisure</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="submenu first"><a href="strand-meer" title="Strand und Meer auf Fehmarn" class="submenu first" aria-haspopup="true" itemprop="url"><span itemprop="name">Beach &amp; Lake</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="stranderlebnisse" title="Strandurlaub an der Ostsee auf Fehmarn" class="first" itemprop="url"><span itemprop="name">Beach Experiences</span></a>
+</li>
+<li><a href="surfen-kiten-segeln" title="Surfen, Kiten, Segeln im Urlaub im Camping- und Ferienpark" itemprop="url"><span itemprop="name">Surfing, kitesurfing, sailing</span></a>
+</li>
+<li><a href="wakepark-fehmarn" title="Wakepark Fehmarn: Wassersport auf dem Burger Binnensee" itemprop="url"><span itemprop="name">Fehmarn Wakepark</span></a>
+</li>
+<li class="last"><a href="tauchen" title="Tauchen in der Ostsee vor der Insel Fehmarn" class="last" itemprop="url"><span itemprop="name">Diving</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="familienzeit" title="Familienzeit im Camping- und Ferienpark" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Family Time</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="kinderanimation" title="Kinderanimation im Camping- und Ferienpark" class="first" itemprop="url"><span itemprop="name">Children's Entertainment</span></a>
+</li>
+<li><a href="spielplaetze" title="Spielpl&auml;tze im Camping- und Ferienpark auf Fehmarn" itemprop="url"><span itemprop="name">Playgrounds</span></a>
+</li>
+<li class="last"><a href="tipps-fuer-ausfluege" title="Tipps f&uuml;r Ausfl&uuml;ge auf Fehmarn und in Ostholstein" class="last" itemprop="url"><span itemprop="name">Tips for Day Trips</span></a>
+</li>
+</ul>
+</li>
+<li><a href="hunde" title="Hunde auf Camping- und Ferienpark auf Fehmarn" itemprop="url"><span itemprop="name">Dogs</span></a>
+</li>
+<li class="submenu"><a href="aktivitaeten" title="Aktivit&auml;ten im Camping- und Ferienpark auf Fehmarn" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Activities</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="sportanimation" title="Sportanimation im Camping- und Ferienpark auf Fehmarn" class="first" itemprop="url"><span itemprop="name">Sports Activities</span></a>
+</li>
+<li><a href="pool" title="Beheizter Pool im Camping- und Ferienpark auf Fehmarn" itemprop="url"><span itemprop="name">Half</span></a>
+</li>
+<li class="last"><a href="radfahren-touren" title="Radfahren und Touren auf der Insel Fehmarn" class="last" itemprop="url"><span itemprop="name">Cycling &amp; Touring</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="golfurlaub" title="Golf-Urlaub an der Ostsee auf Fehmarn" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Golf Vacation</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="golf-pakete" title="Golf-Pakete im Camping- und Ferienpark" class="first" itemprop="url"><span itemprop="name">Golf Packages</span></a>
+</li>
+<li><a href="golf-kurse" title="Golf-Kurse an der Golfschule Fehmarn" itemprop="url"><span itemprop="name">Golf Courses</span></a>
+</li>
+<li><a href="greenfee" title="Greenfee: Sonderpreise im Golfpark Fehmarn" itemprop="url"><span itemprop="name">Green fee</span></a>
+</li>
+<li><a href="wettspielkalender" title="Wettspielkalender Golfpark Fehmarn" itemprop="url"><span itemprop="name">Betting Schedule</span></a>
+</li>
+<li class="last"><a href="fernmitglied-werden" title="Fernmitglied warden im Golf Club Fehmarn" class="last" itemprop="url"><span itemprop="name">Become a Corresponding Member</span></a>
+</li>
+</ul>
+</li>
+<li><a href="wellness-entspannung" title="Wellness und Entspannung im Camping- und Ferienpark" itemprop="url"><span itemprop="name">Wellness &amp; Relaxation</span></a>
+</li>
+<li class="submenu"><a href="entertainment" title="Entertainment im Camping- und Ferienpark" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Entertainment</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="it-s-showtime" title="It&rsquo;s Showtime im Camping- und Ferienpark" class="first" itemprop="url"><span itemprop="name">It's Showtime</span></a>
+</li>
+<li><a href="live-musik-comedy" title="Live-Musik und Comedy im Camping- und Ferienpark" itemprop="url"><span itemprop="name">Live Musik &amp; Comedy</span></a>
+</li>
+<li class="last"><a href="public-viewing" title="Public Viewing im Camping- und Ferienpark" class="last" itemprop="url"><span itemprop="name">Public Viewing</span></a>
+</li>
+</ul>
+</li>
+<li><a href="veranstaltungskalender" title="Veranstaltungskalender Camping- und Ferienpark" itemprop="url"><span itemprop="name">Event Calendar</span></a>
+</li>
+<li class="last"><a href="wsv" title="Wassersportverein des Wulfener Hals" class="last" itemprop="url"><span itemprop="name">Boats - Water Sports Club</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="gaeste-service" title="Service - Infos" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Service - Information</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="submenu first"><a href="gaeste-service" title="G&auml;ste-Service im Camping- und Ferienpark auf Fehmarn" class="submenu first" aria-haspopup="true" itemprop="url"><span itemprop="name">Guest Services</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="kontakt-rezeption" title="Kontakt &amp; Rezeption im Camping- und Ferienpark &ndash; Wulfener Hals" class="first" itemprop="url"><span itemprop="name">Contact &amp; Reception</span></a>
+</li>
+<li><a href="oeffnungszeiten" title="&Ouml;ffnungszeiten im Camping- und Ferienpark&ndash; Wulfener Hals" itemprop="url"><span itemprop="name">Hours of Operation</span></a>
+</li>
+<li><a href="https://v3.onlinebooking.dk/shop/shop_wulfen" title="Wulfis Online-Shop" target="_blank" rel="noreferrer noopener" itemprop="url"><span itemprop="name">Wulfis Online Store</span></a>
+</li>
+<li class="last"><a href="fahrradverleih" title="Fahrradverleih" class="last" itemprop="url"><span itemprop="name">Bicycle Rental</span></a>
+</li>
+</ul>
+</li>
+<li><a href="wulfener-hals-app" title="Wulfener Hals App vom Camping- und Ferienpark &ndash; Wulfener Hals" itemprop="url"><span itemprop="name">Wulfener Hals App</span></a>
+</li>
+<li class="submenu"><a href="news" title="Aktuelles" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">News</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="news" title="News" class="first" itemprop="url"><span itemprop="name">News</span></a>
+</li>
+<li class="last"><a href="presse" title="Presse" class="last" itemprop="url"><span itemprop="name">Press</span></a>
+</li>
+</ul>
+</li>
+<li><a href="3d-rundgang" title="3D Rundgang" itemprop="url"><span itemprop="name">3D Tour</span></a>
+</li>
+<li><a href="service-infos/imagefilm" title="Imagefilm" itemprop="url"><span itemprop="name">Promotional Video</span></a>
+</li>
+<li><a href="wulfener-hals-a-z" title="Camping- und Ferienpark von A-Z &ndash; Wulfener Hals" itemprop="url"><span itemprop="name">Wulfener Hals A-Z</span></a>
+</li>
+<li class="submenu"><a href="ueber-uns" title="&Uuml;ber uns: Camping- und Ferienpark auf Fehmarn &ndash; Wulfener Hals" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">About Us</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="umwelt" title="Umweltschutz im Camping- und Ferienpark &ndash; Wulfener Hals" class="first" itemprop="url"><span itemprop="name">Environment</span></a>
+</li>
+<li><a href="leading-camping" title="Leading Campings auf Fehmarn" itemprop="url"><span itemprop="name">Leading Camping</span></a>
+</li>
+<li><a href="auszeichnungen" title="Auszeichnungen f&uuml;r den Caming- und Ferienpark &ndash; Wulfener Hals" itemprop="url"><span itemprop="name">Awards</span></a>
+</li>
+<li class="last"><a href="65-jahre-wulfener-hals" title="65 Jahre Camping- und Ferienpark &ndash; Wulfener Hals" class="last" itemprop="url"><span itemprop="name">Wulfener Hals's 65th Anniversary</span></a>
+</li>
+</ul>
+</li>
+<li class="last"><a href="jobs" title="Jobs" class="last" itemprop="url"><span itemprop="name">Jobs</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu trail last"><a href="suchen-buchen" title="Buchen &amp; Preise" class="submenu trail last" aria-haspopup="true" itemprop="url"><span itemprop="name">Booking &amp; Prices</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="sibling first"><a href="suchen-buchen" title="Suchen &amp; buchen" class="sibling first" itemprop="url"><span itemprop="name">Search &amp; Book</span></a>
+</li>
+<li class="active"><strong class="active" itemprop="name">Specials &amp; Offers</strong>
+</li>
+<li class="sibling"><a href="last-minute" title="Last-Minute" class="sibling" itemprop="url"><span itemprop="name">Last-Minute</span></a>
+</li>
+<li class="sibling"><a href="online-katalog" title="Online-Katalog" class="sibling" itemprop="url"><span itemprop="name">Online Catalog</span></a>
+</li>
+<li class="sibling"><a href="preise" title="Campingpreise" class="sibling" itemprop="url"><span itemprop="name">Prices</span></a>
+</li>
+<li class="sibling last"><a href="agb-vertragsbedingungen" title="Vertragsbedingungen" class="sibling last" itemprop="url"><span itemprop="name">Terms and Conditions &amp; Contract Terms</span></a>
+</li>
+</ul>
+</li>
+</ul>
+<a id="skipNavigation22" class="invisible">&nbsp;</a>
+</nav>
+</div>
+</header>
+<main id="main" itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
+<section class="mod_article full-width title-image block" id="article-1244">
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/d/Impression_Camping_WulfenerHals_Fehmarn8546-2bb8c5f3.webp 1920w, assets/images/e/Impression_Camping_WulfenerHals_Fehmarn8546-8428a6dc.webp 2500w" sizes="100vw" media="(min-width: 80em)" type="image/webp" width="1920" height="600">
+<source srcset="assets/images/e/Impression_Camping_WulfenerHals_Fehmarn8546-4b556cc9.jpg 1920w, assets/images/9/Impression_Camping_WulfenerHals_Fehmarn8546-febf211a.jpg 2500w" sizes="100vw" media="(min-width: 80em)" width="1920" height="600">
+<source srcset="assets/images/d/Impression_Camping_WulfenerHals_Fehmarn8546-9753abe5.webp 1000w, assets/images/9/Impression_Camping_WulfenerHals_Fehmarn8546-ed831301.webp 2000w" sizes="100vw" media="(min-width: 64em)" type="image/webp" width="1000" height="500">
+<source srcset="assets/images/c/Impression_Camping_WulfenerHals_Fehmarn8546-b2666a47.jpg 1000w, assets/images/1/Impression_Camping_WulfenerHals_Fehmarn8546-c7f2816d.jpg 2000w" sizes="100vw" media="(min-width: 64em)" width="1000" height="500">
+<source srcset="assets/images/6/Impression_Camping_WulfenerHals_Fehmarn8546-83671c71.webp 800w, assets/images/8/Impression_Camping_WulfenerHals_Fehmarn8546-908dc1b8.webp 1600w" sizes="100vw" media="(min-width: 36em)" type="image/webp" width="800" height="300">
+<source srcset="assets/images/b/Impression_Camping_WulfenerHals_Fehmarn8546-cbac7cd5.jpg 800w, assets/images/9/Impression_Camping_WulfenerHals_Fehmarn8546-7228557e.jpg 1600w" sizes="100vw" media="(min-width: 36em)" width="800" height="300">
+<source srcset="assets/images/b/Impression_Camping_WulfenerHals_Fehmarn8546-8997c415.webp 400w, assets/images/8/Impression_Camping_WulfenerHals_Fehmarn8546-a64965b7.webp 800w" sizes="100vw" media="(min-width: 20em)" type="image/webp" width="400" height="300">
+<source srcset="assets/images/e/Impression_Camping_WulfenerHals_Fehmarn8546-57518562.jpg 400w, assets/images/c/Impression_Camping_WulfenerHals_Fehmarn8546-8ac87ce1.jpg 800w" sizes="100vw" media="(min-width: 20em)" width="400" height="300">
+<source srcset="assets/images/e/Impression_Camping_WulfenerHals_Fehmarn8546-99be2af2.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/Service%20-%20Infos/Ueber%20uns/Impression_Camping_WulfenerHals_Fehmarn8546.jpg" width="2500" height="1667" alt="" loading="lazy">
+</source></source></source></source></source></source></source></source></source></picture>
+</figure>
+</div>
+</section>
+<section class="mod_article grid-center block" id="article-1245">
+<div class="grid">
+<h1 class="ce_headline col-12">
+Wulfener Hals Specials: Our Attractive Vacation Offers</h1>
+<h2 class="ce_headline col-12">Special Offers for Early Bookers, Groups, and Long-Term Stays</h2>
+<div class="ce_text col-12_lg-9 block">
+<p>Whether you're staying at a campsite or renting a RV, book our specials at Wulfener Hals. In the <strong>Direct Booking System</strong> You can check the availability of the properties directly and make a reservation. Or just give us a call: Phone <a href="tel:+49437186280">04371 - 86 28 0</a>. Book early and save: up to <strong>48% </strong>compared to the flat rate.</p>
+</div>
+</div>
+</section>
+<section class="mod_article section-primary block" id="article-1246">
+<div class="grid-center"><div class="col-12">
+<div class="ce_table preistabelle block">
+<h3>Specials &amp; Offers</h3>
+<table id="table_8350">
+<thead>
+<tr>
+<th class="head_0 col_first unsortable">Special</th>
+<th class="head_1">Description</th>
+<th class="head_2">Term</th>
+<th class="head_3">Roofs</th>
+<th class="head_4">Campground</th>
+<th class="head_5 col_last">Economy Rental Trailers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="row_0 row_first odd">
+<th scope="row" class="col_0 col_first">Easter Break 1</th>
+<td class="col_1">1</td>
+<td class="col_2">21.03.-28.03.2026</td>
+<td class="col_3">7</td>
+<td class="col_4">229&euro;</td>
+<td class="col_5 col_last">279&euro;</td>
+</tr>
+<tr class="row_1 even">
+<th scope="row" class="col_0 col_first">Easter Break 2</th>
+<td class="col_1">1</td>
+<td class="col_2">02.04.-07.04.2026</td>
+<td class="col_3">5</td>
+<td class="col_4">402&euro;</td>
+<td class="col_5 col_last">449&euro;</td>
+</tr>
+<tr class="row_2 odd">
+<th scope="row" class="col_0 col_first">Easter Break 3</th>
+<td class="col_1">1,3</td>
+<td class="col_2">21.03.-11.04.2026**</td>
+<td class="col_3">14</td>
+<td class="col_4">490&euro;</td>
+<td class="col_5 col_last">559&euro;</td>
+</tr>
+<tr class="row_3 even">
+<th scope="row" class="col_0 col_first">Spring</th>
+<td class="col_1">1,3</td>
+<td class="col_2">11.04.-13.05.2026</td>
+<td class="col_3">32</td>
+<td class="col_4">713&euro;</td>
+<td class="col_5 col_last">729&euro;</td>
+</tr>
+<tr class="row_4 odd">
+<th scope="row" class="col_0 col_first">Introductory Offer</th>
+<td class="col_1">1,3</td>
+<td class="col_2">11.04.-13.05.2026*</td>
+<td class="col_3">7</td>
+<td class="col_4">229&euro;</td>
+<td class="col_5 col_last">299&euro;</td>
+</tr>
+<tr class="row_5 even">
+<th scope="row" class="col_0 col_first">Ascension Day/Pentecost</th>
+<td class="col_1">1,3</td>
+<td class="col_2">13.05.-26.05.2026</td>
+<td class="col_3">13</td>
+<td class="col_4">674&euro;</td>
+<td class="col_5 col_last">799&euro;</td>
+</tr>
+<tr class="row_6 odd">
+<th scope="row" class="col_0 col_first">Ascension Day/Pentecost/<br>Corpus Christi</th>
+<td class="col_1">1,3</td>
+<td class="col_2">13.05.-07.06.2026</td>
+<td class="col_3">25</td>
+<td class="col_4">858&euro;</td>
+<td class="col_5 col_last">1099&euro;</td>
+</tr>
+<tr class="row_7 even">
+<th scope="row" class="col_0 col_first">Pentecost/<br>Corpus Christi</th>
+<td class="col_1">1,3</td>
+<td class="col_2">22.05.-06.06.2026*</td>
+<td class="col_3">15</td>
+<td class="col_4">864&euro;</td>
+<td class="col_5 col_last">899&euro;</td>
+</tr>
+<tr class="row_8 odd">
+<th scope="row" class="col_0 col_first">Early Summer 1</th>
+<td class="col_1">1,3,4</td>
+<td class="col_2">21.06.-04.07.2026</td>
+<td class="col_3">7</td>
+<td class="col_4">290&euro;</td>
+<td class="col_5 col_last">449&euro;</td>
+</tr>
+<tr class="row_9 even">
+<th scope="row" class="col_0 col_first">Early Summer 2</th>
+<td class="col_1">1,3,4</td>
+<td class="col_2">20.06.-04.07.2026</td>
+<td class="col_3">14</td>
+<td class="col_4">476&euro;</td>
+<td class="col_5 col_last">699&euro;</td>
+</tr>
+<tr class="row_10 odd">
+<th scope="row" class="col_0 col_first">Summer 2</th>
+<td class="col_1">1</td>
+<td class="col_2">08.08.-29.08.2026</td>
+<td class="col_3">21</td>
+<td class="col_4">1507&euro;</td>
+<td class="col_5 col_last">1499&euro;</td>
+</tr>
+<tr class="row_11 even">
+<th scope="row" class="col_0 col_first">Summer 1</th>
+<td class="col_1">1</td>
+<td class="col_2">09.08.-23.08.2026</td>
+<td class="col_3">14</td>
+<td class="col_4">1032&euro;</td>
+<td class="col_5 col_last">1049&euro;</td>
+</tr>
+<tr class="row_12 odd">
+<th scope="row" class="col_0 col_first">Indian Summer</th>
+<td class="col_1">1,3</td>
+<td class="col_2">29.08.-02.10.2026***</td>
+<td class="col_3">21</td>
+<td class="col_4">674&euro;</td>
+<td class="col_5 col_last">799&euro;</td>
+</tr>
+<tr class="row_13 even">
+<th scope="row" class="col_0 col_first">Fall Speed 1</th>
+<td class="col_1">1,3</td>
+<td class="col_2">22.08.-02.10.2026**</td>
+<td class="col_3">14</td>
+<td class="col_4">454&euro;</td>
+<td class="col_5 col_last">599&euro;</td>
+</tr>
+<tr class="row_14 odd">
+<th scope="row" class="col_0 col_first">Indian Summer</th>
+<td class="col_1">1</td>
+<td class="col_2">22.08.-02.10.2026*</td>
+<td class="col_3">7</td>
+<td class="col_4">301&euro;</td>
+<td class="col_5 col_last">379&euro;</td>
+</tr>
+<tr class="row_15 even">
+<th scope="row" class="col_0 col_first">Fall Speed 2</th>
+<td class="col_1">1</td>
+<td class="col_2">02.10.-17.10.2026</td>
+<td class="col_3">15</td>
+<td class="col_4">533&euro;</td>
+<td class="col_5 col_last">649&euro;</td>
+</tr>
+<tr class="row_16 odd">
+<th scope="row" class="col_0 col_first">Fall Speed 3</th>
+<td class="col_1">1</td>
+<td class="col_2">10.10.-24.10.2026</td>
+<td class="col_3">14</td>
+<td class="col_4">454&euro;</td>
+<td class="col_5 col_last">599&euro;</td>
+</tr>
+<tr class="row_17 row_last even">
+<th scope="row" class="col_0 col_first">Golden Autumn</th>
+<td class="col_1">1</td>
+<td class="col_2">02.10.-02.11.2026*</td>
+<td class="col_3">7</td>
+<td class="col_4">362&euro;</td>
+<td class="col_5 col_last">359&euro;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="ce_text col-12_md-10 block">
+<p>1. Electricity Flat Rate<br>3. 1 x Sauna <br>4. Green fee at the short-hole course (voucher for 1 week's green fee)<br><br>* 1 week during this time <br>** 2 weeks during this time <br>*** 3 weeks during this time</p>
+<ul>
+<li>Accommodations for up to 4 people from one family (2 adults and 2 children under 12, or 3 adults)</li>
+<li>Prices include showers, hot water, and the pool/hot tub.</li>
+<li>Plus tourist tax.</li>
+<li>The following spots CANNOT be booked at the special price: spots in the premium categories and the Leadingpark.</li>
+</ul>
+<p>Subject to changes and errors. For oversized spaces (* / ** on the site map), a surcharge of 15% or 30% will be applied.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mod_article grid-center block" id="article-1247">
+<div class="grid">
+<div class="ce_text col-12_lg-10 block">
+<h2>Sports Group Stays at the "Wulfener Hals"</h2>
+<p>For school groups, associations, and clubs of 12 or more people. For groups of 24 or more: 2 teachers get in free. Valid during the off-season and shoulder season, including an introductory course in surfing, sailing, SUP, or golf (4 hours).</p>
+<ul>
+<li>Stays from Monday through Friday or from Friday through Monday</li>
+<li>Accommodations in a Category 3&ndash;4 trailer for up to 4 people</li>
+<li>Includes 3 or 4 dinners</li>
+<li>Excludes bed linens; &euro;100 security deposit</li>
+<li>The flat fee for use of the shower, swimming pool, and hot tub is &euro;1.30 per person per night.</li>
+</ul>
+<p>Price: &euro;144.00 per person</p>
+<p><strong>Bookable through: </strong>Group Travel&mdash;Riechey Freizeitanlagen GmbH, Wulfen, Wulfener Hals Weg, 23769 Fehmarn. Tel.: <a href="tel:+49437186280">04371 &ndash; 86 28 0</a>, Fax: 04371 &ndash; 90 41.</p>
+</div>
+</div>
+</section>
+<section class="mod_article section-primary block" id="article-1248">
+<div class="grid">
+<div class="ce_text col-12_lg-10 block">
+<h2>Long-term stays at the Wulfener Hals</h2>
+<p>Wulfener Hals is open year-round, because Fehmarn is a great destination even in the fall or winter. Play golf on the adjacent course, go hiking, jog, enjoy nature&hellip;. Even if you&rsquo;d like to spend your main vacation somewhere else, Fehmarn is the perfect spot for a short getaway.</p>
+<p>Take advantage of our long-term stays for a break in between or for friends and acquaintances. Not all rooms are available for long-term stays. Please check with us about your preferences! Or simply enjoy a long, budget-friendly vacation at the &ldquo;Wulfener Hals.&rdquo;</p>
+</div>
+<div class="ce_table col-12_lg-10 block">
+<h3>Long-term stays</h3>
+<table id="table_8364">
+<tbody>
+<tr class="row_0 row_first odd">
+<td class="col_0 col_first">&#65279;Winter</td>
+<td class="col_1">01.11.25-02.01.2026</td>
+<td class="col_2">62</td>
+<td class="col_3 col_last">383,00 &euro;</td>
+</tr>
+<tr class="row_1 even">
+<td class="col_0 col_first">Winter/Spring</td>
+<td class="col_1">02.01.26.-21.03.2026</td>
+<td class="col_2">79</td>
+<td class="col_3 col_last">178,00 &euro;</td>
+</tr>
+<tr class="row_2 odd">
+<td class="col_0 col_first">Winter&mdash;5 months</td>
+<td class="col_1">01.11.26.-21.03.2026</td>
+<td class="col_2">139</td>
+<td class="col_3 col_last">465,00 &euro;</td>
+</tr>
+<tr class="row_3 even">
+<td class="col_0 col_first">Spring 1</td>
+<td class="col_1">21.03.26-13.05.2026</td>
+<td class="col_2">63</td>
+<td class="col_3 col_last">896,00 &euro;</td>
+</tr>
+<tr class="row_4 odd">
+<td class="col_0 col_first">Spring 2</td>
+<td class="col_1">11.04.26-06.06.2026</td>
+<td class="col_2">56</td>
+<td class="col_3 col_last">1.132,00 &euro;</td>
+</tr>
+<tr class="row_5 even">
+<td class="col_0 col_first">Spring 3</td>
+<td class="col_1">21.03.26.-27.06.2026</td>
+<td class="col_2">97</td>
+<td class="col_3 col_last">2.257,00 &euro;</td>
+</tr>
+<tr class="row_6 odd">
+<td class="col_0 col_first">Late Summer</td>
+<td class="col_1">31.08.26.-31.10.2026</td>
+<td class="col_2">61</td>
+<td class="col_3 col_last">774,00 &euro;</td>
+</tr>
+<tr class="row_7 row_last even">
+<td class="col_0 col_first">Half a year</td>
+<td class="col_1">01.11.25.-30.04.2026</td>
+<td class="col_2">180</td>
+<td class="col_3 col_last">850,00 &euro;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="ce_text col-12_lg-10 block">
+<p>Oversized spaces larger than 110 square meters (*) 15% surcharge <br>Oversized lots larger than 130 square meters (**) are subject to a 30% surcharge.</p>
+<p>Long-term stays can only be booked at certain sites; please contact the front desk for more information.</p>
+<p>Special services (additional tent, pet, boat, etc.) are available upon request. Long-term stays include all other applicable discounts. Electricity is billed based on usage. All offers are subject to a visitor&rsquo;s tax and a flat-rate occupancy fee.</p>
+<p>All combo stays also apply to accommodations at <a href="https://www.haveltourist.de/" target="_blank" rel="noopener">Haveltourist</a> at the Mecklenburgischen Seenplatte</p>
+</div>
+</div>
+</section>
+<section class="mod_article grid-center block" id="article-1249">
+<div class="col-12_md-10">
+<h2 class="ce_headline col-12">Information about the winter semester (from the end of fall break to the start of Easter break)</h2>
+<div class="ce_accordionStart ce_accordion ">
+<div class="accordion-toggle"><i class="fal fa-plus"></i><span>Off-season at the Wulfener Hals Camping and Vacation Park</span></div>
+<div class="accordion-content">
+<div class="ce_text block">
+<p>The cold season is ideal for guests seeking tranquility and who enjoy long walks along an idyllic beach. The many well-maintained bike paths on Fehmarn also invite you to explore the island at your own pace. A reduced range of offerings during the winter months does not justify a claim for a price reduction; rather, it is the reason for the already significantly lower prices during this time. During the winter months, our range of offerings differs greatly from that of the summer months. That is why this period is considered the &ldquo;off-season.&rdquo;</p>
+</div>
+</div>
+</div>
+<div class="ce_accordionStart ce_accordion ">
+<div class="accordion-toggle"><i class="fal fa-plus"></i><span>Hours of Operation</span></div>
+<div class="accordion-content">
+<div class="ce_text button button-primary block">
+<p>The resort is open year-round. The offerings shown in the catalog and online apply to the peak season and, to a limited extent, to the off-season. During the off-season, various facilities are closed and certain services are unavailable; for example, the swimming pool is not heated during this time, the restaurants and entertainment programs are closed, and sports schools&mdash;such as the surfing and diving schools&mdash;are not open, etc. You can find the exact opening hours for our facilities and services here:</p>
+<p><a href="oeffnungszeiten">Overview of Opening Hours</a></p>
+</div>
+</div>
+</div>
+<div class="ce_accordionStart ce_accordion ">
+<div class="accordion-toggle"><i class="fal fa-plus"></i><span>Camping Services at the &ldquo;Wulfener Hals&rdquo; in Winter</span></div>
+<div class="accordion-content">
+<div class="ce_text block">
+<p>When it snows, the main paths and access routes to the restroom building and the reception desk are cleared and salted daily. You may drive onto the campground at any time. Final site assignments can only be made on-site. We reserve the right to reassign your reserved site due to weather conditions. Please park carefully at a right angle to your site without driving onto neighboring sites.</p>
+<p>Due to the risk of freezing in winter, water and sewer connections at the individual sites cannot be provided. Please use the central water and wastewater facilities in the restroom buildings. During the winter months, at least one restroom facility on the campground itself is open, as is the restroom facility in the RV park. Water cannot be supplied to the campsites during the winter months due to the risk of freezing.</p>
+<p>You can pick up bread rolls at the front desk if you order them in advance. The gift shop is closed; gas is sold at the front desk. The front desk is staffed as follows: Monday through Saturday from 8 a.m. to 6 p.m. and Sunday from 9 a.m. to 6 p.m.</p>
+<p>The sauna is available for a fee of &euro;9.00 per person daily from 2:00 p.m. to 10:00 p.m. for two hours. (Advance registration at the front desk is required.) The pool and hot tub are not in operation during the winter months.</p>
+</div>
+</div>
+</div>
+</div>
+<script src="files/secra-theme/js/accordion.js"></script>
+</section>
+</main>
+<footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
+<style></style><div class="footer-top"><div class="grid-center-spaceBetween">
+<div class="ce_text col-12_md-6_lg-2 block">
+<p>Reservation Hotline:</p>
+</div>
+<a class="col-12_md-6_lg-3" href="tel:+49437186280" aria-label="Telefon"><i class="fad fa-phone"></i><span>&ensp;04371 - 8628-0</span></a>
+<a class="col-12_md-6_lg-3" href="mailto:info@wulfenerhals.de" aria-label="E-Mail"><i class="fad fa-envelope"></i><span>&ensp;info@wulfenerhals.de</span></a>
+<a class="booking-button col-12_md-6_lg-3" href="/suchen-buchen" aria-label="Unterkunft buchen"><i class="fad fa-bed"></i><span>Search &amp; Book</span></a>    </div>
+</div>
+<div class="footer-content grid-center">
+<div class="col-12_sm-6_lg-4">
+<div class="ce_text block">
+<p><strong>Wulfener Hals Camping and Vacation Park<br></strong><br>Wulfener Hals 100 Weg, Ortsteil Wulfen<br>23769 Fehmarn<br>Phone: <a href="tel:+49437186280">+49 (0) 4371 - 86 28 -0</a><br>Fax +49 (0) 4371 - 37 23<br><a href="campingpark-wulfener-hals">www.wulfenerhals.de</a><br><a href="mailto:info@wulfenerhals.de">info@wulfenerhals.de</a></p>
+<p>&nbsp;</p>
+</div>
+<div class="ce_image banner block">
+<figure class="image_container">
+<a href="https://www.golfwave.de/" target="_blank" rel="noreferrer noopener">
+<img src="files/bilder/layout/Banner-Golfwave-minimal.jpg" width="1500" height="500" alt="">
+</a>
+</figure>
+</div>
+</div>
+<div class="col-12_sm-6_lg-4 grid">
+<div class="ce_image col-12 footer-logos block">
+<figure class="image_container">
+<img src="files/bilder/logos-auszeichnungen/Logo_Wulfener_Hals_2022_neg.svg" alt="">
+</figure>
+</div>
+<div class="col-12_md-6">
+<ul class="footer-navigation">
+<li><a href="/golfurlaub" aria-label="Golfpark Fehmarn"> Fehmarn Golf Park</a></li>
+<li><a href="/webcam-wetter" aria-label="Wetter-Webcam"> Webcam &amp; Wetter</a></li>
+<li><a href="/wulfener-hals-a-z" aria-label="Wulfen-von-A-Z"> Wulfener Hals from A to Z</a></li>
+<li><a href="/news" aria-label="News">News</a></li>
+</ul>
+</div>
+<div class="col-12_md-6">
+<ul class="footer-navigation">
+<li><a href="/surfen-kiten-segeln" aria-label="surfen kiten segeln">Windsurfing on Fehmarn</a></li>
+<li><a href="/impressum" aria-label="Impressum"> Legal Notice</a></li>
+<li><a href="/datenschutz" aria-label="Datenschutz"> Privacy Policy</a></li>
+<li><a href="/cookie-richtlinien" aria-label="Cookies">Cookie Policy</a></li>
+</ul>
+</div>
+<ul class="social-links col-12">
+<li><a href="https://www.youtube.com/user/WulfenerHals" aria-label="Youtube-Channel" target="_blank"><i class="fab fa-youtube"></i></a></li>
+<li><a href="https://de-de.facebook.com/campingfehmarn/" aria-label="Facebook-Seite" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+<li><a href="https://www.instagram.com/wulfenerhals/?hl=de" aria-label="Instagram-Seite" target="_blank"><i class="fab fa-instagram"></i></a></li>
+</ul>    </div>
+<div class="col-12_sm-6_lg-3 grid">
+<div class="ce_text col-12 block">
+<p><strong>Guest Login</strong></p>
+<p>Sign in to view all your vacation booking details online.</p>
+</div>
+<div class="ce_hyperlink button button-primary col-12 block">
+<a href="compusoft-login" class="hyperlink_txt" title="Zum Login">Log In</a>
+</div>
+<div class="ce_text col-12_md-9 block">
+<p>Our partner company at the Mecklenburgischen Seenplatte:</p>
+</div>
+<div class="ce_image col-12_md-3 footer-logos block">
+<figure class="image_container">
+<a href="https://www.haveltourist.de/" target="_blank" rel="noreferrer noopener">
+<img src="files/bilder/logos-auszeichnungen/logo-haveltourist.png" width="500" height="348" alt="">
+</a>
+</figure>
+</div>
+<div class="ce_text col-12_md-9 block">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<div class="footer-area">
+<div class="ce_gallery footer-logos block">
+<ul class="cols_9" itemscope itemtype="http://schema.org/ImageGallery">
+<li class="row_0 row_first row_last even col_0 col_first">
+<figure class="image_container">
+<a href="assets/images/d/EMAS-7b975328.png" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/EMAS.png" width="506" height="460" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_1">
+<figure class="image_container">
+<a href="assets/images/f/TopPlatz-9db73eb2.png" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/TopPlatz.png" width="532" height="532" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_2">
+<figure class="image_container">
+<a href="https://www.leadingcampings.com/" target="_blank" rel="noreferrer noopener">
+<img src="files/bilder/logos-auszeichnungen/camp_partner_mod16_leadingcamps_530x530_web.jpg" width="530" height="347" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_3">
+<figure class="image_container">
+<a href="assets/images/f/ACSI%202023-6796b237.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/ACSI%202023.jpg" width="736" height="1000" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_4">
+<figure class="image_container">
+<a href="assets/images/9/ADAC-Logo%202024-dcac48d0.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/ADAC-Logo%202024.jpg" width="1000" height="524" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_5">
+<figure class="image_container">
+<a href="assets/images/2/ANWB%202023-3cff32b5.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/ANWB%202023.jpg" width="1000" height="984" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_6">
+<figure class="image_container">
+<a href="assets/images/9/Camping%20Info%20LOGO%202023-202658c2.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/Camping%20Info%20LOGO%202023.jpg" width="656" height="768" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_7">
+<figure class="image_container">
+<a href="assets/images/5/Gefragtester%20Campingplatz%20Deutschlands-0bb30610.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/Gefragtester%20Campingplatz%20Deutschlands.jpg" width="1871" height="1330" alt="">
+</a>
+</figure>
+</li>
+</ul>
+</div>
+<style></style></div>
+</footer>
+<script src="assets/colorbox/js/colorbox.min.js"></script>
+<script></script>
+<script src="assets/swipe/js/swipe.min.js?v=2.2.2"></script>
+<script></script>
+<script src="files/secra-theme/js/navigation-main.js?v=9c80029e"></script><script src="files/secra-theme/js/dsgvocontent.js?v=53f66bcd"></script><script type="application/ld+json">
+{
+    "@context": "https:\/\/schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage"
+        },
+        {
+            "@id": "#\/schema\/image\/124bac01-246e-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/Service%20-%20Infos\/Ueber%20uns\/Impression_Camping_WulfenerHals_Fehmarn8546.jpg"
+        }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https:\/\/schema.contao.org",
+    "@graph": [
+        {
+            "@type": "Page",
+            "fePreview": false,
+            "groups": [],
+            "noSearch": false,
+            "pageId": 221,
+            "protected": false,
+            "title": "Specials & Angebote"
+        }
+    ]
+}
+</script>
+</body>
+</html>

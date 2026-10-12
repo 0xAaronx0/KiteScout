@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Wix.com Website Builder"/>
+  
+  
+  
+  <script></script>
+  <script nomodule="" src="https://static.parastorage.com/unpkg/core-js-bundle@3.2.1/minified.js"></script>
+  <script nomodule="" src="https://static.parastorage.com/unpkg/focus-within-polyfill@5.0.9/dist/focus-within-polyfill.js"></script>
+  <script></script>
+    <script type="application/json" id="wix-essential-viewer-model"></script>
+    <script></script>
+  <script></script>
+  <script></script>
+  <script data-url="https://static.parastorage.com/services/wix-thunderbolt/dist/handleAccessTokens.inline.3250797b.bundle.min.js"></script>
+<script data-url="https://static.parastorage.com/services/wix-thunderbolt/dist/overrideGlobals.inline.b271af7d.bundle.min.js"></script>
+  <script></script>
+  <style data-url="https://static.parastorage.com/services/wix-thunderbolt/dist/main.744ea815.min.css"></style>
+<style data-url="https://static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.d1b87f2e.min.css"></style>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="skype_toolbar" content="skype_toolbar_parser_compatible">
+      <script type="wix/htmlEmbeds" id="pageHtmlEmbeds.head start"></script>
+      <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LodgingBusiness","@id":"https://www.kitebuenhombre.com/cabarete-boutique-kite-hotel#lodging","name":"Cabarete Boutique Kite Hotel","description":"Boutique kite lofts in historic downtown Cabarete, Dominican Republic — pool, yoga lounge, Starlink Wi-Fi, private chef available, about a 30-minute walk (5 minutes by moped) to Kite Beach. Kite Buen Hombre's Cabarete kite gear is stored here, and lessons run wherever the beach is best that day.","url":"https://www.kitebuenhombre.com/cabarete-boutique-kite-hotel","telephone":"+1-829-521-2367","parentOrganization":{"@type":"Organization","@id":"https://www.kitebuenhombre.com/#organization","name":"Kite Buen Hombre","url":"https://www.kitebuenhombre.com","telephone":"+1-829-521-2367","email":"kitebuen@gmail.com","sameAs":["https://www.facebook.com/kitebuenhombre","https://www.instagram.com/kitebuenhombre/","https://www.youtube.com/@kitebuenhombre","https://www.tiktok.com/@kitebuenhombre","https://www.tripadvisor.com/Attraction_Review-g8014437-d6609488-Reviews-Kite_Buen_Hombre-Buen_Hombre_Monte_Cristi_Province_Dominican_Republic.html","https://www.wikidata.org/wiki/Q112020344"]},"priceRange":"$$","address":{"@type":"PostalAddress","addressLocality":"Cabarete","addressRegion":"Puerto Plata Province","addressCountry":"DO"},"geo":{"@type":"GeoCoordinates","latitude":19.74706,"longitude":-70.40588},"sameAs":["https://www.facebook.com/kitebuenhombre","https://www.instagram.com/kitebuenhombre/","https://www.youtube.com/@kitebuenhombre","https://www.tiktok.com/@kitebuenhombre","https://www.tripadvisor.com/Attraction_Review-g8014437-d6609488-Reviews-Kite_Buen_Hombre-Buen_Hombre_Monte_Cristi_Province_Dominican_Republic.html","https://www.wikidata.org/wiki/Q112020344"],"email":"kitebuen@gmail.com","petsAllowed":true,"amenityFeature":[{"@type":"LocationFeatureSpecification","name":"Pool"},{"@type":"LocationFeatureSpecification","name":"Yoga lounge"},{"@type":"LocationFeatureSpecification","name":"Starlink Wi-Fi"},{"@type":"LocationFeatureSpecification","name":"Private chef available on request"}],"makesOffer":{"@type":"Offer","price":"85","priceCurrency":"USD","priceSpecification":{"@type":"UnitPriceSpecification","price":"85","priceCurrency":"USD","unitText":"per night"}}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.kitebuenhombre.com/"},{"@type":"ListItem","position":2,"name":"Cabarete Boutique Kite Hotel","item":"https://www.kitebuenhombre.com/cabarete-boutique-kite-hotel"}]},{"@type":"FAQPage","@id":"https://www.kitebuenhombre.com/cabarete-boutique-kite-hotel#faq","url":"https://www.kitebuenhombre.com/cabarete-boutique-kite-hotel","mainEntity":[{"@type":"Question","name":"How far is the hotel from Kite Beach?","acceptedAnswer":{"@type":"Answer","text":"About a 30-minute walk. 5 minutes by moped."}},{"@type":"Question","name":"Are meals included?","acceptedAnswer":{"@type":"Answer","text":"Not as standard, but a private chef is available on request."}},{"@type":"Question","name":"Is there a pool?","acceptedAnswer":{"@type":"Answer","text":"Yes, plus a yoga lounge and gardens on-site."}},{"@type":"Question","name":"Is there reliable Wi-Fi for remote work?","acceptedAnswer":{"@type":"Answer","text":"Yes — high-speed Starlink Wi-Fi is available across the property."}},{"@type":"Question","name":"What type of rooms are available?","acceptedAnswer":{"@type":"Answer","text":"Boutique kite lofts in the heart of downtown Cabarete."}},{"@type":"Question","name":"Can I book without taking lessons?","acceptedAnswer":{"@type":"Answer","text":"Yes — the property is open to independent travelers and remote workers, not just kitesurfers."}},{"@type":"Question","name":"Where do Cabarete kite lessons take place?","acceptedAnswer":{"@type":"Answer","text":"Wherever the beach is best that day. Cabarete's sand shifts a lot, and Kite Beach can lose its sand from August to October, so we don't teach from one fixed spot. Our kite gear is kept here at the Cabarete Boutique Kite Hotel, and we take you to the best launch for the conditions."}}]}]}</script>
+      <meta name="p:domain_verify" content="8c017dc676c559209e5b64c095cabb8f" />
+      <meta name="yandex-verification" content="9ed4f718bb0aa343" />
+      <meta name="google-site-verification" content="Aug6ki9_X3QqvqXod-VssBefPL6kE-r3YYvIHrhLIaA" />
+      <meta name="facebook-domain-verification" content="zvo55a0sxdh0dkdn2v4g1w5bcr4uo8" />
+      <style></style>
+      <script type="text/plain" id="kbh-faq2"></script><script></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-K9SVY7P2DS"></script>
+<script></script>
+      <style></style><style></style><style></style>
+      <script type="wix/htmlEmbeds" id="pageHtmlEmbeds.head end"></script>
+  <style id="a11y-contrast"></style>
+  <script id="wix-skip-played-animations-setup"></script>
+<meta http-equiv="X-Wix-Meta-Site-Id" content="b564dcd3-b6f3-4f6b-ac70-eeea1271fa3f">
+<meta http-equiv="X-Wix-Application-Instance-Id" content="e8bf2e1b-bef0-468d-a0c9-47b04c53bc75">
+    <meta http-equiv="X-Wix-Published-Version" content="6775"/>
+    <meta http-equiv="etag" content="bug"/>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_bootstrap.674e7dbc.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[SkipToContentButton].c9649c22.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_bootstrap-responsive.4e8a21db.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[RefComponent].98cd6e5f.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[HeaderSection].ccfc51c3.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[Container_ResponsiveBox].ce566e07.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[ImageX].cb16f202.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_menu.28ac9b1a.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[StylableButton_Button].adfb8b7e.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[PageSections].7dbf3cd4.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[Section].62219e60.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[Repeater_Responsive].bf0a2500.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[FiveGridLine_SolidLineStudio].95d42e2b.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[Tabs].2ffb5222.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[SingleTab].0dcd928b.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[VerticalLine_VerticalSolidLine].4ef9ba7e.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[SiteButton_WrappingButton].6b74283d.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[HtmlComponent].c7dce586.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[FooterSection].62219e60.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[LinkBar_Responsive].e175f21e.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[MenuContainer_Responsive].b4ae898e.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_mobile.482f1cf1.min.css"></style>
+<style data-href="https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[VectorImage_VectorButton].8d19a428.min.css"></style>
+<style data-href="https://static.parastorage.com/services/wix-thunderbolt/dist/group_7.c472a333.chunk.min.css"></style>
+<title>Cabarete Kite Hotel | Boutique Lofts at Kite Beach, DR</title>
+  <meta name="description" content="Boutique kite lofts in historic downtown Cabarete — pool, yoga lounge, 200MB Starlink Wi-Fi, private chef available, a 20-minute walk to Kite Beach. Est. 2013."/>
+  
+  <meta property="og:title" content="Cabarete Kite Hotel | Boutique Lofts at Kite Beach, DR"/>
+  <meta property="og:description" content="Boutique kite lofts in historic downtown Cabarete — pool, yoga lounge, 200MB Starlink Wi-Fi, private chef available, a 20-minute walk to Kite Beach. Est. 2013."/>
+  <meta property="og:image" content="https://static.wixstatic.com/media/d76113_2630b56405f24197980dd5dfdf92781b~mv2.jpg/v1/fill/w_2500,h_1666,al_c/d76113_2630b56405f24197980dd5dfdf92781b~mv2.jpg"/>
+  <meta property="og:image:width" content="2500"/>
+  <meta property="og:image:height" content="1666"/>
+  <meta property="og:url" content="https://www.kitebuenhombre.com/cabarete-boutique-kite-hotel"/>
+  <meta property="og:site_name" content="KITE BUEN HOMBRE"/>
+  <meta property="og:type" content="website"/>
+  <meta name="google-site-verification" content="Aug6ki9_X3QqvqXod-VssBefPL6kE-r3YYvIHrhLIaA"/>
+  <meta name="msvalidate.01" content="827D33E5311A3A9EE9AEA63E13B04F40"/>
+  <meta name="fb_admins_meta_tag" content="kitebuenhombre"/>
+  <meta property="fb:admins" content="kitebuenhombre"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image" content="https://static.wixstatic.com/media/d76113_2630b56405f24197980dd5dfdf92781b~mv2.jpg/v1/fill/w_2500,h_1666,al_c/d76113_2630b56405f24197980dd5dfdf92781b~mv2.jpg"/>
+  <meta name="twitter:description" content="Boutique kite lofts in historic downtown Cabarete — pool, yoga lounge, 200MB Starlink Wi-Fi, private chef available, a 20-minute walk to Kite Beach. Est. 2013."/>
+  <meta name="twitter:title" content="Cabarete Kite Hotel | Boutique Lofts at Kite Beach, DR"/>
+<script></script>
+<script type="speculationrules"></script>
+<style id="page-transitions"></style>
+<style rel="stylesheet" data-href="https://static.parastorage.com/services/faq-ooi/1.676.0/FaqOoiViewerWidget.min.css"></style>
+<style id="css_masterPage"></style>
+<style id="css_rdsda"></style>
+<style id="stylableCss_rdsda"></style>
+<style id="compCssMappers_rdsda"></style>
+</head>
+<body class='responsive' >
+<script type="text/javascript"></script>
+    <script type="wix/htmlEmbeds"></script>
+    <script type="wix/htmlEmbeds"></script>
+<script></script>
+<script></script>
+    <style id=wix-custom-css></style>
+<svg></svg>
+<div><div><div><span>top of page</span></div><div><div><div><div><div><div></div><div><div><div><div><header slots="[object Object]" wix="[object Object]"><section><div><div></div><div></div></div><div><div><div></div><div><a href="https://www.kitebuenhombre.com" target="_self"><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/dd80b9_89a4d659d6804cd1a161387952931e0a~mv2.png/v1/crop/x_0,y_0,w_2972,h_2334/fill/w_49,h_38,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Kite%20buen%20Hombre%20logo.png" alt="Kite Buen Hombre logo"/></picture></wow-image></div></div></a></div><div><div><nav><ul><li><div><div><a href="https://www.kitebuenhombre.com" target="_self"><div>Home</div></a></div></div><span></span></li><li><div><div><div><div>Locations</div></div><button><svg></svg></button><button><svg></svg></button></div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/buen-hombre-dominican-republic" target="_self"><span>Playa Buen Hombre (Monte Cristi)</span></a></li><li><a href="https://www.kitebuenhombre.com/cabarete-dominican-republic" target="_self"><span>Cabarete (Puerto Plata)</span></a></li><li><a href="https://www.kitebuenhombre.com/live-wind-live-camera" target="_self"><span>Live Wind &amp; Camera</span></a></li></ul></div></div></div></div></div><div><div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/buen-hombre-dominican-republic" target="_self"><span>Playa Buen Hombre (Monte Cristi)</span></a></li><li><a href="https://www.kitebuenhombre.com/cabarete-dominican-republic" target="_self"><span>Cabarete (Puerto Plata)</span></a></li><li><a href="https://www.kitebuenhombre.com/live-wind-live-camera" target="_self"><span>Live Wind &amp; Camera</span></a></li></ul></div></div></div></div></div></div><span></span></li><li><div><div><div><div>Learn</div></div><button><svg></svg></button><button><svg></svg></button></div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/learn-to-kitesurf-dominican-republic" target="_self"><span>Learn to kitesurf</span></a></li><li><a href="https://www.kitebuenhombre.com/beginner-kitesurfing-lessons-dominican-republic" target="_self"><span>Beginner lessons</span></a></li><li><a href="https://www.kitebuenhombre.com/advanced-kitesurfing-lessons-dominican-republic" target="_self"><span>Advanced Coaching</span></a></li><li><a href="https://www.kitebuenhombre.com/wing-foil-parawing-lessons-dominican-republic" target="_self"><span>Wing Foil &amp; Foil &amp; Parawing</span></a></li><li><a href="https://www.kitebuenhombre.com/kitecamp" target="_self"><span>Kite Camps</span></a></li><li><a href="https://www.kitebuenhombre.com/kite-stay-packages-dominican-republic" target="_self"><span>Kite Stay Packages</span></a></li><li><a href="https://www.kitebuenhombre.com/kitesurfing-dominican-republic" target="_self"><span>DR Kitesurf Guide</span></a></li></ul></div></div></div></div></div><div><div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/learn-to-kitesurf-dominican-republic" target="_self"><span>Learn to kitesurf</span></a></li><li><a href="https://www.kitebuenhombre.com/beginner-kitesurfing-lessons-dominican-republic" target="_self"><span>Beginner lessons</span></a></li><li><a href="https://www.kitebuenhombre.com/advanced-kitesurfing-lessons-dominican-republic" target="_self"><span>Advanced Coaching</span></a></li><li><a href="https://www.kitebuenhombre.com/wing-foil-parawing-lessons-dominican-republic" target="_self"><span>Wing Foil &amp; Foil &amp; Parawing</span></a></li><li><a href="https://www.kitebuenhombre.com/kitecamp" target="_self"><span>Kite Camps</span></a></li><li><a href="https://www.kitebuenhombre.com/kite-stay-packages-dominican-republic" target="_self"><span>Kite Stay Packages</span></a></li><li><a href="https://www.kitebuenhombre.com/kitesurfing-dominican-republic" target="_self"><span>DR Kitesurf Guide</span></a></li></ul></div></div></div></div></div></div><span></span></li><li><div><div><div><div>Stay</div></div><button><svg></svg></button><button><svg></svg></button></div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/where-to-stay" target="_self"><span>Where to Stay</span></a></li><li><a href="https://www.kitebuenhombre.com/flexible-kitesurfing-stay-dominican-republic" target="_self"><span>The Flexible Stay</span></a></li><li><a href="https://www.kitebuenhombre.com/buen-hombre-hotel" target="_self"><span>Buen Hombre Hotel</span></a></li><li><a href="https://www.kitebuenhombre.com/cabarete-boutique-kite-hotel" target="_self"><span>Cabarete Boutique Kite Hotel</span></a></li></ul></div></div></div></div></div><div><div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/where-to-stay" target="_self"><span>Where to Stay</span></a></li><li><a href="https://www.kitebuenhombre.com/flexible-kitesurfing-stay-dominican-republic" target="_self"><span>The Flexible Stay</span></a></li><li><a href="https://www.kitebuenhombre.com/buen-hombre-hotel" target="_self"><span>Buen Hombre Hotel</span></a></li><li><a href="https://www.kitebuenhombre.com/cabarete-boutique-kite-hotel" target="_self"><span>Cabarete Boutique Kite Hotel</span></a></li></ul></div></div></div></div></div></div><span></span></li><li><div><div><div><div>Experience</div></div><button><svg></svg></button><button><svg></svg></button></div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/boat-trips-downwinders" target="_self"><span>Downwinders &amp; Boat Trips</span></a></li><li><a href="https://www.kitebuenhombre.com/cayo-arena-dominican-republic" target="_self"><span>Cayo Arena / Paradise Island</span></a></li><li><a href="https://www.kitebuenhombre.com/grand-grossier" target="_self"><span>Grand Grossier</span></a></li><li><a href="https://www.kitebuenhombre.com/cayos-siete-hermanos-monte-cristi" target="_self"><span>7 Islands / 7 Cayos Trip</span></a></li><li><a href="https://www.kitebuenhombre.com/playa-popa" target="_self"><span>Playa Popa</span></a></li><li><a href="https://www.kitebuenhombre.com/monte-cristi" target="_self"><span>Monte Cristi</span></a></li><li><a href="https://www.kitebuenhombre.com/punta-rucia" target="_self"><span>Punta Rucia</span></a></li></ul></div></div></div></div></div><div><div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/boat-trips-downwinders" target="_self"><span>Downwinders &amp; Boat Trips</span></a></li><li><a href="https://www.kitebuenhombre.com/cayo-arena-dominican-republic" target="_self"><span>Cayo Arena / Paradise Island</span></a></li><li><a href="https://www.kitebuenhombre.com/grand-grossier" target="_self"><span>Grand Grossier</span></a></li><li><a href="https://www.kitebuenhombre.com/cayos-siete-hermanos-monte-cristi" target="_self"><span>7 Islands / 7 Cayos Trip</span></a></li><li><a href="https://www.kitebuenhombre.com/playa-popa" target="_self"><span>Playa Popa</span></a></li><li><a href="https://www.kitebuenhombre.com/monte-cristi" target="_self"><span>Monte Cristi</span></a></li><li><a href="https://www.kitebuenhombre.com/punta-rucia" target="_self"><span>Punta Rucia</span></a></li></ul></div></div></div></div></div></div><span></span></li><li><div><div><div><div>Shop</div></div><button><svg></svg></button><button><svg></svg></button></div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/shop-kitesurfing-equipment" target="_self"><span>Kite Shop &amp; Demo Center</span></a></li><li><a href="https://www.kitebuenhombre.com/merchandise-kite-buen-hombre" target="_self"><span>Merchandise</span></a></li></ul></div></div></div></div></div><div><div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/shop-kitesurfing-equipment" target="_self"><span>Kite Shop &amp; Demo Center</span></a></li><li><a href="https://www.kitebuenhombre.com/merchandise-kite-buen-hombre" target="_self"><span>Merchandise</span></a></li></ul></div></div></div></div></div></div><span></span></li><li><div><div><div><div>Services</div></div><button><svg></svg></button><button><svg></svg></button></div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/transportation-dominican-republic-buen-hombre-cabarete" target="_self"><span>Transportation</span></a></li><li><a href="https://www.kitebuenhombre.com/trips-tours-activities-dominican-republic" target="_self"><span>Trips &amp; Tours &amp; Activities</span></a></li><li><a href="https://www.kitebuenhombre.com/wellness-massage-yoga-personal-training-dominican-republic" target="_self"><span>Massage; Yoga; Personal Training</span></a></li><li><a href="https://www.kitebuenhombre.com/food-dining-buen-hombre-cabarete-dominican-republic" target="_self"><span>Food Service</span></a></li><li><a href="https://www.kitebuenhombre.com/rentals-buen-hombre-cabarete-dominican-republic" target="_self"><span>Rentals</span></a></li><li><a href="https://www.kitebuenhombre.com/concierge-services" target="_self"><span>Concierge Services</span></a></li></ul></div></div></div></div></div><div><div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/transportation-dominican-republic-buen-hombre-cabarete" target="_self"><span>Transportation</span></a></li><li><a href="https://www.kitebuenhombre.com/trips-tours-activities-dominican-republic" target="_self"><span>Trips &amp; Tours &amp; Activities</span></a></li><li><a href="https://www.kitebuenhombre.com/wellness-massage-yoga-personal-training-dominican-republic" target="_self"><span>Massage; Yoga; Personal Training</span></a></li><li><a href="https://www.kitebuenhombre.com/food-dining-buen-hombre-cabarete-dominican-republic" target="_self"><span>Food Service</span></a></li><li><a href="https://www.kitebuenhombre.com/rentals-buen-hombre-cabarete-dominican-republic" target="_self"><span>Rentals</span></a></li><li><a href="https://www.kitebuenhombre.com/concierge-services" target="_self"><span>Concierge Services</span></a></li></ul></div></div></div></div></div></div><span></span></li><li><div><div><div><div>About</div></div><button><svg></svg></button><button><svg></svg></button></div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/our-story" target="_self"><span>Our Story</span></a></li><li><a href="https://www.kitebuenhombre.com/the-team" target="_self"><span>The Team</span></a></li><li><a href="https://www.kitebuenhombre.com/partners" target="_self"><span>Partners</span></a></li><li><a href="https://www.kitebuenhombre.com/miky-kite-instructor-buen-hombre" target="_self"><span>Miky</span></a></li><li><a href="https://www.kitebuenhombre.com/davisito" target="_self"><span>Davisito</span></a></li><li><a href="https://www.kitebuenhombre.com/media" target="_self"><span>In The Media</span></a></li><li><a href="https://www.kitebuenhombre.com/blog" target="_self"><span>Blog</span></a></li><li><a href="https://www.kitebuenhombre.com/faq" target="_self"><span>FAQ</span></a></li><li><a href="https://www.kitebuenhombre.com/reviews" target="_self"><span>Reviews</span></a></li></ul></div></div></div></div></div><div><div><div><div><div><div><ul><li><a href="https://www.kitebuenhombre.com/our-story" target="_self"><span>Our Story</span></a></li><li><a href="https://www.kitebuenhombre.com/the-team" target="_self"><span>The Team</span></a></li><li><a href="https://www.kitebuenhombre.com/partners" target="_self"><span>Partners</span></a></li><li><a href="https://www.kitebuenhombre.com/miky-kite-instructor-buen-hombre" target="_self"><span>Miky</span></a></li><li><a href="https://www.kitebuenhombre.com/davisito" target="_self"><span>Davisito</span></a></li><li><a href="https://www.kitebuenhombre.com/media" target="_self"><span>In The Media</span></a></li><li><a href="https://www.kitebuenhombre.com/blog" target="_self"><span>Blog</span></a></li><li><a href="https://www.kitebuenhombre.com/faq" target="_self"><span>FAQ</span></a></li><li><a href="https://www.kitebuenhombre.com/reviews" target="_self"><span>Reviews</span></a></li></ul></div></div></div></div></div></div><span></span></li><li><div><div><a href="https://www.kitebuenhombre.com/contact" target="_self"><div>Contact</div></a></div></div><span></span></li></ul><div><div><span><svg></svg></span></div><div><span><svg></svg></span></div></div></nav></div><div><nav><div><button type="button"><span><span>Menu</span><span><span>
+<svg></svg>
+</span></span></span></button></div></nav><div><div><div></div><div><div><div><div></div><div><div><div><button type="button"><span><span>Close</span><span><span>
+<svg></svg>
+</span></span></span></button></div></div></div></div></div></div></div></div></div></div><a href="https://www.kitebuenhombre.com/book" target="_self"><span>Book Now</span><span><span>
+<svg></svg>
+</span></span></a></div></div></section></header></div><main><section><div><div></div><div><wix-video><video crossorigin="anonymous" playsinline="" preload="auto" muted="" loop=""></video><wow-image><img src="https://static.wixstatic.com/media/d76113_e9e77d8414fa4f50be03eded7d2b241cf000.jpg/v1/fill/w_100,h_56,al_c,q_80,usm_0.66_1.00_0.01,blur_3,enc_avif,quality_auto/d76113_e9e77d8414fa4f50be03eded7d2b241cf000.jpg" alt=""/></wow-image></wix-video></div></div><div><div><div></div><div><h1>CABARETE <span><span>BOUTIQUE</span></span> KITE HOTEL</h1></div><div><p>Cabarete is more than one of the world&#39;s most iconic kite destinations.</p>
+<p>&nbsp;</p>
+<p>Morning coffee on your terrace.</p>
+<p>Afternoons on Kite Beach.</p>
+<p>Sunset by the pool.</p>
+<p>BBQs that turn strangers into friends.</p>
+<p>&nbsp;</p>
+<p>This isn&#39;t just where you stay.</p>
+<p>It&#39;s where your Cabarete story begins.</p>
+<p><span>​</span></p></div><div><h2>4.9 Rating&nbsp; &bull;&nbsp; Since 2013&nbsp; &bull;&nbsp; Boutique Compound&nbsp;&nbsp;&bull;&nbsp; Up to 25 Guests</h2></div><a href="https://www.kitebuenhombre.com/book#book-cabarete" rel="noreferrer noopener" target="_self"><span>Check Availability</span><span><span>
+<svg></svg>
+</span></span></a></div></div></section><section><div><div></div><div></div></div><div><div><div></div><div><div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_f3283ba907bb4526838af04322190a51~mv2.jpg/v1/fill/w_147,h_196,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20Kite%20Hotel%20beautiful%20tropical%20garden.jpg" alt="Tropical garden at the Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><h2>Slow down and feel like where you belong.</h2></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_cc8643194b564fc688017b6924521f91~mv2.jpg/v1/fill/w_162,h_243,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Image%20Aug%2010%2C%202026%2C%2006_18_42%20PM.jpg" alt="Latte with heart latte art and croissants at a cafe"/></picture></wow-image></div></div></div><div><div></div><div><p>Coffee, warm smiles,<br>
+local secrets.</p></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_0fc93e40d0774e46840ec3949b064b24~mv2.jpg/v1/fill/w_162,h_122,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Library%20-%205%20of%207.jpg" alt="Sunlight shining through palm trees onto a lush garden balcony in Cabaret Boutique Kite Hotel."/></picture></wow-image></div></div></div><div><div></div><div><p>Colors, offers, and the real pulse of the town.</p></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_170a5cb3ce3944399da80b63fdd134ba~mv2.jpg/v1/fill/w_162,h_122,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/orchidia2%20cabarete.jpg" alt="Purple vanda orchids at Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><p>By day two, you're not a tourist anymore.</p></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_6e5d70aca4744c5b9d6de7702244d45c~mv2.jpg/v1/fill/w_162,h_122,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/93villa%20garden%2011_20.jpg" alt="Clusters of green coconuts growing on a palm tree in Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><p>The kind of views you'll never forget.</p></div></div></div></div></div><div><blockquote>
+<p>Most visitors only know the beach. We&#39;d love to show you the neighborhood &mdash; tree-lined streets, hidden bakeries, a market at golden hour, and locals who know your name by day two.</p>
+<p><span>​</span></p>
+</blockquote>
+<blockquote>
+<p>This is the Cabarete few tourists ever find. And it&#39;s only minutes from where you&#39;ll stay.</p>
+</blockquote></div></div></div></section><section><div><div></div><div></div></div><div><div><div></div><div><div></div><div><h2>YOUR CARIBBEAN HOME</h2></div><div><p>It&#39;s Not a Hotel. It&#39;s Your Caribbean Home.</p></div></div><div><div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_39886d878b054d3abd47d45e89ea9c18~mv2.jpg/v1/fill/w_162,h_108,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20kite%20Hotel%20Pool%20Lounge.jpg" alt="Lounge area with yellow sofa by the pool in Cabarete."/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div></div><div><h3>Six boutique lofts</h3></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_f3e658c49f03419f9a0a1099b6f3ec99~mv2.jpg/v1/fill/w_162,h_91,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20Kite%20Hotel%20Tropical%20Garden.jpg" alt="Pink plumeria flowers blooming in a tropical garden In Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div></div><div><h3>Tropical gardens</h3></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_8c2e418ba4ff4ee19dad403d8dca94ef~mv2.jpg/v1/fill/w_150,h_120,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20Kite%20Hotel%20pool.jpg" alt="Swimming pool at Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div></div><div><h3>Swimming pool</h3></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_51b3b7099ef34ee5af77a26ddc4305e8~mv2.jpg/v1/fill/w_162,h_108,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20Kite%20Hotel%20Yoga%20Lounge_edited.jpg" alt="Yoga lounge at the Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div></div><div><h3>100m² yoga studio</h3></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_7c5703f6b7ff49d5bb0af62742e96d6f~mv2.jpg/v1/fill/w_162,h_113,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20Kite%20Hotel%20Outside%20Lounge%20BBQ.jpg" alt="Outdoor lounge and BBQ area at the Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div></div><div><h3>BBQ evenings</h3></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_dfa6ac1cf2c6441f94ffb373cd476f29~mv2.jpg/v1/fill/w_162,h_108,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20kite%20Hotel%20Upstairs%20area.jpg" alt="Upstairs common area at the Cabarete Boutique Kite Hotel "/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div></div><div><h3>Outdoor living</h3></div></div></div></div></div></div><div><div></div><div><p>Rent one loft and join the community.</p>
+<p>Rent the whole property and make it yours.</p></div></div></div></div></section><section><div><div></div><div></div></div><div><div><div></div><div><div></div><div><h2>CHOOSE YOUR SPACE</h2></div><div><p>Find the perfect space for the way you travel.</p></div></div><div><div></div><div><div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_dc0e1eaea2b04e96880c2217b7326fc9~mv2.jpg/v1/fill/w_162,h_108,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20Kite%20Hotel%20King%20Loft.jpg" alt="King Loft room at the Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><h3>For Couples, Families&nbsp;</h3></div><div><h3>King Loft</h3></div><div><p>Bright, spacious, private, and made for slow Caribbean mornings.</p>
+<p>King + single bed, up to 3 guests.</p></div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>King</p>
+<p>bed</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Up to</p>
+<p>3 Guests</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Private</p>
+<p>Space</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Cozy</p></div></div></div><a href="https://www.kitebuenhombre.com/book?room=cab-king#book-cabarete" rel="noreferrer noopener" target="_self"><span>View Loft →</span><span><span>
+<svg></svg>
+</span></span></a></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_6d7f150553d64058a2440ade821d17c1~mv2.jpg/v1/fill/w_162,h_108,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20Hotel%20Queen%20Loft%20bedroom_edited.jpg" alt="Queen Kite Loft at the Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><h3>For Digital Nomads</h3></div><div><h3>Queen Kite Loft</h3></div><div><p>Garden views, natural light, and a quiet corner to get work done between sessions.</p>
+<p>Queen bed + single bed, up to 3 guests.</p></div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>King</p>
+<p>bed</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Up to</p>
+<p>3 Guests</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Garden Views</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Work Friendly</p></div></div></div><a href="https://www.kitebuenhombre.com/book?room=cab-queen#book-cabarete" rel="noreferrer noopener" target="_self"><span>View Loft →</span><span><span>
+<svg></svg>
+</span></span></a></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_051a2d792fce4d6091f4e763271985cf~mv2.jpg/v1/fill/w_162,h_108,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Bouique%20Kite%20Hotel%20Garden%20Loft.jpg" alt="Garden Loft At the Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><h3>For families</h3></div><div><h3>Garden Green Loft</h3></div><div><p>Ground-floor comfort, pool access, two queen beds.</p>
+<p>Up to 4 guests.</p></div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>2 Queen</p>
+<p>bed</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Up to</p>
+<p>4 Guests</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Pool Access</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Garden Views</p></div></div></div><a href="https://www.kitebuenhombre.com/book?room=cab-garden#book-cabarete" rel="noreferrer noopener" target="_self"><span>Read More</span><span><span>
+<svg></svg>
+</span></span></a></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_e9036a2a335849a8ba397a4f7b2e98e6~mv2.jpg/v1/fill/w_162,h_108,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/2M7A2622_edited.jpg" alt="Terrace Loft room / villa living room and kitchen / pool patio at the Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><h3>For Small Groups</h3></div><div><h3>Terrace Loft</h3></div><div><p>Two private bedrooms, two separate entrances, 2 bathrooms, 1 kitchen, 2 fridges, a shared terrace, morning coffee, sunset conversations. King + single in one room, queen in the other; up to 5 guests.</p></div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>2 Private bedrooms</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Up to</p>
+<p>5 Guests</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Shared Terrace</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Relax &amp; Connect</p></div></div></div><a href="https://www.kitebuenhombre.com/book?room=cab-terrace#book-cabarete" rel="noreferrer noopener" target="_self"><span>View Loft →</span><span><span>
+<svg></svg>
+</span></span></a></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_76a356adfbad4bdba78be20f6b6c488e~mv2.jpg/v1/fill/w_162,h_108,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20kite%20Hotel%20Upstairs%20area.jpg" alt="Tropical House wooden balcony with lounge seating and tropical views in Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><h3>For Retreats</h3></div><div><h3>Tropical House</h3></div><div><p>Three bedrooms, private living spaces, an outdoor kitchen, pool access. 4 queen beds, up to 8 guests.</p></div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>4 Queen</p>
+<p>Beds</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Up to</p>
+<p>8 Guests</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Outdoor kitchen</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Pool Access</p></div></div></div><a href="https://www.kitebuenhombre.com/book?room=cab-tropical-house#book-cabarete" rel="noreferrer noopener" target="_self"><span>View Loft →</span><span><span>
+<svg></svg>
+</span></span></a></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_6248e99114a0466a89e48e9512e838e3~mv2.jpg/v1/fill/w_162,h_122,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/terrace%20loft%202_edited.jpg" alt="Small terrace loft at the Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><h3>For Retreats</h3></div><div><h3>Small Terrace Loft</h3></div><div><p>Three bedrooms, private living spaces, an outdoor kitchen, pool access. 4 queen beds, up to 8 guests.</p></div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>1 Queen</p>
+<p>Bed</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Up to</p>
+<p>2 Guests</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Shared Terrace</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Pool Access</p></div></div></div><a href="https://www.kitebuenhombre.com/book?room=cab-small-terrace#book-cabarete" rel="noreferrer noopener" target="_self"><span>View Loft →</span><span><span>
+<svg></svg>
+</span></span></a></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_d4391263341844018b9209c0222d0d71~mv2.jpg/v1/fill/w_162,h_107,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/villa%20living%20room%20kitchen%20entrance_edited.jpg" alt="Villa interior at the Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><h3>For Family, Friends, Couple</h3></div><div><h3>The Luxury villa</h3></div><div><p>Spacious with high ceilings. 2 bedrooms. King bed in one. Queen+single in another. Up to 5 guests. Big kitchen, BBQ.</p></div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>1 King</p>
+<p>Bed</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Up to</p>
+<p>5 Guests</p></div></div><div><div></div><div><div><svg></svg>
+</div></div><div><p>Kitchen, BBQ</p></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Pool Access</p></div></div></div><a href="https://www.kitebuenhombre.com/book?room=cab-villa#book-cabarete" rel="noreferrer noopener" target="_self"><span>View Loft →</span><span><span>
+<svg></svg>
+</span></span></a></div></div></div></div><div><div></div><div><h2>Every accommodation includes:</h2></div><div><div></div><div><div><div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div></div><div><p>Full kitchen</p></div></div></div><div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div></div><div><p>Air conditioning</p></div></div></div><div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div></div><div><p>Ceiling &amp; floor fans</p></div></div></div><div><div></div><div><div></div><div><div></div><div><div><svg></svg>
+</div></div></div><div><p>Starlink internet</p></div></div></div><div><div></div><div><div></div><div><div></div><div><div><svg></svg>
+</div></div></div><div><p>Comfortable workspace</p></div></div></div><div><div></div><div><div></div><div><div></div><div><div><svg></svg>
+</div></div></div><div><p>Private bathroom</p></div></div></div></div></div></div><a href="https://www.kitebuenhombre.com/book#book-cabarete" rel="noreferrer noopener" target="_self"><span>Check Rates &amp; Book</span><span><span>
+<svg></svg>
+</span></span></a></div></div></div></div></section><section><div><div></div><div></div></div><div><div><div></div><div><h2>A DAY IN CABARETE</h2></div><div><p>A visual timeline of a typical day in Cabarete</p></div><div><div><div><div></div><div><div></div><div><p>7 AM</p></div><button type="button"><span>Go</span><span><span>
+<svg></svg>
+</span></span></button><div><p>Coffee on your terrace.</p>
+<p>Palm trees moving gently.</p>
+<p>Quiet before the town wakes</p></div></div></div><div><div></div><div><div></div><div><p>9 AM</p></div><button type="button"><span>Go</span><span><span>
+<svg></svg>
+</span></span></button><div><p>Deep work.</p>
+<p>Video meetings.</p>
+<p>Creative time.</p>
+<p>Reliable Starlink.</p>
+<p>No distractions.</p></div></div></div><div><div></div><div><div></div><div><p>12:30 PM</p></div><button type="button"><span>Go</span><span><span>
+<svg></svg>
+</span></span></button><div><p>Lunch.</p>
+<p>A walk through Cabarete.</p>
+<p>Meeting friends on the beach.</p></div></div></div><div><div></div><div><div></div><div><p>2 PM</p></div><button type="button"><span>Go</span><span><span>
+<svg></svg>
+</span></span></button><div><p>The wind arrives.</p>
+<p>Kite Beach comes alive.</p>
+<p>Hours on the water.</p>
+<p>Progress.</p>
+<p>Freedom.</p></div></div></div><div><div></div><div><div></div><div><p>6 PM</p></div><button type="button"><span>Go</span><span><span>
+<svg></svg>
+</span></span></button><div><p>Pool.</p>
+<p>Recovery.</p>
+<p>A cold drink.</p>
+<p>Sunset</p></div></div></div><div><div></div><div><div></div><div><p>8 PM</p></div><button type="button"><span>Go</span><span><span>
+<svg></svg>
+</span></span></button><div><p>BBQ.</p>
+<p>Dinner.</p>
+<p>Stories.</p>
+<p>Plans for tomorrow.</p></div></div></div></div></div><div><div></div><div><p>Repeat.</p></div></div></div></div></section><section><div><div></div><div></div></div><div><div><div></div><div><h2>7 DAYS<br>
+&darr;<br>
+BECOMES<br>
+&darr;<br>
+&ldquo;JUST A FEW MORE DAYS.&rdquo;</h2></div><div><p>Cabarete has a habit of changing plans.</p>
+<p><span>​</span></p>
+<p>Guests arrive for a week. They find a rhythm they didn&#39;t know they needed &mdash; morning work, afternoon wind, evenings with friends.</p>
+<p><span>​</span></p>
+<p>And suddenly, they&#39;re staying for three weeks.</p></div></div></div></section><section><div><div></div><div></div></div><div><div><div></div><div><div></div><div><h2>WORK REMOTELY. LIVE DIFFERENTLY.</h2></div><div><p>The world&#39;s best office isn&#39;t an office.<br>
+It&#39;s a place where you can do your best work &mdash; and step away from it when the day is done.</p>
+<p>&nbsp;</p>
+<p>Fast Starlink reaches every loft, the gardens, the pool, and the yoga lounge. Work quietly in the morning.</p>
+<p>When the wind picks up, close the laptop.</p>
+<p><span>​</span></p></div></div><div><div></div><div><div><div><svg></svg></div><div><div><span>Work + Life</span></div><div><span>Stay Longer</span></div><div><span>Whats&#x27;s Included</span></div><div><span>Getting Around</span></div><div><span>Cost of Living</span></div></div><div></div><div><svg></svg></div></div><div><div><div><div><div><div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Fast Internet</p></div><div><p>200MB Starlink mesh WiFi (150&ndash;250 Mbps, no dead zones across the property)</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><h3>Your Own Workspace</h3></div><div><p>A Proper desk in every loft with natural light</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><h3>Connected Everywhere</h3></div><div><p>Reliable WiFi across your loft, gardens, pool, and yoga lounge.</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><h3>Work. Then Go.</h3></div><div><p>Quiet mornings at your desk.<br>
+Afternoons belong to the ocean.</p></div></div></div></div></div></div></div></div><div><div><div><div><div></div><div><div></div><div><div></div><div><div><svg></svg>
+</div></div></div><div><h6>One Week</h6></div></div><div><div>
+<svg></svg>
+</div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div></div><div><h6>One Month</h6></div></div><div><div>
+<svg></svg>
+</div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div></div><div><h6>Every Winter</h6></div></div></div></div></div></div><div><div><div><div><div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>200MB Starlink mesh WiFi (150&ndash;250 Mbps, no dead zones across the property)</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Proper desk + Natural Light. A comfortable in every loft</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Typically 3&ndash;5 other digital nomads living here at any given time</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Flexible check-in/out. Arrive and leave on your schedule</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Quiet hours (10 PM&ndash;9 AM) respected throughout</p></div></div></div></div></div></div></div></div><div><div><div><div><div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Cafes</p></div><div><p>7&ndash;8 minutes</p>
+<p>on foot</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Supermarket</p></div><div><p>7&ndash;8 minutes</p>
+<p>on foot</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Beach</p></div><div><p>7&ndash;8 minutes</p>
+<p>on foot</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Wing Beach</p></div><div><p>10 minutes</p>
+<p>on foot</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Kite Beach</p></div><div><p>20 min (roughly 10 minutes by bike, 5 by scooter)</p></div></div></div></div></div></div></div></div><div><div><div><div><div></div><div><h5>$500&ndash;950/month</h5></div><div><p>Beyond Accommodation</p></div><div><div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Groceries</p></div><div><p>$200&ndash;350</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Eating Out</p></div><div><p>$150&ndash;300</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Transport</p></div><div><p>$50&ndash;350</p>
+<p>(optional scooter rental)</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Entertainment</p></div><div><p>$100&ndash;200</p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></section><section><div><div></div><div></div></div><div><div><div></div><div><p>Kite Beach is one of the most famous kitesurf destinations on the planet.</p>
+<p>Living nearby means every windy afternoon becomes an opportunity.</p>
+<p>&nbsp;</p>
+<p>Spend the morning relaxing. Ride until sunset. Come home to a peaceful compound instead of another busy beachfront hotel. Store your equipment safely. Rinse your gear.</p>
+<p>Recover by the pool. Do it all again tomorrow.</p></div><div><div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><div></div><div><h3>YOUR loft</h3></div><div><div></div><div><h3>$60&ndash; 150</h3></div><div><p>/ night</p></div></div><div><p>Per lofts</p></div></div></div><div><div></div></div><div><div><span>VS</span></div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><div></div><div><h3>TYPICAL BEACHFRONT HOTEL</h3></div><div><div></div><div><h3>$150&ndash;350</h3></div><div><p>/ night</p></div></div><div><p>Per Room</p></div></div></div></div><div><p>Keep more of your budget for lessons, boat trips, and another week.</p></div></div><div><div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Secure gear storage and rinse stations</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Outdoor showers&nbsp;</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Hot showers&nbsp;</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Pool recovery&nbsp;</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>KITE + WING SUPPORT Certified lessons, rentals, boat trips &amp; more</p></div></div></div></div></div><div><div></div><div><h3>FLAT WATER. DIFFERENT RIDE.<br>
+Discover Buen Hombre &rarr;</h3></div><a href="https://www.kitebuenhombre.com/buen-hombre-dominican-republic" rel="noreferrer noopener" target="_self"><span>Learn More</span><span><span>
+<svg></svg>
+</span></span></a></div></div></div></section><section><div><div></div><div></div></div><div><div><div></div><div><div></div><div><div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_d073f9f733e840bfa4ec68ae3152a9bb~mv2.jpg/v1/fill/w_162,h_108,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20Kite%20Hotel%20pool.jpg" alt="Outdoor pool and balcony at Cabarete Boutique Kite Hotel."/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><h3>Retreat Pricing</h3></div><div><p>$85</p></div><div><p>per person / night</p></div><div><h3>Boutique accommodation + full access to the property</h3></div></div></div></div><div><div></div><div><p><span>Yoga retreats. Friends. Companies. Families. Creator trips.</span></p>
+<p>&nbsp;</p>
+<p>Rent the entire property.<br>
+Bring your people. We&#39;ll handle the details.</p>
+<p>&nbsp;</p>
+<p>Up to 25 guests&nbsp;&middot;&nbsp;6 lofts + Tropical House&nbsp;&middot;&nbsp;Private pool&nbsp;&middot;&nbsp;Yoga lounge</p></div><div><h3>The specifics</h3></div><div><div><div><div></div><div><p>Up to 25 people&nbsp;</p></div></div><div><div></div><div><p>The pool up to 15 comfortably</p></div></div><div><div></div><div><p>Yoga Lounge up to 10</p></div></div><div><div></div><div><p>The BBQ and Outside Kitchen area</p></div></div></div></div></div></div><div><div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>airport transfers</p></div></div></div><div><div></div><div><div></div><div><div><svg></svg>
+</div></div><div><p>private chef</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>boat adventures</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>yoga instructors</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>massage</p></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>lessons</p></div></div></div></div></div></div><div><div></div><div><p>Your Group. Your Experience</p></div><a href="https://wa.me/18295212367" rel="noreferrer noopener" target="_blank"><span>Plan a Group Stay</span><span><span>
+<svg></svg>
+</span></span></a></div></div></div></section><section><div><div></div><div></div></div><div><div><div></div><div><div></div><div><h2>LIFE AT THE LOFTS</h2></div><div><p>Morning swims. Slow breakfasts. Afternoon yoga. Dinner outside. This is life at the lofts.</p></div></div><div><div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_5ced4bc8d0f5424f8d0fd9a186ef0fb6~mv2.jpg/v1/fill/w_162,h_108,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Tropical%20House%20Pool%20patio.jpg" alt="Swimming pool and outdoor lounge at Cabarete Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Pool</p></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_8107e8f67b504cb9bcecb1ba64246c78~mv2.jpg/v1/fill/w_162,h_188,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Image%20by%20Jared%20Rice.jpg" alt="Silhouette of a person meditating at sunrise outdoors"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Yoga Studio</p></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_92ad7beedc6e4cc3b563b24076277324~mv2.png/v1/fill/w_90,h_51,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20Kite%20Hotel%20Garden.png" alt="White spider lily flower in a tropical garden in Cabarete Boutique kite Hotel Garden"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>Tropical Gardens</p></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_1190a133ffd9485f9a898919afc0b0dd~mv2.jpg/v1/fill/w_162,h_108,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20kite%20hotel%20Pool%20lounge%20downstairs.jpg" alt="Poolside lounge at Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div><svg></svg>
+</div></div><div><p>Outdoor Kitchen</p></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_5de8e4458c6242b1b82c05ea431c7f90~mv2.png/v1/fill/w_90,h_56,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20Kite%20Hotel%20Pool%20Lounge.png" alt="Outdoor lounge area with pool view at Cabarete boutique kite hotel"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>OUTDOOR LIVING</p></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_bbecbfb7a0304c679e6093eebd9dd716~mv2.jpg/v1/fill/w_162,h_243,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Image%20by%20Preet%20Patel.jpg" alt="Chef preparing food at an outdoor restaurant counter"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div><svg></svg>
+</div></div><div><p>PRIVATE CHEF / BBQ</p></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_93e491767c8a41dd86d0e97818ec78f4~mv2.jpg/v1/fill/w_162,h_108,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Cabarete%20Boutique%20kite%20Hotel%20Pool%20Lounge.jpg" alt="Outdoor lounge area with yellow sofa near Cabarete Boutique Kite Hotel pool"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>GARDENS &amp; COMMON SPACES</p></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_3dbd2f2174934979a03c174faf4de42d~mv2.jpg/v1/fill/w_162,h_143,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Laundry%20Service.jpg" alt="Vintage Laundry Service sign with pin-up girl illustration at the Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><p>LAUNDRY</p></div></div></div></div></div></div></div></div></section><section><div><div></div><div></div></div><div><div><div></div><div><p>Ride waves.</p>
+<p>Learn to foil.</p>
+<p>Improve your jumps.</p>
+<p>Explore downwinders.</p>
+<p>Keep progressing.</p></div><div><div></div><div><div></div><div><h2>TRAIN HERE. RIDE BETTER.</h2></div><div><h2>World-class instruction, right from your Cabarete base.</h2></div><div><p>Train with experienced instructors &mdash;</p>
+<p>Miky (Big Air Strapless Champion) and</p>
+<p>Davisito (DR Big Air Champion, Ventum Pro Team) &mdash;</p>
+<p>and equipment from Core, Duotone, Crazyfly, Ventum.</p>
+<p>&nbsp;</p>
+<p>TWO COASTS. ONE TRIP.<br>
+Combine Cabarete&#39;s waves and community with</p>
+<p>flat-water sessions in Buen Hombre.</p></div></div><div><div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_4f247a5e490f42968915125d373b8231~mv2.jpg/v1/fill/w_106,h_125,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Miky%20maestro%2C%20the%20kite%20professional%20and%20champion.jpg" alt="Smiling Miky at Cabarete Boutique Kite Hotel"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><h3>Miky</h3></div><div><p>Big Air Strapless Champion</p></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_2551a63b53f043c0bfe3aaf61c8d11ac~mv2.jpg/v1/fill/w_162,h_108,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Davisito%20with%20Kite%20Buen%20Hombre%20cap_edited.jpg" alt="Davisito Ventum Pro team kitesurfing in Kite Buen Hombre, Dominican Republic"/></picture></wow-image></div></div></div><div><div></div><div><div></div><div><h3>Davisito</h3></div><div><p>DR Big Air Champion, Ventum Pro Team</p></div></div></div></div></div></div></div><div><div></div><div><div></div><div><h3>Featured in</h3></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/dd80b9_6dba5531395a4a05bab2b33d2c8d6516~mv2.jpg/v1/fill/w_147,h_83,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Lonely-Planet-Logo.jpg" alt="Lonely Planet Logo"/></picture></wow-image></div></div></div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/dd80b9_a54fd5b14a0e4514a19d3475c0d47cd7~mv2.png/v1/fill/w_100,h_40,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/iksurfmag_logo.png" alt="iksurfmag logo"/></picture></wow-image></div></div></div></div></div></div></div></div></section><section><div><div></div><div><wow-image><img src="https://static.wixstatic.com/media/d76113_5d55439f64234906b8bbf8e4ca319442~mv2.jpg/v1/fill/w_135,h_90,al_c,q_80,usm_0.66_1.00_0.01,blur_3,enc_avif,quality_auto/d76113_5d55439f64234906b8bbf8e4ca319442~mv2.jpg" alt="Kitesurfer on a hydrofoil in El Morro near cliffs."/></wow-image></div></div><div><div><div></div><div><h3>WHEN THE WIND STOPS</h3></div><div><div>
+<svg></svg>
+</div></div><div><div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><h3>Boat<br>
+trips</h3></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><h3>Surfing</h3></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><h3>Local<br>
+restaurants</h3></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><h3>Hidden<br>
+waterfalls</h3></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><h3>Grand Grossier</h3></div></div></div><div><div></div><div><div></div><div><div>
+<svg></svg>
+</div></div><div><h3>Paradise<br>
+Island</h3></div></div></div></div></div><div><p>Every day here offers something different &mdash; because Cabarete life was never only about kiting.</p></div></div></div></section><div slots="[object Object]" wix="[object Object]"><section><div><div></div><div></div></div><div><div><div></div><div><div></div><div><div></div><div><h2>GUEST STORIES</h2></div><div><p>3,000+ students. Countless stories.</p></div><div><p>More than 3,000 guests have trusted us with their first ride, their next progression, or simply an unforgettable week in the Caribbean. Here&#39;s what a few of them had to say.<br>
+<br>
+★★★★★ 4.9 &middot; 500+ VERIFIED REVIEWS<br>
+Google &amp; TripAdvisor</p></div></div><div></div><div><div></div><div><p>The next great story could be yours.</p></div><a href="https://www.kitebuenhombre.com/book" target="_self"><span>Start Planning Your Trip</span><span><span>
+<svg></svg>
+</span></span></a></div></div><div><div></div><div><div></div><div><h3>Trusted By Thousands of Guests</h3></div><div><p><span><span><span><span><span>★★★★★&nbsp;4.9 <span><a href="https://g.page/r/CdQYId9mRTRtEB0/review" target="_blank" rel="noreferrer noopener">Google</a></span> Rating</span></span></span></span></span></p>
+<p><span><span><span><span><span>★★★★★ <span><a href="https://www.tripadvisor.com/Attraction_Review-g8014437-d6609488-Reviews-Kite_Buen_Hombre-Buen_Hombre_Monte_Cristi_Province_Dominican_Republic.html" target="_blank" rel="noreferrer noopener">TripAdvisor</a></span></span></span></span></span></span></p>
+<p><span><span><span><span><span>3,000+ Students</span></span></span></span></span></p>
+<p><span><span><span><span><span>65+ Countries</span></span></span></span></span></p>
+<p><span><span><span><span><span><span>​</span>Since 2013</span></span></span></span></span></p></div></div></div><div><p><a href="https://www.kitebuenhombre.com/reviews" target="_self">See More Guest Stories</a></p>
+<p><a href="https://www.instagram.com/kitebuenhombre/" target="_blank" rel="noreferrer noopener"><span><span>📸@kitebuenhombre</span></span></a></p></div></div></div></section></div><section><div><div></div><div></div></div><div><div><div></div><div><h2>Faq</h2></div><div><h2>Still Have Questions?</h2></div><div><p>PLANNING YOUR FIRST KITE TRIP CAN FEEL LIKE A LOT TO FIGURE OUT.</p>
+<p>Here are the questions we hear most &mdash; and the answers that help you plan with confidence.</p></div></div></div></section><section><div><div></div><div></div></div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><div><span>CABARETE BOUTIQUE KITE HOTEL</span></div></div></div><div></div></div><div></div></div><div><svg></svg><div></div></div><div><svg></svg><div></div></div></div></div><div></div></div></div><div></div><div><div><div><button><div><div><div><div><h3>How far is the hotel from Kite Beach?</h3></div><div></div></div><div><svg></svg></div></div></div></button><div><div><div><div><div><div><div><div><p><span><span>About a 30-minute walk. 5 minutes by moped.</span></span></p></div></div></div></div></div></div></div></div><div></div></div><div><button><div><div><div><div><h3>Are meals included?</h3></div><div></div></div><div><svg></svg></div></div></div></button><div><div><div><div><div><div><div><div><p><span><span>Not as standard, but a private chef is available on request.</span></span></p></div></div></div></div></div></div></div></div><div></div></div><div><button><div><div><div><div><h3>Is there a pool?</h3></div><div></div></div><div><svg></svg></div></div></div></button><div><div><div><div><div><div><div><div><p><span><span>Yes, plus a yoga lounge and gardens on-site.</span></span></p></div></div></div></div></div></div></div></div><div></div></div><div><button><div><div><div><div><h3>Is there reliable Wi-Fi for remote work?</h3></div><div></div></div><div><svg></svg></div></div></div></button><div><div><div><div><div><div><div><div><p><span><span>Yes — high-speed Starlink Wi-Fi is available across the property.</span></span></p></div></div></div></div></div></div></div></div><div></div></div><div><button><div><div><div><div><h3>What type of rooms are available?</h3></div><div></div></div><div><svg></svg></div></div></div></button><div><div><div><div><div><div><div><div><p><span><span>Boutique kite lofts in the heart of downtown Cabarete.</span></span></p></div></div></div></div></div></div></div></div><div></div></div><div><button><div><div><div><div><h3>Can I book without taking lessons?</h3></div><div></div></div><div><svg></svg></div></div></div></button><div><div><div><div><div><div><div><div><p><span><span>Yes — the property is open to independent travelers and remote workers, not just kitesurfers.</span></span></p></div></div></div></div></div></div></div></div><div></div></div><div><button><div><div><div><div><h3>Where do Cabarete kite lessons take place?</h3></div><div></div></div><div><svg></svg></div></div></div></button><div><div><div><div><div><div><div><div><p><span><span>Wherever the beach is best that day. Cabarete&#x27;s sand shifts a lot, and Kite Beach can lose its sand from August to October, so we don&#x27;t teach from one fixed spot. Our kite gear is kept here at the Cabarete Boutique Kite Hotel, and we take you to the best launch for the conditions.</span></span></p></div></div></div></div></div></div></div></div><div></div></div></div></div><div></div></div></div></div></div></div></div></section><section><div><div></div><div></div></div><div><div><div></div><div><h3>Still Not Sure?</h3></div><div><h4>Tell Us What You&#39;re Planning. We&#39;ll Help You Figure Out The Rest.<br>
+Whether You&#39;re Coming To Learn Your First Kite Skills, Work Remotely For A Month, Bring Your Family, Organize A Retreat, Or Simply Escape Somewhere Warm &mdash; We&#39;ll Help You Find The Right Way To Stay.</h4></div><a href="https://wa.me/18295212367" rel="noreferrer noopener" target="_blank"><span>Plan a Group Stay →</span><span><span>
+<svg></svg>
+</span></span></a></div></div></section><section><div><div></div><div><wow-image><img src="https://static.wixstatic.com/media/d76113_af71d16781474c3ba341a2dcd8fb7866~mv2.jpg/v1/fill/w_160,h_90,al_c,q_80,usm_0.66_1.00_0.01,blur_3,enc_avif,quality_auto/d76113_af71d16781474c3ba341a2dcd8fb7866~mv2.jpg" alt="Smiling woman kitesurfing on blue water in Cabarete."/></wow-image></div></div><div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/d76113_e3510fac1cd849928346630269cc1a14~mv2.jpeg/v1/fill/w_147,h_82,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Buen%20Hombre%20sunset%20with%20kite%20Buen%20Hombre%20flag.jpeg" alt="Buen Hombre sunset with kite Buen Hombre flag"/></picture></wow-image></div></div></div><div><div></div><div><h2>READY TO LIVE CABARETE?</h2></div><div><h3>Come for the kite. Stay for the lifestyle.<br>
+Whether you&#39;re here for a week, a month, or the whole season, we&#39;ll help you find your place in Cabarete.</h3></div><a href="https://wa.me/18295212367" rel="noreferrer noopener" target="_blank"><span>Check Availability →</span><span><span>
+<svg></svg>
+</span></span></a><div><h4>Reschedule only; no refunds. Valid for up to one year from the original booking date &mdash; including no-shows, weather cancellations, and operator-initiated cancellations.</h4></div></div></div></section></main><footer slots="[object Object]" wix="[object Object]"><section><div><div></div><div></div></div><div><div><div></div><div><div></div><div><div><div><wow-image><picture><img src="https://static.wixstatic.com/media/dd80b9_89a4d659d6804cd1a161387952931e0a~mv2.png/v1/fill/w_49,h_42,al_c,q_85,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/Kite%20buen%20Hombre%20logo.png" alt="Kite Buen Hombre logo"/></picture></wow-image></div></div></div><div><p>The Caribbean You Didn&#39;t Know Still Existed.</p></div><div><p>Two destinations. One Local team. Since 2013 we&#39;ve welcomed thousands of guests to experience the Dominican Republic beyond the tourist trail.</p>
+<p><span>​</span></p>
+<p>500+ reviews 4.9</p>
+<p>3,000+ Students</p>
+<p>​Since 2013</p>
+<p>Professional Kite School and Demo center</p></div><div><div></div><a href="mailto:kitebuen@gmail.com" target="_self"><span>kitebuen@gmail.com</span><span><span>
+<svg></svg>
+</span></span></a><a href="tel:+1-829-521-2367"><span>+1-829-521-2367</span><span><span>
+<svg></svg>
+</span></span></a><button type="button"><span>Playa Buen Hombre, Monte Cristi • Cabarete, Puerto Plata</span><span><span>
+<svg></svg>
+</span></span></button></div><div><ul><li><a href="https://www.instagram.com/kitebuenhombre/" target="_blank" rel="noreferrer noopener"><wow-image><img alt="Kite Buen Hombre on Instagram"/></wow-image></a></li><li><a href="https://www.facebook.com/kitebuenhombre" target="_blank" rel="noreferrer noopener"><wow-image><img alt="Facebook"/></wow-image></a></li><li><a href="https://www.tiktok.com/@kitebuenhombre" target="_blank" rel="noreferrer noopener"><wow-image><img alt="Kite Buen Hombre on TikTok"/></wow-image></a></li><li><a href="https://www.youtube.com/@kitebuenhombrekitesurfing" target="_blank" rel="noreferrer noopener"><wow-image><img alt="Kite Buen Hombre on YouTube"/></wow-image></a></li><li><a href="https://www.tripadvisor.com/Attraction_Review-g8014437-d6609488-Reviews-Kite_Buen_Hombre-Buen_Hombre_Monte_Cristi_Province_Dominican_Republic.html" target="_blank" rel="noreferrer noopener"><wow-image><img alt="Kite Buen Hombre on TripAdvisor"/></wow-image></a></li></ul></div></div><div><div><div><div></div><div><div></div><div><h2>DESTINATIONS</h2></div><a href="https://www.kitebuenhombre.com/buen-hombre-dominican-republic" target="_self"><span>Buen Hombre</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/cabarete-dominican-republic" target="_self"><span>Cabarete</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/flexible-kitesurfing-stay-dominican-republic" target="_self"><span>Flexible Stay </span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/live-wind-live-camera" target="_self"><span>Live Wind</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/live-wind-live-camera" target="_self"><span>Live Camera</span><span><span>
+<svg></svg>
+</span></span></a></div></div><div><div></div><div><div></div><div><h3>Learn &amp; Explore</h3></div><a href="https://www.kitebuenhombre.com/learn-to-kitesurf-dominican-republic" target="_self"><span>Learn to Kite</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/advanced-kitesurfing-lessons-dominican-republic" target="_self"><span>Advanced Coaching</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/boat-trips-downwinders" target="_self"><span>Downwinders &amp; Boat Trips</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/cayos-siete-hermanos-monte-cristi" target="_self"><span>Seven Islands</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/rentals-buen-hombre-cabarete-dominican-republic" target="_self"><span>Rentals</span><span><span>
+<svg></svg>
+</span></span></a></div></div><div><div></div><div><div></div><div><h3>Stay</h3></div><a href="https://www.kitebuenhombre.com/where-to-stay" target="_self"><span>Accommodation</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/kite-stay-packages-dominican-republic" target="_self"><span>Packages</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/transportation-dominican-republic-buen-hombre-cabarete" target="_self"><span>Transportation</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/concierge-services" target="_self"><span>Concierge</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/shop-kitesurfing-equipment" target="_self"><span>Shop</span><span><span>
+<svg></svg>
+</span></span></a></div></div><div><div></div><div><div></div><div><h3>About</h3></div><a href="https://www.kitebuenhombre.com/our-story" target="_self"><span>Our Story</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/the-team" target="_self"><span>Team</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/reviews" target="_self"><span>Reviews</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/blog" target="_self"><span>Blog</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/contact" target="_self"><span>Contact</span><span><span>
+<svg></svg>
+</span></span></a></div></div><div><div></div><div><div></div><div><h3>Guest Info</h3></div><a href="https://www.kitebuenhombre.com/kite-buen-hombre-policies" target="_self"><span>Cancellation &amp; Rescheduling</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/contact" target="_self"><span>Additional Information</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/faq" target="_self"><span>FAQ</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/kite-buen-hombre-policies" target="_self"><span>Terms &amp; Conditions</span><span><span>
+<svg></svg>
+</span></span></a><a href="https://www.kitebuenhombre.com/kite-buen-hombre-policies" target="_self"><span>Privacy Policy</span><span><span>
+<svg></svg>
+</span></span></a></div></div></div></div><div></div><div><div></div><div><p><span><span>Ready?</span></span> <span><a href="https://www.kitebuenhombre.com/contact" target="_self">Plan Your Trip</a></span></p></div><div><p>&copy;2026 Kite Buen Hombre | Made with ❤️ in the Dominican Republic | Established 2013 |&nbsp;<span><a href="https://www.kitebuenhombre.com/kite-buen-hombre-policies" target="_self">Return Policy</a></span>&nbsp;|&nbsp;<span><a href="https://www.kitebuenhombre.com/kite-buen-hombre-policies" target="_self">Privacy Policy</a></span>&nbsp;|&nbsp;<span><a href="https://www.kitebuenhombre.com/kite-buen-hombre-policies" target="_self">Terms &amp; Conditions</a></span>&nbsp;|&nbsp;<span><a href="https://www.kitebuenhombre.com/sitemap.xml" target="_blank" rel="noreferrer noopener">Sitemap</a></span></p></div></div></div></div></section></footer><div><div slots="[object Object]" wix="[object Object]"><div><div></div><div><div></div><div><div><div><nav><ul><li><div><span><a href="https://www.kitebuenhombre.com" target="_self">Home</a></span></div></li><li><div><span><div>Locations</div></span><button><div><svg></svg></div></button></div><ul><li><div><span><a href="https://www.kitebuenhombre.com/buen-hombre-dominican-republic" target="_self">Playa Buen Hombre (Monte Cristi)</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/cabarete-dominican-republic" target="_self">Cabarete (Puerto Plata)</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/live-wind-live-camera" target="_self">Live Wind &amp; Camera</a></span></div></li></ul></li><li><div><span><div>Learn</div></span><button><div><svg></svg></div></button></div><ul><li><div><span><a href="https://www.kitebuenhombre.com/learn-to-kitesurf-dominican-republic" target="_self">Learn to kitesurf</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/beginner-kitesurfing-lessons-dominican-republic" target="_self">Beginner lessons</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/advanced-kitesurfing-lessons-dominican-republic" target="_self">Advanced Coaching</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/wing-foil-parawing-lessons-dominican-republic" target="_self">Wing Foil &amp; Foil &amp; Parawing</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/kitecamp" target="_self">Kite Camps</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/kite-stay-packages-dominican-republic" target="_self">Kite Stay Packages</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/kitesurfing-dominican-republic" target="_self">DR Kitesurf Guide</a></span></div></li></ul></li><li><div><span><div>Stay</div></span><button><div><svg></svg></div></button></div><ul><li><div><span><a href="https://www.kitebuenhombre.com/where-to-stay" target="_self">Where to Stay</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/flexible-kitesurfing-stay-dominican-republic" target="_self">The Flexible Stay</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/buen-hombre-hotel" target="_self">Buen Hombre Hotel</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/cabarete-boutique-kite-hotel" target="_self">Cabarete Boutique Kite Hotel</a></span></div></li></ul></li><li><div><span><div>Experience</div></span><button><div><svg></svg></div></button></div><ul><li><div><span><a href="https://www.kitebuenhombre.com/boat-trips-downwinders" target="_self">Downwinders &amp; Boat Trips</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/cayo-arena-dominican-republic" target="_self">Cayo Arena / Paradise Island</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/grand-grossier" target="_self">Grand Grossier</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/cayos-siete-hermanos-monte-cristi" target="_self">7 Islands / 7 Cayos Trip</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/playa-popa" target="_self">Playa Popa</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/monte-cristi" target="_self">Monte Cristi</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/punta-rucia" target="_self">Punta Rucia</a></span></div></li></ul></li><li><div><span><div>Shop</div></span><button><div><svg></svg></div></button></div><ul><li><div><span><a href="https://www.kitebuenhombre.com/shop-kitesurfing-equipment" target="_self">Kite Shop &amp; Demo Center</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/merchandise-kite-buen-hombre" target="_self">Merchandise</a></span></div></li></ul></li><li><div><span><div>Services</div></span><button><div><svg></svg></div></button></div><ul><li><div><span><a href="https://www.kitebuenhombre.com/transportation-dominican-republic-buen-hombre-cabarete" target="_self">Transportation</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/trips-tours-activities-dominican-republic" target="_self">Trips &amp; Tours &amp; Activities</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/wellness-massage-yoga-personal-training-dominican-republic" target="_self">Massage; Yoga; Personal Training</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/food-dining-buen-hombre-cabarete-dominican-republic" target="_self">Food Service</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/rentals-buen-hombre-cabarete-dominican-republic" target="_self">Rentals</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/concierge-services" target="_self">Concierge Services</a></span></div></li></ul></li><li><div><span><div>About</div></span><button><div><svg></svg></div></button></div><ul><li><div><span><a href="https://www.kitebuenhombre.com/our-story" target="_self">Our Story</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/the-team" target="_self">The Team</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/partners" target="_self">Partners</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/miky-kite-instructor-buen-hombre" target="_self">Miky</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/davisito" target="_self">Davisito</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/media" target="_self">In The Media</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/blog" target="_self">Blog</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/faq" target="_self">FAQ</a></span></div></li><li><div><span><a href="https://www.kitebuenhombre.com/reviews" target="_self">Reviews</a></span></div></li></ul></li><li><div><span><a href="https://www.kitebuenhombre.com/contact" target="_self">Contact</a></span></div></li></ul></nav><button><div>
+<svg></svg>
+</div></button></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div><span>bottom of page</span></div></div></div>
+<script></script>
+    <script type="application/json"></script>
+    <script></script>
+        <script></script>
+    <script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+    </link>
+    </link>
+    </link>
+  <script></script>
+  <script></script>
+  <script></script>
+  <script src="https://browser.sentry-cdn.com/7.120.3/modulemetadata.es5.min.js" crossorigin="anonymous" async></script>
+<script></script>
+<script></script>
+<script type="application/json"></script>
+<script></script>
+<script type="application/json"></script>
+<script></script>
+<script></script>
+<script crossorigin="" src="https://static.parastorage.com/unpkg/react@18.3.1/umd/react.production.min.js" onload="resolveExternalsRegistryModule('react')"></script>
+<script crossorigin="" defer="" src="https://static.parastorage.com/unpkg/react-dom@18.3.1/umd/react-dom.production.min.js" onload="resolveExternalsRegistryModule('reactDOM')"></script>
+<script async="" src="https://static.parastorage.com/unpkg/lodash@4.18.1/lodash.min.js" onload="resolveExternalsRegistryModule('lodash')"></script>
+<script async="" src="https://static.parastorage.com/services/wix-thunderbolt/dist/thunderbolt-commons.f0b041c2.bundle.min.js"></script>
+<script></script>
+<script async="" src="https://static.parastorage.com/services/wix-thunderbolt/dist/main.0e1ea6dc.bundle.min.js"></script>
+<script async="" src="https://static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.b325a058.bundle.min.js"></script>
+<script></script>
+<script></script>
+
+    <script async="" src="https://static.parastorage.com/services/wix-thunderbolt/dist/browser-deprecation.bundle.es5.js"></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+        <script></script>
+    <script defer="" src="https://static.parastorage.com/services/tag-manager-client/1.1075.0/siteTags.bundle.min.js"></script>
+    <script type="wix/htmlEmbeds"></script>
+        <script></script>
+        <script></script><style></style><script></script><style></style><script></script>
+<style></style>
+<script></script>
+<style></style>
+<script></script>
+<style></style>
+        <script></script>
+        <script></script>
+        <style></style>
+<script></script>
+        <script></script>
+        <script></script><style></style><script></script>
+        <style></style><script></script>
+        <style></style><script></script>
+        <script></script>
+        <style></style><script></script>
+        <style></style><script></script>
+        <style></style><script></script>
+        <script></script>
+        <script></script>
+        <style></style>
+<script></script>
+        <style></style>
+<script></script>
+        <script></script>
+        <script></script>
+    <script type="wix/htmlEmbeds"></script>
+<script type="application/json"></script>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="ut-no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="pingback" href="https://guesthousepull.com/xmlrpc.php" />
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+        <link rel="shortcut&#x20;icon" href="https://guesthousepull.com/wp-content/themes/brooklyn/images/default/fav-32.png" type="image/png" />
+        <link rel="icon" href="https://guesthousepull.com/wp-content/themes/brooklyn/images/default/fav-32.png" type="image/png" />
+        <link rel="apple-touch-icon" href="https://guesthousepull.com/wp-content/themes/brooklyn/images/default/fav-57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="https://guesthousepull.com/wp-content/themes/brooklyn/images/default/fav-72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="https://guesthousepull.com/wp-content/themes/brooklyn/images/default/fav-114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="https://guesthousepull.com/wp-content/themes/brooklyn/images/default/fav-144.png" />
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+            <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+            <link rel="preload" href="//fonts.googleapis.com/css?family=Poppins:400:,600,400normal,500,100,700,400,200|Raleway:800:,800,700,600&#038;subsets=latin&#038;display=swap" as="fetch" crossorigin="anonymous">
+	<title>Guesthouse Alvor: Your Dream Algarve Holiday Accommodation</title>
+	<meta name="description" content="Welcome to Our Guesthouse in Alvor Discover tranquility in the heart of Alvor, a picturesque fishing village in the Algarve, Portugal." />
+	<link rel="canonical" href="https://guesthousepull.com/" />
+	<meta property="og:locale" content="pt_PT" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Guesthousepull located in alvor" />
+	<meta property="og:description" content="“Discover tranquility in the heart of Alvor, a picturesque fishing village in the Algarve, Portugal. Our Guesthouse is a perfect destination for European holidays, located just steps away from the stunning beaches of the Algarve, recognized worldwide.Close to the serene Alvor lagoon, vibrant bars, exquisite restaurants, and the local market, where fishermen and farmers offer fresh produce daily, it is the ideal place for those seeking gastronomic tourism.Our Guesthouse, recently redesigned while maintaining much of the original Portuguese architecture, offers five unique rooms – a family room, a triple, two doubles, and a suite. Each room is equipped with its own bathroom, a mini-bar, satellite TV, Wi-Fi, and air conditioning, all tastefully decorated in a minimalist style.Relax in our beautiful lounge area, an atmospheric indoor tropical garden that offers a secluded space for visitors to enjoy a quiet drink. For even greater peace and relaxation, we also have a jacuzzi.Don’t miss our terrace with 360-degree views, where you can appreciate the lagoon, the beach, and watch the sunset. Experience the best of Alvor at our Guesthouse, your perfect holiday destination in the Algarve, Portugal.”" />
+	<meta property="og:url" content="https://guesthousepull.com/" />
+	<meta property="og:site_name" content="Guesthousepull Alvor, Algarve, Portugal" />
+	<meta property="article:publisher" content="https://www.facebook.com/guesthousealvor" />
+	<meta property="article:modified_time" content="2025-06-10T17:11:59+00:00" />
+	<meta property="og:image" content="https://guesthousepull.com/wp-content/uploads/2021/08/logoalvor.png" />
+	<meta property="og:image:width" content="807" />
+	<meta property="og:image:height" content="527" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:image" content="https://guesthousepull.com/wp-content/uploads/2021/07/logoalvor.png" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://guesthousepull.com/","url":"https://guesthousepull.com/","name":"Guesthouse Alvor: Your Dream Algarve Holiday Accommodation","isPartOf":{"@id":"https://guesthousepull.com/#website"},"about":{"@id":"https://guesthousepull.com/#organization"},"primaryImageOfPage":{"@id":"https://guesthousepull.com/#primaryimage"},"image":{"@id":"https://guesthousepull.com/#primaryimage"},"thumbnailUrl":"https://guesthousepull.com/wp-content/uploads/2021/07/logoalvor.png","datePublished":"2017-06-07T17:19:28+00:00","dateModified":"2025-06-10T17:11:59+00:00","description":"Welcome to Our Guesthouse in Alvor Discover tranquility in the heart of Alvor, a picturesque fishing village in the Algarve, Portugal.","breadcrumb":{"@id":"https://guesthousepull.com/#breadcrumb"},"inLanguage":"pt-PT","potentialAction":[{"@type":"ReadAction","target":["https://guesthousepull.com/"]}]},{"@type":"ImageObject","inLanguage":"pt-PT","@id":"https://guesthousepull.com/#primaryimage","url":"https://guesthousepull.com/wp-content/uploads/2021/07/logoalvor.png","contentUrl":"https://guesthousepull.com/wp-content/uploads/2021/07/logoalvor.png","width":403,"height":247},{"@type":"BreadcrumbList","@id":"https://guesthousepull.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Início"}]},{"@type":"WebSite","@id":"https://guesthousepull.com/#website","url":"https://guesthousepull.com/","name":"Guesthousepull Alvor, Algarve, Portugal","description":"Experience Tranquility and Authentic Portuguese Charm at Our Algarve Guesthouse","publisher":{"@id":"https://guesthousepull.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://guesthousepull.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"pt-PT"},{"@type":"Organization","@id":"https://guesthousepull.com/#organization","name":"Guesthousepull Alvor, Algarve, Portugal","url":"https://guesthousepull.com/","logo":{"@type":"ImageObject","inLanguage":"pt-PT","@id":"https://guesthousepull.com/#/schema/logo/image/","url":"https://guesthousepull.com/wp-content/uploads/2021/07/EST78564_11zon.jpg","contentUrl":"https://guesthousepull.com/wp-content/uploads/2021/07/EST78564_11zon.jpg","width":4480,"height":6720,"caption":"Guesthousepull Alvor, Algarve, Portugal"},"image":{"@id":"https://guesthousepull.com/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/guesthousealvor"]}]}</script>
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Guesthousepull Alvor, Algarve, Portugal &raquo; Feed" href="https://guesthousepull.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Guesthousepull Alvor, Algarve, Portugal &raquo; Feed de comentários" href="https://guesthousepull.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://guesthousepull.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fguesthousepull.com%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://guesthousepull.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fguesthousepull.com%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css"></style>
+<style id="classic-theme-styles-inline-css"></style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://guesthousepull.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.0.6' media='all' />
+<link rel='stylesheet' id='wpa-css-css' href='https://guesthousepull.com/wp-content/plugins/honeypot/includes/css/wpa.css?ver=2.2.12' media='all' />
+<link rel='stylesheet' id='ut-core-font-and-icons-css' href='https://guesthousepull.com/wp-content/themes/brooklyn/css/ut.core.fonts.min.css?ver=7.1.3' media='all' />
+<link rel='stylesheet' id='ut-core-plugins-css' href='https://guesthousepull.com/wp-content/themes/brooklyn/css/ut.core.plugins.min.css?ver=7.1.3' media='all' />
+<link rel='stylesheet' id='js_composer_front-css' href='https://guesthousepull.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=7.9.5' media='all' />
+<link rel='stylesheet' id='ut-shortcodes-css' href='https://guesthousepull.com/wp-content/themes/brooklyn/css/ut.scodes.min.css?ver=7.1.3' media='all' />
+<link rel='stylesheet' id='ut-vc-shortcodes-css' href='https://guesthousepull.com/wp-content/themes/brooklyn/css/ut.vc.min.css?ver=7.1.3' media='all' />
+<link rel='stylesheet' id='ut-main-style-css' href='https://guesthousepull.com/wp-content/themes/brooklyn/style.css?ver=4.9.9.4' media='all' />
+<link rel='stylesheet' id='ut-theme-style-css' href='https://guesthousepull.com/wp-content/themes/brooklyn/css/ut.theme.min.css?ver=4.9.9.4' media='all' />
+<style id="akismet-widget-style-inline-css"></style>
+<link rel='stylesheet' id='ut-google-fonts-css' href='//fonts.googleapis.com/css?family=Poppins:400:,600,400normal,500,100,700,400,200|Raleway:800:,800,700,600&#038;&#038;ver=7.1.3#038;subsets=latin&#038;display=swap' media='all' />
+<script id="jquery-core-js" src="https://guesthousepull.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://guesthousepull.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="jquery-js-after"></script>
+<script id="modernizr-js" src="https://guesthousepull.com/wp-content/plugins/ut-shortcodes/js/plugins/modernizr/modernizr.min.js?ver=2.6.2"></script>
+<script id="ut-scriptlibrary-js" src="https://guesthousepull.com/wp-content/themes/brooklyn/js/ut-scriptlibrary.min.js?ver=4.9.9.4"></script>
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=GT-WV843M5G" async></script>
+<script id="google_gtagjs-js-after"></script>
+<script></script><link rel="https://api.w.org/" href="https://guesthousepull.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://guesthousepull.com/wp-json/wp/v2/pages/2037" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://guesthousepull.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.3" />
+<link rel='shortlink' href='https://guesthousepull.com/' />
+<meta name="generator" content="Site Kit by Google 1.189.0" /><style></style><style id="ut-spacing-custom-css" type="text/css"></style><style id="ut-site-frame-css" type="text/css"></style><style id="ut-global-custom-css" type="text/css"></style><style id="ut-hero-custom-css" type="text/css"></style><style id="ut-hero-animation-css" type="text/css"></style><style id="ut-top-header-css" type="text/css"></style><style id="ut-navigation-custom-css" type="text/css"></style><style id="ut-mobile-navigation-custom-css" type="text/css"></style><style id="ut-overlay-navigation-spacing-css" type="text/css"></style><style id="ut-overlay-custom-css" type="text/css"></style><style id="ut-overlay-search-css" type="text/css"></style><style id="ut-blog-custom-css" type="text/css"></style><style type="text/css"></style><style id="ut-page-custom-css"type="text/css"></style><style id="ut-portfolio-custom-css" type="text/css"></style><style id="ut-shortcode-custom-css" type="text/css"></style><style id="ut-footer-custom-css" type="text/css"></style><script type="text/javascript"></script>
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<style data-type="vc_custom-css"></style><meta name="generator" content="Powered by Slider Revolution 6.7.34 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<link rel="icon" href="https://guesthousepull.com/wp-content/uploads/2021/07/cropped-logoalvorkiblack-01-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://guesthousepull.com/wp-content/uploads/2021/07/cropped-logoalvorkiblack-01-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://guesthousepull.com/wp-content/uploads/2021/07/cropped-logoalvorkiblack-01-180x180.png" />
+<meta name="msapplication-TileImage" content="https://guesthousepull.com/wp-content/uploads/2021/07/cropped-logoalvorkiblack-01-270x270.png" />
+<script></script>
+<style type="text/css" data-type="vc_shortcodes-custom-css"></style><noscript><style></style></noscript>
+<style id="global-styles-inline-css"></style>
+<link rel='stylesheet' id='vc_google_fonts_raleway100100italic200200italic300300italicregularitalic500500italic600600italic700700italic800800italic900900italic-css' href='//fonts.googleapis.com/css?family=Raleway:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap&#038;ver=7.1.3' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css' href='//guesthousepull.com/wp-content/plugins/revslider/sr6/assets/css/rs6.css?ver=6.7.34' media='all' />
+<style id="rs-plugin-settings-inline-css"></style>
+</head>
+<body id="ut-sitebody" class="home wp-singular page-template-default page page-id-2037 wp-theme-brooklyn ut-hover-cursor-parent wpb-js-composer js-comp-ver-7.9.5 vc_responsive ut-vc-enabled ut-spacing-120 no-touchevents ut-hero-header-off ut-has-top-header has-hero ut-bklyn-multisite ut-header-display-on-hero ut-header-hide-on-hero" data-scrolleffect="easeInOutExpo" data-scrollspeed="1300">
+<div id="ut-floating-toTop"></div> 
+<a class="ut-offset-anchor" id="top" style="top:0px !important;"></a>
+<header id="header-section" data-style="default" data-primary-skin="ut-primary-custom-skin" data-secondary-skin="ut-primary-custom-skin" class="ha-header  ut-header-floating centered bordered-top ut-primary-custom-skin ha-header-hide" data-line-height="80" data-total-height="120">
+	 <div id="ut-top-header" class="ut-top-header-small ut-top-header-centered   hide-on-tablet hide-on-mobile clearfix"><div class="ut-header-inner clearfix"><div id="ut-top-header-left" class=" ut-company-social"><ul class="fa-ul clearfix"><li class=""><a  target="_blank" area-label="facebook" href="https://www.facebook.com/kitesurfschoolalvor"><i class="fa fa-facebook"></i></a></li><li class=""><a  target="_blank" area-label="instagram" href="http://@alvorkitecentercom"><i class="fa fa-instagram"></i></a></li></ul></div><div id="ut-top-header-right" class="ut-top-header-no-content ut-company-contact"></div></div></div>		
+     <div class="grid-container">
+        <div class="ha-header-perspective clearfix">
+            <div class="ha-header-front clearfix">
+					<div class="site-logo-wrap grid-15 tablet-grid-80 mobile-grid-70 ">
+				<div class="site-logo">
+					<h1 class="logo "><a data-responsive-font="site_logo" href="https://guesthousepull.com/" rel="home" data-font-size="22">
+                        Guesthousepull Alvor, Algarve, Portugal</a>
+                    </h1>
+				</div>
+					</div>    
+                    <nav id="navigation" class="ut-horizontal-navigation ut-navigation-for-default grid-85 hide-on-tablet hide-on-mobile ut-navigation-style-separator ut-navigation-with-animation ut-navigation-with-description-above "><ul id="menu-main" class="ut-navigation-menu menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2037 current_page_item menu-item-1208 ut-menu-item-lvl-0 ut-home-link menu-item-object-custom" data-menu-id="1208">
+<a href="#top" class="ut-main-navigation-link"><span>Guesthouse Alvor</span></a>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3529 ut-menu-item-lvl-0" data-menu-id="3529">
+<a href="https://guesthousepull.com/booking/" class="ut-main-navigation-link"><span>Booking</span></a>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2057 ut-menu-item-lvl-0" data-menu-id="2057">
+<a href="https://guesthousepull.com/guesthouse/" class="ut-main-navigation-link"><span>Guesthouse</span></a>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2219 ut-menu-item-lvl-0" data-menu-id="2219">
+<a href="https://guesthousepull.com/videos/" class="ut-main-navigation-link"><span>Videos</span></a>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1700 ut-menu-item-lvl-0" data-menu-id="1700">
+<a href="https://guesthousepull.com/contact/" class="ut-main-navigation-link"><span>Contacts</span></a>
+</li>
+</ul></nav>                
+                <div class="tablet-grid-20 mobile-grid-30 hide-on-desktop"><div class="ut-mm-trigger">        
+        <div id="ut-hamburger-wrap-mobile" class="ut-hamburger-wrap">
+            <a id="ut-open-mobile-menu" class="ut-hamburger ut-hamburger--cross" type="button">
+                <span></span>
+            </a>
+        </div>
+    </div></div><nav id="ut-mobile-nav" class="ut-mobile-menu mobile-grid-100 tablet-grid-100 hide-on-desktop"><div class="ut-scroll-pane-wrap"><div class="ut-scroll-pane"><ul id="ut-mobile-menu" class="ut-mobile-menu ut-mobile-menu-left" ><li id="menu-item-1208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2037 current_page_item menu-item-1208 ut-home-link menu-item-object-custom ut-front-page-link"><a href="#top" class="selected">Guesthouse Alvor</a></li>
+<li id="menu-item-3529" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3529"><a href="https://guesthousepull.com/booking/">Booking</a></li>
+<li id="menu-item-2057" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2057"><a href="https://guesthousepull.com/guesthouse/">Guesthouse</a></li>
+<li id="menu-item-2219" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2219"><a href="https://guesthousepull.com/videos/">Videos</a></li>
+<li id="menu-item-1700" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1700"><a href="https://guesthousepull.com/contact/">Contacts</a></li>
+</ul></div></div></nav>
+            </div>
+        </div>
+    </div> 
+</header>
+<div class="clear"></div>
+<section id="ut-custom-hero" class="ut-custom-hero ha-waypoint " data-animate-up="ha-header-hide" data-animate-down="ha-header-hide">
+    <div id="ut-hero-early-waypoint" class="ut-early-waypoint" data-animate-up="ha-header-hide" data-animate-down="ha-header-small"></div>    
+			<p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="visibility:hidden;background:#141618;padding:0;">
+				<rs-module id="rev_slider_1_1" style="" data-version="6.7.34">
+					<rs-slides style="overflow: hidden; position: absolute;">
+						<rs-slide style="position: absolute;" data-key="rs-1" data-title="Slide" data-thumb="//guesthousepull.com/wp-content/uploads/2021/07/EST78581_11zon-400x200.jpg" data-duration="6000" data-in="o:0;" data-out="a:false;">
+							<img src="//guesthousepull.com/wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="" title="EST78581_11zon" width="6720" height="4480" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//guesthousepull.com/wp-content/uploads/2021/07/EST78581_11zon.jpg" data-bg="p:left center;" data-panzoom="d:10000;e:power0.inOut;ss:115;se:100;" data-no-retina>
+<rs-layer
+								id="slider-1-slide-1-layer-1" 
+								data-type="text"
+								data-color="#ffffff||rgba(255, 255, 255, 1)||rgba(255, 255, 255, 1)||rgba(255, 255, 255, 1)"
+								data-xy="x:c;y:m;yo:-70px,-70px,-60px,-50px;"
+								data-text="s:80,60,50,40;l:80,60,50,40;ls:-4px,-3px,-2px,-1px;fw:800;a:center;"
+								data-frame_0="sX:0.8;sY:0.8;"
+								data-frame_1="e:power2.inOut;st:1000;sp:1000;sR:1000;"
+								data-frame_999="st:w;sp:1000;sR:4000;auto:true;"
+								data-frame_999_mask="u:t;"
+								style="z-index:7;font-family:'Raleway';"
+							>GUEST<span style="color:#FFBF00 !important;">HOUSE</span><br>
+ALVOR 
+							</rs-layer><a
+								id="slider-1-slide-1-layer-4" 
+								class="rs-layer"
+								href="https://guesthousepull.com/booking/" target="_self"
+								data-type="button"
+								data-color="#ffffff||rgba(255, 255, 255, 0.7)||rgba(255, 255, 255, 0.7)||rgba(255, 255, 255, 0.7)"
+								data-xy="x:c;xo:2px,0,0,0;y:m;yo:63px,26px,20px,15px;"
+								data-text="s:35,18,14,12;l:59,30,26,24;ls:0,0px,0px,0px;fw:700,400,400,400;a:center;"
+								data-frame_0="sX:0.8;sY:0.8;"
+								data-frame_1="e:power2.inOut;st:1000;sp:1000;sR:1000;"
+								data-frame_999="st:w;sp:1000;sR:4000;auto:true;"
+								data-frame_999_mask="u:t;"
+								style="z-index:8;font-family:'Poppins';"
+							>BOOK NOW<br /> 
+							</a><rs-layer
+								id="slider-1-slide-1-layer-18" 
+								data-type="shape"
+								data-rsp_ch="on"
+								data-xy="x:c;y:m;"
+								data-text="w:normal;s:20,15,11,6;l:0,19,14,8;"
+								data-dim="w:100%;h:100%;"
+								data-basealign="slide"
+								data-frame_1="e:power2.inOut;sp:1000;"
+								data-frame_999="o:0;st:w;sp:1000;sR:5000;"
+								style="z-index:6;background-color:rgba(0,0,0,0.39);"
+							> 
+							</rs-layer>					</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-23" data-title="Slide" data-thumb="//guesthousepull.com/wp-content/uploads/2021/07/IMG_9380-scaled-1-400x200.jpg" data-duration="6000" data-in="o:0;" data-out="a:false;">
+							<img src="//guesthousepull.com/wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="" title="Alvor accommodation" width="2560" height="1920" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//guesthousepull.com/wp-content/uploads/2021/07/IMG_9380-scaled-1.jpg" data-bg="p:left center;" data-panzoom="d:10000;e:power0.inOut;ss:115;se:100;" data-no-retina>
+<rs-layer
+								id="slider-1-slide-23-layer-1" 
+								data-type="text"
+								data-color="#ffffff||rgba(255, 255, 255, 1)||rgba(255, 255, 255, 1)||rgba(255, 255, 255, 1)"
+								data-xy="x:c;y:m;yo:-70px,-98px,-60px,-50px;"
+								data-text="s:80,87,50,40;l:80,87,50,40;ls:-4px,-4px,-2px,-1px;fw:800;a:center;"
+								data-frame_0="sX:0.8;sY:0.8;"
+								data-frame_1="x:0,0px,0px,0px;y:0,0px,0px,0px;e:power2.inOut;st:1000;sp:1000;sR:1000;"
+								data-frame_999="st:w;sp:1000;sR:4000;auto:true;"
+								data-frame_999_mask="u:t;"
+								style="z-index:7;font-family:'Raleway';"
+							>PERFECT <span style="color:#FFBF00 !important;">HOLIDAYS</span><br>
+							</rs-layer><a
+								id="slider-1-slide-23-layer-4" 
+								class="rs-layer"
+								href="https://guesthousepull.com/booking/" target="_self"
+								data-type="button"
+								data-color="#ffffff||#ffffff||rgba(255, 255, 255, 0.7)||rgba(255, 255, 255, 0.7)"
+								data-xy="x:c;xo:2px,1px,0,0;y:m;yo:63px,0,20px,15px;"
+								data-text="s:35,35,14,12;l:59,58,26,24;ls:0,0,0px,0px;fw:700,700,400,400;a:center;"
+								data-frame_0="sX:0.8;sY:0.8;"
+								data-frame_1="e:power2.inOut;st:1000;sp:1000;sR:1000;"
+								data-frame_999="st:w;sp:1000;sR:4000;auto:true;"
+								data-frame_999_mask="u:t;"
+								style="z-index:8;font-family:'Poppins';"
+							>BOOK NOW<br /> 
+							</a><rs-layer
+								id="slider-1-slide-23-layer-18" 
+								data-type="shape"
+								data-rsp_ch="on"
+								data-xy="x:c;y:m;"
+								data-text="w:normal;s:20,15,11,6;l:0,19,14,8;"
+								data-dim="w:100%;h:100%;"
+								data-basealign="slide"
+								data-frame_1="e:power2.inOut;sp:1000;"
+								data-frame_999="o:0;st:w;sp:1000;sR:5000;"
+								style="z-index:6;background-color:rgba(0,0,0,0.14);"
+							> 
+							</rs-layer>					</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-24" data-title="Slide" data-thumb="//guesthousepull.com/wp-content/uploads/2021/07/IMG_9308-scaled-1-400x200.jpg" data-duration="6000" data-in="o:0;" data-out="a:false;">
+							<img src="//guesthousepull.com/wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="" title="Guesthouse Alvor: Your Dream Algarve Holiday Accommodation" width="2560" height="1920" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//guesthousepull.com/wp-content/uploads/2021/07/IMG_9308-scaled-1.jpg" data-bg="p:left center;" data-panzoom="d:10000;e:power0.inOut;ss:115;se:100;" data-no-retina>
+<rs-layer
+								id="slider-1-slide-24-layer-1" 
+								data-type="text"
+								data-color="#ffffff||rgba(255, 255, 255, 1)||rgba(255, 255, 255, 1)||rgba(255, 255, 255, 1)"
+								data-xy="x:c;y:m;yo:-70px,-98px,-60px,-50px;"
+								data-text="s:80,87,50,40;l:80,87,50,40;ls:-4px,-4px,-2px,-1px;fw:800;a:center;"
+								data-frame_0="sX:0.8;sY:0.8;"
+								data-frame_1="x:0,0px,0px,0px;y:0,0px,0px,0px;e:power2.inOut;st:1000;sp:1000;sR:1000;"
+								data-frame_999="st:w;sp:1000;sR:4000;auto:true;"
+								data-frame_999_mask="u:t;"
+								style="z-index:7;font-family:'Raleway';"
+							>TRANQUILITY &  <span style="color:#FFBF00 !important;"> 
+ AUTHENTIC</span><br>
+							</rs-layer><a
+								id="slider-1-slide-24-layer-4" 
+								class="rs-layer"
+								href="https://guesthousepull.com/booking/" target="_self"
+								data-type="button"
+								data-color="#ffffff||#ffffff||rgba(255, 255, 255, 0.7)||rgba(255, 255, 255, 0.7)"
+								data-xy="x:c;xo:2px,1px,0,0;y:m;yo:63px,0,20px,15px;"
+								data-text="s:35,35,14,12;l:59,58,26,24;ls:0,0,0px,0px;fw:700,700,400,400;a:center;"
+								data-frame_0="sX:0.8;sY:0.8;"
+								data-frame_1="e:power2.inOut;st:1000;sp:1000;sR:1000;"
+								data-frame_999="st:w;sp:1000;sR:4000;auto:true;"
+								data-frame_999_mask="u:t;"
+								style="z-index:8;font-family:'Poppins';"
+							>BOOK NOW<br /> 
+							</a><rs-layer
+								id="slider-1-slide-24-layer-18" 
+								data-type="shape"
+								data-rsp_ch="on"
+								data-xy="x:c;y:m;"
+								data-text="w:normal;s:20,15,11,6;l:0,19,14,8;"
+								data-dim="w:100%;h:100%;"
+								data-basealign="slide"
+								data-frame_1="e:power2.inOut;sp:1000;"
+								data-frame_999="o:0;st:w;sp:1000;sR:5000;"
+								style="z-index:6;background-color:rgba(0,0,0,0.27);"
+							> 
+							</rs-layer>					</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-25" data-title="Slide" data-thumb="//guesthousepull.com/wp-content/uploads/2021/07/EST78568_11zon-400x200.jpg" data-duration="6000" data-in="o:0;" data-out="a:false;">
+							<img src="//guesthousepull.com/wp-content/plugins/revslider/sr6/assets/assets/dummy.png" alt="" title="Prime Alvor Location: Steps from Golden Algarve Beaches" width="6720" height="4480" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//guesthousepull.com/wp-content/uploads/2021/07/EST78568_11zon.jpg" data-bg="p:left center;" data-panzoom="d:10000;e:power0.inOut;ss:115;se:100;" data-no-retina>
+<rs-layer
+								id="slider-1-slide-25-layer-1" 
+								data-type="text"
+								data-color="#ffffff||rgba(255, 255, 255, 1)||rgba(255, 255, 255, 1)||rgba(255, 255, 255, 1)"
+								data-xy="x:c;y:m;yo:-70px,-98px,-60px,-50px;"
+								data-text="s:80,87,50,40;l:80,87,50,40;ls:-4px,-4px,-2px,-1px;fw:800;a:center;"
+								data-frame_0="sX:0.8;sY:0.8;"
+								data-frame_1="x:0,0px,0px,0px;y:0,0px,0px,0px;e:power2.inOut;st:1000;sp:1000;sR:1000;"
+								data-frame_999="st:w;sp:1000;sR:4000;auto:true;"
+								data-frame_999_mask="u:t;"
+								style="z-index:7;font-family:'Raleway';"
+							>EXPLORE  <span style="color:#FFBF00 !important;"> 
+ ALVOR</span><br>
+							</rs-layer><a
+								id="slider-1-slide-25-layer-4" 
+								class="rs-layer"
+								href="https://guesthousepull.com/booking/" target="_self"
+								data-type="button"
+								data-color="#ffffff||#ffffff||rgba(255, 255, 255, 0.7)||rgba(255, 255, 255, 0.7)"
+								data-xy="x:c;xo:2px,1px,0,0;y:m;yo:63px,0,20px,15px;"
+								data-text="s:35,35,14,12;l:59,58,26,24;ls:0,0,0px,0px;fw:700,700,400,400;a:center;"
+								data-frame_0="sX:0.8;sY:0.8;"
+								data-frame_1="e:power2.inOut;st:1000;sp:1000;sR:1000;"
+								data-frame_999="st:w;sp:1000;sR:4000;auto:true;"
+								data-frame_999_mask="u:t;"
+								style="z-index:8;font-family:'Poppins';"
+							>BOOK NOW<br /> 
+							</a><rs-layer
+								id="slider-1-slide-25-layer-18" 
+								data-type="shape"
+								data-rsp_ch="on"
+								data-xy="x:c;y:m;"
+								data-text="w:normal;s:20,15,11,6;l:0,19,14,8;"
+								data-dim="w:100%;h:100%;"
+								data-basealign="slide"
+								data-frame_1="e:power2.inOut;sp:1000;"
+								data-frame_999="o:0;st:w;sp:1000;sR:5000;"
+								style="z-index:6;background-color:rgba(0,0,0,0.27);"
+							> 
+							</rs-layer>					</rs-slide>
+					</rs-slides>
+					<rs-static-layers></rs-static-layers>
+				</rs-module>
+				<script></script>
+			</rs-module-wrap>
+        <div class="hero-down-arrow-wrap">                        
+            <span class="hero-down-arrow">
+                <a href="#ut-to-first-section"><i class="Bklyn-Core-Down-3"></i></a>
+            </span>
+        </div>
+    <div data-section="top" class="ut-scroll-up-waypoint"></div>
+</section>
+<div class="clear"></div>        
+<div id="main-content" class="wrap ha-waypoint" data-animate-up="ha-header-hide" data-animate-down="ha-header-small">
+    <a class="ut-offset-anchor" id="to-main-content"></a>
+        <div class="main-content-background clearfix">
+        <div class="grid-container">
+        <div id="primary" class="grid-parent grid-100 tablet-grid-100 mobile-grid-100 ">
+<div id="post-2037" class="post-2037 page type-page status-publish has-post-thumbnail hentry">
+    <div class="grid-100 mobile-grid-100 tablet-grid-100">
+        <div class="entry-content clearfix">    
+            <div class="wpb-content-wrapper"><section id="ut-section-6acd11b3b9e3c" data-section-title="Welcome Section" data-vc-full-width="true" data-vc-full-width-init="false" data-cursor-skin="global" class="vc_section ut-vc-120 vc_section-has-fill ut-section-6acd11b3b9e42 bklyn-section-with-overlay ut-parallax-section ut-section-with-linking"><a id="section-about" data-id="section-about" class="ut-vc-offset-anchor-top" name="section-about">About</a><div id="ut-parallax-6acd11b3b9e5b" data-parallax-factor="8" data-background-image="https://guesthousepull.com/wp-content/uploads/2021/07/EST78582_11zon.jpg?id=2460" class="parallax-scroll-container parallax-scroll-container-hide ut-background-lozad" data-parallax-scale-move="1.3"></div><div id="ut-section-overlay-6acd11b3b9e59" class="bklyn-overlay bklyn-style-three"></div><div id="ut-row-6acd11b3ba303" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_row-has-fill vc_column-gap-0 ut-row-6acd11b3ba309 ut-parallax-section" ><div id="ut-parallax-6acd11b3ba314" data-parallax-factor="8" data-background-image="" class="parallax-scroll-container parallax-scroll-container-hide ut-background-lozad"></div><div class="wpb_column vc_column_container vc_col-sm-12" ><div id="ut_inner_column_6acd11b3ba67e" class="vc_column-inner " ><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<div class="wpb_text_column wpb_content_element ">
+<div class="wpb_wrapper">
+<h2 data-sourcepos="1:1-1:61">Guesthouse Alvor: Your Dream Algarve Holiday Accommodation</h2>
+<hr data-sourcepos="3:1-3:3" />
+<h3 data-sourcepos="5:1-5:64">Discover Alvor: Tranquility &amp; Authentic Portuguese Charm</h3>
+<p data-sourcepos="7:1-7:296">Welcome to <strong>Guesthouse Alvor</strong>, your premier choice for <strong>Algarve accommodation in <a href="https://guesthousepull.com/booking/">Alvor</a>, Portugal</strong>. <strong>Indeed</strong>, this picturesque fishing village is truly captivating. <strong>Moreover</strong>, our guesthouse, nestled right in its heart, offers an unforgettable <strong>holiday experience</strong> in southern Portugal.</p>
+<hr data-sourcepos="9:1-9:3" />
+<h3 data-sourcepos="11:1-11:59">Prime Alvor Location: Steps from Golden Algarve Beaches</h3>
+<p data-sourcepos="13:1-13:590"><strong>Certainly</strong>, if you&#8217;re planning your next <strong>European getaway</strong>, Guesthouse Alvor is perfectly situated for your dream <strong>Algarve holiday</strong>. <strong>Specifically</strong>, we&#8217;re just moments away from Alvor&#8217;s stunning, world-renowned <strong>Algarve beaches</strong>. <strong>These incredible stretches of sand</strong>, incidentally, are celebrated not only for their golden cliffs <strong>but also</strong> for their pristine turquoise waters. <strong>Furthermore</strong>, you&#8217;ll enjoy over 300 days of glorious sunshine annually. <strong>Therefore</strong>, imagine waking up and being just a short stroll from soft sands and gentle waves — pure relaxation awaits!</p>
+<hr data-sourcepos="15:1-15:3" />
+<h3 data-sourcepos="17:1-17:60"><a href="https://alvorkitecenter.com/">Explore Alvor</a> &amp; the Algarve: Your Ideal Holiday Base</h3>
+<p data-sourcepos="19:1-19:613"><strong>In addition</strong>, at Guesthouse Alvor, we seamlessly blend unparalleled comfort with genuine Portuguese hospitality. <strong>For instance</strong>, whether you&#8217;re eager to explore Alvor&#8217;s charming cobblestone streets and savor delicious fresh seafood at local restaurants, <strong>or perhaps</strong> you simply wish to relax on some of the <strong>best beaches in the Algarve</strong>, our guesthouse provides the ideal base for your adventures. <strong>Crucially</strong>, from traditional markets to vibrant nightlife, <strong>and encompassing</strong> scenic coastal walks to exciting water sports, everything the Algarve has to offer is easily accessible from your doorstep.</p>
+<hr data-sourcepos="21:1-21:3" />
+<h3 data-sourcepos="23:1-23:57">Book Your Guesthouse Alvor Holiday in Portugal Today!</h3>
+<p data-sourcepos="25:1-25:247"><strong>Consequently</strong>, <strong>book your stay at Guesthouse Alvor today</strong> and start planning your perfect <strong>holiday in the Algarve, Portugal</strong>! Experience the magic of Alvor and create lasting memories that will stay with you long after you&#8217;ve returned home.</p>
+</div>
+</div>
+		</div>
+	</div>
+</div></div></div><style type="text/css"></style></div><div class="vc_row-full-width vc_clearfix"></div><div id="ut-row-6acd11b3bacb6" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_column-gap-0 ut-row-6acd11b3bacbb" ><div class="wpb_column vc_column_container vc_col-sm-3" ><div id="ut_inner_column_6acd11b3baf9b" class="vc_column-inner " ><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6" ><div id="ut_inner_column_6acd11b3bb169" class="vc_column-inner " ><div class="wpb_wrapper"><div class="wpb_content_element "><style type="text/css"></style><header id="ut_header_6acd11b3bb3d6" class="page-header page-title-module  ut-no-title-linebreak-mobile ut-no-lead-linebreak-mobile pt-style-2 header-center header-tablet-center header-mobile-center header-with-gradient"><h1 data-title="GuesthousePull"  data-responsive-font="page_title" data-responsive-font-settings="{&quot;base-font-size&quot;:&quot;global&quot;,&quot;font-size&quot;:{&quot;desktop_large&quot;:&quot;60&quot;},&quot;base-line-height&quot;:&quot;global&quot;,&quot;base-letter-spacing&quot;:&quot;global&quot;,&quot;letter-spacing&quot;:{&quot;desktop_large&quot;:&quot;-0.03&quot;}}" class="page-title  "><span>GuesthousePull</span></h1><div data-delay="0" class="lead "><p>Explore our gallery of photos from within the house. No stone is left unturned here. Start imagening your visit.</p>
+</div></header></div><style type="text/css"></style><div id="bklyn_btn_6acd11b3bd759" class="bklyn-btn-holder  bklyn-btn-center bklyn-btn-tablet-center bklyn-btn-mobile-center"><a title=""   href="https://guesthousepull.com/guesthouse/" target="_self" class="bklyn-btn  bklyn-btn-normal" ><span class="ut-btn-text">View Gallery</span></a></div>
+<style type="text/css"></style>
+<div class="vc_empty_space" id="ut-empty-space-6acd11b3bd81c"><span class="vc_empty_space_inner"></span></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3" ><div id="ut_inner_column_6acd11b3bda69" class="vc_column-inner " ><div class="wpb_wrapper"></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><a data-id="section-about" class="ut-vc-offset-anchor-bottom" name="section-about">About</a><style type="text/css"></style></section><div class="vc_row-full-width vc_clearfix"></div><section id="ut-section-6acd11b3be2c8" data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" data-cursor-skin="global" class="vc_section ut-vc-120 vc_section-has-fill ut-section-6acd11b3be2cc ut-parallax-section"><div id="ut-parallax-6acd11b3be2e2" data-parallax-factor="8" data-background-image="https://guesthousepull.com/wp-content/uploads/2021/07/EST78574_11zon.jpg?id=2457" class="parallax-scroll-container parallax-scroll-container-hide ut-background-lozad"></div><div id="ut-row-6acd11b3be6d0" data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_row-has-fill vc_column-gap-0 vc_row-no-padding vc_row-o-equal-height vc_row-flex ut-row-6acd11b3be6d5 ut-parallax-section" ><div id="ut-parallax-6acd11b3be6ea" data-parallax-factor="8" data-background-image="https://guesthousepull.com/wp-content/uploads/2021/08/guesthousealgarve.jpg?id=2576" class="parallax-scroll-container parallax-scroll-container-hide ut-background-lozad" data-parallax-scale-move="1.48"></div><div class="wpb_column vc_column_container vc_col-sm-3" ><div id="ut_inner_column_6acd11b3bea05" class="vc_column-inner " ><div class="wpb_wrapper"></div></div><style type="text/css"></style></div><div class="wpb_column vc_column_container vc_col-sm-6" ><div id="ut_inner_column_6acd11b3bee27" class="vc_column-inner " ><div class="wpb_wrapper">
+<style type="text/css"></style>
+<div class="vc_empty_space" id="ut-empty-space-6acd11b3bf119"><span class="vc_empty_space_inner"></span></div><div class="wpb_content_element "><style type="text/css"></style><header id="ut_header_6acd11b3bf373" class="page-header page-title-module  ut-no-title-linebreak-mobile ut-no-lead-linebreak-mobile pt-style-2 header-center header-tablet-center header-mobile-center"><h1 data-title="Watch videos of our space"  data-responsive-font="page_title" data-responsive-font-settings="{&quot;base-font-size&quot;:&quot;global&quot;,&quot;font-size&quot;:{&quot;desktop_large&quot;:&quot;60&quot;},&quot;base-line-height&quot;:&quot;global&quot;,&quot;base-letter-spacing&quot;:&quot;global&quot;,&quot;letter-spacing&quot;:{&quot;desktop_large&quot;:&quot;-0.03&quot;}}" class="page-title  "><span>Watch videos of our space</span></h1></header></div>
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p><iframe title="YouTube video player" src="https://www.youtube.com/embed/md5UfcnIKks?start=3" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"><span style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" data-mce-type="bookmark" class="mce_SELRES_start">﻿</span></iframe></p>
+		</div>
+	</div>
+<style type="text/css"></style><div id="bklyn_btn_6acd11b3bf85d" class="bklyn-btn-holder  bklyn-btn-center bklyn-btn-tablet-center bklyn-btn-mobile-center"><a title="View Rooms"   href="https://guesthousepull.com/guesthouse/" target="_self" class="bklyn-btn  bklyn-btn-outline bklyn-btn-normal" ><span class="ut-btn-text">Watch Videos</span></a></div></div></div><style type="text/css"></style></div><div class="wpb_column vc_column_container vc_col-sm-3" ><div id="ut_inner_column_6acd11b3bfa82" class="vc_column-inner " ><div class="wpb_wrapper"></div></div></div><style type="text/css"></style></div><div class="vc_row-full-width vc_clearfix"></div><a data-id="section-without-id" class="ut-vc-offset-anchor-bottom" name="section-without-id"></a><style type="text/css"></style></section><div class="vc_row-full-width vc_clearfix"></div><section id="ut-section-6acd11b3c0281" data-section-title="What Clients Say Section" data-vc-full-width="true" data-vc-full-width-init="false" data-cursor-skin="global" class="vc_section ut-vc-120 vc_section-has-no-fill ut-section-6acd11b3c0286 ut-section-with-linking"><a id="section-clients" data-id="section-clients" class="ut-vc-offset-anchor-top" name="section-clients">clients</a><div id="ut-row-6acd11b3c066b" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_column-gap-0 vc_row-o-equal-height vc_row-o-content-middle vc_row-flex ut-row-6acd11b3c0671" ><div class="wpb_column vc_column_container vc_col-sm-12" ><div id="ut_inner_column_6acd11b3c0958" class="vc_column-inner " ><div class="wpb_wrapper"><div class="wpb_content_element "><style type="text/css"></style><header id="ut_header_6acd11b3c0c7b" class="section-header  ut-no-title-linebreak-mobile ut-no-lead-linebreak-mobile pt-style-1 header-center header-tablet-center header-mobile-center"><h2 data-title="CLIENTS' TAKES&#13;&#10;ON OUR GUESTHOUSE"  data-responsive-font="section_title" data-responsive-font-settings="{&quot;base-font-size&quot;:&quot;40&quot;,&quot;font-size-unit&quot;:&quot;px&quot;,&quot;font-size&quot;:{&quot;desktop_large&quot;:&quot;40&quot;},&quot;base-line-height&quot;:&quot;global&quot;,&quot;base-letter-spacing&quot;:&quot;global&quot;}" class="bklyn-divider-styles bklyn-divider-style-1 section-title title-with-linebreak"><span>CLIENTS' TAKES<br />
+ON OUR GUESTHOUSE</span></h2><div data-delay="0" class="lead title-with-linebreak"><p>The comments below are snippets of <b>10.000+ clients&#8217;</b><br />
+testemonials we&#8217;ve gotten over the years.</p>
+<p>
+</div></header></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div id="ut-row-6acd11b3c147b" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_column-gap-0 ut-row-6acd11b3c1480" ><div class="wpb_column vc_column_container vc_col-sm-12" ><div id="ut_inner_column_6acd11b3c175a" class="vc_column-inner " ><div class="wpb_wrapper"><div id="qtSliderOuter6acd11b3c17ae" class="wpb_content_element "> <style type="text/css"></style><div  class="ut-bkly-qt-rotator ut-bkly-text-rotator ut-bklyn-qt-rotator-style-2  ut-bklyn-qt-rotator-style-2-align-left"><div id="qtSlider_6acd11b3c17ad" class="owl-carousel" data-settings="{&quot;items&quot;:1,&quot;smartSpeed&quot;:600,&quot;lazyLoad&quot;:true,&quot;autoplay&quot;:false,&quot;autoplayTimeout&quot;:5000,&quot;loop&quot;:true,&quot;nav&quot;:false,&quot;dots&quot;:false}"><div class="ut-bkly-qt-slide"><div class="bkly-testimonials-style2"><div class="bklyn-testimonials-quote"><p>A very nice guest house, modern and welcoming, with an excellent location and great facilities. Attentive and professional staff. It is definitely a safe and clean space.</p>
+<div class="bklyn-about-testimonials-author"><div class="bklyn-testimonials-icon-wrap"><div class="bklyn-testimonials-icon"><img decoding="async" alt="Anabela Nunes" src="https://guesthousepull.com/wp-content/uploads/2021/07/pexels-alex-green-6626087-64x64.jpg"></div></div><div class="bklyn-testimonials-author-wrap"><h3 class="bklyn-testimonials-author">Anabela Nunes</h3></div></div></div></div></div><div class="ut-bkly-qt-slide"><div class="bkly-testimonials-style2"><div class="bklyn-testimonials-quote"><p>A pleasent surprise, beautiful rooms, a gorgeours poo, hostess 10.</p>
+<div class="bklyn-about-testimonials-author"><div class="bklyn-testimonials-icon-wrap"><div class="bklyn-testimonials-icon"><img decoding="async" alt="Dulci Astorga Santana" src="https://guesthousepull.com/wp-content/uploads/2021/07/pexels-ezekixl-akinnewu-950243-64x64.jpg"></div></div><div class="bklyn-testimonials-author-wrap"><h3 class="bklyn-testimonials-author">Dulci Astorga Santana</h3></div></div></div></div></div><div class="ut-bkly-qt-slide"><div class="bkly-testimonials-style2"><div class="bklyn-testimonials-quote"><p>Good place to spend a few days and meet some good people&#8230;.</p>
+<div class="bklyn-about-testimonials-author"><div class="bklyn-testimonials-icon-wrap"><div class="bklyn-testimonials-icon"><img decoding="async" alt="Afonso Santos" src="https://guesthousepull.com/wp-content/uploads/2021/07/pexels-mododeolhar-3474629-64x64.jpg"></div></div><div class="bklyn-testimonials-author-wrap"><h3 class="bklyn-testimonials-author">Afonso Santos</h3></div></div></div></div></div><div class="ut-bkly-qt-slide"><div class="bkly-testimonials-style2"><div class="bklyn-testimonials-quote"><p>Very good place to stay near the beach and Alvor lagoon.</p>
+<div class="bklyn-about-testimonials-author"><div class="bklyn-testimonials-icon-wrap"><div class="bklyn-testimonials-icon"><img decoding="async" alt="Rui Paulo" src="https://guesthousepull.com/wp-content/uploads/2021/07/2955654946_5aba31451e_w-64x64.jpg"></div></div><div class="bklyn-testimonials-author-wrap"><h3 class="bklyn-testimonials-author">Rui Paulo</h3></div></div></div></div></div><div class="ut-bkly-qt-slide"><div class="bkly-testimonials-style2"><div class="bklyn-testimonials-quote"><p>Great space, excellent staff, very friendly, very good priced and amazing place for kite and fun!!! Keep going guys and thank you very very much!!</p>
+<div class="bklyn-about-testimonials-author"><div class="bklyn-testimonials-icon-wrap"><div class="bklyn-testimonials-icon"><img decoding="async" alt="Vasco Pestana" src="https://guesthousepull.com/wp-content/uploads/2021/07/3258492421_3e81372ec4_w-64x64.jpg"></div></div><div class="bklyn-testimonials-author-wrap"><h3 class="bklyn-testimonials-author">Vasco Pestana</h3></div></div></div></div></div></div><a href="#" data-for="qtSlider_6acd11b3c17ad" class="ut-prev-gallery-slide"><i class="Bklyn-Core-Left-2"></i></a><a href="#" data-for="qtSlider_6acd11b3c17ad" class="ut-next-gallery-slide"><i class="Bklyn-Core-Right-2"></i></a></div></div>
+<style type="text/css"></style>
+<div class="vc_empty_space" id="ut-empty-space-6acd11b3c24a7"><span class="vc_empty_space_inner"></span></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><a data-id="section-clients" class="ut-vc-offset-anchor-bottom" name="section-clients">clients</a></section><div class="vc_row-full-width vc_clearfix"></div><div id="ut-row-6acd11b3c2a3f" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_row-has-fill vc_column-gap-0 ut-row-6acd11b3c2a45 bklyn-row-with-overlay ut-parallax-section ut-video-section" ><a id="ut-background-video-ut-section-video6acd11b3c2a84" data-id="ut-section-video6acd11b3c2a84" class="ut-video-section-player" data-source="youtube" data-property="{ videoURL : 'https://www.youtube.com/watch?v=xHEcdCb4P7c&#038;ab_channel=4KNOCOPYRIGHTSVIDEO' , containment : '#ut-parallax-6acd11b3c2a59' , showControls: false, ratio: 'auto', quality: 'hd720', autoPlay : true, loop : true, mute : true, vol: 5, startAt : 0, stopAt : 0, opacity : 1}"></a><div id="ut-parallax-6acd11b3c2a59" data-parallax-factor="8" data-background-image="" class="parallax-scroll-container parallax-scroll-container-hide ut-background-lozad"></div><div id="ut_row_overlay_6acd11b3c2a56" class="bklyn-overlay "></div><div class="wpb_column vc_column_container vc_col-sm-12" ><div id="ut_inner_column_6acd11b3c2d7b" class="vc_column-inner " ><div class="wpb_wrapper"><div class="wpb_content_element "><style type="text/css"></style><div id="ut_p_quote_6acd11b3c2f55" data-revealfx-color="#ffbf00" class="ut-parallax-quote ut-reveal-fx ut-element-with-block-reveal ut-parallax-quote-align-center ut-parallax-quote-tablet-align-center ut-parallax-quote-mobile-align-center"><blockquote data-responsive-font="blockquote" data-responsive-font-settings="{&quot;base-font-size&quot;:&quot;30&quot;}" data-appear-top-offset="-200" id="ut_reveal_6acd11b3c2f53" class="ut-parallax-quote-title ut-block-reveal-hide ut-no-parallax-quote-linebreak-tablet ut-no-parallax-quote-linebreak-mobile element-with-custom-line-height "><span class="quote-left">"</span>THE BEST WAVE OF YOUR LIFE IS STILL <ins>OUT THERE.</ins><span class="quote-right">"</span></blockquote><br /><div><div class="ut-parallax-quote-name-wrap"><span class="ut-parallax-quote-name">Steve Hawk</span></div></div></div></div></div></div></div><style type="text/css"></style></div><div class="vc_row-full-width vc_clearfix"></div><div id="ut-row-6acd11b3c3377" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_row-has-fill vc_column-gap-0 ut-row-6acd11b3c337d" ><div class="wpb_column vc_column_container vc_col-sm-12 ut-animate-element animated ut-no-animation-tablet ut-no-animation-mobile" data-effect="fadeIn" data-animateonce="yes" data-delay="700" data-animation-duration="1s"><div id="ut_inner_column_6acd11b3c38a5" class="vc_column-inner " ><div class="wpb_wrapper"><div class="wpb_content_element "><style type="text/css"></style><div id="ut_cl_6acd11b3c40c1" data-effect="fadeIn" data-animateonce="yes" data-delay="400" class="ut-custom-link-module-holder  ut-custom-link-module-icon-before ut-custom-link-module-center ut-animate-element animated ut-no-animation-tablet ut-no-animation-mobile" ><a title="Let’s Catch That Wave" href="https://guesthousepull.com/contact/" target="_self" class="ut-custom-link-module" ><i class="fa fa-long-arrow-right"></i>Let’s Catch That Wave</a></div></div></div></div></div><style type="text/css"></style></div><div class="vc_row-full-width vc_clearfix"></div><div id="ut-row-6acd11b3c448b" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_column-gap-0 ut-row-6acd11b3c4492" ><div class="wpb_column vc_column_container vc_col-sm-4" ><div id="ut_inner_column_6acd11b3c4769" class="vc_column-inner " ><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4" ><div id="ut_inner_column_6acd11b3c4937" class="vc_column-inner " ><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4" ><div id="ut_inner_column_6acd11b3c4aff" class="vc_column-inner " ><div class="wpb_wrapper"></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div id="ut-row-6acd11b3c4eab" data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_column-gap-0 ut-row-6acd11b3c4eb0" ><div class="wpb_column vc_column_container vc_col-sm-12" ><div id="ut_inner_column_6acd11b3c5169" class="vc_column-inner " ><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element" >
+		<div class="wpb_wrapper">
+			<p><iframe title="Iframe Example" src=" https://alvorkitecenter-guesthouse.amenitiz.io/" width="1080" height="1024"></iframe></p>
+		</div>
+	</div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div>
+</div>            
+        </div>
+    </div>
+</div>
+        </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    </div>
+    <footer data-cursor-skin="global" class="footer ut-footer-custom ut-footer-fullwidth-off">
+            <a href="#top" class="toTop"><i class="Bklyn-Core-Solid-Up-3"></i></a>
+            <div class="footer-content" data-cursor-skin="global">
+                <div class="grid-container">
+                    <div class="grid-100 mobile-grid-100 tablet-grid-100 ut-sub-footer-style-1 ut-sub-footer-style-2-reverse">
+                        <div class="ut-sub-footer-content">    
+                        <span class="copyright">
+                                ALVOR GUESTHOUSE  DESIGNED BY ADNDIGITAL™
+                        </span>
+                        </div>        
+                    </div>
+                </div>        
+            </div>
+	</footer>
+		<script></script>
+		<script type="speculationrules"></script>
+<script id="d5HvDb"></script><script type="text/html" id="wpb-modifications"></script><link href="//fonts.googleapis.com/css?family=Raleway:800%7CPoppins:700%2C400%7CRoboto:400&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+<script></script>
+<script id="wp-hooks-js" src="https://guesthousepull.com/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://guesthousepull.com/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after"></script>
+<script id="swv-js" src="https://guesthousepull.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.0.6"></script>
+<script id="contact-form-7-js-translations"></script>
+<script id="contact-form-7-js-before"></script>
+<script id="contact-form-7-js" src="https://guesthousepull.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.0.6"></script>
+<script id="wpascript-js" src="https://guesthousepull.com/wp-content/plugins/honeypot/includes/js/wpa.js?ver=2.2.12"></script>
+<script id="wpascript-js-after"></script>
+<script defer async id="tp-tools-js" src="//guesthousepull.com/wp-content/plugins/revslider/sr6/assets/js/rbtools.min.js?ver=6.7.29"></script>
+<script defer async id="revmin-js" src="//guesthousepull.com/wp-content/plugins/revslider/sr6/assets/js/rs6.min.js?ver=6.7.34"></script>
+<script id="ut-sc-plugin-js-extra"></script>
+<script id="ut-sc-plugin-js" src="https://guesthousepull.com/wp-content/plugins/ut-shortcodes/js/ut.scplugin.min.js?ver=5.1.9"></script>
+<script id="unitedthemes-init-js-extra"></script>
+<script id="unitedthemes-init-js" src="https://guesthousepull.com/wp-content/themes/brooklyn/js/ut-init.min.js?ver=4.9.9.4"></script>
+<script id="wpb_composer_front_js-js" src="https://guesthousepull.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=7.9.5"></script>
+<script></script><script id="rs-initialisation-scripts"></script>
+	<script type="text/javascript"></script>
+    <a id="ut-background-video-hero" class="ut-video-player" data-property="{ videoURL : 'https://www.youtube.com/watch?v=JEzBaIel16g&ab_channel=DavizinhoSantos' , containment : '#ut-hero', showControls: false, autoPlay : true, loop : true, mute : true, vol: 5, startAt : 0, stopAt : 0, opacity : 1, abundance : 0}"></a>
+    </body>
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="vi|en">
+<head>
+<base href="https://sealionresort.com/hamtien/" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>BUNGALOW GARDEN VIEW</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="robots" content="index,follow" />
+<link href="https://sealionresort.com/hamtien/upload/photo/logo-sea-lion-mui-ne-tieu-chuan-7676.png" rel="shortcut icon" type="image/x-icon" />
+<meta name="google-site-verification" content="NcK70xU56aS0zchTyUu6b1NEOyuVRbZAbidDcgUBMsg" />
+<meta name="geo.region" content="VN" />
+<meta name="geo.placename" content="Hồ Chí Minh" />
+<meta name="geo.position" content="10.823099;106.629664" />
+<meta name="ICBM" content="10.823099, 106.629664" />
+<meta name='revisit-after' content='1 days' />
+<meta name="author" content="Sea Lion Beach Resort  Mũi Né" />
+<meta name="copyright" content="Sea Lion Beach Resort  Mũi Né - [info@sealionresort.com]" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Sea Lion Beach Resort  Mũi Né" />
+<meta property="og:title" content="BUNGALOW GARDEN VIEW" />
+<meta property="og:description" content="" />
+<meta property="og:url" content="https://sealionresort.com/hamtien/bungalow-garden-view" />
+<meta property="og:image" content="https://sealionresort.com/hamtien/thumbs/1500x1000x2/upload/product/bungalows-sea-lion-beach-resort-mui-ne-12-4074.jpg" />
+<meta property="og:image:alt" content="BUNGALOW GARDEN VIEW" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1500" />
+<meta property="og:image:height" content="1000" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="info@sealionresort.com" />
+<meta name="twitter:creator" content="Sea Lion Beach Resort  Mũi Né" />
+<meta property="og:url" content="https://sealionresort.com/hamtien/bungalow-garden-view" />
+<meta property="og:title" content="BUNGALOW GARDEN VIEW" />
+<meta property="og:description" content="" />
+<meta property="og:image" content="https://sealionresort.com/hamtien/thumbs/1500x1000x2/upload/product/bungalows-sea-lion-beach-resort-mui-ne-12-4074.jpg" />
+<link rel="canonical" href="https://sealionresort.com/hamtien/bungalow-garden-view" />
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">    
+<link href="https://sealionresort.com/hamtien/assets/css/animate.min.css?v=Tpf3UhPNX" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/bootstrap/bootstrap.css?v=2CxpTy0w60" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/fontawesome_pro/css/all.css?v=gXO9YmkTKm" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/confirm/confirm.css?v=4jypku146n" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/holdon/HoldOn.css?v=IdwfLs87PF" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/holdon/HoldOn-style.css?v=CKJSgjLb07" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/mmenu/mmenu.css?v=F2ETMSudIJ" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/fancybox3/jquery.fancybox.css?v=Br7waNWfIZ" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/fancybox3/jquery.fancybox.style.css?v=QtnnCWLpdk" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/css/account.css?v=B0ei4mDwh" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/css/cart.css?v=dcuwtIYhiX" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/photobox/photobox.css?v=yphVYb9z7" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/slick/slick.css?v=jBtiW96tWk" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/slick/slick-theme.css?v=xAD5YTr040" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/slick/slick-style.css?v=vVS1sXyVyj" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/fotorama/fotorama.css?v=cXCXLJ2QyC" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/fotorama/fotorama-style.css?v=cV6VgytPH" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/magiczoomplus/magiczoomplus.css?v=1M6P50jgj4" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/datetimepicker/jquery.datetimepicker.css?v=0GZuGluTXD" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/owlcarousel2/owl.carousel.css?v=lyWQ0jRHCj" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/owlcarousel2/owl.theme.default.css?v=RyoH5xSku" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/simplenotify/simple-notify.css?v=6llWkSzoUT" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/fileuploader/font-fileuploader.css?v=bAEE8lOdix" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/fileuploader/jquery.fileuploader.min.css?v=3wCyL7Zs4n" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/fileuploader/jquery.fileuploader-theme-dragdrop.css?v=1T1woCVjFg" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/jssor/css_jssor_slider.css?v=zg79PWEOC2" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/ninja-slider/ninja-slider.css?v=bxIrWmvGWW" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/comment/comment.css?v=JWHhE4UykD" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/css/fonts.css?v=2J3w2YlbBR" rel="stylesheet">
+<link href="https://sealionresort.com/hamtien/assets/css/style.css?v=yVCINH6oFe" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WS9P7PFT0S"></script>
+<script></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16881697723"></script>
+<script></script></head>
+<body>
+    <ul class="h-card hidden">
+    <li class="h-fn fn">Sea Lion Beach Resort  Mũi Né</li>
+    <li class="h-org org">Sea Lion Beach Resort  Mũi Né</li>
+    <li class="h-tel tel">02523743387</li>
+    <li><a class="u-url ul" href="https://sealionresort.com/hamtien/">https://sealionresort.com/hamtien/</a></li>
+</ul>
+<h1 class="hidden-seoh">BUNGALOW GARDEN VIEW</h1>            <div class="header">
+	<div class="wrap-content flex justify-content-between">
+		<div class="header-left header-top flex align-items-center w-clear justify-content-between">
+			<div class="info-header"><i class="fa-solid fa-phone"></i> <b>025 2374 3387</b></div>
+			<div class="info-header"><i class="fa-solid fa-location-dot"></i> Đ/c: 12 Nguyễn Đình Chiểu, Phường Mũi Né, Tỉnh Lâm Đồng</div>
+		</div>
+		<div class="header-mid pos-relative">
+		<a class="logo-header" href="/">
+			<img class='lazy'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/250x150x2/assets/images/noimage.png';" data-src='https://sealionresort.com/hamtien/thumbs/250x150x2/upload/photo/sea-lion-beach-resort-logo-1550.png' alt='Sea Lion Beach Resort  Mũi Né'/>		</a>
+		</div>
+		<div class="header-top header-right flex align-items-center justify-content-between w-clear">
+			<div class="lang-header">
+				<span>Ngôn ngữ: </span>
+	            <a href="ngon-ngu/vi/"><img class='lazy'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/25x15x1/assets/images/noimage.png';" data-src='https://sealionresort.com/hamtien/assets/images/vi.jpg' alt='Tiếng Việt'/></a>
+	            <a href="ngon-ngu/en/"><img class='lazy'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/25x15x1/assets/images/noimage.png';" data-src='https://sealionresort.com/hamtien/assets/images/en.png' alt='Tiếng Anh'/></a>
+	        </div>
+	    </div>
+	</div>
+			</div>
+<div class="box_scroll scroll_menu">
+	<div class="menu menu-cont">
+    <div class="wrap-content d-flex align-items-center justify-content-between">
+        <ul class="d-flex align-items-center justify-content-evenly header-top">
+            <li class="menu-li"><a class=" transition" href="" title="Trang chủ">Trang chủ</a></li>
+            <li class="menu-li"><a class=" transition" href="ve-chung-toi" title="Về chúng tôi">Về chúng tôi</a></li>
+            <li class="menu-li">
+                <a class="active transition" href="phong" title="Phòng nghỉ">Phòng nghỉ</a>
+                                    <ul>
+                                                    <li>
+                                <a class="has-child transition" title="BUILDING" href="building">BUILDING</a>
+                                                                    <ul>
+                                                                                    <li>
+                                                <a class="has-child transition" title="STANDARD " href="standard-room">STANDARD </a>
+                                                                                            </li>
+                                                                                    <li>
+                                                <a class="has-child transition" title="SUPERIOR" href="superior">SUPERIOR</a>
+                                                                                            </li>
+                                                                                    <li>
+                                                <a class="has-child transition" title="DELUXE GARDEN VIEW" href="deluxe-garden-view">DELUXE GARDEN VIEW</a>
+                                                                                            </li>
+                                                                                    <li>
+                                                <a class="has-child transition" title="DELUXE OCEAN VIEW" href="deluxe-ocean-view">DELUXE OCEAN VIEW</a>
+                                                                                            </li>
+                                                                                    <li>
+                                                <a class="has-child transition" title="DELUXE BEACH FRONT" href="deluxe-beach-front">DELUXE BEACH FRONT</a>
+                                                                                            </li>
+                                                                                    <li>
+                                                <a class="has-child transition" title="FAMILY GARDEN VIEW" href="family-garden-view">FAMILY GARDEN VIEW</a>
+                                                                                            </li>
+                                                                                    <li>
+                                                <a class="has-child transition" title="FAMILY OCEAN VIEW" href="family-ocean-view">FAMILY OCEAN VIEW</a>
+                                                                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                    <li>
+                                <a class="has-child transition" title="BUNGALOW" href="bungalow">BUNGALOW</a>
+                                                                    <ul>
+                                                                                    <li>
+                                                <a class="has-child transition" title="BUNGALOW GARDEN VIEW" href="bungalow-garden-view">BUNGALOW GARDEN VIEW</a>
+                                                                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                            </ul>
+                            </li>
+            <li class="menu-li"><a class=" transition" href="dich-vu" title="Dịch vụ">Dịch vụ</a></li>
+            <li class="menu-li"><a class=" transition" href="tien-nghi" title="Tiện nghi">Tiện nghi</a></li>          
+        </ul>
+        <ul class="d-flex align-items-center justify-content-evenly header-top">
+            <li class="menu-li"><a class=" transition" href="su-kien" title="Sự kiện">Sự kiện</a></li>
+            <li class="menu-li"><a class=" transition" href="thu-vien" title="Thư viện">Thư viện</a></li>
+            <li class="menu-li">
+                <a class=" transition" href="tin-tuc" title="Tin tức">Tin tức</a>
+                            </li>
+            <li class="menu-li"><a class=" transition" href="lien-he" title="Liên hệ">Liên hệ</a></li>
+            <li class="menu-li"><a class=" transition" href="dat-phong" title="Đặt phòng">Đặt phòng</a></li>  
+        </ul>
+    </div>
+</div>
+<div class="menu-res">
+    <div class="menu-bar-res">
+        <a id="hamburger" href="#menu" title="Menu"><span></span></a>
+        <div class="">
+                        <div class="lang-header">
+                <a href="ngon-ngu/vi/"><img class='lazy'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/35x25x1/assets/images/noimage.png';" data-src='https://sealionresort.com/hamtien/assets/images/vi.jpg' alt='Tiếng Việt'/></a>
+                <a href="ngon-ngu/en/"><img class='lazy'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/35x25x1/assets/images/noimage.png';" data-src='https://sealionresort.com/hamtien/assets/images/en.jpg' alt='Tiếng Anh'/></a>
+            </div>
+        </div>
+    </div>
+    <nav id="menu">
+        <ul>
+            <li class="menu-li"><a class=" transition" href="" title="Trang chủ">Trang chủ</a></li>
+            <li class="menu-li"><a class=" transition" href="ve-chung-toi" title="Về chúng tôi">Về chúng tôi</a></li>
+            <li class="menu-li">
+                <a class="active transition" href="phong" title="Phòng nghỉ">Phòng nghỉ</a>
+                                    <ul>
+                                                    <li>
+                                <a class="has-child transition" title="BUILDING" href="building">BUILDING</a>
+                                                                    <ul>
+                                                                                    <li>
+                                                <a class="has-child transition" title="STANDARD " href="standard-room">STANDARD </a>
+                                                                                            </li>
+                                                                                    <li>
+                                                <a class="has-child transition" title="SUPERIOR" href="superior">SUPERIOR</a>
+                                                                                            </li>
+                                                                                    <li>
+                                                <a class="has-child transition" title="DELUXE GARDEN VIEW" href="deluxe-garden-view">DELUXE GARDEN VIEW</a>
+                                                                                            </li>
+                                                                                    <li>
+                                                <a class="has-child transition" title="DELUXE OCEAN VIEW" href="deluxe-ocean-view">DELUXE OCEAN VIEW</a>
+                                                                                            </li>
+                                                                                    <li>
+                                                <a class="has-child transition" title="DELUXE BEACH FRONT" href="deluxe-beach-front">DELUXE BEACH FRONT</a>
+                                                                                            </li>
+                                                                                    <li>
+                                                <a class="has-child transition" title="FAMILY GARDEN VIEW" href="family-garden-view">FAMILY GARDEN VIEW</a>
+                                                                                            </li>
+                                                                                    <li>
+                                                <a class="has-child transition" title="FAMILY OCEAN VIEW" href="family-ocean-view">FAMILY OCEAN VIEW</a>
+                                                                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                                    <li>
+                                <a class="has-child transition" title="BUNGALOW" href="bungalow">BUNGALOW</a>
+                                                                    <ul>
+                                                                                    <li>
+                                                <a class="has-child transition" title="BUNGALOW GARDEN VIEW" href="bungalow-garden-view">BUNGALOW GARDEN VIEW</a>
+                                                                                            </li>
+                                                                            </ul>
+                                                            </li>
+                                            </ul>
+                            </li>
+            <li class="menu-li"><a class=" transition" href="dich-vu" title="Dịch vụ">Dịch vụ</a></li>
+            <li class="menu-li"><a class=" transition" href="tien-nghi" title="Tiện nghi">Tiện nghi</a></li>
+            <li class="menu-li"><a class=" transition" href="su-kien" title="Sự kiện">Sự kiện</a></li>
+            <li class="menu-li"><a class=" transition" href="thu-vien" title="Thư viện">Thư viện</a></li>
+            <li class="menu-li">
+                <a class=" transition" href="tin-tuc" title="Tin tức">Tin tức</a>
+            </li>
+            <li class="menu-li"><a class=" transition" href="lien-he" title="Liên hệ">Liên hệ</a></li>
+            <li class="menu-li"><a class=" transition" href="dat-phong" title="Đặt phòng">Đặt phòng</a></li>        
+        </ul>
+    </nav>
+</div></div>    <div class="slideshow slider_banner">
+        <div class="images">
+            <img class='lazy w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/1366x300x1/assets/images/noimage.png';" data-src='https://sealionresort.com/hamtien/thumbs/1366x300x1/upload/photo/uudai-2764.jpg' alt=''/>        </div>
+        <div class="wrap-content">
+            <div class="title-main flex">
+                <div class="name"></div>
+            </div>
+        </div>
+    </div>
+<div class="breadCrumbs"><div class="wrap-content"><ol class="breadcrumb"><li class="breadcrumb-item"><a class="text-decoration-none" href="https://sealionresort.com/hamtien/"><span>Trang chủ</span></a></li><li class="breadcrumb-item "><a class="text-decoration-none" href="https://sealionresort.com/hamtien/phong"><span>Phòng nghỉ</span></a></li><li class="breadcrumb-item "><a class="text-decoration-none" href="https://sealionresort.com/hamtien/bungalow"><span>BUNGALOW</span></a></li><li class="breadcrumb-item "><a class="text-decoration-none" href="https://sealionresort.com/hamtien/bungalow-garden-view"><span>BUNGALOW GARDEN VIEW</span></a></li><li class="breadcrumb-item active"><a class="text-decoration-none" href="https://sealionresort.com/hamtien/bungalow-garden-view"><span>BUNGALOW GARDEN VIEW</span></a></li></ol><script type="application/ld+json">{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type":"ListItem","position":1,"name":"Ph\u00f2ng ngh\u1ec9","item":"https:\/\/sealionresort.com\/hamtien\/phong"},{"@type":"ListItem","position":2,"name":"BUNGALOW","item":"https:\/\/sealionresort.com\/hamtien\/bungalow"},{"@type":"ListItem","position":3,"name":"BUNGALOW GARDEN VIEW","item":"https:\/\/sealionresort.com\/hamtien\/bungalow-garden-view"},{"@type":"ListItem","position":4,"name":"BUNGALOW GARDEN VIEW","item":"https:\/\/sealionresort.com\/hamtien\/bungalow-garden-view"}]}</script></div></div>        <div class="wrap-main wrap-home w-clear">
+            <div class="grid-pro-detail w-clear">
+    <div class="right-pro-detail">
+        <p class="title-pro-detail mb-3">BUNGALOW GARDEN VIEW</p>
+                                <ul class="attr-pro-detail">
+                <li class="w-clear text-center">
+                    <label class="attr-label-pro-detail">Giá:</label>
+                    <div class="attr-content-pro-detail">
+                                                                            <span class="price-new-pro-detail">Từ 5.300.000 vnđ/đêm</span>
+                                            </div>
+                </li>
+                <li>
+                    <div class="desc-pro-detail"><h3 style="text-align: center;"><strong>Chào Mừng Quý Khách Đến Với Sea Lion Resort</strong></h3>
+<p style="text-align: center;"> </p>
+</div>
+                </li>
+                                            </ul>
+        </div>
+        <div class="left-pro-detail">
+            <div class="slick_1">
+                <div class="item">
+                <img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/upload/product/bungalows-sea-lion-beach-resort-mui-ne-12-4074.jpg' alt='BUNGALOW GARDEN VIEW'/>                </div>
+                                    <div class="item"><img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/upload/product/bungalows-sea-lion-beach-resort-mui-ne-8-1012.jpg' alt='BUNGALOW GARDEN VIEW'/></div>
+                                    <div class="item"><img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/upload/product/bungalows-sea-lion-beach-resort-mui-ne-10-9772.jpg' alt='BUNGALOW GARDEN VIEW'/></div>
+                                    <div class="item"><img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/upload/product/bungalows-sea-lion-beach-resort-mui-ne-3-1262.jpg' alt='BUNGALOW GARDEN VIEW'/></div>
+                                    <div class="item"><img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/upload/product/bungalows-sea-lion-beach-resort-mui-ne-6-3941.jpg' alt='BUNGALOW GARDEN VIEW'/></div>
+                                    <div class="item"><img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/upload/product/bungalows-sea-lion-beach-resort-mui-ne-9-3897.jpg' alt='BUNGALOW GARDEN VIEW'/></div>
+                                    <div class="item"><img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/upload/product/bungalows-sea-lion-beach-resort-mui-ne-1-2766.jpg' alt='BUNGALOW GARDEN VIEW'/></div>
+                                    <div class="item"><img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/upload/product/bungalows-sea-lion-beach-resort-mui-ne-5-6262.jpg' alt='BUNGALOW GARDEN VIEW'/></div>
+                                    <div class="item"><img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/upload/product/bungalows-sea-lion-beach-resort-mui-ne-4-3226.jpg' alt='BUNGALOW GARDEN VIEW'/></div>
+                                    <div class="item"><img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/upload/product/bungalows-sea-lion-beach-resort-mui-ne-11-3033.jpg' alt='BUNGALOW GARDEN VIEW'/></div>
+                                    <div class="item"><img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/upload/product/bungalows-sea-lion-beach-resort-mui-ne-14-4291.jpg' alt='BUNGALOW GARDEN VIEW'/></div>
+                                    <div class="item"><img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/1550x1050x1/upload/product/bungalows-sea-lion-beach-resort-mui-ne-7-8942.jpg' alt='BUNGALOW GARDEN VIEW'/></div>
+                            </div>
+            <div class="info_detail scroll_y">
+                                    <div class="box-news w-clear">
+                        <div class="images">
+                            <img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/32x32x2/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/32x32x2/upload/product/icon-dien-tich-8867.png' alt='Diện tích'/>                        </div>
+                        <div class="info">
+                            <div class="name text-split">Diện tích</div>
+                            <div class="desc text-split">50m2</div>
+                        </div>
+                    </div>
+                <hr>                    <div class="box-news w-clear">
+                        <div class="images">
+                            <img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/32x32x2/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/32x32x2/upload/product/icon-view-65681.png' alt='Tầm Nhìn'/>                        </div>
+                        <div class="info">
+                            <div class="name text-split">Tầm Nhìn</div>
+                            <div class="desc text-split">Vườn / Hồ Bơi</div>
+                        </div>
+                    </div>
+                <hr>                    <div class="box-news w-clear">
+                        <div class="images">
+                            <img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/32x32x2/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/32x32x2/upload/product/icon-bed-17920.png' alt='Giường'/>                        </div>
+                        <div class="info">
+                            <div class="name text-split">Giường</div>
+                            <div class="desc text-split">Double / Twin</div>
+                        </div>
+                    </div>
+                <hr>                    <div class="box-news w-clear">
+                        <div class="images">
+                            <img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/32x32x2/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/32x32x2/upload/product/breakfast-51242.png' alt='Ăn Sáng'/>                        </div>
+                        <div class="info">
+                            <div class="name text-split">Ăn Sáng</div>
+                            <div class="desc text-split">Miễn phí cho 02 khách</div>
+                        </div>
+                    </div>
+                <hr>                    <div class="box-news w-clear">
+                        <div class="images">
+                            <img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/32x32x2/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/32x32x2/upload/product/wifi-99790.png' alt='Mạng Wifi'/>                        </div>
+                        <div class="info">
+                            <div class="name text-split">Mạng Wifi</div>
+                            <div class="desc text-split">Miễn phí</div>
+                        </div>
+                    </div>
+                <hr>                    <div class="box-news w-clear">
+                        <div class="images">
+                            <img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/32x32x2/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/32x32x2/upload/product/icons8-furnitureandhousehold-64-93371.png' alt='Máy Lạnh'/>                        </div>
+                        <div class="info">
+                            <div class="name text-split">Máy Lạnh</div>
+                            <div class="desc text-split">Trong phòng</div>
+                        </div>
+                    </div>
+                <hr>                    <div class="box-news w-clear">
+                        <div class="images">
+                            <img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/32x32x2/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/32x32x2/upload/product/icons8-retro-tv-80-15510.png' alt='Tivi '/>                        </div>
+                        <div class="info">
+                            <div class="name text-split">Tivi </div>
+                            <div class="desc text-split">Truyền Hình Cáp</div>
+                        </div>
+                    </div>
+                <hr>                    <div class="box-news w-clear">
+                        <div class="images">
+                            <img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/32x32x2/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/32x32x2/upload/product/icons8-hair-dryer-100-16002.png' alt='Máy Sấy Tóc'/>                        </div>
+                        <div class="info">
+                            <div class="name text-split">Máy Sấy Tóc</div>
+                            <div class="desc text-split">Đặt trong phòng</div>
+                        </div>
+                    </div>
+                <hr>                    <div class="box-news w-clear">
+                        <div class="images">
+                            <img class='w-100'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/32x32x2/assets/images/noimage.png';" src='https://sealionresort.com/hamtien/thumbs/32x32x2/upload/product/icons8-telephone-100-60581.png' alt='Điện Thoại Bàn'/>                        </div>
+                        <div class="info">
+                            <div class="name text-split">Điện Thoại Bàn</div>
+                            <div class="desc text-split">Đặt trong phòng</div>
+                        </div>
+                    </div>
+            </div>
+    </div>
+        </div>
+   <div class="wrap-product">
+    <div class="wrap-content">
+        <div class="desc-pro-detail"><p style="text-align: justify;"><strong>Dịch Vụ Và Tiện Ích Chung</strong></p>
+<ul>
+	<li><span style="font-size:14px;"> Hồ Bơi Ngoài Trời</span></li>
+	<li><span style="font-size:14px;"> Bãi Đỗ Xe</span></li>
+	<li><span style="font-size:14px;"> Thẻ tín dụng </span></li>
+	<li><span style="font-size:14px;"> An ninh 24/24</span></li>
+	<li><span style="font-size:14px;"> Dịch vụ giặt là</span></li>
+	<li><span style="font-size:14px;">Cho thuê thiết bị nghe nhìn và hỗ trợ hội nghị</span></li>
+	<li><span style="font-size:14px;"> Đổi ngoại tệ</span></li>
+</ul>
+<p><strong>Thời Gian Nhận Và Trả Phòng:</strong></p>
+<ul>
+	<li>Thời gian nhận phòng là sau 14:00 và trả phòng trước 11:30.</li>
+	<li>Việc trả phòng trễ, trước 18:00, sẽ phải trả 50 % giá phòng 01 ngày được áp dụng theo giá hợp đồng.</li>
+	<li>Việc trả phòng trễ, sau 18:00, sẽ phải trả 01 đêm được áp dụng theo giá hợp đồng.</li>
+	<li>Trả phòng sớm so với đặt phòng sẽ phải trả phí toàn bộ giai đoạn.</li>
+	<li>Khi đến nhận phòng, vui lòng xuất trình giấy tở tùy thân như: Chứng minh nhân dân, hộ chiếu, hoặc những giấy tờ hợp lệ khác<em>.</em> Toàn bộ giấy tờ tùy thân của khách sẽ được giữ tại lễ tân đến khi khách check out.</li>
+</ul>
+<p><strong>Chính Sách Trẻ Em:</strong></p>
+<ul>
+	<li>Miễn phí tiền phòng cho tối đa 2 trẻ em dưới 12 tuổi và chia sẻ giường với bố mẹ. Phụ thu ăn sáng cho trẻ em sẽ được tính phí theo bảng giá bữa ăn tại quầy lễ tân.</li>
+	<li>Trẻ em từ 12 tuổi trở lên bắt buộc phải đặt giường phụ khi đặt phòng. Tối đa đặt 1 giường phụ/phòng</li>
+	<li>Cũi dành cho trẻ em sẽ được đặt miễn phí theo yêu cầu và tùy vào số lượng cũi trống của khách sạn.</li>
+</ul>
+<p><strong>Giường Phụ:</strong></p>
+<ul>
+	<li>Chính sách Resort cho phép tối đa 01 (một) giường phụ cho mỗi phòng.</li>
+</ul>
+<p><strong>Chính Sách Hủy Phòng:</strong></p>
+<ul>
+	<li>Hủy phòng từ 14-7 ngày trước khi đến: phạt 50 % doanh thu tổng số tiền phòng đã đặt. Từ 6 ngày đến trước ngày đến, phạt 100% doanh thu tổng số tiền phải thanh toán.</li>
+	<li>Ngày Lễ, Tết: Hủy phòng từ 30 đến 15 ngày trước ngày đến phạt 50 % doanh thu tổng số tiền phòng đã đặt. Từ 14 ngày đến trước ngày đến, phạt 100% doanh thu tổng số tiền phải thanh toán</li>
+	<li>Không thông báo và không đến nhận phòng: phạt 100% tổng số tiền phải thanh toán</li>
+</ul>
+<p> </p>
+</div>
+        </div>
+    </div>
+        </div>
+        <div class="footer">
+    <div class="wrap-content">
+        <div class="footer-article">
+            <div class="flex justify-content-between">
+                <div class="footer-news ft-1">
+                                        <a class="logo-footer" href="">
+                        <img class='lazy'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/250x150x2/assets/images/noimage.png';" data-src='https://sealionresort.com/hamtien/thumbs/250x150x2/upload/photo/sea-lion-beach-resort-logo-1550.png' alt='Sea Lion Beach Resort  Mũi Né'/>                    </a>
+                    <div class="footer-info"><p><span style="font-size:12px;">CÔNG TY TNHH THƯƠNG MẠI - DU LỊCH EDEN</span></p>
+<p><span style="font-size:12px;">MST: 3400381274</span></p>
+<p><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Số 12 Nguyễn Đình Chiểu, Phường Hàm Tiến, Thành phố Phan Thiết, Tỉnh Bình Thuận, Việt Nam</span></span></p>
+<p><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Điện thoại: 025 2374 3387 | 0252 3743 389</span></span></p>
+<p><span style="font-size:12px;"><span style="font-family:Arial,Helvetica,sans-serif;">Fanpage Chính thức: <a href="https://www.facebook.com/sealionresortphanthiet">https://fb.com/sealionresortphanthiet</a></span></span></p>
+</div>
+                </div>
+                <div class="footer-news ft-3">
+                    <div class="footer-title">Đăng ký nhận tin</div>
+                    <div class="w-clear form_dknt">
+                        <form class="validation-newsletter" novalidate method="post" action="" enctype="multipart/form-data">
+    <div class="d-flex">
+	    <div class="newsletter-input flex-grow">
+	        <input type="email" class="form-control text-sm" id="email-newsletter" name="dataNewsletter[email]" placeholder="Email" required />
+	        <div class="invalid-feedback">Vui lòng nhập địa chỉ email</div>
+	    </div>
+	    	    <div class="newsletter-button">
+	        <input type="submit" class="btn btn-sm w-100 button" name="submit-newsletter" value="Gửi" disabled>
+	        <input type="hidden" class="btn btn-sm btn-danger w-100" name="recaptcha_response_newsletter" id="recaptchaResponseNewsletter">
+	    </div>
+	</div>
+</form>
+                    </div>
+                    <div class="hotline-footer footer-info">
+                        <i class="fa-solid fa-phone"></i> <b>025 2374 3387</b>
+                    </div>
+                    <div class="footer-info">
+                        <i class="fa-light fa-envelope"></i> info@sealionresort.com</b>
+                    </div>
+                    <div class="footer-copyright">Copyright &copy 2022 <span>Sea Lion Beach Resort  Mũi Né</span>. Design by Nina.vn</div>
+                </div>
+                <div class="footer-news ft-4">
+                    <div>
+                        <div id="fanpage-facebook"></div>                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                </div>
+</div>
+<div class="modal fade" id="popup-cart" tabindex="-1" role="dialog" aria-labelledby="popup-cart-label" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-top modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h6 class="modal-title" id="popup-cart-label">Giỏ hàng của bạn</h6>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body"></div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/js/jquery.min.js?v=ClTdQ1WTw6"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/js/lazyload.min.js?v=bAorWmpWVZ"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/bootstrap/bootstrap.js?v=usODTFDASr"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/js/wow.min.js?v=jX2gSnIAlH"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/confirm/confirm.js?v=KR7RchugxH"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/holdon/HoldOn.js?v=g5t6x3aFDU"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/mmenu/mmenu.js?v=JaPwzJ1pw7"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/easyticker/easy-ticker.js?v=RM6LISwSs1"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/fotorama/fotorama.js?v=fYW6dbz1kT"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/owlcarousel2/owl.carousel.js?v=xKxTt6cIJ5"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/magiczoomplus/magiczoomplus.js?v=pizDhwaQWW"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/slick/slick.js?v=OzUJotbj4c"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/fancybox3/jquery.fancybox.js?v=oqqjbnIQKt"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/photobox/photobox.js?v=oU2RmrnTSW"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/simplenotify/simple-notify.js?v=JXb9wwSWTI"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/fileuploader/jquery.fileuploader.min.js?v=6QEWIswrV8"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/datetimepicker/php-date-formatter.min.js?v=57oc9cCWY"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/datetimepicker/jquery.mousewheel.js?v=87gRXN6rQQ"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/datetimepicker/jquery.datetimepicker.js?v=ex7XTZPq0w"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/jssor/jssor.js?v=3Y6xdAIaHW"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/jssor/jssor.slider.js?v=0l4TZSBnv"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/js/functions.js?v=wPaz3w3c4O"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/ninja-slider/ninjaVideoPlugin.js?v=EtyhHOtpRi"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/ninja-slider/ninja-slider.js?v=3IdhzqsCQw"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/comment/comment.js?v=iKqtaDhlgU"></script>
+<script type="text/javascript" src="https://sealionresort.com/hamtien/assets/js/apps.js?v=aaAb6dLcwd"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeUQO8ZAAAAAA8FWSc7DdI0xsLAsYsAuqC7FTNI"></script>
+    <script type="text/javascript"></script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "BUNGALOW GARDEN VIEW",
+            "image":
+            [
+                "https://sealionresort.com/hamtien/upload/product/bungalows-sea-lion-beach-resort-mui-ne-12-4074.jpg"
+            ],
+            "description": "",
+            "sku":"SP037",
+            "mpn": "925872",
+            "brand":
+            {
+                "@type": "Brand",
+                "name": "BUNGALOW"
+            },
+            "review":
+            {
+                "@type": "Review",
+                "reviewRating":
+                {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "author":
+                {
+                    "@type": "Person",
+                    "name": "Sea Lion Beach Resort  Mũi Né"
+                }
+            },
+            "aggregateRating":
+            {
+                "@type": "AggregateRating",
+                "ratingValue": "4.4",
+                "reviewCount": "89"
+            },
+            "offers":
+            {
+                "@type": "Offer",
+                "url": "https://sealionresort.com/hamtien/bungalow-garden-view",
+                "priceCurrency": "VND",
+                "price": "5300000",
+                "priceValidUntil": "2020-11-05",
+                "itemCondition": "https://schema.org/UsedCondition",
+                "availability": "https://schema.org/InStock",
+                "seller":
+                {
+                    "@type": "Organization",
+                    "name": "Executive Objects"
+                }
+            }
+        }
+    </script>
+<div id="script-main"></div><script type="text/javascript"></script><script type="text/javascript"></script>
+<div class="support-online">
+    <div class="support-content" style="display: block;">
+        <a class="btn-zalo btn-frame text-decoration-none" target="_blank" href="https://zalo.me/0901428892">
+            <div class="animated infinite zoomIn kenit-alo-circle"></div>
+            <div class="animated infinite pulse kenit-alo-circle-fill"></div>
+            <i><img class='lazy'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/35x35x2/assets/images/noimage.png';" data-src='https://sealionresort.com/hamtien/assets/images/zl.png' alt='Zalo'/></i>
+        </a>
+        <a class="btn-phone btn-frame text-decoration-none" href="tel:02523743387">
+            <div class="animated infinite zoomIn kenit-alo-circle"></div>
+            <div class="animated infinite pulse kenit-alo-circle-fill"></div>
+            <i><img class='lazy'  onerror="this.src='https://sealionresort.com/hamtien/thumbs/35x35x2/assets/images/noimage.png';" data-src='https://sealionresort.com/hamtien/assets/images/hl.png' alt='Hotline'/></i>
+        </a>
+                <div class="js-facebook-messenger-box onApp rotate bottom-right cfm rubberBand animated" data-anim="rubberBand">
+            <svg></svg>
+        </div>
+    </div>
+</div>
+<script type="text/javascript"></script></body>
+</html>

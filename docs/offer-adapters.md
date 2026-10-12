@@ -125,19 +125,43 @@ Engines we do not use (blocked, or they need a session, token, signed header or 
 | freetobook | Kenyaways | robots.txt disallows everything |
 | Leão availability | LOGOS Rhodes | HTTP 500 without the form session |
 
-Skipped from the list:
-- Blocked: Addict Tarifa, Line Up Fuerteventura, Panama Kite Center, Isola dei Gabbiani.
-- No own website: Coco Knots, Pousada Kite Guajiru, Kite Hostel Stagnone, GKS Kite House.
-- No 2026/27 evidence: Lineup Taíba, Beekite, Casa de João, Urla Surf House, Urla Kite Camp, AlvorKiteCenter, Sorrento,
-  No 22 Riders' Inn, Santa Kite, 35 Knots, White Wind, Kite Hostel Sicily, Peahi.
+Skipped from the list (updated after the re-check the same evening):
+- Blocked: Addict Tarifa, Line Up Fuerteventura, Panama Kite Center, Isola dei Gabbiani (request backlog).
+- No own website: Pousada Kite Guajiru. Coco Knots is permanently closed. GKS Kite House is listed from a manual
+  portal snapshot (Aaron's exception, adapter `gks-kite-house-esposende`). Kite Hostel Stagnone has its own site
+  now (`kite-hostel-stagnone-marsala`).
+- Re-checked with relaxed liveness (2026 site edits, reviews or posts count): 9 of the 10 "no 2026/27 evidence"
+  stays are live and built; Casa de João stays unknown (site untouched since 2022). Beekite, Peahi and White Wind
+  are listed content-only by Aaron's decision.
 - Kite link too thin on the own site: Portal do Kite, Buzio Beach, Kite da Mary.
 - For sale without visibly open 2026/27 bookings: Guacamaya, Blue Dream.
-- Not built for a technical reason: Kitejuba (spoofed Origin required).
+- Not built for a technical reason: Kitejuba (spoofed Origin required; request backlog).
 
 Shared-helper follow-ups the agents duplicated locally: block-text splitter (`visible()` / `*Lines`), memoised
 page fetch, Crawl-delay in http.ts (Baja Joe's, Sakalava ask for 10 s), Google Maps embed / place-link
 coordinates, Wix image + location readers, a Leão engine module (Kite Village + Maré Alta), a binary fetch for
 PDF rate sheets (Kenyaways prices are hand-read constants guarded by the linked file names), fixture trim script.
+
+## Stays round 3 (2026-10-12, evening)
+
+New search outside Brazil and Tarifa (Europe, Americas, Africa, Indian Ocean, Oceania), targeted searches for
+Vietnam / Philippines, South Africa / Mozambique and Oman (Masirah), Aaron's Google-Maps pins for the Philippines,
+and Secret Island Kite Camp (Palawan, a fixed-date camp). 67 adapters, built by agents and each verified by the
+lead (own test, fixture probe "content OK", slots valid, secret scan). kitebnb.com gave no leads: it shows a
+SiteGround captcha to bots, lists only Zanzibar / Cape Town / Langebaan / Mauritius, and is reported in liquidation
+(2025, unconfirmed).
+
+Live engines added (public, anonymous, robots-allowed calls the site itself makes): Nightsbridge (Paje by Night),
+Sirvoy (Kite Beach Inn; the widget's anonymous session id), HBook WordPress plugin (Windsurf Village Porto Pollo),
+MasterCamping (La Ballena Alegre, 24 requests per run), BedBooking (Vila Vento). Streamline rate tables via the
+WordPress plugin proxy (Villa Esencia; never `GetTapeChartData`, it returns guest names).
+
+More engines we do not use: STAAH / mybookingsite.io (403), SiteMinder direct-book (AWS WAF challenge), Mews,
+RoomRaccoon, Clock PMS, InnStyle, SynXis, Bookassist (robots.txt), OpenHotel (403), eZee ipms247 (403),
+Ctoutvert / SecureHoliday (embedded API key + faked referer), Compusoft (would need per-unit price calls, not built).
+
+Per-listing photo floor: `OfferAdapter.imageMinSize` (Wadi Lahami, whose operator only publishes 460 px photos;
+it now also uses 2560 px photos from the on-site kite center's own website).
 
 ## Refresh strategy (recommendation)
 

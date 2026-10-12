@@ -6,6 +6,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   wadiLahamiVillageHamata, buildWlSlots, parseWlKitePrices, parseWlPeriod, parseWlPeriodLinks, parseWlRooms,
+  WL_KITE_CENTER_PHOTOS,
 } from '../../src/offers/adapters/wadi-lahami-village-hamata.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import { todayIso } from '../../src/offers/parse.js';
@@ -86,4 +87,21 @@ test('wadi-lahami: content', async () => {
   assert.ok(c.optionalServices.some(s => /EUR 17 per day/.test(s)));
   assert.ok(c.imageUrls.length >= 15);
   assert.ok(c.imageUrls.every(u => !/banners|DJI_0263|DJI_0880/.test(u)));
+});
+
+test('wadi-lahami: kite-center photos after the operator ones, small operator twins dropped', async () => {
+  const urls = (await wadiLahamiVillageHamata.fetchContent(ctx)).imageUrls;
+  const op = urls.filter(u => u.startsWith('https://www.redsea-divingsafari.com/'));
+  const kc = urls.filter(u => u.startsWith('https://wadilahamikitesurfing.com/'));
+  assert.equal(op.length + kc.length, urls.length);
+  assert.equal(op.length, 10);
+  assert.deepEqual(kc, WL_KITE_CENTER_PHOTOS.map(p => p.url));
+  assert.ok(urls.indexOf(kc[0]) > urls.indexOf(op[op.length - 1]));
+  // the operator's 150-460 px copies of the same shots are gone (og square crop, tents, chalets, bar)
+  assert.ok(op.every(u => !/DJI_0119|P1108666|P1108735|P1108843|P1108768|IMG_6862|P8091171|P1005648/.test(u)));
+  assert.ok(op.some(u => /P1108681_28329_lg\.jpg$/.test(u)));
+  // the 14 priority photos fit the ingest's 24-download cap
+  const firstSpare = WL_KITE_CENTER_PHOTOS.findIndex(p => /DJI_0134/.test(p.url));
+  assert.equal(firstSpare, 14);
+  assert.ok(urls.indexOf(WL_KITE_CENTER_PHOTOS[13].url) < 24);
 });

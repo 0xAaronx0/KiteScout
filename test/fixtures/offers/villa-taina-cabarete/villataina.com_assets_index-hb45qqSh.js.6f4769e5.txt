@@ -1,0 +1,163 @@
+/* villa-taina bundle, trimmed 2026-10-12 to the segments the adapter parses */
+kh="/assets/logo2x-4873104.png_1774361713249-DUIsUFRo.webp";
+cO="/assets/PROPERTY_1_1775497216111-B1-5vaKV.JPG";
+uO="/assets/SERENADE_FOOD_11_1775417852719-CAfJu2Ke.jpg";
+dO="/assets/WATERSPORTS_12_1775417852719-iBmYXM7h.jpg";
+fO="/assets/LIFESTYLE_3_1775416128325-BrLXb5Be.JPG";
+hO="/assets/LIFESTYLE_10_1775497450883-Z7NpWqvq.JPG";
+oj="/assets/standard-room-new-1-9888007-9373428_1774376440116-3OrKfkPj.webp";
+lj="/assets/Comfort-Oceaview-Premium-2019-4-1024x680-9888000-6926041_1774376440116-52RXri0T.webp";
+cj="/assets/Ocean-Side-Room-9375373_1774376440116-CD_nACUd.webp";
+uj="/assets/SERENADE_FOOD_2_1775416161565-DuwolRPS.JPG";
+mO="/assets/WATERSPORTS_2_1775416695683-ZPPdI0UV.JPG";
+dj="/assets/_DSC9938_1775497617752-DaeDilom.JPG";
+pO="/assets/PROPERTY_8_1775497527443-C6VjPZcd.jpg";
+gO="/assets/CABARETE_3_1775416128325-CddADyuV.JPG";
+t6="/assets/Comfort-Oceanside-Room-2019-2-1024x680-9888000-6925854_1774376440116-XDA5rQSo.webp";
+n6="/assets/superior-room-bedroom-enhanced-XBBxK6Rk.webp";
+s6="/assets/superior-room-bathroom-enhanced-DNt4ic2Q.webp";
+a6="/assets/ocean-side-bedroom-balcony-enhanced-D1HutflY.webp";
+i6="/assets/ocean-side-bedroom-front-enhanced-DeY3NwDT.webp";
+r6="/assets/ocean-side-bathroom-enhanced-D1mW0wBo.webp";
+o6="/assets/superior-ocean-side-two-beds-close-enhanced-Do5TMmyP.webp";
+l6="/assets/superior-ocean-side-bathroom-enhanced-E6CuI2-w.webp";
+c6="/assets/superior-ocean-side-bed-ocean-view-enhanced-gfWgEdEr.webp";
+u6="/assets/superior-ocean-side-room-wide-enhanced-vwcY0NDU.webp";
+d6="/assets/premium-room-wide-enhanced-CfYcsvUD.webp";
+f6="/assets/premium-room-bed-enhanced-BVSz_LFe.webp";
+h6="/assets/premium-room-amenities-enhanced-C0tB4O_M.webp";
+m6="/assets/premium-room-terrace-enhanced-C1knaFGt.webp";
+p6="/assets/premium-room-bathroom-enhanced-D5oAztp3.webp";
+g6="/assets/standard-room-bed-DtIPqELT.webp";
+x6="/assets/standard-room-bathroom-BSykI2CM.webp";
+y6="/assets/standard-room-amenities-QzuR5jRg.webp";
+j6="/assets/LIFESTYLE_3_1775416128325-BrLXb5Be.JPG";
+S6="/assets/WATERSPORTS_3_1775416695683-FStDIszQ.JPG";
+N6="/assets/CABARETE_4_1775416128325-_j_IgNWB.JPG";
+pj="/assets/SERENADE_FOOD_3_1775416161565-DiEX3410.JPG";
+T6="/assets/LIFESTYLE_4_1775416128325-BLLyujBh.JPG";
+E6="/assets/CABARETE_5_1775416128325-moHhlDCN.JPG";
+k6="/assets/LIFESTYLE_6_1775416128325-_zuu2P8N.JPG";
+R6="/assets/LIFESTYLE_7_1775416128325-dxWyXtrz.JPG";
+gj="/assets/SERENADE_FOOD_4_1775416161565-CCZ7uFqC.jpg";
+D6="/assets/WATERSPORTS_5_1775416695683-Dw9zHVlG.JPG";
+_6="/assets/standardRoom-DlU-FQ2E.jpg";
+B6="/assets/superiorRoom-Pk9D8qSL.jpg";
+P6="/assets/oceanSideRoom-DkUbI8TG.jpg";
+L6="/assets/comfortOceanside-BPXASuoF.jpg";
+V6="/assets/comfortOceanview-DNtEuBKy.jpg";
+z6="/assets/cabarete1-DgMJ8YMG.jpg";
+U6="/assets/cabarete6-BVmJZqV9.jpg";
+H6="/assets/cabarete9-DYW7PYlP.jpg";
+q6="/assets/cabarete14-vhrGe8WM.jpg";
+$6="/assets/food1-LjvKq8IQ.jpg";
+G6="/assets/food5-Bu6dSsmb.jpg";
+F6="/assets/food7-Bmfl0ZfG.jpg";
+Y6="/assets/foodInterior-CxDuuUyD.jpg";
+I6="/assets/lifestyle8-CZUuDybx.jpg";
+K6="/assets/lifestyle9-CMHQs3DK.jpg";
+X6="/assets/lifestyle10-CGxyDQau.jpg";
+W6="/assets/watersportsSurfer-BelfJBXA.jpg";
+Q6="/assets/watersportsKite-D0isIx5N.jpg";
+Z6="/assets/watersportsWing-BW17W2cq.jpg";
+J6="/assets/watersportsGolden-6xeGNbLa.jpg";
+e8="/assets/beachHeart-Y0tjcVDy.jpg";
+t8="/assets/poolView-9DA0ydaW.jpg";
+n8="/assets/roomBalconyView-DNXAgQX4.jpg";
+s8="/assets/beachLoungers-C2iqFWOr.jpg";
+a8="/assets/waterClubKitesurf-DSXcOmDR.jpg";
+i8="/assets/waterClubTeam-C-82a-MP.jpg";
+r8="/assets/kiteGear-USq7FU6a.jpg";
+o8="/assets/waterClubSign-sE_5vPT7.jpg";
+l8="/assets/_dsc5776-hvdqdeWh.webp";
+c8="/assets/_dsc5804-WuFwGN59.webp";
+u8="/assets/_dsc5806-CFOk0zbw.webp";
+d8="/assets/_dsc5826-CuEoJ37S.webp";
+f8="/assets/_dsc5834-CUz_xsSo.webp";
+h8="/assets/_dsc5839-0lafNSUT.webp";
+m8="/assets/_dsc5844-C8bhQ45N.webp";
+p8="/assets/_dsc5851-Bc2I6EkW.webp";
+g8="/assets/_dsc5891-LwKxE7BF.webp";
+x8="/assets/_dsc5905-CV_rSgK8.webp";
+y8="/assets/_dsc5926-DUGtUYtV.webp";
+xj="/assets/_dsc6203-B02wMgJT.webp";
+b8="/assets/_dsc7896-Dr3jPgNT.webp";
+v8="/assets/_dsc7908-DXO5VXAq.webp";
+w8="/assets/_dsc7912-Gd7ARcOv.webp";
+j8="/assets/_dsc7915-Dt_wkh-0.webp";
+S8="/assets/_dsc7928-Cdhn5F8I.webp";
+C8="/assets/PROPERTY_2_1775416161565-DZ6ITS_-.jpg";
+A8="/assets/VINTAGE_1_1775417852719-B3nUwOMA.jpeg";
+E8="/assets/VINTAGE_2_1775417852719-D7TOF-Ry.jpeg";
+k8="/assets/VINTAGE_3_1775417852719-n3VEVlmw.jpeg";
+R8="/assets/VINTAGE_4_1775417852719-Met465uy.jpeg";
+D8="/assets/VINTAGE_5_1775417852719-0CvVLGOd.jpeg";
+K8="/assets/SERENADE_FOOD_1775417852719-BC7VqyTB.JPG";
+X8="/assets/SERENADE_FOOD_5_1775416161565-BR0ZUcda.JPG";
+W8="/assets/SERENADE_FOOD_7_1775416161565-BN6QNIWp.JPG";
+Q8="/assets/SERENADE_FOOD_10_1775416161565-B_UVp5us.jpg";
+Z8="/assets/SERENADE_FOOD_11_1775417852719-CAfJu2Ke.jpg";
+s_="/assets/WATERSPORTS_5_1775416695683-Dw9zHVlG.JPG";
+a_="/assets/WATERSPORTS_6_1775417852719-CGPbmSRv.JPG";
+i_="/assets/WATERSPORTS_12_1775417852719-iBmYXM7h.jpg";
+r_="/assets/WATERSPORTS_13_1775417852719-hpD2-Vny.jpg";
+lv="/assets/amazonica-store-wide-Cu14RNzM.webp";
+c_="/assets/amazonica-store-detail-2QWg_byL.webp";
+b6=['Safe deposit box (fits up to 14" laptops)','Smart TV 43"',"Telephone","Wifi","Shower","Hairdryer"],Ir=(e,n,a=[])=>[e,"Air conditioning","Mini fridge",n,...b6,...a],v6=[{id:"comfort-oceanview-premium",title:"Premium Room",desc:"Our most refined accommodation. Enjoy elevated ocean views from a spacious, modern room with premium furnishings overlooking Cabarete Bay.",features:Ir("Queen or King size bed","Ceiling ventilator",["Coffee maker"]),images:[{src:d6,alt:"Wide view of the Premium Room and private terrace"},{src:f6,alt:"Premium Room king bed and mirrored wardrobe"},{src:h6,alt:"Premium Room seating area, television, mini fridge, and coffee station"},{src:m6,alt:"Premium Room seating area overlooking the ocean-view terrace"},{src:p6,alt:"Premium Room bathroom with walk-in shower and vanity"}]},{id:"comfort-oceanside",title:"Superior Ocean Side Room",desc:"Elevated comfort with an oceanside position. Wake up to warm breezes just steps from the beach, the pool, and the gardens.",features:Ir("Two Queen size beds or one King size bed","Ceiling fan"),images:[{src:t6,alt:"Superior Ocean Side Room at Villa Taina"},{src:u6,alt:"Wide view of the Superior Ocean Side Room with two beds"},{src:c6,alt:"Superior Ocean Side Room bed beside the ocean-view balcony"},{src:o6,alt:"Two-bed layout in the Superior Ocean Side Room"},{src:l6,alt:"Superior Ocean Side Room bathroom with walk-in shower"}]},{id:"ocean-side",title:"Ocean Side Room",desc:"Steps from the garden and pool, these rooms offer views of the tropical landscape with easy access to the heart of the property. The perfect balance of tranquility and proximity.",features:Ir("Queen size bed","Ceiling fan"),images:[{src:cj,alt:"Ocean Side Room at Villa Taina"},{src:a6,alt:"Ocean Side Room bedroom opening onto a furnished balcony"},{src:i6,alt:"Ocean Side Room with a tropical balcony view"},{src:r6,alt:"Ocean Side Room bathroom with bathtub and shower"}]},{id:"superior",title:"Superior Room",desc:"Extra space and refined comfort. Our Superior Rooms feature a generous layout, ideal for families or guests who want a little more room to spread out.",features:Ir("Two Queen size beds or one King size bed","Ceiling ventilator (most rooms)"),images:[{src:n6,alt:"Superior Room with two queen beds"},{src:s6,alt:"Superior Room bathroom with walk-in shower"}]},{id:"standard",title:"Standard Room",desc:"A cozy tropical retreat with warm accents and everything you need for a comfortable stay. Perfect for solo travelers and couples looking for great value in the heart of Cabarete.",features:Ir("Queen size bed or two Twin beds","Ceiling fan (most rooms)"),images:[{src:oj,alt:"Standard Room at Villa Taina"},{src:g6,alt:"Standard Room with queen bed and private balcony",fit:"contain"},{src:y6,alt:"Standard Room television, mini fridge, and dining table",fit:"contain"},{src:x6,alt:"Standard Room bathroom with bathtub and shower",fit:"contain"}]}];
+x=[{title:"Windsurf",desc:"Cabarete is one of the world's top windsurfing destinations. Feel the trade winds fill your sail and ride the waves of the bay — right from the beach at Villa Taina.",icon:Bi,img:a_,rentals:[{duration:"1 Hour",price:"$44"},{duration:"1 Day",price:"$108"},{duration:"1 Week",price:"$348"}],lessons:[{duration:"2 Hours",price:"$184"},{duration:"6 Hours",price:"$477"},{duration:"12 Hours",price:"$771"}]},{title:"Kitesurf",desc:"Learn to fly above the waves or sharpen your skills with our IKO-certified instructors. Consistent wind and warm water make Cabarete the ideal training ground.",icon:_E,img:i_,rentals:[{duration:"1 Hour",price:"$58"},{duration:"1 Day",price:"$109"},{duration:"1 Week",price:"$380"}],lessons:[{duration:"2 Hours",price:"$207"},{duration:"6 Hours",price:"$529"},{duration:"12 Hours",price:"$851"}]},{title:"Wing Foil",desc:"The newest way to ride the wind. Wing foiling combines elements of windsurfing and kitesurfing for a completely new sensation of flight above the water.",icon:ww,img:r_,rentals:[{duration:"1 Hour",price:"$58"},{duration:"1 Day",price:"$109"},{duration:"1 Week",price:"$385"}],lessons:[{duration:"2 Hours",price:"$224"},{duration:"6 Hours",price:"$529"},{duration:"12 Hours",price:"$857"}]}];
+{q:"What is the check-in and check-out time?",a:"Check-in begins at 3:00 PM and check-out is at 12:00 PM (noon). Early check-in and late check-out may be available depending on occupancy and can be requested in advance."}
+{q:"Do you require a deposit to confirm a reservation?",a:"Yes. A 10% deposit is required to confirm your reservation. The remaining balance is charged prior to arrival according to the conditions of your selected rate plan."}
+{q:"Can I modify or cancel my reservation?",a:"Cancellation and modification policies vary depending on the rate selected at the time of booking. Please review the specific terms displayed during the reservation process."}
+{q:"Is it cheaper to book directly with Villa Taina?",a:"Yes. We always recommend booking directly through our website, where guests often receive the best available rates, exclusive offers, and direct communication with our reservations team."}
+{q:"Do you offer long-stay discounts?",a:"Yes. Special rates may be available for extended stays. Please contact us directly for a personalized quote."}
+{q:"Where is Villa Taina located?",a:"Villa Taina is located directly on Cabarete Beach, in the heart of Cabarete, Dominican Republic. Restaurants, cafés, shops, nightlife, and watersports activities are all within walking distance."}
+{q:"How far is Villa Taina from the airport?",schemaText:"Villa Taina is conveniently located approximately: 30 minutes from Puerto Plata International Airport (POP), 90 minutes from Santiago International Airport (STI), 4 hours from Santo Domingo International Airport (SDQ).",a:}
+{q:"Is a rental car necessary?",a:"Not at all. Thanks to our central beachfront location, most guests comfortably enjoy their stay without a rental car."}
+{q:"Do all rooms have air conditioning?",a:"Yes. All accommodations feature air conditioning."}
+{q:"Do rooms have Wi-Fi?",a:"Yes. Complimentary high-speed Wi-Fi is available throughout the property."}
+{q:"Do rooms have kitchens?",a:"Some room categories include kitchenettes or full kitchens. Please review the room description when booking."}
+{q:"Do rooms include a safe?",a:"Yes. Every room includes an in-room safe for your valuables."}
+{q:"Are beach towels provided?",a:"Yes. Beach towels are available for all hotel guests."}
+{q:"Do you have parking?",a:"Villa Taina offers limited complimentary on-site parking. Free street parking is also available nearby, and several paid parking options are located within walking distance of the hotel."}
+{q:"Is Villa Taina directly on the beach?",a:"Yes. Villa Taina sits directly on Cabarete Beach with immediate access to the ocean."}
+{q:"Is the beach swimmable?",schemaText:"Yes. Cabarete Beach is ideal for swimming, relaxing, and enjoying a variety of water activities. Ocean conditions may vary depending on weather and season. Check current ocean conditions on our live webcam.",a:}
+{q:"Do you provide beach chairs?",a:"Yes. Complimentary beach loungers are available for hotel guests."}
+{q:"Is there sargassum (seaweed) at Cabarete Beach?",schemaText:"Cabarete Beach is located on the Dominican Republic's north (Atlantic) coast, which is largely sheltered from the sargassum that mainly affects the country's southern and eastern shores. As a result, our beach is typically clear and clean year-round. On the rare occasion that small amounts of seaweed wash ashore, our team grooms the beachfront regularly to keep it pristine for our guests. See our clean beach for yourself on our live webcam.",a:}
+{q:"Do you have a swimming pool?",a:"Yes. Villa Taina features a beachfront swimming pool surrounded by tropical gardens."}
+{q:"Is Cabarete good for kitesurfing?",schemaText:"Cabarete is widely recognized as one of the world's premier kitesurfing destinations, thanks to its consistent trade winds, warm water, and year-round riding conditions. Check today's wind and wave conditions on our live webcam.",a:}
+{q:"Do you offer kitesurfing lessons?",a:"Yes. Our on-site watersports center offers lessons for beginners as well as equipment rentals for experienced riders."}
+{q:"What watersports equipment is available?",schemaText:"Villa Taina's watersports center offers lessons, rentals, and coaching for a variety of disciplines including: Kitesurfing, Wing Foiling, Windsurfing, E-Foiling, Surfing, Stand-Up Paddleboarding (SUP).",a:}
+{q:"Can beginners learn watersports at Villa Taina?",a:"Absolutely. Many guests experience kitesurfing, wing foiling, surfing, or paddleboarding for the very first time during their stay."}
+{q:"Do you have a restaurant?",a:"Yes. Serenade Restaurant offers beachfront dining for breakfast, lunch, dinner, cocktails, and fresh local cuisine."}
+{q:"Is breakfast included?",a:"Breakfast inclusion depends on the room category and rate plan selected at the time of booking."}
+{q:"Can non-guests visit the restaurant?",a:"Yes. Serenade Restaurant welcomes both hotel guests and outside visitors."}
+{q:"Do you accommodate dietary restrictions?",a:"Our culinary team is happy to accommodate vegetarian, vegan, gluten-free, and other dietary preferences whenever possible."}
+{q:"Is Villa Taina family-friendly?",a:"Yes. Villa Taina welcomes families and offers accommodations suitable for couples, families, and groups."}
+{q:"Do you offer cribs?",a:"Cribs may be available upon request and subject to availability."}
+{q:"Are pets allowed?",a:"Yes. Pets are welcome at Villa Taina. Additional fees and certain restrictions may apply depending on the size, breed, and room category. Please contact us prior to booking for details."}
+{q:"Is Cabarete safe?",a:"Cabarete is one of the Dominican Republic's most established beach destinations and is generally considered safe for visitors. As with any travel destination, we recommend exercising normal precautions with personal belongings."}
+{q:"Is the hotel staffed 24 hours?",a:"Yes. Our team is available throughout the day and night to assist guests."}
+{q:"Can you arrange airport transfers?",a:"Yes. Private airport transportation can be arranged before your arrival."}
+{q:"Can you help organize excursions and activities?",a:"Absolutely. Our team can assist with excursions, tours, transportation, watersports activities, and local recommendations."}
+{q:"What makes Villa Taina unique?",a:"Villa Taina combines a prime beachfront location, authentic Caribbean character, direct access to world-class watersports, and the walkability of downtown Cabarete — all in one property."}
+{q:"Why stay at Villa Taina instead of an all-inclusive resort?",a:"Villa Taina offers a more authentic Caribbean experience. Guests stay directly in the heart of Cabarete, steps from local restaurants, cafés, nightlife, shopping, and watersports rather than being isolated inside a resort complex."}
+{q:"Who is Villa Taina best suited for?",a:"Villa Taina is ideal for active travelers, couples, digital nomads, watersports enthusiasts, families, and anyone seeking a beachfront experience in the center of Cabarete."}
+{q:"Why do guests return year after year?",a:"Many guests return for the unbeatable beachfront location, friendly atmosphere, excellent service, and the unique lifestyle that has made Cabarete famous worldwide."}
+{q:"What is the best time of year to visit Cabarete?",a:"Cabarete is a year-round destination. Winter months offer beautiful weather and a lively social atmosphere, while summer delivers some of the strongest and most consistent wind conditions for kitesurfing, wing foiling, and other watersports."}
+{q:"Is Cabarete only for kitesurfers?",a:"Not at all. While Cabarete is famous for watersports, visitors also enjoy surfing, hiking, mountain biking, horseback riding, waterfalls, yoga, wellness retreats, vibrant nightlife, and some of the Dominican Republic's most beautiful beaches."}
+{q:"What can I do within walking distance of the hotel?",a:"Villa Taina is located in the center of Cabarete, allowing guests to walk to dozens of restaurants, bars, cafés, shops, supermarkets, banks, pharmacies, and nightlife venues within minutes."}
+{q:"Why is Cabarete considered one of the best beach towns in the Caribbean?",schemaText:"Cabarete offers a rare combination of beachfront living, world-class watersports, vibrant nightlife, exceptional dining, and a welcoming international community. Unlike many resort destinations, Cabarete is a real town with authentic character, where visitors can walk along the beach, enjoy dozens of restaurants and cafés, experience Dominican culture, and still enjoy all the comforts of an established Caribbean destination. Whether you're looking to relax by the ocean, learn a new watersport, explore the natural beauty of the Dominican Republic, or simply enjoy a laid-back tropical lifestyle, Cabarete offers an experience unlike anywhere else in the Caribbean.",a:}
+"/":{title:"Villa Taina | The Heart of Cabarete Beach",description:"Villa Taina is a boutique beachfront hotel on Cabarete Beach, Dominican Republic — ocean-view suites, kitesurfing, windsurfing, fine dining at Serenade, and a Water Club steps from the sand."}
+"/rooms":{title:"Rooms & Suites | Villa Taina Cabarete",description:"Choose from ocean-view rooms and suites at Villa Taina on Cabarete Beach. Boutique accommodations designed for comfort and style on the Dominican Republic's vibrant northern coast."}
+"/experience":{title:"Experience Cabarete | Villa Taina",description:"From world-class kitesurfing and windsurfing to diving, hiking, and cultural tours, Villa Taina puts you at the center of Cabarete's most exciting adventures on the Dominican Republic's northern coast."}
+"/lifestyle":{title:"Lifestyle | Villa Taina Cabarete",description:"Live the Cabarete lifestyle at Villa Taina — beachfront dining, water sports, sunset cocktails, and the vibrant energy of the Dominican Republic's kite and surf capital."}
+"/gallery":{title:"Photo Gallery | Villa Taina Cabarete Beach Hotel",description:"Browse photos of Villa Taina's beachfront hotel, ocean-view suites, Serenade restaurant, Water Club, and the legendary kite beach of Cabarete, Dominican Republic."}
+"/about":{title:"About Villa Taina | Cabarete's Landmark Beach Hotel",description:"Since 1993, Villa Taina has been a landmark on Cabarete Beach. Learn about our story, our team, and our commitment to authentic Caribbean hospitality in the Dominican Republic."}
+"/contact":{title:"Contact Us | Villa Taina Cabarete",description:"Get in touch with Villa Taina on Cabarete Beach. Contact our reservations team, ask a question, or plan your Dominican Republic vacation today."}
+"/faq":{title:"Frequently Asked Questions | Villa Taina",description:"Answers to common questions about staying at Villa Taina in Cabarete — check-in times, amenities, water sports, airport transfers, and everything you need to plan your trip."}
+"/serenade":{title:"Serenade Restaurant | Villa Taina Cabarete",description:"Serenade restaurant at Villa Taina serves creative Caribbean cuisine steps from Cabarete Beach. Fresh seafood, tropical cocktails, and unforgettable ocean views in the Dominican Republic."}
+"/water-club":{title:"Water Club | Villa Taina Cabarete",description:"Villa Taina's Water Club is your gateway to Cabarete Beach — beach chairs, watersport rentals, kitesurfing lessons, and direct ocean access on the Dominican Republic's kite coast."}
+"/boutique":{title:"Boutique | Villa Taina Cabarete",description:"Shop Villa Taina's boutique for curated beachwear, local crafts, and unique souvenirs from Cabarete, Dominican Republic."}
+"/live":{title:"Live Entertainment | Villa Taina Cabarete",description:"Enjoy live music, local performers, and vibrant evenings at Villa Taina. Experience the rhythm of Cabarete beach life in the Dominican Republic."}
+"/blog":{title:"Blog | Villa Taina — Stories from Cabarete",description:"News, tips, and stories about life at Villa Taina and the vibrant world of Cabarete — kitesurfing guides, travel tips, and behind-the-scenes from the Dominican Republic's kite capital."}
+"https://embed.windy.com/embed2.html?lat=19.749&lon=-70.413"

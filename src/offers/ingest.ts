@@ -442,6 +442,7 @@ async function runAdapterInner(
           context: `${content.title} (${content.spot ?? content.region ?? ''}, ${content.country}). ${content.summary}`,
           pathPrefix: `packages/${content.kind}/${slug}-site-${a.key}`,
           brief: BRIEFS[content.kind],
+          minSize: a.imageMinSize,
         });
         if (images.length === 0) rep.notes.push('no usable images found');
         const { error: iErr } = await supabase.from('package_offers').update({ images }).eq('id', offerId);

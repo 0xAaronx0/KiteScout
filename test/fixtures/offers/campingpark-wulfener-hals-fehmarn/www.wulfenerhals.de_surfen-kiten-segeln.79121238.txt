@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Surfen, Kiten, Segeln im Urlaub im Camping- und Ferienpark - Campingpark Wulfener Hals</title>
+<base href="https://www.wulfenerhals.de/">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Surfen und Kiten auf Fehmarn: Der Wulfener Hals gilt als gr&ouml;&szlig;ter Surfspot Deutschlands. Die Surfschule Windsurfing Wulfen bietet Surf- und Kitekurse f&uuml;r Kinder und Erwachsene.">
+<meta name="theme-color" content="#1a406b">
+<meta id="page-cache-id" name="page-cache-id" content="/surfen-kiten-segeln?cacheRefresh=1">
+<meta property="og:image" content="https://www.wulfenerhals.de/files/bilder/startseite/Luftaufnahme_WH_Bruecke.jpg">
+<meta property="og:title" content="Surfen, Kiten, Segeln im Urlaub im Camping- und Ferienpark - Campingpark Wulfener Hals">
+<meta property="og:description" content="Surfen und Kiten auf Fehmarn: Der Wulfener Hals gilt als gr&ouml;&szlig;ter Surfspot Deutschlands. Die Surfschule Windsurfing Wulfen bietet Surf- und Kitekurse f&uuml;r Kinder und Erwachsene.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Surfen, Kiten, Segeln im Urlaub im Camping- und Ferienpark - Campingpark Wulfener Hals">
+<link rel="stylesheet" href="assets/colorbox/css/colorbox.min.css?v=2d7cb6b8"><link rel="stylesheet" href="assets/swipe/css/swipe.min.css?v=693e5985"><link rel="stylesheet" href="files/secra-theme/less-css/styles.min.css?v=77f8c384"><script src="assets/jquery/js/jquery.min.js?v=2e868dd8"></script><script src="https://www.wulfenerhals.de/bundles/contaotranslator/js/translator.js"></script>
+<script></script>
+</head>
+<body id="top">
+<input type="hidden" id="pageTranslationLanguage" value="en">
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KFPC86" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<header id="header" itemscope itemtype="http://schema.org/WPHeader">
+<div class="header-content grid-spaceBetween-middle">
+<div class="ce_hyperlink logo block">
+<figure class="image_container">
+<a href="./" class="hyperlink_img">
+<img src="files/bilder/logos-auszeichnungen/Logo_Wulfener_Hals_2022_neg.svg" alt="">
+<span class="link-text">./</span></a>
+</figure>
+</div>
+<div class="ce_hyperlink logo logo-collapsed block">
+<figure class="image_container">
+<a href="./" class="hyperlink_img">
+<img src="files/bilder/logos-auszeichnungen/Logo_Wulfener_Hals_2022_neg.svg" alt="">
+<span class="link-text">./</span></a>
+</figure>
+</div>
+<ul class="header-links">
+<li class="booking"><a class="booking-button" href="/suchen-buchen" aria-label="Suchen &amp; buchen"><i class="fad fa-bed"></i><span>Search &amp; Book</span></a></li>
+<li class="phone"><a href="tel:+49437186280" aria-label="Telefon"><i class="fad fa-phone"></i><span>&ensp;04371 - 8628-0</span></a></li>
+<li class="mail"><a href="mailto:info@wulfenerhals.de" aria-label="E-Mail"><i class="fad fa-envelope"></i><span>&ensp;info@wulfenerhals.de</span></a></li>
+<li class="search"><a href="/suche" aria-label="Suche"><i class="fad fa-search"></i><span>&ensp;Search</span></a></li>
+<li class="login"><a href="/compusoft-login" aria-label="Login"><i class="fad fa-key"></i><span>&ensp;Log In</span></a></li>
+</ul><span class="translate-switch__wrapper">
+<form>
+<select id="language-selector" onchange="changeLanguage()">
+<option value="de">DE</option>
+<option value="en">EN</option>
+</select>
+</form>
+<script></script>
+</span>
+<button class="nav-toggle" title="Men&uuml; &ouml;ffnen"><span>Menu</span><i class="fad fa-bars"></i></button>
+<nav class="mod_navigation navigation-main block" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<button class="nav-close" title="close"><i class="fal fa-times"></i></button>
+<a href="surfen-kiten-segeln?cacheRefresh=1#skipNavigation22" class="invisible">Skip navigation</a>
+<ul class="level_1">
+<li class="submenu first"><a href="campingplatz" title="Camping Ferienpark" class="submenu first" aria-haspopup="true" itemprop="url"><span itemprop="name">Camping Resort</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="first"><a href="campingplatz" title="Campingpark auf Fehmarn" class="first" itemprop="url"><span itemprop="name">Campground</span></a>
+</li>
+<li><a href="lageplan" title="Lageplan des Ferien- und Campingparks an der Ostsee" itemprop="url"><span itemprop="name">Site Map</span></a>
+</li>
+<li><a href="wohnmobilpark" title="Wohnmobilpark an der Ostsee auf der Insel Fehmarn" itemprop="url"><span itemprop="name">RV Park</span></a>
+</li>
+<li><a href="leadingpark" title="Leadingpark an der Ostsee auf der Insel Fehmarn" itemprop="url"><span itemprop="name">Leadingpark</span></a>
+</li>
+<li class="submenu"><a href="ausstattung" title="Ausstattung Camping- und Ferienpark Fehmarn" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Features</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="sanitaergebaeude" title="Sanit&auml;rgeb&auml;ude im Ferien- und Campingpark Fehmarn" class="first" itemprop="url"><span itemprop="name">Restroom Building</span></a>
+</li>
+<li><a href="kinderbad" title="Kinderbad auf dem Campingplatz auf Fehmarn" itemprop="url"><span itemprop="name">Children's Pool</span></a>
+</li>
+<li><a href="mietbaeder" title="Mietb&auml;der im Camping- und Ferienpark auf Fehmarn" itemprop="url"><span itemprop="name">Rental Bathrooms</span></a>
+</li>
+<li><a href="supermarkt-shop" title="Supermarkt &amp; Freizeit-Shop im Camping- und Ferienpark" itemprop="url"><span itemprop="name">Supermarket &amp; Store</span></a>
+</li>
+<li class="last"><a href="wlan-sky-tv" title="Digitales TV und Sky-TV im Camping- und Ferienpark" class="last" itemprop="url"><span itemprop="name">WLAN &amp; Sky-TV</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu last"><a href="gastronomie" title="Restaurants und Gastronomie im Camping- und Ferienpark" class="submenu last" aria-haspopup="true" itemprop="url"><span itemprop="name">Gastronomy</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="restaurant-seeblick" title="Restaurant Seeblick auf Fehmarn" class="first" itemprop="url"><span itemprop="name">Seeblick Restaurant</span></a>
+</li>
+<li><a href="restaurant-wulfener-hals" title="Die Pizzeria am Wulfener Hals" itemprop="url"><span itemprop="name">Pizzeria at the "Wulfener Hals"</span></a>
+</li>
+<li><a href="hotelrestaurant" title="Restaurant Golf &acute;n Wave" itemprop="url"><span itemprop="name">Golf 'n Wave Restaurant</span></a>
+</li>
+<li><a href="golfbar" title="Die Golfbar am Camping und Ferienpark Wulfener Hals" itemprop="url"><span itemprop="name">Golf Bar</span></a>
+</li>
+<li class="last"><a href="bistro" title="Bistro im Camping- und Ferienpark auf Fehmarn" class="last" itemprop="url"><span itemprop="name">Bistro</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="mietwohnwagen" title="Unsere Unterk&uuml;nfte" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Accommodations</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="submenu first"><a href="mietwohnwagen" title="Mietwohnwagen auf Fehmarn" class="submenu first" aria-haspopup="true" itemprop="url"><span itemprop="name">Rental Trailers</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="season-camper" title="Dethleff Season Camper" class="first" itemprop="url"><span itemprop="name">Season Camper</span></a>
+</li>
+<li class="last"><a href="weitere-mietwohnwagen" title="Weitere Mietwohnwagen auf Fehmarn" class="last" itemprop="url"><span itemprop="name">More Rental Trailers</span></a>
+</li>
+</ul>
+</li>
+<li><a href="ferienhaeuser-im-baltic-park" title="Ferienh&auml;user im Balticpark Wulfener Hals auf Fehmarn" itemprop="url"><span itemprop="name">Baltic-Park Vacation Homes</span></a>
+</li>
+<li><a href="ferienhaeuser-im-duenenpark" title="Ferienh&auml;user im D&uuml;nenpark auf Fehmarn" itemprop="url"><span itemprop="name">D&uuml;nenpark Vacation Homes</span></a>
+</li>
+<li><a href="mobilheimpark" title="Mobilheime mieten" itemprop="url"><span itemprop="name">Mobile Home Park</span></a>
+</li>
+<li><a href="strandbungalow" title="Strandbungalow am Wulfener Hals" itemprop="url"><span itemprop="name">Beach Bungalow</span></a>
+</li>
+<li class="submenu"><a href="ferienwohnungen" title="Ferienwohnungen auf Fehmarn" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Vacation Rentals</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="ferienwohnungen-am-strand" title="Ferienwohnungen am Strand" class="first" itemprop="url"><span itemprop="name">at the beach</span></a>
+</li>
+<li><a href="ferienwohnungen-am-pool" title="Ferienwohnungen am Pool" itemprop="url"><span itemprop="name">by the pool</span></a>
+</li>
+<li><a href="ferienwohnungen-am-golfpark" title="Ferienwohnungen am Golfpark auf Fehmarn" itemprop="url"><span itemprop="name">at the Golf Park</span></a>
+</li>
+<li class="last"><a href="http://www.fehmarn-ferienwohnung.info" title="Ferienwohnung in Burg" class="last" target="_blank" rel="noreferrer noopener" itemprop="url"><span itemprop="name">in Burg</span></a>
+</li>
+</ul>
+</li>
+<li><a href="schlafstrandkorb" title="Schlafstrandkorb" itemprop="url"><span itemprop="name">Beach Chair for Sleeping</span></a>
+</li>
+<li><a href="http://www.hotel-sonneninsel-fehmarn.de/" title="Hotel Avendorf" target="_blank" rel="noreferrer noopener" itemprop="url"><span itemprop="name">Hotel Sonneninsel Avendorf</span></a>
+</li>
+<li class="last"><a href="golfnwave" title="Pakete" class="last" itemprop="url"><span itemprop="name">Golf&acute;n Wave Aktivresort</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu trail"><a href="strand-meer" title="Strand &amp; Freizeit" class="submenu trail" aria-haspopup="true" itemprop="url"><span itemprop="name">Beach &amp; Leisure</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="submenu trail first"><a href="strand-meer" title="Strand und Meer auf Fehmarn" class="submenu trail first" aria-haspopup="true" itemprop="url"><span itemprop="name">Beach &amp; Lake</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="sibling first"><a href="stranderlebnisse" title="Strandurlaub an der Ostsee auf Fehmarn" class="sibling first" itemprop="url"><span itemprop="name">Beach Experiences</span></a>
+</li>
+<li class="active"><strong class="active" itemprop="name">Surfing, kitesurfing, sailing</strong>
+</li>
+<li class="sibling"><a href="wakepark-fehmarn" title="Wakepark Fehmarn: Wassersport auf dem Burger Binnensee" class="sibling" itemprop="url"><span itemprop="name">Fehmarn Wake Park</span></a>
+</li>
+<li class="sibling last"><a href="tauchen" title="Tauchen in der Ostsee vor der Insel Fehmarn" class="sibling last" itemprop="url"><span itemprop="name">Diving</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="familienzeit" title="Familienzeit im Camping- und Ferienpark" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Family Time</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="kinderanimation" title="Kinderanimation im Camping- und Ferienpark" class="first" itemprop="url"><span itemprop="name">Children's Activities</span></a>
+</li>
+<li><a href="spielplaetze" title="Spielpl&auml;tze im Camping- und Ferienpark auf Fehmarn" itemprop="url"><span itemprop="name">Playgrounds</span></a>
+</li>
+<li class="last"><a href="tipps-fuer-ausfluege" title="Tipps f&uuml;r Ausfl&uuml;ge auf Fehmarn und in Ostholstein" class="last" itemprop="url"><span itemprop="name">Tips for Day Trips</span></a>
+</li>
+</ul>
+</li>
+<li><a href="hunde" title="Hunde auf Camping- und Ferienpark auf Fehmarn" itemprop="url"><span itemprop="name">Dogs</span></a>
+</li>
+<li class="submenu"><a href="aktivitaeten" title="Aktivit&auml;ten im Camping- und Ferienpark auf Fehmarn" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Activities</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="sportanimation" title="Sportanimation im Camping- und Ferienpark auf Fehmarn" class="first" itemprop="url"><span itemprop="name">Sports Activities</span></a>
+</li>
+<li><a href="pool" title="Beheizter Pool im Camping- und Ferienpark auf Fehmarn" itemprop="url"><span itemprop="name">Half</span></a>
+</li>
+<li class="last"><a href="radfahren-touren" title="Radfahren und Touren auf der Insel Fehmarn" class="last" itemprop="url"><span itemprop="name">Cycling &amp; Touring</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="golfurlaub" title="Golf-Urlaub an der Ostsee auf Fehmarn" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Golf Vacation</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="golf-pakete" title="Golf-Pakete im Camping- und Ferienpark" class="first" itemprop="url"><span itemprop="name">Golf Packages</span></a>
+</li>
+<li><a href="golf-kurse" title="Golf-Kurse an der Golfschule Fehmarn" itemprop="url"><span itemprop="name">Golf Courses</span></a>
+</li>
+<li><a href="greenfee" title="Greenfee: Sonderpreise im Golfpark Fehmarn" itemprop="url"><span itemprop="name">Green fee</span></a>
+</li>
+<li><a href="wettspielkalender" title="Wettspielkalender Golfpark Fehmarn" itemprop="url"><span itemprop="name">Betting Calendar</span></a>
+</li>
+<li class="last"><a href="fernmitglied-werden" title="Fernmitglied warden im Golf Club Fehmarn" class="last" itemprop="url"><span itemprop="name">Become a Corresponding Member</span></a>
+</li>
+</ul>
+</li>
+<li><a href="wellness-entspannung" title="Wellness und Entspannung im Camping- und Ferienpark" itemprop="url"><span itemprop="name">Wellness &amp; Relaxation</span></a>
+</li>
+<li class="submenu"><a href="entertainment" title="Entertainment im Camping- und Ferienpark" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Entertainment</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="it-s-showtime" title="It&rsquo;s Showtime im Camping- und Ferienpark" class="first" itemprop="url"><span itemprop="name">It's Showtime</span></a>
+</li>
+<li><a href="live-musik-comedy" title="Live-Musik und Comedy im Camping- und Ferienpark" itemprop="url"><span itemprop="name">Live Musik &amp; Comedy</span></a>
+</li>
+<li class="last"><a href="public-viewing" title="Public Viewing im Camping- und Ferienpark" class="last" itemprop="url"><span itemprop="name">Public Viewing</span></a>
+</li>
+</ul>
+</li>
+<li><a href="veranstaltungskalender" title="Veranstaltungskalender Camping- und Ferienpark" itemprop="url"><span itemprop="name">Event Calendar</span></a>
+</li>
+<li class="last"><a href="wsv" title="Wassersportverein des Wulfener Hals" class="last" itemprop="url"><span itemprop="name">Boats - Water Sports Club</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="gaeste-service" title="Service - Infos" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Service - Information</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="submenu first"><a href="gaeste-service" title="G&auml;ste-Service im Camping- und Ferienpark auf Fehmarn" class="submenu first" aria-haspopup="true" itemprop="url"><span itemprop="name">Guest Services</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="kontakt-rezeption" title="Kontakt &amp; Rezeption im Camping- und Ferienpark &ndash; Wulfener Hals" class="first" itemprop="url"><span itemprop="name">Contact &amp; Front Desk</span></a>
+</li>
+<li><a href="oeffnungszeiten" title="&Ouml;ffnungszeiten im Camping- und Ferienpark&ndash; Wulfener Hals" itemprop="url"><span itemprop="name">Hours of Operation</span></a>
+</li>
+<li><a href="https://v3.onlinebooking.dk/shop/shop_wulfen" title="Wulfis Online-Shop" target="_blank" rel="noreferrer noopener" itemprop="url"><span itemprop="name">Wulfi's Online Store</span></a>
+</li>
+<li class="last"><a href="fahrradverleih" title="Fahrradverleih" class="last" itemprop="url"><span itemprop="name">Bicycle Rental</span></a>
+</li>
+</ul>
+</li>
+<li><a href="wulfener-hals-app" title="Wulfener Hals App vom Camping- und Ferienpark &ndash; Wulfener Hals" itemprop="url"><span itemprop="name">Wulfener Hals App</span></a>
+</li>
+<li class="submenu"><a href="news" title="Aktuelles" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">News</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="news" title="News" class="first" itemprop="url"><span itemprop="name">News</span></a>
+</li>
+<li class="last"><a href="presse" title="Presse" class="last" itemprop="url"><span itemprop="name">Press</span></a>
+</li>
+</ul>
+</li>
+<li><a href="3d-rundgang" title="3D Rundgang" itemprop="url"><span itemprop="name">3D Tour</span></a>
+</li>
+<li><a href="service-infos/imagefilm" title="Imagefilm" itemprop="url"><span itemprop="name">Promotional Video</span></a>
+</li>
+<li><a href="wulfener-hals-a-z" title="Camping- und Ferienpark von A-Z &ndash; Wulfener Hals" itemprop="url"><span itemprop="name">Wulfener Hals A-Z</span></a>
+</li>
+<li class="submenu"><a href="ueber-uns" title="&Uuml;ber uns: Camping- und Ferienpark auf Fehmarn &ndash; Wulfener Hals" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">About Us</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="umwelt" title="Umweltschutz im Camping- und Ferienpark &ndash; Wulfener Hals" class="first" itemprop="url"><span itemprop="name">Environment</span></a>
+</li>
+<li><a href="leading-camping" title="Leading Campings auf Fehmarn" itemprop="url"><span itemprop="name">Leading Camping</span></a>
+</li>
+<li><a href="auszeichnungen" title="Auszeichnungen f&uuml;r den Caming- und Ferienpark &ndash; Wulfener Hals" itemprop="url"><span itemprop="name">Awards</span></a>
+</li>
+<li class="last"><a href="65-jahre-wulfener-hals" title="65 Jahre Camping- und Ferienpark &ndash; Wulfener Hals" class="last" itemprop="url"><span itemprop="name">Wulfener Hals's 65th Anniversary</span></a>
+</li>
+</ul>
+</li>
+<li class="last"><a href="jobs" title="Jobs" class="last" itemprop="url"><span itemprop="name">Jobs</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu last"><a href="suchen-buchen" title="Buchen &amp; Preise" class="submenu last" aria-haspopup="true" itemprop="url"><span itemprop="name">Booking &amp; Prices</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="first"><a href="suchen-buchen" title="Suchen &amp; buchen" class="first" itemprop="url"><span itemprop="name">Search &amp; Book</span></a>
+</li>
+<li><a href="specials-angebote" title="Specials &amp; Angebote" itemprop="url"><span itemprop="name">Specials &amp; Offers</span></a>
+</li>
+<li><a href="last-minute" title="Last-Minute" itemprop="url"><span itemprop="name">Last-Minute</span></a>
+</li>
+<li><a href="online-katalog" title="Online-Katalog" itemprop="url"><span itemprop="name">Online Catalog</span></a>
+</li>
+<li><a href="preise" title="Campingpreise" itemprop="url"><span itemprop="name">Prices</span></a>
+</li>
+<li class="last"><a href="agb-vertragsbedingungen" title="Vertragsbedingungen" class="last" itemprop="url"><span itemprop="name">Terms and Conditions &amp; Contract Terms</span></a>
+</li>
+</ul>
+</li>
+</ul>
+<a id="skipNavigation22" class="invisible">&nbsp;</a>
+</nav>
+</div>
+</header>
+<main id="main" itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
+<section class="mod_article full-width title-image block" id="article-999">
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/0/DSC03379-2-62921f72.webp 1920w, assets/images/5/DSC03379-2-c64844f0.webp 2010w" sizes="100vw" media="(min-width: 80em)" type="image/webp" width="1920" height="600">
+<source srcset="assets/images/6/DSC03379-2-e4e4b427.jpg 1920w, assets/images/8/DSC03379-2-569c08fb.jpg 2010w" sizes="100vw" media="(min-width: 80em)" width="1920" height="600">
+<source srcset="assets/images/7/DSC03379-2-3869d4f5.webp 1000w, assets/images/8/DSC03379-2-fc14791a.webp 1256w" sizes="100vw" media="(min-width: 64em)" type="image/webp" width="1000" height="500">
+<source srcset="assets/images/4/DSC03379-2-0b969a5d.jpg 1000w, assets/images/3/DSC03379-2-a5a20988.jpg 1256w" sizes="100vw" media="(min-width: 64em)" width="1000" height="500">
+<source srcset="assets/images/4/DSC03379-2-488e7ed4.webp 800w, assets/images/f/DSC03379-2-c52ba4a4.webp 1600w" sizes="100vw" media="(min-width: 36em)" type="image/webp" width="800" height="300">
+<source srcset="assets/images/9/DSC03379-2-71e3d1bd.jpg 800w, assets/images/1/DSC03379-2-5bf4e6ed.jpg 1600w" sizes="100vw" media="(min-width: 36em)" width="800" height="300">
+<source srcset="assets/images/f/DSC03379-2-92b2e4f7.webp 400w, assets/images/2/DSC03379-2-66839638.webp 800w" sizes="100vw" media="(min-width: 20em)" type="image/webp" width="400" height="300">
+<source srcset="assets/images/a/DSC03379-2-4d9b3e20.jpg 400w, assets/images/5/DSC03379-2-7b7c5530.jpg 800w" sizes="100vw" media="(min-width: 20em)" width="400" height="300">
+<source srcset="assets/images/4/DSC03379-2-74ef408f.webp" type="image/webp" width="2500" height="628">
+<img src="files/bilder/Strand%20%26%20Freizeit/Strand%20%26%20Meer/Surfen%2C%20kiten%2C%20segeln/DSC03379-2.jpg" width="2500" height="628" alt="" loading="lazy">
+</source></source></source></source></source></source></source></source></source></picture>
+</figure>
+</div>
+</section>
+<section class="mod_article grid-center block" id="article-1000">
+<div class="grid">
+<div class="ce_text col-12_md-8 block">
+<h1>On your boards, get set, go! Surfing and kitesurfing on Fehmarn</h1>
+<h2 class="ce_headline col-12">Wulfen Surf Area: Germany's Biggest Surf Spot</h2>
+</div>
+<div class="ce_image col-12_md-3 block">
+<figure class="image_container">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202024/logo_windsurfing_wulfen%20%281%29.jpg" width="293" height="103" alt="">
+</figure>
+</div>
+<div class="ce_text col-12_lg-6 block">
+<p>If you&rsquo;re vacationing at the Wulfener Hals camping and vacation park, you&rsquo;ll be right next to Germany&rsquo;s largest surf spot. Experts and beginners alike come from all over to surf and kiteboard in Wulfen on Fehmarn.</p>
+<p>The Wulfener Hals surfing spot on Burger Binnensee is a real hit with surfers and one of the most popular spots on the Baltic Sea island. Because the water is mostly shallow, safe surfing is possible in almost all wind and weather conditions. It&rsquo;s also perfect for kids who want to try surfing for the first time&mdash;they&rsquo;ll make new friends right away in the small beginner classes and have a blast burning off some energy together.</p>
+</div>
+<div class="ce_text col-12_lg-6 block">
+<p><strong>But speed lovers will also get their money's worth here&mdash;without compromise. </strong></p>
+<p>Extremely shallow water makes freeriding a dream from wind force 4 onward&mdash;power jibes and water starts are a breeze here. Pros and wave enthusiasts will find one of the island&rsquo;s best wave spots on the open Baltic Sea&mdash;separated from Burger&rsquo;s inland lake only by a wide sandy beach&mdash;when the wind is blowing from the east.</p>
+</div>
+</div>
+</section>
+<section class="mod_article full-width marg-top block" id="article-1001">
+<div class="text-bild-links">
+<div class="ce_text block">
+<h2>"Windsurfing Wulfen" Surf School</h2>
+<p>If you want to learn to surf or simply improve your skills, the &ldquo;Wulfener Hals&rdquo; is the perfect place for you. It&rsquo;s home to one of Germany&rsquo;s leading surf and catamaran schools, the Surfschule Windsurfing Wulfen. From early April through late October, up to 12 experienced VDWS instructors teach beginners, advanced surfers, adults, teens, and kids ages 6 and up, starting with the &ldquo;Bambini&rdquo; courses.</p>
+<p>At the surf shop and rental station, you can rent or purchase equipment from leading manufacturers. For sailors, Hobby Cats &amp; Topscats are available, and for stand-up paddlers, there&rsquo;s everything your heart desires. At the &ldquo;Wulfener Hals,&rdquo; you have the opportunity to get started in windsurfing or improve your surfing skills. Learn kitesurfing in small groups and experience the thrill of catamaran sailing. Phone: 0157 504 319 91</p>
+<p><a href="http://www.windsurfing-wulfen.de" target="_blank" rel="noopener">www.windsurfing-wulfen.de</a></p>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/f/Surfschule_Camping_WulfenerHals_Fehmarn5775-a1dc8dad.webp 1x, assets/images/7/Surfschule_Camping_WulfenerHals_Fehmarn5775-540e5796.webp 1.25x" media="(min-width: 48em)" type="image/webp" width="2000" height="900">
+<source srcset="assets/images/7/Surfschule_Camping_WulfenerHals_Fehmarn5775-ef6712e3.jpg 1x, assets/images/4/Surfschule_Camping_WulfenerHals_Fehmarn5775-a9520591.jpg 1.25x" media="(min-width: 48em)" width="2000" height="900">
+<source srcset="assets/images/9/Surfschule_Camping_WulfenerHals_Fehmarn5775-4a667f88.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/Strand%20%26%20Freizeit/Strand%20%26%20Meer/Surfen%2C%20kiten%2C%20segeln/Surfschule_Camping_WulfenerHals_Fehmarn5775.jpg" width="2500" height="1667" alt="" loading="lazy">
+</source></source></source></picture>
+</figure>
+</div>
+</div>
+</section>
+<section class="mod_article grid-center block" id="article-1007">
+<div class="col-12_md-10">
+<h2 class="ce_headline col-12">
+Windsurfing Lessons at the "Wulfener Hals" on Fehmarn</h2>
+<div class="ce_accordionStart ce_accordion ">
+<div class="accordion-toggle"><i class="fal fa-plus"></i><span>Beginner Courses</span></div>
+<div class="accordion-content">
+<div class="ce_text block">
+<p>In our beginner courses, you can choose between a week-long course or a weekend intensive course. In just 12 hours, you&rsquo;ll learn to windsurf in a small group in a fun and relaxed way. Our licensed windsurfing instructors ensure your safety on the water and help you get the most out of your learning experience. In addition to the basic techniques, you&rsquo;ll gain fundamental knowledge about the rules, potential hazards, and equipment. The course concludes with the internationally recognized VDWS Basic Certificate, which allows you to windsurf in all areas requiring a license and to rent equipment worldwide.</p>
+<p><strong>To register, please call 0157 504 319 91</strong></p>
+</div>
+</div>
+</div>
+<div class="ce_accordionStart ce_accordion ">
+<div class="accordion-toggle"><i class="fal fa-plus"></i><span>Weekly Classes</span></div>
+<div class="accordion-content">
+<div class="ce_text block">
+<p><strong>In the morning or in the afternoon</strong><br><strong>Monday through Thursday or Tuesday through Friday</strong><br>For children ages 9 and up and adults<br><strong>4 sessions of 3 hours each, 10 a.m.&ndash;1 p.m. or 2&ndash;5 p.m.</strong></p>
+</div>
+<div class="ce_table block">
+<table id="table_6849">
+<tbody>
+<tr class="row_0 row_first odd">
+<td class="col_0 col_first">12-Hour Beginner Course</td>
+<td class="col_1 col_last">200 euros</td>
+</tr>
+<tr class="row_1 even">
+<td class="col_0 col_first">VDWS Exam Fee</td>
+<td class="col_1 col_last">&euro;30</td>
+</tr>
+<tr class="row_2 odd">
+<td class="col_0 col_first">Rental Suit</td>
+<td class="col_1 col_last">&euro;30</td>
+</tr>
+<tr class="row_3 row_last even">
+<td class="col_0 col_first">Materials</td>
+<td class="col_1 col_last">including</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="ce_accordionStart ce_accordion ">
+<div class="accordion-toggle"><i class="fal fa-plus"></i><span>Weekend Classes</span></div>
+<div class="accordion-content">
+<div class="ce_text block">
+<p><strong>Saturday&ndash;Sunday, 10 a.m.&ndash;1 p.m. and 2&ndash;5 p.m.</strong></p>
+</div>
+<div class="ce_table block">
+<table id="table_6852">
+<tbody>
+<tr class="row_0 row_first odd">
+<td class="col_0 col_first">12-hour beginner's course</td>
+<td class="col_1 col_last">200 euros</td>
+</tr>
+<tr class="row_1 even">
+<td class="col_0 col_first">VDWS Exam Fee</td>
+<td class="col_1 col_last">&euro;30</td>
+</tr>
+<tr class="row_2 odd">
+<td class="col_0 col_first">Rental Suit</td>
+<td class="col_1 col_last">&euro;30</td>
+</tr>
+<tr class="row_3 row_last even">
+<td class="col_0 col_first">Materials</td>
+<td class="col_1 col_last">including</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="ce_accordionStart ce_accordion ">
+<div class="accordion-toggle"><i class="fal fa-plus"></i><span>Advanced Courses</span></div>
+<div class="accordion-content">
+<div class="ce_text block">
+<p>In an advanced course, you'll solidify your basic skills with hands-on sailing training, including fast upwind sailing, quick tacks, and jibes&mdash;all in just 6 hours. You're guaranteed maximum time on the water.</p>
+<p><strong>Schedule by arrangement: 2 sessions of 3 hours each</strong></p>
+</div>
+<div class="ce_table block">
+<table id="table_6856">
+<tbody>
+<tr class="row_0 row_first odd">
+<td class="col_0 col_first">6-hour advanced course</td>
+<td class="col_1 col_last">&euro;160</td>
+</tr>
+<tr class="row_1 even">
+<td class="col_0 col_first">Rental Suit</td>
+<td class="col_1 col_last">25 euros</td>
+</tr>
+<tr class="row_2 row_last odd">
+<td class="col_0 col_first">Materials</td>
+<td class="col_1 col_last">including</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="ce_accordionStart ce_accordion ">
+<div class="accordion-toggle"><i class="fal fa-plus"></i><span>Children's Classes</span></div>
+<div class="accordion-content">
+<div class="ce_text block">
+<p>Surf like the pros&mdash;but in a kid-friendly, fun way. The shallow water and extra-light children&rsquo;s sails make it possible for kids as young as 6 to take beginner lessons on Fehmarn.</p>
+<p><strong>Starts Monday or Tuesday </strong></p>
+<p><strong>4 </strong><strong>x 2 hours: 10 a.m.&ndash;12 p.m. or 2&ndash;4 p.m.</strong></p>
+</div>
+<div class="ce_table block">
+<table id="table_6860">
+<tbody>
+<tr class="row_0 row_first odd">
+<td class="col_0 col_first">8-Hour Children's Course</td>
+<td class="col_1 col_last">&euro;160</td>
+</tr>
+<tr class="row_1 even">
+<td class="col_0 col_first">Rental Suit</td>
+<td class="col_1 col_last">25 euros</td>
+</tr>
+<tr class="row_2 row_last odd">
+<td class="col_0 col_first">Materials</td>
+<td class="col_1 col_last">including</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="ce_accordionStart ce_accordion ">
+<div class="accordion-toggle"><i class="fal fa-plus"></i><span>Private Lessons</span></div>
+<div class="accordion-content">
+<div class="ce_text block">
+<p>Personalized one-on-one training on a topic of your choice. <br><strong>Appointment by arrangement</strong></p>
+</div>
+<div class="ce_table block">
+<table id="table_6864">
+<tbody>
+<tr class="row_0 row_first odd">
+<td class="col_0 col_first">1 private lesson</td>
+<td class="col_1 col_last">&euro;60</td>
+</tr>
+<tr class="row_1 even">
+<td class="col_0 col_first">2 people</td>
+<td class="col_1 col_last">&euro;40 per person</td>
+</tr>
+<tr class="row_2 odd">
+<td class="col_0 col_first">Materials</td>
+<td class="col_1 col_last">&euro;15 / &euro;30 per person</td>
+</tr>
+<tr class="row_3 row_last even">
+<td class="col_0 col_first">Rental Suit</td>
+<td class="col_1 col_last">5 euros</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<script src="files/secra-theme/js/accordion.js"></script>
+</section>
+<section class="mod_article full-width marg-top block" id="article-1003">
+<div class="bild-text-bild-skew-right">
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/e/DSC09888-3c0f00fa.webp" type="image/webp" width="2500" height="2500">
+<img src="files/bilder/Strand%20%26%20Freizeit/Strand%20%26%20Meer/Surfen%2C%20kiten%2C%20segeln/DSC09888.jpg" width="2500" height="2500" alt="" loading="lazy">
+</source></picture>
+</figure>
+</div>
+<div class="ce_text block">
+<h2>Kitesurfing on Fehmarn&mdash;at one of the best kitesurfing spots on the Baltic Sea</h2>
+<p>Seeing the colorful sails in the sky is a magnificent sight! <strong>When the wind is blowing from the southeast, Wulfen is probably the best kitesurfing spot in Germany</strong> And recreational athletes from all over the world appreciate that. Using lines about 20 meters long, they let themselves be pulled out of the water by stunt kites with a wing area between 5 and 15 square meters and reach tremendous speeds on special kiteboards even in winds as low as force 2. Anyone who wants to take up this sport should be physically fit and a strong swimmer. A good way to get started is to gain some initial experience with a conventional stunt kite.</p>
+<p>&nbsp;</p>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/c/DSC07273-13fcaf41.webp" type="image/webp" width="2500" height="2500">
+<img src="files/bilder/Strand%20%26%20Freizeit/Strand%20%26%20Meer/Surfen%2C%20kiten%2C%20segeln/DSC07273.jpg" width="2500" height="2500" alt="" loading="lazy">
+</source></picture>
+</figure>
+</div>
+</div>
+</section>
+<section class="mod_article grid-center block" id="article-1005">
+<h2 class="ce_headline col-12">Want to learn how to kitesurf?</h2>
+<div class="ce_text col-12_lg-6 block">
+<p>Then let the pros show you the ropes at one of the best kiteboarding spots on the Baltic Sea! Experienced VDWS instructors will teach you in small groups in shallow waters that are ideal for beginners. At the start, you&rsquo;ll learn all the necessary safety procedures to ensure a safe start. The surf school offers the first session as a 4-hour block with a maximum of four students per instructor. The curriculum includes all safety-related exercises and equipment training, as well as kite handling, and launching and landing the kite in the water and on land.</p>
+</div>
+<div class="ce_text col-12_lg-6 block">
+<p>In subsequent training sessions, we&rsquo;ll use progressive exercises to improve your kite control and practice water starts and other maneuvers. We offer various options, each lasting 3 hours with 4, 3, or 2 students per instructor. You choose how intensive your instruction should be. Courses run daily from Easter through the end of October, by appointment and weather permitting. Secure your spot: For information on courses and bookings, call 0157 504 319 91.</p>
+<p><a href="http://www.windsurfing-wulfen.de" target="_blank" rel="noopener">www.windsurfing-wulfen.de</a></p>
+</div>
+</section>
+<section class="mod_article grid block" id="article-1009">
+<div class="ce_gallery col-12 block">
+<ul class="cols_5" itemscope itemtype="http://schema.org/ImageGallery">
+<li class="row_0 row_first row_last even col_0 col_first">
+<figure class="image_container">
+<a href="assets/images/e/Fehmarn_Wulfener_Hals_Surfen_2-a7b3e255.jpg" data-lightbox="lb6872">
+<picture>
+<source srcset="assets/images/c/Fehmarn_Wulfener_Hals_Surfen_2-791042d5.webp 1x, assets/images/c/Fehmarn_Wulfener_Hals_Surfen_2-a6922dcd.webp 2x" type="image/webp" width="400" height="267">
+<img src="assets/images/a/Fehmarn_Wulfener_Hals_Surfen_2-cdc6b00c.jpg" srcset="assets/images/a/Fehmarn_Wulfener_Hals_Surfen_2-cdc6b00c.jpg 1x, assets/images/0/Fehmarn_Wulfener_Hals_Surfen_2-3fd4029a.jpg 2x" width="400" height="267" alt="" loading="lazy">
+</source></picture>
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_1">
+<figure class="image_container">
+<a href="assets/images/2/Surfschule_Camping_WulfenerHals_Fehmarn0513-852243d3.jpg" data-lightbox="lb6872">
+<picture>
+<source srcset="assets/images/4/Surfschule_Camping_WulfenerHals_Fehmarn0513-cb298804.webp 1x, assets/images/c/Surfschule_Camping_WulfenerHals_Fehmarn0513-a7784ec1.webp 2x" type="image/webp" width="400" height="267">
+<img src="assets/images/6/Surfschule_Camping_WulfenerHals_Fehmarn0513-79261da3.jpg" srcset="assets/images/6/Surfschule_Camping_WulfenerHals_Fehmarn0513-79261da3.jpg 1x, assets/images/b/Surfschule_Camping_WulfenerHals_Fehmarn0513-08524669.jpg 2x" width="400" height="267" alt="" loading="lazy">
+</source></picture>
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_2">
+<figure class="image_container">
+<a href="assets/images/f/Surfschule_Camping_WulfenerHals_Fehmarn5826-9575e535.jpg" data-lightbox="lb6872">
+<picture>
+<source srcset="assets/images/6/Surfschule_Camping_WulfenerHals_Fehmarn5826-8279334f.webp 1x, assets/images/c/Surfschule_Camping_WulfenerHals_Fehmarn5826-c46ca5c7.webp 2x" type="image/webp" width="400" height="267">
+<img src="assets/images/a/Surfschule_Camping_WulfenerHals_Fehmarn5826-acfc4212.jpg" srcset="assets/images/a/Surfschule_Camping_WulfenerHals_Fehmarn5826-acfc4212.jpg 1x, assets/images/3/Surfschule_Camping_WulfenerHals_Fehmarn5826-f6b7a4ee.jpg 2x" width="400" height="267" alt="" loading="lazy">
+</source></picture>
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_3">
+<figure class="image_container">
+<a href="assets/images/4/Surfschule_Camping_WulfenerHals_Fehmarn7246-a4f1d267.jpg" data-lightbox="lb6872">
+<picture>
+<source srcset="assets/images/0/Surfschule_Camping_WulfenerHals_Fehmarn7246-8e5118be.webp 1x, assets/images/4/Surfschule_Camping_WulfenerHals_Fehmarn7246-9855ff1f.webp 2x" type="image/webp" width="400" height="267">
+<img src="assets/images/d/Surfschule_Camping_WulfenerHals_Fehmarn7246-4e9182c6.jpg" srcset="assets/images/d/Surfschule_Camping_WulfenerHals_Fehmarn7246-4e9182c6.jpg 1x, assets/images/c/Surfschule_Camping_WulfenerHals_Fehmarn7246-12ce7f22.jpg 2x" width="400" height="267" alt="" loading="lazy">
+</source></picture>
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_4 col_last">
+<figure class="image_container">
+<a href="assets/images/4/Surfschule_Camping_WulfenerHals_Fehmarn8598-73063bd9.jpg" data-lightbox="lb6872">
+<picture>
+<source srcset="assets/images/d/Surfschule_Camping_WulfenerHals_Fehmarn8598-47d46a30.webp 1x, assets/images/2/Surfschule_Camping_WulfenerHals_Fehmarn8598-046bc932.webp 2x" type="image/webp" width="400" height="267">
+<img src="assets/images/c/Surfschule_Camping_WulfenerHals_Fehmarn8598-d55ea7e7.jpg" srcset="assets/images/c/Surfschule_Camping_WulfenerHals_Fehmarn8598-d55ea7e7.jpg 1x, assets/images/4/Surfschule_Camping_WulfenerHals_Fehmarn8598-b41dcd1d.jpg 2x" width="400" height="267" alt="" loading="lazy">
+</source></picture>
+</a>
+</figure>
+</li>
+</ul>
+</div>
+</section>
+<section class="mod_article section-primary block" id="article-1004">
+<div class="grid-center"><div class="col-12_md-10">
+<div class="ce_table preistabelle block">
+<h3>Prices for Our Kiteboarding Courses</h3>
+<table id="table_6823">
+<tbody>
+<tr class="row_0 row_first odd">
+<th scope="row" class="col_0 col_first">Basis-Block</th>
+<td class="col_1">4 hours / 4 students</td>
+<td class="col_2 col_last">125 EUR per person</td>
+</tr>
+<tr class="row_1 even">
+<th scope="row" class="col_0 col_first">Training Block 4/1</th>
+<td class="col_1">3 hours / 4 students</td>
+<td class="col_2 col_last">110 EUR per person</td>
+</tr>
+<tr class="row_2 odd">
+<th scope="row" class="col_0 col_first">Training Block 2/1</th>
+<td class="col_1">3 hours / 2 students</td>
+<td class="col_2 col_last">165 EUR per person</td>
+</tr>
+<tr class="row_3 even">
+<th scope="row" class="col_0 col_first">Training Block 1/1</th>
+<td class="col_1">2 hours / 1 student</td>
+<td class="col_2 col_last">190 EUR per person</td>
+</tr>
+<tr class="row_4 odd">
+<th scope="row" class="col_0 col_first">Rental Suit</th>
+<td class="col_1">&nbsp;</td>
+<td class="col_2 col_last">10 EUR per block</td>
+</tr>
+<tr class="row_5 row_last even">
+<th scope="row" class="col_0 col_first">Materials</th>
+<td class="col_1">&nbsp;</td>
+<td class="col_2 col_last">including</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="ce_text block">
+<h3>VDWS Kitesurfing License</h3>
+<p>In addition, we offer you the opportunity to earn your VDWS kite license, which is required at many locations in order to rent equipment.</p>
+</div>
+<div class="ce_table preistabelle block">
+<table id="table_6867">
+<tbody>
+<tr class="row_0 row_first odd">
+<th scope="row" class="col_0 col_first">Excludes the workbook</th>
+<td class="col_1 col_last">&euro;45</td>
+</tr>
+<tr class="row_1 row_last even">
+<th scope="row" class="col_0 col_first">includes workbook</th>
+<td class="col_1 col_last">&euro;54</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section class="mod_article full-width block" id="article-1002">
+<div class="text-bild-rechts">
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/5/Firefly%2020250110101353-2-3f7f8048.webp" media="(min-width: 48em)" type="image/webp" width="2048" height="655">
+<source srcset="assets/images/9/Firefly%2020250110101353-2-9431391c.jpg" media="(min-width: 48em)" width="2048" height="655">
+<source srcset="assets/images/4/Firefly%2020250110101353-2-d0a7d413.webp 400w, assets/images/8/Firefly%2020250110101353-2-63b46900.webp 800w" sizes="100vw" media="(min-width: 20em)" type="image/webp" width="400" height="267">
+<source srcset="assets/images/0/Firefly%2020250110101353-2-66cfb429.jpg 400w, assets/images/f/Firefly%2020250110101353-2-adca1e2a.jpg 800w" sizes="100vw" media="(min-width: 20em)" width="400" height="267">
+<source srcset="assets/images/c/Firefly%2020250110101353-2-bf9f85d8.webp" type="image/webp" width="2048" height="1152">
+<img src="files/bilder/Strand%20%26%20Freizeit/Strand%20%26%20Meer/Surfen%2C%20kiten%2C%20segeln/Firefly%2020250110101353-2.jpg" width="2048" height="1152" alt="" loading="lazy">
+</source></source></source></source></source></picture>
+</figure>
+</div>
+<div class="ce_text block">
+<h2>Wingfoil Courses in Wulfen on Fehmarn</h2>
+<p>Are you interested in the latest water sports trend? Then you've come to the right place! Windsurfing Wulfen offers you the chance to try it right here on Fehmarn at the Burger Binnensee <strong>Wingfoil</strong> to learn. Wingfoiling, also known as wingsurfing, is a combination of windsurfing, kitesurfing, and foiling.</p>
+<p><a href="https://www.windsurfing-wulfen.de/foilen.html" target="_blank" rel="noopener">More Info</a></p>
+</div>
+</div>
+</section>
+<section class="mod_article block" id="article-2080">
+<div class="grid-center"><div class="col-12_md-10">
+<div class="ce_text block">
+<h2>Prices for Beginner Courses</h2>
+<p>The basics of wing surfing with plenty of hands-on practice.</p>
+</div>
+<div class="ce_table preistabelle block">
+<h3>Weekend Classes</h3>
+<table id="table_14022">
+<tbody>
+<tr class="row_0 row_first odd">
+<th scope="row" class="col_0 col_first">by arrangement</th>
+<td class="col_1">&nbsp;</td>
+<td class="col_2 col_last">&nbsp;</td>
+</tr>
+<tr class="row_1 even">
+<th scope="row" class="col_0 col_first">Wingsurfing Course</th>
+<td class="col_1">3 hours / 6 students</td>
+<td class="col_2 col_last">&euro;120</td>
+</tr>
+<tr class="row_2 odd">
+<th scope="row" class="col_0 col_first">Wingfoil Course</th>
+<td class="col_1">3 hours / 4 students</td>
+<td class="col_2 col_last">&euro;150</td>
+</tr>
+<tr class="row_3 even">
+<th scope="row" class="col_0 col_first">Wingfoil Course</th>
+<td class="col_1">3 hours / 2 students</td>
+<td class="col_2 col_last">200 euros</td>
+</tr>
+<tr class="row_4 row_last odd">
+<th scope="row" class="col_0 col_first">Wingfoil Course</th>
+<td class="col_1">2 hours / 1 student</td>
+<td class="col_2 col_last">250 euros</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section class="mod_article full-width marg-top block" id="article-1006">
+<div class="bild-text-bild-skew-right">
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/6/Fehmarn_Wulfener_Hals_Burger_Binnensee_015-4e551794.webp" type="image/webp" width="2000" height="1314">
+<img src="files/bilder/Strand%20%26%20Freizeit/Strand%20%26%20Meer/Surfen%2C%20kiten%2C%20segeln/Fehmarn_Wulfener_Hals_Burger_Binnensee_015.jpg" width="2000" height="1314" alt="" loading="lazy">
+</source></picture>
+</figure>
+</div>
+<div class="ce_text block">
+<h2>Cast Off&mdash;Catamaran Sailing on the Baltic Sea</h2>
+<p>HobieCat&mdash;glide across the water on two hulls&mdash;here you'll discover the thrill of catamaran sailing and learn the basics in just 12 hours.</p>
+<p>Here, too, you can choose between a week-long course or a compact weekend course. The course culminates in the internationally recognized VDWS Basic Certification, which allows you to sail a catamaran and rent equipment in all areas where a certification is required. The beginner&rsquo;s course is your introduction to the world of catamaran sailing. From Easter through the end of October, our courses start daily by arrangement, depending on wind conditions.</p>
+<p>&nbsp;</p>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/1/Fehmarn_Wulfener_Hals_Burger_Binnensee_017-d02a8f96.webp" type="image/webp" width="2000" height="1326">
+<img src="files/bilder/Strand%20%26%20Freizeit/Strand%20%26%20Meer/Surfen%2C%20kiten%2C%20segeln/Fehmarn_Wulfener_Hals_Burger_Binnensee_017.jpg" width="2000" height="1326" alt="" loading="lazy">
+</source></picture>
+</figure>
+</div>
+</div>
+</section>
+<section class="mod_article block" id="article-1010">
+<div class="grid-center"><div class="col-12_md-10">
+<div class="ce_text block">
+<h2>Prices for Beginner Courses</h2>
+<p>Basics of catamaran sailing with plenty of hands-on practice and theory, preparing you for the VDWS Basic Certificate.</p>
+</div>
+<div class="ce_table preistabelle block">
+<h3>Weekend Classes</h3>
+<table id="table_6874">
+<tbody>
+<tr class="row_0 row_first odd">
+<th scope="row" class="col_0 col_first">Saturday and Sunday, 10 a.m.&ndash;1 p.m. and 2&ndash;5 p.m.</th>
+<td class="col_1 col_last">&nbsp;</td>
+</tr>
+<tr class="row_1 even">
+<th scope="row" class="col_0 col_first">12-hour beginner's course</th>
+<td class="col_1 col_last">&euro;230</td>
+</tr>
+<tr class="row_2 odd">
+<th scope="row" class="col_0 col_first">Rental Suit</th>
+<td class="col_1 col_last">&euro;30</td>
+</tr>
+<tr class="row_3 row_last even">
+<th scope="row" class="col_0 col_first">VDWS Exam Fee</th>
+<td class="col_1 col_last">&euro;45</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="ce_table preistabelle block">
+<h3>Weekly Courses: Mornings or Afternoons</h3>
+<table id="table_6875">
+<tbody>
+<tr class="row_0 row_first odd">
+<th scope="row" class="col_0 col_first">Monday&ndash;Thursday and Tuesday&ndash;Friday at 10 a.m. and 2 p.m.</th>
+<td class="col_1 col_last">&nbsp;</td>
+</tr>
+<tr class="row_1 even">
+<th scope="row" class="col_0 col_first">12-hour beginner's course</th>
+<td class="col_1 col_last">&euro;230</td>
+</tr>
+<tr class="row_2 odd">
+<th scope="row" class="col_0 col_first">Rental Suit</th>
+<td class="col_1 col_last">&euro;30</td>
+</tr>
+<tr class="row_3 row_last even">
+<th scope="row" class="col_0 col_first">VDWS Exam Fee</th>
+<td class="col_1 col_last">&euro;45</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section class="mod_article full-width block" id="article-1012">
+<div class="bild-text-bild-skew-left">
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/1/Surf_Camping_WulfenerHals_Fehmarn0330-15624e58.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/Strand%20%26%20Freizeit/Strand%20%26%20Meer/Surfen%2C%20kiten%2C%20segeln/Surf_Camping_WulfenerHals_Fehmarn0330.jpg" width="2500" height="1667" alt="" loading="lazy">
+</source></picture>
+</figure>
+</div>
+<div class="ce_text block">
+<h2>Want to go surfing, but don't have your own gear?</h2>
+<p>No problem. New windsurfing gear from leading manufacturers is waiting for you on the beach. For sailors: Hobie Cats, Topscats, and KLs, as well as stand-up paddleboarding equipment.</p>
+<p><a href="https://www.windsurfing-wulfen.de/vermietung.html" target="_blank" rel="noopener">More Info</a></p>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/2/Surf_Camping_WulfenerHals_Fehmarn0334-611e03cb.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/Strand%20%26%20Freizeit/Strand%20%26%20Meer/Surfen%2C%20kiten%2C%20segeln/Surf_Camping_WulfenerHals_Fehmarn0334.jpg" width="2500" height="1667" alt="" loading="lazy">
+</source></picture>
+</figure>
+</div>
+</div>
+</section>
+</main>
+<footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
+<style></style><div class="footer-top"><div class="grid-center-spaceBetween">
+<div class="ce_text col-12_md-6_lg-2 block">
+<p>Reservation Hotline:</p>
+</div>
+<a class="col-12_md-6_lg-3" href="tel:+49437186280" aria-label="Telefon"><i class="fad fa-phone"></i><span>&ensp;04371 - 8628-0</span></a>
+<a class="col-12_md-6_lg-3" href="mailto:info@wulfenerhals.de" aria-label="E-Mail"><i class="fad fa-envelope"></i><span>&ensp;info@wulfenerhals.de</span></a>
+<a class="booking-button col-12_md-6_lg-3" href="/suchen-buchen" aria-label="Unterkunft buchen"><i class="fad fa-bed"></i><span>Search &amp; Book</span></a>    </div>
+</div>
+<div class="footer-content grid-center">
+<div class="col-12_sm-6_lg-4">
+<div class="ce_text block">
+<p><strong>Wulfener Hals Camping and Vacation Park<br></strong><br>Wulfener Hals 100 Weg, Ortsteil Wulfen<br>23769 Fehmarn<br>Phone: <a href="tel:+49437186280">+49 (0) 4371 - 86 28 -0</a><br>Fax +49 (0) 4371 - 37 23<br><a href="campingpark-wulfener-hals">www.wulfenerhals.de</a><br><a href="mailto:info@wulfenerhals.de">info@wulfenerhals.de</a></p>
+<p>&nbsp;</p>
+</div>
+<div class="ce_image banner block">
+<figure class="image_container">
+<a href="https://www.golfwave.de/" target="_blank" rel="noreferrer noopener">
+<img src="files/bilder/layout/Banner-Golfwave-minimal.jpg" width="1500" height="500" alt="">
+</a>
+</figure>
+</div>
+</div>
+<div class="col-12_sm-6_lg-4 grid">
+<div class="ce_image col-12 footer-logos block">
+<figure class="image_container">
+<img src="files/bilder/logos-auszeichnungen/Logo_Wulfener_Hals_2022_neg.svg" alt="">
+</figure>
+</div>
+<div class="col-12_md-6">
+<ul class="footer-navigation">
+<li><a href="/golfurlaub" aria-label="Golfpark Fehmarn"> Fehmarn Golf Park</a></li>
+<li><a href="/webcam-wetter" aria-label="Wetter-Webcam"> Webcam &amp; Wetter</a></li>
+<li><a href="/wulfener-hals-a-z" aria-label="Wulfen-von-A-Z"> Wulfener Hals from A to Z</a></li>
+<li><a href="/news" aria-label="News">News</a></li>
+</ul>
+</div>
+<div class="col-12_md-6">
+<ul class="footer-navigation">
+<li><a href="/surfen-kiten-segeln" aria-label="surfen kiten segeln">Windsurfing on Fehmarn</a></li>
+<li><a href="/impressum" aria-label="Impressum"> Legal Notice</a></li>
+<li><a href="/datenschutz" aria-label="Datenschutz"> Privacy Policy</a></li>
+<li><a href="/cookie-richtlinien" aria-label="Cookies">Cookie Policy</a></li>
+</ul>
+</div>
+<ul class="social-links col-12">
+<li><a href="https://www.youtube.com/user/WulfenerHals" aria-label="Youtube-Channel" target="_blank"><i class="fab fa-youtube"></i></a></li>
+<li><a href="https://de-de.facebook.com/campingfehmarn/" aria-label="Facebook-Seite" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+<li><a href="https://www.instagram.com/wulfenerhals/?hl=de" aria-label="Instagram-Seite" target="_blank"><i class="fab fa-instagram"></i></a></li>
+</ul>    </div>
+<div class="col-12_sm-6_lg-3 grid">
+<div class="ce_text col-12 block">
+<p><strong>Guest Login</strong></p>
+<p>Sign in to view all the booking details for your vacation online.</p>
+</div>
+<div class="ce_hyperlink button button-primary col-12 block">
+<a href="compusoft-login" class="hyperlink_txt" title="Zum Login">Log In</a>
+</div>
+<div class="ce_text col-12_md-9 block">
+<p>Our partner company at the Mecklenburgischen Seenplatte:</p>
+</div>
+<div class="ce_image col-12_md-3 footer-logos block">
+<figure class="image_container">
+<a href="https://www.haveltourist.de/" target="_blank" rel="noreferrer noopener">
+<img src="files/bilder/logos-auszeichnungen/logo-haveltourist.png" width="500" height="348" alt="">
+</a>
+</figure>
+</div>
+<div class="ce_text col-12_md-9 block">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<div class="footer-area">
+<div class="ce_gallery footer-logos block">
+<ul class="cols_9" itemscope itemtype="http://schema.org/ImageGallery">
+<li class="row_0 row_first row_last even col_0 col_first">
+<figure class="image_container">
+<a href="assets/images/d/EMAS-7b975328.png" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/EMAS.png" width="506" height="460" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_1">
+<figure class="image_container">
+<a href="assets/images/f/TopPlatz-9db73eb2.png" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/TopPlatz.png" width="532" height="532" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_2">
+<figure class="image_container">
+<a href="https://www.leadingcampings.com/" target="_blank" rel="noreferrer noopener">
+<img src="files/bilder/logos-auszeichnungen/camp_partner_mod16_leadingcamps_530x530_web.jpg" width="530" height="347" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_3">
+<figure class="image_container">
+<a href="assets/images/f/ACSI%202023-6796b237.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/ACSI%202023.jpg" width="736" height="1000" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_4">
+<figure class="image_container">
+<a href="assets/images/9/ADAC-Logo%202024-dcac48d0.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/ADAC-Logo%202024.jpg" width="1000" height="524" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_5">
+<figure class="image_container">
+<a href="assets/images/2/ANWB%202023-3cff32b5.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/ANWB%202023.jpg" width="1000" height="984" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_6">
+<figure class="image_container">
+<a href="assets/images/9/Camping%20Info%20LOGO%202023-202658c2.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/Camping%20Info%20LOGO%202023.jpg" width="656" height="768" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_7">
+<figure class="image_container">
+<a href="assets/images/5/Gefragtester%20Campingplatz%20Deutschlands-0bb30610.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/Gefragtester%20Campingplatz%20Deutschlands.jpg" width="1871" height="1330" alt="">
+</a>
+</figure>
+</li>
+</ul>
+</div>
+<style></style></div>
+</footer>
+<script src="assets/colorbox/js/colorbox.min.js"></script>
+<script></script>
+<script src="assets/swipe/js/swipe.min.js?v=2.2.2"></script>
+<script></script>
+<script src="files/secra-theme/js/navigation-main.js?v=9c80029e"></script><script src="files/secra-theme/js/dsgvocontent.js?v=53f66bcd"></script><script type="application/ld+json">
+{
+    "@context": "https:\/\/schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage"
+        },
+        {
+            "@id": "#\/schema\/image\/04a7f6cf-d920-11ed-9db0-0cc47a047122",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/Strand%20%26%20Freizeit\/Strand%20%26%20Meer\/Surfen%2C%20kiten%2C%20segeln\/DSC03379-2.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/81223e49-cf38-11ef-98f9-0cc47a047122",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/logos-auszeichnungen\/Auszeichnungen%202024\/logo_windsurfing_wulfen%20%281%29.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/28b2f0e9-2451-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/Strand%20%26%20Freizeit\/Strand%20%26%20Meer\/Surfen%2C%20kiten%2C%20segeln\/Surfschule_Camping_WulfenerHals_Fehmarn5775.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/008dd5ab-fba4-11ed-a017-0cc47a047122",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/Strand%20%26%20Freizeit\/Strand%20%26%20Meer\/Surfen%2C%20kiten%2C%20segeln\/DSC09888.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/38c9a931-cf38-11ef-98f9-0cc47a047122",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/Strand%20%26%20Freizeit\/Strand%20%26%20Meer\/Surfen%2C%20kiten%2C%20segeln\/DSC07273.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/7dbac42e-2451-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/assets\/images\/a\/Fehmarn_Wulfener_Hals_Surfen_2-cdc6b00c.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/7448785c-2451-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/assets\/images\/6\/Surfschule_Camping_WulfenerHals_Fehmarn0513-79261da3.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/78c56721-2451-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/assets\/images\/a\/Surfschule_Camping_WulfenerHals_Fehmarn5826-acfc4212.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/2d628345-2451-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/assets\/images\/d\/Surfschule_Camping_WulfenerHals_Fehmarn7246-4e9182c6.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/7d60d3d7-2451-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/assets\/images\/c\/Surfschule_Camping_WulfenerHals_Fehmarn8598-d55ea7e7.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/e4d7bad1-cf38-11ef-98f9-0cc47a047122",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/Strand%20%26%20Freizeit\/Strand%20%26%20Meer\/Surfen%2C%20kiten%2C%20segeln\/Firefly%2020250110101353-2.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/10d62956-2451-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/Strand%20%26%20Freizeit\/Strand%20%26%20Meer\/Surfen%2C%20kiten%2C%20segeln\/Fehmarn_Wulfener_Hals_Burger_Binnensee_015.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/1218decd-2451-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/Strand%20%26%20Freizeit\/Strand%20%26%20Meer\/Surfen%2C%20kiten%2C%20segeln\/Fehmarn_Wulfener_Hals_Burger_Binnensee_017.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/412c60c3-2451-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/Strand%20%26%20Freizeit\/Strand%20%26%20Meer\/Surfen%2C%20kiten%2C%20segeln\/Surf_Camping_WulfenerHals_Fehmarn0330.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/47071831-2451-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/Strand%20%26%20Freizeit\/Strand%20%26%20Meer\/Surfen%2C%20kiten%2C%20segeln\/Surf_Camping_WulfenerHals_Fehmarn0334.jpg"
+        }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https:\/\/schema.contao.org",
+    "@graph": [
+        {
+            "@type": "Page",
+            "fePreview": false,
+            "groups": [],
+            "noSearch": false,
+            "pageId": 269,
+            "protected": false,
+            "title": "Surfen, Kiten, Segeln im Urlaub im Camping- und Ferienpark"
+        }
+    ]
+}
+</script>
+</body>
+</html>

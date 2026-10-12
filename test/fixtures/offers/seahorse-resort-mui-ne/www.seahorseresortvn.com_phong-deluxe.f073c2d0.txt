@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Phòng Deluxe</title>
+		<link rel="alternate" hreflang="vi" href="https://seahorsemuine.com/"/>
+		<link rel="alternate" hreflang="en" href="https://seahorsemuine.com/en"/>
+		<link rel="alternate" hreflang="zh" href="https://seahorsemuine.com/ru"/>
+		<link rel="alternate" hreflang="zh" href="https://seahorsemuine.com/de"/>
+		<link rel="canonical" href=""/>
+		<link data-default-icon="https://www.seahorseresortvn.com/uploads/images/defaults/favicon/favicon.ico" data-badged-icon="https://www.seahorseresortvn.com/uploads/images/defaults/favicon/favicon.ico" rel="shortcut icon" href="https://www.seahorseresortvn.com/uploads/images/defaults/favicon/favicon-16x16.ico">
+		<link rel="icon" href="https://www.seahorseresortvn.com/uploads/images/defaults/favicon/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="https://www.seahorseresortvn.com/uploads/images/defaults/favicon/favicon.ico" type="image/x-icon">
+		<link href="https://www.seahorseresortvn.com/uploads/images/defaults/favicon/favicon.png" type="image/x-icon" rel="shortcut icon"/>
+		<link rel="icon" type="image/png" sizes="16x16" href="https://www.seahorseresortvn.com/uploads/images/defaults/favicon/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="https://www.seahorseresortvn.com/uploads/images/defaults/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="48x48" href="https://www.seahorseresortvn.com/uploads/images/defaults/favicon/favicon-48x48.png">
+		<meta name="theme-color" content="#b56333">
+		<meta name="keywords" content="Phòng Deluxe">
+		<meta name="description" content="Phòng Deluxe">
+		<meta name="generator" content="Phòng Deluxe"/>
+		<meta name="robots" content="index,follow"/>
+		<meta name="refresh" http-equiv="refresh"/>
+		<meta name="language" content="Vietnamese"/>
+		<meta name="copyright" content="Seahorse Resort & Spa">
+		<meta name="author" content="Seahorse Resort &amp; Spa">
+		<meta http-equiv="audience" content="General">
+		<meta name="resource-type" content="Document">
+		<meta name="distribution" content="Global">
+		<meta name="revisit-after" content="1 days">
+		<meta property="og:site_name" content="www.seahorseresortvn.com">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="vi_VN">
+		<meta property="og:type" content="article"/>
+		<meta content="DOCUMENT" name="RESOURCE-TYPE">
+		<meta property="fb:pages" content="">
+		<meta property="fb:app_id" content=""/>
+		<meta property="fb:admins" content="">
+		<meta property="og:title" content="Phòng Deluxe"/>
+		<meta property="og:description" content="Phòng Deluxe"/>
+		<meta property="og:url" content=""/>
+		<meta property="og:image" content="https://www.seahorseresortvn.com/uploads/images/defaults/banner/banner_default.jpg"/>
+		<meta name="google-site-verification" content="">
+		<meta name="facebook-domain-verification" content="">
+		<meta name="facebook-signin-callback" content="">
+		<meta name="google-signin-client_id" content="">
+		<meta name="google-signin-callback" content="">
+					<script type="application/ld+json">{
+    "@context": "https:\/\/schema.org\/",
+    "@type": "WebSite",
+    "name": "Seahorse Resort Mui Ne -Phan Thiet - Vietnam - Cash voucher",
+    "url": "https:\/\/www.seahorseresortvn.com\/",
+    "description": "Seahorse Resort Mui Ne -Phan Thiet - Vietnam - Cash voucher 2 bữa ăn",
+    "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https:\/\/www.seahorseresortvn.com\/\/tim-kiem?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+    }
+}</script>
+							<script type="application/ld+json">{
+    "@context": "https:\/\/schema.org\/",
+    "@type": "Organization",
+    "name": "Seahorse Resort Mui Ne -Phan Thiet - Vietnam - Cash voucher",
+    "url": "https:\/\/www.seahorseresortvn.com\/phong-deluxe",
+    "logo": "https:\/\/www.seahorseresortvn.com\/uploads\/images\/defaults\/logo\/logo.png",
+    "description": "Seahorse Resort Mui Ne -Phan Thiet - Vietnam - Cash voucher 2 bữa ăn",
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+84 252 3847 507 ",
+        "contactType": "customer service"
+    },
+    "sameAs": [
+        "https:\/\/www.facebook.com\/seahorsemuine",
+        "",
+        "https:\/\/zalo.me\/1329940280028878909",
+        "https:\/\/www.tiktok.com\/@seahorseresortmuine"
+    ]
+}</script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&
+family=Charm:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="preload">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.min.css">
+		<link rel="stylesheet" href="/assets/frontend/css/style.css?v=1.1.3">
+		<script></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="https://accounts.google.com/gsi/client" async defer></script>
+<meta name="google-site-verification" content="PutgHHY9zeviPwIxjwTzuXQFNpfSvcqDJeEp-qZ_4ys" />
+<script type="text/javascript"></script>
+					<script></script>
+			<noscript>
+				<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JJKTF9" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+			</noscript>
+					<script async src="https://www.googletagmanager.com/gtag/js?id=G-7RWBYRME2M"></script>
+			<script></script>
+					<script></script>
+			<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=195276117738654&ev=PageView&noscript=1"/></noscript>
+			</head>
+	<body id="page">
+<div class="">
+	<header class="header">
+		<div class="container">
+			<div class="row align-items-center justify-content-between">
+				<div class="col-auto" style="width: 125px;">
+					<a href="/">
+						<img src="https://www.seahorseresortvn.com/uploads/images/defaults/logo/logo.png?v=1" alt="" class="logo">
+					</a>
+				</div>
+				<div class="col-auto">
+					<div class="resort-name">Seahorse Resort &amp; Spa</div>
+				</div>
+				<div class="col-auto">
+					<div class="language-switcher">
+						<div class="lang-dropdown">
+							<div class="lang-option-item">
+								<img src="/assets/frontend/images/flags/vi.png" alt="TIẾNG VIỆT" class="lang-flag me-1">
+								TIẾNG VIỆT
+								▼</div>
+						</div>
+						<div class="lang-dropdown-content">
+															<div class="lang-option-item">
+									<a href="#" class="lang-option  active " onclick="changeLanguage('vi')">
+										<img src="/assets/frontend/images/flags/vi.png" alt="TIẾNG VIỆT" class="lang-flag me-1">
+										TIẾNG VIỆT</a>
+								</div>
+															<div class="lang-option-item">
+									<a href="#" class="lang-option " onclick="changeLanguage('en')">
+										<img src="/assets/frontend/images/flags/en.png" alt="ENGLISH" class="lang-flag me-1">
+										ENGLISH</a>
+								</div>
+															<div class="lang-option-item">
+									<a href="#" class="lang-option " onclick="changeLanguage('ru')">
+										<img src="/assets/frontend/images/flags/ru.png" alt="РУССКИЙ" class="lang-flag me-1">
+										РУССКИЙ</a>
+								</div>
+															<div class="lang-option-item">
+									<a href="#" class="lang-option " onclick="changeLanguage('de')">
+										<img src="/assets/frontend/images/flags/de.png" alt="DEUTSCH" class="lang-flag me-1">
+										DEUTSCH</a>
+								</div>
+													</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+			<section class="banner-slider">
+							<div class="slide active" style="background-image: url('https://www.seahorseresortvn.com/uploads/images/banners/seahorsemuine-cr62150-hdr-jpg-img_68cd2344ae3491.70336307_.JPG');">
+					<div class="slide-content">
+						<h1 class="slide-title">Deluxe</h1>
+						<p class="slide-subtitle"></p>
+											</div>
+				</div>
+							<div class="slide" style="background-image: url('https://www.seahorseresortvn.com/uploads/images/banners/seahorsemuine-cr62158-hdr-jpg-img_68cd2344ae3957.39333051_.JPG');">
+					<div class="slide-content">
+						<h1 class="slide-title">Deluxe</h1>
+						<p class="slide-subtitle"></p>
+											</div>
+				</div>
+							<div class="slide" style="background-image: url('https://www.seahorseresortvn.com/uploads/images/banners/seahorsemuine-cr62168-jpg-img_68cd2344ae7dd3.58490122_.JPG');">
+					<div class="slide-content">
+						<h1 class="slide-title">Deluxe</h1>
+						<p class="slide-subtitle"></p>
+											</div>
+				</div>
+							<div class="slide" style="background-image: url('https://www.seahorseresortvn.com/uploads/images/banners/seahorsemuine-cr62173-hdr-2-jpg-img_68cd2344ae8005.94630304_.JPG');">
+					<div class="slide-content">
+						<h1 class="slide-title">Deluxe</h1>
+						<p class="slide-subtitle"></p>
+											</div>
+				</div>
+							<div class="slide" style="background-image: url('https://www.seahorseresortvn.com/uploads/images/banners/seahorsemuine-cr62185-hdr-jpg-img_68cd2344ae81b4.40974730_.JPG');">
+					<div class="slide-content">
+						<h1 class="slide-title">Deluxe</h1>
+						<p class="slide-subtitle"></p>
+											</div>
+				</div>
+			<nav class="nav-menu">
+				<div
+					class="container">
+					<div class="nav-header">
+						<div class="nav-logo">
+						<a href="/">
+								<img src="https://www.seahorseresortvn.com/uploads/images/defaults/logo/logo.png" alt="Seahorse Resort &amp; Spa" class="logo">
+							</a>
+						</div>
+						<div class="nav-resort-name">Seahorse Resort &amp; Spa</div>
+					<div class="nav-language-switcher">
+						<div class="lang-dropdown">
+							<div class="lang-option-item">
+								<img src="/assets/frontend/images/flags/vi.png" alt="TIẾNG VIỆT" class="lang-flag me-1">
+								TIẾNG VIỆT
+								▼</div>
+						</div>
+						<div class="lang-dropdown-content">
+															<div class="lang-option-item">
+									<a href="#" class="lang-option  active " onclick="changeLanguage('vi')">
+										<img src="/assets/frontend/images/flags/vi.png" alt="TIẾNG VIỆT" class="lang-flag me-1">
+										TIẾNG VIỆT</a>
+								</div>
+															<div class="lang-option-item">
+									<a href="#" class="lang-option " onclick="changeLanguage('en')">
+										<img src="/assets/frontend/images/flags/en.png" alt="ENGLISH" class="lang-flag me-1">
+										ENGLISH</a>
+								</div>
+															<div class="lang-option-item">
+									<a href="#" class="lang-option " onclick="changeLanguage('ru')">
+										<img src="/assets/frontend/images/flags/ru.png" alt="РУССКИЙ" class="lang-flag me-1">
+										РУССКИЙ</a>
+								</div>
+															<div class="lang-option-item">
+									<a href="#" class="lang-option " onclick="changeLanguage('de')">
+										<img src="/assets/frontend/images/flags/de.png" alt="DEUTSCH" class="lang-flag me-1">
+										DEUTSCH</a>
+								</div>
+													</div>
+					</div>
+					</div>
+					<div class="nav-menu-content">
+						<div class="nav-left">
+							<ul>
+																	<li class="dropdown">
+										<a href="/trang-chu" class="dropdown-toggle">Tổng quan</a>
+																					<ul class="dropdown-menu">
+																																							<li>
+															<a class="dropdown-item" href="/giai-thuong">Giải thưởng</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/seahorse-resort-spa-thien-duong-nghi-duong-ven-bien-mui-ne">Seahorse Resort &amp; Spa</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/vi-tri">Vị trí</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/thu-vien-hinh-anh">Thư viện hình ảnh</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/lien-he">Liên hệ</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="https://duan360.net/Seahorse">Video 3D</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item"
+															   href="#"
+															   data-bs-toggle="modal"
+															   data-bs-target="#videoModal"
+															   data-video-url="https://www.youtube.com/watch?v=3mvxFfKCUio">
+																VIDEO
+															</a>
+														</li>
+																																				</ul>
+																			</li>
+																	<li class="dropdown">
+										<a href="/phong-nghi" class="dropdown-toggle">Phòng nghỉ</a>
+																					<ul class="dropdown-menu">
+																																							<li>
+															<a class="dropdown-item" href="/phong-deluxe">Phòng Deluxe</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/phong-bungalow">Phòng Bungalow</a>
+														</li>
+																																				</ul>
+																			</li>
+																	<li class="dropdown">
+										<a href="/nha-hang-bar" class="dropdown-toggle">Nhà hàng &amp; Bar</a>
+																					<ul class="dropdown-menu">
+																																							<li>
+															<a class="dropdown-item" href="/nha-hang-hippocampe">Nhà hàng Hippocampe</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/non-la-poolbar">Bar nón lá</a>
+														</li>
+																																				</ul>
+																			</li>
+																	<li class="dropdown">
+										<a href="/uu-dai" class="dropdown-toggle">Ưu đãi</a>
+																					<ul class="dropdown-menu">
+																																							<li>
+															<a class="dropdown-item" href="/uu-dai-phong">Ưu đãi phòng</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/uu-dai-spa">Ưu đãi SPA</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/chuong-trinh-khuyen-mai">Chương trình khuyến mãi</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/tin-tuc-su-kien">Tin tức &amp; Sự kiện</a>
+														</li>
+																																				</ul>
+																			</li>
+																	<li class="dropdown">
+										<a href="/spa-giai-tri" class="dropdown-toggle">Spa &amp; giải trí</a>
+																					<ul class="dropdown-menu">
+																																							<li>
+															<a class="dropdown-item" href="/trung-tam-the-hinh">GYM</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/ho-boi-vo-cuc">Hồ bơi</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/the-thao-bien">Hoạt động ngoài trời</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/seahorse-spa-cham-soc-suc-khoe-sac-dep">Spa</a>
+														</li>
+																																				</ul>
+																			</li>
+																	<li class="dropdown">
+										<a href="/hoi-nghi-su-kien" class="dropdown-toggle">Hội nghị &amp; sự kiện</a>
+																					<ul class="dropdown-menu">
+																																							<li>
+															<a class="dropdown-item" href="/phong-hop-hoi-nghi">Hội nghị</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/tiec-cuoi-va-trang-mat">Tiệc cưới</a>
+														</li>
+																																																				<li>
+															<a class="dropdown-item" href="/su-kien">Sự kiện</a>
+														</li>
+																																				</ul>
+																			</li>
+															</ul>
+						</div>
+						<div class="nav-right">
+							<a href="booking-vi" class="book-now-btn">Kiểm tra phòng trống</a>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</section>
+	<div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered modal-xl">
+			<div class="modal-content bg-dark">
+				<div class="modal-header border-0">
+					<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body p-0">
+					<div class="ratio ratio-16x9">
+						<iframe id="youtubePlayer" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script></script>
+</div>
+												<div class="  ">
+															<section class=" mt-3 mb-3">
+	<div class="container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="/">Trang chủ</a>
+				</li>
+				<li class="breadcrumb-item active" aria-current="page">Phòng nghỉ </li>
+			</ol>
+		</nav>
+		<div
+			class="row">
+			<div class="col-12 mb-3">
+				<section class="category-short-description bg-white rounded-3 p-4">
+									</section>
+			</div>
+			<div class="col-12">
+				<section class="blog-list bg-white rounded-3 p-4">
+					<div class="row row-cols-1 row-cols-md-3 g-4">
+													<div class="col">
+								<div class="card h-100 border-0 shadow-sm position-relative overflow-hidden">
+									<a href="/phong-deluxe-huong-mot-phan-khong-huong/room" class="d-block position-relative">
+										<img src="https://www.seahorseresortvn.com/uploads/images/news/seahorsemuine-cr63383-hdrjpg-img_690075480be586.01414387_.JPG" alt="PHÒNG DELUXE KHÔNG CẢNH QUAN" class="card-img-top img-fluid w-100" style="object-fit: cover; height: 220px;">
+										<div class="position-absolute start-0 w-100" style="bottom:0; height:30%; background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center;">
+											<h5 class="card-title mb-0 fw-bold text-white text-center text-shadow" style="text-shadow: 0 2px 8px rgba(0,0,0,0.7); z-index:2; font-size: 1rem;">
+												PHÒNG DELUXE KHÔNG CẢNH QUAN
+											</h5>
+										</div>
+									</a>
+									<div class="card-body d-flex flex-column">
+										<p class="card-text mb-3 text-truncate-3" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">Phòng Deluxe đem đến trải nghiệm đi-xa-như-ở-nhà tại Seahorse Resort &amp; Spa.</p>
+																				<div class="mb-3">
+											<h6 class="text-muted mb-2 fw-bold">
+												<i class="fas fa-concierge-bell me-1"></i>Tiện ích nổi bật:
+											</h6>
+											<div class="d-flex flex-wrap gap-1">
+																																																			<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-expand-arrows-alt me-1"></i>															Diện tích phòng...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-eye me-1"></i>															Tầm nhìn một ph...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-door-open me-1"></i>															Ban công
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-bed me-1"></i>															Giường đôi hoặc...
+														</span>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										<span class="badge bg-secondary fw-normal" style="font-size: 0.75rem;">+ Thêm</span>
+																							</div>
+										</div>
+										<div class="d-flex gap-2 mt-auto">
+											<a href="/phong-deluxe-huong-mot-phan-khong-huong/room" class="btn btn-outline-seahorse flex-fill">Khám phá ngay</a>
+											<a href="/booking-vi?&amp;be-room=5049884" class="btn btn-seahorse flex-fill">Đặt ngay</a>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="col">
+								<div class="card h-100 border-0 shadow-sm position-relative overflow-hidden">
+									<a href="/phong-deluxe-huong-vuon/room" class="d-block position-relative">
+										<img src="https://www.seahorseresortvn.com/uploads/images/Phongnghi/Deluxe/Deluxe%20Garden%20View%20-%20DBL.jpg" alt="PHÒNG DELUXE HƯỚNG VƯỜN" class="card-img-top img-fluid w-100" style="object-fit: cover; height: 220px;">
+										<div class="position-absolute start-0 w-100" style="bottom:0; height:30%; background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center;">
+											<h5 class="card-title mb-0 fw-bold text-white text-center text-shadow" style="text-shadow: 0 2px 8px rgba(0,0,0,0.7); z-index:2; font-size: 1rem;">
+												PHÒNG DELUXE HƯỚNG VƯỜN
+											</h5>
+										</div>
+									</a>
+									<div class="card-body d-flex flex-column">
+										<p class="card-text mb-3 text-truncate-3" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">Phòng Deluxe hướng vườn được thiết kế theo nhiều phong cách kiến trúc khác nhau tạo sự đa dạng mà thống nhất, với không gian thoáng đãng, kết nối với sân vườn tạo cảm giác thư thái và tự nhiên nhất.</p>
+																				<div class="mb-3">
+											<h6 class="text-muted mb-2 fw-bold">
+												<i class="fas fa-concierge-bell me-1"></i>Tiện ích nổi bật:
+											</h6>
+											<div class="d-flex flex-wrap gap-1">
+																																																			<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-expand-arrows-alt me-1"></i>															Diện tích phòng...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-eye me-1"></i>															Tầm nhìn hướng ...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-door-open me-1"></i>															Ban công
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-bed me-1"></i>															Giường đôi hoặc...
+														</span>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										<span class="badge bg-secondary fw-normal" style="font-size: 0.75rem;">+ Thêm</span>
+																							</div>
+										</div>
+										<div class="d-flex gap-2 mt-auto">
+											<a href="/phong-deluxe-huong-vuon/room" class="btn btn-outline-seahorse flex-fill">Khám phá ngay</a>
+											<a href="/booking-vi?&amp;be-room=5049884" class="btn btn-seahorse flex-fill">Đặt ngay</a>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="col">
+								<div class="card h-100 border-0 shadow-sm position-relative overflow-hidden">
+									<a href="/phong-deluxe-huong-bien/room" class="d-block position-relative">
+										<img src="https://www.seahorseresortvn.com/uploads/images/news/seahorsemuine-cr62276-hdrjpg-img_6900768a567248.55568265_.JPG" alt="PHÒNG DELUXE HƯỚNG BIỂN" class="card-img-top img-fluid w-100" style="object-fit: cover; height: 220px;">
+										<div class="position-absolute start-0 w-100" style="bottom:0; height:30%; background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center;">
+											<h5 class="card-title mb-0 fw-bold text-white text-center text-shadow" style="text-shadow: 0 2px 8px rgba(0,0,0,0.7); z-index:2; font-size: 1rem;">
+												PHÒNG DELUXE HƯỚNG BIỂN
+											</h5>
+										</div>
+									</a>
+									<div class="card-body d-flex flex-column">
+										<p class="card-text mb-3 text-truncate-3" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">Deluxe Sea View đem đến trải nghiệm đi-xa-như-ở-nhà tại Seahorse Resort &amp; Spa.</p>
+																				<div class="mb-3">
+											<h6 class="text-muted mb-2 fw-bold">
+												<i class="fas fa-concierge-bell me-1"></i>Tiện ích nổi bật:
+											</h6>
+											<div class="d-flex flex-wrap gap-1">
+																																																			<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-expand-arrows-alt me-1"></i>															Diện tích phòng...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-eye me-1"></i>															Tầm nhìn ra biể...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-door-open me-1"></i>															Ban công
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-bed me-1"></i>															Giường đôi hoặc...
+														</span>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										<span class="badge bg-secondary fw-normal" style="font-size: 0.75rem;">+ Thêm</span>
+																							</div>
+										</div>
+										<div class="d-flex gap-2 mt-auto">
+											<a href="/phong-deluxe-huong-bien/room" class="btn btn-outline-seahorse flex-fill">Khám phá ngay</a>
+											<a href="/booking-vi?&amp;be-room=5049884" class="btn btn-seahorse flex-fill">Đặt ngay</a>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="col">
+								<div class="card h-100 border-0 shadow-sm position-relative overflow-hidden">
+									<a href="/phong-deluxe-gia-dinh-huong-mot-phankhong-huong/room" class="d-block position-relative">
+										<img src="https://www.seahorseresortvn.com/uploads/images/news/seahorsemuine-mb7a4606jpg-img_690074e5af0331.24321413_.jpg" alt="PHÒNG DELUXE GIA ĐÌNH KHÔNG CẢNH QUAN" class="card-img-top img-fluid w-100" style="object-fit: cover; height: 220px;">
+										<div class="position-absolute start-0 w-100" style="bottom:0; height:30%; background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center;">
+											<h5 class="card-title mb-0 fw-bold text-white text-center text-shadow" style="text-shadow: 0 2px 8px rgba(0,0,0,0.7); z-index:2; font-size: 1rem;">
+												PHÒNG DELUXE GIA ĐÌNH KHÔNG CẢNH QUAN
+											</h5>
+										</div>
+									</a>
+									<div class="card-body d-flex flex-column">
+										<p class="card-text mb-3 text-truncate-3" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">Phòng Deluxe gia đình là sự khởi đầu của ý tưởng giải phóng không gian.</p>
+																				<div class="mb-3">
+											<h6 class="text-muted mb-2 fw-bold">
+												<i class="fas fa-concierge-bell me-1"></i>Tiện ích nổi bật:
+											</h6>
+											<div class="d-flex flex-wrap gap-1">
+																																																			<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-expand-arrows-alt me-1"></i>															Diện tích phòng...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-eye me-1"></i>															Tầm nhìn một ph...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-door-open me-1"></i>															Ban công
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-bed me-1"></i>															Giường đôi hoặc...
+														</span>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										<span class="badge bg-secondary fw-normal" style="font-size: 0.75rem;">+ Thêm</span>
+																							</div>
+										</div>
+										<div class="d-flex gap-2 mt-auto">
+											<a href="/phong-deluxe-gia-dinh-huong-mot-phankhong-huong/room" class="btn btn-outline-seahorse flex-fill">Khám phá ngay</a>
+											<a href="/booking-vi?&amp;be-room=5049884" class="btn btn-seahorse flex-fill">Đặt ngay</a>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="col">
+								<div class="card h-100 border-0 shadow-sm position-relative overflow-hidden">
+									<a href="/phong-deluxe-gia-dinh-huong-vuon/room" class="d-block position-relative">
+										<img src="https://www.seahorseresortvn.com/uploads/images/news/seahorsemuine-cr62220-hdrjpg-img_690076bacc83c4.92677596_.JPG" alt="PHÒNG DELUXE GIA ĐÌNH HƯỚNG VƯỜN" class="card-img-top img-fluid w-100" style="object-fit: cover; height: 220px;">
+										<div class="position-absolute start-0 w-100" style="bottom:0; height:30%; background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center;">
+											<h5 class="card-title mb-0 fw-bold text-white text-center text-shadow" style="text-shadow: 0 2px 8px rgba(0,0,0,0.7); z-index:2; font-size: 1rem;">
+												PHÒNG DELUXE GIA ĐÌNH HƯỚNG VƯỜN
+											</h5>
+										</div>
+									</a>
+									<div class="card-body d-flex flex-column">
+										<p class="card-text mb-3 text-truncate-3" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">Phòng gia đình hướng vườn là sự khởi đầu của ý tưởng giải phóng không gian.</p>
+																				<div class="mb-3">
+											<h6 class="text-muted mb-2 fw-bold">
+												<i class="fas fa-concierge-bell me-1"></i>Tiện ích nổi bật:
+											</h6>
+											<div class="d-flex flex-wrap gap-1">
+																																																			<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-expand-arrows-alt me-1"></i>															Diện tích phòng...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-eye me-1"></i>															Tầm nhìn hướng ...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-door-open me-1"></i>															Ban công
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-bed me-1"></i>															Giường đôi hoặc...
+														</span>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										<span class="badge bg-secondary fw-normal" style="font-size: 0.75rem;">+ Thêm</span>
+																							</div>
+										</div>
+										<div class="d-flex gap-2 mt-auto">
+											<a href="/phong-deluxe-gia-dinh-huong-vuon/room" class="btn btn-outline-seahorse flex-fill">Khám phá ngay</a>
+											<a href="/booking-vi?&amp;be-room=5049884" class="btn btn-seahorse flex-fill">Đặt ngay</a>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="col">
+								<div class="card h-100 border-0 shadow-sm position-relative overflow-hidden">
+									<a href="/phong-deluxe-gia-dinh-huong-bien/room" class="d-block position-relative">
+										<img src="https://www.seahorseresortvn.com/uploads/images/Phongnghi/Deluxe/PHONG%20GIA%20DINH%20HUONG%20BIEN/Deluxe%20Family%20Seaview%201.jpg" alt="PHÒNG DELUXE GIA ĐÌNH HƯỚNG BIỂN" class="card-img-top img-fluid w-100" style="object-fit: cover; height: 220px;">
+										<div class="position-absolute start-0 w-100" style="bottom:0; height:30%; background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center;">
+											<h5 class="card-title mb-0 fw-bold text-white text-center text-shadow" style="text-shadow: 0 2px 8px rgba(0,0,0,0.7); z-index:2; font-size: 1rem;">
+												PHÒNG DELUXE GIA ĐÌNH HƯỚNG BIỂN
+											</h5>
+										</div>
+									</a>
+									<div class="card-body d-flex flex-column">
+										<p class="card-text mb-3 text-truncate-3" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">Nằm giữa thiên đường nhịêt đới, phòng Phòng hướng biển cao cấp là nơi mà bạn có thể tận hưởng không khí trong lành và yên tĩnh của miền biển tuyệt đẹp này.</p>
+																				<div class="mb-3">
+											<h6 class="text-muted mb-2 fw-bold">
+												<i class="fas fa-concierge-bell me-1"></i>Tiện ích nổi bật:
+											</h6>
+											<div class="d-flex flex-wrap gap-1">
+																																																			<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-expand-arrows-alt me-1"></i>															Diện tích phòng...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-eye me-1"></i>															Tầm nhìn ra biể...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-door-open me-1"></i>															Ban công
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-bed me-1"></i>															Giường đôi hoặc...
+														</span>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								<span class="badge bg-secondary fw-normal" style="font-size: 0.75rem;">+ Thêm</span>
+																							</div>
+										</div>
+										<div class="d-flex gap-2 mt-auto">
+											<a href="/phong-deluxe-gia-dinh-huong-bien/room" class="btn btn-outline-seahorse flex-fill">Khám phá ngay</a>
+											<a href="/booking-vi?&amp;be-room=5049884" class="btn btn-seahorse flex-fill">Đặt ngay</a>
+										</div>
+									</div>
+								</div>
+							</div>
+													<div class="col">
+								<div class="card h-100 border-0 shadow-sm position-relative overflow-hidden">
+									<a href="/phong-huong-bien-cao-cap/room" class="d-block position-relative">
+										<img src="https://www.seahorseresortvn.com/uploads/images/Phongnghi/Deluxe/premium%20deluxe%20seaview1.jpg" alt="PHÒNG HƯỚNG BIỂN CAO CẤP" class="card-img-top img-fluid w-100" style="object-fit: cover; height: 220px;">
+										<div class="position-absolute start-0 w-100" style="bottom:0; height:30%; background: rgba(0,0,0,0.35); display: flex; align-items: center; justify-content: center;">
+											<h5 class="card-title mb-0 fw-bold text-white text-center text-shadow" style="text-shadow: 0 2px 8px rgba(0,0,0,0.7); z-index:2; font-size: 1rem;">
+												PHÒNG HƯỚNG BIỂN CAO CẤP
+											</h5>
+										</div>
+									</a>
+									<div class="card-body d-flex flex-column">
+										<p class="card-text mb-3 text-truncate-3" style="display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;">Nằm giữa thiên đường nhịêt đới, phòng Phòng hướng biển cao cấp là nơi mà bạn có thể tận hưởng không khí trong lành và yên tĩnh của miền biển tuyệt đẹp này.</p>
+																				<div class="mb-3">
+											<h6 class="text-muted mb-2 fw-bold">
+												<i class="fas fa-concierge-bell me-1"></i>Tiện ích nổi bật:
+											</h6>
+											<div class="d-flex flex-wrap gap-1">
+																																																			<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-expand-arrows-alt me-1"></i>															Diện tích phòng...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-eye me-1"></i>															Tầm nhìn ra biể...
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-door-open me-1"></i>															Ban công
+														</span>
+																																																																		<span class="badge bg-light text-dark border fw-normal" style="font-size: 0.75rem;">
+															<i class="fas fa-bed me-1"></i>															Giường đôi
+														</span>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																										<span class="badge bg-secondary fw-normal" style="font-size: 0.75rem;">+ Thêm</span>
+																							</div>
+										</div>
+										<div class="d-flex gap-2 mt-auto">
+											<a href="/phong-huong-bien-cao-cap/room" class="btn btn-outline-seahorse flex-fill">Khám phá ngay</a>
+											<a href="/booking-vi" class="btn btn-seahorse flex-fill">Đặt ngay</a>
+										</div>
+									</div>
+								</div>
+							</div>
+											</div>
+											<div class="row">
+							<div class="col-12 text-center">
+								<div class="my-pagination mt-4">
+								</div>
+							</div>
+						</div>
+									</section>
+			</div>
+					</div>
+	</div>
+</section>
+												</div>
+<section class="follow-us-section">
+	<div class="container">
+		<div class="follow-us-box">
+			<h3 class="follow-us-title">Kết nối cùng Seahorse Resort &amp; Spa</h3>
+			<p class="follow-us-subtitle">Cập nhật ưu đãi và khoảnh khắc đáng nhớ cùng Seahorse Resort &amp; Spa</p>
+			<div class="follow-us-social">
+				<a href="https://www.facebook.com/seahorsemuine" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-btn">
+					<i class="fab fa-facebook-f"></i>
+				</a>
+				<a href="https://www.instagram.com/seahorsephanthiet_official" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-btn">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="https://www.tiktok.com/@seahorseresortmuine" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="social-btn">
+					<i class="fab fa-tiktok"></i>
+				</a>
+				<a href="https://zalo.me/1329940280028878909" target="_blank" rel="noopener noreferrer" aria-label="Zalo OA" class="social-btn zalo">
+					<span class="zalo-icon"></span>
+				</a>
+				<a href="https://www.tripadvisor.com.vn/Hotel_Review-g298086-d1171156-Reviews-Seahorse_Resort_Spa-Phan_Thiet_Binh_Thuan_Province.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor" class="social-btn tripadvisor">
+					<span class="tripadvisor-icon"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+<footer class="footer">
+	<div
+		class="container">
+		<div
+			class="footer-top-section">
+			<div class="footer-policy-box d-flex justify-content-end align-items-center gap-3 text-center mb-3">
+				<div class="policy-links-top">
+											<a href="/tin-tuc-su-kien" class="text-decoration-none">
+							Bản tin
+						</a>
+											<a href="/khach-hang-than-thiet" class="text-decoration-none">
+							Khách hàng thân thiết
+						</a>
+									</div>
+			</div>
+			<div class="footer-social-box">
+				<div class="qr-codes d-flex align-items-center justify-content-center gap-4">
+					<div class="qr-code-item text-center">
+						<img src="/uploads/images/defaults/social/zalopage.jpg" alt="Zalo QR Code" class="qr-code-image">
+						<p class="qr-code-label mt-2 mb-0">Zalo</p>
+					</div>
+					<div class="qr-code-item text-center">
+						<img src="/uploads/images/defaults/social/facebook-page-qrcode.jpg" alt="Seahorse Resort & Spa Facebook Page QR Code" class="qr-code-image">
+						<p class="qr-code-label mt-2 mb-0">Facebook</p>
+					</div>
+				</div>
+			</div>
+			<div class="footer-newsletter-box  justify-content-start align-items-start">
+				<form id="newsletterForm" class="newsletter-form">
+					<div class="input-group">
+						<input type="email" class="form-control" id="newsletterEmail" placeholder="Đăng ký Email nhận ưu đãi" required>
+						<button class="btn btn-primary" type="submit">
+							<i class="fas fa-paper-plane text-white"></i>
+						</button>
+					</div>
+					<div id="newsletterMessage" class="newsletter-message mt-2"></div>
+				</form>
+			</div>
+		</div>
+		<div class="footer-content">
+			<div class="footer-info">
+				<h3>AN IDEAL RESORT FOR A REAL VACATION</h3>
+				Giữa lòng Mũi Né – nơi được mệnh danh là “thủ đô Resort” của miền Nam Trung Bộ, Seahorse Resort & Spa hiện lên như một ốc đảo yên bình, nơi con người và thiên nhiên giao hòa trong từng khoảnh khắc.
+			</div>
+			<div class="footer-contact">
+			<h4>Phòng Kinh Doanh &amp; Tiếp Thị (Hỗ trợ Báo giá &amp; Đặt phòng)</h4>
+				<p>
+					<i class="fas fa-building"></i>
+					Tầng 15, Tòa nhà Pearl Plaza, 561A Điện Biên Phủ, P. Thạnh Mỹ Tây, TP. Hồ Chí Minh, Việt Nam</p>
+				<p>
+					<i class="fas fa-phone"></i>
+					Tel:
+					+84 28 7307 8288</p>
+				<p>
+					<i class="fas fa-envelope"></i>
+					Email:
+					salesoffice@seahorseresortvn.com</p>
+			</div>
+			<div class="footer-contact">
+				<h4>Địa chỉ</h4>
+				<p>
+					<i class="fas fa-map-marker-alt"></i>
+					Số 16 Nguyễn Đình Chiểu, phường Mũi Né, tỉnh Lâm Đồng, Việt Nam</p>
+				<h4>Liên hệ</h4>
+				<p>
+					<i class="fas fa-phone"></i>
+					+84 252 3847 507 </p>
+				<p>
+					<i class="fas fa-envelope"></i>
+					info@seahorseresortvn.com</p>
+				<p>
+					<i class="fas fa-globe"></i>
+					www.seahorseresortvn.com</p>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="footer-logos">
+				<img src="/uploads/images/default/logo_bocongthuong.png" alt="Thông báo Bộ Công Thương" class="footer-logo">
+			</div>
+			<div class="footer-copyright">
+				<p>&copy; 2001-2025 Seahorse Resort & Spa. Tất cả quyền được bảo lưu.</p>
+			</div>
+		</div>
+	</div>
+	<a href="https://www.kayak.com.au/hotels/Seahorse-Resort--Spa,Phan-Thiet-p17804-h120632-details/2025-10-07/2025-10-08/2adults?psid=oKGEJn0dAW&amp;pm=total" class="fixed-review-btn" target="_blank">
+		<img src="/assets/frontend/images/kayak.svg" alt="Travel Awards">
+		<span class="review-btn-content">
+			<span class="score-container">
+				<span class="score">8.7</span>
+				<span class="divider">/</span>
+				<span class="score">10</span>
+			</span>
+			<span class="label-container">
+				<span class="label">Excellent</span>
+				<span class="count">438 reviews</span>
+			</span>
+		</span>
+	</a>
+</footer>
+			<div id="loading-overlay" style="
+										display: none!important;
+										    position: fixed;
+										    top: 0; left: 0;
+										    width: 100%; height: 100%;
+										    background-color: rgba(0,0,0,0.5);
+										    z-index: 9999;
+										    display: flex;
+										    align-items: center;
+										    justify-content: center;
+										    color: #fff;
+										    font-size: 1.5rem;
+										">
+				Đang tải ...
+			</div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.min.js"></script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=REDACTED&callback=initMap"></script>
+		<script type="text/javascript" src="/assets/frontend/js/dist/main.dev.js?v=1.1.5"></script>
+		<script type="text/javascript" src="/assets/frontend/js/main.core.js?v=1"></script>
+		<script type="text/javascript" src="/assets/frontend/js/slider.js"></script>
+		<script type="text/javascript" src="/assets/frontend/js/main.layout.js?v=1"></script>
+		<script type="text/javascript" src="/assets/frontend/plugin/tableofcontent/jquery.toc.min.js"></script>
+		<script type="text/javascript" src="/assets/frontend/js/content.js"></script>
+				<script type="text/javascript" src="/assets/frontend/js/social/social.js?v=1.1.12"></script>
+			</body>
+</html>

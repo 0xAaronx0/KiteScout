@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name='robots' content='max-image-preview:large' />
+<title>Hotel &#038; Rooms &#8211; Numero Uno Puerto Rico</title>
+<link rel="alternate" type="application/rss+xml" title="Numero Uno Puerto Rico &raquo; Feed" href="https://numerounopr.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Numero Uno Puerto Rico &raquo; Comments Feed" href="https://numerounopr.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://numerounopr.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnumerounopr.com%2Fhotel%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://numerounopr.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnumerounopr.com%2Fhotel%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css'></style>
+<style id='wp-block-site-title-inline-css'></style>
+<style id='wp-block-page-list-inline-css'></style>
+<style id='wp-block-navigation-inline-css'></style>
+<style id='wp-block-group-inline-css'></style>
+<style id='wp-block-post-title-inline-css'></style>
+<style id='wp-block-post-content-inline-css'></style>
+<style id='wp-block-site-tagline-inline-css'></style>
+<style id='wp-block-spacer-inline-css'></style>
+<style id='wp-block-columns-inline-css'></style>
+<style id='wp-block-navigation-link-inline-css'></style>
+<style id='wp-block-paragraph-inline-css'></style>
+<style id='wp-emoji-styles-inline-css'></style>
+<style id='wp-block-library-inline-css'></style>
+<style id='global-styles-inline-css'></style>
+<style id='core-block-supports-inline-css'></style>
+<style id='wp-block-template-skip-link-inline-css'></style>
+<style id='twentytwentyfive-style-inline-css'></style>
+<link rel="https://api.w.org/" href="https://numerounopr.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://numerounopr.com/wp-json/wp/v2/pages/111" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://numerounopr.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.10" />
+<link rel="canonical" href="https://numerounopr.com/hotel/" />
+<link rel='shortlink' href='https://numerounopr.com/?p=111' />
+<script type="importmap" id="wp-importmap"></script>
+<link rel="modulepreload" href="https://numerounopr.com/wp-includes/js/dist/script-modules/interactivity/index.min.js?ver=66c613f68580994bb00a" id="@wordpress/interactivity-js-modulepreload" fetchpriority="low">
+<meta name="generator" content="Elementor 4.0.5; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style></style>
+			<style class='wp-fonts-local'></style>
+</head>
+<body class="wp-singular page-template-default page page-id-111 page-parent wp-embed-responsive wp-theme-twentytwentyfive elementor-default elementor-kit-7">
+<div class="wp-site-blocks"><header class="wp-block-template-part">
+<div class="wp-block-group alignfull is-layout-flow wp-block-group-is-layout-flow">
+	<div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained">
+		<div class="wp-block-group alignwide is-content-justification-space-between is-nowrap is-layout-flex wp-container-core-group-is-layout-8165f36a wp-block-group-is-layout-flex" style="padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30)">
+			<p class="wp-block-site-title"><a href="https://numerounopr.com" target="_self" rel="home">Numero Uno Puerto Rico</a></p>
+			<div class="wp-block-group is-content-justification-right is-nowrap is-layout-flex wp-container-core-group-is-layout-f4c28e8b wp-block-group-is-layout-flex">
+				<nav class="is-responsive items-justified-right wp-block-navigation is-content-justification-right is-layout-flex wp-container-core-navigation-is-layout-fc306653 wp-block-navigation-is-layout-flex" 
+		 data-wp-interactive="core/navigation" data-wp-context='{"overlayOpenedBy":{"click":false,"hover":false,"focus":false},"type":"overlay","roleAttribute":"","ariaLabel":"Menu"}'><button aria-haspopup="dialog" aria-label="Open menu" class="wp-block-navigation__responsive-container-open" 
+				data-wp-on--click="actions.openMenuOnClick"
+				data-wp-on--keydown="actions.handleMenuKeydown"
+			><svg></svg></button>
+				<div class="wp-block-navigation__responsive-container  has-text-color has-contrast-color has-background has-base-background-color"  id="modal-1" 
+				data-wp-class--has-modal-open="state.isMenuOpen"
+				data-wp-class--is-menu-open="state.isMenuOpen"
+				data-wp-watch="callbacks.initMenu"
+				data-wp-on--keydown="actions.handleMenuKeydown"
+				data-wp-on--focusout="actions.handleMenuFocusout"
+				tabindex="-1"
+			>
+					<div class="wp-block-navigation__responsive-close" tabindex="-1">
+						<div class="wp-block-navigation__responsive-dialog" 
+				data-wp-bind--aria-modal="state.ariaModal"
+				data-wp-bind--aria-label="state.ariaLabel"
+				data-wp-bind--role="state.roleAttribute"
+			>
+							<button aria-label="Close menu" class="wp-block-navigation__responsive-container-close" 
+				data-wp-on--click="actions.closeMenuOnClick"
+			><svg></svg></button>
+							<div class="wp-block-navigation__responsive-container-content" 
+				data-wp-watch="callbacks.focusFirstElement"
+			 id="modal-1-content">
+								<ul class="wp-block-navigation__container is-responsive items-justified-right wp-block-navigation"><ul class="wp-block-page-list"><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/camuy-caves/">Camuy Caves (Cuevas de Camuy)</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click menu-item-home"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/">Home</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/nu-menu-template/">Menu Template</a></li><li data-wp-context="{ &quot;submenuOpenedBy&quot;: { &quot;click&quot;: false, &quot;hover&quot;: false, &quot;focus&quot;: false }, &quot;type&quot;: &quot;submenu&quot;, &quot;modal&quot;: null, &quot;previousFocus&quot;: null }" data-wp-interactive="core/navigation" data-wp-on--focusout="actions.handleMenuFocusout" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--mouseenter="actions.openMenuOnHover" data-wp-on--mouseleave="actions.closeMenuOnHover" data-wp-watch="callbacks.initMenu" tabindex="-1" class="wp-block-pages-list__item has-child wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/n1-condos/">N1 Condos</a><button data-wp-bind--aria-expanded="state.isMenuOpen" data-wp-on--click="actions.toggleMenuOnClick" aria-label="N1 Condos submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" ><svg></svg></button><ul data-wp-on--focus="actions.openMenuOnFocus" class="wp-block-navigation__submenu-container"><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click has-text-color has-contrast-color has-background has-base-background-color"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/n1-condos/stay-n1-condos/">Stay N1 Condos</a></li></ul></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/shopping-tours/">Shopping in Old San Juan</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/snorkeling/">Snorkeling in Puerto Rico</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/zipline/">Ziplining in Puerto Rico</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/beach-house/">Beach House</a></li><li data-wp-context="{ &quot;submenuOpenedBy&quot;: { &quot;click&quot;: false, &quot;hover&quot;: false, &quot;focus&quot;: false }, &quot;type&quot;: &quot;submenu&quot;, &quot;modal&quot;: null, &quot;previousFocus&quot;: null }" data-wp-interactive="core/navigation" data-wp-on--focusout="actions.handleMenuFocusout" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--mouseenter="actions.openMenuOnHover" data-wp-on--mouseleave="actions.closeMenuOnHover" data-wp-watch="callbacks.initMenu" tabindex="-1" class="wp-block-pages-list__item has-child wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/pinones/">Piñones</a><button data-wp-bind--aria-expanded="state.isMenuOpen" data-wp-on--click="actions.toggleMenuOnClick" aria-label="Piñones submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" ><svg></svg></button><ul data-wp-on--focus="actions.openMenuOnFocus" class="wp-block-navigation__submenu-container"><li data-wp-context="{ &quot;submenuOpenedBy&quot;: { &quot;click&quot;: false, &quot;hover&quot;: false, &quot;focus&quot;: false }, &quot;type&quot;: &quot;submenu&quot;, &quot;modal&quot;: null, &quot;previousFocus&quot;: null }" data-wp-interactive="core/navigation" data-wp-on--focusout="actions.handleMenuFocusout" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--mouseenter="actions.openMenuOnHover" data-wp-on--mouseleave="actions.closeMenuOnHover" data-wp-watch="callbacks.initMenu" tabindex="-1" class="wp-block-pages-list__item has-child wp-block-navigation-item open-on-hover-click has-text-color has-contrast-color has-background has-base-background-color"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/pinones/hotel/">Piñones Hotel</a><button data-wp-bind--aria-expanded="state.isMenuOpen" data-wp-on--click="actions.toggleMenuOnClick" aria-label="Piñones Hotel submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" ><svg></svg></button><ul data-wp-on--focus="actions.openMenuOnFocus" class="wp-block-navigation__submenu-container"><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click has-text-color has-contrast-color has-background has-base-background-color"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/pinones/hotel/lagoon-room/">Lagoon Room</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click has-text-color has-contrast-color has-background has-base-background-color"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/pinones/hotel/standard-room/">Standard Room</a></li></ul></li></ul></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/dining/">Dining</a></li><li data-wp-context="{ &quot;submenuOpenedBy&quot;: { &quot;click&quot;: false, &quot;hover&quot;: false, &quot;focus&quot;: false }, &quot;type&quot;: &quot;submenu&quot;, &quot;modal&quot;: null, &quot;previousFocus&quot;: null }" data-wp-interactive="core/navigation" data-wp-on--focusout="actions.handleMenuFocusout" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--mouseenter="actions.openMenuOnHover" data-wp-on--mouseleave="actions.closeMenuOnHover" data-wp-watch="callbacks.initMenu" tabindex="-1" class="wp-block-pages-list__item current-menu-item has-child wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/hotel/" aria-current="page">Hotel &amp; Rooms</a><button data-wp-bind--aria-expanded="state.isMenuOpen" data-wp-on--click="actions.toggleMenuOnClick" aria-label="Hotel &amp; Rooms submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" ><svg></svg></button><ul data-wp-on--focus="actions.openMenuOnFocus" class="wp-block-navigation__submenu-container"><li data-wp-context="{ &quot;submenuOpenedBy&quot;: { &quot;click&quot;: false, &quot;hover&quot;: false, &quot;focus&quot;: false }, &quot;type&quot;: &quot;submenu&quot;, &quot;modal&quot;: null, &quot;previousFocus&quot;: null }" data-wp-interactive="core/navigation" data-wp-on--focusout="actions.handleMenuFocusout" data-wp-on--keydown="actions.handleMenuKeydown" data-wp-on--mouseenter="actions.openMenuOnHover" data-wp-on--mouseleave="actions.closeMenuOnHover" data-wp-watch="callbacks.initMenu" tabindex="-1" class="wp-block-pages-list__item has-child wp-block-navigation-item open-on-hover-click has-text-color has-contrast-color has-background has-base-background-color"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/hotel/apartments/">Apartments</a><button data-wp-bind--aria-expanded="state.isMenuOpen" data-wp-on--click="actions.toggleMenuOnClick" aria-label="Apartments submenu" class="wp-block-navigation__submenu-icon wp-block-navigation-submenu__toggle" ><svg></svg></button><ul data-wp-on--focus="actions.openMenuOnFocus" class="wp-block-navigation__submenu-container"><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click has-text-color has-contrast-color has-background has-base-background-color"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/hotel/apartments/one-bedroom/">1 Bedroom</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click has-text-color has-contrast-color has-background has-base-background-color"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/hotel/apartments/two-bedroom-suite/">2 Bedroom Suite</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click has-text-color has-contrast-color has-background has-base-background-color"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/hotel/apartments/beach-apartments/">Beach Apartments</a></li></ul></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click has-text-color has-contrast-color has-background has-base-background-color"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/hotel/deluxe-ocean-view/">Deluxe Ocean View</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click has-text-color has-contrast-color has-background has-base-background-color"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/hotel/deluxe-room/">Deluxe Room</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click has-text-color has-contrast-color has-background has-base-background-color"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/hotel/garden-view/">Garden View</a></li></ul></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/watersports/">Watersports</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/explore/">Explore</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/gallery/">Gallery</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/frequently-asked-questions/">FAQ</a></li><li class="wp-block-pages-list__item wp-block-navigation-item open-on-hover-click"><a class="wp-block-pages-list__item__link wp-block-navigation-item__content" href="https://numerounopr.com/contact/">Contact</a></li></ul></ul>
+							</div>
+						</div>
+					</div>
+				</div></nav>
+			</div>
+		</div>
+	</div>
+</div>
+</header>
+<main class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="margin-top:var(--wp--preset--spacing--60)">
+	<div class="wp-block-group alignfull has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--60)">
+		<h1 class="wp-block-post-title">Hotel &#038; Rooms</h1>
+		<div class="entry-content alignfull wp-block-post-content has-global-padding is-layout-constrained wp-block-post-content-is-layout-constrained">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&#038;family=Inter:wght@400;500;600;700;800&#038;family=Playfair+Display:wght@500;600;700&#038;display=swap" rel="stylesheet">
+<style></style>
+<div class="nu-wrap">
+  <div class="nu-menu-host"></div>
+  <script></script>
+  <section class="nu-hero">
+    <div class="nu-hero-content">
+      <p class="nu-kicker">Stay Beach House</p>
+      <h1>Choose Your Room</h1>
+      <p>Ocean Park’s Premier Boutique Waterfront Hotel. Stay steps from the beach, dining, watersports, and the relaxed rhythm of San Juan.</p>
+      <div class="nu-btns">
+        <a class="nu-btn" href="https://hotel2625.openhotel.com/results.cfm" target="_blank" rel="noopener">Book now</a>
+        <a class="nu-btn alt" href="#rooms">View rooms</a>
+      </div>
+    </div>
+  </section>
+  <section class="nu-section" id="rooms">
+    <div class="nu-section-head">
+      <p class="nu-eyebrow">Featured Rooms</p>
+      <h2>Stay where you play</h2>
+      <p>Choose from cozy garden rooms, spacious deluxe rooms, ocean view stays, or apartment-style accommodations for longer island escapes.</p>
+    </div>
+    <div class="nu-room-grid">
+      <article class="nu-card nu-click-card">
+        <a href="/hotel/garden-view/">
+          <img decoding="async" src="/wp-content/uploads/2026/05/DE9A5318-1.webp" alt="Garden View">
+          <div>
+            <span class="type">Room Type</span>
+            <h3>Garden View</h3>
+            <p>A quiet, relaxing room with beautiful garden courtyard views and designer touches.</p>
+            <div class="nu-room-features">
+              <span>2 Adults</span>
+              <span>Queen Bed</span>
+              <span>Garden View</span>
+            </div>
+            <span class="nu-btn">Room details</span>
+          </div>
+        </a>
+      </article>
+      <article class="nu-card nu-click-card">
+        <a href="/hotel/deluxe-room/">
+          <img decoding="async" src="/wp-content/uploads/2026/05/DE9A5315-1.webp" alt="Deluxe Room">
+          <div>
+            <span class="type">Room Type</span>
+            <h3>Deluxe Room</h3>
+            <p>More space, a king bed, sitting area, and a relaxing courtyard atmosphere.</p>
+            <div class="nu-room-features">
+              <span>King Bed</span>
+              <span>Sitting Area</span>
+              <span>Courtyard</span>
+            </div>
+            <span class="nu-btn">Room details</span>
+          </div>
+        </a>
+      </article>
+      <article class="nu-card nu-click-card">
+        <a href="/hotel/deluxe-ocean-view/">
+          <img decoding="async" src="/wp-content/uploads/2026/05/DE9A5295.webp" alt="Deluxe Ocean View">
+          <div>
+            <span class="type">Room Type</span>
+            <h3>Deluxe Ocean View</h3>
+            <p>Oversized windows with subtle sights and sounds of Ocean Park Beach.</p>
+            <div class="nu-room-features">
+              <span>Ocean View</span>
+              <span>Spacious</span>
+              <span>Beachside</span>
+            </div>
+            <span class="nu-btn">Room details</span>
+          </div>
+        </a>
+      </article>
+    </div>
+  </section>
+  <section class="nu-section">
+    <div class="nu-two">
+      <div>
+        <p class="nu-eyebrow">Beach Apartments</p>
+        <h2>Need space to stretch out?</h2>
+        <p>Our boutique Beach Apartments offer all the great Beach House amenities and perks, plus extra living space and a kitchenette. Stay for a night or stay awhile, all steps from Caribbean sands and epic waves.</p>
+        <p><strong>Room Type</strong><br>One Bedroom Beach Apartments</p>
+        <a class="nu-btn" href="/hotel/apartments/">View apartments</a>
+      </div>
+      <img decoding="async" src="/wp-content/uploads/2026/05/apartments.jpg" alt="Beach Apartments">
+    </div>
+  </section>
+  <section class="nu-section">
+    <div class="nu-amenities">
+      <div>
+        <p class="nu-eyebrow">Relax &#038; Enjoy</p>
+        <h2>Included Amenities</h2>
+        <p>Guests enjoy beachside hospitality, comfortable rooms, and access to the easy-going lifestyle of Numero Uno Beach House.</p>
+      </div>
+      <ul>
+        <li>Waste-free environmental practices and eco-friendly certification</li>
+        <li>Air Conditioning</li>
+        <li>Luxury spa and shower amenities</li>
+        <li>Complimentary amenity basket</li>
+        <li>Complimentary High-Speed Wi-Fi</li>
+        <li>Smart TV and DirecTV in every room</li>
+        <li>Beach towel service</li>
+        <li>Priority access to the beach bar and grill</li>
+      </ul>
+    </div>
+  </section>
+  <section class="nu-section">
+    <div class="nu-band">
+      <h2>Find adventure right where you wake up</h2>
+      <p>Enjoy kiteboarding, watersports, beach dining, and local recommendations from a team that knows the island.</p>
+      <div class="nu-btns">
+        <a class="nu-btn" href="https://hotel2625.openhotel.com/results.cfm" target="_blank" rel="noopener">Book your room</a>
+        <a class="nu-btn alt" href="https://www.kitepuertorico.com">Explore watersports</a>
+      </div>
+    </div>
+  </section>
+  <section class="nu-section">
+    <div class="nu-gallery">
+      <img decoding="async" src="/wp-content/uploads/2026/05/DE9A5315-1.webp" alt="Beach House guest room">
+      <img decoding="async" src="/wp-content/uploads/2026/05/DE9A5301-1.webp" alt="Beach House room">
+      <img decoding="async" src="/wp-content/uploads/2026/05/DE9A5295.webp" alt="Beach House ocean view room">
+      <img decoding="async" src="/wp-content/uploads/2026/05/DE9A5266-1.webp" alt="Numero Uno Beach House">
+    </div>
+  </section>
+  <section class="nu-section">
+    <div class="nu-footercta">
+      <h2>Ready to stay?</h2>
+      <p>Book your Ocean Park stay at Numero Uno Beach House.</p>
+      <div class="nu-btns" style="justify-content:center">
+        <a class="nu-btn" href="https://hotel2625.openhotel.com/results.cfm" target="_blank" rel="noopener">Book now</a>
+        <a class="nu-btn alt" href="/beach-house/">Visit Beach House</a>
+      </div>
+    </div>
+  </section>
+</div>
+</div>
+	</div>
+</main>
+<footer class="wp-block-template-part">
+<div class="wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained" style="padding-top:var(--wp--preset--spacing--60);padding-bottom:var(--wp--preset--spacing--50)">
+	<div class="wp-block-group alignwide is-layout-flow wp-block-group-is-layout-flow">
+		<div class="wp-block-group alignfull is-content-justification-space-between is-layout-flex wp-container-core-group-is-layout-e5edad21 wp-block-group-is-layout-flex">
+			<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-28f84493 wp-block-columns-is-layout-flex">
+				<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow" style="flex-basis:100%"><h2 class="wp-block-site-title"><a href="https://numerounopr.com" target="_self" rel="home">Numero Uno Puerto Rico</a></h2>
+				<p class="wp-block-site-tagline">Boutique stays, dining and watersports in Puerto Rico</p>
+				</div>
+				<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+					<div style="height:var(--wp--preset--spacing--40);width:0px" aria-hidden="true" class="wp-block-spacer"></div>
+				</div>
+			</div>
+			<div class="wp-block-group is-content-justification-space-between is-layout-flex wp-container-core-group-is-layout-570722b2 wp-block-group-is-layout-flex">
+				<nav class="is-vertical wp-block-navigation is-layout-flex wp-container-core-navigation-is-layout-fe9cc265 wp-block-navigation-is-layout-flex"><ul class="wp-block-navigation__container  is-vertical wp-block-navigation"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="#"><span class="wp-block-navigation-item__label">Blog</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="#"><span class="wp-block-navigation-item__label">About</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="#"><span class="wp-block-navigation-item__label">FAQs</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="#"><span class="wp-block-navigation-item__label">Authors</span></a></li></ul></nav>
+				<nav class="is-vertical wp-block-navigation is-layout-flex wp-container-core-navigation-is-layout-fe9cc265 wp-block-navigation-is-layout-flex"><ul class="wp-block-navigation__container  is-vertical wp-block-navigation"><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="#"><span class="wp-block-navigation-item__label">Events</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="#"><span class="wp-block-navigation-item__label">Shop</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="#"><span class="wp-block-navigation-item__label">Patterns</span></a></li><li class=" wp-block-navigation-item wp-block-navigation-link"><a class="wp-block-navigation-item__content"  href="#"><span class="wp-block-navigation-item__label">Themes</span></a></li></ul></nav>
+			</div>
+		</div>
+		<div style="height:var(--wp--preset--spacing--70)" aria-hidden="true" class="wp-block-spacer"></div>
+		<div class="wp-block-group alignfull is-content-justification-space-between is-layout-flex wp-container-core-group-is-layout-91e87306 wp-block-group-is-layout-flex">
+			<p class="has-small-font-size">Twenty Twenty-Five</p>
+			<p class="has-small-font-size">
+				Designed with <a href="https://wordpress.org" rel="nofollow">WordPress</a>			</p>
+		</div>
+	</div>
+</div>
+</footer>
+</div>
+<script type="speculationrules"></script>
+<script type="module" src="https://numerounopr.com/wp-includes/js/dist/script-modules/block-library/navigation/view.min.js?ver=b0f909c3ec791c383210" id="@wordpress/block-library/navigation/view-js-module" fetchpriority="low" data-wp-router-options="{&quot;loadOnClientNavigation&quot;:true}"></script>
+			<script></script>
+			<script id="wp-block-template-skip-link-js-after"></script>
+<script id="wp-emoji-settings" type="application/json"></script>
+<script type="module"></script>
+</body>
+</html>

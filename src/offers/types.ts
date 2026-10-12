@@ -165,6 +165,8 @@ export interface OfferAdapter {
   confidence?: 'high' | 'medium' | 'low';
   /** live quote recipe for exact dates (booking engines only) */
   quote?: QuoteRecipe;
+  /** lower photo size floor for a provider that only publishes small photos (Aaron's call per listing) */
+  imageMinSize?: { width: number; height: number };
   fetchContent(ctx: FetchContext): Promise<OfferContent>;
   fetchSlots(ctx: FetchContext): Promise<Slot[]>;
 }

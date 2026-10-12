@@ -1,0 +1,755 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      class="ios-preview-native-scroll">
+<head>
+    <meta charset="utf-8">
+<script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        HomeUrl: 'https://www.windhoekbonaire.com/',
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: '5f5c5714',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Aug 28, 2026',
+        ExternalUid: null,
+        IsSiteMultilingual: true,
+        InitialPostAlias: '',
+        InitialPostPageUuid: '',
+        InitialDynamicItem: '',
+        DynamicPageInfo: {
+            isDynamicPage: false,
+            base64JsonRowData: 'null',
+        },
+        InitialPageAlias: 'en',
+        InitialPageUuid: 'cbcca621ab6147c994269c3cdde1eb40',
+        InitialPageId: '48642767',
+        InitialEncodedPageAlias: 'ZW4=',
+        InitialHeaderUuid: '6c0318ca0c2848caa186a81ad4d3e608',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: false,
+        ThemeVersion: '500000',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        showCookieNotification: false,
+        cookiesNotificationMarkup: 'null',
+        translatedPageUrl: '/en',
+        sidebarPosition: 'NA',
+        currentLanguage: 'en',
+        currentLocale: 'en',
+        NavItems: '{}',
+        mapConsent: {
+            message: 'This content is served by a third party, {0}. If enabled, {0} may collect information about your activity.',
+            enable: 'Enable'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: -1,
+            NavbarLiveHomePage: 'https://www.windhoekbonaire.com/',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        planID: '7',
+        disableTracking: false,
+        pageType: 'FROM_SCRATCH',
+        isRuntimeServer: true,
+        isInEditor: false,
+        isInPreview: false,
+        hasNativeStore: false,
+        defaultLang: 'nl',
+        hamburgerMigration: null,
+        isFlexSite: true
+    };
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 30;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+<meta name="google-site-verification" content="69_K8NCd5M1MpAd18OcZ1Mb6PFiE89b-xLrpzufBhMk" data-swh-uuid="9b53e29577c943dd9acb1aa85118eeef"/>
+<script type="text/javascript" id="d_track_campaign" data-entry-referrer data-utm-cookies></script>
+<script type="text/javascript" ></script>
+<script></script>
+<script async src="/dnc17plhbz-5f5c5714/dtroolWVF02gWTqXLqw9A93BPGI"></script>
+<script type="text/javascript" id="d_track_ga"></script>
+<meta name="d-service-worker" content="register">
+<link rel="canonical" href="http://www.windhoekbonaire.com/en">
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="dm:lcp-preload" content="dm:lcp-frozen">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/5f5c5714/site_favicon_16_1738356012755.ico"/>
+<link rel="preconnect" href="https://irp.cdn-website.com"/>
+<link rel="preconnect" href="https://irp.cdn-website.com" crossorigin/>
+<link rel="preconnect" href="https://static.cdn-website.com"/>
+<script id='d-js-dmapi'></script>
+<script id="d-js-load-css"></script>
+<script data-role="deferred-init" type="text/javascript"></script>
+<style id="forceCssIncludes"></style>
+<style id="cssVariables" type="text/css"></style>
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Quicksand:ital,wght@0,300..700;1,300..700&amp;subset=latin-ext&amp;display=swap"  />
+<style></style>
+<style></style>
+<style></style>
+<link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/6827/_dm/s/rt/dist/css/d-css-runtime-flex-new-nav.min.css" />
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/5b0a7f317b13285f4266b577f432cfac.css" id="widgetCSS" />
+<style></style>
+<style></style>
+<style id="pageAdditionalWidgetsCss" type="text/css"></style>
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/5f5c5714/files/5f5c5714_en_header_1.min.css?v=403" id="siteGlobalCss" />
+<style id="customWidgetStyle" type="text/css"></style>
+<style id="innerPagesStyle" type="text/css"></style>
+<style
+        id="additionalGlobalCss" type="text/css"
+></style>
+<style id="pagestyle" type="text/css"></style>
+<style id="pagestyleDevice" type="text/css"></style>
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-common-63bd85219866cc362278151e-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-common-0e2f010c-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-common-9df9d643-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-common-90d7d6f4-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-common-2e5727b9-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-common-cecb9ded-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-common-38695a85-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-common-7550d82c-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-common-adfcf234-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-common-flex-footer-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-common-flex-header-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-common-510cd6b4-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-common-a1c024bb-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-common-b59d5a44-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-common-63a049320d35b55b4ef2a372-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-common-6406026c90e1521f6ecb0eca-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-common-63da2bddeae8da42b2353671-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-desktop-flex-header-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-desktop-63da2bddeae8da42b2353671-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-tablet_implicit-flex-header-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-tablet-63bd85219866cc362278151e-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-tablet-0e2f010c-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-tablet-9df9d643-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-tablet-90d7d6f4-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-tablet-2e5727b9-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-tablet-cecb9ded-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-tablet-38695a85-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-tablet-7550d82c-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-tablet-adfcf234-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-tablet-flex-footer-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-tablet-flex-header-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-tablet-510cd6b4-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-tablet-a1c024bb-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-tablet-b59d5a44-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-tablet-63a049320d35b55b4ef2a372-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-tablet-6406026c90e1521f6ecb0eca-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-tablet-63da2bddeae8da42b2353671-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+<style id="globalFontSizeStyle" type="text/css"></style>
+<style id="pageFontSizeStyle" type="text/css"></style>
+<script></script>
+<script type="text/javascript"></script>
+<script></script>
+<script id='d-js-params'></script>
+<script src="https://static.cdn-website.com/mnlt/production/6827/_dm/s/rt/dist/scripts/d-js-runtime-flex-package.min.js"  id="d-js-core" defer></script>
+<script></script>
+<style id="hideAnimFix"></style>
+<style id="fontFallbacks"></style>
+<link rel="alternate" hreflang="de" href="http://www.windhoekbonaire.com/de" />
+<link rel="alternate" hreflang="en" href="http://www.windhoekbonaire.com/en" />
+<link rel="alternate" hreflang="fr" href="http://www.windhoekbonaire.com/fr" />
+<link rel="alternate" hreflang="nl" href="http://www.windhoekbonaire.com/" />
+<link rel="alternate" hreflang="x-default" href="http://www.windhoekbonaire.com/" />
+<link rel="alternate" hreflang="es" href="http://www.windhoekbonaire.com/esc9eef4f1" />
+  <link type="application/rss+xml" rel="alternate" href="http://www.windhoekbonaire.com/feed/rss2"/>
+  <link type="application/atom+xml" rel="alternate" href="http://www.windhoekbonaire.com/feed/atom"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="http://www.windhoekbonaire.com/en"/>
+  <meta property="og:image" content="https://irp.cdn-website.com/5f5c5714/dms3rep/multi/opt/Windhoek+Resort+Bonaire-+Kralendijk-+Bonaire+-+True+media+-+culture-78-1920w.jpeg"/>
+  <title>
+    Luxe Resort | Windhoek Boutique Resort Bonaire
+  </title>
+  <meta name="description" content="Geniet van luxe villa's en prachtige stranden bij Windhoek Boutique Resort Bonaire. Boek nu jouw droomvakantie voor ultieme ontspanning!"/>
+  <meta name="keywords" content="Bonaire, Windhoek Boutique Resort, luxe accommodaties, villas Bonaire, kitesurfen Bonaire, snorkelen Bonaire, tropische vakanties, boutique resort, ontspanning, Caribisch paradijs"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Luxe Resort | Windhoek Boutique Resort Bonaire"/>
+  <meta name="twitter:description" content="Geniet van luxe villa's en prachtige stranden bij Windhoek Boutique Resort Bonaire. Boek nu jouw droomvakantie voor ultieme ontspanning!"/>
+  <meta property="og:description" content="Geniet van luxe villa's en prachtige stranden bij Windhoek Boutique Resort Bonaire. Boek nu jouw droomvakantie voor ultieme ontspanning!"/>
+  <meta property="og:title" content="Luxe Resort | Windhoek Boutique Resort Bonaire"/>
+</head>
+<body id="dmRoot" data-page-alias="en"  class="dmRoot fix-mobile-scrolling flex-site dmResellerSite "
+      style="padding:0;margin:0;"
+     data-flex-site >
+<div id="dm" class='dmwr'>
+    <div class="dm_wrapper -var5 null ">
+         <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="FlexHeader" data-responsive-name="FlexLayout" class="runtime-module-container dm-bfs dm-layout-home hasAnimations hasStickyHeader inMiniHeaderMode rows-1200 hamburger-reverse dmPageBody d-page-1716942098 inputs-css-clean dmDHeader" id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner" data-auto="page-inner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div id="site_content"> <div id="dmFlexHeaderContainer" class="flex_hfcontainer"> <div id="flex-header" data-variation-id="variation0" data-sticky="true" data-changeable-on-scroll="true" data-overlapping="true" role="banner"> <div data-layout-section="" data-auto="flex-section" id="1255042243" data-flex-id="510cd6b4" class="" data-hidden-on-mobile="true" data-hidden-on-tablet="true"> <div class="flex-widgets-container" id="1316913103"></div> 
+ <section id="0ddf69e4" class="flex-element section" data-auto="flex-element-section"> <div id="4546e096" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="01478190" class="flex-element group" data-auto="flex-element-group" data-hidden-on-mobile="" data-hidden-on-tablet=""> <div id="0aeb628d" class="flex-element group" data-auto="flex-element-group"></div> 
+ <div id="c4edd22d" class="flex-element group" data-auto="flex-element-group"> <div id="widget_2t4" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="graphic" data-keep-proportion="true" data-external-id="1494188136"> <div class="graphicWidget graphicWidgetV2 graphicWidgetV3 u_1494188136" data-element-type="graphic" data-widget-type="graphic" id="1494188136"> <a href="tel:+5997775483" id="1753033629" file="false"> <svg></svg> 
+</a> 
+</div> 
+</div> 
+ <div id="widget_vku" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1969431490"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1969431490" style=""><p class="t-size-16"><a href="tel:+5997775483" runtime_url="tel:+5997775483" type="call" style="display: initial; text-decoration: none;">+5997775483</a></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1419854790" data-flex-id="a1c024bb" data-layout-section=""> <div class="flex-widgets-container" id="1059477648"></div> 
+ <section id="db7bccb2" class="flex-element section" data-auto="flex-element-section"> <div id="1de4448b" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="b0f3de8e" class="flex-element group" data-auto="flex-element-group"> <div id="c7527faf" class="flex-element group" data-auto="flex-element-group"> <div id="78e6c4ba" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="image" data-keep-proportion="true" data-external-id="1357833649"> <div class="imageWidget align-center u_1357833649" data-element-type="image" data-widget-type="image" id="1357833649" data-binding=""> <a href="/en" id="1087775314"><img src="https://irp.cdn-website.com/5f5c5714/dms3rep/multi/opt/Logo-subtitle-white-1+%281%29-1920w.png" alt="A white background with a few lines on it" id="1595904571" class="" data-dm-image-path="https://irp.cdn-website.com/5f5c5714/dms3rep/multi/Logo-subtitle-white-1+%281%29.png" width="1563" height="990" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+</div> 
+ <div id="13252a3e" class="flex-element group" data-auto="flex-element-group" data-hidden-on-tablet="" data-hidden-on-mobile=""> <div id="72605361" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ONELinksMenu" data-external-id="1758272801"> <nav class="u_1758272801 effect-bottom main-navigation unifiednav dmLinksMenu" data-auto="links-menu" role="navigation" layout-main="horizontal_nav_layout_1" layout-sub="submenu_horizontal_1" data-show-vertical-sub-items="HOVER" id="1758272801" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container unav-top  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en" class="unifiednav__item unav-item unav-top-item  dmNavItemSelected  dmUDNavigationItem_00  " target="" data-target-page-alias="en" aria-current="page" data-auto="selected-page"> <span class="nav-item-text " data-link-text="Home" data-auto="page-text-style">Home<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" aria-expanded="false" data-sub-nav-menu="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/our-villas" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_01010139467  unifiednav__item_has-sub-nav" target="" data-target-page-alias="en/our-villas"> <span class="nav-item-text " data-link-text="Our villas" data-auto="page-text-style">Our villas<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" class="unifiednav__container unifiednav__container_sub-nav unav-sub" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/one-bedroom-villa" class="unifiednav__item unav-item   dmUDNavigationItem_010101787606  " target="" data-target-page-alias="en/one-bedroom-villa"> <span class="nav-item-text " data-link-text="One Bedroom Villa" data-auto="page-text-style">One Bedroom Villa<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/two-bedroom-villa" class="unifiednav__item unav-item   dmUDNavigationItem_010101285514  " target="" data-target-page-alias="en/two-bedroom-villa"> <span class="nav-item-text " data-link-text="Two Bedroom Villa" data-auto="page-text-style">Two Bedroom Villa<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" aria-expanded="false" data-sub-nav-menu="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/car-rental" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101774691  unifiednav__item_has-sub-nav" target="" data-target-page-alias="en/car-rental"> <span class="nav-item-text " data-link-text="Car rental" data-auto="page-text-style">Car rental<span class="icon icon-angle-down" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+ <ul role="menu" class="unifiednav__container unifiednav__container_sub-nav unav-sub" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1" data-hidden-on-desktop="" data-hidden-on-tablet=""> <a href="/en/reserveer-een-auto" class="unifiednav__item unav-item   dmUDNavigationItem_010101553647  " target="" data-target-page-alias="en/reserveer-een-auto"> <span class="nav-item-text " data-link-text="Reserve a car" data-auto="page-text-style">Reserve a car<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" aria-expanded="false" data-sub-nav-menu="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/services" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101199101  unifiednav__item_has-sub-nav" target="" data-target-page-alias="en/services"> <span class="nav-item-text " data-link-text="Services" data-auto="page-text-style">Services<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" class="unifiednav__container unifiednav__container_sub-nav unav-sub" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/swimming-pool" class="unifiednav__item unav-item   dmUDNavigationItem_010101806125  " target="" data-target-page-alias="en/swimming-pool"> <span class="nav-item-text " data-link-text="Swimming pool" data-auto="page-text-style">Swimming pool<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/honesty-bar" class="unifiednav__item unav-item   dmUDNavigationItem_010101518078  " target="" data-target-page-alias="en/honesty-bar"> <span class="nav-item-text " data-link-text="Honesty Bar" data-auto="page-text-style">Honesty Bar<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/massage" class="unifiednav__item unav-item   dmUDNavigationItem_010101287226  " target="" data-target-page-alias="en/massage"> <span class="nav-item-text " data-link-text="Massage" data-auto="page-text-style">Massage<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" aria-expanded="false" data-sub-nav-menu="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/activities" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101939255  unifiednav__item_has-sub-nav" target="" data-target-page-alias="en/activities"> <span class="nav-item-text " data-link-text="Activities" data-auto="page-text-style">Activities<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" class="unifiednav__container unifiednav__container_sub-nav unav-sub" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/windsurfing" class="unifiednav__item unav-item   dmUDNavigationItem_010101971002  " target="" data-target-page-alias="en/windsurfing"> <span class="nav-item-text " data-link-text="Windsurfing" data-auto="page-text-style">Windsurfing<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/kitesurfing" class="unifiednav__item unav-item   dmUDNavigationItem_010101233436  " target="" data-target-page-alias="en/kitesurfing"> <span class="nav-item-text " data-link-text="Kitesurfing" data-auto="page-text-style">Kitesurfing<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/wing-foiling" class="unifiednav__item unav-item   dmUDNavigationItem_010101361656  " target="" data-target-page-alias="en/wing-foiling"> <span class="nav-item-text " data-link-text="Wing foiling" data-auto="page-text-style">Wing foiling<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/klein-bonaire" class="unifiednav__item unav-item   dmUDNavigationItem_010101854308  " target="" data-target-page-alias="en/klein-bonaire"> <span class="nav-item-text " data-link-text="Klein Bonaire" data-auto="page-text-style">Klein Bonaire<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/slagbaai-park" class="unifiednav__item unav-item   dmUDNavigationItem_010101415411  " target="" data-target-page-alias="en/slagbaai-park"> <span class="nav-item-text " data-link-text="Slagbaai Park" data-auto="page-text-style">Slagbaai Park<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/snorkeling" class="unifiednav__item unav-item   dmUDNavigationItem_010101822619  " target="" data-target-page-alias="en/snorkeling"> <span class="nav-item-text " data-link-text="Snorkeling" data-auto="page-text-style">Snorkeling<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/scuba-diving" class="unifiednav__item unav-item   dmUDNavigationItem_010101319499  " target="" data-target-page-alias="en/scuba-diving"> <span class="nav-item-text " data-link-text="Diving" data-auto="page-text-style">Diving<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/yoga" class="unifiednav__item unav-item   dmUDNavigationItem_010101322565  " target="" data-target-page-alias="en/yoga"> <span class="nav-item-text " data-link-text="Yoga" data-auto="page-text-style">Yoga<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/freediving" class="unifiednav__item unav-item   dmUDNavigationItem_010101646104  " target="" data-target-page-alias="en/freediving"> <span class="nav-item-text " data-link-text="Freediving" data-auto="page-text-style">Freediving<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/blog" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101528770  " target="" data-target-page-alias="en/blog"> <span class="nav-item-text " data-link-text="Blog" data-auto="page-text-style">Blog<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/contact" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101152840  " target="" data-target-page-alias="en/contact"> <span class="nav-item-text " data-link-text="Contact" data-auto="page-text-style">Contact<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0" data-hidden-on-desktop=""> <a href="/en/faq" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101602712  " target="" data-target-page-alias="en/faq"> <span class="nav-item-text " data-link-text="FAQ" data-auto="page-text-style">FAQ<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0" data-hidden-on-desktop=""> <a href="/en/reviews" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101597907  " target="" data-target-page-alias="en/reviews"> <span class="nav-item-text " data-link-text="Reviews" data-auto="page-text-style">Reviews<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0" data-hidden-on-desktop=""> <a href="/en/terms-conditions" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_01010172479  " target="" data-target-page-alias="en/terms-conditions"> <span class="nav-item-text " data-link-text="Terms and conditions" data-auto="page-text-style">Terms and conditions<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+ <div id="01e12776" class="flex-element group" data-auto="flex-element-group" data-hidden-on-desktop=""> <div id="1ebb9b3e" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-hidden-on-desktop="" data-widget-type="hamburgerButton" data-external-id="1735302286"> <button class="hamburgerButton" data-element-type="hamburgerButton" id="1735302286" aria-label="Open menu" aria-controls="hamburger-drawer" aria-expanded="false"> <svg></svg> 
+</button> 
+</div> 
+</div> 
+ <div id="567810d3" class="flex-element group" data-auto="flex-element-group"> <div id="a495ac47" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="multilingual" data-external-id="1641965685"> <div id="1641965685" class="multilingualWidget dropdown flag-only" data-auto="multilingual-widget" dmle_extension="multilingual" data-element-type="multilingual" data-display="dropdown" icon="false" surround="false"> <div class="desktopMultilingual"> <div class="language current-language" data-auto="multilingual-current-language"> <a href="/en" data-disable-ajax-navigation="true"><img src="https://dd-cdn.multiscreensite.com/flags/flags_iso/32/us.png" alt="English" data-code="" onerror="handleImageLoadError(this)"/> <span class="name">English</span> 
+ <span class="short-label">en</span> 
+ <div class="dm-icon dm-icon-chevron-down"></div> 
+</a> 
+</div> 
+ <div class="language other-languages" data-auto="multilingual-other-languages"> <a href="/" data-code="" data-disable-ajax-navigation="true"><img src="https://dd-cdn.multiscreensite.com/flags/flags_iso/32/nl.png" alt="Nederlands" onerror="handleImageLoadError(this)"/> <span class="name">Nederlands</span> 
+ <span class="short-label">nl</span> 
+</a> 
+ <a href="/fr" data-code="" data-disable-ajax-navigation="true"><img src="https://dd-cdn.multiscreensite.com/flags/flags_iso/32/fr.png" alt="Français" onerror="handleImageLoadError(this)"/> <span class="name">Fran&ccedil;ais</span> 
+ <span class="short-label">fr</span> 
+</a> 
+ <a href="/de" data-code="" data-disable-ajax-navigation="true"><img src="https://dd-cdn.multiscreensite.com/flags/flags_iso/32/de.png" alt="Deutsch" onerror="handleImageLoadError(this)"/> <span class="name">Deutsch</span> 
+ <span class="short-label">de</span> 
+</a> 
+ <a href="/esc9eef4f1" data-code="" data-disable-ajax-navigation="true"><img src="https://dd-cdn.multiscreensite.com/flags/flags_iso/32/es.png" alt="Español" onerror="handleImageLoadError(this)"/> <span class="name">Espa&ntilde;ol</span> 
+ <span class="short-label">es</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+ <div id="hamburger-drawer" class="hamburger-drawer layout-drawer" layout="5ff40d2f36ae4e5ea1bc96b2e2fcf67e===header" data-origin="side-reverse"> <div data-layout-section="" data-auto="flex-section" id="1234196344" data-flex-id="b59d5a44"> <div class="flex-widgets-container" id="1684139264"></div> 
+ <section id="201ace87" class="flex-element section" data-auto="flex-element-section"> <div id="9683dcd7" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="b5c06542" class="flex-element group" data-auto="flex-element-group"> <div id="77d0ec24" class="flex-element group" data-auto="flex-element-group"> <div id="2a06aa5a" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="hamburgerButton" data-external-id="1624636510"> <button class="hamburgerButton" data-element-type="hamburgerButton" id="1624636510" aria-label="Close menu" aria-controls="hamburger-drawer" aria-expanded="false"> <svg></svg> 
+</button> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1099442592" data-flex-id="63a049320d35b55b4ef2a372" data-layout-section=""> <div class="flex-widgets-container" id="1247649854"></div> 
+ <section id="63a049320d35b55b4ef2a373" class="flex-element section" data-auto="flex-element-section"> <div id="63a049320d35b55b4ef2a376" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="63a049320d35b55b4ef2a377" class="flex-element group" data-auto="flex-element-group"> <div id="63a049320d35b55b4ef2a374" class="flex-element group" data-auto="flex-element-group"> <div id="63a049ca0d35b55b4ef2a5c3" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ONELinksMenu" data-external-id="1998592992"> <nav class="u_1998592992 effect-bottom main-navigation unifiednav dmLinksMenu" data-auto="links-menu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="" data-show-vertical-sub-items="HIDE" id="1998592992" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container unav-top  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en" class="unifiednav__item unav-item unav-top-item  dmNavItemSelected  dmUDNavigationItem_00  " target="" data-target-page-alias="en" aria-current="page" data-auto="selected-page"> <span class="nav-item-text " data-link-text="Home" data-auto="page-text-style">Home<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" aria-expanded="false" data-sub-nav-menu="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/our-villas" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_01010139467  unifiednav__item_has-sub-nav" target="" data-target-page-alias="en/our-villas"> <span class="nav-item-text " data-link-text="Our villas" data-auto="page-text-style">Our villas<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" class="unifiednav__container unifiednav__container_sub-nav unav-sub" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/one-bedroom-villa" class="unifiednav__item unav-item   dmUDNavigationItem_010101787606  " target="" data-target-page-alias="en/one-bedroom-villa"> <span class="nav-item-text " data-link-text="One Bedroom Villa" data-auto="page-text-style">One Bedroom Villa<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/two-bedroom-villa" class="unifiednav__item unav-item   dmUDNavigationItem_010101285514  " target="" data-target-page-alias="en/two-bedroom-villa"> <span class="nav-item-text " data-link-text="Two Bedroom Villa" data-auto="page-text-style">Two Bedroom Villa<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" aria-expanded="false" data-sub-nav-menu="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/car-rental" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101774691  unifiednav__item_has-sub-nav" target="" data-target-page-alias="en/car-rental"> <span class="nav-item-text " data-link-text="Car rental" data-auto="page-text-style">Car rental<span class="icon icon-angle-down" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+ <ul role="menu" class="unifiednav__container unifiednav__container_sub-nav unav-sub" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1" data-hidden-on-desktop="" data-hidden-on-tablet=""> <a href="/en/reserveer-een-auto" class="unifiednav__item unav-item   dmUDNavigationItem_010101553647  " target="" data-target-page-alias="en/reserveer-een-auto"> <span class="nav-item-text " data-link-text="Reserve a car" data-auto="page-text-style">Reserve a car<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" aria-expanded="false" data-sub-nav-menu="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/services" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101199101  unifiednav__item_has-sub-nav" target="" data-target-page-alias="en/services"> <span class="nav-item-text " data-link-text="Services" data-auto="page-text-style">Services<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" class="unifiednav__container unifiednav__container_sub-nav unav-sub" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/swimming-pool" class="unifiednav__item unav-item   dmUDNavigationItem_010101806125  " target="" data-target-page-alias="en/swimming-pool"> <span class="nav-item-text " data-link-text="Swimming pool" data-auto="page-text-style">Swimming pool<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/honesty-bar" class="unifiednav__item unav-item   dmUDNavigationItem_010101518078  " target="" data-target-page-alias="en/honesty-bar"> <span class="nav-item-text " data-link-text="Honesty Bar" data-auto="page-text-style">Honesty Bar<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/massage" class="unifiednav__item unav-item   dmUDNavigationItem_010101287226  " target="" data-target-page-alias="en/massage"> <span class="nav-item-text " data-link-text="Massage" data-auto="page-text-style">Massage<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" aria-expanded="false" data-sub-nav-menu="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/activities" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101939255  unifiednav__item_has-sub-nav" target="" data-target-page-alias="en/activities"> <span class="nav-item-text " data-link-text="Activities" data-auto="page-text-style">Activities<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" class="unifiednav__container unifiednav__container_sub-nav unav-sub" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/windsurfing" class="unifiednav__item unav-item   dmUDNavigationItem_010101971002  " target="" data-target-page-alias="en/windsurfing"> <span class="nav-item-text " data-link-text="Windsurfing" data-auto="page-text-style">Windsurfing<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/kitesurfing" class="unifiednav__item unav-item   dmUDNavigationItem_010101233436  " target="" data-target-page-alias="en/kitesurfing"> <span class="nav-item-text " data-link-text="Kitesurfing" data-auto="page-text-style">Kitesurfing<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/wing-foiling" class="unifiednav__item unav-item   dmUDNavigationItem_010101361656  " target="" data-target-page-alias="en/wing-foiling"> <span class="nav-item-text " data-link-text="Wing foiling" data-auto="page-text-style">Wing foiling<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/klein-bonaire" class="unifiednav__item unav-item   dmUDNavigationItem_010101854308  " target="" data-target-page-alias="en/klein-bonaire"> <span class="nav-item-text " data-link-text="Klein Bonaire" data-auto="page-text-style">Klein Bonaire<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/slagbaai-park" class="unifiednav__item unav-item   dmUDNavigationItem_010101415411  " target="" data-target-page-alias="en/slagbaai-park"> <span class="nav-item-text " data-link-text="Slagbaai Park" data-auto="page-text-style">Slagbaai Park<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/snorkeling" class="unifiednav__item unav-item   dmUDNavigationItem_010101822619  " target="" data-target-page-alias="en/snorkeling"> <span class="nav-item-text " data-link-text="Snorkeling" data-auto="page-text-style">Snorkeling<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/scuba-diving" class="unifiednav__item unav-item   dmUDNavigationItem_010101319499  " target="" data-target-page-alias="en/scuba-diving"> <span class="nav-item-text " data-link-text="Diving" data-auto="page-text-style">Diving<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/yoga" class="unifiednav__item unav-item   dmUDNavigationItem_010101322565  " target="" data-target-page-alias="en/yoga"> <span class="nav-item-text " data-link-text="Yoga" data-auto="page-text-style">Yoga<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="/en/freediving" class="unifiednav__item unav-item   dmUDNavigationItem_010101646104  " target="" data-target-page-alias="en/freediving"> <span class="nav-item-text " data-link-text="Freediving" data-auto="page-text-style">Freediving<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/blog" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101528770  " target="" data-target-page-alias="en/blog"> <span class="nav-item-text " data-link-text="Blog" data-auto="page-text-style">Blog<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/contact" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101152840  " target="" data-target-page-alias="en/contact"> <span class="nav-item-text " data-link-text="Contact" data-auto="page-text-style">Contact<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0" data-hidden-on-desktop=""> <a href="/en/faq" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101602712  " target="" data-target-page-alias="en/faq"> <span class="nav-item-text " data-link-text="FAQ" data-auto="page-text-style">FAQ<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0" data-hidden-on-desktop=""> <a href="/en/reviews" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_010101597907  " target="" data-target-page-alias="en/reviews"> <span class="nav-item-text " data-link-text="Reviews" data-auto="page-text-style">Reviews<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0" data-hidden-on-desktop=""> <a href="/en/terms-conditions" class="unifiednav__item unav-item unav-top-item  dmUDNavigationItem_01010172479  " target="" data-target-page-alias="en/terms-conditions"> <span class="nav-item-text " data-link-text="Terms and conditions" data-auto="page-text-style">Terms and conditions<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-auto="flex-section" id="1029527021" data-flex-id="6406026c90e1521f6ecb0eca" data-layout-section=""> <div class="flex-widgets-container" id="1659590659"></div> 
+ <section id="6406026c90e1521f6ecb0ec9" class="flex-element section" data-auto="flex-element-section"> <div id="6406026c90e1521f6ecb0ecb" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="6406026c90e1521f6ecb0ecc" class="flex-element group" data-auto="flex-element-group"> <div id="6406026c90e1521f6ecb0ecd" class="flex-element group" data-auto="flex-element-group"></div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+ <div class="layout-drawer-overlay" id="layout-drawer-overlay"></div> 
+</div> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_en dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper" data-auto="all-wrapper"> <div id="dm_content" class="dmContent" role="main"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl" id="1716942098"> <div data-auto="flex-section" id="1507551858" data-flex-id="63bd85219866cc362278151e" data-layout-section=""> <div class="flex-widgets-container" id="1865266723"></div> 
+ <section id="63bd85219866cc362278151d" class="flex-element section" data-auto="flex-element-section"> <div id="63bd85219866cc362278151f" class="flex-element grid hasExtraLayerOverlay relativePos" data-auto="flex-element-grid" data-layout-grid="" data-video-bg-url="https://vid.cdn-website.com/5f5c5714/videos/TL0mTpsyRnOlb0pPxSQi_Windhoekvideo2025desktop-v.mp4" data-video-bg-mobile="true" data-video-bg="eyJzcmMiOiJodHRwczovL3ZpZC5jZG4td2Vic2l0ZS5jb20vNWY1YzU3MTQvdmlkZW9zL1RMMG1UcHN5Um5PbGIwcFB4U1FpX1dpbmRob2VrdmlkZW8yMDI1ZGVza3RvcC12Lm1wNCIsImlkIjoiaHR0cHM6Ly92aWQuY2RuLXdlYnNpdGUuY29tLzVmNWM1NzE0L3ZpZGVvcy9UTDBtVHBzeVJuT2xiMHBQeFNRaV9XaW5kaG9la3ZpZGVvMjAyNWRlc2t0b3Atdi5tcDQiLCJwcm92aWRlciI6ImNkbiIsImVtYmVkIjoiaHR0cHM6Ly92aWQuY2RuLXdlYnNpdGUuY29tLzVmNWM1NzE0L3ZpZGVvcy9UTDBtVHBzeVJuT2xiMHBQeFNRaV9XaW5kaG9la3ZpZGVvMjAyNWRlc2t0b3Atdi5tcDQiLCJyYXRpbyI6MC41NjI1LCJ0aHVtYm5haWwiOiJodHRwczovL2lycC5jZG4td2Vic2l0ZS5jb20vNWY1YzU3MTQvZG1zM3JlcC9tdWx0aS9UTDBtVHBzeVJuT2xiMHBQeFNRaV9XaW5kaG9la3ZpZGVvMjAyNWRlc2t0b3AudjIuMDAwMDAwMC5qcGciLCJzdXBwb3J0QmdPbk1vYmlsZSI6dHJ1ZSwic3VwcG9ydEJnTG9vcCI6dHJ1ZSwidmlkZW9VcmwiOiJodHRwczovL3ZpZC5jZG4td2Vic2l0ZS5jb20vNWY1YzU3MTQvdmlkZW9zL1RMMG1UcHN5Um5PbGIwcFB4U1FpX1dpbmRob2VrdmlkZW8yMDI1ZGVza3RvcC12Lm1wNCIsInBvc3RlciI6Imh0dHBzOi8vaXJwLmNkbi13ZWJzaXRlLmNvbS81ZjVjNTcxNC9kbXMzcmVwL211bHRpL1RMMG1UcHN5Um5PbGIwcFB4U1FpX1dpbmRob2VrdmlkZW8yMDI1ZGVza3RvcC52Mi4wMDAwMDAwLmpwZyJ9" data-video-init="true"> <div class="videobgwrapper video-ssr" data-ratio="0.5625"> <video preload="none" playsinline="playsinline" muted="muted" loop="loop" class="videobgframe" poster="https://irp.cdn-website.com/5f5c5714/dms3rep/multi/opt/TL0mTpsyRnOlb0pPxSQi_Windhoekvideo2025desktop.v2.0000000-1920w.jpg" data-video-src="https://vid.cdn-website.com/5f5c5714/videos/TL0mTpsyRnOlb0pPxSQi_Windhoekvideo2025desktop-v.mp4" style="object-position: 50% 50%" id="videobgframe-63bd85219866cc362278151f"></video> 
+</div> 
+ <div class="bgExtraLayerOverlay"></div> 
+ <div id="63bd85219866cc3622781520" class="flex-element group" data-auto="flex-element-group"> <div id="63bd85219866cc3622781521" class="flex-element group" data-auto="flex-element-group"> <div id="widget_7u4" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1887560844"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1887560844" style=""> <h1 class="text-align-center m-size-40 size-60 t-size-51"><span style="display: unset; color: var(--color_3);" class="font-size-60 t-font-size-51 m-font-size-40">Come home to yourself</span></h1> 
+</div> 
+</div> 
+ <div id="widget_0q1" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="html" data-external-id="1695531446"> <div data-element-type="html" class="dmCustomHtml" id="1695531446"> <script src="https://elfsightcdn.com/platform.js" async=""></script> 
+ <div class="elfsight-app-c9b1defd-9b08-4b8c-9920-8f69d9181d32" data-elfsight-app-lazy=""></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-layout-section="" data-auto="flex-section" id="1982424595" data-flex-id="0e2f010c"> <div class="flex-widgets-container" id="1014435026"></div> 
+ <section id="62ca21aa" class="flex-element section" data-auto="flex-element-section"> <div id="8ca1bd77" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="e1382fde" class="flex-element group" data-auto="flex-element-group"> <div id="98e31b0c" class="flex-element group" data-auto="flex-element-group"> <div id="widget_sgg" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="html" data-external-id="1063837269"> <div data-element-type="html" class="dmCustomHtml u_1063837269" id="1063837269"> <div style="padding:25px;margin:20px auto;display:flex;flex-wrap:wrap;background-color:#284B63;border-radius:12px;box-shadow:0 4px 10px rgba(0, 0, 0, 0.1);text-transform:uppercase;max-width:950px;gap:20px;justify-content:space-between;font-family:'Quicksand', sans-serif;align-items:flex-end;"> <div style="flex: 1; min-width: 280px;"> <label for="arrivalDate" style="display: block; font-size: 15px; font-weight: bold; color: #fff; margin-bottom: 10px;">Check-in Date</label> 
+ <div style="position: relative;"><input type="text" id="arrivalDate" placeholder="Select check-in date" readonly="" style="width: 100%; padding: 15px 20px 15px 50px; font-size: 16px; border: 1px solid #ddd; border-radius: 8px; background-color: #fff;" aria-label="Select check-in date" data-placeholder-original="Select check-in date"/><img src="https://icons.veryicon.com/png/o/miscellaneous/esgcc-basic-icon-library/date-71.png" alt="Calendar" class="calendar-icon" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; pointer-events: none;" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div style="flex: 1; min-width: 280px;"> <label for="departureDate" style="display: block; font-size: 15px; font-weight: bold; color: #fff; margin-bottom: 10px;">Check-out Date</label> 
+ <div style="position: relative;"><input type="text" id="departureDate" placeholder="Select check-out date" readonly="" style="width: 100%; padding: 15px 20px 15px 50px; font-size: 16px; border: 1px solid #ddd; border-radius: 8px; background-color: #fff;" aria-label="Select check-out date" data-placeholder-original="Select check-out date"/><img src="https://icons.veryicon.com/png/o/miscellaneous/esgcc-basic-icon-library/date-71.png" alt="Calendar" class="calendar-icon" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; pointer-events: none;" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div style="flex: 1; min-width: 280px; display: flex; align-items: flex-end;"> <button id="bookRoom" style="background-color:#a8c5c5;border:none;border-radius:8px;cursor:pointer;padding:15px 0;color:#284B63;font-weight:bold;width:100%;font-size:18px;font-family:'Quicksand', sans-serif;transition:background-color 0.3s;">BOOK NOW</button> 
+</div> 
+</div> 
+ <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/> <style></style> 
+ <script></script> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-flex-id="9df9d643" data-auto="flex-section" id="1028720705" data-layout-section="" data-page-element-type="section" data-page-element-id="1048005097"> <div class="flex-widgets-container" id="1618396994"></div> 
+ <section id="71bcd224" class="flex-element section" data-auto="flex-element-section"> <div id="a6ef08d6" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="befb395b" class="flex-element group" data-auto="flex-element-group"> <div id="1b09f993" class="flex-element group" data-auto="flex-element-group"> <div id="efc2576d" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1382398320"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1382398320" data-ai-tag="Section title" style=""> <h1 class="t-size-36 text-align-center m-size-32 m-text-align-left"> <span class="t-font-size-36 m-font-size-32" style="display:unset;">Windhoek Boutique Resort Bonaire</span> 
+</h1> 
+</div> 
+</div> 
+ <div id="2daa57cf" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1733966437"> <div class="dmNewParagraph skip-animation-effect skip-hover-effect" data-element-type="paragraph" data-version="5" id="1733966437" data-ai-tag="Short description" style=""> <h2 class="m-size-19 t-size-20 text-align-center m-text-align-left size-24"><span class="font-size-24 m-font-size-19 t-font-size-20" style="color: var(--color_1); font-weight: normal; display: initial;">Your oasis of comfort in the heart of the Caribbean</span></h2> 
+<p class="t-size-17 text-align-center m-text-align-left"><span style="display: initial;"><br/></span></p><p class="text-align-center m-text-align-left"><span style="display: initial;">Windhoek Boutique Resort Bonaire is the perfect destination for your dream vacation. In our stylish villas, designed by Piet Boon, you&rsquo;ll experience island life at its finest. Take a refreshing dip in the pool and sip a delicious drink at the bar under the palapa. Windhoek Bonaire is an oasis of comfort, surrounded by stunning beaches where you can windsurf, dive, snorkel, or simply unwind and relax.</span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-flex-id="90d7d6f4" data-auto="flex-section" id="1862297656" data-layout-section="" data-page-element-type="section" data-page-element-id="1064588942"> <div class="flex-widgets-container" id="1948276435"></div> 
+ <section id="d6089be5" class="flex-element section" data-auto="flex-element-section"> <div id="b33145ad" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="4d0d12bc" class="flex-element group" data-auto="flex-element-group"> <div id="a7f629cd" class="flex-element group" data-auto="flex-element-group"> <div id="0a2a5f8c" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1707886416"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1707886416" data-ai-tag="Short paragraph (2 sentences)" style=""> <h2> <span style="display:initial;">One bedroom villa</span> 
+</h2> 
+</div> 
+</div> 
+ <div id="d16f99e3" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1124241519"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1124241519" data-ai-tag="Kicker"><p><span class="" style="display: unset;"><span style="display: unset;">Experience the ultimate outdoor lifestyle on Bonaire in our charming</span> 
+</span><a href="/en/one-bedroom-villa" runtime_url="/en/1-bedroom-villa" type="page" style="display: unset;">one-bedroom villa for two</a><span style="display: unset;">. With an open-air living space, you&rsquo;ll enjoy pure relaxation under the tropical sun.</span></p></div> 
+</div> 
+ <div id="ddb9fe4a" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1094353949"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1094353949" file="false" href="/en/one-bedroom-villa" data-element-type="dButtonLinkId" id="1094353949"> <span class="iconBg" id="1083445131"> <span class="icon hasFontIcon icon-star" id="1912237459"></span> 
+</span> 
+ <span class="text" id="1518569283" data-ai-tag="Short button text">READ MORE</span> 
+</a> 
+</div> 
+</div> 
+ <div id="883656c9" class="flex-element group" data-auto="flex-element-group" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6ImZhZGVJbkNvbWJvIiwiZHVyYXRpb24iOjEsImRlbGF5IjowLCJpbnRlbnNpdHkiOjEsImRpciI6ImluLXBsYWNlIn19"></div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-flex-id="2e5727b9" data-auto="flex-section" id="1040596953" data-layout-section="" data-page-element-type="section" data-page-element-id="1064588942"> <div class="flex-widgets-container" id="1576830634"></div> 
+ <section id="1346bd7f" class="flex-element section" data-auto="flex-element-section"> <div id="f6285709" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="9e41dbc2" class="flex-element group" data-auto="flex-element-group"> <div id="cba1f593" class="flex-element group" data-auto="flex-element-group" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6ImZhZGVJbkNvbWJvIiwiZHVyYXRpb24iOjEsImRlbGF5IjowLCJpbnRlbnNpdHkiOjEsImRpciI6ImluLXBsYWNlIn19" data-gallery-bg="eyJzbGlkZXMiOlsiaHR0cHM6Ly9pcnAuY2RuLXdlYnNpdGUuY29tLzVmNWM1NzE0L2RtczNyZXAvbXVsdGkvb3B0L3R3by1iZWRyb29tdmlsbGEzLTE5MjB3LndlYnAiLCJodHRwczovL2lycC5jZG4td2Vic2l0ZS5jb20vNWY1YzU3MTQvZG1zM3JlcC9tdWx0aS9vcHQvVHdvLWJlZHJvb212aWxsYTQtMTkyMHcud2VicCJdLCJ0cmFuc2l0aW9uIjoiZmFkZSIsInNwZWVkIjoyfQ=="></div> 
+ <div id="74279fa9" class="flex-element group" data-auto="flex-element-group"> <div id="b7a9642d" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1454415808"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1454415808" data-ai-tag="Short paragraph (2 sentences)" style=""> <h2> <span style="display:initial;">Two bedroom villa</span> 
+</h2> 
+</div> 
+</div> 
+ <div id="959a0079" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1135470048"> <div class="dmNewParagraph skip-animation-effect skip-hover-effect" data-element-type="paragraph" data-version="5" id="1135470048" data-ai-tag="Kicker" style=""><p><span class="" style="display: unset;"><span style="display: unset;">Let the refreshing Caribbean breeze embrace you in our spacious</span> 
+</span><a href="/en/two-bedroom-villa" runtime_url="/en/2-slaapkamer-villa" type="page" style="display: unset;">two-bedroom villa</a><span style="display: unset;">, featuring a cozy open-air living room, a luxurious bathroom with a rain shower, and a comfortable lounge area for complete relaxation.</span></p></div> 
+</div> 
+ <div id="f049cfaa" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1790880694"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1790880694" file="false" href="/en/two-bedroom-villa" data-element-type="dButtonLinkId" id="1790880694"> <span class="iconBg" id="1444110839"> <span class="icon hasFontIcon icon-star" id="1436488740"></span> 
+</span> 
+ <span class="text" id="1482153980" data-ai-tag="Short button text">READ MORE</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-layout-section="" data-auto="flex-section" id="1509428964" data-flex-id="cecb9ded"> <div class="flex-widgets-container" id="1659149119"></div> 
+ <section id="5796a67f" class="flex-element section" data-auto="flex-element-section"> <div id="c327bdf1" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="78f042a0" class="flex-element group" data-auto="flex-element-group"> <div id="0d1c1a71" class="flex-element group" data-auto="flex-element-group"> <div id="widget_4eb" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="graphic" data-external-id="1472215500"> <div class="graphicWidget graphicWidgetV2 graphicWidgetV3 u_1472215500" data-element-type="graphic" data-widget-type="graphic" id="1472215500"> <svg></svg> 
+</div> 
+</div> 
+ <div id="285aadbf" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1512193543"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1512193543" style=""> <h2 class="text-align-center"><span style="display: unset;">&quot;Windhoek Luxury Resort Bonaire feels like coming home to paradise&quot;</span></h2> 
+ <h2 class="text-align-center"><br/></h2> 
+ <h2 class="text-align-center size-26"><a href="/en/reviews" runtime_url="/en/reviews" type="page" class="font-size-26" style="display: unset;">Read here what our guest said about Windhoek Boutique Resort Bonaire</a></h2> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-layout-section="" data-auto="flex-section" id="1802218372" data-flex-id="38695a85"> <div class="flex-widgets-container" id="1266842767"></div> 
+ <section id="abc622bd" class="flex-element section" data-auto="flex-element-section"> <div id="1cdea865" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="7d03a5e2" class="flex-element group" data-auto="flex-element-group"> <div id="75c2cbc2" class="flex-element group" data-auto="flex-element-group"> <div id="widget_tjo" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="html" data-external-id="1191824090"> <div data-element-type="html" class="dmCustomHtml" id="1191824090"> <script src="https://static.elfsight.com/platform/platform.js" async=""></script> 
+ <div class="elfsight-app-c8a26cc1-c7c6-46e8-9d08-885315cac544" data-elfsight-app-lazy=""></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-layout-section="" data-auto="flex-section" id="1264838361" data-flex-id="7550d82c"> <div class="flex-widgets-container" id="1484351161"></div> 
+ <section id="688e7c56" class="flex-element section" data-auto="flex-element-section"> <div id="0629bb6c" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="eca8ea7e" class="flex-element group" data-auto="flex-element-group"> <div id="6a5d9f4c" class="flex-element group" data-auto="flex-element-group" data-hidden-on-mobile=""></div> 
+</div> 
+</div> 
+</section> 
+</div> 
+ <div data-layout-section="" data-auto="flex-section" id="1973878745" data-flex-id="adfcf234"> <div class="flex-widgets-container" id="1909461859"></div> 
+ <section id="52ce48e8" class="flex-element section" data-auto="flex-element-section"> <div id="dab6c37a" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="5876abaa" class="flex-element group" data-auto="flex-element-group"> <div id="318ed2b8" class="flex-element group" data-auto="flex-element-group"> <div id="widget_g1h" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1884279538"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1884279538" style=""> <h3 class="size-48 t-size-41 m-size-38 text-align-center"> <span class="font-size-48 t-font-size-41 m-font-size-38" style="color:var(--color_3);display:unset;">Book your stay with us</span> 
+</h3> 
+</div> 
+</div> 
+ <div id="f629dbeb" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="link" data-external-id="1964850246"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1964850246" file="false" href="https://booking.roomraccoon.nl/windhoek-resort/en/" data-element-type="dButtonLinkId" id="1964850246" target="_blank"> <span class="iconBg" id="1030762963"> <span class="icon hasFontIcon icon-star" id="1717660907"></span> 
+</span> 
+ <span class="text" id="1355935931" data-ai-tag="Short button text">MAKE A RESERVATION</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer flex_hfcontainer"> <div id="flex-footer" role="contentinfo"> <div data-auto="flex-section" id="1755561873" data-flex-id="63da2bddeae8da42b2353671" data-layout-section=""> <div class="flex-widgets-container" id="1245219930"></div> 
+ <section id="63da2bddeae8da42b2353670" class="flex-element section" data-auto="flex-element-section"> <div id="63da2bddeae8da42b2353672" class="flex-element grid" data-auto="flex-element-grid" data-layout-grid=""> <div id="63da2bddeae8da42b2353673" class="flex-element group" data-auto="flex-element-group"> <div id="63da2bf2eae8da42b23538a2" class="flex-element group" data-auto="flex-element-group" data-hidden-on-mobile=""> <div id="widget_erh" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1291501055"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1291501055" style=""> <h5> <span style="color:var(--color_3);font-weight:normal;display:initial;">Links</span> 
+</h5> 
+</div> 
+</div> 
+ <div id="widget_tg3" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="ONELinksMenu" data-external-id="1503775934"> <nav class="u_1503775934 unifiednav_vertical effect-text-color main-navigation unifiednav dmLinksMenu" data-auto="links-menu" role="navigation" layout-main="vertical_nav_layout_2" layout-sub="" data-show-vertical-sub-items="HOVER" id="1503775934" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container unav-top  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en" class="unifiednav__item unav-item unav-top-item  dmNavItemSelected    " target="" data-target-page-alias="home" aria-current="page" data-auto="selected-page"> <span class="nav-item-text " data-link-text="Home" data-auto="page-text-style">Home<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/faq" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="veelgestelde-vragen"> <span class="nav-item-text " data-link-text="FAQ" data-auto="page-text-style">FAQ<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/terms-conditions" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="algemene-voorwaarden"> <span class="nav-item-text " data-link-text="Terms and conditions" data-auto="page-text-style">Terms and conditions<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/reviews" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="reviews"> <span class="nav-item-text " data-link-text="Reviews" data-auto="page-text-style">Reviews<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/en/bonaire" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="bonaire"> <span class="nav-item-text " data-link-text="Bonaire" data-auto="page-text-style">Bonaire<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+</div> 
+ <div id="e0bc5626" class="flex-element group" data-auto="flex-element-group"> <div id="6bfa7d9b" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1708275091"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1708275091" style=""> <h5 class="m-text-align-center"> <span style="color:var(--color_3);font-weight:normal;display:unset;">Contact</span> 
+</h5> 
+</div> 
+</div> 
+ <div id="c2c08b1c" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1230059485"> <div class="dmNewParagraph skip-animation-effect skip-hover-effect" data-element-type="paragraph" data-version="5" id="1230059485" style=""><p class="m-text-align-center text-align-left t-size-15" style="line-height: 1.5;"><span style="display: initial; color: var(--color_3);">+5997775483</span></p><p class="m-text-align-center text-align-left t-size-15" style="line-height: 1.5;"><span style="display: initial; color: var(--color_3);">info@windhoekbonaire.com</span></p></div> 
+</div> 
+</div> 
+ <div id="eb6263b7" class="flex-element group" data-auto="flex-element-group"> <div id="a69a66e6" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1618546519"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1618546519" style=""> <h5 class="m-text-align-center"> <span style="color:var(--color_3);font-weight:normal;display:unset;">Location</span> 
+</h5> 
+</div> 
+</div> 
+ <div id="6229a620" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1470132032"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1470132032" style=""><p class="t-size-15 text-align-left m-text-align-center" style="line-height: 1.5;"><span class="t-font-size-15" style="display: unset; text-decoration: none; color: var(--color_3);">Kaya Pos di Frances #14</span></p><p class="t-size-15 text-align-left m-text-align-center" style="line-height: 1.5;"><span class="t-font-size-15" style="display: unset; color: var(--color_3);" t-font-size-set="true">Kralendijk Bonaire</span></p></div> 
+</div> 
+</div> 
+ <div id="8ac532b4" class="flex-element group" data-auto="flex-element-group"> <div id="fd40f79a" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="paragraph" data-external-id="1290145479"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1290145479" style=""> <h5 class="m-text-align-center text-align-left"> <span style="color:var(--color_3);font-weight:normal;display:unset;">Follow us</span> 
+</h5> 
+</div> 
+</div> 
+ <div id="widget_0jc" class="flex-element widget-wrapper" data-auto="flex-element-widget-wrapper" data-widget-type="socialhub" data-external-id="1151010592"> <div class="align-center text-align-center u_1151010592 dmSocialHub gapSpacing" id="1151010592" dmle_extension="social_hub" data-element-type="social_hub" extractelementdata="true" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv " data-auto="social-hub-inner"> <a href="https://www.facebook.com/windhoekbonaire/" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.instagram.com/windhoek_resort_bonaire/" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://www.tripadvisor.com/Hotel_Review-g147268-d10232417-Reviews-Windhoek_Boutique_Resort_Bonaire-Kralendijk_Bonaire.html" target="_blank" dm_dont_rewrite_url="true" aria-label="Social network" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Custom1&apos;)"> <span class="dmSocialCustom1 oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect=""> <svg></svg> 
+</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</section> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+    </div>
+</div>
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-mobile_implicit-9df9d643-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-mobile_implicit-90d7d6f4-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-mobile_implicit-2e5727b9-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-mobile_implicit-flex-header-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-mobile-63bd85219866cc362278151e-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-mobile-0e2f010c-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-mobile-9df9d643-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-mobile-90d7d6f4-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-mobile-2e5727b9-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-mobile-cecb9ded-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-mobile-38695a85-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-mobile-7550d82c-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="cbcca621ab6147c994269c3cdde1eb40" id="grid-styles-mobile-adfcf234-cbcca621ab6147c994269c3cdde1eb40"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-mobile-flex-footer-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-mobile-flex-header-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-mobile-510cd6b4-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-mobile-a1c024bb-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-mobile-b59d5a44-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-mobile-63a049320d35b55b4ef2a372-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-mobile-6406026c90e1521f6ecb0eca-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+ <style data-page-uuid="6c0318ca0c2848caa186a81ad4d3e608" data-is-header="true" id="grid-styles-mobile-63da2bddeae8da42b2353671-6c0318ca0c2848caa186a81ad4d3e608"></style> 
+<script type="text/javascript" id="d_track_sp"></script>
+<div style="display:none;" id="P6iryBW0Wu"></div>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" data-auto="pswp-close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" data-auto="pswp-share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="fb-root"
+        data-locale="en"></div>
+<script id="d_track_personalization"></script>
+<script type="text/javascript"></script>
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-0c64d36b-b42b-4457-890c-be323e1ebdaf" data-elfsight-app-lazy></div>
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-edbb3dd5-300b-4374-80a3-fd7db4659ecd" data-elfsight-app-lazy></div>
+</body>
+</html>

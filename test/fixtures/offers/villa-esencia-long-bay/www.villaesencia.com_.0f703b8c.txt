@@ -1,0 +1,734 @@
+<!doctype html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8" />
+<script></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="google-site-verification" content="0k6Ir5QySL2Ifu4WlzDmboyfdOFpwbfKgvJbtUnBCcI" />
+    <link rel="alternate" type="application/rss+xml" title="Villa Esencia RSS2 Feed" href="https://www.villaesencia.com/feed/" />
+    <link rel="pingback" href="https://www.villaesencia.com/xmlrpc.php" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script id="streamline-maps-callback-stub"></script>
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<title>Long Bay Beach Vacation Rentals | Villa Esencia</title>
+<link data-rocket-prefetch href="https://www.googletagmanager.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://fonts.googleapis.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://maxcdn.bootstrapcdn.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://cdn.jsdelivr.net" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://cdnjs.cloudflare.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://ajax.googleapis.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://maps.googleapis.com" rel="dns-prefetch">
+<link data-rocket-prefetch href="https://www.google.com" rel="dns-prefetch"><link rel="preload" data-rocket-preload as="image" href="https://www.villaesencia.com/wp-content/uploads/2026/07/home-banner-image-optimized-scl.jpg" fetchpriority="high">
+	<meta name="description" content="Villa Esencia provides one of a kind Long Bay Beach Vacation Rentals for the perfect Turks and Caicos getaway. Search beautiful private suites &amp; beach villas." />
+	<link rel="canonical" href="https://www.villaesencia.com/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Long Bay Beach Vacation Rentals | Villa Esencia" />
+	<meta property="og:description" content="Villa Esencia provides one of a kind Long Bay Beach Vacation Rentals for the perfect Turks and Caicos getaway. Search beautiful private suites &amp; beach villas." />
+	<meta property="og:url" content="https://www.villaesencia.com/" />
+	<meta property="og:site_name" content="Villa Esencia" />
+	<meta property="article:modified_time" content="2026-09-09T19:20:37+00:00" />
+	<meta property="og:image" content="https://www.villaesencia.com/wp-content/uploads/2026/07/home-banner-image-optimized-scl.jpg" />
+	<meta property="og:image:width" content="1240" />
+	<meta property="og:image:height" content="549" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="google-site-verification" content="EWAjU9ZAF9tUr_OY-pzY-aqJcmrDOOFra-8IEMW1Dz8" />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//maps.googleapis.com' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.villaesencia.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.villaesencia.com%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.villaesencia.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.villaesencia.com%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css"></style>
+<style id="wp-emoji-styles-inline-css"></style>
+<style id="wp-block-library-inline-css"></style>
+<style id="classic-theme-styles-inline-css"></style>
+<style id="global-styles-inline-css"></style>
+<link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='fontawesome-css' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=7.1.3' media='all' />
+<link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='jquery-ui-css-css' href='https://www.villaesencia.com/wp-content/plugins/streamline-core/assets/dist/css/jquery-ui.min.css?ver=3.4.0-beta3' media='all' />
+<link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='waitme-css-css' href='https://www.villaesencia.com/wp-content/plugins/streamline-core/vendor/waitMe/waitMe.min.css?ver=3.4.0-beta3' media='all' />
+<link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='daterange-picker-css-css' href='https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css?ver=7.1.3' media='all' />
+<link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='multiselect-css' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/css/bootstrap-multiselect.css?ver=7.1.3' media='all' />
+<link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='streamline-core-css' href='https://www.villaesencia.com/wp-content/plugins/streamline-core/assets/dist/css/streamline-core.min.css?ver=3.4.0-beta3' media='all' />
+<link rel='preload' as='style' onload='this.onload=null;this.rel="stylesheet"' id='select2-css-css' href='https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css?ver=4.1.0-rc.0' media='all' />
+<link rel='stylesheet' id='style-css' href='https://www.villaesencia.com/wp-content/themes/BizcorLuxury/style.css?ver=7.1.3' media='all' />
+<link rel='stylesheet' id='jquery-lazyloadxt-spinner-css-css' href='//www.villaesencia.com/wp-content/plugins/a3-lazy-load/assets/css/jquery.lazyloadxt.spinner.css?ver=7.1.3' media='all' />
+<script id="jquery-core-js" src="https://www.villaesencia.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.villaesencia.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<link rel="https://api.w.org/" href="https://www.villaesencia.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.villaesencia.com/wp-json/wp/v2/pages/268" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.villaesencia.com/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://www.villaesencia.com/' />
+    <script></script>
+    <meta plugin_version="og:version" content="3.4.0-beta3" />
+<script id="streamlinecore-version-check"></script>
+<script id="streamline-maps-callback"></script>
+<link rel="icon" href="https://www.villaesencia.com/wp-content/uploads/2019/08/cropped-esencia-logo-copy-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.villaesencia.com/wp-content/uploads/2019/08/cropped-esencia-logo-copy-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.villaesencia.com/wp-content/uploads/2019/08/cropped-esencia-logo-copy-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.villaesencia.com/wp-content/uploads/2019/08/cropped-esencia-logo-copy-270x270.png" />
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=777355940043236&ev=PageView&noscript=1"/></noscript>
+<link rel='stylesheet' id='gforms_reset_css-css' href='https://www.villaesencia.com/wp-content/plugins/gravityforms/legacy/css/formreset.min.css?ver=3.1.3' media='all' />
+<link rel='stylesheet' id='gforms_formsmain_css-css' href='https://www.villaesencia.com/wp-content/plugins/gravityforms/legacy/css/formsmain.min.css?ver=3.1.3' media='all' />
+<link rel='stylesheet' id='gforms_ready_class_css-css' href='https://www.villaesencia.com/wp-content/plugins/gravityforms/legacy/css/readyclass.min.css?ver=3.1.3' media='all' />
+<link rel='stylesheet' id='gforms_browsers_css-css' href='https://www.villaesencia.com/wp-content/plugins/gravityforms/legacy/css/browsers.min.css?ver=3.1.3' media='all' />
+<style id="rocket-lazyrender-inline-css"></style><meta name="generator" content="WP Rocket 3.23.5.1" data-wpr-features="wpr_preconnect_external_domains wpr_automatic_lazy_rendering wpr_oci wpr_cdn wpr_desktop" /></head>
+<body class="home wp-singular page-template-default page page-id-268 wp-theme-BizcorLuxury slash_logic">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LC5K3TT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <style></style>
+    <style></style>
+<style></style>
+    <header >
+        <div  class="fixing">
+            <div  class="container-fluid-custom flex_wrapper">
+                <div class="logo">
+                    <a href="/">
+                        <img class="logo-black" src="https://www.villaesencia.com/wp-content/themes/BizcorLuxury/images/esencia-logo.png" style="max-width: 350px;"  title="" alt=""/>
+                        <span class="leftCaret"></span>  
+                        <span class="rightCaret"></span>
+                    </a>                  
+                </div>                
+                <div class="rightSide">
+                    <nav>
+                        <div class="menu-header-menu-container"><ul><li id="menu-item-1516" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-268 current_page_item menu-item-1516"><a href="https://www.villaesencia.com/" aria-current="page">Home</a></li>
+<li id="menu-item-2104" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2104"><a href="#">Accommodations</a>
+<ul class="sub-menu">
+	<li id="menu-item-1519" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1519"><a href="/accommodations/">The Villas</a></li>
+	<li id="menu-item-1518" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1518"><a href="/all-villas-suites/">All Villas And Suites</a></li>
+	<li id="menu-item-1913" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1913"><a href="/ocean-view/">Ocean View</a></li>
+	<li id="menu-item-1914" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1914"><a href="/private-pool/">Private Pool</a></li>
+	<li id="menu-item-2492" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2492"><a href="https://www.villaesencia.com/esencia-mountain/">Esencia Mountain Asheville, NC</a></li>
+	<li id="menu-item-1903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1903"><a href="https://www.villaesencia.com/faq/">FAQs</a></li>
+</ul>
+</li>
+<li id="menu-item-1522" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1522"><a href="#">Gallery</a>
+<ul class="sub-menu">
+	<li id="menu-item-1523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1523"><a href="https://www.villaesencia.com/photos/">Photos</a></li>
+	<li id="menu-item-1524" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1524"><a href="https://www.villaesencia.com/videos/">Videos</a></li>
+</ul>
+</li>
+<li id="menu-item-1525" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1525"><a href="https://www.villaesencia.com/top-kiteboarding-destination/">Kiteboarding</a>
+<ul class="sub-menu">
+	<li id="menu-item-1526" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1526"><a href="https://www.villaesencia.com/partners/">Partners</a></li>
+</ul>
+</li>
+<li id="menu-item-2044" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2044"><a href="https://www.villaesencia.com/pickleball/">Pickleball</a></li>
+<li id="menu-item-1652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1652"><a href="https://www.villaesencia.com/live/">BeachCam</a></li>
+<li id="menu-item-1521" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1521"><a href="https://www.villaesencia.com/concierge-services/">Concierge Services</a></li>
+<li id="menu-item-1528" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1528"><a href="https://www.villaesencia.com/activities/">Island Guide</a>
+<ul class="sub-menu">
+	<li id="menu-item-1529" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1529"><a href="https://www.villaesencia.com/activities/">Activities</a></li>
+	<li id="menu-item-1531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1531"><a href="https://www.villaesencia.com/maps/">Island Maps</a></li>
+	<li id="menu-item-1701" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1701"><a href="https://www.villaesencia.com/blog/">Blog</a></li>
+	<li id="menu-item-1900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1900"><a href="https://www.villaesencia.com/long-bay-beach/">Long Bay Beach</a></li>
+	<li id="menu-item-1977" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1977"><a href="https://www.villaesencia.com/turks-and-caicos-events/">Annual Events</a></li>
+</ul>
+</li>
+<li id="menu-item-2565" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2565"><a href="https://www.villaesencia.com/esencia-mountain/">Asheville</a></li>
+</ul></div>       
+                    </nav>
+                    <div class="contact">
+                        <a href="/get-in-touch/">get in touch</a>
+                    </div> 
+                    <div class="phone">
+                        <a href="tel:+15619353365" class="phone_number">
+                            <span>1 (561)-935-3365</span>
+                            <i class="fas fa-phone"></i>
+                            <svg></svg>
+                            <img src="https://www.villaesencia.com/wp-content/themes/BizcorLuxury/images/phone-solid.svg" alt="" style="display: none;">
+                        </a>
+                    </div>                   
+                    <a href="#" class="modal_btn">
+                        <svg></svg>
+                    </a>  
+                    <div class="mail">
+                        <svg></svg>
+                    </div>
+                    <div class="mobileMenu">
+                        <span class="iconAnime">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>                
+                </div>                           
+            </div>
+            <div  class="CustomMobileMenu">
+                <div class="counter">
+                    <p class="topM">
+                        <a href="https://www.villaesencia.com/">
+                            <img src="https://www.villaesencia.com/wp-content/themes/BizcorLuxury/images/esencia-logo-white.png" alt="logo"/>
+                        </a>
+                        <span class="mobileMenuClose">&times</span>
+                    </p>
+                <div class='gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_7' ><div id='gf_7' class='gform_anchor' tabindex='-1'></div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_7' id='gform_7'  action='/#gf_7' data-formid='7' novalidate>
+                        <div class='gform-body gform_body'><ul id='gform_fields_7' class='gform_fields top_label form_sublabel_below description_below validation_below'><li id="field_7_8" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_7_8'><span class='gform-field-label__text'>Comments</span></label><div class='ginput_container'><input name='input_8' id='input_7_8' type='text' value='' autocomplete='new-password'/></div><div class='gfield_description' id='gfield_description_7_8'>This field is for validation purposes and should be left unchanged.</div></li><li id="field_7_1" class="gfield gfield--type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_1' id='input_7_1' type='hidden' class='gform_hidden'  aria-invalid="false" value='https://www.villaesencia.com/Home' /></div></li><li id="field_7_2" class="gfield gfield--type-name gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label gfield_label_before_complex' ><span class='gform-field-label__text'>Name</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_complex ginput_container ginput_container--name no_prefix has_first_name no_middle_name no_last_name no_suffix gf_name_has_1 ginput_container_name gform-grid-row' id='input_7_2'>
+                            <span id='input_7_2_3_container' class='name_first gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_2.3' id='input_7_2_3' value='' tabindex='20'  aria-required='true'   placeholder='Name*'  />
+                                                    <label for='input_7_2_3' class='gform-field-label gform-field-label--type-sub '>First</label>
+                                                </span>
+                        </div></li><li id="field_7_3" class="gfield gfield--type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_7_3'><span class='gform-field-label__text'>Email</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_3' id='input_7_3' type='email' value='' class='medium' tabindex='24'  placeholder='Email*' aria-required="true" aria-invalid="false"  />
+                        </div></li><li id="field_7_4" class="gfield gfield--type-phone gfield--phone-format-standard gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_7_4'><span class='gform-field-label__text'>Phone</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_phone'><input name='input_4' id='input_7_4' type='tel' value='' class='medium' tabindex='25' placeholder='Phone*' aria-required="true" aria-invalid="false"   data-mask="(999) 999-9999" /></div></li><li id="field_7_5" class="gfield gfield--type-textarea gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_7_5'><span class='gform-field-label__text'>Message</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_textarea'><textarea name='input_5' id='input_7_5' class='textarea medium' tabindex='26'   placeholder='Message*' aria-required="true" aria-invalid="false"   rows='10' cols='50'></textarea></div></li><li id="field_7_6" class="gfield gfield--type-checkbox gfield--type-choice field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible gfield--choice-align-vertical"  ><label class='gfield_label gform-field-label gfield_label_before_complex' ><span class='gform-field-label__text'>Untitled</span></label><div class='ginput_container ginput_container_checkbox'><ul class='gfield_checkbox' id='input_7_6'><li class='gchoice gchoice_7_6_1'>
+								<input class='gfield-choice-input' name='input_6.1' type='checkbox'  value='You have read and agree to &lt;a href=&quot;#&quot;&gt;Privacy Policy&lt;/a&gt;'  id='choice_7_6_1' tabindex='27'  />
+								<label for='choice_7_6_1' id='label_7_6_1' class='gform-field-label gform-field-label--type-inline'>You have read and agree to <a href="#">Privacy Policy</a></label>
+							</li></ul></div></li><li id="field_7_7" class="gfield gfield--type-captcha field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_7_7'><span class='gform-field-label__text'>CAPTCHA</span></label><div id='input_7_7' class='ginput_container ginput_recaptcha' data-sitekey='6LdzpPkUAAAAAGZy6lqLb6VGpreoBo7BBHOH1x8a'  data-theme='light' data-tabindex='28'  data-badge=''></div></li></ul></div>
+        <div class='gform-footer gform_footer top_label'> <button type='submit' id='gform_submit_button_7' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' tabindex='29'>Submit</button> <input type='hidden' name='gform_ajax' value='form_id=7&amp;title=&amp;description=&amp;tabindex=19&amp;theme=legacy&amp;styles=[]&amp;hash=206ed54cd1e39b63673911d79ee2edbb' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_7' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_7' id='gform_theme_7' value='legacy' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_7' id='gform_style_settings_7' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_7' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='7' />
+            <input type='hidden' class='gform_hidden' name='gform_currency' data-currency='USD' value='u+PqiNZiCQ8YlXEQy3Dk7KETt4o37GG3WuZvOonkvUJYeg48uVn3DMNTlTxlhIAu9s7NHmjGI6hfGpBaQHZ4R11l4cGuTY5h9GToL2hx7nrw0VY=' />
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_7' value='WyJ7XCJnZm9ybV9zdWJtaXNzaW9uX21ldGhvZFwiOltcIjljYTE3YjU0NzY2ZjcwZmJkMmRjMTQwNzBmZmFhNGFhXCIsXCIyMmQ5Y2I2NDNlYmZkMDdmOGEwMjgwZDc5NjM3NDdjOVwiLFwiNWQwOWVmMmI5NzUzZDhiZjI2M2RmMTMxYWE2YmYzMmFcIl0sXCJnZm9ybV90aGVtZVwiOlwiYjg1ZjRlNzRkNmU2N2U1YzM1NzZkMDI4OGE4MDZmN2VcIixcImdmb3JtX3N0eWxlX3NldHRpbmdzXCI6XCJkMjZiZjAwNzJmODRiMmI2YmU1OTY3Nzg0Y2FlOTQ3ZFwiLFwiZm9ybV9pZFwiOlwiNGM4ZjYyN2ExYjBhY2Q3Y2I3ZGNlYTE5MDJlZmZlZGFcIixcInVybFwiOlwiYjE0YjEzYzc1ZWViNzg2OTcwZTdjOGEyMzNmM2Y2NmJcIixcInN0YXRlX3RpbWVzdGFtcFwiOlwiZjgwMzA0NTUzZmNmYzQ0YTRjOTU3NmY1ZGI4NzQzYjhcIn0iLCIwNDAzYTJhM2I1MDY1MzIzODhiZmU5OGIyNTFmZTFkNSIsMTc5MTgyNjQ3Nl0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_7' id='gform_target_page_number_7' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_7' id='gform_source_page_number_7' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_7' id='gform_ajax_frame_7' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script></script>
+                </div>
+            </div> 
+        </div>
+            </header>
+	<style></style><div  class="pop_up_wrapp">🌴 Exclusive 20% Offer for Your Getaway at Villa Wyakha - now through Oct 7th! 🌴 <a href="/villa-wyakha/"> View Rentals</a></div>
+            <style></style>
+                <script></script><div  class="content">
+    <section  id="slider">
+        <div  class="home-banner">          
+                                                                                <img fetchpriority="high" width="1920" height="900" src="https://www.villaesencia.com/wp-content/uploads/2026/07/home-banner-image-optimized-scl.jpg" alt="" class="banner-img"/>                        <div class="position-gradient"></div>
+        </div>
+                    <div  class="mobileHB">
+                <img src="https://www.villaesencia.com/wp-content/uploads/2026/07/image_157072583-1-scl.jpg" alt="mobile-banner" />
+            </div>
+        <div  class="container-fluid-custom videoSearch">
+            <h1>VILLA ESENCIA - NATURAL. SERENE. VITAL.
+                <span class="sub_title">Beachfront Vacation Rentals - Long Bay Beach, Turks and Caicos Islands.</span>
+            </h1>
+            <div class="container-custom">
+                <div class="row-custom">                          
+                </div>
+            </div>
+            <span class="border_line b_line left"></span>
+            <span class="border_line b_line right"></span>
+            <span class="border_line t_line left"></span>
+            <span class="border_line t_line right"></span>
+            <span class="border_line l_line"></span>
+            <span class="border_line r_line"></span>
+                    </div>
+        <div  class="loading_animation">
+            <svg></svg>
+        </div>
+    </section>
+    <style></style>
+    <style></style>    
+    <style></style>
+<div  class="category slidered">
+                                            <div  class="category-box round"> 
+                                                                        <div class="category-block">
+                            <a href="/private-pool/">
+                                <div class="category-block-txt"><h3 class="blocktitle">Private Pool</h3>
+<p class="blocktext">Villas</p></div>
+                                <div class="category-block-img">
+                                    <img width="464" height="600" src="https://www.villaesencia.com/wp-content/uploads/2026/07/W1-scl.jpg" alt="#">
+                                </div>
+                                <div class="category-border"></div>
+                            </a>
+                        </div>
+                                            <div class="category-block">
+                            <a href="/ocean-view/">
+                                <div class="category-block-txt"><h3 class="blocktitle">Ocean View</h3>
+<p class="blocktext">Villas</p></div>
+                                <div class="category-block-img">
+                                    <img width="464" height="600" src="https://www.villaesencia.com/wp-content/uploads/2026/07/8-scl.jpg" alt="#">
+                                </div>
+                                <div class="category-border"></div>
+                            </a>
+                        </div>
+                                            <div class="category-block">
+                            <a href="/studio/">
+                                <div class="category-block-txt"><h3 class="blocktitle">Studio</h3>
+<p class="blocktext">Suites</p></div>
+                                <div class="category-block-img">
+                                    <img width="464" height="600" src="https://www.villaesencia.com/wp-content/uploads/2026/07/2-scaled-scl.jpg" alt="#">
+                                </div>
+                                <div class="category-border"></div>
+                            </a>
+                        </div>
+                                            <div class="category-block">
+                            <a href="/penthouse/">
+                                <div class="category-block-txt"><h3 class="blocktitle">Penthouse</h3>
+<p class="blocktext">LEARN MORE</p></div>
+                                <div class="category-block-img">
+                                    <img width="464" height="600" src="https://www.villaesencia.com/wp-content/uploads/2026/07/2016-06-03-Villa-Esencia-9296-scl.jpg" alt="#">
+                                </div>
+                                <div class="category-border"></div>
+                            </a>
+                        </div>
+                                            <div class="category-block">
+                            <a href="/2-3-bedroom/">
+                                <div class="category-block-txt"><h3 class="blocktitle">2 & 3 Bedrooms</h3>
+<p class="blocktext">Suites</p></div>
+                                <div class="category-block-img">
+                                    <img width="464" height="600" src="https://www.villaesencia.com/wp-content/uploads/2026/07/K2-scaled-scl.jpg" alt="#">
+                                </div>
+                                <div class="category-border"></div>
+                            </a>
+                        </div>
+                                            <div class="category-block">
+                            <a href="/garden-view/">
+                                <div class="category-block-txt"><h3 class="blocktitle">Garden View</h3>
+<p class="blocktext">Villas</p></div>
+                                <div class="category-block-img">
+                                    <img width="464" height="600" src="https://www.villaesencia.com/wp-content/uploads/2026/07/Wyakha-Ocean-View-is-like-a-tree-house-above-the-jungle-canopy-1-scl.jpg" alt="#">
+                                </div>
+                                <div class="category-border"></div>
+                            </a>
+                        </div>
+                                                </div>
+<script></script>
+<script></script>
+</div><div  class="info-section left">
+                                    <div  class="info-section-box">
+                    <div class="imgItem "  style="background-image: url('https://www.villaesencia.com/wp-content/uploads/2026/07/image-scl.jpg');">
+                                            </div>
+                    <div class="itemText">
+                        <article>
+                        <h3>TURKS AND CAICOS VACATION RENTALS</h3>
+                        <p>Esencia is a 2.25 acre property of Provo native vegetation directly on the beach in Long Bay, Turks and Caicos Islands. The lush plants and trees are wild and natural, giving you the feeling of being in the midst of undisturbed jungle. We have built in a way that flows with the land and the nature. Our pathways wind through the bush and follow nature’s creation. Our buildings appear to have been dropped in. The smell of wild flowers tantalizes your senses and the beautiful wild orchids reveal their magic. With only 10 Turks and Caicos vacation suites in 4 elegant villas, it is designed for privacy and tranquillity.</p>
+                        <a href="/photos/">browse our property</a>                        </article>
+                    </div> 
+                </div>
+                            <div  class="info-section-box">
+                    <div class="imgItem "  style="background-image: url('https://www.villaesencia.com/wp-content/uploads/2026/07/732d7c_9f0a7d0cc0c0458da91e51436923ca51_mv2_d_4608_3072_s_4_2-scl.jpg');">
+                                            </div>
+                    <div class="itemText">
+                        <article>
+                        <h3>LONG BAY BEACH</h3>
+                        <p>A 3 mile-long stretch of pure white sand a few steps away from your Long Bay Beach vacation villa. The rich and intense turquoise color of the sea will astound you. The warmth and gentleness of the water will appease you. You can spend hours in the shallow water very comfortably. You will often only see a handful of people on the entire beach and maybe a few occasional horseback riders.</p>
+                        <a href="/long-bay-beach/">take a tour</a>                        </article>
+                    </div> 
+                </div>
+<style></style>
+<script></script>
+</div><div data-wpr-lazyrender="1" class="reviews ">
+    <div  class="reviews-box">
+                                            <h2 class="boxtitle">Guest Testimonials</h2>
+                                                                <div class="reviews-slider round"> 
+                                                                                            <div class="reviews-block">
+                                <article>
+                                    <div class="reviews-block-user">
+                                        <div class="reviews-block-user-img">
+                                            <img src="https://www.villaesencia.com/wp-content/uploads/2019/01/rewiews-user-icon.png" alt="#">
+                                        </div>
+                                        <p>Julie P,</p>
+                                        <span>Wonderful villa, very welcoming hosts</span>
+                                    </div>
+                                    <div class="reviews-block-txt">
+                                        <p>''I have spent one week at Villa Esencia. I have really felt like at home: Ritama is a very welcoming, nice and helpful host: her and her husband were always available for us for any request, and were very friendly and reactive.  Among all that, the place is very beautiful, clean, and the patios on the beach are just perfect. I strongly recommend to stay at Villa Esencia!''</p>
+                                    </div>
+                                </article>
+                            </div>
+                                                    <div class="reviews-block">
+                                <article>
+                                    <div class="reviews-block-user">
+                                        <div class="reviews-block-user-img">
+                                            <img src="https://www.villaesencia.com/wp-content/uploads/2019/01/rewiews-user-icon.png" alt="#">
+                                        </div>
+                                        <p>Shadia, Karana</p>
+                                        <span>Piece of Paradise</span>
+                                    </div>
+                                    <div class="reviews-block-txt">
+                                        <p>''If you are looking for a secluded piece of paradise, this is it!! The space is the perfect size for single or couple. The furnishings and space are clean and modern. The kitchen is supplied with everything you need, so just bring food and some reusable plastic cups to take to the beach. Speaking of beach, it is a short walk to the most breathtaking beach, Long Bay. I know Grace Bay Beach is more widely known and has been named the number one beach, but I beg to differ. Long Bay Beach is amazing! Ritama’s secluded piece of paradise is truly special. Your only disappointment will be leaving. I will definitely return!!''</p>
+                                    </div>
+                                </article>
+                            </div>
+                                                    <div class="reviews-block">
+                                <article>
+                                    <div class="reviews-block-user">
+                                        <div class="reviews-block-user-img">
+                                            <img src="https://www.villaesencia.com/wp-content/uploads/2019/01/rewiews-user-icon.png" alt="#">
+                                        </div>
+                                        <p>Gerald P,</p>
+                                        <span>Beautiful Property</span>
+                                    </div>
+                                    <div class="reviews-block-txt">
+                                        <p>''The Property villas were laid out as though you were the only ones there. Pathways for each villa was surrounded with lovely trees, bushes and flowers creating a sense of division, of isolation. The villas are well appointed and you can tell the owners have thoughtfully decorated each unit. All villas were steps away from the beautiful beach. The beach is great for families with small children because the water is only 2-3 feet deep. It's mostly used for sail boarding. This property is well away from all the ruckus - perfect for a quiet, rested vacation''</p>
+                                    </div>
+                                </article>
+                            </div>
+                                                    <div class="reviews-block">
+                                <article>
+                                    <div class="reviews-block-user">
+                                        <div class="reviews-block-user-img">
+                                            <img src="https://www.villaesencia.com/wp-content/uploads/2019/01/rewiews-user-icon.png" alt="#">
+                                        </div>
+                                        <p>Janee</p>
+                                        <span></span>
+                                    </div>
+                                    <div class="reviews-block-txt">
+                                        <p>The villa is exactly as pictured and described in the listing, and it's even more beautiful than you could imagine! From the top-notch furnishings to the perfect beach-side location, every part of this villa is unbelievably comfortable, stylish, and clean. There are seating areas everywhere--pool loungers, dining table by the bbq, and the deck on the beach. These made it so nice to relax and enjoy both the house and the beach. We would come back in a heartbeat!</p>
+                                    </div>
+                                </article>
+                            </div>
+                </div>  
+    </div>
+<style></style>
+<script></script>
+</div><div data-wpr-lazyrender="1" class="info-section left">
+                                    <div  class="info-section-box">
+                    <div class="imgItem "  style="background-image: url('https://www.villaesencia.com/wp-content/uploads/2019/09/ritama-jumping-rally.jpg');">
+                                            </div>
+                    <div class="itemText">
+                        <article>
+                        <h3>experience kiteboarding</h3>
+                        <p>Long Bay has been rated the top destination in the world for learning to kiteboard and we are perfectly situated here for both beginner and advanced kiters. We have compressed air on the beach, self-launch and landing posts, loaner boards and kite and gear storage. Inquire with our partners for lessons.</p>
+                        <a href="/top-kiteboarding-destination">live the thrill</a>                        </article>
+                    </div> 
+                </div>
+                            <div  class="info-section-box">
+                    <div class="imgItem "  style="background-image: url('https://www.villaesencia.com/wp-content/uploads/2026/07/download-scl.jpg');">
+                                            </div>
+                    <div class="itemText">
+                        <article>
+                        <h3>discover our accommodations</h3>
+                        <p>Pamper yourself or your family in our Long Bay Beach villas & suites, interspersed between lush natural vegetation and boarded by a 3 mile long stretch of fine white-sand beach and dazzling turquoise sea.</p>
+                        <a href="/accommodations">take a tour</a>                        </article>
+                    </div> 
+                </div>
+                            <div  class="info-section-box">
+                    <div class="imgItem "  style="background-image: url('https://www.villaesencia.com/wp-content/uploads/2026/07/Kabir-and-Ritama1-scl.jpg');">
+                                            </div>
+                    <div class="itemText">
+                        <article>
+                        <h3>your hosts</h3>
+                        <p>As self-development trainers, authors and avid kiteboarders, we wanted a place in nature that supported a simple and natural lifestyle. We were looking for a quiet, natural environment for our Turks and Caicos villas, close to nature and the sea, away from the buzz of city, roads and pollution. This location fit that description perfectly ... no sounds except the wind, the trees and the sea - and it turned out to be the best location for kiteboarding too. We look forward to welcoming you here.</p>
+                                                </article>
+                    </div> 
+                </div>
+<style></style>
+<script></script>
+</div><div data-wpr-lazyrender="1" class="featured">
+    <h2 class="boxtitle">Featured Vacation Rentals</h2>
+    <div  class="featured-box">
+                    <div class="center round"> 
+                            <div class="featured-margin">
+                                <div class="featured-block">
+                                    <a href="/Esencia-Cottage/" class="featured-block-item">
+                                        <div class="featured-img">
+                                            <img width="435" height="270"  src="https://www.villaesencia.com/wp-content/uploads/2026/07/Esencia-Cottage-Alfresco-Dining-by-the-pool-scl.jpg" alt="">
+                                        </div>
+                                        <div class="featured-txt">
+                                            <h4>ESENCIA COTTAGE</h4>
+                                            <hr>
+                                            <ul>
+                                                    <li>1 Beds</li>
+                                                                                                    <li>1 Baths</li>                                                        
+                                                    <li>3 Guests</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="featured-margin">
+                                <div class="featured-block">
+                                    <a href="/Karana-Penthouse-Loft-k4/" class="featured-block-item">
+                                        <div class="featured-img">
+                                            <img width="435" height="270"  src="https://www.villaesencia.com/wp-content/uploads/2026/07/5595_-Villa-Karana-Private-Pool-scl.jpg" alt="">
+                                        </div>
+                                        <div class="featured-txt">
+                                            <h4>VILLA KARANA</h4>
+                                            <hr>
+                                            <ul>
+                                                    <li>3 Beds</li>
+                                                                                                    <li>3.5 Baths</li>                                                        
+                                                    <li>8 Guests</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="featured-margin">
+                                <div class="featured-block">
+                                    <a href="/Wyakha-1-Garden-View/" class="featured-block-item">
+                                        <div class="featured-img">
+                                            <img width="435" height="270"  src="https://www.villaesencia.com/wp-content/uploads/2019/08/ezgif.com-webp-to-jpg-1.jpg" alt="">
+                                        </div>
+                                        <div class="featured-txt">
+                                            <h4>VILLA WYAKHA</h4>
+                                            <hr>
+                                            <ul>
+                                                    <li>1 Beds</li>
+                                                                                                    <li>1 Baths</li>                                                        
+                                                    <li>3 Guests</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="featured-margin">
+                                <div class="featured-block">
+                                    <a href="/rental/411654/" class="featured-block-item">
+                                        <div class="featured-img">
+                                            <img width="435" height="270"  src="https://www.villaesencia.com/wp-content/uploads/2026/07/1U2A3960Edit-scl2.jpg" alt="">
+                                        </div>
+                                        <div class="featured-txt">
+                                            <h4>ESENCIA PREMIER</h4>
+                                            <hr>
+                                            <ul>
+                                                    <li>2 Beds</li>
+                                                                                                    <li>2 Baths</li>                                                        
+                                                    <li>6 Guests</li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+    </div>
+<style></style>
+<script></script>
+</div>
+    <style></style></div>
+<link href="/wp-content/plugins/streamline-core-0304/assets/dist/css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<script></script>
+<script></script>
+    <footer data-wpr-lazyrender="1">
+                    <div  class="footer-container">
+                <div  class="footer-logo">
+                    <span class="line left"></span>
+                    <a href="#"><img src="https://www.villaesencia.com/wp-content/themes/BizcorLuxury/images/esencia-logo-white.png" alt="logo"></a>
+                    <span class="line right"></span>
+                </div>
+                <div  class="footer-box">
+                    <div class="footer-contact footer-block">
+                        <ul>
+                            <li>
+                                <h3>Our Address</h3>
+                                <p><strong>Villa Esencia </strong></p>
+                                <p>27 Long Bay Beach Drive,<br /> Providenciales, Turks and Caicos Islands</p>
+                            </li>
+                            <li class="call">
+                                <h3>Give Us A Call</h3>
+                                <p><span>(USA)</span><a href="tel:1 (561)-935-3365">1 (561)-935-3365</a></p>
+                                <p><span>(TCI)</span><a href="tel:1 (649) 941-5605">1 (649) 941-5605</a></p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-subscribe footer-block">
+                        <h3>Subscribe to our mailing list</h3>
+                <div class='gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_9' ><div id='gf_9' class='gform_anchor' tabindex='-1'></div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_9' id='gform_9'  action='/#gf_9' data-formid='9' novalidate>
+                        <div class='gform-body gform_body'><ul id='gform_fields_9' class='gform_fields top_label form_sublabel_below description_below validation_below'><li id="field_9_2" class="gfield gfield--type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_9_2'><span class='gform-field-label__text'>Email</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_2' id='input_9_2' type='email' value='' class='medium' tabindex='49'  placeholder='Email Address*' aria-required="true" aria-invalid="false"  />
+                        </div></li><li id="field_9_1" class="gfield gfield--type-hidden gform_hidden field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div class='ginput_container ginput_container_text'><input name='input_1' id='input_9_1' type='hidden' class='gform_hidden'  aria-invalid="false" value='https://www.villaesencia.com/Home' /></div></li><li id="field_9_3" class="gfield gfield--type-captcha field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_9_3'><span class='gform-field-label__text'>CAPTCHA</span></label><div id='input_9_3' class='ginput_container ginput_recaptcha' data-sitekey='6LdzpPkUAAAAAGZy6lqLb6VGpreoBo7BBHOH1x8a'  data-theme='light' data-tabindex='50'  data-badge=''></div></li></ul></div>
+        <div class='gform-footer gform_footer top_label'> <button type='submit' id='gform_submit_button_9' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' tabindex='51'>SUBSCRIBE</button> <input type='hidden' name='gform_ajax' value='form_id=9&amp;title=&amp;description=&amp;tabindex=49&amp;theme=legacy&amp;styles=[]&amp;hash=213db2d6cb21cc50346b33d8f65be8af' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_9' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_9' id='gform_theme_9' value='legacy' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_9' id='gform_style_settings_9' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_9' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='9' />
+            <input type='hidden' class='gform_hidden' name='gform_currency' data-currency='USD' value='hemjTm2pgZDoxO0Hi16BUBWNvUEWnTCdJ6zt/7/1hsGlEty71J0P4tXvPWMJdMGJw3GDKoPAU1L8kt/wUIcR7j6aDjcTtQZ1BLSUIeb8+3Pl8UA=' />
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_9' value='WyJ7XCJnZm9ybV9zdWJtaXNzaW9uX21ldGhvZFwiOltcIjljYTE3YjU0NzY2ZjcwZmJkMmRjMTQwNzBmZmFhNGFhXCIsXCIyMmQ5Y2I2NDNlYmZkMDdmOGEwMjgwZDc5NjM3NDdjOVwiLFwiNWQwOWVmMmI5NzUzZDhiZjI2M2RmMTMxYWE2YmYzMmFcIl0sXCJnZm9ybV90aGVtZVwiOlwiYjg1ZjRlNzRkNmU2N2U1YzM1NzZkMDI4OGE4MDZmN2VcIixcImdmb3JtX3N0eWxlX3NldHRpbmdzXCI6XCJkMjZiZjAwNzJmODRiMmI2YmU1OTY3Nzg0Y2FlOTQ3ZFwiLFwiZm9ybV9pZFwiOlwiNDdjYjMwNDVhY2IzODZlOTIwMmFmNDc1ZGIyZGFjMDdcIixcInVybFwiOlwiYjE0YjEzYzc1ZWViNzg2OTcwZTdjOGEyMzNmM2Y2NmJcIixcInN0YXRlX3RpbWVzdGFtcFwiOlwiZjgwMzA0NTUzZmNmYzQ0YTRjOTU3NmY1ZGI4NzQzYjhcIn0iLCI3YjJmOGUwMGY3MjNlMTQyNWJlMGI2YWU1YThiM2ViNSIsMTc5MTgyNjQ3Nl0=' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_9' id='gform_target_page_number_9' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_9' id='gform_source_page_number_9' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_9' id='gform_ajax_frame_9' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script></script>
+						<div class="sl-img">
+							<a rel="nofollow" href="https://www.streamlinevrs.com/"><img src="/wp-content/uploads/2022/04/Light-Logo.svg" alt="Streamline Vacation Rental Software"></a>
+						</div>
+                    </div>
+                    <div class="footer-links footer-block">
+                        <div class="innerCont">
+                            <h3>Quick Links <svg></svg></h3>
+                            <ul>
+                                                                                                            <li><a href="/search-results/">Rentals</a></li>
+                                                                            <li><a href="/get-in-touch/">Contact Us</a></li>
+                                                                            <li><a href="/cancellation-policy/">Cancellation Policy</a></li>
+                                                                            <li><a href="https://villaesencia.rentalguardian.com/">Travel Insurance</a></li>
+                                                                            <li><a href="/we-accept-crypto">We Accept Cryto</a></li>
+                                                                                                </ul>   
+                            <ul class="social">
+                                <li><a href="https://www.facebook.com/esenciasuites/"><img src="https://www.villaesencia.com/wp-content/themes/BizcorLuxury/images/facebook.svg" alt="#"></a></li>
+                            </ul>                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div  class="footer-copyright">
+            <p>&copy; 2026 Villaesencia.com I All Rights Reserved.</p>
+        </div>
+    </footer>
+<script></script>
+    <style></style>    
+<script type="speculationrules"></script>
+<script id="streamline-core-globals-js-after"></script>
+<script data-wp-strategy="async" defer id="angularjs-js" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script data-wp-strategy="defer" defer id="jquery-color-js" src="https://www.villaesencia.com/wp-includes/js/jquery/jquery.color.min.js?ver=3.0.0"></script>
+<script id="jquery-ui-core-js-before"></script>
+<script data-wp-strategy="defer" id="jquery-ui-core-js" src="https://www.villaesencia.com/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-mouse-js" src="https://www.villaesencia.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.14.2"></script>
+<script data-wp-strategy="defer" defer id="jquery-ui-slider-js" src="https://www.villaesencia.com/wp-includes/js/jquery/ui/slider.min.js?ver=1.14.2"></script>
+<script data-wp-strategy="defer" id="jquery-ui-datepicker-js" src="https://www.villaesencia.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-datepicker-js-after"></script>
+<script data-wp-strategy="defer" defer id="googlemaps-js-js" onload="if(typeof streamlineGoogleMapsReady==='function'){streamlineGoogleMapsReady();}" src="https://maps.googleapis.com/maps/api/js?loading=async&#038;callback=streamlineGoogleMapsReady&#038;key=REDACTED"></script>
+<script data-wp-strategy="defer" defer id="sweet-js-js" src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script data-wp-strategy="defer" defer id="waitme-js-js" src="https://www.villaesencia.com/wp-content/plugins/streamline-core/vendor/waitMe/waitMe.min.js?ver=3.4.0-beta3"></script>
+<script data-wp-strategy="defer" defer id="date-format-js-js" src="https://www.villaesencia.com/wp-content/plugins/streamline-core/vendor/dateFormat/dateFormat.min.js?ver=3.4.0-beta3"></script>
+<script id="frontend-js-js-extra"></script>
+<script data-wp-strategy="defer" defer id="frontend-js-js" src="https://www.villaesencia.com/wp-content/plugins/streamline-core/assets/dist/js/frontend.min.js?ver=3.4.0-beta3"></script>
+<script data-wp-strategy="defer" defer id="angularcookies-js" src="//ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-cookies.min.js"></script>
+<script data-wp-strategy="defer" defer id="ng-payments-js-js" src="https://www.villaesencia.com/wp-content/plugins/streamline-core/vendor/angular-payments/angular-payments.min.js?ver=3.4.0-beta3"></script>
+<script data-wp-strategy="defer" defer id="multiselect-js-js" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.js"></script>
+<script id="select2-js-js" src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js?ver=4.1.0-rc.0"></script>
+<script data-wp-strategy="defer" defer id="jquery-sticky-js-js" src="https://www.villaesencia.com/wp-content/plugins/streamline-core/vendor/jquery.sticky.min.js?ver=3.4.0-beta3"></script>
+<script data-wp-strategy="defer" defer id="custom-quote-js-js" src="https://www.villaesencia.com/wp-content/plugins/streamline-core/assets/dist/js/custom_quote.min.js?ver=3.4.0-beta3"></script>
+<script data-wp-strategy="defer" defer id="moment-js-js" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment-with-locales.min.js"></script>
+<script data-wp-strategy="defer" defer id="daterange-picker-js" src="https://www.villaesencia.com/wp-content/plugins/streamline-core/assets/src/js/daterangepicker.js?ver=3.4.0-beta3"></script>
+<script id="bootstrap_js-js" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script id="custom_js-js" src="https://www.villaesencia.com/wp-content/themes/BizcorLuxury/js/custom.js"></script>
+<script id="slick_js-js" src="https://www.villaesencia.com/wp-content/themes/BizcorLuxury/js/slick.js"></script>
+<script id="jquery-lazyloadxt-js-extra"></script>
+<script id="jquery-lazyloadxt-js" src="//www.villaesencia.com/wp-content/plugins/a3-lazy-load/assets/js/jquery.lazyloadxt.extra.min.js?ver=2.7.9"></script>
+<script id="jquery-lazyloadxt-srcset-js" src="//www.villaesencia.com/wp-content/plugins/a3-lazy-load/assets/js/jquery.lazyloadxt.srcset.min.js?ver=2.7.9"></script>
+<script id="jquery-lazyloadxt-extend-js-extra"></script>
+<script id="jquery-lazyloadxt-extend-js" src="//www.villaesencia.com/wp-content/plugins/a3-lazy-load/assets/js/jquery.lazyloadxt.extend.js?ver=2.7.9"></script>
+<script id="wp-dom-ready-js" src="https://www.villaesencia.com/wp-includes/js/dist/dom-ready.min.js?ver=3fe927cab37bf38d6a23"></script>
+<script id="wp-hooks-js" src="https://www.villaesencia.com/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://www.villaesencia.com/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after"></script>
+<script id="wp-a11y-js" src="https://www.villaesencia.com/wp-includes/js/dist/a11y.min.js?ver=31c6cec5a4ff7aff483d"></script>
+<script id="gform_json-js" defer='defer' src="https://www.villaesencia.com/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=3.1.3"></script>
+<script id="gform_gravityforms-js-extra"></script>
+<script id="gform_gravityforms-js" defer='defer' src="https://www.villaesencia.com/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=3.1.3"></script>
+<script id="gform_recaptcha-js" defer='defer' src="https://www.google.com/recaptcha/api.js?hl=en&#038;&#038;ver=7.1.3#038;render=explicit"></script>
+<script id="gform_placeholder-js" defer='defer' src="https://www.villaesencia.com/wp-content/plugins/gravityforms/js/placeholders.jquery.min.js?ver=3.1.3"></script>
+<script id="gform_gravityforms_utils-js" defer='defer' src="https://www.villaesencia.com/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=d7e103405223e60d2719f4c330fd11cf"></script>
+<script id="gform_gravityforms_theme_vendors-js" defer='defer' src="https://www.villaesencia.com/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=0c901cb641ce64b99c20ea1a4d208cc9"></script>
+<script id="gform_gravityforms_theme-js-extra"></script>
+<script id="gform_gravityforms_theme-js" defer='defer' src="https://www.villaesencia.com/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=373fcf115e257ba62fdd1a205717b981"></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<div  class="modal_search">
+    <div  class="c-search-widget search_widget "> 
+            <form method="post" class="form " id="resortpro-widget-form" action="https://www.villaesencia.com/search-results/" >
+        <input type="hidden" name="resortpro_search_nonce" value="3392832add"/>
+        <input type="hidden" class="disabled" id="resortpro_calendar_flex" name="resortpro_calendar_flex" value=""/>
+                                                                        <div class="row c-search-widget__fields">
+            <div class="modalSearch">
+    <div class="inputLeft">
+        <input type="text" id="resortpro_sw_lodging_unit" placeholder="Type Unit Name..."  name="resortpro_sw_lodging_unit" class="resortpro_sw-date form-control" value="">
+    </div>
+    <div class="buttonRight">
+        <button class="btn" type="submit">
+            <img class="lazy lazy-hidden" src="//www.villaesencia.com/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="/wp-content/themes/BizcorLuxury/images/search-solid-white.svg" alt=""><noscript><img src="/wp-content/themes/BizcorLuxury/images/search-solid-white.svg" alt=""></noscript>
+        </button>
+    </div>    
+</div>        </div>
+            </form>
+        </div>    <span class="close_modal">&times</span>
+</div><div  style="display: none;" class="hiddenWidget">
+    <div  class="c-search-widget search_widget "> 
+            <form method="post" class="form " id="resortpro-widget-form" action="https://www.villaesencia.com/search-results/" >
+        <input type="hidden" name="resortpro_search_nonce" value="3392832add"/>
+        <input type="hidden" class="disabled" id="resortpro_calendar_flex" name="resortpro_calendar_flex" value=""/>
+                                                                        <div class="row c-search-widget__fields">
+            <div class="customView">
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 item">
+        <div class="form-group  resortpro-search-guests-adults-block bg-white">
+            <div class="c-input-group date-group">
+                          <div class="date-arrows wdsearch">
+                            <span class="prevDayDate"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                            <span class="nextDayDate"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                          </div>
+                        <span id="monthsLimit" style="display:none" data-timezone="+00:00"></span><input id="search_start_date" ng-model="search.start_date" data-min-stay="2"   data-turndates="" data-bindpicker="#search_end_date" class="form-control datepicker-input" type="text" name="start_date" readonly="readonly" placeholder="Arrival" data-turnDay="" value="" /><i class="glyphicon glyphicon-calendar"></i></div>                
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 item">
+        <div class="form-group has-feedback resortpro-search-checkout-block bg-white">
+            <div class="c-input-group date-group">
+                            <div class="date-arrows wdsearch">
+                              <span class="prevDayDate"><i class="fa fa-angle-left" aria-hidden="true"></i></span>
+                              <span class="nextDayDate"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+                            </div>
+                          <input id="search_end_date" ng-model="search.end_date" data-turndates="" class="form-control datepicker-input" type="text" name="end_date" readonly="readonly" placeholder="Departure" value="" /><i class="glyphicon glyphicon-calendar"></i></div>
+        </div>
+    </div>    
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 item guests noBorder">
+        <div class="form-group has-feedback resortpro-search-checkin-block bg-white">
+           <div class="c-select-list form-control"><select  name="streamlinecore_fw_adults" id="streamlinecore_fw_adults"   class=""><option value=""  selected="selected">Guests</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="45">45</option><option value="46">46</option><option value="47">47</option><option value="48">48</option><option value="49">49</option><option value="50">50</option></select></div>
+           <img src="//www.villaesencia.com/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="/wp-content/themes/BizcorLuxury/images/sort.svg" class="lazy lazy-hidden form-control-feedback arrow"><noscript><img src="/wp-content/themes/BizcorLuxury/images/sort.svg" class="form-control-feedback arrow"></noscript>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 item">
+        <div class="form-group has-feedback resortpro-search-checkin-block bg-white">
+           <div class="c-select-list form-control"><select  name="streamlinecore_sw_bedrooms_number" id="streamlinecore_sw_bedrooms_number"   class=""><option value=""  selected="selected">Bedrooms</option><option value="1">1 Bedroom</option><option value="2">2 Bedroom</option><option value="3">3 Bedroom</option><option value="4">4 Bedroom</option><option value="5">5 Bedroom</option></select></div>
+           <img src="//www.villaesencia.com/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif" data-lazy-type="image" data-src="/wp-content/themes/BizcorLuxury/images/sort.svg" class="lazy lazy-hidden form-control-feedback arrow"><noscript><img src="/wp-content/themes/BizcorLuxury/images/sort.svg" class="form-control-feedback arrow"></noscript>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 item amenities-wrap">
+        <p class="btn-amenities">advanced search</p>
+    </div>    
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 item search_btn">
+        <div class="form-group  resortpro-search-submit-button-block">
+            <button class="btn" type="submit">Search Rentals</button>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 item all_rentals">
+        <div class="form-group  resortpro-search-submit-button-block">
+            <button class="btn" type="submit">SEARCH ALL RENTALS</button>
+        </div>
+    </div>
+</div>
+<div class="wrap-advensing">
+    <div class="col-lg-12 wrap-amenities">
+        <div class="form-group amenities-box">
+             <div class="col-md-12 amenity_group" style="margin-bottom:24px">
+                      <label>Unit Type</label><br /><div class="amenity">
+                          <input type="checkbox" ng-checked="search.amenities_filter.includes(555359)" name="resortpro_sw_amenities[]" value="555359"  /> 
+                          One Bedroom
+                          <span class="amenity_count" ng-show="searchAmenitiesObj[555359].total_count > 0" ng-bind='" ("+searchAmenitiesObj[555359].total_count+")"'><span>
+                          </div><div class="amenity">
+                          <input type="checkbox" ng-checked="search.amenities_filter.includes(555361)" name="resortpro_sw_amenities[]" value="555361"  /> 
+                          Penthouse
+                          <span class="amenity_count" ng-show="searchAmenitiesObj[555361].total_count > 0" ng-bind='" ("+searchAmenitiesObj[555361].total_count+")"'><span>
+                          </div><div class="amenity">
+                          <input type="checkbox" ng-checked="search.amenities_filter.includes(555362)" name="resortpro_sw_amenities[]" value="555362"  /> 
+                          Private Pool
+                          <span class="amenity_count" ng-show="searchAmenitiesObj[555362].total_count > 0" ng-bind='" ("+searchAmenitiesObj[555362].total_count+")"'><span>
+                          </div><div class="amenity">
+                          <input type="checkbox" ng-checked="search.amenities_filter.includes(555363)" name="resortpro_sw_amenities[]" value="555363"  /> 
+                          Studio
+                          <span class="amenity_count" ng-show="searchAmenitiesObj[555363].total_count > 0" ng-bind='" ("+searchAmenitiesObj[555363].total_count+")"'><span>
+                          </div><div class="amenity">
+                          <input type="checkbox" ng-checked="search.amenities_filter.includes(555364)" name="resortpro_sw_amenities[]" value="555364"  /> 
+                          Ocean View
+                          <span class="amenity_count" ng-show="searchAmenitiesObj[555364].total_count > 0" ng-bind='" ("+searchAmenitiesObj[555364].total_count+")"'><span>
+                          </div><div class="amenity">
+                          <input type="checkbox" ng-checked="search.amenities_filter.includes(555365)" name="resortpro_sw_amenities[]" value="555365"  /> 
+                          2 & 3 Bedrooms
+                          <span class="amenity_count" ng-show="searchAmenitiesObj[555365].total_count > 0" ng-bind='" ("+searchAmenitiesObj[555365].total_count+")"'><span>
+                          </div><div class="amenity">
+                          <input type="checkbox" ng-checked="search.amenities_filter.includes(555366)" name="resortpro_sw_amenities[]" value="555366"  /> 
+                          Garden View
+                          <span class="amenity_count" ng-show="searchAmenitiesObj[555366].total_count > 0" ng-bind='" ("+searchAmenitiesObj[555366].total_count+")"'><span>
+                          </div></div>                 
+        </div>
+    </div>
+</div>        </div>
+            </form>
+        </div></div>
+<script></script>
+</body>
+</html>

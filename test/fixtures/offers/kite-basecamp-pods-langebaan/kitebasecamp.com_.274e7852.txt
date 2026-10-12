@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://kitebasecamp.com/xmlrpc.php" />
+	<script type="text/javascript"></script>
+	<script></script><title>Kite Basecamp | Kite Basecamp</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Kite Basecamp &raquo; Feed" href="https://kitebasecamp.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Kite Basecamp &raquo; Comments Feed" href="https://kitebasecamp.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Kite Basecamp &raquo; Home Comments Feed" href="https://kitebasecamp.com/home/feed/" />
+		<script type="text/javascript"></script>
+		<meta content="Divi Child v." name="generator"/><style type="text/css"></style>
+	<link rel='stylesheet' id='wp-block-library-css'  href='https://kitebasecamp.com/wp-includes/css/dist/block-library/style.min.css?ver=5.8.18' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-back-to-top-css'  href='https://kitebasecamp.com/wp-content/plugins/divi-100-back-to-top/assets/css/style.css?ver=20160602' type='text/css' media='all' />
+<link rel='stylesheet' id='parent-style-css'  href='https://kitebasecamp.com/wp-content/themes/Divi/style.css?ver=5.8.18' type='text/css' media='all' />
+<link rel='stylesheet' id='child-style-css'  href='https://kitebasecamp.com/wp-content/themes/divi-child/style.css?ver=5.8.18' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-fonts-css'  href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&#038;subset=latin,latin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='divi-style-css'  href='https://kitebasecamp.com/wp-content/themes/divi-child/style.css?ver=4.0.9' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css'  href='https://kitebasecamp.com/wp-includes/css/dashicons.min.css?ver=5.8.18' type='text/css' media='all' />
+<script type='text/javascript' src='https://kitebasecamp.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://kitebasecamp.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+<script type='text/javascript' id='et-core-api-spam-recaptcha-js-extra'></script>
+<script type='text/javascript' src='https://kitebasecamp.com/wp-content/themes/Divi/core/admin/js/recaptcha.js?ver=5.8.18' id='et-core-api-spam-recaptcha-js'></script>
+<link rel="https://api.w.org/" href="https://kitebasecamp.com/wp-json/" /><link rel="alternate" type="application/json" href="https://kitebasecamp.com/wp-json/wp/v2/pages/2" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://kitebasecamp.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://kitebasecamp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.8.18" />
+<link rel="canonical" href="https://kitebasecamp.com/" />
+<link rel='shortlink' href='https://kitebasecamp.com/' />
+<link rel="alternate" type="application/json+oembed" href="https://kitebasecamp.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkitebasecamp.com%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://kitebasecamp.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fkitebasecamp.com%2F&#038;format=xml" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /><meta name="generator" content="Powered by Slider Revolution 6.6.11 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DB1V1KWPBF"></script>
+<script></script>
+<script></script>
+<link rel="icon" href="https://kitebasecamp.com/wp-content/uploads/2019/12/cropped-Kite-Basecamp-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://kitebasecamp.com/wp-content/uploads/2019/12/cropped-Kite-Basecamp-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://kitebasecamp.com/wp-content/uploads/2019/12/cropped-Kite-Basecamp-180x180.png" />
+<meta name="msapplication-TileImage" content="https://kitebasecamp.com/wp-content/uploads/2019/12/cropped-Kite-Basecamp-270x270.png" />
+<script></script>
+<link rel="stylesheet" id="et-core-unified-2-cached-inline-styles" href="https://kitebasecamp.com/wp-content/et-cache/2/et-core-unified-2-17917229112534.min.css" onerror="et_core_page_resource_fallback(this, true)" onload="et_core_page_resource_fallback(this)" /></head>
+<body data-rsssl=1 class="home page-template-default page page-id-2 et_divi_100_custom_back_to_top et_divi_100_custom_back_to_top--style-1 et_pb_button_helper_class et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_footer_columns4 et_cover_background et_pb_gutter et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db et_minified_js et_minified_css">
+	<div id="page-container">
+			<header id="main-header" data-height-onload="66">
+			<div class="container clearfix et_menu_container">
+							<div class="logo_container">
+					<span class="logo_helper"></span>
+					<a href="https://kitebasecamp.com/">
+						<img src="https://kitebasecamp.com/wp-content/themes/Divi/images/logo.png" alt="Kite Basecamp" id="logo" data-height-percentage="54" />
+					</a>
+				</div>
+							<div id="et-top-navigation" data-height="66" data-fixed-height="40">
+											<nav id="top-menu-nav">
+													<ul id="top-menu" class="nav">
+																	<li ><a href="https://kitebasecamp.com/">Home</a></li>
+								<li class="page_item page-item-2 current_page_item"><a href="https://kitebasecamp.com/" aria-current="page">Home</a></li>
+															</ul>
+												</nav>
+										<div id="et_top_search">
+						<span id="et_search_icon"></span>
+					</div>
+					<div id="et_mobile_nav_menu">
+				<div class="mobile_nav closed">
+					<span class="select_page">Select Page</span>
+					<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+				</div>
+			</div>				</div> 
+			</div> 
+			<div class="et_search_outer">
+				<div class="container et_search_form_container">
+					<form role="search" method="get" class="et-search-form" action="https://kitebasecamp.com/">
+					<input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />					</form>
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+		</header> 
+			<div id="et-main-area">
+<div id="main-content">
+				<article id="post-2" class="post-2 page type-page status-publish hentry">
+					<div class="entry-content">
+					<div id="et-boc" class="et-boc">
+		<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0 et_pb_fullwidth_section et_section_regular">
+					<div class="et_pb_module et_pb_fullwidth_code et_pb_fullwidth_code_0">
+				<div class="et_pb_code_inner">
+			<p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="rev_slider_5_1_wrapper" data-source="gallery" style="visibility:hidden;background:#ffffff;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+				<rs-module id="rev_slider_5_1" style="" data-version="6.6.11">
+					<rs-slides style="overflow: hidden; position: absolute;">
+						<rs-slide style="position: absolute;" data-key="rs-17" data-title="Slide" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="kitesurfing" width="1910" height="1080" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2024/10/kitesurfing.jpg" data-bg="f:auto;" data-parallax="off" data-no-retina>
+<rs-layer
+								id="slider-5-slide-17-layer-0" 
+								data-type="object"
+								data-rsp_ch="on"
+								data-xy="xo:50px,41px,41px,19px;yo:50px,41px,41px,19px;"
+								data-text="w:normal;s:20,16,16,7;l:0,20,20,9;"
+								data-frame_999="o:0;st:8900;sR:8700;"
+								style="z-index:8;font-family:'Roboto';"
+							> 
+							</rs-layer><rs-layer
+								id="slider-5-slide-17-layer-2" 
+								class="rev-btn"
+								data-type="button"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:-106px,-87px,-87px,-109px;y:t,t,t,m;yo:408px,336px,336px,17px;"
+								data-text="w:normal;s:20,16,16,24;l:50,41,41,30;fw:500;a:left,left,left,center;"
+								data-dim="w:auto,auto,auto,86px;minh:0px,none,0px,none;"
+								data-vbility="f,f,f,f"
+								data-actions='id:eat;o:click;a:scrollto;sp:1000ms;e:power1.inOut;'
+								data-padding="r:20,17,17,11;l:20,17,17,11;"
+								data-frame_0="x:-50,-41,-41,-25px;y:0,0,0,0px;"
+								data-frame_1="x:0,0,0,0px;y:0,0,0,0px;st:1000;sp:3000;"
+								data-frame_999="o:0;st:w;sR:7700;"
+								data-frame_hover="c:#736042;bgc:#fff;boc:#736042;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;sp:200;e:power1.inOut;"
+								style="z-index:12;background-color:#736042;font-family:'Roboto';"
+							>EAT 
+							</rs-layer><rs-layer
+								id="slider-5-slide-17-layer-3" 
+								class="rev-btn"
+								data-type="button"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:0,0,0,-2px;y:t,t,t,m;yo:408px,336px,336px,17px;"
+								data-text="w:normal;s:20,16,16,24;l:50,41,41,30;fw:500;"
+								data-dim="minh:0px,none,0px,none;"
+								data-vbility="f,f,f,f"
+								data-actions='id:stay;o:click;a:scrollto;sp:1000ms;e:power1.inOut;'
+								data-padding="r:20,17,17,13;l:20,17,17,13;"
+								data-frame_0="x:0,0,0,0px;y:50,41,41,31px;"
+								data-frame_1="x:0,0,0,0px;y:0,0,0,0px;st:1000;sp:3000;"
+								data-frame_999="o:0;st:w;sR:7700;"
+								data-frame_hover="c:#736042;bgc:#fff;boc:#736042;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;sp:200;e:power1.inOut;"
+								style="z-index:11;background-color:#736042;font-family:'Roboto';"
+							>STAY FROM R280pps 
+							</rs-layer><rs-layer
+								id="slider-5-slide-17-layer-6" 
+								data-type="shape"
+								data-rsp_ch="on"
+								data-text="w:normal;s:20,16,16,7;l:0,20,20,9;"
+								data-dim="w:100%;h:100%;"
+								data-basealign="slide"
+								data-frame_999="o:0;st:w;"
+								style="z-index:6;background-color:rgba(255,255,255,0.5);"
+							> 
+							</rs-layer><rs-layer
+								id="slider-5-slide-17-layer-7" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:l,l,l,c;xo:50px,41px,41px,-2px;yo:970px,801px,801px,-106px;"
+								data-text="w:normal;s:20,16,16,7;l:0,20,20,9;"
+								data-dim="w:300px,247px,247px,500px;h:180px,148px,148px,1000px;"
+								data-vbility="f,f,t,t"
+								data-frame_999="o:0;st:w;"
+								style="z-index:7;"
+							><img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" class="tp-rs-img rs-lazyload" width="500" height="1000" data-lazyload="//kitebasecamp.com/wp-content/uploads/2019/12/Kite-Basecamp-main_mobi3.jpg" data-no-retina> 
+							</rs-layer>						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-22" data-title="Slide" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Kite-basecamp-pods" width="1910" height="1080" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2024/10/Kite-basecamp-pods.jpg" data-parallax="off" data-no-retina>
+<rs-layer
+								id="slider-5-slide-22-layer-0" 
+								data-type="object"
+								data-rsp_ch="on"
+								data-xy="xo:50px,41px,41px,19px;yo:50px,41px,41px,19px;"
+								data-text="w:normal;s:20,16,16,7;l:0,20,20,9;"
+								data-frame_999="o:0;st:8900;sR:8700;"
+								style="z-index:8;font-family:'Roboto';"
+							> 
+							</rs-layer><rs-layer
+								id="slider-5-slide-22-layer-6" 
+								data-type="shape"
+								data-rsp_ch="on"
+								data-text="w:normal;s:20,16,16,7;l:0,20,20,9;"
+								data-dim="w:100%;h:100%;"
+								data-basealign="slide"
+								data-frame_999="o:0;st:w;"
+								style="z-index:6;background-color:rgba(255,255,255,0.5);"
+							> 
+							</rs-layer><rs-layer
+								id="slider-5-slide-22-layer-7" 
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:l,l,l,c;xo:50px,41px,41px,-2px;yo:970px,801px,801px,-106px;"
+								data-text="w:normal;s:20,16,16,7;l:0,20,20,9;"
+								data-dim="w:300px,247px,247px,500px;h:180px,148px,148px,1000px;"
+								data-vbility="f,f,t,t"
+								data-frame_999="o:0;st:w;"
+								style="z-index:7;"
+							><img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" class="tp-rs-img rs-lazyload" width="500" height="1000" data-lazyload="//kitebasecamp.com/wp-content/uploads/2019/12/Kite-Basecamp-main_mobi3.jpg" data-no-retina> 
+							</rs-layer>						</rs-slide>
+					</rs-slides>
+					<rs-static-layers><rs-layer
+								id="slider-5-slide-5-layer-1" 
+								class="rs-layer-static"
+								data-type="text"
+								data-color="#736042"
+								data-rsp_ch="on"
+								data-xy="x:l,l,l,c;xo:443px,365px,365px,0;yo:430px,346px,346px,453px;"
+								data-text="w:normal;s:30,24,24,25;l:25,20,20,9;fw:700;"
+								data-dim="w:auto,auto,auto,342px;"
+								data-onslides="s:1;"
+								data-frame_0="x:0,0,0,0px;y:50,41,41,31px;"
+								data-frame_1="x:0,0,0,0px;y:0,0,0,0px;st:1000;sp:3000;"
+								data-frame_999="o:0;st:w;sR:7700;"
+								style="z-index:14;font-family:'Open Sans';"
+							>Exclusively for Kite Surfers<br />
+<br />
+							</rs-layer><rs-layer
+								id="slider-5-slide-5-layer-5" 
+								class="rs-layer-static"
+								data-type="image"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:17px,14px,14px,-2px;yo:0,0,0,25px;"
+								data-text="w:normal;s:20,16,16,7;l:0,20,20,9;"
+								data-dim="w:238px,196px,196px,209px;h:295px,243px,243px,259px;"
+								data-onslides="s:1;"
+								data-frame_0="sX:0.9;sY:0.9;"
+								data-frame_1="st:700;sp:3000;sR:700;"
+								data-frame_999="o:0;st:w;sR:5300;"
+								style="z-index:11;"
+							><img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" class="tp-rs-img rs-lazyload" width="500" height="621" data-lazyload="//kitebasecamp.com/wp-content/uploads/2019/12/Kite-Basecamp.png" data-no-retina> 
+							</rs-layer><rs-layer
+								id="slider-5-slide-5-layer-9" 
+								class="rev-btn rs-layer-static"
+								data-type="button"
+								data-rsp_ch="on"
+								data-xy="x:c;xo:16px,13px,13px,-2px;y:t,t,t,m;yo:336px,273px,273px,17px;"
+								data-text="w:normal;s:20,16,16,24;l:50,41,41,30;fw:500;"
+								data-dim="minh:0px,none,0px,none;"
+								data-actions='id:stay;o:click;a:scrollto;sp:1000ms;e:power1.inOut;'
+								data-onslides="s:1;"
+								data-padding="r:20,17,17,13;l:20,17,17,13;"
+								data-border="bos:solid;bow:2px,2px,2px,2px;"
+								data-frame_0="x:0,0,0,0px;y:50,41,41,31px;"
+								data-frame_1="x:0,0,0,0px;y:0,0,0,0px;st:1000;sp:3000;"
+								data-frame_999="o:0;st:w;sR:7700;"
+								data-frame_hover="c:#736042;bgc:#fff;boc:#736042;bor:0px,0px,0px,0px;bos:solid;bow:2px,2px,2px,2px;sp:200;e:power1.inOut;"
+								style="z-index:13;background-color:#736042;font-family:'Roboto';"
+							>STAYS FROM R275pps 
+							</rs-layer></rs-static-layers>
+				</rs-module>
+				<script></script>
+			</rs-module-wrap>
+</div>
+			</div> 
+			</div> <div id="eat" class="et_pb_section et_pb_section_1 et_section_regular">
+					<div class="et_pb_row et_pb_row_0 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough">
+				<div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+				<div class="et_pb_text_inner"><h1 style="text-align: center;"><a href="tel:+27723966038 " style="color: #FFF; text-decoration: none;">+27 (0)72 396 6038</a></h1></div>
+			</div> 
+			</div> <div class="et_pb_column et_pb_column_1_2 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				<div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+				<div class="et_pb_text_inner"><h1 style="text-align: center;"><a style="color: #fff; text-decoration: none;" href="mailtobookings@villagenlife.travel 
+ ">bookings@villagenlife.travel </p>
+<p> </a></h1></div>
+			</div> 
+			</div> 
+			</div> <div class="et_pb_row et_pb_row_1 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
+				<div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+				<div class="et_pb_text_inner"><h3 style="text-align: center;"><a href="tel:+27723966038 " style="color: #FFF; text-decoration: none;">+27 (0)72 396 6038</a></h3></div>
+			</div> 
+			</div> <div class="et_pb_column et_pb_column_1_2 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				<div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">
+				<div class="et_pb_text_inner"><h3 style="text-align: center;"><a href="mailto:bookings@kitebasecamp.com" style="color: #FFF; text-decoration: none;">bookings@kitebasecamp.com</a></h3></div>
+			</div> 
+			</div> 
+			</div> 
+			</div> <div id="eat" class="et_pb_section et_pb_section_2 et_section_regular">
+					<div class="et_pb_row et_pb_row_2 et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				<div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+				<div class="et_pb_text_inner"><p>Located in the Boat Yard of The Farmhouse Hotel, our PODS are clean, well equipped and set up with kiters in mind. Each POD features 2 beds, a mini fridge, deck with BBQ and cooking basics. Communal ablution facilities include showers, toilets and urinals. The secure parking, ample kite drying space and close proximity to Langebaans best kiting spots make the PODS the perfect lock up and go stay for kiters visiting the West Coast.</p>
+<h1 style="padding-bottom: 20px;">Rates</h1>
+<p>&nbsp;</p>
+<table border="1" cellpadding="4" cellspacing="0">
+<thead>
+<tr>
+<th>Year</th>
+<th>Period</th>
+<th>Room Type</th>
+<th>Rate (ZAR)</th>
+</tr>
+</thead>
+<tbody></p>
+<tr>
+<td rowspan="7" style="color: #736042 !important;"><strong>2026</strong></td>
+<td>PEAK</td>
+<td>ALL</td>
+<td>R1 150</td>
+</tr>
+<tr>
+<td>All Periods</td>
+<td>Single</td>
+<td>R550</td>
+</tr>
+<tr>
+<td>All Periods</td>
+<td>Double</td>
+<td>R690</td>
+</tr>
+<tr>
+<td>1 May till 30 Sep</td>
+<td>Single</td>
+<td>R400</td>
+</tr>
+<tr>
+<td>1 May till 30 Sep</td>
+<td>Double</td>
+<td>R550</td>
+</tr>
+<tr>
+<td>1 Oct – 18 Dec</td>
+<td>Single</td>
+<td>R550</td>
+</tr>
+<tr>
+<td>1 Oct – 18 Dec</td>
+<td>Double</td>
+<td>R690</td>
+</tr>
+<tr>
+<td rowspan="13" style="color: #736042 !important;"><strong>2027</strong></td>
+<td>PEAK</td>
+<td>ALL</td>
+<td>R1 250</td>
+</tr>
+<tr>
+<td>4 Jan – 30 Apr</td>
+<td>Single</td>
+<td>R600</td>
+</tr>
+<tr>
+<td>4 Jan – 30 Apr</td>
+<td>Double</td>
+<td>R750</td>
+</tr>
+<tr>
+<td>1 May till 30 Sep</td>
+<td>Single</td>
+<td>R480</td>
+</tr>
+<tr>
+<td>1 May till 30 Sep</td>
+<td>Double</td>
+<td>R625</td>
+</tr>
+<tr>
+<td>1 Oct – 17 Dec</td>
+<td>Single</td>
+<td>R600</td>
+</tr>
+<tr>
+<td>1 Oct – 17 Dec</td>
+<td>Double</td>
+<td>R750</td>
+</tr>
+<tr></tr>
+</tbody>
+</table></div>
+			</div> 
+			</div> 
+			</div> 
+			</div> <div id="stay" class="et_pb_section et_pb_section_3 et_section_regular">
+					<div class="et_pb_row et_pb_row_3 et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough">
+				<div class="et_pb_module et_pb_code et_pb_code_0">
+				<div class="et_pb_code_inner">
+			<p class="rs-p-wp-fix"></p>
+			<rs-module-wrap id="rev_slider_6_2_wrapper" data-source="gallery" style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+				<rs-module id="rev_slider_6_2" style="" data-version="6.6.11">
+					<rs-slides style="overflow: hidden; position: absolute;">
+						<rs-slide style="position: absolute;" data-key="rs-28" data-title="Slide" data-thumb="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Blue-Container-16-100x50.jpg" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Blue-Container-16.jpg" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-29" data-title="Slide" data-thumb="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Blue-Container-19-100x50.jpg" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Blue-Container-19.jpg" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-30" data-title="Slide" data-thumb="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Blue-Container-21-100x50.jpg" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Blue-Container-21.jpg" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-31" data-title="Slide" data-thumb="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Drone-5-100x50.jpg" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Drone-5.jpg" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-32" data-title="Slide" data-thumb="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Drone-7-100x50.jpg" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Drone-7.jpg" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-33" data-title="Slide" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Pod_18-7" width="1620" height="1080" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2026/04/Pod_18-7.webp" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-34" data-title="Slide" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Pod_18-2" width="1620" height="1080" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2026/04/Pod_18-2.webp" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-35" data-title="Slide" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Pod_18-5" width="1620" height="1080" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2026/04/Pod_18-5.webp" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-44" data-title="Slide" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Pod_18-6" width="1620" height="1080" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2026/04/Pod_18-6.webp" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-36" data-title="Slide" data-thumb="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Green-Container-7-100x50.jpg" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Green-Container-7.jpg" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-37" data-title="Slide" data-thumb="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Green-Container-11-100x50.jpg" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Green-Container-11.jpg" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-38" data-title="Slide" data-thumb="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Green-Container-13-100x50.jpg" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Green-Container-13.jpg" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-39" data-title="Slide" data-thumb="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Green-Container-15-100x50.jpg" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Green-Container-15.jpg" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-40" data-title="Slide" data-thumb="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Outside-5-100x50.jpg" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Outside-5.jpg" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-41" data-title="Slide" data-thumb="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Outside-9-100x50.jpg" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Outside-9.jpg" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-42" data-title="Slide" data-thumb="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Outside-11-100x50.jpg" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Outside-11.jpg" data-no-retina>
+						</rs-slide>
+						<rs-slide style="position: absolute;" data-key="rs-43" data-title="Slide" data-thumb="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Service-Station-1-100x50.jpg" data-in="o:0;" data-out="a:false;">
+							<img src="//kitebasecamp.com/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//kitebasecamp.com/wp-content/uploads/2025/12/FHH-Kite-Basecamp-HR20251201-Service-Station-1.jpg" data-no-retina>
+						</rs-slide>
+					</rs-slides>
+				</rs-module>
+				<script></script>
+			</rs-module-wrap>
+</div>
+			</div> 
+			</div> <div class="et_pb_column et_pb_column_1_2 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				<div id="stay" class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_light">
+				<div class="et_pb_text_inner"><h1>STAY</h1>
+<p>Our super clean PODS sleep 2 in either a double bed or 2 single beds and feature a dedicated toilet and shower cubicle in the ablution pod. Complete with a private deck fitted with a BBQ, these pods are designed for the discerning adventure traveller, looking for an affordable, fun place to stay while kiting and exploring Langebaan.</p>
+<p></p>
+<p>POD’s – <span>From R275 per person sharing</span></p></div>
+			</div> <div class="et_pb_button_module_wrapper et_pb_button_0_wrapper  et_pb_module ">
+				<a class="et_pb_button et_pb_button_0 et_pb_bg_layout_light" href="https://www.airbnb.co.za/rooms/52383998?preview_for_ml=true&#038;source_impression_id=p3_1701075185_9LYlyeI7A5xq1SGd" target="_blank">BOOK NOW</a>
+			</div><div id="stay" class="et_pb_module et_pb_text et_pb_text_6  et_pb_text_align_left et_pb_bg_layout_light">
+				<div class="et_pb_text_inner"><p><span></span></p>
+<p>Enjoy:</p>
+<ul>
+<li style="list-style-type: none;">
+<ul>
+<li>Unlimited access to the Basecamp Chill Zone</li>
+<li>BBQ and basic cooking facilities</li>
+<li>Towel and bed linen</li>
+<li>Access to the Cliff Path that leads directly to Shark Bay (our favourite kite spot)</li>
+</ul>
+</li>
+</ul>
+<p>If you want to know more or wish to book your stay with us, <br />contact <a href="mailto:bookings@villagenlife.travel ">bookings@villagenlife.travel </a> or call <a href="tel: +27723966038">+27(0)72 396 6038</a></p></div>
+			</div> 
+			</div> 
+			</div> <div class="et_pb_row et_pb_row_4 et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				<div id="stay" class="et_pb_module et_pb_text et_pb_text_7  et_pb_text_align_left et_pb_bg_layout_light">
+				<div class="et_pb_text_inner"><h1 style="text-align: center;">Introducing a unique new concept</h1>
+<h3 style="text-align: center;">NO WIND &#8211; NO PAY<br /> Kite Basecamps</h3>
+<p style="text-align: center;">At Kite Basecamp, we believe that every kite holiday must be as memorable as possible. We have therefore designed this exclusive policy with our Kitesurfing guests in mind.</p>
+<p style="text-align: center;">No Wind-No Pay Policy dictates that kitesurfer bookings may be cancelled 24 hours prior to the confirmed check-in date with no loss of deposit, should the wind be forecasted, at less than 13 knots for the day of arrival.</p>
+<p style="text-align: center;"><em>*Standard cancellation terms will apply should the wind be forecasted at 14 knots or above. The above policy does not apply to the peak periods between Christmas and New Years, as well as Easter and certain long weekends or during specific special events.</em></p></div>
+			</div> <div class="et_pb_button_module_wrapper et_pb_button_1_wrapper et_pb_button_alignment_center et_pb_module ">
+				<a class="et_pb_button et_pb_button_1 et_pb_bg_layout_light" href="https://www.thefarmhousehotel.com/webcam/" target="_blank">View The Weather Conditions in Real Time</a>
+			</div>
+			</div> 
+			</div> 
+			</div> 		</div>
+	</div>
+		</div>
+							</div> 
+				</article> 
+</div> 
+	<span class="et_pb_scroll_top et-pb-icon"></span>
+			<footer id="main-footer">
+				<div id="footer-bottom">
+					<div class="container clearfix">
+				<div id="footer-info">Copyright © Kite Basecamp 2026
+</div>					</div>	
+				</div>
+			</footer> 
+		</div> 
+	</div> 
+		<script></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400%2C500%7COpen+Sans:700&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+<script></script>
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='https://kitebasecamp.com/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.6.11' type='text/css' media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'></style>
+<script type='text/javascript' src='https://kitebasecamp.com/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.6.11' defer async id='tp-tools-js'></script>
+<script type='text/javascript' src='https://kitebasecamp.com/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.6.11' defer async id='revmin-js'></script>
+<script type='text/javascript' id='divi-custom-script-js-extra'></script>
+<script type='text/javascript' src='https://kitebasecamp.com/wp-content/themes/Divi/js/custom.min.js?ver=4.0.9' id='divi-custom-script-js'></script>
+<script type='text/javascript' src='https://kitebasecamp.com/wp-content/plugins/divi-100-back-to-top/assets/js/scripts.js?ver=20160602' id='custom-back-to-top-js'></script>
+<script type='text/javascript' src='https://kitebasecamp.com/wp-content/themes/Divi/core/admin/js/common.js?ver=4.0.9' id='et-core-common-js'></script>
+<script type='text/javascript' src='https://kitebasecamp.com/wp-includes/js/wp-embed.min.js?ver=5.8.18' id='wp-embed-js'></script>
+<script id="rs-initialisation-scripts"></script>
+</body>
+</html>

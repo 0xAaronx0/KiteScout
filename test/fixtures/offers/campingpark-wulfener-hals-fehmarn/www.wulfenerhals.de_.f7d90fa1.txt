@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Leading Camping auf Fehmarn - Campingpark Wulfener Hals</title>
+<base href="https://www.wulfenerhals.de/">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Erlebe einen einzigartigen Urlaub im Camping- und Ferienpark Wulfener Hals auf der Ostseeinsel Fehmarn. Ob Caravan-Stellplatz, Ferienhaus, Mobilheim oder Mietwohnwagen &ndash; du hast die Wahl und kannst direkt online buchen.">
+<meta name="theme-color" content="#1a406b">
+<meta id="page-cache-id" name="page-cache-id" content="/index?cacheRefresh=1">
+<meta property="og:image" content="https://www.wulfenerhals.de/files/bilder/startseite/Luftaufnahme_WH_Bruecke.jpg">
+<meta property="og:title" content="Leading Camping auf Fehmarn - Campingpark Wulfener Hals">
+<meta property="og:description" content="Erlebe einen einzigartigen Urlaub im Camping- und Ferienpark Wulfener Hals auf der Ostseeinsel Fehmarn. Ob Caravan-Stellplatz, Ferienhaus, Mobilheim oder Mietwohnwagen &ndash; du hast die Wahl und kannst direkt online buchen.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Leading Camping auf Fehmarn - Campingpark Wulfener Hals">
+<link rel="stylesheet" href="assets/colorbox/css/colorbox.min.css?v=2d7cb6b8"><link rel="stylesheet" href="assets/swipe/css/swipe.min.css?v=693e5985"><link rel="stylesheet" href="files/secra-theme/less-css/styles.min.css?v=77f8c384"><script src="assets/jquery/js/jquery.min.js?v=2e868dd8"></script><script src="https://www.wulfenerhals.de/bundles/contaotranslator/js/translator.js"></script>
+<script></script>
+</head>
+<body id="top" class="home">
+<input type="hidden" id="pageTranslationLanguage" value="en">
+<noscript>
+<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KFPC86" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<header id="header" itemscope itemtype="http://schema.org/WPHeader">
+<div class="header-content grid-spaceBetween-middle">
+<div class="ce_hyperlink logo block">
+<figure class="image_container">
+<a href="./" class="hyperlink_img">
+<img src="files/bilder/logos-auszeichnungen/Logo_Wulfener_Hals_2022_neg.svg" alt="">
+<span class="link-text">./</span></a>
+</figure>
+</div>
+<div class="ce_hyperlink logo logo-collapsed block">
+<figure class="image_container">
+<a href="./" class="hyperlink_img">
+<img src="files/bilder/logos-auszeichnungen/Logo_Wulfener_Hals_2022_neg.svg" alt="">
+<span class="link-text">./</span></a>
+</figure>
+</div>
+<ul class="header-links">
+<li class="booking"><a class="booking-button" href="/suchen-buchen" aria-label="Suchen &amp; buchen"><i class="fad fa-bed"></i><span>Search &amp; Book</span></a></li>
+<li class="phone"><a href="tel:+49437186280" aria-label="Telefon"><i class="fad fa-phone"></i><span>&ensp;04371 - 8628-0</span></a></li>
+<li class="mail"><a href="mailto:info@wulfenerhals.de" aria-label="E-Mail"><i class="fad fa-envelope"></i><span>&ensp;info@wulfenerhals.de</span></a></li>
+<li class="search"><a href="/suche" aria-label="Suche"><i class="fad fa-search"></i><span>&ensp;Search</span></a></li>
+<li class="login"><a href="/compusoft-login" aria-label="Login"><i class="fad fa-key"></i><span>&ensp;Log In</span></a></li>
+</ul><span class="translate-switch__wrapper">
+<form>
+<select id="language-selector" onchange="changeLanguage()">
+<option value="de">DE</option>
+<option value="en">EN</option>
+</select>
+</form>
+<script></script>
+</span>
+<button class="nav-toggle" title="Men&uuml; &ouml;ffnen"><span>Menu</span><i class="fad fa-bars"></i></button>
+<nav class="mod_navigation navigation-main block" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<button class="nav-close" title="close"><i class="fal fa-times"></i></button>
+<a href="index?cacheRefresh=1#skipNavigation22" class="invisible">Skip navigation</a>
+<ul class="level_1">
+<li class="submenu sibling first"><a href="campingplatz" title="Camping Ferienpark" class="submenu sibling first" aria-haspopup="true" itemprop="url"><span itemprop="name">Camping Vacation Park</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="first"><a href="campingplatz" title="Campingpark auf Fehmarn" class="first" itemprop="url"><span itemprop="name">Campground</span></a>
+</li>
+<li><a href="lageplan" title="Lageplan des Ferien- und Campingparks an der Ostsee" itemprop="url"><span itemprop="name">Site Map</span></a>
+</li>
+<li><a href="wohnmobilpark" title="Wohnmobilpark an der Ostsee auf der Insel Fehmarn" itemprop="url"><span itemprop="name">RV Park</span></a>
+</li>
+<li><a href="leadingpark" title="Leadingpark an der Ostsee auf der Insel Fehmarn" itemprop="url"><span itemprop="name">Leadingpark</span></a>
+</li>
+<li class="submenu"><a href="ausstattung" title="Ausstattung Camping- und Ferienpark Fehmarn" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Features</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="sanitaergebaeude" title="Sanit&auml;rgeb&auml;ude im Ferien- und Campingpark Fehmarn" class="first" itemprop="url"><span itemprop="name">Restroom Building</span></a>
+</li>
+<li><a href="kinderbad" title="Kinderbad auf dem Campingplatz auf Fehmarn" itemprop="url"><span itemprop="name">Children's Pool</span></a>
+</li>
+<li><a href="mietbaeder" title="Mietb&auml;der im Camping- und Ferienpark auf Fehmarn" itemprop="url"><span itemprop="name">Rental Bathrooms</span></a>
+</li>
+<li><a href="supermarkt-shop" title="Supermarkt &amp; Freizeit-Shop im Camping- und Ferienpark" itemprop="url"><span itemprop="name">Supermarket &amp; Store</span></a>
+</li>
+<li class="last"><a href="wlan-sky-tv" title="Digitales TV und Sky-TV im Camping- und Ferienpark" class="last" itemprop="url"><span itemprop="name">WLAN &amp; Sky-TV</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu last"><a href="gastronomie" title="Restaurants und Gastronomie im Camping- und Ferienpark" class="submenu last" aria-haspopup="true" itemprop="url"><span itemprop="name">Gastronomy</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="restaurant-seeblick" title="Restaurant Seeblick auf Fehmarn" class="first" itemprop="url"><span itemprop="name">Seeblick Restaurant</span></a>
+</li>
+<li><a href="restaurant-wulfener-hals" title="Die Pizzeria am Wulfener Hals" itemprop="url"><span itemprop="name">Pizzeria at the "Wulfener Hals"</span></a>
+</li>
+<li><a href="hotelrestaurant" title="Restaurant Golf &acute;n Wave" itemprop="url"><span itemprop="name">Golf 'n Wave Restaurant</span></a>
+</li>
+<li><a href="golfbar" title="Die Golfbar am Camping und Ferienpark Wulfener Hals" itemprop="url"><span itemprop="name">Golf Bar</span></a>
+</li>
+<li class="last"><a href="bistro" title="Bistro im Camping- und Ferienpark auf Fehmarn" class="last" itemprop="url"><span itemprop="name">Bistro</span></a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="submenu sibling"><a href="mietwohnwagen" title="Unsere Unterk&uuml;nfte" class="submenu sibling" aria-haspopup="true" itemprop="url"><span itemprop="name">Accommodations</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="submenu first"><a href="mietwohnwagen" title="Mietwohnwagen auf Fehmarn" class="submenu first" aria-haspopup="true" itemprop="url"><span itemprop="name">Rental Trailers</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="season-camper" title="Dethleff Season Camper" class="first" itemprop="url"><span itemprop="name">Season Camper</span></a>
+</li>
+<li class="last"><a href="weitere-mietwohnwagen" title="Weitere Mietwohnwagen auf Fehmarn" class="last" itemprop="url"><span itemprop="name">More Rental Trailers</span></a>
+</li>
+</ul>
+</li>
+<li><a href="ferienhaeuser-im-baltic-park" title="Ferienh&auml;user im Balticpark Wulfener Hals auf Fehmarn" itemprop="url"><span itemprop="name">Baltic-Park Vacation Homes</span></a>
+</li>
+<li><a href="ferienhaeuser-im-duenenpark" title="Ferienh&auml;user im D&uuml;nenpark auf Fehmarn" itemprop="url"><span itemprop="name">D&uuml;nenpark Vacation Homes</span></a>
+</li>
+<li><a href="mobilheimpark" title="Mobilheime mieten" itemprop="url"><span itemprop="name">Mobile Home Park</span></a>
+</li>
+<li><a href="strandbungalow" title="Strandbungalow am Wulfener Hals" itemprop="url"><span itemprop="name">Beach Bungalow</span></a>
+</li>
+<li class="submenu"><a href="ferienwohnungen" title="Ferienwohnungen auf Fehmarn" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Vacation Rentals</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="ferienwohnungen-am-strand" title="Ferienwohnungen am Strand" class="first" itemprop="url"><span itemprop="name">at the beach</span></a>
+</li>
+<li><a href="ferienwohnungen-am-pool" title="Ferienwohnungen am Pool" itemprop="url"><span itemprop="name">by the pool</span></a>
+</li>
+<li><a href="ferienwohnungen-am-golfpark" title="Ferienwohnungen am Golfpark auf Fehmarn" itemprop="url"><span itemprop="name">at the Golf Park</span></a>
+</li>
+<li class="last"><a href="http://www.fehmarn-ferienwohnung.info" title="Ferienwohnung in Burg" class="last" target="_blank" rel="noreferrer noopener" itemprop="url"><span itemprop="name">in Burg</span></a>
+</li>
+</ul>
+</li>
+<li><a href="schlafstrandkorb" title="Schlafstrandkorb" itemprop="url"><span itemprop="name">Beach Chair for Sleeping</span></a>
+</li>
+<li><a href="http://www.hotel-sonneninsel-fehmarn.de/" title="Hotel Avendorf" target="_blank" rel="noreferrer noopener" itemprop="url"><span itemprop="name">Hotel Sonneninsel Avendorf</span></a>
+</li>
+<li class="last"><a href="golfnwave" title="Pakete" class="last" itemprop="url"><span itemprop="name">Golf&acute;n Wave Aktivresort</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu sibling"><a href="strand-meer" title="Strand &amp; Freizeit" class="submenu sibling" aria-haspopup="true" itemprop="url"><span itemprop="name">Beach &amp; Leisure</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="submenu first"><a href="strand-meer" title="Strand und Meer auf Fehmarn" class="submenu first" aria-haspopup="true" itemprop="url"><span itemprop="name">Beach &amp; Lake</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="stranderlebnisse" title="Strandurlaub an der Ostsee auf Fehmarn" class="first" itemprop="url"><span itemprop="name">Beach Experiences</span></a>
+</li>
+<li><a href="surfen-kiten-segeln" title="Surfen, Kiten, Segeln im Urlaub im Camping- und Ferienpark" itemprop="url"><span itemprop="name">Surfing, kitesurfing, sailing</span></a>
+</li>
+<li><a href="wakepark-fehmarn" title="Wakepark Fehmarn: Wassersport auf dem Burger Binnensee" itemprop="url"><span itemprop="name">Wakepark Fehmarn</span></a>
+</li>
+<li class="last"><a href="tauchen" title="Tauchen in der Ostsee vor der Insel Fehmarn" class="last" itemprop="url"><span itemprop="name">Scuba Diving</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="familienzeit" title="Familienzeit im Camping- und Ferienpark" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Family Time</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="kinderanimation" title="Kinderanimation im Camping- und Ferienpark" class="first" itemprop="url"><span itemprop="name">Children's Activities</span></a>
+</li>
+<li><a href="spielplaetze" title="Spielpl&auml;tze im Camping- und Ferienpark auf Fehmarn" itemprop="url"><span itemprop="name">Playgrounds</span></a>
+</li>
+<li class="last"><a href="tipps-fuer-ausfluege" title="Tipps f&uuml;r Ausfl&uuml;ge auf Fehmarn und in Ostholstein" class="last" itemprop="url"><span itemprop="name">Tips for Outings</span></a>
+</li>
+</ul>
+</li>
+<li><a href="hunde" title="Hunde auf Camping- und Ferienpark auf Fehmarn" itemprop="url"><span itemprop="name">Dogs</span></a>
+</li>
+<li class="submenu"><a href="aktivitaeten" title="Aktivit&auml;ten im Camping- und Ferienpark auf Fehmarn" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Activities</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="sportanimation" title="Sportanimation im Camping- und Ferienpark auf Fehmarn" class="first" itemprop="url"><span itemprop="name">Sports Activities</span></a>
+</li>
+<li><a href="pool" title="Beheizter Pool im Camping- und Ferienpark auf Fehmarn" itemprop="url"><span itemprop="name">Half</span></a>
+</li>
+<li class="last"><a href="radfahren-touren" title="Radfahren und Touren auf der Insel Fehmarn" class="last" itemprop="url"><span itemprop="name">Cycling &amp; Touring</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="golfurlaub" title="Golf-Urlaub an der Ostsee auf Fehmarn" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Golf Vacation</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="golf-pakete" title="Golf-Pakete im Camping- und Ferienpark" class="first" itemprop="url"><span itemprop="name">Golf Packages</span></a>
+</li>
+<li><a href="golf-kurse" title="Golf-Kurse an der Golfschule Fehmarn" itemprop="url"><span itemprop="name">Golf Courses</span></a>
+</li>
+<li><a href="greenfee" title="Greenfee: Sonderpreise im Golfpark Fehmarn" itemprop="url"><span itemprop="name">Green fee</span></a>
+</li>
+<li><a href="wettspielkalender" title="Wettspielkalender Golfpark Fehmarn" itemprop="url"><span itemprop="name">Betting Schedule</span></a>
+</li>
+<li class="last"><a href="fernmitglied-werden" title="Fernmitglied warden im Golf Club Fehmarn" class="last" itemprop="url"><span itemprop="name">Become a Corresponding Member</span></a>
+</li>
+</ul>
+</li>
+<li><a href="wellness-entspannung" title="Wellness und Entspannung im Camping- und Ferienpark" itemprop="url"><span itemprop="name">Wellness &amp; Relaxation</span></a>
+</li>
+<li class="submenu"><a href="entertainment" title="Entertainment im Camping- und Ferienpark" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">Entertainment</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="it-s-showtime" title="It&rsquo;s Showtime im Camping- und Ferienpark" class="first" itemprop="url"><span itemprop="name">It's Showtime</span></a>
+</li>
+<li><a href="live-musik-comedy" title="Live-Musik und Comedy im Camping- und Ferienpark" itemprop="url"><span itemprop="name">Live Musik &amp; Comedy</span></a>
+</li>
+<li class="last"><a href="public-viewing" title="Public Viewing im Camping- und Ferienpark" class="last" itemprop="url"><span itemprop="name">Public Viewing</span></a>
+</li>
+</ul>
+</li>
+<li><a href="veranstaltungskalender" title="Veranstaltungskalender Camping- und Ferienpark" itemprop="url"><span itemprop="name">Event Calendar</span></a>
+</li>
+<li class="last"><a href="wsv" title="Wassersportverein des Wulfener Hals" class="last" itemprop="url"><span itemprop="name">Boats - Water Sports Club</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu sibling"><a href="gaeste-service" title="Service - Infos" class="submenu sibling" aria-haspopup="true" itemprop="url"><span itemprop="name">Service - Information</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="submenu first"><a href="gaeste-service" title="G&auml;ste-Service im Camping- und Ferienpark auf Fehmarn" class="submenu first" aria-haspopup="true" itemprop="url"><span itemprop="name">Guest Services</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="kontakt-rezeption" title="Kontakt &amp; Rezeption im Camping- und Ferienpark &ndash; Wulfener Hals" class="first" itemprop="url"><span itemprop="name">Contact &amp; Front Desk</span></a>
+</li>
+<li><a href="oeffnungszeiten" title="&Ouml;ffnungszeiten im Camping- und Ferienpark&ndash; Wulfener Hals" itemprop="url"><span itemprop="name">Hours of Operation</span></a>
+</li>
+<li><a href="https://v3.onlinebooking.dk/shop/shop_wulfen" title="Wulfis Online-Shop" target="_blank" rel="noreferrer noopener" itemprop="url"><span itemprop="name">Wulfi's Online Store</span></a>
+</li>
+<li class="last"><a href="fahrradverleih" title="Fahrradverleih" class="last" itemprop="url"><span itemprop="name">Bicycle Rental</span></a>
+</li>
+</ul>
+</li>
+<li><a href="wulfener-hals-app" title="Wulfener Hals App vom Camping- und Ferienpark &ndash; Wulfener Hals" itemprop="url"><span itemprop="name">Wulfener Hals App</span></a>
+</li>
+<li class="submenu"><a href="news" title="Aktuelles" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">News</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="news" title="News" class="first" itemprop="url"><span itemprop="name">News</span></a>
+</li>
+<li class="last"><a href="presse" title="Presse" class="last" itemprop="url"><span itemprop="name">Press</span></a>
+</li>
+</ul>
+</li>
+<li><a href="3d-rundgang" title="3D Rundgang" itemprop="url"><span itemprop="name">3D Tour</span></a>
+</li>
+<li><a href="service-infos/imagefilm" title="Imagefilm" itemprop="url"><span itemprop="name">Promotional Video</span></a>
+</li>
+<li><a href="wulfener-hals-a-z" title="Camping- und Ferienpark von A-Z &ndash; Wulfener Hals" itemprop="url"><span itemprop="name">Wulfener Hals A-Z</span></a>
+</li>
+<li class="submenu"><a href="ueber-uns" title="&Uuml;ber uns: Camping- und Ferienpark auf Fehmarn &ndash; Wulfener Hals" class="submenu" aria-haspopup="true" itemprop="url"><span itemprop="name">About Us</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_3">
+<li class="first"><a href="umwelt" title="Umweltschutz im Camping- und Ferienpark &ndash; Wulfener Hals" class="first" itemprop="url"><span itemprop="name">Environment</span></a>
+</li>
+<li><a href="leading-camping" title="Leading Campings auf Fehmarn" itemprop="url"><span itemprop="name">Leading Camping</span></a>
+</li>
+<li><a href="auszeichnungen" title="Auszeichnungen f&uuml;r den Caming- und Ferienpark &ndash; Wulfener Hals" itemprop="url"><span itemprop="name">Awards</span></a>
+</li>
+<li class="last"><a href="65-jahre-wulfener-hals" title="65 Jahre Camping- und Ferienpark &ndash; Wulfener Hals" class="last" itemprop="url"><span itemprop="name">Wulfener Hals's 65th Anniversary</span></a>
+</li>
+</ul>
+</li>
+<li class="last"><a href="jobs" title="Jobs" class="last" itemprop="url"><span itemprop="name">Jobs</span></a>
+</li>
+</ul>
+</li>
+<li class="submenu sibling last"><a href="suchen-buchen" title="Buchen &amp; Preise" class="submenu sibling last" aria-haspopup="true" itemprop="url"><span itemprop="name">Booking &amp; Prices</span></a>
+<span class="subnav-toggle"><i class="fal fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="first"><a href="suchen-buchen" title="Suchen &amp; buchen" class="first" itemprop="url"><span itemprop="name">Search &amp; Book</span></a>
+</li>
+<li><a href="specials-angebote" title="Specials &amp; Angebote" itemprop="url"><span itemprop="name">Specials &amp; Offers</span></a>
+</li>
+<li><a href="last-minute" title="Last-Minute" itemprop="url"><span itemprop="name">Last-Minute</span></a>
+</li>
+<li><a href="online-katalog" title="Online-Katalog" itemprop="url"><span itemprop="name">Online Catalog</span></a>
+</li>
+<li><a href="preise" title="Campingpreise" itemprop="url"><span itemprop="name">Prices</span></a>
+</li>
+<li class="last"><a href="agb-vertragsbedingungen" title="Vertragsbedingungen" class="last" itemprop="url"><span itemprop="name">Terms and Conditions &amp; Contract Terms</span></a>
+</li>
+</ul>
+</li>
+</ul>
+<a id="skipNavigation22" class="invisible">&nbsp;</a>
+</nav>
+</div>
+</header>
+<main id="main" itemscope itemtype="http://schema.org/WebPageElement" itemprop="mainContentOfPage">
+<section class="mod_article full-width slider block" id="article-632">
+<div class="ce_text block">
+<h2>Camping &amp; Vacation Park</h2>
+<h1>Wulfener Hals</h1>
+</div>
+<div class="ce_sliderStart block">
+<div class="content-slider" data-config="8000,400,0,1">
+<div class="slider-wrapper">
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/d/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-1817b0a6.webp 1920w, assets/images/3/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-a8a74e4d.webp 2500w" sizes="100vw" media="(min-width: 80em)" type="image/webp" width="1920" height="920">
+<source srcset="assets/images/9/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-7a68efb9.jpg 1920w, assets/images/e/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-899bfa34.jpg 2500w" sizes="100vw" media="(min-width: 80em)" width="1920" height="920">
+<source srcset="assets/images/2/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-e89e46b9.webp 1000w, assets/images/8/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-91c55945.webp 2000w" sizes="100vw" media="(min-width: 64em)" type="image/webp" width="1000" height="576">
+<source srcset="assets/images/0/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-0434d535.jpg 1000w, assets/images/f/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-a649895c.jpg 2000w" sizes="100vw" media="(min-width: 64em)" width="1000" height="576">
+<source srcset="assets/images/c/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-16f2934a.webp 800w, assets/images/2/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-7db1e6a6.webp 1571w" sizes="100vw" media="(min-width: 48em)" type="image/webp" width="800" height="800">
+<source srcset="assets/images/7/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-d4c964e7.jpg 800w, assets/images/7/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-e2095aab.jpg 1571w" sizes="100vw" media="(min-width: 48em)" width="800" height="800">
+<source srcset="assets/images/b/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-0fd2d2da.webp 400w, assets/images/c/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-16f2934a.webp 800w" sizes="100vw" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/e/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-5f0ca43c.jpg 400w, assets/images/7/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-d4c964e7.jpg 800w" sizes="100vw" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/2/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet-f41adbe6.webp" type="image/webp" width="2500" height="1571">
+<img src="files/bilder/startseite/slider/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet.jpg" width="2500" height="1571" alt="">
+</source></source></source></source></source></source></source></source></source></picture>
+</figure>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/b/Grillen_Camping_WulfenerHals_Fehmarn5480-4c3b4f8d.webp 1920w, assets/images/4/Grillen_Camping_WulfenerHals_Fehmarn5480-7778d1b4.webp 2498w" sizes="100vw" media="(min-width: 80em)" type="image/webp" width="1920" height="920">
+<source srcset="assets/images/0/Grillen_Camping_WulfenerHals_Fehmarn5480-1c3686d1.jpg 1920w, assets/images/9/Grillen_Camping_WulfenerHals_Fehmarn5480-c444e7bd.jpg 2498w" sizes="100vw" media="(min-width: 80em)" width="1920" height="920">
+<source srcset="assets/images/c/Grillen_Camping_WulfenerHals_Fehmarn5480-ce71f45e.webp 1000w, assets/images/7/Grillen_Camping_WulfenerHals_Fehmarn5480-e7dfde13.webp 2000w" sizes="100vw" media="(min-width: 64em)" type="image/webp" width="1000" height="576">
+<source srcset="assets/images/6/Grillen_Camping_WulfenerHals_Fehmarn5480-aa78ab87.jpg 1000w, assets/images/3/Grillen_Camping_WulfenerHals_Fehmarn5480-d5bbbe2c.jpg 2000w" sizes="100vw" media="(min-width: 64em)" width="1000" height="576">
+<source srcset="assets/images/9/Grillen_Camping_WulfenerHals_Fehmarn5480-ff2ed075.webp 800w, assets/images/1/Grillen_Camping_WulfenerHals_Fehmarn5480-6a362d9b.webp 1600w" sizes="100vw" media="(min-width: 48em)" type="image/webp" width="800" height="800">
+<source srcset="assets/images/7/Grillen_Camping_WulfenerHals_Fehmarn5480-a3947904.jpg 800w, assets/images/3/Grillen_Camping_WulfenerHals_Fehmarn5480-81ba17c2.jpg 1600w" sizes="100vw" media="(min-width: 48em)" width="800" height="800">
+<source srcset="assets/images/6/Grillen_Camping_WulfenerHals_Fehmarn5480-812cba2e.webp 400w, assets/images/9/Grillen_Camping_WulfenerHals_Fehmarn5480-ff2ed075.webp 800w" sizes="100vw" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/c/Grillen_Camping_WulfenerHals_Fehmarn5480-4ac5d08e.jpg 400w, assets/images/7/Grillen_Camping_WulfenerHals_Fehmarn5480-a3947904.jpg 800w" sizes="100vw" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/e/Grillen_Camping_WulfenerHals_Fehmarn5480-504331bc.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/startseite/slider/Grillen_Camping_WulfenerHals_Fehmarn5480.jpg" width="2500" height="1667" alt="">
+</source></source></source></source></source></source></source></source></source></picture>
+</figure>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/4/GoCart_Camping_WulfenerHals_Fehmarn0262-c3c4728d.webp 1920w, assets/images/b/GoCart_Camping_WulfenerHals_Fehmarn0262-872dccc3.webp 2500w" sizes="100vw" media="(min-width: 80em)" type="image/webp" width="1920" height="920">
+<source srcset="assets/images/c/GoCart_Camping_WulfenerHals_Fehmarn0262-307570bd.jpg 1920w, assets/images/c/GoCart_Camping_WulfenerHals_Fehmarn0262-cef21a96.jpg 2500w" sizes="100vw" media="(min-width: 80em)" width="1920" height="920">
+<source srcset="assets/images/a/GoCart_Camping_WulfenerHals_Fehmarn0262-184d227e.webp 1000w, assets/images/a/GoCart_Camping_WulfenerHals_Fehmarn0262-91833936.webp 2000w" sizes="100vw" media="(min-width: 64em)" type="image/webp" width="1000" height="576">
+<source srcset="assets/images/b/GoCart_Camping_WulfenerHals_Fehmarn0262-00b0c830.jpg 1000w, assets/images/6/GoCart_Camping_WulfenerHals_Fehmarn0262-12f468cb.jpg 2000w" sizes="100vw" media="(min-width: 64em)" width="1000" height="576">
+<source srcset="assets/images/8/GoCart_Camping_WulfenerHals_Fehmarn0262-551fb313.webp 800w, assets/images/d/GoCart_Camping_WulfenerHals_Fehmarn0262-b6e01309.webp 1600w" sizes="100vw" media="(min-width: 48em)" type="image/webp" width="800" height="800">
+<source srcset="assets/images/6/GoCart_Camping_WulfenerHals_Fehmarn0262-3106fa0c.jpg 800w, assets/images/7/GoCart_Camping_WulfenerHals_Fehmarn0262-f131072d.jpg 1600w" sizes="100vw" media="(min-width: 48em)" width="800" height="800">
+<source srcset="assets/images/9/GoCart_Camping_WulfenerHals_Fehmarn0262-5c9600a2.webp 400w, assets/images/8/GoCart_Camping_WulfenerHals_Fehmarn0262-551fb313.webp 800w" sizes="100vw" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/5/GoCart_Camping_WulfenerHals_Fehmarn0262-289dcf69.jpg 400w, assets/images/6/GoCart_Camping_WulfenerHals_Fehmarn0262-3106fa0c.jpg 800w" sizes="100vw" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/c/GoCart_Camping_WulfenerHals_Fehmarn0262-1b7a21cb.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/startseite/slider/GoCart_Camping_WulfenerHals_Fehmarn0262.jpg" width="2500" height="1667" alt="">
+</source></source></source></source></source></source></source></source></source></picture>
+</figure>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/5/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-2372c29d.webp 1920w, assets/images/7/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-a36c3055.webp 2496w" sizes="100vw" media="(min-width: 80em)" type="image/webp" width="1920" height="920">
+<source srcset="assets/images/7/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-15270658.jpg 1920w, assets/images/3/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-a5cf310c.jpg 2496w" sizes="100vw" media="(min-width: 80em)" width="1920" height="920">
+<source srcset="assets/images/1/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-cbbbf1e2.webp 1000w, assets/images/2/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-15a5e29a.webp 2000w" sizes="100vw" media="(min-width: 64em)" type="image/webp" width="1000" height="576">
+<source srcset="assets/images/6/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-6086a886.jpg 1000w, assets/images/8/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-8162f6c1.jpg 2000w" sizes="100vw" media="(min-width: 64em)" width="1000" height="576">
+<source srcset="assets/images/9/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-4d72f5bc.webp 800w, assets/images/7/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-2b901a6d.webp 1600w" sizes="100vw" media="(min-width: 48em)" type="image/webp" width="800" height="800">
+<source srcset="assets/images/3/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-f21a4943.jpg 800w, assets/images/9/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-1bfeba24.jpg 1600w" sizes="100vw" media="(min-width: 48em)" width="800" height="800">
+<source srcset="assets/images/3/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-8b2e4797.webp 400w, assets/images/9/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-4d72f5bc.webp 800w" sizes="100vw" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/1/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-29f700cd.jpg 400w, assets/images/3/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-f21a4943.jpg 800w" sizes="100vw" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/d/PicknickWandern_Camping_WulfenerHals_Fehmarn5611-9e1644d8.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/startseite/slider/PicknickWandern_Camping_WulfenerHals_Fehmarn5611.jpg" width="2500" height="1667" alt="">
+</source></source></source></source></source></source></source></source></source></picture>
+</figure>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/6/Pool_Camping_WulfenerHals_Fehmarn5383-7bc4dcb1.webp 1920w, assets/images/1/Pool_Camping_WulfenerHals_Fehmarn5383-8b2b2056.webp 2500w" sizes="100vw" media="(min-width: 80em)" type="image/webp" width="1920" height="920">
+<source srcset="assets/images/c/Pool_Camping_WulfenerHals_Fehmarn5383-1c0b1def.jpg 1920w, assets/images/1/Pool_Camping_WulfenerHals_Fehmarn5383-4c174e9c.jpg 2500w" sizes="100vw" media="(min-width: 80em)" width="1920" height="920">
+<source srcset="assets/images/d/Pool_Camping_WulfenerHals_Fehmarn5383-53a61205.webp 1000w, assets/images/7/Pool_Camping_WulfenerHals_Fehmarn5383-4e2e8935.webp 2000w" sizes="100vw" media="(min-width: 64em)" type="image/webp" width="1000" height="576">
+<source srcset="assets/images/9/Pool_Camping_WulfenerHals_Fehmarn5383-a8b9f948.jpg 1000w, assets/images/b/Pool_Camping_WulfenerHals_Fehmarn5383-df79debe.jpg 2000w" sizes="100vw" media="(min-width: 64em)" width="1000" height="576">
+<source srcset="assets/images/f/Pool_Camping_WulfenerHals_Fehmarn5383-3d7dba55.webp 800w, assets/images/6/Pool_Camping_WulfenerHals_Fehmarn5383-2dbb3040.webp 1600w" sizes="100vw" media="(min-width: 48em)" type="image/webp" width="800" height="800">
+<source srcset="assets/images/e/Pool_Camping_WulfenerHals_Fehmarn5383-fda68f19.jpg 800w, assets/images/7/Pool_Camping_WulfenerHals_Fehmarn5383-a77f15fd.jpg 1600w" sizes="100vw" media="(min-width: 48em)" width="800" height="800">
+<source srcset="assets/images/9/Pool_Camping_WulfenerHals_Fehmarn5383-dfe58c58.webp 400w, assets/images/f/Pool_Camping_WulfenerHals_Fehmarn5383-3d7dba55.webp 800w" sizes="100vw" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/5/Pool_Camping_WulfenerHals_Fehmarn5383-7e31115a.jpg 400w, assets/images/e/Pool_Camping_WulfenerHals_Fehmarn5383-fda68f19.jpg 800w" sizes="100vw" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/0/Pool_Camping_WulfenerHals_Fehmarn5383-898e0a56.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/startseite/slider/Pool_Camping_WulfenerHals_Fehmarn5383.jpg" width="2500" height="1667" alt="">
+</source></source></source></source></source></source></source></source></source></picture>
+</figure>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/e/Strand_Camping_WulfenerHals_Fehmarn-cbf69e78.webp 1920w, assets/images/b/Strand_Camping_WulfenerHals_Fehmarn-3281252c.webp 2500w" sizes="100vw" media="(min-width: 80em)" type="image/webp" width="1920" height="920">
+<source srcset="assets/images/3/Strand_Camping_WulfenerHals_Fehmarn-a68b760c.jpg 1920w, assets/images/4/Strand_Camping_WulfenerHals_Fehmarn-4d9b3bb6.jpg 2500w" sizes="100vw" media="(min-width: 80em)" width="1920" height="920">
+<source srcset="assets/images/9/Strand_Camping_WulfenerHals_Fehmarn-d1575722.webp 1000w, assets/images/9/Strand_Camping_WulfenerHals_Fehmarn-bb61bcb5.webp 2000w" sizes="100vw" media="(min-width: 64em)" type="image/webp" width="1000" height="576">
+<source srcset="assets/images/7/Strand_Camping_WulfenerHals_Fehmarn-89bd9a6f.jpg 1000w, assets/images/c/Strand_Camping_WulfenerHals_Fehmarn-6e55bbe9.jpg 2000w" sizes="100vw" media="(min-width: 64em)" width="1000" height="576">
+<source srcset="assets/images/5/Strand_Camping_WulfenerHals_Fehmarn-9bc96b4f.webp 800w, assets/images/9/Strand_Camping_WulfenerHals_Fehmarn-1c2e052b.webp 1600w" sizes="100vw" media="(min-width: 48em)" type="image/webp" width="800" height="800">
+<source srcset="assets/images/7/Strand_Camping_WulfenerHals_Fehmarn-58cd80b0.jpg 800w, assets/images/8/Strand_Camping_WulfenerHals_Fehmarn-4449d4f8.jpg 1600w" sizes="100vw" media="(min-width: 48em)" width="800" height="800">
+<source srcset="assets/images/6/Strand_Camping_WulfenerHals_Fehmarn-fbad2369.webp 400w, assets/images/5/Strand_Camping_WulfenerHals_Fehmarn-9bc96b4f.webp 800w" sizes="100vw" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/d/Strand_Camping_WulfenerHals_Fehmarn-431d1a04.jpg 400w, assets/images/7/Strand_Camping_WulfenerHals_Fehmarn-58cd80b0.jpg 800w" sizes="100vw" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/7/Strand_Camping_WulfenerHals_Fehmarn-8e575054.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/startseite/slider/Strand_Camping_WulfenerHals_Fehmarn.jpg" width="2500" height="1667" alt="">
+</source></source></source></source></source></source></source></source></source></picture>
+</figure>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/3/Surfschule_Camping_WulfenerHals_Fehmarn5826-ef3425d6.webp 1920w, assets/images/b/Surfschule_Camping_WulfenerHals_Fehmarn5826-ebd45ba7.webp 2500w" sizes="100vw" media="(min-width: 80em)" type="image/webp" width="1920" height="920">
+<source srcset="assets/images/2/Surfschule_Camping_WulfenerHals_Fehmarn5826-e651278f.jpg 1920w, assets/images/b/Surfschule_Camping_WulfenerHals_Fehmarn5826-a9985f1c.jpg 2500w" sizes="100vw" media="(min-width: 80em)" width="1920" height="920">
+<source srcset="assets/images/c/Surfschule_Camping_WulfenerHals_Fehmarn5826-8119b822.webp 1000w, assets/images/6/Surfschule_Camping_WulfenerHals_Fehmarn5826-c9f03dfe.webp 2000w" sizes="100vw" media="(min-width: 64em)" type="image/webp" width="1000" height="576">
+<source srcset="assets/images/e/Surfschule_Camping_WulfenerHals_Fehmarn5826-1437e7cb.jpg 1000w, assets/images/1/Surfschule_Camping_WulfenerHals_Fehmarn5826-c58cd0af.jpg 2000w" sizes="100vw" media="(min-width: 64em)" width="1000" height="576">
+<source srcset="assets/images/c/Surfschule_Camping_WulfenerHals_Fehmarn5826-9135b233.webp 800w, assets/images/9/Surfschule_Camping_WulfenerHals_Fehmarn5826-6171b572.webp 1600w" sizes="100vw" media="(min-width: 48em)" type="image/webp" width="800" height="800">
+<source srcset="assets/images/8/Surfschule_Camping_WulfenerHals_Fehmarn5826-804c7d09.jpg 800w, assets/images/a/Surfschule_Camping_WulfenerHals_Fehmarn5826-d78325f1.jpg 1600w" sizes="100vw" media="(min-width: 48em)" width="800" height="800">
+<source srcset="assets/images/d/Surfschule_Camping_WulfenerHals_Fehmarn5826-7ce3cd4b.webp 400w, assets/images/c/Surfschule_Camping_WulfenerHals_Fehmarn5826-9135b233.webp 800w" sizes="100vw" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/f/Surfschule_Camping_WulfenerHals_Fehmarn5826-e2f9c576.jpg 400w, assets/images/8/Surfschule_Camping_WulfenerHals_Fehmarn5826-804c7d09.jpg 800w" sizes="100vw" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/7/Surfschule_Camping_WulfenerHals_Fehmarn5826-141eaf40.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/startseite/slider/Surfschule_Camping_WulfenerHals_Fehmarn5826.jpg" width="2500" height="1667" alt="">
+</source></source></source></source></source></source></source></source></source></picture>
+</figure>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/f/Luft_Camping_WulfenerHals_Fehmarn0125-fa2e2a76.webp 1920w, assets/images/f/Luft_Camping_WulfenerHals_Fehmarn0125-be7a490e.webp 2202w" sizes="100vw" media="(min-width: 80em)" type="image/webp" width="1920" height="920">
+<source srcset="assets/images/0/Luft_Camping_WulfenerHals_Fehmarn0125-0ba34312.jpg 1920w, assets/images/e/Luft_Camping_WulfenerHals_Fehmarn0125-a3ce21c4.jpg 2202w" sizes="100vw" media="(min-width: 80em)" width="1920" height="920">
+<source srcset="assets/images/f/Luft_Camping_WulfenerHals_Fehmarn0125-92f48ac3.webp 1000w, assets/images/2/Luft_Camping_WulfenerHals_Fehmarn0125-90b9b594.webp 1832w" sizes="100vw" media="(min-width: 64em)" type="image/webp" width="1000" height="576">
+<source srcset="assets/images/1/Luft_Camping_WulfenerHals_Fehmarn0125-a4dcc9a6.jpg 1000w, assets/images/a/Luft_Camping_WulfenerHals_Fehmarn0125-20ab88cb.jpg 1832w" sizes="100vw" media="(min-width: 64em)" width="1000" height="576">
+<source srcset="assets/images/a/Luft_Camping_WulfenerHals_Fehmarn0125-09614494.webp 800w, assets/images/a/Luft_Camping_WulfenerHals_Fehmarn0125-86128cf0.webp 1055w" sizes="100vw" media="(min-width: 48em)" type="image/webp" width="800" height="800">
+<source srcset="assets/images/8/Luft_Camping_WulfenerHals_Fehmarn0125-1850853a.jpg 800w, assets/images/a/Luft_Camping_WulfenerHals_Fehmarn0125-9ec40a0e.jpg 1055w" sizes="100vw" media="(min-width: 48em)" width="800" height="800">
+<source srcset="assets/images/2/Luft_Camping_WulfenerHals_Fehmarn0125-50320757.webp 400w, assets/images/a/Luft_Camping_WulfenerHals_Fehmarn0125-09614494.webp 800w" sizes="100vw" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/4/Luft_Camping_WulfenerHals_Fehmarn0125-8a00dfb3.jpg 400w, assets/images/8/Luft_Camping_WulfenerHals_Fehmarn0125-1850853a.jpg 800w" sizes="100vw" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/f/Luft_Camping_WulfenerHals_Fehmarn0125-3804c27d.webp" type="image/webp" width="2500" height="1055">
+<img src="files/bilder/startseite/slider/Luft_Camping_WulfenerHals_Fehmarn0125.jpg" width="2500" height="1055" alt="">
+</source></source></source></source></source></source></source></source></source></picture>
+</figure>
+</div>
+</div>
+</div>
+<nav class="slider-control">
+<a href="#" class="slider-prev">Back</a>
+<span class="slider-menu"></span>
+<a href="#" class="slider-next">Forward</a>
+</nav>
+</div>
+<div class="searchwidget-box">
+<script></script>
+<link rel="stylesheet" href="files/secra-theme/js/vendor/flatpickr/flatpickr.min.css">
+<script src="files/secra-theme/js/vendor/flatpickr/flatpickr.js"></script>
+<script src="files/secra-theme/js/vendor/flatpickr/de.js"></script>
+<div class="compusoft">
+<div class="ce_form searchwidget">
+<div class="widget widget-text reisezeitraum">
+<input id="calendertest" class="text reisezeitraum" placeholder="Reisezeitraum">
+<i id="calendericon" class="fad fa-calendar-alt"></i>
+</div>
+<button id="search_button" onclick="" class="submit button search-button">Search <i class="fad fa-search"></i>
+</button>
+</div>
+</div>
+<script></script>
+</div>
+</section>
+<section class="mod_article full-width block" id="article-2081">
+<div class="border-gold-text"><div class="grid-center">
+<div class="ce_image col-1 logo-leading block">
+<figure class="image_container">
+<img src="files/bilder/logos-auszeichnungen/logo-leading-campings.png" width="448" height="300" alt="">
+</figure>
+</div>
+<div class="ce_image col-2 adac block">
+<figure class="image_container">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/ADAC-Logo%202024.jpg" width="1000" height="524" alt="">
+</figure>
+</div>
+<div class="ce_text col-6 block">
+<p>Member of Leading Campings of Europe</p>
+</div>
+<div class="ce_image col-3 hotelbanner block">
+<figure class="image_container">
+<a href="https://www.golfwave.de" target="_blank" rel="noreferrer noopener">
+<img src="files/bilder/layout/Banner-Golfwave-minimal.jpg" width="1500" height="500" alt="">
+</a>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="mod_article section-primary grass-light block" id="article-409">
+<div class="grid">
+<h2 class="ce_headline col-12">The Baltic Sea from every angle. Be right in the middle of it.</h2>
+<h3 class="ce_headline col-12">Enjoy your vacation on Fehmarn with the whole family</h3>
+<div class="ce_text col-12_lg-6 block">
+<p>Are you looking for a truly special vacation? We have just the thing. In a one-of-a-kind location. Discover our fantastic setting between Lake Burger and the Baltic Sea.</p>
+<p>Here, breathtaking natural beauty meets a vast array of recreational and entertainment activities. Water sports enthusiasts will find the best conditions for riding the waves on their kiteboards or surfboards.</p>
+<p>At our award-winning campground, you can enjoy your vacation with the whole family: dining options, entertainment, musicals, shows, and live bands promise an unforgettable getaway all year round.</p>
+<p>Whether on the beautiful sandy beach, in the refreshing pool, or at one of our many playgrounds&mdash;the kids can run around and play while you listen to the waves and enjoy the sun. And Fehmarn, the &ldquo;Sun Island,&rdquo; gets more sunshine than anywhere else in Germany.</p>
+</div>
+<div class="col-12_lg-6">
+<div class="ce_text block">
+<p>For your Baltic Sea vacation, we want to offer you everything you're looking for: comfortable accommodations, friendly service, and attractive <strong data-stringify-type="bold">Gastronomy</strong> and great recreational activities for the whole family. We place a high priority on quality, comfort, and activities.</p>
+<p>Whether it's a caravan site, a motorhome site, a mobile home, a vacation apartment, a vacation home, or <strong data-stringify-type="bold">Rental Trailers</strong> &ndash; Plan your vacation exactly the way you want it. And whenever you want. With our wide variety of <strong data-stringify-type="bold">Accommodations</strong> We're open for you all year round.</p>
+<p><strong>Don't settle for less&mdash;experience something special. Are you ready?</strong></p>
+</div>
+</div>
+</div>
+</section>
+<section class="mod_article section-primary block" id="article-2058">
+<div class="grid-center">
+</div>
+</section>
+<section class="mod_article full-width block" id="article-1792">
+<div class="bild-text-bild-skew-right">
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/e/glamping-ferienhaeuser-c4727b23.webp" type="image/webp" width="2500" height="1663">
+<img src="files/bilder/startseite/glamping-ferienhaeuser.jpg" width="2500" height="1663" alt="" loading="lazy">
+</source></picture>
+</figure>
+</div>
+<div class="ce_text block">
+<h2>Specials and Offers</h2>
+<p>Want to try a vacation on Fehmarn this year? We&rsquo;ve got just the thing for you: We&rsquo;ve prepared some great specials &amp; offers for you again this year! Whether you&rsquo;d like to come with your own RV or trailer, we have the perfect option for you. Of course, you&rsquo;ll also find great deals on our rental properties. But even as a regular guest, you can book these offers for your vacation on the Baltic Sea!</p>
+<p><a title="Specials &amp; Angebote" href="specials-angebote">Click here for Specials &amp; Offers</a></p>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/9/Fruehstueck_Camping_WulfenerHals_Fehmarn9374-19f97a2e.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/startseite/Fruehstueck_Camping_WulfenerHals_Fehmarn9374.jpg" width="2500" height="1667" alt="" loading="lazy">
+</source></picture>
+</figure>
+</div>
+</div>
+</section>
+<section class="mod_article grid block" id="article-1323">
+<h2 class="ce_headline col-12 center">There's always something going on here</h2>
+<div class="col-12 center">
+<script src="system/modules/veranstaltung/assets/js/dist/event-view-bundle.js?v=1791530980"></script>
+<div id="eventteaser-view"></div>    </div>
+<div class="col-12 center">
+<div class="ce_hyperlink button button-primary block">
+<a href="veranstaltungskalender" class="hyperlink_txt" title="&Uuml;bersicht aller Angebote">Overview of All Offers</a>
+</div>
+</div>
+</section>
+<section class="mod_article section-primary wulfi block" id="article-587">
+<div class="grid">
+<h2 class="ce_headline col-12_lg-5 headline-border">News for Your Vacation</h2>
+<div class="mod_newslist block">
+<div class="news news-teaser grid block first even" itemscope itemtype="http://schema.org/Article">
+<div class="news-teaser-content col-12">
+<p class="info"><time datetime="2025-11-25T12:36:00+01:00" itemprop="datePublished">25.11.2025</time>  </p>
+<h2 itemprop="name" style="pointer-events:none;"><a href="news-detail/wir-sind-gefragtester-platz-europas" title='Den Artikel lesen: Wir sind: "gefragtester Platz Europas"!'>We are: "Europe's most sought-after destination"!</a></h2>
+<div class="ce_text block" itemprop="description">
+<p>Great excitement on the sunny island of Fehmarn: The &ldquo;Wulfener Hals&rdquo; camping and vacation park has claimed the top spot in the European rankings. According to the latest analysis by the ADAC camping portal PiNCAMP, &ldquo;Wulfener Hals&rdquo; is the most sought-after campground in all of Europe.</p>        </div>
+<a href="news-detail/wir-sind-gefragtester-platz-europas" title='Den Artikel lesen: Wir sind: "gefragtester Platz Europas"!'>Read more &hellip;<span class="invisible"> Wir sind: "gefragtester Platz Europas"!</span></a>            </div>
+</div><div class="news news-teaser grid block last odd" itemscope itemtype="http://schema.org/Article">
+<div class="news-teaser-content col-12">
+<p class="info"><time datetime="2025-06-24T10:29:00+02:00" itemprop="datePublished">24.06.2025</time>  </p>
+<h2 itemprop="name" style="pointer-events:none;"><a href="news-detail/unsere-wulfener-hals-app" title="Den Artikel lesen: Unsere Wulfener Hals App">Our "Wulfener Hals" App</a></h2>
+<div class="ce_text block" itemprop="description">
+<p>Want to stay up to date? Then download our "Wulfener Hals" app!</p>        </div>
+<a href="news-detail/unsere-wulfener-hals-app" title="Den Artikel lesen: Unsere Wulfener Hals App">Read more &hellip;<span class="invisible"> Unsere Wulfener Hals App</span></a>            </div>
+</div>
+</div>
+</div>
+</section>
+<section class="mod_article full-width block" id="article-810">
+<div class="bild-text-bild-skew-right">
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/1/DSC09914-cd6ee3ae.webp" type="image/webp" width="2048" height="2048">
+<img src="files/bilder/Strand%20%26%20Freizeit/Aktivit%C3%A4ten/DSC09914.jpg" width="2048" height="2048" alt="" loading="lazy">
+</source></picture>
+</figure>
+</div>
+<div class="ce_text block">
+<h2>Water Sports and Beach Activities</h2>
+<p>On your marks, get set, go! Here, vacationers and day-trippers alike can really get active on the beach. Surfing, kitesurfing, sailing, wakeboarding, or scuba diving&mdash;anything is possible.</p>
+<p>And all this against a unique backdrop. Professionals and beginners alike come from far and wide to enjoy their sport in the Wulfener Hals surf area on Burger Binnensee or on the open Baltic Sea.</p>
+<p><a href="strand-meer">Beach + Lake</a></p>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/c/Strand_Camping_WulfenerHals_Fehmarn6741-4d2bba6c.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/startseite/Strand_Camping_WulfenerHals_Fehmarn6741.jpg" width="2500" height="1667" alt="" loading="lazy">
+</source></picture>
+</figure>
+</div>
+</div>
+</section>
+<section class="mod_article full-width-padding block" id="article-722">
+<div class="icon-teaser">
+<div class="grid-center">
+<div class="ce_hyperlink blau block">
+<figure class="image_container">
+<a href="kinderanimation" title="Kinderanimation" class="hyperlink_img">
+<img src="files/bilder/icons/mini-wulfi.svg" alt="" title="Kinderanimation">
+<span class="link-text">Children's Activities</span></a>
+</figure>
+</div>
+<div class="ce_hyperlink blau block">
+<figure class="image_container">
+<a href="sportanimation" title="Sportprogramm" class="hyperlink_img">
+<img src="files/bilder/icons/sport.svg" alt="" title="Sportprogramm">
+<span class="link-text">Sports Program</span></a>
+</figure>
+</div>
+<div class="ce_hyperlink blau block">
+<figure class="image_container">
+<a href="golfurlaub" title="Golf" class="hyperlink_img">
+<img src="files/bilder/icons/golf-flag-hole-regular.svg" alt="" title="Ponyreiten">
+<span class="link-text">Golf</span></a>
+</figure>
+</div>
+<div class="ce_hyperlink blau block">
+<figure class="image_container">
+<a href="pool" title="Pool" class="hyperlink_img">
+<img src="files/bilder/icons/pool.svg" alt="" title="Pool">
+<span class="link-text">Half</span></a>
+</figure>
+</div>
+<div class="ce_hyperlink blau block">
+<figure class="image_container">
+<a href="gastronomie" title="Gastronomie" class="hyperlink_img">
+<img src="files/bilder/icons/gastro.svg" alt="" title="Gastronomie">
+<span class="link-text">Gastronomy</span></a>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section class="mod_article full-width block" id="article-809">
+<div class="bild-text-bild-skew-left">
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/9/Fruehstueck_Camping_WulfenerHals_Fehmarn9374-19f97a2e.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/startseite/Fruehstueck_Camping_WulfenerHals_Fehmarn9374.jpg" width="2500" height="1667" alt="" loading="lazy">
+</source></picture>
+</figure>
+</div>
+<div class="ce_text block">
+<h2>Family Vacation</h2>
+<p>Your premier vacation resort.</p>
+<p>In the mood for some action? You'll never get bored at the "Wulfener Hals."</p>
+<p>Pool fun, children's activities, and great playgrounds right on the Baltic Sea await the kids on their camping vacation.</p>
+<p><a href="suchen-buchen">Book a Vacation</a></p>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/f/Strand_Camping_WulfenerHals_Fehmarn1481-ac9695da.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/startseite/Strand_Camping_WulfenerHals_Fehmarn1481.jpg" width="2500" height="1667" alt="" loading="lazy">
+</source></picture>
+</figure>
+</div>
+</div>
+</section>
+<section class="mod_article full-width-padding block" id="article-410">
+<div class="grid-center">
+<div class="ce_hyperlink image-teaser col-12_sm-6_lg-4 margin block">
+<figure class="image_container">
+<a href="campingplatz" title="Camping - Caravan Standpl&auml;tze" class="hyperlink_img">
+<picture>
+<source srcset="assets/images/0/DSC00150-2-088c854f.webp 500w, assets/images/8/DSC00150-2-b32c40a0.webp 1000w" sizes="33.33vw" media="(min-width: 64em)" type="image/webp" width="500" height="500">
+<source srcset="assets/images/1/DSC00150-2-aae633bf.jpg 500w, assets/images/d/DSC00150-2-9cceb1df.jpg 1000w" sizes="33.33vw" media="(min-width: 64em)" width="500" height="500">
+<source srcset="assets/images/d/DSC00150-2-c8b30666.webp 1x, assets/images/4/DSC00150-2-49ff910f.webp 2x" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/9/DSC00150-2-067e1ada.jpg 1x, assets/images/5/DSC00150-2-017b157c.jpg 2x" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/0/DSC00150-2-0ec9c32e.webp" type="image/webp" width="2048" height="2048">
+<img src="files/bilder/Camping%20Ferienpark/Campingpark/Stellpl%C3%A4tze/DSC00150-2.jpg" width="2048" height="2048" alt="" loading="lazy">
+</source></source></source></source></source></picture>
+<span class="link-text">Camping - Caravan Sites</span></a>
+</figure>
+</div>
+<div class="ce_hyperlink image-teaser col-12_sm-6_lg-4 margin block">
+<figure class="image_container">
+<a href="wohnmobilpark" title="Wohnmobil-Stellpl&auml;tze" class="hyperlink_img">
+<picture>
+<source srcset="assets/images/c/Wohnmobilpark%201d-24f42df0.webp 500w, assets/images/4/Wohnmobilpark%201d-ba16d0e5.webp 1000w" sizes="33.33vw" media="(min-width: 64em)" type="image/webp" width="500" height="500">
+<source srcset="assets/images/c/Wohnmobilpark%201d-d2eeff4f.jpg 500w, assets/images/2/Wohnmobilpark%201d-8db2e58e.jpg 1000w" sizes="33.33vw" media="(min-width: 64em)" width="500" height="500">
+<source srcset="assets/images/1/Wohnmobilpark%201d-ef0b8925.webp 1x, assets/images/b/Wohnmobilpark%201d-18a02aa7.webp 2x" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/5/Wohnmobilpark%201d-fef18ef5.jpg 1x, assets/images/6/Wohnmobilpark%201d-92e42984.jpg 2x" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/8/Wohnmobilpark%201d-05455a5d.webp" type="image/webp" width="2048" height="2048">
+<img src="files/bilder/Camping%20Ferienpark/Campingpark/Wohnmobilpark/Wohnmobilpark%201d.jpg" width="2048" height="2048" alt="" loading="lazy">
+</source></source></source></source></source></picture>
+<span class="link-text">RV Parking Spaces</span></a>
+</figure>
+</div>
+<div class="ce_hyperlink image-teaser col-12_sm-6_lg-4 margin block">
+<figure class="image_container">
+<a href="mietwohnwagen" title="Mietwohnwagen" class="hyperlink_img">
+<picture>
+<source srcset="assets/images/8/Seasoncamper-9d5d0d61.webp 500w, assets/images/0/Seasoncamper-057fbf52.webp 1000w" sizes="33.33vw" media="(min-width: 64em)" type="image/webp" width="500" height="500">
+<source srcset="assets/images/b/Seasoncamper-2af24e13.jpg 500w, assets/images/a/Seasoncamper-558aa803.jpg 1000w" sizes="33.33vw" media="(min-width: 64em)" width="500" height="500">
+<source srcset="assets/images/3/Seasoncamper-ae0ed693.webp 1x, assets/images/2/Seasoncamper-8539b8a2.webp 2x" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/6/Seasoncamper-ade6c7fc.jpg 1x, assets/images/8/Seasoncamper-390cdfad.jpg 2x" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/1/Seasoncamper-114956a9.webp" type="image/webp" width="2500" height="1665">
+<img src="files/bilder/startseite/Seasoncamper.jpg" width="2500" height="1665" alt="" loading="lazy">
+</source></source></source></source></source></picture>
+<span class="link-text">Rental Trailers</span></a>
+</figure>
+</div>
+</div>
+</section>
+<section class="mod_article full-width block" id="article-812">
+<div class="text-bild-links">
+<div class="ce_text block">
+<h2>Golf Vacation Right by the Ocean</h2>
+<p>A view of the Baltic Sea from every tee and green. <br>That makes golf even more enjoyable. <br>Enjoy your golf vacation at our camping and vacation park.</p>
+<p><a href="golfurlaub">Golf Offers</a></p>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/2/nadinesaupper-fehmarngolfWEB0178-3829d039.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/Strand%20%26%20Freizeit/Golfurlaub/Golf-Pakete/nadinesaupper-fehmarngolfWEB0178.jpg" width="2500" height="1667" alt="" loading="lazy">
+</source></picture>
+</figure>
+</div>
+</div>
+</section>
+<section class="mod_article full-width-padding block" id="article-813">
+<div class="grid-center">
+<div class="ce_hyperlink image-teaser col-12_sm-6_lg-3 margin block">
+<figure class="image_container">
+<a href="gastronomie" title="Gastronomie" class="hyperlink_img">
+<picture>
+<source srcset="assets/images/6/RestaurantSeeblick1-0a9f40c6.webp 500w, assets/images/f/RestaurantSeeblick1-dd265301.webp 1000w" sizes="33.33vw" media="(min-width: 64em)" type="image/webp" width="500" height="500">
+<source srcset="assets/images/8/RestaurantSeeblick1-368a079d.jpg 500w, assets/images/a/RestaurantSeeblick1-768f2823.jpg 1000w" sizes="33.33vw" media="(min-width: 64em)" width="500" height="500">
+<source srcset="assets/images/c/RestaurantSeeblick1-11fe6213.webp 1x, assets/images/5/RestaurantSeeblick1-a2be28df.webp 2x" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/7/RestaurantSeeblick1-d999774f.jpg 1x, assets/images/e/RestaurantSeeblick1-a8cf41ac.jpg 2x" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/6/RestaurantSeeblick1-1c10041f.webp" type="image/webp" width="2500" height="1656">
+<img src="files/bilder/startseite/RestaurantSeeblick1.jpg" width="2500" height="1656" alt="" loading="lazy">
+</source></source></source></source></source></picture>
+<span class="link-text">Gastronomy</span></a>
+</figure>
+</div>
+<div class="ce_hyperlink image-teaser col-12_sm-6_lg-3 margin block">
+<figure class="image_container">
+<a href="it-s-showtime" title="Showtime" class="hyperlink_img">
+<picture>
+<source srcset="assets/images/7/DSC_4814-2ec7b824.webp 500w, assets/images/1/DSC_4814-255bdcd4.webp 1000w" sizes="33.33vw" media="(min-width: 64em)" type="image/webp" width="500" height="500">
+<source srcset="assets/images/7/DSC_4814-419e4d36.jpg 500w, assets/images/a/DSC_4814-3dedb742.jpg 1000w" sizes="33.33vw" media="(min-width: 64em)" width="500" height="500">
+<source srcset="assets/images/e/DSC_4814-018ad419.webp 1x, assets/images/d/DSC_4814-6f635e76.webp 2x" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/0/DSC_4814-5135e18b.jpg 1x, assets/images/1/DSC_4814-a857b767.jpg 2x" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/3/DSC_4814-dd55c8da.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/Abendveranstaltungen/DSC_4814.jpg" width="2500" height="1667" alt="" loading="lazy">
+</source></source></source></source></source></picture>
+<span class="link-text">Showtime</span></a>
+</figure>
+</div>
+<div class="ce_hyperlink image-teaser col-12_sm-6_lg-3 margin block">
+<figure class="image_container">
+<a href="wellness-entspannung" title="Wellness" class="hyperlink_img">
+<picture>
+<source srcset="assets/images/7/Massage-7bd3da78.webp 500w, assets/images/1/Massage-2f1bcba4.webp 1000w" sizes="33.33vw" media="(min-width: 64em)" type="image/webp" width="500" height="500">
+<source srcset="assets/images/9/Massage-0a3841e8.jpg 500w, assets/images/a/Massage-17bbee15.jpg 1000w" sizes="33.33vw" media="(min-width: 64em)" width="500" height="500">
+<source srcset="assets/images/9/Massage-88322d0b.webp 1x, assets/images/b/Massage-9d8f1a47.webp 2x" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/5/Massage-7b3046b3.jpg 1x, assets/images/9/Massage-85d5abbe.jpg 2x" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/a/Massage-b9028bc0.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/startseite/Massage.jpg" width="2500" height="1667" alt="" loading="lazy">
+</source></source></source></source></source></picture>
+<span class="link-text">Wellness</span></a>
+</figure>
+</div>
+<div class="ce_hyperlink image-teaser col-12_sm-6_lg-3 margin block">
+<figure class="image_container">
+<a href="schlafstrandkorb" title="Schlaf-&lt;br&gt;strandkorb" class="hyperlink_img">
+<picture>
+<source srcset="assets/images/6/Schlafstrandkorb_Camping_WulfenerHals_Fehmarn7209-76bb880d.webp 500w, assets/images/7/Schlafstrandkorb_Camping_WulfenerHals_Fehmarn7209-dccabd6a.webp 1000w" sizes="33.33vw" media="(min-width: 64em)" type="image/webp" width="500" height="500">
+<source srcset="assets/images/9/Schlafstrandkorb_Camping_WulfenerHals_Fehmarn7209-eba7dff2.jpg 500w, assets/images/e/Schlafstrandkorb_Camping_WulfenerHals_Fehmarn7209-7b925cb6.jpg 1000w" sizes="33.33vw" media="(min-width: 64em)" width="500" height="500">
+<source srcset="assets/images/5/Schlafstrandkorb_Camping_WulfenerHals_Fehmarn7209-81fa206a.webp 1x, assets/images/c/Schlafstrandkorb_Camping_WulfenerHals_Fehmarn7209-5022df9e.webp 2x" media="(min-width: 20em)" type="image/webp" width="400" height="400">
+<source srcset="assets/images/3/Schlafstrandkorb_Camping_WulfenerHals_Fehmarn7209-e6b2fbcc.jpg 1x, assets/images/4/Schlafstrandkorb_Camping_WulfenerHals_Fehmarn7209-1db02159.jpg 2x" media="(min-width: 20em)" width="400" height="400">
+<source srcset="assets/images/c/Schlafstrandkorb_Camping_WulfenerHals_Fehmarn7209-348258de.webp" type="image/webp" width="2500" height="1667">
+<img src="files/bilder/startseite/Schlafstrandkorb_Camping_WulfenerHals_Fehmarn7209.jpg" width="2500" height="1667" alt="" loading="lazy">
+</source></source></source></source></source></picture>
+<span class="link-text">Sleep-<br>beach chair</span></a>
+</figure>
+</div>
+</div>
+</section>
+<section class="mod_article section-primary grass-dark block" id="article-814">
+<div class="grid-spaceBetween">
+<h2 class="ce_headline col-12_md-7 headline-border">
+Our new "Wulfener Hals" app</h2>
+<div class="ce_text col-12_lg-7 button button-primary block">
+<p>Great service right on your phone: Our app <strong>Wulfener Hals Camping and Vacation Park</strong> provides you with information, tips, and ideas for your Baltic Sea vacation.</p>
+<p>Whether it's events, our entertainment program, or our hours of operation&mdash;you'll find everything in our new app. You can also easily request a spa appointment or contact the front desk&mdash;we're here to help you with advice and assistance.</p>
+<p><a href="https://portal.gastfreund.net/wulfener-hals" target="_blank" rel="noopener">Go to the web version of the app</a></p>
+</div>
+<div class="col-12_lg-4"><div class="text-box orange grid app">
+<h2 class="ce_headline col-12 headline-border">Download the app for free</h2>
+<div class="ce_hyperlink col-12_sm-6_md-4_lg-6 block">
+<figure class="image_container">
+<a href="https://apps.apple.com/us/app/camping-wulfener-hals/id1606755135" class="hyperlink_img">
+<img src="files/bilder/layout/app-store-batch.png" width="543" height="197" alt="">
+<span class="link-text">https://apps.apple.com/us/app/camping-wulfener-hals/id1606755135</span></a>
+</figure>
+</div>
+<div class="ce_hyperlink col-12_sm-6_md-4_lg-6 block">
+<figure class="image_container">
+<a href="https://play.google.com/store/apps/details?id=net.gastfreund.WulfenerHals" title="Test" class="hyperlink_img">
+<img src="files/bilder/layout/play-store-batch.png" width="543" height="197" alt="">
+<span class="link-text">Test</span></a>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="mod_article full-width block" id="article-811">
+<div class="text-bild-rechts">
+<div class="ce_image block">
+<figure class="image_container">
+<picture>
+<source srcset="assets/images/e/glamping-ferienhaeuser-fbee975a.webp" media="(min-width: 48em)" type="image/webp" width="2500" height="800">
+<source srcset="assets/images/7/glamping-ferienhaeuser-4f6e5a83.jpg" media="(min-width: 48em)" width="2500" height="800">
+<source srcset="assets/images/7/glamping-ferienhaeuser-72bed850.webp 400w, assets/images/9/glamping-ferienhaeuser-60ede678.webp 800w" sizes="100vw" media="(min-width: 20em)" type="image/webp" width="400" height="267">
+<source srcset="assets/images/2/glamping-ferienhaeuser-3e316237.jpg 400w, assets/images/a/glamping-ferienhaeuser-31934e05.jpg 800w" sizes="100vw" media="(min-width: 20em)" width="400" height="267">
+<source srcset="assets/images/e/glamping-ferienhaeuser-c4727b23.webp" type="image/webp" width="2500" height="1663">
+<img src="files/bilder/startseite/glamping-ferienhaeuser.jpg" width="2500" height="1663" alt="" loading="lazy">
+</source></source></source></source></source></picture>
+</figure>
+</div>
+<div class="ce_text block">
+<h2>Glamping at the "Wulfener Hals"</h2>
+<p><strong>Luxury accommodations:</strong><br><strong>Glamour meets camping.</strong><br>Everything is already set up for you:</p>
+<p>Whether you stay in our luxurious mobile homes and vacation homes or our comfortable rental trailers&mdash;enjoy your vacation at the &ldquo;Wulfener Hals&rdquo; without having to bring your own trailer.</p>
+<p><a href="suchen-buchen">Book Now</a></p>
+</div>
+</div>
+</section>
+<section class="mod_article full-width-padding block" id="article-816">
+<div class="grid  socialwall">
+<h2 class="ce_headline col-6_md-3_xl-2">Social wall</h2>
+<div class="col-2_lg-1">
+<i class="fab fa-instagram"></i>
+</div>
+<h3 class="ce_headline col-12">Experience the #wulfenerhals up close!</h3>
+<ul class="juicer-feed" data-feed-id="wulfenerhals" data-origin="embed-code" data-per="10" data-truncate="250"></ul>
+<div class="dsgvo_message dsgvocontent-script" style="top:0; width:100%; height:450px; padding: 20px; text-align:center; background-color: #F4EBDC; cursor:pointer; display:flex; justify-content:center; align-items: center; font-size: 1rem; line-height: 1.4; color:#1A406B;border:3px solid #CFA663;" data-script="https://assets.juicer.io/embed.js" data-css="https://assets.juicer.io/embed.css">
+<p style="max-width:70%">Click in this area to view the social wall of <strong>Juicer.io</strong> to display. By loading this content, you accept the <a onclick="openWindow(event,'https://www.juicer.io/privacy');">Privacy Policy</a> der saas.group LLC, 304 S. Jones Blvd #1205, Las Vegas NV 89107, USA.</p>
+</div>    </div>
+</section>
+</main>
+<footer id="footer" itemscope itemtype="http://schema.org/WPFooter">
+<style></style><div class="footer-top"><div class="grid-center-spaceBetween">
+<div class="ce_text col-12_md-6_lg-2 block">
+<p>Reservation Hotline:</p>
+</div>
+<a class="col-12_md-6_lg-3" href="tel:+49437186280" aria-label="Telefon"><i class="fad fa-phone"></i><span>&ensp;04371 - 8628-0</span></a>
+<a class="col-12_md-6_lg-3" href="mailto:info@wulfenerhals.de" aria-label="E-Mail"><i class="fad fa-envelope"></i><span>&ensp;info@wulfenerhals.de</span></a>
+<a class="booking-button col-12_md-6_lg-3" href="/suchen-buchen" aria-label="Unterkunft buchen"><i class="fad fa-bed"></i><span>Search &amp; Book</span></a>    </div>
+</div>
+<div class="footer-content grid-center">
+<div class="col-12_sm-6_lg-4">
+<div class="ce_text block">
+<p><strong>Wulfener Hals Camping and Vacation Park<br></strong><br>Wulfener Hals 100 Weg, Ortsteil Wulfen<br>23769 Fehmarn<br>Tel. <a href="tel:+49437186280">+49 (0) 4371 - 86 28 -0</a><br>Fax +49 (0) 4371 - 37 23<br><a href="campingpark-wulfener-hals">www.wulfenerhals.de</a><br><a href="mailto:info@wulfenerhals.de">info@wulfenerhals.de</a></p>
+<p>&nbsp;</p>
+</div>
+<div class="ce_image banner block">
+<figure class="image_container">
+<a href="https://www.golfwave.de/" target="_blank" rel="noreferrer noopener">
+<img src="files/bilder/layout/Banner-Golfwave-minimal.jpg" width="1500" height="500" alt="">
+</a>
+</figure>
+</div>
+</div>
+<div class="col-12_sm-6_lg-4 grid">
+<div class="ce_image col-12 footer-logos block">
+<figure class="image_container">
+<img src="files/bilder/logos-auszeichnungen/Logo_Wulfener_Hals_2022_neg.svg" alt="">
+</figure>
+</div>
+<div class="col-12_md-6">
+<ul class="footer-navigation">
+<li><a href="/golfurlaub" aria-label="Golfpark Fehmarn"> Fehmarn Golf Park</a></li>
+<li><a href="/webcam-wetter" aria-label="Wetter-Webcam"> Webcam &amp; Wetter</a></li>
+<li><a href="/wulfener-hals-a-z" aria-label="Wulfen-von-A-Z"> Wulfener Hals from A to Z</a></li>
+<li><a href="/news" aria-label="News">News</a></li>
+</ul>
+</div>
+<div class="col-12_md-6">
+<ul class="footer-navigation">
+<li><a href="/surfen-kiten-segeln" aria-label="surfen kiten segeln">Windsurfing on Fehmarn</a></li>
+<li><a href="/impressum" aria-label="Impressum"> Legal Notice</a></li>
+<li><a href="/datenschutz" aria-label="Datenschutz"> Privacy Policy</a></li>
+<li><a href="/cookie-richtlinien" aria-label="Cookies">Cookie Policy</a></li>
+</ul>
+</div>
+<ul class="social-links col-12">
+<li><a href="https://www.youtube.com/user/WulfenerHals" aria-label="Youtube-Channel" target="_blank"><i class="fab fa-youtube"></i></a></li>
+<li><a href="https://de-de.facebook.com/campingfehmarn/" aria-label="Facebook-Seite" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+<li><a href="https://www.instagram.com/wulfenerhals/?hl=de" aria-label="Instagram-Seite" target="_blank"><i class="fab fa-instagram"></i></a></li>
+</ul>    </div>
+<div class="col-12_sm-6_lg-3 grid">
+<div class="ce_text col-12 block">
+<p><strong>Guest Login</strong></p>
+<p>Sign in to view all the booking details for your vacation online.</p>
+</div>
+<div class="ce_hyperlink button button-primary col-12 block">
+<a href="compusoft-login" class="hyperlink_txt" title="Zum Login">Log In</a>
+</div>
+<div class="ce_text col-12_md-9 block">
+<p>Our partner company at the Mecklenburgischen Seenplatte:</p>
+</div>
+<div class="ce_image col-12_md-3 footer-logos block">
+<figure class="image_container">
+<a href="https://www.haveltourist.de/" target="_blank" rel="noreferrer noopener">
+<img src="files/bilder/logos-auszeichnungen/logo-haveltourist.png" width="500" height="348" alt="">
+</a>
+</figure>
+</div>
+<div class="ce_text col-12_md-9 block">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+<div class="footer-area">
+<div class="ce_gallery footer-logos block">
+<ul class="cols_9" itemscope itemtype="http://schema.org/ImageGallery">
+<li class="row_0 row_first row_last even col_0 col_first">
+<figure class="image_container">
+<a href="assets/images/d/EMAS-7b975328.png" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/EMAS.png" width="506" height="460" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_1">
+<figure class="image_container">
+<a href="assets/images/f/TopPlatz-9db73eb2.png" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/TopPlatz.png" width="532" height="532" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_2">
+<figure class="image_container">
+<a href="https://www.leadingcampings.com/" target="_blank" rel="noreferrer noopener">
+<img src="files/bilder/logos-auszeichnungen/camp_partner_mod16_leadingcamps_530x530_web.jpg" width="530" height="347" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_3">
+<figure class="image_container">
+<a href="assets/images/f/ACSI%202023-6796b237.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/ACSI%202023.jpg" width="736" height="1000" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_4">
+<figure class="image_container">
+<a href="assets/images/9/ADAC-Logo%202024-dcac48d0.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/ADAC-Logo%202024.jpg" width="1000" height="524" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_5">
+<figure class="image_container">
+<a href="assets/images/2/ANWB%202023-3cff32b5.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/ANWB%202023.jpg" width="1000" height="984" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_6">
+<figure class="image_container">
+<a href="assets/images/9/Camping%20Info%20LOGO%202023-202658c2.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/Camping%20Info%20LOGO%202023.jpg" width="656" height="768" alt="">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_7">
+<figure class="image_container">
+<a href="assets/images/5/Gefragtester%20Campingplatz%20Deutschlands-0bb30610.jpg" data-lightbox="lb5953">
+<img src="files/bilder/logos-auszeichnungen/Auszeichnungen%202023/Gefragtester%20Campingplatz%20Deutschlands.jpg" width="1871" height="1330" alt="">
+</a>
+</figure>
+</li>
+</ul>
+</div>
+<style></style></div>
+</footer>
+<script src="assets/colorbox/js/colorbox.min.js"></script>
+<script></script>
+<script src="assets/swipe/js/swipe.min.js?v=2.2.2"></script>
+<script></script>
+<script src="files/secra-theme/js/navigation-main.js?v=9c80029e"></script><script src="files/secra-theme/js/dsgvocontent.js?v=53f66bcd"></script><script type="application/ld+json">
+{
+    "@context": "https:\/\/schema.org",
+    "@graph": [
+        {
+            "@type": "WebPage"
+        },
+        {
+            "@id": "#\/schema\/image\/346bcda9-806b-11ed-97a0-0cc47a047122",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/startseite\/slider\/Neues%20Luftbild%20WH%202022a%20farbwerte%20bearbeitet.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/0f2412f6-1fb0-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/startseite\/slider\/Grillen_Camping_WulfenerHals_Fehmarn5480.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/a4f89b49-22e2-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/startseite\/slider\/GoCart_Camping_WulfenerHals_Fehmarn0262.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/eac5996d-22e2-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/startseite\/slider\/PicknickWandern_Camping_WulfenerHals_Fehmarn5611.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/f351ddce-1faf-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/startseite\/slider\/Pool_Camping_WulfenerHals_Fehmarn5383.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/44971e36-2396-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/startseite\/slider\/Strand_Camping_WulfenerHals_Fehmarn.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/85c8b96b-22e2-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/startseite\/slider\/Surfschule_Camping_WulfenerHals_Fehmarn5826.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/e99b2e58-1faf-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/startseite\/slider\/Luft_Camping_WulfenerHals_Fehmarn0125.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/c559de5e-fec9-11ec-9cc3-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/logos-auszeichnungen\/logo-leading-campings.png"
+        },
+        {
+            "@id": "#\/schema\/image\/75f304ad-98ed-11ee-8c6b-0cc47a047122",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/logos-auszeichnungen\/Auszeichnungen%202023\/ADAC-Logo%202024.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/22ae4692-cdc4-11ef-98f9-0cc47a047122",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/layout\/Banner-Golfwave-minimal.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/39420393-09bb-11ed-9cc3-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/startseite\/glamping-ferienhaeuser.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/49cbcefe-1fb0-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/startseite\/Fruehstueck_Camping_WulfenerHals_Fehmarn9374.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/aa3fc6a0-9132-11ef-93a2-0cc47a047122",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/Strand%20%26%20Freizeit\/Aktivit%C3%A4ten\/DSC09914.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/bc2197b0-1fb1-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/startseite\/Strand_Camping_WulfenerHals_Fehmarn6741.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/4381228e-1fb0-11ed-9dd8-002590d806fa",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/startseite\/Strand_Camping_WulfenerHals_Fehmarn1481.jpg"
+        },
+        {
+            "@id": "#\/schema\/image\/21ba2bce-9133-11ef-93a2-0cc47a047122",
+            "@type": "ImageObject",
+            "contentUrl": "\/files\/bilder\/Strand%20%26%20Freizeit\/Golfurlaub\/Golf-Pakete\/nadinesaupper-fehmarngolfWEB0178.jpg"
+        }
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https:\/\/schema.contao.org",
+    "@graph": [
+        {
+            "@type": "Page",
+            "fePreview": false,
+            "groups": [],
+            "noSearch": false,
+            "pageId": 127,
+            "protected": false,
+            "title": "Leading Camping auf Fehmarn"
+        }
+    ]
+}
+</script>
+</body>
+</html>

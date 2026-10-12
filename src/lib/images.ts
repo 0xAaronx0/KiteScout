@@ -529,6 +529,8 @@ export async function curateAndStoreImages(opts: {
   pathPrefix?: string;
   /** vision QC wording; default = kite cruise */
   brief?: VisionBrief;
+  /** per-listing size floor when a provider only publishes small photos (default MIN_WIDTH x MIN_HEIGHT) */
+  minSize?: { width: number; height: number };
 }): Promise<StoredImage[]> {
   const { candidateUrls, providerId, slug, sourceUrl, context } = opts;
   const prefix = opts.pathPrefix ?? `cruise-offers/${providerId}/${slug}`;
@@ -563,7 +565,7 @@ export async function curateAndStoreImages(opts: {
     } catch {
       continue;
     }
-    if (width < MIN_WIDTH || height < MIN_HEIGHT) continue;
+    if (width < (opts.minSize?.width ?? MIN_WIDTH) || height < (opts.minSize?.height ?? MIN_HEIGHT)) continue;
     const aspect = width / height;
     if (aspect > MAX_ASPECT || aspect < MIN_ASPECT) continue;
     downloaded.push({ sourceUrl: url, buf, width, height });

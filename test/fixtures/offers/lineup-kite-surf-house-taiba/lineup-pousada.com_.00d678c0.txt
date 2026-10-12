@@ -1,0 +1,541 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" dir="ltr" lang="en-US" prefix="og: https://ogp.me/ns#"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	    <title>LINEUP Kite and Surf House</title>
+
+		<!-- All in One SEO 5.0.3 - aioseo.com -->
+	<meta name="description" content="LOCATED IN TAIBA VILLAGE, ONLY 150 METERS FROM THE BEACH AND A FEW MINUTES FROM THE LAGOON AND CITY CENTER.WE SERVE LOCAL STYLE DELICIOUS AND HEALTHY BREAKFAST." />
+	<meta name="robots" content="max-image-preview:large" />
+	<link rel="canonical" href="https://lineup-pousada.com/" />
+		<meta name="generator" content="All in One SEO (AIOSEO) 5.0.3" />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:site_name" content="LINEUP Kite and Surf House - The Best Place in Brazil" />
+		<meta property="og:type" content="article" />
+		<meta property="og:title" content="LINEUP Kite and Surf House" />
+		<meta property="og:description" content="LOCATED IN TAIBA VILLAGE, ONLY 150 METERS FROM THE BEACH AND A FEW MINUTES FROM THE LAGOON AND CITY CENTER.WE SERVE LOCAL STYLE DELICIOUS AND HEALTHY BREAKFAST." />
+		<meta property="og:url" content="https://lineup-pousada.com/" />
+		<meta property="og:image" content="https://www.lineup-pousada.com/wp-content/uploads/2021/06/LOGO_LINEUP_DARK-1.png" />
+		<meta property="og:image:secure_url" content="https://www.lineup-pousada.com/wp-content/uploads/2021/06/LOGO_LINEUP_DARK-1.png" />
+		<meta property="article:published_time" content="2018-02-13T08:06:42+00:00" />
+		<meta property="article:modified_time" content="2026-02-13T11:42:24+00:00" />
+		<meta property="article:publisher" content="https://www.facebook.com/Lineup.Pousada" />
+		<meta property="article:author" content="https://www.facebook.com/Lineup.Pousada" />
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content="LINEUP Kite and Surf House" />
+		<meta name="twitter:description" content="LOCATED IN TAIBA VILLAGE, ONLY 150 METERS FROM THE BEACH AND A FEW MINUTES FROM THE LAGOON AND CITY CENTER.WE SERVE LOCAL STYLE DELICIOUS AND HEALTHY BREAKFAST." />
+		<meta name="twitter:image" content="https://www.lineup-pousada.com/wp-content/uploads/2021/06/LOGO_LINEUP_DARK-1.png" />
+		<script type="application/ld+json" class="aioseo-schema">
+			{"@context":"https:\/\/schema.org","@graph":[{"@type":"BreadcrumbList","@id":"https:\/\/lineup-pousada.com\/#breadcrumblist","itemListElement":[{"@type":"ListItem","@id":"https:\/\/lineup-pousada.com\/#listItem","position":1,"name":"Home"}]},{"@type":"Organization","@id":"https:\/\/lineup-pousada.com\/#organization","name":"LINEUP Kite & Surf House","description":"The Best Place in Brazil","url":"https:\/\/lineup-pousada.com\/","telephone":"+558599143158","logo":{"@type":"ImageObject","url":"https:\/\/www.lineup-pousada.com\/wp-content\/uploads\/2021\/06\/LOGO_LINEUP_DARK-1.png","@id":"https:\/\/lineup-pousada.com\/#organizationLogo"},"image":{"@id":"https:\/\/lineup-pousada.com\/#organizationLogo"},"sameAs":["https:\/\/www.facebook.com\/Lineup.Pousada","https:\/\/www.instagram.com\/lineup.pousada\/","https:\/\/www.youtube.com\/channel\/UCb1IGxR7ZFmUpdn7xTuctqw","https:\/\/www.linkedin.com\/company\/lineup-kite-and-surf-house"]},{"@type":"WebPage","@id":"https:\/\/lineup-pousada.com\/#webpage","url":"https:\/\/lineup-pousada.com\/","name":"LINEUP Kite and Surf House","description":"LOCATED IN TAIBA VILLAGE, ONLY 150 METERS FROM THE BEACH AND A FEW MINUTES FROM THE LAGOON AND CITY CENTER.WE SERVE LOCAL STYLE DELICIOUS AND HEALTHY BREAKFAST.","inLanguage":"en-US","isPartOf":{"@id":"https:\/\/lineup-pousada.com\/#website"},"breadcrumb":{"@id":"https:\/\/lineup-pousada.com\/#breadcrumblist"},"datePublished":"2018-02-13T08:06:42+00:00","dateModified":"2026-02-13T11:42:24+00:00"},{"@type":"WebSite","@id":"https:\/\/lineup-pousada.com\/#website","url":"https:\/\/lineup-pousada.com\/","name":"LINEUP Kite and Surf House","description":"The Best Place in Brazil","inLanguage":"en-US","publisher":{"@id":"https:\/\/lineup-pousada.com\/#organization"}}]}
+		</script>
+		<!-- All in One SEO -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="LINEUP Kite and Surf House &raquo; Feed" href="https://lineup-pousada.com/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://lineup-pousada.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flineup-pousada.com%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://lineup-pousada.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Flineup-pousada.com%2F&#038;format=xml" />
+	
+			<!-- Google Analytics -->
+			<script type="text/plain" data-service="google-analytics" data-category="statistics"></script>
+			<!-- End Google Analytics -->
+		<style id="wp-img-auto-sizes-contain-inline-css"></style>
+<style id="wp-emoji-styles-inline-css"></style>
+<style id="wp-block-library-inline-css"></style>
+<style id="classic-theme-styles-inline-css"></style>
+
+<style id="global-styles-inline-css"></style>
+
+<link rel='stylesheet' id='gdprmagnificpopup-css' href='https://lineup-pousada.com/wp-content/plugins/be-gdpr/public/css/magnific-popup.css?ver=1.1.6' media='all' />
+<link rel='stylesheet' id='be-gdpr-css' href='https://lineup-pousada.com/wp-content/plugins/be-gdpr/public/css/be-gdpr-public.css?ver=1.1.6' media='all' />
+<link rel='stylesheet' id='be-slider-css' href='https://lineup-pousada.com/wp-content/plugins/oshine-modules/public/css/be-slider.css?ver=566160247483012e11518640d1934f1a' media='all' />
+<link rel='stylesheet' id='oshine-modules-css' href='https://lineup-pousada.com/wp-content/plugins/oshine-modules/public/css/oshine-modules.css?ver=3.2' media='all' />
+<link rel='stylesheet' id='prisna-wp-translate-css' href='https://lineup-pousada.com/wp-content/plugins/prisna-wp-translate/styles/translator-s.css?ver=1.16' media='screen' />
+<link rel='stylesheet' id='typehub-css' href='https://lineup-pousada.com/wp-content/plugins/tatsu/includes/typehub/public/css/typehub-public.css?ver=2.0.6' media='all' />
+<link rel='stylesheet' id='typehub-google-fonts-css' href='//fonts.googleapis.com/css?family=Playfair%20Display:400,400italic|Open%20Sans:400,600|Raleway:600,400|Montserrat:700,400|Crimson%20Text:400Italic&#038;ver=1.0' media='all' />
+<link rel='stylesheet' id='tatsu-main-css' href='https://lineup-pousada.com/wp-content/plugins/tatsu/public/css/tatsu.min.css?ver=3.5.3' media='all' />
+<link rel='stylesheet' id='oshine_icons-css' href='https://lineup-pousada.com/wp-content/themes/oshin/fonts/icomoon/style.css?ver=7.3.2' media='all' />
+<link rel='stylesheet' id='font_awesome-css' href='https://lineup-pousada.com/wp-content/plugins/tatsu/includes/icons/font_awesome/font-awesome.css?ver=566160247483012e11518640d1934f1a' media='all' />
+<link rel='stylesheet' id='font_awesome_brands-css' href='https://lineup-pousada.com/wp-content/plugins/tatsu/includes/icons/font_awesome/brands.css?ver=566160247483012e11518640d1934f1a' media='all' />
+<link rel='stylesheet' id='tatsu_icons-css' href='https://lineup-pousada.com/wp-content/plugins/tatsu/includes/icons/tatsu_icons/tatsu-icons.css?ver=566160247483012e11518640d1934f1a' media='all' />
+<link rel='stylesheet' id='cmplz-general-css' href='https://lineup-pousada.com/wp-content/plugins/complianz-gdpr/assets/css/cookieblocker.min.css?ver=1788917396' media='all' />
+<link rel='stylesheet' id='be-themes-bb-press-css-css' href='https://lineup-pousada.com/wp-content/themes/oshin/bb-press/bb-press.css?ver=566160247483012e11518640d1934f1a' media='all' />
+<link rel='stylesheet' id='be-style-main-css-css' href='https://lineup-pousada.com/wp-content/themes/oshin/css/main.css?ver=7.3.2' media='all' />
+<link rel='stylesheet' id='be-style-top-header-css' href='https://lineup-pousada.com/wp-content/themes/oshin/css/headers/top-header.css?ver=7.3.2' media='all' />
+<link rel='stylesheet' id='be-style-responsive-header-css' href='https://lineup-pousada.com/wp-content/themes/oshin/css/headers/responsive-header.css?ver=7.3.2' media='all' />
+<link rel='stylesheet' id='be-style-multilevel-menu-css' href='https://lineup-pousada.com/wp-content/themes/oshin/css/headers/multilevel-menu.css?ver=7.3.2' media='all' />
+<link rel='stylesheet' id='be-themes-layout-css' href='https://lineup-pousada.com/wp-content/themes/oshin/css/layout.css?ver=7.3.2' media='all' />
+<link rel='stylesheet' id='magnific-popup-css' href='https://lineup-pousada.com/wp-content/themes/oshin/css/vendor/magnific-popup.css?ver=566160247483012e11518640d1934f1a' media='all' />
+<link rel='stylesheet' id='scrollbar-css' href='https://lineup-pousada.com/wp-content/themes/oshin/css/vendor/scrollbar.css?ver=566160247483012e11518640d1934f1a' media='all' />
+<link rel='stylesheet' id='flickity-css' href='https://lineup-pousada.com/wp-content/themes/oshin/css/vendor/flickity.css?ver=566160247483012e11518640d1934f1a' media='all' />
+<link rel='stylesheet' id='be-custom-fonts-css' href='https://lineup-pousada.com/wp-content/themes/oshin/fonts/fonts.css?ver=7.3.2' media='all' />
+<link rel='stylesheet' id='be-style-css-css' href='https://lineup-pousada.com/wp-content/themes/oshin/style.css?ver=7.3.2' media='all' />
+<link rel='stylesheet' id='cmplz-banner-1-optin-css' href='https://lineup-pousada.com/wp-content/uploads/complianz/css/banner-1-optin.css?ver=1788917735' media='all' />
+<script id="burst-timeme-js" async src="https://lineup-pousada.com/wp-content/plugins/burst-statistics/assets/js/timeme/timeme.min.js?ver=1790644357"></script>
+<script id="burst-js" async src="https://lineup-pousada.com/wp-content/uploads/burst/js/burst.min.js?ver=1791813183"></script>
+<script id="jquery-core-js" src="https://lineup-pousada.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://lineup-pousada.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="be-gdpr-js-extra"></script>
+<script id="be-gdpr-js" src="https://lineup-pousada.com/wp-content/plugins/be-gdpr/public/js/be-gdpr-public.js?ver=1.1.6"></script>
+<script id="webfontloader-js" src="https://lineup-pousada.com/wp-content/plugins/tatsu/includes/typehub/public/js/webfont.min.js?ver=566160247483012e11518640d1934f1a"></script>
+<script id="modernizr-js" src="https://lineup-pousada.com/wp-content/themes/oshin/js/vendor/modernizr.js?ver=566160247483012e11518640d1934f1a"></script>
+<link rel="https://api.w.org/" href="https://lineup-pousada.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://lineup-pousada.com/wp-json/wp/v2/pages/6" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://lineup-pousada.com/xmlrpc.php?rsd" />
+<meta name="generator" content="Site Kit by Google 1.189.0" /><link rel="alternate" hreflang="en" href="https://lineup-pousada.com/" />
+<link rel="alternate" hreflang="fr" href="https://lineup-pousada.com/fr/" />
+<link rel="alternate" hreflang="pt" href="https://lineup-pousada.com/pt/" />
+<style type="text/css"></style>			<style></style>
+				<style id = "be-dynamic-css" type="text/css"></style><style rel="stylesheet" id="typehub-output"></style><style id = "oshine-typehub-css" type="text/css"></style><style rel="stylesheet" id="colorhub-output"></style><link rel="icon" href="https://lineup-pousada.com/wp-content/uploads/2021/06/LOGO_LINEUP_SQUARE-50x50.png" sizes="32x32" />
+<link rel="icon" href="https://lineup-pousada.com/wp-content/uploads/2021/06/LOGO_LINEUP_SQUARE.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://lineup-pousada.com/wp-content/uploads/2021/06/LOGO_LINEUP_SQUARE.png" />
+<meta name="msapplication-TileImage" content="https://lineup-pousada.com/wp-content/uploads/2021/06/LOGO_LINEUP_SQUARE.png" />
+<style id="wp-custom-css"></style>
+</head>
+<body data-rsssl=1 data-cmplz=1 class="home wp-singular page-template-default page page-id-6 wp-theme-oshin header-transparent section-scroll single-page-version top-header menu-animate-fall be-themes-layout-layout-wide opt-panel-cache-off" data-be-site-layout='layout-wide' data-be-page-template = 'page'  data-burst_id="6" data-burst_type="page">	
+	<div class="search-box-wrapper style2-header-search-widget">
+				<a href="#" class="header-search-form-close"><i class="icon-icon_close font-icon"></i></a>
+				<div class="search-box-inner1">
+					<div class="search-box-inner2"><form role="search" method="get" class="searchform" action="https://lineup-pousada.com/" >
+	    <input type="text" placeholder="Search ..." value="" name="s" class="s" />
+	    <i class="search-icon icon-search font-icon"></i>
+	    <input type="submit" class="search-submit" value="" />
+	    </form></div>
+				</div>
+			</div><div id="main-wrapper"
+    >
+            <div id="main" class="ajaxable layout-wide" >
+        
+<header id="header">
+		<div id="header-inner-wrap" class="transparent background--dark style3"  data-headerscheme = "background--dark">
+					<div id="header-wrap" class=" clearfix" data-default-height="130" data-sticky-height="130">
+				    <div class="logo">
+        <a href="https://lineup-pousada.com"><img class="transparent-logo dark-scheme-logo" src="https://lineup-pousada.com/wp-content/uploads/2021/06/LOGO_LINEUP_W.png" alt="LINEUP Kite and Surf House" /><img class="transparent-logo light-scheme-logo" src="https://lineup-pousada.com/wp-content/uploads/2021/06/LOGO_LINEUP_D.png" alt="LINEUP Kite and Surf House" /><img class="normal-logo" src="https://lineup-pousada.com/wp-content/uploads/2021/06/LOGO_LINEUP_D.png" alt="LINEUP Kite and Surf House" /><img class="sticky-logo" src="https://lineup-pousada.com/wp-content/uploads/2021/06/LOGO_LINEUP_SQUARE.png" alt="LINEUP Kite and Surf House" /></a>    </div>
+        <div id="header-controls-right">
+                        <div class="menu-controls menu-falling-animate-controller"><span class="be-mobile-menu-icon style1">   
+        <span class="hamburger-line-1"></span>
+        <span class="hamburger-line-2"></span>
+        <span class="hamburger-line-3"></span>
+</span></div>
+            				<div class="header-code-widgets"><div  class="tatsu-module tatsu-icon-group tatsu-ii01rfy4thdnd63g  "  ><style></style>
+<div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-ii01rfy4zpr31hd   "><style></style><a href="https://www.facebook.com/Lineup.Pousada"  class="tatsu-icon-wrap square     " data-animation="fadeIn"   aria-label="icon-facebook2" data-gdpr-atts={}   ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-facebook2 tiny square"  data-animation="fadeIn" data-animation-delay="0"></i></a></div>
+<div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-ii01rfy5432dkm0w   "><style></style><a href="https://www.instagram.com/lineup.pousada/"  class="tatsu-icon-wrap square     " data-animation="fadeIn"   aria-label="icon-instagram2" data-gdpr-atts={}   ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-instagram2 tiny square"  data-animation="fadeIn" data-animation-delay="0"></i></a></div>
+<div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-ii01rfy57t5oj8ep   "><style></style><a href="https://www.youtube.com/channel/UCb1IGxR7ZFmUpdn7xTuctqw"  class="tatsu-icon-wrap square     " data-animation="fadeIn"   aria-label="icon-youtube" data-gdpr-atts={}   ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-youtube tiny square"  data-animation="fadeIn" data-animation-delay="0"></i></a></div>
+<div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-ii01rfy5aj6gzrm5   "><style></style><a href="https://vimeo.com/julienzgraggen"  class="tatsu-icon-wrap square     " data-animation="fadeIn"   aria-label="icon-vimeo" data-gdpr-atts={}   ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-vimeo tiny square"  data-animation="fadeIn" data-animation-delay="0"></i></a></div>
+</div>				</div>        <div class="mobile-nav-controller-wrap">
+            <div class="menu-controls mobile-nav-controller" title="Mobile Menu Controller"> <span class="be-mobile-menu-icon style1">   
+        <span class="hamburger-line-1"></span>
+        <span class="hamburger-line-2"></span>
+        <span class="hamburger-line-3"></span>
+</span></div>
+        </div>
+    </div>				<div id="header-bottom-bar">
+				<nav id="navigation" class="clearfix">	<div class="menu"><ul id="menu" class="clearfix none"><li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a href="#LINEUP" title="LINEUP">LINEUP</a></li>
+<li id="menu-item-199" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199"><a href="#TAIBA" title="TAIBA">TAIBA</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="#ROOMS" title="GUEST ROOMS">GUEST ROOMS</a></li>
+<li id="menu-item-130" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-130"><a href="#KITESURF" title="KITESURF">KITESURF</a></li>
+<li id="menu-item-136" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136"><a href="#SURF" title="SURF">SURF</a></li>
+<li id="menu-item-142" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-142"><a href="#KITESCHOOL" title="KITESCHOOL">KITESCHOOL</a></li>
+<li id="menu-item-190" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-190"><a href="#ABOUTUS" title="ABOUT US">ABOUT US</a></li>
+<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="#NEWS" title="NEWS">NEWS</a></li>
+<li id="menu-item-242" class="menu-item menu-item-type-prisna_wp_translate menu-item-object-prisna_wp_translate menu-item-242"><div class="prisna-wp-translate-widget-container"></div></li>
+</ul></div>				</nav><!-- End Navigation -->
+				</div>
+			</div>
+
+			<div class='header-mobile-navigation clearfix'><div class="mobile-menu"><ul id="mobile-menu" class="clearfix"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-14"><a href="#LINEUP" title="LINEUP">LINEUP</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-199"><a href="#TAIBA" title="TAIBA">TAIBA</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="#ROOMS" title="GUEST ROOMS">GUEST ROOMS</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-130"><a href="#KITESURF" title="KITESURF">KITESURF</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-136"><a href="#SURF" title="SURF">SURF</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-142"><a href="#KITESCHOOL" title="KITESCHOOL">KITESCHOOL</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-190"><a href="#ABOUTUS" title="ABOUT US">ABOUT US</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15"><a href="#NEWS" title="NEWS">NEWS</a></li>
+<li class="menu-item menu-item-type-prisna_wp_translate menu-item-object-prisna_wp_translate menu-item-242"><div class="prisna-wp-translate-widget-container"></div></li>
+</ul></div></div>	</div>
+</header> <!-- END HEADER -->	<div id="content" class="no-sidebar-page">
+		<div id="content-wrap" class="page-builder">
+			<section id="page-content">
+				<div class="clearfix"  >
+					<div  class="tatsu-foew1bumj8aqggn2 tatsu-section  tatsu-fullscreen tatsu-video-section   tatsu-clearfix" data-title="INTRO"  data-headerscheme="background--dark"><div class="tatsu-fullscreen-wrap"><div class='tatsu-section-pad clearfix' data-padding='{"d":"120px 0px 120px 0px"}' data-padding-top='120px'></div><div class="tatsu-section-background-wrap"><div class = "tatsu-section-background" ></div></div><video class="tatsu-bg-video" autoplay="autoplay" loop="loop" muted="muted" preload="auto" playsinline webkit-playsinline><source src="https://www.lineup-pousada.com/wp-content/uploads/2021/06/LINEUP-Taiba-Kite-Surf-House.mp4" type="video/mp4"><source src="https://www.lineup-pousada.com/wp-content/uploads/2021/06/LINEUP-Taiba-Kite-Surf-House.ogg" type="video/ogg"><source src="https://www.lineup-pousada.com/wp-content/uploads/2021/06/LINEUP-Taiba-Kite-Surf-House.webm" type="video/webm"></video></div><style></style></div><div id="LINEUP" class="tatsu-ry6pas42u tatsu-section  tatsu-fullscreen   tatsu-clearfix" data-title="LINEUP"  data-headerscheme="background--dark"><div class="tatsu-fullscreen-wrap"><div class='tatsu-section-pad clearfix' data-padding='{"d":"120px 0px 120px 0px"}' data-padding-top='120px'><div class="tatsu-row-wrap  tatsu-wrap tatsu-row-has-one-half tatsu-row-has-two-cols tatsu-medium-gutter tatsu-reg-cols  tatsu-clearfix tatsu-SyxpaaiEhO" ><div  class="tatsu-row " ><div  class="tatsu-column  tatsu-column-no-bg tatsu-column-empty tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-r1Sa6TsE3O"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-SyW6p6jNhu"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-module tatsu-inline-text clearfix tatsu-SJGTTas4hO   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h4><span class="palette-2 ">Kite &#038; Surf House</span></h4>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-HJjhOyY3_   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h1><span class="palette-2 "><em>Lineup</em></span></h1>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-ryEaTTi42_   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h6 style="text-align: justify;"><span class="palette-2 ">located in Taiba village, only 150 meters from the beach and a few minutes from the lagoon and city center.We serve local style delicious and healthy breakfast. Dinner and lunch options made with fresh local produce are available several times a week. Guests also enjoy our nice swimming pool area with hot tub and bar. Kite storage is provided.</span></h6>
+</div></div><div class="tatsu-row-wrap  tatsu-row-has-four-cols tatsu-tiny-gutter tatsu-reg-cols tatsu-inner-row-wrap tatsu-animate tatsu-clearfix tatsu-foey3yfawk3rvwlr" data-animation="fadeInUp" data-animation-delay="200" ><div  class="tatsu-row " ><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-fourth tatsu-column-image- tatsu-column-effect-  tatsu-foey3yfawu7eruyn"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="oshine-animated-link  tatsu-foey3yfaxdd6bnlx oshine-module align-center   " ><a class = "animated-link animated-link-style2"  href = "#ROOMS" aria-label = "Accommodation"><span class = "link-text"  >Accommodation</span></a><style></style></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-fourth tatsu-column-image- tatsu-column-effect-  tatsu-foey3yfaxr96gui7"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="oshine-animated-link  tatsu-foey3yfay89njbwv oshine-module align-center   " ><a class = "animated-link animated-link-style2"  href = "#KITESURF" aria-label = "Activity"><span class = "link-text"  >Activity</span></a><style></style></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-fourth tatsu-column-image- tatsu-column-effect-  tatsu-foey3yfayldh1iae"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="oshine-animated-link  tatsu-SJyo31t2d oshine-module align-center   " ><a class = "animated-link animated-link-style2"  href = "#KITESCHOOL" aria-label = "KITESCHOOL"><span class = "link-text"  >KITESCHOOL</span></a><style></style></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div><div  class="tatsu-column  tatsu-bg-overlay tatsu-one-fourth tatsu-column-image- tatsu-column-effect-  tatsu-SJMVQ31Y3u"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="oshine-animated-link  tatsu-BJBjhJK3u oshine-module align-center   " ><a class = "animated-link animated-link-style2"  href = "#NEWS" aria-label = "NEWS"><span class = "link-text"  >NEWS</span></a><style></style></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div><div class="tatsu-overlay tatsu-column-overlay tatsu-animate-none" ></div></div><style></style></div></div></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div></div></div></div><div class="tatsu-section-background-wrap"><div class = "tatsu-section-background" ></div></div></div><style>.tatsu-ry6pas42u .tatsu-section-background{background-image: url(https://www.lineup-pousada.com/wp-content/uploads/2021/06/DSC00764-scaled.jpg)}</style></div><div id="TAIBA" class="tatsu-By9-4gF3u tatsu-section  tatsu-fullscreen   tatsu-clearfix" data-title="TAIBA"  data-headerscheme="background--dark"><div class="tatsu-fullscreen-wrap"><div class='tatsu-section-pad clearfix' data-padding='{"d":"120px 0px 120px 0px"}' data-padding-top='120px'><div class="tatsu-row-wrap  tatsu-wrap tatsu-row-has-one-half tatsu-row-has-two-cols tatsu-medium-gutter tatsu-reg-cols  tatsu-clearfix tatsu-SJe9ZEeF2O" ><div  class="tatsu-row " ><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-S1Z5-Vxtn_"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-module tatsu-inline-text clearfix tatsu-SJfqbVxY2u   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h4><span class="palette-2 ">Brazil, Ceará</span></h4>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-SJ79-NgF3d   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h1><span class="palette-2 "><em>and Taiba</em></span></h1>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-HJV9-4gK3O   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h6 style="text-align: justify;"><span class="palette-2 ">typical Brazilian fishermen ‘s village located about 75 kms north of Fortaleza. If you love nature and wildlife, the northeast of Brazil with its beautiful nature and magic landscape is the perfect choice. Sunny Brazil and its hot samba rhythms attract people from all over the world. Sun, warm water, endless sandy beaches, spectacular natural wonders … Brazil never fails to charm its visitors.</span></h6>
+</div></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div><div  class="tatsu-column  tatsu-column-no-bg tatsu-column-empty tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-ryBqW4eYnd"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div></div></div></div><div class="tatsu-section-background-wrap"><div class = "tatsu-section-background" ></div></div></div><style>.tatsu-By9-4gF3u .tatsu-section-background{background-image: url(https://www.lineup-pousada.com/wp-content/uploads/2021/06/DSC00450-scaled.jpg)}</style></div><div id="ROOMS" class="tatsu-foexunx10m42hy39 tatsu-section  tatsu-fullscreen   tatsu-clearfix" data-title="GUEST ROOM"  data-headerscheme="background--dark"><div class="tatsu-fullscreen-wrap"><div class='tatsu-section-pad clearfix' data-padding='{"d":"120px 0px 120px 0px "}' data-padding-top='120px'><div class="tatsu-row-wrap  tatsu-wrap tatsu-row-has-one-half tatsu-row-has-two-cols tatsu-medium-gutter tatsu-reg-cols  tatsu-clearfix tatsu-BkkSiOm3_" ><div  class="tatsu-row " ><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-H1e1BiOm2O"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-module tatsu-inline-text clearfix tatsu-rJWyHiuQ3u   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h4><span class="palette-4 ">Pousada Lineup</span></h4>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-H1fkriumh_   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h1><span style="color: #fafbfd;"><em>Our Rooms</em></span></h1>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-rk7yHsu72d   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h6 style="text-align: justify;">Lineup kite &#038; Surf house has 8 double rooms, 1 triple room and 2 dormitories. The rooms are equipped with comfortable beds, fan or *air conditioning,  *mini bar and *spacious bathrooms. A common 30m2 veranda is at your disposal to relax with a view of the sea. Free WIFI available in and around the house.</h6>
+<h6 style="text-align: justify;">* The equipment can vary, ask us for availability!</h6>
+</div></div><div  class="tatsu-module tatsu-normal-button tatsu-button-wrap   tatsu-SJO-aGr2O button-scale  "><a class="tatsu-shortcode smallbtn tatsu-button left-icon rounded  tatsu-animate  bg-animation-none  " href="https://api.whatsapp.com/send?phone=5585991431583" style= "" data-animation="fadeInUp" data-animation-delay="200"  aria-label="Need a price or a question ?" data-gdpr-atts={} target="_blank"><i class="tatsu-icon icon-icon_chat"></i>Need a price or a question ?</a><style></style></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-HyNyri_X2_"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-module tatsu-inline-text clearfix tatsu-rylBthE2u   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h4><span class="palette-4 ">Double Room</span></h4>
+</div></div><div  class="tatsu-module tatsu-video tatsu-hosted-wrap tatsu-HJ1-Q2Eh_   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><video  width = "100%" controls controlsList="nodownload" poster = ""    ><source src="https://www.lineup-pousada.com/wp-content/uploads/2021/06/URLA-ROOM.mp4" type="video/mp4"></video></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div></div></div></div><div class="tatsu-section-background-wrap"><div class = "tatsu-section-background" ></div></div></div><style>.tatsu-foexunx10m42hy39 .tatsu-section-background{background-image: url(https://www.lineup-pousada.com/wp-content/uploads/2021/06/LINEUP_ROOM.jpeg)}</style></div><div id="KITESURF" class="tatsu-rJBU4kS3O tatsu-section  tatsu-fullscreen   tatsu-clearfix" data-title="KITESURF"  data-headerscheme="background--dark"><div class="tatsu-fullscreen-wrap"><div class='tatsu-section-pad clearfix' data-padding='{"d":"120px 0px 120px 0px "}' data-padding-top='120px'><div class="tatsu-row-wrap  tatsu-wrap tatsu-row-has-one-half tatsu-row-has-two-cols tatsu-medium-gutter tatsu-reg-cols  tatsu-clearfix tatsu-HJgrUE1Sn_" ><div  class="tatsu-row " ><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-r1-r841r2_"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-module tatsu-inline-text clearfix tatsu-By7ZcJBhO   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h4><span class="palette-2 tatsu-inline-link-style2"># ilovekitetaiba</span></h4>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-HkgOt1H2u   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h1><span class="palette-2"><em>Taiba Kitesurf Spots</em></span></h1>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-B14BI4JH2u   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h6 style="text-align: justify;"><span class="palette-2">Taiba kite conditions are just perfect. Thanks to the annual trade winds, there are almost 7 months of steady wind conditions (ranging from 18 to 32 knots), from July to January. Warm tropical waters with mostly safe side-onshore winds are awaiting you. Taiba is a versatile spot because there are Atlantic waves breaking on the shore as well as a super flat lagoon.</span></h6>
+</div></div><div  class="tatsu-module tatsu-video tatsu-youtube-wrap tatsu-r1drLVJrnu   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="gdpr-alt-image  be-gdpr-consent-message"><img decoding="async" style="opacity:1;" src="https://img.youtube.com/vi/xBH0AZkVPVI/maxresdefault.jpg"/><div class="gdpr-video-alternate-image-content" >Your consent is required to display this content from  youtube - <a href="#gdpr-popup" class="mfp-popup white-popup privacy-settings" data-type="HTML" >Privacy Settings</a></div></div></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-SJIBLEyrhd"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-module tatsu-inline-text clearfix tatsu-HJ1T0yH3u   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h4><span class="palette-2 ">Downwind</span></h4>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-B1ryJeSh_   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h6 style="text-align: justify;"><span class="palette-2">ONE Kitesurfing day guided downwind, fully assisted and secured by experienced riders and graduates.</span></h6>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-SyvB8Eyrn_   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h4><span class="palette-2 ">Gear Rental</span></h4>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-r1vc6kShO   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h6 style="text-align: justify;"><span class="palette-2">Full equipment can be rented from lineup Kite &#038; surf house. We will help you choose your equipment according to your level, spots and wind strength.</span></h6>
+</div></div><div  class="tatsu-module tatsu-normal-button tatsu-button-wrap   tatsu-SJcdRzr2O button-scale  "><a class="tatsu-shortcode smallbtn tatsu-button left-icon rounded  tatsu-animate  bg-animation-none  " href="https://api.whatsapp.com/send?phone=5585991431583" style= "" data-animation="fadeInUp" data-animation-delay="200"  aria-label="Need a price or a question ?" data-gdpr-atts={} target="_blank"><i class="tatsu-icon icon-icon_chat"></i>Need a price or a question ?</a><style></style></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div></div></div></div><div class="tatsu-section-background-wrap"><div class = "tatsu-section-background" ></div></div></div><style>.tatsu-rJBU4kS3O .tatsu-section-background{background-image: url(https://www.lineup-pousada.com/wp-content/uploads/2021/06/LINEUP_LAGOON_TAIBA-scaled.jpeg)}</style></div><div id="SURF" class="tatsu-BJfvllrnu tatsu-section  tatsu-fullscreen   tatsu-clearfix" data-title="SURF"  data-headerscheme="background--dark"><div class="tatsu-fullscreen-wrap"><div class='tatsu-section-pad clearfix' data-padding='{"d":"120px 0px 120px 0px"}' data-padding-top='120px'><div class="tatsu-row-wrap  tatsu-wrap tatsu-row-has-one-half tatsu-row-has-two-cols tatsu-medium-gutter tatsu-reg-cols  tatsu-clearfix tatsu-HkxMweeS2_" ><div  class="tatsu-row " ><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-r1WzPggShd"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-module tatsu-inline-text clearfix tatsu-S1Gzvegr3u   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h4><span class="palette-4">Surf</span></h4>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-SymGwllr3O   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h1><span class="palette-4 "><em>Taiba Surf Spots</em></span></h1>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-ryVzPgxH2O   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h6 style="text-align: justify;"><span class="palette-4">The Taiba surf spot offers good conditions for beginners as well as advanced surfers. The water temperature is perfect, the scenery is beautiful, and from January to April you can get a really good swell.</span></h6>
+</div></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-rkUzPlxHh_"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-module tatsu-inline-text clearfix tatsu-rJFMweeShd   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h4><span class="palette-4 ">Gear Rental</span></h4>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-SJcMwgxSnd   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h6 style="text-align: justify;"><span class="palette-4">Full equipment can be rented from lineup Kite &#038; surf house. We will help you choose your equipment according to your level.</span></h6>
+</div></div><div  class="tatsu-module tatsu-normal-button tatsu-button-wrap   tatsu-rysr0GBnu button-scale  "><a class="tatsu-shortcode smallbtn tatsu-button left-icon rounded  tatsu-animate  bg-animation-none  " href="https://api.whatsapp.com/send?phone=5585991431583" style= "" data-animation="fadeInUp" data-animation-delay="200"  aria-label="Need a price or a question ?" data-gdpr-atts={} target="_blank"><i class="tatsu-icon icon-icon_chat"></i>Need a price or a question ?</a><style></style></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div></div></div></div><div class="tatsu-section-background-wrap"><div class = "tatsu-section-background" ></div></div></div><style>.tatsu-BJfvllrnu .tatsu-section-background{background-image: url(https://www.lineup-pousada.com/wp-content/uploads/2021/06/DSC00535-scaled.jpg)}</style></div><div id="KITESCHOOL" class="tatsu-rkAdGXB2u tatsu-section  tatsu-fullscreen tatsu-video-section   tatsu-clearfix" data-title="KITESCHOOL"  data-headerscheme="background--dark"><div class="tatsu-fullscreen-wrap"><div class='tatsu-section-pad clearfix' data-padding='{"d":"120px 0px 120px 0px"}' data-padding-top='120px'><div class="tatsu-row-wrap  tatsu-wrap tatsu-row-has-one-half tatsu-row-has-two-cols tatsu-medium-gutter tatsu-reg-cols  tatsu-clearfix tatsu-SJzX7JKnO" ><div  class="tatsu-row " ><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-HJeM7XyKn_"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-module tatsu-inline-text clearfix tatsu-rkbMmQyY3_   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h4><span class="palette-2 ">Lineup</span></h4>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-ryzGmQythd   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h1><span class="palette-2"><em>Kiteschool</em></span></h1>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-BJXGm7kt3O   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<p style="text-align: justify;"><span class="palette-2">Our goal is that you can actually practice independently without us and feel ready to go on the spot without us.Teaching in shallow water ensures a fast and safe teaching. We make sure that you master the onshore manipulations to quickly gain real autonomy. The development of radio pedagogy is set up for you, in order to have a clear and precise teaching. Your monitor will be 100% with you! By using the radio, we are gradually making you autonomous without you noticing. Whenever you have assimilated a skill, a gesture, a technique, the instructor reduces his instructions until you fly on your own. Most trainees seek autonomY. We want to put our trainees in confidence so that after a few days of teaching, they become kitesurfers. We teach you to share kitesurf culture with youwhich will allow you to choose, your site of practice correctly and your material, so that it is adapted to the conditions of the day. We wish to contaminate you with this delicious virus which is kitesurf.In general, it is accepted that 10 to 30 hours of sailing after an internship are necessary to correctly acquire the technique of upwelling.</span></p>
+</div></div><div  class="tatsu-module tatsu-normal-button tatsu-button-wrap   tatsu-HkOGQX1t3d button-scale  "><a class="tatsu-shortcode smallbtn tatsu-button left-icon rounded  tatsu-animate  bg-animation-none  " href="https://api.whatsapp.com/send?phone=5585991431583" style= "" data-animation="fadeInUp" data-animation-delay="200"  aria-label="Book your course !" data-gdpr-atts={} target="_blank"><i class="tatsu-icon icon-icon_chat"></i>Book your course !</a><style></style></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-SyEMXQyFnO"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class = " tatsu-r1HfmQJKh_ accordion-wrap oshine-module tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class = "accordion" data-collapsed="0"><h3 class="accordion-head no-bg tatsu-SkLz7X1t2O" style="">Beginners<style></style></h3><div>
+<h6 style="text-align: justify;"><span style="color: #4a4a4a;">FROM INITIATION TO AUTONOMY, SEVERAL FORMULAS WILL MAKE YOU AN AUTONOMOUS RIDER, WHATEVER YOUR BACKGROUND. </span><span style="color: #4a4a4a;">THE TEACHING PROVIDED DURING OUR COURSES WILL ALLOW YOU TO ASSIMILATE ONE BY ONE THE DIFFERENT STAGES OF OUR EDUCATIONAL AND SECURITY CONTENT. YOU WILL LEARN TO CONTROL YOUR MARINE WING (KITESURF KITE). YOU WILL VALIDATE YOUR PILOTING ON LAND BY SWIMMING AT SEA. YOU WILL FOCUS ON THE REALIZATION OF THE WATERSTART, AND THE FIRST GLIDES, PULLING YOUR EDGES TO THE RIGHT AND TO THE LEFT. IN ANY CASE, YOU WILL EVOLVE AT YOUR OWN PACE TOWARDS A PRACTICE OF AUTONOMOUS AND SAFE KITESURFING, IN ORDER TO ACQUIRE AN INDEPENDENT BEGINNER LEVEL OF PRACTICE.</span></h6>
+</div><h3 class="accordion-head no-bg tatsu-rJvfmXyKnu" style="">Intermediate & Advanced<style></style></h3><div>
+<h6 style="text-align: justify;"><span style="color: #4a4a4a;">You want to improve your level, become more experienced and learn more about kitesurfing! Learn to master the basic techniques to jump and unlock new maneuvers! Your instructor will introduce you to different techniques to achieve your result. Theoretical topics will include how to better assess the sailing space, kitesurf safety and more details on how to adjust your kite.</span> <span style="color: #4a4a4a;">Advanced kitesurfing courses are designed for fully autonomous people, who have the ability to easily navigate the water. You have to be able to go at all speeds. The instructor will be kiting with you or on the ground, according to the instruction. You use your own equipment.</span></h6>
+</div></div></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div></div></div></div><div class="tatsu-section-background-wrap"><div class = "tatsu-section-background" ></div></div><video class="tatsu-bg-video" autoplay="autoplay" loop="loop" muted="muted" preload="auto" playsinline webkit-playsinline><source src="https://www.lineup-pousada.com/wp-content/uploads/2021/06/Nayane.mp4" type="video/mp4"><source src="https://www.lineup-pousada.com/wp-content/uploads/2021/06/Nayane.ogg" type="video/ogg"><source src="https://www.lineup-pousada.com/wp-content/uploads/2021/06/Nayane.webm" type="video/webm"></video></div><style>.tatsu-rkAdGXB2u .tatsu-section-background{background-image: url(https://www.lineup-pousada.com/wp-content/uploads/2021/06/JZG03534-scaled.jpg)}</style></div><div id="ABOUTUS" class="tatsu-folmufki6i4etni8 tatsu-section    tatsu-clearfix" data-title="ABOUT US"  data-headerscheme="background--dark"><div class='tatsu-section-pad clearfix' data-padding='{"d":"0px 0px 0px 0px"}' data-padding-top='0px'><div class="tatsu-row-wrap  tatsu-row-full-width tatsu-row-one-col tatsu-row-has-one-cols tatsu-medium-gutter tatsu-reg-cols  tatsu-clearfix tatsu-r1tdgbt2_" ><style></style><div  class="tatsu-row " ><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-col tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-Bket_ebF3_"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-module tatsu-inline-text clearfix tatsu-S1GFulZtnu   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h1 style="text-align: center;"><span class="palette-4 "><em>D&#8217;ont dream you life, Live your dreams !</em></span></h1>
+</div></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div></div></div><div class="tatsu-row-wrap  tatsu-row-full-width tatsu-row-has-one-half tatsu-row-has-two-cols tatsu-no-gutter tatsu-eq-cols tatsu-fullscreen-cols  tatsu-clearfix tatsu-folmufki73dxkryk" ><div  class="tatsu-row " ><div  class="tatsu-column  tatsu-one-half tatsu-column-align-middle tatsu-column-image-none tatsu-column-effect-none  tatsu-folmufki7d2la9e8"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-module tatsu-inline-text clearfix tatsu-SJgK7kt2u   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h4><span class="palette-2 ">Soraya</span></h4>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-SJoF7yK3_   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h1><span class="palette-2"><em>Bonfim</em></span></h1>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-Byi5Q1F2_   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<p style="text-align: justify;"><span class="palette-2">was born in Brazil (João Pessoa, Paraiba) and moved to Switzerland on age of 23 to discover Europe and study Tourism in Lausanne, enchanted with Swiss mountains and beauties she made this country her home. With a Tourism background and diploma, she can help all clients to build their perfect trip to Brazil. She also studies Physical Education in Brazil and Lausanne University where she acquired an Aerobics &#038; Fitness Diploma. A sport addicted she practices different sport as Kite, Wake, Surf, SUP, Ski, Snowboard, Skate, Bike and Yoga.</span></p>
+</div></div><div  class="tatsu-module tatsu-icon-group tatsu-SyevgVyK3u   tatsu-animate " data-animation="fadeInUp" data-animation-delay="200"  ><style></style><div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-rkwlEyY3u   "><style></style><a href="https://www.facebook.com/soraya.bonfim.3"  class="tatsu-icon-wrap plain  tatsu-animate    " data-animation="fadeIn"   aria-label="icon-facebook4" data-gdpr-atts={}  target="_blank" ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-facebook4 small plain"></i></a></div><div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-S1GNEkYh_   "><style></style><a href="https://www.instagram.com/sosobonfim/"  class="tatsu-icon-wrap plain  tatsu-animate    " data-animation="fadeIn"   aria-label="icon-instagram2" data-gdpr-atts={}  target="_blank" ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-instagram2 small plain"></i></a></div><div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-SyO8E1Y3O   "><style></style><a href="https://vimeo.com/178478498"  class="tatsu-icon-wrap plain  tatsu-animate    " data-animation="fadeIn"   aria-label="icon-social_vimeo" data-gdpr-atts={}  target="_blank" ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-social_vimeo small plain"></i></a></div><div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-H16_EJt3d   "><style></style><a href="https://www.youtube.com/watch?v=XlHsd8lPWy8"  class="tatsu-icon-wrap plain  tatsu-animate    " data-animation="fadeIn"   aria-label="icon-social_youtube" data-gdpr-atts={}  target="_blank" ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-social_youtube small plain"></i></a></div><div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-BJw541Khd   "><style></style><a href="mailto:info@lineup-pousada.com"  class="tatsu-icon-wrap plain  tatsu-animate    " data-animation="fadeIn"   aria-label="icon-email" data-gdpr-atts={}  target="_blank" ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-email small plain"></i></a></div><div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-BJJ2VkFhu   "><style></style><a href="https://api.whatsapp.com/send?phone=5585991431583"  class="tatsu-icon-wrap plain  tatsu-animate    " data-animation="fadeIn"   aria-label="icon-icon_comment" data-gdpr-atts={}  target="_blank" ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-icon_comment small plain"></i></a></div></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style>.tatsu-folmufki7d2la9e8.tatsu-column > .tatsu-column-inner > .tatsu-column-bg-image-wrap > .tatsu-column-bg-image{background-image: url(https://www.lineup-pousada.com/wp-content/uploads/2021/06/DSC00141-scaled.jpg)}</style></div><div  class="tatsu-column  tatsu-one-half tatsu-column-align-middle tatsu-column-image-none tatsu-column-effect-none  tatsu-folmufki7v269hkl"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-module tatsu-inline-text clearfix tatsu-rkX68kKhd   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h4><span class="palette-2">Julien</span></h4>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-r1R6U1KhO   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h1><span class="palette-2 "><em>Zgraggen</em></span></h1>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-rJ808kthO   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<p style="text-align: justify;"><span class="palette-2 ">was born in Switzerland, he made all his studies in Geneva. After his apprenticeship and a solid background in communication and publicity he created his won company specialized in this area. He is a sport passionate and practiced in a semi-pro level Tennis, basket and Ping Pong. He started the Kite in 2000 and the sport becomes his passion. All these years he dedicated all his free time and vacation to practice and improve his tricks, he is sponsored by Takoon Kiteboard Family. The last years he starts practice wakeboard in wake parks in France, Germany and Thailand.</span></p>
+</div></div><div  class="tatsu-module tatsu-icon-group tatsu-B1j08JY3u   tatsu-animate " data-animation="fadeInUp" data-animation-delay="200"  ><style></style><div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-HJliAIkFh_   "><style></style><a href="https://www.facebook.com/soraya.bonfim.3"  class="tatsu-icon-wrap plain  tatsu-animate    " data-animation="fadeIn"   aria-label="icon-facebook4" data-gdpr-atts={}  target="_blank" ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-facebook4 small plain"></i></a></div><div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-B1ZoAU1tnu   "><style></style><a href="https://www.instagram.com/sosobonfim/"  class="tatsu-icon-wrap plain  tatsu-animate    " data-animation="fadeIn"   aria-label="icon-instagram2" data-gdpr-atts={}  target="_blank" ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-instagram2 small plain"></i></a></div><div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-S1fi0LJY2_   "><style></style><a href="https://vimeo.com/178478498"  class="tatsu-icon-wrap plain  tatsu-animate    " data-animation="fadeIn"   aria-label="icon-social_vimeo" data-gdpr-atts={}  target="_blank" ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-social_vimeo small plain"></i></a></div><div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-r1Qs0IyKh_   "><style></style><a href="https://www.youtube.com/watch?v=XlHsd8lPWy8"  class="tatsu-icon-wrap plain  tatsu-animate    " data-animation="fadeIn"   aria-label="icon-social_youtube" data-gdpr-atts={}  target="_blank" ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-social_youtube small plain"></i></a></div><div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-rkEsCIyFh_   "><style></style><a href="mailto:info@lineup-pousada.com"  class="tatsu-icon-wrap plain  tatsu-animate    " data-animation="fadeIn"   aria-label="icon-email" data-gdpr-atts={}  target="_blank" ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-email small plain"></i></a></div><div  class="tatsu-module tatsu-normal-icon tatsu-icon-shortcode align-none tatsu-H1Hj0LJtnO   "><style></style><a href="https://api.whatsapp.com/send?phone=5585991431583"  class="tatsu-icon-wrap plain  tatsu-animate    " data-animation="fadeIn"   aria-label="icon-icon_comment" data-gdpr-atts={}  target="_blank" ><i class="tatsu-icon tatsu-custom-icon tatsu-custom-icon-class icon-icon_comment small plain"></i></a></div></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style>.tatsu-folmufki7v269hkl.tatsu-column > .tatsu-column-inner > .tatsu-column-bg-image-wrap > .tatsu-column-bg-image{background-image: url(https://www.lineup-pousada.com/wp-content/uploads/2021/06/DSC4844-scaled.jpg)}</style></div></div></div></div><div class="tatsu-section-background-wrap"><div class = "tatsu-section-background" ></div></div><div class = "tatsu-shape-divider tatsu-bottom-divider tatsu-shape-over"><svg preserveAspectRatio = "none" xmlns="http://www.w3.org/2000/svg" width="1920" height="217" viewBox="0 0 1920 217"></svg>
+</div><style>.tatsu-folmufki6i4etni8 .tatsu-section-background{background-image: url(https://www.lineup-pousada.com/wp-content/uploads/2021/06/DSC00450-scaled.jpg)}</style></div><div id="NEWS" class="tatsu-HkI_bxAhd tatsu-section  tatsu-fullscreen   tatsu-clearfix" data-title="NEWS"  data-headerscheme="background--dark"><div class="tatsu-fullscreen-wrap"><div class='tatsu-section-pad clearfix' data-padding='{"d":"120px 0px 120px 0px"}' data-padding-top='120px'><div class="tatsu-row-wrap  tatsu-wrap tatsu-row-has-one-half tatsu-row-has-two-cols tatsu-medium-gutter tatsu-reg-cols  tatsu-clearfix tatsu-SkeIdZlAh_" ><div  class="tatsu-row " ><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-ryWUd-gA2u"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-single-image tatsu-module align-center tatsu-animate tatsu-external-image tatsu-Syg0OlR2u  " data-animation="fadeInUp" data-animation-delay="200" ><div class="tatsu-single-image-inner " style="" ><div class = "tatsu-single-image-padding-wrap" style = "" ></div><a href = "https://www.instagram.com/lineup.pousada/" target = "_blank" ><img class = "tatsu-gradient-border" src = "https://www.lineup-pousada.com/wp-content/uploads/2021/07/INTRAGRAM_LINEUP_iPHONE.png" alt =" "  /></a></div><style></style></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div><div  class="tatsu-column  tatsu-column-no-bg tatsu-one-half tatsu-column-align-top tatsu-column-image-none tatsu-column-effect-none  tatsu-H1SU_-xC3d"  data-parallax-speed="0" style=""><div class="tatsu-column-inner " ><div class="tatsu-column-pad-wrap"><div class="tatsu-column-pad" ><div  class="tatsu-module tatsu-inline-text clearfix tatsu-ByMmrJbF2O   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h4><span class="palette-4 ">Lineup Kite &#038; Surf House</span></h4>
+</div></div><div  class="tatsu-module tatsu-inline-text clearfix tatsu-ByQXB1ZK2O   tatsu-animate" data-animation="fadeInUp" data-animation-delay="200" ><style></style><div class="tatsu-inline-text-inner tatsu-align-center">
+<h1><span class="palette-4 "><em>News</em></span></h1>
+</div></div><div  class="tatsu-module tatsu-normal-button tatsu-button-wrap   tatsu-S1r7HfIo3_ button-transform  "><a class="tatsu-shortcode smallbtn tatsu-button left-icon rounded   bg-animation-none  " href="https://www.facebook.com/Lineup.Pousada" style= ""  aria-label="FACEBOOK" data-gdpr-atts={} target="_blank"><i class="tatsu-icon icon-facebook4"></i>FACEBOOK</a><style></style></div><div  class="tatsu-module tatsu-normal-button tatsu-button-wrap   tatsu-HyLXSMUon_ button-transform  "><a class="tatsu-shortcode smallbtn tatsu-button left-icon rounded   bg-animation-none  " href="https://www.instagram.com/lineup.pousada/" style= ""  aria-label="INSTAGRAM" data-gdpr-atts={} target="_blank"><i class="tatsu-icon icon-instagram2"></i>INSTAGRAM</a><style></style></div><div  class="tatsu-module tatsu-normal-button tatsu-button-wrap   tatsu-S1zXGT2nd button-transform  "><a class="tatsu-shortcode smallbtn tatsu-button left-icon rounded   bg-animation-none  " href="https://www.youtube.com/channel/UCb1IGxR7ZFmUpdn7xTuctqw" style= ""  aria-label="YOUTUBE" data-gdpr-atts={} target="_blank"><i class="tatsu-icon icon-social_youtube_square"></i>YOUTUBE</a><style></style></div><div  class="tatsu-module tatsu-normal-button tatsu-button-wrap   tatsu-ryPQfThhO button-transform  "><a class="tatsu-shortcode smallbtn tatsu-button left-icon rounded   bg-animation-none  " href="https://vimeo.com/julienzgraggen" style= ""  aria-label="VIMEO" data-gdpr-atts={} target="_blank"><i class="tatsu-icon icon-social_vimeo"></i>VIMEO</a><style></style></div></div></div><div class = "tatsu-column-bg-image-wrap"><div class = "tatsu-column-bg-image" ></div></div></div><style></style></div></div></div></div><div class="tatsu-section-background-wrap"><div class = "tatsu-section-background" ></div></div></div><style></style></div>
+				</div> <!--  End Page Content -->
+							</section>
+		</div>
+	</div>				</div>
+	<div class="loader page-loader">
+	<div class="loader-style1-wrap"><div class="loader-style1-double-bounce1"></div><div class="loader-style1-double-bounce2"></div></div></div>
+				</div>
+
+
+
+<input type="hidden" id="ajax_url" value="https://lineup-pousada.com/wp-admin/admin-ajax.php" />
+<script type="speculationrules"></script>
+			<div id="gdpr-popup" class="be-gdpr-popup mfp-hide " data-rel="gdpr-popup-gallery" >
+				<div  class="be-gdpr-modal" >
+				<div class="be-modal-content-wrapper" >
+					<div class="be-gdpr-modal-heading" >Privacy Settings</div>
+
+					<div class="be-gdpr-modal-desc" > We use cookies to enhance your experience while using our website. If you are using our Services via a browser you can restrict, block or remove cookies through your web browser settings. We also use content and scripts from third parties that may use tracking technologies. You can selectively provide your consent below to allow such third party embeds. For complete information about the cookies we use, data we collect and how we process them, please check our <a target="_blank" href="https://lineup-pousada.com/privacy-policy/">Privacy Policy</a> </div>
+					<div class="be-gdpr-modal-items" >
+						<div class="be-gdpr-modal-item" >
+								<div class="be-gdpr-modal-item-head" >Youtube</div>
+								<div class="be-gdpr-modal-item-desc" >Consent to display content from - Youtube </div>
+								<div class="be-gdpr-modal-item-switch">
+									<label class="switch be-modal-switch">
+										<input class="be-gdpr-switch-input" value="youtube" type="checkbox">
+										<span class="slider round"></span>
+					  				</label></div>
+								</div><div class="be-gdpr-modal-item" >
+								<div class="be-gdpr-modal-item-head" >Vimeo</div>
+								<div class="be-gdpr-modal-item-desc" >Consent to display content from - Vimeo </div>
+								<div class="be-gdpr-modal-item-switch">
+									<label class="switch be-modal-switch">
+										<input class="be-gdpr-switch-input" value="vimeo" type="checkbox">
+										<span class="slider round"></span>
+					  				</label></div>
+								</div><div class="be-gdpr-modal-item" >
+								<div class="be-gdpr-modal-item-head" >Google Maps</div>
+								<div class="be-gdpr-modal-item-desc" >Consent to display content from - Google </div>
+								<div class="be-gdpr-modal-item-switch">
+									<label class="switch be-modal-switch">
+										<input class="be-gdpr-switch-input" value="gmaps" type="checkbox">
+										<span class="slider round"></span>
+					  				</label></div>
+								</div>					</div>
+					</div>
+					<div class="be-gdpr-modal-footer" >
+						<div class="be-gdpr-modal-save-btn" onClick="gdprSaveBtnClick(event);" >Save</div>
+					</div>
+				</div>
+			</div>
+			<div class="be-gdpr-cookie-notice-bar">
+						<div class="be-gdpr-cookie-notice-wrap">
+							<div class="be-gdpr-cookie-notice-bar-text">We use cookies to enhance your experience while using our website. To learn more about the cookies we use and the data we collect, please check our <a href="#gdpr-popup" class="mfp-popup white-popup privacy-settings" data-type="HTML" >Privacy Settings</a>.</div>
+							<div class="be-gdpr-cookie-notice-actions">
+							<div class="be-gdpr-cookie-notice-button">I Accept</div>
+							</div>
+						</div>
+					 </div> 
+			
+		    <div id="gallery" class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+		        <div class="pswp__bg"></div>
+
+		        <div class="pswp__scroll-wrap">
+
+		          <div class="pswp__container">
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+		          </div>
+
+		          <div class="pswp__ui pswp__ui--hidden">
+
+		            <div class="pswp__top-bar">
+
+						<div class="pswp__counter"></div>
+
+						<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+						<button class="pswp__button pswp__button--share" title="Share"></button>
+
+						<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+						<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+						<div class="pswp__preloader">
+							<div class="pswp__preloader__icn">
+							  <div class="pswp__preloader__cut">
+							    <div class="pswp__preloader__donut"></div>
+							  </div>
+							</div>
+						</div>
+		            </div>
+
+
+					<!-- <div class="pswp__loading-indicator"><div class="pswp__loading-indicator__line"></div></div> -->
+
+		            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+			            <div class="pswp__share-tooltip">
+							<!-- <a href="#" class="pswp__share--facebook"></a>
+							<a href="#" class="pswp__share--twitter"></a>
+							<a href="#" class="pswp__share--pinterest"></a>
+							<a href="#" download class="pswp__share--download"></a> -->
+			            </div>
+			        </div>
+
+		            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+		            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+		            <div class="pswp__caption">
+		              <div class="pswp__caption__center">
+		              </div>
+		            </div>
+		          </div>
+
+		        </div>
+
+		    </div>
+<!-- Consent Management powered by Complianz | GDPR/CCPA Cookie Consent https://wordpress.org/plugins/complianz-gdpr -->
+<div id="cmplz-cookiebanner-container"><div id="cmplz-cookiebanner-1-optin" class="cmplz-cookiebanner cmplz-hidden banner-1 banner-a optin cmplz-bottom-right cmplz-categories-type-view-preferences" aria-modal="true" data-nosnippet="true" role="dialog" aria-live="polite" aria-labelledby="cmplz-header-1-optin" aria-describedby="cmplz-message-1-optin">
+	<div class="cmplz-header">
+		<div class="cmplz-logo"></div>
+		<div class="cmplz-title" id="cmplz-header-1-optin">Manage Consent</div>
+		<div class="cmplz-close" tabindex="0" role="button" aria-label="Close dialog">
+			<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"></svg>
+		</div>
+	</div>
+
+	<div class="cmplz-divider cmplz-divider-header"></div>
+	<div class="cmplz-body">
+		<div class="cmplz-message" id="cmplz-message-1-optin">To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions.</div>
+		<!-- categories start -->
+		<div class="cmplz-categories">
+			<div class="cmplz-category cmplz-functional">
+				<div class="cmplz-category-header">
+					<span class="cmplz-category-title" id="cmplz-title-functional-1-optin">Functional</span>
+					<span class='cmplz-always-active'>
+						<span class="cmplz-banner-checkbox">
+							<input type="checkbox"
+									id="cmplz-functional-optin"
+									data-category="cmplz_functional"
+									class="cmplz-consent-checkbox cmplz-functional"
+									size="40"
+									value="1"/>
+							<label class="cmplz-label" for="cmplz-functional-optin"><span class="screen-reader-text">Functional</span></label>
+						</span>
+						Always active					</span>
+					<button class="cmplz-category-toggle"
+							aria-expanded="false"
+							aria-controls="cmplz-desc-functional-1-optin"
+							aria-labelledby="cmplz-title-functional-1-optin">
+						<span class="cmplz-icon cmplz-open">
+							<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"></svg>
+						</span>
+					</button>
+				</div>
+				<div class="cmplz-description" id="cmplz-desc-functional-1-optin" hidden>
+					<span class="cmplz-description-functional">The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network.</span>
+				</div>
+			</div>
+
+			<div class="cmplz-category cmplz-preferences">
+				<div class="cmplz-category-header">
+					<span class="cmplz-category-title" id="cmplz-title-preferences-1-optin">Preferences</span>
+					<span class="cmplz-banner-checkbox">
+						<input type="checkbox"
+								id="cmplz-preferences-optin"
+								data-category="cmplz_preferences"
+								class="cmplz-consent-checkbox cmplz-preferences"
+								size="40"
+								value="1"/>
+						<label class="cmplz-label" for="cmplz-preferences-optin"><span class="screen-reader-text">Preferences</span></label>
+					</span>
+					<button class="cmplz-category-toggle"
+							aria-expanded="false"
+							aria-controls="cmplz-desc-preferences-1-optin"
+							aria-labelledby="cmplz-title-preferences-1-optin">
+						<span class="cmplz-icon cmplz-open">
+							<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"></svg>
+						</span>
+					</button>
+				</div>
+				<div class="cmplz-description" id="cmplz-desc-preferences-1-optin" hidden>
+					<span class="cmplz-description-preferences">The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user.</span>
+				</div>
+			</div>
+
+			<div class="cmplz-category cmplz-statistics">
+				<div class="cmplz-category-header">
+					<span class="cmplz-category-title" id="cmplz-title-statistics-1-optin">Statistics</span>
+					<span class="cmplz-banner-checkbox">
+						<input type="checkbox"
+								id="cmplz-statistics-optin"
+								data-category="cmplz_statistics"
+								class="cmplz-consent-checkbox cmplz-statistics"
+								size="40"
+								value="1"/>
+						<label class="cmplz-label" for="cmplz-statistics-optin"><span class="screen-reader-text">Statistics</span></label>
+					</span>
+					<button class="cmplz-category-toggle"
+							aria-expanded="false"
+							aria-controls="cmplz-desc-statistics-1-optin"
+							aria-labelledby="cmplz-title-statistics-1-optin">
+						<span class="cmplz-icon cmplz-open">
+							<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"></svg>
+						</span>
+					</button>
+				</div>
+				<div class="cmplz-description" id="cmplz-desc-statistics-1-optin" hidden>
+					<span class="cmplz-description-statistics">The technical storage or access that is used exclusively for statistical purposes.</span>
+					<span class="cmplz-description-statistics-anonymous">The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.</span>
+				</div>
+			</div>
+
+			<div class="cmplz-category cmplz-marketing">
+				<div class="cmplz-category-header">
+					<span class="cmplz-category-title" id="cmplz-title-marketing-1-optin">Marketing</span>
+					<span class="cmplz-banner-checkbox">
+						<input type="checkbox"
+								id="cmplz-marketing-optin"
+								data-category="cmplz_marketing"
+								class="cmplz-consent-checkbox cmplz-marketing"
+								size="40"
+								value="1"/>
+						<label class="cmplz-label" for="cmplz-marketing-optin"><span class="screen-reader-text">Marketing</span></label>
+					</span>
+					<button class="cmplz-category-toggle"
+							aria-expanded="false"
+							aria-controls="cmplz-desc-marketing-1-optin"
+							aria-labelledby="cmplz-title-marketing-1-optin">
+						<span class="cmplz-icon cmplz-open">
+							<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"></svg>
+						</span>
+					</button>
+				</div>
+				<div class="cmplz-description" id="cmplz-desc-marketing-1-optin" hidden>
+					<span class="cmplz-description-marketing">The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes.</span>
+				</div>
+			</div>
+		</div><!-- categories end -->
+			</div>
+
+	<div class="cmplz-links cmplz-information">
+		<ul>
+			<li><a class="cmplz-link cmplz-manage-options cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">Manage options</a></li>
+			<li><a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="#" data-relative_url="#cmplz-cookies-overview">Manage services</a></li>
+			<li><a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="#" data-relative_url="#cmplz-tcf-wrapper">Manage {vendor_count} vendors</a></li>
+			<li><a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank" rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/" aria-label="Read more about TCF purposes on Cookie Database">Read more about these purposes</a></li>
+		</ul>
+			</div>
+
+	<div class="cmplz-divider cmplz-footer"></div>
+
+	<div class="cmplz-buttons">
+		<button class="cmplz-btn cmplz-accept">Accept</button>
+		<button class="cmplz-btn cmplz-deny">Deny</button>
+		<button class="cmplz-btn cmplz-view-preferences">View preferences</button>
+		<button class="cmplz-btn cmplz-save-preferences">Save preferences</button>
+		<a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">View preferences</a>
+			</div>
+
+
+	<div class="cmplz-documents cmplz-links">
+		<ul>
+			<li><a class="cmplz-link cookie-statement" href="#" data-relative_url="">{title}</a></li>
+			<li><a class="cmplz-link privacy-statement" href="#" data-relative_url="">{title}</a></li>
+			<li><a class="cmplz-link impressum" href="#" data-relative_url="">{title}</a></li>
+		</ul>
+			</div>
+</div>
+</div>
+					<div id="cmplz-manage-consent" data-nosnippet="true"><button class="cmplz-btn cmplz-hidden cmplz-manage-consent manage-consent-1" aria-haspopup="dialog" aria-controls="cmplz-cookiebanner-1-optin">Manage consent</button>
+
+</div><ul class="prisna-wp-translate-seo" id="prisna-translator-seo"><li class="prisna-wp-translate-seo-en prisna-wp-translate-seo-current"><a href="https://lineup-pousada.com/" title="English">English</a></li><li class="prisna-wp-translate-seo-fr"><a href="https://lineup-pousada.com/fr/" title="French">French</a></li><li class="prisna-wp-translate-seo-pt"><a href="https://lineup-pousada.com/pt/" title="Portuguese">Portuguese</a></li><li></ul><script id="gdprmagnificpopup-js" src="https://lineup-pousada.com/wp-content/plugins/be-gdpr/public/js/magnificpopup.min.js"></script>
+<script id="asyncloader-js" src="https://lineup-pousada.com/wp-content/plugins/oshine-modules/public/js/vendor/asyncloader.js?ver=1.0"></script>
+<script id="jquery-ui-core-js-before"></script>
+<script id="jquery-ui-core-js" src="https://lineup-pousada.com/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-accordion-js" src="https://lineup-pousada.com/wp-includes/js/jquery/ui/accordion.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-tabs-js" src="https://lineup-pousada.com/wp-includes/js/jquery/ui/tabs.min.js?ver=1.14.2"></script>
+<script id="oshine-modules-js-extra"></script>
+<script id="oshine-modules-js" src="https://lineup-pousada.com/wp-content/plugins/oshine-modules/public/js/oshine-modules.js?ver=3.2"></script>
+<script id="jquery-ui-mouse-js" src="https://lineup-pousada.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-draggable-js" src="https://lineup-pousada.com/wp-includes/js/jquery/ui/draggable.min.js?ver=1.14.2"></script>
+<script id="prisna-wp-translate-js" src="https://lineup-pousada.com/wp-content/plugins/prisna-wp-translate/javascript/translator.js?ver=1.16"></script>
+<script id="prisna-wp-translate-js-after"></script>
+<script id="es6-promises-polyfill-js" src="https://lineup-pousada.com/wp-content/plugins/tatsu/public/js/vendor/es6-promise.auto.min.js?ver=566160247483012e11518640d1934f1a"></script>
+<script id="be-script-helpers-js" src="https://lineup-pousada.com/wp-content/plugins/tatsu/public/js/helpers.min.js?ver=3.5.3"></script>
+<script id="debouncedresize-js" src="https://lineup-pousada.com/wp-content/plugins/tatsu/public/js/vendor/debouncedresize.min.js?ver=3.5.3"></script>
+<script id="tatsu-js-extra"></script>
+<script id="tatsu-js" src="https://lineup-pousada.com/wp-content/plugins/tatsu/public/js/tatsu.min.js?ver=3.5.3"></script>
+<script id="custom-scrollbar-js" src="https://lineup-pousada.com/wp-content/themes/oshin/js/vendor/perfect-scrollbar.jquery.js?ver=566160247483012e11518640d1934f1a"></script>
+<script id="be-themes-script-js-js-extra"></script>
+<script id="be-themes-script-js-js" src="https://lineup-pousada.com/wp-content/themes/oshin/js/script.js?ver=7.3.2"></script>
+<script id="cmplz-cookiebanner-js-extra"></script>
+<script defer id="cmplz-cookiebanner-js" src="https://lineup-pousada.com/wp-content/plugins/complianz-gdpr/cookiebanner/js/complianz.min.js?ver=1788917396"></script>
+<script id="cmplz-cookiebanner-js-after"></script>
+<script id="wp-emoji-settings" type="application/json"></script>
+<script type="module"></script>
+<!-- Option Panel Custom JavaScript -->
+<script></script>
+</body>
+</html>

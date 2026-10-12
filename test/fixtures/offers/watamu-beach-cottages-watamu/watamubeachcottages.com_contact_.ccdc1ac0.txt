@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+        <link rel="pingback" href="https://watamubeachcottages.com/xmlrpc.php" />
+    <title>Contact &#8211; Watamu Beach Cottages</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Watamu Beach Cottages &raquo; Feed" href="https://watamubeachcottages.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Watamu Beach Cottages &raquo; Comments Feed" href="https://watamubeachcottages.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Watamu Beach Cottages &raquo; Contact Comments Feed" href="https://watamubeachcottages.com/contact/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://watamubeachcottages.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwatamubeachcottages.com%2Fcontact%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://watamubeachcottages.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwatamubeachcottages.com%2Fcontact%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css"></style>
+<style id="wp-emoji-styles-inline-css"></style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://watamubeachcottages.com/wp-includes/css/dist/block-library/style.min.css?ver=7.1.2' media='all' />
+<style id="classic-theme-styles-inline-css"></style>
+<link rel='stylesheet' id='wp-theme-css' href='https://watamubeachcottages.com/wp-includes/css/dist/theme/design-tokens.min.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='wp-components-css' href='https://watamubeachcottages.com/wp-includes/css/dist/components/style.min.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='wp-preferences-css' href='https://watamubeachcottages.com/wp-includes/css/dist/preferences/style.min.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='wp-block-editor-css' href='https://watamubeachcottages.com/wp-includes/css/dist/block-editor/style.min.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='wp-reusable-blocks-css' href='https://watamubeachcottages.com/wp-includes/css/dist/reusable-blocks/style.min.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='wp-patterns-css' href='https://watamubeachcottages.com/wp-includes/css/dist/patterns/style.min.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='wp-media-utils-css' href='https://watamubeachcottages.com/wp-includes/css/dist/media-utils/style.min.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='wp-editor-css' href='https://watamubeachcottages.com/wp-includes/css/dist/editor/style.min.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='rentals_gutenberg-cgb-style-css-css' href='https://watamubeachcottages.com/wp-content/plugins/rentals-gutenberg/dist/blocks.style.build.css?ver=7.1.2' media='all' />
+<style id="global-styles-inline-css"></style>
+<link rel='stylesheet' id='woocommerce-layout-css' href='https://watamubeachcottages.com/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=11.0.1' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css' href='https://watamubeachcottages.com/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=11.0.1' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css' href='https://watamubeachcottages.com/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=11.0.1' media='all' />
+<style id="woocommerce-inline-inline-css"></style>
+<link rel='stylesheet' id='gateway-css' href='https://watamubeachcottages.com/wp-content/plugins/woocommerce-paypal-payments/assets/ppcp-button-css-gateway.css?ver=4.0.4' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='https://watamubeachcottages.com/wp-content/themes/wprentals/css/bootstrap.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='bootstrap-theme-css' href='https://watamubeachcottages.com/wp-content/themes/wprentals/css/bootstrap-theme.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='wpestate_style-css' href='https://watamubeachcottages.com/wp-content/themes/wprentals/style.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='wpestate_media-css' href='https://watamubeachcottages.com/wp-content/themes/wprentals/css/my_media.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='bootstrap-selectcss.min-css' href='https://watamubeachcottages.com/wp-content/themes/wprentals/css/bootstrap-select.min.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='jquery-ui.min-css' href='https://watamubeachcottages.com/wp-content/themes/wprentals/css/jquery-ui.min.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='daterangepicker-css' href='https://watamubeachcottages.com/wp-content/themes/wprentals/css/daterangepicker.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='leaflet-css' href='https://watamubeachcottages.com/wp-content/themes/wprentals/js/openstreet/leaflet.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='MarkerCluster-css' href='https://watamubeachcottages.com/wp-content/themes/wprentals/js/openstreet/MarkerCluster.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='MarkerCluster.Default-css' href='https://watamubeachcottages.com/wp-content/themes/wprentals/js/openstreet/MarkerCluster.Default.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='wpestate-roboto-css' href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900&#038;display=swap&#038;subset=latin-ext&#038;display=swap&#038;ver=7.1.2' media='all' />
+<link rel='stylesheet' id='fontello-css' href='https://watamubeachcottages.com/wp-content/themes/wprentals/css/fontello.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='font-awesome.min-css' href='https://watamubeachcottages.com/wp-content/themes/wprentals/css/fontawesome/css/fontawesome.min.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='font-awesome6.min-css' href='https://watamubeachcottages.com/wp-content/themes/wprentals/css/fontawesome/css/all.min.css?ver=7.1.2' media='all' />
+<link rel='stylesheet' id='wpsocialreviews_chat-css' href='https://watamubeachcottages.com/wp-content/plugins/wp-social-reviews/assets/css/social-review-chat.css?ver=4.3.2' media='all' />
+<script id="jquery-core-js" src="https://watamubeachcottages.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://watamubeachcottages.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script data-wp-strategy="defer" defer id="wc-jquery-blockui-js" src="https://watamubeachcottages.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.11.0.1"></script>
+<script id="wc-add-to-cart-js-extra"></script>
+<script data-wp-strategy="defer" defer id="wc-add-to-cart-js" src="https://watamubeachcottages.com/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=11.0.1"></script>
+<script data-wp-strategy="defer" defer id="wc-js-cookie-js" src="https://watamubeachcottages.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.11.0.1"></script>
+<script id="woocommerce-js-extra"></script>
+<script data-wp-strategy="defer" defer id="woocommerce-js" src="https://watamubeachcottages.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=11.0.1"></script>
+<script id="modernizr-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/modernizr.custom.62456.js?ver=1.0"></script>
+<script id="google_gtagjs-js" src="https://www.googletagmanager.com/gtag/js?id=G-QHD9MBPF1S" async></script>
+<script id="google_gtagjs-js-after"></script>
+<link rel="https://api.w.org/" href="https://watamubeachcottages.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://watamubeachcottages.com/wp-json/wp/v2/pages/254" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://watamubeachcottages.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.2" />
+<meta name="generator" content="WooCommerce 11.0.1" />
+<link rel="canonical" href="https://watamubeachcottages.com/contact/" />
+<link rel='shortlink' href='https://watamubeachcottages.com/?p=254' />
+<meta name="generator" content="Site Kit by Google 1.185.0" />		<script></script>
+				<style></style>
+		<style type='text/css'></style>	<noscript><style></style></noscript>
+	<meta name="generator" content="Elementor 4.1.1; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+<meta name="generator" content="Redux 4.5.3.1" />			<style></style>
+			<link rel="icon" href="https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-60x60.png" sizes="32x32" />
+<link rel="icon" href="https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-300x300.png" />
+<meta name="msapplication-TileImage" content="https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-300x300.png" />
+<style id="wp-custom-css"></style>
+    </head>
+    <body data-rsssl=1 class="wp-singular page-template page-template-contact_page page-template-contact_page-php page page-id-254 wp-theme-wprentals theme-wprentals woocommerce-no-js eio-default  elementor-default elementor-kit-6" >
+<div class="mobilewrapper" id="mobilewrapper_links">
+    <div class="snap-drawers">
+        <div class="snap-drawer snap-drawer-left">
+            <div class="mobilemenu-close"><i class="fas fa-times"></i></div>
+            <ul id="menu-home-menu" class="mobilex-menu"><li id="menu-item-37910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-37910"><a href="#">ACCOMMODATION</a>
+<ul class="sub-menu">
+	<li id="menu-item-37911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-37911"><a href="#">TYPES OF ACCOMMODATION</a>
+	<ul class="sub-menu">
+		<li id="menu-item-40665" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-40665"><a href="https://watamubeachcottages.com/listings/1-bedroom-cottage/">1 Bedroom Cottage</a></li>
+		<li id="menu-item-40666" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-40666"><a href="https://watamubeachcottages.com/listings/2-bedroom-cottage/">2 Bedroom Cottage</a></li>
+		<li id="menu-item-40667" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-40667"><a href="https://watamubeachcottages.com/listings/apartment/">Apartment</a></li>
+		<li id="menu-item-40668" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-40668"><a href="https://watamubeachcottages.com/listings/bamba-kofi-tent/">Bamba Kofi Tent</a></li>
+		<li id="menu-item-40669" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-40669"><a href="https://watamubeachcottages.com/listings/baobab-tent/">Baobab Tent</a></li>
+		<li id="menu-item-40670" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-40670"><a href="https://watamubeachcottages.com/listings/chalet/">Chalet</a></li>
+		<li id="menu-item-40671" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-40671"><a href="https://watamubeachcottages.com/listings/clubrooms/">Clubrooms</a></li>
+		<li id="menu-item-40672" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-40672"><a href="https://watamubeachcottages.com/listings/tent-hut/">Tent Hut</a></li>
+		<li id="menu-item-40673" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-40673"><a href="https://watamubeachcottages.com/listings/villa/">Villa</a></li>
+	</ul>
+</li>
+	<li id="menu-item-40679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-40679"><a href="#">UNITS</a>
+	<ul class="sub-menu">
+		<li id="menu-item-41662" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-41662"><a href="https://watamubeachcottages.com/holiday-home/nomad-cottage/">Nomad – Coastal Cottage</a></li>
+		<li id="menu-item-40684" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-40684"><a href="https://watamubeachcottages.com/holiday-home/dhow-comfy-beach-cottage/">Dhow – Coastal Cottage</a></li>
+		<li id="menu-item-40683" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-40683"><a href="https://watamubeachcottages.com/holiday-home/bling-romantic-cottage-on-beachfront-forest/">Bling – Coastal Cottage</a></li>
+		<li id="menu-item-40685" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-40685"><a href="https://watamubeachcottages.com/holiday-home/beach-cottage-bijou/">Bijou Cottage</a></li>
+		<li id="menu-item-40686" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-40686"><a href="https://watamubeachcottages.com/holiday-home/beautiful-romantic-cottage-little-gem/">Little Gem Cottage</a></li>
+		<li id="menu-item-40687" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-40687"><a href="https://watamubeachcottages.com/holiday-home/trinket-cottage/">Trinket Cottage</a></li>
+		<li id="menu-item-40688" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-40688"><a href="https://watamubeachcottages.com/holiday-home/aqua-sea-view-apartment/">Aqua Sea View Apartment</a></li>
+		<li id="menu-item-41504" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-41504"><a href="https://watamubeachcottages.com/holiday-home/marine-sea-view-family-apartment/">Marine Sea View Family Apartment</a></li>
+		<li id="menu-item-40689" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-40689"><a href="https://watamubeachcottages.com/holiday-home/captains-penthouse/">Captain’s Penthouse</a></li>
+	</ul>
+</li>
+	<li id="menu-item-40698" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-40698"><a href="#">UNITS</a>
+	<ul class="sub-menu">
+		<li id="menu-item-37936" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-37936"><a href="https://watamubeachcottages.com/holiday-home/camping-in-watamu-bamba-kofi-1/">Bamba Kofi Tented Camp-Tent 1</a></li>
+		<li id="menu-item-37937" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-37937"><a href="https://watamubeachcottages.com/holiday-home/camping-in-watamu-bamba-kofi-2/">Bamba Kofi Tented Camp-Tent 2</a></li>
+		<li id="menu-item-37938" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-37938"><a href="https://watamubeachcottages.com/holiday-home/camping-in-watamu-bamba-kofi-3/">Bamba Kofi Tented Camp-Tent 3</a></li>
+		<li id="menu-item-37939" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-37939"><a href="https://watamubeachcottages.com/holiday-home/camping-in-watamu-bamba-kofi-4/">Bamba Kofi Tented Camp-Tent 4</a></li>
+		<li id="menu-item-40693" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-40693"><a href="https://watamubeachcottages.com/holiday-home/tornado-a-cool-african-chalet-in-watamu/">Tornado – Cool Chalet B&#038;B</a></li>
+		<li id="menu-item-40691" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-40691"><a href="https://watamubeachcottages.com/holiday-home/laser-a-rustic-chic-african-chalet-on-beachfront-forest/">Laser – Cool Chalet B&#038;B</a></li>
+		<li id="menu-item-40692" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-40692"><a href="https://watamubeachcottages.com/holiday-home/optimist-a-neat-african-chalet-in-watamu/">Optimist – Cool Chalet B&#038;B</a></li>
+		<li id="menu-item-41277" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-41277"><a href="https://watamubeachcottages.com/holiday-home/star-chalet-cool-chalet-at-watamu-sailing-camp-bb/">Star – Cool Chalet B&#038;B</a></li>
+	</ul>
+</li>
+	<li id="menu-item-40697" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-40697"><a href="#">UNITS</a>
+	<ul class="sub-menu">
+		<li id="menu-item-40694" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-40694"><a href="https://watamubeachcottages.com/holiday-home/topaz-sea-view-beach-villa/">Topaz Sea View Villa</a></li>
+		<li id="menu-item-38844" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-38844"><a href="https://watamubeachcottages.com/holiday-home/flamboyant-camp-tent-hut-1/">Flamboyant Camp – Tent Hut 1</a></li>
+		<li id="menu-item-38843" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-38843"><a href="https://watamubeachcottages.com/holiday-home/flamboyant-camp-tent-hut-2/">Flamboyant Camp – Tent Hut 2</a></li>
+		<li id="menu-item-37940" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-37940"><a href="https://watamubeachcottages.com/holiday-home/baobab-camp-baobab-tent/">Baobab Camp – Baobab Tent Hut</a></li>
+		<li id="menu-item-38009" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-38009"><a href="https://watamubeachcottages.com/holiday-home/bring-a-tent/">Bring a Tent or Overlander</a></li>
+	</ul>
+</li>
+	<li id="menu-item-41269" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-41269"><a href="#">UNITS</a>
+	<ul class="sub-menu">
+		<li id="menu-item-41270" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-41270"><a href="https://watamubeachcottages.com/holiday-home/air-conditioned-club-room-1-bb/">Air Conditioned Club Room 2 B&#038;B</a></li>
+		<li id="menu-item-41271" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-41271"><a href="https://watamubeachcottages.com/holiday-home/air-conditioned-club-room/">Air Conditioned Club Room 1 B&#038;B</a></li>
+		<li id="menu-item-41272" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-41272"><a href="https://watamubeachcottages.com/holiday-home/air-conditioned-club-room-3/">Air Conditioned Club Room 3 B&#038;B</a></li>
+		<li id="menu-item-41273" class="menu-item menu-item-type-post_type menu-item-object-estate_property menu-item-41273"><a href="https://watamubeachcottages.com/holiday-home/air-conditioned-clubroom-4/">Air Conditioned Club Room 4 B&#038;B</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-37941" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-37941"><a href="https://watamubeachcottages.com/#facilities">FACILITIES</a></li>
+<li id="menu-item-37942" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-37942"><a href="https://watamubeachcottages.com/#todo">THINGS TO DO</a></li>
+<li id="menu-item-37943" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-254 current_page_item menu-item-37943"><a href="https://watamubeachcottages.com/contact/" aria-current="page">CONTACT</a></li>
+<li id="menu-item-37944" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37944"><a href="tel:+254%20728%20986066">+254 728 986066</a></li>
+</ul>
+        </div>
+  </div>
+</div>
+<div class="mobilewrapper-user" id="mobilewrapperuser">
+    <div class="snap-drawers">
+        <div class="snap-drawer snap-drawer-right">
+        <div class="mobilemenu-close-user"><i class="fas fa-times"></i></div>
+        <div class="login_sidebar_mobile">
+            <h3 class="widget-title-sidebar"  id="login-div-title-mobile">Login</h3>
+            <div class="login_form" id="login-div-mobile">
+                <div class="loginalert" id="login_message_area_wd_mobile" ></div>
+                <input type="text" class="form-control" name="log" id="login_user_wd_mobile" placeholder="Username"/>
+                <div class="password_holder">
+                    <input type="password" class="form-control" name="pwd" id="login_pwd_wd_mobile" placeholder="Password"/>
+                    <i class=" far fa-eye-slash show_hide_password"></i>
+                </div>     
+                <input type="hidden" name="loginpop" id="loginpop_mobile" value="0">
+                <input type="hidden" id="security-login-mobile" name="security-login-mobile" value="30d5600e99-1790694168">
+                <button class="wpb_button  wpb_btn-info  wpb_regularsize   wpestate_vc_button  vc_button" id="wp-login-but-wd-mobile">Login</button>
+                <div class="login-links">
+                    <a href="#" id="widget_register_mobile">Need an account? Register here!</a>
+                    <a href="#" id="forgot_pass_widget_mobile">Forgot Password?</a>
+                </div> 
+            </div>
+              <h3 class="widget-title-sidebar"  id="register-div-title-mobile">Register</h3>
+                <div class="login_form" id="register-div-mobile">
+                    <div class="loginalert" id="register_message_area_wd_mobile" ></div>
+                    <input type="text" name="user_login_register" id="user_login_register_wd_mobile" class="form-control" placeholder="Username"/><input type="text" name="user_email_register" id="user_email_register_wd_mobile" class="form-control" placeholder="Email"  /><div class="password_holder"><input type="password" name="user_password" id="user_password_wd_mobile" class="form-control" placeholder="Password" size="20" />   <i class=" far fa-eye-slash show_hide_password"></i></div><div class="password_holder"><input type="password" name="user_password_retype" id="user_password_retype_wd_mobile" class="form-control" placeholder="Retype Password" size="20" />   <i class=" far fa-eye-slash show_hide_password"></i></div><input type="checkbox" name="terms" id="user_terms_register_wd_mobile"><label id="user_terms_register_wd_label_mobile" for="user_terms_register_wd_mobile">I agree with <a href="https://watamubeachcottages.com/terms-and-conditions/" target="_blank" id="user_terms_register_topbar_link">terms &amp; conditions</a> </label><p id="reg_passmail_mobile">A password will be e-mailed to you</p>
+                    <input type="hidden" id="security-register-mobile" name="security-register-mobile" value="541b1c1997-1790694168"><button class="wpb_button  wpb_btn-info  wpb_regularsize  wpestate_vc_button  vc_button" id="wp-submit-register_wd_mobile">Register</button>
+                    <div class="login-links">
+                        <a href="#" id="widget_login_sw_mobile">Back to Login</a>
+                    </div>
+                 </div>
+                </div>
+            <div id="mobile_forgot_wrapper">
+                <h3 class="widget-title-sidebar"  id="forgot-div-title_mobile">Reset Password</h3>
+                <div class="login_form" id="forgot-pass-div_mobile">
+                    <div class="loginalert" id="forgot_pass_area_shortcode_wd_mobile"></div>
+                    <div class="loginrow">
+                            <input type="text" class="form-control" name="forgot_email" id="forgot_email_mobile" placeholder="Enter Your Email Address" size="20" />
+                    </div><input type="hidden" id="security-login-forgot_wd_mobile" name="security-login-forgot_wd_mobile" value="2274d5ffe5" /><input type="hidden" name="_wp_http_referer" value="/contact/" /><input type="hidden" id="postid" value="0">
+                    <button class="wpb_btn-info wpb_regularsize wpestate_vc_button  vc_button" id="wp-forgot-but_mobile" name="forgot" >Reset Password</button>
+                    <div class="login-links shortlog">
+                    <a href="#" id="return_login_shortcode_mobile">Return to Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <div class="website-wrapper is_header_type1  is_search_type1 topbar_show_mobile_no mobile_header_wrap_sticky_no"  id="all_wrapper">
+            <div class="container main_wrapper  wide  ">
+        <div class="master_header master_  wide   master_header_wide_yes hover_type_2">
+<div class="mobile_header  mobile_header_sticky_no">
+    <div class="mobile-trigger"><i class="fas fa-bars"></i></div>
+    <div class="mobile-logo">
+        <a href="https://watamubeachcottages.com">
+            <img   alt="logo" data-src="https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03.png" class="img-responsive retina_ready lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03.png" class="img-responsive retina_ready" alt="logo"/></noscript>        </a>
+    </div>
+    <div class="mobile-trigger-user"><i class="fas fa-user-circle"></i></div></div>            
+            <div class="header_wrapper    header_type1 header_align_center header_wide_yes">
+                <div class="header_wrapper_inside">
+                    <div class="logo">
+                        <a href="https://watamubeachcottages.com">
+                            <img  
+                                 alt="logo" data-src="https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03.png" class="img-responsive retina_ready lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img src="https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03.png" 
+                                 class="img-responsive retina_ready" 
+                                 alt="logo"/></noscript>
+                        </a>
+                    </div>
+                        <div class="user_menu" id="user_menu_u">   
+        <div id="shopping-cart" class="wpestate_header_shoping_cart_icon">
+        <svg></svg>
+        <span class="wpestream_cart_counter_header">0</span></div>        
+        <div class="signuplink" id="topbarlogin">Login</div>
+        <div class="signuplink" id="topbarregister">Sign Up</div>    
+    </div> 
+<div class="wpestate_header_shoping_cart" id="wpestate_header_shoping_cart"><div class="wpestate_header_shoping_cart_container "><div class="wpestate_header_shoping_cart_total">Total: <span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol" translate="no">&#36;</span>0.00</bdi></span></div><a class="wpestate_header_view_cart " href="https://watamubeachcottages.com/cart/">View Cart</a><a class="wpestate_header_view_checkout" href="https://watamubeachcottages.com/checkout/">Checkout</a></div></div>                    
+                    <nav id="access">
+                        <ul id="menu-home-menu-1" class="menu"><li id="menu-item-37910" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children with-megamenu   "><a class="menu-item-link"  href="#">ACCOMMODATION</a>
+<ul style="" class="  sub-menu wpestate_megamenu_col_5">
+	<li id="menu-item-37911" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children wpestate_megamenu_col_5 wpestate_megamenu_first_element   "><div class="megamenu-title"><a href="#">TYPES OF ACCOMMODATION</a></div>
+	<ul style="" class="  sub-menu wpestate_megamenu_col_5">
+		<li id="menu-item-40665" class="menu-item menu-item-type-taxonomy menu-item-object-property_category   "><a class="menu-item-link"  href="https://watamubeachcottages.com/listings/1-bedroom-cottage/"><i class="fas fa-caret-right"></i>1 Bedroom Cottage</a></li>
+		<li id="menu-item-40666" class="menu-item menu-item-type-taxonomy menu-item-object-property_category   "><a class="menu-item-link"  href="https://watamubeachcottages.com/listings/2-bedroom-cottage/"><i class="fas fa-caret-right"></i>2 Bedroom Cottage</a></li>
+		<li id="menu-item-40667" class="menu-item menu-item-type-taxonomy menu-item-object-property_category   "><a class="menu-item-link"  href="https://watamubeachcottages.com/listings/apartment/"><i class="fas fa-caret-right"></i>Apartment</a></li>
+		<li id="menu-item-40668" class="menu-item menu-item-type-taxonomy menu-item-object-property_category   "><a class="menu-item-link"  href="https://watamubeachcottages.com/listings/bamba-kofi-tent/"><i class="fas fa-caret-right"></i>Bamba Kofi Tent</a></li>
+		<li id="menu-item-40669" class="menu-item menu-item-type-taxonomy menu-item-object-property_category   "><a class="menu-item-link"  href="https://watamubeachcottages.com/listings/baobab-tent/"><i class="fas fa-caret-right"></i>Baobab Tent</a></li>
+		<li id="menu-item-40670" class="menu-item menu-item-type-taxonomy menu-item-object-property_category   "><a class="menu-item-link"  href="https://watamubeachcottages.com/listings/chalet/"><i class="fas fa-caret-right"></i>Chalet</a></li>
+		<li id="menu-item-40671" class="menu-item menu-item-type-taxonomy menu-item-object-property_category   "><a class="menu-item-link"  href="https://watamubeachcottages.com/listings/clubrooms/"><i class="fas fa-caret-right"></i>Clubrooms</a></li>
+		<li id="menu-item-40672" class="menu-item menu-item-type-taxonomy menu-item-object-property_category   "><a class="menu-item-link"  href="https://watamubeachcottages.com/listings/tent-hut/"><i class="fas fa-caret-right"></i>Tent Hut</a></li>
+		<li id="menu-item-40673" class="menu-item menu-item-type-taxonomy menu-item-object-property_category   "><a class="menu-item-link"  href="https://watamubeachcottages.com/listings/villa/"><i class="fas fa-caret-right"></i>Villa</a></li>
+	</ul>
+</li>
+	<li id="menu-item-40679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children wpestate_megamenu_col_5   "><div class="megamenu-title"><a href="#">UNITS</a></div>
+	<ul style="" class="  sub-menu wpestate_megamenu_col_5">
+		<li id="menu-item-41662" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/nomad-cottage/"><i class="fas fa-caret-right"></i>Nomad – Coastal Cottage</a></li>
+		<li id="menu-item-40684" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/dhow-comfy-beach-cottage/"><i class="fas fa-caret-right"></i>Dhow – Coastal Cottage</a></li>
+		<li id="menu-item-40683" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/bling-romantic-cottage-on-beachfront-forest/"><i class="fas fa-caret-right"></i>Bling – Coastal Cottage</a></li>
+		<li id="menu-item-40685" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/beach-cottage-bijou/"><i class="fas fa-caret-right"></i>Bijou Cottage</a></li>
+		<li id="menu-item-40686" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/beautiful-romantic-cottage-little-gem/"><i class="fas fa-caret-right"></i>Little Gem Cottage</a></li>
+		<li id="menu-item-40687" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/trinket-cottage/"><i class="fas fa-caret-right"></i>Trinket Cottage</a></li>
+		<li id="menu-item-40688" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/aqua-sea-view-apartment/"><i class="fas fa-caret-right"></i>Aqua Sea View Apartment</a></li>
+		<li id="menu-item-41504" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/marine-sea-view-family-apartment/"><i class="fas fa-caret-right"></i>Marine Sea View Family Apartment</a></li>
+		<li id="menu-item-40689" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/captains-penthouse/"><i class="fas fa-caret-right"></i>Captain’s Penthouse</a></li>
+	</ul>
+</li>
+	<li id="menu-item-40698" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children wpestate_megamenu_col_5   "><div class="megamenu-title"><a href="#">UNITS</a></div>
+	<ul style="" class="  sub-menu wpestate_megamenu_col_5">
+		<li id="menu-item-37936" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/camping-in-watamu-bamba-kofi-1/"><i class="fa fa-caret-right"></i>Bamba Kofi Tented Camp-Tent 1</a></li>
+		<li id="menu-item-37937" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/camping-in-watamu-bamba-kofi-2/"><i class="fa fa-caret-right"></i>Bamba Kofi Tented Camp-Tent 2</a></li>
+		<li id="menu-item-37938" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/camping-in-watamu-bamba-kofi-3/"><i class="fa fa-caret-right"></i>Bamba Kofi Tented Camp-Tent 3</a></li>
+		<li id="menu-item-37939" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/camping-in-watamu-bamba-kofi-4/"><i class="fa fa-caret-right"></i>Bamba Kofi Tented Camp-Tent 4</a></li>
+		<li id="menu-item-40693" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/tornado-a-cool-african-chalet-in-watamu/"><i class="fas fa-caret-right"></i>Tornado – Cool Chalet B&#038;B</a></li>
+		<li id="menu-item-40691" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/laser-a-rustic-chic-african-chalet-on-beachfront-forest/"><i class="fas fa-caret-right"></i>Laser – Cool Chalet B&#038;B</a></li>
+		<li id="menu-item-40692" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/optimist-a-neat-african-chalet-in-watamu/"><i class="fas fa-caret-right"></i>Optimist – Cool Chalet B&#038;B</a></li>
+		<li id="menu-item-41277" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/star-chalet-cool-chalet-at-watamu-sailing-camp-bb/">Star – Cool Chalet B&#038;B</a></li>
+	</ul>
+</li>
+	<li id="menu-item-40697" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children wpestate_megamenu_col_5   "><div class="megamenu-title"><a href="#">UNITS</a></div>
+	<ul style="" class="  sub-menu wpestate_megamenu_col_5">
+		<li id="menu-item-40694" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/topaz-sea-view-beach-villa/"><i class="fas fa-caret-right"></i>Topaz Sea View Villa</a></li>
+		<li id="menu-item-38844" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/flamboyant-camp-tent-hut-1/"><i class="fas fa-caret-right"></i>Flamboyant Camp – Tent Hut 1</a></li>
+		<li id="menu-item-38843" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/flamboyant-camp-tent-hut-2/"><i class="fas fa-caret-right"></i>Flamboyant Camp – Tent Hut 2</a></li>
+		<li id="menu-item-37940" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/baobab-camp-baobab-tent/"><i class="fa fa-caret-right"></i>Baobab Camp – Baobab Tent Hut</a></li>
+		<li id="menu-item-38009" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/bring-a-tent/"><i class="fas fa-caret-right"></i>Bring a Tent or Overlander</a></li>
+	</ul>
+</li>
+	<li id="menu-item-41269" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children wpestate_megamenu_col_5   "><div class="megamenu-title"><a href="#">UNITS</a></div>
+	<ul style="" class="  sub-menu wpestate_megamenu_col_5">
+		<li id="menu-item-41270" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/air-conditioned-club-room-1-bb/">Air Conditioned Club Room 2 B&#038;B</a></li>
+		<li id="menu-item-41271" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/air-conditioned-club-room/">Air Conditioned Club Room 1 B&#038;B</a></li>
+		<li id="menu-item-41272" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/air-conditioned-club-room-3/">Air Conditioned Club Room 3 B&#038;B</a></li>
+		<li id="menu-item-41273" class="menu-item menu-item-type-post_type menu-item-object-estate_property   "><a class="menu-item-link"  href="https://watamubeachcottages.com/holiday-home/air-conditioned-clubroom-4/">Air Conditioned Club Room 4 B&#038;B</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-37941" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home no-megamenu   "><a class="menu-item-link"  href="https://watamubeachcottages.com/#facilities">FACILITIES</a></li>
+<li id="menu-item-37942" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home no-megamenu   "><a class="menu-item-link"  href="https://watamubeachcottages.com/#todo">THINGS TO DO</a></li>
+<li id="menu-item-37943" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-254 current_page_item no-megamenu   "><a class="menu-item-link"  href="https://watamubeachcottages.com/contact/">CONTACT</a></li>
+<li id="menu-item-37944" class="menu-item menu-item-type-custom menu-item-object-custom no-megamenu   "><a class="menu-item-link"  href="tel:+254%20728%20986066"><i class="fa fa-phone"></i>+254 728 986066</a></li>
+</ul>                    </nav>
+                </div>
+            </div>
+        </div>
+<div class="header_media with_search_type3">
+</div>
+  <div class="content_wrapper  row ">
+<div class="row">
+    <div class="col-md-12 breadcrumb_container"><ol class="breadcrumb">
+           <li><a href="https://watamubeachcottages.com/">Home</a></li><li class="active">Contact</li></ol></div>    <div class="col-md-12">
+        <span class="entry-title listing_loader_title">Your search results</span>
+<div class="loader-inner ball-pulse" id="internal-loader">
+    <div class="double-bounce1"></div>
+    <div class="double-bounce2"></div>
+</div>
+<div id="listing_ajax_container">
+</div>
+                                    <h1 class="entry-title entry-contact">Contact</h1>
+                        <div class="contact-wrapper">
+            <div class="col-md-4 contact_page_company_picture">
+                <div class="company_headline ">
+                    <h3>Watamu Beach Cottages</h3>
+                    <div class="agent_detail contact_detail"><i class="fas fa-phone"></i><a href="tel: +254 728 986066"> +254 728 986066</a></div><div class="agent_detail contact_detail"><i class="fas fa-mobile-alt"></i><a href="tel: +254 728 986066"> +254 728 986066</a></div><div class="agent_detail contact_detail"><i class="far fa-envelope"></i><a href="mailto:info@watamubeachcottages.com">info@watamubeachcottages.com</a></div>
+                    <div class="header_social">
+                         <a href="https://www.facebook.com/watamubeachcottages/" target="_blank" class="share_facebook"><i class="fab fa-facebook-f"></i></a> <a href="https://www.instagram.com/watamubeachcottages/?hl=en" target="_blank" class="share_instagram" ><i class="fa-brands fa-instagram"></i></a>                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 contact_page_company_details">
+                <div class="agent_contanct_form">
+                    <div class="alert-box-contact-page error">
+                        <div class="alert-message" id="alert-agent-contact"></div>
+                    </div>
+                    <p class="third-form  ">
+                        <input type="text" id="contact_name" size="40" name="contact_name" class="form-control" placeholder="Full Name"  value="">
+                    </p>
+                    <p class="third-form  ">
+                        <input type="text" id="contact_email" size="40" name="contact_email" class="form-control" placeholder="Email"  value="">
+                    </p>
+                    <p class="third-form last-third">
+                        <input type="text" id="contact_website" size="40" name="contact_website" class="form-control" placeholder="Website"  value="">
+                    </p>
+                    <textarea id="agent_comment" name="comment" class="form-control" cols="45" rows="8" aria-required="true" placeholder="Your Message" ></textarea>
+                    <div class="gpr_wrapper"><input type="checkbox" id="wpestate_agree_gdpr" class="wpestate_agree_gdpr" name="wpestate_agree_gdpr" />
+            <label for="wpestate_agree_gdpr">I consent to the <a target="_blank" href="https://watamubeachcottages.com/gdpr-terms-and-conditions/">GDPR Terms</a></label></div>
+                    <input type="submit" class="wpb_btn-info wpb_btn-small wpestate_vc_button  vc_button"  id="agent_submit_contact" value="Send Message">
+                    <input type="hidden" name="contact_ajax_nonce" id="agent_property_ajax_nonce"  value="804a507a7d" />
+                </div>
+            </div>
+            </div>
+            <div class="single-content contact-content">
+                            </div>
+            </div>
+<div class="clearfix visible-xs"></div>
+</div>
+</div>
+<footer id="colophon"  class="  footer_back_repeat_no  ">
+    <div id="footer-widget-area" class="row ">
+    <div id="first" class="widget-area col-md-4 ">
+        <ul class="xoxo">
+            <li id="media_image-3" class="widget-container widget_media_image"><a href="https://watamubeachcottages.com/"><img width="150" height="150"   alt="" style="max-width: 100%; height: auto;" decoding="async" data-srcset="https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-150x150.png 150w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-300x300.png 300w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-100x100.png 100w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-600x600.png 600w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-1024x1024.png 1024w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-768x768.png 768w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-60x60.png 60w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03.png 1417w"  data-src="https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-150x150.png" data-sizes="(max-width: 150px) 100vw, 150px" class="image wp-image-37762  attachment-thumbnail size-thumbnail lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="150" height="150" src="https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-150x150.png" class="image wp-image-37762  attachment-thumbnail size-thumbnail" alt="" style="max-width: 100%; height: auto;" decoding="async" srcset="https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-150x150.png 150w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-300x300.png 300w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-100x100.png 100w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-600x600.png 600w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-1024x1024.png 1024w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-768x768.png 768w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03-60x60.png 60w, https://watamubeachcottages.com/wp-content/uploads/2022/09/WATAMU-BEACH-LOGO-white-03.png 1417w" sizes="(max-width: 150px) 100vw, 150px" /></noscript></a></li><li id="text-2" class="widget-container widget_text"><h3 class="widget-title-footer">About Watamu Beach Cottages</h3>			<div class="textwidget"><p>Watamu Beach Cottages is a beautiful, wildly rustic coastal property situated in Watamu, Kenya. Our large, beachfront plot has so much to offer – <em>it’s a Peaceful Paradise!</em></p>
+</div>
+		</li>        </ul>
+    </div>
+    <div id="second" class="widget-area col-md-4">
+        <ul class="xoxo">
+        <li id="media_image-2" class="widget-container widget_media_image"><h3 class="widget-title-footer">Our Awards</h3><img width="300" height="81"   alt="" style="max-width: 100%; height: auto;" decoding="async" data-srcset="https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-300x81.png 300w, https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-600x162.png 600w, https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-1024x277.png 1024w, https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-768x207.png 768w, https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-1536x415.png 1536w, https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-2048x553.png 2048w"  data-src="https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-300x81.png" data-sizes="(max-width: 300px) 100vw, 300px" class="image wp-image-37042  attachment-medium size-medium lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><noscript><img width="300" height="81" src="https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-300x81.png" class="image wp-image-37042  attachment-medium size-medium" alt="" style="max-width: 100%; height: auto;" decoding="async" srcset="https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-300x81.png 300w, https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-600x162.png 600w, https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-1024x277.png 1024w, https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-768x207.png 768w, https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-1536x415.png 1536w, https://watamubeachcottages.com/wp-content/uploads/2022/05/Watamu-Beach-Cottges-Banner-01-2048x553.png 2048w" sizes="(max-width: 300px) 100vw, 300px" /></noscript></li><li id="text-4" class="widget-container widget_text">			<div class="textwidget"><div class="footer-container container">
+<div id="footer-widget-3" class="footer-column six columns">
+<div id="text-10" class="widget widget_text gdlr-item gdlr-widget">
+<div class="textwidget">Superhosts are experienced, highly rated hosts<br />
+who are committed to providing great<br />
+stays for guests.</div>
+</div>
+</div>
+</div>
+</div>
+		</li>        </ul>
+    </div>
+    <div id="third" class="widget-area col-md-4">
+        <ul class="xoxo">
+        <li id="wpestate_contact_widget-2" class="widget-container contact_sidebar"><h3 class="widget-title-footer">Contact Us</h3><div class="contact_sidebar_wrap"><p class="widget_contact_addr"><i class="fas fa-home"></i>Plot 38, Turtle Bay Road, Watamu, Kilifi 00502</p><p class="widget_contact_phone"><i class="fas fa-phone"></i><a href="tel:+%2B254+728+986066"> +254 728 986066</a></p><p class="widget_contact_email"><i class="far fa-envelope"></i><a href="mailto: info@watamubeachcottages.com"> info@watamubeachcottages.com</a></p></div></li><li id="wpestate_social_widget-2" class="widget-container social_sidebar"><h3 class="widget-title-footer">Social Links:</h3><div class="social_sidebar_internal"><a href="https://www.facebook.com/watamubeachcottages/" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://www.instagram.com/watamubeachcottages/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a></div></li>        </ul>
+    </div>
+    </div>
+        <div class="sub_footer">
+            <div class="sub_footer_content ">
+                <span class="copyright">
+                    Copyright All Rights Reserved                </span>
+                <div class="subfooter_menu">
+                    <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-37036" class="menu-item menu-item-type-taxonomy menu-item-object-property_status menu-item-37036"><a href="https://watamubeachcottages.com/status/hot-offer/">Hot Offer</a></li>
+<li id="menu-item-37039" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-37039"><a href="https://watamubeachcottages.com/listings/apartment/">Apartment</a></li>
+<li id="menu-item-37040" class="menu-item menu-item-type-taxonomy menu-item-object-property_category menu-item-37040"><a href="https://watamubeachcottages.com/listings/chalet/">Chalet</a></li>
+<li id="menu-item-36440" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36440"><a href="https://watamubeachcottages.com/cancellation-policy/">Cancellation Policy</a></li>
+<li id="menu-item-35307" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-35307"><a href="https://watamubeachcottages.com/terms-and-conditions/">Terms and Conditions</a></li>
+</ul></div>                </div>
+            </div>
+        </div>
+</footer>
+</div> 
+</div> 
+<script type="speculationrules"></script>
+<div class="modal fade " id="loginmodal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog" style="height:590px">
+          <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <div class="modal-body">
+                <div id="ajax_login_div" class=" ">
+                      <div class="modal-header">
+                        <h2 class="modal-title_big" >Log in to your account</h2>
+                      </div>
+                      <div class="loginalert" id="login_message_area" ></div>
+                      <div class="loginrow password_holder">
+                          <input type="text" class="form-control dofocus" name="log" id="login_user" autofocus placeholder="Username" size="20" />
+                      </div>
+                      <div class="loginrow password_holder">
+                            <input type="password" class="form-control" name="pwd" placeholder="Password" id="login_pwd" size="20" />
+                            <i class=" far fa-eye-slash show_hide_password"></i>
+                      </div>
+                      <input type="hidden" name="loginpop" id="loginpop" value="0">
+                      <input type="hidden" id="security-login" name="security-login" value="068c9c85c6-1790694168">
+                      <button id="wp-login-but" class="wpb_button  wpb_btn-info  wpb_regularsize   wpestate_vc_button  vc_button" data-mixval="">Login</button>
+                      <div class="navigation_links">
+                          <a href="#" id="reveal_register">Don&#039;t have an account?</a> |
+                          <a href="#" id="forgot_password_mod">Forgot Password</a>
+                      </div>
+                </div>
+                <div id="ajax_register_div" class="">
+                  <div class="modal-header">
+                    <h2 class="modal-title_big" >Create an account</h2>
+                  </div>
+        <div class="login_form shortcode-login">
+                <div class="loginalert" id="register_message_area" ></div>
+                <div class="loginrow">
+                    <input type="text" name="user_login_register" id="user_login_register" class="form-control" placeholder="Username" size="20" />
+                </div>
+            <div class="loginrow">
+                <input type="text" name="user_email_register" id="user_email_register" class="form-control" placeholder="Email" size="20" />
+            </div>
+            <div class="loginrow password_holder">
+                <input type="password" name="user_password" id="user_password" class="form-control" placeholder="Password" size="20" />
+                <i class=" far fa-eye-slash show_hide_password"></i>
+            </div>
+            <div class="loginrow password_holder">
+                <input type="password" name="user_password_retype" id="user_password_retype" class="form-control" placeholder="Retype Password" size="20" />
+                <i class=" far fa-eye-slash show_hide_password"></i>
+            </div>
+        <input type="checkbox" name="terms" id="user_terms_register_sh">
+        <label id="user_terms_register_sh_label" for="user_terms_register_sh">I agree with <a href="https://watamubeachcottages.com/terms-and-conditions/" target="_blank" id="user_terms_register_topbar_link">terms &amp; conditions</a> </label><button
+               data-sitekey="" 
+        data-callback=Wprentals_onSubmit" 
+        data-action="submit"
+                 id="wp-submit-register"  style="margin-top:10px;" class="wpb_button  wpb_btn-info  wpb_btn-small wpestate_vc_button  vc_button g-recaptcha">Create an account</button>
+        <input type="hidden" id="security-register" name="security-register" value="5757caf46d-1790694168"></div>                      <div class="navigation_links">
+                        <a href="#"  id="reveal_login">Already a member? Sign in!</a>
+                      </div>
+                </div>
+                <div  id="forgot-pass-div_mod" style="display:none;">
+                      <div class="modal-header">
+                        <h2 class="modal-title_big" >Forgot Password</h2>
+                      </div>
+                      <div class="loginalert" id="forgot_pass_area_shortcode"></div>
+                      <div class="loginrow">
+                         <input type="text" class="form-control forgot_email_mod" name="forgot_email" id="forgot_email_mod" placeholder="Enter Your Email Address" size="20" />
+                      </div>
+                      <input type="hidden" id="security-login-forgot_wd" name="security-login-forgot_wd" value="124d2b5145" /><input type="hidden" name="_wp_http_referer" value="/contact/" />                      <input type="hidden" id="postid" value="0">
+                      <button class="wpb_button  wpb_btn-info  wpb_regularsize wpestate_vc_button  vc_button" id="wp-forgot-but_mod" name="forgot" >Reset Password</button>
+                      <div class="navigation_links">
+                        <a href="#" id="return_login_mod">Return to Login</a>
+                      </div>
+                </div>
+                <div class="modal_login_image_wrapper">
+                  <div class="modal_login_image" style="background-image:url(https://watamubeachcottages.com/wp-content/themes/wprentals/img/modal_default.png)"></div>
+                </div>
+            </div>
+          </div>
+      </div>
+</div> 
+<input type="hidden" id="wprentals_ajax_filtering" value="546820cff4" />    <input type="hidden" id="wpestate_ajax_log_reg" value="c40f17044b" />    <a href="#" class="backtop "><i class="fas fa-chevron-up"></i></a><div class="social_share_wrapper 1">
+        <a class="social_share share_facebook_side" href="https://www.facebook.com/watamubeachcottages/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="social_share share_instagram_side" href="https://www.instagram.com/watamubeachcottages/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+</div>
+			<script></script>
+			<div data-chats-side="front"
+     id="wpsr-chat-widget-37399"
+     class="wpsr-fm-chat-wrapper wpsr_pro_active  wpsr-fm-bubble-position-bottom-right wpsr-fm-chat-template1   "
+     style="--wpsn-chat-channel-icon-bg-color: "
+       data-popup-target=false>
+    <div class="wpsr-fm-chat-box">
+    <div class="wpsr-fm-chat-close" style="--wpsn-chat-close-btn-color: #1d2129"></div>
+    <div id="wpsr-chat-active-status" class="wpsr-fm-chat-header"
+     style="background-color:">
+        <div class="wpsr-chat-user-img">
+        <img 
+             alt="Watamu Beach Cottages" width="70" height="70" data-src="https://watamubeachcottages.com/wp-content/uploads/2022/09/cropped-Watamu-Beach-Cottages-Logo.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://watamubeachcottages.com/wp-content/uploads/2022/09/cropped-Watamu-Beach-Cottages-Logo.png"
+             alt="Watamu Beach Cottages" width="70" height="70"></noscript>
+    </div>
+    <div class="wpsr-fm-group-details">
+                <h3 style="color:">
+            Watamu Beach Cottages        </h3>
+                    <p class="wpsr-fm-caption"
+               style="color:">
+                Typically replies within an hour            </p>
+                    <p class="wpsr-fm-offline-caption"
+               style="color:">
+                I will be back soon            </p>
+            </div>
+</div><div class="wpsr-fm-chat-room"><div class="wpsr-fm-conversation">
+        <div class="wpsr-fm-user-picture">
+        <img 
+             alt="Watamu Beach Cottages" width="40" height="40" data-src="https://watamubeachcottages.com/wp-content/uploads/2022/09/cropped-Watamu-Beach-Cottages-Logo.png" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://watamubeachcottages.com/wp-content/uploads/2022/09/cropped-Watamu-Beach-Cottages-Logo.png"
+             alt="Watamu Beach Cottages" width="40" height="40"></noscript>
+    </div>
+        <div class="wpsr-fm-chat">
+        <div class="wpsr-fm-chat-bubbles">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="wpsr-fm-greeting-msg">
+                    <div class="wpsr-fm-msg-text">
+                Hey there 👋 <br />Let us know how we can assist you today!            </div>
+            </div>
+</div><div class="wpsr-fm-chat-btn-wrapper">
+    <div class="wpsr-fm-btn-icon">
+                                    <a role="button"
+                       data-chat-url="https://api.whatsapp.com/send?phone=254728986066"
+                       data-channel="whatsapp"
+                       data-message-context="none"
+                                              style="background-color:"
+                       class="wpsr-fm-btn whatsapp"
+                    >
+                            <span>Start Chat with:</span>
+                                                            <img  alt="whatsapp" width="32" height="32" data-src="https://watamubeachcottages.com/wp-content/plugins/wp-social-reviews/assets/images/svg/whatsapp.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://watamubeachcottages.com/wp-content/plugins/wp-social-reviews/assets/images/svg/whatsapp.svg" alt="whatsapp" width="32" height="32"></noscript>
+                                                                                </a>
+                                            </div>
+</div>
+</div></div><div class="wpsr-fm-chat-bubble">
+    <a href="#" class="wpsr-fm-bubble-btn  whatsapp" data-form-ids="+254728986066"
+       style="background-color:">
+                    <img  alt="WhatsApp" width="32" height="32" data-src="https://watamubeachcottages.com/wp-content/plugins/wp-social-reviews/assets/images/svg/whatsapp.svg" class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="https://watamubeachcottages.com/wp-content/plugins/wp-social-reviews/assets/images/svg/whatsapp.svg" alt="WhatsApp" width="32" height="32"></noscript>
+                <span></span>
+    </a>
+</div>
+</div>
+	<script type='text/javascript'></script>
+	<link rel='stylesheet' id='ppcp-pwc-payment-method-css' href='https://watamubeachcottages.com/wp-content/plugins/woocommerce-paypal-payments/assets/ppcp-local-alternative-payment-methods-css-gateway.css?ver=4.0.4' media='all' />
+<link rel='stylesheet' id='wc-blocks-style-css' href='https://watamubeachcottages.com/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-11.0.1' media='all' />
+<script id="ppcp-smart-button-js-extra"></script>
+<script id="ppcp-smart-button-js" src="https://watamubeachcottages.com/wp-content/plugins/woocommerce-paypal-payments/assets/ppcp-button-js-button.js?ver=4.0.4"></script>
+<script id="jquery-ui-core-js-before"></script>
+<script id="jquery-ui-core-js" src="https://watamubeachcottages.com/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-mouse-js" src="https://watamubeachcottages.com/wp-includes/js/jquery/ui/mouse.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-slider-js" src="https://watamubeachcottages.com/wp-includes/js/jquery/ui/slider.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-datepicker-js" src="https://watamubeachcottages.com/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-datepicker-js-after"></script>
+<script id="jquery-ui-menu-js" src="https://watamubeachcottages.com/wp-includes/js/jquery/ui/menu.min.js?ver=1.14.2"></script>
+<script id="wp-dom-ready-js" src="https://watamubeachcottages.com/wp-includes/js/dist/dom-ready.min.js?ver=3fe927cab37bf38d6a23"></script>
+<script id="wp-hooks-js" src="https://watamubeachcottages.com/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://watamubeachcottages.com/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after"></script>
+<script id="wp-a11y-js" src="https://watamubeachcottages.com/wp-includes/js/dist/a11y.min.js?ver=31c6cec5a4ff7aff483d"></script>
+<script id="jquery-ui-autocomplete-js" src="https://watamubeachcottages.com/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.14.2"></script>
+<script id="slick-slider-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/slick.min.js?ver=1.0"></script>
+<script id="bootstrap.min-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/bootstrap.min.js?ver=1.0"></script>
+<script id="query.viewport.mini-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/jquery.viewport.mini.js?ver=1.0"></script>
+<script id="placeholders.min-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/placeholders.min.js?ver=1.0"></script>
+<script id="slideout.min-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/slideout.min.js?ver=1.0"></script>
+<script id="bootstrap-selectjs-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/bootstrap-select.min.js?ver=1.0"></script>
+<script id="dense-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/dense.js?ver=1.0"></script>
+<script id="jquery.ui.touch-punch.min-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/jquery.ui.touch-punch.min.js?ver=1.0"></script>
+<script id="jquery.lazyload.min-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/jquery.lazyload.min.js?ver=1.0"></script>
+<script id="latinise.min_-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/latinise.min_.js?ver=1.0"></script>
+<script id="moment-js" src="https://watamubeachcottages.com/wp-includes/js/dist/vendor/moment.min.js?ver=2.30.1"></script>
+<script id="moment-js-after"></script>
+<script id="daterangepicker-js-extra"></script>
+<script id="daterangepicker-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/daterangepicker.js?ver=1.0"></script>
+<script id="places.js@1.13.0-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/openstreet/places.js@1.13.0?ver=1.0"></script>
+<script id="algoliasearch.min-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/openstreet/algoliasearch.min.js?ver=1.0"></script>
+<script id="leaflet-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/openstreet/leaflet.js?ver=1.0"></script>
+<script id="leaflet.markercluster-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/openstreet/leaflet.markercluster.js?ver=1.0"></script>
+<script id="datepicker-en-GB-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/i18n/datepicker-en-GB.js?ver=1.0"></script>
+<script id="wpestate_mapfunctions-js-extra"></script>
+<script id="wpestate_mapfunctions-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/google_js/mapfunctions.js?ver=1.0"></script>
+<script id="wpestate_ajaxcalls-js-extra"></script>
+<script id="wpestate_ajaxcalls-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/ajaxcalls.js?ver=1.0"></script>
+<script id="wpestate_mapfunctions_base-js-extra"></script>
+<script id="wpestate_mapfunctions_base-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/google_js/maps_base.js?ver=1.0"></script>
+<script id="wpestate_googlecode_contact-js-extra"></script>
+<script id="wpestate_googlecode_contact-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/google_js/google_map_code_contact.js?ver=1.0"></script>
+<script id="wpestate_control-js-extra"></script>
+<script id="wpestate_control-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/control.js?ver=1.0"></script>
+<script async data-wp-strategy="async" fetchpriority="low" id="comment-reply-js" src="https://watamubeachcottages.com/wp-includes/js/comment-reply.min.js?ver=7.1.2"></script>
+<script id="jquery.chart.min-js" src="https://watamubeachcottages.com/wp-content/themes/wprentals/js/chart.bundle.min.js?ver=1.0"></script>
+<script id="sourcebuster-js-js" src="https://watamubeachcottages.com/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=11.0.1"></script>
+<script id="wc-order-attribution-js-extra"></script>
+<script id="wc-order-attribution-js" src="https://watamubeachcottages.com/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=11.0.1"></script>
+<script id="ppcp-fraudnet-js-extra"></script>
+<script id="ppcp-fraudnet-js" src="https://watamubeachcottages.com/wp-content/plugins/woocommerce-paypal-payments/assets/ppcp-wc-gateway-js-fraudnet.js?ver=4.0.4"></script>
+<script id="wpsocialreviews_chat-js" src="https://watamubeachcottages.com/wp-content/plugins/wp-social-reviews/assets/js/chat.js?ver=4.3.2"></script>
+<script id="smush-lazy-load-js" src="https://watamubeachcottages.com/wp-content/plugins/wp-smush-pro/app/assets/js/smush-lazy-load.min.js?ver=3.12.3"></script>
+<script id="wp-emoji-settings" type="application/json"></script>
+<script type="module"></script>
+</body>
+</html>

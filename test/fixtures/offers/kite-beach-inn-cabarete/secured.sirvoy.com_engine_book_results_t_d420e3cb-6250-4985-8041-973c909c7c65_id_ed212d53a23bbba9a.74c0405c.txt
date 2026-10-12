@@ -1,0 +1,93 @@
+<!DOCTYPE html><html><body><!-- Sirvoy book_results page, trimmed 2026-10-12 to room data, room cards and currency -->
+<p>"customerCurrency":"USD"</p>
+<div data-room-type-data="&#x7B;&quot;is_dorm&quot;&#x3A;false,&quot;exemptSurchargeIds&quot;&#x3A;&#x5B;&#x5D;,&quot;rateByOccupancy&quot;&#x3A;&#x7B;&quot;1&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;59,&quot;ratePreDiscount&quot;&#x3A;59,&quot;quantity&quot;&#x3A;3,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;2&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;59,&quot;ratePreDiscount&quot;&#x3A;59,&quot;quantity&quot;&#x3A;3,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;&#x7D;,&quot;name&quot;&#x3A;&quot;Standard&#x20;-&#x20;with&#x20;air&#x20;conditioning&quot;,&quot;availableUnitIds&quot;&#x3A;&#x5B;102192115,102192114,102192113,102192112,102192111,102192110,102192109,102192108,102192131&#x5D;&#x7D;"></div>
+<div data-room-type-data="&#x7B;&quot;is_dorm&quot;&#x3A;false,&quot;exemptSurchargeIds&quot;&#x3A;&#x5B;&#x5D;,&quot;rateByOccupancy&quot;&#x3A;&#x7B;&quot;1&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;84,&quot;ratePreDiscount&quot;&#x3A;84,&quot;quantity&quot;&#x3A;3,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;2&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;84,&quot;ratePreDiscount&quot;&#x3A;84,&quot;quantity&quot;&#x3A;3,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;&#x7D;,&quot;name&quot;&#x3A;&quot;Ocean&#x20;view&#x20;-&#x20;with&#x20;air&#x20;conditioning&quot;,&quot;availableUnitIds&quot;&#x3A;&#x5B;102192116&#x5D;&#x7D;"></div>
+<div data-room-type-data="&#x7B;&quot;is_dorm&quot;&#x3A;false,&quot;exemptSurchargeIds&quot;&#x3A;&#x5B;&#x5D;,&quot;rateByOccupancy&quot;&#x3A;&#x7B;&quot;1&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;79,&quot;ratePreDiscount&quot;&#x3A;79,&quot;quantity&quot;&#x3A;3,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;2&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;79,&quot;ratePreDiscount&quot;&#x3A;79,&quot;quantity&quot;&#x3A;3,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;3&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;79,&quot;ratePreDiscount&quot;&#x3A;79,&quot;quantity&quot;&#x3A;3,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;&#x7D;,&quot;name&quot;&#x3A;&quot;Ground&#x20;floor&#x20;studio&quot;,&quot;availableUnitIds&quot;&#x3A;&#x5B;102192119,102192118,102192130&#x5D;&#x7D;"></div>
+<div data-room-type-data="&#x7B;&quot;is_dorm&quot;&#x3A;false,&quot;exemptSurchargeIds&quot;&#x3A;&#x5B;&#x5D;,&quot;rateByOccupancy&quot;&#x3A;&#x7B;&quot;1&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;89,&quot;ratePreDiscount&quot;&#x3A;89,&quot;quantity&quot;&#x3A;3,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;2&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;89,&quot;ratePreDiscount&quot;&#x3A;89,&quot;quantity&quot;&#x3A;3,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;3&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;89,&quot;ratePreDiscount&quot;&#x3A;89,&quot;quantity&quot;&#x3A;3,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;&#x7D;,&quot;name&quot;&#x3A;&quot;Partial&#x20;ocean&#x20;view&#x20;studio&quot;,&quot;availableUnitIds&quot;&#x3A;&#x5B;102192126,102192125,102192124,102192123,102192122,102192121&#x5D;&#x7D;"></div>
+<div data-room-type-data="&#x7B;&quot;is_dorm&quot;&#x3A;false,&quot;exemptSurchargeIds&quot;&#x3A;&#x5B;&#x5D;,&quot;rateByOccupancy&quot;&#x3A;&#x7B;&quot;1&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;84,&quot;ratePreDiscount&quot;&#x3A;84,&quot;quantity&quot;&#x3A;3,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;2&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;84,&quot;ratePreDiscount&quot;&#x3A;84,&quot;quantity&quot;&#x3A;3,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;&#x7D;,&quot;name&quot;&#x3A;&quot;Ocean&#x20;view&#x20;penthouse&#x20;studio&quot;,&quot;availableUnitIds&quot;&#x3A;&#x5B;102192127&#x5D;&#x7D;"></div>
+<div class="card-item__description" dir="auto">
+ <h3 class="text-xl font-semibold mb-4">Standard - with air conditioning</h3>
+ <div class="card-item__amenities tags">
+ <div aria-label="Bed&#x20;spaces&#x3A;&#x20;2" class="amenities__amount tags has-addons" title="Bed&#x20;spaces&#x3A;&#x20;2">
+ <span class="tag"><i class="fas fa-user"></i></span>
+ <span class="tag">
+ 2
+ </span>
+ </div>
+ </div>
+ <div class="sirvoy-long-text"
+ data-read-more="Read&#x20;more"
+ data-read-less="Read&#x20;less"
+ >
+ Private bath, 2 singles, AC, digital cable TV.
+ </div>
+ </div>
+<div class="card-item__description" dir="auto">
+ <h3 class="text-xl font-semibold mb-4">Ocean view - with air conditioning</h3>
+ <div class="card-item__amenities tags">
+ <div aria-label="Bed&#x20;spaces&#x3A;&#x20;2" class="amenities__amount tags has-addons" title="Bed&#x20;spaces&#x3A;&#x20;2">
+ <span class="tag"><i class="fas fa-user"></i></span>
+ <span class="tag">
+ 2
+ </span>
+ </div>
+ </div>
+ <div class="sirvoy-long-text"
+ data-read-more="Read&#x20;more"
+ data-read-less="Read&#x20;less"
+ >
+ Ocean view room, private bath, 1 queen, AC, digital safe, digital cable TV, balcony, mini fridge.
+ </div>
+ </div>
+<div class="card-item__description" dir="auto">
+ <h3 class="text-xl font-semibold mb-4">Ground floor studio</h3>
+ <div class="card-item__amenities tags">
+ <div aria-label="Bed&#x20;spaces&#x3A;&#x20;1,&#x20;Extra&#x20;bed&#x20;spaces&#x3A;&#x20;2" class="amenities__amount tags has-addons" title="Bed&#x20;spaces&#x3A;&#x20;1,&#x20;Extra&#x20;bed&#x20;spaces&#x3A;&#x20;2">
+ <span class="tag"><i class="fas fa-user"></i></span>
+ <span class="tag">
+ 1+2
+ </span>
+ </div>
+ </div>
+ <div class="sirvoy-long-text"
+ data-read-more="Read&#x20;more"
+ data-read-less="Read&#x20;less"
+ >
+ Studio with private bath, kitchenette, AC, 3 singles, digital safe, flat screen digital cable TV.
+ </div>
+ </div>
+<div class="card-item__description" dir="auto">
+ <h3 class="text-xl font-semibold mb-4">Partial ocean view studio</h3>
+ <div class="card-item__amenities tags">
+ <div aria-label="Bed&#x20;spaces&#x3A;&#x20;1,&#x20;Extra&#x20;bed&#x20;spaces&#x3A;&#x20;2" class="amenities__amount tags has-addons" title="Bed&#x20;spaces&#x3A;&#x20;1,&#x20;Extra&#x20;bed&#x20;spaces&#x3A;&#x20;2">
+ <span class="tag"><i class="fas fa-user"></i></span>
+ <span class="tag">
+ 1+2
+ </span>
+ </div>
+ </div>
+ <div class="sirvoy-long-text"
+ data-read-more="Read&#x20;more"
+ data-read-less="Read&#x20;less"
+ >
+ 2nd or 3rd floor ocean view studio with balcony, private bath, kitchenette, AC, 1 queen and 1 single, digital safe, flat screen digital cable TV.
+ </div>
+ </div>
+<div class="card-item__description" dir="auto">
+ <h3 class="text-xl font-semibold mb-4">Ocean view penthouse studio</h3>
+ <div class="card-item__amenities tags">
+ <div aria-label="Bed&#x20;spaces&#x3A;&#x20;1,&#x20;Extra&#x20;bed&#x20;spaces&#x3A;&#x20;1" class="amenities__amount tags has-addons" title="Bed&#x20;spaces&#x3A;&#x20;1,&#x20;Extra&#x20;bed&#x20;spaces&#x3A;&#x20;1">
+ <span class="tag"><i class="fas fa-user"></i></span>
+ <span class="tag">
+ 1+1
+ </span>
+ </div>
+ </div>
+ <div class="sirvoy-long-text"
+ data-read-more="Read&#x20;more"
+ data-read-less="Read&#x20;less"
+ >
+ 4th floor ocean view penthouse studio with private bath, kitchenette, AC, 1 queen, digital safe, flat screen digital cable TV.
+ </div>
+ </div>
+</body></html>

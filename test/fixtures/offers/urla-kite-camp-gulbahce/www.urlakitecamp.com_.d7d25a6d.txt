@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="tr" class="no-js">
+	<head>
+<meta charset="utf-8">
+<title>İzmir Kitesurf Eğitimi ve Konaklama | Urla Kite Camp</title>
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta name="theme-color" content="#ffffff">
+
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="img/kitesurf.jpg" fetchpriority="high">
+
+<meta name="description" content="Urla Kite Camp, İzmir Urla Gülbahçe'de kitesurf dersleri, kiteboard eğitimi, konaklama, cafe ve surf shop hizmetleri sunan kite destinasyonudur." />
+<meta name="keywords" content="Urla kite camp, Urla kitesurf, Urla kiteboard, Urla kite school, Urla kitesurf school, İzmir kitesurf, Turkey kite camp, Turkey kitesurf holiday, kiteboarding Turkey, kitesurf hotel Urla, kite hotel Turkey, kiteboarding lessons, beginner kitesurf lessons, advanced kite coaching, kite rental Urla, kitesurf equipment shop, surf school Urla, wind sports Turkey, beachfront kite camp, all inclusive kite camp, kitesurf vacation Turkey" />
+<link rel="canonical" href="https://www.urlakitecamp.com/" />
+
+<meta property="og:locale" content="tr_TR" />
+<meta property="og:locale:alternate" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Urla Kite Camp | Kitesurf Okulu, Otel, Cafe ve Shop" />
+<meta property="og:description" content="Urla Gülbahçe'de kitesurf dersleri, kiteboard eğitimi, konaklama, cafe ve surf shop. Detaylı bilgi: +90 532 606 55 79" />
+<meta property="og:url" content="https://www.urlakitecamp.com/" />
+<meta property="og:site_name" content="URLA KITE CAMP" />
+<meta property="og:image" content="https://www.urlakitecamp.com/img/kitesurf.jpg" />
+<meta property="og:image:width" content="3264" />
+<meta property="og:image:height" content="2133" />
+<meta property="og:image:alt" content="Urla Kite Camp kitesurf eğitimi" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Urla Kite Camp | Kitesurf Okulu, Otel, Cafe ve Shop" />
+<meta name="twitter:description" content="Urla Gülbahçe'de kitesurf dersleri, konaklama, cafe ve surf shop." />
+<meta name="twitter:image" content="https://www.urlakitecamp.com/img/kitesurf.jpg" />
+
+
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+
+
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+
+<script></script>
+<script type="application/ld+json">
+{
+	"@context": "https://schema.org",
+	"@type": "SportsActivityLocation",
+	"name": "Urla Kite Camp",
+	"url": "https://www.urlakitecamp.com/",
+	"image": "https://www.urlakitecamp.com/img/kitesurf.jpg",
+	"description": "Urla Gülbahçe'de kitesurf dersleri, kiteboard eğitimi, konaklama, cafe ve surf shop.",
+	"telephone": "+905326065579",
+	"address": {
+		"@type": "PostalAddress",
+		"streetAddress": "Gülbahçe Mah. 12075/1 Sok No:5",
+		"addressLocality": "Urla",
+		"addressRegion": "İzmir",
+		"postalCode": "35430",
+		"addressCountry": "TR"
+	},
+	"areaServed": ["Urla", "İzmir", "Türkiye"],
+	"sport": ["Kitesurf", "Kiteboard", "Wing Foil"]
+}
+</script>
+
+	</head>
+	<body class="loading">
+		<svg class="hidden"></svg>
+		<main>
+			<div class="sections">
+				<header class="sections__header">
+					<a class="site-logo" href="index.html" aria-label="Urla Kite Camp ana sayfa">
+						<img src="img/logo.png" alt="Urla Kite Camp" width="200" loading="eager" decoding="async">
+					</a>
+				</header>
+				<!-- menu -->
+				<nav class="menu">
+					<ul class="menu__inner">
+						<li class="menu__item"><a class="menu__item-link" href="#kitesurf" data-section="0">Kite Surf</a></li>
+						<li class="menu__item"><a class="menu__item-link" href="#hotel" data-section="1">Hotel</a></li>
+						<li class="menu__item"><a class="menu__item-link" href="#cafe" data-section="2">Cafe</a></li>
+						<li class="menu__item"><a class="menu__item-link" href="#shop" data-section="3">Shop</a></li>
+						<li class="menu__item"><a class="menu__item-link" href="#kite-stay" data-section="4">Kite & Stay</a></li>
+								<li class="menu__item"><a class="menu__item-link" href="#community" data-section="5">Topluluk</a></li>
+								<li class="menu__item"><a class="menu__item-link" href="#spot" data-section="6">Gülbahçe / URLA</a></li>
+						<li class="menu__item"><a class="menu__item-link" href="#contact" data-section="7">Say Hi!</a></li>
+					</ul>
+					<button class="menu__toggle" type="button" aria-label="Menüyü aç veya kapat">
+						<span class="menu__toggle-inner menu__toggle-inner--open">
+							<svg class="icon icon--menu"></svg>
+						</span>
+						<span class="menu__toggle-inner menu__toggle-inner--close">
+							<svg class="icon icon--close"></svg>
+						</span>
+					</button>
+				</nav>
+				<!-- facts expander with toggles; content for each is in its section -->
+				<div class="facts">
+					<div class="facts__toggle">
+						<span class="facts__toggle-inner facts__toggle-inner--more">
+							<svg class="icon icon--dot"></svg>
+							<span class="facts__toggle-text">Detayları Gör</span>
+						</span>
+						<span class="facts__toggle-inner facts__toggle-inner--less">
+							<svg class="icon icon--cross"></svg>
+							<span class="facts__toggle-text">Detayları Kapat</span>
+						</span>
+					</div>
+					<button class="button-contentclose" type="button" aria-label="Görselleri kapat">
+						<svg class="icon icon--close"></svg>
+					</button>
+				</div>
+				<!-- index -->
+				<div class="sections__index">
+					<span class="sections__index-current">
+						<span class="sections__index-inner">01</span>
+					</span>
+					<span class="sections__index-total">08</span>
+				</div>
+				<!-- navigation down -->
+				<nav class="sections__nav">
+					<button class="sections__nav-item sections__nav-item--prev" type="button" aria-label="Önceki bölüm">
+						<svg class="icon icon--navup"></svg>
+					</button>
+					<button class="sections__nav-item sections__nav-item--next" type="button" aria-label="Sonraki bölüm">
+						<svg class="icon icon--navdown"></svg>
+					</button>
+				</nav>
+
+
+<!-- kitesurf section -->
+<section class="section section--current" id="kitesurf">
+<div class="section__content">
+<h1 class="section__title">Kitesurf</h1>
+
+<!-- this below line should change as the section__title above changes -->
+<!-- <h2 class="section__title_sub">İzmir'de Kitesurf Öğrenmek İçin Doğru Adres</h2> -->
+
+<div class="section__description_container">
+<p class="section__description">
+<span class="section__description-inner">Urla Kite Camp, İzmir'in Gülbahçe bölgesinde uzun yıllardır kitesurf eğitimi veren köklü bir kitesurf okuludur. Düzenli yaz rüzgarları, geniş sürüş alanı ve güvenli öğrenme koşulları sayesinde Gülbahçe, Türkiye'de kitesurf öğrenmek isteyenlerin en çok tercih ettiği noktalardan biridir.</span></p>
+
+<p class="section__description">
+<span class="section__description-inner">Daha önce hiç kitesurf yapmamış olsanız da, mevcut seviyenizi geliştirmek isteseniz de eğitim programlarımız her seviyeye uygun olarak planlanmaktadır.
+</span></p>
+
+<p class="section__description">
+	<span class="section__description-inner">Urla Kite Camp'teki eğitimler, güvenlik ve sürdürülebilir öğrenme prensipleri doğrultusunda gerçekleştirilmektedir.
+</span></p>
+</div>
+
+</div>
+<div class="section__img">
+<div class="section__img-inner" style="background-image: url(img/kitesurf.jpg)"></div>
+</div>
+<div class="section__more">
+<div class="section__more-inner section__more-inner--bg1">
+<span class="section__more-text">Kitesurf öğrenmek istiyor musun ?</span>
+<a href="https://wa.me/+905326065579" class="section__more-link">
+<span class="section__more-linktext">Hemen ders randevusu al</span>
+<svg class="icon icon--arrowlong"></svg>
+</a>
+</div>
+</div>
+<div class="section__expander"></div>
+
+<ul class="section__facts">
+<li class="section__facts-item">
+<h3 class="section__facts-title">Eğitim İçeriği</h3><br>
+<span class="section__facts-detail">- Rüzgar ve güvenlik teorisi</span>
+</li>
+
+<li class="section__facts-item"><span class="section__facts-detail">- Ekipman tanıtımı</span></li>
+<li class="section__facts-item"><span class="section__facts-detail">- Uçurtma kontrolü</span></li>
+<li class="section__facts-item"><span class="section__facts-detail">- Kara çalışmaları</span></li>
+<li class="section__facts-item"><span class="section__facts-detail">- Suda başlangıç teknikleri</span></li>
+<li class="section__facts-item"><span class="section__facts-detail">- Board start çalışmaları</span></li>
+<li class="section__facts-item"><span class="section__facts-detail">- İlk sürüş deneyimleri</span></li>
+
+
+
+
+<!-- <li class="section__facts-item">
+<h3 class="section__facts-title">İleri Seviye Paketi</h3>
+<span class="section__facts-detail">Kendini geliştirmek isteyenler için</span>
+</li>
+<li class="section__facts-item">
+<h3 class="section__facts-title">Wing Foil</h3>
+<span class="section__facts-detail">Wing Foil paketimiz</span>
+</li>
+
+<li class="section__facts-item">
+<h3 class="section__facts-title">Ekipman Kiralama</h3>
+<span class="section__facts-detail">Yarım yada tam gün ekipman kiralama hizmeti</span>
+</li>
+<li class="section__facts-item">
+<h3 class="section__facts-title">Süpervizyon Hizmeti</h3>
+<span class="section__facts-detail">Tecrübeli eğitmenimiz size eşlik eder</span>
+</li>
+ -->
+
+<li class="section__facts-item section__facts-item--clickable" data-gallery="gallery1">
+<div class="section__facts-img">
+<img src="img/kitesurf/kite1.jpg" alt="Kitesurf Görselleri" loading="lazy" decoding="async"/>
+<svg class="icon icon--grid"></svg>
+</div>
+<h3 class="section__facts-title">Kitesurf Görselleri</h3>
+<span class="section__facts-detail">Eğitimlerden Görseller</span>
+</li>
+</ul>
+
+<div class="section__gallery" id="gallery1">
+<h3 class="section__gallery-item section__gallery-item--title">Kitesurf Görselleri</h3>
+
+<a class="section__gallery-item" href="img/kitesurf/kite1.jpg"><img src="img/kitesurf/kite1.jpg" alt="Kitesurf Görselleri 1" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/kitesurf/kite2.jpg"><img src="img/kitesurf/kite2.jpg" alt="Kitesurf Görselleri 2" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/kitesurf/kite3.jpg"><img src="img/kitesurf/kite3.jpg" alt="Kitesurf Görselleri 3" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/kitesurf/kite4.jpg"><img src="img/kitesurf/kite4.jpg" alt="Kitesurf Görselleri 4" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/kitesurf/kite5.jpg"><img src="img/kitesurf/kite5.jpg" alt="Kitesurf Görselleri 5" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/kitesurf/kite6.jpg"><img src="img/kitesurf/kite6.jpg" alt="Kitesurf Görselleri 6" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/kitesurf/kite7.jpg"><img src="img/kitesurf/kite7.jpg" alt="Kitesurf Görselleri 7" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/kitesurf/kite8.jpg"><img src="img/kitesurf/kite8.jpg" alt="Kitesurf Görselleri 8" loading="lazy" decoding="async"/></a> 
+</div>
+
+
+
+</section>
+<!-- kitesurf section -->
+
+<!-- hotel section -->
+
+				<section class="section" id="hotel">
+					<div class="section__content">
+						<h2 class="section__title">hotel</h2>
+
+<!-- this below line should change as the section__title above changes -->
+<!-- <h2 class="section__title_sub">Gülbahçe’de Denize Yakın Konaklama</h2> -->
+
+<div class="section__description_container">
+<p class="section__description">
+<span class="section__description-inner">Urla Kite Camp’i farklı kılan en önemli özelliklerden biri, misafirlerine yalnızca bir konaklama imkanı değil, samimi bir topluluk deneyimi sunmasıdır. Yıllar içinde oluşan kamp kültürü sayesinde misafirlerimiz kendilerini evlerinde hisseder, yeni insanlarla tanışır ve unutulmaz anılar biriktirir.
+</span></p>
+
+<p class="section__description">
+<span class="section__description-inner">İster doğayla iç içe kamp yapmayı tercih edin, ister konforlu bir odada konaklayın; Urla Kite Camp’te ihtiyaçlarınıza uygun bir seçenek bulabilirsiniz.
+</span></p>
+
+<p class="section__description">
+<span class="section__description-inner">İzmir’in gözde bölgelerinden Gülbahçe’de yer alan tesisimiz, doğa ve denizin buluştuğu özel bir konumda bulunmaktadır. Şehir hayatının yoğunluğundan uzaklaşmak, sakin bir ortamda dinlenmek ve Urla’nın eşsiz atmosferini deneyimlemek isteyen misafirlerimiz için ideal bir konaklama sunuyoruz.
+</span></p>
+
+<p class="section__description">
+<span class="section__description-inner">Denize yalnızca birkaç adım mesafedeki tesisimiz, hem hafta sonu kaçamakları hem de uzun süreli tatiller için keyifli ve huzurlu bir ortam sağlar.
+</span></p>
+</div>
+
+
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(img/otel.png)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg2">
+							<span class="section__more-text">Konaklama rezervasyonu yapmak ister misiniz ?</span>
+							<a href="https://wa.me/+905326065579" class="section__more-link">
+								<span class="section__more-linktext">Rezervasyon için iletişim</span>
+								<svg class="icon icon--arrowlong"></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Design Room</h3>
+							<span class="section__facts-detail">Daha geniş yaşam alanı ve ekstra konfor arayan misafirlerimiz için tasarlanan odalarımız, ferah ve rahat bir konaklama deneyimi sunar.</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Classic Room</h3>
+							<span class="section__facts-detail">Sade, konforlu ve işlevsel bir konaklama tercih eden misafirlerimiz için ideal seçenektir.</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Çadır Konaklama</h3>
+							<span class="section__facts-detail">Doğayla iç içe gerçek bir kamp deneyimi yaşamak isteyenler için çadır alanımız hizmet vermektedir. Özellikle yaz aylarında kamp atmosferini seven misafirlerimiz tarafından yoğun ilgi görmektedir.</span>
+						</li>
+						<li class="section__facts-item section__facts-item--clickable" data-gallery="gallery2">
+							<div class="section__facts-img">
+								<img src="img/hotel/oda1.jpg" alt="Hotel Görselleri" loading="lazy" decoding="async"/>
+								<svg class="icon icon--grid"></svg>
+							</div>
+							<h3 class="section__facts-title">Hotel & Kamp Alanı</h3>
+							<span class="section__facts-detail">Tesisimizden Görseller</span>
+						</li>
+					</ul>
+					<div class="section__gallery" id="gallery2">
+						<h3 class="section__gallery-item section__gallery-item--title">Tesisimizden Görseller</h3>
+<a class="section__gallery-item" href="img/hotel/oda1.jpg"><img src="img/hotel/oda1.jpg" alt="hotel Görselleri" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/hotel/oda2.jpg"><img src="img/hotel/oda2.jpg" alt="hotel Görselleri" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/hotel/oda3.jpg"><img src="img/hotel/oda3.jpg" alt="hotel Görselleri" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/hotel/oda4.jpg"><img src="img/hotel/oda4.jpg" alt="hotel Görselleri" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/hotel/oda5.jpg"><img src="img/hotel/oda5.jpg" alt="hotel Görselleri" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/hotel/oda6.jpg"><img src="img/hotel/oda6.jpg" alt="hotel Görselleri" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/hotel/oda7.jpg"><img src="img/hotel/oda7.jpg" alt="hotel Görselleri" loading="lazy" decoding="async"/></a>
+<a class="section__gallery-item" href="img/hotel/oda8.jpg"><img src="img/hotel/oda8.jpg" alt="hotel Görselleri" loading="lazy" decoding="async"/></a> 
+					</div>
+				</section>
+
+				<!--/ hotel section -->
+
+<!-- cafe section -->
+
+				<section class="section" id="cafe">
+					<div class="section__content">
+						<h2 class="section__title">Cafe</h2>
+						<div class="section__description_container">
+						<p class="section__description"><span class="section__description-inner">Akşam yemeği, kahvaltı ya da gün içinde küçük bir atıştırmalık… Aradığınız her lezzet Kite Camp mutfağında sizi bekliyor. Açılışımızdan birkaç yıl sonra gelen yoğun ilgiyle birlikte kurduğumuz geleneksel Anadolu odun fırını, bugün mutfağımızın en özel köşelerinden biri haline geldi. Sahildeki kiteboardcuların ve misafirlerimizin favorisi olan bu fırından çıkan taş fırın pizzalar ve özel güveçlerde hazırlanan ev yemekleri, kamp atmosferine sıcacık bir lezzet katıyor.</span></p>	
+						
+						<p class="section__description"><span class="section__description-inner">Gün boyunca enerji ihtiyacınızı karşılamak için vitamin barımızda taze meyvelerle hazırlanan smoothie’ler ve sağlıklı içecekler de sunuyoruz. Kite Camp’ta sunduğumuz her hizmette olduğu gibi restoranımızda da kalite ve samimiyetten ödün vermeden, siz değerli misafirlerimize keyifli ve lezzet dolu bir deneyim yaşatmayı amaçlıyoruz.</span></p>
+						</div>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(img/cafe.jpg)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg3">
+							<span class="section__more-text">Özel gün ve kutlamalar için bizi düşünür müsünüz ?</span>
+							<a href="https://wa.me/+905326065579" class="section__more-link">
+								<span class="section__more-linktext">Cafe / Restaurant rezervasyonu için bizi arayın</span>
+								<svg class="icon icon--arrowlong"></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Kahvaltı Seçenekleri</h3>
+							<span class="section__facts-detail">Serpme Eğe Kahvaltısı, Çeşitli Bowllar ve Taze Kahve</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Atıştırmalıklar</h3>
+							<span class="section__facts-detail">Gün boyu hafif atıştırmalık ve kahve molası</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Vegan Seçenekler</h3>
+							<span class="section__facts-detail">Doğal malzemelerle hazırlanmış vegan lezzetler</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">İmza Kokteyller</h3>
+							<span class="section__facts-detail">Özel karışımlar ve sezonluk tarifler</span>
+						</li>
+						<li class="section__facts-item section__facts-item--clickable" data-gallery="gallery3">
+							<div class="section__facts-img">
+								<img src="img/cafe/kafe1.jpg" alt="Cafe Görselleri" loading="lazy" decoding="async"/>
+								<svg class="icon icon--grid"></svg>
+							</div>
+							<h3 class="section__facts-title">Cafe Görselleri</h3>
+							<span class="section__facts-detail">Lezzetli kareler, sıcak atmosfer</span>
+						</li>
+					</ul>
+
+					<div class="section__gallery" id="gallery3">
+						<h3 class="section__gallery-item section__gallery-item--title">Cafe Görselleri</h3>
+						<a class="section__gallery-item" href="img/cafe/kafe1.jpg"><img src="img/cafe/kafe1.jpg" alt="Cafe Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/cafe/kafe2.jpg"><img src="img/cafe/kafe2.jpg" alt="Cafe Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/cafe/kafe3.jpg"><img src="img/cafe/kafe3.jpg" alt="Cafe Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/cafe/kafe4.jpg"><img src="img/cafe/kafe4.jpg" alt="Cafe Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/cafe/kafe5.jpg"><img src="img/cafe/kafe5.jpg" alt="Cafe Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/cafe/kafe6.jpg"><img src="img/cafe/kafe6.jpg" alt="Cafe Görselleri" loading="lazy" decoding="async"/></a>
+					</div>
+
+				</section>
+
+<!--/ cafe section -->
+<!-- shop section -->
+
+
+
+				<section class="section" id="shop">
+					<div class="section__content">
+						<h2 class="section__title">shop</h2>
+						<div class="section__description_container">
+						<p class="section__description"><span class="section__description-inner">Kite Camp içerisinde, dünyanın önde gelen aksiyon ve su sporları markalarını bir arada bulabilirsiniz. Naish Kites, Quiksilver, GoPro ve G-Shock gibi prestijli markaların seçili ürünleri, hem sporcuların ihtiyaçlarını karşılamak hem de kamp deneyimini tamamlamak için sizlerle buluşuyor.</span></p>
+					
+						<p class="section__description"><span class="section__description-inner">Aynı zamanda Kite Camp, dünyaca ünlü öncü kiteboard markası olan “Naish Kites”ın Türkiye temsilcisidir. Naish’in yüksek performanslı ekipmanları ve ürünleri, özel sipariş ile ithal edilerek kite tutkunlarına güvenilir ve kaliteli bir alışveriş deneyimi sunulmaktadır..</span></p>
+						</div>
+					</div>
+						<div class="section__img">
+							<div class="section__img-inner" style="background-image: url(img/shop.webp)"></div>
+						</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg4">
+							<span class="section__more-text">Kite Ekipmanı mı Arıyorsun ?</span>
+							<a href="https://wa.me/+905326065579" class="section__more-link">
+								<span class="section__more-linktext">Uzman Ekip Arkadaşımız ile Görüş</span>
+								<svg class="icon icon--arrowlong"></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+<ul class="section__facts">
+	<li class="section__facts-item">
+		<h3 class="section__facts-title">Naish Kites</h3>
+		<span class="section__facts-detail">
+			Dünyanın öncü kiteboard markalarından biri olan Naish, yüksek performanslı ekipmanlarıyla profesyonellerin tercihi.
+		</span>
+	</li>
+
+	<li class="section__facts-item">
+		<h3 class="section__facts-title">Quiksilver</h3>
+		<span class="section__facts-detail">
+			Sörf ve aksiyon sporlarının ikonik markası Quiksilver, konforlu ve stil sahibi plaj giyim ürünleri sunar.
+		</span>
+	</li>
+
+	<li class="section__facts-item">
+		<h3 class="section__facts-title">GoPro</h3>
+		<span class="section__facts-detail">
+			Macera anlarını en kaliteli şekilde kaydetmek isteyenler için dayanıklı ve profesyonel aksiyon kameraları.
+		</span>
+	</li>
+
+	<li class="section__facts-item">
+		<h3 class="section__facts-title">G-Shock</h3>
+		<span class="section__facts-detail">
+			Zorlu doğa ve spor koşullarına dayanıklı yapısıyla öne çıkan efsanevi saat markası.
+		</span>
+	</li>
+	<li class="section__facts-item section__facts-item--clickable" data-gallery="gallery4">
+		<div class="section__facts-img">
+			<img src="img/shop.webp" alt="Shop Görselleri" loading="lazy" decoding="async"/>
+			<svg class="icon icon--grid"></svg>
+		</div>
+		<h3 class="section__facts-title">Shop Görselleri</h3>
+		<span class="section__facts-detail">Mağaza ve ürünlerden görseller</span>
+	</li>
+</ul>
+					<div class="section__gallery" id="gallery4">
+						<h3 class="section__gallery-item section__gallery-item--title">Shop Görselleri</h3>
+						<a class="section__gallery-item" href="img/shop.webp"><img src="img/shop.webp" alt="Shop Görselleri" loading="lazy" decoding="async"/></a>
+					</div>
+				</section>
+<!--/ shop section -->
+
+
+<!-- kite & stay section -->
+
+				<section class="section" id="kite-stay">
+					<div class="section__content">
+						<h2 class="section__title">Kite & Stay</h2>
+						<div class="section__description_container">
+						<p class="section__description"><span class="section__description-inner">En çok tercih edilen paketlerimizden biri olan Kite & Stay Experience, kitesurf eğitimi ve konforlu konaklamayı bir araya getirir.</span></p>
+						<p class="section__description"><span class="section__description-inner">Hem kitesurf öğrenmek hem de Urla'nın eşsiz atmosferinde keyifli bir tatil geçirmek isteyenler için ideal bir deneyim sunuyoruz.</span></p>
+						<p class="section__description"><span class="section__description-inner">Urla Kamp Alanı ve Sosyal Atmosfer</span></p>
+						<p class="section__description"><span class="section__description-inner">Urla Kite Camp, yalnızca bir konaklama tesisi değil; aynı zamanda keyifli anılar biriktirebileceğiniz sosyal bir yaşam alanıdır.</span></p>
+						<p class="section__description"><span class="section__description-inner">Gün boyunca denizin ve güneşin tadını çıkarabilir, ortak alanlarda dinlenebilir ve farklı şehirlerden gelen misafirlerle tanışarak kamp atmosferinin bir parçası olabilirsiniz.</span></p>
+						<p class="section__description"><span class="section__description-inner">Tesisimizde sunulan olanaklar: Ücretsiz Wi-Fi, ortak kullanım alanları, sıcak duş, restoran, bar, ücretsiz otopark, kamp alanı ve elektrik erişimi.</span></p>
+						<p class="section__description"><span class="section__description-inner">Urla’da denize yakın, samimi ve huzurlu bir konaklama deneyimi arıyorsanız, Urla Kite Camp sizleri bekliyor.</span></p>
+						</div>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(img/kite%26stay.webp)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg1">
+							<span class="section__more-text">Kite & Stay paketi hakkında bilgi almak ister misiniz?</span>
+							<a href="https://wa.me/+905326065579" class="section__more-link">
+								<span class="section__more-linktext">Detaylar için iletişime geçin</span>
+								<svg class="icon icon--arrowlong"></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Paket İçeriği</h3>
+							<span class="section__facts-detail">2 Gece 3 Gün Konaklama</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Kitesurf Eğitimi</h3>
+							<span class="section__facts-detail">6 Saat Kitesurf Eğitimi ve tüm ekipman kullanımı</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Konaklama Dahil</h3>
+							<span class="section__facts-detail">Kahvaltı, ücretsiz Wi-Fi, gün boyu çay ve kahve</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Sosyal Kamp Atmosferi</h3>
+							<span class="section__facts-detail">Kite topluluğuna erişim</span>
+						</li>
+						<li class="section__facts-item section__facts-item--clickable" data-gallery="gallery5">
+							<div class="section__facts-img">
+								<img src="img/kite%26stay/kite%26stay1.jpg" alt="Kite & Stay Görselleri" loading="lazy" decoding="async"/>
+								<svg class="icon icon--grid"></svg>
+							</div>
+							<h3 class="section__facts-title">Kite & Stay Görselleri</h3>
+							<span class="section__facts-detail">Kite & Stay bölümünden görseller</span>
+						</li>
+					</ul>
+					<div class="section__gallery" id="gallery5">
+						<h3 class="section__gallery-item section__gallery-item--title">Kite & Stay Görselleri</h3>
+						<a class="section__gallery-item" href="img/kite%26stay/kite%26stay1.jpg"><img src="img/kite%26stay/kite%26stay1.jpg" alt="Kite & Stay Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/kite%26stay/kite%26stay2.jpg"><img src="img/kite%26stay/kite%26stay2.jpg" alt="Kite & Stay Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/kite%26stay/kite%26stay3.jpg"><img src="img/kite%26stay/kite%26stay3.jpg" alt="Kite & Stay Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/kite%26stay/kite%26stay4.jpg"><img src="img/kite%26stay/kite%26stay4.jpg" alt="Kite & Stay Görselleri" loading="lazy" decoding="async"/></a>
+					</div>
+				</section>
+
+<!--/ kite & stay section -->
+
+<!-- community section -->
+
+				<section class="section" id="community">
+					<div class="section__content">
+						<h2 class="section__title">Topluluk</h2>
+						<div class="section__description_container">
+						<p class="section__description"><span class="section__description-inner">Türkiye'nin köklü kite topluluklarından birine katılın.</span></p>
+						<p class="section__description"><span class="section__description-inner">Urla Kite Camp, yıllardır yerli ve yabancı birçok sporcuyu ağırlayan önemli bir buluşma noktasıdır.</span></p>
+						<p class="section__description"><span class="section__description-inner">Burada yalnızca kitesurf öğrenmezsiniz; aynı zamanda Türkiye'nin en aktif kite topluluklarından biriyle tanışma fırsatı yakalarsınız. Eğitim sonrasında da devam eden sosyal çevre ve rider ağı, misafirlerimizin bizi tekrar tercih etmesindeki en önemli nedenlerden biridir.</span></p>
+						</div>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(img/community.webp)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg2">
+							<span class="section__more-text">Kamp topluluğuna katılmak ister misiniz?</span>
+							<a href="https://wa.me/+905326065579" class="section__more-link">
+								<span class="section__more-linktext">Bize ulaşın</span>
+								<svg class="icon icon--arrowlong"></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Topluluk</h3>
+							<span class="section__facts-detail">Kamp kültürü ve sosyal alanlar</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Paylaşılan Deneyim</h3>
+							<span class="section__facts-detail">Rüzgar, deniz ve kamp yaşamı</span>
+						</li>
+						<li class="section__facts-item section__facts-item--clickable" data-gallery="gallery6">
+							<div class="section__facts-img">
+								<img src="img/community/community1.jpg" alt="Topluluk Görselleri" loading="lazy" decoding="async"/>
+								<svg class="icon icon--grid"></svg>
+							</div>
+							<h3 class="section__facts-title">Topluluk Görselleri</h3>
+							<span class="section__facts-detail">Kamp hayatından görseller</span>
+						</li>
+					</ul>
+					<div class="section__gallery" id="gallery6">
+						<h3 class="section__gallery-item section__gallery-item--title">Topluluk Görselleri</h3>
+						<a class="section__gallery-item" href="img/community/community1.jpg"><img src="img/community/community1.jpg" alt="Topluluk Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/community/community2.jpg"><img src="img/community/community2.jpg" alt="Topluluk Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/community/community3.jpg"><img src="img/community/community3.jpg" alt="Topluluk Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/community/community4.jpg"><img src="img/community/community4.jpg" alt="Topluluk Görselleri" loading="lazy" decoding="async"/></a>
+					</div>
+				</section>
+
+<!--/ community section -->
+
+<!-- spot section -->
+
+				<section class="section" id="spot">
+					<div class="section__content">
+						<h2 class="section__title">Gülbahçe</h2>
+						<div class="section__description_container">
+						<p class="section__description"><span class="section__description-inner">Neden Gülbahçe'de Kitesurf?</span></p>
+						<p class="section__description"><span class="section__description-inner">Urla Gülbahçe, yaz aylarında etkili olan termal rüzgar sistemi sayesinde düzenli ve ideal rüzgar koşulları sunar. Bu doğal avantaj, hem başlangıç seviyesindeki öğrenciler hem de deneyimli sporcular için güvenli ve keyifli bir sürüş ortamı oluşturur.</span></p>
+						<p class="section__description"><span class="section__description-inner">İzmir şehir merkezine yakın konumu sayesinde kolay ulaşım imkanı sunan Gülbahçe, aynı zamanda sakin atmosferi ve doğal yapısıyla öne çıkar.</span></p>
+						<p class="section__description"><span class="section__description-inner">Gülbahçe'nin doğal güzelliklerini keşfedin. Urla'nın en sevilen bölgelerinden biri olan Gülbahçe; gün batımları, sıcakkanlı lokalleri, yürüyüş rotaları ve doğal yapısıyla dikkat çekmektedir.</span></p>
+						<p class="section__description"><span class="section__description-inner">Bölge aynı zamanda Türkiye'nin önemli kitesurf merkezlerinden biri olarak bilinmekte ve yıl boyunca yerli ve yabancı ziyaretçileri ağırlamaktadır. Urla Kite Camp olarak 20 yıllık kar ve su sporları deneyimimizi Gülbahçe'de kitesurf ile devam ettirmekteyiz.</span></p>
+						<p class="section__description"><span class="section__description-inner">Konaklamanız boyunca Urla merkez, sahil rotaları, yerel restoranlar ve çevredeki doğal güzelliklere kolayca ulaşabilirsiniz. Doğanın, rüzgarın ve Ege'nin huzurlu atmosferinin keyfini çıkarmak için bizimle iletişime geçebilir ve rezervasyonunuzu oluşturabilirsiniz.</span></p>
+						</div>
+					</div>
+					<div class="section__img">
+						<div class="section__img-inner" style="background-image: url(img/spot.jpg)"></div>
+					</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg3">
+							<span class="section__more-text">Gülbahçe spotu hakkında bilgi almak ister misiniz?</span>
+							<a href="https://wa.me/+905326065579" class="section__more-link">
+								<span class="section__more-linktext">Bize yazın</span>
+								<svg class="icon icon--arrowlong"></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+					<ul class="section__facts">
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Gülbahçe / URLA</h3>
+							<span class="section__facts-detail">Urla'da rüzgar ve denizle iç içe bir spot</span>
+						</li>
+						<li class="section__facts-item">
+							<h3 class="section__facts-title">Spot Deneyimi</h3>
+							<span class="section__facts-detail">Eğitim, pratik ve kamp hayatı için uygun ortam</span>
+						</li>
+						<li class="section__facts-item section__facts-item--clickable" data-gallery="gallery7">
+							<div class="section__facts-img">
+								<img src="img/spot/spot1.jpg" alt="Gülbahçe Görselleri" loading="lazy" decoding="async"/>
+								<svg class="icon icon--grid"></svg>
+							</div>
+							<h3 class="section__facts-title">Gülbahçe Görselleri</h3>
+							<span class="section__facts-detail">Spot ve çevresinden görseller</span>
+						</li>
+					</ul>
+					<div class="section__gallery" id="gallery7">
+						<h3 class="section__gallery-item section__gallery-item--title">Gülbahçe Görselleri</h3>
+						<a class="section__gallery-item" href="img/spot/spot1.jpg"><img src="img/spot/spot1.jpg" alt="Gülbahçe Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/spot/spot2.jpg"><img src="img/spot/spot2.jpg" alt="Gülbahçe Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/spot/spot3.jpg"><img src="img/spot/spot3.jpg" alt="Gülbahçe Görselleri" loading="lazy" decoding="async"/></a>
+						<a class="section__gallery-item" href="img/spot/spot4.jpg"><img src="img/spot/spot4.jpg" alt="Gülbahçe Görselleri" loading="lazy" decoding="async"/></a>
+					</div>
+				</section>
+
+<!--/ spot section -->
+
+
+<!-- contact section -->
+
+
+
+				<section class="section section--static" id="contact">
+<div class="section__content">
+	<h2 class="section__title">İletişim</h2>
+
+	<div class="section__description_container">
+	<p class="section__description">
+		<span class="section__description-inner">
+			Rüzgar, deniz ve keyif dolu bir kamp deneyimi için sizi Kite Camp’e bekliyoruz. 
+			Konaklama, kiteboard eğitimi, ekipman, restoran ve kamp hayatı hakkında detaylı bilgi almak için bizimle dilediğiniz zaman iletişime geçebilirsiniz.
+		</span>
+	</p>
+
+	<p class="section__description">
+		<span class="section__description-inner">
+			<span class="contact-label">Adres:</span> 
+			<a href="https://maps.google.com/?q=Gülbahçe+Mah.+12075/1+Sok+No:5+Urla+İzmir+35430+Türkiye" target="_blank">
+				Gülbahçe Mah. 12075/1 Sok No:5, Urla / İzmir 35430 Türkiye
+			</a>
+			<br><br>
+
+			<span class="contact-label">Telefon:</span> 
+			<a href="tel:+905326065579">+90 532 606 5579</a>
+			<br><br>
+
+			<span class="contact-label">E-Mail:</span> 
+			<a href="mailto:info@urlakitecamp.com">info@urlakitecamp.com</a>
+			<br><br>
+
+			<span class="contact-label">WhatsApp:</span> 
+			<a href="https://wa.me/905326065579" target="_blank">
+				+90 532 606 5579
+			</a>
+		</span>
+	</p>
+	</div>
+</div>
+						<div class="section__img section__img--map">
+							<div class="section__img-inner section__map">
+								<iframe title="Urla Kite Camp Google Map" src="https://www.google.com/maps?q=G%C3%BClbah%C3%A7e%20Mah.%2012075%2F1%20Sok%20No%3A5%2C%20Urla%20%2F%20%C4%B0zmir%2035430%20T%C3%BCrkiye&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
+						</div>
+					<div class="section__more">
+						<div class="section__more-inner section__more-inner--bg4">
+							<span class="section__more-text">Öğrenmek İstediğiniz Başka Bir Konu mu Var ?</span>
+							<a href="https://wa.me/+905326065579" class="section__more-link">
+								<span class="section__more-linktext">Hemen Bize Ulaşın</span>
+								<svg class="icon icon--arrowlong"></svg>
+							</a>
+						</div>
+					</div>
+					<div class="section__expander"></div>
+<ul class="section__facts">
+	<li class="section__facts-item">
+		<h3 class="section__facts-title">Bizi Takip Edin</h3>
+		<span class="section__facts-detail">
+			Etkinliklerden, kampanyalardan ve topluluk haberlerini kaçırmamak için bizi instagramda takip edin.
+			<a class="instagram-link" href="https://www.instagram.com/urlakitecamp" target="_blank" rel="noopener">
+				<svg class="icon icon--instagram" viewBox="0 0 24 24" aria-hidden="true"></svg>
+				<span>Urla Kite Camp</span>
+			</a>
+		</span>
+	</li>
+</ul>
+				</section>
+<!--/ contact section -->
+
+
+			</div><!--/ sections -->
+		</main>
+		<script src="js/charming.min.js" defer></script>
+		<script src="js/anime.min.js" defer></script>
+		<script src="js/main.js" defer></script>
+
+
+
+
+
+	</body>
+</html>
