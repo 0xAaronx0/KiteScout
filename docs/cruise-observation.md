@@ -53,6 +53,8 @@ new products were all LLM-read artefacts.
 | `kite-and-islands` | 4 product + 6 event pages (Wix Events) | departures + status words (AUSGEBUCHT, Nur noch N Plätze, Anmeldung geschlossen); no prices (on request / per night) |
 | `kite-safari-season` | `/en.html` | Event JSON-LD per departure (dates **merge**: only the season on sale), cheapest "€/person" |
 | `kite2sail` | 5 destination pages | site-wide schedule table split per destination, "starting from" p.p. price |
+| `sickdogsurf` | `/kite-safari/` | year-less weekly table: year from the season heading, rolls when the month goes back; FULL / Last Cabin; throws if all weeks are past |
+| `golden-dolphin` | homepage "Upcoming trips" | only kite/wing routes count (the box lists dive safaris); none → states nothing, page no longer LLM-read |
 
 Not adapted: kitelife.vacations (SiteGround captcha for our honest UA since 2026-10-12, never
 bypassed), windseekersredsea.com (dates load via JS; 1 change ever), ocean-ad-ventures (dates in a JS
