@@ -261,11 +261,13 @@ Not usable (robots / 403 / bot filter / session-only results): Mews, Clock PMS+,
 Exely (hopenapi), Booking Expert, Danline (Skaven; results only in the session basket), Kite Passion's own system
 (a price calculator, no inventory).
 
-Badge rule (Aaron 2026-10-14, `badgeCols` in ingest.ts): the stored `live_availability` and `instant_booking` are
-badge-ready. Both are true only while the provider's own engine shows at least one future date that is open
-(`available` / `limited`) on the last complete live run; `instant_booking` also needs `instantBooking` on the
-adapter. A non-live adapter never gets either badge (its open dates cannot be confirmed); an incomplete live run
-keeps the last state. The adapter fields keep the capabilities (live engine read, instant site).
+Badge rule (Aaron 2026-10-14, `badgeCols` in ingest.ts), two levels, stored badge-ready:
+`live_availability` = the provider's own engine showed an open future date (`available` / `limited`) on the last
+complete run; `instant_booking` = the provider's site books online instantly (adapter `instantBooking`) AND future
+dates exist (live: an open date; otherwise a priced future slot that is not sold out or closed). An incomplete run
+keeps the last state. `instantBooking` was verified per site on 2026-10-14 (provider page / embed, 1-2 requests):
+4 turned out request-only (Windchaser, Panama Kite House, Drivethru, Inchcape) and 11 could not be confirmed
+(Beds24 x3, Smoobu x2, Beddy, Guesty, Wix Hotels, Too Wet To Shred, Loissin, Surf House Chalupy); all 15 are false.
 
 ## Refresh strategy (recommendation)
 

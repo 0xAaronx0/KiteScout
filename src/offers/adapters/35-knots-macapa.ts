@@ -219,7 +219,6 @@ export const thirtyFiveKnotsMacapa: OfferAdapter = {
   },
   url: K35_HOME_URL,
   slotMethod: 'booking_engine',
-  instantBooking: true,
   fetchBudget: 4,
   confidence: 'low', // Wix Hotels engine not usable (signed visitor token); no prices on the pages
   async fetchContent() {

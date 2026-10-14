@@ -226,7 +226,6 @@ export const windchaserVillasLongBay: OfferAdapter = {
   },
   url: WC_VILLA_URLS[0],
   slotMethod: 'price_table',
-  instantBooking: true,
   fetchBudget: 6,
   confidence: 'medium', // base price without dates or availability
   async fetchContent() {

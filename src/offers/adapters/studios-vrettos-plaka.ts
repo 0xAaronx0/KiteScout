@@ -164,7 +164,6 @@ export const studiosVrettosPlaka: OfferAdapter = {
   },
   url: VRETTOS_HOME_URL,
   slotMethod: 'booking_engine',
-  instantBooking: true,
   fetchBudget: 3,
   confidence: 'low',
   async fetchContent() {

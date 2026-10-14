@@ -131,7 +131,6 @@ export const hotelPuclaroGualliguaica: OfferAdapter = {
   },
   url: PUCLARO_HOME_URL,
   slotMethod: 'booking_engine',
-  instantBooking: true,
   fetchBudget: 1,
   confidence: 'low',
   async fetchContent() {

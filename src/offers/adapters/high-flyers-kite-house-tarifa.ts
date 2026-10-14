@@ -291,7 +291,6 @@ export const highFlyersKiteHouseTarifa: OfferAdapter = {
   },
   url: HF_HOME_URL,
   slotMethod: 'html_dates',
-  instantBooking: true,
   fetchBudget: 7,
   async fetchContent(ctx) {
     const home = await page(HF_HOME_URL);

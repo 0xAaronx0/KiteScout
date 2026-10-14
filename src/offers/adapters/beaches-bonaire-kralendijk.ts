@@ -232,7 +232,6 @@ export const beachesBonaireKralendijk: OfferAdapter = {
   },
   url: BCH_HOME_URL,
   slotMethod: 'price_table',
-  instantBooking: true,
   fetchBudget: 5,
   async fetchContent() {
     const home = await page(BCH_HOME_URL);
