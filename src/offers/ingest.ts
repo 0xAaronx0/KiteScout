@@ -148,6 +148,19 @@ export function isAhead(kind: OfferKind, s: Slot, today: string): boolean {
   return s.endDate === null || s.endDate >= today;
 }
 
+// --- badges ---------------------------------------------------------------------------
+/** Badge flags for the app (Aaron 2026-10-14): live_availability and instant_booking are true only while the
+ *  provider's own engine shows at least one future date that is open ('available' / 'limited'); instant_booking
+ *  additionally needs a site that books instantly. A live adapter's incomplete run keeps the last state (no keys);
+ *  a non-live adapter can never confirm an open date, so both stay false. */
+export function badgeCols(a: Pick<OfferAdapter, 'kind' | 'liveAvailability' | 'instantBooking'>, slots: Slot[], today: string,
+  liveOk: boolean, now = new Date().toISOString()): Record<string, unknown> {
+  if (a.liveAvailability !== true) return { live_availability: false, availability_checked_at: null, instant_booking: false };
+  if (!liveOk) return {};
+  const openNow = slots.some(s => (s.availability === 'available' || s.availability === 'limited') && isAhead(a.kind, s, today));
+  return { live_availability: openNow, availability_checked_at: now, instant_booking: a.instantBooking === true && openNow };
+}
+
 // --- price summary ------------------------------------------------------------------
 interface PriceSummary {
   min: Slot | null;
@@ -459,14 +472,8 @@ async function runAdapterInner(
       price_from_eur: price.min && price.min.currency === 'EUR' && price.priceUnit === 'package' ? Math.round(price.min.price!) : null,
     };
 
-    // live availability: the flag follows the adapter; the check time only moves on a complete live delivery
     const liveOk = a.liveAvailability === true && !rep.slotError && incomplete === null && !guardTripped;
-    const liveCols: Record<string, unknown> = {
-      instant_booking: a.instantBooking === true,
-      ...(a.liveAvailability === true
-        ? { live_availability: true, ...(liveOk ? { availability_checked_at: new Date().toISOString() } : {}) }
-        : { live_availability: false, availability_checked_at: null }),
-    };
+    const liveCols = badgeCols(a, slots, today, liveOk);
 
     if (content) {
       const spots = await locateSpots(content, existing?.itinerary_spots);
