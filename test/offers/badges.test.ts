@@ -32,11 +32,23 @@ test('badges: live but request-only site -> live badge, no instant badge', () =>
     { live_availability: true, availability_checked_at: now, instant_booking: false });
 });
 
-test('badges: incomplete live run keeps the last state', () => {
+test('badges: incomplete run keeps the last state', () => {
   assert.deepEqual(badgeCols({ ...stay, liveAvailability: true, instantBooking: true }, [], today, false, now), {});
 });
 
-test('badges: non-live adapter never shows badges, even when the site books instantly', () => {
+test('badges: non-live instant site with a priced future slot -> instant badge only ("bookable online directly")', () => {
   assert.deepEqual(badgeCols({ ...stay, instantBooking: true }, [slot('unknown', '2026-11-01', '2026-11-30')], today, true, now),
+    { live_availability: false, availability_checked_at: null, instant_booking: true });
+});
+
+test('badges: non-live instant site without future priced dates (price on request, past or sold out) -> no badge', () => {
+  const noPrice = { ...slot('unknown', '2026-11-01', '2026-11-30'), price: null };
+  const slots = [noPrice, slot('available', '2026-08-01', '2026-08-31'), slot('sold_out', '2026-12-01', '2026-12-31')];
+  assert.deepEqual(badgeCols({ ...stay, instantBooking: true }, slots, today, true, now),
     { live_availability: false, availability_checked_at: null, instant_booking: false });
+  assert.equal(badgeCols({ ...stay, instantBooking: true }, [], today, true, now).instant_booking, false);
+});
+
+test('badges: request-only non-live site -> no badge', () => {
+  assert.equal(badgeCols({ ...stay }, [slot('unknown', '2026-11-01', '2026-11-30')], today, true, now).instant_booking, false);
 });

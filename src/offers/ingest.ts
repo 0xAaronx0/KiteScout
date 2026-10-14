@@ -149,16 +149,22 @@ export function isAhead(kind: OfferKind, s: Slot, today: string): boolean {
 }
 
 // --- badges ---------------------------------------------------------------------------
-/** Badge flags for the app (Aaron 2026-10-14): live_availability and instant_booking are true only while the
- *  provider's own engine shows at least one future date that is open ('available' / 'limited'); instant_booking
- *  additionally needs a site that books instantly. A live adapter's incomplete run keeps the last state (no keys);
- *  a non-live adapter can never confirm an open date, so both stay false. */
+/** Badge flags for the app, two levels (Aaron 2026-10-14):
+ *  - live_availability: the provider's own engine shows at least one OPEN future date ('available' / 'limited')
+ *    on the last complete run ("instantly bookable, free dates checked live");
+ *  - instant_booking: the provider's site books online instantly AND future dates exist: for a live adapter an
+ *    open date, otherwise a priced future slot that is not sold out or closed ("bookable online directly").
+ *  An incomplete run keeps the last state (no keys). */
 export function badgeCols(a: Pick<OfferAdapter, 'kind' | 'liveAvailability' | 'instantBooking'>, slots: Slot[], today: string,
-  liveOk: boolean, now = new Date().toISOString()): Record<string, unknown> {
-  if (a.liveAvailability !== true) return { live_availability: false, availability_checked_at: null, instant_booking: false };
-  if (!liveOk) return {};
-  const openNow = slots.some(s => (s.availability === 'available' || s.availability === 'limited') && isAhead(a.kind, s, today));
-  return { live_availability: openNow, availability_checked_at: now, instant_booking: a.instantBooking === true && openNow };
+  runOk: boolean, now = new Date().toISOString()): Record<string, unknown> {
+  if (!runOk) return {};
+  const ahead = slots.filter(s => isAhead(a.kind, s, today));
+  if (a.liveAvailability === true) {
+    const openNow = ahead.some(s => s.availability === 'available' || s.availability === 'limited');
+    return { live_availability: openNow, availability_checked_at: now, instant_booking: a.instantBooking === true && openNow };
+  }
+  const seasonOpen = ahead.some(s => s.price !== null && s.availability !== 'sold_out' && s.availability !== 'closed');
+  return { live_availability: false, availability_checked_at: null, instant_booking: a.instantBooking === true && seasonOpen };
 }
 
 // --- price summary ------------------------------------------------------------------
@@ -472,8 +478,8 @@ async function runAdapterInner(
       price_from_eur: price.min && price.min.currency === 'EUR' && price.priceUnit === 'package' ? Math.round(price.min.price!) : null,
     };
 
-    const liveOk = a.liveAvailability === true && !rep.slotError && incomplete === null && !guardTripped;
-    const liveCols = badgeCols(a, slots, today, liveOk);
+    const runOk = !rep.slotError && incomplete === null && !guardTripped;
+    const liveCols = badgeCols(a, slots, today, runOk);
 
     if (content) {
       const spots = await locateSpots(content, existing?.itinerary_spots);
