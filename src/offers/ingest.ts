@@ -78,6 +78,11 @@ function sha(v: unknown): string {
   return createHash('sha256').update(JSON.stringify(v)).digest('hex').slice(0, 16);
 }
 
+/** Postgres text/jsonb reject \u0000 ("unsupported Unicode escape sequence"); strip it from every string we write. */
+function noNul<T>(v: T): T {
+  return JSON.parse(JSON.stringify(v, (_k, x) => typeof x === 'string' ? x.replace(/\u0000/g, '') : x)) as T;
+}
+
 function withTimeout<T>(p: Promise<T>, ms: number, what: string): Promise<T> {
   let timer: NodeJS.Timeout | undefined;
   const limit = new Promise<T>((_, rej) => { timer = setTimeout(() => rej(new Error(`${what}: timeout after ${ms / 1000}s`)), ms); });
@@ -213,6 +218,9 @@ const KNOWN_PINS: Record<string, { lat: number; lng: number }> = {
   // Tarifa (OSM): "Valdevaqueros" alone resolves to a village in Zamora, "Punta Paloma" to Fuerteventura
   valdevaqueros: { lat: 36.0662, lng: -5.6814 },
   'punta paloma': { lat: 36.0594, lng: -5.7111 },
+  // the Hel Peninsula village (OSM); the geocoder picks the namesake in Łódź voivodeship, 400 km south
+  'chałupy': { lat: 54.7587, lng: 18.5099 },
+  'drejby strand, kegnæs': { lat: 54.8628, lng: 10.0011 }, // the campsite (OSM); the spot name alone finds nothing
 };
 
 export async function locateSpots(c: OfferContent, stored: unknown): Promise<StoredSpot[]> {
@@ -303,7 +311,7 @@ async function writeSlotTable(offerId: string, slots: Slot[], allowRetract: bool
       active: true, last_seen_at: now, ...(differs ? { changed_at: now } : {}),
     };
     const { data: up, error: upErr } = await supabase
-      .from('offer_slots').upsert(row, { onConflict: 'package_offer_id,slot_key' }).select('id').single();
+      .from('offer_slots').upsert(noNul(row), { onConflict: 'package_offer_id,slot_key' }).select('id').single();
     if (upErr) throw new Error(`offer_slots upsert failed (${s.key}): ${upErr.message}`);
     if (differs) {
       changed++;
@@ -449,7 +457,7 @@ async function runAdapterInner(
       if (!spots.some(s => s.lat !== null)) rep.notes.push('no map pin: spot could not be geocoded');
       const row = { ...contentRow(a, content, operatorId, spots), ...priceCols, rooms: roomsWithPrices(content, slots, today) };
       const { data: up, error: upErr } = await supabase
-        .from('package_offers').upsert(row, { onConflict: 'source_listing_id' }).select('id').single();
+        .from('package_offers').upsert(noNul(row), { onConflict: 'source_listing_id' }).select('id').single();
       if (upErr) throw new Error(`package_offers upsert failed: ${upErr.message}`);
       offerId = up.id as string;
 
@@ -467,9 +475,7 @@ async function runAdapterInner(
           minSize: a.imageMinSize,
         });
         if (images.length === 0) rep.notes.push('no usable images found');
-        // jsonb rejects \u0000 ("unsupported Unicode escape sequence"); strip it from every string in the image records
-        const clean = JSON.parse(JSON.stringify(images, (_k, v) => typeof v === 'string' ? v.replace(/\u0000/g, '') : v)) as StoredImage[];
-        const { error: iErr } = await supabase.from('package_offers').update({ images: clean }).eq('id', offerId);
+        const { error: iErr } = await supabase.from('package_offers').update({ images: noNul(images) }).eq('id', offerId);
         if (iErr) throw new Error(`images update failed: ${iErr.message}`);
         rep.images = images.length;
       } else {

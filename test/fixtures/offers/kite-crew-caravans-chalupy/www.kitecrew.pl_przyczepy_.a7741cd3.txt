@@ -1,0 +1,622 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="pl-PL"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+	<![endif]-->
+	<title>Wypożyczalnia przyczep kempingowych Chałupy 6 | KITE CREWKite Crew Szkoła Kite &amp; Surf</title>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="icon" type="image/png" href="https://www.kitecrew.pl/wp-content/uploads/2022/08/logo-white-kite-crew-szkola-surf-1-6.png">	
+    <script type="text/javascript"></script><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<!-- This site is optimized with the Yoast SEO plugin v28.0 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<meta name="description" content="Wypożyczalnia Przyczep Kempingowych - Sprawdź ofertę 2026. Przyczepy na Kempingu Chałupy 6 Wynajem. W samym centrum kempingu, przy plaży nad zatoką" />
+	<link rel="canonical" href="https://www.kitecrew.pl/przyczepy/" />
+	<meta property="og:locale" content="pl_PL" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Wypożyczalnia przyczep kempingowych Chałupy 6 | KITE CREW" />
+	<meta property="og:description" content="Wypożyczalnia Przyczep Kempingowych - Sprawdź ofertę 2026. Przyczepy na Kempingu Chałupy 6 Wynajem. W samym centrum kempingu, przy plaży nad zatoką" />
+	<meta property="og:url" content="https://www.kitecrew.pl/przyczepy/" />
+	<meta property="og:site_name" content="Kite Crew Szkoła Kite &amp; Surf" />
+	<meta property="article:publisher" content="https://www.facebook.com/kitecrewpl" />
+	<meta property="article:modified_time" content="2026-04-15T07:00:23+00:00" />
+	<meta property="og:image" content="https://www.kitecrew.pl/wp-content/uploads/2022/06/wynajem-przyczep-kempingowych-chalupy-6-wypozyczalnia-kamping-scaled.jpg" />
+	<meta property="og:image:width" content="2560" />
+	<meta property="og:image:height" content="1706" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.kitecrew.pl\/przyczepy\/","url":"https:\/\/www.kitecrew.pl\/przyczepy\/","name":"Wypożyczalnia przyczep kempingowych Chałupy 6 | KITE CREW","isPartOf":{"@id":"https:\/\/www.kitecrew.pl\/#website"},"primaryImageOfPage":{"@id":"https:\/\/www.kitecrew.pl\/przyczepy\/#primaryimage"},"image":{"@id":"https:\/\/www.kitecrew.pl\/przyczepy\/#primaryimage"},"thumbnailUrl":"https:\/\/www.kitecrew.pl\/wp-content\/uploads\/2022\/06\/wynajem-przyczep-kempingowych-chalupy-6-wypozyczalnia-kamping-scaled.jpg","datePublished":"2015-04-09T15:01:49+00:00","dateModified":"2026-04-15T07:00:23+00:00","description":"Wypożyczalnia Przyczep Kempingowych - Sprawdź ofertę 2026. Przyczepy na Kempingu Chałupy 6 Wynajem. W samym centrum kempingu, przy plaży nad zatoką","breadcrumb":{"@id":"https:\/\/www.kitecrew.pl\/przyczepy\/#breadcrumb"},"inLanguage":"pl-PL","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.kitecrew.pl\/przyczepy\/"]}]},{"@type":"ImageObject","inLanguage":"pl-PL","@id":"https:\/\/www.kitecrew.pl\/przyczepy\/#primaryimage","url":"https:\/\/www.kitecrew.pl\/wp-content\/uploads\/2022\/06\/wynajem-przyczep-kempingowych-chalupy-6-wypozyczalnia-kamping-scaled.jpg","contentUrl":"https:\/\/www.kitecrew.pl\/wp-content\/uploads\/2022\/06\/wynajem-przyczep-kempingowych-chalupy-6-wypozyczalnia-kamping-scaled.jpg","width":2560,"height":1706,"caption":"wynajem przyczep kempingowych chalupy 6 wypozyczalnia kamping hel"},{"@type":"BreadcrumbList","@id":"https:\/\/www.kitecrew.pl\/przyczepy\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Strona główna","item":"https:\/\/www.kitecrew.pl\/"},{"@type":"ListItem","position":2,"name":"Przyczepy Chalupy"}]},{"@type":"WebSite","@id":"https:\/\/www.kitecrew.pl\/#website","url":"https:\/\/www.kitecrew.pl\/","name":"www.kitecrew.pl","description":"Szkoła kitesurfingu i surfingu prowadzona przez Mistrzynię Polski Kasię Lange. Położona jest na kempingu Chałupy 6.","publisher":{"@id":"https:\/\/www.kitecrew.pl\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.kitecrew.pl\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"pl-PL"},{"@type":"Organization","@id":"https:\/\/www.kitecrew.pl\/#organization","name":"KITE CREW","url":"https:\/\/www.kitecrew.pl\/","logo":{"@type":"ImageObject","inLanguage":"pl-PL","@id":"https:\/\/www.kitecrew.pl\/#\/schema\/logo\/image\/","url":"https:\/\/www.kitecrew.pl\/wp-content\/uploads\/2024\/04\/logo-black-kite-crew-szkola-surf_.jpg","contentUrl":"https:\/\/www.kitecrew.pl\/wp-content\/uploads\/2024\/04\/logo-black-kite-crew-szkola-surf_.jpg","width":347,"height":66,"caption":"KITE CREW"},"image":{"@id":"https:\/\/www.kitecrew.pl\/#\/schema\/logo\/image\/"},"sameAs":["https:\/\/www.facebook.com\/kitecrewpl","http:\/\/instagram.com\/kitecrew.pl\/"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//maps.googleapis.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//maps.gstatic.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//fonts.gstatic.com' />
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//apis.google.com' />
+<link rel='dns-prefetch' href='//google-analytics.com' />
+<link rel='dns-prefetch' href='//www.google-analytics.com' />
+<link rel='dns-prefetch' href='//ssl.google-analytics.com' />
+<link rel='dns-prefetch' href='//youtube.com' />
+<link rel='dns-prefetch' href='//api.pinterest.com' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//pixel.wp.com' />
+<link rel='dns-prefetch' href='//connect.facebook.net' />
+<link rel='dns-prefetch' href='//platform.twitter.com' />
+<link rel='dns-prefetch' href='//syndication.twitter.com' />
+<link rel='dns-prefetch' href='//platform.instagram.com' />
+<link rel='dns-prefetch' href='//disqus.com' />
+<link rel='dns-prefetch' href='//sitename.disqus.com' />
+<link rel='dns-prefetch' href='//s7.addthis.com' />
+<link rel='dns-prefetch' href='//platform.linkedin.com' />
+<link rel='dns-prefetch' href='//w.sharethis.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s.gravatar.com' />
+<link rel='dns-prefetch' href='//0.gravatar.com' />
+<link rel='dns-prefetch' href='//2.gravatar.com' />
+<link rel='dns-prefetch' href='//1.gravatar.com' />
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='dns-prefetch' href='//www.googletagservices.com' />
+<link rel='dns-prefetch' href='//adservice.google.com' />
+<link rel='dns-prefetch' href='//pagead2.googlesyndication.com' />
+<link rel='dns-prefetch' href='//tpc.googlesyndication.com' />
+<link rel='dns-prefetch' href='//bp.blogspot.com' />
+<link rel='dns-prefetch' href='//1.bp.blogspot.com' />
+<link rel='dns-prefetch' href='//2.bp.blogspot.com' />
+<link rel='dns-prefetch' href='//3.bp.blogspot.com' />
+<link rel='dns-prefetch' href='//4.bp.blogspot.com' />
+<link rel='dns-prefetch' href='//ajax.microsoft.com' />
+<link rel='dns-prefetch' href='//ajax.aspnetcdn.com' />
+<link rel='dns-prefetch' href='//s3.amazonaws.com' />
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//stackpath.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//use.fontawesome.com' />
+<link rel='dns-prefetch' href='//player.vimeo.com' />
+<link rel='dns-prefetch' href='//github.githubassets.com' />
+<link rel='dns-prefetch' href='//referrer.disqus.com' />
+<link rel='dns-prefetch' href='//c.disquscdn.com' />
+<link rel='dns-prefetch' href='//ad.doubleclick.net' />
+<link rel='dns-prefetch' href='//googleads.g.doubleclick.net' />
+<link rel='dns-prefetch' href='//stats.g.doubleclick.net' />
+<link rel='dns-prefetch' href='//cm.g.doubleclick.net' />
+<link rel='dns-prefetch' href='//stats.buysellads.com' />
+<link rel='dns-prefetch' href='//s3.buysellads.com' />
+<link rel="alternate" type="application/rss+xml" title="Kite Crew Szkoła Kite &amp; Surf &raquo; Kanał z wpisami" href="https://www.kitecrew.pl/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Kite Crew Szkoła Kite &amp; Surf &raquo; Kanał z komentarzami" href="https://www.kitecrew.pl/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Kite Crew Szkoła Kite &amp; Surf &raquo; Przyczepy Chalupy Kanał z komentarzami" href="https://www.kitecrew.pl/przyczepy/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.kitecrew.pl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.kitecrew.pl%2Fprzyczepy%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.kitecrew.pl/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.kitecrew.pl%2Fprzyczepy%2F&#038;format=xml" />
+<style></style>
+<link rel='stylesheet' id='sbi_styles-css' href='https://www.kitecrew.pl/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.11.3' type='text/css' media='all' />
+<style></style>
+<style></style>
+<style></style>
+<style></style>
+<style></style>
+<link rel='stylesheet' id='cookie-notice-front-css' href='https://www.kitecrew.pl/wp-content/plugins/cookie-notice/css/front.min.css?ver=3.1.2' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='rs-plugin-settings-css' href='https://www.kitecrew.pl/wp-content/cache/min/1/wp-content/plugins/revslider/public/assets/css/settings.css?ver=1771235523' type='text/css' media='all' />
+<style></style>
+<link rel='stylesheet' id='cff-css' href='https://www.kitecrew.pl/wp-content/plugins/custom-facebook-feed/assets/css/cff-style.min.css?ver=4.8.1' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='sb-font-awesome-css' href='https://www.kitecrew.pl/wp-content/cache/min/1/wp-content/plugins/custom-facebook-feed/assets/css/font-awesome.min.css?ver=1771235523' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='parent-style-css' href='https://www.kitecrew.pl/wp-content/cache/min/1/wp-content/themes/namo/style.css?ver=1771235523' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='be-themes-layout-css' href='https://www.kitecrew.pl/wp-content/cache/min/1/wp-content/themes/namo/css/layout.css?ver=1771235523' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='be-themes-shortcodes-css' href='https://www.kitecrew.pl/wp-content/cache/min/1/wp-content/themes/namo/css/shortcodes.css?ver=1771235523' type='text/css' media='all' />
+<link rel='stylesheet' id='be-themes-css-css' href='https://www.kitecrew.pl/wp-admin/admin-ajax.php?action=be_themes_options_css&#038;ver=6.9.4' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='fontello-css' href='https://www.kitecrew.pl/wp-content/cache/min/1/wp-content/themes/namo/fonts/fontello/be-themes.css?ver=1771235523' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='be-lightbox-css-css' href='https://www.kitecrew.pl/wp-content/cache/min/1/wp-content/themes/namo/css/magnific-popup.css?ver=1771235523' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='be-flexslider-css' href='https://www.kitecrew.pl/wp-content/cache/min/1/wp-content/themes/namo/css/flexslider.css?ver=1771235523' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='be-animations-css' href='https://www.kitecrew.pl/wp-content/cache/min/1/wp-content/themes/namo/css/animate-custom.css?ver=1771235523' type='text/css' media='all' />
+<link data-minify="1" rel='stylesheet' id='be-slider-css' href='https://www.kitecrew.pl/wp-content/cache/min/1/wp-content/themes/namo/css/be-slider.css?ver=1771235523' type='text/css' media='all' />
+<style></style>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" data-rocket-defer defer></script>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.8.3" id="tp-tools-js" data-rocket-defer defer></script>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.8.3" id="revmin-js" data-rocket-defer defer></script>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-content/themes/namo/js/vendor/modernizr-2.6.2.min.js?ver=6.9.4" id="modernizr-js" data-rocket-defer defer></script>
+<script type="text/javascript" id="facebook-signal-js-extra"></script>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-content/plugins/official-facebook-pixel/core/../js/facebook_signal.js?ver=5.2.1" id="facebook-signal-js" data-rocket-defer defer></script>
+<!-- Fragment znacznika Google (gtag.js) dodany przez Site Kit -->
+<!-- Fragment Google Analytics dodany przez Site Kit -->
+<script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=G-P1CMRWJ7M9" id="google_gtagjs-js" async></script>
+<script type="text/javascript" id="google_gtagjs-js-after"></script>
+<link rel="https://api.w.org/" href="https://www.kitecrew.pl/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.kitecrew.pl/wp-json/wp/v2/pages/3280" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.kitecrew.pl/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.4" />
+<link rel='shortlink' href='https://www.kitecrew.pl/?p=3280' />
+<meta name="generator" content="Site Kit by Google 1.182.0" />
+<!-- Meta Pixel Code -->
+<script type='text/javascript'></script>
+<!-- End Meta Pixel Code -->
+<script type='text/javascript'></script><script type='text/javascript'></script><meta name="generator" content="Powered by Slider Revolution 5.4.8.3 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<link rel="icon" href="https://www.kitecrew.pl/wp-content/uploads/2022/06/cropped-kitecrew-szkola-surfingu-i-kitesurfingu-chalupy-6-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.kitecrew.pl/wp-content/uploads/2022/06/cropped-kitecrew-szkola-surfingu-i-kitesurfingu-chalupy-6-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.kitecrew.pl/wp-content/uploads/2022/06/cropped-kitecrew-szkola-surfingu-i-kitesurfingu-chalupy-6-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.kitecrew.pl/wp-content/uploads/2022/06/cropped-kitecrew-szkola-surfingu-i-kitesurfingu-chalupy-6-270x270.png" />
+<script type="text/javascript"></script>
+		<style></style>
+		<noscript><style></style></noscript><meta name="google-site-verification" content="1ibNxanG0rAtLB8hpd1WQBuWpwzJmploCvXfW0alX7c" />
+<!-- Facebook Pixel Code -->
+<script></script>
+<!-- Google Tag Manager -->
+<script></script>
+<!-- End Google Tag Manager -->
+<noscript><img height="1" width="1"
+src="https://www.facebook.com/tr?id=247203082396542&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "KITE CREW",
+  "url": "https://www.kitecrew.pl/",
+  "logo": "https://www.kitecrew.pl/wp-content/uploads/2014/07/kitecrew_logoczarne.png",
+  "sameAs": [
+    "https://www.facebook.com/kitecrewpl/?ref=ts",
+    "https://twitter.com/kasiunial",
+    "https://www.youtube.com/user/LaKasiunia"
+  ]
+}
+</script>
+<script></script>
+<style></style>
+<style></style><meta name="generator" content="WP Rocket 3.18.2" data-wpr-features="wpr_defer_js wpr_lazyload_images wpr_lazyload_iframes wpr_automatic_lazy_rendering wpr_minify_css wpr_desktop wpr_dns_prefetch" /></head>
+<body class="wp-singular page-template-default page page-id-3280 wp-theme-namo wp-child-theme-KiteCrew cookies-not-set sticky-header">		
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6GMXM5"
+height="0" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<div  class="sb-slidebar sb-right">
+			</div>
+	<div  id="main-wrapper">
+		<div id="main" class="ajaxable layout-wide" >
+			<header  id="header">
+	<div id="header-inner-wrap" class="" >
+				<div id="header-wrap" class="be-wrap clearfix" data-default-height="126" data-sticky-height="106">
+			<div id="logo">
+				<a href="https://www.kitecrew.pl"><img class="normal-logo" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" alt="" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2022/08/logo-white-kite-crew-szkola-surf-.png" /><noscript><img class="normal-logo" src="https://www.kitecrew.pl/wp-content/uploads/2022/08/logo-white-kite-crew-szkola-surf-.png" alt="" /></noscript></a>			</div>
+			<div class="header-controls">
+																						<div class="mobile-nav-controller-wrap">
+							<div class="menu-controls mobile-nav-controller" title="Mobile Menu Controller"><i class="font-icon icon-menu"></i></div>
+						</div>
+							</div>
+			<nav id="navigation" class="clearfix">	
+				<div class="menu left"><ul id="menu" class="clearfix"><li id="menu-item-6934" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6934"><a href="https://www.kitecrew.pl/kursy-kitesurfingu/">Kursy kite</a>
+<span class="mobile-sub-menu-controller"><i class="icon-down-open-mini"></i></span><ul class="sub-menu clearfix">
+	<li id="menu-item-6939" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6939"><a href="https://www.kitecrew.pl/portfolio/kurs-kitesurfingu-pzkite-1-poziom-poczatkujacy/">Kurs Kitesurfingu PZKite 1</a></li>
+	<li id="menu-item-6940" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6940"><a href="https://www.kitecrew.pl/portfolio/kurs-kitesurfingu-pzkite-ii-srednio-zaawansowany/">KURS KITESURFINGU PZKite 2</a></li>
+	<li id="menu-item-6943" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6943"><a href="https://www.kitecrew.pl/portfolio/kurs-kitesurfingu-pzkite-i-ii-dobry-pakiet/">Kurs Kitesurfingu PZKite 1+2</a></li>
+	<li id="menu-item-6941" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6941"><a href="https://www.kitecrew.pl/portfolio/kurs-kitesurfingu-pzkite-iii-samodzielny/">KURS KITESURFINGU PZKite 3</a></li>
+	<li id="menu-item-6944" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6944"><a href="https://www.kitecrew.pl/portfolio/kurs-kitesurfingu-pzkite-i-ii-iii-mega-pakiet/">Kurs Kitesurfingu PZKite 1+2+3</a></li>
+	<li id="menu-item-6942" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6942"><a href="https://www.kitecrew.pl/portfolio/kurs-kitesurfingu-pzkite-4-zaawansowany/">Kurs Kitesurfingu PZKite 4</a></li>
+	<li id="menu-item-6945" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6945"><a href="https://www.kitecrew.pl/portfolio/lekcja-indywidualna/">Lekcja Indywidualna</a></li>
+	<li id="menu-item-7155" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-7155"><a href="https://www.kitecrew.pl/portfolio/kite-crew-academy/">KITE CREW ACADEMY</a></li>
+</ul>
+</li>
+<li id="menu-item-6935" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6935"><a href="https://www.kitecrew.pl/surfing/">Surfing</a></li>
+<li id="menu-item-6933" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6933"><a href="https://www.kitecrew.pl/obozy-kitesurfingowe/">Obozy / Eventy</a>
+<span class="mobile-sub-menu-controller"><i class="icon-down-open-mini"></i></span><ul class="sub-menu clearfix">
+	<li id="menu-item-7031" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-7031"><a href="https://www.kitecrew.pl/portfolio/obozy-kitesurfingowe-chalupy-6/">Obozy kitesurfingowe Chałupy</a></li>
+	<li id="menu-item-6949" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6949"><a href="https://www.kitecrew.pl/portfolio/obozy-studenckie/">Obozy studenckie</a></li>
+	<li id="menu-item-7030" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-7030"><a href="https://www.kitecrew.pl/portfolio/obozy-kitesurfingowe-kite-and-yoga/">Obozy Kite &#038; Joga</a></li>
+	<li id="menu-item-6948" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6948"><a href="https://www.kitecrew.pl/portfolio/obozy-kitesurfingowe-wake-and-kite/">Obozy Wake &#038; Kite</a></li>
+	<li id="menu-item-6947" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6947"><a href="https://www.kitecrew.pl/portfolio/oboz-surf-and-yoga-dla-kobiet/">Obóz Surf &#038; Yoga dla Kobiet</a></li>
+	<li id="menu-item-6952" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6952"><a href="https://www.kitecrew.pl/portfolio/the-queen-of-hel-kobiecy-festiwal-kitesurfingu/">Festiwal The Queen of Hel</a></li>
+	<li id="menu-item-7189" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-7189"><a href="https://www.kitecrew.pl/portfolio/oboz-kite-surf-lekarski/">Obóz Kite &#038; Surf lekarski</a></li>
+	<li id="menu-item-6951" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6951"><a href="https://www.kitecrew.pl/portfolio/oferta-dla-firm-eventy-firmowe/">Eventy firmowe</a></li>
+</ul>
+</li>
+<li id="menu-item-6932" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6932"><a href="https://www.kitecrew.pl/wyjazdy/">Wyjazdy</a>
+<span class="mobile-sub-menu-controller"><i class="icon-down-open-mini"></i></span><ul class="sub-menu clearfix">
+	<li id="menu-item-6958" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6958"><a href="https://www.kitecrew.pl/wyjazdy/">Wyjazdy kitesurfingowe</a></li>
+	<li id="menu-item-6956" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6956"><a href="https://www.kitecrew.pl/portfolio/egipt/">Egipt – Soma Bay</a></li>
+	<li id="menu-item-6955" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6955"><a href="https://www.kitecrew.pl/portfolio/brazylia-kitesurfing/">Brazylia Kite Camp</a></li>
+</ul>
+</li>
+<li id="menu-item-6936" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3280 current_page_item menu-item-6936"><a href="https://www.kitecrew.pl/przyczepy/" aria-current="page">Przyczepy Chalupy</a></li>
+<li id="menu-item-7374" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7374"><a>Promocje</a>
+<span class="mobile-sub-menu-controller"><i class="icon-down-open-mini"></i></span><ul class="sub-menu clearfix">
+	<li id="menu-item-7375" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7375"><a href="https://www.kitecrew.pl/majowka-otwarcie-sezonu-kite-surf/" title="Oferta Majówki &#8211; kursy kitesurfingu i surfingu z zakwaterowaniem ">MAJÓWKA</a></li>
+	<li id="menu-item-7395" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7395"><a href="https://www.kitecrew.pl/boze-cialo-oboz-kite-surf/">BOŻE CIAŁO</a></li>
+	<li id="menu-item-7376" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7376"><a href="https://www.kitecrew.pl/promocje-na-kurs-kitesurfingu-nocleg/">Przed i Po sezonie</a></li>
+</ul>
+</li>
+<li id="menu-item-6937" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6937"><a href="https://www.kitecrew.pl/news/">News</a></li>
+<li id="menu-item-6973" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6973"><a>Kontakt</a>
+<span class="mobile-sub-menu-controller"><i class="icon-down-open-mini"></i></span><ul class="sub-menu clearfix">
+	<li id="menu-item-6975" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6975"><a href="https://www.kitecrew.pl/#o-nas">O nas</a></li>
+	<li id="menu-item-6974" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6974"><a href="https://www.kitecrew.pl/galeria/">Galeria</a></li>
+	<li id="menu-item-6976" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6976"><a href="https://www.kitecrew.pl/#kontakt" title="#kontakt">Kontakt i dojazd</a></li>
+</ul>
+</li>
+</ul></div>			</nav><!-- End Navigation -->
+		</div>
+		<div class="clearfix">
+			<div class="mobile-menu"><ul id="mobile-menu" class="clearfix"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6934"><a href="https://www.kitecrew.pl/kursy-kitesurfingu/">Kursy kite</a>
+<span class="mobile-sub-menu-controller"><i class="icon-down-open-mini"></i></span><ul class="sub-menu clearfix">
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6939"><a href="https://www.kitecrew.pl/portfolio/kurs-kitesurfingu-pzkite-1-poziom-poczatkujacy/">Kurs Kitesurfingu PZKite 1</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6940"><a href="https://www.kitecrew.pl/portfolio/kurs-kitesurfingu-pzkite-ii-srednio-zaawansowany/">KURS KITESURFINGU PZKite 2</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6943"><a href="https://www.kitecrew.pl/portfolio/kurs-kitesurfingu-pzkite-i-ii-dobry-pakiet/">Kurs Kitesurfingu PZKite 1+2</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6941"><a href="https://www.kitecrew.pl/portfolio/kurs-kitesurfingu-pzkite-iii-samodzielny/">KURS KITESURFINGU PZKite 3</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6944"><a href="https://www.kitecrew.pl/portfolio/kurs-kitesurfingu-pzkite-i-ii-iii-mega-pakiet/">Kurs Kitesurfingu PZKite 1+2+3</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6942"><a href="https://www.kitecrew.pl/portfolio/kurs-kitesurfingu-pzkite-4-zaawansowany/">Kurs Kitesurfingu PZKite 4</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6945"><a href="https://www.kitecrew.pl/portfolio/lekcja-indywidualna/">Lekcja Indywidualna</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-7155"><a href="https://www.kitecrew.pl/portfolio/kite-crew-academy/">KITE CREW ACADEMY</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6935"><a href="https://www.kitecrew.pl/surfing/">Surfing</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6933"><a href="https://www.kitecrew.pl/obozy-kitesurfingowe/">Obozy / Eventy</a>
+<span class="mobile-sub-menu-controller"><i class="icon-down-open-mini"></i></span><ul class="sub-menu clearfix">
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-7031"><a href="https://www.kitecrew.pl/portfolio/obozy-kitesurfingowe-chalupy-6/">Obozy kitesurfingowe Chałupy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6949"><a href="https://www.kitecrew.pl/portfolio/obozy-studenckie/">Obozy studenckie</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-7030"><a href="https://www.kitecrew.pl/portfolio/obozy-kitesurfingowe-kite-and-yoga/">Obozy Kite &#038; Joga</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6948"><a href="https://www.kitecrew.pl/portfolio/obozy-kitesurfingowe-wake-and-kite/">Obozy Wake &#038; Kite</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6947"><a href="https://www.kitecrew.pl/portfolio/oboz-surf-and-yoga-dla-kobiet/">Obóz Surf &#038; Yoga dla Kobiet</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6952"><a href="https://www.kitecrew.pl/portfolio/the-queen-of-hel-kobiecy-festiwal-kitesurfingu/">Festiwal The Queen of Hel</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-7189"><a href="https://www.kitecrew.pl/portfolio/oboz-kite-surf-lekarski/">Obóz Kite &#038; Surf lekarski</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6951"><a href="https://www.kitecrew.pl/portfolio/oferta-dla-firm-eventy-firmowe/">Eventy firmowe</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-6932"><a href="https://www.kitecrew.pl/wyjazdy/">Wyjazdy</a>
+<span class="mobile-sub-menu-controller"><i class="icon-down-open-mini"></i></span><ul class="sub-menu clearfix">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6958"><a href="https://www.kitecrew.pl/wyjazdy/">Wyjazdy kitesurfingowe</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6956"><a href="https://www.kitecrew.pl/portfolio/egipt/">Egipt – Soma Bay</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-6955"><a href="https://www.kitecrew.pl/portfolio/brazylia-kitesurfing/">Brazylia Kite Camp</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3280 current_page_item menu-item-6936"><a href="https://www.kitecrew.pl/przyczepy/" aria-current="page">Przyczepy Chalupy</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-7374"><a>Promocje</a>
+<span class="mobile-sub-menu-controller"><i class="icon-down-open-mini"></i></span><ul class="sub-menu clearfix">
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7375"><a href="https://www.kitecrew.pl/majowka-otwarcie-sezonu-kite-surf/" title="Oferta Majówki &#8211; kursy kitesurfingu i surfingu z zakwaterowaniem ">MAJÓWKA</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7395"><a href="https://www.kitecrew.pl/boze-cialo-oboz-kite-surf/">BOŻE CIAŁO</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-7376"><a href="https://www.kitecrew.pl/promocje-na-kurs-kitesurfingu-nocleg/">Przed i Po sezonie</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6937"><a href="https://www.kitecrew.pl/news/">News</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-6973"><a>Kontakt</a>
+<span class="mobile-sub-menu-controller"><i class="icon-down-open-mini"></i></span><ul class="sub-menu clearfix">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6975"><a href="https://www.kitecrew.pl/#o-nas">O nas</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6974"><a href="https://www.kitecrew.pl/galeria/">Galeria</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-6976"><a href="https://www.kitecrew.pl/#kontakt" title="#kontakt">Kontakt i dojazd</a></li>
+</ul>
+</li>
+</ul></div>		</div>
+	</div>
+</header> <!-- END HEADER --><div  class="header-hero-section"></div>	<section  id="content" class="no-sidebar-page">
+		<div id="content-wrap" class="page-builder">
+			<section id="page-content">
+				<div class="clearfix">
+					<div class="be-section       clearfix" data-headerscheme="background--dark" ><div class="be-section-pad clearfix"><div class="be-row be-wrap clearfix"><div class="one-col column-block clearfix  "><h3><span>Przyczepy Chałupy 6</span></h3>
+<h1><span>Wynajem Przyczep Kempingowych</span></h1>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-half column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2024/05/Przyczepy-kempingowe-wynajem-KITE-CREW-mapa.png"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2024/05/Przyczepy-kempingowe-wynajem-KITE-CREW-mapa.png"></noscript><br>
+</div><div class="one-half column-block   "><h3>Rezerwacje:</h3>
+<p><span>info@kitecrew.pl&nbsp;</span></p>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2021/01/wynajem-przyczep-kempingowych-kemping-chalupy-6-kitecrew-e1716323692589.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2021/01/wynajem-przyczep-kempingowych-kemping-chalupy-6-kitecrew-e1716323692589.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2021/01/wypozyczalnia-przyczepy-kempingowe-chalupy-6-kemping-kitecrew-e1716323368376.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2021/01/wypozyczalnia-przyczepy-kempingowe-chalupy-6-kemping-kitecrew-e1716323368376.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2021/01/wynajem-przyczep-kempingowych-kemping-chalupy6-kitecrew.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2021/01/wynajem-przyczep-kempingowych-kemping-chalupy6-kitecrew.jpg"></noscript><br>
+</div></div><div class="be-row be-wrap clearfix"><div class="two-third column-block   "><h2><strong><span>​ Wynajem przyczep kempingowych&nbsp;&#8211; Noclegi Chałupy 6</span></strong></h2>
+<p><span><strong><span>♦</span><span>​</span> Cennik 2026:&nbsp;</strong></span></p>
+<p><strong><span><span>♦​​♦​<strong data-mce-fragment="1"><span data-mce-fragment="1"><span data-mce-fragment="1">♦​</span></span></strong>​&nbsp;</span>Wysoki sezon (obejmuje 1-4.05, 3-7.06, 19-21.06, 26.06-31.08) :</span></strong></p>
+<ul>
+<li><strong>800zł */ dobę</strong>&nbsp; za przyczepy Standard: &nbsp;przyczepa nr 1-OCEAN (max 4 os); &nbsp;przyczepa nr 2-LMC (max 5 os)</li>
+<li><strong>850zł */ dobę</strong> za przyczepy typu Komfort:&nbsp; przyczepa 3 FUERTA (max 5 os),&nbsp; przyczepa nr 4-BALI (max 5 os),&nbsp; &nbsp;przyczepa nr 5-CALIFORNIA ( max 6 os),&nbsp; przyczepa nr 6-HAWAII (max 6 os)</li>
+</ul>
+<p>* &#8211; plus opłata klimatyczna odprowadzana do Gminy Władysławowo = 3,40zł/os/dzień (ok 120zł/tydzień) płatna w gotówce</p>
+<p><strong>W pełnym sezonie cena uwzględnia </strong>wszystkie <strong>opłaty kempingowe</strong> za noclegi, oraz postój 1 samochodu. <strong>Nie uwzględnia opłaty klimatycznej</strong>.<br />
+<strong>W pełnym sezonie</strong> wynajmujemy przyczepy w terminach tygodniowych (7 noclegów) i przyjmujemy&nbsp;rezerwacje od niedzieli do niedzieli.</p>
+<p><span><strong><span>​​​​♦​♦​<strong data-mce-fragment="1"><span data-mce-fragment="1"><span data-mce-fragment="1">♦​</span></span></strong>​</span><span><span>&nbsp;</span></span>​Niski sezon (okresy między</strong></span><span><strong> 4 maja &#8211; 3 czerwca, 8-19 czerwca, 21-26.06, 31.08-13 września) :</strong></span></p>
+<ul>
+<li><span><strong>&nbsp;<span>50% ceny* </span></strong>czyli <strong>400zł </strong>lub<strong>&nbsp;425zł/</strong>dobę &#8211; koszt bez opłat</span></li>
+<li><span>oraz<strong> opłaty kempingowe</strong> dzienne: <strong>30zł</strong>/os/dzień,<strong>&nbsp;</strong><strong>30zł</strong>/auto. W skrócie opłaty dziennie z autem dla: 5os=180zł/os, 4os=150zł/os, 3os=120zł/os, 2os=190zł, 1 os=60zł.&nbsp;</span></li>
+</ul>
+<p><span><strong data-mce-fragment="1"><span data-mce-fragment="1"><span>♦</span>​ Terminy wysokiego sezonu w sezonie 2026:</span></strong></span></p>
+<ul>
+<li><span data-mce-fragment="1"><strong>​Majówka:</strong> &nbsp;01-03.05​ , <strong>Boże Ciało:</strong>&nbsp; 04-07.06 , ​​<strong>Hel Riders:</strong>&nbsp; 19-21.06</span></li>
+<li><span data-mce-fragment="1">latem tylko 7-dniowe terminy, od niedzieli &#8211; do niedzieli:</span></li>
+<li data-mce-fragment="1"><span><strong>Lipiec:</strong>&nbsp; 28.06- 5.07,&nbsp; 05-12.07 , 12-19.07 , 19-26.07 , 26.07-02.08</span></li>
+<li data-mce-fragment="1"><span><strong>Sierpień:</strong> &nbsp;02-09.08 , 09-16.08 ,&nbsp; 23-30.08 ,&nbsp; &nbsp;<span>16-23.08 niedostępny</span></span></li>
+</ul>
+<p><span data-mce-fragment="1">W wysokim sezonie oraz długie weekendy ze względu na zalecenia kempingu wynajmujemy przyczepy rodzinom oraz osobom powyżej 25 roku życia.</span><strong><span data-mce-fragment="1"><strong data-mce-fragment="1"><span data-mce-fragment="1">​​</span></strong></span></strong></p>
+<p><strong><span><span data-mce-fragment="1">♦​​</span>​&nbsp;<span>Płatność</span></span></strong></p>
+<ol>
+<li data-mce-fragment="1">Zadatek w wysokości 1500zł/tydzień wpłaca się na konto w ciągu <strong>3 dni</strong> od rezerwacji.</li>
+<li data-mce-fragment="1">Pozostałą część opłaty wpłaca się na konto do <strong>14 dni</strong> przed przyjazdem.</li>
+<li data-mce-fragment="1">W dzień<strong> przyjazdu</strong> wpłaca się Kaucję 1500zł <strong>w gotówce</strong> oraz opłatę klimatyczną w biurze Kite Crew.</li>
+<li data-mce-fragment="1">Kaucja zwracana jest w dniu<strong> wyjazdu</strong> po zdaniu przyczepy.</li>
+</ol>
+<p>Poza sezonem :&nbsp;<strong>w dzień przyjazdu</strong> wnosi się również opłaty kempingowe, płatne w gotówce w biurze szkoły Kite Crew.</p>
+<p>&nbsp;</p>
+<h3><span><strong>Rodzaje przyczep:</strong></span></h3>
+<p>Zdjęcia i rozkład łóżek na dole strony, w Galerii.</p>
+<h5><strong><span><span>♦</span>​&nbsp;Przyczepy&nbsp;Standard</span> :</strong></h5>
+<p>Przyczepa <strong>nr 1 OCEAN</strong>&nbsp; mała przyczepa o dł. 5m, wygodna, z przedsionkiem Isabella. Przyczepa 2-4 osobowa, posiada 2 podwójne łóżka. Wyposażony przedsionek, w tej przyczepie aneks kuchenny znajduje się w przedsionku.</p>
+<p>Przyczepa<strong> nr 2 LMC</strong> &nbsp;duża przyczepa o długości 7m, dla 5-6-osób​, dwa podwójne łóżka i łóżko piętrowe. Polecamy kilkuosobowym grupkom kursantów, szukającym zakwaterowania na terenie bazy kitesurfingu w samym centrum kempingu, lub rodzinie z dziećmi (łóżko piętrowe). Wyposażony przedsionek.</p>
+<p>&nbsp;</p>
+<h5><b><span>​<span>♦​</span>&nbsp;Przyczepy&nbsp;Komfort</span> :</b></h5>
+<p>Przyczepa <strong>nr 3 FUERTA</strong>&nbsp; przyczepa 5-osobowa, zawiera łóżko piętrowe, stolik z siedzeniami rozkładany na łóżko 1 os, oraz łóżko francuskie 2-osobowe. Pomieści rodzinę z dorastającymi dziećmi, lub nawet do piątki dorosłych. Wyposażony przedsionek, w tej przyczepie aneks kuchenny znajduje się w przedsionku.​</p>
+<p>Przyczepa <strong>nr 4 BALI</strong>&nbsp; 5-osobowa​, o długości 6,5m, w środku z dwoma łóżkami 2-osobowymi i jedynką. Brak łazienki dodaje przestrzeni w środku. Wyposażony przedsionek.</p>
+<p>Przyczepa <strong>nr 5 CALIFORNIA</strong>&nbsp; 5-6 osobowa, o długości 7m, posiada trzy rozkładane na podwójne łóżka kanapy. Brak łazienki dodaje przestrzeni w środku. Wyposażony przedsionek.</p>
+<p><strong>&nbsp;</strong>Przyczepa <strong>nr 6 HAWAII </strong>&nbsp;5-6 osobowa, o długości 7,2m, posiada dużo szafek, rozkładaną na podwójne łóżko rogówkę ze stolikiem, łóżko małżeńskie i piętrowe. Wyposażony przedsionek.</p>
+<p>Przyczepy <strong>nie posiadają</strong> podłączenia do wody, ani toalety. Zaledwie 20-30m obok znajdują się sanitariaty z toaletami, prysznicami i miejscem do mycia naczyń.</p>
+<p>Zjedź do Galerii po szerszy opis wyposażenia i zdjęcia wnętrz i przedsionków przyczep.</p>
+<h3><span><strong>Wyposażenie przyczep:</strong></span></h3>
+<ul>
+<li>część kuchenna: kuchenka turystyczna elektryczna, czajnik bezprzewodowy, naczynia, sztućce, patelnia, garnek, lodówka kempingowa;</li>
+<li>wyposażenie: szafa, wiele mniejszych półek</li>
+<li>farelka</li>
+<li>przedsionki: podłoga, stół z krzesłami, lampa stojąca, wieszak na pianki, światełka, parawan. Przyczepy Komfort posiadają większe stoły z krzesłami, oraz stolik na kawę i leżaki. Rozłożone 15.05-6.09 (w majówkę brak).</li>
+</ul>
+<p><span><strong><span>♦</span><span>​</span>&nbsp;Pościel we własnym zakresie </strong>(zabierz śpiwór, prześcieradło, poduszki).</span></p>
+<h3><span><strong><span>♦</span>​&nbsp;Zadatek</strong></span></h3>
+<p>Rezerwacja przyczepy kempingowej jest potwierdzona przez wpłatę Zadatku w ciągu 3 dni od złożenia rezerwacji i otrzymania dokumentu rezerwacji wstępnej. W wysokim sezonie wynosi on 1500zł.</p>
+<h3><span><strong><span>♦ </span>​Kaucja </strong></span></h3>
+<p>Kaucja na poczet ewentualnych szkód, jest pobierana w dniu przyjazdu w biurze szkoły, w wysokości 1500zł, płatna tylko w gotówce.</p>
+<p>Zwrot Kaucji: Po zdaniu przyczepy i zatwierdzeniu jej stanu Kaucja jest zwracana w całości. Inne przypadki opisane poniżej i w Regulaminie.</p>
+<p>Przyczepę NALEŻY oddać w stanie czystym &#8211; posprzątaną z pozamiatanym piaskiem oraz umytymi naczyniami, jeśli przyczepa nie jest posprzątana, pobierana jest opłata 200zł, która pomniejsza zwracaną Kaucję.</p>
+<p>Wszystkie szkody spowodowane w przyczepie przez Najemcę do wysokości Kaucji spowodują zatrzymanie Kaucji przez Wynajmującego, a szkody powyżej wysokości Kaucji spowodują przejście na drogę sądową w celu egzekucji wysokości szkód powyżej kwoty Kaucji.</p>
+<p>Prosimy zapoznać się z Regulaminem. Wpłacenie zadatku oznacza zapoznanie się i zaakceptowanie Regulaminu.</p>
+<h3>​​​​<strong><span><span>♦​</span> ​​​Zapłata za wynajem​​</span></strong></h3>
+<p>Kwotę wynajmu pomniejszoną o wpłacony Zadatek należy wpłacić przelewem najpóźniej na 14dni przed przyjazdem.</p>
+<h3><strong><span><span>♦​&nbsp;​</span>Regulamin</span></strong></h3>
+<p><span><a href="../regulamin-wynajmu-przyczep/" target="_blank" rel="noopener noreferrer"> <u>Regulamin wynajmu przyczep</u></a></span></p>
+<p>(Godziny check-in i check-out, Zasady odbioru kluczy po zamknięciu biura (po 19:00), Zasady opłacania szkód itp znajdują się w regulaminie, w linku powyżej).</p>
+</div><div class="one-third column-block   "><h5>Baza noclegowa dla naszych kursantów</h5>
+<p>Posiadamy własną bazę noclegową, w której w pierwszej kolejności chcemy zakwaterować naszych kursantów. Zależy nam przede wszystkim, aby każdy kto chce nauczyć się kitesurfingu u nas, miał możliwość wynajęcia przyczepy bezpośrednio na naszym spocie.</p>
+<p>Będąc na miejscu podczas odbywania kursu korzystasz jeszcze więcej !!</p>
+<div class="special-heading-wrap style1 0" data-animation="fadeIn"><div class="special-heading align-center"><h4 class="special-h-tag">Zapraszamy do zapoznania się z naszą ofertą kursów kitesurfingu!</h4><hr class="separator style-2" /></div></div><div class="be-button-wrap align-block block-center"><a class="be-shortcode largebtn be-button rounded  " href="https://www.kitecrew.pl/#kursy-kite" data-animation="fadeIn" data-bg-color="#3edce5" data-hover-bg-color="#39d6d3" data-color="#000000" data-hover-color="#000000" data-border-color="#000000" data-hover-border-color="#3edce5">KURSY KITE</a></div><p><strong>Kontakt:</strong><br />
+e-mail:&nbsp; info@kitecrew.pl</p>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-col column-block clearfix  "><div class="special-heading-wrap style1 0" data-animation="fadeIn"><div class="special-heading align-center"><div class="sub-title"><h2><span>WYPOŻYCZALNIA PRZYCZEP - GALERIA</span></h2></div><hr class="separator style-2" /></div></div></div></div><div class="be-row be-wrap clearfix"><div class="one-col column-block clearfix  "><h4><span>♦​</span>&nbsp;​Przyczepa 1 OCEAN &#8211; Standard</h4>
+<p>4-osobowa, mniejsza przyczepa, 2 podwójne łóżka, jedno stałe, drugie składane na stolik i 2 ławy. Przedsionek Isabella z podłogą, w przedsionku stół z krzesłami, ławka, aneks kuchenny, lampa stojąca, wieszak na pianki, miotła, zmiotka i szufelka. Max ilość osób = 4.</p>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2026/02/przyczepa-kempigowa-wynajem-chalupy-kitecrew-4.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2026/02/przyczepa-kempigowa-wynajem-chalupy-kitecrew-4.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2026/02/przyczepa-kempigowa-wynajem-chalupy-kitecrew-2-2.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2026/02/przyczepa-kempigowa-wynajem-chalupy-kitecrew-2-2.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2026/02/przyczepa-kempigowa-wynajem-chalupy-kitecrew.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2026/02/przyczepa-kempigowa-wynajem-chalupy-kitecrew.jpg"></noscript><br>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2026/02/przyczepa-kempigowa-wynajem-chalupy-kitecrew-3.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2026/02/przyczepa-kempigowa-wynajem-chalupy-kitecrew-3.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2025/06/przyczepa-kempigowa-wynajem-chalupy-kitecrew-5.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2025/06/przyczepa-kempigowa-wynajem-chalupy-kitecrew-5.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2025/06/przyczepa-kempigowa-wynajem-chalupy-kitecrew-6.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2025/06/przyczepa-kempigowa-wynajem-chalupy-kitecrew-6.jpg"></noscript><br>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-col column-block clearfix  "><h4><span>♦</span><span>​</span>&nbsp;Przyczepa 2 LMC &#8211; Standard</h4>
+<p>5 &#8211; osobowa , o długości 7m,&nbsp; dwa podwójne łóżka: jedno w salonie (składane na stolik i podkowę) i drugie w sypialni (stałe), plus mały pokoik z łóżkiem piętrowym (dolne łóżko ogólnoużytkowe, górne łóżko tylko dla dziecka do 50kg). Przedsionek z podłogą, zawiera stół, krzesła, lampę, światełka, wieszak na pianki, oraz środki czystości. Max ilość osób = 5.</p>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2025/06/wypozyczalnia-przyczep-chalupy-6-kitecrew-5.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2025/06/wypozyczalnia-przyczep-chalupy-6-kitecrew-5.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2025/06/wypozyczalnia-przyczep-chalupy-6-kitecrew-2.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2025/06/wypozyczalnia-przyczep-chalupy-6-kitecrew-2.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2025/06/wypozyczalnia-przyczep-chalupy-6-kite-crew.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2025/06/wypozyczalnia-przyczep-chalupy-6-kite-crew.jpg"></noscript><br>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2025/06/wypozyczalnia-przyczep-chalupy-6-kitecrew-4.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2025/06/wypozyczalnia-przyczep-chalupy-6-kitecrew-4.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2025/06/wypozyczalnia-przyczep-chalupy-6-kitecrew-1.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2025/06/wypozyczalnia-przyczep-chalupy-6-kitecrew-1.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2025/06/wypozyczalnia-przyczep-kite-crew-chalupy-6.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2025/06/wypozyczalnia-przyczep-kite-crew-chalupy-6.jpg"></noscript><br>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-col column-block clearfix  "><h4>​​​<span>♦​</span> Przyczepa 3 FUERTA &#8211; typu Komfort</h4>
+<p>5-osobowa, posiada 4 łóżka: łóżka piętrowe (2 x 1 os), stolik z siedzeniami rozkładany na łóżko 1 os, oraz łóżko francuskie 2-osobowe. Nowy przedsionek Isabella z podłogą, w przedsionku stół, krzesła, aneks kuchenny, lodówka, lampa stojąca, wieszak na pianki, skrzynka z przyborami: miotłą, zmiotką i szufelką. Max ilość osób = 5.</p>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2026/04/przyczepa_kempingowa_kitecrew_chalupy_IMG_2835_.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2026/04/przyczepa_kempingowa_kitecrew_chalupy_IMG_2835_.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2026/04/przyczepa_kempingowa_kitecrew_chalupy_IMG_2831_.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2026/04/przyczepa_kempingowa_kitecrew_chalupy_IMG_2831_.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2026/04/przyczepa_kempingowa_kitecrew_chalupy_IMG_2822_.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2026/04/przyczepa_kempingowa_kitecrew_chalupy_IMG_2822_.jpg"></noscript><br>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2026/04/przyczepa_kempingowa_kitecrew_chalupy_IMG_2823_.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2026/04/przyczepa_kempingowa_kitecrew_chalupy_IMG_2823_.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2026/04/przyczepa_kempingowa_kitecrew_chalupy_IMG_2833_.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2026/04/przyczepa_kempingowa_kitecrew_chalupy_IMG_2833_.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2026/04/przyczepa_kempingowa_kitecrew_chalupy_IMG_2819_.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2026/04/przyczepa_kempingowa_kitecrew_chalupy_IMG_2819_.jpg"></noscript><br>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-col column-block clearfix  "><h4><span>♦​&nbsp;</span>Przyczepa 4 BALI &#8211; typu Komfort</h4>
+<p>5-osobowa, łóżko 2-osobowe stałe, podkowa ze stolikiem rozkładana na łóżko 2-osobowe, łóżko pojedyncze składane na stolik z siedzeniami;&nbsp;przedsionek z drewnianą podłogą z pełnym wyposażeniem: stół, krzesła, leżak, stoliczek na kawę, lampa stojąca, wieszak na pianki, pojemnik do naczyń, skrzynka, miotła, zmiotka i szufelka. Max ilość osób = 5.</p>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_0X4A6449.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_0X4A6449.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2024/06/wynajem-przyczep-kempingowych-chalupy-6-kitecrewpl.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2024/06/wynajem-przyczep-kempingowych-chalupy-6-kitecrewpl.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_wynajem-przyczep-kempingowych-chalupy-6-kitecrew_pl-1.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_wynajem-przyczep-kempingowych-chalupy-6-kitecrew_pl-1.jpg"></noscript><br>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2024/06/wypozyczalnia-przyczepa-kempingowa-chalupy-6-kite_crew_pl.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2024/06/wypozyczalnia-przyczepa-kempingowa-chalupy-6-kite_crew_pl.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_wynajem-przyczep-chalupy-kitecrew-110-kite-crew-1.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_wynajem-przyczep-chalupy-kitecrew-110-kite-crew-1.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2024/06/wynajem-przyczep-chalupy-kitecrew-110-kite-crew_109-1.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2024/06/wynajem-przyczep-chalupy-kitecrew-110-kite-crew_109-1.jpg"></noscript><br>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-col column-block clearfix  "><h4><span>♦</span>​&nbsp;Przyczepa 5 CALIFORNIA &#8211; typu Komfort</h4>
+<p>5-6-osobowa, trzy kanapy rozkładane na 2-osobowe łóżka, obszerna, przedsionek z pełnym wyposażeniem: stół, krzesła, leżak, stoliczek na kawę, lampa stojąca, wieszak na pianki, skrzynka, miotła, zmiotka i szufelka. Max ilość osób = 6.</p>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_wypozyczalnia-przyczepy-kempingowe-przyczepa-wynajem-chalupy-6.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_wypozyczalnia-przyczepy-kempingowe-przyczepa-wynajem-chalupy-6.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_wypozyczalnia-przyczepy-kempingowe-przyczepa-wynajem-chalupy-6-camping-2-e1717851079251.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_wypozyczalnia-przyczepy-kempingowe-przyczepa-wynajem-chalupy-6-camping-2-e1717851079251.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2024/04/przyczepa-kempingowa-wypozyczalnia-kitecrew-chalupy-6.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2024/04/przyczepa-kempingowa-wypozyczalnia-kitecrew-chalupy-6.jpg"></noscript><br>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_wypozyczalnia-przyczepy-kempingowe-przyczepa-wynajem-chalupy-6-109-kitecrew_108.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_wypozyczalnia-przyczepy-kempingowe-przyczepa-wynajem-chalupy-6-109-kitecrew_108.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2022/06/wynajem-przyczep-kempingowych-chalupy-6-wypozyczalnia-kamping-hel-scaled.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2022/06/wynajem-przyczep-kempingowych-chalupy-6-wypozyczalnia-kamping-hel-scaled.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_wypozyczalnia-przyczepy-kempingowe-przyczepa-wynajem-chalupy-6-89-kitecrew_88.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2024/06/kitecrew_wypozyczalnia-przyczepy-kempingowe-przyczepa-wynajem-chalupy-6-89-kitecrew_88.jpg"></noscript><br>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-col column-block clearfix  "><h4><span>♦</span>​&nbsp;Przyczepa 6 HAWAII &#8211; typu Komfort</h4>
+<p>Przyczepa 5-6 osobowa. Duża podkowa składana na 2-3 osobowe łóżko, po środku 2-os łóżko małżeńskie z materacem, z tyłu &#8222;pokoik&#8221; z łóżkiem piętrowym (2 pojedyncze materace 1,80 x 70 cm) oraz stoliczkiem dla dzieci z 2 miejscami do siedzenia; przedsionek z drewnianą podłogą i pełnym wyposażeniem: stół, krzesła, leżak, stoliczek na kawę, lampa stojąca, wieszak na pianki, skrzynka, miotła, zmiotka i szufelka. Max ilość osób = 6.</p>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2021/06/kemping-chalupy6-przyczepy-rental.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2021/06/kemping-chalupy6-przyczepy-rental.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2021/06/wynajem-przyczep-kempingowych-chalupy6-kite-crew.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2021/06/wynajem-przyczep-kempingowych-chalupy6-kite-crew.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2021/06/przyczepy-chalupy-6-kemping-hel-kite-scaled.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2021/06/przyczepy-chalupy-6-kemping-hel-kite-scaled.jpg"></noscript><br>
+</div></div><div class="be-row be-wrap clearfix"><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2021/06/wynajem-przyczep-kemping-chaupy-6-kitecrew.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2021/06/wynajem-przyczep-kemping-chaupy-6-kitecrew.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2021/06/przyczepy-kempingowe-wypozyczalnia-chalupy6.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2021/06/przyczepy-kempingowe-wypozyczalnia-chalupy6.jpg"></noscript><br>
+</div><div class="one-third column-block   "><img decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E" data-lazy-src="https://www.kitecrew.pl/wp-content/uploads/2024/04/przyczepa-kempingowa-wypozyczalnia-chalupy-6-kitecrew-e1717847929493.jpg"><noscript><img decoding="async" src="https://www.kitecrew.pl/wp-content/uploads/2024/04/przyczepa-kempingowa-wypozyczalnia-chalupy-6-kitecrew-e1717847929493.jpg"></noscript><br>
+</div></div></div></div><div class="be-section       clearfix" data-headerscheme="background--dark" ><div class="be-section-pad clearfix"><div class="be-row be-wrap clearfix"><div class="one-col column-block clearfix  "><h3>Przyczepa kempingowa Hel &#8211; noclegi Chałupy</h3>
+<p>Szkoła kitesurfingu Kite Crew to miejsce gdzie rozpocząć naukę kitesurfingu może każdy ! Aby zapewnić Wam najlepszy dostęp do szkolenia i warunków przez cały okres przyjazdu do nas, dbamy by nasze niewielkie zaplecze noclegowe było zarezerwowane dla Was, a wypożyczalnia przyczep kempingowych zawsze miała miejsce dla kursantów. Wybierając i rezerwując kurs kitesurfingu wybierzcie tydzień w którym chcielibyście do nas przyjechać o wyślijcie mailowo zapytanie lub zadzwońcie by sprawdzić naszą dostępność i zarezerwować sobie przyczepkę.</p>
+<h3>Przyczepy kempingowe tuż przy plaży</h3>
+<p>Nasza wypożyczalnia przyczep kempingowych to kilka przyczep przygotowanych dla kitesurferów i ich rodzin, lub osób, które zaplanowały wakacje razem. Przyczepy kempingowe znajdują się bardzo blisko plaży, tuż za biurem szkoły, z dostępem do plaży przez bazą szkoły. Zaledwie 20m od naszych przyczep kempingowych znajdują się sanitariaty z osobnymi toaletami i prysznicami damskimi i męskimi, tuż obok jest sklep spożywczy, restauracja Karma, a wychodząc z naszej alejki znajdziecie lodziarnię, foodtrucki, sklep odzieżowy, bar Bacardi, strefę chill out, plac zabaw, pralnia i suszarnia ubrań &#8211; wszystko w zasięgu 50m.</p>
+<p>Przyczepy kempingowe wynajmowane w szkole Kite Crew znajdują się w samym centrum kempingu, zarówno nasza plaża jak i cały kemping Chałupy 6 mocno żyją swoim życiem, a nasza okolica jest wiecznie w ruchu.</p>
+<h3>Obozy kitesurfingowe Chałupy</h3>
+<p>Wynajem przyczep kempingowych to również powód dla którego możemy gościć Was na naszych ciekawych obozach, łączących różne aktywności i tworzących niezapomniane momenty ! Zapraszamy na jeden z obozów: obóz Kite &amp; Yoga, obóz Wake &amp; Kite, obóz Kite &amp; Dance, oraz kobiecy Kite Active Camp z The Queen of Hel. Więcej na stronie OBOZÓW KITE&nbsp;&nbsp;https://www.kitecrew.pl/portfolio/obozy-kitesurfingowe-chalupy-6/</p>
+<p>&nbsp;</p>
+<h2>KEMPING CHAŁUPY 6 i PÓŁWYSEP HELSKI</h2>
+<h3>Chałupy 6 i Półwysep Helski</h3>
+<p>Kemping Chałupy 6 / Pole namiotowe nr 6 to część przepięknego Nadmorskiego Parku Krajobrazowego którzy leży na Półwyspie Helskim. Półwysep Helski ciągnie się 35 km do położonego na jego końcu miasta Hel. Uwielbiany przez tysiące&nbsp;turystów Półwysep ma szerokość od zaledwie 400m do 3km.</p>
+<h3>Przyczepy Hel</h3>
+<p>Przez cały Półwysep Helski ciągnie się ścieżka rowerowa, która jest dosyć ruchliwa w obrębie Chałup w trakcie sezonu, jednak jak tylko wyjedzie się za miasto, można odczuć spokój i bliskość z&nbsp;naturą gdzie można wybrać się na rower, longboard, deskorolkę, rolki, czy spacer, zmierzając okoliczne lasy i widoki Zatoki i Morza Bałtyckiego.</p>
+<h3>Kemping Chałupy</h3>
+<p>Kemping Chałupy 6 znajduje się w odległości 6km od miasta Władysławowa i zaledwie 300m od wioski Chałupy.</p>
+<p>Położony jest po stronie Zatoki Puckiej i ciągnie się wzdłuż plaży Zatoki. Zatoka Pucka to zdecydowanie najlepszy spot kitesurfingowy i windsurfingowy w Polsce, z połaciami płaskiej wody, daje&nbsp;bezpieczne warunki do szkolenia. Kursy kitesurfingu odbywają się codziennie.</p>
+<h3>Atrakcje turystyczne Półwyspu:</h3>
+<p>&#8211; piękne plaże miejscowości &nbsp;Władysławowo, Chałupy, Kuźnica, Jurata, Jastarnia, Hel</p>
+<p>&#8211; fokarium w Helu</p>
+<p>&#8211; Muzeum Obrony Wybrzeża w Helu</p>
+<p>&#8211; molo w Juracie</p>
+<p>&#8211; przystań i port w Kuźnicy</p>
+<p>&#8211; kościół Rybacki w Kuźnicy</p>
+<p>&#8211; ścieżka podróżnicza Torfowe&nbsp;Kłyje w Jastarni</p>
+<p>&#8211; latarnia morska i inne zabytki w Jastarni</p>
+<p>&#8211; bunkry w Jastarni</p>
+<p>&#8211; plaża naturystów w Chałupach</p>
+<p>&#8211; Hallerówka, oraz Port we Władysławowie</p>
+<h3>Przyczepy Chałupy &#8211; okolica naszej wypożyczalni</h3>
+<p>Jest to świetne miejsce na wypoczynek, turystycznie mocno rozwinięte w sezonie Chałupy oferują: restauracje, smażalnie ryb, place zabaw dla dzieci, festiwale muzyczne, kluby, imprezy.</p>
+<p>Wypożyczalnia przyczep kempingowych Chałupy 6 znajduje się w centrum wibrującego kempingu Chałupy 6 który słynie z nowoczesności, czystości, szerokiej gamie atrakcji sportowych, kulturowych i rozrywkowych, oraz dobrej kuchni restauracji, oraz food track&#8217;ów. Przyczepy kempingowe Chałupy 6 leżą w samym centrum kempingu od strony Zatoki, plaża znajduje się tuż obok, a z drugiej strony wszystkie atrakcje kempingu &#8211; restauracja, sklep, sanitariaty, pralnia i suszarnia ubrań. Wypożyczalnia przyczep posiada biuro w szkole Kite Crew otwarte codziennie pon-ndz od 9 -19 , dzięki czemu zawsze możemy pomóc, doradzić. Przyczepy kempingowe są komfortowe i zadbane. Przestrzeń powiększa przedsionek który znajduje się przed każdą przyczepą, a w nim stół i krzesła. Zapraszamy</p>
+<p>Przyczepy Kempingowe Chałupy 6 / Wypożyczalnia Przyczep Kempingowych / Wynajem Przyczep / Kemping Chałupy 6 Przyczepy / Kempingi na Chałupach / Profesjonalna Wypożyczalnia Przyczep Kempingowych na Półwyspie Helskim</p>
+<h3><span><strong>Atrakcje kempingu</strong></span></h3>
+<p>Na kempingu dostępne są:</p>
+<ul>
+<li>szkoła kitesurfingu Kite Crew</li>
+<li>sklep spożywczy (20m),</li>
+<li>sklep odzieżowy (100m),</li>
+<li>restauracja Karma (30m),</li>
+<li>2 Food-tracki: burgery i kanapki oraz gofry i desery,</li>
+<li>koktajl bar,</li>
+<li>plac zabaw,</li>
+<li>szkółka z animacjami dla dzieci &#8211; przedszkole dla dzieci na kempingu Surf baza</li>
+<li>kort tenisowy,</li>
+<li>plażowa siłownia i crossfit park,</li>
+<li>3 sanitariaty (30m),</li>
+<li>pralnia i suszarnia ubrań</li>
+<li>znakomita lokalizacja! tylko 300m do Chałup gdzie znajdziecie restauracje, bary, sklepy całodobowe, PKP, PKS itp</li>
+<li>w okresie lipiec &#8211; sierpień : muzyczna strefa Bacardi, darmowe koncerty 2x w tygodniu, lekcje gotowania z Masterchef, kino letnie Chałupy 6, stand up&#8217;y i wiele ciekawych promocji i samplingów.</li>
+</ul>
+<hr class="be-shortcode separator" /><div class="be-button-wrap align-block block-center"><a class="be-shortcode mediumbtn be-button rounded  " href="https://www.kitecrew.pl/portfolio/obozy-kitesurfingowe-chalupy-6/" data-animation="fadeIn" data-bg-color="inherit" data-hover-bg-color="#3edce5" data-color="#000000" data-hover-color="#000000" data-border-color="#3edce5" data-hover-border-color="#000000">Obozy Kitesurfingowe</a></div></div></div></div></div>				</div> <!--  End Page Content -->
+							</section>
+		</div>
+	</section>		<footer data-wpr-lazyrender="1" id="bottom-widgets">
+<!--
+<div id="fb-footer">
+	<iframe loading="lazy" src="about:blank" width="280" height="200" scrolling="no" frameborder="0" allowTransparency="true" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Ffacebook.com%2FKitecrewpl-Szko%25C5%2582a-Kitesurfingu-Kursy-Zagraniczne-581830525218654%2F&#038;tabs=timeline&#038;width=280&#038;height=200&#038;small_header=true&#038;adapt_container_width=true&#038;hide_cover=false&#038;show_facepile=true&#038;appId=351593394930094"></iframe><noscript><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Ffacebook.com%2FKitecrewpl-Szko%25C5%2582a-Kitesurfingu-Kursy-Zagraniczne-581830525218654%2F&tabs=timeline&width=280&height=200&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=351593394930094" width="280" height="200" scrolling="no" frameborder="0" allowTransparency="true"></iframe></noscript>
+</div>
+-->
+			<div id="bottom-widgets-wrap" class="be-wrap be-row clearfix">
+									<div class="one-third column-block clearfix">
+						<div class="widget_search widget"><p class="old-h6">Szukaj&#8230;</p><form role="search" method="get" class="searchform" action="https://www.kitecrew.pl/" >
+	    <input type="text" placeholder="Szukaj..." value="" name="s" class="s" />
+	    <i class="search-icon icon-search font-icon"></i>
+	    <input type="submit" class="search-submit" value="" />
+	    </form></div><div class="widget_text widget"><p class="old-h6">KEMPING CHAŁUPY 6</p>			<div class="textwidget"><p>Czynne od 1 maja &#8211; Jesteśmy pierwszą szkołą po wejściu na kemping &#8211; Za bramą wjazdową skręć w prawo, miniesz restaurację i sklep spożywczy, a następnie skręć w lewo przy flagach Kite Crew, w alejkę do zatoki</p>
+</div>
+		</div><div class="widget_text widget"><p class="old-h6">Numer konta:</p>			<div class="textwidget"><p>KITE CREW, ul. Rzemieślnicza 2/25, 84-120 Władysławowo</p>
+<p>REDACTED-ACCOUNT</p>
+<p>Millennium Bank</p>
+<p>SWIFT: BIGBPLPWXXX</p>
+</div>
+		</div>					</div>
+									<div class="one-third column-block clearfix">
+						<div class="widget_text widget"><p class="old-h6">Kontakt z nami</p>			<div class="textwidget">info@kitecrew.pl <br/> tel / WhatsApp (+48) 789-424-210                                                                   
+<br /><br /></div>
+		</div><div class="widget_text widget">			<div class="textwidget"><p><iframe loading="lazy" src="about:blank" frameborder="0" scrolling="no" data-rocket-lazyload="fitvidscompatible" data-lazy-src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Ffacebook.com%2FKitecrewpl-Szko%25C5%2582a-Kitesurfingu-Kursy-Zagraniczne-581830525218654%2F&#038;tabs=timeline&#038;width=280&#038;height=200&#038;small_header=true&#038;adapt_container_width=true&#038;hide_cover=false&#038;show_facepile=true&#038;appId=351593394930094"></iframe><noscript><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Ffacebook.com%2FKitecrewpl-Szko%25C5%2582a-Kitesurfingu-Kursy-Zagraniczne-581830525218654%2F&amp;tabs=timeline&amp;width=280&amp;height=200&amp;small_header=true&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=351593394930094" frameborder="0" scrolling="no"></iframe></noscript></p>
+</div>
+		</div><div class="widget_mc4wp_form_widget widget"><p class="old-h6">Newsletter</p><script></script><!-- Mailchimp for WordPress v4.13.1 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-5987" method="post" data-id="5987" data-name="Newsletter" ><div class="mc4wp-form-fields"><p>
+    <label>Imię:</label>
+    <input type="text" name="FNAME">
+</p>
+<p> <label>Adres e-mail: 
+		<input type="email" name="EMAIL" placeholder="Your email address" required />
+</label>
+</p>
+<label>
+        <input name="AGREE_TO_TERMS" type="checkbox" value="1" required=""> <a href="https://www.kitecrew.pl/regulamin/" target="_blank">I have read and agree to the terms &amp; conditions</a>
+    </label>
+<p>
+	<input type="submit" value="Sign up" />
+</p></div><label>Pozostaw to pole puste, jeśli jesteś człowiekiem: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label><input type="hidden" name="_mc4wp_timestamp" value="1791840407" /><input type="hidden" name="_mc4wp_form_id" value="5987" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin --></div><div class="widget_block widget">
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-9d6595d7 wp-block-columns-is-layout-flex">
+<div class="wp-block-column is-layout-flow wp-block-column-is-layout-flow">
+<div class="wp-block-columns is-layout-flex wp-container-core-columns-is-layout-9d6595d7 wp-block-columns-is-layout-flex"></div>
+</div>
+</div>
+</div>					</div>
+									<div class="one-third column-block clearfix">
+						<div class="widget_tag_cloud widget"><p class="old-h6">Tagi</p><div class="tagcloud"><a rel="nofollow"  href="https://www.kitecrew.pl/tag/australia/" class="tag-cloud-link tag-link-62 tag-link-position-1">Australia</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/brazylia/" class="tag-cloud-link tag-link-58 tag-link-position-2">brazylia</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/chalupy-6/" class="tag-cloud-link tag-link-72 tag-link-position-3">chałupy 6</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/cumbuco/" class="tag-cloud-link tag-link-63 tag-link-position-4">cumbuco</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/eventy/" class="tag-cloud-link tag-link-89 tag-link-position-5">eventy</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/festiwal/" class="tag-cloud-link tag-link-112 tag-link-position-6">festiwal</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/fordkitecup/" class="tag-cloud-link tag-link-42 tag-link-position-7">fordkitecup</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/katarzyna-lange/" class="tag-cloud-link tag-link-66 tag-link-position-8">Katarzyna Lange</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/kite/" class="tag-cloud-link tag-link-87 tag-link-position-9">kite</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/kite-joga/" class="tag-cloud-link tag-link-114 tag-link-position-10">kite &amp; joga</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/kitesurfing/" class="tag-cloud-link tag-link-88 tag-link-position-11">kitesurfing</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/kurs-instruktorski/" class="tag-cloud-link tag-link-67 tag-link-position-12">kurs instruktorski</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/kursy-kitesurfingu/" class="tag-cloud-link tag-link-65 tag-link-position-13">kursy kitesurfingu</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/kursy-zagraniczne/" class="tag-cloud-link tag-link-54 tag-link-position-14">kursy zagraniczne</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/lekcje-kitesurfingu/" class="tag-cloud-link tag-link-61 tag-link-position-15">lekcje kitesurfingu</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/majowka/" class="tag-cloud-link tag-link-74 tag-link-position-16">majówka</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/maroko/" class="tag-cloud-link tag-link-52 tag-link-position-17">maroko</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/mistrzyni-polski/" class="tag-cloud-link tag-link-116 tag-link-position-18">mistrzyni polski</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/obozy-studenckie/" class="tag-cloud-link tag-link-100 tag-link-position-19">obozy studenckie</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/oboz/" class="tag-cloud-link tag-link-103 tag-link-position-20">obóz</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/pkra/" class="tag-cloud-link tag-link-53 tag-link-position-21">pkra</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/podroze/" class="tag-cloud-link tag-link-50 tag-link-position-22">podróże</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/pro-camp/" class="tag-cloud-link tag-link-98 tag-link-position-23">pro camp</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/promocje/" class="tag-cloud-link tag-link-109 tag-link-position-24">promocje</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/przyczepy-kempingowe/" class="tag-cloud-link tag-link-96 tag-link-position-25">przyczepy kempingowe</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/queen-of-hel/" class="tag-cloud-link tag-link-105 tag-link-position-26">queen of hel</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/surf/" class="tag-cloud-link tag-link-131 tag-link-position-27">surf</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/surfing/" class="tag-cloud-link tag-link-130 tag-link-position-28">surfing</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/szkola-surfingu/" class="tag-cloud-link tag-link-132 tag-link-position-29">szkola surfingu</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/szkolenie-kite/" class="tag-cloud-link tag-link-99 tag-link-position-30">szkolenie kite</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/szkola-kitesurfingu/" class="tag-cloud-link tag-link-64 tag-link-position-31">szkoła kitesurfingu</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/wyjazdy-2/" class="tag-cloud-link tag-link-49 tag-link-position-32">wyjazdy</a>
+<a rel="nofollow"  href="https://www.kitecrew.pl/tag/zawody/" class="tag-cloud-link tag-link-43 tag-link-position-33">zawody</a></div>
+</div>					</div>
+							</div>
+		</footer>
+			<footer data-wpr-lazyrender="1" id="footer">
+			<div id="footer-wrap" class="be-wrap clearfix">
+				<div id="copyright">
+					© Copyright 2014 - 2019 KiteCrew. All Rights Reserved. |  Realizacja: <a rel="nofollow" href="http://www.stroniarz.pl/">Stroniarz.pl</a>				</div>
+			</div>
+		</footer>
+		<div  class="gallery-slider-wrap">
+			<div class="gallery-slider-content">
+			</div>
+			<div class="gallery-slider-controls">
+				<div class="bubblingG loader">
+					<span id="bubblingG_1"></span>
+					<span id="bubblingG_2"></span>
+					<span id="bubblingG_3"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div  class="bubblingG loader page-loader">
+		<span id="bubblingG_1"></span>
+		<span id="bubblingG_2"></span>
+		<span id="bubblingG_3"></span>
+	</div>
+	<a href="#" id="back-to-top"><i class="font-icon icon-up-open-big"></i></a>
+</div>
+<script></script>
+<!-- Option Panel Custom JavaScript -->
+<script></script>
+<input type="hidden" id="ajax_url" value="https://www.kitecrew.pl/wp-admin/admin-ajax.php" />
+        <!-- Meta Pixel Event Code -->
+        <script type='text/javascript'></script>
+        <!-- End Meta Pixel Event Code -->
+                <!-- Meta Pixel Event Code -->
+        <script type='text/javascript'></script>
+        <!-- End Meta Pixel Event Code -->
+        <script type="speculationrules"></script>
+<!-- Custom Facebook Feed JS -->
+<script type="text/javascript"></script>
+<script></script><script></script>    <!-- Meta Pixel Event Code -->
+    <script type='text/javascript'></script>
+    <!-- End Meta Pixel Event Code -->
+        <div id='fb-pxl-ajax-code'></div><!-- Instagram Feed JS -->
+<script type="text/javascript"></script>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-includes/js/comment-reply.min.js?ver=6.9.4" id="comment-reply-js" async="async" data-wp-strategy="async" fetchpriority="low"></script>
+<script type="text/javascript" id="cookie-notice-front-js-before"></script>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-content/plugins/cookie-notice/js/front.min.js?ver=3.1.2" id="cookie-notice-front-js" data-rocket-defer defer></script>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-content/plugins/custom-facebook-feed/assets/js/cff-scripts.min.js?ver=4.8.1" id="cffscripts-js" data-rocket-defer defer></script>
+<script type="text/javascript" id="google-invisible-recaptcha-js-before"></script>
+<script type="text/javascript" async defer src="https://www.google.com/recaptcha/api.js?onload=renderInvisibleReCaptcha&amp;render=explicit" id="google-invisible-recaptcha-js"></script>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-content/themes/namo/js/plugins.js?ver=6.9.4" id="be-themes-plugins-js-js" data-rocket-defer defer></script>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-content/themes/namo/js/be-slider.js?ver=6.9.4" id="be-themes-slider-js-js" data-rocket-defer defer></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?ver=6.9.4" id="map-api-js" data-rocket-defer defer></script>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-content/themes/namo/js/gmap3.min.js?ver=6.9.4" id="be-map-js" data-rocket-defer defer></script>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-content/themes/namo/js/jquery-ui-1.8.22.custom.min.js?ver=6.9.4" id="jquery_ui_custom-js" data-rocket-defer defer></script>
+<script type="text/javascript" src="https://www.kitecrew.pl/wp-content/themes/namo/js/script.js?ver=6.9.4" id="be-themes-script-js-js" data-rocket-defer defer></script>
+<script type="text/javascript" defer src="https://www.kitecrew.pl/wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.13.1" id="mc4wp-forms-api-js"></script>
+		<!-- Compliance by Hu-manity.co plugin v3.1.2 https://hu-manity.co/ -->
+		<div  id="cookie-notice" role="dialog" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom" aria-label="Compliance by Hu-manity.co"><div  class="cookie-notice-container"><span id="cn-notice-text" class="cn-text-container">Ta strona korzysta z ciasteczek aby świadczyć usługi na najwyższym poziomie. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.</span><span id="cn-notice-buttons" class="cn-buttons-container"><button id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button" aria-label="Zgoda">Zgoda</button></span><button type="button" id="cn-close-notice" data-cookie-set="accept" class="cn-close-icon" aria-label="Nie wyrażam zgody"></button></div>
+		</div>
+		<!-- / Compliance by Hu-manity.co plugin --><script></script><script data-no-minify="1" async src="https://www.kitecrew.pl/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script></script><!-- hosted on pihost.pl -->
+</body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

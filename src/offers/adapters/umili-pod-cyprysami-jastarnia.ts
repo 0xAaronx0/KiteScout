@@ -151,7 +151,7 @@ export function parsePodCyprysamiContent(p: PcPages): OfferContent {
     summary,
     continent: 'Europe',
     country: 'Poland',
-    region: 'Hel Peninsula',
+    region: 'Jastarnia, Hel Peninsula',
     spot: 'Jastarnia',
     spotCoords: coords, // the "home" marker of the site's own resort map
     itinerarySpots: [],

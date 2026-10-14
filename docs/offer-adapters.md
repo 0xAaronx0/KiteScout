@@ -186,6 +186,24 @@ Pins: the geocoder picked namesakes far away (Valdevaqueros in Zamora, Punta Pal
 Farol in Pará) or municipality centroids inland (Touros, Icaraí de Amontada); these are in `KNOWN_PINS` now.
 Package images are stripped of `\u0000` before the jsonb write (it failed one listing).
 
+## Stays round 5: North and Baltic Sea outside Germany (2026-10-14)
+
+17 adapters: Denmark 7 (Drivethru Hvide Sande, Hvide Sande Camping, Bork Havn, Skaven, Thorsminde, Drejby on Als,
+Feddet), Poland 8 (Chałupy: kite.pl, Kite Crew, Surf House; Jastarnia: Sun4Hel, Loop It; Rewita Jurata, Kite Marina
+Sarbsk, FLY House Łeba), Netherlands 1 (LearnKiteboardingNow, Oostvoorne), Belgium 1 (Lakeside Paradise, Knokke-Heist).
+Left out on Aaron's call: Hotel Skipper Rewa, I Love Travels; Camping Hindeloopen (403) is on the request backlog.
+
+Live engine added: Compusoft (v3.onlinebooking.dk, robots `Allow: /`, the widget's anonymous profile-list and price
+calls; one Saturday-to-Saturday sample week per month) for Hvide Sande Camping, Drejby and Feddet. The helpers live in
+`hvide-sande-camping.ts` (candidate for `src/offers/engines/compusoft.ts`; Thorsminde and Wulfener Hals use the same
+engine). Not used: Bookinglayer (Drivethru, robots), mobile-calendar, RoomAdmin, Profitroom (robots), GuestSage
+(switched off at Kite Marina), nfhotel (hidden-frame script, FLY House), Cubilis (403), LearnKiteboardingNow's
+WordPress calendar beyond the current month (needs the page nonce).
+
+Many Baltic price tables are 2026-only and already past (Kite Marina, kite.pl, Kite Crew, Surf House), so those show
+"price on request" until the 2027 tables appear. The `\u0000` strip now covers every package, slot and image write
+(a page text carried one). Pins: "Chałupy" and "Drejby Strand, Kegnæs" in `KNOWN_PINS`.
+
 ## Refresh strategy (recommendation)
 
 - Booking-engine / Shopify / app JSON: daily `--slots` (in the 06:00 UTC monitor cron, job `offer-slots`,
