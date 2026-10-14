@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="mobile-web-app-capable" content="yes">
+	
+			<link href="/assets/oasiskite/oasiskite/google-fonts.css" rel="stylesheet">
+	
+			<link crossorigin="anonymous" rel='stylesheet' id='mec-google-fonts-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A400%2C700%7CRoboto%3A100%2C300%2C400%2C700&#038;ver=5.8.2' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='mec-custom-google-font-css'  href='https://fonts.googleapis.com/css?family=Voltaire%3Aregular%2C+%7CVoltaire%3Aregular%2C+&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='pique-fonts-css'  href='https://fonts.googleapis.com/css?family=Lora%3A400%2C700%2C400italic%2C700italic%7CKarla%3A400%2C700%2C400italic%2C700italic&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='google-fonts-1-css'  href='https://fonts.googleapis.com/css?family=Josefin+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CVoltaire%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.8.2' type='text/css' media='all' />
+	    <title>
+        			Buchung			</title>
+		    <link href="/static/responsive/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/static/responsive/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="/static/responsive/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+	<link href="/static/responsive/css/animate.css" rel="stylesheet">
+			<link href="/static/responsive/css/style.css" rel="stylesheet">
+	
+	<link rel="stylesheet" href="/static/js/jquery-ui-1.11.4/jquery-ui.css">
+	
+	<link href="/static/js/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet">
+	
+    <link href="/static/responsive/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="/static/js/tooltipster/dist/css/tooltipster.bundle.min.css" />
+	
+			<link href="/static/css/bookingform.css" rel="stylesheet">
+	
+	<link rel='stylesheet' href='/static/js/unitegallery/css/unite-gallery.css' type='text/css' />
+	
+	<link rel="stylesheet" href="/static/js/fullcalendar/fullcalendar.min.css" />
+	<link rel="stylesheet" href="/static/js/fullcalendar/scheduler.min.css" />
+	<link rel="stylesheet" href="/static/js/intPhone/css/intlTelInput.css" />
+	
+						<link href="/assets/oasiskite/oasiskite/stylesheet.css?v=1791962493" rel="stylesheet">
+	
+	<link rel="apple-touch-icon" sizes="57x57" href="/static/images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/static/images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/static/images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/static/images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/static/images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/static/images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/static/images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/static/images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/static/images/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	
+	
+		    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+	    <script></script>
+	    <script></script>
+	</head>
+<body id="iframe-leao">
+	<div class="overlayLoader text-center" style="display: none;">
+        <div class="loader"></div>
+        <div class="overlayLoaderText">
+            <div class="text-white container text-center">
+                <h5>Vielen Dank! Deine Buchung wird gespeichert. Wir bitten um ein wenig Geduld...</h5>
+            </div>
+        </div>
+    </div>
+	
+			<div id="header-bg">
+		<div class="container">
+			<div class="col-xs-12" id="header-bookingform">
+				<a href="https://oasiskite.com" target="_blank">
+			<img id="logo" src="/assets/oasiskite/oasiskite/images/logo.png" alt="Oasis Kite">
+	</a>
+<div id="langbox">
+	<div id="station_phone"><a href="tel:+21624458655 (WhatsApp)"><i class="fa fa-phone"></i>&nbsp;+21624458655 (WhatsApp)</a></div>
+	
+			<div id="lang_selection_flags">
+					<a href="?setLanguage=de"><img src="/static/images/flags-xl/de.png" border="0" width="25"></a>
+					<a href="?setLanguage=en"><img src="/static/images/flags-xl/en.png" border="0" width="25"></a>
+				</div>
+	</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="menu-bg">
+		<div class="container">
+			<div class="col-xs-12" id="menu-bookingform">
+				<div class="nav">
+<ul>
+<li class="hidden-xs"><a href="/selfservice/destination-date"><i class='fa fa-calendar'></i> Aufenthalt</a></li>				<li class="hidden-xs"><div><i class='fa fa-users'></i> Teilnehmer</div></li>			<li class="hidden-xs"><div><i class='fa fa-shopping-cart'></i> Leistungen</div></li>		<li class="hidden-xs"><div><i class='fa fa-file-text'></i> Kundendaten</div></li>		<li class="hidden-xs"><div><i class='fa fa-info-circle'></i> Zusammenfassung</div></li>		</ul>	<div class="visible-xs col-xs-12 col-12 li-select-menu">
+		<select class="w-100 select-menu  mb-5" onChange="document.location.href=this.value" style="padding: 10px;">
+			<option value="/selfservice/destination-date">Schritt 1: <i class='fa fa-calendar'></i> Aufenthalt</option><option disabled>Schritt 2: <i class='fa fa-users'></i> Teilnehmer</option><option disabled>Schritt 3: <i class='fa fa-shopping-cart'></i> Leistungen</option><option disabled>Schritt 4: <i class='fa fa-file-text'></i> Kundendaten</option><option disabled>Schritt 5: <i class='fa fa-info-circle'></i> Zusammenfassung</option>		</select>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="content-bg" class="pb-5">
+		<div class="container">
+			<form method="post">				<div class="col-xs-12" id="content-bookingform">
+					
+					<div class="col-xs-12 padding-xs" id="content-bookingform-left">
+						<div id="left-col">
+							<script></script>
+    <div class="modal inmodal" id="delete_all_from_booking-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content animated bounceInRight">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Schließen</span></button>
+				<i class="fa fa-trash modal-icon"></i>
+				<h4 class="modal-title">Alle Eingaben löschen</h4>
+			</div>
+			<form role="form" id="delete_all_from_booking-form" novalidate="novalidate">
+				<div class="modal-body">
+					Möchtest du wirklich alles löschen? Alle bisherigen Eingaben gehen dadurch unwideruflich verloren!				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-white" data-dismiss="modal"><i class="fa fa-close"></i>&nbsp;&nbsp;Nein, doch nicht</button>
+					<button type="submit" id="delete_all_from_booking-save" class="btn btn-primary"><i class="fa fa-trash"></i>&nbsp;&nbsp;Alles löschen</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>    
+			<div id="table2132" style="display: block;" class="overEffect">
+			<h4 class="leao-category-name">Kite Camp Djerba</h4>
+						<div class="event-calendar-wrapper">
+							<div class="ms-1 me-1 pt-1 pb-1 event-calendar-item row odd">
+											<div class="col-6 col-xs-6 col-sm-4">
+							<img src="/assets/oasiskite/oasiskite/images/products/16552332192144562523.jpg" style="max-width: 100%; width: auto;">
+						</div>
+						<div class="col-6 col-xs-6 col-sm-5">
+											<div class="event-calendar-name leao-product-name">
+							<strong>Beginner +  Advanced Package Djerba - Doppelzimmer</strong>
+							&nbsp;<i class="tooltipster fa fa-info-circle success" data-tooltip-content="#tooltip_content-32193"></i><br>
+						</div>
+						<div class="event-calendar-remark leao-product-teaser">
+							<small>20H KITEKURS AUGFETEILT AUF 6 TAGE INKL. MATERIAL</small>
+						</div>
+					</div>
+															<div class="event-calendar-link col-6 col-xs-6 col-sm-3 text-right text-end">
+						<div class="event-calendar-price leao-product-price">
+							<nobr><nobr>1.090,00 €</nobr></nobr>
+													</div>
+						<a href="https://myleao.com/calendar/product/32193/de" id="book-button-32193" class="btn btn-primary btn-list form-button leao-product-btn">Termin wählen</a>
+					</div>
+				</div>
+											<div class="ms-1 me-1 pt-1 pb-1 event-calendar-item row even">
+											<div class="col-6 col-xs-6 col-sm-4">
+							<img src="/assets/oasiskite/oasiskite/images/products/16552332192144562523.jpg" style="max-width: 100%; width: auto;">
+						</div>
+						<div class="col-6 col-xs-6 col-sm-5">
+											<div class="event-calendar-name leao-product-name">
+							<strong>Beginner + Advanced Package Djerba - Einzelzimmer</strong>
+							&nbsp;<i class="tooltipster fa fa-info-circle success" data-tooltip-content="#tooltip_content-32296"></i><br>
+						</div>
+						<div class="event-calendar-remark leao-product-teaser">
+							<small>20H KITEKURS AUGFETEILT AUF 6 TAGE INKL. MATERIAL</small>
+						</div>
+					</div>
+															<div class="event-calendar-link col-6 col-xs-6 col-sm-3 text-right text-end">
+						<div class="event-calendar-price leao-product-price">
+							<nobr><nobr>1.290,00 €</nobr></nobr>
+													</div>
+						<a href="https://myleao.com/calendar/product/32296/de" id="book-button-32296" class="btn btn-primary btn-list form-button leao-product-btn">Termin wählen</a>
+					</div>
+				</div>
+											<div class="ms-1 me-1 pt-1 pb-1 event-calendar-item row odd">
+											<div class="col-6 col-xs-6 col-sm-4">
+							<img src="/assets/oasiskite/oasiskite/images/products/16552332192144562523.jpg" style="max-width: 100%; width: auto;">
+						</div>
+						<div class="col-6 col-xs-6 col-sm-5">
+											<div class="event-calendar-name leao-product-name">
+							<strong>Rider Package Djerba - Doppelzimmer</strong>
+							&nbsp;<i class="tooltipster fa fa-info-circle success" data-tooltip-content="#tooltip_content-32194"></i><br>
+						</div>
+						<div class="event-calendar-remark leao-product-teaser">
+							<small>6 TAGE NUTZUNG DES MATERIALPOOLS + BEGLEITETES KITEN</small>
+						</div>
+					</div>
+															<div class="event-calendar-link col-6 col-xs-6 col-sm-3 text-right text-end">
+						<div class="event-calendar-price leao-product-price">
+							<nobr><nobr>790,00 €</nobr></nobr>
+													</div>
+						<a href="https://myleao.com/calendar/product/32194/de" id="book-button-32194" class="btn btn-primary btn-list form-button leao-product-btn">Termin wählen</a>
+					</div>
+				</div>
+											<div class="ms-1 me-1 pt-1 pb-1 event-calendar-item row even">
+											<div class="col-6 col-xs-6 col-sm-4">
+							<img src="/assets/oasiskite/oasiskite/images/products/16552332192144562523.jpg" style="max-width: 100%; width: auto;">
+						</div>
+						<div class="col-6 col-xs-6 col-sm-5">
+											<div class="event-calendar-name leao-product-name">
+							<strong>Rider Package Djerba - Einzelzimmer</strong>
+							&nbsp;<i class="tooltipster fa fa-info-circle success" data-tooltip-content="#tooltip_content-32297"></i><br>
+						</div>
+						<div class="event-calendar-remark leao-product-teaser">
+							<small>6 TAGE NUTZUNG DES MATERIALPOOLS + BEGLEITETES KITEN</small>
+						</div>
+					</div>
+															<div class="event-calendar-link col-6 col-xs-6 col-sm-3 text-right text-end">
+						<div class="event-calendar-price leao-product-price">
+							<nobr><nobr>990,00 €</nobr></nobr>
+													</div>
+						<a href="https://myleao.com/calendar/product/32297/de" id="book-button-32297" class="btn btn-primary btn-list form-button leao-product-btn">Termin wählen</a>
+					</div>
+				</div>
+											<div class="ms-1 me-1 pt-1 pb-1 event-calendar-item row odd">
+											<div class="col-6 col-xs-6 col-sm-4">
+							<img src="/assets/oasiskite/oasiskite/images/products/Yoga.jpg" style="max-width: 100%; width: auto;">
+						</div>
+						<div class="col-6 col-xs-6 col-sm-5">
+											<div class="event-calendar-name leao-product-name">
+							<strong>Yoga Package Djerba - Ad on Option</strong>
+							&nbsp;<i class="tooltipster fa fa-info-circle success" data-tooltip-content="#tooltip_content-43791"></i><br>
+						</div>
+						<div class="event-calendar-remark leao-product-teaser">
+							<small>Yoga Angebot als Ergänzung zum gewählten Kitecamp</small>
+						</div>
+					</div>
+															<div class="event-calendar-link col-6 col-xs-6 col-sm-3 text-right text-end">
+						<div class="event-calendar-price leao-product-price">
+							<nobr><nobr>60,00 €</nobr></nobr>
+													</div>
+						<a href="https://myleao.com/product/43791/de" id="book-button-43791" class="btn btn-primary btn-list form-button leao-product-btn">Buchen</a>
+					</div>
+				</div>
+											<div class="ms-1 me-1 pt-1 pb-1 event-calendar-item row even">
+											<div class="col-6 col-xs-6 col-sm-4">
+							<img src="/assets/oasiskite/oasiskite/images/products/Banner_Yoga_NL.jpg" style="max-width: 100%; width: auto;">
+						</div>
+						<div class="col-6 col-xs-6 col-sm-5">
+											<div class="event-calendar-name leao-product-name">
+							<strong>Yoga und Abenteuer Camp Djerba - Doppelzimmer</strong>
+							&nbsp;<i class="tooltipster fa fa-info-circle success" data-tooltip-content="#tooltip_content-43792"></i><br>
+						</div>
+						<div class="event-calendar-remark leao-product-teaser">
+							<small> Yoga und Abenteuer Camp Djerba</small>
+						</div>
+					</div>
+															<div class="event-calendar-link col-6 col-xs-6 col-sm-3 text-right text-end">
+						<div class="event-calendar-price leao-product-price">
+							<nobr><nobr>790,00 €</nobr></nobr>
+													</div>
+						<a href="https://myleao.com/calendar/product/43792/de" id="book-button-43792" class="btn btn-primary btn-list form-button leao-product-btn">Termin wählen</a>
+					</div>
+				</div>
+											<div class="ms-1 me-1 pt-1 pb-1 event-calendar-item row odd">
+											<div class="col-6 col-xs-6 col-sm-4">
+							<img src="/assets/oasiskite/oasiskite/images/products/IMG_5873.JPG" style="max-width: 100%; width: auto;">
+						</div>
+						<div class="col-6 col-xs-6 col-sm-5">
+											<div class="event-calendar-name leao-product-name">
+							<strong>Rider PLUS Package Djerba - Doppelzimmer</strong>
+							&nbsp;<i class="tooltipster fa fa-info-circle success" data-tooltip-content="#tooltip_content-46371"></i><br>
+						</div>
+						<div class="event-calendar-remark leao-product-teaser">
+							<small>6 TAGE NUTZUNG DES MATERIALPOOLS + 5h PROGRESS KITEKURS + VIDEO ANALYSE</small>
+						</div>
+					</div>
+															<div class="event-calendar-link col-6 col-xs-6 col-sm-3 text-right text-end">
+						<div class="event-calendar-price leao-product-price">
+							<nobr><nobr>990,00 €</nobr></nobr>
+													</div>
+						<a href="https://myleao.com/calendar/product/46371/de" id="book-button-46371" class="btn btn-primary btn-list form-button leao-product-btn">Termin wählen</a>
+					</div>
+				</div>
+											<div class="ms-1 me-1 pt-1 pb-1 event-calendar-item row even">
+											<div class="col-6 col-xs-6 col-sm-4">
+							<img src="/assets/oasiskite/oasiskite/images/products/IMG_5883.JPG" style="max-width: 100%; width: auto;">
+						</div>
+						<div class="col-6 col-xs-6 col-sm-5">
+											<div class="event-calendar-name leao-product-name">
+							<strong>Rider PLUS Package Djerba - Einzelzimmer</strong>
+							&nbsp;<i class="tooltipster fa fa-info-circle success" data-tooltip-content="#tooltip_content-46372"></i><br>
+						</div>
+						<div class="event-calendar-remark leao-product-teaser">
+							<small>6 TAGE NUTZUNG DES MATERIALPOOLS + 5h PROGRESS KITEKURS + VIDEO ANALYSE</small>
+						</div>
+					</div>
+															<div class="event-calendar-link col-6 col-xs-6 col-sm-3 text-right text-end">
+						<div class="event-calendar-price leao-product-price">
+							<nobr><nobr>1.190,00 €</nobr></nobr>
+													</div>
+						<a href="https://myleao.com/product/46372/de" id="book-button-46372" class="btn btn-primary btn-list form-button leao-product-btn">Buchen</a>
+					</div>
+				</div>
+										</div>
+		</div>
+	<div class="tooltip_templates" style="display: none;">
+														<span id="tooltip_content-32193" class="leao-product-description">
+						<p>✔ 7 Nächte im Doppelzimmer (EZ mit Aufschlag möglich)</p><p>✔ 7x Frühstück und 5x Abendessen im Camp</p><p>✔ Flughafentransfers</p><p>✔ Transfers zum Kitespot</p><p>✔  Kleine Gruppen mit höchstens 2 Kites pro Instructor​</p><p>✔  Maximal zwei Schüler pro Kite​</p><p>✔  Materialabsicherung</p><p>✔  No Wind Programm: Houmt Souk, Djerba Hood, Strandhopping uvm.</p><p> </p><p><strong>NICHT IM BEGINNER-, RIDER PACKAGE ENTHALTEN:</strong></p><p><strong>X</strong>Kostenpflichtiges Rahmenprogramm: Kajak, SUP, Quad, Dromedar, Reiten, Golf, Flamingo Insel, Yoga, Spa</p><p><strong>X </strong>Zwei externe Restaurantbesuche, nicht aufgeführte Mahlzeiten und Getränke</p><p><strong>X </strong>Professionelles + persönliches Foto- und Videoshooting von deiner Kitesession</p><p><strong>X </strong>Foilboard auf Anfrage zubuchbar</p>					</span>
+																<span id="tooltip_content-32296" class="leao-product-description">
+						<p>✔  7 Nächte im Einzelzimmer</p><p>✔  7x Frühstück und 5x Abendessen im Camp</p><p>✔  Flughafentransfers</p><p>✔  Transfers zum Kitespot</p><p>✔  Kleine Gruppen mit höchstens 2 Kites pro Instructor​</p><p>✔  Maximal zwei Schüler pro Kite​</p><p>✔  Materialabsicherung</p><p>✔  No Wind Programm: Houmt Souk, Djerba Hood, Strandhopping uvm.</p><p><strong>NICHT IM BEGINNER-, RIDER PACKAGE ENTHALTEN:</strong></p><p><strong>X </strong>Kostenpflichtiges Rahmenprogramm: Kajak, SUP, Quad, Dromedar, Reiten, Golf, Flamingo Insel, Yoga, Spa</p><p><strong>X </strong>Zwei externe Restaurantbesuche, nicht aufgeführte Mahlzeiten und Getränke</p><p><strong>X</strong>Professionelles + persönliches Foto- und Videoshooting von deiner Kitesession</p><p><strong>X </strong>Foilboard auf Anfrage zubuchbar</p>					</span>
+																<span id="tooltip_content-32194" class="leao-product-description">
+						<p>✔  7 Nächte im Doppelzimmer (EZ mit Aufschlag möglich)</p><p>✔  7x Frühstück und 5x Abendessen im Camp</p><p>✔  Flughafentransfers</p><p>✔  Transfers zum Kitespot</p><p>✔  Begleitetes Kiten</p><p>✔  No Wind Programm: Houmt Souk, Djerba Hood, Strandhopping uvm.</p><p><em>Voraussetzung: Sicheres Upwind fahren</em></p><p><strong>NICHT IM BEGINNER-, RIDER PACKAGE ENTHALTEN:</strong></p><p><strong>X</strong>Kostenpflichtiges Rahmenprogramm: Kajak, SUP, Quad, Dromedar, Reiten, Golf, Flamingo Insel, Yoga, Spa</p><p><strong>X</strong>Zwei externe Restaurantbesuche, nicht aufgeführte Mahlzeiten und Getränke</p><p><strong>X</strong>Professionelles + persönliches Foto- und Videoshooting von deiner Kitesession</p><p><strong>X </strong>Foilboard auf Anfrage zubuchbar</p>					</span>
+																<span id="tooltip_content-32297" class="leao-product-description">
+						<p>✔  7 Nächte im Einzelzimmer</p><p>✔  7x Frühstück und 5x Abendessen im Camp</p><p>✔  Flughafentransfers</p><p>✔  Transfers zum Kitespot</p><p>✔  Begleitetes Kiten</p><p>✔  No Wind Programm: Houmt Souk, Djerba Hood, Strandhopping uvm.</p><p><em>Voraussetzung: Sicheres Upwind fahren</em></p><p><strong>NICHT IM BEGINNER-, RIDER PACKAGE ENTHALTEN:</strong></p><p><strong>X </strong>Kostenpflichtiges Rahmenprogramm: Kajak, SUP, Quad, Dromedar, Reiten, Golf, Flamingo Insel, Yoga, Spa</p><p><strong>X </strong>Zwei externe Restaurantbesuche, nicht aufgeführte Mahlzeiten und Getränke</p><p><strong>X</strong>Professionelles + persönliches Foto- und Videoshooting von deiner Kitesession</p><p><strong>X</strong>Foilboard auf Anfrage zubuchbar</p>					</span>
+																<span id="tooltip_content-43791" class="leao-product-description">
+						<p>Wir bieten 5-6 wöchentliche Yoga Sessions an. Wenn du Yoga begeistert bist und dich vor oder nach der Kitesession ausbalancieren möchtest, kannst du deinen Platz schon jetzt reservieren.<br , >Bei Buchung unseres Yoga Pakets (4x Yoga für 60 Euro) erhältst du die fünfte Yoga Stunde gratis.</p>					</span>
+																<span id="tooltip_content-43792" class="leao-product-description">
+						<p>✔ Flughafentransfers<br , >✔ 7 Nächte im Doppelzimmer (EZ mit Aufschlag möglich)<br , >✔ 7x Frühstück und 5x Abendessen im Camp<br , >✔ 6x Yoga Sessions an unterschiedlichen Orten<br , >✔ Ausflug in die Djerbahood und Stadt Erkundungstour in Houmt Souk<br , >✔ 3 Wahl Aktivitäten aus der Abenteuerliste inklusive<br , ><br , ><strong>Abenteuer Liste:</strong></p><p>- Quadtour durch das Hinterland Djerbas<br , >- Biking Tour ab Houmt Souk<br , >- Ausritt auf arabischen Pferden<br , >- Kamelreiten am Strand<br , >- Ausfahrt mit dem Katamaran<br , >- SUP oder Kayak Tour zur Flamingo Insel<br , ><br , ><strong>Kostenpflichtig zubuchbare Optionen:</strong><br , >- Hamam, Massagen und weitere Wellness Angebote<br , >- Golf<br , >- Kitesurfen<br , >- Tauchen</p>					</span>
+																<span id="tooltip_content-46371" class="leao-product-description">
+						<p><strong>✔ 7 Nächte im Doppelzimmer (EZ mit Aufschlag möglich)</strong></p><p><strong>✔ 7x Frühstück und 5x Abendessen im Camp</strong></p><p><strong>✔ Flughafentransfers</strong></p><p><strong>✔ Transfers zum Kitespot</strong></p><p><strong>✔ 5h Progress Kitekurs</strong></p><p><strong>✔ Video Analysen deiner Sessions</strong></p><p><strong>✔ Begleitetes Kiten</strong></p><p><strong>✔ No Wind Programm: Houmt Souk, Djerba Hood, Strandhopping uvm.</strong></p><p> </p><p>NICHT IM BEGINNER-, RIDER PACKAGE ENTHALTEN:</p><p>XKostenpflichtiges Rahmenprogramm: Kajak, SUP, Quad, Dromedar, Reiten, Golf, Flamingo Insel, Yoga, Spa</p><p>XZwei externe Restaurantbesuche, nicht aufgeführte Mahlzeiten und Getränke</p><p>XProfessionelles + persönliches Foto- und Videoshooting von deiner Kitesession</p><p>X Foilboard auf Anfrage zubuchbar</p><p> </p><p><strong>Das Rider Plus Paket richtet sich an ambitionierte Rider, die sich an die nächsten Tricks und Sprünge wagen möchten. In kleiner Gruppe und mit maximal 3 Ridern pro Instructor gehen wir auf dein individuelles Level ein und erarbeiten gemeinsam einen Plan, um deine Style-Punkte auf dem Wasser in die Höhe schnellen zu lassen.<br , >Die Inhalte des Kurses werden an das jeweilige Teilnehmerlevel angepasst und können beispielsweise folgende Elemente umfassen: Wende, Jibe, Toeside, Pop, Basic Jump, Backroll, Frontroll, Kiteloops, Grabs, Darkslide. Ziel ist es, gemeinsam den nächsten Trick zu landen.</strong></p><p><strong>Das Rider Plus Paket ist auch für Aufsteiger geeignet, die im letzten Urlaub bereits Upwind gefahren sind, aber zu Beginn noch einmal einen Refresher möchten und anschließend im Wasser unterstützt werden wollen.</strong></p>					</span>
+																<span id="tooltip_content-46372" class="leao-product-description">
+						<p><strong>✔ 7 Nächte im Einzelzimmer</strong></p><p><strong>✔ 7x Frühstück und 5x Abendessen im Camp</strong></p><p><strong>✔ Flughafentransfers</strong></p><p><strong>✔ Transfers zum Kitespot</strong></p><p><strong>✔ 5h Progress Kitekurs</strong></p><p><strong>✔ Video Analysen deiner Sessions</strong></p><p><strong>✔ Begleitetes Kiten</strong></p><p><strong>✔ No Wind Programm: Houmt Souk, Djerba Hood, Strandhopping uvm.</strong></p><p> </p><p>NICHT IM BEGINNER-, RIDER PACKAGE ENTHALTEN:</p><p>XKostenpflichtiges Rahmenprogramm: Kajak, SUP, Quad, Dromedar, Reiten, Golf, Flamingo Insel, Yoga, Spa</p><p>XZwei externe Restaurantbesuche, nicht aufgeführte Mahlzeiten und Getränke</p><p>XProfessionelles + persönliches Foto- und Videoshooting von deiner Kitesession</p><p>X Foilboard auf Anfrage zubuchbar</p><p> </p><p><strong>Das Rider Plus Paket richtet sich an ambitionierte Rider, die sich an die nächsten Tricks und Sprünge wagen möchten. In kleiner Gruppe und mit maximal 3 Ridern pro Instructor gehen wir auf dein individuelles Level ein und erarbeiten gemeinsam einen Plan, um deine Style-Punkte auf dem Wasser in die Höhe schnellen zu lassen.<br , >Die Inhalte des Kurses werden an das jeweilige Teilnehmerlevel angepasst und können beispielsweise folgende Elemente umfassen: Wende, Jibe, Toeside, Pop, Basic Jump, Backroll, Frontroll, Kiteloops, Grabs, Darkslide. Ziel ist es, gemeinsam den nächsten Trick zu landen.</strong></p><p><strong>Das Rider Plus Paket ist auch für Aufsteiger geeignet, die im letzten Urlaub bereits Upwind gefahren sind, aber zu Beginn noch einmal einen Refresher möchten und anschließend im Wasser unterstützt werden wollen.</strong></p>					</span>
+										</div>
+							
+													</div>
+					</div>
+					
+				</div>
+			</form>
+                            <div class="clearfix"></div>
+				                                                <div style="margin: 20px; float:left;" id="payment-methods"><strong>
+                                                            <div>Vorkasse (Rechnung)</div>
+                                                                        </div>
+            		</div>
+		<input type="hidden" name="exchangeCurrency" id="exchangeCurrency" value="EUR">
+		<input type="hidden" name="exchangeRate" id="exchangeRate" value="1">
+	</div>
+	
+	<div id="footer-bg">
+		<div class="container">
+			<div class="col-xs-12" id="footer-bookingform">
+				<div class="pull-right">
+				   Urheberrechtlich geschützt.				</div>
+				<div>
+					<strong>Leão Booking</strong> &copy; <a href="https://www.myleao.com" target="_blank">Nerdsquad UG (haftungsbeschränkt), 2014-2026</a>&nbsp;/&nbsp;
+					<a href="https://www.myleao.com/impressum" target="_blank">Impressum</a>&nbsp;
+					<a href="https://www.myleao.com/datenschutz" target="_blank">Datenschutzerklärung</a>&nbsp;
+					<a href="https://www.facebook.com/LeaoBooking" target="_blank"><i class="fa fa-facebook-official"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script></script>
+    <script></script>
+	<script></script>
+	    	<script></script>
+	    <script></script>
+    <script></script>
+	
+	<script></script>
+	<script></script>
+	
+	<script></script>
+	
+	<script></script>
+	
+    <script></script>
+	
+	<script></script>
+	<script></script>
+    
+    <script></script>
+    <script></script>
+    <script></script>
+	
+	<script></script>
+	<script></script>
+	
+	<script></script>
+	<script></script>
+	<script></script>
+	<script></script>
+    
+    <script></script>
+    <script></script>
+    <script></script>
+	<script></script>
+	
+	<script></script>
+		<script></script>
+</body>
+</html>

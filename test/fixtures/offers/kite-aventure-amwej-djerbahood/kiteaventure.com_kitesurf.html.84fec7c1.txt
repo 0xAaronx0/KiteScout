@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.css">
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kite Aventure Djerba - Stages cours et Locations de Kitesurf</title>
+    <meta name="description" content="Rejoignez Kite Aventure à Djerba pour des stages de kitesurf uniques. Que vous soyez débutant ou professionnel, nous avons des cours adaptés à tous les niveaux. Profitez également de notre service de location surveillée pour une expérience de kitesurf inoubliable.">
+    <meta name="keywords" content="Kite Aventure, Kitesurf Djerba, Cours de Kitesurf, Location Kitesurf, Stages de Kitesurf, Kitesurf Djerba, Kitesurf Tunisie, École de Kitesurf, Kiteboarding Djerba">
+    
+    
+    <link rel="shortcut icon" href="images/favicon.png">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-responsive.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/vertical-rhythm.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">  
+    <link rel="stylesheet" href="css/YTPlayer.css">  
+    
+    
+    <link rel="alternate" hreflang="fr" href="https://kiteaventure.com/kitesurf">
+    <link rel="alternate" hreflang="en" href="https://kiteaventure.com/en/kitesurf">
+</head>
+    <body class="appear-animate">
+                
+        <div class="page-loader">
+            <div class="loader">Chargement...</div>
+        </div>
+        
+        <div class="page" id="top">
+            
+            
+              
+            <section id="kite" class="page-section fixed-height-small pt-0 pb-0 bg-dark-alfa-30" data-background="images/stages-sejours-kitesurf-djerba.jpg" >
+                <div class="js-height-parent container relative">
+                    <div class="home-content">
+                        <div class="home-text">
+                            
+                            <h1 class="hs-line-14 font-alt mb-50 mb-xs-30">Stages de kitesurf</h1>
+                            
+                             <div class="local-scroll hidden-xs">
+                                <a href="#discovery" class="btn btn-mod btn-border-w btn-medium btn-round">Découverte</a>
+                                <span>&nbsp;</span>
+                                <a href="#intermediate" class="btn btn-mod btn-border-w btn-medium btn-round relative">Intermédiaire</a>
+                                <span>&nbsp;</span>                              
+                                <a href="#autonome" class="btn btn-mod btn-border-w btn-medium btn-round relative">Autonome</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+               
+            <hr class="mt-0 mb-0 ">
+<section class="page-section">
+    <div class="relative container">
+        <div class="section-text align-center">
+            <h2><b>Kite Aventure</b></h2>
+            Kite Aventure offre des cours de kitesurf conformément aux normes les plus élevées. Nos stages sont accessibles à tous, dès l'âge de 12 ans. <span class="strong">Le nombre d’élèves par moniteur est limité à 2</span> pour garantir la sécurité et une expérience d'apprentissage de qualité. Ainsi, chaque stagiaire reçoit l'attention nécessaire. <br><br>
+            Grâce à notre méthode d'enseignement éprouvée, vous progresserez à votre rythme, en fonction de votre niveau et de vos connaissances. Les cours sont conçus pour <b>vous permettre d'obtenir les meilleurs résultats dans les plus brefs délais.</b> <br><br>
+            Nous utilisons le dernier équipement de kitesurf : kites avec systèmes de sécurité intégrés, planches, <b>casques-radio</b>, gilets de sauvetage, combinaisons, harnais, et l'assurance est incluse dans tous nos forfaits. <b>Vous bénéficierez également du soutien de nos bateaux de sauvetage</b>, qui seront à vos côtés lors de vos premières glisses! <br><br>
+            Le kitesurf est un sport accessible à tous. Avec les bons conseils, la plupart des débutants parviennent à <b>se mettre debout en moins de deux jours !</b>
+        </div>        
+    </div>
+</section>
+         
+           
+<div  >
+<section id="discovery" class="page-section" style="background-color: rgba(41, 83, 252, 0.2);" >
+    <div class="container relative" >
+        <div class="row" >
+            <div class="col-md-7 mb-sm-40">
+                <div class="work-full-media mt-0 white-shadow wow fadeInUp">
+                    <ul class="clearlist work-full-slider owl-carousel">
+                        <li>
+                            <img src="images/kitesurf-decouverte-djerba.webp" alt="Premiers Pas en Kitesurf">
+                        </li>
+                        <li>
+                            <img src="images/kitesurf-stage-decouverte-djerba.webp" alt="Apprentissage du Kitesurf">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-5 col-lg-4 col-lg-offset-1">
+                <div class="text-justify">
+                    <h2 class="font-alt mb-30 mb-xxs-10 text-center">Stage Découverte</h2>
+                    <p>
+                        Notre <strong>Stage Découverte</strong> est spécialement conçu pour ceux qui souhaitent s'initier au monde fascinant du kitesurf. Que vous soyez un passionné d'aventure ou simplement curieux de découvrir un nouveau sport, ce stage est fait pour vous.
+                    </p>
+                    <p>
+                        Sur une durée de <strong>3 heures</strong>, nous vous ferons vivre une expérience complète, allant de la théorie à la pratique. Vous apprendrez :
+                        <ul>
+                            <li>Les bases du pilotage d'une voile à deux lignes</li> 
+                            <li>La compréhension et la manipulation de la fenêtre de vol</li>
+                            <li>Les techniques de décollage et d'atterrissage de l'aile</li>
+                            <li>Le contrôle de l'aile en mouvement et en nage tractée</li>
+                        </ul>
+                    <p>
+                        Nous mettons un point d'honneur sur la <strong>sécurité</strong> et le <strong>plaisir d'apprendre</strong>. Nos moniteurs certifiés IKO vous accompagneront tout au long de cette initiation pour assurer une expérience d'apprentissage sûre et agréable.
+                    </p>
+                    <p>
+                        Ce stage représente une excellente opportunité pour évaluer votre intérêt pour le kitesurf et décider de la suite de votre parcours. À la fin de cette session, vous aurez une compréhension claire de ce sport fascinant et des compétences de base pour poursuivre votre apprentissage.
+                    </p>
+                    <p>
+                        <strong>Tarif :</strong> 80 € pour 3 heures d'aventure intense.
+                    </p>
+                              
+                                    <div class="work-full-detail">
+                                        <p>
+                                            <strong>Durée:</strong>
+                                            3 heures
+                                        </p>
+                                        <p>
+                                            <strong>âge:</strong>
+                                            À partir de 12 ans
+                                        </p>
+                                        <p>
+                                            <strong>Prix:</strong>
+                                            80€ 
+                                        </p>
+                                        <p>
+                                            <strong>Réduction:</strong>
+                                            3 personnes ou plus  
+                                        </p>
+                                    </div>
+                                
+                                <div class="mt-40 text-center">
+                                    <a href="contact.html" >Réservez</a>
+                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            
+            
+            <hr class="mt-0 mb-0 ">
+            
+          
+<section id="intermediate" class="page-section" style="background-color: rgba(53, 221, 255, 0.2);">
+    <div class="container relative">
+        <div class="row">
+            <div class="col-md-7 col-lg-offset-1">
+                <div class="work-full-media mt-0 white-shadow wow fadeInUp">
+                    <ul class="clearlist work-full-slider owl-carousel">
+                        <li>
+                            <img src="images/kitesurf-stage-initiation-djerba.webp" alt="Stage Initiation Kitesurf">
+                        </li>
+                        <li>
+                            <img src="images/kitesurf-initiation-djerba.webp" alt="Stage Initiation Kitesurf">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-4 mb-sm-40">
+                <div class="text-justify">
+                    <h3 class="font-alt mb-30 mb-xxs-10 text-center">Stage Initiation</h3>
+                    <p>
+                        Découvrez les joies du kitesurf à Djerba avec notre <strong>Stage d'Initiation</strong>. Ce stage est idéal pour les débutants qui souhaitent apprendre les bases du kitesurf et vivre une expérience inoubliable sur les eaux cristallines de Djerba.
+                    </p>
+                    <p>
+                        Au cours de ce stage de 6 heures, vous allez :
+                        <ul>
+                            <li>Maîtriser le pilotage d’une petite voile à 2 lignes.</li>
+                            <li>Comprendre et utiliser efficacement la fenêtre de vol.</li>
+                            <li>Apprendre les techniques de décollage et atterrissage de l’aile.</li>
+                            <li>Pratiquer l’auto-sauvetage et la récupération de votre planche.</li>
+                            <li>Réaliser vos premiers départs et glisser sur l’eau.</li>
+                        </ul>
+                    <div class="work-full-detail">
+                        <p><strong>Durée :</strong> 6 heures</p>
+                        <p><strong>Âge minimum :</strong> À partir de 12 ans</p>
+                        <p><strong>Prix :</strong>210 €</p>
+                    </div>
+                    <div class="mt-40 text-center">
+                        <a href="contact.html">Réserver</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+            <hr class="mt-0 mb-0 ">
+            
+<section id="autonome" class="page-section" style="background-color: rgba(41, 83, 252, 0.2);">
+    <div class="container relative">
+        <div class="row">
+            <div class="col-md-7 mb-sm-40">
+                <div class="work-full-media mt-0 white-shadow wow fadeInUp">
+                    <ul class="clearlist work-full-slider owl-carousel">
+                        <li>
+                            <img src="images/kitesurf-djerba-stage-initiation.webp" alt="Stage Autonome Kitesurf">
+                        </li>
+                        <li>
+                            <img src="images/kitesurf-initiation-djerba-3.webp" alt="Stage Autonome Kitesurf">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-5 col-lg-4 col-lg-offset-1">
+                <div class="text-justify">
+                    <h3 class="font-alt mb-30 mb-xxs-10 text-center">Stage Autonome</h3>
+                    <p>
+                        Plongez-vous dans le monde du kitesurf avec notre <strong>Stage Autonome</strong>. Ce stage est conçu pour vous permettre de devenir un kiteboarder indépendant sur les eaux de Djerba.
+                    </p>
+                    <p>
+                        Apprenez à :
+                        <ul>
+                            <li>Pilotage de voile à 2 lignes.</li>
+                            <li>Maîtrise des systèmes de sécurité.</li>
+                            <li>Remontée au vent et premiers bords.</li>
+                        </ul>
+                    
+                    <div class="work-full-detail">
+                        <p><strong>Durée :</strong>12 heures</p>
+                        <p><strong>Âge minimum :</strong> À partir de 12 ans</p>
+                        <p><strong>Prix :</strong>400 €</p>
+                    </div>
+                    <div class="mt-40 text-center">
+                        <a href="contact.html" >Réservez</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            
+            
+            <hr class="mt-0 mb-0 ">
+            
+            
+<section id="perfectionnement" class="page-section" style="background-color: rgba(53, 221, 255, 0.2);">
+    <div class="container relative">
+        <div class="row">
+             <div class="col-md-7 col-lg-offset-1">
+                <div class="work-full-media mt-0 white-shadow wow fadeInUp">
+                    <ul class="clearlist work-full-slider owl-carousel">
+                        <li>
+                            <img src="images/kitesurf-saut-djerba.webp" alt="Stage Perfectionnement Kitesurf">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-5 col-lg-4 mb-sm-40">
+                <div class="text-justify">
+                    <h3 class="font-alt mb-30 mb-xxs-10 text-center">Stage Perfectionnement</h3>
+                    <p>
+                        Un stage pour kiteurs initiés désireux de progresser sur des points précis comme la remontée au vent, les transitions, et les sauts.
+                    </p>
+                    <div class="work-full-detail">
+                        <p><strong>Durée :</strong> 1 heure</p>     
+                        <p><strong>Avec équipement:</strong> 50 €</p>
+                        <p><strong>Sans équipement :</strong> 35 €</p>
+                    </div>
+                    <div class="mt-40 text-center">
+                        <a href="contact.html" >Réserver</a>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
+            <hr class="mt-0 mb-0 ">
+            
+<section id="downwind" class="page-section" style="background-color: rgba(41, 83, 252, 0.2);">
+    <div class="container relative">
+        <div class="row">
+            <div class="col-md-7 mb-sm-40">
+                <div class="work-full-media mt-0 white-shadow wow fadeInUp">
+                    <ul class="clearlist work-full-slider owl-carousel">
+                        <li>
+                            <img src="images/kitesurf-perfectionnement-djerba.webp" alt="Downwind Kitesurf Djerba">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-5 col-lg-4 col-lg-offset-1">
+                <div class="text-justify">
+                    <h3 class="font-alt mb-30 mb-xxs-10 text-center">Downwind</h3>
+                    <p>
+                        Découvrez le plaisir du downwind kitesurf, une aventure passionnante pour les kitesurfeurs confirmés. Glissez en pleine mer, encadrés par nos experts et surveillés par un bateau de secours.
+                    </p>
+                    <p>
+                        <strong>Participants :</strong> De 2 à 7 kiteurs.<br>
+                        <strong>Sécurité :</strong> Bateau à moteur + Assistant.<br>
+                        <strong>Encadrement :</strong> Kitesurfeurs Pro.<br>
+                        <strong>Durée :</strong>Minimum 3 heures.
+                    </p>
+                    <div class="mt-40 text-center">
+                        <a href="contact.html">Info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="raid" class="page-section" style="background-color: rgba(53, 221, 255, 0.2);">
+    <div class="container relative">
+        <div class="row">
+            <div class="col-md-7 col-lg-offset-1">
+                <div class="work-full-media mt-0 white-shadow wow fadeInUp">
+                    <ul class="clearlist work-full-slider owl-carousel">
+                        <li>
+                            <img src="images/kitesurf-djerba-downwind.webp" alt="Raid Kitesurf">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-5 col-lg-4 mb-sm-40">
+                <div class="text-justify">
+                    <h3 class="font-alt mb-30 mb-xxs-10 text-center">Raid Kitesurf</h3>
+                    <p>
+                        Vivez une expérience unique avec notre Raid Kitesurf, combinant navigation et camping sur des plages vierges. Parfait pour les kiteurs autonomes cherchant à explorer les merveilles de Djerba.
+                    </p>
+                    <p>
+                        <strong>Participants :</strong> De 2 à 7 kiteurs.<br>
+                        <strong>Sécurité :</strong> Bateau à moteur + Assistant.<br>
+                        <strong>Durée :</strong> 1 jours.
+                    </p>
+                    <div class="mt-40 text-center">
+                        <a href="contact.html">Infos</a>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</section>
+          
+<section id="amwej-kitecamp" class="page-section" style="background-color: rgba(41, 83, 252, 0.2);">
+    <div class="container relative">
+        <div class="row">
+            
+            <div class="col-md-7 mb-sm-40">
+                <div class="work-full-media mt-0 white-shadow wow fadeInUp">
+                    <ul class="clearlist work-full-slider owl-carousel">
+                        <li>
+                            <img src="images/kitesurf-club-djerba.webp" alt="AMWEJ Kite Camp">
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-md-5 col-lg-4 col-lg-offset-1">
+                <div class="text-justify">
+                    <h3 class="font-alt mb-30 mb-xxs-10 text-center">Séjour kitesurf tout compris</h3>
+                  <p>
+    Kite Aventure vous invite à découvrir des séjours de kitesurf tout compris à Amwej Kite Camp, le camp de kite de notre club, ou dans une variété d'hébergements au choix - hôtels, maisons d'hôte, villas de vacances ou gîtes de charme. 
+</p>
+<p>
+    Profitez d'activités uniques telles que l'équitation, des sessions de yoga, des excursions en bateau, du stand up paddle, et du kayak. Bénéficiez également d'une réduction de 10% sur nos stages de kitesurf dans les séjours organisés. Vivez une expérience inoubliable avec Kite Aventure.
+</p>
+    <p>
+                        <strong>Inclus :</strong> <br>
+                        -transfert aeroport<br>
+                        -transfert de/vers le club<br>
+                        -petit déjeuné<br>
+                        -tour de l'ile<br>
+                        -stand up paddle et kayaks<br>
+                    </p>
+                    <div class="work-full-detail">
+                        <p><strong>1 semaine :</strong>1 P : 675 €. 2 P : 990 €</p>
+                        <p><strong>3 jours </strong>1 P : 310 €. 2 P : 490 € </p>
+                    </div>
+                    <div class="mt-40 text-center">
+                        <a href="contact.html">Demander les disponibilités</a>
+                    </div>
+   				</div>
+            </div>
+        </div>
+    </div>
+</section>
+            
+            <hr class="mt-0 mb-0 ">
+            
+        <section class="page-section">
+            <div class="container relative">
+                <h2 class="section-title font-alt mb-70 mb-sm-40">
+                    Ce qui nous distingue
+                </h2>
+                
+                <ul class="nav nav-tabs tpl-alt-tabs font-alt pt-3 pt-sm-0 pb-3 pb-sm-0 text-center"  role="tablist">
+                    <li class="active">
+                        <a href="#unique-location" data-toggle="tab">
+                            <div class="alt-tabs-icon text-center">
+                                <i class="fa fa-map-marker-alt"></i>
+                            </div>
+                            Emplacement Exceptionnel
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#unique-instructors" data-toggle="tab">
+                            <div class="alt-tabs-icon text-center">
+                                <i class="fa fa-user-tie"></i>
+                            </div>
+                            Instructeurs Certifiés
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#unique-equipment" data-toggle="tab">
+                            <div class="alt-tabs-icon text-center">
+                                <i class="fa fa-parachute-box"></i>
+                            </div>
+                            Équipement de Pointe
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#unique-culture" data-toggle="tab">
+                            <div class="alt-tabs-icon text-center">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                            Immersion Culturelle
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#unique-adventure" data-toggle="tab">
+                            <div class="alt-tabs-icon text-center">
+                                <i class="fa fa-compass"></i>
+                            </div>
+                            Aventures Uniques
+                        </a>
+                    </li>
+                </ul>
+                
+                <div class="tab-content tpl-tabs-cont">
+                    <div class="tab-pane fade in active" id="unique-location">
+                        <div class="section-text align-center mb-70 mb-xs-40">
+                            <blockquote class="mb-0">
+                                <p>
+                                    Notre club est situé face à une magnifique lagune, offrant des conditions idéales
+                                    pour le kitesurf. C'est le terrain de jeu parfait pour les débutants et les experts.
+                                </p>
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="unique-instructors">
+                        <div class="section-text">
+                            <div class="row">
+                                <div class="col-md-4 mb-md-40 mb-xs-30">
+                                    <blockquote class="text-center">
+                                        <p>
+                                            Des professionnels passionnés et certifiés.
+                                        </p>
+                                    </blockquote>
+                                </div>
+                                <div class="col-sm-6 mb-sm-50 mb-xs-30">
+                                    <p>
+                                        Nos instructeurs, certifiés IKO, combinent expertise technique et passion pour
+                                        le kitesurf, garantissant une expérience d'apprentissage à la fois sûre et
+                                        enrichissante.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="unique-equipment">
+                        <div class="section-text">
+                            <div class="row">
+                                <div class="col-md-4 mb-md-40 mb-xs-30">
+                                    <blockquote>
+                                        <p>
+                                            Le meilleur en équipement et sécurité.
+                                        </p>
+                                    </blockquote>
+                                </div>
+                                <div class="col-sm-6 mb-sm-50 mb-xs-30">
+                                    <p>
+                                        Nous utilisons le dernier cri en matière d'équipement de kitesurf, assurant une
+                                        expérience optimale en termes de performance et de sécurité.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="unique-culture">
+                        <div class="section-text">
+                            <div class="row">
+                                <div class="col-md-4 mb-md-40 mb-xs-30">
+                                    <blockquote>
+                                        <p>
+                                            Découvrez la culture locale.
+                                        </p>
+                                    </blockquote>
+                                </div>
+                                <div class="col-sm-6 mb-sm-50 mb-xs-30">
+                                    <p>
+                                        Kite Aventure n'est pas seulement un club de kitesurf, c'est une porte ouverte
+                                        sur la richesse culturelle de Djerba, offrant une expérience authentique et
+                                        mémorable.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="unique-adventure">
+                        <div class="section-text">
+                            <div class="row">
+                                <div class="col-md-4 mb-md-40 mb-xs-30">
+                                    <blockquote>
+                                        <p>
+                                            Des aventures de kitesurf inédites.
+                                        </p>
+                                    </blockquote>
+                                </div>
+                                <div class="col-sm-6 mb-sm-50 mb-xs-30">
+                                    <p>
+                                        Au-delà du kitesurf, nous proposons une variété d'activités et d'aventures, des
+                                        downwinds passionnants aux excursions exclusives, pour une expérience complète.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="align-center">
+                    <a href="#contact" class="section-more font-alt">Des questions sur nos méthodes d'enseignement? <i
+                            class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+        </section>
+                    <div class="align-center">
+                        <a href="kitesurf_fr.html#contact" class="section-more font-alt">Des questions sur nos méthodes d'enseignement? <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+                       
+                    
+                <div class="container relative">
+                  
+                    
+                    <div class="row multi-columns-row alt-features-grid">
+                        
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-target"></span>
+                                </div>
+                                 <h3 class="alt-features-title font-alt">Ça marche!</h3>
+                                <div class="alt-features-descr align-left">
+                                    Toute notre expérience et notre savoir-faire pour dépasser vos attentes et vous apporter des vacances sans faille.  
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-clock"></span>
+                                </div>
+                                <h3 class="alt-features-title font-alt">Nous respectons votre emploi du temps</h3>
+                                <div class="alt-features-descr align-left">
+                                    Nous restons flexibles et respectons votre façon de profiter de votre voyage. 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-heart"></span>
+                                </div>
+                                <h3 class="alt-features-title font-alt">Nous avons la magie!</h3>
+                                <div class="alt-features-descr align-left">
+                                    Vous la ressentirez aussi! Nous aimons ce que nous faisons et partager cette passion est notre priorité! 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-camera"></span>
+                                </div>
+                                <h3 class="alt-features-title font-alt">Fabricants de souvenirs</h3>
+                                <div class="alt-features-descr align-left">
+                                   Nous serons constamment derrière l'objectif ou dans les airs, filmant chacun de vos mouvements.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-lifesaver"></span>
+                                </div>
+                                <h3 class="alt-features-title font-alt">La sécurité d'abord</h3>
+                                <div class="alt-features-descr align-left">
+                                    Nous veillerons personnellement à votre sécurité et veillerons à ce que vous soyez couvert sous tous les angles. 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-happy"></span>
+                                </div>
+                                <h3 class="alt-features-title font-alt">On est simpa</h3>
+                                <div class="alt-features-descr align-left">
+                                   On est des gens sympas, des kiters qui aident des kiters ;-)
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                
+                </div></div>
+            
+           
+<nav class="main-nav dark transparent stick-fixed">
+    <div class="full-wrapper relative clearfix">
+        <div class="nav-logo-wrap local-scroll">
+            <a href="index.html" class="logo">
+                <img src="images/faviconnav.png" alt="Kite Aventure Logo">
+            </a>
+        </div>
+        
+        <div class="mobile-nav">
+            <i class="fa fa-bars"></i>
+        </div>
+        
+        <div class="inner-nav desktop-nav">
+            <ul class="clearlist">
+                <li>
+                    <a href="kitesurf.html">Kitesurf</a>
+                </li>
+                <li>
+                    <a href="sejours.html#kiteCamp">Kite Camp</a>
+                </li>
+                <li>
+                    <a href="sejours.html#sejourkite">Séjours</a>
+                </li>
+                <li>
+                    <a href="sejours.html#act">Activités</a>
+                </li>
+                <li>
+                    <a href="a-propos.html">Le Club</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                
+                <li>
+                    <a href="https://www.facebook.com/kite.Aventure/" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/kiteaventure/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                </li>
+                
+                <li class="language-switcher">
+                    <a href="index_en.html">EN</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+            
+            
+            
+            
+          
+<section id="faq" class="page-section bg-dark-alfa-90">
+    <div class="container relative">
+        <div class="row section-text">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="section-title2 font-alt mb-70 mb-sm-40">
+                    F.A.Q. Kite Aventure
+                </h2> 
+                <dl class="accordion">
+                    <dt>
+                        <a href="">Comment rejoindre Kite Aventure à Djerba?</a>
+                    </dt>
+                    <dd>
+                        Djerba est accessible par avion avec des vols directs depuis de nombreuses grandes villes. Une fois arrivé à l'aéroport de Djerba, vous pouvez louer une voiture ou utiliser notre service de transfert pour rejoindre Kite Aventure.
+                    </dd>
+                    <dt>
+                        <a href="">Quelles sont les conditions météorologiques pour le kitesurf?</a>
+                    </dt>
+                    <dd>
+                        Djerba offre des conditions idéales pour le kitesurf presque toute l'année. Les vents sont généralement favorables et la température de l'eau est agréable, ce qui permet de pratiquer le kitesurf dans des conditions optimales.
+                    </dd>
+                    <dt>
+                        <a href="">Quelles sont les options d'hébergement à Kite Aventure?</a>
+                    </dt>
+                    <dd>
+                        Nous proposons diverses options d'hébergement allant de chambres confortables dans notre Kite Camp AMWEJ à des partenariats avec des hôtels locaux. Toutes nos options offrent confort et proximité avec les spots de kitesurf.
+                    </dd>
+                    <dt>
+                        <a href="">Faut-il louer une voiture à Djerba?</a>
+                    </dt>
+                    <dd>
+                        Bien que Djerba dispose d'un réseau de transport public, nous recommandons de louer une voiture pour plus de flexibilité, surtout si vous souhaitez explorer l'île ou vous rendre sur différents spots de kitesurf.
+                    </dd>
+                    <dt>
+                        <a href="">Quelles autres activités proposez-vous?</a>
+                    </dt>
+                    <dd>
+                        Outre le kitesurf, nous proposons des activités telles que le stand-up paddle, des excursions en bateau, des séances de yoga et des visites culturelles pour découvrir la richesse de Djerba.
+                    </dd>
+                    <dt>
+                        <a href="">Où peut-on manger à Djerba?</a>
+                    </dt>
+                    <dd>
+                        Djerba offre une variété de restaurants proposant des spécialités locales et internationales. Nous serons ravis de vous recommander nos restaurants favoris pour une expérience culinaire authentique.
+                    </dd>
+                    <dt>
+                        <a href="">Y a-t-il une vie nocturne à Djerba?</a>
+                    </dt>
+                    <dd>
+                        Djerba a une vie nocturne variée, avec des bars, des cafés et des clubs offrant une ambiance détendue. Idéale pour se relaxer après une journée de kitesurf.
+                    </dd>
+                </dl>
+                
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="page-section bg-gray-lighter footer pb-60">
+    <div class="containerrelative"> 
+        <h2 class="section-title font-alt mb-70 mb-sm-40">Nous Trouver</h2>        
+        <div class="row">            
+            <div class="col-md-8 col-md-offset-2">
+                <div class="row">                    
+                    <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                        <div class="contact-item">
+                            <div class="ci-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="ci-title font-alt">
+                                Appelez-nous
+                            </div>
+                            <div class="ci-text">
+                               +216 54 762 434
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                        <div class="contact-item">
+                            <div class="ci-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="ci-title font-alt">
+                                Adresse
+                            </div>
+                            <div class="ci-text">
+                                Plage Soug El Guebli, Aghir, Djerba
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                        <div class="contact-item">
+                            <div class="ci-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="ci-title font-alt">
+                                Email
+                            </div>
+                            <div class="ci-text">
+                                <a href="mailto:contact@kiteaventure.com">contact@kiteaventure.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>        
+    </div>
+    <div class="container">
+        <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.6604349748095!2d10.946039875456437!3d33.71773447328479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13aabfb6f4782879%3A0x8bee48314706d415!2sKite%20Aventure!5e0!3m2!1sfr!2stn!4v1704380222840!5m2!1sfr!2stn" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+<a href="https://wa.me/21654762434" target="_blank" class="buy-button"><i class="fab fa-whatsapp fa-lg" aria-hidden="true"></i> <span>Chat</span></a>
+    
+    <div class="local-scroll">
+        <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
+    </div>
+    
+    <div class="footer-text">        
+        <div class="footer-copy font-alt">
+            &copy; Kite Aventure 2024
+        </div>        
+        <div class="footer-made">
+            Vivez l'Expérience Kite Aventure
+        </div>        
+    </div>     
+    
+    <div class="footer-social-links mb-110 mb-xs-60">
+        <a href="https://www.facebook.com/kite.Aventure/" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/kiteaventure/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+        
+<script></script>
+<script></script>
+ <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "SportsOrganization",
+      "name": "Kite Aventure Djerba",
+      "url": "https://kiteaventure.com/kitesurf",
+      "logo": "https://kiteaventure.com/images/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/kite.Aventure/",
+        "https://www.instagram.com/kiteaventure/"
+      ]
+    }
+    </script>
+    <script></script>
+        
+        <script></script>
+        <script></script>
+        <script></script>        
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+       
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>  
+        <script></script>   
+        <script></script>  
+        
+        
+    </body>
+</html>

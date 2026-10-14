@@ -225,6 +225,13 @@ a unique violation. Pins: "Saal" (the geocoder picked Saal an der Donau) and "Dr
 Kitefun Tarifa: house photos exist only at 400x300, so that listing's floor is 400x300 and the school's 800 px course
 photos (group-courses page) are added, capped so all house photos reach the vision QC (it sees the 10 largest).
 
+## Djerba / Zarzis (2026-10-14)
+
+Targeted search for Zarzis found nothing qualifying in Zarzis itself; three Djerba places on the south-east lagoon
+side were built: Oasis Kite's camp (kind camp, Leão per-event API `GET /api/event/product/<id>/lang/de`, anonymous,
+the call the engine's own calendar makes; helpers in the adapter, candidate for `src/offers/engines/leao.ts`), the
+Djerbakite villa and Kite Aventure's AMWEJ camp (both price on request, on the request backlog for current prices).
+
 ## Refresh strategy (recommendation)
 
 - Booking-engine / Shopify / app JSON: daily `--slots` (in the 06:00 UTC monitor cron, job `offer-slots`,

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      
+        <title>Séjours Kitesurf - Kite Aventure</title>
+        <meta name="description" content="Découvrez nos séjours kitesurf uniques à Djerba avec Kite Aventure. Profitez d'une expérience de kitesurf inoubliable, adaptée à tous les niveaux, dans un cadre magnifique.">
+        <meta name="keywords" content="Kite Aventure, kitesurf Djerba, école kitesurf, séjours kitesurf, kite camp, kiteboarding, kitesurf Tunisie, cours kitesurf, kite surf, stage kitesurf Djerba">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        
+        <link rel="shortcut icon" href="images/favicon.png">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-responsive.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/vertical-rhythm.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="css/YTPlayer.css">
+        <script></script>
+        <script></script>
+		<script></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<script></script>
+<script></script>
+<script></script>
+    </head>
+    <body class="appear-animate">
+                
+        <div class="page-loader">
+            <div class="loader">Chargement...</div>
+        </div>
+        
+        <div class="page" id="top">
+            
+            
+              
+            <section  class= "page-section fixed-height-small pt-0 pb-0 bg-dark-alfa-30" data-background="images/kite-aventure.webp" id="caboverde">
+                <div class="js-height-parent container relative">
+                    <div class="home-content">
+                        <div class="home-text">
+                            
+                            <h2 class="hs-line-14 font-alt mb-50 mb-xs-30">
+sejours                          </h2>
+                             <div class="local-scroll hidden-xs">
+                                <a href="#amwej-kite-camp" class="btn btn-mod btn-border-w btn-medium btn-round">AMWEJ Kite Camp</a>
+                                <span>&nbsp;</span>
+                                <a href="#sejourkite" class="btn btn-mod btn-border-w btn-medium btn-round">Séjours Kitesurf</a>
+                                <span>&nbsp;</span>
+                                <a href="#activite" class="btn btn-mod btn-border-w btn-medium btn-round relative">Activités</a>
+                                <span>&nbsp;</span>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+         
+<section class="page-section">
+    <div class="container relative">
+        
+        <div  class="section-text align-center">
+            <b>Kite Aventure</b>, votre partenaire idéal pour des séjours de kitesurf inoubliables à Djerba. Nous collaborons étroitement avec des hébergements soigneusement sélectionnés pour garantir confort et proximité avec les spots de kitesurf. Notre offre s'étend du charmant Kite Camp Amwej, offrant une ambiance conviviale et détendue, à une variété de villas et appartements, idéals pour tous les goûts et besoins. 
+            En plus de l'hébergement, nous proposons une gamme complète d'activités pour enrichir votre expérience : des excursions en stand up paddle et kayak, des sorties en bateau, des nuits en camping sur des plages sauvages, des soirées barbecue, des séances de yoga, de l'équitation, des explorations du désert et bien plus encore. Chaque jour avec Kite Aventure est une nouvelle aventure, combinant passion du kitesurf et découverte de la magnifique île de Djerba. 
+            
+            <a href="lien_vers_page_offres_ou_contact.html" class="btn btn-mod btn-border-w btn-medium btn-round">Découvrez nos offres</a>
+        </div>
+        
+    </div>
+</section>
+            
+            
+<section id="amwej-kite-camp" class="page-section">
+    <div class="container relative">
+        <div class="row">
+            
+            <div class="col-md-7 mb-sm-40">
+                <div class="work-full-media mt-0 white-shadow wow fadeInUp">
+                    <ul class="clearlist work-full-slider owl-carousel">
+                        <li>
+                            <img src="images/Amwej-kite-camp.jpeg" alt="Guebliya Chambre Double" />
+                        </li>
+                        <li>
+                            <img src="images/Amwej-kite-camp-yoga.jpeg" alt="Charguiya Chambre Double" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="kiteCamp" class="col-md-5 col-lg-4 col-lg-offset-1">
+                <div class="text-justify">
+                    <h3 class="font-alt mb-30 mb-xxs-10">AMWEJ Kite Camp</h3>
+                    <p>
+                        Découvrez le charme authentique de Djerba à l'AMWEJ Kite Camp, situé au cœur de DjerbaHood, un village artistique vibrant. Notre camp, une maison djerbienne traditionnelle, offre une expérience culturelle immersive, parfaite pour les passionnés de kitesurf, d'éco-tourisme et d'art.
+                    </p>
+                    <p>
+                        Chaque suite, de GUEBLIA à CHARGUIYA, est conçue pour allier confort, style et fonctionnalité, avec des installations adaptées aux besoins des kitesurfeurs. Profitez de nos séjours tout compris avec des cours de kitesurf, et laissez-vous séduire par l'ambiance unique de notre camp.
+                    </p>
+                     <div class="work-full-detail">
+                                        <p>
+                                            <strong>Chambres:</strong>
+                                            4
+                                        </p>
+                                        <p>
+                                            <strong>Max. pers.:</strong>
+                                            10
+                                        </p>
+                                        <p>
+                                            <strong>Prix:</strong>
+                                            À partir de 15€/nuit
+                                        </p>
+                                    </div>
+                    <div class="mt-40">
+                        <a href="contact.html">Demander les disponibilités</a>
+                    
+                </div>
+          
+            </div>
+        </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section-title font-alt mb-70 mb-xs-40">Expériences et Services</h2>
+                <p>
+                    Au-delà du kitesurf, AMWEJ offre une gamme d'activités captivantes : des séances de yoga, des excursions en stand-up paddle et kayak, des balades à cheval, des explorations du désert et des soirées barbecue. Chaque moment passé à AMWEJ promet aventure, détente et découverte.
+                </p>
+                <p>
+                    Nous proposons également des séances de massage thérapeutique et des dégustations de cuisine locale pour une immersion complète dans la culture djerbienne. Laissez-nous vous guider à travers les joyaux cachés de l'île pour une expérience inoubliable.
+                </p>
+            </div>
+        </div>
+        
+</section>
+            
+            
+            <hr class="mt-0 mb-0 "/>
+            
+            
+            <section id="poolvilla" class="page-section">
+                <div class="container relative">
+                    <div class="row">
+                        <div class="col-md-5 col-lg-4 mb-sm-40">
+                            
+                            <div id ="sejourkite" class="text-justify">
+                              <h3 class="font-alt mb-30 mb-xxs-10">Séjours Kitesurf</h3>
+<p>
+    Kite Aventure vous invite à découvrir ses séjours kitesurf uniques à Djerba, un paradis pour les amateurs et les professionnels de ce sport. Nos hébergements variés, allant des hostels conviviaux aux luxueuses villas avec piscine, offrent une expérience inoubliable à chaque visiteur. <strong>Profitez d'une combinaison parfaite de confort, d'aventure et de découverte culturelle</strong>, adaptée à tous les goûts et tous les niveaux de kitesurf. <br/><br/>
+</p>
+<p>
+    Au-delà de l'hébergement, chaque séjour est enrichi par une multitude d'activités choisies avec soin. Explorez Djerba et ses environs à travers des excursions, plongez dans des sessions de yoga apaisantes ou participez à des sorties en bateau captivantes. Pour les passionnés d'aventure, nos excursions dans le désert et nos activités équestres offrent une expérience authentique et mémorable. <strong>Notre trip planner personnalisable vous permet de créer le séjour de vos rêves, alliant passion du kitesurf et émerveillement quotidien</strong>. <br/><br/>
+</p>
+                               
+                                   
+                                </div>
+                                <div class="mt-40">
+                                    <a href="contact.html">Demander les disponibilités</a>
+                                
+                            </div>
+                    
+                        </div>
+                        <div class="col-md-7 col-lg-offset-1">
+                            
+                            <div class="work-full-media mt-0 white-shadow wow fadeInUp">
+                                <ul class="clearlist work-full-slider owl-carousel">
+                                    <li>
+                                        <img src="images/kitesurf-club-djerba.webp" alt="séjour kitesurf a djerba" />
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                     </div>
+                </div>
+            </section>
+            <hr class="mt-0 mb-0 "/>
+            
+            <section id="appartment" class="page-section">
+                <div class="container relative">
+                    <div class="row">
+                        <div class="col-md-7 mb-sm-40">
+                            
+                            <div class="work-full-media mt-0 white-shadow wow fadeInUp">
+                                <ul class="clearlist work-full-slider owl-carousel">
+                                    <li>
+                                        <img src="images/kite-djerba.webp" alt="kite aventure djerba" />
+                                    </li>
+                                    <li>
+                                        <img src="images/kitesurf-paddle-djerba-tunisie.webp" alt="kite aventure djerba" />
+                                    </li>
+                                    <li>
+                                        <img src="images/kitesurf-yoga-djerba.webp" alt="kite aventure djerba" />
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                        <div id="activite" class="col-md-5 col-lg-4 col-lg-offset-1">
+                            
+                            <div class="text-justify">
+                            <h3 class="font-alt mb-30 mb-xxs-10">Stand Up Paddle</h3>
+<p>
+    Plongez dans l'aventure avec nos excursions en <strong>Stand Up Paddle et Kayak</strong>! Chez Kite Aventure, nous vous offrons la possibilité de glisser sur les eaux cristallines de Djerba, découvrant des paysages côtiers à couper le souffle. Que vous soyez débutant ou expérimenté, nos équipements de qualité et nos guides experts garantissent une expérience sûre et mémorable.
+</p>
+<h3 class="font-alt mb-30 mb-xxs-10">excursions en bateau</h3>
+<p>
+    Embarquez pour une aventure inoubliable avec nos <strong>excursions en bateau</strong>! Profitez d'une journée de pêche, ou optez pour une expérience unique de camping et barbecue sur des plages secrètes. Nos excursions sont parfaites pour ceux qui cherchent à combiner l'aventure avec la relaxation, offrant des moments privilégiés en pleine mer et sous le soleil radieux de Djerba.
+</p>
+<h3 class="font-alt mb-30 mb-xxs-10">Yoga</h3>
+<p>
+    Rejoignez nos sessions de yoga, que ce soit au Kite Camp ou dans des endroits insolites en bord de mer, pour une expérience de détente profonde. Nos séances de yoga sont conçues pour tous les niveaux, offrant une pause de sérénité et une connexion unique avec la nature. Laissez le son des vagues apaiser votre esprit et renforcez votre corps sous le ciel bleu de Djerba.
+</p>
+                                   
+                                
+                                <div class="mt-40">
+                                    <a href="contact.html">Demander les disponibilités</a>
+                                
+                            </div>
+                       
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <hr class="mt-0 mb-0 "/>
+            
+            
+                
+           
+        
+            <nav class="main-nav dark transparent stick-fixed">
+                <div class="full-wrapper relative clearfix">
+                    <div class="nav-logo-wrap local-scroll">
+                        <a href="index.html" class="logo">
+                            <img src="images/favicon.png" alt="logo club de kitesurf Kite aventure djerba" />
+                        </a>
+                    </div>
+                    <div class="mobile-nav">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                   
+        <div class="inner-nav desktop-nav">
+            <ul class="clearlist">
+                <li>
+                    <a href="kitesurf.html">Kitesurf</a>
+                </li>
+                <li>
+                    <a href="#kiteCamp">Kite Camp</a>
+                </li>
+                <li>
+                    <a href="#sejourkite">Séjours</a> 
+                </li>
+                <li>
+                    <a href="sejours.html#act">Activités</a>
+                </li>
+                <li>
+                    <a href="a-propos.html">Le Club</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                
+                <li>
+                    <a href="https://www.facebook.com/kite.Aventure/" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/kiteaventure/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                </li>
+                
+                <li class="language-switcher">
+                    <a href="index_en.html">EN</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+          
+            
+            <section id="chooseus"class="page-section">
+                <div class="container relative">
+                    <h2 class="section-title2">
+                        Pourquoi chez nous?
+                    </h2>
+                    
+                    <div class="row multi-columns-row alt-features-grid">
+                        
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-target"></span>
+                                </div>
+                                 <h3 class="alt-features-title font-alt">Ça marche!</h3>
+                                <div class="alt-features-descr align-left">
+                                    Toute notre expérience et notre savoir-faire pour dépasser vos attentes et vous apporter des vacances sans faille.  
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-clock"></span>
+                                </div>
+                                <h3 class="alt-features-title font-alt">Nous respectons votre emploi du temps</h3>
+                                <div class="alt-features-descr align-left">
+                                    Nous restons flexibles et respectons votre façon de profiter de votre voyage. 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-heart"></span>
+                                </div>
+                                <h3 class="alt-features-title font-alt">Nous avons la magie!</h3>
+                                <div class="alt-features-descr align-left">
+                                    Vous la ressentirez aussi! Nous aimons ce que nous faisons et partager cette passion est notre priorité! 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-camera"></span>
+                                </div>
+                                <h3 class="alt-features-title font-alt">Fabricants de souvenirs</h3>
+                                <div class="alt-features-descr align-left">
+                                   Nous serons constamment derrière l'objectif ou dans les airs, filmant chacun de vos mouvements.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-lifesaver"></span>
+                                </div>
+                                <h3 class="alt-features-title font-alt">La sécurité d'abord</h3>
+                                <div class="alt-features-descr align-left">
+                                    Nous veillerons personnellement à votre sécurité et veillerons à ce que vous soyez couvert sous tous les angles. 
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-sm-6 col-md-4 col-lg-4">
+                            <div class="alt-features-item align-center">
+                                <div class="alt-features-icon">
+                                    <span class="icon-happy"></span>
+                                </div>
+                                <h3 class="alt-features-title font-alt">On est simpa</h3>
+                                <div class="alt-features-descr align-left">
+                                   On est des gens sympas, des kiters qui aident des kiters ;-)
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                
+                </div>
+            </section>
+            
+            
+       <section id="faq" class="page-section bg-dark-alfa-90">
+    <div class="container relative">
+        <div class="row section-text">
+            <div class="col-md-8 col-md-offset-2">
+                <h2 class="section-title2 font-alt mb-70 mb-sm-40">
+                    F.A.Q.
+                </h2>
+                <dl class="accordion">
+                    <dt>
+                        <a href="">Quelles options de séjours propose Kite Aventure ?</a>
+                    </dt>
+                    <dd> Kite Aventure offre une variété de séjours à Djerba, du Kite Camp Amwej, idéal pour une expérience conviviale, aux villas et appartements de luxe pour ceux qui cherchent plus de confort. Nos séjours incluent l'hébergement, les cours de kitesurf, et une multitude d'activités passionnantes.
+                    </dd>
+                    <dt>
+                        <a href="">Qu'est-ce qui est inclus dans un séjour tout compris au Kite Camp Amwej ?</a>
+                    </dt>
+                    <dd>
+                        Les séjours tout compris à l'AMWEJ Kite Camp comprennent l'hébergement, les cours de kitesurf, des activités quotidiennes telles que le yoga, le stand-up paddle, le kayak, et des soirées barbecue. Nous offrons également des séances de massage et des dégustations de cuisine locale pour une immersion totale.
+                    </dd>
+                    <dt>
+                        <a href="">Peut-on personnaliser son séjour chez Kite Aventure ?</a>
+                    </dt>
+                    <dd>
+                        Absolument ! Notre trip planner personnalisable vous permet de créer le séjour parfait, en combinant la passion du kitesurf avec la découverte de Djerba. Choisissez parmi une gamme d'hébergements, d'activités et d'expériences culturelles pour personnaliser votre aventure.
+                    </dd>
+                    <dt>
+                        <a href="">Comment réserver un séjour chez Kite Aventure ?</a>
+                    </dt>
+                    <dd>
+                        Vous pouvez réserver votre séjour en ligne sur notre site web, par téléphone, ou en nous visitant directement. Nous vous conseillons de réserver à l'avance pour garantir la disponibilité, surtout pendant la haute saison.
+                    </dd>
+                    <dt>
+                        <a href="">Y a-t-il des activités pour ceux qui ne font pas de kitesurf ?</a>
+                    </dt>
+                    <dd>
+                        Oui, nous proposons une large gamme d'activités pour non-kitesurfeurs, incluant des excursions en stand-up paddle et kayak, du yoga, des explorations du désert, et bien plus. Il y a toujours quelque chose à découvrir avec Kite Aventure.
+                    </dd>
+                    <dt>
+                        <a href="">Quelles mesures de sécurité sont prises lors des activités de kitesurf ?</a>
+                    </dt>
+                    <dd>
+                        La sécurité est notre priorité. Toutes nos activités sont encadrées par des instructeurs certifiés, et nous fournissons tout l'équipement de sécurité nécessaire. Nous veillons à ce que toutes les conditions soient réunies pour une pratique sûre du kitesurf.
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+            
+<footer class="page-section bg-gray-lighter footer pb-60">
+    <div class="containerrelative"> 
+        <h2 class="section-title2">Nous Trouver</h2>        
+        <div class="row">            
+            <div class="col-md-8 col-md-offset-2">
+                <div class="row">                    
+                    <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                        <div class="contact-item">
+                            <div class="ci-icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="ci-title font-alt">
+                                Appelez-nous
+                            </div>
+                            <div class="ci-text">
+                               +216 54 762 434
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                        <div class="contact-item">
+                            <div class="ci-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="ci-title font-alt">
+                                Adresse
+                            </div>
+                            <div class="ci-text">
+                                Plage Soug El Guebli, Aghir, Djerba
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6 col-lg-4 pt-20 pb-20 pb-xs-0">
+                        <div class="contact-item">
+                            <div class="ci-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="ci-title font-alt">
+                                Email
+                            </div>
+                            <div class="ci-text">
+                                <a href="mailto:contact@kiteaventure.com">contact@kiteaventure.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>        
+    </div>
+    <div class="container">
+        <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.6604349748095!2d10.946039875456437!3d33.71773447328479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13aabfb6f4782879%3A0x8bee48314706d415!2sKite%20Aventure!5e0!3m2!1sfr!2stn!4v1704380222840!5m2!1sfr!2stn" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+<a href="https://wa.me/21654762434" target="_blank" class="buy-button"><i class="fab fa-whatsapp fa-lg" aria-hidden="true"></i> <span>Chat</span></a>
+    
+    <div class="local-scroll">
+        <a href="#top" class="link-to-top"><i class="fa fa-caret-up"></i></a>
+    </div>
+    
+    <div class="footer-text">        
+        <div class="footer-copy font-alt">
+            &copy; Kite Aventure 2024
+        </div>        
+        <div class="footer-made">
+            Vivez l'Expérience Kite Aventure
+        </div>        
+    </div>     
+    
+    <div class="footer-social-links mb-110 mb-xs-60">
+        <a href="https://www.facebook.com/kite.Aventure/" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/kiteaventure/" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+</footer>
+        
+        
+        <script></script>
+        <script></script>
+        <script></script>        
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+       
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>
+        <script></script>  
+        <script></script>   
+        <script></script>  
+        <script></script>
+    </body>
+</html>

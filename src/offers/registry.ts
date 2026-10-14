@@ -39,6 +39,7 @@ import { costaKiteBahiaSalinas } from './adapters/costa-kite-bahia-salinas.js';
 import { dagaliSnowkiteCampFagerheim } from './adapters/dagali-snowkite-camp-fagerheim.js';
 import { dakhlaAttitudeDakhla } from './adapters/dakhla-attitude-dakhla.js';
 import { dakhlaDownwindChallenge } from './adapters/dakhla-downwind-challenge.js';
+import { djerbakiteVillaSedouikech } from './adapters/djerbakite-villa-sedouikech.js';
 import { drejbyStrandCampingAls } from './adapters/drejby-strand-camping-als.js';
 import { drivethruKiteSurfCampHvideSande } from './adapters/drivethru-kite-surf-camp-hvide-sande.js';
 import { dunasLuxuryBeachResortValdevaqueros } from './adapters/dunas-luxury-beach-resort-valdevaqueros.js';
@@ -69,6 +70,7 @@ import { kailuaLodgePelzerhaken } from './adapters/kailua-lodge-pelzerhaken.js';
 import { kenyawaysDiani } from './adapters/kenyaways-diani.js';
 import { kerosBlueLimnos } from './adapters/keros-blue-limnos.js';
 import { kilomboVillasSibauma } from './adapters/kilombo-villas-sibauma.js';
+import { kiteAventureAmwejDjerbahood } from './adapters/kite-aventure-amwej-djerbahood.js';
 import { kiteBasecampPodsLangebaan } from './adapters/kite-basecamp-pods-langebaan.js';
 import { kiteBeachInnCabarete } from './adapters/kite-beach-inn-cabarete.js';
 import { kiteBuenHombreEcoLodge } from './adapters/kite-buen-hombre-eco-lodge.js';
@@ -120,6 +122,7 @@ import { nohotelLampesPiratenKojeDranske } from './adapters/nohotel-lampes-pirat
 import { nordseeSurfschuleDomeSeeschwalbeHooksiel } from './adapters/nordsee-surfschule-dome-seeschwalbe-hooksiel.js';
 import { nordwindWassersportSurendorf } from './adapters/nordwind-wassersport-surendorf.js';
 import { numeroUnoBeachHouseOceanPark } from './adapters/numero-uno-beach-house-ocean-park.js';
+import { oasisKiteKitecampDjerba } from './adapters/oasis-kite-kitecamp-djerba.js';
 import { oceanSpiritsLodgeBurgau } from './adapters/ocean-spirits-lodge-burgau.js';
 import { oitiBeachResortTutoia } from './adapters/oiti-beach-resort-tutoia.js';
 import { oysterrockLangebaan } from './adapters/oysterrock-langebaan.js';
@@ -243,6 +246,7 @@ export const adapters: OfferAdapter[] = [
   dagaliSnowkiteCampFagerheim,
   dakhlaAttitudeDakhla,
   dakhlaDownwindChallenge,
+  djerbakiteVillaSedouikech,
   drejbyStrandCampingAls,
   drivethruKiteSurfCampHvideSande,
   dunasLuxuryBeachResortValdevaqueros,
@@ -274,6 +278,7 @@ export const adapters: OfferAdapter[] = [
   kerosBlueLimnos,
   kilomboVillasSibauma,
   kiteactiveXxxlDownwinder,
+  kiteAventureAmwejDjerbahood,
   kiteBasecampPodsLangebaan,
   kiteBeachInnCabarete,
   kiteBuenHombreEcoLodge,
@@ -324,6 +329,7 @@ export const adapters: OfferAdapter[] = [
   nordseeSurfschuleDomeSeeschwalbeHooksiel,
   nordwindWassersportSurendorf,
   numeroUnoBeachHouseOceanPark,
+  oasisKiteKitecampDjerba,
   oceanSpiritsLodgeBurgau,
   oitiBeachResortTutoia,
   oysterrockLangebaan,
