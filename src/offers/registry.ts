@@ -114,6 +114,7 @@ import { lakesideParadiseSportHostelKnokkeHeist } from './adapters/lakeside-para
 import { lakeunitedDjerba } from './adapters/lakeunited-djerba.js';
 import { lazyKiteSurfHouseTarifa } from './adapters/lazy-kite-surf-house-tarifa.js';
 import { learnkiteboardingnowCampingBbOostvoorne } from './adapters/learnkiteboardingnow-camping-bb-oostvoorne.js';
+import { letsgokiteWestaustralienKitesafari } from './adapters/letsgokite-westaustralien-kitesafari.js';
 import { lineupKiteSurfHouseTaiba } from './adapters/lineup-kite-surf-house-taiba.js';
 import { lionHostelTarifa } from './adapters/lion-hostel-tarifa.js';
 import { logosBeachVillageTheologos } from './adapters/logos-beach-village-theologos.js';
@@ -338,6 +339,7 @@ export const adapters: OfferAdapter[] = [
   laVentanaHotel,
   lazyKiteSurfHouseTarifa,
   learnkiteboardingnowCampingBbOostvoorne,
+  letsgokiteWestaustralienKitesafari,
   lineupKiteSurfHouseTaiba,
   lionHostelTarifa,
   logosBeachVillageTheologos,

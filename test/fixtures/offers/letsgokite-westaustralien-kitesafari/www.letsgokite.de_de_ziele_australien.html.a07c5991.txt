@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Australien Kitesafari - LetsGoKite</title>
+<base href="https://www.letsgokite.de/">
+<meta name="robots" content="index,follow">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="generator" content="Contao Open Source CMS">
+<link rel="stylesheet" href="https://www.letsgokite.desystem/modules/kit_fontawesome/assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="system/modules/aid_letsgokite/assets/css/ce_image_conic.css">
+<link rel="stylesheet" href="assets/css/dc79d94921bf.css">
+<script src="assets/js/0c3134ecfd30.js"></script>
+<link rel="alternate" hreflang="de" lang="de" href="de/ziele/australien.html" title="Australien">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=!0;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f)})(window,document,'script','dataLayer','GTM-NWV7Q9T')</script>
+<!-- End Google Tag Manager -->
+<link rel="apple-touch-icon" sizes="57x57" href="files/letsgokite/design/favicons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="files/letsgokite/design/favicons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="files/letsgokite/design/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="files/letsgokite/design/favicons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="files/letsgokite/design/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="files/letsgokite/design/favicons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="files/letsgokite/design/favicons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="files/letsgokite/design/favicons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="files/letsgokite/design/favicons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="files/letsgokite/design/favicons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="files/letsgokite/design/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="files/letsgokite/design/favicons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="files/letsgokite/design/favicons/favicon-16x16.png">
+<link rel="manifest" href="files/letsgokite/design/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="files/letsgokite/design/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<!--[if lt IE 9]><script src="assets/html5shiv/3.7.2/html5shiv-printshiv.min.js"></script><![endif]-->
+</head>
+<body id="top" class="unknown other  slidersmall australien lang-de">
+<div class="elfsight-app-d63ef379-2d6d-4ee5-aefc-f73d5eecfcd2"></div>
+<!--[if lt IE 8]>
+<p>You are using an outdated browser. <a href="http://whatbrowser.org/">Upgrade your browser today</a>.</p>
+<![endif]-->
+<div class="page">
+<div class="page-inner">
+<header class="page-header fixed">
+<!-- indexer::stop -->
+<nav class="mod_changelanguage block">
+<ul class="level_1" role="menubar">
+<li class="lang-de active last"><a href="de/ziele/australien.html" title="Australien" class="lang-de active last" hreflang="de" lang="de" role="menuitem"></a></li>
+</ul>
+</nav>
+<!-- indexer::continue -->
+<div class="header_bg">
+<div class="blue_bg">
+<div class="logo_bg">
+<div class="ce_image first last block" id="logo">
+<figure class="image_container">
+<a href="de/kiten-lernen-im-kitekurs-mit-lets-go-kite.html">
+<img src="files/letsgokite/design/img/bg/logo_kite.png" sizes="(max-width: 320px) 120px, (max-width: 360px) 150px, (max-width: 599px) 180px, (max-width: 768px) 230px, 265px" alt="">
+</a>
+</figure>
+</div>
+</div>
+<div class="ecke_bg"></div>
+</div>
+<!-- Google Tag Manager (noscript) -->
+<div style="display:none;visibility:hidden">
+&lt;noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NWV7Q9T" height="0" width="0" style="display:none;visibility:hidden"></iframe>&lt;/noscript>
+</div>
+<!-- End Google Tag Manager (noscript) -->
+<div class="mainnavigation">
+<!-- indexer::stop -->
+<nav class="mod_navigation block">
+<a href="de/ziele/australien.html#skipNavigation45" class="invisible">Navigation überspringen</a>
+<ul class="level_1" role="menubar">
+<li class="submenu trail first"><a href="de/ziele/deutschland.html" title="Reiseziele" class="submenu trail first" role="menuitem" aria-haspopup="true">Kitekurse / Kite Events</a>
+<ul class="level_2" role="menu">
+<li class="daenemark sibling first"><a href="de/ziele/deutschland.html" title="Deutschland" class="daenemark sibling first" role="menuitem">Deutschland</a></li>
+<li class="aegypten sibling"><a href="de/ziele/aegypten.html" title="Kiten lernen Ägypten" class="aegypten sibling" role="menuitem">Ägypten</a></li>
+<li class="active australien"><a href="de/ziele/australien.html" title="Australien Kitesafari" class="active australien" role="menuitem">Australien</a></li>
+<li class="brasilien sibling last"><a href="de/ziele/brasilien.html" title="Kiten lernen Brasilien" class="brasilien sibling last" role="menuitem">Brasilien</a></li>
+</ul>
+</li>
+<li><a href="de/kontakt.html" title="Kontakt" role="menuitem">Kontakt</a></li>
+<li class="last"><a href="de/ueber-uns.html" title="Über uns" class="last" role="menuitem">Über uns</a></li>
+</ul>
+<a id="skipNavigation45" class="invisible">&nbsp;</a>
+</nav>
+<!-- indexer::continue -->
+</div></div><div class="mod_rocksolid_slider header-slider block">
+<div data-rsts-type="image" data-rsts-name="Slider Kitesurfer">
+<img data-rsts-position="top" src="files/letsgokite/content/Deutschland/Hafen%20Dabitz/Unterkuenfte%20Neu%20Juni%202021/Kiten%20lernen%20mit%20Let%27s%20Go%20Kite%20in%20Deutschland.jpg" width="1311" height="730" alt="Kiten lernen mit Let's Go Kite in Deutschland">
+</div>
+<div data-rsts-type="image" data-rsts-name="Slider Brasil">
+<img data-rsts-position="center" src="files/letsgokite/content/Deutschland/Hafen%20Dabitz/Unterkuenfte%20Neu%20Juni%202021/Kiten%20lernen%20Deutschland%203.jpg" width="1311" height="730" alt="Kite Camp - Kiten lernen in Deutschland - Let's Go Kite">
+</div>
+<div data-rsts-type="image" data-rsts-name="Slider Neu Brasil">
+<img data-rsts-position="center" src="files/letsgokite/content/brasilien/team_sonnenuntergang.jpg" width="1600" height="1200" alt="">
+</div>
+<div data-rsts-type="image" data-rsts-name="Slider Nina">
+<img  src="files/letsgokite/content/aegypten/Erfolgreicher%20Start%20Kitesurfen.jpg" width="1920" height="1280" alt="Erfolg gestartet: Das Brett sitzt sicher am Fuß">
+</div>
+</div>
+<script>(function($){var slider=$('.mod_rocksolid_slider').last();slider.find('video[data-rsts-background], [data-rsts-type=video] video').each(function(){this.player=!1});slider.rstSlider({"type":"fade","skin":"lgk","height":"730","navType":"bullets","scaleMode":"crop","imagePosition":"center","random":!1,"loop":!0,"videoAutoplay":!1,"autoplayProgress":!1,"pauseAutoplayOnHover":!1,"keyboard":!0,"captions":!1,"controls":!1,"combineNavItems":!0,"duration":1200,"autoplay":8000,"autoplayRestart":8100,"gapSize":"0%"});$(function(){if(!$.fn.colorbox){return}
+var lightboxConfig={loop:!1,rel:function(){return $(this).attr('data-lightbox')},maxWidth:'95%',maxHeight:'95%'};var update=function(links){links.colorbox(lightboxConfig)};slider.on('rsts-slidestop',function(event){update(slider.find('a[data-lightbox]'))});update(slider.find('a[data-lightbox]'))})})(jQuery)</script>
+<div class="mod_article first last block" id="navi-aus">
+<nav class="ce_rsce_anchor_nav one-page-navi" data-change-url="true">
+<div class="rotate-bg"></div>
+<div class="nav-inner">
+<a href="/" class="logo-klein">
+<div class="extra-logo" style="background: url('../files/letsgokite/content/australien/Australien%20Kite.png') no-repeat right top;"></div>
+</a>
+<ul>
+<li>
+<a  href="de/kiten-lernen-im-kitekurs-mit-lets-go-kite.html" data-icon="&#xe0a1;"></a>
+</li>
+<li>
+<a  href="de/ziele/australien.html&#35;ablauf">Ablauf</a>
+</li>
+<li>
+<a  href="de/ziele/australien.html&#35;spots">Spots</a>
+</li>
+<li>
+<a  href="de/ziele/australien.html&#35;unterkunft">Unterkünfte</a>
+</li>
+<li>
+<a  href="de/ziele/australien.html&#35;termine+preise">Termine & Preise</a>
+</li>
+<li>
+<a  href="de/ziele/australien.html&#35;buchung">Buchung</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+</header>
+<div class="content-wrapper">
+<section role="main" class="main-content">
+<div class="mod_article first last block" id="ziele-australien">
+<div class="centered-wrapper ce_rsce_centered_wrapper_start first -standard-color -low-right-1 -low -top -box-shadow -shadow-blue -height-small setself " style=" " id="home">
+<div class="centered-wrapper-background rotate-top"></div>
+<div class="centered-wrapper-background rotate-bottom -shadow-blue"></div>
+<div class="centered-wrapper-inner-background" style="position: relative; z-index: 100;">
+<div class="centered-wrapper-inner ">
+<div class="rs-columns ce_rs_columns_start">
+<div class="ce_rs_column_start p-b-3 rs-column -large-col-3-2 -large-first -large-first-row -medium-col-1-1 -medium-first -medium-last -medium-first-row -small-col-1-1 -small-first -small-last -small-first-row">
+<div class="headline-box -align-left ce_rsce_headline_box  -blue">
+<div class="anchor"></div>
+<div class="headline-background"></div>
+<h1 class="">Australien - Kitesafari</h1>
+</div>
+<div class="ce_text block">
+<h1>Kitesafari Westaustralien - inkl. 6 Tage Wave- oder Sprungtraining mit VDWS Lehrteamer Claas Zäncker & Eleveight Teamrider Lennart Radlof</h1>
+<p>Mit dem Flieger einmal um die Welt und im windigen Paradies Down Under<strong> im kristallblauen Wasser mit Delphinen kiten</strong> gehen. Das wollen wir mit dir 2026/2027 auf unserer Westaustralien Kite Safari erleben. Zusammen gehen wir auf Abenteurerreise und an den besten Kitespots der Westküste gemeinsam kiten.&nbsp;</p>
+<p>&nbsp;</p>
+<p><strong>Der Kitesafari Termin:</strong></p>
+<p><strong>29.Dezember 2026 - 20.Januar 2027</strong></p>
+<p>&nbsp;</p>
+<p>Die Westküste Australiens ist bestückt mit einzigartiger und unberührter Natur. Zahlreiche geschützte, <strong>kristallklare Flachwasserbuchten und Kitesurfspots mit sauberen Wellen und Wassertemperaturen um die 20 Grad</strong> machen deinen Kiteurlaub zu etwas ganz Besonderen. Mit dem Van steuern wir verschiedene Orte und Spots an und wollen neben dem Kiten mit euch Abstecher in wunderschöne Nationalparks, zu lokalen Märkten und einzigartigen Naturwundern machen. Die Safari wird von unserem professionellen <strong>VDWS lizenzierten Team</strong> durchgeführt, die euch die gesamte Reise begleitet, die verschiedenen Spots mit ihren Besonderheiten zeigt und euch mit wertvollen Tipps jederzeit zur Seite steht. Um euch im Voraus einen Eindruck von unserem Team zu vermitteln, möchten wir die Kielehrer/-innen kurz vorstellen:</p>
+<p>Zum einen begleitet euch unser <strong>VDWS Lehrteamer</strong> Claas Zäncker, Mitglied des VDWS Lehrteams und Wave-Kite Enthusiast. Wenige kennen den Sport und seine Besonderheiten so gut wie er und aufgrund seiner langjährigen Unterrichtserfahrung wird er dich beim erlernen neuer Moves optimal unterstützen.&nbsp;Unser <strong>HW-Shapes &amp; Eleveight Teamrider</strong> Lennart Radlof bringt neben seiner langjährigen Erfahrung als Kitelehrer auch ein außergewöhnliches Talent für die Fotografie mit und wird viele der einzigartigen Momente für die Ewigkeit auf Film festhalten. Das Team wird durch weiblicher Power von unserer <strong>VDWS lizenzierte Kitelehrerin</strong> Clara Kolboske vervollständigt. Des Weiteren bekommt unser Team Unterstützung von Manny, der seit mehreren Jahre vor Ort lebt und das Gebiet wie seine Westentasche kennt.</p>
+<p>Kannst du uns nachweisen, dass du im Kitesurfen Level 5 erfolgreich absolviert hast, steht deiner Reise nichts mehr im Wege! Aufgrund der <strong>Vielzahl an unterschiedlichen Spots</strong> an unseren einzelnen Stationen ist die Reise <strong>ideal für Twintip- und Wavekiter</strong>, denn es erwarten euch sowohl traumhafte Flachwasserbuchten als auch jede Menge Wavespots.</p>
+</div>
+</div>
+<div class="ce_rs_column_start  rs-column -large-col-3-1 -large-last -large-first-row -medium-col-1-1 -medium-first -medium-last -small-col-1-1 -small-first -small-last">
+<iframe class="map" width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=82.17773437500001%2C-50.569282865582416%2C149.50195312500003%2C-8.667918002363107&amp;layer=mapnik&amp;marker=-31.952162238024975%2C115.83984375"></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<div class="ce_image_conic">
+<div class="overlay-top align-asc color-white"></div>
+<div class="image_container">
+<picture>
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="assets/images/c/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-0ae163ec.jpg 1x, assets/images/e/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-7d15a1de.jpg 1.5x, assets/images/0/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-e857f050.jpg 2x" media="(max-width: 479px)">
+<source srcset="assets/images/a/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-778cd38a.jpg 1x, assets/images/c/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-a57ff48c.jpg 1.5x, assets/images/e/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-3d85638e.jpg 2x" media="(max-width: 767px)">
+<source srcset="assets/images/c/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-2c689bac.jpg 1x, assets/images/7/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-6f05f777.jpg 1.5x, assets/images/f/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-bad29d6f.jpg 2x" media="(max-width: 959px)">
+<source srcset="assets/images/f/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-fbefc24f.jpg 1x, assets/images/7/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-a31f46a7.jpg 1.5x, assets/images/7/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-ef12a417.jpg 2x" media="(max-width: 1399px)">
+<!--[if IE 9]></video><![endif]-->
+<img src="assets/images/9/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-7738f699.jpg" srcset="assets/images/9/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-7738f699.jpg 1x, assets/images/6/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-f952a146.jpg 1.5x, assets/images/7/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Welle-46916ac7.jpg 2x" alt="">
+</picture>
+<script>window.respimage&&window.respimage({elements:[document.images[document.images.length-1]]})</script>
+</div>
+<div class="overlay-bottom align-desc color-white">
+</div>
+<div class="headline">
+<div class="anchor" id="ablauf"></div>
+<div class="inside">
+<div class="align color-white">
+<h2>Ablauf</h2>
+<div class="background"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="centered-wrapper ce_rsce_centered_wrapper_start -standard-color -low-right-1 -close -inner -box-shadow -shadow-black -height-small -vertical-centered setself " style=" ">
+<div class="centered-wrapper-background rotate-top"></div>
+<div class="centered-wrapper-background rotate-bottom -shadow-black"></div>
+<div class="centered-wrapper-inner-background" style="position: relative; z-index: 100;">
+<div class="centered-wrapper-inner ">
+<div class="ce_text right block">
+<h2>3 Wochen lang die besten Spots der Australischen Westküste entdecken</h2>
+<h3><strong>Von Perth über Lancelin, nach Geraldton und Kalbarri</strong></h3>
+<p>&nbsp;</p>
+<p>Damit ihr genau wisst, was euch auf eurer <strong>Kite&nbsp;Safari</strong> erwartet, könnt ihr euch im Folgenden die genaue Route anschauen. Natürlich kann es auch mal anders laufen, als geplant. Wenn es uns an einem Ort richtig gut gefällt oder an einem Ort der Wind mal fehlen sollte, passen wir unsere Reiseziele natürlich an. Die Anreise kann übrigens auch erst ein bis zwei Tage später erfolgen, wir warten bis dahin auf euch in Perth. Ein weiteres faszinierendes Highlight wird natürlich auch ein unvergesslicher Silvester in Perth sein.</p>
+<p><strong>Tag 1 - 5:</strong></p>
+<p style="padding-left: 30px;">Mit dem Flieger landen wir in <strong>Perth</strong>, der Hauptstadt des Bundesstaates Western Australia. Die ersten Tage werden wir entspannt angehen und unsere ersten Kitesurf Sessions an den wunderschönen Stränden der Stadt verbringen. Unser Airbnb befindet sich in Freemantle, einem Stadtviertel, das für seine lebendige Kultur, reichhaltige Geschichte und großartige maritime Atmosphäre bekannt ist. Außerdem zeigen wir euch das Stadtzentrum, machen einen Ausflug zu einem lokalen Markt und genießen ein Bierchen auf „The Island“. &nbsp;In den ersten Tagen erwartet euch aber auch gleich schon ein echtes Highlight, wenn wir unsere <strong>Downwinder Tour vom City Beach zum Sorrento Beach</strong> starten. Der Blick auf das Land während der Tour ist unbeschreiblich. Am Abend kann der Sonnenuntergang genossen werden.</p>
+<p><strong>Tag 6 - Tag 10:</strong></p>
+<p style="padding-left: 30px;">Am fünften Tag steigen wir für eine etwa 2-stündige Fahrt in den Van und machen uns auf den Weg nach&nbsp;<strong>Lancelin</strong>. Lancelin - einem süßen kleinen Fischerdorf mit ca. 700 Einwohnern und wunderschönen weißen Sanddünen. Hier erwarten dich traumhafte Spots mit ganz unterschiedlichen Bedingungen. Neben einem <strong>Flachwasserspot</strong> mit einem riesigen <strong>Stehrevier</strong>, kannst du hier einzigartige <strong>Reefbreaks</strong> mit sauberen, langen Wellen mitnehmen und so richtig im Kitesurfparadies Down Under ankommen.</p>
+<p><strong>Tag 10 - Tag 17:</strong></p>
+<p style="padding-left: 30px;">Von Lancelin fahren wir in Richtung <strong>Geraldton</strong> weiter. Auf der Strecke kommen wir auf den schönen Indian Ocean Drive an weißen Sandstränden, den Buchten sowie der von Heidepflanzen und kleinen Eukalyptusbaumarten bewachsenen <strong>Dünenlandschaften des Nambung Nationalparks</strong> vorbei. Einen Zwischenstopp können wir bei „The Pinnacles Desert“ einlegen, der Hauptattraktion des Naturschutzgebietes. Die Pinnacles sind Kalksteinformationen und bilden ein wahres Naturwunder. Am Jurien Bay packen wir die Kitesurfbretter aus und cruisen <strong>vom Booka Beach in fantastisch türkisblauem Wasser zur Boullanger Island</strong>. In der Abdeckung der Insel kommt ihr&nbsp;<strong>bei absoluten Traum Flachwasserbedingungen</strong>&nbsp;auf eure&nbsp;Kosten. In unglaublichem Ambiente genießen wir bei einem Picknick die wunderschöne Insel. Übernachten werden wir hier in sehr schönen Häusern, die alle in einer top Lage liegen.</p>
+<p style="padding-left: 30px;">In <strong>Geraldton</strong> haben wir etwas ganz Besonderes für euch. In der Kleinstadt an der Küste werden wir uns für einige Zeit niederlassen und von hier aus verschiedenen Spots anfahren. Am <strong>Coronation Beach</strong>, dem <strong>absoluten Hotspot fürs Wavekiten</strong>, erwartet euch ein spektakuläres <strong>6-tägiges Kitecamp mit unserem VDWS Lehrteamer Claas Zäncker</strong>. Er wird euch im Wavekiten unterrichten, Videoanalysen durchführen und eure Skills auf einen höheren Level bringen. Alternativ könnt ihr hier auch ein <strong>Sprungtraining mit unserem VDWS Lehrer Lennart Radlof</strong> absolvieren. In der Umgebung von Geraldton gibt es zahlreiche Spots, die sich für alle Könnensstufen ideal eignen.</p>
+<p style="padding-left: 30px;">Als Option halten wir uns einen <strong>Auslug nach Kalbarri</strong> offen, einem kleinen Ferienörtchen an der Küste.&nbsp; Auf dem Weg legen wir einen Zwischenstopp bei dem einzigartigen Pink Lake ein, dessen Farbe durch eine Alge zustande kommt.</p>
+<p><strong>Tag 17:</strong></p>
+<p style="padding-left: 30px;">Nach aufregenden <strong>Wochen voller toller Kitesurfsessions</strong> müssen wir uns so langsam auf den Weg <strong>zurück nach Perth</strong> machen. Um unsere Kitesurf Safari ausklingen zu lassen, unternehmen wir hier <strong>noch eine Downwindertour</strong>, bevor es ans Packen geht und der Flug zurück nach Deutschland auf uns wartet.</p>
+</div>
+<div class="ce_gallery centered -per-row-3 block">
+<ul class="cols_3">
+<li class="row_0 row_first even col_0 col_first">
+<figure class="image_container">
+<img src="assets/images/a/IMG_0017-9c6d670a.jpeg" srcset="assets/images/a/IMG_0017-9c6d670a.jpeg 1x, assets/images/4/IMG_0017-6d197104.jpeg 1.5x, assets/images/3/IMG_0017-a2e58c43.jpeg 2x" width="450" height="350" alt="IMG_0017.jpeg">
+<script>window.respimage&&window.respimage({elements:[document.images[document.images.length-1]]})</script>
+</figure>
+</li>
+<li class="row_0 row_first even col_1">
+<figure class="image_container">
+<img src="assets/images/f/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Foto%20Surfer%20in%20Welle-cccb952f.jpg" srcset="assets/images/f/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Foto%20Surfer%20in%20Welle-cccb952f.jpg 1x, assets/images/2/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Foto%20Surfer%20in%20Welle-0fb7e332.jpg 1.5x, assets/images/8/Let%27s%20Go%21%20Kite%20-%20Australien%20-%20Foto%20Surfer%20in%20Welle-38402fe8.jpg 2x" width="450" height="350" alt="Let's Go! Kite - Australien - Foto Surfer in Welle.jpg">
+<script>window.respimage&&window.respimage({elements:[document.images[document.images.length-1]]})</script>
+</figure>
+</li>
+<li class="row_0 row_first even col_2 col_last">
+<figure class="image_container">
+<img src="assets/images/5/Australien%20-%20Kitesafari%20-%20Perth-6ff9f9d5.jpg" srcset="assets/images/5/Australien%20-%20Kitesafari%20-%20Perth-6ff9f9d5.jpg 1x, assets/images/c/Australien%20-%20Kitesafari%20-%20Perth-6812bbfc.jpg 1.5x, assets/images/5/Australien%20-%20Kitesafari%20-%20Perth-79e67a65.jpg 2x" width="450" height="350" alt="Australien - Kitesafari - Perth.JPG">
+<script>window.respimage&&window.respimage({elements:[document.images[document.images.length-1]]})</script>
+</figure>
+</li>
+<li class="row_1 row_last odd col_0 col_first">
+<figure class="image_container">
+<img src="assets/images/8/IMG_1800-c8ce2778.jpeg" srcset="assets/images/8/IMG_1800-c8ce2778.jpeg 1x, assets/images/0/IMG_1800-72f9b1e0.jpeg 1.5x, assets/images/f/IMG_1800-5db330ff.jpeg 2x" width="450" height="350" alt="IMG_1800.jpeg">
+<script>window.respimage&&window.respimage({elements:[document.images[document.images.length-1]]})</script>
+</figure>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="ce_image_conic">
+<div class="overlay-top align-asc color-white"></div>
+<div class="image_container">
+<picture>
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="assets/images/5/Australien%20-%20Kitesafari%20-%20Pink%20Lake-fe337595.jpg 1x, assets/images/3/Australien%20-%20Kitesafari%20-%20Pink%20Lake-5a2fcad3.jpg 1.5x, assets/images/a/Australien%20-%20Kitesafari%20-%20Pink%20Lake-07a9391a.jpg 2x" media="(max-width: 479px)">
+<source srcset="assets/images/3/Australien%20-%20Kitesafari%20-%20Pink%20Lake-5fd055c3.jpg 1x, assets/images/c/Australien%20-%20Kitesafari%20-%20Pink%20Lake-bf0d83ec.jpg 1.5x, assets/images/4/Australien%20-%20Kitesafari%20-%20Pink%20Lake-11059df4.jpg 2x" media="(max-width: 767px)">
+<source srcset="assets/images/9/Australien%20-%20Kitesafari%20-%20Pink%20Lake-01b49e59.jpg 1x, assets/images/e/Australien%20-%20Kitesafari%20-%20Pink%20Lake-605727ce.jpg 1.5x, assets/images/2/Australien%20-%20Kitesafari%20-%20Pink%20Lake-1fb4ab02.jpg 2x" media="(max-width: 959px)">
+<source srcset="assets/images/8/Australien%20-%20Kitesafari%20-%20Pink%20Lake-f8ee4658.jpg 1x, assets/images/e/Australien%20-%20Kitesafari%20-%20Pink%20Lake-daf17e7e.jpg 1.5x, assets/images/d/Australien%20-%20Kitesafari%20-%20Pink%20Lake-ad8207ad.jpg 2x" media="(max-width: 1399px)">
+<!--[if IE 9]></video><![endif]-->
+<img src="assets/images/d/Australien%20-%20Kitesafari%20-%20Pink%20Lake-b0add0dd.jpg" srcset="assets/images/d/Australien%20-%20Kitesafari%20-%20Pink%20Lake-b0add0dd.jpg 1x, assets/images/e/Australien%20-%20Kitesafari%20-%20Pink%20Lake-f8e1893e.jpg 1.5x, assets/images/3/Australien%20-%20Kitesafari%20-%20Pink%20Lake-9cc65333.jpg 2x" alt="">
+</picture>
+<script>window.respimage&&window.respimage({elements:[document.images[document.images.length-1]]})</script>
+</div>
+<div class="overlay-bottom align-desc color-white">
+</div>
+<div class="headline">
+<div class="anchor" id="spots"></div>
+<div class="inside">
+<div class="align color-white">
+<h2>Spots</h2>
+<div class="background"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="centered-wrapper ce_rsce_centered_wrapper_start innerPadding -standard-color -close -inner -shadow-blue -height-small setself " style=" " id="spot">
+<div class="centered-wrapper-background rotate-top"></div>
+<div class="centered-wrapper-background rotate-bottom -shadow-blue"></div>
+<div class="centered-wrapper-inner-background" style="position: relative; z-index: 100;">
+<div class="centered-wrapper-inner ">
+<div class="ce_text p-b-3 block">
+<p><strong>Spots</strong></p>
+<div style="float: right;"><img src="files/letsgokite/content/australien/Lets Go Kite - Windstatistik - Australien.jpg" alt="" width="350"></div>
+<p>Unsere Kitesafari führt uns von Perth in Richtung Norden<strong>&nbsp;der Küste Westaustraliens entlang</strong> und wieder zurück. Während der gesamten Tour achten wir darauf,&nbsp;<strong>verschiedene Spots</strong> mit unterschiedlichen Bedingungen anzufahren. Ob Waveboard oder Twintip, hier kommt wirklich jeder auf seine Kosten.</p>
+<p>Nördlich von Perth beginnt das Abenteuer und es erwarten uns die besten Bedingungen zum Kitesurfen. <strong>Einzigartige Reefbreaks, sauber brechende Wellen und traumhafte, geschützte Flachwasserspots</strong>, die sich ideal zum Kiten&nbsp;eignen, werden wir während drei Wochen geniessen können.</p>
+<p>Unseren längsten Aufenthalt legen wir am Coronation Beach ein. Er&nbsp;gilt als weltweites Highlights zum Wavekiten. Hier brechen die Wellen wunderschön über Sandbänke und versprechen&nbsp;<strong>unvergessliche Sessions</strong>. Profi-Kiterin Gabi Steindl wird euch diesen Spot genau zeigen und euch eine Woche lang mit jede Menge Tipps und Tricks schulen.</p>
+<p><strong>Windbedingungen</strong></p>
+<p>Neben einzigartigen Spots werden wir <strong>mit den besten Windbedingungen beschenkt</strong>. In den Sommermonaten sorgt in Perth und entlang der Westküste Australiens ein Hochdruckgebiet im Tagesverlauf für die sehr zuverlässige Seabreeze aus S-SW. Je weiter wir Richtung Norden fahren, desto früher und kräftiger setzt die Thermik ein.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="ce_image_conic">
+<div class="overlay-top align-asc color-white"></div>
+<div class="image_container">
+<picture>
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="assets/images/3/IMG_2078-872b7b03.jpg 1x, assets/images/6/IMG_2078-cca15ab6.jpg 1.5x, assets/images/2/IMG_2078-c7ccb8c2.jpg 2x" media="(max-width: 479px)">
+<source srcset="assets/images/5/IMG_2078-070028e5.jpg 1x, assets/images/3/IMG_2078-5ed68ea3.jpg 1.5x, assets/images/f/IMG_2078-614c37cf.jpg 2x" media="(max-width: 767px)">
+<source srcset="assets/images/f/IMG_2078-ed16c12f.jpg 1x, assets/images/5/IMG_2078-176e14f5.jpg 1.5x, assets/images/b/IMG_2078-c1787f5b.jpg 2x" media="(max-width: 959px)">
+<source srcset="assets/images/4/IMG_2078-fb2b1024.jpg 1x, assets/images/a/IMG_2078-db8cdbea.jpg 1.5x, assets/images/1/IMG_2078-f537c651.jpg 2x" media="(max-width: 1399px)">
+<!--[if IE 9]></video><![endif]-->
+<img src="assets/images/0/IMG_2078-f9ad8260.jpg" srcset="assets/images/0/IMG_2078-f9ad8260.jpg 1x, assets/images/4/IMG_2078-a1bdf054.jpg 1.5x, assets/images/c/IMG_2078-3504648c.jpg 2x" alt="">
+</picture>
+<script>window.respimage&&window.respimage({elements:[document.images[document.images.length-1]]})</script>
+</div>
+<div class="overlay-bottom align-desc color-white">
+</div>
+<div class="headline">
+<div class="anchor" id="unterkunft"></div>
+<div class="inside">
+<div class="align color-white">
+<h2>Unterkünfte</h2>
+<div class="background"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="centered-wrapper ce_rsce_centered_wrapper_start zindex994 -standard-color -low-right-1 -high -top -box-shadow -shadow-blue -height-small -vertical-centered setself " style=" ">
+<div class="centered-wrapper-background rotate-top"></div>
+<div class="centered-wrapper-background rotate-bottom -shadow-blue"></div>
+<div class="centered-wrapper-inner-background" style="position: relative; z-index: 100;">
+<div class="centered-wrapper-inner ">
+<div class="ce_text p-t-2 block">
+<p>Während unserer Kitesafari übernachten wir in süßen Airbnb's, kleinen Ferienhäuschen und Strandhütten, die alle in idealer Lage liegen. Alle Unterkünfte sind <strong>sehr sauber, gut&nbsp;gelegen</strong>&nbsp;und laden am Abend zu einem <strong>gemütlichen Beisammensein</strong> ein. Nach dem&nbsp;Frühstück, laden wir die Bretter auf und machen uns startklar für einen wunderschönen Tag auf dem Wasser.</p>
+</div>
+<div class="ce_gallery -per-row-4 block">
+<ul class="cols_4">
+<li class="row_0 row_first row_last even col_0 col_first">
+<figure class="image_container">
+<img src="files/letsgokite/content/australien/Lets%20Go%20Kite%20-%20Australien%20-%20Unterkunft%201.jpg" width="857" height="683" alt="Lets Go Kite - Australien - Unterkunft 1.jpg">
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_1">
+<figure class="image_container">
+<img src="files/letsgokite/content/australien/Lets%20Go%20Kite%20-%20Australien%20-%20Unterkunft%202.jpg" width="857" height="683" alt="Lets Go Kite - Australien - Unterkunft 2.jpg">
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_2">
+<figure class="image_container">
+<img src="files/letsgokite/content/australien/Lets%20Go%20Kite%20-%20Australien%20-%20Unterkunft%203.jpg" width="857" height="683" alt="Lets Go Kite - Australien - Unterkunft 3.jpg">
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_3 col_last">
+<figure class="image_container">
+<img src="files/letsgokite/content/australien/Lets%20Go%20Kite%20-%20Australien%20-%20Unterkunft%204.jpg" width="857" height="683" alt="Lets Go Kite - Australien - Unterkunft 4.jpg">
+</figure>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="ce_image_conic">
+<div class="overlay-top align-asc color-white"></div>
+<div class="image_container">
+<picture>
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="assets/images/5/IMG_3221-80418db5.jpeg 1x, assets/images/5/IMG_3221-426e5025.jpeg 1.5x, assets/images/4/IMG_3221-6a8122f4.jpeg 2x" media="(max-width: 479px)">
+<source srcset="assets/images/a/IMG_3221-1fada8ba.jpeg 1x, assets/images/e/IMG_3221-d100cede.jpeg 1.5x, assets/images/7/IMG_3221-a0f0bd07.jpeg 2x" media="(max-width: 767px)">
+<source srcset="assets/images/5/IMG_3221-d95d4655.jpeg 1x, assets/images/b/IMG_3221-19b3619b.jpeg 1.5x, assets/images/8/IMG_3221-81c1a518.jpeg 2x" media="(max-width: 959px)">
+<source srcset="assets/images/3/IMG_3221-f897a2f3.jpeg 1x, assets/images/1/IMG_3221-0baa2491.jpeg 1.5x, assets/images/f/IMG_3221-87a43d0f.jpeg 2x" media="(max-width: 1399px)">
+<!--[if IE 9]></video><![endif]-->
+<img src="assets/images/5/IMG_3221-66824235.jpeg" srcset="assets/images/5/IMG_3221-66824235.jpeg 1x, assets/images/5/IMG_3221-0ddcc425.jpeg 1.5x, assets/images/0/IMG_3221-a440bb80.jpeg 2x" alt="">
+</picture>
+<script>window.respimage&&window.respimage({elements:[document.images[document.images.length-1]]})</script>
+</div>
+<div class="overlay-bottom align-desc color-white">
+</div>
+<div class="headline">
+<div class="anchor" id="termine+preise"></div>
+<div class="inside">
+<div class="align color-white">
+<h2>Termine & Preise</h2>
+<div class="background"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="centered-wrapper ce_rsce_centered_wrapper_start -standard-color -low-right-1 -high -top -box-shadow -shadow-black -height-small setself " style=" ">
+<div class="centered-wrapper-background rotate-top"></div>
+<div class="centered-wrapper-background rotate-bottom -shadow-black"></div>
+<div class="centered-wrapper-inner-background" style="position: relative; z-index: 100;">
+<div class="centered-wrapper-inner ">
+<div class="ce_text p-b-3 block">
+<h3><strong>Unser Angebot</strong></h3>
+<p>In diesem Jahr bieten wir die Safari im Zeitraum vom <strong>29.12.2026&nbsp;- 20.01.2027</strong>&nbsp;an und möchten mit euch die schönsten Spots Westaustraliens&nbsp;besuchen. Die Anreise nach Perth kann auf Wunsch auch einen Tag früher oder ein bis zwei Tage später erfolgen.</p>
+<p><br><strong>Die Westaustralien Kitesafari&nbsp;umfasst&nbsp;</strong></p>
+<ul>
+<li>Abholung vom Flughafen sowie alle Transfers zu &nbsp;den Spots und Unterkünften&nbsp;</li>
+<li>Übernachtungen inkl. Frühstück</li>
+<li>Kitesurfguiding durch unsere erfahrene VDWS lizenzierten Kitesurfguides</li>
+<li>6 Tage Wavetraining inklusive Videoanalyse mit VDWS Lehrteamer Claas Zäncker</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>Mit eigenem Material</strong> bist du ab&nbsp;4.900<strong>,- €</strong> dabei. (Benötigst du Material vor Ort, kannst du dieses auch ausleihen: Für 490,- € pro Woche kitest du mit dem neuesten Material von Duotone.)</p>
+<p>Komm mit uns drei Wochen lang auf Abenteuerreise, lerne neue Menschen kennen und tauche in die Australische Kultur ein. Wir könnten dir wahrscheinlich fast versprechen, dass diese Reise nicht deine Letzte nach Australien sein wird. :-)</p>
+<p>Wir helfen dir gerne bei der Buchung deiner Flüge und stehen dir selbstverständlich bei all deinen Fragen zur Verfügung.</p>
+<p>Wir freuen uns auf dich!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="centered-wrapper ce_rsce_centered_wrapper_start -normal -inner -shadow-blue setself " style=" ">
+<div class="centered-wrapper-background rotate-top"></div>
+<div class="centered-wrapper-background rotate-bottom -shadow-blue"></div>
+<div class="centered-wrapper-inner-background" style="position: relative; z-index: 100;">
+<div class="centered-wrapper-inner ">
+<div class="headline-box -align-right ce_rsce_headline_box form  -white">
+<div class="anchor" id="buchung"></div>
+<div class="headline-background"></div>
+<h2 class="">Buchungsformular</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="centered-wrapper ce_rsce_centered_wrapper_start -highlight-color -low-left-2 -close -inner -shadow-blue -color-inverted -height-small setself " style=" ">
+<div class="centered-wrapper-background rotate-top"></div>
+<div class="centered-wrapper-background rotate-bottom -shadow-blue"></div>
+<div class="centered-wrapper-inner-background" style="position: relative; z-index: 100;">
+<div class="centered-wrapper-inner ">
+<div class="rs-columns ce_rs_columns_start">
+<div class="ce_rs_column_start  rs-column -large-col-3-1 -large-first -large-first-row -medium-col-3-1 -medium-first -medium-first-row -small-col-1-1 -small-first -small-last -small-first-row">
+<div class="ce_text block" style="margin-top:32px;">
+<p>Wie kann ich dir behilflich sein?</p>
+</div>
+<div class="ce_text suse block">
+<figure class="image_container float_above">
+<img src="assets/images/f/Danilo_profil%20Bild-bd5f06ff.jpg" srcset="assets/images/f/Danilo_profil%20Bild-bd5f06ff.jpg 420w, assets/images/a/Danilo_profil%20Bild-08145d2a.jpg 630w, assets/images/1/Danilo_profil%20Bild-d343d521.jpg 840w" sizes="(max-width: 600px) 320px, (max-width: 768px) 160px, (max-width: 1100px) 240px, 320px" alt="">
+<script>window.respimage&&window.respimage({elements:[document.images[document.images.length-1]]})</script>
+</figure>
+<p><strong>Danilo</strong><br>Mobile: <a title="+49 163 2669822" href="Tel:%20+49 163 2669822">+49&nbsp;16</a>32669822</p>
+</div>
+</div>
+<div class="ce_rs_column_start  rs-column -large-col-3-2 -large-last -large-first-row -medium-col-3-2 -medium-last -medium-first-row -small-col-1-1 -small-first -small-last">
+<!-- indexer::stop -->
+<div class="ce_form tableless block">
+<form action="de/ziele/australien.html" id="f3" method="post" enctype="application/x-www-form-urlencoded">
+<div class="formbody">
+<input type="hidden" name="FORM_SUBMIT" value="auto_form_3">
+<input type="hidden" name="REQUEST_TOKEN" value="7a05de2e1e8d4d73428db4afdee5c2c9">
+<fieldset>
+<legend>Persönliche Daten</legend>
+<div class="widget widget-text mandatory">
+<label for="ctrl_30" class="mandatory">
+<span class="invisible">Pflichtfeld </span>Name:<span class="mandatory">*</span>
+</label>
+<input type="text" name="name" id="ctrl_30" class="text mandatory" value="" required placeholder="Max">
+</div>
+<div class="widget widget-text mandatory">
+<label for="ctrl_31" class="mandatory">
+<span class="invisible">Pflichtfeld </span>Nachname:<span class="mandatory">*</span>
+</label>
+<input type="text" name="nachname" id="ctrl_31" class="text mandatory" value="" required placeholder="Mustermann">
+</div>
+<div class="widget widget-text">
+<label for="ctrl_32">
+Telefon:          </label>
+<input type="tel" name="telephon" id="ctrl_32" class="text" value="" placeholder="+49 123 456 78 90">
+</div>
+<div class="widget widget-text mandatory">
+<label for="ctrl_33" class="mandatory">
+<span class="invisible">Pflichtfeld </span>E-Mail:<span class="mandatory">*</span>
+</label>
+<input type="email" name="email" id="ctrl_33" class="text mandatory" value="" required placeholder="max@mustermann.de">
+</div>
+</fieldset>
+<fieldset>
+<legend>Abflughafen</legend>
+<div class="widget widget-explanation explanation">
+<p>Die Angabe eines Abflughafens ist optional - gerne unterbreiten wir dir ein Angebot für einen Flug.</p>  </div>
+<div class="widget widget-text">
+<label for="ctrl_107">
+Wunschabflughafen 1:          </label>
+<input type="text" name="abflughafen1" id="ctrl_107" class="text" value="" placeholder="Airport Berlin">
+</div>
+<div class="widget widget-text">
+<label for="ctrl_108">
+Wunschabflughafen 2:          </label>
+<input type="text" name="abflughafen2" id="ctrl_108" class="text" value="" placeholder="Airport München">
+</div>
+</fieldset>
+<fieldset>
+<legend>Bemerkungen</legend>
+<div class="widget widget-textarea">
+ <textarea name="bemerkungen" id="ctrl_40" class="textarea" rows="4" cols="40" placeholder="Bitte teil uns hier eventuelle Besonderheiten mit. (z.B. Materialmiete, spätere Anreise, Allergien etc.) Vielen Dank!"></textarea>
+</div>
+</fieldset>
+<fieldset>
+<legend>Unser Newsletter</legend>
+<div class="widget widget-checkbox">
+<fieldset id="ctrl_243" class="checkbox_container">
+<input type="hidden" name="newsletter" value="">
+<span><input type="checkbox" name="newsletter" id="opt_243_0" class="checkbox" value="Newsletter abonnieren"> <label id="lbl_243_0" for="opt_243_0">Ich möchte den Newsletter von Let´s Go Kite abonnieren.</label></span>
+</fieldset>
+</div>
+<div class="widget widget-checkbox mandatory">
+<fieldset id="ctrl_230" class="checkbox_container mandatory">
+<input type="hidden" name="datenschutz" value="">
+<span><input type="checkbox" name="datenschutz" id="opt_230_0" class="checkbox" value="Datenschutz" required> <label id="lbl_230_0" for="opt_230_0">Ich haben die <a style="color:blue" href="datenschutz.html" target="_blank">Datenschutzerklärung</a> gelesen und bin mit der Speicherung meiner Daten einverstanden.</label></span>
+</fieldset>
+</div>
+<div class="submit_container">
+<input type="submit" id="ctrl_244" class="submit" value="Buchungsanfrage absenden">
+</div>
+</div>
+</form>
+</div>
+<!-- indexer::continue -->
+<div class="ce_text left block">
+<p>Bitte beachten Sie die Pflichtfelder.</p>
+<p><img src="https://vg05.met.vgwort.de/na/f2f87ac35135427c94d8632703c245d6" alt="" width="1" height="1"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<footer class="page-footer">
+<div class="ce_image_conic">
+<div class="overlay-top align-asc color-blue"></div>
+<div class="image_container">
+<picture>
+<!--[if IE 9]><video style="display: none;"><![endif]-->
+<source srcset="files/letsgokite/content/Deutschland/Hafen%20Dabitz/Wasser%20Danilo-9.jpg 1x" media="(max-width: 479px)">
+<source srcset="files/letsgokite/content/Deutschland/Hafen%20Dabitz/Wasser%20Danilo-9.jpg 1x" media="(max-width: 767px)">
+<source srcset="files/letsgokite/content/Deutschland/Hafen%20Dabitz/Wasser%20Danilo-9.jpg 1x" media="(max-width: 959px)">
+<source srcset="files/letsgokite/content/Deutschland/Hafen%20Dabitz/Wasser%20Danilo-9.jpg 1x" media="(max-width: 1399px)">
+<!--[if IE 9]></video><![endif]-->
+<img src="files/letsgokite/content/Deutschland/Hafen%20Dabitz/Wasser%20Danilo-9.jpg" srcset="files/letsgokite/content/Deutschland/Hafen%20Dabitz/Wasser%20Danilo-9.jpg 1x" alt="">
+</picture>
+<script>window.respimage&&window.respimage({elements:[document.images[document.images.length-1]]})</script>
+</div>
+<div class="overlay-bottom align-desc color-blue">
+</div>
+</div>
+<div class="centered-wrapper ce_rsce_centered_wrapper_start footer-content -normal -inner -shadow-blue setself " style=" " id="kontakt">
+<div class="centered-wrapper-background rotate-top"></div>
+<div class="centered-wrapper-background rotate-bottom -shadow-blue"></div>
+<div class="centered-wrapper-inner-background" style="position: relative; z-index: 100;">
+<div class="centered-wrapper-inner ">
+<div class="rs-columns ce_rs_columns_start">
+<div class="ce_rs_column_start  rs-column -large-col-3-2 -large-first -large-first-row -medium-col-3-2 -medium-first -medium-first-row -small-col-1-1 -small-first -small-last -small-first-row">
+<div class="subheadline-box  ce_rsce_subheadline_box ">
+<h2 class=" -first">Let's Go Kite - Get in Touch!</h2>
+</div>
+<div class="elfsight-app-9c70198e-9b5d-468e-ab5f-414f2bd5134d">&nbsp;</div>
+<div class="ce_text contact-text subheadline-box block">
+<h2>Kontakt</h2>
+<table>
+<tbody>
+<tr>
+<td>EMAIL:</td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#x69;&#x6E;&#x66;&#111;&#64;&#108;&#101;&#116;&#x73;&#103;&#111;&#107;&#x69;&#x74;&#x65;&#x2E;&#100;&#x65;">&#x69;&#x6E;&#x66;&#111;&#64;&#108;&#101;&#116;&#x73;&#103;&#111;&#107;&#x69;&#x74;&#x65;&#x2E;&#100;&#x65;</a></td>
+</tr>
+<tr>
+<td>TELEPHONE:</td>
+<td>
+<p><a href="tel:+491632669822">+49 163 266 98 22</a></p>
+</td>
+</tr>
+<tr>
+<td>SOCIAL:</td>
+<td><a href="https://www.facebook.com/LGKB4YOU" target="_blank"><img style="margin-top: 8px;" src="files/letsgokite/design/img/logos/logo_facebook.png" alt="" width="24" height="24"></a><a href="https://www.instagram.com/letsgokite/" target="_blank"><img style="margin-top: 8px; margin-left: 8px;" src="files/letsgokite/design/img/logos/logo_instagram.png" alt="" width="24" height="24"></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- indexer::stop -->
+<nav class="mod_customnav block">
+<a href="de/ziele/australien.html#skipNavigation12" class="invisible">Navigation überspringen</a>
+<ul class="level_1" role="menubar">
+<li class="first"><a href="de/datenschutz.html" title="Datenschutz" class="first" role="menuitem">Datenschutz</a></li>
+<li><a href="de/impressum.html" title="Impressum" role="menuitem">Impressum</a></li>
+<li><a href="de/faqs.html" title="FAQ's" role="menuitem">FAQ's</a></li>
+<li class="last"><a href="de/ueber-uns.html" title="Über uns" class="last" role="menuitem">Über uns</a></li>
+</ul>
+<a id="skipNavigation12" class="invisible">&nbsp;</a>
+</nav>
+<!-- indexer::continue -->
+</div>
+<div class="rs-column -large-col-3-1 -large-last -large-first-row -medium-col-3-1 -medium-last -medium-first-row -small-col-1-1 -small-first -small-last">
+<div class="ce_text dots_top_btn block">
+<ul>
+<li class="dots_top"><img src="files/letsgokite/design/img/bg/dots_top.png" alt="" width="55" height="300"></li>
+<li class="top_btn"><a href="#top"><img src="files/letsgokite/design/img/bg/top_btn.png" alt="" width="55" height="60"></a></li>
+<li class="dots_bottom"><img src="files/letsgokite/design/img/bg/dots_bottom.png" alt="" width="55" height="47"></li>
+</ul>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<script src="assets/jquery/colorbox/1.6.1/js/colorbox.min.js"></script>
+<script>(function($){$(document).ready(function(){$('a[data-lightbox]').map(function(){$(this).colorbox({loop:!1,rel:$(this).attr('data-lightbox'),maxWidth:'95%',maxHeight:'95%'})})})})(jQuery)</script>
+<script>(function($){$(document).ready(function(){$('.widget').each(function(index){if($(this).hasClass('error')){$('html, body').animate({scrollTop:$(this).offset().top},800);return!1}})
+$('#danke').each(function(){$('html, body').animate({scrollTop:$(this).offset().top},800)});$('.mod_aid_letsgokite_camp_list .camp .text').click(function(){$(".ce_form select.zeitraum option").each(function(){$(this).prop('selected',!1)});$(".ce_form select.zeitraum option[value='"+$(this).attr('data-alias')+"']").prop('selected',!0);$('html, body').animate({scrollTop:$('.form h2').offset().top-100},400)})})})(jQuery)</script>
+<script src="assets/jquery/ui/1.11.4/jquery-ui.min.js"></script>
+<script>(function($){$(document).ready(function(){$(document).accordion({heightStyle:'content',header:'div.toggler',collapsible:!0,active:!1,create:function(event,ui){ui.header.addClass('active')},activate:function(event,ui){ui.newHeader.addClass('active');ui.oldHeader.removeClass('active')}})})})(jQuery)</script>
+<script>setTimeout(function(){var e=function(e,t){try{var n=new XMLHttpRequest}catch(r){return}n.open("GET",e,!0),n.onreadystatechange=function(){this.readyState==4&&this.status==200&&typeof t=="function"&&t(this.responseText)},n.send()},t="system/cron/cron.";e(t+"txt",function(n){parseInt(n||0)<Math.round(+(new Date)/1e3)-86400&&e(t+"php")})},5e3)</script>
+<script src="files/letsgokite/design/js/simpleParallax.min.js"></script>
+<script src="files/letsgokite/design/js/script.js"></script>
+<script src="files/letsgokite/design/js/aid.js"></script>
+<script type="text/javascript">var gaProperty='UA-65153577-1';var disableStr='ga-disable-'+gaProperty;if(document.cookie.indexOf(disableStr+'=true')>-1){window[disableStr]=!0}
+function gaOptout(){document.cookie=disableStr+'=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';window[disableStr]=!0;alert('Das Tracking durch Google Analytics wurde in Ihrem Browser für diese Website deaktiviert.')}</script>
+<script>(function(i,s,o,g,r,a,m){i.GoogleAnalyticsObject=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-65153577-1','auto');ga('set','anonymizeIp',!0);ga('send','pageview')</script>
+</body>
+</html>
