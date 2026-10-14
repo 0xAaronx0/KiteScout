@@ -268,6 +268,8 @@ export const jaguaribeLodgeFortim: OfferAdapter = {
   url: JL_PAGES.hotel,
   quote: { engine: 'omnibees', hotelId: JL_HOTEL.hotelId, chainId: JL_HOTEL.chainId, currencyId: JL_HOTEL.currencyId, currency: JL_HOTEL.currency },
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 13,
   async fetchContent() {
     const [hotel, lodges, kite, omnibees] = [await sisterPage(JL_PAGES.hotel), await sisterPage(JL_PAGES.lodges), await sisterPage(JL_PAGES.kite), await sisterPage(JL_HOTEL_URL)];

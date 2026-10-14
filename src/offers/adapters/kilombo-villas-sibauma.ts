@@ -170,6 +170,8 @@ export const kilomboVillasSibauma: OfferAdapter = {
   url: KV_HOME_URL,
   quote: { engine: 'omnibees', hotelId: KV_HOTEL.hotelId, chainId: KV_HOTEL.chainId, currencyId: KV_HOTEL.currencyId, currency: KV_HOTEL.currency },
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 10,
   async fetchContent() {
     const home = await fetchText(KV_HOME_URL, { accept: 'text/html' });

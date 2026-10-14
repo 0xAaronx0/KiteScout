@@ -278,6 +278,7 @@ export const mounuIslandResortVavau: OfferAdapter = {
   },
   url: MOU_TONGA_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 5,
   confidence: 'medium', // year-less price table, year inferred from the page edit
   async fetchContent() {

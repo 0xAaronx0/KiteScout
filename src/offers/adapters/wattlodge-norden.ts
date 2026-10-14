@@ -236,6 +236,7 @@ export const wattlodgeNorden: OfferAdapter = {
   },
   url: WL_HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 6,
   confidence: 'medium', // year-less table, per-night unit inferred
   async fetchContent() {

@@ -266,6 +266,7 @@ export const nordseeSurfschuleDomeSeeschwalbeHooksiel: OfferAdapter = {
   },
   url: NS_LODGING_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 7,
   confidence: 'low', // no prices readable
   async fetchContent() {

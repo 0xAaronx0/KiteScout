@@ -462,6 +462,8 @@ export const kiteVillageHamata: OfferAdapter = {
     ],
   },
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 15,
   async fetchContent() {
     const shell = await fetchText(KV_PAGE_URL);

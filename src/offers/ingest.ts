@@ -459,10 +459,19 @@ async function runAdapterInner(
       price_from_eur: price.min && price.min.currency === 'EUR' && price.priceUnit === 'package' ? Math.round(price.min.price!) : null,
     };
 
+    // live availability: the flag follows the adapter; the check time only moves on a complete live delivery
+    const liveOk = a.liveAvailability === true && !rep.slotError && incomplete === null && !guardTripped;
+    const liveCols: Record<string, unknown> = {
+      instant_booking: a.instantBooking === true,
+      ...(a.liveAvailability === true
+        ? { live_availability: true, ...(liveOk ? { availability_checked_at: new Date().toISOString() } : {}) }
+        : { live_availability: false, availability_checked_at: null }),
+    };
+
     if (content) {
       const spots = await locateSpots(content, existing?.itinerary_spots);
       if (!spots.some(s => s.lat !== null)) rep.notes.push('no map pin: spot could not be geocoded');
-      const row = { ...contentRow(a, content, operatorId, spots), ...priceCols, rooms: roomsWithPrices(content, slots, today) };
+      const row = { ...contentRow(a, content, operatorId, spots), ...priceCols, ...liveCols, rooms: roomsWithPrices(content, slots, today) };
       const { data: up, error: upErr } = await supabase
         .from('package_offers').upsert(noNul(row), { onConflict: 'source_listing_id' }).select('id').single();
       if (upErr) throw new Error(`package_offers upsert failed: ${upErr.message}`);
@@ -489,8 +498,8 @@ async function runAdapterInner(
         rep.images = before.length;
         rep.notes.push(`kept ${before.length} curated images (--refresh-images to replace)`);
       }
-    } else if (!keepSlots) {
-      const { error: pErr } = await supabase.from('package_offers').update(priceCols).eq('id', offerId!);
+    } else {
+      const { error: pErr } = await supabase.from('package_offers').update({ ...priceCols, ...liveCols }).eq('id', offerId!);
       if (pErr) throw new Error(`price update failed: ${pErr.message}`);
     }
     rep.offerId = offerId;

@@ -192,6 +192,7 @@ export const hotel100FunValdevaqueros: OfferAdapter = {
   },
   url: FUN_HOME_URL,
   slotMethod: 'price_table', // the site prints no prices: always [] (price on request)
+  instantBooking: true,
   fetchBudget: 12,
   confidence: 'medium',
   async fetchContent() {

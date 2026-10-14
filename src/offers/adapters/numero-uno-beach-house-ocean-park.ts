@@ -152,6 +152,7 @@ export const numeroUnoBeachHouseOceanPark: OfferAdapter = {
   },
   url: NU_HOTEL_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 4,
   confidence: 'low',
   async fetchContent() {

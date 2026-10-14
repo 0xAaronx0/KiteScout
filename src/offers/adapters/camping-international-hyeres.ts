@@ -204,6 +204,7 @@ export const campingInternationalHyeres: OfferAdapter = {
   },
   url: CI_HOME_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 3,
   confidence: 'low', // no prices or availability readable (SecureHoliday needs an embedded API key + faked referer)
   async fetchContent(ctx) {

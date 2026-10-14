@@ -183,6 +183,7 @@ export const cascadeKiteboardingMauiWinterCamp: OfferAdapter = {
   },
   url: CK_MAUI_URL,
   slotMethod: 'html_dates',
+  instantBooking: true,
   fetchBudget: 2,
   confidence: 'medium',
   async fetchContent() {

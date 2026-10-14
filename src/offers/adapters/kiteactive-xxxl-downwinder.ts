@@ -295,6 +295,8 @@ export const kiteactiveXxxlDownwinder: OfferAdapter = {
   },
   url: KITEACTIVE_PAGE_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 4,
   async fetchContent() {
     const { html, data } = await loadTrip();

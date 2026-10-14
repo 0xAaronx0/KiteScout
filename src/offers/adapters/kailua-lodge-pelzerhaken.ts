@@ -338,6 +338,7 @@ export const kailuaLodgePelzerhaken: OfferAdapter = {
   },
   url: KLP_WATERSPORT_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 4,
   confidence: 'medium', // prices are hand-read constants from the PDF price lists
   async fetchContent() {

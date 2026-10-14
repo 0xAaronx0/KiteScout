@@ -120,6 +120,7 @@ export const regenbogenBorn: OfferAdapter = {
   operator: RGB_OPERATOR,
   url: RBO_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 2,
   confidence: 'medium', // prices are hand-read constants from the linked PDF price list
   async fetchContent() {

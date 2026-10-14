@@ -217,6 +217,7 @@ export const algarveWatersportZeroToHero: OfferAdapter = {
   },
   url: ALGARVE_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 3,
   async fetchContent() {
     return parseAlgarveContent(await page(ALGARVE_URL), ALGARVE_URL);

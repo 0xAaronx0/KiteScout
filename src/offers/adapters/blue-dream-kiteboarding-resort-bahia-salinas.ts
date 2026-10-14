@@ -204,6 +204,7 @@ export const blueDreamKiteboardingResortBahiaSalinas: OfferAdapter = {
   },
   url: BD_HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 4,
   confidence: 'low',
   async fetchContent() {

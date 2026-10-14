@@ -228,6 +228,7 @@ export const masiraIslandResortMasirah: OfferAdapter = {
   },
   url: MIR_ACTIVITIES_URL,
   slotMethod: 'price_table', // no rates on the site, SynXis robots-disallowed: always [] (price on request)
+  instantBooking: true,
   fetchBudget: 4,
   confidence: 'low',
   async fetchContent() {

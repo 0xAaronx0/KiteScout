@@ -438,6 +438,8 @@ export const ummaiiSurfhostelUmmanz: OfferAdapter = {
   },
   url: UM_HOSTEL_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 19,
   fetchContent: ctx => fetchUmContent(ctx, todayIso()),
   fetchSlots: ctx => fetchUmSlots(ctx, todayIso()),

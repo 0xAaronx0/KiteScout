@@ -207,6 +207,7 @@ export const hatterasIslandVacationRentalsAvon: OfferAdapter = {
   },
   url: HIVR_HOUSES[2].url,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 5,
   confidence: 'medium',
   async fetchContent() {

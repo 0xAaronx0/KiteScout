@@ -243,6 +243,7 @@ export const toowettoshredBrazil: OfferAdapter = {
   },
   url: TWTS_PAGE_URL,
   slotMethod: 'html_dates',
+  instantBooking: true,
   fetchBudget: 2,
   async fetchContent() {
     return parseToowettoshredContent(await fetchText(TWTS_PAGE_URL));

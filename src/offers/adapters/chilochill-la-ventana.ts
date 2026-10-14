@@ -234,6 +234,7 @@ export const chilochillLaVentana: OfferAdapter = {
   },
   url: CC_KITE_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 5,
   confidence: 'medium',
   async fetchContent(ctx) {

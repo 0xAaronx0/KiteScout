@@ -417,6 +417,8 @@ export const laBallenaAlegreSantPerePescador: OfferAdapter = {
   },
   url: BA_BUNGALOWS_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 30,
   async fetchContent() {
     const bungalows = await get(BA_BUNGALOWS_URL, 'text/html');

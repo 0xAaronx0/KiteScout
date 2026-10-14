@@ -117,6 +117,7 @@ export const casaNomadeIlhaDoGuajiru: OfferAdapter = {
   },
   url: NOMADE_CASA_URL,
   slotMethod: 'price_table', // no prices on the site, engine robots-disallowed: always [] (price on request)
+  instantBooking: true,
   fetchBudget: 2,
   confidence: 'medium',
   async fetchContent() {

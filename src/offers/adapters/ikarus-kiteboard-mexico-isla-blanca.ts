@@ -215,6 +215,7 @@ export const ikarusKiteboardMexicoIslaBlanca: OfferAdapter = {
   },
   url: IKARUS_ROOMS_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 3,
   async fetchContent() {
     const home = await page(IKARUS_HOME_URL);

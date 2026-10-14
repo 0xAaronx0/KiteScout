@@ -179,6 +179,7 @@ export const pousadaRaia1Ibiraquera: OfferAdapter = {
   },
   url: RAIA_PAGES.rooms,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 4,
   confidence: 'low', // no prices on the site; the HSystem booking engine is robots-disallowed
   async fetchContent() {

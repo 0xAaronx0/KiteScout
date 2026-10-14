@@ -156,6 +156,7 @@ export const laVentanaHotel: OfferAdapter = {
   },
   url: LVH_ROOMS_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 4,
   confidence: 'low',
   async fetchContent() {

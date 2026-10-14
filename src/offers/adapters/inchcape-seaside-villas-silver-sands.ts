@@ -325,6 +325,7 @@ export const inchcapeSeasideVillasSilverSands: OfferAdapter = {
   },
   url: IC_HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 6,
   async fetchContent() {
     const home = await page(IC_HOME_URL);

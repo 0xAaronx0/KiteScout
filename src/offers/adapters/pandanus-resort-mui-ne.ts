@@ -166,6 +166,7 @@ export const pandanusResortMuiNe: OfferAdapter = {
   },
   url: PR_HOME_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 5,
   confidence: 'low', // no public rates; kite link from the school's site only
   async fetchContent() {

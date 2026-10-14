@@ -181,6 +181,8 @@ export const ranchoDoPeixePrea: OfferAdapter = {
   url: RP_PAGES.rancho,
   quote: { engine: 'omnibees', hotelId: RP_HOTEL.hotelId, chainId: RP_HOTEL.chainId, currencyId: RP_HOTEL.currencyId, currency: RP_HOTEL.currency },
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 14,
   async fetchContent() {
     const home = await fetchText(RP_PAGES.home, { accept: 'text/html' });

@@ -194,6 +194,7 @@ export const amanpuloPamalican: OfferAdapter = {
   },
   url: AMP_URLS.kite,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 5,
   confidence: 'low', // no public rates
   async fetchContent() {

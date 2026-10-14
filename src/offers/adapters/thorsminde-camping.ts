@@ -243,6 +243,7 @@ export const thorsmindeCamping: OfferAdapter = {
   },
   url: TMC_KITE_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 5,
   async fetchContent() {
     const home = await page(TMC_HOME_URL);

@@ -262,6 +262,8 @@ export const playaCentralCampsLaVentana: OfferAdapter = {
   },
   url: PC_CAMPS_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 6,
   async fetchContent(ctx) {
     const { html, camps } = await loadCamps();

@@ -229,6 +229,7 @@ export const pousadaIlhaDoVentoSaoMiguelDoGostoso: OfferAdapter = {
   },
   url: IDV_PAGES.stay,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 4,
   confidence: 'medium', // undated "from" prices; the booking engine (HSystem) is not read
   async fetchContent() {

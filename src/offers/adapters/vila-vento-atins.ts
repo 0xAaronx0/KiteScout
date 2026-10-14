@@ -375,6 +375,8 @@ export const vilaVentoAtins: OfferAdapter = {
   },
   url: VV_HOME_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 12,
   async fetchContent() {
     const home = await fetchText(VV_HOME_URL, { accept: 'text/html' });

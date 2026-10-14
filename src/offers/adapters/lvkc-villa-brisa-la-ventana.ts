@@ -272,6 +272,7 @@ export const lvkcVillaBrisaLaVentana: OfferAdapter = {
   },
   url: LVKC_CAMPS_URL,
   slotMethod: 'booking_engine',
+  liveAvailability: true,
   fetchBudget: 6,
   async fetchContent(ctx) {
     const [camps, home, gallery] = [await page(LVKC_CAMPS_URL), await page(LVKC_HOME_URL), await page(LVKC_GALLERY_URL)];

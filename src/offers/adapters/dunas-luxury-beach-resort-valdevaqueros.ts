@@ -229,6 +229,7 @@ export const dunasLuxuryBeachResortValdevaqueros: OfferAdapter = {
   },
   url: DUN_STAY_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 5,
   confidence: 'medium', // undated from-prices, no live availability
   async fetchContent() {

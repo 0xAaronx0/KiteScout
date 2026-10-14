@@ -340,6 +340,8 @@ export const pajeByNightPaje: OfferAdapter = {
   },
   url: PBN_HOME_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 9,
   async fetchContent(ctx: FetchContext) {
     const home = await fetchText(PBN_HOME_URL, { accept: 'text/html' });

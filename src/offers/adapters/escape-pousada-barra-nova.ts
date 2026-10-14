@@ -248,6 +248,7 @@ export const escapePousadaBarraNova: OfferAdapter = {
   },
   url: EP_POUSADA_URL,
   slotMethod: 'booking_engine',
+  liveAvailability: true,
   fetchBudget: 7,
   confidence: 'medium', // live availability, no prices
   async fetchContent() {

@@ -445,6 +445,8 @@ export const hvideSandeCamping: OfferAdapter = {
   },
   url: HSC_CABINS_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 23,
   async fetchContent() {
     const home = await page(HSC_HOME_URL);

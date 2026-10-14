@@ -157,6 +157,7 @@ export const anapnoeParoskitePounda: OfferAdapter = {
   },
   url: ANAPNOE_HOME_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 3,
   confidence: 'low',
   async fetchContent() {

@@ -365,6 +365,7 @@ export const regenbogenUmmanz: OfferAdapter = {
   operator: RGB_OPERATOR,
   url: RUM_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 2,
   confidence: 'medium', // prices are hand-read constants from the linked PDF price list
   async fetchContent() {

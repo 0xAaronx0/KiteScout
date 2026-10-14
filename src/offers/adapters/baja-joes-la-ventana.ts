@@ -235,6 +235,7 @@ export const bajaJoesLaVentana: OfferAdapter = {
   },
   url: BJ_ROOMS_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 6,
   // no rates readable (SabeeApp API needs a client-secret signature): the offer shows "price on request"
   confidence: 'low',

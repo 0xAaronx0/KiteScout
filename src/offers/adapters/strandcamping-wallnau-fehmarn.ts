@@ -408,6 +408,8 @@ export const strandcampingWallnauFehmarn: OfferAdapter = {
   },
   url: SCW_WATERSPORT_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 8,
   async fetchContent() {
     const home = await page(SCW_HOME_URL);

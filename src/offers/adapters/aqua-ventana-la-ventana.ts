@@ -300,6 +300,8 @@ export const aquaVentanaLaVentana: OfferAdapter = {
   },
   url: ROOMS_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 13,
   async fetchContent() {
     const md = { accept: 'text/markdown,text/plain,*/*;q=0.8' };

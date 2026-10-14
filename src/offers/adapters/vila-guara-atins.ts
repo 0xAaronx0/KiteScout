@@ -157,6 +157,8 @@ export const vilaGuaraAtins: OfferAdapter = {
   url: VG_HOTEL_URL,
   quote: { engine: 'omnibees', hotelId: VG.hotelId, chainId: VG.chainId, currencyId: VG.currencyId, currency: VG.currency },
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 10,
   async fetchContent() {
     // Duda answers a JSON payload instead of HTML when Accept lists application/json (http.ts default)

@@ -256,6 +256,7 @@ export const maszoperiaSun4helJastarnia: OfferAdapter = {
   },
   url: S4H_HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 8,
   confidence: 'low',
   async fetchContent() {

@@ -381,6 +381,8 @@ export const taigaTarifaValdevaqueros: OfferAdapter = {
   },
   url: TG_PAGE_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 15,
   async fetchContent() {
     const page = await fetchText(TG_PAGE_URL, { accept: 'text/html' });

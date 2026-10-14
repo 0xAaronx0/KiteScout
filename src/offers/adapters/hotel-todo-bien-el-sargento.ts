@@ -180,6 +180,7 @@ export const hotelTodoBienElSargento: OfferAdapter = {
   },
   url: TB_HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 4,
   confidence: 'low',
   async fetchContent() {

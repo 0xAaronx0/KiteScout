@@ -209,6 +209,7 @@ export const wahooWindHotelHondoLosBarriles: OfferAdapter = {
   },
   url: HH_ROOMS_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 6,
   confidence: 'low',
   async fetchContent(ctx: FetchContext) {

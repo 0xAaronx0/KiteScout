@@ -23,3 +23,8 @@ test('registry is complete and keys are unique', async () => {
     }
   }
 });
+
+test('liveAvailability is only set on booking-engine adapters', () => {
+  for (const a of adapters) if (a.liveAvailability) assert.equal(a.slotMethod, 'booking_engine', a.key);
+  assert.ok(adapters.filter(a => a.liveAvailability).length >= 30);
+});

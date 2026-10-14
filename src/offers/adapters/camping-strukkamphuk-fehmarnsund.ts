@@ -277,6 +277,8 @@ export const campingStrukkamphukFehmarnsund: OfferAdapter = {
   },
   url: CSK_CARAVANS_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 23,
   async fetchContent() {
     const home = await page(CSK_HOME_URL);

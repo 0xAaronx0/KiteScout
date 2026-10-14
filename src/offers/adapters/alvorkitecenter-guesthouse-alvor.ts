@@ -176,6 +176,7 @@ export const alvorkitecenterGuesthouseAlvor: OfferAdapter = {
   },
   url: AKC_HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 3,
   confidence: 'low',
   async fetchContent() {

@@ -188,6 +188,8 @@ export const feddetStrandResort: OfferAdapter = {
   },
   url: FSR_KITE_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 27,
   async fetchContent() {
     const home = await fetchText(FSR_HOME_URL, { accept: 'text/html' });

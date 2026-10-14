@@ -211,6 +211,7 @@ export const saltysKitesurfVillageKilifi: OfferAdapter = {
   },
   url: SKV_HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 6,
   async fetchContent() {
     const home = await fetchText(SKV_HOME_URL, { accept: 'text/html' });

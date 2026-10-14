@@ -177,6 +177,7 @@ export const grassyFlatsResortMarathon: OfferAdapter = {
   },
   url: GF_KITE_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 3,
   confidence: 'low',
   async fetchContent() {

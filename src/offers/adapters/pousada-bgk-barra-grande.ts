@@ -159,6 +159,8 @@ export const pousadaBgkBarraGrande: OfferAdapter = {
   url: BGK_PAGES.home,
   quote: { engine: 'omnibees', hotelId: BGK_HOTEL.hotelId, chainId: BGK_HOTEL.chainId, currencyId: BGK_HOTEL.currencyId, currency: BGK_HOTEL.currency },
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 12,
   async fetchContent() {
     const home = await fetchText(BGK_PAGES.home, { accept: 'text/html' });

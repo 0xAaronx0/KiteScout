@@ -250,6 +250,7 @@ export const kerosBlueLimnos: OfferAdapter = {
   },
   url: `${SITE}/`,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 7,
   async fetchContent() {
     const [home, about, kite, gallery] = [

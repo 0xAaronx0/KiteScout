@@ -238,6 +238,8 @@ export const learnkiteboardingnowCampingBbOostvoorne: OfferAdapter = {
   },
   url: LKN_CAMP_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 4,
   async fetchContent() {
     const camp = await get(LKN_CAMP_URL);

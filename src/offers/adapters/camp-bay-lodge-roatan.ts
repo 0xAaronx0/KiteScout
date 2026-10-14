@@ -235,6 +235,7 @@ export const campBayLodgeRoatan: OfferAdapter = {
   },
   url: CBL_ROOMS_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 15,
   async fetchContent(ctx) {
     const { rooms, roomPages } = await loadRooms(ctx);

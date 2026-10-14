@@ -209,6 +209,7 @@ export const prasebanResortPakNamPran: OfferAdapter = {
   },
   url: PSB_KITE_URL,
   slotMethod: 'price_table', // no prices on the site, Cloudbeds /booking/* blocked: always [] (price on request)
+  instantBooking: true,
   fetchBudget: 13,
   confidence: 'medium',
   async fetchContent() {

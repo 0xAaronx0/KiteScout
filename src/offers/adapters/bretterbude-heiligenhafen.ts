@@ -251,6 +251,7 @@ export const bretterbudeHeiligenhafen: OfferAdapter = {
   },
   url: BBH_KITE_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 6,
   async fetchContent() {
     const home = await page(BBH_HOME_URL);

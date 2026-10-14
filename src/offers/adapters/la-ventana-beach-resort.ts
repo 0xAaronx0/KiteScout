@@ -214,6 +214,7 @@ export const laVentanaBeachResort: OfferAdapter = {
   },
   url: LVBR_HOTEL_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 6,
   confidence: 'low',
   async fetchContent() {

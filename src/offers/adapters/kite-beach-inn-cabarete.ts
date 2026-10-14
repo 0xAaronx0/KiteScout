@@ -316,6 +316,8 @@ export const kiteBeachInnCabarete: OfferAdapter = {
   },
   url: KBI_HOME_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 15,
   fetchContent: ctx => fetchKbiContent(ctx, todayIso()),
   fetchSlots: ctx => fetchKbiSlots(ctx, todayIso()),

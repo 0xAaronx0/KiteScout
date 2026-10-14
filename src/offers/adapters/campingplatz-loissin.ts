@@ -354,6 +354,7 @@ export const campingplatzLoissin: OfferAdapter = {
   },
   url: CPL_HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 9,
   async fetchContent() {
     const home = await page(CPL_HOME_URL);

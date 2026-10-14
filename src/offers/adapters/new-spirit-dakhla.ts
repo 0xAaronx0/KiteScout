@@ -177,6 +177,7 @@ export const newSpiritDakhla: OfferAdapter = {
   },
   url: NS_HOME_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 2,
   confidence: 'low', // no prices or availability readable (HotelRunner API needs a browser session)
   async fetchContent() {

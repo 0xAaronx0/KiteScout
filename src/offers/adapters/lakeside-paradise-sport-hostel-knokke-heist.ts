@@ -223,6 +223,7 @@ export const lakesideParadiseSportHostelKnokkeHeist: OfferAdapter = {
   },
   url: LP_OVERVIEW_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 6,
   async fetchContent() {
     const overview = await get(LP_OVERVIEW_URL);

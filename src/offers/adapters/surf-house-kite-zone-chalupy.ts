@@ -246,6 +246,7 @@ export const surfHouseKiteZoneChalupy: OfferAdapter = {
   },
   url: SH_PAGE_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 3,
   confidence: 'low',
   async fetchContent() {

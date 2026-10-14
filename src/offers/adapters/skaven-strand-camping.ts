@@ -223,6 +223,7 @@ export const skavenStrandCamping: OfferAdapter = {
   },
   url: SSC_KITE_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 5,
   confidence: 'medium', // season end inferred, cabin table year-less
   async fetchContent() {

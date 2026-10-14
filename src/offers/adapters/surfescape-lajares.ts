@@ -218,6 +218,7 @@ export const surfescapeLajares: OfferAdapter = {
   },
   url: SE_PAGE_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 2,
   confidence: 'low', // no room prices on the site; Cloudbeds /booking/* is 403 for non-browser clients
   async fetchContent() {

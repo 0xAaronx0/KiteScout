@@ -120,6 +120,8 @@ export const taigaTarifaPuntaPaloma: OfferAdapter = {
   },
   url: TPP_PAGE_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 15,
   async fetchContent() {
     const page = await fetchText(TPP_PAGE_URL, { accept: 'text/html' });

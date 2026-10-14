@@ -297,6 +297,7 @@ export const kenyawaysDiani: OfferAdapter = {
   },
   url: KW_ROOMS_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 4,
   confidence: 'medium', // prices are hand-read constants from PDF/JPG rate sheets
   async fetchContent() {

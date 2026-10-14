@@ -348,6 +348,8 @@ export const windsurfVillagePortoPollo: OfferAdapter = {
   },
   url: WV_HOME_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 4 + MAX_SAMPLES,
   async fetchContent() {
     const [home, apartments, kite] = [

@@ -159,6 +159,13 @@ export interface OfferAdapter {
   /** the page a human would open */
   url: string;
   slotMethod: SlotMethod;
+  /** true when fetchSlots reads availability from the provider's own booking system / inventory on every run
+   *  (an engine, API or shop stock), not from printed price tables or page text; written to
+   *  package_offers.live_availability and shown in the app */
+  liveAvailability?: boolean;
+  /** true when the provider's own website takes online bookings with immediate confirmation (engine or checkout),
+   *  false for request-only booking; independent of liveAvailability; written to package_offers.instant_booking */
+  instantBooking?: boolean;
   /** max fetches per run we allow ourselves against this host (politeness budget) */
   fetchBudget: number;
   /** package_offers.extraction_confidence; 'low' when prices/dates cannot be read live (default 'high') */

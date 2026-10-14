@@ -209,6 +209,7 @@ export const flagBeachSurfersRetreatCorralejo: OfferAdapter = {
   },
   url: FBR_PAGE_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 3,
   async fetchContent() {
     const [retreat, kitePackages] = [await page(FBR_PAGE_URL), await page(FBR_KITE_PACKAGES_URL)];

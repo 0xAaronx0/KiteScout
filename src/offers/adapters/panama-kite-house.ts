@@ -217,6 +217,7 @@ export const panamaKiteHouse: OfferAdapter = {
   },
   url: PKH_PAGE_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 6,
   async fetchContent() {
     const [rider, kitehouse, villa] = [

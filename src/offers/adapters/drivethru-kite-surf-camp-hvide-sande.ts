@@ -202,6 +202,7 @@ export const drivethruKiteSurfCampHvideSande: OfferAdapter = {
   },
   url: DTC_OFFER_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 6,
   confidence: 'medium', // "from" price without dates; Bookinglayer (dates, availability) is robots-blocked
   async fetchContent() {

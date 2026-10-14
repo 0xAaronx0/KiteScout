@@ -210,6 +210,7 @@ export const kokohauBungalowsSantaVeronica: OfferAdapter = {
   },
   url: KSE_HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 3,
   async fetchContent() {
     const home = await fetchText(KSE_HOME_URL, { accept: 'text/html' });

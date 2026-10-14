@@ -207,6 +207,7 @@ export const kiteLodgeBrazilPrea: OfferAdapter = {
   },
   url: KL_PAGES.accommodations,
   slotMethod: 'price_table',
+  instantBooking: true,
   confidence: 'medium',
   fetchBudget: 6,
   async fetchContent() {

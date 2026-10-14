@@ -290,6 +290,7 @@ export const campingparkWulfenerHalsFehmarn: OfferAdapter = {
   },
   url: WH_KITE_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 11,
   confidence: 'medium', // prices only for the Economy rental trailer specials; other units on request
   async fetchContent() {

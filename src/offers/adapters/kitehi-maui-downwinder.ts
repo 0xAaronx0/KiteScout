@@ -136,6 +136,7 @@ export const kitehiMauiDownwinder: OfferAdapter = {
   },
   url: KITEHI_ABOUT_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 3,
   // prices are not readable live (FareHarbor is robots-blocked): mark the row as low confidence
   confidence: 'low',

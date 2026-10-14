@@ -210,6 +210,7 @@ export const seahorseResortMuiNe: OfferAdapter = {
   },
   url: SH_HOME_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 7,
   confidence: 'low', // no public rates; kite link from the school's site only
   async fetchContent() {

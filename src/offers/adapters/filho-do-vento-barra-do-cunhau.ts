@@ -172,6 +172,8 @@ export const filhoDoVentoBarraDoCunhau: OfferAdapter = {
   url: FDV_PAGES.home,
   quote: { engine: 'omnibees', hotelId: FDV_HOTEL.hotelId, chainId: FDV_HOTEL.chainId, currencyId: FDV_HOTEL.currencyId, currency: FDV_HOTEL.currency },
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 12,
   async fetchContent() {
     const home = await fetchText(FDV_PAGES.home, { accept: 'text/html' });

@@ -206,6 +206,7 @@ export const umiliPodCyprysamiJastarnia: OfferAdapter = {
   },
   url: PC_HOME_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 3,
   confidence: 'low', // no prices or availability readable (Bookassist robots-blocked)
   async fetchContent() {

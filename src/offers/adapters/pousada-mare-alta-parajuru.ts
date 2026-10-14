@@ -369,6 +369,8 @@ export const pousadaMareAltaParajuru: OfferAdapter = {
     ],
   },
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 27,
   async fetchContent() {
     return parseMareAltaContent(await fetchText(MA_PAGE_URL, { accept: 'text/html' }));

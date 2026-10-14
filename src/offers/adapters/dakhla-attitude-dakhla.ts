@@ -347,6 +347,7 @@ export const dakhlaAttitudeDakhla: OfferAdapter = {
   },
   url: DA_HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 9,
   async fetchContent() {
     const home = await dhgFetch(DA_HOME_URL);

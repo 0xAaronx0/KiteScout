@@ -240,6 +240,8 @@ export const amagaliPousadaGalinhos: OfferAdapter = {
   url: AMG_PAGES.home,
   quote: { engine: 'omnibees', hotelId: AMG_HOTEL.hotelId, chainId: AMG_HOTEL.chainId, currencyId: AMG_HOTEL.currencyId, currency: AMG_HOTEL.currency },
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 12,
   async fetchContent() {
     const home = await fetchText(AMG_PAGES.home, { accept: 'text/html' });

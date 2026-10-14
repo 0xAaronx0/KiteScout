@@ -157,6 +157,8 @@ export const oitiBeachResortTutoia: OfferAdapter = {
   url: OITI_HOME_URL,
   quote: { engine: 'omnibees', hotelId: OITI_HOTEL.hotelId, chainId: OITI_HOTEL.chainId, currencyId: OITI_HOTEL.currencyId, currency: OITI_HOTEL.currency },
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 10,
   async fetchContent() {
     // Duda answers a JSON payload instead of HTML when Accept lists application/json

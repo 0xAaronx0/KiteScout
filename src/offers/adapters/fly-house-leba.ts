@@ -164,6 +164,7 @@ export const flyHouseLeba: OfferAdapter = {
   },
   url: FH_HOUSE_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 4,
   confidence: 'low', // no prices on the site; the nfhotel engine is not read (service-worker channel)
   async fetchContent() {

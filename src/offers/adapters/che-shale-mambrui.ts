@@ -196,6 +196,7 @@ export const cheShaleMambrui: OfferAdapter = {
   },
   url: CS_HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 5,
   async fetchContent() {
     const home = await fetchText(CS_HOME_URL, { accept: 'text/html' });

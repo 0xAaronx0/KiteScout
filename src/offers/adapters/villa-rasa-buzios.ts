@@ -235,6 +235,8 @@ export const villaRasaBuzios: OfferAdapter = {
   url: VR_PAGES.home,
   quote: { engine: 'omnibees', hotelId: VR_HOTEL.hotelId, chainId: VR_HOTEL.chainId, currencyId: VR_HOTEL.currencyId, currency: VR_HOTEL.currency },
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 12,
   async fetchContent() {
     const home = await fetchText(VR_PAGES.home, { accept: 'text/html' });

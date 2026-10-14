@@ -466,6 +466,8 @@ export const oasisKiteKitecampDjerba: OfferAdapter = {
   },
   url: OK_CAMP_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 12,
   async fetchContent() {
     const camp = await page(OK_CAMP_URL);

@@ -300,6 +300,7 @@ export const logosBeachVillageTheologos: OfferAdapter = {
   },
   url: HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 8,
   async fetchContent() {
     const home = await fetchText(HOME_URL, { accept: 'text/html' });

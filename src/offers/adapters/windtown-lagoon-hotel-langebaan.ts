@@ -151,6 +151,7 @@ export const windtownLagoonHotelLangebaan: OfferAdapter = {
   },
   url: WT_HOME_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 1,
   confidence: 'low', // no prices on the site; the STAAH booking engine host refuses us (403 on robots.txt)
   async fetchContent() {

@@ -197,6 +197,7 @@ export const kitePassionGlampingPuttgarden: OfferAdapter = {
   },
   url: KPG_STAY_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 3,
   async fetchContent() {
     const stay = await page(KPG_STAY_URL);

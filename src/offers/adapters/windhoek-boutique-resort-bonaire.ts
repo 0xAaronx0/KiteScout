@@ -176,6 +176,7 @@ export const windhoekBoutiqueResortBonaire: OfferAdapter = {
   },
   url: WH_KITE_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
   fetchBudget: 4,
   confidence: 'low',
   async fetchContent() {

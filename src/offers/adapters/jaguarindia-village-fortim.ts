@@ -170,6 +170,8 @@ export const jaguarindiaVillageFortim: OfferAdapter = {
   url: JV_PAGES.about,
   quote: { engine: 'omnibees', hotelId: JV_HOTEL.hotelId, chainId: JV_HOTEL.chainId, currencyId: JV_HOTEL.currencyId, currency: JV_HOTEL.currency },
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 13,
   async fetchContent() {
     const [about, rooms, kite, omnibees] = [await sisterPage(JV_PAGES.about), await sisterPage(JV_PAGES.rooms), await sisterPage(JV_PAGES.kite), await sisterPage(JV_HOTEL_URL)];

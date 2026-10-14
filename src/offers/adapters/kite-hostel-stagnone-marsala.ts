@@ -230,6 +230,7 @@ export const kiteHostelStagnoneMarsala: OfferAdapter = {
   },
   url: KHS_HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 11,
   confidence: 'medium',
   async fetchContent() {

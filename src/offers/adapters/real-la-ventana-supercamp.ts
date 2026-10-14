@@ -249,6 +249,8 @@ export const realLaVentanaSupercamp: OfferAdapter = {
   },
   url: REAL_LANDING_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 6,
   async fetchContent(ctx) {
     const [landing, prods] = await Promise.all([once('landing', () => fetchText(REAL_LANDING_URL)), products(ctx)]);

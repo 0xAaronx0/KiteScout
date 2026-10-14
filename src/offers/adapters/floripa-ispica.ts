@@ -239,6 +239,7 @@ export const floripaIspica: OfferAdapter = {
   },
   url: FLORIPA_HOME_URL,
   slotMethod: 'price_table',
+  instantBooking: true,
   fetchBudget: 6,
   confidence: 'medium',
   async fetchContent() {

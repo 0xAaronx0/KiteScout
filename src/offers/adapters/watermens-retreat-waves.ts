@@ -357,6 +357,8 @@ export const watermensRetreatWaves: OfferAdapter = {
   },
   url: WR_HOME_URL,
   slotMethod: 'booking_engine',
+  instantBooking: true,
+  liveAvailability: true,
   fetchBudget: 18,
   async fetchContent() {
     const home = await fetchText(WR_HOME_URL, { accept: 'text/html' });
