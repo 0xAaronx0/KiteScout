@@ -132,6 +132,8 @@ async function upsertOperator(a: OfferAdapter): Promise<string> {
     discovery_source: 'offer_adapter',
     status: 'new',
   }).select('id').single();
+  // a sibling adapter of the same operator ingested in parallel created the row first: read it instead
+  if (insErr?.code === '23505') return upsertOperator(a);
   if (insErr) throw new Error(`providers insert failed: ${insErr.message}`);
   return data.id as string;
 }
@@ -221,6 +223,8 @@ const KNOWN_PINS: Record<string, { lat: number; lng: number }> = {
   // the Hel Peninsula village (OSM); the geocoder picks the namesake in Łódź voivodeship, 400 km south
   'chałupy': { lat: 54.7587, lng: 18.5099 },
   'drejby strand, kegnæs': { lat: 54.8628, lng: 10.0011 }, // the campsite (OSM); the spot name alone finds nothing
+  'dranske, wittow': { lat: 54.6276, lng: 13.2283 }, // NoHotel (OSM hostel node); the spot name alone finds nothing
+  saal: { lat: 54.3099, lng: 12.4992 }, // Saal am Saaler Bodden (OSM); the geocoder picks Saal an der Donau
 };
 
 export async function locateSpots(c: OfferContent, stored: unknown): Promise<StoredSpot[]> {

@@ -1,0 +1,2506 @@
+<!doctype html>
+<html lang="de" data-bs-theme="light">
+	<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="theme-color" content="#ffffff">
+ <title>Strandcamping Wallnau - Onepage Booking</title>
+ <style></style>
+ <style></style>
+ <script></script>
+ <script></script>
+ <script></script>
+ <script></script>
+ <script></script>
+ <script></script>
+ <script></script>
+ <script></script>
+ <script></script>
+ <script></script>
+ <script></script>
+ <script></script>
+ <script></script>
+ <script></script>
+ <script></script>
+	</head>
+	<body>
+ <template id="message_template">
+ <div>
+ <div role="alert">
+ <div>
+ <i></i>
+ <span></span>
+ </div>
+ <button type="button" aria-label="Schließen"></button>
+ </div>
+ </div>
+ </template>
+ <div id="messages">
+ </div>
+ <div>
+ <div id="loading_page">
+ <div role="status">
+ <span>Lade...</span>
+ </div>
+ <noscript>
+ <h1>Diese Seite erfordert Javascript</h1>
+ </noscript>
+ </div>
+ <div id="banner">
+ <div>
+ <div>
+ <img src="/10206/images/logo-0002.png" alt="logo">
+ </div>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <ul>
+ <li>
+ <a aria-current="page" href="onepage.php">Buchung</a>
+ </li>
+ <li>
+ <a aria-disabled="true" href="overview.php">Übersicht</a>
+ </li>
+ <li>
+ <a aria-disabled="true" href="bookingdata.php">Daten</a>
+ </li>
+ <li>
+ <a aria-disabled="true" href="payment.php">Zahlung</a>
+ </li>
+ </ul>
+ </div>
+ <div>
+ <ul>
+ <li>
+ <button role="button" data-bs-toggle="dropdown" aria-expanded="false"> <img id="language_flag" src="/10206/images/languages/DE.png" alt="Set Language"> </button>
+ <ul id="language_picker">
+ <li><span data-langid="de"><img src="/10206/images/languages/DE.png" alt="Deutsch"> Deutsch</span></li>
+ <li><span data-langid="en"><img src="/10206/images/languages/EN.png" alt="English"> English</span></li>
+ </ul>
+ </li>
+ </ul>
+ </div>
+ </div>
+ <hr>
+ </div>
+ <main>
+ <div>
+ <div role="alert">
+ <div>
+ <i></i>
+ <span>Herzlich willkommen! Wir freuen uns, dass ihr euren Urlaub bei uns buchen möchtet.<BR>
+Damit bei der Buchung alles glattläuft, beachtet dass für unsere Mietwohnwagen und Mobilheime die Anreise in der Hauptsaison nur mittwochs und sonntags möglich ist.<BR>
+Habt ihr einen bestimmten Lieblingsstellplatz im Auge? Um euch genau diesen Platz zu sichern, nutzt bitte die Option "Wunschobjekt". Auf Stellplatzwünsche im Kommentarfeld können wir leider keine Rücksicht nehmen.</span>
+ </div>
+ </div>
+ </div>
+ <div id="person_data">
+ <h2>Reisedaten</h2>
+ <div>
+ <div>
+ <label for="guest-category-nadults">Erwachsene</label>
+ </div>
+ <div>
+ <div>
+ <div>
+ <button type="button" aria-label="Anzahl Erwachsene verringern"><i></i></button>
+ <input id="guest-category-nadults" tabindex="-1" type="number" name="guest-category-nadults" min="1" value="1" aria-label="Anzahl Erwachsene" readonly>
+ <button type="button" aria-label="Anzahl Erwachsene erhöhen"><i></i></button>
+ <div>Ungültige Anzahl Erwachsene</div>
+ </div>
+ </div>
+ </div>
+ <div>
+ <span>
+ ab 18 Jahre </span>
+ </div>
+ </div>
+ <div>
+ <div>
+ <label for="guest-category-nchildren">Kinder</label>
+ </div>
+ <div>
+ <div>
+ <div>
+ <button type="button" aria-label="Anzahl Kinder verringern"><i></i></button>
+ <input id="guest-category-nchildren" tabindex="-1" type="number" name="guest-category-nchildren" min="0" value="0" aria-label="Anzahl Kinder" readonly>
+ <button type="button" aria-label="Anzahl Kinder erhöhen"><i></i></button>
+ <div>Ungültige Anzahl Kinder</div>
+ </div>
+ </div>
+ </div>
+ <div>
+ <span>
+ 4 - 17 Jahre </span>
+ </div>
+ </div>
+ <div>
+ <div>
+ <label for="guest-category-ntoddlers">Kleinkinder</label>
+ </div>
+ <div>
+ <div>
+ <div>
+ <button type="button" aria-label="Anzahl Kleinkinder verringern"><i></i></button>
+ <input id="guest-category-ntoddlers" tabindex="-1" type="number" name="guest-category-ntoddlers" min="0" value="0" aria-label="Anzahl Kleinkinder" readonly>
+ <button type="button" aria-label="Anzahl Kleinkinder erhöhen"><i></i></button>
+ <div>Ungültige Anzahl Kleinkinder</div>
+ </div>
+ </div>
+ </div>
+ <div>
+ <span>
+ bis 3 Jahre </span>
+ </div>
+ </div>
+ <div>
+ <div>
+ <label for="guest-category-ndogs">Hunde</label>
+ </div>
+ <div>
+ <div>
+ <div>
+ <button type="button" aria-label="Anzahl Hunde verringern"><i></i></button>
+ <input id="guest-category-ndogs" tabindex="-1" type="number" name="guest-category-ndogs" min="0" value="0" max="0" aria-label="Anzahl Hunde" readonly>
+ <button type="button" aria-label="Anzahl Hunde erhöhen"><i></i></button>
+ <div>Ungültige Anzahl Hunde</div>
+ </div>
+ </div>
+ </div>
+ <div>
+ </div>
+ </div>
+ </div>
+ <div id="accommodations">
+ <div id="accommodation-rental">
+ <div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Achtung: Sie haben Fahrzeugdaten für Stellplätze ausgefüllt - Mietobjekte erlauben keine Fahrzeuge!">
+ <div>
+ <div>
+ <label for="accommodation-switch-rental">
+ Mietobjekte <span>
+ <svg></svg> </span>
+ </label>
+ </div>
+ <div>
+ <div>
+ <input type="checkbox" role="switch" id="accommodation-switch-rental" checked>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="accommodation-pitch">
+ <div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Achtung: Sie haben Fahrzeugdaten für Stellplätze ausgefüllt - Mietobjekte erlauben keine Fahrzeuge!">
+ <div>
+ <div>
+ <label for="accommodation-switch-pitch">
+ Stellplätze <span>
+ <svg></svg> </span>
+ </label>
+ </div>
+ <div>
+ <div>
+ <input type="checkbox" role="switch" id="accommodation-switch-pitch" checked>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="category_wrapper">
+ <div>
+ <hr>
+ <h2>Bitte wählen Sie</h2>
+ <div id="step_choice">
+ <div>
+ <div>
+ <span>oder</span>
+ <input type="radio" name="step" id="category" autocomplete="off" value="category" checked>
+ <label for="category">
+ <div>
+ <h5>Bitte wählen Sie eine Kategorie</h5>
+ <p>Wählen Sie eine oder mehrere Kategorien</p>
+ </div>
+ </label>
+ </div>
+ <div>
+ <span>oder</span>
+ <input type="radio" name="step" id="date" autocomplete="off" value="final">
+ <label for="date">
+ <div>
+ <h5>An- und Abreisedatum</h5>
+ <p>Wählen Sie ein spezifisches An- und Abreisedatum</p>
+ </div>
+ </label>
+ </div>
+ <div>
+ <span>oder</span>
+ <input type="radio" name="step" id="datespan" autocomplete="off" value="range">
+ <label for="datespan">
+ <div>
+ <h5>Reisezeitraum wählen</h5>
+ <p>Wählen Sie einen groben Reisezeitraum zu dem Ihnen Reisedaten vorgeschlagen werden sollen.</p>
+ </div>
+ </label>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="range_picker">
+ <hr>
+ <h2>Bitte wählen Sie einen Reisezeitraum</h2>
+ <div>
+ <div>
+ <div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Es sind keine früheren Termine verfügbar">
+ <button type="button" disabled>
+ Früher <i></i>
+ </button>
+ </div>
+ </div>
+ <div></div>
+ <div>
+ <div>
+ <div>
+ <template>
+ <option value="0">Month</option>
+ </template>
+ <select>
+ </select>
+ </div>
+ <div>
+ <template>
+ <option value="0">Year</option>
+ </template>
+ <select>
+ </select>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <template>
+ <div>
+ <h4></h4>
+ <div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ </div>
+ </div>
+ </template>
+ <div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Es sind keine späteren Termine verfügbar">
+ <button type="button">
+ Später <i></i>
+ </button>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="range_picker_loader">
+ <div role="status">
+ <span>Lade...</span>
+ </div>
+ </div>
+ </div>
+ <div>
+ <hr>
+ <h2>Bitte wählen Sie eine Kategorie</h2>
+ <h5>Mehrfachauswahl möglich</h5>
+ <div id="object_category_filters">
+ <div id="category-available-switch-wrapper">
+ <div>
+ <div>
+ <label for="category-available-switch">
+ Nur verfügbare Kategorien anzeigen </label>
+ </div>
+ <div>
+ <div>
+ <input type="checkbox" role="switch" id="category-available-switch">
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="object_categories">
+ <div>
+ <div id="object-category-1" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-1" autocomplete="off">
+ <label for="category-btn-1">
+ <div>
+ <img src="/10206/images/objectcategory-1-1-0001.jpg" alt="Stellplatz bis 98m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz bis 98m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-2" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-2" autocomplete="off">
+ <label for="category-btn-2">
+ <div>
+ <img src="/10206/images/objectcategory-2-1-0001.jpg" alt="Stellplatz bis 98m² (ohne Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz bis 98m² (ohne Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-42" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-42" autocomplete="off">
+ <label for="category-btn-42">
+ <div>
+ <img src="/10206/images/objectcategory-42-1-0001.jpg" alt="Küstennaher Stellplatz bis 98m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Küstennaher Stellplatz bis 98m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-3" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-3" autocomplete="off">
+ <label for="category-btn-3">
+ <div>
+ <img src="/10206/images/objectcategory-3-1-0001.jpg" alt="Stellplatz von 99 bis 114m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz von 99 bis 114m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-4" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-4" autocomplete="off">
+ <label for="category-btn-4">
+ <div>
+ <img src="/10206/images/objectcategory-4-1-0001.jpg" alt="Stellplatz von 99 bis 114m² (ohne Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz von 99 bis 114m² (ohne Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-43" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-43" autocomplete="off">
+ <label for="category-btn-43">
+ <div>
+ <img src="/10206/images/objectcategory-43-1-0001.jpg" alt="Küstennaher Stellplatz von 99 bis 114m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Küstennaher Stellplatz von 99 bis 114m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-50" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-50" autocomplete="off">
+ <label for="category-btn-50">
+ <div>
+ <img src="/10206/images/objectcategory-50-1-0001.jpg" alt="Küstennaher Stellplatz von 99 bis 114m² inkl. Privatsanitär">
+ </div>
+ <div>
+ <h5>Küstennaher Stellplatz von 99 bis 114m² inkl. Privatsanitär</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-5" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-5" autocomplete="off">
+ <label for="category-btn-5">
+ <div>
+ <img src="/10206/images/objectcategory-5-1-0002.jpg" alt="Stellplatz von 115-129m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz von 115-129m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-6" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-6" autocomplete="off">
+ <label for="category-btn-6">
+ <div>
+ <img src="/10206/images/objectcategory-6-1-0002.jpg" alt="Stellplatz von 115-129m² (ohne Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz von 115-129m² (ohne Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-44" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-44" autocomplete="off">
+ <label for="category-btn-44">
+ <div>
+ <img src="/10206/images/objectcategory-44-1-0002.jpg" alt="Küstennaher Stellplatz von 115-129m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Küstennaher Stellplatz von 115-129m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-46" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-46" autocomplete="off">
+ <label for="category-btn-46">
+ <div>
+ <img src="/10206/images/objectcategory-46-1-0001.jpg" alt="Stellplatz ab 130m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz ab 130m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-47" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-47" autocomplete="off">
+ <label for="category-btn-47">
+ <div>
+ <img src="/10206/images/objectcategory-47-1-0001.jpg" alt="Stellplatz ab 130m² (ohne Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz ab 130m² (ohne Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-45" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-45" autocomplete="off">
+ <label for="category-btn-45">
+ <div>
+ <img src="/10206/images/objectcategory-45-1-0001.jpg" alt="Küstennaher Stellplatz ab 130m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Küstennaher Stellplatz ab 130m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-49" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-49" autocomplete="off">
+ <label for="category-btn-49">
+ <div>
+ <img src="/10206/images/objectcategory-49-1-0001.jpg" alt="Küstennaher Stellplatz ab 130m² inkl. Privatsanitär">
+ </div>
+ <div>
+ <h5>Küstennaher Stellplatz ab 130m² inkl. Privatsanitär</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-26" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-26" autocomplete="off">
+ <label for="category-btn-26">
+ <div>
+ <img src="/10206/images/objectcategory-26-1-0001.jpg" alt="Mobilheim Family (für 4 Personen)">
+ </div>
+ <div>
+ <h5>Mobilheim Family (für 4 Personen)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-27" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-27" autocomplete="off">
+ <label for="category-btn-27">
+ <div>
+ <img src="/10206/images/objectcategory-27-1-0001.jpg" alt="Mobilheim Family &amp; Friends (für 6 Personen)">
+ </div>
+ <div>
+ <h5>Mobilheim Family & Friends (für 6 Personen)</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-28" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-28" autocomplete="off">
+ <label for="category-btn-28">
+ <div>
+ <img src="/10206/images/objectcategory-28-1-0001.jpg" alt="Hundewohnwagen 560 KMFE">
+ </div>
+ <div>
+ <h5>Hundewohnwagen 560 KMFE</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-37" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-37" autocomplete="off">
+ <label for="category-btn-37">
+ <div>
+ <img src="/10206/images/objectcategory-37-1-0001.jpg" alt="Hundewohnwagen 560 UL">
+ </div>
+ <div>
+ <h5>Hundewohnwagen 560 UL</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-29" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-29" autocomplete="off">
+ <label for="category-btn-29">
+ <div>
+ <img src="/10206/images/objectcategory-29-1-0001.jpg" alt="Komfortwohnwagen 560 UL">
+ </div>
+ <div>
+ <h5>Komfortwohnwagen 560 UL</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-30" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-30" autocomplete="off">
+ <label for="category-btn-30">
+ <div>
+ <img src="/10206/images/objectcategory-30-1-0001.jpg" alt="Komfortwohnwagen 560 KMFE">
+ </div>
+ <div>
+ <h5>Komfortwohnwagen 560 KMFE</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-40" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-40" autocomplete="off">
+ <label for="category-btn-40">
+ <div>
+ <img src="/10206/images/objectcategory-40-1-0001.jpg" alt="Komfortwohnwagen 560 CFE">
+ </div>
+ <div>
+ <h5>Komfortwohnwagen 560 CFE</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-38" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-38" autocomplete="off">
+ <label for="category-btn-38">
+ <div>
+ <img src="/10206/images/objectcategory-38-1-0001.jpg" alt="Superiorwohnwagen 650 UMFE">
+ </div>
+ <div>
+ <h5>Superiorwohnwagen 650 UMFE</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-39" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-39" autocomplete="off">
+ <label for="category-btn-39">
+ <div>
+ <img src="/10206/images/objectcategory-39-1-0001.jpg" alt="Superiorwohnwagen 620 CL">
+ </div>
+ <div>
+ <h5>Superiorwohnwagen 620 CL</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-41" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-41" autocomplete="off">
+ <label for="category-btn-41">
+ <div>
+ <img src="/10206/images/objectcategory-41-1-0001.jpg" alt="Superiorwohnwagen 650 KMFE">
+ </div>
+ <div>
+ <h5>Superiorwohnwagen 650 KMFE</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-32" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-32" autocomplete="off">
+ <label for="category-btn-32">
+ <div>
+ <img src="/10206/images/objectcategory-32-1-0001.jpg" alt="Luxuswohnwagen 650 UFF">
+ </div>
+ <div>
+ <h5>Luxuswohnwagen 650 UFF</h5>
+ </div>
+ </label>
+ </div>
+ <div id="object-category-31" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <input type="checkbox" name="category" id="category-btn-31" autocomplete="off">
+ <label for="category-btn-31">
+ <div>
+ <img src="/10206/images/objectcategory-31-1-0001.jpg" alt="Luxuswohnwagen 650 KMFE">
+ </div>
+ <div>
+ <h5>Luxuswohnwagen 650 KMFE</h5>
+ </div>
+ </label>
+ </div>
+ </div>
+ <div id="categories_next">
+ <a href="#calendar">
+ Fortfahren <i></i>
+ </a>
+ </div>
+ </div>
+ </div>
+ <div id="calendar">
+ <hr>
+ <h2>An- und Abreisetag wählen</h2>
+ <h6>Tage mit einem <i></i> sind gültige Abreisedaten und werden auswählbar, nachdem ein Anreisedatum ausgewählt wurde.</h6>
+ <h6>Für die gewählten Kategorien ist die Anreise nur am aktuellen Tag möglich</h6>
+ <div>
+ <div>
+ <div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Es sind keine früheren Termine verfügbar">
+ <button type="button" disabled>
+ Früher <i></i>
+ </button>
+ </div>
+ </div>
+ <div></div>
+ <div>
+ <div>
+ <div>
+ <template>
+ <option value="0">Month</option>
+ </template>
+ <select>
+ </select>
+ </div>
+ <div>
+ <template>
+ <option value="0">Year</option>
+ </template>
+ <select>
+ </select>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <template>
+ <div>
+ <h4></h4>
+ <div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ <div data-date="">
+ <input type="checkbox" name="dates" id="" autocomplete="off">
+ <label for="">
+ <span>
+ <span></span>
+ <span></span>
+ </span>
+ </label>
+ <span>
+ Anreise </span>
+ <span>
+ Abreise </span>
+ <button type="button" aria-label="Close" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abbrechen">
+ <i></i>
+ </button>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Abreise möglich">
+ <i></i>
+ </div>
+ </div>
+ </div>
+ </div>
+ </template>
+ <div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Es sind keine späteren Termine verfügbar">
+ <button type="button">
+ Später <i></i>
+ </button>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="calendar_loader">
+ <div role="status">
+ <span>Lade...</span>
+ </div>
+ </div>
+ </div>
+ <div id="object_category_final">
+ <hr>
+ <h2>Für Ihren gewählten Reisezeitraum sind folgende Kategorien verfügbar</h2>
+ <div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-1" value="1" autocomplete="off">
+ <label for="category-final-1">
+ <div>
+ <img src="/10206/images/objectcategory-1-1-0001.jpg" alt="Stellplatz bis 98m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz bis 98m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-2" value="2" autocomplete="off">
+ <label for="category-final-2">
+ <div>
+ <img src="/10206/images/objectcategory-2-1-0001.jpg" alt="Stellplatz bis 98m² (ohne Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz bis 98m² (ohne Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-42" value="42" autocomplete="off">
+ <label for="category-final-42">
+ <div>
+ <img src="/10206/images/objectcategory-42-1-0001.jpg" alt="Küstennaher Stellplatz bis 98m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Küstennaher Stellplatz bis 98m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-3" value="3" autocomplete="off">
+ <label for="category-final-3">
+ <div>
+ <img src="/10206/images/objectcategory-3-1-0001.jpg" alt="Stellplatz von 99 bis 114m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz von 99 bis 114m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-4" value="4" autocomplete="off">
+ <label for="category-final-4">
+ <div>
+ <img src="/10206/images/objectcategory-4-1-0001.jpg" alt="Stellplatz von 99 bis 114m² (ohne Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz von 99 bis 114m² (ohne Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-43" value="43" autocomplete="off">
+ <label for="category-final-43">
+ <div>
+ <img src="/10206/images/objectcategory-43-1-0001.jpg" alt="Küstennaher Stellplatz von 99 bis 114m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Küstennaher Stellplatz von 99 bis 114m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-50" value="50" autocomplete="off">
+ <label for="category-final-50">
+ <div>
+ <img src="/10206/images/objectcategory-50-1-0001.jpg" alt="Küstennaher Stellplatz von 99 bis 114m² inkl. Privatsanitär">
+ </div>
+ <div>
+ <h5>Küstennaher Stellplatz von 99 bis 114m² inkl. Privatsanitär</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-5" value="5" autocomplete="off">
+ <label for="category-final-5">
+ <div>
+ <img src="/10206/images/objectcategory-5-1-0002.jpg" alt="Stellplatz von 115-129m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz von 115-129m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-6" value="6" autocomplete="off">
+ <label for="category-final-6">
+ <div>
+ <img src="/10206/images/objectcategory-6-1-0002.jpg" alt="Stellplatz von 115-129m² (ohne Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz von 115-129m² (ohne Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-44" value="44" autocomplete="off">
+ <label for="category-final-44">
+ <div>
+ <img src="/10206/images/objectcategory-44-1-0002.jpg" alt="Küstennaher Stellplatz von 115-129m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Küstennaher Stellplatz von 115-129m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-46" value="46" autocomplete="off">
+ <label for="category-final-46">
+ <div>
+ <img src="/10206/images/objectcategory-46-1-0001.jpg" alt="Stellplatz ab 130m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz ab 130m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-47" value="47" autocomplete="off">
+ <label for="category-final-47">
+ <div>
+ <img src="/10206/images/objectcategory-47-1-0001.jpg" alt="Stellplatz ab 130m² (ohne Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Stellplatz ab 130m² (ohne Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-45" value="45" autocomplete="off">
+ <label for="category-final-45">
+ <div>
+ <img src="/10206/images/objectcategory-45-1-0001.jpg" alt="Küstennaher Stellplatz ab 130m² (mit Wasser/Abwasser)">
+ </div>
+ <div>
+ <h5>Küstennaher Stellplatz ab 130m² (mit Wasser/Abwasser)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-49" value="49" autocomplete="off">
+ <label for="category-final-49">
+ <div>
+ <img src="/10206/images/objectcategory-49-1-0001.jpg" alt="Küstennaher Stellplatz ab 130m² inkl. Privatsanitär">
+ </div>
+ <div>
+ <h5>Küstennaher Stellplatz ab 130m² inkl. Privatsanitär</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-26" value="26" autocomplete="off">
+ <label for="category-final-26">
+ <div>
+ <img src="/10206/images/objectcategory-26-1-0001.jpg" alt="Mobilheim Family (für 4 Personen)">
+ </div>
+ <div>
+ <h5>Mobilheim Family (für 4 Personen)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-27" value="27" autocomplete="off">
+ <label for="category-final-27">
+ <div>
+ <img src="/10206/images/objectcategory-27-1-0001.jpg" alt="Mobilheim Family &amp; Friends (für 6 Personen)">
+ </div>
+ <div>
+ <h5>Mobilheim Family & Friends (für 6 Personen)</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-28" value="28" autocomplete="off">
+ <label for="category-final-28">
+ <div>
+ <img src="/10206/images/objectcategory-28-1-0001.jpg" alt="Hundewohnwagen 560 KMFE">
+ </div>
+ <div>
+ <h5>Hundewohnwagen 560 KMFE</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-37" value="37" autocomplete="off">
+ <label for="category-final-37">
+ <div>
+ <img src="/10206/images/objectcategory-37-1-0001.jpg" alt="Hundewohnwagen 560 UL">
+ </div>
+ <div>
+ <h5>Hundewohnwagen 560 UL</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-29" value="29" autocomplete="off">
+ <label for="category-final-29">
+ <div>
+ <img src="/10206/images/objectcategory-29-1-0001.jpg" alt="Komfortwohnwagen 560 UL">
+ </div>
+ <div>
+ <h5>Komfortwohnwagen 560 UL</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-30" value="30" autocomplete="off">
+ <label for="category-final-30">
+ <div>
+ <img src="/10206/images/objectcategory-30-1-0001.jpg" alt="Komfortwohnwagen 560 KMFE">
+ </div>
+ <div>
+ <h5>Komfortwohnwagen 560 KMFE</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-40" value="40" autocomplete="off">
+ <label for="category-final-40">
+ <div>
+ <img src="/10206/images/objectcategory-40-1-0001.jpg" alt="Komfortwohnwagen 560 CFE">
+ </div>
+ <div>
+ <h5>Komfortwohnwagen 560 CFE</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-38" value="38" autocomplete="off">
+ <label for="category-final-38">
+ <div>
+ <img src="/10206/images/objectcategory-38-1-0001.jpg" alt="Superiorwohnwagen 650 UMFE">
+ </div>
+ <div>
+ <h5>Superiorwohnwagen 650 UMFE</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-39" value="39" autocomplete="off">
+ <label for="category-final-39">
+ <div>
+ <img src="/10206/images/objectcategory-39-1-0001.jpg" alt="Superiorwohnwagen 620 CL">
+ </div>
+ <div>
+ <h5>Superiorwohnwagen 620 CL</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-41" value="41" autocomplete="off">
+ <label for="category-final-41">
+ <div>
+ <img src="/10206/images/objectcategory-41-1-0001.jpg" alt="Superiorwohnwagen 650 KMFE">
+ </div>
+ <div>
+ <h5>Superiorwohnwagen 650 KMFE</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-32" value="32" autocomplete="off">
+ <label for="category-final-32">
+ <div>
+ <img src="/10206/images/objectcategory-32-1-0001.jpg" alt="Luxuswohnwagen 650 UFF">
+ </div>
+ <div>
+ <h5>Luxuswohnwagen 650 UFF</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="white-space-pre-line" data-bs-title="none">
+ <input type="radio" name="category-final" id="category-final-31" value="31" autocomplete="off">
+ <label for="category-final-31">
+ <div>
+ <img src="/10206/images/objectcategory-31-1-0001.jpg" alt="Luxuswohnwagen 650 KMFE">
+ </div>
+ <div>
+ <h5>Luxuswohnwagen 650 KMFE</h5>
+ </div>
+ </label>
+ <div role="status" aria-live="polite"></div>
+ </div>
+ </div>
+ <div id="final_loader">
+ <div role="status">
+ <span>Lade...</span>
+ </div>
+ </div>
+ </div>
+ <div id="category_description">
+ <hr>
+ <h2>Title</h2>
+ <div>
+ <div>
+ <div id="category-description-carousel">
+ <template>
+ <button type="button" data-bs-target="#category-description-carousel" aria-label="Object Image Slide"></button>
+ </template>
+ <div>
+ </div>
+ <template>
+ <div>
+ <img alt="...">
+ </div>
+ </template>
+ <div>
+ </div>
+ <button type="button" data-bs-target="#category-description-carousel" data-bs-slide="prev">
+ <span aria-hidden="true"></span>
+ <span>Vorheriges</span>
+ </button>
+ <button type="button" data-bs-target="#category-description-carousel" data-bs-slide="next">
+ <span aria-hidden="true"></span>
+ <span>Nächstes</span>
+ </button>
+ </div>
+ </div>
+ </div>
+ <div>
+ <div>
+ <p></p>
+ </div>
+ </div>
+ <template>
+ <div>
+ <h5></h5>
+ <ul>
+ </ul>
+ <p>
+ </p>
+ </div>
+ </template>
+ <div>
+ </div>
+ </div>
+ <div id="category_extras">
+ <hr>
+ <h2>Extras</h2>
+ <template>
+ <div data-id="">
+ <div>
+ <div>
+ </div>
+ <img alt="">
+ <div>
+ <h5></h5>
+ <ul>
+ </ul>
+ <p></p>
+ </div>
+ <div>
+ <div>
+ <div>
+ <input type="checkbox" role="switch" name="">
+ </div>
+ </div>
+ <span></span>
+ <span></span>
+ </div>
+ <div>
+ <div>
+ <div>
+ <button type="button" aria-label="Anzahl verringern"><i></i></button>
+ <input type="number" tabindex="-1" aria-label="Anzahl" readonly>
+ <button type="button" aria-label="Anzahl erhöhen"><i></i></button>
+ <div>Ungültige Anzahl</div>
+ </div>
+ </div>
+ <span></span>
+ <span></span>
+ </div>
+ </div>
+ </div>
+ </template>
+ <div>
+ </div>
+ <div id="category_extras_loader">
+ <div role="status">
+ <span>Lade...</span>
+ </div>
+ </div>
+ </div>
+ <div id="category_price">
+ <hr>
+ <template>
+ <tr>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td></td>
+ </tr>
+ </template>
+ <div>
+ <table>
+ <thead>
+ <tr>
+ <th scope="col">Nächte</th>
+ <th scope="col">Menge</th>
+ <th scope="col">Position</th>
+ <th scope="col">Preis</th>
+ <th scope="col">Rabatt</th>
+ <th scope="col">Gesamtpreis</th>
+ </tr>
+ </thead>
+ <tbody>
+ </tbody>
+ <tbody>
+ <tr>
+ <th colspan="4">Summe:</th>
+ <td></td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ <template>
+ <div>
+ <hr>
+ <div>
+ <div>
+ Nächte </div>
+ <div>
+ </div>
+ </div>
+ <div>
+ <div>
+ Menge </div>
+ <div>
+ </div>
+ </div>
+ <div>
+ <div>
+ Position </div>
+ <div>
+ </div>
+ </div>
+ <div>
+ <div>
+ Preis </div>
+ <div>
+ </div>
+ </div>
+ <div>
+ <div>
+ Rabatt </div>
+ <div>
+ </div>
+ </div>
+ <div>
+ <div>
+ Gesamtpreis </div>
+ <div>
+ </div>
+ </div>
+ </div>
+ </template>
+ <div>
+ <div>
+ <div>
+ </div>
+ </div>
+ <div>
+ <div>
+ </div>
+ </div>
+ </div>
+ <div id="category_price_loader">
+ <div role="status">
+ <span>Lade...</span>
+ </div>
+ </div>
+ </div>
+ <div id="choose_object">
+ <hr>
+ <h2>Wählen Sie Ihr Wunschobjekt</h2>
+ <div id="spotmap_wrapper_1">
+ <div>
+ <div>
+ <label for="spot_select_1">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_1">
+ <option value="75" disabled>D043</option>
+ <option value="76" disabled>D044</option>
+ <option value="77" disabled>D045</option>
+ <option value="78" disabled>D046</option>
+ <option value="79" disabled>D047</option>
+ <option value="165" disabled>D031</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_2">
+ <div>
+ <div>
+ <label for="spot_select_2">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_2">
+ <option value="4" disabled>A201</option>
+ <option value="5" disabled>A202</option>
+ <option value="6" disabled>A203</option>
+ <option value="7" disabled>A204</option>
+ <option value="8" disabled>A205</option>
+ <option value="9" disabled>A221</option>
+ <option value="10" disabled>A222</option>
+ <option value="11" disabled>A223</option>
+ <option value="12" disabled>A224</option>
+ <option value="13" disabled>A225</option>
+ <option value="14" disabled>A241</option>
+ <option value="15" disabled>A261</option>
+ <option value="16" disabled>A262</option>
+ <option value="17" disabled>A264</option>
+ <option value="19" disabled>A281</option>
+ <option value="20" disabled>A282</option>
+ <option value="21" disabled>A283</option>
+ <option value="22" disabled>A284</option>
+ <option value="23" disabled>A285</option>
+ <option value="24" disabled>A301</option>
+ <option value="25" disabled>A302</option>
+ <option value="26" disabled>A303</option>
+ <option value="27" disabled>A304</option>
+ <option value="29" disabled>C006</option>
+ <option value="30" disabled>C007</option>
+ <option value="31" disabled>C008</option>
+ <option value="32" disabled>C009</option>
+ <option value="33" disabled>C010</option>
+ <option value="34" disabled>C011</option>
+ <option value="35" disabled>C012</option>
+ <option value="36" disabled>C013</option>
+ <option value="37" disabled>C014</option>
+ <option value="38" disabled>C018</option>
+ <option value="39" disabled>C019</option>
+ <option value="40" disabled>C020</option>
+ <option value="41" disabled>C022</option>
+ <option value="42" disabled>C023</option>
+ <option value="43" disabled>C024</option>
+ <option value="44" disabled>C025</option>
+ <option value="45" disabled>C026</option>
+ <option value="46" disabled>C027</option>
+ <option value="47" disabled>C028</option>
+ <option value="48" disabled>C029</option>
+ <option value="49" disabled>C031</option>
+ <option value="50" disabled>C033</option>
+ <option value="51" disabled>C034</option>
+ <option value="52" disabled>C035</option>
+ <option value="53" disabled>C036</option>
+ <option value="54" disabled>C037</option>
+ <option value="55" disabled>C038</option>
+ <option value="56" disabled>C039</option>
+ <option value="57" disabled>C041</option>
+ <option value="58" disabled>C042</option>
+ <option value="59" disabled>C043</option>
+ <option value="60" disabled>C044</option>
+ <option value="61" disabled>C046</option>
+ <option value="62" disabled>C047</option>
+ <option value="63" disabled>C048</option>
+ <option value="64" disabled>C049</option>
+ <option value="65" disabled>C051</option>
+ <option value="66" disabled>C052</option>
+ <option value="67" disabled>C053</option>
+ <option value="68" disabled>C054</option>
+ <option value="69" disabled>C055</option>
+ <option value="70" disabled>C056</option>
+ <option value="71" disabled>C057</option>
+ <option value="72" disabled>C058</option>
+ <option value="73" disabled>C059</option>
+ <option value="74" disabled>C060</option>
+ <option value="221" disabled>C069</option>
+ <option value="266" disabled>C016</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_42">
+ <div>
+ <div>
+ <label for="spot_select_42">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_42">
+ <option value="80" disabled>K003</option>
+ <option value="81" disabled>K004</option>
+ <option value="82" disabled>K005</option>
+ <option value="83" disabled>K006</option>
+ <option value="84" disabled>K007</option>
+ <option value="85" disabled>K008</option>
+ <option value="86" disabled>K009</option>
+ <option value="87" disabled>K010</option>
+ <option value="88" disabled>K011</option>
+ <option value="89" disabled>K012</option>
+ <option value="90" disabled>K013</option>
+ <option value="91" disabled>K014</option>
+ <option value="92" disabled>K015</option>
+ <option value="93" disabled>K021</option>
+ <option value="94" disabled>K025</option>
+ <option value="95" disabled>K044</option>
+ <option value="96" disabled>K045</option>
+ <option value="97" disabled>K046</option>
+ <option value="98" disabled>K062</option>
+ <option value="99" disabled>K063</option>
+ <option value="100" disabled>K064</option>
+ <option value="101" disabled>K065</option>
+ <option value="102" disabled>K081</option>
+ <option value="103" disabled>K082</option>
+ <option value="104" disabled>K083</option>
+ <option value="105" disabled>K084</option>
+ <option value="106" disabled>K105</option>
+ <option value="107" disabled>K106</option>
+ <option value="108" disabled>K145</option>
+ <option value="109" disabled>K165</option>
+ <option value="110" disabled>K168</option>
+ <option value="791" disabled>K148</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_3">
+ <div>
+ <div>
+ <label for="spot_select_3">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_3">
+ <option value="135" disabled>D001</option>
+ <option value="136" disabled>D002</option>
+ <option value="137" disabled>D003</option>
+ <option value="138" disabled>D004</option>
+ <option value="139" disabled>D005</option>
+ <option value="140" disabled>D006</option>
+ <option value="141" disabled>D007</option>
+ <option value="142" disabled>D008</option>
+ <option value="143" disabled>D009</option>
+ <option value="144" disabled>D010</option>
+ <option value="145" disabled>D011</option>
+ <option value="146" disabled>D012</option>
+ <option value="147" disabled>D013</option>
+ <option value="148" disabled>D014</option>
+ <option value="149" disabled>D015</option>
+ <option value="150" disabled>D016</option>
+ <option value="151" disabled>D017</option>
+ <option value="152" disabled>D018</option>
+ <option value="153" disabled>D019</option>
+ <option value="154" disabled>D020</option>
+ <option value="155" disabled>D021</option>
+ <option value="156" disabled>D022</option>
+ <option value="157" disabled>D023</option>
+ <option value="158" disabled>D024</option>
+ <option value="159" disabled>D025</option>
+ <option value="160" disabled>D026</option>
+ <option value="161" disabled>D027</option>
+ <option value="162" disabled>D028</option>
+ <option value="163" disabled>D029</option>
+ <option value="164" disabled>D030</option>
+ <option value="166" disabled>D032</option>
+ <option value="167" disabled>D033</option>
+ <option value="168" disabled>D034</option>
+ <option value="169" disabled>D035</option>
+ <option value="170" disabled>D036</option>
+ <option value="171" disabled>D037</option>
+ <option value="172" disabled>D038</option>
+ <option value="173" disabled>D039</option>
+ <option value="174" disabled>D041</option>
+ <option value="175" disabled>D042</option>
+ <option value="176" disabled>D048</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_4">
+ <div>
+ <div>
+ <label for="spot_select_4">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_4">
+ <option value="114" disabled>A242</option>
+ <option value="115" disabled>A243</option>
+ <option value="116" disabled>A244</option>
+ <option value="117" disabled>A245</option>
+ <option value="118" disabled>A263</option>
+ <option value="119" disabled>A321</option>
+ <option value="120" disabled>A322</option>
+ <option value="121" disabled>A323</option>
+ <option value="123" disabled>A341</option>
+ <option value="124" disabled>A342</option>
+ <option value="125" disabled>A343</option>
+ <option value="127" disabled>C061</option>
+ <option value="128" disabled>C062</option>
+ <option value="129" disabled>C063</option>
+ <option value="130" disabled>C064</option>
+ <option value="131" disabled>C065</option>
+ <option value="132" disabled>C066</option>
+ <option value="133" disabled>C067</option>
+ <option value="134" disabled>C070</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_43">
+ <div>
+ <div>
+ <label for="spot_select_43">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_43">
+ <option value="177" disabled>K022</option>
+ <option value="178" disabled>K023</option>
+ <option value="179" disabled>K024</option>
+ <option value="180" disabled>K026</option>
+ <option value="181" disabled>K027</option>
+ <option value="182" disabled>K029</option>
+ <option value="183" disabled>K030</option>
+ <option value="184" disabled>K041</option>
+ <option value="185" disabled>K042</option>
+ <option value="186" disabled>K043</option>
+ <option value="187" disabled>K047</option>
+ <option value="188" disabled>K048</option>
+ <option value="189" disabled>K049</option>
+ <option value="190" disabled>K053</option>
+ <option value="191" disabled>K061</option>
+ <option value="192" disabled>K066</option>
+ <option value="193" disabled>K067</option>
+ <option value="194" disabled>K068</option>
+ <option value="196" disabled>K085</option>
+ <option value="197" disabled>K086</option>
+ <option value="198" disabled>K104</option>
+ <option value="199" disabled>K142</option>
+ <option value="200" disabled>K143</option>
+ <option value="201" disabled>K144</option>
+ <option value="202" disabled>K146</option>
+ <option value="203" disabled>K147</option>
+ <option value="204" disabled>K161</option>
+ <option value="205" disabled>K162</option>
+ <option value="206" disabled>K163</option>
+ <option value="207" disabled>K164</option>
+ <option value="208" disabled>K166</option>
+ <option value="209" disabled>K167</option>
+ <option value="785" disabled>K033</option>
+ <option value="792" disabled>K149</option>
+ <option value="794" disabled>K001</option>
+ <option value="795" disabled>K002</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_50">
+ <div>
+ <div>
+ <label for="spot_select_50">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_50">
+ <option value="195" disabled>K072</option>
+ </select>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_5">
+ <div>
+ <div>
+ <label for="spot_select_5">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_5">
+ <option value="210" disabled>A041</option>
+ <option value="211" disabled>A042</option>
+ <option value="212" disabled>A043</option>
+ <option value="213" disabled>A044</option>
+ <option value="214" disabled>A045</option>
+ <option value="215" disabled>A046</option>
+ <option value="216" disabled>A047</option>
+ <option value="217" disabled>A048</option>
+ <option value="218" disabled>A049</option>
+ <option value="222" disabled>D051</option>
+ <option value="223" disabled>D052</option>
+ <option value="224" disabled>D053</option>
+ <option value="225" disabled>D054</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_6">
+ <div>
+ <div>
+ <label for="spot_select_6">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_6">
+ <option value="126" disabled>A344</option>
+ <option value="220" disabled>C068</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_44">
+ <div>
+ <div>
+ <label for="spot_select_44">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_44">
+ <option value="227" disabled>K028</option>
+ <option value="228" disabled>K031</option>
+ <option value="229" disabled>K032</option>
+ <option value="230" disabled>K050</option>
+ <option value="231" disabled>K051</option>
+ <option value="232" disabled>K052</option>
+ <option value="233" disabled>K069</option>
+ <option value="236" disabled>K087</option>
+ <option value="237" disabled>K088</option>
+ <option value="240" disabled>K101</option>
+ <option value="241" disabled>K102</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_46">
+ <div>
+ <div>
+ <label for="spot_select_46">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_46">
+ <option value="226" disabled>D055</option>
+ </select>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_47">
+ <div>
+ <div>
+ <label for="spot_select_47">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_47">
+ <option value="18" disabled>A265</option>
+ <option value="122" disabled>A324</option>
+ <option value="219" disabled>A226</option>
+ </select>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_45">
+ <div>
+ <div>
+ <label for="spot_select_45">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_45">
+ <option value="239" disabled>K100</option>
+ <option value="242" disabled>K103</option>
+ </select>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_49">
+ <div>
+ <div>
+ <label for="spot_select_49">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_49">
+ <option value="234" disabled>K070</option>
+ <option value="235" disabled>K071</option>
+ <option value="238" disabled>K089</option>
+ </select>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_26">
+ <div>
+ <div>
+ <label for="spot_select_26">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_26">
+ <option value="744" disabled>C071</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_27">
+ <div>
+ <div>
+ <label for="spot_select_27">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_27">
+ <option value="745" disabled>C072</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_28">
+ <div>
+ <div>
+ <label for="spot_select_28">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_28">
+ <option value="746" disabled>A167</option>
+ <option value="747" disabled>A168</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_37">
+ <div>
+ <div>
+ <label for="spot_select_37">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_37">
+ <option value="756" disabled>A124</option>
+ <option value="757" disabled>A125</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_29">
+ <div>
+ <div>
+ <label for="spot_select_29">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_29">
+ <option value="748" disabled>A081</option>
+ <option value="749" disabled>A085</option>
+ <option value="750" disabled>A086</option>
+ <option value="751" disabled>A087</option>
+ <option value="752" disabled>A090</option>
+ <option value="753" disabled>A103</option>
+ <option value="754" disabled>A105</option>
+ <option value="755" disabled>A123</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_30">
+ <div>
+ <div>
+ <label for="spot_select_30">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_30">
+ <option value="758" disabled>A143</option>
+ <option value="763" disabled>A082</option>
+ <option value="764" disabled>A083</option>
+ <option value="765" disabled>A088</option>
+ <option value="766" disabled>A089</option>
+ <option value="767" disabled>A091</option>
+ <option value="768" disabled>A104</option>
+ <option value="769" disabled>A106</option>
+ <option value="770" disabled>A121</option>
+ <option value="771" disabled>A122</option>
+ <option value="777" disabled>A161</option>
+ <option value="778" disabled>A163</option>
+ <option value="779" disabled>A162</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_40">
+ <div>
+ <div>
+ <label for="spot_select_40">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_40">
+ <option value="772" disabled>A144</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_38">
+ <div>
+ <div>
+ <label for="spot_select_38">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_38">
+ <option value="761" disabled>A164</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_39">
+ <div>
+ <div>
+ <label for="spot_select_39">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_39">
+ <option value="759" disabled>A146</option>
+ <option value="760" disabled>A147</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_41">
+ <div>
+ <div>
+ <label for="spot_select_41">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_41">
+ <option value="762" disabled>A165</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_32">
+ <div>
+ <div>
+ <label for="spot_select_32">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_32">
+ <option value="776" disabled>A145</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="spotmap_wrapper_31">
+ <div>
+ <div>
+ <label for="spot_select_31">Wunschobjekt:</label>
+ </div>
+ <div>
+ <select id="spot_select_31">
+ <option value="773" disabled>A101</option>
+ <option value="774" disabled>A102</option>
+ <option value="775" disabled>A166</option>
+ </select>
+ </div>
+ </div>
+ <div>
+ <div>
+ <div>
+ <svg></svg>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="guests">
+ <template>
+ <div>
+ <div>
+ <div>
+ <input type="text" placeholder="Vorname" name="firstname" value="">
+ <label>Vorname</label>
+ </div>
+ </div>
+ <div>
+ <div>
+ <input type="text" placeholder="Nachname" name="lastname" value="">
+ <label>Nachname</label>
+ </div>
+ </div>
+ <div>
+ <div>
+ <h6>Geburtsdatum</h6>
+ </div>
+ <div>
+ <div>
+ <select>
+ <option value="" selected disabled>TT</option>
+ <option value="1">01</option>
+ <option value="2">02</option>
+ <option value="3">03</option>
+ <option value="4">04</option>
+ <option value="5">05</option>
+ <option value="6">06</option>
+ <option value="7">07</option>
+ <option value="8">08</option>
+ <option value="9">09</option>
+ <option value="10">10</option>
+ <option value="11">11</option>
+ <option value="12">12</option>
+ <option value="13">13</option>
+ <option value="14">14</option>
+ <option value="15">15</option>
+ <option value="16">16</option>
+ <option value="17">17</option>
+ <option value="18">18</option>
+ <option value="19">19</option>
+ <option value="20">20</option>
+ <option value="21">21</option>
+ <option value="22">22</option>
+ <option value="23">23</option>
+ <option value="24">24</option>
+ <option value="25">25</option>
+ <option value="26">26</option>
+ <option value="27">27</option>
+ <option value="28">28</option>
+ <option value="29">29</option>
+ <option value="30">30</option>
+ <option value="31">31</option>
+ </select>
+ </div>
+ <div>
+ <select>
+ <option value="" selected disabled>MM</option>
+ <option value="1">01</option>
+ <option value="2">02</option>
+ <option value="3">03</option>
+ <option value="4">04</option>
+ <option value="5">05</option>
+ <option value="6">06</option>
+ <option value="7">07</option>
+ <option value="8">08</option>
+ <option value="9">09</option>
+ <option value="10">10</option>
+ <option value="11">11</option>
+ <option value="12">12</option>
+ </select>
+ </div>
+ <div>
+ <select>
+ <option value="" selected disabled>JJJJ</option>
+ <option value="2026">2026</option>
+ <option value="2025">2025</option>
+ <option value="2024">2024</option>
+ <option value="2023">2023</option>
+ <option value="2022">2022</option>
+ <option value="2021">2021</option>
+ <option value="2020">2020</option>
+ <option value="2019">2019</option>
+ <option value="2018">2018</option>
+ <option value="2017">2017</option>
+ <option value="2016">2016</option>
+ <option value="2015">2015</option>
+ <option value="2014">2014</option>
+ <option value="2013">2013</option>
+ <option value="2012">2012</option>
+ <option value="2011">2011</option>
+ <option value="2010">2010</option>
+ <option value="2009">2009</option>
+ <option value="2008">2008</option>
+ <option value="2007">2007</option>
+ <option value="2006">2006</option>
+ <option value="2005">2005</option>
+ <option value="2004">2004</option>
+ <option value="2003">2003</option>
+ <option value="2002">2002</option>
+ <option value="2001">2001</option>
+ <option value="2000">2000</option>
+ <option value="1999">1999</option>
+ <option value="1998">1998</option>
+ <option value="1997">1997</option>
+ <option value="1996">1996</option>
+ <option value="1995">1995</option>
+ <option value="1994">1994</option>
+ <option value="1993">1993</option>
+ <option value="1992">1992</option>
+ <option value="1991">1991</option>
+ <option value="1990">1990</option>
+ <option value="1989">1989</option>
+ <option value="1988">1988</option>
+ <option value="1987">1987</option>
+ <option value="1986">1986</option>
+ <option value="1985">1985</option>
+ <option value="1984">1984</option>
+ <option value="1983">1983</option>
+ <option value="1982">1982</option>
+ <option value="1981">1981</option>
+ <option value="1980">1980</option>
+ <option value="1979">1979</option>
+ <option value="1978">1978</option>
+ <option value="1977">1977</option>
+ <option value="1976">1976</option>
+ <option value="1975">1975</option>
+ <option value="1974">1974</option>
+ <option value="1973">1973</option>
+ <option value="1972">1972</option>
+ <option value="1971">1971</option>
+ <option value="1970">1970</option>
+ <option value="1969">1969</option>
+ <option value="1968">1968</option>
+ <option value="1967">1967</option>
+ <option value="1966">1966</option>
+ <option value="1965">1965</option>
+ <option value="1964">1964</option>
+ <option value="1963">1963</option>
+ <option value="1962">1962</option>
+ <option value="1961">1961</option>
+ <option value="1960">1960</option>
+ <option value="1959">1959</option>
+ <option value="1958">1958</option>
+ <option value="1957">1957</option>
+ <option value="1956">1956</option>
+ <option value="1955">1955</option>
+ <option value="1954">1954</option>
+ <option value="1953">1953</option>
+ <option value="1952">1952</option>
+ <option value="1951">1951</option>
+ <option value="1950">1950</option>
+ <option value="1949">1949</option>
+ <option value="1948">1948</option>
+ <option value="1947">1947</option>
+ <option value="1946">1946</option>
+ <option value="1945">1945</option>
+ <option value="1944">1944</option>
+ <option value="1943">1943</option>
+ <option value="1942">1942</option>
+ <option value="1941">1941</option>
+ <option value="1940">1940</option>
+ <option value="1939">1939</option>
+ <option value="1938">1938</option>
+ <option value="1937">1937</option>
+ <option value="1936">1936</option>
+ <option value="1935">1935</option>
+ <option value="1934">1934</option>
+ <option value="1933">1933</option>
+ <option value="1932">1932</option>
+ <option value="1931">1931</option>
+ <option value="1930">1930</option>
+ <option value="1929">1929</option>
+ <option value="1928">1928</option>
+ <option value="1927">1927</option>
+ <option value="1926">1926</option>
+ <option value="1925">1925</option>
+ <option value="1924">1924</option>
+ <option value="1923">1923</option>
+ <option value="1922">1922</option>
+ <option value="1921">1921</option>
+ <option value="1920">1920</option>
+ <option value="1919">1919</option>
+ <option value="1918">1918</option>
+ <option value="1917">1917</option>
+ <option value="1916">1916</option>
+ <option value="1915">1915</option>
+ <option value="1914">1914</option>
+ <option value="1913">1913</option>
+ <option value="1912">1912</option>
+ <option value="1911">1911</option>
+ <option value="1910">1910</option>
+ </select>
+ </div>
+ </div>
+ </div>
+ </div>
+ </template>
+ <hr>
+ <h2>Bitte nennen Sie uns die Namen der Gäste</h2>
+ <div>
+ <h4>Erwachsene</h4>
+ <div>
+ </div>
+ </div>
+ <div>
+ <h4>Kinder</h4>
+ <div>
+ </div>
+ </div>
+ <div>
+ <h4>Kleinkinder</h4>
+ <div>
+ </div>
+ </div>
+ </div>
+ <div id="continue">
+ <div>
+ <div data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="none">
+ <button id="submit_button" type="button">
+ <span>
+ <span>Lade...</span>
+ </span>
+ <span>
+ Zur Übersicht <i></i>
+ </span>
+ </button>
+ </div>
+ </div>
+ </div>
+ <div>
+ <div id="scroll_spy" role="group">
+ <a href="#person_data">
+ <i></i>
+ <span>Reisedaten</span>
+ </a>
+ <a href="#category_wrapper">
+ <i></i>
+ <span>Wähle nächsten Schritt</span>
+ </a>
+ <a href="#calendar">
+ <i></i>
+ <span>Reisedaten</span>
+ </a>
+ <a href="#object_category_final">
+ <i></i>
+ <span>Kategorie</span>
+ </a>
+ <a href="#category_description">
+ <i></i>
+ <span>Kategoriebeschreibung</span>
+ </a>
+ <a href="#category_extras">
+ <i></i>
+ <span>Extras</span>
+ </a>
+ <a href="#choose_object">
+ <i></i>
+ <span>Auswahl Wunschobjekt</span>
+ </a>
+ <a href="#guests">
+ <i></i>
+ <span>Gästeangaben</span>
+ </a>
+ </div>
+ </div>
+ </main>
+ <footer>
+ <div>
+ <div>
+ <div>
+ <a href="imprint.php">Impressum</a>
+ </div>
+ <div>
+ <a href="doc/agb.pdf" target="_blank">AGB</a>
+ </div>
+ <div>
+ <a href="https://strandcamping.de/datenschutzerklaerung/" target="_blank">Datenschutzerklärung</a>
+ </div>
+ </div>
+ </div>
+ </footer>
+ <div id="cookie-banner">
+ <div>
+ <div>
+ <div>
+ <span>
+ Diese Website verwendet technisch notwendige Cookies, um Sie durch den Buchungvorgang zu führen. Durch die Nutzung dieser Webseite erklären Sie sich damit einverstanden, dass Cookies gesetzt werden. Weitere Informationen finden Sie in unserer <a href="https://strandcamping.de/datenschutzerklaerung/" target="_blank">Datenschutzerklärung</a>. </span>
+ </div>
+ <div>
+ <button>
+ <span>
+ <span>Lade...</span>
+ </span>
+ <span>
+ <i></i>
+ Akzeptieren </span>
+ </button>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div id="timeout" tabindex="-1" aria-labelledby="timeout_label" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+ <div>
+ <div>
+ <div>
+ <h5 id="timeout_label">Zeitüberschreitung</h5>
+ </div>
+ <div>
+ Ihre Session läuft in Kürze aus. Bitte klicken Sie den "Aktualisieren" Button um fortzufahren. </div>
+ <div>
+ <button type="button">
+ <span>
+ <span>Lade...</span>
+ </span>
+ <span>
+ Aktualisieren </span>
+ </button>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <script type="text/javascript">
+ var jsShare = {"settings": {"min_date": "2026-10-14", "max_date": "2029-03-14", "pin_radius": 10, "lang": "de-DE", "allow_accommodation_filter": true, "ask_for_guest_booking_data": true, "min_stay": 1, "max_stay": 0, "consider_gap": true, "arrival_only_today": false, "cur_date": "2026-10-14T08:42:30", "currency_code": "EUR", "currency_symbol": "€", "restrictions_disable_other_accommodations": false}, "guest_categories": {"nadults": {"id": "nadults", "label": "Erwachsene", "desc": "ab 18 Jahre", "min": 1, "max": -1, "min_age": 18, "max_age": 0, "is_person": true, "may_overflow_from": "nchildren"}, "nchildren": {"id": "nchildren", "label": "Kinder", "desc": "4 - 17 Jahre", "min": 0, "max": -1, "min_age": 4, "max_age": 17, "is_person": true, "may_overflow_from": "ntoddlers", "may_overflow_to": "nadults"}, "ntoddlers": {"id": "ntoddlers", "label": "Kleinkinder", "desc": "bis 3 Jahre", "min": 0, "max": -1, "min_age": 0, "max_age": 3, "is_person": true, "may_overflow_to": "nchildren"}, "ndogs": {"id": "ndogs", "label": "Hunde", "min": 0, "max": 0, "min_age": 0, "max_age": 0, "is_person": false}}, "object_categories": {"26": {"id": "26", "label": "Mobilheim Family (für 4 Personen)", "accommodation": "rental"}, "27": {"id": "27", "label": "Mobilheim Family & Friends (für 6 Personen)", "accommodation": "rental"}, "28": {"id": "28", "label": "Hundewohnwagen 560 KMFE", "accommodation": "rental"}, "37": {"id": "37", "label": "Hundewohnwagen 560 UL", "accommodation": "rental"}, "29": {"id": "29", "label": "Komfortwohnwagen 560 UL", "accommodation": "rental"}, "30": {"id": "30", "label": "Komfortwohnwagen 560 KMFE", "accommodation": "rental"}, "40": {"id": "40", "label": "Komfortwohnwagen 560 CFE", "accommodation": "rental"}, "38": {"id": "38", "label": "Superiorwohnwagen 650 UMFE", "accommodation": "rental"}, "39": {"id": "39", "label": "Superiorwohnwagen 620 CL", "accommodation": "rental"}, "41": {"id": "41", "label": "Superiorwohnwagen 650 KMFE", "accommodation": "rental"}, "32": {"id": "32", "label": "Luxuswohnwagen 650 UFF", "accommodation": "rental"}, "31": {"id": "31", "label": "Luxuswohnwagen 650 KMFE", "accommodation": "rental"}}, "objects": {"744": {"id": 744, "category_id": 26}, "745": {"id": 745, "category_id": 27}, "746": {"id": 746, "category_id": 28}, "747": {"id": 747, "category_id": 28}, "756": {"id": 756, "category_id": 37}, "757": {"id": 757, "category_id": 37}, "748": {"id": 748, "category_id": 29}, "749": {"id": 749, "category_id": 29}, "750": {"id": 750, "category_id": 29}, "751": {"id": 751, "category_id": 29}, "752": {"id": 752, "category_id": 29}, "753": {"id": 753, "category_id": 29}, "754": {"id": 754, "category_id": 29}, "755": {"id": 755, "category_id": 29}, "758": {"id": 758, "category_id": 30}, "763": {"id": 763, "category_id": 30}, "764": {"id": 764, "category_id": 30}, "765": {"id": 765, "category_id": 30}, "766": {"id": 766, "category_id": 30}, "767": {"id": 767, "category_id": 30}, "768": {"id": 768, "category_id": 30}, "769": {"id": 769, "category_id": 30}, "770": {"id": 770, "category_id": 30}, "771": {"id": 771, "category_id": 30}, "777": {"id": 777, "category_id": 30}, "778": {"id": 778, "category_id": 30}, "779": {"id": 779, "category_id": 30}, "772": {"id": 772, "category_id": 40}, "761": {"id": 761, "category_id": 38}, "759": {"id": 759, "category_id": 39}, "760": {"id": 760, "category_id": 39}, "762": {"id": 762, "category_id": 41}, "776": {"id": 776, "category_id": 32}, "773": {"id": 773, "category_id": 31}, "774": {"id": 774, "category_id": 31}, "775": {"id": 775, "category_id": 31}}};
+ </script>
+	</body>
+</html>

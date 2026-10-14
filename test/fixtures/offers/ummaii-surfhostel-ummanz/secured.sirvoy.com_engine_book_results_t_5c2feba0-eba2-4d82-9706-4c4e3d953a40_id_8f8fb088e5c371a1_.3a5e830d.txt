@@ -1,0 +1,156 @@
+<!DOCTYPE html><html><body><!-- Sirvoy book_results page, trimmed 2026-10-14 to room data, room cards, currency and the date error notice -->
+<p>&quot;customerCurrency&quot;&#x3A;&quot;EUR&quot;</p>
+<div data-room-type-data="&#x7B;&quot;is_dorm&quot;&#x3A;false,&quot;exemptSurchargeIds&quot;&#x3A;&#x5B;&#x5D;,&quot;rateByOccupancy&quot;&#x3A;&#x7B;&quot;1&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;45,&quot;ratePreDiscount&quot;&#x3A;45,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;2&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;72,&quot;ratePreDiscount&quot;&#x3A;72,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;3&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;92,&quot;ratePreDiscount&quot;&#x3A;92,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;&#x7D;,&quot;name&quot;&#x3A;&quot;Zimmer&#x20;3&#x20;Bett&#x20;Haupthaus&quot;,&quot;availableUnitIds&quot;&#x3A;&#x5B;1107351525&#x5D;&#x7D;"></div>
+<div data-room-type-data="&#x7B;&quot;is_dorm&quot;&#x3A;false,&quot;exemptSurchargeIds&quot;&#x3A;&#x5B;&#x5D;,&quot;rateByOccupancy&quot;&#x3A;&#x7B;&quot;1&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;45,&quot;ratePreDiscount&quot;&#x3A;45,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;2&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;72,&quot;ratePreDiscount&quot;&#x3A;72,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;3&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;92,&quot;ratePreDiscount&quot;&#x3A;92,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;4&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;122,&quot;ratePreDiscount&quot;&#x3A;122,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;&#x7D;,&quot;name&quot;&#x3A;&quot;Zimmer&#x20;4&#x20;Bett&#x20;Haupthaus&quot;,&quot;availableUnitIds&quot;&#x3A;&#x5B;1107350996,1107350997&#x5D;&#x7D;"></div>
+<div data-room-type-data="&#x7B;&quot;is_dorm&quot;&#x3A;false,&quot;exemptSurchargeIds&quot;&#x3A;&#x5B;&#x5D;,&quot;rateByOccupancy&quot;&#x3A;&#x7B;&quot;1&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;104.1,&quot;ratePreDiscount&quot;&#x3A;104.1,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;2&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;104.1,&quot;ratePreDiscount&quot;&#x3A;104.1,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;&#x7D;,&quot;name&quot;&#x3A;&quot;Baumhaus&quot;,&quot;availableUnitIds&quot;&#x3A;&#x5B;1107354291&#x5D;&#x7D;"></div>
+<div data-room-type-data="&#x7B;&quot;is_dorm&quot;&#x3A;false,&quot;exemptSurchargeIds&quot;&#x3A;&#x5B;&#x5D;,&quot;rateByOccupancy&quot;&#x3A;&#x7B;&quot;1&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;150,&quot;ratePreDiscount&quot;&#x3A;150,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;2&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;150,&quot;ratePreDiscount&quot;&#x3A;150,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;3&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;150,&quot;ratePreDiscount&quot;&#x3A;150,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;4&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;150,&quot;ratePreDiscount&quot;&#x3A;150,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;&#x7D;,&quot;name&quot;&#x3A;&quot;Tinyhaus&#x20;1&quot;,&quot;availableUnitIds&quot;&#x3A;&#x5B;1107354246&#x5D;&#x7D;"></div>
+<div data-room-type-data="&#x7B;&quot;is_dorm&quot;&#x3A;false,&quot;exemptSurchargeIds&quot;&#x3A;&#x5B;&#x5D;,&quot;rateByOccupancy&quot;&#x3A;&#x7B;&quot;1&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;170,&quot;ratePreDiscount&quot;&#x3A;170,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;2&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;170,&quot;ratePreDiscount&quot;&#x3A;170,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;3&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;170,&quot;ratePreDiscount&quot;&#x3A;170,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;4&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;170,&quot;ratePreDiscount&quot;&#x3A;170,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;&#x7D;,&quot;name&quot;&#x3A;&quot;Tinyhaus&#x20;2&quot;,&quot;availableUnitIds&quot;&#x3A;&#x5B;1107350595&#x5D;&#x7D;"></div>
+<div data-room-type-data="&#x7B;&quot;is_dorm&quot;&#x3A;false,&quot;exemptSurchargeIds&quot;&#x3A;&#x5B;&#x5D;,&quot;rateByOccupancy&quot;&#x3A;&#x7B;&quot;1&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;25,&quot;ratePreDiscount&quot;&#x3A;25,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;2&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;25,&quot;ratePreDiscount&quot;&#x3A;25,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;3&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;30,&quot;ratePreDiscount&quot;&#x3A;30,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;,&quot;4&quot;&#x3A;&#x7B;&quot;rate&quot;&#x3A;30,&quot;ratePreDiscount&quot;&#x3A;30,&quot;quantity&quot;&#x3A;4,&quot;quantityLabel&quot;&#x3A;&quot;shared.term.per_night&quot;&#x7D;&#x7D;,&quot;name&quot;&#x3A;&quot;Stellplatz&#x20;Bulli&#x5C;&#x2F;&#x20;Camper&#x5C;&#x2F;&#x20;Zelt&quot;,&quot;availableUnitIds&quot;&#x3A;&#x5B;1107354292,1107354293,1107354294,1107354295,1107354296,1107362854,1107362855&#x5D;&#x7D;"></div>
+<div class="card-item__description" dir="auto">
+                                <h3 class="text-xl font-semibold mb-4">Zimmer 3 Bett Haupthaus</h3>
+                                <div class="card-item__amenities tags">
+                                                                                                                                                                                        <div aria-label="Bed&#x20;spaces&#x3A;&#x20;3" class="amenities__amount tags has-addons" title="Bed&#x20;spaces&#x3A;&#x20;3">
+                                        <span class="tag"><i class="fas fa-user"></i></span>
+                                        <span class="tag">
+                                            3
+                                        </span>
+                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                <div class="sirvoy-long-text"
+                                    data-read-more="Read&#x20;more"
+                                    data-read-less="Read&#x20;less"
+                                >
+                                    Zimmer mit 3 Einzelbetten, Schrank, Tisch, beheizt, 1. OG, DU/ WC auf dem Flur
+                                </div>
+                            </div>
+<div class="card-item__description" dir="auto">
+                                <h3 class="text-xl font-semibold mb-4">Zimmer 4 Bett Haupthaus</h3>
+                                <div class="card-item__amenities tags">
+                                                                                                                                                                                        <div aria-label="Bed&#x20;spaces&#x3A;&#x20;1,&#x20;Extra&#x20;bed&#x20;spaces&#x3A;&#x20;3" class="amenities__amount tags has-addons" title="Bed&#x20;spaces&#x3A;&#x20;1,&#x20;Extra&#x20;bed&#x20;spaces&#x3A;&#x20;3">
+                                        <span class="tag"><i class="fas fa-user"></i></span>
+                                        <span class="tag">
+                                            1+3
+                                        </span>
+                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                <div class="sirvoy-long-text"
+                                    data-read-more="Read&#x20;more"
+                                    data-read-less="Read&#x20;less"
+                                >
+                                    Zimmer mit 2 Einzel und 1 Stockbett, Schrank, Tisch, beheizt, 1. OG, DU/ WC auf dem Flur
+                                </div>
+                            </div>
+<div class="card-item__description" dir="auto">
+                                <h3 class="text-xl font-semibold mb-4">Baumhaus</h3>
+                                <div class="card-item__amenities tags">
+                                                                                                                                                                                        <div aria-label="Bed&#x20;spaces&#x3A;&#x20;2" class="amenities__amount tags has-addons" title="Bed&#x20;spaces&#x3A;&#x20;2">
+                                        <span class="tag"><i class="fas fa-user"></i></span>
+                                        <span class="tag">
+                                            2
+                                        </span>
+                                    </div>
+                                                                                                                        <div class="tag" aria-label="Wifi">
+                                                <i class="fas fa-wifi" title="Wifi"></i>
+                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                    <div class="tag" aria-label="Refrigerator">
+                                                <i class="fas fa-refrigerator" title="Refrigerator"></i>
+                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                <div class="sirvoy-long-text"
+                                    data-read-more="Read&#x20;more"
+                                    data-read-less="Read&#x20;less"
+                                >
+                                    Baumhaus für max. 2 Personen, mit Sundowner Terasse, DU/WC in extra Gebäude, inkl. Frühstück und Endreinigung
+                                </div>
+                            </div>
+<div class="card-item__description" dir="auto">
+                                <h3 class="text-xl font-semibold mb-4">Tinyhaus 1</h3>
+                                <div class="card-item__amenities tags">
+                                                                                                                                                                                        <div aria-label="Bed&#x20;spaces&#x3A;&#x20;2,&#x20;Extra&#x20;bed&#x20;spaces&#x3A;&#x20;2" class="amenities__amount tags has-addons" title="Bed&#x20;spaces&#x3A;&#x20;2,&#x20;Extra&#x20;bed&#x20;spaces&#x3A;&#x20;2">
+                                        <span class="tag"><i class="fas fa-user"></i></span>
+                                        <span class="tag">
+                                            2+2
+                                        </span>
+                                    </div>
+                                                                                                                        <div class="tag" aria-label="Wifi">
+                                                <i class="fas fa-wifi" title="Wifi"></i>
+                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                    <div class="tag" aria-label="Refrigerator">
+                                                <i class="fas fa-refrigerator" title="Refrigerator"></i>
+                                            </div>
+                                                                                                                                                                                                                                            <div class="tag" aria-label="Coffee&#x20;machine">
+                                                <i class="fas fa-coffee" title="Coffee&#x20;machine"></i>
+                                            </div>
+                                                                                                                                                                                                                                            <div class="tag" aria-label="Shower">
+                                                <i class="fas fa-shower" title="Shower"></i>
+                                            </div>
+                                                                                                                                                                <div class="tag" aria-label="Bath">
+                                                <i class="fas fa-bath" title="Bath"></i>
+                                            </div>
+                                                                                                                                                                                                                                                                                                                        <div class="tag" aria-label="Non-smoking">
+                                                <i class="fas fa-smoking-ban" title="Non-smoking"></i>
+                                            </div>
+                                                                                                                                                                                                                                                                                                                                                </div>
+                                <div class="sirvoy-long-text"
+                                    data-read-more="Read&#x20;more"
+                                    data-read-less="Read&#x20;less"
+                                >
+                                    Tinyhaus mit Du/ Bad und Küche, eigene Terasse
+                                </div>
+                            </div>
+<div class="card-item__description" dir="auto">
+                                <h3 class="text-xl font-semibold mb-4">Tinyhaus 2</h3>
+                                <div class="card-item__amenities tags">
+                                                                                                                                                                                        <div aria-label="Bed&#x20;spaces&#x3A;&#x20;4" class="amenities__amount tags has-addons" title="Bed&#x20;spaces&#x3A;&#x20;4">
+                                        <span class="tag"><i class="fas fa-user"></i></span>
+                                        <span class="tag">
+                                            4
+                                        </span>
+                                    </div>
+                                                                                                                        <div class="tag" aria-label="Wifi">
+                                                <i class="fas fa-wifi" title="Wifi"></i>
+                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                    <div class="tag" aria-label="Refrigerator">
+                                                <i class="fas fa-refrigerator" title="Refrigerator"></i>
+                                            </div>
+                                                                                                                                                                                                                                            <div class="tag" aria-label="Coffee&#x20;machine">
+                                                <i class="fas fa-coffee" title="Coffee&#x20;machine"></i>
+                                            </div>
+                                                                                                                                                                                                                                            <div class="tag" aria-label="Shower">
+                                                <i class="fas fa-shower" title="Shower"></i>
+                                            </div>
+                                                                                                                                                                <div class="tag" aria-label="Bath">
+                                                <i class="fas fa-bath" title="Bath"></i>
+                                            </div>
+                                                                                                                                                                                                                                            <div class="tag" aria-label="Pet&#x20;friendly">
+                                                <i class="fas fa-dog" title="Pet&#x20;friendly"></i>
+                                            </div>
+                                                                                                                                                                <div class="tag" aria-label="Non-smoking">
+                                                <i class="fas fa-smoking-ban" title="Non-smoking"></i>
+                                            </div>
+                                                                                                                                                                                                                                                                                                                                                </div>
+                                <div class="sirvoy-long-text"
+                                    data-read-more="Read&#x20;more"
+                                    data-read-less="Read&#x20;less"
+                                >
+                                    Tinyhaus mit Du/ Bad und Küche, eigene Terasse
+                                </div>
+                            </div>
+<div class="card-item__description" dir="auto">
+                                <h3 class="text-xl font-semibold mb-4">Stellplatz Bulli/ Camper/ Zelt</h3>
+                                <div class="card-item__amenities tags">
+                                                                                                                                                                                        <div aria-label="Bed&#x20;spaces&#x3A;&#x20;2,&#x20;Extra&#x20;bed&#x20;spaces&#x3A;&#x20;2" class="amenities__amount tags has-addons" title="Bed&#x20;spaces&#x3A;&#x20;2,&#x20;Extra&#x20;bed&#x20;spaces&#x3A;&#x20;2">
+                                        <span class="tag"><i class="fas fa-user"></i></span>
+                                        <span class="tag">
+                                            2+2
+                                        </span>
+                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                <div class="sirvoy-long-text"
+                                    data-read-more="Read&#x20;more"
+                                    data-read-less="Read&#x20;less"
+                                >
+                                    Stellplatz auf dem Gelände, Sanitärgebäude (keine Entsorgungsmöglichkeit für Campingtoiletten)
+                                </div>
+                            </div>
+</body></html>

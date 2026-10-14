@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="UTF-8"/>
+<script></script>
+
+	
+	<link rel="profile" href="https://gmpg.org/xfn/11"/>
+		
+				<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+					
+							<meta name="description" content="Die Surfschule an der Nordsee - Kitesurfen / Windsurfen in Nordsee Academy lernen -  Bezahle nur, was du auch wirklich bekommst! Jetzt Kitecamp oder Kurs online buchen oder Termin anfragen.">
+						
+							<meta name="keywords" content="Surfschule, Kiteschule, Sup, Nordsee, Urlaub, Hooksiel, Schillig, Kitematerial kaufen, Kitevermietung, Wakeboarden, Kite mieten, Hooksiel, Jugendreise, Kiten lernen, Surfurlaub">
+						<link rel="shortcut icon" type="image/x-icon" href="https://www.nordsee-surfschule.de/wp-content/uploads/2016/03/favicon-nordsee-academy.jpg">
+			<link rel="apple-touch-icon" href="https://www.nordsee-surfschule.de/wp-content/uploads/2016/03/favicon-nordsee-academy.jpg"/>
+			
+	<title>Nordsee Surfschule</title>
+<meta name='robots' content='max-image-preview:large' />
+<script data-cfasync="false" data-cookieconsent="ignore" data-ezscrex="false" data-no-defer="1" data-pagespeed-no-defer></script>
+<script data-cfasync="false" data-cookieconsent="ignore" data-ezscrex="false" data-no-defer="1" data-pagespeed-no-defer></script>
+<link rel='dns-prefetch' href='//www.nordsee-surfschule.de' />
+<link rel='dns-prefetch' href='//fd.cleantalk.org' />
+<link rel='dns-prefetch' href='//widgets.regiondo.net' />
+
+<link rel="preload" href="https://www.nordsee-surfschule.de/wp-content/cache/borlabs-cookie/1/borlabs-cookie-config-de.json.js?ver=3.4.6-48" as="script">
+<link rel="preload" href="https://www.nordsee-surfschule.de/wp-content/cache/borlabs-cookie/1/borlabs-cookie-1-de.css?ver=3.4.6-43" as="style">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.nordsee-surfschule.de/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.nordsee-surfschule.de%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.nordsee-surfschule.de/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.nordsee-surfschule.de%2F&#038;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css"></style>
+<style id="wp-block-library-inline-css"></style>
+<style id="classic-theme-styles-inline-css"></style>
+
+<style id="global-styles-inline-css"></style>
+
+<link rel='stylesheet' id='cleantalk-public-css-css' href='https://www.nordsee-surfschule.de/wp-content/plugins/cleantalk-spam-protect/css/cleantalk-public.min.css?ver=6.89.1_1791487718' media='all' />
+<link rel='stylesheet' id='cleantalk-email-decoder-css-css' href='https://www.nordsee-surfschule.de/wp-content/plugins/cleantalk-spam-protect/css/cleantalk-email-decoder.min.css?ver=6.89.1_1791487718' media='all' />
+<link rel='stylesheet' id='mediaelement-css' href='https://www.nordsee-surfschule.de/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.17' media='all' />
+<link rel='stylesheet' id='wp-mediaelement-css' href='https://www.nordsee-surfschule.de/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=0f77ac03d64aee1807d37f802288f4f5' media='all' />
+<link rel='stylesheet' id='stockholm-default-style-css' href='https://www.nordsee-surfschule.de/wp-content/themes/stockholm/style.css?ver=0f77ac03d64aee1807d37f802288f4f5' media='all' />
+<link rel='stylesheet' id='stockholm-font-awesome-css' href='https://www.nordsee-surfschule.de/wp-content/themes/stockholm/framework/modules/icons/font-awesome/css/font-awesome.min.css?ver=0f77ac03d64aee1807d37f802288f4f5' media='all' />
+<link rel='stylesheet' id='elegant-icons-css' href='https://www.nordsee-surfschule.de/wp-content/themes/stockholm/framework/modules/icons/elegant-icons/style.min.css?ver=0f77ac03d64aee1807d37f802288f4f5' media='all' />
+<link rel='stylesheet' id='linear-icons-css' href='https://www.nordsee-surfschule.de/wp-content/themes/stockholm/framework/modules/icons/linear-icons/style.min.css?ver=0f77ac03d64aee1807d37f802288f4f5' media='all' />
+<link rel='stylesheet' id='linea-icons-css' href='https://www.nordsee-surfschule.de/wp-content/themes/stockholm/framework/modules/icons/linea-icons/style.min.css?ver=0f77ac03d64aee1807d37f802288f4f5' media='all' />
+<link rel='stylesheet' id='ion-icons-css' href='https://www.nordsee-surfschule.de/wp-content/themes/stockholm/framework/modules/icons/ion-icons/style.min.css?ver=0f77ac03d64aee1807d37f802288f4f5' media='all' />
+<link rel='stylesheet' id='stockholm-stylesheet-css' href='https://www.nordsee-surfschule.de/wp-content/themes/stockholm/css/stylesheet.min.css?ver=0f77ac03d64aee1807d37f802288f4f5' media='all' />
+<link rel='stylesheet' id='stockholm-style-dynamic-css' href='https://www.nordsee-surfschule.de/wp-content/themes/stockholm/css/style_dynamic_callback.php?ver=0f77ac03d64aee1807d37f802288f4f5' media='all' />
+<link rel='stylesheet' id='stockholm-responsive-css' href='https://www.nordsee-surfschule.de/wp-content/themes/stockholm/css/responsive.min.css?ver=0f77ac03d64aee1807d37f802288f4f5' media='all' />
+<link rel='stylesheet' id='stockholm-style-dynamic-responsive-css' href='https://www.nordsee-surfschule.de/wp-content/themes/stockholm/css/style_dynamic_responsive_callback.php?ver=0f77ac03d64aee1807d37f802288f4f5' media='all' />
+<style id="stockholm-style-dynamic-responsive-inline-css"></style>
+<link rel='stylesheet' id='js_composer_front-css' href='https://www.nordsee-surfschule.de/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=9.0.1' media='all' />
+<link rel='stylesheet' id='stockholm-google-fonts-css' href='//www.nordsee-surfschule.de/wp-content/uploads/omgf/stockholm-google-fonts/stockholm-google-fonts.css?ver=1647619035' media='all' />
+<style id="borlabs-cookie-critical-inline-css"></style>
+<link onload="this.media='all';this.onload=null" data-borlabs-cookie-deferred-style="1" rel='stylesheet' id='borlabs-cookie-custom-css' href='https://www.nordsee-surfschule.de/wp-content/cache/borlabs-cookie/1/borlabs-cookie-1-de.css?ver=3.4.6-43' media="print" />
+<noscript><link rel='stylesheet' id='borlabs-cookie-custom-css' href='https://www.nordsee-surfschule.de/wp-content/cache/borlabs-cookie/1/borlabs-cookie-1-de.css?ver=3.4.6-43' media='all' />
+</noscript>
+<link rel='stylesheet' id='tablepress-default-css' href='https://www.nordsee-surfschule.de/wp-content/plugins/tablepress/css/build/default.css?ver=3.4' media='all' />
+<link rel='stylesheet' id='gforms_reset_css-css' href='https://www.nordsee-surfschule.de/wp-content/plugins/gravityforms/legacy/css/formreset.min.css?ver=3.1.3' media='all' />
+<link rel='stylesheet' id='gforms_formsmain_css-css' href='https://www.nordsee-surfschule.de/wp-content/plugins/gravityforms/legacy/css/formsmain.min.css?ver=3.1.3' media='all' />
+<link rel='stylesheet' id='gforms_ready_class_css-css' href='https://www.nordsee-surfschule.de/wp-content/plugins/gravityforms/legacy/css/readyclass.min.css?ver=3.1.3' media='all' />
+<link rel='stylesheet' id='gforms_browsers_css-css' href='https://www.nordsee-surfschule.de/wp-content/plugins/gravityforms/legacy/css/browsers.min.css?ver=3.1.3' media='all' />
+<script id="apbct-public-bundle.min-js-js" src="https://www.nordsee-surfschule.de/wp-content/plugins/cleantalk-spam-protect/js/apbct-public-bundle.min.js?ver=6.89.1_1791487718"></script>
+<script async data-wp-strategy="async" id="ct_bot_detector-js" src="https://fd.cleantalk.org/ct-bot-detector-wrapper.js?ver=6.89.1"></script>
+<script id="jquery-core-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="hammer-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/hammer.min.js?ver=1"></script>
+<script id="virtual-scroll-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/virtual-scroll.min.js?ver=1"></script>
+<script data-no-optimize="1" data-no-minify="1" data-cfasync="false" id="borlabs-cookie-config-js" src="https://www.nordsee-surfschule.de/wp-content/cache/borlabs-cookie/1/borlabs-cookie-config-de.json.js?ver=3.4.6-48"></script>
+<script id="gform_json-js" defer='defer' src="https://www.nordsee-surfschule.de/wp-content/plugins/gravityforms/js/jquery.json.min.js?ver=3.1.3"></script>
+<script id="gform_gravityforms-js-extra"></script>
+<script id="gform_gravityforms-js-before"></script>
+<script id="gform_gravityforms-js" defer='defer' src="https://www.nordsee-surfschule.de/wp-content/plugins/gravityforms/js/gravityforms.min.js?ver=3.1.3"></script>
+<script id="gform_gravityforms_utils-js" defer='defer' src="https://www.nordsee-surfschule.de/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js?ver=d7e103405223e60d2719f4c330fd11cf"></script>
+<script></script><link rel="https://api.w.org/" href="https://www.nordsee-surfschule.de/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.nordsee-surfschule.de/wp-json/wp/v2/pages/19843" /><link rel="canonical" href="https://www.nordsee-surfschule.de/" />
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<style data-type="vc_custom-css"></style><style id="wp-custom-css"></style>
+<style type="text/css" data-type="vc_shortcodes-custom-css"></style><noscript><style></style></noscript></head>
+<body data-rsssl=1 class="home wp-singular page-template page-template-full_width page-template-full_width-php page page-id-19843 wp-theme-stockholm stockholm-core-2.4.9 select-theme-ver-9.14.4  qode_menu_ wpb-js-composer js-comp-ver-9.0.1 vc_responsive">
+		<div class="wrapper">
+		<div class="wrapper_inner">
+				<header class="page_header scrolled_not_transparent  fixed">
+				
+		<div class="header_inner clearfix">
+						
+			<div class="header_top_bottom_holder">
+								
+				<div class="header_bottom clearfix" >
+										<div class="container">
+						<div class="container_inner clearfix" >
+																					<div class="header_inner_left">
+																	<div class="mobile_menu_button"><span><i class="fa fa-bars"></i></span></div>
+								<div class="logo_wrapper">
+									<div class="q_logo">
+										<a href="https://www.nordsee-surfschule.de/">
+	<img class="normal" src="https://www.nordsee-surfschule.de/wp-content/uploads/2016/03/logo-nordsee-acedemy.png" alt="Logo"/>
+<img class="light" src="https://www.nordsee-surfschule.de/wp-content/uploads/2016/03/logo-nordsee-acedemy.png" alt="Logo"/>
+<img class="dark" src="https://www.nordsee-surfschule.de/wp-content/uploads/2016/03/logo-nordsee-acedemy.png" alt="Logo"/>
+	
+	<img class="sticky" src="https://www.nordsee-surfschule.de/wp-content/uploads/2016/03/logo-nordsee-acedemy.png" alt="Logo"/>
+	
+	</a>									</div>
+																	</div>
+																
+                                							</div>
+																																							<div class="header_inner_right">
+										<div class="side_menu_button_wrapper right">
+																																	<div class="side_menu_button">
+																																															</div>
+										</div>
+									</div>
+																                                                                    <nav class="main_menu drop_down   right">
+                                        <ul id="menu-nordsee-menu" class=""><li id="nav-menu-item-21523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-19843 current_page_item active narrow"><a href="https://www.nordsee-surfschule.de/" class=" current "><i class="menu_icon fa blank"></i><span class="menu-text">Willkommen</span><span class="plus"></span></a></li>
+<li id="nav-menu-item-21524" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow"><a href="#" class=" no_link" style="cursor: default;" onclick="JavaScript: return false;"><i class="menu_icon fa blank"></i><span class="menu-text">Sportarten</span><span class="plus"></span></a>
+<div class="second"><div class="inner"><ul>
+	<li id="nav-menu-item-22238" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/windsurfkurse/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Windsurfen</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-21525" class="menu-item menu-item-type-custom menu-item-object-custom "></li>
+	<li id="nav-menu-item-21526" class="menu-item menu-item-type-custom menu-item-object-custom "></li>
+	<li id="nav-menu-item-22707" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/kitekurse/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Kitesurfen</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-22449" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/sup/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Stand Up Paddeln</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-22911" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/landboardkurse/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Landboarden</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-23762" class="menu-item menu-item-type-post_type menu-item-object-page "></li>
+</ul></div></div>
+</li>
+<li id="nav-menu-item-22242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow"><a href="https://www.nordsee-surfschule.de/windsurfkurse/#vermietung-windsurfen" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Vermietung</span><span class="plus"></span></a>
+<div class="second"><div class="inner"><ul>
+	<li id="nav-menu-item-25613" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/?page_id=25608" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Flysurfer und Core Testcenter</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-23491" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="https://www.nordsee-surfschule.de/kitekurse/#vermietung-kitesurfen" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Vermietung</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-25623" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/?page_id=22266" class=""><i class="menu_icon fa blank"></i><span class="menu-text">PATRIK Windsurf Proshop</span><span class="plus"></span></a></li>
+</ul></div></div>
+</li>
+<li id="nav-menu-item-21529" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow"><a href="#" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Camps</span><span class="plus"></span></a>
+<div class="second"><div class="inner"><ul>
+	<li id="nav-menu-item-22662" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/kitecamp/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Kitecamp</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-22663" class="menu-item menu-item-type-post_type menu-item-object-page "></li>
+	<li id="nav-menu-item-22710" class="menu-item menu-item-type-post_type menu-item-object-page "></li>
+	<li id="nav-menu-item-22709" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/hochschulsport/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Hochschulsport</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-22711" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/klassenfahrten/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Klassenfahrten</span><span class="plus"></span></a></li>
+</ul></div></div>
+</li>
+<li id="nav-menu-item-24785" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="https://www.nordsee-surfschule.de/unterkuenfte/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Unterkünfte</span><span class="plus"></span></a></li>
+<li id="nav-menu-item-21544" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow"><a href="#" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Events</span><span class="plus"></span></a>
+<div class="second"><div class="inner"><ul>
+	<li id="nav-menu-item-25790" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/hochzeit/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Hochzeit direkt am Meer</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-22443" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/feier-mit-uns/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Feier mit uns</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-22445" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/mooi-strandhaus-hooksiel/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">mooi Strandhaus Hooksiel</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-22444" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/mooi-surfbar-harlesiel/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">mooi Surfbar Harlesiel</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-22442" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/schillig-beach-days/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Schillig Beach Days</span><span class="plus"></span></a></li>
+</ul></div></div>
+</li>
+<li id="nav-menu-item-21533" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub narrow"><a href="#" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Über uns</span><span class="plus"></span></a>
+<div class="second"><div class="inner"><ul>
+	<li id="nav-menu-item-25810" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/unser-team/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Das Team</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-22722" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/jobs/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Jobs</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-22909" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/kitezonen/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Kitezonen</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-22908" class="menu-item menu-item-type-post_type menu-item-object-page "></li>
+	<li id="nav-menu-item-23310" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/faq/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">FAQ</span><span class="plus"></span></a></li>
+	<li id="nav-menu-item-23039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children sub"><a href="https://www.nordsee-surfschule.de/kontakt/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Kontakt</span><span class="plus"></span><i class="q_menu_arrow fa fa-angle-right"></i></a>
+	<ul>
+		<li id="nav-menu-item-23041" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/kontakt/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Kontakt</span><span class="plus"></span></a></li>
+		<li id="nav-menu-item-23040" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/buchung/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Buchung</span><span class="plus"></span></a></li>
+	</ul>
+</li>
+</ul></div></div>
+</li>
+<li id="nav-menu-item-22910" class="menu-item menu-item-type-post_type menu-item-object-page  narrow"><a href="https://www.nordsee-surfschule.de/gutschein/" class=""><i class="menu_icon fa blank"></i><span class="menu-text">Gutschein</span><span class="plus"></span></a></li>
+</ul>                                    </nav>
+                                																																							<nav class="mobile_menu">
+			<ul id="menu-nordsee-menu-1" class=""><li id="mobile-menu-item-21523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-19843 current_page_item active"><a href="https://www.nordsee-surfschule.de/" class=" current "><span>Willkommen</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+<li id="mobile-menu-item-21524" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub"><h4><span>Sportarten</span></h4><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
+<ul class="sub_menu">
+	<li id="mobile-menu-item-22238" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/windsurfkurse/" class=""><span>Windsurfen</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-21525" class="menu-item menu-item-type-custom menu-item-object-custom "></li>
+	<li id="mobile-menu-item-21526" class="menu-item menu-item-type-custom menu-item-object-custom "></li>
+	<li id="mobile-menu-item-22707" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/kitekurse/" class=""><span>Kitesurfen</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-22449" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/sup/" class=""><span>Stand Up Paddeln</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-22911" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/landboardkurse/" class=""><span>Landboarden</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-23762" class="menu-item menu-item-type-post_type menu-item-object-page "></li>
+</ul>
+</li>
+<li id="mobile-menu-item-22242" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub"><a href="https://www.nordsee-surfschule.de/windsurfkurse/#vermietung-windsurfen" class=""><span>Vermietung</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
+<ul class="sub_menu">
+	<li id="mobile-menu-item-25613" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/?page_id=25608" class=""><span>Flysurfer und Core Testcenter</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-23491" class="menu-item menu-item-type-custom menu-item-object-custom "><a href="https://www.nordsee-surfschule.de/kitekurse/#vermietung-kitesurfen" class=""><span>Vermietung</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-25623" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/?page_id=22266" class=""><span>PATRIK Windsurf Proshop</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+</ul>
+</li>
+<li id="mobile-menu-item-21529" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub"><a href="#" class=""><span>Camps</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
+<ul class="sub_menu">
+	<li id="mobile-menu-item-22662" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/kitecamp/" class=""><span>Kitecamp</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-22663" class="menu-item menu-item-type-post_type menu-item-object-page "></li>
+	<li id="mobile-menu-item-22710" class="menu-item menu-item-type-post_type menu-item-object-page "></li>
+	<li id="mobile-menu-item-22709" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/hochschulsport/" class=""><span>Hochschulsport</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-22711" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/klassenfahrten/" class=""><span>Klassenfahrten</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+</ul>
+</li>
+<li id="mobile-menu-item-24785" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/unterkuenfte/" class=""><span>Unterkünfte</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+<li id="mobile-menu-item-21544" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub"><a href="#" class=""><span>Events</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
+<ul class="sub_menu">
+	<li id="mobile-menu-item-25790" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/hochzeit/" class=""><span>Hochzeit direkt am Meer</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-22443" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/feier-mit-uns/" class=""><span>Feier mit uns</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-22445" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/mooi-strandhaus-hooksiel/" class=""><span>mooi Strandhaus Hooksiel</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-22444" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/mooi-surfbar-harlesiel/" class=""><span>mooi Surfbar Harlesiel</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-22442" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/schillig-beach-days/" class=""><span>Schillig Beach Days</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+</ul>
+</li>
+<li id="mobile-menu-item-21533" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children  has_sub"><a href="#" class=""><span>Über uns</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
+<ul class="sub_menu">
+	<li id="mobile-menu-item-25810" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/unser-team/" class=""><span>Das Team</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-22722" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/jobs/" class=""><span>Jobs</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-22909" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/kitezonen/" class=""><span>Kitezonen</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-22908" class="menu-item menu-item-type-post_type menu-item-object-page "></li>
+	<li id="mobile-menu-item-23310" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/faq/" class=""><span>FAQ</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	<li id="mobile-menu-item-23039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children  has_sub"><a href="https://www.nordsee-surfschule.de/kontakt/" class=""><span>Kontakt</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span>
+	<ul class="sub_menu">
+		<li id="mobile-menu-item-23041" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/kontakt/" class=""><span>Kontakt</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+		<li id="mobile-menu-item-23040" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/buchung/" class=""><span>Buchung</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="mobile-menu-item-22910" class="menu-item menu-item-type-post_type menu-item-object-page "><a href="https://www.nordsee-surfschule.de/gutschein/" class=""><span>Gutschein</span></a><span class="mobile_arrow"><i class="fa fa-angle-right"></i><i class="fa fa-angle-down"></i></span></li>
+</ul></nav>								
+															</div>
+						</div>
+											</div>
+				</div>
+			</div>
+	</header>
+			
+			<div class="content content_top_margin">
+								
+				<div class="content_inner">
+										
+											<div class="q_slider">
+		<div class="q_slider_inner">
+			<div id="qode-home-neu"  class="carousel slide   responsive_height q_auto_start   header_not_transparent" data-slide_animation="6000" data-height='650' data-parallax="no" style="height: 650px; "><div class="qode_slider_preloader"><div class="ajax_loader" ><div class="ajax_loader_1"><div class="pulse"></div></div></div></div><div class="carousel-inner relative_position" data-start="transform: translateY(0px);" data-1440="transform: translateY(-500px);"><div class="item " style="height: 650px;"><div class="image" style="background-image:url(https://www.nordsee-surfschule.de/wp-content/uploads/2019/01/FLYSURFER-BOOST-Capetown-byMiriamJoanna-08-scaled-e1646515740469.jpg);"><img src="https://www.nordsee-surfschule.de/wp-content/uploads/2019/01/FLYSURFER-BOOST-Capetown-byMiriamJoanna-08-scaled-e1646515740469.jpg" alt="Jetzt Camp oder Kurs buchen und VDWS Lizenz gratis sichern"></div><div class="slider_content_outer "><div class="slider_content left" style="width:80%;left: 10%;top: 35%;" data-start="width:80%; opacity:1; left: 10%; top: 35%;" data-300="opacity: 0; left: 10%; top: 10%;"><div class="text all_at_once" style=""><h2 class="q_slide_title" style="color: #ffffff;text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);"><span>Jetzt Camp oder Kurs buchen und VDWS Lizenz gratis sichern</span></h2><div class="slide_buttons_holder"><a class="qbutton" href="/kitecamp" target="_blank">Kitesurfcamp</a><a class="qbutton white"href="https://www.nordsee-surfschule.de/kitekurse/" target="_blank">Kitekurse</a></div></div></div></div></div><div class="item " style="height: 650px;"><div class="image" style="background-image:url(https://www.nordsee-surfschule.de/wp-content/uploads/2019/01/IMG_0225-2-2-scaled.jpeg);"><img src="https://www.nordsee-surfschule.de/wp-content/uploads/2019/01/IMG_0225-2-2-scaled.jpeg" alt="Übernachte direkt am Meer"></div><div class="slider_content_outer "><div class="slider_content left" style="width:80%;left: 10%;top: 35%;" data-start="width:80%; opacity:1; left: 10%; top: 35%;" data-300="opacity: 0; left: 10%; top: 10%;"><div class="text all_at_once" style=""><h2 class="q_slide_title" style="color: #ffffff;text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);"><span>Übernachte direkt am Meer</span></h2><div class="slide_buttons_holder"><a class="qbutton" href="https://www.nordsee-surfschule.de/unterkuenfte/" target="_blank">Ferienwohnungen</a><a class="qbutton white"href="https://www.nordsee-surfschule.de/unterkuenfte/" target="_blank">Glamping Dome</a></div></div></div></div></div><div class="item " style="height: 650px;"><div class="image" style="background-image:url(https://www.nordsee-surfschule.de/wp-content/uploads/2014/07/Bildschirmfoto-2022-12-01-um-11.40.42-e1669891423900.png);"><img src="https://www.nordsee-surfschule.de/wp-content/uploads/2014/07/Bildschirmfoto-2022-12-01-um-11.40.42-e1669891423900.png" alt="Hol dir deinen Materialdeal"></div><div class="slider_content_outer "><div class="slider_content left" style="width:80%;left:0%%;top: 35%;" data-start="width:80%; opacity:1; left:0%%; top: 35%;" data-300="opacity: 0; left:0%%; top: 10%;"><div class="text all_at_once" style=""><h2 class="q_slide_title" style="text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);"><span>Hol dir deinen Materialdeal</span></h2><div class="slide_buttons_holder"><a class="qbutton" href="https://www.nordsee-surfschule.de/kitekurs" target="_blank">Kursplatz sichern.</a><a class="qbutton white"href="https://www.nordsee-surfschule.de/kontakt/" target="_blank">Angebot einholen.</a></div></div></div></div></div></div><ol class="carousel-indicators" data-start="opacity: 1;" data-300="opacity:0;"><li data-target="#qode-home-neu" data-slide-to="0" class="active"></li><li data-target="#qode-home-neu" data-slide-to="1"></li><li data-target="#qode-home-neu" data-slide-to="2"></li></ol></div>		</div>
+	</div>
+	<div class="full_width" style="background-color:#ffffff">
+	<div class="full_width_inner" style="padding-top:25px">
+										<div class="wpb-content-wrapper" id="wpb-content-root"><div class="vc_row wpb_row section vc_row-fluid " style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div     class="vc_row wpb_row vc_inner section vc_row-fluid grid_section" style='background-color:#ffffff; text-align:left;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>Die Surfschule an der Nordsee</h4>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 5px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h2>Willkommen bei der nordsee academy</h2>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 20px"><span class="vc_empty_space_inner"></span></div></div></div></div></div></div></div><div     class="vc_row wpb_row vc_inner section vc_row-fluid grid_section" style=' text-align:left;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='q_team '><div class='q_team_inner'><div class='q_team_image'><img decoding="async" src="https://www.nordsee-surfschule.de/wp-content/uploads/2022/12/Chris_Niko_final-1.jpg" alt="team_image"  /><div class='q_team_social_holder'  style='background-color:#00a5da;'><div class='q_team_social'><div class='q_team_social_inner'></div></div></div></div><div class='q_team_text left_align' ><div class='q_team_text_inner'><div class='q_team_title_holder'><h6 class='q_team_position' >Geschäftsführer</h6><h4 class='q_team_name' >Niko Goretzki, Chris Wezel</h4></div></div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: justify;">Moin und willkommen bei der Nordsee Academy,</p>
+<p>&nbsp;</p>
+<p>Schön, dass du hier bist und in die Wassersport-Welt eintauchst.</p>
+<p>Für die Saison 2026 sind wir bereits mit dem Abbau beschäftigt um unsere Standorte vor Sturmfluten zu schützen. Die Saison 2027 wird bereits Ostern beginnen, die Temrine hierzu sind bald online buchbar.</p>
+<p>Solltest du über einen Materialkauf nachdenken, suchen wir mit dir gerne etwas Passendes heraus. Ob telefonisch, per WhatsApp oder via Mail &#8211; du kannst dich jederzeit bei uns melden!</p>
+<p>&nbsp;</p>
+<p>Suchst du zusätzlich nach einer passenden Unterkunft bei uns in der Nähe? Unsere <a href="https://www.nordsee-surfschule.de/unterkuenfte/">Ferienunterkünfte</a> in Schillig sind ganzjährig buchbar. Somit brauchst du im Winter nicht auf die Nordseeluft verzichten und hast deinen Schlafplatz in der Saison in Spotnähe gesichert. Der perfekte Ort für Auszeiten, ungestörte Remote Work und einen kurzen Weg zum Strand.</p>
+<p>&nbsp;</p>
+<p>Gerne halten wir dich zu unserer Academy-Welt via Instagram (@nordseeacademy) auf dem Laufenden und freuen uns, dich bald bei uns zu treffen.</p>
+<p>&nbsp;</p>
+<p>Friesische Grüße von der Nordseeküste und auf bald!</p>
+
+		</div>
+	</div></div></div></div><div class="vc_empty_space"   style="height: 20px"><span class="vc_empty_space_inner"></span></div><div     class="vc_row wpb_row vc_inner section vc_row-fluid grid_section" style=' text-align:left;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper  "><img fetchpriority="high" decoding="async" width="1920" height="182" src="https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner.png" class="vc_single_image-img attachment-full" alt="" title="Nordsee-Academy-Trenner" srcset="https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner.png 1920w, https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner-300x28.png 300w, https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner-768x73.png 768w, https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner-1024x97.png 1024w, https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner-700x66.png 700w, https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner-1100x104.png 1100w" sizes="(max-width: 1920px) 100vw, 1920px" /></div>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 15px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: justify;">„Jetzt wollte ich es endlich einmal selbst ausprobieren&#8230;“ ist einer der wohl häufigsten Einstiegssätze unserer Schüler:innen bei ihrer Anmeldung oder Ankunft an unseren Surfschulen. Egal, ob es hierbei um die ersten Schritte beim Wind- oder Kitesurfen oder um den Trendsport SUP geht, ihr solltet nicht mehr länger damit warten.</p>
+<p style="text-align: justify;">Unsere motivierten Coaches bringen euch spielerisch auf jedes Brett, ganz gleich was euer Einstiegslevel ist.</p>
+<p style="text-align: justify;">Seit 20 Jahren steht die Nordsee Academy für Wassersportschulung auf höchstem Niveau. Als Mitgliedsschule im Verband Deutscher Wassersportschulen (VDWS) achtet unser Team lizensierter Instruktor:innen darauf, dass Spaß und Sicherheit stets im Einklang stehen, weshalb wir ebenfalls das Siegel Qualitätsausbildung im Wassersport (QAW) tragen dürfen.</p>
+<p style="text-align: justify;">Damit ihr selbst die Faszination Wassersport erleben könnt, bieten wir regelmäßig Schupperstunden an. Wenn ihr dann Gefallen am Surfsport findet, könnt ihr in unseren Anfängerkursen eure persönliche Surfkarriere starten.</p>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 15px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper  "><img fetchpriority="high" decoding="async" width="1920" height="182" src="https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner.png" class="vc_single_image-img attachment-full" alt="" title="Nordsee-Academy-Trenner" srcset="https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner.png 1920w, https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner-300x28.png 300w, https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner-768x73.png 768w, https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner-1024x97.png 1024w, https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner-700x66.png 700w, https://www.nordsee-surfschule.de/wp-content/uploads/2016/04/Nordsee-Academy-Trenner-1100x104.png 1100w" sizes="(max-width: 1920px) 100vw, 1920px" /></div>
+		</div>
+	</div>
+</div></div></div></div></div></div></div></div></div></div></div><div     class="vc_row wpb_row section vc_row-fluid  grid_section" style='background-color:#ffffff; padding-bottom:80px; text-align:left;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div     class="vc_row wpb_row vc_inner section vc_row-fluid grid_section" style=' text-align:left;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>DAS GEHT BEI UNS AB</h4>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 5px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h2>SPORTARTEN</h2>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 30px"><span class="vc_empty_space_inner"></span></div></div></div></div></div></div></div>
+	<div class="q_accordion_holder clearfix wpb_content_element toggle  not-column-inherit" data-active-tab="1" data-collapsible="no" data-border-radius="">
+			
+				<h4 class="clearfix title-holder" style=""><span class="accordion_mark left_mark"><span class="accordion_mark_icon"><span class="icon_plus"></span><span class="icon_minus-06"></span></span></span><span class="tab-title"><span class="tab-title-inner">WINDSURFEN</span></span></h4>
+				<div  class="accordion_content">
+			<div class="accordion_content_inner">
+				<div     class="vc_row wpb_row vc_inner section vc_row-fluid grid_section" style=' text-align:left;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper  "><img decoding="async" width="150" height="150" src="https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Surf-250x250-150x150.png" class="vc_single_image-img attachment-thumbnail" alt="" title="NA Surf Icon" srcset="https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Surf-250x250-150x150.png 150w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Surf-250x250-180x180.png 180w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Surf-250x250-e1462801618410.png 75w" sizes="(max-width: 150px) 100vw, 150px" /></div>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 30px"><span class="vc_empty_space_inner"></span></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p class="p1" style="text-align: justify;">Mit unseren Windsurf Schnupperkursen gelingen die ersten Schritte auf dem Surfboard spielerisch. Du entscheidest, ob du eine Schnupperstunde machen möchtest oder gleich an einem kompletten Kurstag teilnimmst, um dir ein noch besseres Bild von der Sportart zu machen. Windsurfen kann man bereits ab 6 Jahren erlernen.</p>
+<p class="p1" style="text-align: justify;">Im Anschluss an einen Schnupperkurs besteht die Möglichkeit, mit einem Windsurf Einsteigerkurs weiterzumachen. Für fortgeschrittene Windsurfer empfiehlt sich der Aufsteigerkurs, um schnell das nächste Level zu erreichen.</p>
+<p class="p1" style="text-align: justify;">Ganz egal, ob du deine Manöver aus dem Grundkurs verbessern willst, den Beachstart oder das Trapezfahren in Angriff nehmen willst, wir finden für dich das richtige Angebot. Geschult wird ausschließlich mit modernem VDWS-Schulungsmaterial sowie brandaktuellem Material der Marke PATRIK.</p>
+
+		</div>
+	</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></div></div>
+			</div>
+				</div>
+				<h4 class="clearfix title-holder" style=""><span class="accordion_mark left_mark"><span class="accordion_mark_icon"><span class="icon_plus"></span><span class="icon_minus-06"></span></span></span><span class="tab-title"><span class="tab-title-inner">KITESURFEN</span></span></h4>
+				<div  class="accordion_content">
+			<div class="accordion_content_inner">
+				<div     class="vc_row wpb_row vc_inner section vc_row-fluid" style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper  "><img decoding="async" width="150" height="150" src="https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Kite-250x250-1-150x150.png" class="vc_single_image-img attachment-thumbnail" alt="" title="Icon-Kite-250x250" srcset="https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Kite-250x250-1-150x150.png 150w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Kite-250x250-1-180x180.png 180w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Kite-250x250-1.png 250w" sizes="(max-width: 150px) 100vw, 150px" /></div>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 30px"><span class="vc_empty_space_inner"></span></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p class="p1" style="text-align: justify;">Der Einstieg in den Trendsport Kitesurfen gelingt dir am besten mit unserem Kitesurf Einsteigerkurs oder im Rahmen eines der beliebten mehrtägigen Camps. Für alle Unentschlossenen empfiehlt sich ein Landboardkurs an Land, um in die Sportart hinein zu schnuppern.</p>
+<p class="p1" style="text-align: justify;">Wer bereits über Vorerfahrung im Kitesurfen verfügt, kann bei seinem individuellen Könnensstand in den Kurs einsteigen oder ab Lizenz-Level 3 den Kitesurf Aufsteigerkurs buchen.</p>
+<p class="p1" style="text-align: justify;">Ab Level 4 vermieten wir auch unser Material an dich, sodass du selbständig weiterlernen kannst. Die perfekte Alternative zur Vermietung, in Kombination mit dem höchsten Maß an Sicherheit, stellt das Begleitete Kiten dar. Hierbei gehst du mit deinem eigenen oder mit unserem Material parallel zur Schulung aufs Wasser, sodass wir immer ein Auge auf dich haben. Du nimmst außerdem teil an unserem Spotcheck, um die geeignete Materialwahl zu treffen und bekommst Start- und Landehilfe.</p>
+
+		</div>
+	</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></div>
+			</div>
+				</div>
+				<h4 class="clearfix title-holder" style=""><span class="accordion_mark left_mark"><span class="accordion_mark_icon"><span class="icon_plus"></span><span class="icon_minus-06"></span></span></span><span class="tab-title"><span class="tab-title-inner">LANDBOARDING</span></span></h4>
+				<div  class="accordion_content">
+			<div class="accordion_content_inner">
+				<div     class="vc_row wpb_row vc_inner section vc_row-fluid" style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper  "><img loading="lazy" decoding="async" width="150" height="150" src="https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Landboarding-150x150.png" class="vc_single_image-img attachment-thumbnail" alt="" title="Icon-Landboarding" srcset="https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Landboarding-150x150.png 150w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Landboarding-300x300.png 300w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Landboarding-550x550.png 550w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Landboarding-500x500.png 500w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Landboarding-180x180.png 180w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-Landboarding.png 591w" sizes="auto, (max-width: 150px) 100vw, 150px" /></div>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 30px"><span class="vc_empty_space_inner"></span></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p class="p1" style="text-align: justify;">Landboarding gibt dir das Gefühl vom Kitesurfen ohne dabei nass zu werden. Auf den robusten All Terrain Boards (ATB) kannst du mit dem Powerkite neue Tricks üben oder deinem Lieblingssport nachgehen, wenn das Wasser gerade mal nicht da ist.</p>
+<p class="p1" style="text-align: justify;">Sobald du einen Powerkite sicher kontrollierst (was du natürlich auch in unserem Powerkitekurs lernen kannst), kannst in im Landboardkurs deine ersten Meter auf dem ATB zurücklegen</p>
+
+		</div>
+	</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></div>
+			</div>
+				</div>
+				<h4 class="clearfix title-holder" style=""><span class="accordion_mark left_mark"><span class="accordion_mark_icon"><span class="icon_plus"></span><span class="icon_minus-06"></span></span></span><span class="tab-title"><span class="tab-title-inner">SUP</span></span></h4>
+				<div  class="accordion_content">
+			<div class="accordion_content_inner">
+				<div     class="vc_row wpb_row vc_inner section vc_row-fluid" style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper  "><img loading="lazy" decoding="async" width="150" height="150" src="https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-SUP-250x250-1-150x150.png" class="vc_single_image-img attachment-thumbnail" alt="" title="Icon-SUP-250x250" srcset="https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-SUP-250x250-1-150x150.png 150w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-SUP-250x250-1-180x180.png 180w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-SUP-250x250-1.png 250w" sizes="auto, (max-width: 150px) 100vw, 150px" /></div>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 30px"><span class="vc_empty_space_inner"></span></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Als perfekte Ergänzung zum Windsurfen ist „Stehpaddeln“ der Wassersporttrend der letzten Jahre und wächst stetig weiter. Nach kurzer Einführung geht es gleich los und die malerischen Wasserwege und Binnenreviere können aus einer völlig neuer Perspektive erkundet werden.</p>
+<p>Natürlich steht der Spaß im Vordergrund, aber SUP ist längst auch ein Fitnesstrend geworden und bietet tolle Trainingseffekte.</p>
+
+		</div>
+	</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></div>
+			</div>
+				</div>
+				<h4 class="clearfix title-holder" style=""><span class="accordion_mark left_mark"><span class="accordion_mark_icon"><span class="icon_plus"></span><span class="icon_minus-06"></span></span></span><span class="tab-title"><span class="tab-title-inner">Camp</span></span></h4>
+				<div  class="accordion_content">
+			<div class="accordion_content_inner">
+				<div     class="vc_row wpb_row vc_inner section vc_row-fluid" style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper  "><img loading="lazy" decoding="async" width="150" height="150" src="https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-camp-250x250-1-150x150.png" class="vc_single_image-img attachment-thumbnail" alt="" title="Icon-camp-250x250" srcset="https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-camp-250x250-1-150x150.png 150w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-camp-250x250-1-180x180.png 180w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Icon-camp-250x250-1.png 250w" sizes="auto, (max-width: 150px) 100vw, 150px" /></div>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 30px"><span class="vc_empty_space_inner"></span></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: justify;">Du möchtest mit intensiver Schulung im Wassersport gleich richtig durchstarten? Dann führt kein Weg an unserem 5-Tage-Camp vorbei. Ob im Windsurfen oder Kitesurfen, auf dich wartet ein Komplettpaket aus Schulung und jeder Menge Spaß mit netten Leuten.</p>
+<p style="text-align: justify;">Wer mag bucht die Unterkunft direkt bei uns im Beachcamp. Im Rahmen von Firmenevents, im Freundeskreis oder für Studentengruppen wird ein solches Camp zum ultimativen Erlebnis. Selbstverständlich kannst du dich auch alternativ in einer Ferienwohnung oder einem Hotel einmieten.</p>
+
+		</div>
+	</div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></div>
+			</div>
+				</div>
+	</div></div></div></div></div></div></div><div     class="vc_row wpb_row section vc_row-fluid " style='background-color:#f5f5f5; padding-top:80px; padding-bottom:80px; text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div     class="vc_row wpb_row vc_inner section vc_row-fluid grid_section" style=' text-align:left;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>Hier sind wir zu finden</h4>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 5px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h2>STANDORTE DER NORDSEE ACADEMY</h2>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Unsere Schulungsreviere bieten euch beste Einsteigerbedingungen. Egal ob im Windsurfen, Stand Up Paddling (SUP) oder Kitesurfen, du wirst kaum zuverlässigere Spots finden, um die Sportarten schnell und sicher zu erlernen. Nicht nur für Kinder sind unsere großen und geschützten Stehbereiche der ideale Schulungsraum.</p>
+
+		</div>
+	</div><div class="separator  transparent   " style="margin-top:20px;margin-bottom:0px"></div></div></div></div></div></div></div><div     class="vc_row wpb_row vc_inner section vc_row-fluid grid_section" style=' text-align:left;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper  "><img loading="lazy" decoding="async" width="2048" height="1365" src="https://www.nordsee-surfschule.de/wp-content/uploads/2019/01/Nastenka-40.jpg" class="vc_single_image-img attachment-full" alt="" title="Nastenka-40" srcset="https://www.nordsee-surfschule.de/wp-content/uploads/2019/01/Nastenka-40.jpg 2048w, https://www.nordsee-surfschule.de/wp-content/uploads/2019/01/Nastenka-40-300x200.jpg 300w, https://www.nordsee-surfschule.de/wp-content/uploads/2019/01/Nastenka-40-1024x683.jpg 1024w, https://www.nordsee-surfschule.de/wp-content/uploads/2019/01/Nastenka-40-700x467.jpg 700w, https://www.nordsee-surfschule.de/wp-content/uploads/2019/01/Nastenka-40-1100x733.jpg 1100w" sizes="auto, (max-width: 2048px) 100vw, 2048px" /></div>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 5px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h6>KITESURF / LANDBOARD</h6>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 5px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h5>HOOKSIEL STRAND</h5>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: justify;">Unser Kitesurfspot in Hooksiel bietet dir neben Schillig die idealen Vorraussetzungen, um sicher und schnell in diesen Sport zu finden. Der Spot verfügt über einen riesigen Stehbereich und eine große Windrange (WSW über N bis O) mit idealen Lernbedingungen. Je nach Windrichtung können wir also den besten Spot für euren Kurs wählen. Die großen Wiesenflächen direkt an unserem Beach Haus (Strandhaus 2) machen es möglich, mit euch ideal das Kiten an Land zu trainieren und zum Beispiel zu Landboarden.</p>
+<p style="text-align: justify;">Tolle Infrastruktur mit modernsten Duschen und Sanitäranlagen, Süßwasserduschen für das Material und einem Parkplatz direkt hinter dem Deich runden die perfekten Voraussetzungen ab.</p>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 40px"><span class="vc_empty_space_inner"></span></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		<div class="wpb_wrapper">
+			
+			<div class="vc_single_image-wrapper  "><img loading="lazy" decoding="async" width="2048" height="1356" src="https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/GH011042-3-e1547554975828.jpg" class="vc_single_image-img attachment-full" alt="" title="GH011042-3" srcset="https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/GH011042-3-e1547554975828.jpg 2048w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/GH011042-3-e1547554975828-300x199.jpg 300w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/GH011042-3-e1547554975828-1024x678.jpg 1024w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/GH011042-3-e1547554975828-700x464.jpg 700w, https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/GH011042-3-e1547554975828-1100x729.jpg 1100w" sizes="auto, (max-width: 2048px) 100vw, 2048px" /></div>
+		</div>
+	</div>
+<div class="vc_empty_space"   style="height: 5px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h6>KITE- / WINDSURF / LANDBOARD / SUP / Skimboard</h6>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 5px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h5>SCHILLIG STRAND</h5>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: justify;">In Schillig befindet sich unser dritter Spot, dessen riesiger Stehbereich 2/3 der gesamten Kitezone ausmacht. Nach Nord-Osten ausgerichtet deckt er viele Windrichtungen (NW über O bis SSO) ab und ist der ideale Ergänzungsspot zur Kitezone in Hooksiel. Nicht zuletzt die tolle Infrastruktur mit modernsten Duschen und Sanitäranlagen, Süßwasserduschen für das Material und einem Parkplatz direkt hinter dem Deich sind dafür verantwortlich. An Land auf der großen Drachenwiese sind dem Landboarding und Kite-Übungen keine Grenzen gesetzt.</p>
+<p>Auch unter fortgeschrittenen Kitern sind Hooksiel und Schillig als Spots sehr beliebt. Mit dem Priel in Hooksiel und der flachen Wasseroberfläche an beiden Spots durch die Tide bietet sich hier beinahe täglich ein Freestyleparadies.</p>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 30px"><span class="vc_empty_space_inner"></span></div></div></div></div></div></div></div></div></div></div></div></div><div     class="vc_row wpb_row section vc_row-fluid  pattern_background" style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="call_to_action normal" style="background-color: #00a5da;"><div class="container_inner"><div class="two_columns_75_25 clearfix"><div class="text_wrapper column1"><div class="call_to_action_text" style=""></p>
+<h2 style="text-align: left;"><span style="color: #ffffff;">JETZT KITECAMPER WERDEN!</span></h2>
+<h4 style="text-align: left;"><span style="color: #ffffff; font-size: 24px;">Kitecamp ab 399€</span></h4>
+<p></div></div><div class="button_wrapper column2"><a href="https://www.nordsee-surfschule.de/kitecamp/" class="qbutton " target="_blank" style="color:#ffffff;border-color:#ffffff;background-color: #00a5da;" data-hover-background-color=#00a5da  data-hover-border-color=#e1e1e1  data-hover-color=#e1e1e1>Mehr erfahren</a></div></div></div></div></div></div></div></div></div><div     class="vc_row wpb_row section vc_row-fluid " style='background-image:url(https://www.nordsee-surfschule.de/wp-content/uploads/2014/06/Nastenka-40.jpg); padding-top:120px; padding-bottom:120px; text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div     class="vc_row wpb_row vc_inner section vc_row-fluid" style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div><div class="kitacamps_wrapper wpb_column vc_column_container vc_col-sm-6 vc_col-has-fill"><div class="vc_column-inner vc_custom_1553695218056"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element  vc_custom_1789799816995">
+		<div class="wpb_wrapper">
+			<h2 style="text-align: center;">KITECAMPS</h2>
+<p style="text-align: center;">Du möchtest mit intensiver Schulung im Kitesurfen gleich richtig durchstarten? Dann führt kein Weg an unserem Kitecamp vorbei. Auf dich wartet ein Komplettpaket aus Schulung und jeder Menge Spaß mit netten Leuten. Wer mag, bucht die Unterkunft online direkt dazu.</p>
+<p style="text-align: center;"><strong>Kitecamp ab 399€</strong></p>
+
+		</div>
+	</div><a href="https://www.nordsee-surfschule.de/kitecamp/" target="_self" data-hover-background-color='#ffffff' data-hover-border-color='#283282' data-hover-color='#283282' class="qbutton  medium qbutton_with_icon" style="color: #ffffff; border-color: #283282; font-style: normal; font-weight: 800; font-size: 12px; background-color: #283282;">Mehr erfahren<i class="qode_icon_font_awesome fa  button_icon" style="" ></i></a><div class="vc_empty_space"   style="height: 30px"><span class="vc_empty_space_inner"></span></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></div></div></div></div></div></div><div     class="vc_row wpb_row section vc_row-fluid " style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			
+		</div>
+	</div></div></div></div></div></div><div     class="vc_row wpb_row section vc_row-fluid vc_custom_1547219913217" style='background-color:#ffffff; border-bottom: 1px solid #ffffff; padding-top:80px; padding-bottom:30px; text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div     class="vc_row wpb_row vc_inner section vc_row-fluid vc_custom_1547219906430 grid_section" style=' padding-bottom:40px; text-align:left;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>LERNT UNS KENNEN</h4>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 5px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h2>UNSER TEAM</h2>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Mit jeder Menge Schulungserfahrung ist das lizensierte Team der Nordsee Academy dein kompetenter, ambitionierter und fröhlicher Ansprechpartner für einige der schönsten Sportarten der Welt. Hier stellen wir einige von uns vor:</p>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 30px"><span class="vc_empty_space_inner"></span></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></div></div><div     class="vc_row wpb_row vc_inner section vc_row-fluid grid_section" style=' text-align:left;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='q_team '><div class='q_team_inner'><div class='q_team_image'><img decoding="async" src="https://www.nordsee-surfschule.de/wp-content/uploads/2019/10/Teamfoto_Chris-e1586452052332.jpg" alt="team_image"  /><div class='q_team_social_holder'  style='background-color:#00a5da;'><div class='q_team_social'><div class='q_team_social_inner'><span class='q_social_icon_holder with_link circle_social' ><a href='https://www.facebook.com/nordseeacademy/' target='_self'><span class='fa-stack  circle_social' style=''><span class='social_icon social_facebook'></span></span></a></span><span class='q_social_icon_holder with_link circle_social' ><a href='https://www.instagram.com/chris_nordseeacademy/' target='_self'><span class='fa-stack  circle_social' style=''><span class='social_icon social_instagram_square'></span></span></a></span></div></div></div></div><div class='q_team_text ' ><div class='q_team_text_inner'><div class='q_team_title_holder'><h6 class='q_team_position' >Geschäftsführer und Niemalsschläfer</h6><h4 class='q_team_name' >Chris Wezel</h4></div><div class='q_team_description'><p >VDWS Windsurf, Kitesurf, SUP Instructor und Snowkite Coach<br />
+Abseits vom Schreibtisch fordert euch der Gesellschafter, Campbespaßer und Möglichmacher nicht nur im Wassersport regelmäßig heraus. Als VDWS Lehrteamer gibt er außerdem seine geballte Kompetenz an angehende Kitelehrer:innen weiter und sorgt damit für höchstes Schulungsniveau in unseren Wassersportkursen.</p></div></div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='q_team '><div class='q_team_inner'><div class='q_team_image'><img decoding="async" src="https://www.nordsee-surfschule.de/wp-content/uploads/2019/10/Teamfoto_Niko1.jpg" alt="team_image"  /><div class='q_team_social_holder'  style='background-color:#00a5da;'><div class='q_team_social'><div class='q_team_social_inner'><span class='q_social_icon_holder with_link circle_social' ><a href='https://www.instagram.com/niko.goretzki/' target='_self'><span class='fa-stack  circle_social' style=''><span class='social_icon social_instagram_square'></span></span></a></span></div></div></div></div><div class='q_team_text ' ><div class='q_team_text_inner'><div class='q_team_title_holder'><h6 class='q_team_position' >Geschäftsführer und kluger Kopf</h6><h4 class='q_team_name' >Niko Goretzki</h4></div><div class='q_team_description'><p >VDWS Windsurf, Kitesurf und SUP Instructor<br />
+Den Auftakt in der Wassersportwelt machte er vor 23 Jahren, als er das erste Mal einen Fuß in die Surfschule am Hooksmeer setzte. Als Gründer der Surf In GmbH, Ideenanstoßer, Strukturengeber und Organisator bringt er täglich Projekte voran und trifft mit Geschäftspartner Chris die (hoffentlich) klugen Entscheidungen. Abseits der Saison kitet er am liebsten die Wellen Kapstadts.</p></div></div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='q_team '><div class='q_team_inner'><div class='q_team_image'><img decoding="async" src="https://www.nordsee-surfschule.de/wp-content/uploads/2021/01/Teamfoto_Elena.jpg" alt="team_image"  /><div class='q_team_social_holder'  style='background-color:#00a5da;'><div class='q_team_social'><div class='q_team_social_inner'><span class='q_social_icon_holder with_link circle_social' ><a href='https://www.instagram.com/eleenasc/' target='_blank'><span class='fa-stack  circle_social' style=''><span class='social_icon social_instagram'></span></span></a></span></div></div></div></div><div class='q_team_text ' ><div class='q_team_text_inner'><div class='q_team_title_holder'><h6 class='q_team_position' >Die Frau, die Akzente setzt</h6><h4 class='q_team_name' >Elena Schreiber</h4></div><div class='q_team_description'><p >VDWS Kitesurfinstructor, Snowkite Coach und Gästemanagerin<br />
+Neben ihrer starken Performance an der Wasseroberfläche ist Elena tief in die Academy-Welt eingetaucht. Egal ob Kursplanung, -kommunikation oder Kojenorganisation - Elena findet charmant aber beharrlich die passende Lösung für euer Anliegen. Neben dem Trubel im Alltag setzt sie nach Feierband gemeinsam mit Niko die Segel an Bord von schnellen Booten.</p></div></div></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"><div class='q_team '><div class='q_team_inner'><div class='q_team_image'><img decoding="async" src="https://www.nordsee-surfschule.de/wp-content/uploads/2019/10/Teamfoto_Björn.jpg" alt="team_image"  /><div class='q_team_social_holder'  style='background-color:#00a5da;'><div class='q_team_social'><div class='q_team_social_inner'><span class='q_social_icon_holder with_link circle_social' ><a href='https://www.instagram.com/_bjo_ern_/' target='_self'><span class='fa-stack  circle_social' style=''><span class='social_icon social_instagram'></span></span></a></span></div></div></div></div><div class='q_team_text ' ><div class='q_team_text_inner'><div class='q_team_title_holder'><h6 class='q_team_position' >Repair and Care</h6><h4 class='q_team_name' >Björn Quistorff</h4></div><div class='q_team_description'><p >VDWS Kitesurf und SUP Instructor, Snowkite Coach<br />
+Der Hamburger Jung ist mit mehr als 5 Jahren Erfahrung als Wassersportlehrer ein alter Hase im Schulungsalltag. Aber auch an Land wird Björn nicht langweilig. Er bekommt alles wieder in Gang oder oder baut einfach direkt eine neue, noch bessere Variante.</p></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div     class="vc_row wpb_row section vc_row-fluid " style=' text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p style="text-align: center;">Mehr von unserem Team findest du <a href="https://www.nordsee-surfschule.de/unser-team/">hier</a>.</p>
+
+		</div>
+	</div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			
+		</div>
+	</div><div class="vc_empty_space"   style="height: 32px"><span class="vc_empty_space_inner"></span></div></div></div></div></div></div><div     class="vc_row wpb_row section vc_row-fluid " style='background-color:#f5f5f5; border-bottom: 1px solid #f5f5f5; padding-top:50px; padding-bottom:50px; text-align:left;'><div class=" full_section_inner clearfix"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div     class="vc_row wpb_row vc_inner section vc_row-fluid grid_section" style=' text-align:left;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Die Wetterlage</p>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 5px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			
+		</div>
+	</div><div class="vc_empty_space"   style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p>Wind und Gezeiten beschäftigen uns immer. Für einen ersten Überblick der nächsten Tage hilft die Vorhersage rechts. Wenn Du tiefer einsteigen möchtest, nutze gern den Superforecast.</p>
+
+		</div>
+	</div></div></div></div></div></div></div><div     class="vc_row wpb_row vc_inner section vc_row-fluid grid_section" style=' padding-top:60px; text-align:left;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<p><script src="https://www.windfinder.com/widget/forecast/js/schillig_tide?unit_wave=m&amp;unit_rain=mm&amp;unit_temperature=c&amp;unit_wind=kts&amp;unit_pressure=hPa&amp;days=4&amp;show_day=1&amp;show_pressure=0&amp;show_waves=0&amp;show_clouds=0"></script></p>
+<p><noscript><a rel="nofollow" href="https://www.windfinder.com/forecast/schillig_tide?utm_source=forecast&amp;utm_medium=web&amp;utm_campaign=homepageweather&amp;utm_content=noscript-Schillig (Tide)">Wind forecast for Schillig (Tide)</a> provided by <a rel="nofollow" href="https://www.windfinder.com?utm_source=forecast&amp;utm_medium=web&amp;utm_campaign=homepageweather&amp;utm_content=noscript-logo">windfinder.com</a></noscript></p>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 10px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			
+		</div>
+	</div></div></div></div></div></div></div></div></div></div></div></div><div     class="vc_row wpb_row section vc_row-fluid  grid_section" style=' text-align:left;'><div class=" section_inner clearfix"><div class='section_inner_margin clearfix'><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_empty_space"   style="height: 50px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h4>Noch Fragen?</h4>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 5px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_text_column wpb_content_element ">
+		<div class="wpb_wrapper">
+			<h2>Hier geht&#8217;s zur Anfrage</h2>
+
+		</div>
+	</div><div class="vc_empty_space"   style="height: 15px"><span class="vc_empty_space_inner"></span></div>
+                <div class='gf_browser_unknown gform_wrapper gform_legacy_markup_wrapper gform-theme--no-framework' data-form-theme='legacy' data-form-index='0' id='gform_wrapper_7' ><form method='post' enctype='multipart/form-data'  id='gform_7'  action='/' data-formid='7' novalidate>
+                        <div class='gform-body gform_body'><ul id='gform_fields_7' class='gform_fields top_label form_sublabel_below description_below validation_below'><li id="field_7_37" class="gfield gfield--type-honeypot gform_validation_container field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_7_37'><span class='gform-field-label__text'>Instagram</span></label><div class='ginput_container'><input name='input_37' id='input_7_37' type='text' value='' autocomplete='new-password'/></div><div class='gfield_description' id='gfield_description_7_37'>Dieses Feld dient zur Validierung und sollte nicht verändert werden.</div></li><li id="field_7_35" class="gfield gfield--type-html gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><script type="text/javascript"></script></li><li id="field_7_10" class="gfield gfield--type-name gfield_contains_required field_sublabel_above gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label gfield_label_before_complex' ><span class='gform-field-label__text'>Wie ist dein Name?</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_complex ginput_container ginput_container--name no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gform-grid-row' id='input_7_10'>
+                            
+                            <span id='input_7_10_3_container' class='name_first gform-grid-col gform-grid-col--size-auto' >
+                                                    <label for='input_7_10_3' class='gform-field-label gform-field-label--type-sub '>Vorname</label>
+                                                    <input type='text' name='input_10.3' id='input_7_10_3' value=''   aria-required='true'     />
+                                                </span>
+                            
+                            <span id='input_7_10_6_container' class='name_last gform-grid-col gform-grid-col--size-auto' >
+                                                            <label for='input_7_10_6' class='gform-field-label gform-field-label--type-sub '>Nachname</label>
+                                                            <input type='text' name='input_10.6' id='input_7_10_6' value=''   aria-required='true'     />
+                                                        </span>
+                            
+                        </div></li><li id="field_7_13" class="gfield gfield--type-email gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_7_13'><span class='gform-field-label__text'>Unter welcher E-Mail-Adresse dürfen wir dich kontaktieren?</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_email'>
+                            <input name='input_13' id='input_7_13' type='email' value='' class='medium'    aria-required="true" aria-invalid="false"  />
+                        </div></li><li id="field_7_12" class="gfield gfield--type-phone gfield--phone-format-international gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_7_12'><span class='gform-field-label__text'>Unter welcher Nummer dürfen wir dich zurückrufen?</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_phone'><input name='input_12' id='input_7_12' type='tel' value='' class='medium'   aria-required="true" aria-invalid="false"    /></div></li><li id="field_7_33" class="gfield gfield--type-checkbox gfield--type-choice gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible gfield--choice-align-vertical"  ><label class='gfield_label gform-field-label gfield_label_before_complex' ><span class='gform-field-label__text'>Um welches Thema geht es bei deiner Anfrage?</span><span class="gfield_required"><span class="gfield_required gfield_required_asterisk">*</span></span></label><div class='ginput_container ginput_container_checkbox'><ul class='gfield_checkbox' id='input_7_33'><li class='gchoice gchoice_7_33_1'>
+								<input class='gfield-choice-input' name='input_33.1' type='checkbox'  value='Kitesurfen'  id='choice_7_33_1'   />
+								<label for='choice_7_33_1' id='label_7_33_1' class='gform-field-label gform-field-label--type-inline'>Kitesurfen</label>
+							</li><li class='gchoice gchoice_7_33_2'>
+								<input class='gfield-choice-input' name='input_33.2' type='checkbox'  value='Windsurfen'  id='choice_7_33_2'   />
+								<label for='choice_7_33_2' id='label_7_33_2' class='gform-field-label gform-field-label--type-inline'>Windsurfen</label>
+							</li><li class='gchoice gchoice_7_33_3'>
+								<input class='gfield-choice-input' name='input_33.3' type='checkbox'  value='Stand up Paddling'  id='choice_7_33_3'   />
+								<label for='choice_7_33_3' id='label_7_33_3' class='gform-field-label gform-field-label--type-inline'>Stand up Paddling</label>
+							</li><li class='gchoice gchoice_7_33_4'>
+								<input class='gfield-choice-input' name='input_33.4' type='checkbox'  value='Veranstaltung'  id='choice_7_33_4'   />
+								<label for='choice_7_33_4' id='label_7_33_4' class='gform-field-label gform-field-label--type-inline'>Veranstaltung</label>
+							</li><li class='gchoice gchoice_7_33_5'>
+								<input class='gfield-choice-input' name='input_33.5' type='checkbox'  value='Sonstiges'  id='choice_7_33_5'   />
+								<label for='choice_7_33_5' id='label_7_33_5' class='gform-field-label gform-field-label--type-inline'>Sonstiges</label>
+							</li></ul></div></li><li id="field_7_36" class="gfield gfield--type-textarea field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_7_36'><span class='gform-field-label__text'>Bitte nenne uns kurz dein Anliegen</span></label><div class='ginput_container ginput_container_textarea'><textarea name='input_36' id='input_7_36' class='textarea medium'      aria-invalid="false"   rows='10' cols='50'></textarea></div></li></ul></div>
+        <div class='gform-footer gform_footer top_label'> <button type='submit' id='gform_submit_button_7' class='gform_button button' onclick='gform.submission.handleButtonClick(this);' data-submission-type='submit' >Anfrage absenden</button> 
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_7' value='postback' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_7' id='gform_theme_7' value='legacy' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_7' id='gform_style_settings_7' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_7' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='7' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_currency' data-currency='EUR' value='G3cXTlc4pj14FBynpA9tsSOAQHC+vrqks3tsHn7Co9F0n2RX2tzRuTX9ujhU8WekpIYYRmbZaoi6xlKJ26uZS9kBvikO9hUHUsOO5iC21LFJBkY=' />
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_7' value='WyJ7XCJnZm9ybV9zdWJtaXNzaW9uX21ldGhvZFwiOltcImFkMzg0Yzg1ZTdjMzEwNmIxZDc4ZDczMjJhYmZhYzk3XCIsXCI4ODA3ZjJiNTNjNWI2YWJhNTljNmRjYTM1ZjJhOGZiMlwiXSxcImdmb3JtX3RoZW1lXCI6XCJiM2ExZmEzYjNkNTNlMzg2ODMwZTM1MWMzODQ2NGRjZVwiLFwiZ2Zvcm1fc3R5bGVfc2V0dGluZ3NcIjpcIjZhZDgxMTM3YjFhMThkODJlYzM2MmEyNjVkMDdhMDViXCIsXCJmb3JtX2lkXCI6XCIzYzJmMWVkOTkxYTk0ZTg4MjE2ZDA1MTA1MGU2YWYzOVwiLFwidXJsXCI6XCJhMjMyNjZkMzc1NGJkOTc1ODk2YTk3MGI4ZWU0NGE4NVwiLFwic3RhdGVfdGltZXN0YW1wXCI6XCI1Mjg2ODZhYjlkMGY1NzlkMWE3ZmY5YzYyMWY4ZWYxNFwifSIsIjc3MzhmYTJlOWRiY2I2YTkyYTFiMWQ1YzFiNzc4ZjM0IiwxNzkxOTU5MzMxXQ==' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_7' id='gform_target_page_number_7' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_7' id='gform_source_page_number_7' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        <input type="hidden" id="ct_checkjs_45c48cce2e2d7fbdea1afc51c7c6ad26" name="ct_checkjs" value="0" /><script></script><input
+                    class="apbct_special_field apbct_email_id__gravity_form"
+                    name="apbct__email_id__gravity_form"
+                    aria-label="apbct__label_id__gravity_form"
+                    type="text" size="30" maxlength="200" autocomplete="off"
+                    value=""
+                /></form>
+                        </div><div class="vc_empty_space"   style="height: 100px"><span class="vc_empty_space_inner"></span></div>
+	<div class="wpb_raw_code wpb_raw_html wpb_content_element" >
+		<div class="wpb_wrapper">
+			<a href="/#anker-anfragen" class="ctabtnbottom ctabtn1">anfragen</a>
+<a href="/buchung" class="ctabtnbottom ctabtn2">buchen</a>
+		</div>
+	</div>
+</div></div></div></div></div></div>
+</div>																				</div>
+</div>
+</div>
+</div>
+	<footer class="qodef-page-footer footer_border_columns">
+		<div class="footer_inner clearfix">
+				<div class="footer_top_holder">
+		<div class="footer_top ">
+						<div class="container">
+				<div class="container_inner">
+																	<div class="four_columns clearfix">
+								<div class="qode_column column1 qodef-footer-top-column-1">
+									<div class="column_inner">
+										<div id="text-2" class="widget widget_text">			<div class="textwidget"><img src="/wp-content/uploads/2016/03/surfschule-nordsee-footerlogo.png" alt="logo" />
+
+<div class="separator  transparent center  " style="margin-top:20px"></div>
+
+<span class='q_social_icon_holder with_link circle_social' ><a href='https://www.facebook.com/nordseeacademy/' target='_blank'><span class='fa-stack tiny circle_social' style='color: #393939;'><span class='social_icon social_facebook'></span></span></a></span><span class='q_social_icon_holder with_link circle_social' ><a href='https://www.instagram.com/nordseeacademy/' target='_self'><span class='fa-stack tiny circle_social' style='color: #393939;'><span class='social_icon social_instagram'></span></span></a></span></div>
+		</div>									</div>
+								</div>
+								<div class="qode_column column2 qodef-footer-top-column-2">
+									<div class="column_inner">
+										<div id="text-7" class="widget widget_text"><h4>KONTAKT</h4>			<div class="textwidget"><span >Ruf uns an!</span>
+<div class="separator  transparent center  " style="margin-top:7px"></div>
+ <span>+49 (0) 163 - 8460040 </span>
+<div class="separator  transparent center  " style="margin-top:10px"></div>
+<span >Schreib uns!</span>
+<div class="separator  transparent center  " style="margin-top:7px"></div>
+<a href="mailto:in**@****************le.de" title="Dieser Kontakt wurde von Anti-Spam by CleanTalk verschlüsselt. Klicken Sie hier, um ihn zu entschlüsseln. Um die Entschlüsselung abzuschließen, stellen Sie sicher, dass JavaScript in Ihrem Browser aktiviert ist." data-original-string="b0VH26wxKkD/zqTIHSVE+A==d27DK6oKZYAe1zAWNcsKBFeC6O3gvpDxVH3BRttyauFkbU="><span 
+                data-original-string='soOQ6dCIqB57EXLIP4kgCg==d27hRiKb7TDq3Lv9Ivn6U/BHsE7qlMMCGSbJGhuaAt77Dg='
+                class='apbct-email-encoder'
+                title='Dieser Kontakt wurde von Anti-Spam by CleanTalk verschlüsselt. Klicken Sie hier, um ihn zu entschlüsseln. Um die Entschlüsselung abzuschließen, stellen Sie sicher, dass JavaScript in Ihrem Browser aktiviert ist.'>in<span class="apbct-blur">**</span>@<span class="apbct-blur">****************</span>le.de</span></a></div>
+		</div>									</div>
+								</div>
+								<div class="qode_column column3 qodef-footer-top-column-3">
+									<div class="column_inner">
+										<div id="text-8" class="widget widget_text"><h4>Rechtliches</h4>			<div class="textwidget"><a href="/impressum">Impressum</a>
+<div class="separator  transparent center  " style="margin-top:7px"></div>
+<a href="/agb">AGB</a>
+<div class="separator  transparent center  " style="margin-top:7px"></div>
+<a href="https://www.nordsee-surfschule.de/kontakt/">Kontakt</a>
+<div class="separator  transparent center  " style="margin-top:7px"></div>
+<a href="/datenschutz">Datenschutz</a>
+</div>
+		</div>									</div>
+								</div>
+								<div class="qode_column column4 qodef-footer-top-column-4">
+									<div class="column_inner">
+										<div id="qode_instagram_widget-2" class="widget widget_qode_instagram_widget"><h4>Photo Stream</h4></div>									</div>
+								</div>
+							</div>
+																</div>
+			</div>
+				</div>
+	</div>
+					</div>
+	</footer>
+</div>
+</div>
+<script type="speculationrules"></script>
+<script id="wp-importmap" type="importmap"></script>
+<script data-cfasync="false" data-no-minify="1" data-no-optimize="1" id="borlabs-cookie-core-js-module" src="https://www.nordsee-surfschule.de/wp-content/plugins/borlabs-cookie/assets/javascript/borlabs-cookie.min.js?ver=3.4.6" type="module"></script>
+<script id="borlabs-cookie-legacy-backward-compatibility-js-module" src="https://www.nordsee-surfschule.de/wp-content/plugins/borlabs-cookie/assets/javascript/borlabs-cookie-legacy-backward-compatibility.min.js?ver=3.4.6" type="module"></script>
+<div data-nosnippet data-borlabs-cookie-consent-required='true' id='BorlabsCookieBox'></div><div id='BorlabsCookieWidget' class='brlbs-cmpnt-container'></div><script type="text/html" id="wpb-modifications"></script><script id="regiondo-booking-js" src="https://widgets.regiondo.net/booking/v1/booking-widget.min.js"></script>
+<script id="jquery-ui-core-js-before"></script>
+<script id="jquery-ui-core-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/ui/core.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-accordion-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/ui/accordion.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-datepicker-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-datepicker-js-after"></script>
+<script id="jquery-effects-core-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/ui/effect.min.js?ver=1.14.2"></script>
+<script id="jquery-effects-fade-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/ui/effect-fade.min.js?ver=1.14.2"></script>
+<script id="jquery-effects-size-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/ui/effect-size.min.js?ver=1.14.2"></script>
+<script id="jquery-effects-scale-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/ui/effect-scale.min.js?ver=1.14.2"></script>
+<script id="jquery-effects-slide-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/ui/effect-slide.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-mouse-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/ui/mouse.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-slider-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/ui/slider.min.js?ver=1.14.2"></script>
+<script id="jquery-ui-tabs-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/ui/tabs.min.js?ver=1.14.2"></script>
+<script id="jquery-form-js" src="https://www.nordsee-surfschule.de/wp-includes/js/jquery/jquery.form.min.js?ver=4.3.0"></script>
+<script id="mediaelement-core-js-before"></script>
+<script id="mediaelement-core-js" src="https://www.nordsee-surfschule.de/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.17"></script>
+<script id="mediaelement-migrate-js" src="https://www.nordsee-surfschule.de/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="mediaelement-js-extra"></script>
+<script id="wp-mediaelement-js" src="https://www.nordsee-surfschule.de/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="doubletaptogo-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/doubletaptogo.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="modernizr-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/modernizr.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="appear-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.appear.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="hoverIntent-js" src="https://www.nordsee-surfschule.de/wp-includes/js/hoverIntent.min.js?ver=1.10.2"></script>
+<script id="absoluteCounter-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/absoluteCounter.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="easypiechart-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/easypiechart.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="mixitup-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.mixitup.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="nicescroll-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.nicescroll.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="prettyphoto-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.prettyPhoto.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="fitvids-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.fitvids.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="flexslider-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.flexslider-min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="infinitescroll-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/infinitescroll.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="waitforimages-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.waitforimages.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="waypoints-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/waypoints.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="jplayer-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jplayer.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="bootstrap-carousel-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/bootstrap.carousel.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="skrollr-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/skrollr.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="Chart-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/Chart.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="jquery-easing-1.3-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.easing.1.3.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="jquery-plugin-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.plugin.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="countdown-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.countdown.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="justifiedGallery-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.justifiedGallery.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="owl-carousel-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/owl.carousel.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="carouFredSel-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.carouFredSel-6.2.1.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="fullPage-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.fullPage.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="lemmonSlider-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/lemmon-slider.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="mousewheel-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.mousewheel.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="touchSwipe-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.touchSwipe.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="isotope-js" src="https://www.nordsee-surfschule.de/wp-content/plugins/js_composer/assets/lib/vendor/dist/isotope-layout/dist/isotope.pkgd.min.js?ver=9.0.1"></script>
+<script id="packery-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/packery-mode.pkgd.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="parallax-scroll-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.parallax-scroll.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="multiscroll-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/jquery.multiscroll.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="stockholm-default-dynamic-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/default_dynamic_callback.php?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="stockholm-default-js-extra"></script>
+<script id="stockholm-default-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/default.min.js?ver=0f77ac03d64aee1807d37f802288f4f5"></script>
+<script id="stockholm-default-js-after"></script>
+<script id="wpb_composer_front_js-js" src="https://www.nordsee-surfschule.de/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=9.0.1"></script>
+<script id="stockholm-like-js-extra"></script>
+<script id="stockholm-like-js" src="https://www.nordsee-surfschule.de/wp-content/themes/stockholm/js/plugins/qode-like.js?ver=1.0"></script>
+<script id="wp-dom-ready-js" src="https://www.nordsee-surfschule.de/wp-includes/js/dist/dom-ready.min.js?ver=3fe927cab37bf38d6a23"></script>
+<script id="wp-hooks-js" src="https://www.nordsee-surfschule.de/wp-includes/js/dist/hooks.min.js?ver=f0f188028580e8dc1255"></script>
+<script id="wp-i18n-js" src="https://www.nordsee-surfschule.de/wp-includes/js/dist/i18n.min.js?ver=1dfe7db3940c23ea9216"></script>
+<script id="wp-i18n-js-after"></script>
+<script id="wp-a11y-js-translations"></script>
+<script id="wp-a11y-js" src="https://www.nordsee-surfschule.de/wp-includes/js/dist/a11y.min.js?ver=31c6cec5a4ff7aff483d"></script>
+<script id="gform_gravityforms_theme_vendors-js" defer='defer' src="https://www.nordsee-surfschule.de/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js?ver=0c901cb641ce64b99c20ea1a4d208cc9"></script>
+<script id="gform_gravityforms_theme-js-extra"></script>
+<script id="gform_gravityforms_theme-js" defer='defer' src="https://www.nordsee-surfschule.de/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js?ver=373fcf115e257ba62fdd1a205717b981"></script>
+<script></script><template id="brlbs-cmpnt-cb-template-facebook-content-blocker">
+ <div class="brlbs-cmpnt-container brlbs-cmpnt-content-blocker brlbs-cmpnt-with-individual-styles" data-borlabs-cookie-content-blocker-id="facebook-content-blocker" data-borlabs-cookie-content=""><div class="brlbs-cmpnt-cb-preset-b brlbs-cmpnt-cb-facebook"> <div class="brlbs-cmpnt-cb-thumbnail" style="background-image: url('https://www.nordsee-surfschule.de/wp-content/uploads/borlabs-cookie/1/cb-facebook-main.png')"></div> <div class="brlbs-cmpnt-cb-main"> <div class="brlbs-cmpnt-cb-content"> <p class="brlbs-cmpnt-cb-description">Sie sehen gerade einen Platzhalterinhalt von <strong>Facebook</strong>. Um auf den eigentlichen Inhalt zuzugreifen, klicken Sie auf die Schaltfläche unten. Bitte beachten Sie, dass dabei Daten an Drittanbieter weitergegeben werden.</p> <a class="brlbs-cmpnt-cb-provider-toggle" href="#" data-borlabs-cookie-show-provider-information role="button">Mehr Informationen</a> </div> <div class="brlbs-cmpnt-cb-buttons"> <a class="brlbs-cmpnt-cb-btn" href="#" data-borlabs-cookie-unblock role="button">Inhalt entsperren</a> <a class="brlbs-cmpnt-cb-btn" href="#" data-borlabs-cookie-accept-service role="button" style="display: inherit">Erforderlichen Service akzeptieren und Inhalte entsperren</a> </div> </div> </div></div>
+</template>
+<script></script><template id="brlbs-cmpnt-cb-template-gravity-forms-recaptcha">
+ <div class="brlbs-cmpnt-container brlbs-cmpnt-content-blocker brlbs-cmpnt-with-individual-styles" data-borlabs-cookie-content-blocker-id="gravity-forms-recaptcha" data-borlabs-cookie-content=""><div class="brlbs-cmpnt-cb-preset-b brlbs-cmpnt-cb-recaptcha-gravity-forms"> <div class="brlbs-cmpnt-cb-thumbnail" style="background-image: url('https://www.nordsee-surfschule.de/wp-content/uploads/borlabs-cookie/1/bct-google-recaptcha-main.png')"></div> <div class="brlbs-cmpnt-cb-main"> <div class="brlbs-cmpnt-cb-content"> <p class="brlbs-cmpnt-cb-description">Sie müssen den Inhalt von <strong>reCAPTCHA</strong> laden, um das Formular abzuschicken. Bitte beachten Sie, dass dabei Daten mit Drittanbietern ausgetauscht werden.</p> <a class="brlbs-cmpnt-cb-provider-toggle" href="#" data-borlabs-cookie-show-provider-information role="button">Mehr Informationen</a> </div> <div class="brlbs-cmpnt-cb-buttons"> <a class="brlbs-cmpnt-cb-btn" href="#" data-borlabs-cookie-unblock role="button">Inhalt entsperren</a> <a class="brlbs-cmpnt-cb-btn" href="#" data-borlabs-cookie-accept-service role="button" style="display: inherit">Erforderlichen Service akzeptieren und Inhalte entsperren</a> </div> </div> </div></div>
+</template>
+<script></script><template id="brlbs-cmpnt-cb-template-instagram">
+ <div class="brlbs-cmpnt-container brlbs-cmpnt-content-blocker brlbs-cmpnt-with-individual-styles" data-borlabs-cookie-content-blocker-id="instagram" data-borlabs-cookie-content=""><div class="brlbs-cmpnt-cb-preset-b brlbs-cmpnt-cb-instagram"> <div class="brlbs-cmpnt-cb-thumbnail" style="background-image: url('https://www.nordsee-surfschule.de/wp-content/uploads/borlabs-cookie/1/cb-instagram-main.png')"></div> <div class="brlbs-cmpnt-cb-main"> <div class="brlbs-cmpnt-cb-content"> <p class="brlbs-cmpnt-cb-description">Sie sehen gerade einen Platzhalterinhalt von <strong>Instagram</strong>. Um auf den eigentlichen Inhalt zuzugreifen, klicken Sie auf die Schaltfläche unten. Bitte beachten Sie, dass dabei Daten an Drittanbieter weitergegeben werden.</p> <a class="brlbs-cmpnt-cb-provider-toggle" href="#" data-borlabs-cookie-show-provider-information role="button">Mehr Informationen</a> </div> <div class="brlbs-cmpnt-cb-buttons"> <a class="brlbs-cmpnt-cb-btn" href="#" data-borlabs-cookie-unblock role="button">Inhalt entsperren</a> <a class="brlbs-cmpnt-cb-btn" href="#" data-borlabs-cookie-accept-service role="button" style="display: inherit">Erforderlichen Service akzeptieren und Inhalte entsperren</a> </div> </div> </div></div>
+</template>
+<script></script><template id="brlbs-cmpnt-cb-template-wordfence-login-security-recaptcha">
+ <div class="brlbs-cmpnt-container brlbs-cmpnt-content-blocker brlbs-cmpnt-with-individual-styles" data-borlabs-cookie-content-blocker-id="wordfence-login-security-recaptcha" data-borlabs-cookie-content=""><div class="brlbs-cmpnt-cb-preset-b"> <div class="brlbs-cmpnt-cb-thumbnail" style="background-image: url('https://www.nordsee-surfschule.de/wp-content/uploads/borlabs-cookie/1/recaptcha-preset-main.png')"></div> <div class="brlbs-cmpnt-cb-main"> <div class="brlbs-cmpnt-cb-content"> <p class="brlbs-cmpnt-cb-description">Sie sehen gerade einen Platzhalterinhalt von <strong>reCAPTCHA</strong>. Um auf den eigentlichen Inhalt zuzugreifen, klicken Sie auf die Schaltfläche unten. Bitte beachten Sie, dass dabei Daten an Drittanbieter weitergegeben werden.</p> <a class="brlbs-cmpnt-cb-provider-toggle" href="#" data-borlabs-cookie-show-provider-information role="button">Mehr Informationen</a> </div> <div class="brlbs-cmpnt-cb-buttons"> <a class="brlbs-cmpnt-cb-btn" href="#" data-borlabs-cookie-unblock role="button">Inhalt entsperren</a> <a class="brlbs-cmpnt-cb-btn" href="#" data-borlabs-cookie-accept-service role="button" style="display: inherit">Erforderlichen Service akzeptieren und Inhalte entsperren</a> </div> </div> </div></div>
+</template>
+<script></script><template id="brlbs-cmpnt-cb-template-x-alias-twitter-content-blocker">
+ <div class="brlbs-cmpnt-container brlbs-cmpnt-content-blocker brlbs-cmpnt-with-individual-styles" data-borlabs-cookie-content-blocker-id="x-alias-twitter-content-blocker" data-borlabs-cookie-content=""><div class="brlbs-cmpnt-cb-preset-b brlbs-cmpnt-cb-x"> <div class="brlbs-cmpnt-cb-thumbnail" style="background-image: url('https://www.nordsee-surfschule.de/wp-content/uploads/borlabs-cookie/1/cb-twitter-main.png')"></div> <div class="brlbs-cmpnt-cb-main"> <div class="brlbs-cmpnt-cb-content"> <p class="brlbs-cmpnt-cb-description">Sie sehen gerade einen Platzhalterinhalt von <strong>X</strong>. Um auf den eigentlichen Inhalt zuzugreifen, klicken Sie auf die Schaltfläche unten. Bitte beachten Sie, dass dabei Daten an Drittanbieter weitergegeben werden.</p> <a class="brlbs-cmpnt-cb-provider-toggle" href="#" data-borlabs-cookie-show-provider-information role="button">Mehr Informationen</a> </div> <div class="brlbs-cmpnt-cb-buttons"> <a class="brlbs-cmpnt-cb-btn" href="#" data-borlabs-cookie-unblock role="button">Inhalt entsperren</a> <a class="brlbs-cmpnt-cb-btn" href="#" data-borlabs-cookie-accept-service role="button" style="display: inherit">Erforderlichen Service akzeptieren und Inhalte entsperren</a> </div> </div> </div></div>
+</template>
+<script></script><script></script>
+<script></script>
+<div hidden data-wpu-integrity="404a017a6982cdb549011b3bd8975afa"></div>
+</body>
+</html>

@@ -15,9 +15,12 @@
 //            people." Year: the table has none; we take it from the page's own article:modified_time (2026-06-10 on
 //            2026-10-12), like the other year-less tables (docs/offer-adapters.md).
 //   content  the same page (surf house text, FAQ, JSON-LD SportsActivityLocation of the school).
+//   photos   the house photos exist only at 400x300 on every language version of the page (checked 2026-10-14),
+//            so this listing's photo floor is 400x300 (imageMinSize); the school's own course photos (800 px) come
+//            from the group-courses page https://kitefuntarifa.com/en/kitesurf-courses-tarifa/kite-group-courses-tarifa.html
 // No booking engine: "Contact us!" (e-mail, phone, WhatsApp) -> 'on_request'.
 // robots.txt (2026-10-12): "User-agent: * / Allow: /*.css / Allow: /*.js / Disallow:" (allow all).
-// Requests per run: 1 (content and slots share one memoised fetch).
+// Requests per run: 2 (content and slots share one memoised fetch of the house page, plus the group-courses page).
 // Parsed: slot = course row x month of the table year ("9h-kite-course|2026-10"), priceUnit 'package' for the 3-night
 //   pack, price per person (= the printed total for 2 people / 2; priceTotal keeps the total), occupancy 2,
 //   datePrecision 'month' (arrival any day of the month), availability 'on_request'; "Contact" cells (August) are
@@ -32,6 +35,7 @@ import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js'
 const SITE = 'https://kitefuntarifa.com';
 export const KF_URL = `${SITE}/en/kitesurf-courses-tarifa/kitesurf-courses-accommodation-tarifa.html`;
 const CONTACT_URL = `${SITE}/en/contact.html`;
+export const KF_GROUP_URL = `${SITE}/en/kitesurf-courses-tarifa/kite-group-courses-tarifa.html`;
 
 const keyPart = (s: string): string => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const lastDay = (y: number, m: number): number => new Date(Date.UTC(y, m, 0)).getUTCDate();
@@ -185,6 +189,17 @@ export function parseKitefunContent(html: string): OfferContent {
   };
 }
 
+/** course photos kept: the vision QC only sees the 10 largest candidates (VISION_MAX_IMAGES in lib/images.ts), so
+ *  1 hero + 3 house photos (400 px, the smallest) + 6 course photos keeps all house photos in front of it */
+const KF_COURSE_PHOTOS = 6;
+
+/** the school's own course photos (full size, not the "-min" thumbnails) from the group-courses page */
+export function kfCoursePhotos(html: string): string[] {
+  return imageCandidates(html, KF_GROUP_URL, null, 40)
+    .filter(u => /\/kite-courses-tarifa\/[^/]*(course|lessons)[^/]*\.webp$/i.test(u) && !/-min\.webp$/i.test(u))
+    .slice(0, KF_COURSE_PHOTOS);
+}
+
 // --- adapter ----------------------------------------------------------------------------------------
 export const kitefunSurfHouseTarifa: OfferAdapter = {
   key: 'kitefun-surf-house-tarifa',
@@ -199,10 +214,19 @@ export const kitefunSurfHouseTarifa: OfferAdapter = {
   },
   url: KF_URL,
   slotMethod: 'price_table',
-  fetchBudget: 2,
+  fetchBudget: 3,
   confidence: 'medium', // year-less table, year from the page's last edit
-  async fetchContent() {
-    return parseKitefunContent(await page(KF_URL));
+  // the house photos are only published at 400x300 (see header)
+  imageMinSize: { width: 400, height: 300 },
+  async fetchContent(ctx) {
+    const c = parseKitefunContent(await page(KF_URL));
+    try {
+      const extra = kfCoursePhotos(await page(KF_GROUP_URL)).filter(u => !c.imageUrls.includes(u));
+      c.imageUrls = [...c.imageUrls, ...extra];
+    } catch (e) {
+      ctx.note(`group-courses page not read, house photos only: ${(e as Error).message}`);
+    }
+    return c;
   },
   async fetchSlots(ctx) {
     const html = await page(KF_URL);

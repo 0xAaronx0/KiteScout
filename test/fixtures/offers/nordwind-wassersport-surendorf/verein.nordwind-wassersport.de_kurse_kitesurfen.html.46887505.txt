@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<script></script>
+<meta charset="UTF-8">
+<title>Kitesurfen - Nordwind Wassersport</title>
+<base href="https://verein.nordwind-wassersport.de/">
+<meta name="robots" content="index,follow">
+<meta name="description" content="">
+<meta name="generator" content="Contao Open Source CMS">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script></script><script></script><script></script><script></script>
+<script></script>
+<script></script>
+<script></script>
+<style></style>
+</head>
+<body id="top">
+<div id="wrapper">
+<div id="container">
+<main id="main">
+<div class="inside">
+<div id="header">
+<div class="navigation_top">
+<nav class="mod_huh_menu block" itemscope itemtype="http://schema.org/SiteNavigationElement"
+data-max-trigger-level="0"
+data-open-delay="200"
+data-close-delay="200"
+data-opening-duration="0"
+data-closing-duration="0"
+data-trigger-classes-for-childfree-level1=""
+>
+<a href="kurse/kitesurfen.html#skipNavigation13" class="invisible">Navigation überspringen</a>
+<div class="navbar d-none d-lg-block navbar-expand-lg navbar-light">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content-" aria-controls="navbar-content-" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbar-content-">
+<ul class="level_1 navbar-nav mr-auto">
+<li class="nav-item home">
+<a class="nav-link submenu sibling first" href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+</li>
+<li class="nav-item submenu first">
+<a href="der-verein/ueber-uns.html"
+title="Der Verein"
+class="nav-link submenu first"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">Der Verein</span>
+</a>
+<ul class="level_2">
+<li class="nav-item first">
+<a href="der-verein/ueber-uns.html"
+title="Über uns"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Über uns</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="der-verein/vorstand.html"
+title="Vorstand"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Vorstand</span>
+</a>
+</li>
+<li class="nav-item submenu">
+<a href="der-verein/beitragsordnung/ausbildung.html"
+title="Gut zu wissen"
+class="nav-link submenu"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">Gut zu wissen</span>
+</a>
+<ul class="level_3">
+<li class="nav-item first">
+<a href="der-verein/beitragsordnung/ausbildung.html"
+title="Ausbildung"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Ausbildung</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="der-verein/beitragsordnung/chartergebuehren-fuer-betriebssport-und-ags.html"
+title="Chartergebühren für Betriebssport und AGs"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Chartergebühren für Betriebssport und AGs</span>
+</a>
+</li>
+<li class="nav-item last">
+<a href="der-verein/beitragsordnung/materialverleih.html"
+title="Materialverleih"
+class="nav-link last"
+itemprop="url">
+<span itemprop="name">Materialverleih</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item last">
+<a href="https://verein.nordwind-wassersport.de/der-verein/ueber-uns.html?file=files/CONTENT/Verein/PDF/Beitragsordnung%20ab%2001.01.2025.pdf&cid=2372"
+title="Beitragsordnung"
+class="nav-link last"
+target="_blank" itemprop="url">
+<span itemprop="name">Beitragsordnung</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="termine.html"
+title="Termine"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Termine</span>
+</a>
+</li>
+<li class="nav-item submenu trail">
+<a href="kurse/katamaransegeln.html"
+title="Kurse"
+class="nav-link submenu trail"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">Kurse</span>
+</a>
+<ul class="level_2">
+<li class="nav-item sibling first">
+<a href="kurse/katamaransegeln.html"
+title="Katamaransegeln"
+class="nav-link sibling first"
+itemprop="url">
+<span itemprop="name">Katamaransegeln</span>
+</a>
+</li>
+<li class="nav-item sibling">
+<a href="kurse/windsurfen.html"
+title="Windsurfen"
+class="nav-link sibling"
+itemprop="url">
+<span itemprop="name">Windsurfen</span>
+</a>
+</li>
+<li class="nav-item active">
+<a href="kurse/kitesurfen.html"
+title="Kitesurfen"
+class="nav-link active"
+itemprop="url">
+<span itemprop="name">Kitesurfen</span>
+</a>
+</li>
+<li class="nav-item sibling">
+<a href="kurse/wingsurfen.html"
+title="Wingsurfen"
+class="nav-link sibling"
+itemprop="url">
+<span itemprop="name">Wingsurfen</span>
+</a>
+</li>
+<li class="nav-item sibling">
+<a href="kurse/jollensegeln.html"
+title="Jollensegeln"
+class="nav-link sibling"
+itemprop="url">
+<span itemprop="name">Jollensegeln</span>
+</a>
+</li>
+<li class="nav-item sibling last">
+<a href="kurse/stand-up-paddeling-sup.html"
+title="Stand-Up-Paddeling/ SUP"
+class="nav-link sibling last"
+itemprop="url">
+<span itemprop="name">Stand-Up-Paddeling/ SUP</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item submenu">
+<a href="trainingsgruppen/surfen.html"
+title="Trainingsgruppen"
+class="nav-link submenu"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">Trainingsgruppen</span>
+</a>
+<ul class="level_2">
+<li class="nav-item first">
+<a href="trainingsgruppen/surfen.html"
+title="Surfen"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Surfen</span>
+</a>
+</li>
+<li class="nav-item last">
+<a href="trainingsgruppen/segeln.html"
+title="Segeln"
+class="nav-link last"
+itemprop="url">
+<span itemprop="name">Segeln</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item submenu last">
+<a href="standorte/surendorf.html"
+title="Gästehäuser"
+class="nav-link submenu last"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">Gästehäuser</span>
+</a>
+<ul class="level_2">
+<li class="nav-item first">
+<a href="standorte/surendorf.html"
+title="Surendorf"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Surendorf</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="standorte/schubystrand-damp.html"
+title="Schubystrand/ Damp"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Schubystrand/ Damp</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="standorte/langholz.html"
+title="Langholz"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Langholz</span>
+</a>
+</li>
+<li class="nav-item last">
+<a href="standorte/glamping.html"
+title="Glamping"
+class="nav-link last"
+itemprop="url">
+<span itemprop="name">Glamping</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="mod_mobile_menu block">
+<div id="mobile-menu-19-trigger" class="mobile_menu_trigger">
+<div id="btnMenu"><i class="fas fa-bars" aria-hidden="true"></i></div></div>
+<div id="mobile-menu-19" class="mobile_menu">
+<div class="inner">
+<div id="mMenu">
+<nav class="mod_navigation block">
+<a href="kurse/kitesurfen.html#skipNavigation2" class="invisible">Navigation überspringen</a>
+<ul class="level_1">
+<li class="submenu first"><a href="der-verein/ueber-uns.html" title="Der Verein" class="submenu first" aria-haspopup="true">Der Verein</a>
+<ul class="level_2">
+<li class="first"><a href="der-verein/ueber-uns.html" title="Über uns" class="first">Über uns</a></li>
+<li><a href="der-verein/vorstand.html" title="Vorstand">Vorstand</a></li>
+<li class="submenu"><a href="der-verein/beitragsordnung/ausbildung.html" title="Gut zu wissen" class="submenu" aria-haspopup="true">Gut zu wissen</a>
+<ul class="level_3">
+<li class="first"><a href="der-verein/beitragsordnung/ausbildung.html" title="Ausbildung" class="first">Ausbildung</a></li>
+<li><a href="der-verein/beitragsordnung/chartergebuehren-fuer-betriebssport-und-ags.html" title="Chartergebühren für Betriebssport und AGs">Chartergebühren für Betriebssport und AGs</a></li>
+<li class="last"><a href="der-verein/beitragsordnung/materialverleih.html" title="Materialverleih" class="last">Materialverleih</a></li>
+</ul>
+</li>
+<li class="last"><a href="https://verein.nordwind-wassersport.de/der-verein/ueber-uns.html?file=files/CONTENT/Verein/PDF/Beitragsordnung%20ab%2001.01.2025.pdf&cid=2372" title="Beitragsordnung" class="last" target="_blank" rel="noreferrer noopener">Beitragsordnung</a></li>
+</ul>
+</li>
+<li><a href="termine.html" title="Termine">Termine</a></li>
+<li class="submenu trail"><a href="kurse/katamaransegeln.html" title="Kurse" class="submenu trail" aria-haspopup="true">Kurse</a>
+<ul class="level_2">
+<li class="sibling first"><a href="kurse/katamaransegeln.html" title="Katamaransegeln" class="sibling first">Katamaransegeln</a></li>
+<li class="sibling"><a href="kurse/windsurfen.html" title="Windsurfen" class="sibling">Windsurfen</a></li>
+<li class="active"><strong class="active">Kitesurfen</strong></li>
+<li class="sibling"><a href="kurse/wingsurfen.html" title="Wingsurfen" class="sibling">Wingsurfen</a></li>
+<li class="sibling"><a href="kurse/jollensegeln.html" title="Jollensegeln" class="sibling">Jollensegeln</a></li>
+<li class="sibling last"><a href="kurse/stand-up-paddeling-sup.html" title="Stand-Up-Paddeling/ SUP" class="sibling last">Stand-Up-Paddeling/ SUP</a></li>
+</ul>
+</li>
+<li class="submenu"><a href="trainingsgruppen/surfen.html" title="Trainingsgruppen" class="submenu" aria-haspopup="true">Trainingsgruppen</a>
+<ul class="level_2">
+<li class="first"><a href="trainingsgruppen/surfen.html" title="Surfen" class="first">Surfen</a></li>
+<li class="last"><a href="trainingsgruppen/segeln.html" title="Segeln" class="last">Segeln</a></li>
+</ul>
+</li>
+<li class="submenu last"><a href="standorte/surendorf.html" title="Gästehäuser" class="submenu last" aria-haspopup="true">Gästehäuser</a>
+<ul class="level_2">
+<li class="first"><a href="standorte/surendorf.html" title="Surendorf" class="first">Surendorf</a></li>
+<li><a href="standorte/schubystrand-damp.html" title="Schubystrand/ Damp">Schubystrand/ Damp</a></li>
+<li><a href="standorte/langholz.html" title="Langholz">Langholz</a></li>
+<li class="last"><a href="standorte/glamping.html" title="Glamping" class="last">Glamping</a></li>
+</ul>
+</li>
+</ul>
+<span id="skipNavigation2" class="invisible"></span>
+</nav>
+</div> </div>
+</div>
+<script></script>
+</div>
+</div>
+<div class="slider">
+<div class="inline">
+<div class="item item-1">
+<div class="mod_pageimage block">
+<figure class="image_container">
+<img src="files/CONTENT/Bilder/Feriencamps/Wing.Kite.Surf.Sail/Nordwind%20Wassersport%20Wingkitesurfsail-07.jpg" width="2560" height="1707" alt="">
+</figure>
+</div>
+</div>
+<div class="item item-2">
+<div class="mod_pageimage block">
+<figure class="image_container">
+<img src="files/CONTENT/Bilder/Feriencamps/Wing.Kite.Surf.Sail/Nordwind%20Wassersport%20Wingkitesurfsail-07.jpg" width="2560" height="1707" alt="">
+</figure>
+</div>
+</div>
+</div>
+<div class="mod_randomImage block" id="Logo">
+<figure class="image_container">
+<a class="stretched-link" href="https://nordwind-wassersport.de/" rel="noreferrer noopener">
+<img src="files/website/Bilder/Logo.png" width="303" height="303" alt="">
+</a>
+</figure>
+</div>
+</div>
+</div>
+<style></style><section id="article-474" class="mod_article">
+<div class="container mod_article block">
+<div class="ce_bs_gridStart row align-items-center">
+<div class="col-lg-5">
+<div class="ce_gallery block" id="gridbox">
+<div class="img1 row_0 row_first row_last even col_0 col_first">
+<figure class="image_container">
+<img src="files/CONTENT/Bilder/Kurse/Kitesurfen/kurs_kitesegeln_%231.jpg" width="3543" height="2362" alt="">
+</figure>
+</div>
+<div class="img2 row_0 row_first row_last even col_1">
+<figure class="image_container">
+<img src="files/CONTENT/Bilder/Kurse/Kitesurfen/kurs_kitesegeln_%232.jpg" width="3543" height="2362" alt="">
+</figure>
+</div>
+<div class="img3 row_0 row_first row_last even col_2">
+<figure class="image_container">
+<img src="files/CONTENT/Bilder/Kurse/Kitesurfen/kurs_kitesegeln_%233.webp" width="3543" height="2362" alt="">
+</figure>
+</div>
+</div>
+</div>
+<div class="ce_bs_gridSeparator col-lg-7">
+<div class="ce_text block">
+<h2><span>Willkommen im Nordwind Wasserport </span>Kitesurfing Club</h2>
+<div class="elementor-element elementor-element-d6d3b1f elementor-widget elementor-widget-text-editor" data-id="d6d3b1f" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">Pünktlich zum Saisonstart gibt es an der Nordwind Wassersportstation in Surendorf die Möglichkeit Kitekurse zu belegen. Ebenso auch auf Anfrage an der Station Schubystrand. Falls die Kurse an der jeweiligen Station nicht stattfinden können, werdet ihr mit unserem Road &amp; Boatshuttleservice in Surendorf abgeholt und an den täglich optimalen Spot des Reviers gebracht.</div>
+<div class="elementor-widget-container"><br>Einer passt fast immer und mit unserem stark motorisiertem Kitetaxiboot seid ihr in wenigen Minuten dort, bei günstigen Bedingungen sogar mit einer kleinen Wakeboardeinlage. Fun und Abenteuer von Anfang an. Ein professionelles Instruktorenteam schult und betreut euch, das Motorboot ist immer vor Ort und sorgt für Sicherheit. Sollte einmal gar kein Spot am Revier passen, bringt euch unser Kitebulli samt Material in kürzester Zeit zu einem geeigneten Revier in der Nähe. Für einige der Kurse bieten euch die Nordwind Gästehäuser am Hauptspot Surendorf (von hier aus startet an jedem Kurstag der Shuttleservice) besonders günstige Übernachtungsmöglichkeiten. Beim Plätschern der Wellen lässt es sich dann gut vom Kiten träumen!</div>
+<div class="elementor-widget-container">&nbsp;</div>
+<div class="elementor-widget-container">Solltest Du weitere Informationen benötigen, <a href="tel:%20+49%204346%205955" title="anrufen">rufe uns einfach an</a> oder schicke uns eine <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#x6E;&#102;&#x6F;&#64;&#x6E;&#111;&#x72;&#100;&#x77;&#105;&#x6E;&#100;&#x2D;&#119;&#x61;&#115;&#x73;&#101;&#x72;&#115;&#x70;&#111;&#x72;&#116;&#x2E;&#100;&#x65;" title="E-Mail">E-Mail</a>. Also, dann viel Spaß beim aussuchen und planen.<br><br></div>
+<div class="elementor-widget-container"><strong>Alle Kurse sind auch bei uns online als Gutschein buchbar.</strong></div>
+</div>
+</div>
+<div class="ce_hyperlink block">
+<a href="https://gutschein.nordwind-wassersport.de/" class="btn btn-warning btn-lg hyperlink_txt" title="Gutschein kaufen!" target="_blank" rel="noreferrer noopener">Gutschein kaufen! <i class="fa fa-arrow-right ml-4" aria-hidden="true"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section><section id="slider" class="mod_article py-0">
+<div class="splide">
+<div class="splide__track">
+<ul class="splide__list">
+<li class="splide__slide">
+<figure class="image_container">
+<a class="stretched-link" href="files/CONTENT/Bilder/Kurse/Kitesurfen/kurs_kitesegeln_%231.jpg" data-lightbox="lb2415">
+<img src="assets/images/f/kurs_kitesegeln_%231-451692b0.jpg" width="350" height="350" alt="">
+</a>
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<a class="stretched-link" href="files/CONTENT/Bilder/Kurse/Kitesurfen/kurs_kitesegeln_%232.jpg" data-lightbox="lb2415">
+<img src="assets/images/9/kurs_kitesegeln_%232-3592a807.jpg" width="350" height="350" alt="">
+</a>
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<a class="stretched-link" href="files/CONTENT/Bilder/Kurse/Kitesurfen/kurs_kitesegeln_%233.webp" data-lightbox="lb2415">
+<img src="assets/images/3/kurs_kitesegeln_%233-76bc66f7.webp" width="350" height="350" alt="">
+</a>
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<a class="stretched-link" href="files/CONTENT/Bilder/Kurse/Kitesurfen/kurs_kitesegeln_%234.jpg" data-lightbox="lb2415">
+<img src="assets/images/9/kurs_kitesegeln_%234-a0c02d39.jpg" width="350" height="350" alt="">
+</a>
+</figure>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="article-476" class="mod_article">
+<div class="container mod_article block">
+<div class="ce_text block">
+<h3>Goodies</h3>
+<ul>
+<li class="elementor-icon-list-item"><span class="elementor-icon-list-text">Professionelles VDWS Instruktorenteam</span></li>
+<li class="elementor-icon-list-item"><span class="elementor-icon-list-text">Shuttlebootservice zum besten Spot des Tages</span></li>
+<li class="elementor-icon-list-item"><span class="elementor-icon-list-text">Kitebulli zum schnellen Revierwechsel mit allem Equipment</span></li>
+<li class="elementor-icon-list-item"><span class="elementor-icon-list-text">Voll eingerichtete, eigene Wassersportstation mit perfekter Infrastruktur</span></li>
+<li class="elementor-icon-list-item"><span class="elementor-icon-list-text">Ozone Kites in allen relevanten Größen &amp; Könnensstufen</span></li>
+<li class="elementor-icon-list-item"><span class="elementor-icon-list-text">DSV Zugehörigkeit für Mitglieder der Kitesparte mit Regattaambitionen</span></li>
+</ul>
+</div>
+<div class="ce_text mt-5 block">
+<h3>VDWS-Grundkurs</h3>
+<p>Maximal 4 Schüler pro Lehrer. In ca. 9 Stunden erlernt ihr alle wichtigen allgemeinen und sicherheitsrelevanten Regeln des Kitens. Theoretische Einführung mit allen sicherheitsrelevanten Punkten, Materialaufbau, Starten und Landen bei Turbulenzen und schon gehts aus Wasser. Wasserstart und Bodydrag lassen einen die ersten Erfahrungen mit dem Kite auf dem Wasser erfahren.</p>
+<p><strong>Preis pro Person inkl. Neoprenanzug, Trapez, Helm, Prallschutzweste und Shuttleservice.</strong></p>
+<p><strong>Zusammenfassung:</strong></p>
+<p>Dauer: 9 Stunden<br>Mindestalter: 14 Jahre<br>Mindestgewicht: 50 kg<br>Teilnehmeranzahl: max. 4 Personen<br>Kosten: <strong>299,00 €</strong> Kursgebühr + <strong>39,00 €</strong> Prüfgebühr/ Lehrmittel</p>
+</div>
+<div class="ce_hyperlink block">
+<a href="https://gutschein.nordwind-wassersport.de/produkt/kitesurfen-einsteigerkurs-buchen/" class="btn btn-warning btn-lg hyperlink_txt" title="VDWS-Kite-Grundkurs buchen!">VDWS-Kite-Grundkurs buchen! <i class="fa fa-arrow-right ml-4" aria-hidden="true"></i></a>
+</div>
+</div>
+</section>
+<div class="xl-parallax" data-parallax="scroll" data-image-src="assets/images/2/kurs_kitesegeln_%233-ddabb659.webp">
+<div class="mod_article block" id="article-477">
+</div>
+</div>
+<section id="article-478" class="mod_article">
+<div class="container mod_article block">
+<div class="ce_text block">
+<h2>Welcome to the Club!</h2>
+<p><span class="elementor-alert-description">Mitglieder des Nordwind Wassersport e.V. und Kursteilnehmer/innen, die unmittelbar nach der erfolgreichen Absolvierung des Grundkurses Vereinsmitglied werden, erhalten 25% Preisnachlass auf Grundkurs- und Prüfungsgebühr. Als Mitglied kann je nach Könnensstufe Vereinsmaterial genutzt und an Trainings und vielen weiteren Veranstaltungen des Vereins teilgenommen werden. </span></p>
+</div>
+<div class="ce_hyperlink block">
+<a href="https://nordwind-wassersport.de/gutscheine-kurse/erlebnisgutschein.html" class="hyperlink_txt" title="Kursgutschein verschenken">Kursgutschein verschenken</a>
+</div>
+<div class="ce_hyperlink block">
+<a href="https://nordwind-wassersport.de/reisen/kompaktwochenenden.html" class="hyperlink_txt" title="Dein Wochenend-Camp">Dein Wochenend-Camp</a>
+</div>
+<div class="ce_text mt-5 block">
+<h3>Fortgeschrittenenkurse und Trainings</h3>
+<p>Inkl. Platz auf den Shuttleboot bzw. Bulli und inkl. freier Kite- &amp; Boardnutzung.</p>
+<p><strong>Zusammenfassung:</strong></p>
+<p>Dauer: 3 Stunden<br>Kosten: <strong>99,00 €</strong> pro Person</p>
+</div>
+</div>
+</section>
+<div class="xl-parallax" data-parallax="scroll" data-image-src="assets/images/4/kurs_kitesegeln_%232-f622a00c.jpg">
+<div class="mod_article block" id="article-479">
+</div>
+</div>
+<section id="article-1021" class="mod_article">
+<div class="container mod_article block">
+<div class="ce_text block">
+<h2>Kurszeiten</h2>
+<div class="table-responsive">
+<table class="table table-striped table-bordered" style="width: 45.5507%; height: 907.2px;">
+<thead>
+<tr class="row-1 odd" style="height: 33.6px;">
+<th class="column-1" style="width: 19.5648%; height: 33.6px;"><strong>Kurszeiten 2026</strong></th>
+<th class="column-2" style="width: 10.8704%; height: 33.6px;">&nbsp;</th>
+<th class="column-3" style="width: 10.2289%; height: 33.6px;">&nbsp;</th>
+<th class="column-4" style="width: 44.9807%; height: 33.6px;" colspan="5"><strong>Kitesurfen</strong></th>
+<th class="column-9" style="width: 8.89105%; height: 33.6px;">&nbsp;</th>
+</tr>
+</thead>
+<tbody class="row-hover">
+<tr class="row-2 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">&nbsp;</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-4" style="width: 44.9807%; height: 16.8px;" colspan="5">für Einzelbucher</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-3 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">&nbsp;</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-4" style="width: 44.9807%; height: 16.8px;" colspan="5">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-4 even" style="height: 16.8px;">
+<td class="column-1" style="width: 57.0503%; height: 16.8px;" colspan="5">Einsteigerkurs ca. 9 Std. / Level 1-3</td>
+<td class="column-6" style="width: 37.4855%; height: 16.8px;" colspan="4">ab 14 Jahre / mind. 50 kg</td>
+</tr>
+<tr class="row-5 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 57.0503%; height: 16.8px;" colspan="5">Andere Levels auf Absprache</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-6 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">&nbsp;</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-7 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">&nbsp;</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;"><strong>Standort</strong></td>
+<td class="column-3" style="width: 19.1199%; height: 16.8px;" colspan="2"><strong>Surendorf</strong></td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;"><strong>Standort</strong></td>
+<td class="column-8" style="width: 19.1199%; height: 16.8px;" colspan="2"><strong>Surendorf</strong></td>
+</tr>
+<tr class="row-8 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">&nbsp;</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;"><strong>Startzeit</strong></td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;"><strong>Kursart</strong></td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;"><strong>Startzeit</strong></td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;"><strong>Kursart</strong></td>
+</tr>
+<tr class="row-9 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">02/05/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-7" style="width: 10.8704%; height: 33.6px;" rowspan="2">17/08/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+</tr>
+<tr class="row-10 even" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+</tr>
+<tr class="row-11 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">03/05/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">SO</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">16/08/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+</tr>
+<tr class="row-12 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">09/05/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-7" style="width: 10.8704%; height: 33.6px;" rowspan="2">22/08/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+</tr>
+<tr class="row-13 odd" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+</tr>
+<tr class="row-14 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">10/05/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">SO</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">23/08/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+</tr>
+<tr class="row-15 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">16/05/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-7" style="width: 10.8704%; height: 33.6px;" rowspan="2">29/08/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+</tr>
+<tr class="row-16 even" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+</tr>
+<tr class="row-17 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">17/05/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">SO</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">30/08/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+</tr>
+<tr class="row-18 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">23/05/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-7" style="width: 10.8704%; height: 33.6px;" rowspan="2">05/09/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+</tr>
+<tr class="row-19 odd" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+</tr>
+<tr class="row-20 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">24/05/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">SO</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">06/09/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+</tr>
+<tr class="row-21 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">30/05/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-7" style="width: 10.8704%; height: 33.6px;" rowspan="2">12/09/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+</tr>
+<tr class="row-22 even" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+</tr>
+<tr class="row-23 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">31/05/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">SO</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">13/09/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+</tr>
+<tr class="row-24 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">06/06/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-7" style="width: 10.8704%; height: 33.6px;" rowspan="2">19/09/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+</tr>
+<tr class="row-25 odd" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+</tr>
+<tr class="row-26 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">07/06/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">SO</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">20/09/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+</tr>
+<tr class="row-27 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">13/06/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-7" style="width: 10.8704%; height: 33.6px;" rowspan="2">26/09/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+</tr>
+<tr class="row-28 even" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+</tr>
+<tr class="row-29 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">14/06/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">SO</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">27/09/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+</tr>
+<tr class="row-30 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">20/06/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-7" style="width: 10.8704%; height: 33.6px;" rowspan="2">03/10/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+</tr>
+<tr class="row-31 odd" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+</tr>
+<tr class="row-32 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">21/06/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">SO</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">04/10/26</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+</tr>
+<tr class="row-33 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">27/06/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 33.6px;" rowspan="2">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 33.6px;" rowspan="2">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-34 even" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-35 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">28/06/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-36 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">04/07/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 33.6px;" rowspan="2">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 33.6px;" rowspan="2">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-37 odd" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-38 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">05/07/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-39 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">11/07/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 33.6px;" rowspan="2">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 33.6px;" rowspan="2">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-40 even" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-41 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">12/07/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-42 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">18/07/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-43 odd" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-44 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">19/07/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-45 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">25/07/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-46 even" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-47 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">26/07/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-48 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">01/08/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-49 odd" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-50 even" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">02/08/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-51 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 33.6px;" rowspan="2">SA</td>
+<td class="column-2" style="width: 10.8704%; height: 33.6px;" rowspan="2">08/08/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 1</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-52 even" style="height: 16.8px;">
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">14:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 2</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+<tr class="row-53 odd" style="height: 16.8px;">
+<td class="column-1" style="width: 19.5648%; height: 16.8px;">SO</td>
+<td class="column-2" style="width: 10.8704%; height: 16.8px;">09/08/26</td>
+<td class="column-3" style="width: 10.2289%; height: 16.8px;">10:00</td>
+<td class="column-4" style="width: 8.89105%; height: 16.8px;">Level 3</td>
+<td class="column-5" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-6" style="width: 7.49516%; height: 16.8px;">&nbsp;</td>
+<td class="column-7" style="width: 10.8704%; height: 16.8px;">&nbsp;</td>
+<td class="column-8" style="width: 10.2289%; height: 16.8px;">&nbsp;</td>
+<td class="column-9" style="width: 8.89105%; height: 16.8px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section><section id="article-1031" class="mod_article pt-0">
+<div class="container mod_article pt-0 block">
+<div class="ce_downloads block">
+<h2>Anmeldung & Infomationen für Kursteilnehmer</h2>
+<ul>
+<li class="download-element ext-pdf">
+<a href="kurse/kitesurfen.html?file=files/CONTENT/Dokumente/NWWS_Informationen_Schulungsteilnehmerinnen_2025.pdf&amp;cid=4608" title="Die Datei NWWS_Informationen_Schulungsteilnehmerinnen_2025.pdf herunterladen" type="application/pdf">Wichtige Informationen für Schulungsteilnehmer:innen <span class="size">(6,7 KiB)</span></a>
+</li>
+<li class="download-element ext-pdf">
+<a href="kurse/kitesurfen.html?file=files/CONTENT/Dokumente/NWWS_Kursanmeldung_2025.pdf&amp;cid=4608" title="Die Datei NWWS_Kursanmeldung_2025.pdf herunterladen" type="application/pdf">Kursanmeldung 2025 <span class="size">(431,1 KiB)</span></a>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<div id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-lg-2">
+<div class="mod_randomImage block" id="LogoFooter">
+<figure class="image_container">
+<a class="stretched-link" href="https://nordwind-wassersport.de/" rel="noreferrer noopener">
+<img src="files/website/Bilder/Logo.png" width="303" height="303" alt="">
+</a>
+</figure>
+</div>
+</div>
+<div class="col-md-9 col-lg-10">
+<div class="row">
+<div class="col-md-4">
+<h3>Nordwind Wassersport</h3>
+<nav class="mod_customnav block">
+<a href="kurse/kitesurfen.html#skipNavigation11" class="invisible">Navigation überspringen</a>
+<ul class="level_1">
+<li class="first"><a href="./" title="Verein &amp; Kurse" class="first">Verein & Kurse</a></li>
+<li><a href="https://reisen.nordwind-wassersport.de/" title="Reisen">Reisen</a></li>
+<li class="last"><a href="https://gutschein.nordwind-wassersport.de/" title="Gutschein" class="last">Gutschein</a></li>
+</ul>
+<span id="skipNavigation11" class="invisible"></span>
+</nav>
+</div>
+<div class="col-md-4">
+<h3>Standorte</h3>
+<nav class="mod_customnav block">
+<a href="kurse/kitesurfen.html#skipNavigation12" class="invisible">Navigation überspringen</a>
+<ul class="level_1">
+<li class="first"><a href="standorte/surendorf.html" title="Surendorf" class="first">Surendorf</a></li>
+<li><a href="standorte/schubystrand-damp.html" title="Schubystrand/ Damp">Schubystrand/ Damp</a></li>
+<li><a href="standorte/langholz.html" title="Langholz">Langholz</a></li>
+<li class="last"><a href="standorte/glamping.html" title="Glamping" class="last">Glamping</a></li>
+</ul>
+<span id="skipNavigation12" class="invisible"></span>
+</nav>
+</div>
+<div class="col-md-4">
+<h3>Kontakt</h3>
+<p><i class="fa fa-phone" aria-hidden="true"></i> +49 4346 5955</p>
+<p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@nordwind-wassersport.de" style="text-transform: inherit">info@nordwind-wassersport.de</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postfooter">
+<div class="container d-flex justify-content-between align-items-center">
+<div class="socialmedia d-flex">
+<span><a href="https://www.facebook.com/NordwindWassersportEV" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></span>
+<span><a href="https://www.instagram.com/nordwind.wassersport/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></span>
+<span><a href="https://www.youtube.com/channel/UCBIXERPq6cOmS9mifp7GuLw" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></span>
+<span><a href="https://www.tiktok.com/@nordwind.wassersport?lang=de-DE" target="_blank"><i class="fab fa-tiktok" aria-hidden="true"></i></a></span>
+</div>
+<div class="rechtliches d-flex">
+<a href="kontakt.html">Kontakt</a>
+<a href="impressum.html">Impressum</a>
+<a href="datenschutz.html">Datenschutz</a>
+</div>
+</div>
+</div> </div>
+</main>
+</div>
+</div>
+<script></script>
+<script></script>
+<script></script><script></script>
+<script></script><script></script>
+<script></script>
+<script></script>
+<script></script>
+<script type="application/ld+json">
+{
+ "@context": "https:\/\/schema.org",
+ "@graph": [
+ {
+ "@type": "WebPage"
+ },
+ {
+ "@id": "#\/schema\/image\/6e8b72a7-b54c-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/f\/kurs_kitesegeln_%231-451692b0.jpg"
+ },
+ {
+ "@id": "#\/schema\/image\/6e7142fa-b54c-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/9\/kurs_kitesegeln_%232-3592a807.jpg"
+ },
+ {
+ "@id": "#\/schema\/image\/6ed1ec8f-b54c-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/3\/kurs_kitesegeln_%233-76bc66f7.webp"
+ },
+ {
+ "@id": "#\/schema\/image\/6ec2aee7-b54c-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/9\/kurs_kitesegeln_%234-a0c02d39.jpg"
+ }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https:\/\/schema.contao.org",
+ "@graph": [
+ {
+ "@type": "Page",
+ "fePreview": false,
+ "groups": [],
+ "noSearch": false,
+ "pageId": 136,
+ "protected": false,
+ "title": "Kitesurfen"
+ }
+ ]
+}
+</script></body>
+</html>

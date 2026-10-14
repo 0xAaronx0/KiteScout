@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+                <title>Windloop: Kite- und Windsurfen lernen an der Nordsee</title>
+              
+                <meta name="description" content="Kite- und Windsurfen lernen bei Windloop an der Nordsee. Buche Deinen Kitekurs mit riesigem Stehrevier, super motivierten und ausgebildeten Lehrern.">
+                <meta name="keywords" content="Kiteschule, Wassersport, Kitesurfschule, Kitekurs, Kitecamp, Kitekurs, Strandbar, Beachclub,">
+              
+    
+        
+    <link rel="icon" href="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/favicon.ico?1709912111">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/apple-touch-icon.png?1709912111">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/favicon-32x32.png?1709912111">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/favicon-16x16.png?1709912111">
+    <link rel="manifest" href="/webmanifest.json">
+    <link rel="mask-icon" href="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/safari-pinned-tab.svg?1709912111" color="#5bbad5">
+    <meta name="application-name" content="Windloop Kitesurfschule ">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/mstile-150x150.png?1709912111">
+    <meta name="theme-color" content="#ffffff">
+    
+    <meta property="og:url" content="https://www.windloop.de/">
+    <meta property="og:title" content="Windloop">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://cdn.locomotive.works/sites/5e5bcd761b7bc200a731b593/assets/65d5df5571f38b007dfea964/Windloop_Logo_sw_2023.png">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="142">
+
+    
+    <script src="https://cookie-consent.intelligentmobiles.com/im-cookie-consent.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cookie-consent.intelligentmobiles.com/im-cookie-consent.css" />
+
+    <script></script>
+
+    
+        <script type="text/plain" cookie-consent="further"></script>
+    
+    
+    <script type="text/plain" cookie-consent="further"></script>
+    
+    <link href="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/stylesheets/application.css?1709912111" media="screen" rel="stylesheet" type="text/css" />
+    
+
+    <style></style>
+<link rel="stylesheet" type="text/css" href="https://assets.locomotive.works/assets/locomotive/wysihtml5_editor-fc9dd453168cc989b0d1e4df89ed54a330618916423c4a4ac4a804329cc4fb1a.css"></head>
+<body class="larger-md">
+    
+    <noscript><iframe data-src="https://www.googletagmanager.com/ns.html?id=AW-476572938"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <div class="d-none d-lg-inline-block position-relative strandbarlogo-container">
+                <img class="strandbarlogo lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/logo.png?1709912111" alt="Strandbar Logo" title="Zur Strandbarseite">
+            </div>
+            <img class="strandbarlogo lazy d-lg-none" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/logo.png?1709912111" alt="Strandbar Logo" title="Zur Strandbarseite">
+        </a>
+        <button class="navbar-toggler hamburger hamburger--collapse" type="button" data-toggle="collapse" data-target="#main-navbar-collapse" aria-controls="main-navbar-collapse" aria-expanded="false" aria-label="Navigation öffnen bzw. schließen">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <div id="main-navbar-collapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-md-4 ml-xl-5 w-100 justify-content-around justify-content-lg-between align-items-center text-center">
+                
+                
+                
+                    
+                
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/kurse">Kurse</a>
+                        </li>
+                    
+                
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/infocenter">Infocenter</a>
+                        </li>
+                    
+                
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/shop">Shop</a>
+                        </li>
+                    
+                
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/ueber-uns">Über Uns</a>
+                        </li>
+                    
+                
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/kontakt">Kontakt</a>
+                        </li>
+                    
+                
+                    
+                
+                
+                <li class="nav-item ml-md-3 ml-xl-4 pt-3 pb-4 pt-lg-0 pb-lg-2">
+                    <a href="/strandbar">
+                        <div class="d-none d-lg-inline-block position-relative strandbarlogo-container">
+                            <img class="strandbarlogo lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/strandbar.gif?1709912111" alt="Strandbar Logo" title="Zur Strandbarseite">
+                        </div>
+                        <img class="strandbarlogo lazy d-lg-none" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/strandbar.gif?1709912111" alt="Strandbar Logo" title="Zur Strandbarseite">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <header class="wave-box">
+    <div class="grayscale fill-parent cover-bg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/pages/5e5bcd761b7bc200a731b595/files/P1149853__1_-2.jpg?1790947929')"></div>
+    <div class="header-gradient fill-parent cover-bg"></div>
+    <div class="d-flex h-100 w-100 justify-content-center align-items-center">
+        <div class="container text-white position-relative">
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="mb-0">Kite- und Windsurfen lernen!</h1>
+                    <p class="lead mb-3"><P>
+<p/>
+
+WINTERPAUSE 2026/2027 - ab 1.10. geschlossen 
+<P>
+<p/>
+Kite- und Windsurfschule Windloop an der Nordsee.</p>
+                    <p>Buche Deinen Kitekurs an dem Traumspot der Nordsee. Dein Kitekurs in Deutschland in unserem riesigen Stehrevier, super motivierten und ausgebildeten VDWS LehrerInnen. Wir schulen mit dem Material von Duotone, dem Marktführer. Kitesurfen lernen an der Nordsee - im eigenen exklusivem Stehrevier mit viel Platz. Ob im Kitecamp oder Kitekurs, bei uns wird dein Wunsch erfolgreich umgesetzt. 
+Wirf einen Blick in unsere Bewertungen und werde Teil unserer Windloop Familie. Wir gehen speziell auf deine Wünsche ein und bringen dich erfolgreich und sicher auf das Brett.
+
+<a href="https://www.beyondsurfing.com/wassersport-deutschland/" target="_blank" rel="noopener"><img src="https://www.beyondsurfing.com/wp-content/uploads/award-wassersport-anlage-2025-negativ.png" border="0" alt="BeyondSurfing Wassersport-Anlagen Award" width="140" height="140" border="0" style="border-style:none;"></a></p>
+                    <span class="btn-shadow-light"><a class="btn btn-white text-primary my-3" href="./kurse" role="button">Zu den Kitekursen / Anmeldung</a></span>
+                </div>
+                
+                <div class="col-md-6 pt-2">
+                    <div class="embed-responsive embed-responsive-16by9 shadow-sm"
+                        data-container-class="embed-responsive-item"
+                        data-cookie-consent-placeholder="partnerships"
+                        data-preview-image="https://cdn.locomotive.works/sites/5e5bcd761b7bc200a731b593/assets/5e6f5ceae5588800a666c080/beach_big.jpg"
+                        data-info-text="Bitte alle Cookies aktivieren, um diesen Inhalt zu laden."
+                        data-link-text="Weitere Info"
+                        data-button-text="Okay!"
+                        data-inner-html='<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/881696825?color=00def&title=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'></div>                        
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="wave-container">
+        <canvas id="canvas" style="position: absolute; top: 0; left: 0;"></canvas>
+    </div>
+    <div class="bg-white position-absolute" style="height: 4px; bottom: -2px; left: 0; width: 100%"></div>
+</header>
+
+    
+
+    
+
+<section id="kursfinder" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-3">Finde direkt deinen passenden Kurs!</h2>
+        <div class="swiper-container pb-5">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-10 mx-md-auto">
+                            <div class="finder-title my-4">Jetzt neu: buchen dein Windloop Glamping-Zelt direkt mit Parkplatz gleich mit!</div>
+                        </div>
+                    </div>
+                    <div class="text-center pb-4 pb-md-5">
+                        
+                        
+                            <span class="btn-shadow-light mx-2 my-2 display-sport d-none" data-sport="kitesurfen">
+                                <button type="button" class="btn btn-secondary btn-icon-left btn-sport lazy " data-sport="kitesurfen" data-bg="url(https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd045469c8b00a684a771/5eec8a7c0c807300ac05f9dd/files/kitesurfen.svg?1668410430)">
+                                    Kitesurfen
+                                </button>
+                            </span><br class="d-md-none display-sport d-none" data-sport="kitesurfen">
+                        
+                            <span class="btn-shadow-light mx-2 my-2 display-sport d-none" data-sport="windsurfen">
+                                <button type="button" class="btn btn-secondary btn-icon-left btn-sport lazy " data-sport="windsurfen" data-bg="url(https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd045469c8b00a684a771/5eec8a7b0c807300ac05f9da/files/windsurfen.svg?1701161946)">
+                                    Windsurfen
+                                </button>
+                            </span><br class="d-md-none display-sport d-none" data-sport="windsurfen">
+                        
+                            <span class="btn-shadow-light mx-2 my-2 display-sport d-none" data-sport="stand-up-paddling">
+                                <button type="button" class="btn btn-secondary btn-icon-left btn-sport lazy double-icon" data-sport="stand-up-paddling" data-bg="url(https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd045469c8b00a684a771/5eec8a790c807300c405f9b7/files/sup_wingfoil_picto.svg?1772694277)">
+                                    SUP
+                                </button>
+                            </span><br class="d-md-none display-sport d-none" data-sport="stand-up-paddling">
+                        
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-10 mx-md-auto">
+                            <div class="finder-title my-4">Wie ist würdest du dein Erfahrungslevel einschätzen?</div>
+                        </div>
+                    </div>
+                    <div class="text-center pb-4 pb-md-5">
+                        
+                        
+                            <span class="btn-shadow-light mx-2 mb-2 display-skill-level d-none" data-skill-level="anfaenger">
+                                <button type="button" class="btn btn-secondary btn-icon-left btn-skill-level lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a783/5eec8a8017bca800ac3ebba8/files/happy-baby.svg?1592560256')" data-skill-level="anfaenger">
+                                    Anfänger
+                                </button><br class="d-md-none display-skill-level d-none" data-skill-level="anfaenger">
+                            </span>
+                        
+                            <span class="btn-shadow-light mx-2 mb-2 display-skill-level d-none" data-skill-level="fortgeschritten">
+                                <button type="button" class="btn btn-secondary btn-icon-left btn-skill-level lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a783/5eec8a8117bca800ac3ebbab/files/boy-broad-smile.svg?1592560257')" data-skill-level="fortgeschritten">
+                                    Fortgeschritten
+                                </button><br class="d-md-none display-skill-level d-none" data-skill-level="fortgeschritten">
+                            </span>
+                        
+                            <span class="btn-shadow-light mx-2 mb-2 display-skill-level d-none" data-skill-level="profi">
+                                <button type="button" class="btn btn-secondary btn-icon-left btn-skill-level lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a783/5eec8a8217bca800ac3ebbae/files/hipster-smiling.svg?1592560258')" data-skill-level="profi">
+                                    Profi
+                                </button><br class="d-md-none display-skill-level d-none" data-skill-level="profi">
+                            </span>
+                        
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-10 mx-md-auto">
+                            <div class="finder-title my-4">Wie schnell würdest du gerne Fortschritte machen? Wir bieten dir einzelne Kurse oder mehrtätige Camps.</div>
+                        </div>
+                    </div>
+                    <div class="text-center pb-4 pb-md-5">
+                        
+                        
+                            <span class="btn-shadow-light mx-2 mb-2 display-offer-type d-none" data-offer-type="kurs">
+                                <button type="button" class="btn btn-secondary btn-offer-type" data-offer-type="kurs">
+                                    Kurs
+                                </button>
+                            </span><br class="d-md-none display-offer-type d-none" data-offer-type="">
+                        
+                            <span class="btn-shadow-light mx-2 mb-2 display-offer-type d-none" data-offer-type="camp">
+                                <button type="button" class="btn btn-secondary btn-offer-type" data-offer-type="camp">
+                                    Camp
+                                </button>
+                            </span><br class="d-md-none display-offer-type d-none" data-offer-type="">
+                        
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="row">
+                        <div class="col-lg-10 mx-md-auto">
+                            <div class="finder-title my-4">Diese Kurse könnten zu dir passen!</div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="kitesurfen" data-skill-level="anfaenger" data-offer-type="kurs">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/61cada32b4ccd1007d40caf8/files/P1080321-2.JPG?1772437699')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/einsteiger-kitekurs-3tage" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            Einsteiger Kitekurs 3 Tage
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/einsteiger-kitekurs-3tage">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">Einsteiger Kitekurs 3 Tage</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="kitesurfen" data-skill-level="anfaenger" data-offer-type="kurs">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/5eec8a9c10e3ab00aca60e6b/files/P1080696-2.JPG?1772437753')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/einsteiger-kitekurs-2-tage" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            Der 2 Tages Kurs - der klassische Einstieg in das Kitesurfen!
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/einsteiger-kitekurs-2-tage">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">Einsteiger Kitekurs 2 Tage</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="kitesurfen" data-skill-level="fortgeschritten" data-offer-type="kurs">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/5eec8a9010e3ab00aca60e59/files/WhatsApp_Image_2021-06-22_at_14.13.17.jpeg?1772438180')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/aufsteiger-kitekurs-1-tag" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            Der Aufbaukurs, der klassische Wiedereinstieg!
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/aufsteiger-kitekurs-1-tag">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">Aufsteiger Kitekurs 1 Tag</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="kitesurfen" data-skill-level="anfaenger" data-offer-type="camp">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/5eec8a9410e3ab00aca60e5f/files/WhatsApp_Image_2021-06-22_at_14.13.19.jpeg?1772438159')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/kitecamp-5-tage" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            Der Intensiv Kurs im Kiten! Lerne jetzt Kiten - aber richtig! 
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/kitecamp-5-tage">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">Einsteiger Kitecamp 5 Tage</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="kitesurfen" data-skill-level="fortgeschritten" data-offer-type="camp">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/5eec8a9210e3ab00aca60e5c/files/WhatsApp_Image_2021-06-22_at_14.13.16.jpeg?1772438230')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/aufbaucamp-kiten" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            Du bist schon mal gefahren? Du hast schon einmal einen Kurs gemacht und willst jetzt endlich auf das Brett? Dann bist Du hier genau richtig! 
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/aufbaucamp-kiten">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">Aufsteiger Kitecamp 3-5 Tage</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="windsurfen" data-skill-level="anfaenger" data-offer-type="kurs">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/5eec8a8b10e3ab00aca60e53/files/EF433CE5-6917-4645-9DB9-462D80A2D7B5.jpg?1701155167')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/schnupperkurs-windsurfen" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            Jetzt Schnupperkurs buchen - bereits ab 8 Jahren!
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/schnupperkurs-windsurfen">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">Schnupper Windsurfkurs</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="windsurfen" data-skill-level="anfaenger" data-offer-type="kurs">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/5eec8a8e10e3ab00aca60e56/files/compress_kitesurfen.jpg?1648799193')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/einsteigerkurs-windsurfen-4-tage" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            Der richtige Windsurfkurs!  4 Tage Aktion auf dem Wasser. Am Ende auf Wunsch mit Lizenz und du kannst Weltweit Windsurfen gehen
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/einsteigerkurs-windsurfen-4-tage">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">Einsteiger Windsurfkurs 4 Tage</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="windsurfen" data-skill-level="fortgeschritten" data-offer-type="kurs">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/5eec8a8910e3ab00aca60e50/files/G0478372.JPG?1752397187')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/aufbaukurs-windsurfen-2-tage" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            Du kannst schon etwas Windsurfen - willst aber weiter kommen und neue Manöver lernen - dann los!
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/aufbaukurs-windsurfen-2-tage">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">Aufsteiger Windsurfkurs - 2 Tage</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="stand-up-paddling" data-skill-level="anfaenger" data-offer-type="kurs">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/5eec8aa410e3ab00aca60e71/files/IMG_3127-1.JPG?1782654901')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/sup-kurs" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            Schnuppere rein ins SUP fahren. Schnell und sicher mit einem unserer Trainer! Gerne kannst du auch den Anfänger Grundkurs oder unserer Siel Tour buchen.
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/sup-kurs">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">SUP Schnupperkurs 1 Stunde</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="stand-up-paddling" data-skill-level="anfaenger" data-offer-type="kurs">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/5eec8a9810e3ab00aca60e65/files/IMG_1786.JPG?1702981143')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/sup-tour" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            In einer Gruppe - durch die Siele von Neuharlingersiel - verschiedene Route durch Brücken und unter Bäumen lang - ein Ostfriesland von seiner ganz anderen Seite!
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/sup-tour">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">SUP Siel Tour 2 Stunden</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="stand-up-paddling" data-skill-level="anfaenger" data-offer-type="kurs">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/60d59d535761d600a581c74d/files/IMG-20210518-WA0020.jpg?1725196990')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/sup-technik-kurs" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            SUP Grund-Kurs
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/sup-technik-kurs">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">SUP Grund-Kurs</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="stand-up-paddling" data-skill-level="anfaenger" data-offer-type="kurs">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/63bbc905211248009989d340/files/P1100113.JPG?1721999972')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/sup-family-tour" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            SUP Family Tour - Deine SUP Tour mit der ganzen Familie. Ihr bestimmt das Tempo. 
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/sup-family-tour">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">SUP Family Tour</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="windsurfen" data-skill-level="anfaenger" data-offer-type="kurs">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/6565b03ef0692e007d3b711a/files/EF433CE5-6917-4645-9DB9-462D80A2D7B5.jpg?1719586146')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/bambinikurs-windsurfen-ab-6-jahren" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            Ab 6 Jahren bereits Lust auf Windsurfen - los gehts! In diesem Kurs kommen die Kleinen ganz groß raus. Wir schulen spielerisch die Kleinen und verschaffen ihnen so Spaß und Sicherheit im Umgang mit Wind, Wellen und dem Material. 
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/bambinikurs-windsurfen-ab-6-jahren">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">Bambini Windsurfkurs ab 6 Jahren</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="col-lg-3 col-md-6 my-3 course-selection" data-sport="kitesurfen" data-skill-level="anfaenger" data-offer-type="camp">
+                                <div class="infocard text-white position-relative">
+                                    <div class="infocard-bg cover-bg ratio-3to4 rounded-lg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/content_entry5e5cd046469c8b00a684a786/698627820f163c007960d67c/files/IMG_4503.jpeg?1772438127')"></div>
+                                    <div class="infocard-overlay fill-parent rounded-lg"></div>
+                                    <a href="/kurse/kite-week-und-sleep-ein-plus-aufsteiger-camp" class="infocard-text hidden-information fill-parent px-3 pt-3 pb-5" style="text-decoration: none;">
+                                        <div class="w-100 h-100 overflow-auto text-white">
+                                            Kite Week & Sleep *NEU*
+                                        </div>
+                                    </a>
+                                    <a class="course-link hidden-information" href="/kurse/kite-week-und-sleep-ein-plus-aufsteiger-camp">
+                                        <span class="text-nowrap">Zum Kurs & Anmeldung</span><br>
+                                        <img class="lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/arrow-down-white.svg?1709912111" alt="weisser pfeil nach unten">
+                                    </a>
+                                    <div class="infocard-label fill-parent d-flex flex-column justify-content-center align-items-center p-4">
+                                        <div class="text-center">Kite Week & Sleep - 5 Tage Ein+Aufsteiger Camp</div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination stepper"></div>
+        </div>
+    </div>
+</section>
+
+
+<section id="instagram" class="bg-light mt-md-4 bg-ellipse-mask">
+    <div class="container text-center pt-3 pt-md-5">
+        <h2 class="mt-3 mb-4 mt-md-4 mb-md-5">#windloop</h2>
+        
+        <div class="embed-responsive embed-responsive-16by9"
+            data-container-class="embed-responsive-item"
+            data-cookie-consent-placeholder="partnerships"
+            data-preview-image="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/pages/5e5bcd761b7bc200a731b595/files/instagram_platzhalter.jpg?1790947929"
+            data-info-text="Bitte alle Cookies aktivieren, um diesen Inhalt zu laden."
+            data-link-text="Weitere Info"
+            data-button-text="Okay!"
+            data-inner-html='<iframe src="https://snapwidget.com/embed/771710" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:100%; "></iframe>'
+        ></div>
+        <div data-placeholder-visible="false"
+            data-cookie-consent-placeholder="partnerships"
+            data-script-src='https://snapwidget.com/js/snapwidget.js'
+        ></div>
+    </div>
+</section>
+
+    
+        
+
+
+    <button id="toastshowhide" type="button" class="btn btn-termine">Termine</button>
+    <div class="toast px-0 fade hide" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" style="max-height: 80vh; position: fixed; right: 15px; bottom: 60px; z-index: 100">
+        <div class="toast-header px-2 px-md-3">
+            <img class="rounded mr-2" src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/kitesurf-sign.svg?1709912111" height="20" alt="Benachrichtigungsicon">
+            <strong class="mr-auto">Aktuelle Kitekurs-Termine</strong>
+            <small class="text-muted"></small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Schließen">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body px-0" style="overflow-y: auto; max-height: calc(80vh - 35px);">
+            
+                <div class="lead">Hier findet ihr die aktuellen Kitekurse</div>
+                <div class="mb-3"><p>.</p></div>
+                
+            
+                <a class="kurstoggle collapse show px-2 px-md-3" href=".kurstoggle" data-toggle="collapse">alle Termine anzeigen</a>
+                <div class="kurstoggle collapse">
+                    
+                        
+                        
+                        <div class="lead">Aufsteiger Kitekurs 2,5h<br><small class="text-muted">24.09.2026</small></div>
+                        <div class="mb-3"><p>Start: 11:00 Uhr. Bitte 15 min vorher zur Anmeldung kommen.</p></div>
+                    
+                        
+                        <div class="lead">Aufsteiger Kitekurs 2,5h - Abgesagt<br><small class="text-muted">25.09.2026</small></div>
+                        <div class="mb-3"><p>
+
+Start: 11:45 Uhr. Bitte 15 min vorher zur Anmeldung kommen.
+
+<br></p></div>
+                    
+                        
+                        <div class="lead">Am Freitag der 25.9. ist unser letzter Schulungstag.<br><small class="text-muted">25.09.2026</small></div>
+                        <div class="mb-3"><p>..</p></div>
+                    
+                </div>
+            
+        </div>
+    </div>
+
+
+            
+    
+    
+    <footer class="footer bg-light">
+    <div class="mt-3 bg-ellipse-filled">
+        <div class="container text-center text-white pt-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Newsletter abonnieren</h2>
+                </div>
+                <div class="col-12 mb-4">
+                    <span class="btn-shadow-light"><a class="btn btn-white text-primary my-3"  data-toggle="modal" href="#newsletter-modal">Jetzt Abonnieren</a></span>
+                </div>
+                
+                <div class="col-12 mx-auto mb-4">
+                    <a class="text-decoration-none mr-md-3" href="https://www.facebook.com/windloop/" target="_blank">
+                        <img class="social-media-icon lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/Windloop_FB.svg?1709912111" alt="facebook icon">
+                    </a>
+                    <a class="text-decoration-none" href="https://www.instagram.com/surfschulen_windloop/" target="_blank">
+                        <img class="social-media-icon lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/Windloop_IG.svg?1709912111" alt="instagram icon">
+                    </a>
+                </div>
+                
+                <div class="col-12 mx-auto mb-4" style="font-size: 16px;font-weight: bold;">
+                    <p>Offizieller Partner von:</p>
+                    <a class="text-decoration-none mr-md-3"  href="https://www.duotonesports.com/" target="_blank">
+                        <img class="partner-logo lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/duotone_log.svg?1709912111" alt="duotone logo" style="width: 120px;">
+                    </a>
+                    <a class="text-decoration-none" href="https://www.ion-products.com/" target="_blank">
+                        <img class="partner-logo lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/Ion-log.svg?1709912111" alt="ion logo" style="width: 100px;">
+                    </a>
+                </div>
+                <div class="col-12 text-uppercase">
+                    <a class="mr-md-3" href="/impressum">Impressum</a>
+                    <a href="/datenschutz">Datenschutz</a>
+                    <br>
+                    <a id="reinit-cookies" href="javascript:void(0)">Cookies</a>
+                </div>
+                <div class="col-12 mb-3">
+                    <small class="text-nowrap"><span class="font-weight-light">Eine Lösung von</span> <a href="https://www.intelligentmobiles.com/"><strong>IntelligentMobiles</strong></a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="newsletter-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Newsletter abonnieren</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Schließen">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="https://windloop.us13.list-manage.com/subscribe/post?u=39f34f43a250d8267ad1bb537&amp;id=f9268823d6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div class="mc_embed_signup_scroll">
+                        <label for="mce-EMAIL">*E-Mail</label>
+                        <input class="email form-control" id="mce-EMAIL" name="email" type="email" required>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="datenschutzbedingungen-newsletter" required>
+                        <label class="custom-control-label" for="datenschutzbedingungen-newsletter">Ich akzeptiere die <a href="/datenschutz" target="_blank">Datenschutzbedingungen</a>.</label>
+                    </div>
+                    <div class="text-right mt-3 mb-4">
+                        <span class="btn-shadow-light"><button id="mc-embedded-subscribe" value="Subscribe" name="subscribe" type="submit" class="btn btn-primary">Absenden</button></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    
+    <script src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/javascripts/application.js?1709912111" type="text/javascript" ></script>
+
+    <script></script>
+    
+<script></script>
+
+<script></script>
+
+</body>
+</html>

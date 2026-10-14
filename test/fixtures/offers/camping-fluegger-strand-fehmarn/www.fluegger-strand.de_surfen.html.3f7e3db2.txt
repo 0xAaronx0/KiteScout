@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Surfen - Camping Flügger Strand</title>
+<base href="https://www.fluegger-strand.de/">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Fortgeschrittene Wind- und Kitesurfer können unter Anleitung von zertifizierten Trainern ihr Fahrkönnen verbessern und in das Thema Foilen am Camping Flügger Strand einsteigen.">
+<meta name="keywords" content="Sanitärgebäude, Wellness, Campingplatz, Ostsee, Familienbäder, Mietbäder, Waschsalon, behindertengerechtes Bad">
+<meta name="generator" content="Contao Open Source CMS">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script></script><script></script><meta property="og:title" content="CAMPING FLÜGGER STRAND - Unbeschwertes Campingglück und Natur pur am Flügger Strand auf Fehmarn" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.fluegger-strand.de/" />
+<meta property="og:image" content="http://www.fluegger-strand.de/files/theme-styles/img/og-image.jpg" />
+<meta property="og:description" content="Der ****Campingplatz bezaubert mit seiner Lage am Meer,
+ob mit Wohnwagen, Wohnmobil, Zelt, im Mietwohnwagen oder Ferienhaus. Freuen Sie sich auf einen
+unvergesslichen Ostseeurlaub auf der Insel Fehmarn." />
+<script></script>
+<script></script>
+</head>
+<body id="top" class="unknown other ">
+<div id="wrapper">
+<header id="header">
+<div class="inside">
+<div id="subheader">
+<div class="inside">
+<a id="logo-dt" title="Flügger Strand-Logo" href=""><img alt="Flügger Strand-Logo" src="files/theme-styles/img/logo-flueggerstrand.svg" width="253" height="192"></a>
+<a id="logo-mob" title="Flügger Strand-Logo" href=""><img alt="Flügger Strand-Logo" src="files/theme-styles/img/logo-flueggerstrand.svg" width="130" height="97"></a>
+<a href="camping-fluegger-strand.html" id="btn-home" title="zur Startseite"></a>
+<a href="buchungsanfrage.html" id="booking-link-mob">Buchungsanfrage</a>
+<div id="hotline" class="header-hotline">
+<a title="Hotline für Sie" href="javascript:void(0)">
+<i class="fa fa-phone"></i>
+<span>0 43 72 - 99 13 44 &nbsp;&&nbsp; 0 43 72 - 7 14</span>
+</a>
+</div>
+<a href="buchungsanfrage.html" id="booking-link">Buchungsanfrage</a>
+<div id="hotline-mob" class="header-hotline">
+<a title="Hotline für Sie" href="tel:+494372714">
+<i class="fa fa-phone"></i>
+<span>0 43 72 - 714</span>
+</a>
+</div>
+<button class="nav-toggle" title="Menü öffnen">Menü <i class="fa fa-bars"></i></button>
+<nav class="mod_navigation navigation-main block" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<button class="nav-close" title="close"><i class="fa fa-times"></i></button>
+<a href="surfen.html#skipNavigation33" class="invisible">Navigation überspringen</a>
+<ul class="level_1">
+<li class="submenu first"><a href="campingplatz.html" title="Familienurlaub in der Natur" class="submenu first" aria-haspopup="true" itemprop="url"><span itemprop="name">Campingplatz</span></a>
+<span class="subnav-toggle"><i class="fa fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="first"><a href="stellplaetze.html" title="Campen mit Wohnwagen, Wohnmobil, Zelt" class="first" itemprop="url"><span itemprop="name">Stellplätze</span></a>
+</li>
+<li><a href="wohnmobile.html" title="Wohnmobilstellplatz mit Meerblick" itemprop="url"><span itemprop="name">Wohnmobile</span></a>
+</li>
+<li><a href="dauerplaetze.html" title="Dauercamping auf Fehmarn" itemprop="url"><span itemprop="name">Dauerplätze</span></a>
+</li>
+<li class="last"><a href="mietwohnwagen.html" title="Mietwohnwagen in der 1. Reihe zur Ostsee" class="last" itemprop="url"><span itemprop="name">Mietwohnwagen</span></a>
+</li>
+</ul></li>
+<li class="submenu trail"><a href="platzplan.html" title="Platz-Infos" class="submenu trail" rel="nofollow" aria-haspopup="true" itemprop="url"><span itemprop="name">Platz-Infos</span></a>
+<span class="subnav-toggle"><i class="fa fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="no-header-pic sibling first"><a href="platzplan.html" title="Platzplan" class="no-header-pic sibling first" itemprop="url"><span itemprop="name">Platzplan</span></a>
+</li>
+<li class="sibling"><a href="sanitaer-wellness.html" title="Moderne Sanitärgebäude und Wellness" class="sibling" itemprop="url"><span itemprop="name">Sanitär & Wellness</span></a>
+</li>
+<li class="sibling"><a href="restaurant-sb-laden.html" title="Restaurant mit Ostseeblick" class="sibling" itemprop="url"><span itemprop="name">Restaurant / SB-Laden</span></a>
+</li>
+<li class="active"><strong class="active" itemprop="name">Surfen</strong>
+</li>
+<li class="sibling"><a href="freizeit-events.html" title="Campingurlaub mit Sport, Spiel, Spaß" class="sibling" itemprop="url"><span itemprop="name">Freizeit & Events</span></a>
+</li>
+<li class="no-header-pic sibling"><a href="aktuelles.html" title="Aktuelles" class="no-header-pic sibling" itemprop="url"><span itemprop="name">Aktuelles</span></a>
+</li>
+<li class="no-header-pic sibling"><a href="angebote.html" title="Angebote" class="no-header-pic sibling" itemprop="url"><span itemprop="name">Angebote</span></a>
+</li>
+<li class="sibling last"><a href="prospekte.html" title="Prospekte" class="sibling last" itemprop="url"><span itemprop="name">Prospekte</span></a>
+</li>
+</ul></li>
+<li><a href="ferienhaeuschen.html" title="Ferienhäuschen am Strand auf Fehmarn" itemprop="url"><span itemprop="name">Ferienhäuschen</span></a>
+</li>
+<li><a href="kinder-freizeit.html" title="Kinderparadies mit Animation" itemprop="url"><span itemprop="name">Kinder & Freizeit</span></a>
+</li>
+<li class="submenu"><a href="fluegger-strand.html" title="Insel Fehmarn in der Ostsee" class="submenu" rel="nofollow" aria-haspopup="true" itemprop="url"><span itemprop="name">Flügger Strand & Fehmarn</span></a>
+<span class="subnav-toggle"><i class="fa fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="first"><a href="fluegger-strand.html" title="Flügger Strand" class="first" itemprop="url"><span itemprop="name">Flügger Strand</span></a>
+</li>
+<li class="last"><a href="fehmarn.html" title="Insel Fehmarn in der Ostsee" class="last" itemprop="url"><span itemprop="name">Fehmarn</span></a>
+</li>
+</ul></li>
+<li class="submenu"><a href="preise-camping.html" title="Preise" class="submenu" rel="nofollow" aria-haspopup="true" itemprop="url"><span itemprop="name">Preise</span></a>
+<span class="subnav-toggle"><i class="fa fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="no-header-pic first"><a href="preise-camping.html" title="Preise - Camping" class="no-header-pic first" itemprop="url"><span itemprop="name">Camping</span></a>
+</li>
+<li class="no-header-pic"><a href="preise-mietwohnwagen.html" title="Preise - Mietwohnwagen" class="no-header-pic" itemprop="url"><span itemprop="name">Mietwohnwagen</span></a>
+</li>
+<li class="no-header-pic"><a href="preise-ferienhaeuschen.html" title="Preise - Ferienhäuschen" class="no-header-pic" itemprop="url"><span itemprop="name">Ferienhäuschen</span></a>
+</li>
+<li class="no-header-pic"><a href="preise-serviceleistungen.html" title="Buchbare Serviceleistungen" class="no-header-pic" itemprop="url"><span itemprop="name">Serviceleistungen</span></a>
+</li>
+<li class="no-header-pic"><a href="buchungsanfrage.html" title="Buchungsanfrage" class="no-header-pic" itemprop="url"><span itemprop="name">Buchungsanfrage</span></a>
+</li>
+<li class="no-header-pic last"><a href="buchungsbedingungen.html" title="Buchungsbedingungen" class="no-header-pic last" itemprop="url"><span itemprop="name">Buchungsbedingungen</span></a>
+</li>
+</ul></li>
+<li class="last"><a href="service.html" title="Unser persönlicher Gästeservice" class="last" itemprop="url"><span itemprop="name">Service</span></a>
+</li>
+</ul>
+<a id="skipNavigation33" class="invisible">&nbsp;</a>
+</nav>
+ </div>
+</div>
+</div>
+</header>
+<div class="custom">
+<div id="header-pic">
+<div class="inside">
+<div class="mod_article section-full first last block" id="article-351">
+<div class="inside">
+<div class="row">
+<div class="ce_image first last block">
+<figure class="image_container">
+<picture><source media="(min-width: 769px) and (max-width: 1024px)"><img src="assets/images/8/surf2-9bf047df.jpg" alt="Sanitärgebäude Camping Flügger Strand" title="Sanitärgebäude Camping Flügger Strand" itemprop="image"></picture>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="container">
+<div id="main">
+<div class="inside">
+<div class="mod_article sitenav block">
+<div class="inside">
+<div class="row">
+<div class="mod_article block" id="article-50">
+<div class="inside">
+<div class="row">
+<section class="ce_sectionstart grid lg-1 md-1 ms-1 xs-1 first">
+<div class="mod_breadcrumb block">
+<ul>
+<li class="first"><a href="" title="Camping Flügger Strand">Camping Flügger Strand</a></li>
+<i class="fa fa-backslash-right"></i>
+<li><a href="platzplan.html" title="Platz-Infos">Platz-Infos</a></li>
+<i class="fa fa-backslash-right"></i>
+<li class="active last">Surfen</li>
+</ul>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mod_article introtext first block" id="article-352">
+<div class="inside">
+<div class="row">
+<h1 class="ce_headline first">
+Flügge werden und Flügel bekommen</h1>
+<div class="ce_text last block">
+<h2>Surfen & Kiten am Flügger Strand</h2>
+<p><strong>Vor dem Campingplatz Flügger Strand finden Sie viel Freiraum zum Windsurfen.<br>Es gibt eine Sandbank im Wasser, die ca. bis 25 m hinaus in die Ostsee reicht.<br>Das Revier ist empfehlenswert für Fortgeschrittene.<br><br>Am Platzende können die Kiter Ihr Segel steigen lassen. Eignung ebenfalls nur für Fortgeschrittene, bei Südwest- oder Nordwestwinden.<br>Das Kiten ist ausschließlich außerhalb der Badebetonnung<br>des Campingplatzes erlaubt.</strong></p>
+<p><strong>Für Anfänger gibt es Surfschulen und Kitesurfschulen sowie Materialverleih und Surfshop im Orther Hafen sowie in Lemkenhafen. Beides ist gut mit dem Fahrrad oder Pkw erreichbar (Orth ca. 3 km, Lemkenhafen ca. 5 km).</strong></p>
+</div>
+</div>
+</div>
+</div>
+<div class="mod_article last block" id="article-358">
+<div class="inside">
+<div class="row">
+<div class="ce_text grid lg-2 md-2 sm-2 xs-1 first block">
+<h3>Windsurfen in Orth auf Fehmarn</h3>
+<figure class="image_container float_above">
+<a href="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%201.jpg" title="Surfschule" data-lightbox="5c3bd4">
+<img src="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%201.jpg" width="1364" height="949" alt="Surfschule" itemprop="image">
+</a>
+</figure>
+<p>Vom Campingplatz Flügger Strand sind es ca. 3 km bis zum Orther Hafen. Hier finden Sie ein klassisches Stehrevier, optimal für alle Anfänger und Fortgeschrittene. Es gibt eine<a href="https://windsurfing-fehmarn.de/" target="_blank" rel="noopener"> Surf- und Kitesurfschule sowie einen Surf-Shop</a>.</p>
+</div>
+<div class="ce_text grid lg-2 md-2 sm-2 xs-1 block">
+<h3>Surf- u. SUP-Kurse in Orth auf Fehmarn</h3>
+<figure class="image_container float_above">
+<a href="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%202.jpg" title="Surfschule" data-lightbox="45a168">
+<img src="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%202.jpg" width="1372" height="947" alt="Surfschule" itemprop="image">
+</a>
+</figure>
+<p><a href="https://windsurfing-fehmarn.de/" target="_blank" rel="noopener">https://windsurfing-fehmarn.de/</a><br>.<br>.<br>.</p>
+</div>
+<div class="ce_text grid lg-2 md-2 sm-2 xs-1 block">
+<h3>Kitesurfen in Orth auf Fehmarn</h3>
+<figure class="image_container float_above">
+<a href="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%203.jpg" title="Surfschule" data-lightbox="6aef17">
+<img src="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%203.jpg" width="793" height="843" alt="Surfschule" itemprop="image">
+</a>
+</figure>
+<p>.<a href="https://windgeister.de/" target="_blank" rel="noopener">https://windgeister.de/</a></p>
+</div>
+<div class="ce_text grid lg-2 md-2 sm-2 xs-1 block">
+<h3>Kitekurse in Orth auf Fehmarn</h3>
+<figure class="image_container float_above">
+<a href="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%204.jpg" title="Surfschule" data-lightbox="f9449f">
+<img src="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%204.jpg" width="848" height="901" alt="Surfschule" itemprop="image">
+</a>
+</figure>
+<p><a href="https://windgeister.de/" target="_blank" rel="noopener">https://windgeister.de/</a></p>
+<p>.</p>
+</div>
+<div class="ce_text grid lg-2 md-2 sm-2 xs-1 block">
+<h3>Windsurfen in Lemkenhafen auf Fehmarn</h3>
+<figure class="image_container float_above">
+<a href="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%205.jpg" title="Surfschule" data-lightbox="1b3f30">
+<img src="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%205.jpg" width="1257" height="886" alt="Surfschule" itemprop="image">
+</a>
+</figure>
+<p>Vom Campingplatz Flügger Strand sind es ca. 5 km bis nach Lemkenhafen. Hier finden Sie ein Top Revier für Anfänger und eine <a href="https://surfspot-fehmarn.de/" target="_blank" rel="noopener">Surf-Schule mit VDWS-Surf-Kursen,</a> SUP-Kurse am Surfspot und Tretboot-Verleih.</p>
+</div>
+<div class="ce_text grid lg-2 md-2 sm-2 xs-1 block">
+<h3>Surf- & SUP-Kurse in Lemkenhafen</h3>
+<figure class="image_container float_above">
+<a href="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%206.jpg" title="Surfschule" data-lightbox="732942">
+<img src="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%206.jpg" width="1244" height="863" alt="Surfschule" itemprop="image">
+</a>
+</figure>
+<p><a href="https://surfspot-fehmarn.de/" target="_blank" rel="noopener">https://surfspot-fehmarn.de/</a>.</p>
+<p>.</p>
+<p>.</p>
+</div>
+<div class="ce_text grid lg-2 md-2 sm-2 xs-1 block">
+<h3>Foiling-Kurse am Flügger Strand</h3>
+<figure class="image_container float_above">
+<picture><source media="(min-width: 769px) and (max-width: 1023px)"><img src="assets/images/2/surf4-ca033458.jpg" alt="Surfschule" title="Surfschule &#40;Kopie&#41;" itemprop="image"></picture>
+</figure>
+<p>Am Flügger Strand werden für fortgeschrittene Wind- und Kitesurfer Foil-Kurse und individuelle Trainingsformen angeboten.<br><strong>Kontakt: </strong>0172-6711589 und&nbsp;<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#111;&#x66;&#102;&#x69;&#99;&#x65;&#64;&#x66;&#111;&#x69;&#108;&#x2D;&#97;&#x63;&#97;&#x64;&#101;&#x6D;&#121;&#x2E;&#100;&#x65;" target="_blank" rel="noopener">&#111;&#x66;&#102;&#x69;&#99;&#x65;&#64;&#x66;&#111;&#x69;&#108;&#x2D;&#97;&#x63;&#97;&#x64;&#101;&#x6D;&#121;&#x2E;&#100;&#x65;</a></p>
+</div>
+<div class="ce_text grid lg-2 md-2 sm-2 xs-1 block">
+<h3>Foiling-Kurse am Flügger Strand</h3>
+<figure class="image_container float_above">
+<picture><source media="(min-width: 769px) and (max-width: 1023px)"><img src="assets/images/0/surf1-78d8bea1.jpg" alt="Surfschule" title="Surfschule" itemprop="image"></picture>
+</figure>
+<p>Der neueste Trend ist die perfekte Ergänzung zum normalen Wind- und Kitesurfen, wenn es um frühes Gleiten und Spaß bei Leichtwind geht.<br>.<br>.</p>
+</div>
+<div class="ce_text grid lg-2 md-2 sm-2 xs-1 last block">
+<h3>Tretboot- & SUP-Verleih Lemkenhafen</h3>
+<figure class="image_container float_above">
+<a href="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%207.jpg" title="Surfschule" data-lightbox="0e343b">
+<img src="files/bilder/freizeit-events/Surfen%20Orth%20Fehmarn%207.jpg" width="849" height="886" alt="Surfschule" itemprop="image">
+</a>
+</figure>
+<p><a href="https://surfspot-fehmarn.de/" target="_blank" rel="noopener">https://surfspot-fehmarn.de/</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer id="footer">
+<div class="inside">
+<div class="footer-inside block">
+<div class="inside">
+<div class="mod_article block" id="article-32">
+<div class="inside">
+<div class="row">
+<section class="ce_sectionstart row first">
+<article class="ce_articlestart grid xs-1 sm-3 md-6 lg-6 block">
+<div class="ce_image block">
+<figure class="image_container" style="margin-top:10px;">
+<a href="files/bilder/auszeichnungen-partner/ADAC_tipp-2026.png" data-lightbox="8ad6c4">
+<img src="assets/images/4/ADAC_tipp-2026-5d5f96d0.png" width="180" height="128" alt="ADAC Camping-Tipp 2024" itemprop="image">
+</a>
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-3 md-4 lg-3 block">
+<div id="pin-w"></div>
+<script></script>
+</article>
+<article class="ce_articlestart grid xs-1 sm-4 md-6 lg-6 block">
+<div class="ce_image block">
+<figure class="image_container" style="margin-top:10px;">
+<a href="files/bilder/auszeichnungen-partner/DCC-Logo-4Sterne.png" data-lightbox="86a582">
+<img src="assets/images/c/DCC-Logo-4Sterne-8e99816e.png" width="140" height="113" alt="DCC-Logo" itemprop="image">
+</a>
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-3 md-9 lg-9 block">
+<div class="ce_image block">
+<figure class="image_container" style="margin-top:10px;">
+<img src="assets/images/4/camping-paradies-fehmarn-e6b1838f.png" width="180" height="180" alt="ADAC Camping-Tipp 2024" itemprop="image">
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-3 md-9 lg-9 block">
+<div class="ce_image block">
+<figure class="image_container" style="margin-top:10px;">
+<img src="assets/images/3/camping-schleswig-holstein-e6e3c07d.png" width="180" height="180" alt="ADAC Camping-Tipp 2024" itemprop="image">
+</figure>
+</div>
+</article>
+</section>
+<section class="ce_sectionstart row">
+<article class="ce_articlestart grid xs-1 sm-1 md-3 lg-3 block">
+<div class="ce_hyperlink google-button block">
+<a href="https://www.google.de/travel/search?gsas=1&amp;ts=EggKAggDCgIIAxocEhoSFAoHCOgPEAcYHxIHCOgPEAgYARgBMgIQAA&amp;qs=MhRDZ3NJeU9UdGxfZVktX181QVJBQjgC&amp;ap=ugEHcmV2aWV3cw&amp;biw=1920&amp;bih=953&amp;hl=de-DE&amp;ved=0CAAQ5JsGahcKEwjA-Zn0086HAxUAAAAAHQAAAAAQDA" class="hyperlink_txt" title="Bewerten Sie uns auf Google" target="_blank" rel="noreferrer noopener">Bewerten Sie uns auf Google</a>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<img src="assets/images/9/klimaneutral-batch-bae94973.svg" width="250" height="120" alt="Ökostrom und Klimaneurtral" itemprop="image">
+</figure>
+</div>
+<div class="ce_text block">
+<p>Camping Flügger&nbsp;Strand <br>Familie Köneking <br>Flügge 2, 23769 Fehmarn</p>
+<p><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#x6E;&#102;&#x6F;&#64;&#x66;&#108;&#x75;&#101;&#x67;&#103;&#x65;&#114;&#x2D;&#115;&#x74;&#114;&#x61;&#110;&#x64;&#46;&#x64;&#101;">&#105;&#x6E;&#102;&#x6F;&#64;&#x66;&#108;&#x75;&#101;&#x67;&#103;&#x65;&#114;&#x2D;&#115;&#x74;&#114;&#x61;&#110;&#x64;&#46;&#x64;&#101;<br></a>Tel. 0 43 72 - 99 13 44<br>Tel. 0 43 72 - 7 14<br><a href="kontakt-impressum.html"><br></a></p>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-2 md-3 lg-3 block border-box map-vs">
+<h4 class="ce_headline">
+Interaktiver Platzplan</h4>
+<div class="ce_image block">
+<figure class="image_container">
+<a href="platzplan.html" title="zum interaktiven Platzplan">
+<img src="files/theme-styles/img/platzplan/map-vs.jpg" width="334" height="221" alt="Platzplan Vorschau" itemprop="image">
+</a>
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-2 md-3 lg-3 block">
+<h4 class="ce_headline">
+Service & Info</h4>
+<div class="ce_hyperlink btn-blue halfbox block">
+<a href="webcam.html" class="hyperlink_txt" title="Webcam">Webcam</a>
+</div>
+<div class="ce_hyperlink btn-yellow halfbox block">
+<a href="wetter.html" class="hyperlink_txt" title="Wetter">Wetter</a>
+</div>
+<div class="ce_hyperlink clearfix block">
+<a href="lage-anfahrt.html" class="hyperlink_txt" title="Lage & Anfahrt">Lage & Anfahrt</a>
+</div>
+<div class="ce_hyperlink block">
+<a href="bildergalerie.html" class="hyperlink_txt" title="Bildergalerie">Bildergalerie</a>
+</div>
+<div class="ce_text block">
+<p><br><a href="kontakt-impressum.html">KONTAKT / IMPRESSUM<br></a><a href="datenschutz.html">DATENSCHUTZ</a><a href="kontakt-impressum.html"><br></a></p>
+</div>
+<div class="ce_text social">
+<ul>
+<li>
+<a title="Flügger Strand bei facebook" href="
+https://www.facebook.com/campingflueggerstrand/" target="_blank">
+<span class="social-inner">facebook</span>
+<i class="fa fa-facebook"></i>
+</a>
+</li>
+<li>
+<a title="Flügger Strand bei Instagram" href="
+https://www.instagram.com/campingflueggerstrand/" target="_blank">
+<span class="social-inner">instagram</span>
+<i class="fa fa-instagram" style="color: #fff;"></i>
+</a>
+</li>
+</ul>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-inside-top block">
+<div class="inside">
+<div class="ce_toplink first last block">
+<a title="TOP" href="surfen.html#top">TOP<i class="fa fa-chevron-up"></i></a>
+</div>
+</div>
+</div> </div>
+</footer>
+</div>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script><script></script><script type="application/ld+json">{"@context":{"contao":"https:\/\/schema.contao.org\/"},"@type":"contao:Page","contao:title":"Surfen","contao:pageId":73,"contao:noSearch":false,"contao:protected":false,"contao:groups":[],"contao:fePreview":false}</script>
+<script></script>
+<script></script>
+<script></script>
+</body>
+</html>

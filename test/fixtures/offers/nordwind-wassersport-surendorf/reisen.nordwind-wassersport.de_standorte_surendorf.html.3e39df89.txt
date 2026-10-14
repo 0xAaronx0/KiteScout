@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<script></script>
+<meta charset="UTF-8">
+<title>Surendorf - Nordwind Wassersport</title>
+<base href="https://reisen.nordwind-wassersport.de/">
+<meta name="robots" content="index,follow">
+<meta name="description" content="">
+<meta name="generator" content="Contao Open Source CMS">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script></script><script></script>
+<script></script>
+<script></script>
+<script></script>
+<style></style>
+</head>
+<body id="top">
+<div id="wrapper">
+<div id="container">
+<main id="main">
+<div class="inside">
+<div id="header">
+<div class="navigation_top">
+<nav class="mod_huh_menu block" itemscope itemtype="http://schema.org/SiteNavigationElement"
+data-max-trigger-level="0"
+data-open-delay="200"
+data-close-delay="200"
+data-opening-duration="0"
+data-closing-duration="0"
+data-trigger-classes-for-childfree-level1=""
+>
+<a href="standorte/surendorf.html#skipNavigation13" class="invisible">Navigation überspringen</a>
+<div class="navbar d-none d-lg-block navbar-expand-lg navbar-light">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content-" aria-controls="navbar-content-" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbar-content-">
+<ul class="level_1 navbar-nav mr-auto">
+<li class="nav-item home">
+<a class="nav-link submenu sibling first" href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+</li>
+<li class="nav-item submenu first">
+<a href="reisen-2026/klassenfahrten-2026.html"
+title="Klassenfahrten"
+class="nav-link submenu first"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">Klassenfahrten</span>
+</a>
+<ul class="level_2">
+<li class="nav-item submenu first">
+<a href="reisen-2026/klassenfahrten-2026.html"
+title="2026"
+class="nav-link submenu first"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">2026</span>
+</a>
+<ul class="level_3">
+<li class="nav-item first">
+<a href="reisen-2026/klassenfahrten-2026.html"
+title="Klassenfahrten Kurzübersicht"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Klassenfahrten Kurzübersicht</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/einleitung.html"
+title="Einleitung"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Einleitung</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/klassenfahrten-2026/seacollege-2026.html"
+title="Seacollege 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Seacollege 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/klassenfahrten-2026/active-beach-2026.html"
+title="Active Beach 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Active Beach 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/klassenfahrten-2026/surf-sail-bike-2026.html"
+title="Surf-Sail-Bike 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Surf-Sail-Bike 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/klassenfahrten-2026/team-und-mee-h-r-2026.html"
+title="Team und Mee&#40;h&#41;r 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Team und Mee&#40;h&#41;r 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/klassenfahrten-2026/vario-2026.html"
+title="Vario 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Vario 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/klassenfahrten-2026/zubuchbare-leistungen.html"
+title="Zubuchbare Leistungen"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Zubuchbare Leistungen</span>
+</a>
+</li>
+<li class="nav-item last">
+<a href="reisen-2026/klassenfahrten-2026/transfer-shuttle.html"
+title="Transfer + Shuttle"
+class="nav-link last"
+itemprop="url">
+<span itemprop="name">Transfer + Shuttle</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item submenu last">
+<a href="337.html"
+title="2027"
+class="nav-link submenu last"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">2027</span>
+</a>
+<ul class="level_3">
+<li class="nav-item first">
+<a href="337.html"
+title="Klassenfahrten Kurzübersicht"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Klassenfahrten Kurzübersicht</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="338.html"
+title="Einleitung"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Einleitung</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/seacollege-2027.html"
+title="Seacollege 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Seacollege 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/active-beach-2027.html"
+title="Active Beach 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Active Beach 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/surf-sail-bike-2027.html"
+title="Surf-Sail-Bike 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Surf-Sail-Bike 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/team-und-mee-h-r-2027.html"
+title="Team und Mee&#40;h&#41;r 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Team und Mee&#40;h&#41;r 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/vario-2027.html"
+title="Vario 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Vario 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/swim-if-you-can-2027.html"
+title="Swim if you can! 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Swim if you can! 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/surf-sail-city-2027.html"
+title="Surf, Sail + City 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Surf, Sail + City 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="344.html"
+title="Zubuchbare Leistungen"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Zubuchbare Leistungen</span>
+</a>
+</li>
+<li class="nav-item last">
+<a href="345.html"
+title="Transfer + Shuttle"
+class="nav-link last"
+itemprop="url">
+<span itemprop="name">Transfer + Shuttle</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item submenu">
+<a href="feriencamps/id-2026/kite-wing-sail-surf-wassersport-total-2026.html"
+title="Feriencamps"
+class="nav-link submenu"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">Feriencamps</span>
+</a>
+<ul class="level_2">
+<li class="nav-item submenu first">
+<a href="feriencamps/id-2026/kite-wing-sail-surf-wassersport-total-2026.html"
+title="2026"
+class="nav-link submenu first"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">2026</span>
+</a>
+<ul class="level_3">
+<li class="nav-item first">
+<a href="feriencamps/id-2026/kite-wing-sail-surf-wassersport-total-2026.html"
+title="Kite.Wing.Sail.Surf – Wassersport total 2026"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Kite.Wing.Sail.Surf – Wassersport total 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="feriencamps/id-2026/fischer-s-fritz-2026.html"
+title="Fischer´s Fritz 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Fischer´s Fritz 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="feriencamps/id-2026/chill-surf-2026.html"
+title="Chill &amp; Surf 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Chill & Surf 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="feriencamps/id-2026/sail-surf-2026.html"
+title="Sail &amp; Surf 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Sail & Surf 2026</span>
+</a>
+</li>
+<li class="nav-item last">
+<a href="feriencamps/id-2026/7-tage-7-abenteuer-2026.html"
+title="7 Tage, 7 Abenteuer 2026"
+class="nav-link last"
+itemprop="url">
+<span itemprop="name">7 Tage, 7 Abenteuer 2026</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item submenu last">
+<a href="feriencamps/id-2027/kite-wing-sail-surf-wassersport-total.html"
+title="2027"
+class="nav-link submenu last"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">2027</span>
+</a>
+<ul class="level_3">
+<li class="nav-item first">
+<a href="feriencamps/id-2027/kite-wing-sail-surf-wassersport-total.html"
+title="Kite * Wing * Sail * Surf"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Kite * Wing * Sail * Surf</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="feriencamps/id-2027/fischer-s-fritz.html"
+title="Fischer´s Fritz"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Fischer´s Fritz</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="feriencamps/id-2027/beach-surf.html"
+title="Beach &amp; Surf"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Beach & Surf</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="feriencamps/id-2027/sail-surf.html"
+title="Sail &amp; Surf"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Sail & Surf</span>
+</a>
+</li>
+<li class="nav-item last">
+<a href="feriencamps/id-2027/7-tage-7-abenteuer.html"
+title="7 Tage, 7 Abenteuer"
+class="nav-link last"
+itemprop="url">
+<span itemprop="name">7 Tage, 7 Abenteuer</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item submenu">
+<a href="kompaktwochenenden/kitesurfen.html"
+title="Kompaktwochenenden"
+class="nav-link submenu"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">Kompaktwochenenden</span>
+</a>
+<ul class="level_2">
+<li class="nav-item first">
+<a href="kompaktwochenenden/kitesurfen.html"
+title="Kitesurfen"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Kitesurfen</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="kompaktwochenenden/katamaransegeln.html"
+title="Katamaransegeln"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Katamaransegeln</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="kompaktwochenenden/windsurfen.html"
+title="Windsurfen"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Windsurfen</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="kompaktwochenenden/stand-up-paddeling.html"
+title="Stand-Up-Paddeling"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Stand-Up-Paddeling</span>
+</a>
+</li>
+<li class="nav-item last">
+<a href="kompaktwochenenden/wingfoiling.html"
+title="Wingfoiling"
+class="nav-link last"
+itemprop="url">
+<span itemprop="name">Wingfoiling</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="ferienspass.html"
+title="Ferienspaß"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Ferienspaß</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="schwimmkurse.html"
+title="Schwimmkurse"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Schwimmkurse</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="firmenevents.html"
+title="Firmenevents"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Firmenevents</span>
+</a>
+</li>
+<li class="nav-item forward trail submenu last">
+<a href="standorte/surendorf.html"
+title="Gästehäuser"
+class="nav-link forward trail submenu last"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">Gästehäuser</span>
+</a>
+<ul class="level_2">
+<li class="nav-item active first">
+<a href="standorte/surendorf.html"
+title="Surendorf"
+class="nav-link active first"
+itemprop="url">
+<span itemprop="name">Surendorf</span>
+</a>
+</li>
+<li class="nav-item sibling">
+<a href="standorte/schubystrand-damp.html"
+title="Schubystrand/ Damp"
+class="nav-link sibling"
+itemprop="url">
+<span itemprop="name">Schubystrand/ Damp</span>
+</a>
+</li>
+<li class="nav-item sibling">
+<a href="standorte/langholz.html"
+title="Langholz"
+class="nav-link sibling"
+itemprop="url">
+<span itemprop="name">Langholz</span>
+</a>
+</li>
+<li class="nav-item sibling last">
+<a href="standorte/glamping.html"
+title="Glamping"
+class="nav-link sibling last"
+itemprop="url">
+<span itemprop="name">Glamping</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="mod_mobile_menu block">
+<div id="mobile-menu-19-trigger" class="mobile_menu_trigger">
+<div id="btnMenu"><i class="fas fa-bars" aria-hidden="true"></i></div></div>
+<div id="mobile-menu-19" class="mobile_menu">
+<div class="inner">
+<div id="mMenu">
+<nav class="mod_navigation block">
+<a href="standorte/surendorf.html#skipNavigation2" class="invisible">Navigation überspringen</a>
+<ul class="level_1">
+<li class="submenu first"><a href="reisen-2026/klassenfahrten-2026.html" title="Klassenfahrten" class="submenu first" aria-haspopup="true">Klassenfahrten</a>
+<ul class="level_2">
+<li class="submenu first"><a href="reisen-2026/klassenfahrten-2026.html" title="2026" class="submenu first" aria-haspopup="true">2026</a>
+<ul class="level_3">
+<li class="first"><a href="reisen-2026/klassenfahrten-2026.html" title="Klassenfahrten Kurzübersicht" class="first">Klassenfahrten Kurzübersicht</a></li>
+<li><a href="reisen-2026/einleitung.html" title="Einleitung">Einleitung</a></li>
+<li><a href="reisen-2026/klassenfahrten-2026/seacollege-2026.html" title="Seacollege 2026">Seacollege 2026</a></li>
+<li><a href="reisen-2026/klassenfahrten-2026/active-beach-2026.html" title="Active Beach 2026">Active Beach 2026</a></li>
+<li><a href="reisen-2026/klassenfahrten-2026/surf-sail-bike-2026.html" title="Surf-Sail-Bike 2026">Surf-Sail-Bike 2026</a></li>
+<li><a href="reisen-2026/klassenfahrten-2026/team-und-mee-h-r-2026.html" title="Team und Mee&#40;h&#41;r 2026">Team und Mee&#40;h&#41;r 2026</a></li>
+<li><a href="reisen-2026/klassenfahrten-2026/vario-2026.html" title="Vario 2026">Vario 2026</a></li>
+<li><a href="reisen-2026/klassenfahrten-2026/zubuchbare-leistungen.html" title="Zubuchbare Leistungen">Zubuchbare Leistungen</a></li>
+<li class="last"><a href="reisen-2026/klassenfahrten-2026/transfer-shuttle.html" title="Transfer + Shuttle" class="last">Transfer + Shuttle</a></li>
+</ul>
+</li>
+<li class="submenu last"><a href="337.html" title="2027" class="submenu last" aria-haspopup="true">2027</a>
+<ul class="level_3">
+<li class="first"><a href="337.html" title="Klassenfahrten Kurzübersicht" class="first">Klassenfahrten Kurzübersicht</a></li>
+<li><a href="338.html" title="Einleitung">Einleitung</a></li>
+<li><a href="klassenfahrten/id-2027/seacollege-2027.html" title="Seacollege 2027">Seacollege 2027</a></li>
+<li><a href="klassenfahrten/id-2027/active-beach-2027.html" title="Active Beach 2027">Active Beach 2027</a></li>
+<li><a href="klassenfahrten/id-2027/surf-sail-bike-2027.html" title="Surf-Sail-Bike 2027">Surf-Sail-Bike 2027</a></li>
+<li><a href="klassenfahrten/id-2027/team-und-mee-h-r-2027.html" title="Team und Mee&#40;h&#41;r 2027">Team und Mee&#40;h&#41;r 2027</a></li>
+<li><a href="klassenfahrten/id-2027/vario-2027.html" title="Vario 2027">Vario 2027</a></li>
+<li><a href="klassenfahrten/id-2027/swim-if-you-can-2027.html" title="Swim if you can! 2027">Swim if you can! 2027</a></li>
+<li><a href="klassenfahrten/id-2027/surf-sail-city-2027.html" title="Surf, Sail + City 2027">Surf, Sail + City 2027</a></li>
+<li><a href="344.html" title="Zubuchbare Leistungen">Zubuchbare Leistungen</a></li>
+<li class="last"><a href="345.html" title="Transfer + Shuttle" class="last">Transfer + Shuttle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="feriencamps/id-2026/kite-wing-sail-surf-wassersport-total-2026.html" title="Feriencamps" class="submenu" aria-haspopup="true">Feriencamps</a>
+<ul class="level_2">
+<li class="submenu first"><a href="feriencamps/id-2026/kite-wing-sail-surf-wassersport-total-2026.html" title="2026" class="submenu first" aria-haspopup="true">2026</a>
+<ul class="level_3">
+<li class="first"><a href="feriencamps/id-2026/kite-wing-sail-surf-wassersport-total-2026.html" title="Kite.Wing.Sail.Surf – Wassersport total 2026" class="first">Kite.Wing.Sail.Surf – Wassersport total 2026</a></li>
+<li><a href="feriencamps/id-2026/fischer-s-fritz-2026.html" title="Fischer´s Fritz 2026">Fischer´s Fritz 2026</a></li>
+<li><a href="feriencamps/id-2026/chill-surf-2026.html" title="Chill &amp; Surf 2026">Chill & Surf 2026</a></li>
+<li><a href="feriencamps/id-2026/sail-surf-2026.html" title="Sail &amp; Surf 2026">Sail & Surf 2026</a></li>
+<li class="last"><a href="feriencamps/id-2026/7-tage-7-abenteuer-2026.html" title="7 Tage, 7 Abenteuer 2026" class="last">7 Tage, 7 Abenteuer 2026</a></li>
+</ul>
+</li>
+<li class="submenu last"><a href="feriencamps/id-2027/kite-wing-sail-surf-wassersport-total.html" title="2027" class="submenu last" aria-haspopup="true">2027</a>
+<ul class="level_3">
+<li class="first"><a href="feriencamps/id-2027/kite-wing-sail-surf-wassersport-total.html" title="Kite * Wing * Sail * Surf" class="first">Kite * Wing * Sail * Surf</a></li>
+<li><a href="feriencamps/id-2027/fischer-s-fritz.html" title="Fischer´s Fritz">Fischer´s Fritz</a></li>
+<li><a href="feriencamps/id-2027/beach-surf.html" title="Beach &amp; Surf">Beach & Surf</a></li>
+<li><a href="feriencamps/id-2027/sail-surf.html" title="Sail &amp; Surf">Sail & Surf</a></li>
+<li class="last"><a href="feriencamps/id-2027/7-tage-7-abenteuer.html" title="7 Tage, 7 Abenteuer" class="last">7 Tage, 7 Abenteuer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="kompaktwochenenden/kitesurfen.html" title="Kompaktwochenenden" class="submenu" aria-haspopup="true">Kompaktwochenenden</a>
+<ul class="level_2">
+<li class="first"><a href="kompaktwochenenden/kitesurfen.html" title="Kitesurfen" class="first">Kitesurfen</a></li>
+<li><a href="kompaktwochenenden/katamaransegeln.html" title="Katamaransegeln">Katamaransegeln</a></li>
+<li><a href="kompaktwochenenden/windsurfen.html" title="Windsurfen">Windsurfen</a></li>
+<li><a href="kompaktwochenenden/stand-up-paddeling.html" title="Stand-Up-Paddeling">Stand-Up-Paddeling</a></li>
+<li class="last"><a href="kompaktwochenenden/wingfoiling.html" title="Wingfoiling" class="last">Wingfoiling</a></li>
+</ul>
+</li>
+<li><a href="ferienspass.html" title="Ferienspaß">Ferienspaß</a></li>
+<li><a href="schwimmkurse.html" title="Schwimmkurse">Schwimmkurse</a></li>
+<li><a href="firmenevents.html" title="Firmenevents">Firmenevents</a></li>
+<li class="forward trail submenu last"><strong class="forward trail submenu last" aria-haspopup="true">Gästehäuser</strong>
+<ul class="level_2">
+<li class="active first"><strong class="active first">Surendorf</strong></li>
+<li class="sibling"><a href="standorte/schubystrand-damp.html" title="Schubystrand/ Damp" class="sibling">Schubystrand/ Damp</a></li>
+<li class="sibling"><a href="standorte/langholz.html" title="Langholz" class="sibling">Langholz</a></li>
+<li class="sibling last"><a href="standorte/glamping.html" title="Glamping" class="sibling last">Glamping</a></li>
+</ul>
+</li>
+</ul>
+<span id="skipNavigation2" class="invisible"></span>
+</nav>
+</div> </div>
+</div>
+<script></script>
+</div>
+</div>
+<div class="slider">
+<div class="inline">
+<div class="item item-1">
+<div class="mod_pageimage block">
+<figure class="image_container">
+<img src="files/CONTENT/Bilder/Feriencamps/Wing.Kite.Surf.Sail/Nordwind%20Wassersport%20Wingkitesurfsail-07.jpg" width="2560" height="1707" alt="">
+</figure>
+</div>
+</div>
+<div class="item item-2">
+<div class="mod_pageimage block">
+<figure class="image_container">
+<img src="files/CONTENT/Bilder/Feriencamps/Wing.Kite.Surf.Sail/Nordwind%20Wassersport%20Wingkitesurfsail-07.jpg" width="2560" height="1707" alt="">
+</figure>
+</div>
+</div>
+</div>
+<div class="mod_randomImage block" id="Logo">
+<figure class="image_container">
+<a class="stretched-link" href="https://nordwind-wassersport.de/" rel="noreferrer noopener">
+<img src="files/website/Bilder/Logo.png" width="303" height="303" alt="">
+</a>
+</figure>
+</div>
+</div>
+</div>
+<style></style>
+<section id="article-701" class="mod_article">
+<div class="container mod_article block">
+<div class="ce_text block">
+<h2>Nordwind Gästehäuser in Surendorf</h2>
+<p>Die gemütlichen und direkt am Meer gelegenen Nordwind Gästehäuser Surendorf bestehen aus jeweils 3-4 nebeneinandergelegen, modern möblierten Wohnungen mit 4-8 Bett Zimmern. In jeder Wohnung gibt es ein Bad und eine Pantryküche. Die Häuser stehen unmittelbar oberhalb des Strandes und der Wassersportstation. </p>
+<p class="p3">Die vollsortierte Wassersportstation hält aktuelle Ausrüstung vor, mit der bis zu 30 Segler/innen oder bis zu 30 Surfer/innen zeitgleich unterrichtet werden können.</p>
+<p class="p4">Für den Freizeitbereich stehen diverse SUP Boards, XXL SUP Board, Sit-On-Top-Kajaks, Tretboote und Bodyboards samt Flossen bereit, sowie ein umfangreiches Spielesortiment für In- und Outdoor.</p>
+<p class="p4">Auf Anfrage können bis zu 30 Fahrräder kostenpflichtig bereitgestellt werden.</p>
+<p class="p2">Alternativ steht das <strong>urige Peanuts Hostel </strong>im benachbarten Krusendorf (ca. 3 km) zur Verfügung.</p>
+<p class="p5">Fahrräder für den Shuttle zur Wassersportstation sind kostenlos.</p>
+</div>
+<div class="ce_text mt-5 mb-5 block">
+<h2>Wohnungen + Preise</h2>
+<table style="border-collapse: collapse; width: 97.533%; height: 33.6px; border-style: hidden; float: left;" border="1" cellpadding="5">
+<tbody>
+<tr style="height: 16.8px;">
+<td style="width: 16.4408%; height: 16.8px; border-style: hidden;"><strong><a href="https://verein.nordwind-wassersport.de/standorte/surendorf/wohnung-west.html" title="Wohnung &#039;West&#039;">Wohnung &#39;West&#39;</a></strong></td>
+<td style="width: 17.1635%; height: 16.8px; border-style: hidden;"><strong><a href="https://verein.nordwind-wassersport.de/standorte/surendorf/wohnung-nord.html" title="Wohnung &#039;Nord&#039;">Wohnung &#39;Nord&#39;</a></strong></td>
+<td style="width: 16.4408%; height: 16.8px; border-style: hidden;"><strong><a href="https://verein.nordwind-wassersport.de/standorte/surendorf/wohnung-sued.html" title="Wohnung &#039;Süd&#039;">Wohnung &#39;Süd&#39;</a></strong></td>
+<td style="width: 16.2602%; border-style: hidden;"><strong><a href="https://verein.nordwind-wassersport.de/standorte/surendorf/wohnung-ost.html" title="Wohnung &#039;Ost&#039;">Wohnung &#39;Ost&#39;</a></strong></td>
+<td style="width: 18.3379%; border-style: hidden;"><strong><a href="https://verein.nordwind-wassersport.de/standorte/surendorf/wohnung-luv-lee.html" title="Wohnung &#039;Luv &amp; Lee&#039;">Wohnung &#39;Luv &amp; Lee&#39;</a></strong></td>
+<td style="width: 15.3568%; border-style: hidden;"><strong><a href="https://verein.nordwind-wassersport.de/standorte/surendorf/wohnung-turm.html" title="Wohnung &#039;Turm&#039;">Wohnung &#39;Turm&#39;</a></strong></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="article-1022" class="mod_article py-0">
+<div class="splide">
+<div class="splide__track">
+<ul class="splide__list">
+<li class="splide__slide">
+<figure class="image_container">
+<a class="stretched-link" href="files/CONTENT/Bilder/Standorte/Surendorf/standort_surendorf_%231.jpg" data-lightbox="lb4584">
+<img src="assets/images/b/standort_surendorf_%231-e6922c34.jpg" width="350" height="350" alt="">
+</a>
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<a class="stretched-link" href="files/CONTENT/Bilder/Standorte/Surendorf/standort_surendorf_%232.jpg" data-lightbox="lb4584">
+<img src="assets/images/c/standort_surendorf_%232-4f248ff8.jpg" width="350" height="350" alt="">
+</a>
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<a class="stretched-link" href="standorte/surendorf.html" target="_blank">
+<img src="assets/images/a/standort_surendorf_%233-0e74d2f1.jpg" width="350" height="350" alt="">
+</a>
+<figcaption class="caption">Gästehäuser Surendorf</figcaption>
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<a class="stretched-link" href="files/CONTENT/Bilder/Standorte/Surendorf/standort_surendorf_%234.jpg" data-lightbox="lb4584">
+<img src="assets/images/2/standort_surendorf_%234-d64031c6.jpg" width="350" height="350" alt="">
+</a>
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<a class="stretched-link" href="files/CONTENT/Bilder/Standorte/Surendorf/standort_surendorf_%235.jpg" data-lightbox="lb4584">
+<img src="assets/images/e/standort_surendorf_%235-df2c3f76.jpg" width="350" height="350" alt="">
+</a>
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<a class="stretched-link" href="files/CONTENT/Bilder/Standorte/Surendorf/standort_surendorf_%236.jpg" data-lightbox="lb4584">
+<img src="assets/images/f/standort_surendorf_%236-3dc7a383.jpg" width="350" height="350" alt="">
+</a>
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<a class="stretched-link" href="files/CONTENT/Bilder/Standorte/Surendorf/standort_surendorf_%237.jpg" data-lightbox="lb4584">
+<img src="assets/images/d/standort_surendorf_%237-dca9564f.jpg" width="350" height="350" alt="">
+</a>
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<a class="stretched-link" href="standorte/surendorf.html" target="_blank">
+<img src="assets/images/e/standort_surendorf_%238-460b94a5.jpg" width="350" height="350" alt="">
+</a>
+<figcaption class="caption">Wassersportstation Surendorf</figcaption>
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<a class="stretched-link" href="files/CONTENT/Bilder/Standorte/Surendorf/Clubhaus-Mensa.webp" data-lightbox="lb4584">
+<img src="assets/images/3/Clubhaus-Mensa-0775875f.webp" width="350" height="350" alt="">
+</a>
+</figure>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<div id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-lg-2">
+<div class="mod_randomImage block" id="LogoFooter">
+<figure class="image_container">
+<a class="stretched-link" href="https://nordwind-wassersport.de/" rel="noreferrer noopener">
+<img src="files/website/Bilder/Logo.png" width="303" height="303" alt="">
+</a>
+</figure>
+</div>
+</div>
+<div class="col-md-9 col-lg-10">
+<div class="row">
+<div class="col-md-4">
+<h3>Nordwind Wassersport</h3>
+<nav class="mod_customnav block">
+<a href="standorte/surendorf.html#skipNavigation11" class="invisible">Navigation überspringen</a>
+<ul class="level_1">
+<li class="first"><a href="https://verein.nordwind-wassersport.de/" title="Verein &amp; Kurse" class="first">Verein & Kurse</a></li>
+<li><a href="./" title="Reisen">Reisen</a></li>
+<li class="last"><a href="https://gutschein.nordwind-wassersport.de/" title="Gutschein" class="last">Gutschein</a></li>
+</ul>
+<span id="skipNavigation11" class="invisible"></span>
+</nav>
+</div>
+<div class="col-md-4">
+<h3>Standorte</h3>
+<nav class="mod_customnav block">
+<a href="standorte/surendorf.html#skipNavigation12" class="invisible">Navigation überspringen</a>
+<ul class="level_1">
+<li class="first"><a href="standorte/surendorf.html" title="Surendorf" class="first">Surendorf</a></li>
+<li><a href="standorte/schubystrand-damp.html" title="Schubystrand/ Damp">Schubystrand/ Damp</a></li>
+<li><a href="standorte/langholz.html" title="Langholz">Langholz</a></li>
+<li class="last"><a href="standorte/glamping.html" title="Glamping" class="last">Glamping</a></li>
+</ul>
+<span id="skipNavigation12" class="invisible"></span>
+</nav>
+</div>
+<div class="col-md-4">
+<h3>Kontakt</h3>
+<p><i class="fa fa-phone" aria-hidden="true"></i> +49 4346 5955</p>
+<p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@nordwind-wassersport.de" style="text-transform: inherit">info@nordwind-wassersport.de</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postfooter">
+<div class="container d-flex justify-content-between align-items-center">
+<div class="socialmedia d-flex">
+<span><a href="https://www.facebook.com/NordwindWassersportEV" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></span>
+<span><a href="https://www.instagram.com/nordwind.wassersport/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></span>
+<span><a href="https://www.youtube.com/channel/UCBIXERPq6cOmS9mifp7GuLw" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></span>
+<span><a href="https://www.tiktok.com/@nordwind.wassersport?lang=de-DE" target="_blank"><i class="fab fa-tiktok" aria-hidden="true"></i></a></span>
+</div>
+<div class="rechtliches d-flex">
+<a href="kontakt.html">Kontakt</a>
+<a href="impressum.html">Impressum</a>
+<a href="datenschutz.html">Datenschutz</a>
+</div>
+</div>
+</div> </div>
+</main>
+</div>
+</div>
+<script></script>
+<script></script>
+<script></script><script></script>
+<script></script><script></script>
+<script></script>
+<script></script>
+<script></script>
+<script type="application/ld+json">
+{
+ "@context": "https:\/\/schema.org",
+ "@graph": [
+ {
+ "@type": "WebPage"
+ },
+ {
+ "@id": "#\/schema\/image\/c0569828-b603-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/b\/standort_surendorf_%231-e6922c34.jpg"
+ },
+ {
+ "@id": "#\/schema\/image\/c087f863-b603-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/c\/standort_surendorf_%232-4f248ff8.jpg"
+ },
+ {
+ "@id": "#\/schema\/image\/c116e225-b603-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "caption": "Gästehäuser Surendorf",
+ "contentUrl": "assets\/images\/a\/standort_surendorf_%233-0e74d2f1.jpg"
+ },
+ {
+ "@id": "#\/schema\/image\/c0ebd885-b603-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/2\/standort_surendorf_%234-d64031c6.jpg"
+ },
+ {
+ "@id": "#\/schema\/image\/c158eeb8-b603-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/e\/standort_surendorf_%235-df2c3f76.jpg"
+ },
+ {
+ "@id": "#\/schema\/image\/c177efaf-b603-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/f\/standort_surendorf_%236-3dc7a383.jpg"
+ },
+ {
+ "@id": "#\/schema\/image\/c1cba7f2-b603-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/d\/standort_surendorf_%237-dca9564f.jpg"
+ },
+ {
+ "@id": "#\/schema\/image\/c206714b-b603-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "caption": "Wassersportstation Surendorf",
+ "contentUrl": "assets\/images\/e\/standort_surendorf_%238-460b94a5.jpg"
+ },
+ {
+ "@id": "#\/schema\/image\/23d2793b-04de-11f0-a6ec-74563c9ff0ca",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/3\/Clubhaus-Mensa-0775875f.webp"
+ }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https:\/\/schema.contao.org",
+ "@graph": [
+ {
+ "@type": "Page",
+ "fePreview": false,
+ "groups": [],
+ "noSearch": false,
+ "pageId": 269,
+ "protected": false,
+ "title": "Surendorf"
+ }
+ ]
+}
+</script></body>
+</html>

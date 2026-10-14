@@ -204,6 +204,27 @@ Many Baltic price tables are 2026-only and already past (Kite Marina, kite.pl, K
 "price on request" until the 2027 tables appear. The `\u0000` strip now covers every package, slot and image write
 (a page text carried one). Pins: "Chałupy" and "Drejby Strand, Kegnæs" in `KNOWN_PINS`.
 
+## Stays round 6: German North and Baltic Sea (2026-10-14)
+
+20 adapters (Aaron: the 18 recommended plus NoHotel and Flügger Strand; Beach Motel SPO left out). Rügen and Bodden:
+UMMAII, Regenbogen Ummanz and Born, ProBoarding, Rügen Kite Hostel, NoHotel, Loissin, Saal (Westwind / Darßblick),
+FTF Zipke. Fehmarn and Holstein: Bretterbude, Kite Passion, Strukkamphuk, Wallnau, Flügger Strand, Kailua Lodge,
+Nordwind Surendorf (kite weekends, kind camp). North Sea: WattLodge, Windloop (camp), Nordsee Surfschule dome +
+Seeschwalbe, Strandgut Cuxhaven.
+
+Live engines: Sirvoy for UMMAII (Kite Beach Inn's parser), Compusoft for Strukkamphuk (helpers from
+hvide-sande-camping.ts), campbuchung.de for Wallnau (no robots.txt, anonymous POST, one per run). Not used: SIHOT
+(Regenbogen; the data call needs a session cookie), mgm Easybuchen (Loissin; robots), OnePageBooking (Bretterbude;
+encrypted session token), V-Office (Kailua; signed token), Easy-Booking (WattLodge; request not worked out), Smoobu.
+Regenbogen and Kailua prices are read by hand from the parks' PDF price lists into constants, released only while the
+page links the same PDF path (confidence medium; re-read when the PDFs change). Several sites ask for a Crawl-delay
+(nohotel.de 5 s, ferienwohnungen-saal.de 10 s); those adapters wait themselves (http.ts has no crawl-delay support).
+
+Ingest: a parallel run of two adapters of a new operator raced on `providers.root_domain`; the insert now re-reads on
+a unique violation. Pins: "Saal" (the geocoder picked Saal an der Donau) and "Dranske, Wittow" in `KNOWN_PINS`.
+Kitefun Tarifa: house photos exist only at 400x300, so that listing's floor is 400x300 and the school's 800 px course
+photos (group-courses page) are added, capped so all house photos reach the vision QC (it sees the 10 largest).
+
 ## Refresh strategy (recommendation)
 
 - Booking-engine / Shopify / app JSON: daily `--slots` (in the 06:00 UTC monitor cron, job `offer-slots`,

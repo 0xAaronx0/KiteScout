@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Mietwohnwagen in der 1. Reihe zur Ostsee - Camping Flügger Strand</title>
+<base href="https://www.fluegger-strand.de/">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Die Mietwohnwagen mit Vorzelt sind mit 4 bzw. 5 Personen zu bewohnen. Sie stehen direkt an der Düne, zum Meer sind es nur 40 Meter!">
+<meta name="keywords" content="Mietwohnwagen, Campingplatz, Fehmarn, Flügge, Ostsee">
+<meta name="generator" content="Contao Open Source CMS">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script></script><script></script><meta property="og:title" content="CAMPING FLÜGGER STRAND - Unbeschwertes Campingglück und Natur pur am Flügger Strand auf Fehmarn" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.fluegger-strand.de/" />
+<meta property="og:image" content="http://www.fluegger-strand.de/files/theme-styles/img/og-image.jpg" />
+<meta property="og:description" content="Der ****Campingplatz bezaubert mit seiner Lage am Meer,
+ob mit Wohnwagen, Wohnmobil, Zelt, im Mietwohnwagen oder Ferienhaus. Freuen Sie sich auf einen
+unvergesslichen Ostseeurlaub auf der Insel Fehmarn." />
+<script></script>
+<script></script>
+</head>
+<body id="top" class="unknown other ">
+<div id="wrapper">
+<header id="header">
+<div class="inside">
+<div id="subheader">
+<div class="inside">
+<a id="logo-dt" title="Flügger Strand-Logo" href=""><img alt="Flügger Strand-Logo" src="files/theme-styles/img/logo-flueggerstrand.svg" width="253" height="192"></a>
+<a id="logo-mob" title="Flügger Strand-Logo" href=""><img alt="Flügger Strand-Logo" src="files/theme-styles/img/logo-flueggerstrand.svg" width="130" height="97"></a>
+<a href="camping-fluegger-strand.html" id="btn-home" title="zur Startseite"></a>
+<a href="buchungsanfrage.html" id="booking-link-mob">Buchungsanfrage</a>
+<div id="hotline" class="header-hotline">
+<a title="Hotline für Sie" href="javascript:void(0)">
+<i class="fa fa-phone"></i>
+<span>0 43 72 - 99 13 44 &nbsp;&&nbsp; 0 43 72 - 7 14</span>
+</a>
+</div>
+<a href="buchungsanfrage.html" id="booking-link">Buchungsanfrage</a>
+<div id="hotline-mob" class="header-hotline">
+<a title="Hotline für Sie" href="tel:+494372714">
+<i class="fa fa-phone"></i>
+<span>0 43 72 - 714</span>
+</a>
+</div>
+<button class="nav-toggle" title="Menü öffnen">Menü <i class="fa fa-bars"></i></button>
+<nav class="mod_navigation navigation-main block" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<button class="nav-close" title="close"><i class="fa fa-times"></i></button>
+<a href="mietwohnwagen.html#skipNavigation33" class="invisible">Navigation überspringen</a>
+<ul class="level_1">
+<li class="submenu trail first"><a href="campingplatz.html" title="Familienurlaub in der Natur" class="submenu trail first" aria-haspopup="true" itemprop="url"><span itemprop="name">Campingplatz</span></a>
+<span class="subnav-toggle"><i class="fa fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="sibling first"><a href="stellplaetze.html" title="Campen mit Wohnwagen, Wohnmobil, Zelt" class="sibling first" itemprop="url"><span itemprop="name">Stellplätze</span></a>
+</li>
+<li class="sibling"><a href="wohnmobile.html" title="Wohnmobilstellplatz mit Meerblick" class="sibling" itemprop="url"><span itemprop="name">Wohnmobile</span></a>
+</li>
+<li class="sibling"><a href="dauerplaetze.html" title="Dauercamping auf Fehmarn" class="sibling" itemprop="url"><span itemprop="name">Dauerplätze</span></a>
+</li>
+<li class="active last"><strong class="active last" itemprop="name">Mietwohnwagen</strong>
+</li>
+</ul></li>
+<li class="submenu"><a href="platzplan.html" title="Platz-Infos" class="submenu" rel="nofollow" aria-haspopup="true" itemprop="url"><span itemprop="name">Platz-Infos</span></a>
+<span class="subnav-toggle"><i class="fa fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="no-header-pic first"><a href="platzplan.html" title="Platzplan" class="no-header-pic first" itemprop="url"><span itemprop="name">Platzplan</span></a>
+</li>
+<li><a href="sanitaer-wellness.html" title="Moderne Sanitärgebäude und Wellness" itemprop="url"><span itemprop="name">Sanitär & Wellness</span></a>
+</li>
+<li><a href="restaurant-sb-laden.html" title="Restaurant mit Ostseeblick" itemprop="url"><span itemprop="name">Restaurant / SB-Laden</span></a>
+</li>
+<li><a href="surfen.html" title="Surfen" itemprop="url"><span itemprop="name">Surfen</span></a>
+</li>
+<li><a href="freizeit-events.html" title="Campingurlaub mit Sport, Spiel, Spaß" itemprop="url"><span itemprop="name">Freizeit & Events</span></a>
+</li>
+<li class="no-header-pic"><a href="aktuelles.html" title="Aktuelles" class="no-header-pic" itemprop="url"><span itemprop="name">Aktuelles</span></a>
+</li>
+<li class="no-header-pic"><a href="angebote.html" title="Angebote" class="no-header-pic" itemprop="url"><span itemprop="name">Angebote</span></a>
+</li>
+<li class="last"><a href="prospekte.html" title="Prospekte" class="last" itemprop="url"><span itemprop="name">Prospekte</span></a>
+</li>
+</ul></li>
+<li><a href="ferienhaeuschen.html" title="Ferienhäuschen am Strand auf Fehmarn" itemprop="url"><span itemprop="name">Ferienhäuschen</span></a>
+</li>
+<li><a href="kinder-freizeit.html" title="Kinderparadies mit Animation" itemprop="url"><span itemprop="name">Kinder & Freizeit</span></a>
+</li>
+<li class="submenu"><a href="fluegger-strand.html" title="Insel Fehmarn in der Ostsee" class="submenu" rel="nofollow" aria-haspopup="true" itemprop="url"><span itemprop="name">Flügger Strand & Fehmarn</span></a>
+<span class="subnav-toggle"><i class="fa fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="first"><a href="fluegger-strand.html" title="Flügger Strand" class="first" itemprop="url"><span itemprop="name">Flügger Strand</span></a>
+</li>
+<li class="last"><a href="fehmarn.html" title="Insel Fehmarn in der Ostsee" class="last" itemprop="url"><span itemprop="name">Fehmarn</span></a>
+</li>
+</ul></li>
+<li class="submenu"><a href="preise-camping.html" title="Preise" class="submenu" rel="nofollow" aria-haspopup="true" itemprop="url"><span itemprop="name">Preise</span></a>
+<span class="subnav-toggle"><i class="fa fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="no-header-pic first"><a href="preise-camping.html" title="Preise - Camping" class="no-header-pic first" itemprop="url"><span itemprop="name">Camping</span></a>
+</li>
+<li class="no-header-pic"><a href="preise-mietwohnwagen.html" title="Preise - Mietwohnwagen" class="no-header-pic" itemprop="url"><span itemprop="name">Mietwohnwagen</span></a>
+</li>
+<li class="no-header-pic"><a href="preise-ferienhaeuschen.html" title="Preise - Ferienhäuschen" class="no-header-pic" itemprop="url"><span itemprop="name">Ferienhäuschen</span></a>
+</li>
+<li class="no-header-pic"><a href="preise-serviceleistungen.html" title="Buchbare Serviceleistungen" class="no-header-pic" itemprop="url"><span itemprop="name">Serviceleistungen</span></a>
+</li>
+<li class="no-header-pic"><a href="buchungsanfrage.html" title="Buchungsanfrage" class="no-header-pic" itemprop="url"><span itemprop="name">Buchungsanfrage</span></a>
+</li>
+<li class="no-header-pic last"><a href="buchungsbedingungen.html" title="Buchungsbedingungen" class="no-header-pic last" itemprop="url"><span itemprop="name">Buchungsbedingungen</span></a>
+</li>
+</ul></li>
+<li class="last"><a href="service.html" title="Unser persönlicher Gästeservice" class="last" itemprop="url"><span itemprop="name">Service</span></a>
+</li>
+</ul>
+<a id="skipNavigation33" class="invisible">&nbsp;</a>
+</nav>
+ </div>
+</div>
+</div>
+</header>
+<div class="custom">
+<div id="header-pic">
+<div class="inside">
+<div class="mod_article section-full first last block" id="article-95">
+<div class="inside">
+<div class="row">
+<div class="ce_image first last block">
+<figure class="image_container">
+<picture><source media="(min-width: 769px) and (max-width: 1024px)"><img src="assets/images/5/IMG_8800-26f780ab.jpg" alt="Mietwohnwagen" title="Mietwohnwagen" itemprop="image"></picture>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="container">
+<div id="main">
+<div class="inside">
+<div class="mod_article sitenav block">
+<div class="inside">
+<div class="row">
+<div class="mod_article block" id="article-50">
+<div class="inside">
+<div class="row">
+<section class="ce_sectionstart grid lg-1 md-1 ms-1 xs-1 first">
+<div class="mod_breadcrumb block">
+<ul>
+<li class="first"><a href="" title="Camping Flügger Strand">Camping Flügger Strand</a></li>
+<i class="fa fa-backslash-right"></i>
+<li><a href="campingplatz.html" title="Familienurlaub in der Natur">Campingplatz</a></li>
+<i class="fa fa-backslash-right"></i>
+<li class="active last">Mietwohnwagen</li>
+</ul>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mod_article introtext first block" id="article-96">
+<div class="inside">
+<div class="row">
+<h1 class="ce_headline first">
+Mittendrin im Flügger Campingglück</h1>
+<h2 class="ce_headline last">
+Mietwohnwagen in der 1. Reihe zur Ostsee - Ankommen, Einziehen, Wohlfühlen</h2>
+</div>
+</div>
+</div>
+<div class="mod_article block" id="article-98">
+<div class="inside">
+<div class="row">
+<div class="ce_image grid lg-3 md-1 sm-1 xs-1 first block">
+<figure class="image_container">
+<picture><source media="(min-width: 769px) and (max-width: 1023px)"><img src="assets/images/5/IMG_8829-3cff4e59.jpg" alt="Mietwohnwagen" title="Mietwohnwagen" itemprop="image"></picture>
+</figure>
+</div>
+<div class="ce_text grid lg-3 md-2 sm-2 xs-1 block">
+<p class="western">Wer es richtig bequem haben möchte, der braucht seine Camping-Unterkunft nicht mitzubringen. Denn auf dem Campingplatz Flügger Strand vermieten wir sieben&nbsp;komplett ausgestattete Wohnwagen. Sie stehen zum Teil direkt an der Düne, in der 1. Reihe zur Ostsee. Zum Meer sind es nur 40 Meter!</p>
+<p class="western">Entspannt anreisen – und entspannt ankommen, denn Ihr Wohnwagen wartet bereits auf Sie. Die Mietwohnwagen sind mit bis zu 4 bzw. 5 Personen zu bewohnen. Alle Wohnwagen sind mit&nbsp;eingerichtetem Vorzelt ausgestattet.</p>
+</div>
+<div class="ce_text grid lg-3 md-2 sm-2 xs-1 last block">
+<h4>Das bieten die Mietwohnwagen:</h4>
+<ul>
+<li class="western">Wasser- u. Abwasseranschluss</li>
+<li class="western">Strom- u. Gasanschluss, Heizung</li>
+<li class="western">Spül-WC mit kleinem Waschraum</li>
+<li class="western">SAT-TV, Radio</li>
+<li class="western">Decken und Kissen</li>
+<li class="western">geräumiges Vorzelt mit Sitzecke, komplette Küchenausstattung und Kühlschrank mit Gefrierfach</li>
+<li class="western">Gartenmöbel, Sonnenliege, Strandkorb und Grill&nbsp;</li>
+<li class="western">modernes Sanitärgebäude in unmittelbarer Nähe</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="mod_article bg-full-color last block" id="article-100">
+<div class="inside">
+<div class="row">
+<h3 class="ce_headline first">
+Mietwohnwagen-Typen</h3>
+<section class="ce_sectionstart grid lg-1 md-1 sm-1 xs-1 clearfix bg-blue-v2">
+<article class="ce_articlestart grid lg-2 md-2 sm-2 xs-1">
+<div class="ce_text block">
+<h4>Kategorie 1 - A</h4>
+<ul>
+<li>Wohnwagen Hobby Excellent 560 UL</li>
+<li>Aufbaulänge 6,20 m x 2,50 m mit Vorzelt</li>
+<li>für 2 bis 4 Personen geeeignet</li>
+<li>zwei Einzelbetten rechts und eine zum Doppelbett umbaubare Sitzecke links</li>
+<li>stehen in der 1. Reihe zum Meer</li>
+<li>M1 und M2</li>
+</ul>
+</div>
+<div class="ce_image grid lg-2 md-1 sm-2 xs-1 noscale block">
+<figure class="image_container">
+<img src="files/bilder/grundrisse/mietwohnwagen/gr_mw_kat-1.gif" width="154" height="79" alt="Grundriss: Mietwohnwagen Kategorie 1" itemprop="image">
+<figcaption class="caption">Grundriss</figcaption>
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid lg-2 md-2 sm-2 xs-1">
+<div class="ce_image block">
+<figure class="image_container">
+<picture><source media="(min-width: 769px) and (max-width: 1023px)"><img src="assets/images/b/IMG_8738-698fd878.jpg" alt="Mietwohnwagen" title="Mietwohnwagen" itemprop="image"></picture>
+</figure>
+</div>
+<div class="ce_gallery small-gall block">
+<ul class="cols_4" itemscope itemtype="http://schema.org/ImageGallery">
+<li class="row_0 row_first row_last even col_0 col_first">
+<figure class="image_container">
+<a href="files/bilder/mietwohnwagen/wohnwagen-1/IMG_8686.jpg" data-lightbox="lb1571">
+<img src="assets/images/6/IMG_8686-841c53b9.jpg" width="90" height="60" alt="" itemprop="image">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_1">
+<figure class="image_container">
+<a href="files/bilder/mietwohnwagen/wohnwagen-1/IMG_8696.jpg" data-lightbox="lb1571">
+<img src="assets/images/c/IMG_8696-172f2df2.jpg" width="90" height="60" alt="" itemprop="image">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_2">
+<figure class="image_container">
+<a href="files/bilder/mietwohnwagen/wohnwagen-1/IMG_8698.jpg" data-lightbox="lb1571">
+<img src="assets/images/9/IMG_8698-8b26d536.jpg" width="90" height="60" alt="" itemprop="image">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_3 col_last">
+<figure class="image_container">
+<a href="files/bilder/mietwohnwagen/wohnwagen-1/IMG_8812.jpg" data-lightbox="lb1571">
+<img src="assets/images/9/IMG_8812-257bff88.jpg" width="90" height="60" alt="" itemprop="image">
+</a>
+</figure>
+</li>
+</ul>
+</div>
+</article>
+</section>
+<section class="ce_sectionstart grid lg-1 md-1 sm-1 xs-1 clearfix bg-blue-v2">
+<article class="ce_articlestart grid lg-2 md-2 sm-2 xs-1 clearfix">
+<div class="ce_text block">
+<h4>Kategorie 1 - B</h4>
+<ul>
+<li>Wohnwagen Hobby Excellent 560 UL</li>
+<li>Aufbaulänge 6,20 m x 2,50 m mit Vorzelt</li>
+<li>für 2 bis 4 Personen geeignet</li>
+<li>zwei Einzelbetten rechts und eine zum Doppelbett umbaubare Sitzecke links</li>
+<li>stehen in der 2. Reihe zum Meer</li>
+<li>M3 und M4</li>
+</ul>
+</div>
+<div class="ce_image grid lg-2 md-1 sm-2 xs-1 noscale block">
+<figure class="image_container">
+<img src="files/bilder/grundrisse/mietwohnwagen/gr_mw_kat-1.gif" width="154" height="79" alt="Grundriss: Mietwohnwagen Kategorie 2" itemprop="image">
+<figcaption class="caption">Grundriss</figcaption>
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid lg-2 md-2 sm-2 xs-1">
+<div class="ce_image block">
+<figure class="image_container">
+<picture><source media="(min-width: 769px) and (max-width: 1023px)"><img src="assets/images/b/IMG_8738-698fd878.jpg" alt="Mietwohnwagen" title="Mietwohnwagen" itemprop="image"></picture>
+</figure>
+</div>
+<div class="ce_gallery small-gall block">
+<ul class="cols_4" itemscope itemtype="http://schema.org/ImageGallery">
+<li class="row_0 row_first row_last even col_0 col_first">
+<figure class="image_container">
+<a href="files/bilder/mietwohnwagen/wohnwagen-1/IMG_8686.jpg" data-lightbox="lb1579">
+<img src="assets/images/6/IMG_8686-841c53b9.jpg" width="90" height="60" alt="" itemprop="image">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_1">
+<figure class="image_container">
+<a href="files/bilder/mietwohnwagen/wohnwagen-1/IMG_8696.jpg" data-lightbox="lb1579">
+<img src="assets/images/c/IMG_8696-172f2df2.jpg" width="90" height="60" alt="" itemprop="image">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_2">
+<figure class="image_container">
+<a href="files/bilder/mietwohnwagen/wohnwagen-1/IMG_8698.jpg" data-lightbox="lb1579">
+<img src="assets/images/9/IMG_8698-8b26d536.jpg" width="90" height="60" alt="" itemprop="image">
+</a>
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_3 col_last">
+<figure class="image_container">
+<a href="files/bilder/mietwohnwagen/wohnwagen-1/IMG_8812.jpg" data-lightbox="lb1579">
+<img src="assets/images/9/IMG_8812-257bff88.jpg" width="90" height="60" alt="" itemprop="image">
+</a>
+</figure>
+</li>
+</ul>
+</div>
+</article>
+</section>
+<article class="ce_articlestart grid lg-2 md-2 sm-2 xs-1 clearfix">
+</article>
+<article class="ce_articlestart grid lg-2 md-2 sm-2 xs-1">
+</article>
+</section>
+<section class="ce_sectionstart grid lg-1 md-1 sm-1 xs-1 clearfix bg-blue-v2">
+<article class="ce_articlestart grid lg-2 md-2 sm-2 xs-1">
+<div class="ce_text block">
+<h4>Kategorie 2 - A und B</h4>
+<ul>
+<li>neue, geräumige Wohnwagen Hobby 650 UMFe Prestige</li>
+<li>Aufbaulänge 7,40 m x 2,50 m mit großem Vorzelt</li>
+<li>für 2 bis 5 Personen geeignet (4 Erwachsene und 1 Kind)</li>
+<li>ein französisches Bett rechts, eine zum Doppelbett umbaubare Sitzecke links und ein Einzelbett für ein Kind in der Mitte</li>
+<li>Kategorie 2 - A steht in der 1. Reihe zum Meer (M6)</li>
+<li>Kategorie 2 - B steht in der 2. Reihe zum Meer (M5 und M8)</li>
+</ul>
+</div>
+<div class="ce_image grid lg-2 md-1 sm-2 xs-1 noscale block">
+<figure class="image_container">
+<img src="files/bilder/grundrisse/mietwohnwagen/gr_mw_kat-2b.gif" width="193" height="72" alt="Grundriss: Mietwohnwagen Kategorie 1" itemprop="image">
+<figcaption class="caption">Grundriss</figcaption>
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid lg-2 md-2 sm-2 xs-1">
+<div class="ce_image block">
+<figure class="image_container">
+<picture><source media="(min-width: 769px) and (max-width: 1023px)"><img src="assets/images/1/IMG_8800-2741f745.jpg" alt="Mietwohnwagen" title="Mietwohnwagen" itemprop="image"></picture>
+</figure>
+</div>
+<div class="ce_gallery small-gall block">
+<ul class="cols_4" itemscope itemtype="http://schema.org/ImageGallery">
+<li class="row_0 row_first row_last even col_0 col_first">
+<figure class="image_container">
+<a href="files/bilder/diverse/fluegger-strand-moewe-vor-flagge.jpg" data-lightbox="lb1595" title="Flügger Strand Möwe vor Flagge">
+<img src="assets/images/d/fluegger-strand-moewe-vor-flagge-f6de346d.jpg" width="90" height="60" alt="" itemprop="image">
+</a>
+</figure>
+</li>
+</ul>
+</div>
+</article>
+</section>
+<article class="ce_articlestart grid lg-1 md-1 sm-1 xs-1 text-center clearfix">
+<div class="ce_hyperlink button block">
+<a href="preise-mietwohnwagen.html" class="hyperlink_txt" title="Preise Mietwohnwagen">Preise Mietwohnwagen</a>
+</div>
+</article>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer id="footer">
+<div class="inside">
+<div class="footer-inside block">
+<div class="inside">
+<div class="mod_article block" id="article-32">
+<div class="inside">
+<div class="row">
+<section class="ce_sectionstart row first">
+<article class="ce_articlestart grid xs-1 sm-3 md-6 lg-6 block">
+<div class="ce_image block">
+<figure class="image_container" style="margin-top:10px;">
+<a href="files/bilder/auszeichnungen-partner/ADAC_tipp-2026.png" data-lightbox="8ad6c4">
+<img src="assets/images/4/ADAC_tipp-2026-5d5f96d0.png" width="180" height="128" alt="ADAC Camping-Tipp 2024" itemprop="image">
+</a>
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-3 md-4 lg-3 block">
+<div id="pin-w"></div>
+<script></script>
+</article>
+<article class="ce_articlestart grid xs-1 sm-4 md-6 lg-6 block">
+<div class="ce_image block">
+<figure class="image_container" style="margin-top:10px;">
+<a href="files/bilder/auszeichnungen-partner/DCC-Logo-4Sterne.png" data-lightbox="86a582">
+<img src="assets/images/c/DCC-Logo-4Sterne-8e99816e.png" width="140" height="113" alt="DCC-Logo" itemprop="image">
+</a>
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-3 md-9 lg-9 block">
+<div class="ce_image block">
+<figure class="image_container" style="margin-top:10px;">
+<img src="assets/images/4/camping-paradies-fehmarn-e6b1838f.png" width="180" height="180" alt="ADAC Camping-Tipp 2024" itemprop="image">
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-3 md-9 lg-9 block">
+<div class="ce_image block">
+<figure class="image_container" style="margin-top:10px;">
+<img src="assets/images/3/camping-schleswig-holstein-e6e3c07d.png" width="180" height="180" alt="ADAC Camping-Tipp 2024" itemprop="image">
+</figure>
+</div>
+</article>
+</section>
+<section class="ce_sectionstart row">
+<article class="ce_articlestart grid xs-1 sm-1 md-3 lg-3 block">
+<div class="ce_hyperlink google-button block">
+<a href="https://www.google.de/travel/search?gsas=1&amp;ts=EggKAggDCgIIAxocEhoSFAoHCOgPEAcYHxIHCOgPEAgYARgBMgIQAA&amp;qs=MhRDZ3NJeU9UdGxfZVktX181QVJBQjgC&amp;ap=ugEHcmV2aWV3cw&amp;biw=1920&amp;bih=953&amp;hl=de-DE&amp;ved=0CAAQ5JsGahcKEwjA-Zn0086HAxUAAAAAHQAAAAAQDA" class="hyperlink_txt" title="Bewerten Sie uns auf Google" target="_blank" rel="noreferrer noopener">Bewerten Sie uns auf Google</a>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<img src="assets/images/9/klimaneutral-batch-bae94973.svg" width="250" height="120" alt="Ökostrom und Klimaneurtral" itemprop="image">
+</figure>
+</div>
+<div class="ce_text block">
+<p>Camping Flügger&nbsp;Strand <br>Familie Köneking <br>Flügge 2, 23769 Fehmarn</p>
+<p><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#x6E;&#102;&#x6F;&#64;&#x66;&#108;&#x75;&#101;&#x67;&#103;&#x65;&#114;&#x2D;&#115;&#x74;&#114;&#x61;&#110;&#x64;&#46;&#x64;&#101;">&#105;&#x6E;&#102;&#x6F;&#64;&#x66;&#108;&#x75;&#101;&#x67;&#103;&#x65;&#114;&#x2D;&#115;&#x74;&#114;&#x61;&#110;&#x64;&#46;&#x64;&#101;<br></a>Tel. 0 43 72 - 99 13 44<br>Tel. 0 43 72 - 7 14<br><a href="kontakt-impressum.html"><br></a></p>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-2 md-3 lg-3 block border-box map-vs">
+<h4 class="ce_headline">
+Interaktiver Platzplan</h4>
+<div class="ce_image block">
+<figure class="image_container">
+<a href="platzplan.html" title="zum interaktiven Platzplan">
+<img src="files/theme-styles/img/platzplan/map-vs.jpg" width="334" height="221" alt="Platzplan Vorschau" itemprop="image">
+</a>
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-2 md-3 lg-3 block">
+<h4 class="ce_headline">
+Service & Info</h4>
+<div class="ce_hyperlink btn-blue halfbox block">
+<a href="webcam.html" class="hyperlink_txt" title="Webcam">Webcam</a>
+</div>
+<div class="ce_hyperlink btn-yellow halfbox block">
+<a href="wetter.html" class="hyperlink_txt" title="Wetter">Wetter</a>
+</div>
+<div class="ce_hyperlink clearfix block">
+<a href="lage-anfahrt.html" class="hyperlink_txt" title="Lage & Anfahrt">Lage & Anfahrt</a>
+</div>
+<div class="ce_hyperlink block">
+<a href="bildergalerie.html" class="hyperlink_txt" title="Bildergalerie">Bildergalerie</a>
+</div>
+<div class="ce_text block">
+<p><br><a href="kontakt-impressum.html">KONTAKT / IMPRESSUM<br></a><a href="datenschutz.html">DATENSCHUTZ</a><a href="kontakt-impressum.html"><br></a></p>
+</div>
+<div class="ce_text social">
+<ul>
+<li>
+<a title="Flügger Strand bei facebook" href="
+https://www.facebook.com/campingflueggerstrand/" target="_blank">
+<span class="social-inner">facebook</span>
+<i class="fa fa-facebook"></i>
+</a>
+</li>
+<li>
+<a title="Flügger Strand bei Instagram" href="
+https://www.instagram.com/campingflueggerstrand/" target="_blank">
+<span class="social-inner">instagram</span>
+<i class="fa fa-instagram" style="color: #fff;"></i>
+</a>
+</li>
+</ul>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-inside-top block">
+<div class="inside">
+<div class="ce_toplink first last block">
+<a title="TOP" href="mietwohnwagen.html#top">TOP<i class="fa fa-chevron-up"></i></a>
+</div>
+</div>
+</div> </div>
+</footer>
+</div>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script><script></script><script type="application/ld+json">{"@context":{"contao":"https:\/\/schema.contao.org\/"},"@type":"contao:Page","contao:title":"Mietwohnwagen in der 1. Reihe zur Ostsee","contao:pageId":34,"contao:noSearch":false,"contao:protected":false,"contao:groups":[],"contao:fePreview":false}</script>
+<script></script>
+<script></script>
+<script></script>
+</body>
+</html>

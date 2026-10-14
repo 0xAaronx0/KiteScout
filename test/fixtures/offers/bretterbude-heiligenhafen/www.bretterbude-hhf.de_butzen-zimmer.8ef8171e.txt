@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+ <script></script>
+ <script></script>
+ <script></script>
+ <script></script>
+ <style></style>
+<meta charset="utf-8"/> 
+ <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <title>Zimmer & Butzen | Bretterbude Heiligenhafen</title>
+ <meta name="description" content="✓ Butzen ✓ zum Pennen ✓ direkt am Strand ✓ mit Meerblick und so. Ahoi aus Holy Harbour! Gönnt euch ne Auszeit. Bucht jetzt eure Butze!"/>
+ <meta property="og:image" content="https://www.bretterbude-hhf.de/media/w-1920/bb/xl">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="msapplication-config" content="/src/theme/default/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<script></script>
+</head>
+<body class="css-transitions-only-after-page-load theme-default layout-default view-rooms view-rooms-default pageid-52f5f102-424a-4348-9b82-384f17b27bf6">
+ <noscript>
+ <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJ33474>" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+ </noscript>
+<div style="visibility:hidden" class="wrapper">
+ <header class="header">
+ <div class="container container--fluid">
+ <div class="grid grid--row">
+ <div class="header__logo col--flex-0-0 col--left@md">
+ <a href="https://www.bretterbude-hhf.de" title="www.bretterbude-hhf.de">
+ <img width="189" height="116" class="lazyload" src="/assets/img/logo-bretterbude-hhf-mobile.png" alt="Logo der Bretterbude Heiligenhafen">
+ </a>
+ </div>
+ <div class="header__navigation col--flex-0-1 col--left@md">
+ <div class="header__select-standort--mobile col--flex-0-0 col--left@md">
+ <span class="standort__auswahl">weitere Heimathafen&reg; Hotels</span>
+ <ul class="standort__standort">
+ <li>
+ <a target="_blank" href="https://www.bretterbude-buesum.de/">Bretterbude Büsum</a>
+ </li>
+ <li>
+ <a target="_blank" href="https://www.beachmotel-hhf.de/">Beach Motel Heiligenhafen</a>
+ </li>
+ <li>
+ <a target="_blank" href="https://www.beach-apartments-hhf.de/">Beach Apartments Heiligenhafen</a>
+ </li>
+ <li>
+ <a target="_blank" href="https://www.heimathafenhotels.de/">weitere Heimathafen&reg; Hotels</a>
+ </li>
+ </ul>
+ </div>
+ <ul class="header__nav--menu"><li class="level-0 first has-children has-visible-children has-subsub"><a href="https://www.bretterbude-hhf.de/hotel-und-wir" title="" autoAnchor="1">Hotel</a><ul><li class="level-1 first has-children has-visible-children"><span class="menu-item__headline">Über uns</span><ul><li class="level-2 first"><a href="https://www.bretterbude-hhf.de/hotel-und-wir/eindruecke" title="" autoAnchor="1">Eindrücke</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/hotel-und-wir/news" title="" autoAnchor="1">News</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/hotel-und-wir/faqs" title="" autoAnchor="1">FAQs</a></li><li class="level-2 last"><a href="https://www.bretterbude-hhf.de/hotel-und-wir/freundeskreis" title="" autoAnchor="1">Freundeskreis</a></li></ul></li><li class="level-1 has-children has-visible-children"><span class="menu-item__headline">Im Bums</span><ul><li class="level-2 first"><a href="https://www.bretterbude-hhf.de/hotel-und-wir/plankenverleih" title="" autoAnchor="1">Plankenverleih</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/hotel-und-wir/anfahrt" title="" autoAnchor="1">Anfahrt</a></li><li class="level-2 last"><a href="https://www.bretterbude-hhf.de/hotel-und-wir/plankengrill" title="" autoAnchor="1">Plankengrill</a></li></ul></li><li class="level-1 last has-children has-visible-children"><span class="menu-item__headline">Preise</span><ul><li class="level-2 first"><a href="https://www.bretterbude-hhf.de/hotel-und-wir/preisliste" title="" autoAnchor="1">Preisliste Extras</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/hotel-und-wir/knueller-angebote" title="" autoAnchor="1">Knüller-Angebote</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/hotel-und-wir/add-ons" title="" autoAnchor="1">Extras</a></li><li class="level-2 last"><a href="https://www.bretterbude-hhf.de/hotel-und-wir/direktbuchervorteile" title="" autoAnchor="1">Direktbuchervorteile</a></li></ul></li></ul></li><li class="level-0 has-children has-visible-children has-subsub"><a href="https://www.bretterbude-hhf.de/entspannung-wellness" title="" autoAnchor="1">Entspannung</a><ul><li class="level-1 first last has-children has-visible-children"><span class="menu-item__headline">Spa</span><ul><li class="level-2 first"><a href="https://www.bretterbude-hhf.de/entspannung-wellness/sauna" title="" autoAnchor="1">Sauna</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/entspannung-wellness/plankensauna" title="" autoAnchor="1">Plankensauna</a></li><li class="level-2 last"><a href="https://www.bretterbude-hhf.de/entspannung-wellness/anwendungen--1#anwendungen" title="" autoAnchor="1">Anwendungen</a></li></ul></li></ul></li><li class="level-0 current active has-children has-visible-children has-subsub"><a href="https://www.bretterbude-hhf.de/butzen-zimmer" title="" autoAnchor="1">Schlafen</a><ul><li class="level-1 current active first has-children has-visible-children"><span class="menu-item__headline">Butzen</span><ul><li class="level-2 first"><a href="https://www.bretterbude-hhf.de/butzen-zimmer/butzen" title="" autoAnchor="1">Butzen</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/butzen-zimmer/spezialbutzen" title="" autoAnchor="1">Spezialbutzen</a></li><li class="level-2 last"><a href="https://www.bretterbude-hhf.de/butzen-zimmer/xl-butzen" title="" autoAnchor="1">XL Butzen</a></li></ul></li><li class="level-1 current active has-children has-visible-children"><span class="menu-item__headline">Freiluftbutzen</span><ul><li class="level-2 first"><a href="https://www.bretterbude-hhf.de/butzen-zimmer/bauwagen-renate--1#bauwagen-renate" title="" autoAnchor="1">Bauwagen Renate</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/butzen-zimmer/bulliparkplatz" title="" autoAnchor="1">Bulliparkplatz</a></li><li class="level-2 last"><a href="https://www.bretterbude-hhf.de/butzen-zimmer/bulliparkplatz-bent" title="" autoAnchor="1">Bulliparkplatz BENT</a></li></ul></li><li class="level-1 current active last has-children has-visible-children"><span class="menu-item__headline">Barrierefreiheit </span><ul><li class="level-2 first last"><a href="https://www.bretterbude-hhf.de/butzen-zimmer/rollstuhlgerecht-barrierefrei" title="" autoAnchor="1">Rollstuhlgerecht & Barrierefrei</a></li></ul></li></ul></li><li class="level-0 has-children has-visible-children has-subsub"><a href="https://www.bretterbude-hhf.de/gastro" title="" autoAnchor="1">Gastro</a><ul><li class="level-1 first has-children has-visible-children"><span class="menu-item__headline">Restaurants</span><ul><li class="level-2 first last"><a href="https://www.bretterbude-hhf.de/gastro/restaurant-strandschuppen" title="" autoAnchor="1">Strandschuppen</a></li></ul></li><li class="level-1 has-children has-visible-children"><span class="menu-item__headline">Bars</span><ul><li class="level-2 first"><a href="https://www.bretterbude-hhf.de/gastro/bar-spelunke" title="" autoAnchor="1">Spelunke</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/gastro/ankerplatz" title="" autoAnchor="1">Ankerplatz</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/gastro/garage" title="" autoAnchor="1">Garage</a></li><li class="level-2 last"><a href="https://www.bretterbude-hhf.de/gastro/deck-7" title="" autoAnchor="1">Deck 7</a></li></ul></li><li class="level-1 last has-children has-visible-children"><span class="menu-item__headline">Besonders & Regional</span><ul><li class="level-2 first"><a href="https://www.bretterbude-hhf.de/gastro/unsere-james-farm" title="" autoAnchor="1">Unsere James Farm</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/gastro/fruehstueck-im-bums" title="" autoAnchor="1">Frühstück im Bums</a></li><li class="level-2 last"><a href="https://www.bretterbude-hhf.de/gastro/plankengrill" title="" autoAnchor="1">Plankengrill</a></li></ul></li></ul></li><li class="level-0 has-children has-visible-children has-subsub"><a href="https://www.bretterbude-hhf.de/events" title="" autoAnchor="1">Events</a><ul><li class="level-1 first last has-children has-visible-children"><span class="menu-item__headline">Events</span><ul><li class="level-2 first"><a href="https://www.bretterbude-hhf.de/events/eventkalender" title="" autoAnchor="1">Eventkalender</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/events/tagen" title="" autoAnchor="1">Tagungen</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/events/feiern" title="" autoAnchor="1">Feiern</a></li><li class="level-2 last"><a href="https://www.bretterbude-hhf.de/events/veranstaltungsanfrage" title="" autoAnchor="1">Veranstaltungsanfrage</a></li></ul></li></ul></li><li class="level-0 has-children has-visible-children has-subsub"><a href="https://www.bretterbude-hhf.de/heiligenhafen" title="" autoAnchor="1">Heiligenhafen</a><ul><li class="level-1 first last has-children has-visible-children"><span class="menu-item__headline">Aktivitäten</span><ul><li class="level-2 first"><a href="https://www.bretterbude-hhf.de/heiligenhafen/sport" title="" autoAnchor="1">Sport</a></li><li class="level-2"><a href="https://www.bretterbude-hhf.de/heiligenhafen/kleine-rabauken-grosse-abenteuer" title="" autoAnchor="1">Kleine Rabauken. Große Abenteuer.</a></li><li class="level-2 last"><a href="https://www.bretterbude-hhf.de/heiligenhafen/highlights-im-ort" title="" autoAnchor="1">Highlights im Ort</a></li></ul></li></ul></li><li class="level-0 last"><a href="https://www.bretterbude-hhf.de/jobs--1#jobs" title="" autoAnchor="1">Jobs</a></li></ul> <div class="navigation__mobile--container">
+ <a target="_blank" class="navigation__coupon" href="https://www.vbooking.de/v3/booking.aspx?clientid=bretterbude">
+ <img width="50" height="50" src="/assets/img/coupon.svg" alt="Gutscheinshop">
+ </a>
+ <address class="navigation__call">
+ <a class="header__call--mobile" href="tel:+49436250040">
+ <img width="50" height="50" src="/assets/img/phone.svg" alt="Anrufen">
+ </a>
+ </address>
+ </div>
+ <div class="navigation__mobile--contact">
+ <a href="/"><img width="189" height="116" class="navigation__logo lazyload" src="/assets/img/logo-bretterbude-hhf-mobile.png" alt="Logo der Bretterbude Heiligenhafen"></a>
+ <address class="navigation__contact">
+ <span>Bretterbude - Hotel Heiligenhafen</span>
+ <span>Telefon: <a href="tel:+49436250040">04362 50040</a></span>
+ </address>
+ <div class="navigation__socials">
+ <a target="_blank" href="https://www.facebook.com/bretterbudehotel"><img src="/assets/img/facebook.png" alt="Facebook"></a>
+ <a target="_blank" href="https://www.instagram.com/bretterbude_heiligenhafen/"><img src="/assets/img/instagram.png" alt="Instagram"></a>
+ </div>
+ </div>
+ </div>
+ <div class="header__select--standort col--flex-0-0">
+ <div class="standort">
+ <div class="standort__auswahl">
+ weitere Heimathafen&reg; Hotels <ul class="standort__standort header__nav--menu">
+ <li>
+ <a target="_blank" href="https://www.bretterbude-buesum.de/">Bretterbude Büsum</a>
+ </li>
+ <li>
+ <a target="_blank" href="https://www.beachmotel-hhf.de/">Beach Motel Heiligenhafen</a>
+ </li>
+ <li>
+ <a target="_blank" href="https://www.beach-apartments-hhf.de/">Beach Apartments Heiligenhafen</a>
+ </li>
+ <li>
+ <a target="_blank" href="https://www.heimathafenhotels.de/">weitere Heimathafen&reg; Hotels</a>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ <div class="header__language col--flex-0-0">
+ <div class="language">
+ <ul>
+ <li>
+ <span>
+ de </span>
+ </li>
+ <li>
+ <a href="https://www.bretterbude-hhf.de/en/slugs" rel="alternate" hreflang="en">
+ en </a>
+ </li>
+ <li>
+ <a href="https://www.bretterbude-hhf.de/da/snegle" rel="alternate" hreflang="da">
+ da </a>
+ </li>
+ </ul>
+ </div>
+ </div>
+ <div style="pointer-events:none;" class="header__container--buttons">
+ <div style="pointer-events:auto;" class="header__ctas">
+ <a href="https://onepagebooking.com/bretterbude?id=bretterbude&module=public&lang=de" target="_blank" class="button button--large header__booknow">
+ Online buchen </a>
+ <a href="https://www.vbooking.de/v3/booking.aspx?clientid=bretterbude" target="_blank" class="button button--special header__gutscheine">
+ Gutscheinshop </a>
+ <a href="https://onepagebooking.com/bretterbude?id=bretterbude&module=public&lang=de" target="_blank" class="button header__booknow--scrolled">
+ Buchen </a>
+ </div>
+ </div>
+ </div>
+ <span class="burger">
+ <button class="hamburger hamburger--spin" type="button">
+ <span class="hamburger-box">
+ <span class="hamburger-inner"></span>
+ </span>
+ </button>
+ </span>
+ <address class="header__call">
+ <a href="tel:+49436250040">
+ <img src="/assets/img/phone.svg" alt="Anrufen">
+ </a>
+ </address>
+ </div>
+</header>
+ <div class="keyvisual js-swiper-frame" id="slider">
+ <div class="swiper" sx-swiper="enabled: ; id: 'slider'; config: 'kv'; autoplay.delay: 5000;">
+ <div class="swiper-wrapper grid grid--base ">
+ <div class="keyvisual__slide swiper-slide col--12-12@xs">
+ <div class="video mime-video ratio--5-7 ratio--5-7@xs ratio--1-1@sm ratio--2-1@md ratio--2-1@lg ratio--2-1@xl ratio--2-1@xxl lazyload" sx-ratio="ratio: 0.5633">
+ <div class="video__image">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_7/bretterbude-grosse-butze-mit-meerblick-youtube-4k-querformat.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="" data-sizes="auto"></picture>
+ </div>
+ <div class="video__wrap">
+ <div sx-vimeo="id: 924922455; autoplay: true; delay: 100;"></div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="swiper-button-next"></div>
+ <div class="swiper-button-prev"></div>
+ <div class="swiper-pagination"></div>
+ <div class="kv__logo">
+ <a href="/">
+ <img width="400" height="394" src="/assets/img/logo-bretterbude-hhf.png" alt="Logo Bretterbude Heiligenhafen">
+ </a>
+ </div>
+ <div class="kv__scroll">
+ <div class="kv__scroll--content">
+ <span class="kv__scroll--text">Auf Tauchstation!</span>
+ <a href="#article__intro" aria-label="Zum ersten Absatz springen" class="kv__scroll--button"></a>
+ </div>
+ </div>
+ </div>
+<div class="article__intro article__main">
+ <article class="article__container container article__body last-mb-none editor">
+ <div class="grid grid--gutter grid--wrap">
+ <div class="col--12-12 col--7-12@lg">
+ <div class="article__headline">
+ <h1 class="headline headline--headline"><span> Bude frei!</span></h1> </div>
+ <div class="editor content content--content last-mb-none"><p>Wer von euch war früher auch verrückt nach Tetris? Wir für unseren Teil können mit gutem Gewissen sagen: Tetris hat uns aufs Leben vorbereitet. Denn beim Zusammenstellen der Butzenschen Inneneinrichtung haben wir uns wie damals gefühlt. Es wurde viel hin und her geschoben, viel ausprobiert und einiges neu angefertigt. Aber dank etwas Geduld, Fingerspitzengefühl und langjähriger Tetromino-Praxis sind wir zu einem tollen Ergebnis gelangt. Die Butzen sind zum Pennen, Kram lagern und Zwischenstopp einlegen. Kommt doch einfach mal rum und überzeugt euch selbst!</p><p>Apropos Tetris, wenn ihr euch einbringen wollt – oder sogar müsst: Zustellbetten kosten 15 € pro Nacht, Babybetten einen 5er.</p></div>
+ </div>
+ <div class="introtext__img col--12-12 offset--2-12@sm col--8-12@sm offset--1-12@lg col--4-12@lg">
+ <div class="image lazyload mime-svg ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="Fisch Illu " data-sizes="auto"></picture>
+<div class="introtext__img--text-outer"><span class="introtext__img--text">Gucken, staunen, Butze buchen!</span></div> </div>
+ </div>
+ </div>
+ </article>
+</div>
+ <div class="filter-background">
+ <div class="container">
+ <form id="filter" onsubmit="return false">
+ <div class="col--12-12 filter-container">
+ <div class="filter">
+ <div class="formular-item form-group col--12-12 col--4-12@lg col--3-12@xl">
+ <div class="filter__label">
+ Kategorie </div>
+ <div class="filter__field">
+ <div class="filter-select" data-name="kategorie" data-count="0">
+ <div class="filter-select__label chosen-pseudo" data-label="Alle Butzen|:count ausgewählt|:count ausgewählt">
+ Alle Butzen </div>
+ <div class="filter-select__list">
+ <ul>
+ <li>
+ <input id="kategorieklein" type="checkbox" name="kategorie" value="klein">
+ <label for="kategorieklein">
+ Kleine Butzen </label>
+ </li>
+ <li>
+ <input id="kategorieetage" type="checkbox" name="kategorie" value="etage">
+ <label for="kategorieetage">
+ Etagenbutzen </label>
+ </li>
+ <li>
+ <input id="kategoriegross" type="checkbox" name="kategorie" value="gross">
+ <label for="kategoriegross">
+ Große Butzen </label>
+ </li>
+ <li>
+ <input id="kategoriespezial" type="checkbox" name="kategorie" value="spezial">
+ <label for="kategoriespezial">
+ Special-Butzen </label>
+ </li>
+ <li>
+ <input id="kategoriexl" type="checkbox" name="kategorie" value="xl">
+ <label for="kategoriexl">
+ XXL Butzen </label>
+ </li>
+ <li>
+ <input id="kategoriefreiluft" type="checkbox" name="kategorie" value="freiluft">
+ <label for="kategoriefreiluft">
+ Freiluftbutze </label>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="formular-item form-group col--12-12 col--4-12@lg col--3-12@xl">
+ <div class="filter__label">
+ Belegung </div>
+ <div class="filter__field">
+ <div class="filter-select" data-name="personen" data-count="0">
+ <div class="filter-select__label chosen-pseudo" data-label="Halunk:innen egal|:count ausgewählt|:count ausgewählt">
+ Halunk:innen egal </div>
+ <div class="filter-select__list">
+ <ul>
+ <li>
+ <input id="personen2" type="checkbox" name="personen" value="2">
+ <label for="personen2">
+ 2 Halunk:innen </label>
+ </li>
+ <li>
+ <input id="personen3" type="checkbox" name="personen" value="3">
+ <label for="personen3">
+ 3 Halunk:innen </label>
+ </li>
+ <li>
+ <input id="personen4" type="checkbox" name="personen" value="4">
+ <label for="personen4">
+ 4 Halunk:innen </label>
+ </li>
+ <li>
+ <input id="personen5" type="checkbox" name="personen" value="5">
+ <label for="personen5">
+ 5 Halunk:innen </label>
+ </li>
+ <li>
+ <input id="personen6" type="checkbox" name="personen" value="6">
+ <label for="personen6">
+ 6 Halunk:innen </label>
+ </li>
+ <li>
+ <input id="personen7" type="checkbox" name="personen" value="7">
+ <label for="personen7">
+ 7 Halunk:innen </label>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="formular-item form-group col--12-12 col--4-12@lg col--3-12@xl">
+ <div class="filter__label">
+ Ausblick </div>
+ <div class="filter__field">
+ <div class="filter-select" data-name="ausblick" data-count="0">
+ <div class="filter-select__label chosen-pseudo" data-label="Ausblick egal|:count ausgewählt|:count ausgewählt">
+ Ausblick egal </div>
+ <div class="filter-select__list">
+ <ul>
+ <li>
+ <input id="ausblicklandblick" type="checkbox" name="ausblick" value="landblick">
+ <label for="ausblicklandblick">
+ Landblick </label>
+ </li>
+ <li>
+ <input id="ausblickhofblick" type="checkbox" name="ausblick" value="hofblick">
+ <label for="ausblickhofblick">
+ Hofblick </label>
+ </li>
+ <li>
+ <input id="ausblickmeerblick" type="checkbox" name="ausblick" value="meerblick">
+ <label for="ausblickmeerblick">
+ Meerblick </label>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </form>
+ </div>
+ </div>
+ <section id="teaser" class="teaser last-mb-none bg-orange" data-filter="1">
+ <div class="container container--fluid container--nomobile">
+ <div class="js-items teaser__items grid grid--gutter grid--center">
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="eb0513c4-4201-4d5c-b9cd-278f802cac4a">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/kleine-butzen/kleine-butze-meerblick" class="teaser__item" title="Kleine Butze Meerblick" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/17-zimmer-kl-butze-meerblick-at-andrea-flak.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="Spieglein, Spieglein an der Wand" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span>Kleine Butze<br/>Meerblick</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Durchblick? Ausblick! Und zwar aufs Meer, die Ostsee – oder wie wir sagen…</div>
+ <ul class="facts teaser__facts">
+ <li>Flat-TV</li>
+ <li>Duschbad mit Fön</li>
+ <li>Extra Stauraum</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="c0291faa-09d7-41bc-a2bd-e3ab853e1d5d">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/etagenbutzen/etagenbutze-meerblick" class="teaser__item" title="Etagenbutze Meerblick" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/08-bretterbude-at-andrea-flak.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="Fenster mit Meerblick " data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span>Etagenbutze<br/>Meerblick</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Nu geiht dat aber los! 2 Etagen mit Meerblick? Jupp, bitteschön. Wenn wir von…</div>
+ <ul class="facts teaser__facts">
+ <li>Doppelbett und Schlafcouch</li>
+ <li>Zwei Etagen</li>
+ <li>Flat-TV</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="d8ec7db0-b530-47d4-bf5b-e7a325034e9f">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/spezialbutzen/skate-aid-butze" class="teaser__item" title="skate-aid Butze" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/161108-16-skate-aid-bretterbude-at-andrea-flak.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="Schlicht, aber ergreifend" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span>skate-aid Butze</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Wir sind zwar geborene Wasserratten, wissen aber auch die Vorzüge des…</div>
+ <ul class="facts teaser__facts">
+ <li>Doppelbett und Schlafcouch</li>
+ <li>Flat-TV</li>
+ <li>Duschbad mit Fön</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="7a4e0f24-2d8b-466f-ad1e-c2adb2f3ffe4">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/spezialbutzen/trap-butze" class="teaser__item" title="Trap Butze" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/bb-hhf-trap-spezialbutze-25-32-florian-busch.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span> Trap Butze</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Schau mal an, noch 'ne Board-Butze! Logo, doppelt hält doch bretter. Zum Pennen…</div>
+ <ul class="facts teaser__facts">
+ <li>Doppelbett und Schlafcouch</li>
+ <li>Balkon</li>
+ <li>Flat-TV</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="b69c9921-3302-4e17-9682-cb09e61e6ca5">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/spezialbutzen/viva-con-agua-butze" class="teaser__item" title="Viva con Agua Butze" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/bb-hhf-viva-con-agua-spezialbutze-2604-34-florian-busch.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span> Viva con Agua Butze</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Hier wird’s künstlerisch! Inspiriert von den…</div>
+ <ul class="facts teaser__facts">
+ <li>Flat-TV</li>
+ <li>Duschbad mit Fön</li>
+ <li>Spezial-Hochbettchen</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="d9377607-b147-440d-a1e4-ef19b6556e8e">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/spezialbutzen/clepto-butze" class="teaser__item" title="Clepto Butze" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/bb-hhf-clepto-spezialbutze-25-22-florian-busch.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span>Clepto Butze</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Home sweet home! In dieser 50 qm großen Butze hat sich der schon zu Lebzeiten…</div>
+ <ul class="facts teaser__facts">
+ <li>Flat-TV</li>
+ <li>Maritimitäten und Nautiquitäten</li>
+ <li>Bad mit Wanne, Dusche und Fön</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="ac3cbad0-be89-4f9b-9323-f29a8acf8973">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/spezialbutzen/jaegermeister-butze" class="teaser__item" title="Jägermeister Butze" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/bb-hhf-jaegermeister-spezial-butze-pascal-buenning.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="Zimmer mit Bar-Feeling" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span>Jägermeister Butze</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Jetzt wollen wir den Bums aber mal aufmischen: Denn unsere Jägermeister Spezial…</div>
+ <ul class="facts teaser__facts">
+ <li>Duschbad mit Fön</li>
+ <li>Flat-TV</li>
+ <li>Bar und Hängeschaukel</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="9de4bd4b-dcce-4e22-b1c4-d1b8d59aa313">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/spezialbutzen/oldesloer-korn-butze" class="teaser__item" title="Oldesloer Korn Butze" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/bb-hhf-oldesloer-spezialbutze-25-39-florian-busch.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span>Oldesloer Korn Butze</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Hier haben sich jetzt zwei Küstenkinder vom feinsten zusammen getan. Denn was…</div>
+ <ul class="facts teaser__facts">
+ <li>Flat-TV</li>
+ <li>Duschbad mit Fön</li>
+ <li>Mini Brennerei Oldesloer Korn</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="119ffe74-d804-4fa8-84e5-80caeb107815">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/spezialbutzen/werkhaus-butze" class="teaser__item" title="Werkhaus Butze" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/bb-hhf-werkhaus-spezialbutze-25-16-florian-busch.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="Werkhausbutze mit Meerblick" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span>Werkhaus Butze</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Ein Hotelzimmer wie jedes andere? Nicht hier! Die Werkhaus Spezialbutze in der…</div>
+ <ul class="facts teaser__facts">
+ <li>Sauna</li>
+ <li>Meerblick</li>
+ <li>Für bis zu sechs Personen</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="6aeec64f-7ed7-4700-955e-e74fbf9a8324">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/xl-butzen/xl-butze" class="teaser__item" title="XL Butze" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/161108-02-butze-83-bretterbde-at-andrea-flak.jpeg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="XL-Butze in voller Länge" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span> XL Butze</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Ihr habt keinen Bock auf Hotel und wollt euch lieber selbst versorgen? Kein…</div>
+ <ul class="facts teaser__facts">
+ <li>Eigene Küche</li>
+ <li>Separates WC und Bad mit Dusche</li>
+ <li>Balkon und Fernseher</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="4de9b6fc-fd6a-44f0-80be-c4641dbbc444">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/xl-butzen/xl-butze/flysurfer-xl-butze" class="teaser__item" title="Flysurfer XL Butze" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/bb-hhf-flysurfer-xl-butze-2604-9-florian-busch.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span>Flysurfer XL Butze</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Willkommen in der Flysurfer XL Butze – knapp 85 qm voller Meerblick, Windliebe…</div>
+ <ul class="facts teaser__facts">
+ <li>Eigene Küche</li>
+ <li>Meerblick</li>
+ <li>Balkon und Fernseher</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="2089eca6-b2f8-49b2-814e-17600be90708">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/xl-butzen/xxl-butze" class="teaser__item" title="XXL Butze" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/bb-xxl-butze-levis-carolin-wehmer-9.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="XXL Butze Levis in voller Länge" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span> XXL Butze</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Hier waren wir so großzügig und haben nochmal 20 qm oben drauf gepackt, also…</div>
+ <ul class="facts teaser__facts">
+ <li>Küche</li>
+ <li>Separates WC und Bad mit Dusche</li>
+ <li>Fernseher</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="ebacdc89-f112-48ed-b6d3-0188abdf8544">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/bauwagen-renate--1#bauwagen-renate" class="teaser__item" title="Bauwagen Renate" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/bauwagen-renate50-carolinwehmer.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span>Bauwagen<br/>Renate</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Renate – Deine Freiluftbutze mit ordentlich Draußen-Feeling Lust auf ‘ne Portion…</div>
+ <ul class="facts teaser__facts">
+ <li>8 Quadratmeter</li>
+ <li>2 Personen</li>
+ <li>Bettwäsche & Handtücher</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="526ffc61-9559-4812-9f08-2623e6abc30e">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/bulliparkplatz" class="teaser__item" title="Bulliparkplatz" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/bb-hhf-bulligarten-25-1-florian-busch.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="Bulligarten Stellplatz mit Blick auf's Meer" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span>Bulliparkplatz</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Für alle Naturliebhaber, Freiheitssuchende und Konventionsbrecher haben wir auf…</div>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="7bb7a517-42b2-48eb-bc22-fa22ad42232e">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/bulliparkplatz-bent" class="teaser__item" title="Bulliparkplatz BENT" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/bb-hh-bulligarten-spezialstellplatz-bent-gml04448-carolin-wehmer--1.jpeg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="Bulligarten Spezialstellplatz BENT " data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span>Bulliparkplatz BENT</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Unser Platz mit Camping-Know-how und Sonnensegel-Upgrade Für alle, die ihr…</div>
+ <ul class="facts teaser__facts">
+ <li>Sonnensegel (inkl. Adapter)</li>
+ <li>Carpet</li>
+ <li>Zip Kissenrolle</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="2b764d45-bad4-4c15-979a-904fa50df2e4">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/kleine-butzen/kleine-butze-landblick" class="teaser__item" title="Kleine Butze Landblick" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/16-zimmer-kl-butze-landblick-at-andrea-flak.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="Kleine Butze mit Blick auf Heiligenhafen" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span>Kleine Butze<br/>Landblick</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Klein, aber yeah! Unsere kleinen, putzigen Butzen lassen sich nichts schenken –…</div>
+ <ul class="facts teaser__facts">
+ <li>Flat-TV</li>
+ <li>Duschbad mit Fön</li>
+ <li>Extra Stauraum</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="cc4f8124-081b-4461-8876-902f4f5d817b">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/etagenbutzen/etagenbutze-landblick" class="teaser__item" title="Etagenbutze Landblick" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/28-bretterbude-etagenbutze-land-at-andrea-flak.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="TV-Ecke mit Stauraum" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span>Etagenbutze<br/>Landblick</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Doppelt hält besser! Dat weiß doch jede:r Halunk:in – deswegen haben wir hier…</div>
+ <ul class="facts teaser__facts">
+ <li>Doppelbett und Schlafcouch</li>
+ <li>Zwei Etagen</li>
+ <li>Flat-TV</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="9cfe73b3-4912-46bd-a2af-29a96c15f7d6">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/grosse-butzen/grosse-butze-meerblick" class="teaser__item" title="Große Butze Meerblick" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/02-zi-08-bretterbude-at-andrea-flak.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="Doppelbett mit Sofa und Tischchen" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span> Große Butze<br/>Meerblick</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Size matters – zumindest manchmal. In diesem Fall bedeutet das für euch: eine…</div>
+ <ul class="facts teaser__facts">
+ <li>Doppelbett und Schlafcouch</li>
+ <li>Flat-TV</li>
+ <li>Duschbad mit Fön</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ <div class="teaser__item--container animate col--12-12 col--4-12@md" data-id="1f3b54b2-05d7-4f2d-b112-95272f161d75">
+ <a href="https://www.bretterbude-hhf.de/butzen-zimmer/grosse-butzen/grosse-butze-meerblick-mit-balkon" class="teaser__item" title="Große Butze Meerblick mit Balkon" autoAnchor="1">
+ <div class="teaser__image col--flex-0-0">
+ <div class="image lazyload mime-image ratio--5-6 ratio--5-6@xs ratio--5-6@sm ratio--5-6@md ratio--5-6@lg ratio--5-6@xl ratio--5-6@xxl">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/5_6/10-zimmer-01-at-andrea-flak.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif" title="" alt="Butze mit Meerblick" data-sizes="auto"></picture>
+ </div>
+ <h3 class="teaser__hl teaser__hl--title"><span> Große Butze<br/>Meerblick mit<br/>Balkon</span></h3>
+ </div>
+ <div class="teaser__body col--middle">
+ <div class="teasertext teaser__teasertext teasertext--teasertext teaser__teasertext--teasertext">Nicht nur die Nase an der Fensterscheibe plattdrücken, sondern auch mal…</div>
+ <ul class="facts teaser__facts">
+ <li>Doppelbett und Schlafcouch</li>
+ <li>Flat-TV</li>
+ <li>Duschbad mit Fön</li>
+ </ul>
+<div class="button button--small button--black teaser__button button--small button--black"><span>mehr</span></div>
+ </div>
+ </a> </div>
+ </div>
+ <div class="js-items__empty teaser__empty grid grid--center">
+ <div class="col--auto">
+ Keine Einträge vorhanden </div>
+ </div>
+ </div>
+ </section>
+ <section id="butzenuebersicht-abschnitt" class="multipage__item article__intro multipage__intro article__page-default pageid-9db59688-2140-44fb-879d-6b1e35b7f809">
+ <div id="article__intro" class="article__container container">
+ <div class="grid grid--gutter grid--wrap">
+ <div class="col--12-12 offset--1-12@lg col--9-12@lg">
+ <div class="article__headline editor">
+ <h1 class="headline headline--headline"><span> Schon nett hier, oder?</span></h1> </div>
+ <div class="article__intro article__main">
+ <article class="container article__body last-mb-none editor">
+ <div class="editor content content--content last-mb-none"><p>Muckelig, superhübsch und für alle Fälle gewappnet: Wir wollen nicht prahlen – wir sind einfach nur irre stolz auf unsere kleinen und großen Butzen. Jede einzelne ein Traum von einem Schlafgemach, finden wir. Ihr auch?</p></div>
+ </article>
+ </div>
+ </div>
+ </div>
+</div>
+ </section>
+ <div class="gallery">
+ <div class="container">
+ <div class="grid-gallery" uk-grid="masonry: true" sx-light-gallery="counter: false; download: false; zoom: false; share: false; thumbnail: false;">
+ <div class="col-gallery-item">
+ <a class="gallery__item gallery__item--image" href="https://www.bretterbude-hhf.de/media/bb/xl/32-bretterbude-etagenbutze-at-andrea-flak.jpg"
+ data-sub-html="Treppe ruff, gemütlich machen">
+ <div class="gallery-item__image--container">
+ <div class="image lazyload mime-image ratio--xl ratio--xl@xs ratio--xl@sm ratio--xl@md ratio--xl@lg ratio--xl@xl ratio--xl@xxl" data-ratio="3000 / 2000">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/xl/32-bretterbude-etagenbutze-at-andrea-flak.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif?width=3&height=2" title="" alt="Schlafbereich in sanften Farben" data-sizes="auto"></picture>
+ </div>
+ <span class="image__description">Treppe ruff, gemütlich machen</span> </div>
+ </a>
+ </div>
+ <div class="col-gallery-item">
+ <a class="gallery__item gallery__item--image" href="https://www.bretterbude-hhf.de/media/bb/xl/07-zimmer-mit-wanne-at-andrea-flak.jpg"
+ data-sub-html="Butzen-Badespaß mit Meerblick? Sicher, Diggi!">
+ <div class="gallery-item__image--container">
+ <div class="image lazyload mime-image ratio--xl ratio--xl@xs ratio--xl@sm ratio--xl@md ratio--xl@lg ratio--xl@xl ratio--xl@xxl" data-ratio="3000 / 2000">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/xl/07-zimmer-mit-wanne-at-andrea-flak.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif?width=3&height=2" title="" alt="Zwischen Wanne und Strand" data-sizes="auto"></picture>
+ </div>
+ <span class="image__description">Butzen-Badespaß mit Meerblick? Sicher, Diggi!</span> </div>
+ </a>
+ </div>
+ <div class="col-gallery-item">
+ <a class="gallery__item gallery__item--image" href="https://www.bretterbude-hhf.de/media/bb/xl/07-bretterbude-at-andrea-flak.jpg"
+ data-sub-html="Unten chillen, oben pennen: Unsere Etagenbutzen machen doppelt Laune!">
+ <div class="gallery-item__image--container">
+ <div class="image lazyload mime-image ratio--xl ratio--xl@xs ratio--xl@sm ratio--xl@md ratio--xl@lg ratio--xl@xl ratio--xl@xxl" data-ratio="3000 / 2000">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/xl/07-bretterbude-at-andrea-flak.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif?width=3&height=2" title="" alt="Treppe im Shabby Chick" data-sizes="auto"></picture>
+ </div>
+ <span class="image__description">Unten chillen, oben pennen: Unsere Etagenbutzen machen doppelt Laune!</span> </div>
+ </a>
+ </div>
+ <div class="col-gallery-item">
+ <a class="gallery__item gallery__item--image" href="https://www.bretterbude-hhf.de/media/bb/xl/160429-04-bretterbude-at-andrea-flak.jpg"
+ data-sub-html="Bei dem Meerblick bekommt ihr kein Auge zu? Können wir auch nicht ändern ...">
+ <div class="gallery-item__image--container">
+ <div class="image lazyload mime-image ratio--xl ratio--xl@xs ratio--xl@sm ratio--xl@md ratio--xl@lg ratio--xl@xl ratio--xl@xxl" data-ratio="3000 / 2001">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/xl/160429-04-bretterbude-at-andrea-flak.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif?width=1000&height=667" title="" alt="Mehr Ostsee geht nicht" data-sizes="auto"></picture>
+ </div>
+ <span class="image__description">Bei dem Meerblick bekommt ihr kein Auge zu? Können wir auch nicht ändern ...</span> </div>
+ </a>
+ </div>
+ <div class="col-gallery-item">
+ <a class="gallery__item gallery__item--image" href="https://www.bretterbude-hhf.de/media/bb/xl/bb-xxl-butze-levis-carolin-wehmer-15.jpg"
+ data-sub-html="Monsteramäßige Stimmung in der Bude">
+ <div class="gallery-item__image--container">
+ <div class="image lazyload mime-image ratio--xl ratio--xl@xs ratio--xl@sm ratio--xl@md ratio--xl@lg ratio--xl@xl ratio--xl@xxl" data-ratio="3000 / 2250">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/xl/bb-xxl-butze-levis-carolin-wehmer-15.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif?width=4&height=3" title="" alt="Monstera mit Pride-Buch" data-sizes="auto"></picture>
+ </div>
+ <span class="image__description">Monsteramäßige Stimmung in der Bude</span> </div>
+ </a>
+ </div>
+ <div class="col-gallery-item">
+ <a class="gallery__item gallery__item--image" href="https://www.bretterbude-hhf.de/media/bb/xl/160823-moodd-etagenbutze-c5a2414-at-andrea-flak.jpg"
+ data-sub-html="Upcycling by Bretterbude: Da geht dir ein Licht auf!">
+ <div class="gallery-item__image--container">
+ <div class="image lazyload mime-image ratio--xl ratio--xl@xs ratio--xl@sm ratio--xl@md ratio--xl@lg ratio--xl@xl ratio--xl@xxl" data-ratio="3000 / 2000">
+ <picture><source media="(max-width: 575px)" data-srcset="https://www.bretterbude-hhf.de/media/w-{width}/bb/xl/160823-moodd-etagenbutze-c5a2414-at-andrea-flak.jpg"><img class="lazyload" src="https://www.bretterbude-hhf.de/media/ratio.gif?width=3&height=2" title="" alt="Lampe aus farbigen Einweggläsern" data-sizes="auto"></picture>
+ </div>
+ <span class="image__description">Upcycling by Bretterbude: Da geht dir ein Licht auf!</span> </div>
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+<footer class="footer">
+ <div class="footer__bg">
+ <div class="container container--fluid">
+ <div class="footer__navigation">
+ <div class="footer__socials">
+ <a target="_blank" href="https://www.facebook.com/bretterbudehotel"><img width="100" height="100" class="lazyload" src="/assets/img/facebook.png" alt="Facebook"></a>
+ <a target="_blank" href="https://www.instagram.com/bretterbude_heiligenhafen/"><img width="100" height="100" class="lazyload" src="/assets/img/instagram.png" alt="Instagram"></a>
+ </div>
+ <ul><li class="level-0 first"><a href="https://www.bretterbude-hhf.de/jobs" title="" autoAnchor="1">Jobs</a></li><li class="level-0"><a href="https://www.bretterbude-hhf.de/kontakt" title="" autoAnchor="1">Kontakt</a></li><li class="level-0"><a href="https://www.bretterbude-hhf.de/presse" title="" autoAnchor="1">Pressekontakt</a></li><li class="level-0"><a href="https://www.bretterbude-hhf.de/agb" title="" autoAnchor="1">AGB</a></li><li class="level-0"><a href="https://www.bretterbude-hhf.de/datenschutzerklaerung" title="" autoAnchor="1">Datenschutz</a></li><li class="level-0"><a href="https://www.bretterbude-hhf.de/impressum" title="" autoAnchor="1">Impressum</a></li><li class="level-0"><a href="https://www.bretterbude-hhf.de/partnerinnen" title="" autoAnchor="1">Partner:innen</a></li><li class="level-0 last"><a href="https://www.bretterbude-hhf.de/hinweisgebersystem" title="" autoAnchor="1">Hinweisgebersystem</a></li></ul> </div>
+ <div class="footer__main">
+ <div class="grid grid--gutter">
+ <div class="col--4-12@lg col--12-12 footer__slotmachine">
+ <div class="slotmachine">
+ <img width="517" height="508" class="slotmachine__machine lazyload" src="/assets/img/slotmachine/slotmachine.png" alt="Partnerlogos in einem Spielautomaten">
+ <div id="slotmachine__slots" class="slotmachine__slots">
+ <img width="452" height="318" class="slotmachine__slot lazyload" src="/assets/img/slotmachine/logo-trap.png" alt="Logo Trap">
+ <img width="452" height="318" class="slotmachine__slot lazyload" src="/assets/img/slotmachine/logo-cleptomanicx.png" alt="Logo Cleptomanicx">
+ <img width="452" height="318" class="slotmachine__slot lazyload" src="/assets/img/slotmachine/logo-jever.png" alt="Logo Jever">
+ <img width="452" height="318" class="slotmachine__slot lazyload" src="/assets/img/slotmachine/logo-skate-aid.png" alt="Logo Skate Aid">
+ <img width="452" height="318" class="slotmachine__slot lazyload" src="/assets/img/slotmachine/logo-audiolith.png" alt="Logo Audiolith">
+ <img width="452" height="318" class="slotmachine__slot lazyload" src="/assets/img/slotmachine/logo-levis.png" alt="Logo Levis">
+ <img width="452" height="318" class="slotmachine__slot lazyload" src="/assets/img/slotmachine/logo-viva-con-agua.png" alt="Logo Viva Con Agua">
+ <img width="452" height="318" class="slotmachine__slot lazyload" src="/assets/img/slotmachine/logo-weare.png" alt="Logo We Are">
+ </div>
+ </div>
+ </div>
+ <div class="footer__newsletter col--12-12 col--4-12@lg">
+ <div class="footer__newsletter--headline">
+ <span>Newsletter abonnieren</span>
+ </div>
+ <div class="footer__newsletter--content">
+ Jetzt schnell unseren Newsletter abonnieren und immer auf dem Laufenden sein! </div>
+<form class="footer-newsletter__form df clearfix" action="/newsletter" method="GET">
+ <div class="form-group">
+ <div class="formular-item__body">
+ <div class="input-group">
+ <input type="email" required name="email" class="formular-item__input input input--block footer-newsletter__input" placeholder="E-Mail Adresse" value="" />
+ <div class="input-group-append"><input class="button button--small btn--footer-newsletter" type="submit" value="Senden"><span></span></div>
+ </div>
+ </div>
+ </div>
+</form> </div>
+ <div class="col--4-12@lg col--12-12 footer__tides">
+ <div class="tides">
+ <a class="tides__main" target="_blank" href="https://indd.adobe.com/view/3d1f8307-aabf-43d6-b31e-7c114674517a">
+ <div class="tides__img js_tides js_tides_13"><img width="320" height="416" class="lazyload" src="/assets/img/tides/tides_13.jpg" alt="Hotelmagazin THE TIDES Ausgabe 13"></div>
+ <div style="display:none" class="tides__img js_tides js_tides_12"><img width="320" height="416" class="lazyload" src="/assets/img/tides/tides_12.jpg" alt="Hotelmagazin THE TIDES Ausgabe 12"></div>
+ <div style="display:none" class="tides__img js_tides js_tides_11"><img width="320" height="416" class="lazyload" src="/assets/img/tides/tides_11.jpg" alt="Hotelmagazin THE TIDES Ausgabe 11"></div>
+ <div style="display:none" class="tides__img js_tides js_tides_10"><img width="320" height="416" class="lazyload" src="/assets/img/tides/tides_10.jpg" alt="Hotelmagazin THE TIDES Ausgabe 10"></div>
+ <div style="display:none" class="tides__img js_tides js_tides_9"><img width="320" height="416" class="lazyload" src="/assets/img/tides/tides_9.jpg" alt="Hotelmagazin THE TIDES Ausgabe 9"></div>
+ <div style="display:none" class="tides__img js_tides js_tides_8"><img width="288" height="376" class="lazyload" src="/assets/img/tides/tides_8.jpg" alt="Hotelmagazin THE TIDES Ausgabe 8"></div>
+ <div style="display:none" class="tides__img js_tides js_tides_7"><img width="288" height="376" class="lazyload" src="/assets/img/tides/tides_7.jpg" alt="Hotelmagazin THE TIDES Ausgabe 7"></div>
+ </a>
+ <span class="tides__txt">Unser Magazin!</span>
+ <div class="vol-container">
+ <a class="vol t01" data-file="js_tides_13" target="_blank" href="https://indd.adobe.com/view/3d1f8307-aabf-43d6-b31e-7c114674517a">#13</a>
+ <a class="vol t01" data-file="js_tides_12" target="_blank" href="https://indd.adobe.com/view/2e144a5c-4b93-4f3c-b31b-fa23d0a0e93c">#12</a>
+ <a class="vol t01" data-file="js_tides_11" target="_blank" href="https://www.heimathafenhotels.de/assets/img/tides/the_tides_vol_11.pdf">#11</a>
+ <a class="vol t02" data-file="js_tides_10" target="_blank" href="https://www.heimathafenhotels.de/assets/img/tides/the_tides_vol_10.pdf">#10</a>
+ <a class="vol t03" data-file="js_tides_9" target="_blank" href="https://www.heimathafenhotels.de/assets/img/tides/the_tides_vol_09.pdf">#09</a>
+ <a class="vol t04" data-file="js_tides_8" target="_blank" href="https://www.heimathafenhotels.de/assets/img/tides/the_tides_vol_08.pdf">#08</a>
+ <a class="vol t05" data-file="js_tides_7" target="_blank" href="https://www.heimathafenhotels.de/assets/img/tides/the_tides_vol_07.pdf">#07</a>
+ </div>
+</div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="footer__imprint container">
+ <address class="footer__imprint--contact">
+ Bretterbude - Hotel Heiligenhafen | Seebrückenpromenade 4 | 23774 Heiligenhafen
+ <span class="footer__imprint--phone">Telefon: <a href="tel:+49436250040">04362 50040</a></span>
+ <a href="/kontakt" class="button button--small footer__imprint--cta">Kontakt</a>
+ </address>
+ </div>
+ </div>
+ <div class="footer__label">
+ <div class="container container--fluid">
+ <div class="grid">
+ <a href="https://www.heimathafenhotels.de/" target="_blank" class="label--hhh">
+ <img src="/assets/img/label-hhh.png" alt="Ein Haus der Heimathafen Hotels (öffnet neuen Tab)">
+ </a>
+ </div>
+ </div>
+ </div>
+ <div class="footer__awards">
+ <div class="footer__awards--container container container--fluid">
+ <div class="footer__awards--left">
+ <img width="150" height="122" class="award__1 lazyload" src="/assets/img/awards/aktiv-hotel-award-2018.png" alt="Logo Aktiv Hotel: Award 2018">
+ <img width="118" height="216" class="award__2 lazyload" src="/assets/img/awards/top-hotel-opening-2016.png" alt="Logo Tophotel: Opening 2016">
+ <img width="170" height="130" class="award__3 lazyload" src="/assets/img/awards/hotel-forum-2017.png" alt="Logo Hotel Forum: Hotelimmobilie des Jahres Gewinner 2017">
+ <a href="https://www.beyondcamping.de/" target="_blank" class="award__4"><img width="140" height="140" class="lazyload" src="/assets/img/awards/award-campingplatz-beyondcamping-2022-rot.png" alt="Logo Beyond Camping: Top Camping Plätze 2022"></a>
+ </div>
+ <div class="footer__awards--right">
+ <img width="434" height="240" src="/assets/img/awards/wir-foerdern-wirtschaft-sh.png" class="award__1 lazyload" alt="Logo EU.SH - Wir fördern Wirtschaft. Der echte Norden">
+ </div>
+ </div>
+ </div>
+</footer>
+<style></style></div>
+<script></script>
+<script></script>
+ <script></script>
+ <script></script>
+<script></script>
+<style></style>
+</body>
+</html>

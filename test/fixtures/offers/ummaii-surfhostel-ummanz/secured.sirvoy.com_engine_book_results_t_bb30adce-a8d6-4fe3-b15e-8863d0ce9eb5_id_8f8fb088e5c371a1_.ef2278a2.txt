@@ -1,0 +1,6 @@
+<!DOCTYPE html><html><body><!-- Sirvoy book_results page, trimmed 2026-10-14 to room data, room cards, currency and the date error notice -->
+<div class="search-form__error notification is-warning is-light sirvoy-flexible-text" data-translation-key="booking_engine.error.invalid_date"
+                                >
+            The selected dates can&#039;t be booked. Please make another selection or call to book.
+        </div>
+</body></html>

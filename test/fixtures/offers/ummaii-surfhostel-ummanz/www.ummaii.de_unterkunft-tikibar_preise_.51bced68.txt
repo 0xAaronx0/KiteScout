@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+<title>UMMAII :: Unterkunft und TikiBar :: Preise</title>
+<meta name="generator" content="TYPO3 CMS">
+<meta name="author" content="Windsurfing Rügen / Kite-Island">
+<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<meta name="DC.title" content="Kite-Surfen, Windsurfing und vieles mehr – in unserem Surfhostel auf Rügen gibt es viel zu erleben. Wir bieten alles für eine tolle Zeit an der Ostsee." />
+<meta name="geo.region" content="DE-MV" />
+<meta name="geo.placename" content="Ummanz" />
+<meta name="geo.position" content="54.474674;13.147695" />
+<meta name="ICBM" content="54.474674, 13.147695" />
+
+
+
+
+
+
+<meta name="msapplication-config" content="/fileadmin/templates/htmltemplates/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<meta name="google-site-verification" content="lJZ8P5FzrkrCUCSzu9Ed7eHP2ETzx6p81NNmXkAfT6M" />
+<meta name="google-site-verification" content="Vp27yCV8ssJ_14YtdvJOTYd3izNnkqDGBwg113dlZIY" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+<meta property="og:title" content="Preise" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://www.ummaii.de/typo3conf/ext/jh_opengraphprotocol/Resources/Public/Images/nopic.jpg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="200" />
+<meta property="og:image:height" content="200" />
+<meta property="og:url" content="https://www.ummaii.de/unterkunft-tikibar/preise/" />
+<meta property="og:site_name" content="UMMAII :: Unterkunft und TikiBar :" />
+<meta property="og:locale" content="de_DE" />
+
+</head>
+<body class="smh no-trans transparent-header">
+
+ <div class="site">
+  <div class="site-outer">
+    <nav class="mp-menu mp-cover" id="mp-menu">
+      <div class="mp-level" data-level="1">
+        <ul>
+          <li><a title="schliessen" href="javascript:void(0);" class="mp-back"><i class="fa fa-window-close" aria-hidden="true"></i></a></li>
+          <li><a title="Home" href="/">Home</a></li>
+          
+          <li><a title="Windsurfkurse" href="javascript:void(0);">Windsurfkurse ></a>
+            <div class="mp-level" data-level="2"> <a href="javascript:void(0);" class="mp-back" title="zurück"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+              <ul class="sub-menu third-level">
+                <li class="listheader">Windsurfen</li>
+                <li><a href="/windsurfkurse/uebersicht/">Übersicht</a></li><li><a href="/windsurfkurse/grundkurs/">Grundkurs</a></li><li><a href="/windsurfkurse/aufsteigerkurs/">Aufsteigerkurs</a></li><li><a href="/windsurfkurse/privatstunde/">Privatstunde</a></li><li><a href="/windsurfkurse/wochenendkurs/">Wochenendkurs</a></li><li><a href="/windsurfkurse/5-tage-windsurf-camp/">5 Tage Windsurf-Camp</a></li><li><a href="/windsurfkurse/refresh-kurs/">Refresh Kurs</a></li><li><a href="/windsurfkurse/preise/">Preise</a></li> 
+              </ul>
+            </div>
+          </li>
+          
+          <li> <a title="Kitesurfkurse" href="javascript:void(0);">Kitesurfkurse ></a>
+            <div class="mp-level" data-level="2"> <a href="javascript:void(0);" class="mp-back" title="zurück"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+              <ul class="sub-menu third-level">
+                <li class="listheader">Kitesurfen</li>
+                <li><a href="/kitesurfkurse/uebersicht/">Übersicht</a></li><li><a href="/kitesurfkurse/grundkurs-3-tage/">Grundkurs 3 Tage</a></li><li><a href="/kitesurfkurse/wochenendkurs-2-tage/">Wochenendkurs 2 Tage</a></li><li><a href="/kitesurfkurse/aufsteigerkurs-2-tage/">Aufsteigerkurs 2 Tage</a></li><li><a href="/kitesurfkurse/kite-schnuppertag/">Kite Schnuppertag</a></li><li><a href="/kitesurfkurse/betreutes-kiten/">Betreutes Kiten</a></li><li><a href="/kitesurfkurse/privatkurs/">Privatkurs</a></li><li><a href="/kitesurfkurse/exklusivtraining/">Exklusivtraining</a></li><li><a href="/kitesurfkurse/5-tage-kitecamp/">5 Tage Kitecamp</a></li><li><a href="/kitesurfkurse/preise/">Preise</a></li> 
+              </ul>
+            </div>
+          </li>
+          
+          
+          <li> <a title="Wingsurfen" href="/wingsurfen/">Wingsurfen</a></li>
+          
+          <li> <a title="Klassenfahrten" href="javascript:void(0);">Klassenfahrten ></a>
+            <div class="mp-level" data-level="2"> <a href="javascript:void(0);" class="mp-back" title="zurück"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+              <ul class="sub-menu third-level">
+                <li class="listheader">Klassenfahrten</li>
+                <li><a href="/klassenfahrten/uebersicht/">Übersicht</a></li><li><a href="/klassenfahrten/klassenfahrt-windsurfwoche/">Klassenfahrt  Windsurfwoche</a></li><li><a href="/klassenfahrten/klassenfahrt-kitesurfwoche/">Klassenfahrt Kitesurfwoche</a></li><li><a href="/klassenfahrten/klassenfahrt-outdoorwoche/">Klassenfahrt Outdoorwoche</a></li><li><a href="/klassenfahrten/anfrage-klassenfahrt/">Anfrage Klassenfahrt</a></li><li><a href="/klassenfahrten/preise/">Preise</a></li>
+              </ul>
+            </div>
+          </li>
+          
+           <li> <a title="Heiraten &amp; Feiern" href="javascript:void(0);">Heiraten &amp; Feiern ></a>
+            <div class="mp-level" data-level="2"> <a href="javascript:void(0);" class="mp-back" title="zurück"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+              <ul class="sub-menu third-level">
+                <li class="listheader">Heiraten &amp; Feiern</li>
+                <li><a href="/heiraten-feiern/feiern-im-surfhostel/">Feiern im Surfhostel</a></li><li><a href="/heiraten-feiern/feier-anfragen/">Feier anfragen</a></li><li><a href="/heiraten-feiern/preise/">Preise</a></li>
+              </ul>
+            </div>
+           </li>
+           <li> <a title="Unterkunft &amp; TikiBar" href="javascript:void(0);">Unterkunft &amp; UMMAII TikiBar ></a>
+            <div class="mp-level" data-level="2"> <a href="javascript:void(0);" class="mp-back" title="zurück"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+              <ul class="sub-menu third-level">
+                <li class="listheader">Unterkunft &amp; TikiBar</li>
+                <li><a href="/unterkunft-tikibar/uebersicht/">Übersicht</a></li><li><a href="/unterkunft-tikibar/hostel/">Hostel</a></li><li><a href="/unterkunft-tikibar/baumhaus/">Baumhaus</a></li><li><a href="/unterkunft-tikibar/tiny-houses/">Tiny Houses</a></li><li><a href="/unterkunft-tikibar/ummaii-tikibar/">UMMAII TikiBar</a></li><li><a href="/unterkunft-tikibar/weitere-unterkuenfte/">Weitere Unterkünfte</a></li><li><a href="/unterkunft-tikibar/unterkunft-anfragen/">Unterkunft anfragen</a></li><li class="active"><a href="/unterkunft-tikibar/preise/">Preise</a></li>
+              </ul>
+            </div>
+           </li>
+           
+           <li> <a title="Events" href="/events/">Events &amp; Konzerte</a></li>
+           <li><a title="UMMAII Rupien (Gutscheine)" href="/ummaii-buerger-werden/ummaii-rupien-gutscheine/">UMMAII Rupien (Gutscheine)</a></li>
+           <li> <a title="Shop" href="/online-shop/">Online-Shop</a></li>
+           <li> <a title="FAQ" href="javascript:void(0);">FAQs ></a>
+            <div class="mp-level" data-level="2"> <a href="javascript:void(0);" class="mp-back" title="zurück"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+              <ul class="sub-menu third-level">
+                <li class="listheader">FAQs</li>
+                <li><a href="/faqs/faq-kitekurse/">FAQ Kitekurse</a></li><li><a href="/faqs/faq-windsurfkurse/">FAQ Windsurfkurse</a></li><li><a href="/faqs/faq-hochzeit-feiern/">FAQ Hochzeit & Feiern</a></li><li><a href="/faqs/faq-klassenfahrt/">FAQ Klassenfahrt</a></li> 
+              </ul>
+            </div>
+           </li>
+           <li> <a title="Jobs" href="/jobs/">Jobs</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+     
+      
+           
+
+    
+    
+    <div class="scrollToTop circle"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+    
+    
+    
+    <div class="page-wrapper">
+
+
+      
+      <div class="header-container">
+        
+        <header class="header fixed fixed-before clearfix hidden-xs">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                
+                
+                <div class="header-left clearfix">
+                  <div class="navi">  
+                    <ul>
+                      <li class="navIcon">
+                        <a href="javascript:void(0);" class="navTrigger" title="Navigation"></a>
+                      </li>
+                      <li class="searchIcon">
+                        <a href="javascript:void(0);" class="searchTrigger" title="Suche"></a>
+                      </li>
+                      <li class="camIcon">
+                        <a href="javascript:void(0);" class="camTrigger" title="Soziale Netze"></a>
+                      </li>
+                      <li class="weatherIcon">
+                        <a href="javascript:void(0);" class="weatherTrigger" title="Wind &amp; Wetter"></a>
+                      </li>
+                    </ul>
+                    
+                  </div>
+                  <div class="searchbar">
+                    <form id="form_kesearch_pi1" class="form-inline" method="get" name="form_kesearch_pi1" action="/suchergebnisse/">
+                      <div class="form-group">
+                       
+                        <div class="input-group">
+                          <input type="hidden" name="id" value="90" />
+                          <input type="text" class="form-control" id="ke_search_sword" name="tx_kesearch_pi1[sword]" placeholder="Suchen">
+                          <input id="kesearchpagenumber" type="hidden" name="tx_kesearch_pi1[page]" value="1" />
+                          <input id="resetFilters" type="hidden" name="tx_kesearch_pi1[resetFilters]" value="0" />
+                          <input id="sortByField" type="hidden" name="tx_kesearch_pi1[sortByField]" value="" />
+                          <input id="sortByDir" type="hidden" name="tx_kesearch_pi1[sortByDir]" value="" />
+                        </div>
+                      </div>
+                      <button id="kesearch_submit" type="submit" class="btn btn-primary submit">Los</button>
+                      
+                    </form>
+                  </div>
+                  
+                  <div class="weatherbar"><div class="headline">Aktuelles Wetter</div>
+	<div class="weather-act">
+		<div class="weather-item-act">
+			<div class="icon_large"><i class="wi wi-day-sunny"></i></div>
+			<div class="desc">Klar / Sonnig</div>
+			<div class="degree">Temperatur:&nbsp;9&deg;C</div>
+			<div class="wind">Wind:&nbsp;14&nbsp;km/h aus Richtung&nbsp;W</div>
+			<div class="humidity">Luftfeuchte:&nbsp;75%</div>
+			<div class="pressure">Luftdruck:&nbsp;1020&nbsp;hPa</div>
+		</div>
+	</div>
+                    <a href="https://www.windguru.cz/665105" target="_blank" title="Windvorhersage" class="Button-Orange">zur Windguru Windvorhersage</a>
+                  </div>
+ 
+                  <div class="socialbar">
+                   <div class="sb_icons">
+                       <a class="fbhlink" target="_blank" title="Facebook" href="https://www.facebook.com/Windsurfing-R%C3%BCgen-Kite-Island-109188582483052/"><i class="fa fa-facebook-square"></i></a>
+                       <a class="ythlink" target="_blank" title="Youtube" href="https://www.youtube.com/channel/UCYW327w3_XXq-sUDbzFXVnA"><i class="fa fa-youtube-square"></i></a>
+                       <a class="inhlink" target="_blank" title="Instagram" href="https://www.instagram.com/ummaii_ruegen/"><i class="fa fa-instagram"></i></a> 
+                    </div>
+                  </div>
+
+                </div>
+                
+
+              
+          
+                
+                
+                <div class="header-right clearfix">
+                  
+               <div class="logoContainer">
+                 <a href="/home/" title="Zur Startseite"><div class="logo"></div></a>
+               </div>
+               
+                
+                </div>
+                
+          
+              </div>
+            </div>
+          </div>
+          
+        </header>
+        
+      </div>
+      
+
+<div class="">
+
+<header class="header mobile hidden-lg hidden-md hidden-sm">
+  <div class="navi">
+    <ul>
+       <li class="navIcon">
+         <a href="javascript:;" class="navTrigger"></a>
+      </li>
+      <li class="weatherIcon">
+        <a href="javascript:;" class="weatherTrigger"></a>
+      </li>
+      <li class="camIcon">
+        <a href="javascript:void(0);" class="camTrigger" title="Soziale Netze"></a>
+      </li>
+      <li class="searchIcon">
+        <a href="javascript:;" class="searchTrigger"></a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="searchbar">
+    <form id="form_kesearch_pi1" class="form-inline" method="get" name="form_kesearch_pi1" action="/suchergebnisse/">
+       <div class="form-group">
+         
+         <div class="input-group">
+           <input type="hidden" name="id" value="90" />
+           <input type="text" class="form-control" id="ke_search_sword" name="tx_kesearch_pi1[sword]" placeholder="Suchen">
+           <input id="kesearchpagenumber" type="hidden" name="tx_kesearch_pi1[page]" value="1" />
+           <input id="resetFilters" type="hidden" name="tx_kesearch_pi1[resetFilters]" value="0" />
+           <input id="sortByField" type="hidden" name="tx_kesearch_pi1[sortByField]" value="" />
+           <input id="sortByDir" type="hidden" name="tx_kesearch_pi1[sortByDir]" value="" />
+         </div>
+         
+      </div>
+      <button id="kesearch_submit" type="submit" class="btn btn-primary submit">Los</button>
+                      
+    </form>
+  </div>
+  <div class="weatherbar">
+    <div class="headline">Aktuelles Wetter</div>
+	<div class="weather-act">
+		<div class="weather-item-act">
+			<div class="icon_large"><i class="wi wi-day-sunny"></i></div>
+			<div class="desc">Klar / Sonnig</div>
+			<div class="degree">Temperatur:&nbsp;9&deg;C</div>
+			<div class="wind">Wind:&nbsp;14&nbsp;km/h aus Richtung&nbsp;W</div>
+			<div class="humidity">Luftfeuchte:&nbsp;75%</div>
+			<div class="pressure">Luftdruck:&nbsp;1020&nbsp;hPa</div>
+		</div>
+	</div>
+      <a href="https://www.windguru.cz/665105" target="_blank" title="Windvorhersage" class="Button-Orange">zur Windguru Windvorhersage</a>
+  </div>
+  <div class="socialbar">
+    <div class="sb_icons">
+      <a class="fbhlink" target="_blank" title="Facebook" href="https://www.facebook.com/Windsurfing-R%C3%BCgen-Kite-Island-109188582483052/"><i class="fa fa-facebook-square"></i></a>
+      <a class="ythlink" target="_blank" title="Youtube" href="https://www.youtube.com/channel/UCYW327w3_XXq-sUDbzFXVnA"><i class="fa fa-youtube-square"></i></a>
+      <a class="inhlink" target="_blank" title="Instagram" href="https://www.instagram.com/ummaii_ruegen/"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+  
+  <div class="logoContainer">
+    <a href="/home/" title="Zur Startseite"><div class="logo"></div></a>
+  </div>
+  
+</header>
+</div>
+
+
+      
+
+
+     
+ <div id="page-start" style="background-image: url(/fileadmin/redaktion/bilder/header/header_unterkunft.jpg);height:500px;position:relative;top:-500px;background-size:cover;background-position-x: center;"></div>
+    <div class="container bc" > 
+      <ol class="breadcrumb">
+        <li class="hidden-xs"><i class="fa fa-home pr-10"></i><a href="/home">Home</a></li>
+        <li class="hidden-xs"> <a href="/unterkunft-tikibar/uebersicht/" title=" zur Seite: Unterkunft &amp; TikiBar">Unterkunft & TikiBar</a> </li><li class="hidden-xs"> Preise </li>
+        
+    
+      <a href="/shop/warenkorb/?no_cache=1">
+        <li class="minibasket" style="display: none;">
+           <i class="fa fa-shopping-cart" aria-hidden="true"></i> 0 Artikel im Warenkorb
+        </li>
+    </a>
+  
+  
+     </ol>
+     
+    </div>
+     
+
+
+<div id="c642" class="csc-frame csc-frame-default"><section class=" pt-50 pb-50 white"><div class="container"><div id="c644" class="csc-frame csc-frame-default"><div class="csc-header csc-header-n1"><h1 class="csc-firstHeader">Preisliste Übernachtung &amp; Verpflegung</h1></div></div><div id="c1127" class="csc-frame csc-frame-default"><div class="csc-header csc-header-n2"><h2>Informationen zur Verpflegung</h2></div><p class="bodytext">Bei allen Zimmerbuchungen&nbsp;ist ein Frühstück inklusive. Für Gruppen ab 10 Personen kann ein warmes, frisch gekochtes, leckeres Abendessen&nbsp; dazugebucht werden. Fragen Sie das Abendessen gerne an, wir informieren Sie bei der Buchungsbestätigung ob dies in Ihrem Reisezeitraum verfügbar ist.</p></div><div id="c643" class="csc-frame csc-frame-default"><div id="c312" class="csc-frame csc-frame-default"><table class="table contenttable contenttable-0"><tr><td>Mieten, Übernachten (inkl. Frühstück)</td><td> </td></tr><tr><td> </td><td> </td></tr><tr><td>Übernachtung mit Frühstück im Bungalow ab 3 Pers. (6- &amp; 8 Bettzimmer)</td><td>p.P. 36,90 €</td></tr><tr><td>Übernachtung mit Frühstück im Bungalow 2 er Belegung (Doppelz.) </td><td>p.P. 41,90 €</td></tr><tr><td>Übernachtung mit Frühstück im Bungalow 1 er Belegung (Einzelz.)</td><td>p.P. 48,90 €</td></tr><tr><td>Übernachtung mit Frühstück im Haupthaus ab 3 Pers. (2-4 Bettzimmer)</td><td>p.P. 40,90 €</td></tr><tr><td>Übernachtung mit Frühstück im Haupthaus 2 er Belegung (Doppelz.) </td><td>p.P. 45,90 €</td></tr><tr><td>Übernachtung mit Frühstück im Haupthaus 1 er Belegung (Einzelz.)</td><td>p.P. 52,90 €</td></tr><tr><td>zzgl. Endreinigung pro Zimmer</td><td>10,00 €</td></tr><tr><td>Übernachtung im Baumhaus 2 Pers. inkl. Frühstück</td><td>120,- €</td></tr><tr><td>Tinyhaus 1 pro Nacht zzgl Endreinigung</td><td>140,- €</td></tr><tr><td>Tinyhaus 2 pro Nacht zzgl. Endreinigung</td><td>160,- €</td></tr><tr><td>Kinderermäßigung bei Einzelübernachtungen 4-11 Jahre</td><td>p.P. 8,- €</td></tr><tr><td>Kinderermäßigung bei Einzelübernachtungen 12-17 Jahre</td><td>p.P 4,- €</td></tr><tr><td> </td><td> </td></tr><tr><td>Frühstück EW &amp; Jugendl. ab 12 Jahre</td><td>p.P. 12,90 €</td></tr><tr><td>Frühstück Kinder 4-11 Jahre</td><td>p.P. 7,90 €</td></tr><tr><td>Lunchpaket* ab 10 Personen </td><td>p.P. 5,00 €</td></tr><tr><td>Abendessen ab 10 Personen</td><td>p.P. 12,90 €</td></tr><tr><td>Bettwäsche (Schlafsäcke sind nicht gestattet)</td><td>p.P. 10,00 €</td></tr></table></div></div><div id="c1314" class="csc-frame csc-frame-default"><div class="csc-header csc-header-n4"><h2>Unser Beitrag für eine bessere Umwelt</h2></div><p class="bodytext">Seit geraumer Zeit&nbsp;verzichten wir beim Lunchpaket auf Einweg-Plastikflaschen und stellen Glas-Wasserflaschen gegen Pfand zur Verf&uuml;gung. Bei Buchung des Lunchpaketes empfiehlt es sich, eine eigene Trinkflasche mitzubringen, in die das Wasser umgef&uuml;llt werden kann.</p></div></div></section></div>
+   
+  
+
+        
+  
+      
+   
+      
+      <div class="clearfix"></div>
+      
+      
+    <footer id="footer" class="clearfix ">
+  
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-md-2 col-lg-2 hidden-sm hidden-xs">
+            <div class="footer-content">
+              
+              <img src="/fileadmin/templates/images/header_logo_ummaii.svg" alt="UMMAII - sunset island rügen"/>
+            </div>
+          </div>
+          <div class="clearfix visible-sm"></div>
+          <div class="col-md-9 col-lg-8 col-lg-offset-2">
+            
+            <div class="footer-content">
+              <div>
+                <div class="row pb-30">
+                  <div class="col-sm-5">
+                    <h2 class="title">Kite- &amp; Surfschule</h2>
+                    <p class="normal"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+493830582240">038305 82240</a></p>
+                    <p class="normal"><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:kitesurfen@ummaii.de">kitesurfen@ummaii.de</a></p>
+                    <p class="normal"><i class="fa fa-map-marker" aria-hidden="true"></i>Regenbogencamp, 18569 Suhrendorf</p>
+                  </div>
+                  <div class="col-sm-5 xs-pt30">
+                    <h2 class="title">Surfhostel &amp; Tikibar</h2>
+                    <p class="normal"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+4938305565056">038305 55018</a></p>
+                    <p class="normal"><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:betrieb@uns-eigen.de">betrieb@uns-eigen.de</a></p>
+                    <p class="normal"><i class="fa fa-map-marker" aria-hidden="true"></i>Ortsteil Haide, 18569 Ummanz</p>
+                  </div>
+                  <div class="col-sm-2">
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+    </div> 
+  <div class="subfooter">
+    <div class="container">
+            <div class="footer-inner">
+        <div class="row">
+          <div class="col-sm-4 col-md-6 col-lg-6">
+            <p class="cpright">UMMAII - Windsurfing Rügen | Kite island &amp; Rügen Surfhostel<br />Copyright © 2022 | <a href="/impressum">Impressum</a> | <a href="/datenschutz">Datenschutz</a> | <a href="/agb-und-widerrufsbelehrung">AGB &amp; Widerrufbelehrung</a></p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-2 col-lg-offset-4 text-right">
+            <ul class="social-links circle animated-effect-1">
+              <li class="facebook"><a target="_blank" title="Facebook" href="https://www.facebook.com/Windsurfing-R%C3%BCgen-Kite-Island-109188582483052/"><i class="fa fa-facebook"></i></a></li>
+              <li class="googleplus"><a target="_blank" title="Youtube" href="https://www.youtube.com/channel/UCYW327w3_XXq-sUDbzFXVnA"><i class="fa fa-youtube"></i></a></li>
+              <li class="linkedin"><a target="_blank" title="Instagram" href="https://www.instagram.com/ummaii_ruegen/"><i class="fa fa-instagram"></i></a></li> 
+            </ul>
+          </div>
+        </div>
+      </div>
+     </div>
+   </div>  
+</footer>  
+           
+
+    </div>
+    
+ 
+  </div>
+</div>
+
+<script></script>
+
+
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+
+<script></script>
+<script></script>
+<script></script>
+
+<script></script>
+<script></script>
+<script></script>
+<script></script> 
+
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+
+</body>
+</html>

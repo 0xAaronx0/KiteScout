@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
+
+<title>UMMAII :: Kitesurfen, Windsurfen, Surfhostel</title>
+<meta name="generator" content="TYPO3 CMS">
+<meta name="author" content="Windsurfing Rügen / Kite-Island">
+<meta name="robots" content="index,follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="kite surfen, kiten lernen, kiteschule, kitekurs, jugendherberge rügen">
+<meta name="description" content="Kitesurfen und Windsurfen auf Ummanz – in unserem Surfhostel auf Rügen gibt es viel zu erleben. Wir bieten alles für eine tolle Zeit an der Ostsee.">
+
+
+
+<meta name="DC.title" content="Kite-Surfen, Windsurfing und vieles mehr – in unserem Surfhostel auf Rügen gibt es viel zu erleben. Wir bieten alles für eine tolle Zeit an der Ostsee." />
+<meta name="geo.region" content="DE-MV" />
+<meta name="geo.placename" content="Ummanz" />
+<meta name="geo.position" content="54.474674;13.147695" />
+<meta name="ICBM" content="54.474674, 13.147695" />
+
+
+
+
+
+
+<meta name="msapplication-config" content="/fileadmin/templates/htmltemplates/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+<meta name="google-site-verification" content="lJZ8P5FzrkrCUCSzu9Ed7eHP2ETzx6p81NNmXkAfT6M" />
+<meta name="google-site-verification" content="Vp27yCV8ssJ_14YtdvJOTYd3izNnkqDGBwg113dlZIY" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+<meta property="og:title" content="UMMAII : Home" />
+<meta property="og:type" content="website" />
+<meta property="og:image:secure_url" content="https://www.ummaii.de/fileadmin/templates/images/facebook-default.png" />
+<meta property="og:image" content="http://www.ummaii.de/fileadmin/templates/images/facebook-default.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1000" />
+<meta property="og:image:height" content="950" />
+<meta property="og:url" content="https://www.ummaii.de/home/" />
+<meta property="og:site_name" content="UMMAII :" />
+<meta property="og:description" content="Kitesurfen und Windsurfen auf Ummanz – in unserem Surfhostel auf Rügen gibt es viel zu erleben. Wir bieten alles für eine tolle Zeit an der Ostsee." />
+<meta property="og:locale" content="de_DE" />
+
+</head>
+<body class="no-trans transparent-header">
+
+ <div class="site">
+  <div class="site-outer">
+    <nav class="mp-menu mp-cover" id="mp-menu">
+      <div class="mp-level" data-level="1">
+        <ul>
+          <li><a title="schliessen" href="javascript:void(0);" class="mp-back"><i class="fa fa-window-close" aria-hidden="true"></i></a></li>
+          <li><a title="Home" href="/">Home</a></li>
+          
+          <li><a title="Windsurfkurse" href="javascript:void(0);">Windsurfkurse ></a>
+            <div class="mp-level" data-level="2"> <a href="javascript:void(0);" class="mp-back" title="zurück"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+              <ul class="sub-menu third-level">
+                <li class="listheader">Windsurfen</li>
+                <li><a href="/windsurfkurse/uebersicht/">Übersicht</a></li><li><a href="/windsurfkurse/grundkurs/">Grundkurs</a></li><li><a href="/windsurfkurse/aufsteigerkurs/">Aufsteigerkurs</a></li><li><a href="/windsurfkurse/privatstunde/">Privatstunde</a></li><li><a href="/windsurfkurse/wochenendkurs/">Wochenendkurs</a></li><li><a href="/windsurfkurse/5-tage-windsurf-camp/">5 Tage Windsurf-Camp</a></li><li><a href="/windsurfkurse/refresh-kurs/">Refresh Kurs</a></li><li><a href="/windsurfkurse/preise/">Preise</a></li> 
+              </ul>
+            </div>
+          </li>
+          
+          <li> <a title="Kitesurfkurse" href="javascript:void(0);">Kitesurfkurse ></a>
+            <div class="mp-level" data-level="2"> <a href="javascript:void(0);" class="mp-back" title="zurück"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+              <ul class="sub-menu third-level">
+                <li class="listheader">Kitesurfen</li>
+                <li><a href="/kitesurfkurse/uebersicht/">Übersicht</a></li><li><a href="/kitesurfkurse/grundkurs-3-tage/">Grundkurs 3 Tage</a></li><li><a href="/kitesurfkurse/wochenendkurs-2-tage/">Wochenendkurs 2 Tage</a></li><li><a href="/kitesurfkurse/aufsteigerkurs-2-tage/">Aufsteigerkurs 2 Tage</a></li><li><a href="/kitesurfkurse/kite-schnuppertag/">Kite Schnuppertag</a></li><li><a href="/kitesurfkurse/betreutes-kiten/">Betreutes Kiten</a></li><li><a href="/kitesurfkurse/privatkurs/">Privatkurs</a></li><li><a href="/kitesurfkurse/exklusivtraining/">Exklusivtraining</a></li><li><a href="/kitesurfkurse/5-tage-kitecamp/">5 Tage Kitecamp</a></li><li><a href="/kitesurfkurse/preise/">Preise</a></li> 
+              </ul>
+            </div>
+          </li>
+          
+          
+          <li> <a title="Wingsurfen" href="/wingsurfen/">Wingsurfen</a></li>
+          
+          <li> <a title="Klassenfahrten" href="javascript:void(0);">Klassenfahrten ></a>
+            <div class="mp-level" data-level="2"> <a href="javascript:void(0);" class="mp-back" title="zurück"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+              <ul class="sub-menu third-level">
+                <li class="listheader">Klassenfahrten</li>
+                <li><a href="/klassenfahrten/uebersicht/">Übersicht</a></li><li><a href="/klassenfahrten/klassenfahrt-windsurfwoche/">Klassenfahrt  Windsurfwoche</a></li><li><a href="/klassenfahrten/klassenfahrt-kitesurfwoche/">Klassenfahrt Kitesurfwoche</a></li><li><a href="/klassenfahrten/klassenfahrt-outdoorwoche/">Klassenfahrt Outdoorwoche</a></li><li><a href="/klassenfahrten/anfrage-klassenfahrt/">Anfrage Klassenfahrt</a></li><li><a href="/klassenfahrten/preise/">Preise</a></li>
+              </ul>
+            </div>
+          </li>
+          
+           <li> <a title="Heiraten &amp; Feiern" href="javascript:void(0);">Heiraten &amp; Feiern ></a>
+            <div class="mp-level" data-level="2"> <a href="javascript:void(0);" class="mp-back" title="zurück"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+              <ul class="sub-menu third-level">
+                <li class="listheader">Heiraten &amp; Feiern</li>
+                <li><a href="/heiraten-feiern/feiern-im-surfhostel/">Feiern im Surfhostel</a></li><li><a href="/heiraten-feiern/feier-anfragen/">Feier anfragen</a></li><li><a href="/heiraten-feiern/preise/">Preise</a></li>
+              </ul>
+            </div>
+           </li>
+           <li> <a title="Unterkunft &amp; TikiBar" href="javascript:void(0);">Unterkunft &amp; UMMAII TikiBar ></a>
+            <div class="mp-level" data-level="2"> <a href="javascript:void(0);" class="mp-back" title="zurück"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+              <ul class="sub-menu third-level">
+                <li class="listheader">Unterkunft &amp; TikiBar</li>
+                <li><a href="/unterkunft-tikibar/uebersicht/">Übersicht</a></li><li><a href="/unterkunft-tikibar/hostel/">Hostel</a></li><li><a href="/unterkunft-tikibar/baumhaus/">Baumhaus</a></li><li><a href="/unterkunft-tikibar/tiny-houses/">Tiny Houses</a></li><li><a href="/unterkunft-tikibar/ummaii-tikibar/">UMMAII TikiBar</a></li><li><a href="/unterkunft-tikibar/weitere-unterkuenfte/">Weitere Unterkünfte</a></li><li><a href="/unterkunft-tikibar/unterkunft-anfragen/">Unterkunft anfragen</a></li><li><a href="/unterkunft-tikibar/preise/">Preise</a></li>
+              </ul>
+            </div>
+           </li>
+           
+           <li> <a title="Events" href="/events/">Events &amp; Konzerte</a></li>
+           <li><a title="UMMAII Rupien (Gutscheine)" href="/ummaii-buerger-werden/ummaii-rupien-gutscheine/">UMMAII Rupien (Gutscheine)</a></li>
+           <li> <a title="Shop" href="/online-shop/">Online-Shop</a></li>
+           <li> <a title="FAQ" href="javascript:void(0);">FAQs ></a>
+            <div class="mp-level" data-level="2"> <a href="javascript:void(0);" class="mp-back" title="zurück"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></a>
+              <ul class="sub-menu third-level">
+                <li class="listheader">FAQs</li>
+                <li><a href="/faqs/faq-kitekurse/">FAQ Kitekurse</a></li><li><a href="/faqs/faq-windsurfkurse/">FAQ Windsurfkurse</a></li><li><a href="/faqs/faq-hochzeit-feiern/">FAQ Hochzeit & Feiern</a></li><li><a href="/faqs/faq-klassenfahrt/">FAQ Klassenfahrt</a></li> 
+              </ul>
+            </div>
+           </li>
+           <li> <a title="Jobs" href="/jobs/">Jobs</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+     
+      
+           
+
+    
+    
+    <div class="scrollToTop circle"><i class="fa fa-chevron-up" aria-hidden="true"></i></div>
+    
+    
+    
+    <div class="page-wrapper">
+    
+
+      
+      <div class="header-container">
+        
+        <header class="header fixed fixed-before clearfix hidden-xs">
+          
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                
+                
+                <div class="header-left clearfix">
+                  <div class="navi">  
+                    <ul>
+                      <li class="navIcon">
+                        <a href="javascript:void(0);" class="navTrigger" title="Navigation"></a>
+                      </li>
+                      <li class="searchIcon">
+                        <a href="javascript:void(0);" class="searchTrigger" title="Suche"></a>
+                      </li>
+                      <li class="camIcon">
+                        <a href="javascript:void(0);" class="camTrigger" title="Soziale Netze"></a>
+                      </li>
+                      <li class="weatherIcon">
+                        <a href="javascript:void(0);" class="weatherTrigger" title="Wind &amp; Wetter"></a>
+                      </li>
+                    </ul>
+                    
+                  </div>
+                  <div class="searchbar">
+                    <form id="form_kesearch_pi1" class="form-inline" method="get" name="form_kesearch_pi1" action="/suchergebnisse/">
+                      <div class="form-group">
+                       
+                        <div class="input-group">
+                          <input type="hidden" name="id" value="90" />
+                          <input type="text" class="form-control" id="ke_search_sword" name="tx_kesearch_pi1[sword]" placeholder="Suchen">
+                          <input id="kesearchpagenumber" type="hidden" name="tx_kesearch_pi1[page]" value="1" />
+                          <input id="resetFilters" type="hidden" name="tx_kesearch_pi1[resetFilters]" value="0" />
+                          <input id="sortByField" type="hidden" name="tx_kesearch_pi1[sortByField]" value="" />
+                          <input id="sortByDir" type="hidden" name="tx_kesearch_pi1[sortByDir]" value="" />
+                        </div>
+                      </div>
+                      <button id="kesearch_submit" type="submit" class="btn btn-primary submit">Los</button>
+                      
+                    </form>
+                  </div>
+                  
+                  <div class="weatherbar"><div class="headline">Aktuelles Wetter</div>
+	<div class="weather-act">
+		<div class="weather-item-act">
+			<div class="icon_large"><i class="wi wi-day-sunny"></i></div>
+			<div class="desc">Klar / Sonnig</div>
+			<div class="degree">Temperatur:&nbsp;9&deg;C</div>
+			<div class="wind">Wind:&nbsp;14&nbsp;km/h aus Richtung&nbsp;W</div>
+			<div class="humidity">Luftfeuchte:&nbsp;75%</div>
+			<div class="pressure">Luftdruck:&nbsp;1020&nbsp;hPa</div>
+		</div>
+	</div>
+                    <a href="https://www.windguru.cz/665105" target="_blank" title="Windvorhersage" class="Button-Orange">zur Windguru Windvorhersage</a>
+                  </div>
+ 
+                  <div class="socialbar">
+                   <div class="sb_icons">
+                       <a class="fbhlink" target="_blank" title="Facebook" href="https://www.facebook.com/Windsurfing-R%C3%BCgen-Kite-Island-109188582483052/"><i class="fa fa-facebook-square"></i></a>
+                       <a class="ythlink" target="_blank" title="Youtube" href="https://www.youtube.com/channel/UCYW327w3_XXq-sUDbzFXVnA"><i class="fa fa-youtube-square"></i></a>
+                       <a class="inhlink" target="_blank" title="Instagram" href="https://www.instagram.com/ummaii_ruegen/"><i class="fa fa-instagram"></i></a> 
+                    </div>
+                  </div>
+
+                </div>
+                
+
+              
+          
+                
+                
+                <div class="header-right clearfix">
+                  
+               <div class="logoContainer">
+                 <a href="/home/" title="Zur Startseite"><div class="logo"></div></a>
+               </div>
+               
+                
+                </div>
+                
+          
+              </div>
+            </div>
+          </div>
+          
+        </header>
+        
+      </div>
+       
+
+<div class="">
+
+<header class="header mobile hidden-lg hidden-md hidden-sm">
+  <div class="navi">
+    <ul>
+       <li class="navIcon">
+         <a href="javascript:;" class="navTrigger"></a>
+      </li>
+      <li class="weatherIcon">
+        <a href="javascript:;" class="weatherTrigger"></a>
+      </li>
+      <li class="camIcon">
+        <a href="javascript:void(0);" class="camTrigger" title="Soziale Netze"></a>
+      </li>
+      <li class="searchIcon">
+        <a href="javascript:;" class="searchTrigger"></a>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="searchbar">
+    <form id="form_kesearch_pi1" class="form-inline" method="get" name="form_kesearch_pi1" action="/suchergebnisse/">
+       <div class="form-group">
+         
+         <div class="input-group">
+           <input type="hidden" name="id" value="90" />
+           <input type="text" class="form-control" id="ke_search_sword" name="tx_kesearch_pi1[sword]" placeholder="Suchen">
+           <input id="kesearchpagenumber" type="hidden" name="tx_kesearch_pi1[page]" value="1" />
+           <input id="resetFilters" type="hidden" name="tx_kesearch_pi1[resetFilters]" value="0" />
+           <input id="sortByField" type="hidden" name="tx_kesearch_pi1[sortByField]" value="" />
+           <input id="sortByDir" type="hidden" name="tx_kesearch_pi1[sortByDir]" value="" />
+         </div>
+         
+      </div>
+      <button id="kesearch_submit" type="submit" class="btn btn-primary submit">Los</button>
+                      
+    </form>
+  </div>
+  <div class="weatherbar">
+    <div class="headline">Aktuelles Wetter</div>
+	<div class="weather-act">
+		<div class="weather-item-act">
+			<div class="icon_large"><i class="wi wi-day-sunny"></i></div>
+			<div class="desc">Klar / Sonnig</div>
+			<div class="degree">Temperatur:&nbsp;9&deg;C</div>
+			<div class="wind">Wind:&nbsp;14&nbsp;km/h aus Richtung&nbsp;W</div>
+			<div class="humidity">Luftfeuchte:&nbsp;75%</div>
+			<div class="pressure">Luftdruck:&nbsp;1020&nbsp;hPa</div>
+		</div>
+	</div>
+      <a href="https://www.windguru.cz/665105" target="_blank" title="Windvorhersage" class="Button-Orange">zur Windguru Windvorhersage</a>
+  </div>
+  <div class="socialbar">
+    <div class="sb_icons">
+      <a class="fbhlink" target="_blank" title="Facebook" href="https://www.facebook.com/Windsurfing-R%C3%BCgen-Kite-Island-109188582483052/"><i class="fa fa-facebook-square"></i></a>
+      <a class="ythlink" target="_blank" title="Youtube" href="https://www.youtube.com/channel/UCYW327w3_XXq-sUDbzFXVnA"><i class="fa fa-youtube-square"></i></a>
+      <a class="inhlink" target="_blank" title="Instagram" href="https://www.instagram.com/ummaii_ruegen/"><i class="fa fa-instagram"></i></a>
+    </div>
+  </div>
+  
+  <div class="logoContainer">
+    <a href="/home/" title="Zur Startseite"><div class="logo"></div></a>
+  </div>
+  
+</header>
+</div>
+
+ 
+      
+
+
+       
+      
+      <div class="banner clearfix">
+
+        
+        
+        <div class="slideshow">
+          
+          
+          
+          <div class="slider-revolution-5-container">
+            <div id="slider-banner-fullwidth-hero" class="slider-banner-fullwidth-hero rev_slider" data-version="5.0">
+              <ul class="slides">
+                
+                
+                <li data-transition="fade" data-slotamount="default" data-masterspeed="default" data-title="">
+                
+                
+                <img src="/fileadmin/redaktion/slider-home/titelbild.jpg" alt="slidebg1" data-bgposition="center center"  data-bgrepeat="no-repeat" data-bgfit="cover" class="rev-slidebg">
+                
+                
+                <div class="tp-caption dark-translucent-bg"
+                  data-x="center"
+                  data-y="center"
+                  data-start="0"
+                  data-transform_in="opacity:0;s:600;e:Power2.easeInOut;"
+                  data-transform_out="opacity:0;s:600;s:300;"
+                  data-width="5000"
+                  data-height="5000">
+                </div>
+
+              
+                <div class="rs-background-video-layer hidden-xs"
+                  data-forcerewind="on"
+                  data-volume="mute"
+                  data-videowidth="100%"
+                  data-videoheight="100%"
+                  data-videomp4="/fileadmin/redaktion/slider-home/ummaii_final.mp4"
+                  data-videoloop="loop"
+                  data-aspectratio="16:9"
+                  data-autoplay="true"
+                  data-autoplayonlyfirsttime="false"
+                  data-nextslideatend="false">
+                </div> 
+                  
+            
+              
+  
+                </li>
+                
+
+              </ul>
+              <div class="tp-bannertimer"></div>
+            </div>
+          </div>
+          
+
+        </div>
+        
+
+      </div>
+        
+     
+ <div id="page-start"></div>
+      
+
+
+<div id="c139" class="csc-frame csc-frame-default"><section class=" pt-30 pb-30 white"><div class="container"><div id="c1310" class="csc-frame csc-frame-default"><div class="csc-header csc-header-n1"><h1 class="csc-header-alignment-center csc-firstHeader">Herzlich Willkommen im 1. freien Inselstaat &quot;UMMAII&quot;</h1></div><p class="text-center"><br /> Wassersport- Urlaub im wunderschönen Westen der Insel Rügen - mitten im Nationalpark Vorpommersche Boddenlandschaft. Wenn Du einen Ort abseits vom Massentourismus suchst wirst du hier fündig. Zwar gibt es hier keine Sandstrände, dafür noch nahezu unberührte Natur. Tauche ein in unseren kleinen Mikrokosmos Ummaii&nbsp; und erlebe das <a href="https://ummaii-hostel.sirvoy.me/" target="_blank">Surfhostel</a>&nbsp;ebenso wie die einmalige Surfstation am größten&nbsp;Stehrevier Deutschlands - wir freuen uns auf Euch!</p>
+<p class="text-center"><strong>Öffnungszeiten / Service im Oktober</strong></p>
+<p class="text-center">Das <strong>Surfcenter</strong> ist den gesamten Oktober besetzt. Schulung noch bis 12.10. Anschließend fahren wir langsam runter. Meldet euch vorab zur Sicherheit telefonisch bei uns.</p>
+<p class="text-center">Die <strong>TIKI Bar</strong> hat Freitag - Sonntag 17-21 Uhr geöffnet. Küche bis 20.00 Uhr<br /> Am 31.10. wird Halloween gefeiert !</p></div><div class="overlay"><div class="row "><div class="col-md-6   "><div class="image-teaser-border">
+<div class="image-box shadow text-center">                     
+    <div class="overlay-container overlay-visible">                      
+   	 	
+			<img src="/fileadmin/redaktion/bilder/home/windsurfkurse.jpg" width="800" height="533" alt="" border="0">
+		
+		<a href="/windsurfkurse/uebersicht/" class="overlay-link" title="Windsurfkurse"></a>
+	  	<div class="overlay-bottom">
+        	<div class="semicircle"><p><a href="/windsurfkurse/uebersicht/" title="Windsurfkurse">ansehen</a></p></div>      
+      	</div>                                           
+    </div>                   
+  </div>
+  <h2><a href="/windsurfkurse/uebersicht/" title="Windsurfkurse">Windsurfkurse</a></h2>
+</div></div><div class="col-md-6   "><div class="image-teaser-border">
+<div class="image-box shadow text-center">                     
+    <div class="overlay-container overlay-visible">                      
+   	 	
+			<img src="/fileadmin/redaktion/bilder/teaser/KitekurseTeaser.jpg" width="800" height="533" alt="" border="0">
+		
+		<a href="/kitesurfkurse/uebersicht/" class="overlay-link" title="Kitesurfkurse"></a>
+	  	<div class="overlay-bottom">
+        	<div class="semicircle"><p><a href="/kitesurfkurse/uebersicht/" title="Kitesurfkurse">ansehen</a></p></div>      
+      	</div>                                           
+    </div>                   
+  </div>
+  <h2><a href="/kitesurfkurse/uebersicht/" title="Kitesurfkurse">Kitesurfkurse</a></h2>
+</div></div></div></div><div class="overlay2"><div class="row "><div class="col-md-4   "><div class="image-teaser-border">
+<div class="image-box shadow text-center">                     
+    <div class="overlay-container overlay-visible">                      
+   	 	
+			<img src="/fileadmin/redaktion/bilder/teaser/Klassenfahrten-Outdoorwoche-Teaser.jpg" width="800" height="800" alt="" border="0">
+		
+		<a href="/klassenfahrten/" class="overlay-link" title="Klassenfahrten &amp; Gruppenreisen"></a>
+	  	<div class="overlay-bottom">
+        	<div class="semicircle"><p><a href="/klassenfahrten/" title="Klassenfahrten &amp; Gruppenreisen">ansehen</a></p></div>      
+      	</div>                                           
+    </div>                   
+  </div>
+  <h2><a href="/klassenfahrten/" title="Klassenfahrten &amp; Gruppenreisen">Klassenfahrten &amp; Gruppenreisen</a></h2>
+</div></div><div class="col-md-4   "><div class="image-teaser-border">
+<div class="image-box shadow text-center">                     
+    <div class="overlay-container overlay-visible">                      
+   	 	
+			<img src="/fileadmin/redaktion/bilder/home/teaser_hochzeit.jpg" width="800" height="800" alt="" border="0">
+		
+		<a href="/heiraten-feiern/feiern-im-surfhostel/" class="overlay-link" title="Heiraten &amp; Feiern auf UMMAII"></a>
+	  	<div class="overlay-bottom">
+        	<div class="semicircle"><p><a href="/heiraten-feiern/feiern-im-surfhostel/" title="Heiraten &amp; Feiern auf UMMAII">ansehen</a></p></div>      
+      	</div>                                           
+    </div>                   
+  </div>
+  <h2><a href="/heiraten-feiern/feiern-im-surfhostel/" title="Heiraten &amp; Feiern auf UMMAII">Heiraten &amp; Feiern auf UMMAII</a></h2>
+</div></div><div class="col-md-4   "><div class="image-teaser-border">
+<div class="image-box shadow text-center">                     
+    <div class="overlay-container overlay-visible">                      
+   	 	
+			<img src="/fileadmin/redaktion/bilder/home/teaser_baumhaus.jpg" width="800" height="800" alt="" border="0">
+		
+		<a href="/unterkunft-tikibar/uebersicht/" class="overlay-link" title="Hostel, Tiny Lodge, Baumhaus &amp; Tikibar"></a>
+	  	<div class="overlay-bottom">
+        	<div class="semicircle"><p><a href="/unterkunft-tikibar/uebersicht/" title="Hostel, Tiny Lodge, Baumhaus &amp; Tikibar">ansehen</a></p></div>      
+      	</div>                                           
+    </div>                   
+  </div>
+  <h2><a href="/unterkunft-tikibar/uebersicht/" title="Hostel, Tiny Lodge, Baumhaus &amp; Tikibar">Hostel, Tiny Lodge, Baumhaus &amp; Tikibar</a></h2>
+</div></div></div></div><div id="c1413" class="csc-frame csc-frame-default"><div class="lno"></div></div><div id="c1412" class="csc-frame csc-frame-default csc-space-before-large"><div class="csc-header csc-header-n5"><h2 class="csc-header-alignment-center">Buche Deine Unterkunft</h2></div></div><div id="c1411" class="csc-frame csc-frame-default"><script></script></div></div></section></div><div id="c140" class="csc-frame csc-frame-default"><section class=" pt-100 pb-100 white parallax" style="background-image: url('/uploads/pics/sonnenuntergang-bg-01_01.jpg');background-size:cover;"><div class="container"><div id="c76" class="csc-frame csc-frame-default"><div class="row "><div class="col-md-4   "><div id="c1249" class="csc-frame csc-frame-default"><div class="teaser-white image-teaser-border">
+	  <h3>Stand up Paddling</h3>
+		<a href="/windsurfkurse/preise/">
+		  
+			<img src="/fileadmin/redaktion/bilder/home/familien-sup-800x320_72dpi.jpg" width="800" height="320" alt="" border="0">
+		  
+		</a>
+	  <p class="bodytext">SUP - Vermietung. &nbsp;Hier gehts zu den <br />Preisen...</p>
+	  <a href="/windsurfkurse/preise/" class="btn btn-primary">mehr erfahren</a>
+	
+	</div></div><div id="c75" class="csc-frame csc-frame-default"><div class="teaser-white image-teaser-border">
+	  <h3>Kitekurs buchen</h3>
+		<a href="/kitesurfkurse/uebersicht/">
+		  
+			<img src="/fileadmin/redaktion/bilder/teaser-small/small-teaser-kitekurs.jpg" width="800" height="320" alt="" border="0">
+		  
+		</a>
+	  <p class="bodytext">Du hast Interesse an einem Kitekurs, der Dich fordert...</p>
+	  <a href="/kitesurfkurse/uebersicht/" class="btn btn-primary">mehr erfahren &amp; buchen</a>
+	
+	</div></div></div><div class="col-md-4   "><div id="c712" class="csc-frame csc-frame-default"><div class="teaser-white image-teaser-border">
+	  <h3>Kauf Dir ein Stück Glück!</h3>
+		<a href="http://www.uns-eigen.de">
+		  
+			<img src="/fileadmin/redaktion/bilder/home/hostel_drohne_800x322_72dpi.jpg" width="800" height="322" alt="" border="0">
+		  
+		</a>
+	  <p class="bodytext"><strong>Hilf uns das Surfhostel weiter zu betreiben!!!</strong></p>
+	  <a href="http://www.uns-eigen.de" class="btn btn-primary">mehr erfahren</a>
+	
+	</div></div><div id="c74" class="csc-frame csc-frame-default"><div class="teaser-white image-teaser-border">
+	  <h3>Windsurfkurs buchen</h3>
+		<a href="/windsurfkurse/uebersicht/">
+		  
+			<img src="/fileadmin/redaktion/bilder/teaser-small/small-teaser-windsurfkurs.jpg" width="800" height="320" alt="" border="0">
+		  
+		</a>
+	  <p class="bodytext">Deinen Wunschkurs einfach &amp; schnell online buchen...</p>
+	  <a href="/windsurfkurse/uebersicht/" class="btn btn-primary">mehr erfahren &amp; buchen</a>
+	
+	</div></div></div><div class="col-md-4   "><div id="c1191" class="csc-frame csc-frame-default"><div class="teaser-white image-teaser-border">
+	  <h3>Wingsurfen</h3>
+		<a href="/wingsurfen/">
+		  
+			<img src="/fileadmin/_processed_/f/a/csm_wingsurfen2_90bd1a25b3.jpg" width="800" height="319" alt="" border="0">
+		  
+		</a>
+	  <p class="bodytext">2 Stunden Modul ab 90&euro;<br />&nbsp;&nbsp; </p>
+	  <a href="/wingsurfen/" class="btn btn-primary">mehr erfahren und buchen</a>
+	
+	</div></div><div id="c1125" class="csc-frame csc-frame-default"><div class="teaser-white image-teaser-border">
+	  <h3>Ummaii Paradies Festival</h3>
+		<a href="/events-konzerte/ummaii-paradies-festival/">
+		  
+			<img src="/fileadmin/redaktion/bilder/events/2018/upfestival/ummaii_paradies_teaser_schmal.jpg" width="800" height="322" alt="" border="0">
+		  
+		</a>
+	  <p class="bodytext">22.-24.05.2026&nbsp;(Pfingsten)... der Event für die ganze Familie.&nbsp;</p>
+	  <a href="/events-konzerte/ummaii-paradies-festival/" class="btn btn-primary">mehr erfahren</a>
+	
+	</div></div></div></div></div></div></section></div><div id="c141" class="csc-frame csc-frame-default"><section class=" pt-30 pb-30 white"><div class="container"><div id="c128" class="csc-frame csc-frame-default"><div class="csc-header csc-header-n1"><h1 class="csc-header-alignment-center csc-firstHeader">Insel Ummaii  – erster baltischer Inselstaat</h1></div></div><div id="c145" class="csc-frame csc-frame-default"><p style="text-align: center;" class="bodytext">Reise nach Ummaii! - Dort entdeckst Du nicht nur paradiesische Surfbedingungen sondern auch einen verzaubernden Kosmos f&uuml;r alle Sinne. Schalte ab um voll aufzudrehen. Erlebe die Tage und N&auml;chte in unber&uuml;hrter Natur, zelebriere Dich und Deinen Sport, tanze auf Deiner alternativen Traumhochzeit und nenne das Paradies Dein Eigen.</p>
+<p style="text-align: center;" class="bodytext"><b>Alles an einem Spot</b><br />Und zwar nicht irgendein Spot - sondern Deutschlands gr&ouml;&szlig;tes Stehrevier f&uuml;r Wassersport. Auf der Insel Ummanz vor Hiddensee muss man gewesen sein. Spot-Info gibt&acute;s <a href="/fileadmin/redaktion/pdf-dokumente/Spot-Info_Ummaii.pdf" target="_blank">hier</a>. Wir befinden uns auf einem modernen Campingplatz der <a href="http://www.regenbogen.ag" target="_blank">Regenbogen AG</a> ,und bieten neben <a href="/windsurfkurse/uebersicht/" title="Windsurfkurse">Windsurf</a>- und <a href="/kitesurfkurse/uebersicht/" title="Kitesurfkurse">Kitekursen</a> auch <a href="/unterkunft-tikibar/uebersicht/" title="Unterk&amp;uuml;nfte">Unterk&uuml;nfte</a> im R&uuml;gen Surfhostel. S&uuml;dsee an der Ostsee... <b>hier gibt&acute;s Urlaub!</b></p></div><div id="c70" class="csc-frame csc-frame-default"><div class="row "><div class="col-md-7 col-lg-7   "><div id="c144" class="csc-frame csc-frame-default"><div class="csc-textpic csc-textpic-center csc-textpic-above"><div class="csc-textpic-imagewrap"><div class="csc-textpic-center-outer"><div class="csc-textpic-center-inner"><div class="csc-textpic-image csc-textpic-last"><img src="/fileadmin/redaktion/bilder/home/Karte_Ummaii.jpg" width="800" height="395" alt="" border="0"></div></div></div></div></div></div></div><div class="col-md-5 col-lg-5   "><div class="checklist"><ul><li><strong>gr&ouml;&szlig;tes Stehrevier</strong> Deutschlands</li> <li><strong>Wassersportcenter</strong> auf &uuml;ber 300 m<sup>2</sup></li> <li><strong>Wind- &amp; Kitesurfkurse</strong> seit 1994</li> <li><strong>Surfhostel</strong> &amp; weitere Unterk&uuml;nfte</li> <li>mitten im <strong>Nationalpark</strong></li> <li>Location f&uuml;r <strong>Feste</strong> und <strong>Feiern</strong></li> <li><strong>Livemusik</strong> &amp; <strong>Events</strong></li> <li><strong>hier gibt&acute;s Urlaub!</strong></li></ul></div></div></div></div><div id="c1072" class="csc-frame csc-frame-default"><div class="csc-header csc-header-n4"><h2 class="csc-header-alignment-center">Faszination Wassersport und Surfhostel mit entspannter Atmosphäre</h2></div><p style="text-align: center;" class="bodytext">In unserer Kiteschule an der Ostsee kannst Du an einem <a href="/kitesurfkurse/uebersicht/" title="Kitesurfkurse">Kitesurfkurs</a> teilnehmen, der genau auf Dein K&ouml;nnen zugeschnitten ist. Anf&auml;ngern bringen unsere erfahrenen Coaches Kite- und Windsurfen bei, und selbst alte Hasen auf dem Board erhalten bei uns noch n&uuml;tzliche Tipps. Ob Schnupperkurs oder mehrt&auml;giges Camp, hier bist Du genau richtig, wenn f&uuml;r Dich das Brett die Welt bedeutet.</p>
+<p style="text-align: center;" class="bodytext">Wir zeigen Dir in Theorie und Praxis, wie es geht. Wer bei uns einen Surf- oder Kitekurs belegt, kann am Ende mit einer Lizenz des Verbandes Deutscher Windsurfing und Wassersportschulen (VDWS) in der Tasche nach Hause fahren. Damit ist man dazu berechtigt, an jeder Kiteschule Equipment zu mieten.</p>
+<p style="text-align: center;" class="bodytext">Wenn Du eine passende <a href="/unterkunft-tikibar/uebersicht/" title="Zum Hostel">Jugendherberge</a> auf R&uuml;gen suchst, in der Du mit Deiner Clique chillen und eine gute Zeit verbringen kannst, bieten wir Dir eine attraktive Unterkunft. Die Zimmer in unserem Haupthaus und unsere f&uuml;nf Bungalows sind gem&uuml;tlich eingerichtet, als besondere Attraktionen erwarten Dich ein H&auml;ngemattenpark, eine Chill-Lounge und eine <a href="/unterkunft-tikibar/ummaii-tikibar/" title="Tiki-Bar">Tiki-Bar</a>.</p>
+<p style="text-align: center;" class="bodytext">Aber nicht nur f&uuml;r eine erholsame Auszeit ist unser Hostel die perfekte Wahl. Auch wenn es um das Thema <a href="/heiraten-feiern/feiern-im-surfhostel/" title="Heiraten auf R&amp;uuml;gen">Heiraten auf R&uuml;gen</a> geht, stellen wir die Location f&uuml;r ein unvergessliches Hochzeitsfest zur Verf&uuml;gung. Wer im S&uuml;dseeflair heiraten m&ouml;chte, muss nicht zwangsweise weit weg fliegen!</p></div></div></section></div><div id="c1414" class="csc-frame csc-frame-default"><section class=" pt-50 pb-50 white"><div class="container"><div id="c127" class="csc-frame csc-frame-default"><div class="responsive-video">
+<iframe width="854" height="480" src="https://www.youtube-nocookie.com/embed/AJ_h4sqBCYE?rel=0" frameborder="0" allowfullscreen></iframe>
+</div></div></div></section></div><div id="c269" class="csc-frame csc-frame-default"><div class="csc-header csc-header-n5"><h2 class="csc-header-alignment-center">UMMAII Events</h2></div></div>
+<section class="regular slider">
+
+
+
+  
+
+      <div class="no-news-found">
+        
+      </div>
+    
+
+
+
+
+
+</section>
+
+
+      
+   
+      
+     
+<div class="clearfix"></div>
+
+      
+    <footer id="footer" class="clearfix ">
+  
+  <div class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="row">
+          <div class="col-md-2 col-lg-2 hidden-sm hidden-xs">
+            <div class="footer-content">
+              
+              <img src="/fileadmin/templates/images/header_logo_ummaii.svg" alt="UMMAII - sunset island rügen"/>
+            </div>
+          </div>
+          <div class="clearfix visible-sm"></div>
+          <div class="col-md-9 col-lg-8 col-lg-offset-2">
+            
+            <div class="footer-content">
+              <div>
+                <div class="row pb-30">
+                  <div class="col-sm-5">
+                    <h2 class="title">Kite- &amp; Surfschule</h2>
+                    <p class="normal"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+493830582240">038305 82240</a></p>
+                    <p class="normal"><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:kitesurfen@ummaii.de">kitesurfen@ummaii.de</a></p>
+                    <p class="normal"><i class="fa fa-map-marker" aria-hidden="true"></i>Regenbogencamp, 18569 Suhrendorf</p>
+                  </div>
+                  <div class="col-sm-5 xs-pt30">
+                    <h2 class="title">Surfhostel &amp; Tikibar</h2>
+                    <p class="normal"><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:+4938305565056">038305 55018</a></p>
+                    <p class="normal"><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailto:betrieb@uns-eigen.de">betrieb@uns-eigen.de</a></p>
+                    <p class="normal"><i class="fa fa-map-marker" aria-hidden="true"></i>Ortsteil Haide, 18569 Ummanz</p>
+                  </div>
+                  <div class="col-sm-2">
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+    </div> 
+  <div class="subfooter">
+    <div class="container">
+            <div class="footer-inner">
+        <div class="row">
+          <div class="col-sm-4 col-md-6 col-lg-6">
+            <p class="cpright">UMMAII - Windsurfing Rügen | Kite island &amp; Rügen Surfhostel<br />Copyright © 2022 | <a href="/impressum">Impressum</a> | <a href="/datenschutz">Datenschutz</a> | <a href="/agb-und-widerrufsbelehrung">AGB &amp; Widerrufbelehrung</a></p>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-2 col-lg-offset-4 text-right">
+            <ul class="social-links circle animated-effect-1">
+              <li class="facebook"><a target="_blank" title="Facebook" href="https://www.facebook.com/Windsurfing-R%C3%BCgen-Kite-Island-109188582483052/"><i class="fa fa-facebook"></i></a></li>
+              <li class="googleplus"><a target="_blank" title="Youtube" href="https://www.youtube.com/channel/UCYW327w3_XXq-sUDbzFXVnA"><i class="fa fa-youtube"></i></a></li>
+              <li class="linkedin"><a target="_blank" title="Instagram" href="https://www.instagram.com/ummaii_ruegen/"><i class="fa fa-instagram"></i></a></li> 
+            </ul>
+          </div>
+        </div>
+      </div>
+     </div>
+   </div>  
+</footer>  
+           
+
+    </div>
+    
+ 
+  </div>
+</div>
+
+<script></script>
+
+
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+
+<script></script>
+<script></script>
+<script></script>
+
+<script></script>
+<script></script>
+<script></script>
+<script></script> 
+
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+
+</body>
+</html>

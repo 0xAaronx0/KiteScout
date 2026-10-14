@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title> Kailua Lodge Pelzerhaken</title>
+ <meta name="msapplication-TileImage" content="https://www.kailualodge.de/wp-content/themes/cleantheme/images/tile.png">
+ <meta name="msapplication-TileImage" content="https://www.kailualodge.de/wp-content/themes/cleantheme/images/tile.png">
+ <meta name='robots' content='max-image-preview:large' />
+<style></style>
+<style></style>
+<style></style>
+<style></style>
+<style></style>
+<noscript>
+</noscript>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<meta name="generator" content="WordPress 7.1.3" />
+	</head>
+	<body>
+ <div id="wrapper">
+ <div> 
+ <header id="header">
+ <div id="branding"> 
+ <h1 id="logo">
+ <a href="https://www.kailualodge.de">
+ <img src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/logo.svg" alt="Logo">
+ <span>Kailua Lodge Pelzerhaken - Herrliche Ferienunterkünfte an der Ostsee!</span>
+ </a>
+ </h1>
+ </div>
+ <button><span></span></button>
+ <div> 
+ <ul id="main-menu"><li><a href="https://www.kailualodge.de/uebernachten/"><span>Unterkünfte</span></a><ul><li><a href="https://www.kailualodge.de/uebernachten/"><div><figure><img width="300" height="187" src="https://www.kailualodge.de/wp-content/uploads/2020/06/lageplan-300x187.jpg" alt="" decoding="async" fetchpriority="high" loading="eager" /></figure></div><span>Alle Feriendomizile</span></a><ul><li><a href="https://www.kailualodge.de/uebernachten/"><span>Welcher Haustyp passt zu mir?</span></a></li></ul></li><li><a href="https://www.kailualodge.de/ferienhaeuser/"><div><figure><img width="300" height="169" src="https://www.kailualodge.de/wp-content/uploads/2024/08/Architektur_KailuaLodge_9348_600px-web-300x169.jpg" alt="" decoding="async" loading="eager" /></figure></div><span>Ferienhäuser</span></a><ul><li><a href="https://www.kailualodge.de/lodge/ferienhaus-typ-a/"><span>Ferienhaus Typ A</span></a></li><li><a href="https://www.kailualodge.de/lodge/ferienhaus-typ-b1/"><span>Ferienhaus Typ B1</span></a></li><li><a href="https://www.kailualodge.de/lodge/ferienhaus-typ-b2/"><span>Ferienhaus Typ B2</span></a></li></ul></li><li><a href="https://www.kailualodge.de/ferienwohnungen/"><div><figure><img width="300" height="200" src="https://www.kailualodge.de/wp-content/uploads/2024/08/architektur_kailualodge_9362_web-300x200.jpg" alt="" decoding="async" loading="eager" /></figure></div><span>Ferienwohnungen</span></a><ul><li><a href="https://www.kailualodge.de/lodge/ferienwohnung-typ-d1/"><span>Ferienwohnung Typ D1</span></a></li><li><a href="https://www.kailualodge.de/lodge/ferienwohnung-typ-d2/"><span>Ferienwohnung Typ D2</span></a></li><li><a href="https://www.kailualodge.de/kailua-loft-waterfront/"><span>Loft „Waterfront“</span></a></li></ul></li><li><a href="https://www.kailualodge.de/lodges/"><div><figure><img width="300" height="169" src="https://www.kailualodge.de/wp-content/uploads/2020/06/kauai_aussenansicht-haus_03_1920-300x169.jpg" alt="" decoding="async" loading="eager" /></figure></div><span>Lodges</span></a><ul><li><a href="https://www.kailualodge.de/lodge/lodge-typ-c1/"><span>Lodge Typ C1</span></a></li><li><a href="https://www.kailualodge.de/lodge/lodge-typ-c2/"><span>Lodge Typ C2</span></a></li><li><a href="https://www.kailualodge.de/lodge/mini-lodge-typ-c1/"><span>Mini-Lodge Typ C1</span></a></li><li><a href="https://www.kailualodge.de/lodge/mini-lodge-typ-c2/"><span>Mini-Lodge Typ C2</span></a></li></ul></li></ul></li><li><a href="https://www.kailualodge.de/urlaub-planen/"><span>Urlaub vor Ort</span></a><ul><li><a><div><figure><img width="300" height="169" src="https://www.kailualodge.de/wp-content/uploads/2021/05/kailualodge_service-300x169.jpg" alt="Service Kailua Lodge" decoding="async" loading="eager" /></figure></div><span>Service</span></a><ul><li><a href="https://www.kailualodge.de/anreise-und-kontakt/"><span>Anreise und Kontakt</span></a></li><li><a href="https://www.kailualodge.de/downloads/"><span>Digitale Gästemappe</span></a></li><li><a href="https://www.kailualodge.de/faq/"><span>Wichtige Fragen und Antworten</span></a></li></ul></li><li><a><div><figure><img width="300" height="200" src="https://www.kailualodge.de/wp-content/uploads/2021/01/kailua_lodge_naish_procenter_1-300x200.jpg" alt="" decoding="async" loading="eager" /></figure></div><span>Wassersport</span></a><ul><li><a href="https://www.kailualodge.de/wassersportferien-sail-surf-pelzerhaken/"><span>Sail &#038; Surf Pelzerhaken</span></a></li></ul></li><li><a><div><figure><img width="300" height="169" src="https://www.kailualodge.de/wp-content/uploads/2020/07/KindertobenamStrand_0017_neu_1920px-300x169.jpg" alt="" decoding="async" loading="eager" /></figure></div><span>Unbeschwerte Ostseezeit</span></a><ul><li><a href="https://www.kailualodge.de/herbst-und-winterspecial/"><span>Herbst- und Winterspecial</span></a></li><li><a href="https://www.kailualodge.de/familienurlaub-mit-kindern/"><span>Familienurlaub an der Ostsee</span></a></li><li><a href="https://www.kailualodge.de/urlaub-mit-hund/"><span>Urlaub auf vier Pfoten</span></a></li><li><a href="https://www.kailualodge.de/ihr-urlaubsort-pelzerhaken/"><span>Ihr Urlaubsort Pelzerhaken</span></a></li></ul></li><li><a><div><figure><img width="300" height="169" src="https://www.kailualodge.de/wp-content/uploads/2021/05/teaser_beachhouse-300x169.png" alt="" decoding="async" loading="eager" /></figure></div><span>Schlemmen und chillen</span></a><ul><li><a href="https://www.kailualodge.de/beachhouse-pelzerhaken/"><span>BeachHouse Pelzerhaken</span></a></li></ul></li></ul></li><li><a href="https://www.kailualodge.de/kailua-lodge/"><span>Kailua Lodge</span></a><ul><li><a href="https://www.kailualodge.de/galerie-folgt/"><div><figure><img width="300" height="169" src="https://www.kailualodge.de/wp-content/uploads/2021/02/galerie_test-300x169.jpg" alt="" decoding="async" loading="eager" /></figure></div><span>Galerie</span></a><ul><li><a href="https://www.kailualodge.de/galerie-folgt/"><span>Impressionen</span></a></li></ul></li><li><a><div><figure><img width="300" height="169" src="https://www.kailualodge.de/wp-content/uploads/2021/02/kailua_lodge_philosophie_2-300x169.jpg" alt="" decoding="async" loading="eager" /></figure></div><span>Philosophie</span></a><ul><li><a href="https://www.kailualodge.de/entstehung-der-kailua-lodge/"><span>Inspiration Hawaii</span></a></li></ul></li></ul></li><li><a href="https://www.kailualodge.de/buchungsanfrage/"><span>Buchungsanfrage</span></a></li></ul> </div>
+ </header> 
+ </div>
+<div>
+	<div id="main">
+ <div>
+ <main id="content">
+	<article id="post-2">
+ <div>
+ <div id="block_318169c387b190f2fb00d3ba7eebaf20">
+ <div>
+ <div>
+ <div>
+ <div>
+ <img decoding="async" width="1920" height="1020" src="https://www.kailualodge.de/wp-content/uploads/2024/08/slider-start-kailua-0275.jpg" alt="" loading="eager" /> </div>
+ <div><span></span></div>
+ <div>
+ <div>
+ <h2>Hawaiianisches Lebensgefühl trifft Ostseefrische</h2>
+ </div>
+ </div>
+ </div>
+ <div>
+ <div>
+ <img decoding="async" width="1920" height="1020" src="https://www.kailualodge.de/wp-content/uploads/2024/08/slider-start-kailua-9062.jpg" alt="" loading="eager" /> </div>
+ <div><span></span></div>
+ <div>
+ <div>
+ <h2>Hawaiianisches Lebensgefühl trifft Ostseefrische</h2>
+ </div>
+ </div>
+ </div>
+ <div>
+ <div>
+ <img decoding="async" width="1920" height="1020" src="https://www.kailualodge.de/wp-content/uploads/2024/08/slider-start-kailua-9300.jpg" alt="" loading="eager" /> </div>
+ <div><span></span></div>
+ <div>
+ <div>
+ <h2>Hawaiianisches Lebensgefühl trifft Ostseefrische</h2>
+ </div>
+ </div>
+ </div>
+ <div>
+ <div>
+ <img decoding="async" width="1920" height="1080" src="https://www.kailualodge.de/wp-content/uploads/2024/08/architektur_kailualodge_9340_web.jpg" alt="" loading="eager" /> </div>
+ <div><span></span></div>
+ <div>
+ <div>
+ <h2>Hawaiianisches Lebensgefühl trifft Ostseefrische</h2>
+ </div>
+ </div>
+ </div>
+ <div>
+ <div>
+ <img decoding="async" width="1920" height="1020" src="https://www.kailualodge.de/wp-content/uploads/2024/08/slider-start-kailua-9348.jpg" alt="" loading="eager" /> </div>
+ <div><span></span></div>
+ <div>
+ <div>
+ <h2>Hawaiianisches Lebensgefühl trifft Ostseefrische</h2>
+ </div>
+ </div>
+ </div>
+ <div>
+ <div>
+ <img decoding="async" width="1920" height="1020" src="https://www.kailualodge.de/wp-content/uploads/2024/08/slider-start-kailua-9362.jpg" alt="" loading="eager" /> </div>
+ <div><span></span></div>
+ <div>
+ <div>
+ <h2>Hawaiianisches Lebensgefühl trifft Ostseefrische</h2>
+ </div>
+ </div>
+ </div>
+ <div>
+ <div>
+ <img decoding="async" width="1920" height="1020" src="https://www.kailualodge.de/wp-content/uploads/2024/08/slider-start-kailua-9072.jpg" alt="" loading="eager" /> </div>
+ <div><span></span></div>
+ <div>
+ <div>
+ <h2>Hawaiianisches Lebensgefühl trifft Ostseefrische</h2>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div>
+ <div></div>
+ <div></div>
+ </div>
+ </div>
+ <script></script>
+ </div>
+<div><div>
+	<div id="block_ba8c32238951c1d8ea95081760fcc839">
+ <div>
+ <img decoding="async" width="697" height="783" src="https://www.kailualodge.de/wp-content/uploads/2020/06/bamboo1.png" alt="" loading="eager" /> 
+ </div>
+ <style></style>
+ <script></script>
+	</div>
+	<div id="block_706c023d9d33a8216bd1fb5ef60f22b6" aria-hidden="true">
+ <style></style>
+ </div>
+<h1>Herzlich willkommen in der Kailua Lodge</h1>
+	<div id="block_432c74e2901a1d69b1e7d3a274f94b3c" aria-hidden="true">
+ <style></style>
+ </div>
+<p>Am traumhaften Sandstrand in Pelzerhaken an der Lübecker Bucht genießen Sie in unserem hawaiianischen Feriendorf einen unbeschwerten Ferienhausurlaub der besonderen Art. Eingebettet in eine immergrüne Ruheoase mit exotischem Bambus und heimischem Grün erwarten Sie in unserer Kailua Lodge Urlaubsunterkünfte für jeden Geschmack: hochwertige, lichtdurchflutete Ferienhäuser über zwei Ebenen für Familien und Freunde, großzügige Ferienwohnungen für bis zu fünf Personen und charmante Lodge-Inseln für gemeinsame Erlebnisse. Lassen Sie sich von unserer Kailua Lodge inspirieren und freuen Sie sich in Ihrem nächsten Urlaub auf einen Hauch Südseeflair am Ostseestrand!</p>
+	<div id="block_d2213af4d188f23c5f841e9f7faa4788" aria-hidden="true">
+ <style></style>
+ </div>
+<div><div><div>
+<figure><a href="https://www.kailualodge.de/herbst-und-winterspecial/"><img decoding="async" width="1000" height="290" src="https://www.kailualodge.de/wp-content/uploads/2025/10/button-winterspecial2.png" alt="" /></a></figure>
+</div></div></div>
+	<div id="block_c6020061371c8cacab0e00c4c41b8d2d" aria-hidden="true">
+ <style></style>
+ </div>
+	<div id="block_8b27e57ace1083656a04b30bf6ccb00f">
+ <div>
+ <img decoding="async" width="1058" height="701" src="https://www.kailualodge.de/wp-content/uploads/2021/02/kailua_lodge_skizze_lodges_gross_2-2.png" alt="" loading="eager" /> 
+ </div>
+ <style></style>
+ <script></script>
+	</div>
+<h2>Entdecken Sie unsere Kailua Lodge virtuell</h2>
+<div>
+<div>
+<h4>&#8230; aus der Vogelperspektive (Filmdauer: 1 Minute)</h4>
+<figure><div>
+ <div data-borlabs-cookie-content-blocker-id="vimeo-content-blocker" data-borlabs-cookie-content="PGlmcmFtZSB0aXRsZT0iS2FpbHVhIExvZGdlIiBzcmM9Imh0dHBzOi8vcGxheWVyLnZpbWVvLmNvbS92aWRlby80ODkzNjUzNjk/ZG50PTEmYW1wO2FwcF9pZD0xMjI5NjMiIHdpZHRoPSI1MDAiIGhlaWdodD0iMjgxIiBmcmFtZWJvcmRlcj0iMCIgYWxsb3c9ImF1dG9wbGF5OyBmdWxsc2NyZWVuOyBwaWN0dXJlLWluLXBpY3R1cmU7IGNsaXBib2FyZC13cml0ZTsgZW5jcnlwdGVkLW1lZGlhOyB3ZWItc2hhcmUiIHJlZmVycmVycG9saWN5PSJzdHJpY3Qtb3JpZ2luLXdoZW4tY3Jvc3Mtb3JpZ2luIj48L2lmcmFtZT4="><div> <div></div> <div> <div></div> <div> <p>Sie sehen gerade einen Platzhalterinhalt von <strong>Vimeo</strong>. Um auf den eigentlichen Inhalt zuzugreifen, klicken Sie auf die Schaltfläche unten. Bitte beachten Sie, dass dabei Daten an Drittanbieter weitergegeben werden.</p> <a href="#" data-borlabs-cookie-show-provider-information role="button">Mehr Informationen</a> </div> <div> <a href="#" data-borlabs-cookie-unblock role="button">Inhalt entsperren</a> <a href="#" data-borlabs-cookie-accept-service role="button">Erforderlichen Service akzeptieren und Inhalte entsperren</a> </div> </div> </div></div>
+</div></figure>
+</div>
+<div>
+<h4>&#8230; auf einen Blick</h4>
+	<div id="block_007d497a70fb9d0e84aeb9bb2b783691">
+ <div>
+ <div>
+ <div>
+ <div> 
+	<article id="post-74-block_007d497a70fb9d0e84aeb9bb2b783691">
+ <div>
+ <div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2024/08/architektur_kailualodge_9086_web-galerie-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2024/08/architektur_kailualodge_9370_web-galerie-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/ferienhaus-a-kailualodge-3-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/ferienhaus-a-kailualodge-4-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/ferienhaus-a-kailualodge-5-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/ferienhaus-a-kailualodge-6-580x362.jpg" alt="" loading="eager" /> </div>
+ </div>
+ </div>
+ <script></script>
+ <div>
+ <div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ </div>
+ <h2>
+ <a href="https://www.kailualodge.de/lodge/ferienhaus-typ-a/" title="Ferienhaus Typ A">
+ Ferienhaus Typ A </a>
+ </h2>
+ <div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/size.svg" alt="Größe">
+ </span>
+ <span>
+ <span>Größe</span>
+ <span>100 m²</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/bedrooms.svg" alt="Schlafzimmer">
+ </span>
+ <span>
+ <span>Schlafzimmer</span>
+ <span>3</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/bathrooms.svg" alt="Badezimmer">
+ </span>
+ <span>
+ <span>Badezimmer / WC</span>
+ <span>2 / 2</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/people.svg" alt="Personen">
+ </span>
+ <span>
+ <span>Personen</span>
+ <span>6</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/beach.svg" alt="Strand in">
+ </span>
+ <span>
+ <span>Strand in</span>
+ <span>80 m</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/pets.svg" alt="Hunde erlaubt">
+ </span>
+ <span>
+ <span>Hunde erlaubt</span>
+ <span>Ja</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/parking.svg" alt="Parkplatz">
+ </span>
+ <span>
+ <span>Parkplatz</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/wlan.svg" alt="WLAN">
+ </span>
+ <span>
+ <span>WLAN</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/sauna.svg" alt="Sauna">
+ </span>
+ <span>
+ <span>Sauna</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/chimney.svg" alt="Kamin">
+ </span>
+ <span>
+ <span>Kamin</span>
+ </span>
+ </div>
+ </div>
+ </div>
+	</article>
+ </div>
+ <div> 
+	<article id="post-94-block_007d497a70fb9d0e84aeb9bb2b783691">
+ <div>
+ <div>
+ <div>
+ <img decoding="async" width="580" height="387" src="https://www.kailualodge.de/wp-content/uploads/2020/06/kailua_lodge_pelzerhaken_ferienhaus_b1-580x387.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/kula-8_1000x624px-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/kula-22_1000x624px-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/03_molokai_wohnbereich-1_1000x624px-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/05_molokai_wohnbereich-3_1000x624px-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/07_molokai_schlafzimmer-eg-1_1000x624px-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/pukalani-2_1000x624px-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/13_molokai_schlafzimmer-og-2_1000x624px-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/16_molokai_bad-3_1000x624px-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/pukalani-7_1000x624px-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="387" src="https://www.kailualodge.de/wp-content/uploads/2020/06/kailua_lodge_molokai_bad-4-580x387.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="387" src="https://www.kailualodge.de/wp-content/uploads/2020/06/kailua_lodge_kula_sauna-580x387.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/11_molokai_schlafzimmer-og-1_1000x624px-1-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="326" src="https://www.kailualodge.de/wp-content/uploads/2020/06/kailualodge_ferienhaus_typ_b_aussen_1-580x326.jpg" alt="" loading="eager" /> </div>
+ </div>
+ </div>
+ <script></script>
+ <div>
+ <div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ </div>
+ <h2>
+ <a href="https://www.kailualodge.de/lodge/ferienhaus-typ-b1/" title="Ferienhaus Typ B1">
+ Ferienhaus Typ B1 </a>
+ </h2>
+ <div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/size.svg" alt="Größe">
+ </span>
+ <span>
+ <span>Größe</span>
+ <span>85 m²</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/bedrooms.svg" alt="Schlafzimmer">
+ </span>
+ <span>
+ <span>Schlafzimmer</span>
+ <span>2</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/bathrooms.svg" alt="Badezimmer">
+ </span>
+ <span>
+ <span>Badezimmer / WC</span>
+ <span>2 / 2</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/people.svg" alt="Personen">
+ </span>
+ <span>
+ <span>Personen</span>
+ <span>4</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/beach.svg" alt="Strand in">
+ </span>
+ <span>
+ <span>Strand in</span>
+ <span>80 bis 150 m</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/pets.svg" alt="Hunde erlaubt">
+ </span>
+ <span>
+ <span>Hunde erlaubt</span>
+ <span>Ja</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/parking.svg" alt="Parkplatz">
+ </span>
+ <span>
+ <span>Parkplatz</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/wlan.svg" alt="WLAN">
+ </span>
+ <span>
+ <span>WLAN</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/sauna.svg" alt="Sauna">
+ </span>
+ <span>
+ <span>Sauna</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/chimney.svg" alt="Kamin">
+ </span>
+ <span>
+ <span>Kamin</span>
+ </span>
+ </div>
+ </div>
+ </div>
+	</article>
+ </div>
+ <div> 
+	<article id="post-96-block_007d497a70fb9d0e84aeb9bb2b783691">
+ <div>
+ <div>
+ <div>
+ <img decoding="async" width="580" height="387" src="https://www.kailualodge.de/wp-content/uploads/2020/06/kailua_lodge_pelzerhaken_b2-580x387.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/03_kihei_terrasse-02-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/14_kihei_bad-og-05-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/16_kihei_schlafzimmer-og-01-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/22_kihei_wohnraum-eg-02-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/26_kihei_wohnraum-eg-01-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/01_kona_wohnbereich-eg-4-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/04_makani_masterbedroom-og-01-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/07_pali_terrasse-01-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/21_pali_wohnraum-eg-01-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/15_makani_sauna-01_1000x624px-580x362.jpg" alt="" loading="eager" /> </div>
+ <div>
+ <img decoding="async" width="580" height="362" src="https://www.kailualodge.de/wp-content/uploads/2020/06/kailua_lodge_pelzerhaken_ferienhaus_b2-580x362.jpg" alt="" loading="eager" /> </div>
+ </div>
+ </div>
+ <script></script>
+ <div>
+ <div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ </div>
+ <h2>
+ <a href="https://www.kailualodge.de/lodge/ferienhaus-typ-b2/" title="Ferienhaus Typ B2">
+ Ferienhaus Typ B2 </a>
+ </h2>
+ <div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/size.svg" alt="Größe">
+ </span>
+ <span>
+ <span>Größe</span>
+ <span>100 m²</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/bedrooms.svg" alt="Schlafzimmer">
+ </span>
+ <span>
+ <span>Schlafzimmer</span>
+ <span>3</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/bathrooms.svg" alt="Badezimmer">
+ </span>
+ <span>
+ <span>Badezimmer / WC</span>
+ <span>2 / 2</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/people.svg" alt="Personen">
+ </span>
+ <span>
+ <span>Personen</span>
+ <span>6</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/beach.svg" alt="Strand in">
+ </span>
+ <span>
+ <span>Strand in</span>
+ <span>100 bis 150 m</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/pets.svg" alt="Hunde erlaubt">
+ </span>
+ <span>
+ <span>Hunde erlaubt</span>
+ <span>Ja</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/parking.svg" alt="Parkplatz">
+ </span>
+ <span>
+ <span>Parkplatz</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/wlan.svg" alt="WLAN">
+ </span>
+ <span>
+ <span>WLAN</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/sauna.svg" alt="Sauna">
+ </span>
+ <span>
+ <span>Sauna</span>
+ </span>
+ </div>
+ <div>
+ <span>
+ <img decoding="async" src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/properties/chimney.svg" alt="Kamin">
+ </span>
+ <span>
+ <span>Kamin</span>
+ </span>
+ </div>
+ </div>
+ </div>
+	</article>
+ </div>
+ </div>
+ <div>
+ <div></div>
+ <div></div>
+ </div>
+ </div>
+ <script></script>
+ </div>
+	</div>
+</div>
+</div>
+</div></div>
+<div><div>
+	<div id="block_f091a22d7c299c1890209f32f211a375" aria-hidden="true">
+ <style></style>
+ </div>
+<h1>Vorgestellt: unsere Ferienunterkünfte</h1>
+<p>Lichtdurchflutete Ferienhäuser mit Masterbedroom, großzügige Ferienwohnungen mit Kamin und Sauna oder charmante Lodges mit zubuchbaren Mini-Lodges: Welches ist Ihr Wunsch-Zuhause auf Zeit?</p>
+<p>Wir stellen Ihnen unsere 38 Feriendomizile ausführlich vor und beraten Sie gern bei der Wahl Ihrer gewünschten Urlaubsheimat.</p>
+	<div id="block_f091a22d7c299c1890209f32f211a375" aria-hidden="true">
+ <style></style>
+ </div>
+<div>
+<div>
+<div><div>
+<figure><img decoding="async" width="600" height="338" src="https://www.kailualodge.de/wp-content/uploads/2024/08/Architektur_KailuaLodge_9348_600px-web.jpg" alt="" /></figure>
+<h4><a href="https://www.kailualodge.de/ferienhaeuser/">Die Ferienhäuser</a></h4>
+<p>Mit viel Liebe bis ins kleinste Detail konzipiert, vereinen die Ferienhäuser der Kailua Lodge hawaiianische Lebensart mit polynesischem Wohnambiente.</p>
+</div></div>
+</div>
+<div>
+<div><div>
+<figure><img decoding="async" width="600" height="338" src="https://www.kailualodge.de/wp-content/uploads/2024/08/architektur_kailualodge_9362_600px-web.jpg" alt="" /></figure>
+<h4><a href="https://www.kailualodge.de/ferienwohnungen/" data-type="page" data-id="701">Die Ferienwohnungen</a></h4>
+<p>Unsere schönen und geräumigen Ferienwohnungen verfügen neben viel Platz über eine möblierte Holzterrasse oder einen Balkon, einen Kamin und eine Sauna.</p>
+</div></div>
+</div>
+<div>
+<div><div>
+<figure><img decoding="async" width="300" height="169" src="https://www.kailualodge.de/wp-content/uploads/2021/01/kailua_lodge_lodges_bambus_1-300x169.jpg" alt="" /></figure>
+<h4><a href="https://www.kailualodge.de/lodges/" data-type="page" data-id="709">Die Lodges</a></h4>
+<p>Unsere originellen Lodges laden zum geselligen Miteinander ein. Somit sind sie ideal für gemeinsam reisende Familien, Freunde oder Gruppen.</p>
+</div></div>
+</div>
+</div>
+</div></div>
+	<div id="block_24f188016a1157d8d7172349ae8cf3b5" aria-hidden="true">
+ <style></style>
+ </div>
+<div>
+<div><a href="https://www.kailualodge.de/uebernachten/">Welche Unterkunft passt zu mir?</a></div>
+</div>
+	<div id="block_f5db2f400c527e15c812465d7f3c2153" aria-hidden="true">
+ <style></style>
+ </div>
+<div><div>
+<h2>Welche Unterkunft erfüllt Ihre Urlaubswünsche am besten?</h2>
+<p>Gern beraten wir Sie telefonisch täglich von 10 bis&nbsp;16 Uhr<br>oder per E-Mail – wir freuen uns auf Ihre Anfrage.</p>
+<div>
+<div><a href="tel: +4945615588229">(0 45 61) 55 88 229</a></div>
+<div><a href="https://www.kailualodge.de/buchungsanfrage/">Buchungsanfrage</a></div>
+<div><a href="https://buchen.kailualodge.de/">Online buchen</a></div>
+</div>
+</div></div>
+<div><div>
+<div><div>
+	<div id="block_f5db2f400c527e15c812465d7f3c2153" aria-hidden="true">
+ <style></style>
+ </div>
+<h1>Schlemmen am Ostseestrand</h1>
+	<div id="block_843d5ae6dc4a22ff3cbddb333c227251" aria-hidden="true">
+ <style></style>
+ </div>
+<div>
+<div>
+<div><div>
+<h3>Direkt am Strand von Pelzerhaken, gut zu Fuß erreichbar und mit traumhaftem Ostseeblick lädt das BeachHouse zu genussvollen Stunden ein.</h3>
+<p>Fisch &amp; Fleisch, Veggie &amp; Sushi, Kaffee &amp; Kuchen: <br>Nur 100 Meter von der Kailua Lodge entfernt verwöhnen wir Sie mit vielseitigen Köstlichkeiten in legerem Ambiente.</p>
+<p>Wir freuen uns auf Ihren Besuch!</p>
+</div><figure><a href="https://www.kailualodge.de/urlaub-mit-hund/"><img decoding="async" width="960" height="640" src="https://www.kailualodge.de/wp-content/uploads/2026/06/beachhouse-strand-teaserbild.jpg" alt="Das BeachHouse steht am weitläufigen Sandstrand direkt an der Ostsee." /></a></figure></div>
+<div>
+<div><a href="https://www.kailualodge.de/beachhouse-pelzerhaken/">Das BeachHouse entdecken</a></div>
+<div><a href="https://www.beachhouse-pelzerhaken.de/reservierung/" target="_blank" rel="noreferrer noopener">Jetzt online reservieren</a></div>
+</div>
+</div>
+</div>
+</div></div>
+<div><div>
+	<div id="block_f5db2f400c527e15c812465d7f3c2153" aria-hidden="true">
+ <style></style>
+ </div>
+<div>
+<figure><img decoding="async" src="https://www.kailualodge.de/wp-content/uploads/2020/06/hund.svg" alt=""/></figure>
+</div>
+<h1>Urlaub mit Hund</h1>
+	<div id="block_843d5ae6dc4a22ff3cbddb333c227251" aria-hidden="true">
+ <style></style>
+ </div>
+	<div id="block_dd7b4de646a68c9748d3a55aa33fb31a">
+ <div>
+ <img decoding="async" width="680" height="800" src="https://www.kailualodge.de/wp-content/uploads/2021/02/kind_hund.png" alt="" loading="eager" /> 
+ </div>
+ <style></style>
+ <script></script>
+	</div>
+<div>
+<div>
+<div><figure><a href="https://www.kailualodge.de/urlaub-mit-hund/"><img decoding="async" width="1024" height="683" src="https://www.kailualodge.de/wp-content/uploads/2021/01/urlaub_mit_hund_kailua_lodge-1024x683.jpg" alt=""/></a></figure><div>
+<h3>In unserer Kailua Lodge sind Hunde jederzeit genauso herzlich willkommen wie Sie. </h3>
+<p>Mit ein wenig Rücksicht auf andere Urlaubsgäste werden Sie und Ihre vierbeinigen Gefährten eine unbeschwerte Zeit genießen.</p>
+<p>Und das Allerbeste: In Pelzerhaken laden gleich zwei ausgewiesene Hundestrände zum ausgelassenen Toben an Land und im Wasser ein.</p>
+<div>
+<div><a href="https://www.kailualodge.de/urlaub-mit-hund/">Weiter auf vier Pfoten</a></div>
+</div>
+</div></div>
+</div>
+</div>
+</div></div>
+<div><div>
+	<div id="block_51a964ebec33151b7f813e15569aa3bb" aria-hidden="true">
+ <style></style>
+ </div>
+	<div id="block_92066e02b45e8944892cd1dcc6fa5df6">
+ <div>
+ <img decoding="async" width="550" height="810" src="https://www.kailualodge.de/wp-content/uploads/2020/06/pineapple.png" alt="" loading="eager" /> 
+ </div>
+ <style></style>
+ <script></script>
+	</div>
+<h1>Familienurlaub mit Kindern</h1>
+	<div id="block_843d5ae6dc4a22ff3cbddb333c227251" aria-hidden="true">
+ <style></style>
+ </div>
+<div>
+<div>
+<div><div>
+<p>Sandburgen bauen, Drachen steigen lassen oder mit dem Stand-up-Paddle-Board über die Ostseewellen gleiten: Am Strand von Pelzerhaken werden sich Ihre Kleinen ganz schnell sehr wohlfühlen. Für eine kleine Pause von Strand und Meer oder bei Schietwetter hält die nähere Umgebung kurzweilige Freizeitvergnügen bereit.</p>
+<p>Wir haben Ihnen einige Tipps zusammengestellt, die bei Familien besonders beliebt sind.</p>
+<div>
+<div><a href="https://www.kailualodge.de/familienurlaub-mit-kindern/">Zum Familienspaß</a></div>
+</div>
+</div><figure><a href="https://www.kailualodge.de/urlaub-mit-hund/"><img decoding="async" width="800" height="533" src="https://www.kailualodge.de/wp-content/uploads/2021/02/am_strand_toben_kailua_lodge.jpg" alt="" /></a></figure></div>
+</div>
+</div>
+	<div id="block_c6020061371c8cacab0e00c4c41b8d2d" aria-hidden="true">
+ <style></style>
+ </div>
+</div></div>
+</div></div>
+<p></p>
+ </div>
+	</article> 
+ </main>
+ </div>
+	</div>
+</div>
+ <div>
+ <div id="footer-image">
+ <img src="https://www.kailualodge.de/wp-content/themes/cleantheme/images/footer.svg" alt="Footer">
+ </div>
+ </div>
+ <div>
+ <footer id="footer">
+	<div>
+ <aside id="widget-area-footer">
+ <div>
+ <section id="black-studio-tinymce-2"><div><h3>Kailua Lodge</h3><div><p><img src="https://www.kailualodge.de/wp-content/uploads/2020/06/kailua_loge_logo.svg" alt="" width="244" /></p>
+<p>Kailua Lodge KG<br />
+Wiesenstraße 33 – 35 (Rezeption)<br />
+23730 Neustadt</p>
+</div></div></section><section id="black-studio-tinymce-3"><div><h3>Buchungsanfrage</h3><div><p><strong id="footer">Downloads</strong><br />
+<a href="https://www.kailualodge.de/wp-content/uploads/2025/07/broschuere-kl-2025-web.pdf" target="_blank" rel="noopener">Unser Prospekt</a><br />
+<a href="https://www.kailualodge.de/wp-content/uploads/2026/08/preisliste-2026.pdf" target="_blank" rel="noopener">Preisliste 2026</a><br />
+<a href="https://www.kailualodge.de/wp-content/uploads/2026/08/preisliste-2027.pdf" target="_blank" rel="noopener">Preisliste 2027</a></p>
+<p><strong>Sie suchen eine Unterkunft?<br />
+Wir beraten Sie gern!<br />
+</strong>Täglich von 10 bis 16 Uhr<br />
+<a href="tel:+4945615588229">Telefon <span>(0 45 61) 55 88 229</span> </a><br />
+<a href="https://www.kailualodge.de/buchungsanfrage/">Buchungsanfrage</a><br />
+<a href="https://buchen.kailualodge.de/s">Direkt online buchen</a></p>
+</div></div></section><section id="black-studio-tinymce-4"><div><h3>Wassersportpartner</h3><div><p><strong>Wassersportpartner</strong></p>
+<p><a href="https://www.sailandsurfpelzerhaken.de/" target="_blank" rel="noopener"><img src="https://www.kailualodge.de/wp-content/uploads/2025/03/sail_surf_weiss-300x134.png" alt="" width="191" height="85" /></a></p>
+</div></div></section><section id="black-studio-tinymce-7"><div><h3>BeachHouse</h3><div><p><strong>Restaurant &amp; Strandbar</strong></p>
+<p><a href="https://www.beachhouse-pelzerhaken.de/" target="_blank" rel="noopener"><img src="https://www.kailualodge.de/wp-content/uploads/2025/03/logo_beachhouse_restaurant-blanko_weiss-300x164.png" alt="" width="168" height="75" /></a></p>
+</div></div></section>
+<section id="nav_menu_advanced-2"><div> 
+	<h3>Meta</h3>
+<ul id="widget-meta-menu"><li><a href="https://www.kailualodge.de/impressum/"><span>Impressum</span></a></li><li><a href="https://www.kailualodge.de/datenschutz/"><span>Datenschutz</span></a></li><li><a href="https://www.kailualodge.de/agb/"><span>AGB</span></a></li><li><a href="#cookie-preference"><span>Cookie-Einstellungen</span></a></li></ul> 
+</div></section><section id="black-studio-tinymce-5"><div><h3>© Kailua Lodge KG, 2026</h3><div><p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>© Kailua Lodge</p>
+</div></div></section> </div>
+ </aside>
+	</div>
+ </footer> 
+ </div>
+ </div>
+ <div id="guide">
+ <a href="#down"><i></i></a>
+ <a href="#top"><i></i></a>
+ </div>
+ <script></script>
+<script></script><script></script><script></script>
+<script></script>
+<script></script>
+<div data-nosnippet data-borlabs-cookie-consent-required='true' id='BorlabsCookieBox'></div><div id='BorlabsCookieWidget' class='brlbs-cmpnt-container'></div><script></script>
+<style></style>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script><script></script>
+<script></script><script></script><script></script>
+<script></script>
+<script></script>
+<template id="brlbs-cmpnt-cb-template-contact-form-seven-recaptcha">
+ <div data-borlabs-cookie-content-blocker-id="contact-form-seven-recaptcha" data-borlabs-cookie-content=""><div> <div></div> <div> <div> <p>Sie müssen den Inhalt von <strong>reCAPTCHA</strong> laden, um das Formular abzuschicken. Bitte beachten Sie, dass dabei Daten mit Drittanbietern ausgetauscht werden.</p> <a href="#" data-borlabs-cookie-show-provider-information role="button">Mehr Informationen</a> </div> <div> <a href="#" data-borlabs-cookie-unblock role="button">Inhalt entsperren</a> <a href="#" data-borlabs-cookie-accept-service role="button">Erforderlichen Service akzeptieren und Inhalte entsperren</a> </div> </div> </div></div>
+</template>
+<script></script><template id="brlbs-cmpnt-cb-template-contact-form-seven-turnstile">
+ <div data-borlabs-cookie-content-blocker-id="contact-form-seven-turnstile" data-borlabs-cookie-content=""><div> <div></div> <div> <div> <p>Sie sehen gerade einen Platzhalterinhalt von <strong>Turnstile</strong>. Um auf den eigentlichen Inhalt zuzugreifen, klicken Sie auf die Schaltfläche unten. Bitte beachten Sie, dass dabei Daten an Drittanbieter weitergegeben werden.</p> <a href="#" data-borlabs-cookie-show-provider-information role="button">Mehr Informationen</a> </div> <div> <a href="#" data-borlabs-cookie-unblock role="button">Inhalt entsperren</a> <a href="#" data-borlabs-cookie-accept-service role="button">Erforderlichen Service akzeptieren und Inhalte entsperren</a> </div> </div> </div></div>
+</template>
+<script></script> 
+	</body>
+</html>

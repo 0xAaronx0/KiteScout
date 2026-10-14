@@ -64,6 +64,11 @@ test('kitefun: content (camp: stay only sold with a course)', async () => {
   assert.match(c.summary, /3 nights in a double room for 2 people, from EUR 520 to 760/);
   assert.match(c.summary, /North Kiteboarding, Ocean Rodeo and Mystic/);
   assert.equal(c.imageUrls[0], 'https://kitefuntarifa.com/images/cursos-kite-tarifa/PhotoByKiteFunTarifa.jpg');
-  assert.ok(c.imageUrls.every(u => !/navigation-links|banderitas|logo|w1\.webp/.test(u)));
+  assert.ok(c.imageUrls.every(u => !/navigation-links|banderitas|logo|w1\.webp|-min\.webp/.test(u)));
+  // the school's own 800 px course photos from the group-courses page, after the 400 px house photos
+  assert.ok(c.imageUrls.includes('https://kitefuntarifa.com/en/kitesurf-courses-tarifa/images/kite-courses-tarifa/group-kite-lessons-tarifa.webp'));
+  assert.equal(c.imageUrls.length, 10); // 1 hero + 3 house photos + 6 course photos (vision sees 10)
+  for (const h of ['kitesurf-house-tarifa', 'surf-house-tarifa', 'curso-kitesurf-alojamiento-tarifa']) assert.ok(c.imageUrls.some(u => u.endsWith(`/${h}.webp`)), h);
+  assert.deepEqual(kitefunSurfHouseTarifa.imageMinSize, { width: 400, height: 300 });
   assert.ok(c.rooms[0].features.includes('9h Kite Course: June / October EUR 520, July / September EUR 640, August on request (3 nights, 2 people)'));
 });

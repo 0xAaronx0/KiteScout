@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+                <title>Kontakt - Windloop</title>
+              
+                <meta name="description" content="Interesse? Ruf uns an, besuche uns in Neuharlingersiel oder kontaktiere uns direkt per Nachricht.">
+                <meta name="keywords" content="Kiteschule, Wassersport, Kitesurfschule, Kitekurs, Kitecamp, Kitekurs, Strandbar, Beachclub,">
+              
+    
+        
+    <link rel="icon" href="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/favicon.ico?1709912111">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/apple-touch-icon.png?1709912111">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/favicon-32x32.png?1709912111">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/favicon-16x16.png?1709912111">
+    <link rel="manifest" href="/webmanifest.json">
+    <link rel="mask-icon" href="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/safari-pinned-tab.svg?1709912111" color="#5bbad5">
+    <meta name="application-name" content="Windloop Kitesurfschule ">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-TileImage" content="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/mstile-150x150.png?1709912111">
+    <meta name="theme-color" content="#ffffff">
+    
+    <meta property="og:url" content="https://www.windloop.de/">
+    <meta property="og:title" content="Windloop">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://cdn.locomotive.works/sites/5e5bcd761b7bc200a731b593/assets/65d5df5571f38b007dfea964/Windloop_Logo_sw_2023.png">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="142">
+
+    
+    <script src="https://cookie-consent.intelligentmobiles.com/im-cookie-consent.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cookie-consent.intelligentmobiles.com/im-cookie-consent.css" />
+
+    <script></script>
+
+    
+        <script type="text/plain" cookie-consent="further"></script>
+    
+    
+    <script type="text/plain" cookie-consent="further"></script>
+    
+    <link href="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/stylesheets/application.css?1709912111" media="screen" rel="stylesheet" type="text/css" />
+    
+
+    <style></style>
+<link rel="stylesheet" type="text/css" href="https://assets.locomotive.works/assets/locomotive/wysihtml5_editor-fc9dd453168cc989b0d1e4df89ed54a330618916423c4a4ac4a804329cc4fb1a.css"></head>
+<body class="larger-md">
+    
+    <noscript><iframe data-src="https://www.googletagmanager.com/ns.html?id=AW-476572938"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    
+    <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <div class="d-none d-lg-inline-block position-relative strandbarlogo-container">
+                <img class="strandbarlogo lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/logo.png?1709912111" alt="Strandbar Logo" title="Zur Strandbarseite">
+            </div>
+            <img class="strandbarlogo lazy d-lg-none" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/logo.png?1709912111" alt="Strandbar Logo" title="Zur Strandbarseite">
+        </a>
+        <button class="navbar-toggler hamburger hamburger--collapse" type="button" data-toggle="collapse" data-target="#main-navbar-collapse" aria-controls="main-navbar-collapse" aria-expanded="false" aria-label="Navigation öffnen bzw. schließen">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <div id="main-navbar-collapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-md-4 ml-xl-5 w-100 justify-content-around justify-content-lg-between align-items-center text-center">
+                
+                
+                
+                    
+                
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/kurse">Kurse</a>
+                        </li>
+                    
+                
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/infocenter">Infocenter</a>
+                        </li>
+                    
+                
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/shop">Shop</a>
+                        </li>
+                    
+                
+                    
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/ueber-uns">Über Uns</a>
+                        </li>
+                    
+                
+                    
+                        <li class="nav-item active">
+                            <a class="nav-link text-white" href="/kontakt">Kontakt</a>
+                        </li>
+                    
+                
+                    
+                
+                
+                <li class="nav-item ml-md-3 ml-xl-4 pt-3 pb-4 pt-lg-0 pb-lg-2">
+                    <a href="/strandbar">
+                        <div class="d-none d-lg-inline-block position-relative strandbarlogo-container">
+                            <img class="strandbarlogo lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/strandbar.gif?1709912111" alt="Strandbar Logo" title="Zur Strandbarseite">
+                        </div>
+                        <img class="strandbarlogo lazy d-lg-none" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/strandbar.gif?1709912111" alt="Strandbar Logo" title="Zur Strandbarseite">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <header class="wave-box">
+    <div class="grayscale fill-parent cover-bg lazy" data-bg="url('https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/pages/5e5cd138469c8b00bd849ef1/files/duotone_kiteboarding_action_pic_rebel13.png?1790948084')"></div>
+    <div class="header-gradient fill-parent cover-bg"></div>
+    <div class="d-flex h-100 w-100 justify-content-center align-items-center">
+        <div class="container text-white position-relative">
+            
+            <div class="row">
+                <div class="col-md-8 mx-md-auto text-center">
+                    <h1 class="mb-0">Kontakt</h1>
+                    <p class="lead mb-3">Windloop - Deine Kite- und Windsurfschule an der Nordsee!</p>
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="wave-container">
+        <canvas id="canvas" style="position: absolute; top: 0; left: 0;"></canvas>
+    </div>
+    <div class="bg-white position-absolute" style="height: 4px; bottom: -2px; left: 0; width: 100%"></div>
+</header>
+
+    
+
+    
+<section id="telefon" class="pt-5 mb-4">
+    <div class="container mb-4">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-4">Interesse? Ruf uns an!</h2>
+            </div>
+            <div class="col-md-6 mb-4">
+                
+                
+                    <div class="phone-number-font text-nowrap">
+                        <a href="tel:0151 701 66 96 6"><img class="pb-1 mr-3 lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/phone-new.svg?1709912111" style="width: 29px;"> Surfschule - 0151 701 66 96 6</a><br>
+                    </div>
+                
+                    <div class="phone-number-font text-nowrap">
+                        <a href="tel:0151 701 33 44 5"><img class="pb-1 mr-3 lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/phone-new.svg?1709912111" style="width: 29px;"> Strandbar - 0151 701 33 44 5</a><br>
+                    </div>
+                
+            <h2 class="pt-4">Anfahrt</h2>
+                <div class="phone-number-font pl-md-5">Ab 1.10.2026 geschlossen <P>
+<p/>
+Ab 01.05.2027 wieder geöffnet
+<P>
+<p/>
+Surfschulen Windloop<br> Edo-Edzards-Str. 1<br>26427 Neuharlingersiel<br><br>Parkplatz am Hafen WEST / 6,00 € am Tag</div>
+            </div>
+            <div class="col-md-6">
+                <img class="-fluid lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/pages/5e5cd138469c8b00bd849ef1/files/kontakt.png?1790948084" alt="Kontakt Motiv">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="karte" class="py-5">
+    <h2 class="my-4 text-center">Hier findest du uns</h2>
+    <div id="map"></div>
+</section>
+
+<section id="formular" class="bg-light mt-md-3 bg-ellipse-mask">
+    <div class="container py-md-5 py-3">
+        <h2 class="mt-4 mb-5 text-center">Kontaktiere uns direkt</h2>
+        <div class="row">
+            <div class="col-md-10 col-lg-8 mx-md-auto">
+                <form method="POST" enctype="multipart/form-data"><input type="hidden" name="content_type_slug" value="contact_requests" /><input type="hidden" name="_csrf" value="GxiUiTAmkiRNZt0vwXJDH8maBBPMLiBXOVFhcmHcVc8" /><input type="hidden" name="success_callback" value="/" /><input type="hidden" name="error_callback" value="/contact" /><input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response" />
+                    <input name="success_callback" value="/danke" type="hidden">
+                    <input name="error_callback" value="/fehler" type="hidden">
+                    <div class="row">
+                        <div class="col-md-12 text-right mb-5">
+                            <span class="btn-shadow-light w-100"><a href="mailto:info@windloop.de" class="btn btn-primary w-100">Direkt E-Mail Schreiben</a></span>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="request-name" class="text-gray-dark">*Vorname und Name</label>
+                                <input id="request-name" class="form-control" name="content[name]" value="" type="text" autocomplete="name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="request-email" class="text-gray-dark">*E-Mail</label>
+                                <input id="request-email" class="form-control" name="content[email]" value="" type="email" autocomplete="email" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="request-phone" class="text-gray-dark">Telefonnummer</label>
+                                <input id="request-phone" class="form-control" name="content[phone]" value="" type="tel" autocomplete="tel">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="request-message" class="text-gray-dark">*Deine Nachricht</label>
+                                <textarea id="request-message" class="form-control" name="content[message]" maxlength="2000" value="" type="text" rows="5" required></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="datenschutzbedingungen" required>
+                                <label class="custom-control-label" for="datenschutzbedingungen">Ich akzeptiere die <a href="/datenschutz">Datenschutzbedingungen</a>.</label>
+                            </div>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="daten-duerfen-verwendet-werden" required>
+                                <label class="custom-control-label" for="daten-duerfen-verwendet-werden">Meine Daten dürfen zur Kontaktaufnahme verwendet werden.</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-right mb-5 mt-3">
+                            <span class="btn-shadow-light"><button type="submit" class="btn btn-primary">Absenden</button></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+        
+
+
+    <button id="toastshowhide" type="button" class="btn btn-termine">Termine</button>
+    <div class="toast px-0 fade hide" role="alert" aria-live="assertive" aria-atomic="true" data-autohide="false" style="max-height: 80vh; position: fixed; right: 15px; bottom: 60px; z-index: 100">
+        <div class="toast-header px-2 px-md-3">
+            <img class="rounded mr-2" src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/kitesurf-sign.svg?1709912111" height="20" alt="Benachrichtigungsicon">
+            <strong class="mr-auto">Aktuelle Kitekurs-Termine</strong>
+            <small class="text-muted"></small>
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Schließen">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body px-0" style="overflow-y: auto; max-height: calc(80vh - 35px);">
+            
+                <div class="lead">Hier findet ihr die aktuellen Kitekurse</div>
+                <div class="mb-3"><p>.</p></div>
+                
+            
+                <a class="kurstoggle collapse show px-2 px-md-3" href=".kurstoggle" data-toggle="collapse">alle Termine anzeigen</a>
+                <div class="kurstoggle collapse">
+                    
+                        
+                        
+                        <div class="lead">Aufsteiger Kitekurs 2,5h<br><small class="text-muted">24.09.2026</small></div>
+                        <div class="mb-3"><p>Start: 11:00 Uhr. Bitte 15 min vorher zur Anmeldung kommen.</p></div>
+                    
+                        
+                        <div class="lead">Aufsteiger Kitekurs 2,5h - Abgesagt<br><small class="text-muted">25.09.2026</small></div>
+                        <div class="mb-3"><p>
+
+Start: 11:45 Uhr. Bitte 15 min vorher zur Anmeldung kommen.
+
+<br></p></div>
+                    
+                        
+                        <div class="lead">Am Freitag der 25.9. ist unser letzter Schulungstag.<br><small class="text-muted">25.09.2026</small></div>
+                        <div class="mb-3"><p>..</p></div>
+                    
+                </div>
+            
+        </div>
+    </div>
+
+
+            
+    
+    
+    <footer class="footer bg-light">
+    <div class="mt-3 bg-ellipse-filled">
+        <div class="container text-center text-white pt-5">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Newsletter abonnieren</h2>
+                </div>
+                <div class="col-12 mb-4">
+                    <span class="btn-shadow-light"><a class="btn btn-white text-primary my-3"  data-toggle="modal" href="#newsletter-modal">Jetzt Abonnieren</a></span>
+                </div>
+                
+                <div class="col-12 mx-auto mb-4">
+                    <a class="text-decoration-none mr-md-3" href="https://www.facebook.com/windloop/" target="_blank">
+                        <img class="social-media-icon lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/Windloop_FB.svg?1709912111" alt="facebook icon">
+                    </a>
+                    <a class="text-decoration-none" href="https://www.instagram.com/surfschulen_windloop/" target="_blank">
+                        <img class="social-media-icon lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/Windloop_IG.svg?1709912111" alt="instagram icon">
+                    </a>
+                </div>
+                
+                <div class="col-12 mx-auto mb-4" style="font-size: 16px;font-weight: bold;">
+                    <p>Offizieller Partner von:</p>
+                    <a class="text-decoration-none mr-md-3"  href="https://www.duotonesports.com/" target="_blank">
+                        <img class="partner-logo lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/duotone_log.svg?1709912111" alt="duotone logo" style="width: 120px;">
+                    </a>
+                    <a class="text-decoration-none" href="https://www.ion-products.com/" target="_blank">
+                        <img class="partner-logo lazy" data-src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/images/Ion-log.svg?1709912111" alt="ion logo" style="width: 100px;">
+                    </a>
+                </div>
+                <div class="col-12 text-uppercase">
+                    <a class="mr-md-3" href="/impressum">Impressum</a>
+                    <a href="/datenschutz">Datenschutz</a>
+                    <br>
+                    <a id="reinit-cookies" href="javascript:void(0)">Cookies</a>
+                </div>
+                <div class="col-12 mb-3">
+                    <small class="text-nowrap"><span class="font-weight-light">Eine Lösung von</span> <a href="https://www.intelligentmobiles.com/"><strong>IntelligentMobiles</strong></a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="newsletter-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Newsletter abonnieren</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Schließen">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="https://windloop.us13.list-manage.com/subscribe/post?u=39f34f43a250d8267ad1bb537&amp;id=f9268823d6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div class="mc_embed_signup_scroll">
+                        <label for="mce-EMAIL">*E-Mail</label>
+                        <input class="email form-control" id="mce-EMAIL" name="email" type="email" required>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="datenschutzbedingungen-newsletter" required>
+                        <label class="custom-control-label" for="datenschutzbedingungen-newsletter">Ich akzeptiere die <a href="/datenschutz" target="_blank">Datenschutzbedingungen</a>.</label>
+                    </div>
+                    <div class="text-right mt-3 mb-4">
+                        <span class="btn-shadow-light"><button id="mc-embedded-subscribe" value="Subscribe" name="subscribe" type="submit" class="btn btn-primary">Absenden</button></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    
+    <script src="https://assets.locomotive.works/sites/5e5bcd761b7bc200a731b593/theme/javascripts/application.js?1709912111" type="text/javascript" ></script>
+
+    <script></script>
+    
+<script src="https://www.google.com/recaptcha/api.js?render=REDACTED"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=REDACTED"></script>
+
+<script>
+    // ReCaptcha V3
+     grecaptcha.ready(function() {
+      grecaptcha.execute('REDACTED', {action: 'register'}).then(function(token) {
+        document.getElementById('g-recaptcha-response').value  = token;
+      });
+    });
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+    function init() {
+        // Basic options for a simple Google Map
+        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var windloopPosition = new google.maps.LatLng(53.700978, 7.694482);
+        var mapOptions = {
+            zoom: 15.7,
+            center: windloopPosition,
+            styles:
+                [
+                    {
+                        "featureType": "administrative",
+                        "elementType": "labels.text.fill",
+                        "stylers": [
+                            {
+                                "color": "#444444"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.country",
+                        "elementType": "geometry.fill",
+                        "stylers": [
+                            {
+                                "saturation": "-12"
+                            },
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "landscape",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "color": "#f2f2f2"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "saturation": -100
+                            },
+                            {
+                                "lightness": 45
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.highway",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "simplified"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.arterial",
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "water",
+                        "elementType": "all",
+                        "stylers": [
+                            {
+                                "color": "#46bcec"
+                            },
+                            {
+                                "visibility": "on"
+                            }
+                        ]
+                    }
+                ]
+        };
+
+        // Get the HTML DOM element that will contain your map
+        // We are using a div with id="map" seen below in the <body>
+        var mapElement = document.getElementById('map');
+
+        // Create the Google Map using our element and options defined above
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        // Let's also add a marker while we're at it
+        var marker = new google.maps.Marker({
+            position: windloopPosition,
+            map: map,
+            title: 'Windloop'
+        });
+        marker.setMap(map);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Campingplatz direkt am Meer auf Fehmarn - Camping Flügger Strand</title>
+<base href="https://www.fluegger-strand.de/">
+<meta name="robots" content="index,follow">
+<meta name="description" content="Der ****Campingplatz am Flügger Strand auf Fehmarn bezaubert mit seiner Lage am Meer, ob mit Zelt, Wohnmobil, im Mietwohnwagen oder Ferienhaus.">
+<meta name="keywords" content="">
+<meta name="generator" content="Contao Open Source CMS">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script></script><script></script><script></script><meta property="og:title" content="CAMPING FLÜGGER STRAND - Unbeschwertes Campingglück und Natur pur am Flügger Strand auf Fehmarn" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.fluegger-strand.de/" />
+<meta property="og:image" content="http://www.fluegger-strand.de/files/theme-styles/img/og-image.jpg" />
+<meta property="og:description" content="Der ****Campingplatz bezaubert mit seiner Lage am Meer,
+ob mit Wohnwagen, Wohnmobil, Zelt, im Mietwohnwagen oder Ferienhaus. Freuen Sie sich auf einen
+unvergesslichen Ostseeurlaub auf der Insel Fehmarn." />
+<script></script>
+<script></script>
+</head>
+<body id="top" class="unknown other home">
+<div id="wrapper">
+<header id="header">
+<div class="inside">
+<div id="subheader">
+<div class="inside">
+<a id="logo-dt" title="Flügger Strand-Logo" href=""><img alt="Flügger Strand-Logo" src="files/theme-styles/img/logo-flueggerstrand.svg" width="253" height="192"></a>
+<a id="logo-mob" title="Flügger Strand-Logo" href=""><img alt="Flügger Strand-Logo" src="files/theme-styles/img/logo-flueggerstrand.svg" width="130" height="97"></a>
+<a href="buchungsanfrage.html" id="booking-link-mob">Buchungsanfrage</a>
+<div id="hotline" class="header-hotline">
+<a title="Hotline für Sie" href="javascript:void(0)">
+<i class="fa fa-phone"></i>
+<span>0 43 72 - 99 13 44 &nbsp;&&nbsp; 0 43 72 - 7 14</span>
+</a>
+</div>
+<a href="buchungsanfrage.html" id="booking-link">Buchungsanfrage</a>
+<div id="hotline-mob" class="header-hotline">
+<a title="Hotline für Sie" href="tel:+494372714">
+<i class="fa fa-phone"></i>
+<span>0 43 72 - 714</span>
+</a>
+</div>
+<button class="nav-toggle" title="Menü öffnen">Menü <i class="fa fa-bars"></i></button>
+<nav class="mod_navigation navigation-main block" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<button class="nav-close" title="close"><i class="fa fa-times"></i></button>
+<a href="#skipNavigation33" class="invisible">Navigation überspringen</a>
+<ul class="level_1">
+<li class="submenu sibling first"><a href="campingplatz.html" title="Familienurlaub in der Natur" class="submenu sibling first" aria-haspopup="true" itemprop="url"><span itemprop="name">Campingplatz</span></a>
+<span class="subnav-toggle"><i class="fa fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="first"><a href="stellplaetze.html" title="Campen mit Wohnwagen, Wohnmobil, Zelt" class="first" itemprop="url"><span itemprop="name">Stellplätze</span></a>
+</li>
+<li><a href="wohnmobile.html" title="Wohnmobilstellplatz mit Meerblick" itemprop="url"><span itemprop="name">Wohnmobile</span></a>
+</li>
+<li><a href="dauerplaetze.html" title="Dauercamping auf Fehmarn" itemprop="url"><span itemprop="name">Dauerplätze</span></a>
+</li>
+<li class="last"><a href="mietwohnwagen.html" title="Mietwohnwagen in der 1. Reihe zur Ostsee" class="last" itemprop="url"><span itemprop="name">Mietwohnwagen</span></a>
+</li>
+</ul></li>
+<li class="submenu sibling"><a href="platzplan.html" title="Platz-Infos" class="submenu sibling" rel="nofollow" aria-haspopup="true" itemprop="url"><span itemprop="name">Platz-Infos</span></a>
+<span class="subnav-toggle"><i class="fa fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="no-header-pic first"><a href="platzplan.html" title="Platzplan" class="no-header-pic first" itemprop="url"><span itemprop="name">Platzplan</span></a>
+</li>
+<li><a href="sanitaer-wellness.html" title="Moderne Sanitärgebäude und Wellness" itemprop="url"><span itemprop="name">Sanitär & Wellness</span></a>
+</li>
+<li><a href="restaurant-sb-laden.html" title="Restaurant mit Ostseeblick" itemprop="url"><span itemprop="name">Restaurant / SB-Laden</span></a>
+</li>
+<li><a href="surfen.html" title="Surfen" itemprop="url"><span itemprop="name">Surfen</span></a>
+</li>
+<li><a href="freizeit-events.html" title="Campingurlaub mit Sport, Spiel, Spaß" itemprop="url"><span itemprop="name">Freizeit & Events</span></a>
+</li>
+<li class="no-header-pic"><a href="aktuelles.html" title="Aktuelles" class="no-header-pic" itemprop="url"><span itemprop="name">Aktuelles</span></a>
+</li>
+<li class="no-header-pic"><a href="angebote.html" title="Angebote" class="no-header-pic" itemprop="url"><span itemprop="name">Angebote</span></a>
+</li>
+<li class="last"><a href="prospekte.html" title="Prospekte" class="last" itemprop="url"><span itemprop="name">Prospekte</span></a>
+</li>
+</ul></li>
+<li class="sibling"><a href="ferienhaeuschen.html" title="Ferienhäuschen am Strand auf Fehmarn" class="sibling" itemprop="url"><span itemprop="name">Ferienhäuschen</span></a>
+</li>
+<li class="sibling"><a href="kinder-freizeit.html" title="Kinderparadies mit Animation" class="sibling" itemprop="url"><span itemprop="name">Kinder & Freizeit</span></a>
+</li>
+<li class="submenu sibling"><a href="fluegger-strand.html" title="Insel Fehmarn in der Ostsee" class="submenu sibling" rel="nofollow" aria-haspopup="true" itemprop="url"><span itemprop="name">Flügger Strand & Fehmarn</span></a>
+<span class="subnav-toggle"><i class="fa fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="first"><a href="fluegger-strand.html" title="Flügger Strand" class="first" itemprop="url"><span itemprop="name">Flügger Strand</span></a>
+</li>
+<li class="last"><a href="fehmarn.html" title="Insel Fehmarn in der Ostsee" class="last" itemprop="url"><span itemprop="name">Fehmarn</span></a>
+</li>
+</ul></li>
+<li class="submenu sibling"><a href="preise-camping.html" title="Preise" class="submenu sibling" rel="nofollow" aria-haspopup="true" itemprop="url"><span itemprop="name">Preise</span></a>
+<span class="subnav-toggle"><i class="fa fa-chevron-down"></i></span>
+<ul class="level_2">
+<li class="no-header-pic first"><a href="preise-camping.html" title="Preise - Camping" class="no-header-pic first" itemprop="url"><span itemprop="name">Camping</span></a>
+</li>
+<li class="no-header-pic"><a href="preise-mietwohnwagen.html" title="Preise - Mietwohnwagen" class="no-header-pic" itemprop="url"><span itemprop="name">Mietwohnwagen</span></a>
+</li>
+<li class="no-header-pic"><a href="preise-ferienhaeuschen.html" title="Preise - Ferienhäuschen" class="no-header-pic" itemprop="url"><span itemprop="name">Ferienhäuschen</span></a>
+</li>
+<li class="no-header-pic"><a href="preise-serviceleistungen.html" title="Buchbare Serviceleistungen" class="no-header-pic" itemprop="url"><span itemprop="name">Serviceleistungen</span></a>
+</li>
+<li class="no-header-pic"><a href="buchungsanfrage.html" title="Buchungsanfrage" class="no-header-pic" itemprop="url"><span itemprop="name">Buchungsanfrage</span></a>
+</li>
+<li class="no-header-pic last"><a href="buchungsbedingungen.html" title="Buchungsbedingungen" class="no-header-pic last" itemprop="url"><span itemprop="name">Buchungsbedingungen</span></a>
+</li>
+</ul></li>
+<li class="sibling last"><a href="service.html" title="Unser persönlicher Gästeservice" class="sibling last" itemprop="url"><span itemprop="name">Service</span></a>
+</li>
+</ul>
+<a id="skipNavigation33" class="invisible">&nbsp;</a>
+</nav>
+ </div>
+</div>
+</div>
+</header>
+<div id="container">
+<div id="main">
+<div class="inside">
+<div class="mod_article section-full first block" id="rs-slideshow">
+<div class="inside">
+<div class="row">
+<div class="mod_rocksolid_slider slider first last block">
+<div data-rsts-name="Slide 1" class="slideHome-1" data-rsts-class="col-slider">
+<div class="ce_image block">
+<figure class="image_container">
+<picture><source media="(min-width: 769px) and (max-width: 1024px)"><img src="assets/images/b/campingplatz-2-haupt-1230bd79.jpg" alt="Camping Flügger Strand" title="Camping Flügger Strand" itemprop="image"></picture>
+</figure>
+</div>
+<section class="ce_sectionstart section-inside">
+<h3 class="ce_headline">
+Weite bis zum</h3>
+<h2 class="ce_headline white">
+Horizont</h2>
+</section>
+</div>
+<div data-rsts-name="Slide 2" class="slideHome-3" data-rsts-class="col-slider">
+<div class="ce_image block">
+<figure class="image_container">
+<picture><source media="(min-width: 769px) and (max-width: 1024px)"><img src="assets/images/f/Campingplatz_Fluegge_Luftbild-4196d660.jpg" alt="Camping Flügger Strand Luftaufnahme" title="Camping Flügger Strand Luftaufnahme" itemprop="image"></picture>
+</figure>
+</div>
+<section class="ce_sectionstart section-inside">
+<h3 class="ce_headline">
+Weite bis zum</h3>
+<h2 class="ce_headline white">
+Horizont</h2>
+</section>
+</div>
+<div data-rsts-name="Slide 3" class="slideHome-2" data-rsts-class="col-slider">
+<div class="ce_image block">
+<figure class="image_container">
+<picture><source media="(min-width: 769px) and (max-width: 1024px)"><img src="assets/images/3/FlueggerStrandTag2_0083-c5906851.jpg" alt="Camping Flügger Strand" title="Camping Flügger Strand" itemprop="image"></picture>
+</figure>
+</div>
+<section class="ce_sectionstart section-inside">
+<h3 class="ce_headline">
+Weite bis zum</h3>
+<h2 class="ce_headline white">
+Horizont</h2>
+</section>
+</div>
+<div data-rsts-name="Slide 4" class="slideHome-4" data-rsts-class="col-slider">
+<div class="ce_image block">
+<figure class="image_container">
+<picture><source media="(min-width: 769px) and (max-width: 1024px)"><img src="assets/images/9/02_CAMPING-FL%C3%BCGGE_ORIGINAL_ausschnitt-41380f28.jpg" alt="Luftbild Camping Flügger Strand" title="Luftbild Camping Flügger Strand" itemprop="image"></picture>
+</figure>
+</div>
+<section class="ce_sectionstart section-inside">
+<h3 class="ce_headline">
+Weite bis zum</h3>
+<h2 class="ce_headline white">
+Horizont</h2>
+</section>
+</div>
+<div data-rsts-name="Slide 5" class="slideHome-4" data-rsts-class="col-slider">
+<div class="ce_image block">
+<figure class="image_container">
+<picture><source media="(min-width: 769px) and (max-width: 1024px)"><img src="assets/images/6/FlueggerStrand_StrandPan6-b946ef42.jpg" alt="Dünen Camping Flügger Strand" title="Dünen Camping Flügger Strand" itemprop="image"></picture>
+</figure>
+</div>
+<section class="ce_sectionstart section-inside">
+<h3 class="ce_headline">
+Weite bis zum</h3>
+<h2 class="ce_headline white">
+Horizont</h2>
+</section>
+</div>
+<div data-rsts-name="Slide 6" class="slideHome-4" data-rsts-class="col-slider">
+<div class="ce_image block">
+<figure class="image_container">
+<picture><source media="(min-width: 769px) and (max-width: 1024px)"><img src="assets/images/9/Restaurant_Duenenhaus-18030a9b.jpg" alt="Restaurant Dünenhaus Flügger Strand" title="Restaurant Dünenhaus Flügger Strand" itemprop="image"></picture>
+</figure>
+</div>
+<section class="ce_sectionstart section-inside">
+<h3 class="ce_headline">
+Weite bis zum</h3>
+<h2 class="ce_headline white">
+Horizont</h2>
+</section>
+</div>
+<div data-rsts-name="Slide 7" class="slideHome-4" data-rsts-class="col-slider">
+<div class="ce_image block">
+<figure class="image_container">
+<picture><source media="(min-width: 769px) and (max-width: 1024px)"><img src="assets/images/b/Kinderanimation_am_FlueggerStrand-87a51674.jpg" alt="Kinderanimation Flügger Strand" title="Kinderanimation Flügger Strand" itemprop="image"></picture>
+</figure>
+</div>
+<section class="ce_sectionstart section-inside">
+<h3 class="ce_headline">
+Weite bis zum</h3>
+<h2 class="ce_headline white">
+Horizont</h2>
+</section>
+</div>
+</div>
+<script></script>
+</div>
+</div>
+</div>
+<div class="mod_article introtext block" id="titel-start">
+<div class="inside">
+<div class="row">
+<div class="ce_gallery signets noscale first block">
+<ul class="cols_4" itemscope itemtype="http://schema.org/ImageGallery">
+<li class="row_0 row_first row_last even col_0 col_first">
+<figure class="image_container">
+<img src="assets/images/8/ADAC_tipp-2026-3a60a84c.png" width="127" height="90" alt="" itemprop="image">
+</figure>
+</li>
+<li class="row_0 row_first row_last even col_1">
+<figure class="image_container">
+<img src="assets/images/8/DCC-Logo-4Sterne-654ba395.png" width="112" height="90" alt="" itemprop="image">
+</figure>
+</li>
+</ul>
+</div>
+<div class="ce_text lowmarg block">
+<h2>Unbeschwertes Campingglück und <strong>Natur pur</strong> am</h2>
+</div>
+<h1 class="ce_headline">
+Flügger Strand auf Fehmarn</h1>
+<div class="ce_text last block">
+<p>Der ****Campingplatz bezaubert mit seiner Lage am Meer, ob mit Wohnwagen, Wohnmobil, Zelt, im Mietwohnwagen oder Ferienhaus. Freuen Sie sich auf einen unvergesslichen Ostseeurlaub auf der Insel Fehmarn.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mod_article teaserbox block" id="article-58">
+<div class="inside">
+<div class="row">
+<article class="ce_articlestart grid lg-4 md-2 sm-2 xs-2 text-center first">
+<div class="ce_image block">
+<figure class="image_container">
+<a href="kinder-freizeit.html" title="Kind auf Seilrutsche">
+<img src="assets/images/0/IMG_4839_kleiner-a9ecdebb.jpg" width="284" height="284" alt="Kind auf Seilrutsche" itemprop="image">
+</a>
+</figure>
+</div>
+<div class="ce_text block">
+<h3>Kinderparadies Flügger Strand</h3>
+<p class="western">Hier darfst Du jeden Spaß mitmachen</p>
+</div>
+</article>
+<article class="ce_articlestart grid lg-4 md-2 sm-2 xs-2 text-center">
+<div class="ce_image block">
+<figure class="image_container">
+<a href="sanitaer-wellness.html" title="Neuste komfortable Sanitäranlagen">
+<img src="assets/images/a/120818_FlueggerStrandTag2_0022_300dpiCMYK-f02f7b44.jpg" width="284" height="284" alt="Neuste komfortable Sanitäranlagen" itemprop="image">
+</a>
+</figure>
+</div>
+<div class="ce_text block">
+<h3>Auf höchstem Komfort-Niveau</h3>
+<p class="western">Das neue Sanitärgebäude</p>
+</div>
+</article>
+<article class="ce_articlestart grid lg-4 md-2 sm-2 xs-2 text-center">
+<div class="ce_image block">
+<figure class="image_container">
+<a href="preise-camping.html#camping-angebote" title="Liegestühle am Strand">
+<img src="assets/images/d/PICT1466-2323e441.jpg" width="284" height="284" alt="Liegestühle am Strand" itemprop="image">
+</a>
+</figure>
+</div>
+<div class="ce_text block">
+<h3>Entspannt sparen</h3>
+<p class="western">Buchen Sie unsere Top-Angebote</p>
+</div>
+</article>
+<article class="ce_articlestart grid lg-4 md-2 sm-2 xs-2 text-center">
+<div class="ce_image block">
+<figure class="image_container">
+<a href="surfen.html" title="Neu: Foilen am Flügger Strand">
+<img src="assets/images/c/surf3-6d8866fa.jpg" width="284" height="284" alt="Neu: Foilen am Flügger Strand" itemprop="image">
+</a>
+</figure>
+</div>
+<div class="ce_text block">
+<h3>Surfen & Kiten, SUP im Inselwesten</h3>
+<p>.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+<div class="mod_article bg-full-color nomarg teaser-blue block" id="article-68">
+<div class="inside">
+<div class="row">
+<article class="ce_articlestart grid lg-1 md-1 sm-1 xs-1 text-center first">
+<div class="ce_text versal block">
+<h3>360° Camping</h3>
+<p>ERLEBEN SIE UNSEREN PLATZ INTERAKTIV</p>
+</div>
+<div class="ce_text block">
+<figure class="image_container float_above">
+<picture><source media="(min-width: 769px) and (max-width: 1023px)"><img src="assets/images/1/360grad_panorama_flueggerstrand_standort7-e94b21ed.jpg" alt="Panorama Camping Flügger Strand" title="Panorama Camping Flügger Strand" itemprop="image"></picture>
+</figure>
+<p>Einzigartige Rundumblicke auf unserem Campingplatz</p>
+</div>
+<div class="ce_hyperlink button block">
+<a href="bildergalerie.html#panoramen" class="hyperlink_txt" title="Jetzt anschauen">Jetzt anschauen</a>
+</div>
+</article>
+<article class="ce_articlestart grid lg-2 md-2 sm-2 xs-1 text-center news-home-wrapper">
+<div class="ce_text versal block">
+<h3>Aktuelles</h3>
+<p>VOM FLÜGGER STRAND</p>
+</div>
+<div class="mod_newslist news-home news-home block">
+<div class="layout_latest arc_1 block first last even">
+<p class="info"><time datetime="2026-08-28T15:24:00+02:00">28.08.2026</time> </p>
+<h2>.</h2>
+<div class="teaser">
+<p style="text-align: left;">Liebe Gäste,<br><br>Herzlichen Willkommen am Flügger Strand!<br>Wir haben für Sie geöffnet vom 27. März bis zum 18. Oktober 2026.<br><br>Sie möchten einen Campingstellplatz reservieren oder wünschen ein Angebot?<br><br>Dann nutzen Sie doch einfach unsere<a href="buchungsanfrage.html"> Online-Buchungsanfrage</a>, rufen Sie uns gern an unter Tel. 04372/ 714 oder schreiben Sie uns eine<br>E-Mail an &#114;&#x65;&#122;&#x65;&#112;&#x74;&#105;&#x6F;&#110;&#x40;&#102;&#x6C;&#117;&#x65;&#103;&#x67;&#101;&#x72;&#45;&#x73;&#116;&#x72;&#97;&#x6E;&#100;&#x2E;&#100;&#x65;.<br><br>Sie erreichen uns täglich mind. von 9 bis 17 Uhr. Wir beraten Sie gern!<br><br>Ihre Familie Köneking &amp; Team<br><br><br><span style="text-decoration: underline;"><strong>2026 NEU:<br><br></strong></span><strong>W-LAN</strong> ist auf dem gesamten Campinggelände für Sie jetzt <strong>kostenfrei! </strong>Ganz ohne Gebühren. <br><br>Ebenso gilt ab sofort: <strong>Warmduschen inklusive! </strong>Bitte gehen Sie sorgsam mit dem Wasser um, der Umwelt zu Liebe!</p>
+<p style="text-align: left;">Das <strong>Restaurant Dünenhus </strong>wurde<strong> renoviert und </strong>steht<strong> unter neuer Leitung:</strong> <br>Wir freuen uns ganz besonders, dass das engagierte Team um Renée und Angela Boss <br>das Dünenhus im Neuen Glanz erstrahlen lässt. Auch die Küchen- u. Kühltechnik<br>wurde auf den neuesten Stand gebracht! <br><br>*Öffnungszeiten Restaurant Dünenhus* <br>Montag Ruhetag (nur Nebensaison) <br>Dienstag bis Freitag 11-14 Uhr <strong>Mittagstisch</strong> <br>14-17 Uhr <strong>Kaffee, selbstgebackene Kuchen &amp; Kaffeespezialitäten</strong> <br>17-21 Uhr <strong>Abendessen</strong><br><br>Ferner gibt es jeden <strong>Freitag 1/2 Hähnchen</strong> frisch vom Grill. <br><strong>Samstag , Sonntag &amp; Feiertag </strong>wird auch <strong>Frühstück</strong> angeboten. <br>Reservierungen sind unter folgender Rufnummer 04372 7868967 <br>oder 01578 9314835 möglich. <br>Das Restaurant bietet eine kleine Karte mit deutscher Küche &amp; Tagesangeboten <br>sowie eine kleine Auswahl an Pizzen &amp; Flammkuchen an.<br>Lassen Sie sich kulinarisch verwöhnen im Dünenhus Flügger Strand! <br><br>Die alte Anmeldung wurde zu neuem Leben erweckt! <br>Renoviert finden Sie hier neu den <strong>Shop Strandbude</strong> mit handgemachten Souvenirs, <br>Accessoires und Möbeln. Eröffnung ist am Ostersamstag dem 04.04.'26.</p>
+<p style="text-align: left;">Am Ostersamstag den <strong>04.04.</strong> ab 18:30 Uhr findet das traditionelle <strong>Osterfeuer</strong> <br>statt, mit Akkordeon-Musik und Stockbrotbacken für die Kinder. <br>Es gibt Leckeres, z.B. Krustenbraten und Leberkäs, und für Getränke ist gesorgt. <br><br>Am Ostersonntag den <strong>05.04.</strong> findet das große <strong>Ostereiersuchen</strong> <br>um 10:30 Uhr für die kleinen und 10:45 Uhr für die großen Kinder statt, <br>Treffpunkt vor dem Minigolfplatz. <br><br>Genießen Sie Ihren Urlaub und entspannen Sie bei einer <strong>Massage.</strong> <br>Ab 01.04. ist unser Physio Stefan Pack wieder für Sie da, um für Ihr Wohlbefinden <br>zu sorgen, Termine unter 0177 3074375. <br>Die Fußfee (<strong>Fußpflege</strong> Frau Reinecke) bietet Anwendungen auch vor Ort in Flügge <br>bei Ihnen am Platz an, Termine unter 0176 22864407. <br>&nbsp;&nbsp;<br><strong>Veranstaltungen 2026:<br></strong><strong>Sa. 18.07. 19°° Karaokeshow mit Maren u.Daniell<br>So. 19.07. 21°° Finale Fussball WM</strong><br><strong>Sa. 25.07. 20°° Trio Curtain Call </strong><br><strong>Sa. 01.08. 20°° Finegas - Irish Folk Music </strong><br><strong>Fr. 07.08. 19°° Karaokeshow mit Maren und Daniell<br></strong><br><strong>Fr. 04.09. 19°° Jimi-Hendrix-Revival 2026<br></strong><br><img src="files/bilder/kinder-freizeit/Fluegger%20Strand%201970%20Jimi%20Hendrix%20Revival%20Party.jpg" alt="" width="923" height="1291"></p>
+<p style="text-align: left;"><strong><br>Freitag, 04.09.2026<br></strong><strong>- ab 15 Uhr </strong><strong>Fotoausstellung<br>von Wolfgang Gau<br></strong><strong><br>- ab 19 Uhr&nbsp; &nbsp;Musikprogramm<br></strong>Mit dabei in diesem Jahr:<strong><br></strong><strong><a href="https://www.five-connected.de/" target="_blank" rel="noopener">Five Connected</a></strong><strong><br><a href="http://www.boneshakerband.com" target="_blank" rel="noopener">Boneshaker</a><br></strong><a href="http://www.the-double-vision.de" target="_blank" rel="noopener"><strong>Double Vision</strong></a><br>auf dem Campingplatz Flügger Strand<br><br><strong>Samstag, 05.09.2026&nbsp; &nbsp;ab 13 Uhr<br>- Festival-Film im Festzelt<br>- Fotoausstellung von Wolfgang Gau</strong><br><br><strong>Weitere Veranstaltungen und mehr Infos finden Sie <a href="freizeit-events.html">HIER.</a></strong></p>
+<p style="text-align: left;"><strong><br>4 E-Auto-Ladestationen:<br></strong><a title="Camping Flügger Strand Ladepunkt 1" href="https://adhoc-charge.de/con/DE*CFS*EFEH*0001*1" target="_blank" rel="noopener">Ladepunkt 1</a>, <a title="Camping Flügger Strand Ladepunkt 2" href="https://adhoc-charge.de/con/DE*CFS*EFEH*0001*2" target="_blank" rel="noopener">Ladepunkt 2</a>, <a title="Camping Flügger Strand Ladepunkt 3" href="https://adhoc-charge.de/con/DE*CFS*EFEH*0001*3" target="_blank" rel="noopener">Ladepunkt 3</a>, <a title="Camping Flügger Strand Ladepunkt 4" href="https://adhoc-charge.de/con/DE*CFS*EFEH*0001*4" target="_blank" rel="noopener">Ladepunkt 4</a><br><br>Die Stationen befinden sich gegenüber der Rezeption und dem Restaurant.<br>Sie können mit allen Karten laden!</p>
+<p><strong><img src="files/bilder/diverse/E-Ladestationen%20fuer%20Gaeste.jpg" alt="" width="631" height="597"></strong></p>
+<p><span style="text-decoration: underline;"><strong><br></strong></span><strong><a href="http://www.buergerbus-fehmarn.de/seite/768270/tour-6-fl%C3%BCgge-wallnau.html" target="_blank" rel="noopener">Der Bürgerbus</a><br><br><a title="Buergerbus Fehmarn" href="http://www.buergerbus-fehmarn.de/seite/768270/tour-6-fl%C3%BCgge-wallnau.html"><img src="files/bilder/diverse/buergerbus_fehmarn.jpg" alt=""></a><br><br><a href="http://www.buergerbus-fehmarn.de/seite/768270/tour-6-fl%C3%BCgge-wallnau.html" target="_blank" rel="noopener">fährt Mo., Mi. und Fr. 4 x täglich</a><br><a href="http://www.buergerbus-fehmarn.de/seite/768270/tour-6-fl%C3%BCgge-wallnau.html" target="_blank" rel="noopener">von Flügge nach Burg.</a><br></strong><em>- Mit der Ostseecard kostenfrei. -</em></p> </div>
+<p class="more"><a href="aktuelles.html">zu allen Neuigkeiten</a></p>
+</div>
+</div>
+</article>
+</article>
+</div>
+</div>
+</div>
+<div class="mod_article bg-full-img last block" id="article-365">
+<div class="inside">
+<div class="row">
+<h2 class="ce_headline grid lg-1 md-1 sm-1 xs-1 versal first">
+Einfach mal anschalten & abschalten</h2>
+<article class="ce_articlestart grid lg-2 md-2 sm-1 xs-1">
+<div class="video-container-wrapper" style="position:relative; width: 100%;">
+<iframe width="610" height="340" data-thirdparty="https://www.youtube-nocookie.com/embed/BL0nRoOmmFM?si=K2e0IpkrdNJSiXOn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="dsgvo_message dsgvocontent-iframe" style="background: url(files/theme-styles/img/dsgvo/fluegger-strand-video-vs-1.jpeg); position:absolute; top:0; width:100%; height:350px; padding: 20px; text-align:center; cursor:pointer; display:flex; justify-content:center; align-items: center; font-size: 1rem; line-height: 1.4; color:#000;border:3px solid #ddd;">
+<p style="max-width:70%; background-color: #fff;padding:1rem;">Klicken Sie in diesen Bereich, um das Video von <strong>Youtube</strong> anzuzeigen. Mit dem Laden dieses Videos akzeptieren Sie die <a onclick="openWindow(event,'https://policies.google.com/privacy');">Datenschutzerklärung</a> von YouTube.</p>
+</div>
+</div>
+</article>
+<article class="ce_articlestart grid lg-2 md-2 sm-1 xs-1">
+<div class="video-container-wrapper" style="position:relative; width: 100%">
+<iframe width="610" height="340" data-thirdparty="https://www.youtube-nocookie.com/embed/9kwFLsqxdlI?si=lfc2toxTNRs5yZG8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="dsgvo_message dsgvocontent-iframe" style="background: url(files/theme-styles/img/dsgvo/fluegger-strand-video-vs-2.jpeg); position:absolute; top:0; width:100%; height:350px; padding: 20px; text-align:center; cursor:pointer; display:flex; justify-content:center; align-items: center; font-size: 1rem; line-height: 1.4; color:#000;border:3px solid #ddd;">
+<p style="max-width:70%; background-color: #fff;padding:1rem;">Klicken Sie in diesen Bereich, um das Video von <strong>Youtube</strong> anzuzeigen. Mit dem Laden dieses Videos akzeptieren Sie die <a onclick="openWindow(event,'https://policies.google.com/privacy');">Datenschutzerklärung</a> von YouTube.</p>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+<div class="mod_article block" id="article-367">
+<div class="inside">
+<div class="row">
+<div class="popup-overlay" id="popupOverlay" onclick="closeOnOverlay(event)">
+<div class="ce_text info-popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+<button class="popup-close" onclick="closePopup()" aria-label="Schließen">×</button>
+<div class="ce_text block">
+<h2>Kurkarten online buchen!</h2>
+<p><span data-olk-copy-source="MessageBody">Melden Sie bitte Ihre Kurkarten vor Anreise direkt online über wlcmpass:</span><br><br>Einfach QR-Code scannen oder<a href="https://web.welcmpass.info/2192/booking" target="_blank" rel="noopener"> hier klicken</a><br><img src="files/bilder/QR-Code-Campingplatz%20Fl%C3%BCgger%20Strand.svg" alt=""></p>
+<p><strong>Kurkarten-Tarife 2026:</strong><br>15.05. - 14.09. 2,30€ / Erw. je Tag<br>Übrige Zeit 1,50€ / Erw. je Tag</p>
+<p>&nbsp;</p>
+<p>Weitere Informationen zur Kurabgabe finden Sie <a title="https://www.fehmarn.de/service/ostseecard" href="https://www.fehmarn.de/service/ostseecard" target="_blank" rel="noopener" data-auth="NotApplicable" data-linkindex="0">hier</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mod_article block" id="article-366">
+<div class="inside">
+<div class="row">
+<aside class="ce_asidestart sidebar-fixed first">
+<div class="ce_divstart sidebar-inner">
+<div class="ce_image sidebar-icon block">
+<figure class="image_container">
+<img src="files/theme-styles/img/wlan-inkl.svg" alt="WLAN-Symbol" title="WLAN auf dem Campingplatz" itemprop="image">
+</figure>
+</div>
+<div class="ce_image sidebar-icon block">
+<figure class="image_container">
+<img src="files/theme-styles/img/dusche-inkl.svg" alt="WLAN-Symbol" title="WLAN auf dem Campingplatz" itemprop="image">
+</figure>
+</div>
+<button class="popup-trigger-btn" onclick="openPopup()">
+Wichtige Info: Kur&shy;karten 2026
+</button>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer id="footer">
+<div class="inside">
+<div class="footer-inside block">
+<div class="inside">
+<div class="mod_article block" id="article-32">
+<div class="inside">
+<div class="row">
+<section class="ce_sectionstart row first">
+<article class="ce_articlestart grid xs-1 sm-3 md-6 lg-6 block">
+<div class="ce_image block">
+<figure class="image_container" style="margin-top:10px;">
+<a href="files/bilder/auszeichnungen-partner/ADAC_tipp-2026.png" data-lightbox="8ad6c4">
+<img src="assets/images/4/ADAC_tipp-2026-5d5f96d0.png" width="180" height="128" alt="ADAC Camping-Tipp 2024" itemprop="image">
+</a>
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-3 md-4 lg-3 block">
+<div id="pin-w"></div>
+<script></script>
+</article>
+<article class="ce_articlestart grid xs-1 sm-4 md-6 lg-6 block">
+<div class="ce_image block">
+<figure class="image_container" style="margin-top:10px;">
+<a href="files/bilder/auszeichnungen-partner/DCC-Logo-4Sterne.png" data-lightbox="86a582">
+<img src="assets/images/c/DCC-Logo-4Sterne-8e99816e.png" width="140" height="113" alt="DCC-Logo" itemprop="image">
+</a>
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-3 md-9 lg-9 block">
+<div class="ce_image block">
+<figure class="image_container" style="margin-top:10px;">
+<img src="assets/images/4/camping-paradies-fehmarn-e6b1838f.png" width="180" height="180" alt="ADAC Camping-Tipp 2024" itemprop="image">
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-3 md-9 lg-9 block">
+<div class="ce_image block">
+<figure class="image_container" style="margin-top:10px;">
+<img src="assets/images/3/camping-schleswig-holstein-e6e3c07d.png" width="180" height="180" alt="ADAC Camping-Tipp 2024" itemprop="image">
+</figure>
+</div>
+</article>
+</section>
+<section class="ce_sectionstart row">
+<article class="ce_articlestart grid xs-1 sm-1 md-3 lg-3 block">
+<div class="ce_hyperlink google-button block">
+<a href="https://www.google.de/travel/search?gsas=1&amp;ts=EggKAggDCgIIAxocEhoSFAoHCOgPEAcYHxIHCOgPEAgYARgBMgIQAA&amp;qs=MhRDZ3NJeU9UdGxfZVktX181QVJBQjgC&amp;ap=ugEHcmV2aWV3cw&amp;biw=1920&amp;bih=953&amp;hl=de-DE&amp;ved=0CAAQ5JsGahcKEwjA-Zn0086HAxUAAAAAHQAAAAAQDA" class="hyperlink_txt" title="Bewerten Sie uns auf Google" target="_blank" rel="noreferrer noopener">Bewerten Sie uns auf Google</a>
+</div>
+<div class="ce_image block">
+<figure class="image_container">
+<img src="assets/images/9/klimaneutral-batch-bae94973.svg" width="250" height="120" alt="Ökostrom und Klimaneurtral" itemprop="image">
+</figure>
+</div>
+<div class="ce_text block">
+<p>Camping Flügger&nbsp;Strand <br>Familie Köneking <br>Flügge 2, 23769 Fehmarn</p>
+<p><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#105;&#x6E;&#102;&#x6F;&#64;&#x66;&#108;&#x75;&#101;&#x67;&#103;&#x65;&#114;&#x2D;&#115;&#x74;&#114;&#x61;&#110;&#x64;&#46;&#x64;&#101;">&#105;&#x6E;&#102;&#x6F;&#64;&#x66;&#108;&#x75;&#101;&#x67;&#103;&#x65;&#114;&#x2D;&#115;&#x74;&#114;&#x61;&#110;&#x64;&#46;&#x64;&#101;<br></a>Tel. 0 43 72 - 99 13 44<br>Tel. 0 43 72 - 7 14<br><a href="kontakt-impressum.html"><br></a></p>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-2 md-3 lg-3 block border-box map-vs">
+<h4 class="ce_headline">
+Interaktiver Platzplan</h4>
+<div class="ce_image block">
+<figure class="image_container">
+<a href="platzplan.html" title="zum interaktiven Platzplan">
+<img src="files/theme-styles/img/platzplan/map-vs.jpg" width="334" height="221" alt="Platzplan Vorschau" itemprop="image">
+</a>
+</figure>
+</div>
+</article>
+<article class="ce_articlestart grid xs-1 sm-2 md-3 lg-3 block">
+<h4 class="ce_headline">
+Service & Info</h4>
+<div class="ce_hyperlink btn-blue halfbox block">
+<a href="webcam.html" class="hyperlink_txt" title="Webcam">Webcam</a>
+</div>
+<div class="ce_hyperlink btn-yellow halfbox block">
+<a href="wetter.html" class="hyperlink_txt" title="Wetter">Wetter</a>
+</div>
+<div class="ce_hyperlink clearfix block">
+<a href="lage-anfahrt.html" class="hyperlink_txt" title="Lage & Anfahrt">Lage & Anfahrt</a>
+</div>
+<div class="ce_hyperlink block">
+<a href="bildergalerie.html" class="hyperlink_txt" title="Bildergalerie">Bildergalerie</a>
+</div>
+<div class="ce_text block">
+<p><br><a href="kontakt-impressum.html">KONTAKT / IMPRESSUM<br></a><a href="datenschutz.html">DATENSCHUTZ</a><a href="kontakt-impressum.html"><br></a></p>
+</div>
+<div class="ce_text social">
+<ul>
+<li>
+<a title="Flügger Strand bei facebook" href="
+https://www.facebook.com/campingflueggerstrand/" target="_blank">
+<span class="social-inner">facebook</span>
+<i class="fa fa-facebook"></i>
+</a>
+</li>
+<li>
+<a title="Flügger Strand bei Instagram" href="
+https://www.instagram.com/campingflueggerstrand/" target="_blank">
+<span class="social-inner">instagram</span>
+<i class="fa fa-instagram" style="color: #fff;"></i>
+</a>
+</li>
+</ul>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-inside-top block">
+<div class="inside">
+<div class="ce_toplink first last block">
+<a title="TOP" href="#top">TOP<i class="fa fa-chevron-up"></i></a>
+</div>
+</div>
+</div> </div>
+</footer>
+</div>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script><script></script><script></script><script type="application/ld+json">{"@context":{"contao":"https:\/\/schema.contao.org\/"},"@type":"contao:Page","contao:title":"Campingplatz direkt am Meer auf Fehmarn","contao:pageId":2,"contao:noSearch":false,"contao:protected":false,"contao:groups":[],"contao:fePreview":false}</script>
+<script></script>
+<script></script>
+</body>
+</html>

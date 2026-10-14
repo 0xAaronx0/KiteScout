@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="de-de" dir="ltr">
+    <head><script src="https://cloud.ccm19.de/app.js?apiKey=REDACTED&amp;domain=699c7452a5922fe879001c52" referrerpolicy="origin"></script>
+        <meta charset="utf-8">
+	<meta name="author" content="Vendoweb">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<meta name="description" content="Unsere Strandgut-Kajüten sind kleiner als unsere Tiny-Häuser, dafür aber größer und komfortabler als unsere Strandgut-Kojen. Dies macht sie zum idealen Kompromiss für dich, falls du dich nicht zwischen Tiny House und Strandgut-Koje entscheiden kannst.">
+	<meta name="generator" content="Joomla! - Open Source Content Management">
+	<title>Strandgut-Kajüten in Cuxhaven - Strandgut Campingplatz</title>
+	<link href="/images/favicon-strandgut.png" rel="icon">
+	<link href="/images/favicon-strandgut.png#2" rel="apple-touch-icon">
+
+        <link href="/media/vendor/joomla-custom-elements/css/joomla-alert.min.css?0.4.1" rel="stylesheet">
+	<link href="/media/system/css/joomla-fontawesome.min.css?5.0.42" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link href="/templates/yootheme_eventomaxx/css/lenin.css?5.0.42" rel="stylesheet">
+	<link href="/templates/yootheme_eventomaxx/css/theme.9.css?1777456170" rel="stylesheet">
+	<link href="/templates/yootheme/css/theme.update.css?5.0.42" rel="stylesheet">
+
+        <script type="application/json" class="joomla-script-options new"></script>
+	<script src="/media/system/js/core.min.js?a3d8f8"></script>
+	<script src="/media/vendor/webcomponentsjs/js/webcomponents-bundle.min.js?2.8.0" nomodule defer></script>
+	<script src="/media/system/js/joomla-hidden-mail.min.js?80d9c7" type="module"></script>
+	<script src="/media/system/js/messages.min.js?9a4811" type="module"></script>
+	<script src="/media/vendor/jquery/js/jquery.min.js?3.7.1"></script>
+	<script src="/media/legacy/js/jquery-noconflict.min.js?504da4"></script>
+	<script src="/templates/yootheme_eventomaxx/js/lenis.min.js?5.0.42" defer></script>
+	<script src="/templates/yootheme_eventomaxx/js/lenisInit.js?5.0.42" defer></script>
+	<script src="/templates/yootheme/vendor/assets/uikit/dist/js/uikit.min.js?5.0.42"></script>
+	<script src="/templates/yootheme/vendor/assets/uikit/dist/js/uikit-icons-woolberry.min.js?5.0.42"></script>
+	<script src="/templates/yootheme/assets/site/js/theme.js?5.0.42"></script>
+	<script></script>
+	
+<script type="application/ld+json" data-type="gsd">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.campingplatz-strandgut.de"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Alternative Unterkünfte",
+            "item": "https://www.campingplatz-strandgut.de/alternative-unterkuenfte"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Strandgut-Kajüten",
+            "item": "https://www.campingplatz-strandgut.de/alternative-unterkuenfte/strandgut-kajueten"
+        }
+    ]
+}
+</script>
+
+	<script src='https://js-sdk.dirs21.de/8d05cb23-0dc4-4052-b451-f14d07344384' type='text/javascript' async></script>
+
+    </head>
+    <body class="">
+
+        <div class="uk-hidden-visually uk-notification uk-notification-top-left uk-width-auto">
+            <div class="uk-notification-message">
+                <a href="#tm-main" class="uk-link-reset">Zum Hauptinhalt springen</a>
+            </div>
+        </div>
+
+        
+        
+        <div class="tm-page">
+
+                        
+
+
+<header class="tm-header-mobile uk-hidden@l">
+
+
+        <div uk-sticky cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container">
+    
+        <div class="uk-navbar-container">
+
+            <div class="uk-container uk-container-expand">
+                <nav class="uk-navbar" uk-navbar="{&quot;align&quot;:&quot;left&quot;,&quot;container&quot;:&quot;.tm-header-mobile &gt; [uk-sticky]&quot;,&quot;boundary&quot;:&quot;.tm-header-mobile .uk-navbar-container&quot;}">
+
+                                        <div class="uk-navbar-left ">
+
+                                                    <a href="https://www.campingplatz-strandgut.de/" aria-label="Zurück zur Startseite" class="uk-logo uk-navbar-item">
+    <img alt="logo"></a>
+                        
+                        
+                        
+                    </div>
+                    
+                    
+                                        <div class="uk-navbar-right">
+
+                                                    
+                        
+                                                    <a uk-toggle href="#tm-dialog-mobile" class="uk-navbar-toggle" aria-controls="tm-dialog-mobile">
+
+                <span class="uk-margin-xsmall-right uk-text-middle">Menü</span>
+        
+        <div uk-navbar-toggle-icon></div>
+
+        
+    </a>
+                        
+                    </div>
+                    
+                </nav>
+            </div>
+
+        </div>
+
+        </div>
+    
+
+
+
+    
+    
+        <div id="tm-dialog-mobile" class="uk-dropbar uk-dropbar-right" uk-drop="{&quot;flip&quot;:&quot;false&quot;,&quot;container&quot;:&quot;.tm-header-mobile &gt; [uk-sticky]&quot;,&quot;target-y&quot;:&quot;.tm-header-mobile .uk-navbar-container&quot;,&quot;mode&quot;:&quot;click&quot;,&quot;target-x&quot;:&quot;.tm-header-mobile .uk-navbar-container&quot;,&quot;stretch&quot;:true,&quot;pos&quot;:&quot;bottom-right&quot;,&quot;bgScroll&quot;:&quot;false&quot;,&quot;animation&quot;:&quot;slide-right&quot;,&quot;animateOut&quot;:true,&quot;duration&quot;:300,&quot;toggle&quot;:&quot;false&quot;}">
+
+        <div class="tm-height-min-1-1 uk-flex uk-flex-column">
+
+            
+                        <div class="uk-margin-auto-bottom">
+                
+<div class="uk-panel" id="module-menu-dialog-mobile">
+
+    
+    
+<ul class="uk-nav uk-nav-primary uk-nav-">
+    
+	<li class="item-101"><a href="/" title="Campingplatz Strandgut">Home</a></li>
+	<li class="item-193"><a href="/stellplaetze-reisecamping" title="Stellplätze Reisecamping">Stellplätze Reisecamping</a></li>
+	<li class="item-194 uk-active uk-parent"><a href="/alternative-unterkuenfte" title="Alternative Unterkünfte">Alternative Unterkünfte</a>
+	<ul class="uk-nav-sub">
+
+		<li class="item-195"><a href="/alternative-unterkuenfte/tiny-house" title="Tiny House">Tiny House</a></li>
+		<li class="item-196 uk-active"><a href="/alternative-unterkuenfte/strandgut-kajueten" title="Strandgut-Kajüten">Strandgut-Kajüten</a></li>
+		<li class="item-197"><a href="/alternative-unterkuenfte/strandgut-kojen" title="Strandgut-Kojen">Strandgut-Kojen</a></li>
+		<li class="item-198"><a href="/alternative-unterkuenfte/sandbank2go" title="Sandbank2Go">Sandbank2Go</a></li></ul></li>
+	<li class="item-199"><a href="/wohnmobil-zur-miete" title="Wohnmobil zur Miete">Wohnmobil zur Miete</a></li>
+	<li class="item-200 uk-parent"><a href="/platz-ausstattung" title="Platz &amp; Ausstattung">Platz &amp; Ausstattung</a>
+	<ul class="uk-nav-sub">
+
+		<li class="item-201"><a href="/platz-ausstattung#camping-hund" uk-scroll title="Camping mit Hund">Camping mit Hund</a></li></ul></li>
+	<li class="item-202"><a href="/freie-stellplaetze-verkauf" title="Freie Stellplätze / Verkauf">Freie Stellplätze / Verkauf</a></li>
+	<li class="item-203"><a href="/preise" title="Preise">Preise</a></li>
+	<li class="item-169"><a href="/kontakt" title="Kontakt">Kontakt</a></li></ul>
+
+</div>
+
+            </div>
+            
+            
+        </div>
+
+    </div>
+    
+
+</header>
+
+
+
+
+<header class="tm-header uk-visible@l">
+
+
+
+        <div uk-sticky media="@l" cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container">
+    
+        <div class="uk-navbar-container">
+
+            <div class="uk-container uk-container-expand">
+                <nav class="uk-navbar" uk-navbar="{&quot;align&quot;:&quot;left&quot;,&quot;container&quot;:&quot;.tm-header &gt; [uk-sticky]&quot;,&quot;boundary&quot;:&quot;.tm-header .uk-navbar-container&quot;}">
+
+                                        <div class="uk-navbar-left ">
+
+                                                    <a href="https://www.campingplatz-strandgut.de/" aria-label="Zurück zur Startseite" class="uk-logo uk-navbar-item">
+    <img alt="logo"></a>
+                        
+                        
+                        
+                    </div>
+                    
+                                        <div class="uk-navbar-center">
+
+                        
+                                                    
+<ul class="uk-navbar-nav">
+    
+	<li class="item-101"><a href="/" title="Campingplatz Strandgut">Home</a></li>
+	<li class="item-193"><a href="/stellplaetze-reisecamping" title="Stellplätze Reisecamping">Stellplätze Reisecamping</a></li>
+	<li class="item-194 uk-active uk-parent"><a href="/alternative-unterkuenfte" title="Alternative Unterkünfte">Alternative Unterkünfte</a>
+	<div class="uk-drop uk-navbar-dropdown"><div><ul class="uk-nav uk-navbar-dropdown-nav">
+
+		<li class="item-195"><a href="/alternative-unterkuenfte/tiny-house" title="Tiny House">Tiny House</a></li>
+		<li class="item-196 uk-active"><a href="/alternative-unterkuenfte/strandgut-kajueten" title="Strandgut-Kajüten">Strandgut-Kajüten</a></li>
+		<li class="item-197"><a href="/alternative-unterkuenfte/strandgut-kojen" title="Strandgut-Kojen">Strandgut-Kojen</a></li>
+		<li class="item-198"><a href="/alternative-unterkuenfte/sandbank2go" title="Sandbank2Go">Sandbank2Go</a></li></ul></div></div></li>
+	<li class="item-199"><a href="/wohnmobil-zur-miete" title="Wohnmobil zur Miete">Wohnmobil zur Miete</a></li>
+	<li class="item-200 uk-parent"><a href="/platz-ausstattung" title="Platz &amp; Ausstattung">Platz &amp; Ausstattung</a>
+	<div class="uk-drop uk-navbar-dropdown"><div><ul class="uk-nav uk-navbar-dropdown-nav">
+
+		<li class="item-201"><a href="/platz-ausstattung#camping-hund" uk-scroll title="Camping mit Hund">Camping mit Hund</a></li></ul></div></div></li>
+	<li class="item-202"><a href="/freie-stellplaetze-verkauf" title="Freie Stellplätze / Verkauf">Freie Stellplätze / Verkauf</a></li>
+	<li class="item-203"><a href="/preise" title="Preise">Preise</a></li>
+	<li class="item-169"><a href="/kontakt" title="Kontakt">Kontakt</a></li></ul>
+
+                        
+                    </div>
+                    
+                    
+                </nav>
+            </div>
+
+        </div>
+
+        </div>
+    
+
+
+
+
+
+
+
+</header>
+
+            
+            
+
+            <main id="tm-main">
+
+                
+                <div id="system-message-container" aria-live="polite"></div>
+
+                <style class="uk-margin-remove-adjacent"></style>
+<div class="uk-section-primary uk-position-relative uk-section uk-padding-remove-vertical fs-section-divider-waves-7 uk-height-viewport" tm-header-transparent-noplaceholder data-style="primary" data-padding="none" uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-bottom-small; delay: false;">
+
+
+
+
+
+
+
+<div class="uk-grid tm-grid-expand uk-grid-collapse" uk-grid>
+    
+        
+<div class="uk-width-1-2@m">
+        <div class="uk-height-viewport uk-panel">    
+        
+            
+            
+            
+                
+                    
+<div class="uk-panel uk-margin-remove-first-child uk-position-relative uk-margin uk-width-large uk-margin-auto uk-text-left" id="page#0" style="top: 25vh;" uk-scrollspy-class>
+    
+        
+            
+                                                
+            
+            
+                
+                
+                    
+
+        
+                <h1 class="el-title uk-heading-small uk-margin-top uk-margin-remove-bottom">Strandgut-Kajüten</h1>        
+                <div class="el-meta uk-h3 uk-margin-top uk-margin-remove-bottom">Der perfekte Kompromiss</div>        
+    
+        
+        
+                <div class="el-content uk-panel uk-margin-top">Unsere Strandgut-Kajüten sind kleiner als unsere Tiny-Häuser, dafür aber größer und komfortabler als unsere Strandgut-Kojen. Dies macht sie zum idealen Kompromiss für dich, falls du dich nicht zwischen Tiny House und Strandgut-Koje entscheiden kannst.
+</div>        
+        
+        
+
+                
+                
+            
+        
+    
+</div>
+                
+            
+        
+        </div>    
+</div>
+<div class="uk-width-1-2@m">
+        <div class="uk-flex uk-height-viewport">    
+                <div class="uk-background-norepeat uk-background-cover uk-background-center-center uk-tile uk-width-1-1" data-src="/images/Alternative%20Unterkunfte/Strandgut-Kajueten/ChatGPT%20Image%2019.%20Feb.%202026%2015_40_10%201.png" uk-img>        
+            
+                        <div class="uk-position-cover" style="background-color: rgba(0, 0, 0, 0.08); background-image: linear-gradient(180deg,rgba(0, 0, 0, 0.35) 0%, rgba(255, 255, 255, 0) 28%);; background-clip: padding-box;"></div>            
+                        <div class="uk-panel uk-width-1-1">            
+                
+                    
+                
+                        </div>            
+                </div>        
+        </div>    
+</div>
+    
+</div>
+
+
+
+
+                
+    <div class="fs-shape-divider waves-7 uk-position-absolute uk-width-1-1 uk-overflow-hidden" style="left:0; right:0; bottom:-1px; transform: rotate(180deg);" data-position="bottom">    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid" viewBox="0 0 1200 158" fill="#FFFFFF" aria-hidden="true" class="uk-position-relative uk-width-1-1 uk-display-block" style="max-width: 100%; width: 100%; bottom:1px; filter: drop-shadow(0px 20px 5px #00000080); -webkit-filter: drop-shadow(0px 20px 5px #00000080); -moz-filter: drop-shadow(0px 20px 5px #00000080);"></svg>    </div>    
+</div>
+<div class="uk-section-default uk-section uk-section- fs-section" data-style="default">
+
+
+
+
+
+    <div class="uk-container fs-section-content">
+
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-grid-column-large" uk-grid>
+    
+        
+<div class="uk-width-1-2@m">
+    
+        
+            
+            
+            
+                
+                    <div class="uk-panel uk-margin">Die Kajüte ist mit einem großen Doppelbett (1,80 x 2,00 Meter) ausgestattet und bietet Platz für max. zwei Personen. Unter dem Bett gibt es großzügigen Stauraum für das Gepäck.<br><br>
+Zwei kleine Fenster, zwei Leselampen und eine Deckenlampe bringen ausreichend Licht ins Dunkle. Steckdosen inkl. USB sind ebenfalls vorhanden. Ein ausziehbarer Tisch sowie zwei kleine einzelne Sitzbänke laden im Innenraum zum Verweilen ein.
+Auf der kleinen überdachten Veranda kann man sowohl bei gutem als auch bei Schietwetter sitzen. Dank der Veranda lässt sich der Aufenthalt auch außerhalb der Kajüte an der frischen Luft genießen.</div>
+                
+            
+        
+    
+</div>
+<div class="uk-width-1-2@m">
+    
+        
+            
+            
+            
+                
+                    
+<div class="uk-margin" uk-slideshow="minHeight: 400; autoplay: 1;">
+    <div class="uk-position-relative">
+        
+            <div class="uk-slideshow-items">                
+                    <div class="el-item">
+
+    
+        
+            
+                <picture><img class="el-image" src="/media/yootheme/cache/83/k-image00004-831015a1.jpeg" alt="Bett in Kajüte" loading="lazy" width="1440" height="1920" uk-cover></picture>
+            
+        
+        
+        
+    
+</div>
+                
+                    <div class="el-item">
+
+    
+        
+            
+                <picture><img class="el-image" src="/images/Alternative%20Unterkunfte/Strandgut-Kajueten/k-image00001.jpeg" alt="Bett mit ausziehbaren Tisch" loading="lazy" width="1920" height="1440" uk-cover></picture>
+            
+        
+        
+        
+    
+</div>
+                
+                    <div class="el-item">
+
+    
+        
+            
+                <picture><img class="el-image" src="/images/Alternative%20Unterkunfte/Strandgut-Kajueten/k-image00002.jpeg" alt="Kajüte Wohnraum" loading="lazy" width="1920" height="1440" uk-cover></picture>
+            
+        
+        
+        
+    
+</div>
+                
+                    <div class="el-item">
+
+    
+        
+            
+                <picture><img class="el-image" src="/images/Alternative%20Unterkunfte/Strandgut-Kajueten/k-image00003.jpeg" alt="Doppelbett" loading="lazy" width="1920" height="1440" uk-cover></picture>
+            
+        
+        
+        
+    
+</div>
+                            </div>
+        
+        
+        
+    </div>
+        
+<div class="uk-margin-top" uk-inverse>
+    <ul class="el-nav uk-slideshow-nav uk-dotnav uk-flex-center" uk-margin>                <li uk-slideshow-item="0">
+            <a href="#"></a>
+        </li>
+                <li uk-slideshow-item="1">
+            <a href="#"></a>
+        </li>
+                <li uk-slideshow-item="2">
+            <a href="#"></a>
+        </li>
+                <li uk-slideshow-item="3">
+            <a href="#"></a>
+        </li>
+            </ul>
+</div>    
+</div>
+                
+            
+        
+    
+</div>
+    
+</div>
+<div class="uk-container uk-container-small uk-margin-large">
+        <div class="uk-grid tm-grid-expand uk-child-width-1-1">    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    
+<h2 class="uk-h3 uk-text-primary uk-text-center">
+    
+        
+                    Zusatzkosten:        
+        
+    
+</h2>
+                
+            
+        
+    
+</div>
+        </div>    
+</div>
+<div class="uk-grid-margin uk-container">
+        <div class="uk-grid tm-grid-expand uk-grid-column-medium" uk-grid>    
+        
+<div class="uk-width-1-2@m">
+    
+        
+            
+            
+            
+                
+                    
+<ul class="uk-list uk-list-divider uk-width-xlarge" id="page#1">
+    
+    
+                <li class="el-item">            
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap">            <div class="uk-width-auto"><span class="uk-text-secondary el-image" uk-icon="icon: check; width: 30; height: 30;"></span></div>            <div>
+                <div class="el-content uk-panel">Für Strom berechnen wir pauschal einmalig 3,00 €.</div>            </div>
+        </div>
+    
+        </li>                <li class="el-item">            
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap">            <div class="uk-width-auto"><span class="uk-text-secondary el-image" uk-icon="icon: check; width: 30; height: 30;"></span></div>            <div>
+                <div class="el-content uk-panel">Die Endreinigung kostet 15,00 €.</div>            </div>
+        </div>
+    
+        </li>                <li class="el-item">            
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap">            <div class="uk-width-auto"><span class="uk-text-secondary el-image" uk-icon="icon: check; width: 30; height: 30;"></span></div>            <div>
+                <div class="el-content uk-panel">Der Gästebeitrag ab dem 16. Lebensjahr pro Person und Übernachtung teilt sich auf die beiden Saisons wie folgt auf:
+<p class="saison">◦ Saison A -&gt; 1. April – 13. Oktober: 4,00 €<br />◦ Saison B -&gt; 15. März – 31. März: 3,20 €</p></div>            </div>
+        </div>
+    
+        </li>        
+    
+    
+</ul>
+                
+            
+        
+    
+</div>
+<div class="uk-width-1-2@m">
+    
+        
+            
+            
+            
+                
+                    
+<ul class="uk-list uk-list-divider uk-list-large uk-width-xlarge" id="page#2">
+    
+    
+                <li class="el-item">            
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap">            <div class="uk-width-auto"><span class="uk-text-secondary el-image" uk-icon="icon: check; width: 30; height: 30;"></span></div>            <div>
+                <div class="el-content uk-panel">Rauchen und Haustiere sind nicht erlaubt.</div>            </div>
+        </div>
+    
+        </li>                <li class="el-item">            
+    
+        <div class="uk-grid uk-grid-small uk-child-width-expand uk-flex-nowrap">            <div class="uk-width-auto"><span class="uk-text-secondary el-image" uk-icon="icon: check; width: 30; height: 30;"></span></div>            <div>
+                <div class="el-content uk-panel">Optional kann ein Wäschepaket dazu gebucht werden. Dieses beinhaltet Bettwäsche für eine Person und ein kleines sowie ein großes Handtuch. Das Wäschepaket kostet 20,00 € pro Person.</div>            </div>
+        </div>
+    
+        </li>        
+    
+    
+</ul>
+                
+            
+        
+    
+</div>
+        </div>    
+</div>
+    </div>
+
+
+
+
+</div>
+<div class="uk-section-default uk-section uk-section- fs-section" data-style="default">
+
+
+
+
+
+    <div class="uk-container fs-section-content">
+
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
+    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    
+                
+            
+        
+    
+</div>
+    
+</div>
+    </div>
+
+
+
+
+</div>
+
+                
+            </main>
+
+            
+
+                        <footer>
+                <style class="uk-margin-remove-adjacent"></style>
+<div id="footer" class="uk-section-primary uk-position-relative uk-section uk-section- fs-section-divider-waves-2" data-style="primary" uk-scrollspy="target: [uk-scrollspy-class]; cls: uk-animation-slide-top-small; delay: false;">
+
+
+
+
+
+    <div class="uk-container fs-section-content uk-position-relative uk-position-z-index">
+
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-grid-column-large uk-grid-divider" uk-grid id="footer#2">
+    
+        
+<div class="uk-width-1-3@s uk-flex-first@s">
+    
+        
+            
+            
+            
+                
+                    
+<div class="uk-margin uk-width-small uk-margin-auto" id="footer#0" uk-scrollspy-class>
+        <picture><img class="el-image uk-border-rounded uk-box-shadow-large" src="/images/Start/Logo_Strandgut.png" alt="Campingplatz Strandgut Logo" loading="lazy" width="1400" height="1300"></picture>    
+    
+</div>
+<div id="footer#1" class="uk-margin-medium-top uk-width-small uk-margin-auto uk-text-left@m uk-text-center" uk-scrollspy-class>
+    
+        <ul class="uk-margin-remove-bottom uk-subnav  uk-subnav-divider uk-flex-left@m uk-flex-center" uk-margin>                <li class="el-item ">
+<a class="el-link" href="/impressum">
+        Impressum
+</a></li>
+                <li class="el-item ">
+<a class="el-link" href="/datenschutz">
+        Datenschutz
+</a></li>
+                <li class="el-item ">
+<a class="el-link" href="javascript:CCM.openWidget();">
+        Cookies
+</a></li>
+                </ul>
+    
+</div>
+                
+            
+        
+    
+</div>
+<div class="uk-width-1-3@s uk-flex-first">
+    
+        
+            
+            
+            
+                
+                    
+<h2 class="uk-h3 uk-text-left@m uk-text-center" uk-scrollspy-class>
+    
+        
+                    Kontakt        
+        
+    
+</h2><div class="uk-panel uk-text-small uk-margin uk-text-left@m uk-text-center" uk-scrollspy-class><p><strong>Campingplatz Strandgut</strong><br /><span class="uk-margin-small-right" uk-icon="mail"></span><joomla-hidden-mail  is-link="1" is-email="1" first="aW5mbw==" last="Y2FtcGluZ3BsYXR6LXN0cmFuZGd1dC5kZQ==" text="aW5mb0BjYW1waW5ncGxhdHotc3RyYW5kZ3V0LmRl" base="" >Diese E-Mail-Adresse ist vor Spambots geschützt! Zur Anzeige muss JavaScript eingeschaltet sein.</joomla-hidden-mail> <br /><span class="uk-margin-small-right" uk-icon="phone"></span><a href="tel:01621022561">0162 1022561</a><br /><span class="uk-margin-small-right" uk-icon="whatsapp"></span><a href="https://wa.me/1621022561" target="_blank" rel="noopener" title="Whatsapp">WhatsApp</a></p></div>
+<h3 class="uk-h3 uk-text-left@m uk-text-center" uk-scrollspy-class>
+    
+        
+                    Anschrift        
+        
+    
+</h3><div class="uk-panel uk-text-small uk-margin uk-text-left@m uk-text-center" uk-scrollspy-class>Wernerwaldstraße 25<br />27476 Cuxhaven</div>
+                
+            
+        
+    
+</div>
+<div class="uk-width-1-3@s">
+    
+        
+            
+            
+            
+                
+                    
+<h3 class="uk-h3 uk-text-left@m uk-text-center" uk-scrollspy-class>
+    
+        
+                    Geschäftszeiten        
+        
+    
+</h3><div class="uk-panel uk-text-small uk-margin uk-text-left@m uk-text-center" uk-scrollspy-class><p><strong>Montag - Donnerstag</strong> <br />09:00 - 13:00 Uhr / 15:00 - 16:30 Uhr<br /><br /><strong>Freitag</strong><br />09:00 - 13:00 Uhr / 15:00 - 18:00 Uhr<br /><br /><strong>Samstag - Sonntag</strong><br />09:00 - 13:00 Uhr / 15:00 - 16:30 Uhr</p></div>
+                
+            
+        
+    
+</div>
+    
+</div>
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1 uk-margin-large-top">
+    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    
+<div id="footer#3" class="uk-text-center" uk-scrollspy-class>
+        <div class="uk-flex-middle uk-grid-small uk-child-width-auto uk-flex-center" uk-grid>    
+    
+                <div class="el-item">
+        
+        
+<a class="el-content uk-button uk-button-default uk-flex-inline uk-flex-center uk-flex-middle" aria-label="Plan- und Platzordnung" href="/images/platzplan-platzordnung.pdf" target="_blank">
+        <span class="uk-margin-xsmall-right" uk-icon="file-pdf"></span>    
+        Plan- und Platzordnung    
+    
+</a>
+
+
+                </div>
+        
+    
+                <div class="el-item">
+        
+        
+<a class="el-content uk-button uk-button-default uk-flex-inline uk-flex-center uk-flex-middle" aria-label=" Platzordnung für Hundehalter" href="/images/campingplatzordnug_hundebesitzer.pdf" target="_blank">
+        <span class="uk-margin-xsmall-right" uk-icon="file-pdf"></span>    
+         Platzordnung für Hundehalter    
+    
+</a>
+
+
+                </div>
+        
+    
+        </div>    
+</div>
+
+                
+            
+        
+    
+</div>
+    
+</div>
+    </div>
+
+
+
+                
+    <div class="fs-shape-divider waves-2 uk-position-absolute uk-width-1-1 uk-overflow-hidden uk-position-z-index" style="left:0; right:0; top:1px; transform: translateY(-100%);" data-position="top-outside" data-invert="true">    <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid" viewBox="0 0 1200 144" fill="#288CC7" aria-hidden="true" class="uk-position-relative uk-width-1-1 uk-display-block" style="max-width: 100%; width: 100%; top:1px;"></svg>    </div>    
+</div>
+<div id="footer#4" class="uk-section-primary uk-section uk-section-xsmall fs-section" data-style="primary" data-padding="xsmall">
+
+
+
+
+
+
+
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
+    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    <div class="uk-panel uk-text-small uk-margin uk-text-center">Design, Umsetzung &amp; Hosting by <a title="vendoweb - Die Internet- und Webagentur in Oldenburg" href="https://www.vendoweb.de/" target="_blank" rel="noopener noreferrer">vendoweb</a>. Die Internet- &amp; Webagentur in Oldenburg und Lübeck.</div>
+                
+            
+        
+    
+</div>
+    
+</div>
+
+
+
+
+
+</div>
+<div class="uk-section-default uk-section uk-padding-remove-vertical fs-section" data-style="default" data-padding="none">
+
+
+
+
+
+
+
+<div class="uk-grid-margin uk-grid tm-grid-expand uk-child-width-1-1">
+    
+        
+<div class="uk-width-1-1">
+    
+        
+            
+            
+            
+                
+                    
+<div id="footer#5" class="uk-position-fixed uk-margin uk-width-small uk-margin-auto-left uk-text-right">
+        <div class="uk-flex-middle uk-grid-column-small uk-grid-row-collapse uk-child-width-auto uk-flex-right" uk-grid>    
+    
+                <div class="el-item">
+        
+        
+<a class="el-content uk-button uk-button-primary uk-button-small" aria-label="Mail" href="mailto:info@campingplatz-strandgut.de">
+        <span uk-icon="mail"></span>    
+    
+    
+</a>
+
+
+                </div>
+        
+    
+                <div class="el-item">
+        
+        
+<a class="el-content uk-button uk-button-primary uk-button-small" aria-label="Telefon" href="tel:01621022561">
+        <span uk-icon="receiver"></span>    
+    
+    
+</a>
+
+
+                </div>
+        
+    
+        </div>    
+</div>
+
+                
+            
+        
+    
+</div>
+    
+</div>
+
+
+
+
+
+</div>            </footer>
+            
+        </div>
+
+        
+        
+        
+
+    </body>
+</html>

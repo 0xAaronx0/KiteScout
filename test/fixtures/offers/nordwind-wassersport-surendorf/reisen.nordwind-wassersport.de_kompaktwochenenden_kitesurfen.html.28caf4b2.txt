@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<script></script>
+<meta charset="UTF-8">
+<title>Kitesurfen - Nordwind Wassersport</title>
+<base href="https://reisen.nordwind-wassersport.de/">
+<meta name="robots" content="index,follow">
+<meta name="description" content="">
+<meta name="generator" content="Contao Open Source CMS">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script></script><script></script><script></script><script></script>
+<script></script>
+<script></script>
+<script></script>
+<style></style>
+</head>
+<body id="top">
+<div id="wrapper">
+<div id="container">
+<main id="main">
+<div class="inside">
+<div id="header">
+<div class="navigation_top">
+<nav class="mod_huh_menu block" itemscope itemtype="http://schema.org/SiteNavigationElement"
+data-max-trigger-level="0"
+data-open-delay="200"
+data-close-delay="200"
+data-opening-duration="0"
+data-closing-duration="0"
+data-trigger-classes-for-childfree-level1=""
+>
+<a href="kompaktwochenenden/kitesurfen.html#skipNavigation13" class="invisible">Navigation überspringen</a>
+<div class="navbar d-none d-lg-block navbar-expand-lg navbar-light">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content-" aria-controls="navbar-content-" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbar-content-">
+<ul class="level_1 navbar-nav mr-auto">
+<li class="nav-item home">
+<a class="nav-link submenu sibling first" href="index.html"><i class="fa fa-home" aria-hidden="true"></i></a>
+</li>
+<li class="nav-item submenu first">
+<a href="reisen-2026/klassenfahrten-2026.html"
+title="Klassenfahrten"
+class="nav-link submenu first"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">Klassenfahrten</span>
+</a>
+<ul class="level_2">
+<li class="nav-item submenu first">
+<a href="reisen-2026/klassenfahrten-2026.html"
+title="2026"
+class="nav-link submenu first"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">2026</span>
+</a>
+<ul class="level_3">
+<li class="nav-item first">
+<a href="reisen-2026/klassenfahrten-2026.html"
+title="Klassenfahrten Kurzübersicht"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Klassenfahrten Kurzübersicht</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/einleitung.html"
+title="Einleitung"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Einleitung</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/klassenfahrten-2026/seacollege-2026.html"
+title="Seacollege 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Seacollege 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/klassenfahrten-2026/active-beach-2026.html"
+title="Active Beach 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Active Beach 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/klassenfahrten-2026/surf-sail-bike-2026.html"
+title="Surf-Sail-Bike 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Surf-Sail-Bike 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/klassenfahrten-2026/team-und-mee-h-r-2026.html"
+title="Team und Mee&#40;h&#41;r 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Team und Mee&#40;h&#41;r 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/klassenfahrten-2026/vario-2026.html"
+title="Vario 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Vario 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="reisen-2026/klassenfahrten-2026/zubuchbare-leistungen.html"
+title="Zubuchbare Leistungen"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Zubuchbare Leistungen</span>
+</a>
+</li>
+<li class="nav-item last">
+<a href="reisen-2026/klassenfahrten-2026/transfer-shuttle.html"
+title="Transfer + Shuttle"
+class="nav-link last"
+itemprop="url">
+<span itemprop="name">Transfer + Shuttle</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item submenu last">
+<a href="337.html"
+title="2027"
+class="nav-link submenu last"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">2027</span>
+</a>
+<ul class="level_3">
+<li class="nav-item first">
+<a href="337.html"
+title="Klassenfahrten Kurzübersicht"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Klassenfahrten Kurzübersicht</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="338.html"
+title="Einleitung"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Einleitung</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/seacollege-2027.html"
+title="Seacollege 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Seacollege 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/active-beach-2027.html"
+title="Active Beach 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Active Beach 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/surf-sail-bike-2027.html"
+title="Surf-Sail-Bike 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Surf-Sail-Bike 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/team-und-mee-h-r-2027.html"
+title="Team und Mee&#40;h&#41;r 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Team und Mee&#40;h&#41;r 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/vario-2027.html"
+title="Vario 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Vario 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/swim-if-you-can-2027.html"
+title="Swim if you can! 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Swim if you can! 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="klassenfahrten/id-2027/surf-sail-city-2027.html"
+title="Surf, Sail + City 2027"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Surf, Sail + City 2027</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="344.html"
+title="Zubuchbare Leistungen"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Zubuchbare Leistungen</span>
+</a>
+</li>
+<li class="nav-item last">
+<a href="345.html"
+title="Transfer + Shuttle"
+class="nav-link last"
+itemprop="url">
+<span itemprop="name">Transfer + Shuttle</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item submenu">
+<a href="feriencamps/id-2026/kite-wing-sail-surf-wassersport-total-2026.html"
+title="Feriencamps"
+class="nav-link submenu"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">Feriencamps</span>
+</a>
+<ul class="level_2">
+<li class="nav-item submenu first">
+<a href="feriencamps/id-2026/kite-wing-sail-surf-wassersport-total-2026.html"
+title="2026"
+class="nav-link submenu first"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">2026</span>
+</a>
+<ul class="level_3">
+<li class="nav-item first">
+<a href="feriencamps/id-2026/kite-wing-sail-surf-wassersport-total-2026.html"
+title="Kite.Wing.Sail.Surf – Wassersport total 2026"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Kite.Wing.Sail.Surf – Wassersport total 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="feriencamps/id-2026/fischer-s-fritz-2026.html"
+title="Fischer´s Fritz 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Fischer´s Fritz 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="feriencamps/id-2026/chill-surf-2026.html"
+title="Chill &amp; Surf 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Chill & Surf 2026</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="feriencamps/id-2026/sail-surf-2026.html"
+title="Sail &amp; Surf 2026"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Sail & Surf 2026</span>
+</a>
+</li>
+<li class="nav-item last">
+<a href="feriencamps/id-2026/7-tage-7-abenteuer-2026.html"
+title="7 Tage, 7 Abenteuer 2026"
+class="nav-link last"
+itemprop="url">
+<span itemprop="name">7 Tage, 7 Abenteuer 2026</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item submenu last">
+<a href="feriencamps/id-2027/kite-wing-sail-surf-wassersport-total.html"
+title="2027"
+class="nav-link submenu last"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">2027</span>
+</a>
+<ul class="level_3">
+<li class="nav-item first">
+<a href="feriencamps/id-2027/kite-wing-sail-surf-wassersport-total.html"
+title="Kite * Wing * Sail * Surf"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Kite * Wing * Sail * Surf</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="feriencamps/id-2027/fischer-s-fritz.html"
+title="Fischer´s Fritz"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Fischer´s Fritz</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="feriencamps/id-2027/beach-surf.html"
+title="Beach &amp; Surf"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Beach & Surf</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="feriencamps/id-2027/sail-surf.html"
+title="Sail &amp; Surf"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Sail & Surf</span>
+</a>
+</li>
+<li class="nav-item last">
+<a href="feriencamps/id-2027/7-tage-7-abenteuer.html"
+title="7 Tage, 7 Abenteuer"
+class="nav-link last"
+itemprop="url">
+<span itemprop="name">7 Tage, 7 Abenteuer</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="nav-item forward trail submenu">
+<a href="kompaktwochenenden/kitesurfen.html"
+title="Kompaktwochenenden"
+class="nav-link forward trail submenu"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">Kompaktwochenenden</span>
+</a>
+<ul class="level_2">
+<li class="nav-item active first">
+<a href="kompaktwochenenden/kitesurfen.html"
+title="Kitesurfen"
+class="nav-link active first"
+itemprop="url">
+<span itemprop="name">Kitesurfen</span>
+</a>
+</li>
+<li class="nav-item sibling">
+<a href="kompaktwochenenden/katamaransegeln.html"
+title="Katamaransegeln"
+class="nav-link sibling"
+itemprop="url">
+<span itemprop="name">Katamaransegeln</span>
+</a>
+</li>
+<li class="nav-item sibling">
+<a href="kompaktwochenenden/windsurfen.html"
+title="Windsurfen"
+class="nav-link sibling"
+itemprop="url">
+<span itemprop="name">Windsurfen</span>
+</a>
+</li>
+<li class="nav-item sibling">
+<a href="kompaktwochenenden/stand-up-paddeling.html"
+title="Stand-Up-Paddeling"
+class="nav-link sibling"
+itemprop="url">
+<span itemprop="name">Stand-Up-Paddeling</span>
+</a>
+</li>
+<li class="nav-item sibling last">
+<a href="kompaktwochenenden/wingfoiling.html"
+title="Wingfoiling"
+class="nav-link sibling last"
+itemprop="url">
+<span itemprop="name">Wingfoiling</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="nav-item">
+<a href="ferienspass.html"
+title="Ferienspaß"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Ferienspaß</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="schwimmkurse.html"
+title="Schwimmkurse"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Schwimmkurse</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="firmenevents.html"
+title="Firmenevents"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Firmenevents</span>
+</a>
+</li>
+<li class="nav-item submenu last">
+<a href="standorte/surendorf.html"
+title="Gästehäuser"
+class="nav-link submenu last"
+aria-haspopup="true" itemprop="url">
+<span itemprop="name">Gästehäuser</span>
+</a>
+<ul class="level_2">
+<li class="nav-item first">
+<a href="standorte/surendorf.html"
+title="Surendorf"
+class="nav-link first"
+itemprop="url">
+<span itemprop="name">Surendorf</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="standorte/schubystrand-damp.html"
+title="Schubystrand/ Damp"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Schubystrand/ Damp</span>
+</a>
+</li>
+<li class="nav-item">
+<a href="standorte/langholz.html"
+title="Langholz"
+class="nav-link"
+itemprop="url">
+<span itemprop="name">Langholz</span>
+</a>
+</li>
+<li class="nav-item last">
+<a href="standorte/glamping.html"
+title="Glamping"
+class="nav-link last"
+itemprop="url">
+<span itemprop="name">Glamping</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="mod_mobile_menu block">
+<div id="mobile-menu-19-trigger" class="mobile_menu_trigger">
+<div id="btnMenu"><i class="fas fa-bars" aria-hidden="true"></i></div></div>
+<div id="mobile-menu-19" class="mobile_menu">
+<div class="inner">
+<div id="mMenu">
+<nav class="mod_navigation block">
+<a href="kompaktwochenenden/kitesurfen.html#skipNavigation2" class="invisible">Navigation überspringen</a>
+<ul class="level_1">
+<li class="submenu first"><a href="reisen-2026/klassenfahrten-2026.html" title="Klassenfahrten" class="submenu first" aria-haspopup="true">Klassenfahrten</a>
+<ul class="level_2">
+<li class="submenu first"><a href="reisen-2026/klassenfahrten-2026.html" title="2026" class="submenu first" aria-haspopup="true">2026</a>
+<ul class="level_3">
+<li class="first"><a href="reisen-2026/klassenfahrten-2026.html" title="Klassenfahrten Kurzübersicht" class="first">Klassenfahrten Kurzübersicht</a></li>
+<li><a href="reisen-2026/einleitung.html" title="Einleitung">Einleitung</a></li>
+<li><a href="reisen-2026/klassenfahrten-2026/seacollege-2026.html" title="Seacollege 2026">Seacollege 2026</a></li>
+<li><a href="reisen-2026/klassenfahrten-2026/active-beach-2026.html" title="Active Beach 2026">Active Beach 2026</a></li>
+<li><a href="reisen-2026/klassenfahrten-2026/surf-sail-bike-2026.html" title="Surf-Sail-Bike 2026">Surf-Sail-Bike 2026</a></li>
+<li><a href="reisen-2026/klassenfahrten-2026/team-und-mee-h-r-2026.html" title="Team und Mee&#40;h&#41;r 2026">Team und Mee&#40;h&#41;r 2026</a></li>
+<li><a href="reisen-2026/klassenfahrten-2026/vario-2026.html" title="Vario 2026">Vario 2026</a></li>
+<li><a href="reisen-2026/klassenfahrten-2026/zubuchbare-leistungen.html" title="Zubuchbare Leistungen">Zubuchbare Leistungen</a></li>
+<li class="last"><a href="reisen-2026/klassenfahrten-2026/transfer-shuttle.html" title="Transfer + Shuttle" class="last">Transfer + Shuttle</a></li>
+</ul>
+</li>
+<li class="submenu last"><a href="337.html" title="2027" class="submenu last" aria-haspopup="true">2027</a>
+<ul class="level_3">
+<li class="first"><a href="337.html" title="Klassenfahrten Kurzübersicht" class="first">Klassenfahrten Kurzübersicht</a></li>
+<li><a href="338.html" title="Einleitung">Einleitung</a></li>
+<li><a href="klassenfahrten/id-2027/seacollege-2027.html" title="Seacollege 2027">Seacollege 2027</a></li>
+<li><a href="klassenfahrten/id-2027/active-beach-2027.html" title="Active Beach 2027">Active Beach 2027</a></li>
+<li><a href="klassenfahrten/id-2027/surf-sail-bike-2027.html" title="Surf-Sail-Bike 2027">Surf-Sail-Bike 2027</a></li>
+<li><a href="klassenfahrten/id-2027/team-und-mee-h-r-2027.html" title="Team und Mee&#40;h&#41;r 2027">Team und Mee&#40;h&#41;r 2027</a></li>
+<li><a href="klassenfahrten/id-2027/vario-2027.html" title="Vario 2027">Vario 2027</a></li>
+<li><a href="klassenfahrten/id-2027/swim-if-you-can-2027.html" title="Swim if you can! 2027">Swim if you can! 2027</a></li>
+<li><a href="klassenfahrten/id-2027/surf-sail-city-2027.html" title="Surf, Sail + City 2027">Surf, Sail + City 2027</a></li>
+<li><a href="344.html" title="Zubuchbare Leistungen">Zubuchbare Leistungen</a></li>
+<li class="last"><a href="345.html" title="Transfer + Shuttle" class="last">Transfer + Shuttle</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="submenu"><a href="feriencamps/id-2026/kite-wing-sail-surf-wassersport-total-2026.html" title="Feriencamps" class="submenu" aria-haspopup="true">Feriencamps</a>
+<ul class="level_2">
+<li class="submenu first"><a href="feriencamps/id-2026/kite-wing-sail-surf-wassersport-total-2026.html" title="2026" class="submenu first" aria-haspopup="true">2026</a>
+<ul class="level_3">
+<li class="first"><a href="feriencamps/id-2026/kite-wing-sail-surf-wassersport-total-2026.html" title="Kite.Wing.Sail.Surf – Wassersport total 2026" class="first">Kite.Wing.Sail.Surf – Wassersport total 2026</a></li>
+<li><a href="feriencamps/id-2026/fischer-s-fritz-2026.html" title="Fischer´s Fritz 2026">Fischer´s Fritz 2026</a></li>
+<li><a href="feriencamps/id-2026/chill-surf-2026.html" title="Chill &amp; Surf 2026">Chill & Surf 2026</a></li>
+<li><a href="feriencamps/id-2026/sail-surf-2026.html" title="Sail &amp; Surf 2026">Sail & Surf 2026</a></li>
+<li class="last"><a href="feriencamps/id-2026/7-tage-7-abenteuer-2026.html" title="7 Tage, 7 Abenteuer 2026" class="last">7 Tage, 7 Abenteuer 2026</a></li>
+</ul>
+</li>
+<li class="submenu last"><a href="feriencamps/id-2027/kite-wing-sail-surf-wassersport-total.html" title="2027" class="submenu last" aria-haspopup="true">2027</a>
+<ul class="level_3">
+<li class="first"><a href="feriencamps/id-2027/kite-wing-sail-surf-wassersport-total.html" title="Kite * Wing * Sail * Surf" class="first">Kite * Wing * Sail * Surf</a></li>
+<li><a href="feriencamps/id-2027/fischer-s-fritz.html" title="Fischer´s Fritz">Fischer´s Fritz</a></li>
+<li><a href="feriencamps/id-2027/beach-surf.html" title="Beach &amp; Surf">Beach & Surf</a></li>
+<li><a href="feriencamps/id-2027/sail-surf.html" title="Sail &amp; Surf">Sail & Surf</a></li>
+<li class="last"><a href="feriencamps/id-2027/7-tage-7-abenteuer.html" title="7 Tage, 7 Abenteuer" class="last">7 Tage, 7 Abenteuer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="forward trail submenu"><strong class="forward trail submenu" aria-haspopup="true">Kompaktwochenenden</strong>
+<ul class="level_2">
+<li class="active first"><strong class="active first">Kitesurfen</strong></li>
+<li class="sibling"><a href="kompaktwochenenden/katamaransegeln.html" title="Katamaransegeln" class="sibling">Katamaransegeln</a></li>
+<li class="sibling"><a href="kompaktwochenenden/windsurfen.html" title="Windsurfen" class="sibling">Windsurfen</a></li>
+<li class="sibling"><a href="kompaktwochenenden/stand-up-paddeling.html" title="Stand-Up-Paddeling" class="sibling">Stand-Up-Paddeling</a></li>
+<li class="sibling last"><a href="kompaktwochenenden/wingfoiling.html" title="Wingfoiling" class="sibling last">Wingfoiling</a></li>
+</ul>
+</li>
+<li><a href="ferienspass.html" title="Ferienspaß">Ferienspaß</a></li>
+<li><a href="schwimmkurse.html" title="Schwimmkurse">Schwimmkurse</a></li>
+<li><a href="firmenevents.html" title="Firmenevents">Firmenevents</a></li>
+<li class="submenu last"><a href="standorte/surendorf.html" title="Gästehäuser" class="submenu last" aria-haspopup="true">Gästehäuser</a>
+<ul class="level_2">
+<li class="first"><a href="standorte/surendorf.html" title="Surendorf" class="first">Surendorf</a></li>
+<li><a href="standorte/schubystrand-damp.html" title="Schubystrand/ Damp">Schubystrand/ Damp</a></li>
+<li><a href="standorte/langholz.html" title="Langholz">Langholz</a></li>
+<li class="last"><a href="standorte/glamping.html" title="Glamping" class="last">Glamping</a></li>
+</ul>
+</li>
+</ul>
+<span id="skipNavigation2" class="invisible"></span>
+</nav>
+</div> </div>
+</div>
+<script></script>
+</div>
+</div>
+<div class="slider">
+<div class="inline">
+<div class="item item-1">
+<div class="mod_pageimage block">
+<figure class="image_container">
+<img src="files/CONTENT/2026/Wocheneden.jpg" width="2023" height="777" alt="">
+</figure>
+</div>
+</div>
+<div class="item item-2">
+<div class="mod_pageimage block">
+<figure class="image_container">
+<img src="files/CONTENT/2026/Wocheneden.jpg" width="2023" height="777" alt="">
+</figure>
+</div>
+</div>
+</div>
+<div class="mod_randomImage block" id="Logo">
+<figure class="image_container">
+<a class="stretched-link" href="https://nordwind-wassersport.de/" rel="noreferrer noopener">
+<img src="files/website/Bilder/Logo.png" width="303" height="303" alt="">
+</a>
+</figure>
+</div>
+</div>
+</div>
+<style></style><section id="article-776" class="mod_article">
+<div class="container mod_article block">
+<h2 class="ce_headline">
+<span>Kompaktwochende</span>Kitesurfen</h2>
+<div class="ce_text block">
+<div class="elementor-element elementor-element-29a81861 elementor-widget elementor-widget-text-editor" data-id="29a81861" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<div class="elementor-element elementor-element-ca5fa92 elementor-widget elementor-widget-text-editor" data-id="ca5fa92" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<p>Ein Wochenende im Zeichen von Wind, Wasser und bunten Schirmen. Tauche ein in die faszinierende Welt des Kitesurfens. Nicht nur auf dem Wasser, auch in der Unterkunft ist die Nähe zum Meer spür- und hörbar. Einmal den Tag am Strand von Sonnenauf- bis Sonnenuntergang komplett erleben!</p>
+<p>Blaues Wasser, weiter Himmel, bunte Schirme: <strong>Kitesurfen</strong> ist eine der schönsten Weisen, um die Freiheit auf dem Wasser zu erleben. Wenn du Lust auf eine riesen Portion Spaß und jede Menge Action auf dem Wasser hast, dann bist du hier goldrichtig! Nette und kompetente Kitelehrer, Topmaterial und dazu die herrliche Kulisse der Eckernförder Bucht sorgen für ein neues Lebensgefühl!</p>
+<p>Die erste, ca. 3-stündige Unterrichtseinheit startet gegen 10:00 Uhr. Zu Beginn des <strong>Kitesurf-Kurses</strong> werden Grundbegriffe und erste Manöver trainiert. Du machst dich mit der Ausrüstung und den Sicherheitsvorkehrungen genauestens vertraut. Du lernst dein Material kennen – Der Auf- und Abbau des Schirmes und der Bar &amp; Leinen werden dir in Theorie und Praxis beigebracht. Nach dem kurzen Theorieteil geht es auch sofort mit der Praxisschulung weiter. Die ersten Übungen finden auf dem Trockenen statt – Starten und Landen sowie fliegen im Windfenster bringen dir schnell das Gefühl für den Schirm näher. Sobald es klappt, geht es ins stehtiefe Wasser und du lernst die Zugkräfte des Schirmes kennen.</p>
+<p>Am Anfang einer Kitesurfkarriere sind die richtigen Tipps wichtig, sonst wird aus Spaß schnell Frust. Aus dem Grund stehen dir bei diesem <strong>Kitesurf-Kurs</strong> immer qualifizierte Instruktoren zur Seite. In kleinen Gruppen lernst du <strong>Kitesurfen</strong> leicht und sicher.<br>Während der Schulung ist immer ein motorisiertes Sicherungsboot dabei, um gegebenenfalls auch schnell auf Nachbarreviere ausweichen zu können.</p>
+<p>Während der ca. 1- stündigen Mittagspause stehen viele Restaurants auf der Promenade zur Verfügung oder du genießt den Ausblick am Strand bei einem kleinen Picknick.</p>
+<p>Nachmittags geht es gegen 14:00 Uhr weiter. Im Fokus steht die Schirmkontrolle, sicheres Steuern in der Softzone, sowie Starten und Landen des Kites. Einhändiges Steuern und das Kennenlernen der Powerzone sind die wichtigen Stepps zum ersten Downwind Drag. Nun bist du fast soweit und es fehlt nur noch der wichtige Upwind Bodydrag. Ist dieser erfolgreich absolviert, geht es nun darum alles Erlernte zu verknüpfen und die ersten Wasserstarts mit dem Kiteboard zu versuchen.</p>
+<p>Was für ein Tag. Hast du immer noch genug Power? Dann schnapp dir ein Kajak oder ein SUP Board und Paddel noch eine Weile, bis die Sonne untergeht.</p>
+<p>Am zweiten Tag geht es wieder gegen 10:00 Uhr los. Du lässt zusammen mit den Instruktoren das bereits Gelernte Revue passieren. Wo gibt es Fragen, wo bedarf es weiterer Erläuterungen? Nachdem diese Fragen geklärt sind, erhältst du einen weiteren intensiven Theorieteil bei dem du viel über Sicherheits- und Ausweichregeln lernst. Jetzt geht es wieder aufs Wasser. Der Wasserstart wird intensiviert und du fährst die ersten Meter.</p>
+<p>Im Anschluss hast du die Möglichkeit deinen Kurs mit dem VDWS Grundschein (kann gegen einen Prüfgebühr von 35,00 € zusätzlich erworben werden) zu beenden. Dieser wird in der Regel an vielen Stationen als Nachweis zum Ausleihen von Material verlangt.<br>Häufig stellt sich nun die Frage „Wie geht es weiter?“. Dein Kite-Lehrer berät dich gerne, welche Stepps nun Sinn machen. Der erste eigene Kite? Ein Aufbautraining? Oder doch gleich eine Kite-Reise? Unsere Coaches wissen was du brauchst.</p>
+<p>Die Anreise für euer Aktionswochenende ist jeweils am Freitag ab 16:00 Uhr möglich. Die Abreise ist am Sonntag bis 16:00 Uhr, es sei denn, ihr habt einen Verlängerungstag gebucht. Falls frühere An- oder spätere Abreisen gewünscht sind, könnt ihr euer Gepäck im Clubhaus sicher zwischenlagern.</p>
+<p>Eure Unterkünfte, die Nordwind Gästehäuser, befinden sich direkt oberhalb vom Strand und der Wassersportstation. Sie verfügen über diverse Appartements für 2 – 8 Personen. Viele Räume haben Meerblick. Alle Appartements haben eine kleine Pantry, Dusche / WC, sowie Wlan. Handtücher und Bettwäsche bringt ihr bitte mit, Bäcker und Supermarkt, sowie diverse Strandrestaurants sind vor Ort.</p>
+<p>Bitte hinterlasst die Wohnung für die nächsten Wassersportfans gereinigt und aufgeräumt,<span style="color: var( --e-global-color-text ); font-family: var( --e-global-typography-text-font-family ), Arial; font-weight: var( --e-global-typography-text-font-weight );"> dazu g</span><span style="color: var( --e-global-color-text ); font-family: var( --e-global-typography-text-font-family ), Arial; font-weight: var( --e-global-typography-text-font-weight );">ehört u.a. benutztes Geschirr Abzuwaschen und trocken in den Geschirrschrank zu räumen, Geschirr und Einrichtungsgestände ggf. wieder dorthin zu räumen wo sie vorgefunden wurden</span><span style="color: var( --e-global-color-text ); font-family: var( --e-global-typography-text-font-family ), Arial; font-weight: var( --e-global-typography-text-font-weight );">. </span></p>
+<p><span style="color: var( --e-global-color-text ); font-family: var( --e-global-typography-text-font-family ), Arial; font-weight: var( --e-global-typography-text-font-weight );">Für die Endreinigung berechnen wir 59,00 € (Kategorie A), bzw. 69,00 € (Kategorie B) pro Wohnung.</span></p>
+<p>Mit einer Buchung wird unsere Hausordnung akzeptiert, die hier einsehbar ist: <a href="https://nordwind-wassersport.de/der-verein/hausordnung.html">Hausordnung</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ce_hyperlink block">
+<a href="https://gutschein.nordwind-wassersport.de/produkt/kompaktwochenende-kitesurfen/" class="btn btn-warning btn-lg hyperlink_txt" title="Gleich buchen!" target="_blank" rel="noreferrer noopener">Gleich buchen! <i class="fa fa-arrow-right ml-4" aria-hidden="true"></i></a>
+</div>
+</div>
+</section><section id="article-777" class="mod_article py-0">
+<div class="splide">
+<div class="splide__track">
+<ul class="splide__list">
+<li class="splide__slide">
+<figure class="image_container">
+<img src="assets/images/e/kmpkt_WE_kite_%231-7885232c.jpg" width="350" height="350" alt="">
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<img src="assets/images/b/kmpkt_WE_kite_%232-f60f922f.jpg" width="350" height="350" alt="">
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<img src="assets/images/b/kmpkt_WE_kite_%233-36b2d23b.jpg" width="350" height="350" alt="">
+</figure>
+</li>
+<li class="splide__slide">
+<figure class="image_container">
+<img src="assets/images/3/kmpkt_WE_kite_6-0fe644bc.webp" width="350" height="350" alt="">
+</figure>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="article-778" class="mod_article">
+<div class="container mod_article block">
+<div class="ce_text mb-5 block">
+<h3>Details</h3>
+<table style="border-collapse: collapse; width: 100%; height: 294.2px;" border="1">
+<tbody>
+<tr style="height: 33.6px;">
+<td style="width: 49.6916%; height: 33.6px;">VDWS Grundschein</td>
+<td style="width: 49.6916%; height: 33.6px;">Abgeschlossen werden kann der Kurs mit dem VDWS Diplom. Die Prüfungsgebühr von 35,00 € ist vor Ort zu entrichten.</td>
+</tr>
+<tr style="height: 96.7px;">
+<td style="width: 49.6916%; height: 96.7px;">Teilnahmevoraussetzungen:</td>
+<td style="width: 49.6916%; height: 96.7px;">
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-6e5989b" data-id="6e5989b" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-dc73bff elementor-widget elementor-widget-text-editor" data-id="dc73bff" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<ul>
+<li>normale physische Verfassung</li>
+<li>Schwimmkenntnisse</li>
+<li>Personen unter 18 Jahren nur mit schriftlicher Einverständniserklärung eines Erziehungsberechtigten</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</td>
+</tr>
+<tr style="height: 79.9px;">
+<td style="width: 49.6916%; height: 79.9px;">Durchführbarkeit abhängig vom Wetter:</td>
+<td style="width: 49.6916%; height: 79.9px;">
+<ul>
+<li>genug Wind</li>
+<li>Gwitter</li>
+<li>Sturm oder Flaute</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 16.8px;">
+<td style="width: 49.6916%; height: 16.8px;">Dauer:</td>
+<td style="width: 49.6916%; height: 16.8px;">2 Übernachtungen/ 2 Tage Wassersport (insgesamt ca. 9 Stunden)</td>
+</tr>
+<tr style="height: 16.8px;">
+<td style="width: 49.6916%; height: 16.8px;">Teilnehmeranzahl:</td>
+<td style="width: 49.6916%; height: 16.8px;">1-20 Personen</td>
+</tr>
+<tr style="height: 16.8px;">
+<td style="width: 49.6916%; height: 16.8px;">Zuschauer/ Mitreisende:</td>
+<td style="width: 49.6916%; height: 16.8px;">Sind herzlich willkommen!</td>
+</tr>
+<tr style="height: 16.8px;">
+<td style="width: 49.6916%; height: 16.8px;">Bekleidung/ Ausrüstung (wird gestellt):</td>
+<td style="width: 49.6916%; height: 16.8px;">
+<ul>
+<li>Neoprenanzug, Helm und Schwimmweste</li>
+<li>SUP Boards und Kajaks stehen nach Verfügbarkeit zur kostenlosen Nutzung bereit</li>
+</ul>
+</td>
+</tr>
+<tr style="height: 16.8px;">
+<td style="width: 49.6916%; height: 16.8px;">Bekleidung/ Ausrüstung (mitzubringen):</td>
+<td style="width: 49.6916%; height: 16.8px;">
+<ul>
+<li>Schwimm- und Wechselkleidung</li>
+<li>Handtücher</li>
+<li>Sonnenschutz</li>
+<li>evtl. Brillenband</li>
+<li>Neoprenschuhe bzw. Schwimmschuhe müssen mitgebracht werden, bzw. können in unserem Minishop vor Ort erworben werden.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="ce_text block">
+<h3>Preise &#40;pro Person für das ganze Paket&#41;</h3>
+<p><strong>Kiten / Unterkunftskategorie A für Paare und Einzelbucher</strong></p>
+<ul>
+<li>2 Übernachtungen im 2 Personen Appartement (Pantryküche + Bad, überwiegend Meerblick)</li>
+<li>Kitegrundkurs ca. 9 Stunden</li>
+<li>freie Nutzung von SUP / Kajak</li>
+<li>369,00 € pro Person</li>
+<li>Mitreisende ohne Kitekurs 99,00 €</li>
+<li>Zuschlag Einzelbelegung: 69,00 € für das gesamte Wochenende</li>
+<li>Optional Verlängerungsnacht 79,00 € pro Wohnung</li>
+<li>Optional Bettwäsche und Handtücher 12,00 € pro Person</li>
+<li>+ Endreinigung 59,00 €</li>
+</ul>
+<p><strong>Kiten B / Unterkategorie B für Kleingruppen</strong></p>
+<ul>
+<li>2 Übernachtungen in Ferienwohnung (Pantryküche + Bad, überwiegend Meerblick),</li>
+<li>Mehrbettzimmer 2-6 Personen</li>
+<li>Kleingruppen ab 3 Personen bis ca. 8 Personen,</li>
+<li>Kitegrundkurs ca. 9 Stunden</li>
+<li>freie Nutzung von SUP / Kajak</li>
+<li>ab 3 Personen 339,00 € pro Person / ab 5 Personen 319,00 € pro Person</li>
+<li>Mitreisende ohne Kitekurs 89 €</li>
+<li>Optional Verlängerungsnacht 109,00 € pro Wohnung</li>
+<li>Optional Bettwäsche und Handtücher 12,00 € pro Person</li>
+<li>+ Endreinigung 69,00 €</li>
+</ul>
+</div>
+<div class="ce_text block">
+<div class="elementor-element elementor-element-5efc0c9 elementor-widget elementor-widget-text-editor" data-id="5efc0c9" data-element_type="widget" data-widget_type="text-editor.default">
+<div class="elementor-widget-container">
+<p>Auf Anfrage und je nach Verfügbarkeit kannst du deinen Aufenthalt auch erweitern. Du hast noch mehr Zeit und Lust, das Erlernte zu vertiefen?<br>Du magst die Atmosphäre am Strand und liebst die Freiheit auf dem Wasser? Kein Problem.</p>
+<p>Weitere Wassersporteinheiten und Übernachtungen in der Strandnahen Unterkunft, ein paar Tage früher anreisen oder etwas länger bleiben – Mach aus einem Wochenendtrip einen kleinen Urlaub.</p>
+<p>Stand April 2026 – Änderungen vorbehalten.</p>
+</div>
+</div>
+</div>
+<div class="ce_hyperlink block">
+<a href="https://gutschein.nordwind-wassersport.de/produkt/kompaktwochenende-kitesurfen/" class="btn btn-warning btn-lg hyperlink_txt" title="Gleich buchen!" target="_blank" rel="noreferrer noopener">Gleich buchen! <i class="fa fa-arrow-right ml-4" aria-hidden="true"></i></a>
+</div>
+</div>
+</section>
+<div class="xl-parallax" data-parallax="scroll" data-image-src="assets/images/4/kurs_kitesegeln_%232-f622a00c.jpg">
+<div class="mod_article block" id="article-1094">
+</div>
+</div>
+<section id="article-1090" class="mod_article">
+<div class="container mod_article block">
+<div class="ce_text block">
+<h2>Termine 2026 Kitesurf-Kompaktwochenende</h2>
+<table style="border-collapse: collapse; width: 100.352%; height: 268.8px;" border="1">
+<tbody>
+<tr style="height: 16.8px;">
+<td style="width: 15.8036%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">29.05. - 31.05.</td>
+<td style="width: 16.0669%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">05.06. - 07.06.</td>
+<td style="width: 16.5937%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">10.07. - 12.07.</td>
+<td style="width: 17.3839%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">21.08. - 23.08.</td>
+<td style="width: 17.4717%; border-style: hidden; text-align: left; vertical-align: middle;">04.09. - 06.09.</td>
+<td style="width: 16.5937%; border-style: hidden; text-align: left; vertical-align: middle;">02.10. - 04.10.</td>
+</tr>
+<tr style="height: 16.8px;">
+<td style="width: 15.8036%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+<td style="width: 16.0669%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">12.06. - 14.06.</td>
+<td style="width: 16.5937%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+<td style="width: 17.3839%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">28.08. - 30.08.</td>
+<td style="width: 17.4717%; border-style: hidden; text-align: left; vertical-align: middle;">11.09. - 13.09.</td>
+<td style="width: 16.5937%; border-style: hidden; text-align: left; vertical-align: middle;">09.10. - 11.10.</td>
+</tr>
+<tr style="height: 16.8px;">
+<td style="width: 15.8036%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+<td style="width: 16.0669%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">19.06. - 21.06.</td>
+<td style="width: 16.5937%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+<td style="width: 17.3839%; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+<td style="width: 17.4717%; border-style: hidden; text-align: left; vertical-align: middle;">18.09. - 20.09.</td>
+<td style="width: 16.5937%; border-style: hidden; text-align: left; vertical-align: middle;">16.10. - 18.10.</td>
+</tr>
+<tr style="height: 16.8px;">
+<td style="width: 15.8036%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+<td style="width: 16.0669%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">26.06. - 28.06.</td>
+<td style="width: 16.5937%; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+<td style="width: 17.3839%; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+<td style="width: 17.4717%; border-style: hidden; text-align: left; vertical-align: middle;">25.09. - 27.09.</td>
+<td style="width: 16.5937%; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+</tr>
+<tr style="height: 16.8px;">
+<td style="width: 15.8036%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+<td style="width: 16.0669%; height: 16.8px; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+<td style="width: 16.5937%; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+<td style="width: 17.3839%; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+<td style="width: 17.4717%; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+<td style="width: 16.5937%; border-style: hidden; text-align: left; vertical-align: middle;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="article-1044" class="mod_article bg-light">
+<div class="container mod_article block">
+<div class="ce_form block">
+<h3>Jetzt Buchungsanfrage schicken!</h3>
+<form method="post" enctype="application/x-www-form-urlencoded">
+<div class="formbody">
+<input type="hidden" name="FORM_SUBMIT" value="auto_form_1">
+<input type="hidden" name="REQUEST_TOKEN" value="">
+<div class="widget widget-text mandatory form-group">
+<input class="mandatory form-control" id="ctrl_1" name="name" type="text" value="" required placeholder="Name">
+</div>
+<div class="widget widget-text mandatory form-group">
+<input class="mandatory form-control" id="ctrl_2" name="e-mail" type="email" value="" required placeholder="E-Mail">
+</div>
+<div class="widget widget-text form-group">
+<input class="form-control" id="ctrl_3" name="telefon" type="text" value="" placeholder="Telefon">
+</div>
+<div class="row">
+<div class="col-lg-6">
+<div class="widget widget-text mandatory form-group">
+<input class="mandatory form-control" id="ctrl_4" name="buchungszeitraum_start" type="text" value="" required placeholder="Buchungszeitraum von">
+</div>
+</div>
+<div class="col-lg-6">
+<div class="widget widget-text mandatory form-group">
+<input class="mandatory form-control" id="ctrl_5" name="buchungszeitraum_ende" type="text" value="" required placeholder="Buchungszeitraum bis">
+</div>
+</div>
+</div>
+<div class="widget widget-textarea mandatory form-group">
+ <textarea class="mandatory form-control" id="ctrl_6" name="nachricht" rows="4" cols="40" required placeholder="Ihre Nachricht an uns"></textarea>
+</div>
+<div class="widget widget-select select mandatory form-group">
+<label class="select mandatory" for="ctrl_7">
+<span class="sr-only">Pflichtfeld </span>Wassersportdisziplin<span class="mandatory">*</span>
+</label>
+<select class="select mandatory form-control custom-select" id="ctrl_7" name="wassersportdisziplin" required>
+<option value="Kitesurfen">Kitesurfen</option>
+<option value="Windsurfen">Windsurfen</option>
+<option value="Katamaransegeln">Katamaransegeln</option>
+<option value="Stand-Up-Paddling">Stand-Up-Paddling</option>
+<option value="Wingfoiling">Wingfoiling</option>
+</select>
+</div>
+<div class="widget widget-select select mandatory form-group">
+<label class="select mandatory" for="ctrl_8">
+<span class="sr-only">Pflichtfeld </span>Wie hast Du uns gefunden?<span class="mandatory">*</span>
+</label>
+<select class="select mandatory form-control custom-select" id="ctrl_8" name="gefunden" required>
+<option value="Ich war schonmal bei Euch">Ich war schonmal bei Euch</option>
+<option value="Empfehlung von Freunden">Empfehlung von Freunden</option>
+<option value="Facebook">Facebook</option>
+<option value="Instagram">Instagram</option>
+<option value="Google-Suche">Google-Suche</option>
+<option value="Anzeige auf Webseiten/ Apps">Anzeige auf Webseiten/ Apps</option>
+<option value="Sonstiges">Sonstiges</option>
+</select>
+</div>
+<div class="widget widget-submit form-group">
+<button class="submit btn btn-primary" id="ctrl_9" name="" alt="Anfrage abschicken" title="Anfrage abschicken">Anfrage abschicken</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</section>
+<div id="footer">
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-lg-2">
+<div class="mod_randomImage block" id="LogoFooter">
+<figure class="image_container">
+<a class="stretched-link" href="https://nordwind-wassersport.de/" rel="noreferrer noopener">
+<img src="files/website/Bilder/Logo.png" width="303" height="303" alt="">
+</a>
+</figure>
+</div>
+</div>
+<div class="col-md-9 col-lg-10">
+<div class="row">
+<div class="col-md-4">
+<h3>Nordwind Wassersport</h3>
+<nav class="mod_customnav block">
+<a href="kompaktwochenenden/kitesurfen.html#skipNavigation11" class="invisible">Navigation überspringen</a>
+<ul class="level_1">
+<li class="first"><a href="https://verein.nordwind-wassersport.de/" title="Verein &amp; Kurse" class="first">Verein & Kurse</a></li>
+<li><a href="./" title="Reisen">Reisen</a></li>
+<li class="last"><a href="https://gutschein.nordwind-wassersport.de/" title="Gutschein" class="last">Gutschein</a></li>
+</ul>
+<span id="skipNavigation11" class="invisible"></span>
+</nav>
+</div>
+<div class="col-md-4">
+<h3>Standorte</h3>
+<nav class="mod_customnav block">
+<a href="kompaktwochenenden/kitesurfen.html#skipNavigation12" class="invisible">Navigation überspringen</a>
+<ul class="level_1">
+<li class="first"><a href="standorte/surendorf.html" title="Surendorf" class="first">Surendorf</a></li>
+<li><a href="standorte/schubystrand-damp.html" title="Schubystrand/ Damp">Schubystrand/ Damp</a></li>
+<li><a href="standorte/langholz.html" title="Langholz">Langholz</a></li>
+<li class="last"><a href="standorte/glamping.html" title="Glamping" class="last">Glamping</a></li>
+</ul>
+<span id="skipNavigation12" class="invisible"></span>
+</nav>
+</div>
+<div class="col-md-4">
+<h3>Kontakt</h3>
+<p><i class="fa fa-phone" aria-hidden="true"></i> +49 4346 5955</p>
+<p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:info@nordwind-wassersport.de" style="text-transform: inherit">info@nordwind-wassersport.de</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postfooter">
+<div class="container d-flex justify-content-between align-items-center">
+<div class="socialmedia d-flex">
+<span><a href="https://www.facebook.com/NordwindWassersportEV" target="_blank"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></span>
+<span><a href="https://www.instagram.com/nordwind.wassersport/" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></span>
+<span><a href="https://www.youtube.com/channel/UCBIXERPq6cOmS9mifp7GuLw" target="_blank"><i class="fab fa-youtube" aria-hidden="true"></i></a></span>
+<span><a href="https://www.tiktok.com/@nordwind.wassersport?lang=de-DE" target="_blank"><i class="fab fa-tiktok" aria-hidden="true"></i></a></span>
+</div>
+<div class="rechtliches d-flex">
+<a href="kontakt.html">Kontakt</a>
+<a href="impressum.html">Impressum</a>
+<a href="datenschutz.html">Datenschutz</a>
+</div>
+</div>
+</div> </div>
+</main>
+</div>
+</div>
+<script></script>
+<script></script>
+<script></script><script></script>
+<script></script><script></script>
+<script></script>
+<script></script>
+<script></script>
+<script type="application/ld+json">
+{
+ "@context": "https:\/\/schema.org",
+ "@graph": [
+ {
+ "@type": "WebPage"
+ },
+ {
+ "@id": "#\/schema\/image\/8c0c9ddd-b5ec-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/e\/kmpkt_WE_kite_%231-7885232c.jpg"
+ },
+ {
+ "@id": "#\/schema\/image\/8beeeed2-b5ec-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/b\/kmpkt_WE_kite_%232-f60f922f.jpg"
+ },
+ {
+ "@id": "#\/schema\/image\/8c3af658-b5ec-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/b\/kmpkt_WE_kite_%233-36b2d23b.jpg"
+ },
+ {
+ "@id": "#\/schema\/image\/8c58751b-b5ec-11ee-88e1-408d5c809fcc",
+ "@type": "ImageObject",
+ "contentUrl": "assets\/images\/3\/kmpkt_WE_kite_6-0fe644bc.webp"
+ }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https:\/\/schema.contao.org",
+ "@graph": [
+ {
+ "@type": "Page",
+ "fePreview": false,
+ "groups": [],
+ "noSearch": false,
+ "pageId": 231,
+ "protected": false,
+ "title": "Kitesurfen"
+ }
+ ]
+}
+</script></body>
+</html>
