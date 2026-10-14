@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script></script>
+<script></script>
+<script defer src="/_vercel/insights/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kite Camps Gallery | La Ventana Kite Camp</title>
+  <meta name="description" content="Photos from La Ventana Kite Camp: kiteboarding lessons, beach life, chef-made meals, crew hang out and La Ventana scenery. See what a week at camp looks like.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="canonical" href="https://www.laventanacamps.com/gallery-kite-camp">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/icon.png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/apple-icon.png">
+  <meta name="theme-color" content="#1D3E93">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="La Ventana Kite Camp">
+  <meta property="og:title" content="Kite Camps Gallery | La Ventana Kite Camp">
+  <meta property="og:description" content="Photos from La Ventana Kite Camp: kiteboarding lessons, beach life, chef-made meals, crew hang out and La Ventana scenery. See what a week at camp looks like.">
+  <meta property="og:url" content="https://www.laventanacamps.com/gallery-kite-camp">
+  <meta property="og:image" content="https://www.laventanacamps.com/og.png">
+  <meta property="og:image:width" content="2000">
+  <meta property="og:image:height" content="949">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_MX">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kite Camps Gallery | La Ventana Kite Camp">
+  <meta name="twitter:description" content="Photos from La Ventana Kite Camp: kiteboarding lessons, beach life, chef-made meals, crew hang out and La Ventana scenery. See what a week at camp looks like.">
+  <meta name="twitter:image" content="https://www.laventanacamps.com/og.png">
+</head>
+<body class="lang-en">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX27HBP6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <header data-section-id="header">
+    <div class="container header-container">
+      <a href="/" class="logo"><img class="logo-img" src="/assets/images/lvkc_logo.png" alt="LVKC — La Ventana Kite Camp"></a>
+      <nav>
+        <div class="nav-links">
+          <a href="/"><span lang="en">Home</span><span lang="es">Inicio</span></a>
+          <a href="/kite-camps"><span lang="en">Camps</span><span lang="es">Campamentos</span></a>
+          <a href="/la-ventana-kite-lessons"><span lang="en">Kite School</span><span lang="es">Escuela de Kite</span></a>
+          <a href="/about-us-meet-the-team"><span lang="en">About Us</span><span lang="es">Nosotros</span></a>
+        </div>
+        <div class="lang-switch"><button class="lang-btn active" data-lang="en">EN</button><button class="lang-btn" data-lang="es">ES</button></div>
+      </nav>
+      <button class="burger-menu" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <section class="hero" data-section-id="gallery-hero" data-section-name="Galería — Portada" style="height: auto; min-height: auto; padding: calc(6rem + var(--header-height)) 0 6rem;">
+    <div class="hero-bg" style="background-image: url('assets/images/lvkc_edit_64.jpg');" data-bg-mobile="assets/images/lvkc_edit_64.jpg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="tagline"><span lang="en">Life on the Water</span><span lang="es">Vida en el Agua</span></span>
+        <h1 style="font-size: 3rem;"><span lang="en">LVKC <strong>Gallery</strong></span><span lang="es">Galería <strong>LVKC</strong></span></h1>
+        <p lang="en" style="margin-bottom: 0;">Photos from our kite school and past kite camps.</p>
+        <p lang="es" style="margin-bottom: 0;">Fotos de nuestra escuela de kite y campamentos anteriores.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section-bg-light" data-section-id="gallery-intro" data-section-name="Galería — Introducción">
+    <div class="container">
+      <div class="section-header">
+        <span class="tagline"><span lang="en">Kite School &amp; Camps</span><span lang="es">Escuela y Campamentos</span></span>
+        <h2><span lang="en">Stories from La Ventana</span><span lang="es">Historias desde La Ventana</span></h2>
+        <p lang="en">Every photo tells the story of our kiteboarding adventures: students and instructors in action, learning new skills, progressing, and enjoying the camaraderie of our kite community.</p>
+        <p lang="es">Cada foto cuenta la historia de nuestras aventuras de kitesurf: alumnos e instructores en acción, aprendiendo nuevas habilidades, progresando y disfrutando la convivencia de nuestra comunidad de kite.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section-bg-alt" data-section-id="gallery-images" data-section-name="Galería — Imágenes" style="padding-top: 4rem;">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1rem;">
+        <img src="assets/images/lvkc_marzo_104.jpg" alt="la ventana kite camp" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/lvkc_marzo_161.jpg" alt="all inclusive kite camp mexico" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/lvkc_marzo_73.jpg" alt="kitesurfing la ventana mexico" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/lvkc_enero_121.jpg" alt="kiteboarding camp baja" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/lvkc_enero_79.jpg" alt="kite camp mexico" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/lvkc_enero_91.jpg" alt="learn to kitesurf la ventana" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/lvkc_canon_70.jpg" alt="Kitesurfing in La Ventana" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/lvkc_14.jpg" alt="la ventana kiteboarding" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/lvkc_10.jpg" alt="la ventana kiteboarding" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/pau_2.jpg" alt="la ventana kiteboarding" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/IMG_2543.jpeg" alt="la ventana kiteboarding" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/IMG_2695.jpeg" alt="la ventana kite camp" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/wa_image_1.jpeg" alt="kitesurfing la ventana mexico" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/wa_image_2.jpeg" alt="kiteboarding camp baja" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/wa_image_3.jpeg" alt="kite camp mexico" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/wa_image_4.jpeg" alt="learn to kitesurf la ventana" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/wa_image_5.jpeg" alt="la ventana kiteboarding" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+        <img src="assets/images/wa_image_6.jpeg" alt="la ventana kiteboarding" loading="lazy" style="width:100%;height:320px;object-fit:cover;border-radius:var(--border-radius-md);">
+      </div>
+      <div style="text-align:center;margin-top:3rem;">
+        <a href="/kite-camps" class="btn btn-primary"><span lang="en">Explore the Camps</span><span lang="es">Conoce los Campamentos</span></a>
+      </div>
+    </div>
+  </section>
+  <footer data-section-id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col brand">
+          <h2 class="footer-brand-mark"><img class="footer-logo-img" src="/assets/images/lvkc_logo.png" alt="LVKC — La Ventana Kite Camp"></h2>
+          <p lang="en">A premium yet laid-back kiteboarding experience in La Ventana, Baja California Sur, Mexico.</p>
+          <p lang="es">Una experiencia de kitesurf premium pero relajada en La Ventana, Baja California Sur, México.</p>
+          <div class="social-links">
+            <a href="https://instagram.com/laventana_kitecamp" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></a>
+            <a href="https://www.facebook.com/laventanakitecamp/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3><span lang="en">Information</span><span lang="es">Información</span></h3>
+          <ul>
+            <li><a href="/la-ventana-baja-california-sur"><span lang="en">About La Ventana</span><span lang="es">Sobre La Ventana</span></a></li>
+            <li><a href="/about-us-meet-the-team#founders"><span lang="en">Meet the Team</span><span lang="es">El Equipo</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3><span lang="en">Others</span><span lang="es">Otros</span></h3>
+          <ul>
+            <li><a href="/faq"><span lang="en">FAQs</span><span lang="es">Preguntas Frecuentes</span></a></li>
+            <li><a href="/blog"><span lang="en">Blog</span><span lang="es">Blog</span></a></li>
+            <li><a href="/gallery-kite-camp"><span lang="en">Gallery</span><span lang="es">Galería</span></a></li>
+            <li><a href="/testimonials"><span lang="en">Testimonials</span><span lang="es">Testimonios</span></a></li>
+            <li><a href="/faq#booking-policy"><span lang="en">Booking Policy</span><span lang="es">Políticas de Reserva</span></a></li>
+            <li><a href="/terms-conditions"><span lang="en">Terms &amp; Conditions</span><span lang="es">Términos y Condiciones</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3><span lang="en">Get in Touch</span><span lang="es">Contacto</span></h3>
+          <div class="footer-contact-info">
+            <p lang="en">Get in touch to book your spot or request more information.</p>
+            <p lang="es">Ponte en contacto para reservar tu lugar o solicitar más información.</p>
+            <a href="https://wa.me/526121974886" class="btn btn-primary" style="margin-top: 1rem;" target="_blank">
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 La Ventana Kite Camp. All rights reserved.</p>
+        <p>laventanacamps@gmail.com | +52 612 197 4886</p>
+      </div>
+    </div>
+  </footer>
+  <div class="floating-cta-container" data-section-id="floating-cta-container">
+    <div class="floating-cta-menu" id="floatingCtaMenu">
+      <a href="/kite-camps?booking=camps" class="floating-menu-item"><span lang="en">Book Camp Week</span><span lang="es">Reservar Campamento</span></a>
+      <a href="/la-ventana-kite-lessons?booking=school" class="floating-menu-item"><span lang="en">Book Kite Lessons</span><span lang="es">Reservar Clases de Kite</span></a>
+      <a href="https://wa.me/526121974886" target="_blank" rel="noopener" class="floating-menu-item"><span lang="en">Chat on WhatsApp</span><span lang="es">Chat por WhatsApp</span></a>
+    </div>
+    <button class="floating-cta-btn" id="floatingCtaToggle"><span lang="en">Book Now</span><span lang="es">Reservar</span></button>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body></html>

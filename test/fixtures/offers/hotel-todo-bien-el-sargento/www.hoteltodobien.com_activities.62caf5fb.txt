@@ -1,0 +1,730 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      class="">
+<head>
+    <meta charset="utf-8">
+<script type="text/javascript"></script>
+<meta name="google-site-verification" content="WKhmVEwiv4KciLHauQcbvdyqeU38tT_QDaUXy1yadog" data-swh-uuid="285c917b988d4f0cb24d11c963553dcd"/>
+<meta name="d-service-worker" content="register">
+<link rel="canonical" href="https://www.hoteltodobien.com/activities">
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/fab44011/site_favicon_16_1767038754960.ico"/>
+<link rel="preconnect" href="https://irp.cdn-website.com"/>
+<link rel="preconnect" href="https://irp.cdn-website.com" crossorigin/>
+<link rel="preconnect" href="https://static.cdn-website.com"/>
+<script id='d-js-dmapi'></script>
+<script id="d-js-load-css"></script>
+<script data-role="deferred-init" type="text/javascript"></script>
+<style id="forceCssIncludes"></style>
+<style id="cssVariables" type="text/css"></style>
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:ital,wght@0,400&amp;subset=latin-ext&amp;display=swap"  />
+<link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/6853/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-structured-global.min.css" />
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/765f0dba662dce947037c6e07c4888c0.css" id="widgetCSS" />
+<style></style>
+<style></style>
+<style id="pageAdditionalWidgetsCss" type="text/css"></style>
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fab44011/files/fab44011_1.min.css?v=b991f58d40ef9333b43723a90c27d884" id="siteGlobalCss" />
+<style id="customWidgetStyle" type="text/css"></style>
+<style id="innerPagesStyle" type="text/css"></style>
+<style
+        id="additionalGlobalCss" type="text/css"
+></style>
+<style id="pagestyle" type="text/css"></style>
+<style id="pagestyleDevice" type="text/css"></style>
+<style id="globalFontSizeStyle" type="text/css"></style>
+<style id="pageFontSizeStyle" type="text/css"></style>
+<script></script>
+<script></script>
+<script></script>
+<script type="text/javascript"></script>
+<script type="text/javascript" id='d-js-jquery'
+        src="https://static.cdn-website.com/libs/jquery/jquery-3.7.0.min.js"></script>
+<script src="https://app.termly.io/resource-blocker/24fddb63-55d0-4cf3-93aa-d66703e54d7c?autoBlock=on" data-swh-uuid="880c8f1884664765b6a8354cea182854"></script>
+<script type="text/javascript" id="d_track_campaign" data-entry-referrer data-utm-cookies></script>
+<script type="text/javascript" ></script>
+<script></script>
+<script></script>
+<script id='d-js-params'></script>
+<script src="https://static.cdn-website.com/mnlt/production/6853/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js"  id="d-js-core"></script>
+    <script src="https://static.cdn-website.com/mnlt/production/6853/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js" ></script>
+<script></script>
+<style id="hideAnimFix"></style>
+<style id="fontFallbacks"></style>
+  <link type="application/rss+xml" rel="alternate" href="https://www.hoteltodobien.com/feed/rss2"/>
+  <link type="application/atom+xml" rel="alternate" href="https://www.hoteltodobien.com/feed/atom"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.hoteltodobien.com/activities"/>
+  <title>
+    Experiences &amp; Adventures
+  </title>
+  <meta name="description" content="From kiteboarding to snorkeling, discover the best of La Ventana. Book your Baja adventures and enjoy our premium water sports equipment at Hotel Todo Bien."/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Experiences &amp; Adventures"/>
+  <meta name="twitter:description" content="From kiteboarding to snorkeling, discover the best of La Ventana. Book your Baja adventures and enjoy our premium water sports equipment at Hotel Todo Bien."/>
+  <meta name="twitter:image" content="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Background-1920w.png"/>
+  <meta property="og:description" content="From kiteboarding to snorkeling, discover the best of La Ventana. Book your Baja adventures and enjoy our premium water sports equipment at Hotel Todo Bien."/>
+  <meta property="og:title" content="Experiences &amp; Adventures"/>
+  <meta property="og:image" content="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Background-1920w.png"/>
+</head>
+<body id="dmRoot" data-page-alias="activities"  class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody responsiveTablet "
+      style="padding:0;margin:0;"
+    >
+<div id="dm" class='dmwr'>
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-sec hasAnimations rows-1200 inMiniHeaderMode hasStickyHeader hamburger-reverse dmPageBody d-page-1716942098 inputs-css-clean dmFreeHeader" id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner" data-auto="page-inner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer" freeheader="true" headerlayout="b58ba5b5703b4cd7b5f5f7951565dc87===horizontal-layout-5" layout="7f3c1de367df47d5b45ab63d33101c7b===header" data-scrollable-target="body" data-scrollable-target-threshold="1" data-scroll-responder-id="1" logo-size-target="80%" secondary-image="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/todo-bien-logo-white-1920w.png" has-secondary-image="true" data-auto="header"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1715915041 dmRespRow dmDefaultListContentRow fullBleedChanged fullBleedMode" style="text-align:center" id="1715915041"> <div class="dmRespColsWrapper" id="1951897559"> <div class="u_1657460522 small-12 dmRespCol large-2 medium-2" id="1657460522"> <div class="u_1223751667 imageWidget align-center" data-widget-type="image" id="1223751667" data-element-type="image"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/todo-bien-logo-white-cf01a6c3-1920w.png" id="1826725239" class="" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/todo-bien-logo-white-cf01a6c3.png" width="510" height="450" alt=""TODO BIEN" in bold, black block letters, meaning "everything is fine" in Spanish." onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div class="u_1525381962 dmRespCol small-12 large-7 medium-7" id="1525381962"> <nav class="u_1670011220 effect-bottom main-navigation unifiednav dmLinksMenu" data-auto="links-menu" role="navigation" layout-main="horizontal_nav_layout_2" layout-sub="submenu_horizontal_2" data-show-vertical-sub-items="HOVER" id="1670011220" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container unav-top  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="home"> <span class="nav-item-text " data-link-text="
+         HOME
+        " data-auto="page-text-style">HOME<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/rooms" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="rooms"> <span class="nav-item-text " data-link-text="
+         ROOMS
+        " data-auto="page-text-style">ROOMS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/villas" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="villas"> <span class="nav-item-text " data-link-text="VILLAS" data-auto="page-text-style">VILLAS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/restaurant" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="restaurant"> <span class="nav-item-text " data-link-text="
+         RESTAURANT
+        " data-auto="page-text-style">RESTAURANT<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/activities" class="unifiednav__item unav-item unav-top-item  dmNavItemSelected    " target="" data-target-page-alias="activities" aria-current="page" data-auto="selected-page"> <span class="nav-item-text " data-link-text="
+         ACTIVITIES
+        " data-auto="page-text-style">ACTIVITIES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/events" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="events"> <span class="nav-item-text " data-link-text="EVENTS" data-auto="page-text-style">EVENTS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/Residential" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="real-estate"> <span class="nav-item-text " data-link-text="RESIDENTIAL" data-auto="page-text-style">RESIDENTIAL<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+ <div class="u_1005315039 dmRespCol small-12 large-3 medium-3" id="1005315039"> <a data-display-type="block" class="u_1316554538 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="https://hotels.cloudbeds.com/reservation/5r6IWY" id="1316554538" data-element-type="dButtonLinkId" target="_blank"> <span class="iconBg" id="1941951503"> <span class="icon hasFontIcon icon-star" id="1596228024"></span> 
+</span> 
+ <span class="text" id="1945693725">BOOK NOW</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-auto="sticky-header-spacer" data-new="true"></div> 
+ <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow "> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None"> <div class="titleLine display_None"><hr/></div> 
+ <div id="pageTitleText"> <div class="innerPageTitle">ACTIVITIES</div> 
+</div> 
+ <div class="titleLine display_None"><hr/></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_activities dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper" data-auto="all-wrapper"> <div id="dm_content" class="dmContent" role="main"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl" id="1716942098"> <div class="u_1306379224 dmRespRow hasBackgroundOverlay dmSectionParallaxNew" style="text-align: center;" id="1306379224"> <div class="dmRespColsWrapper" id="1279802873"> <div class="dmRespCol small-12 u_1706709642 medium-12 large-12" id="1706709642"> <div class="imageWidget align-center dm-icon-w_image" data-placeholder="true" data-element-type="image" data-widget-type="image" id="1203408733"><img src="" alt="" id="1468537152" onerror="handleImageLoadError(this)"/></div> 
+ <span id="1913310021"></span> 
+ <div class="u_1546442857 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1546442857"> <h1 class="size-45 m-size-36"><span style="display:initial;font-family:Arial, 'Arial Fallback';" class="font-size-45 m-font-size-36">Where the road ends, adventure begins.</span></h1> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1750729151 dmRespRow mobile-columns-reversed" id="1750729151"> <div class="dmRespColsWrapper" id="1911984559"> <div class="u_1570974242 dmRespCol small-12 medium-12 large-12" id="1570974242"> <div class="u_1266468927 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1266468927" style="transition: opacity 1s ease-in-out 0s;"> <h2 class="text-align-center"><strong style="text-shadow:none;color:var(--color_7);font-weight:bold;display:unset;font-family:Arial, 'Arial Fallback';">Wind</strong></h2> 
+</div> 
+ <div class="u_1347485808 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1347485808"><p style="line-height: 1.5;"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">Whether you&rsquo;re into kiting, wing foiling or windsurfing, La Ventana is an endless windy playground. The bay&rsquo;s shape is great for beginners while also delivering exciting conditions for intermediate and expert riders. Todo Bien offers an easy beach launch, making access to the water quick and convenient.</span></p><p style="line-height: 1;"><br/></p><p style="line-height: 1.5;"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">To arrange lessons, email us before your stay and we&rsquo;ll connect you with trusted local instructors. We recommend booking at least two weeks in advance to ensure availability.</span></p><p style="line-height: 1;"><br/></p><p style="line-height: 1.5;"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">The primary wind season runs November through April, with the strongest and most consistent winds typically November 15&ndash;March 15. Wing and foil riders can expect rideable conditions across an even wider range of dates.</span></p><p style="line-height: 1;"><br/></p><p class="text-align-justify" style="line-height: 1.5;"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">Winter water temperatures average 21&ndash;25&deg;C (70&ndash;74&deg;F). A 4/3 wetsuit is recommended for longer sessions in January and February, while a 3/2 works well most days. From March through November, warmer water means a shorty or swimsuit is usually sufficient. Experienced riders rarely use booties, though beginners may prefer them for added comfort.</span></p></div> 
+ <div class="u_1488079020 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp photo-gallery-done text-layout-fixed captionAlignment-center_center photoGallery" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="asymetric2" data-desktop-columns="2" data-element-type="dPhotoGalleryId" data-desktop-text-layout="fixed" id="1488079020" data-placeholder="false" data-rows-to-show="1" data-desktop-caption-alignment="center_center"> <div class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1362986591"></div> 
+ <div class="layout-container asymetric2"> <div class="photogallery-row " data-index=""> <div class="photogallery-column row-direction column-2" data-index="0" style="width: 30%;"> <div index="0" class="photoGalleryThumbs animated  flex column width-50" data-index="0"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Kitesurfer on a wave in the ocean, holding kite handles. Spray erupts as the board rides the wave." data-dm-force-device="mobile" class="u_1776401408" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/wind-5-1080.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-5-1080-640w.jpg');"><img id="1177515142" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-5-1080-1920w.jpg" alt="Kitesurfer on a wave in the ocean, holding kite handles. Spray erupts as the board rides the wave." aria-label="Kitesurfer on a wave in the ocean, holding kite handles. Spray erupts as the board rides the wave." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1569464396" class="caption-container u_1569464396" style="display:none"> <span class="caption-inner"> <a id="1610727651" class="caption-button dmWidget  clearfix u_1610727651" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="1" class="photoGalleryThumbs animated  flex column width-50" data-index="1"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Kite surfers on blue ocean water with colorful kites in the sky." data-dm-force-device="mobile" class="u_1463511882" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/3BE875A3-6789-4B36-9C11-D57F0694749A.png" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/3BE875A3-6789-4B36-9C11-D57F0694749A-640w.png');"><img id="1826949190" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/3BE875A3-6789-4B36-9C11-D57F0694749A-1920w.png" alt="Kite surfers on blue ocean water with colorful kites in the sky." aria-label="Kite surfers on blue ocean water with colorful kites in the sky." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1477707503" class="caption-container u_1477707503" style="display:none"> <span class="caption-inner"> <a id="1940422616" class="caption-button dmWidget  clearfix u_1940422616" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="2" class="photoGalleryThumbs animated  flex column width-50" data-index="2"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Aerial view of colorful wing foils on a sandy beach near the ocean. Several people are present." data-dm-force-device="mobile" class="u_1836124249" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/A+Replace+woman+in+wave.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/A+Replace+woman+in+wave-640w.jpeg');"><img id="1848027586" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/A+Replace+woman+in+wave-1920w.jpeg" alt="Aerial view of colorful wing foils on a sandy beach near the ocean. Several people are present." aria-label="Aerial view of colorful wing foils on a sandy beach near the ocean. Several people are present." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1194982252" class="caption-container u_1194982252" style="display:none"> <span class="caption-inner"> <a id="1924815403" class="caption-button dmWidget  clearfix u_1924815403" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="3" class="photoGalleryThumbs animated  flex column width-50" data-index="3"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Kitesurfers on a beach with colorful kites in the sky, mountains in the background." data-dm-force-device="mobile" class="u_1936214414" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/5ca3d3bb8ee4d-ventanafoil.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/5ca3d3bb8ee4d-ventanafoil-640w.jpeg');"><img id="1293218012" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/5ca3d3bb8ee4d-ventanafoil-1920w.jpeg" alt="Kitesurfers on a beach with colorful kites in the sky, mountains in the background." aria-label="Kitesurfers on a beach with colorful kites in the sky, mountains in the background." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1479558713" class="caption-container u_1479558713" style="display:none"> <span class="caption-inner"> <a id="1595108351" class="caption-button dmWidget  clearfix u_1595108351" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-2" data-index="1"> <div index="4" class="photoGalleryThumbs animated  asymetric-big-image" data-index="4"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Kitesurfers on the water, one airborne. Blue kite and sky, white water, sunny day." data-dm-force-device="mobile" class="u_1613654541" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_6109.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_6109-640w.jpeg');"><img id="1484065278" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_6109-1920w.jpeg" alt="Kitesurfers on the water, one airborne. Blue kite and sky, white water, sunny day." aria-label="Kitesurfers on the water, one airborne. Blue kite and sky, white water, sunny day." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1180329714" class="caption-container u_1180329714" style="display:none"> <span class="caption-inner"> <a id="1269842282" class="caption-button dmWidget  clearfix u_1269842282" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row  photogallery-hidden-row " data-index=""> <div class="photogallery-column column-2" data-index="0"> <div index="5" class="photoGalleryThumbs animated  asymetric-big-image" data-index="5"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Person windsurfing, standing on hydrofoil board, blue sail, ocean setting." data-dm-force-device="mobile" class="u_1563715644" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/O--Wing-Foil-FS-Action-09.webp" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/O--Wing-Foil-FS-Action-09-640w.webp');"><img id="1249692403" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/O--Wing-Foil-FS-Action-09-1920w.webp" alt="Person windsurfing, standing on hydrofoil board, blue sail, ocean setting." aria-label="Person windsurfing, standing on hydrofoil board, blue sail, ocean setting." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1321874339" class="caption-container u_1321874339" style="display:none"> <span class="caption-inner"> <a id="1097201489" class="caption-button dmWidget  clearfix u_1097201489" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column row-direction column-2" data-index="1" style="width: 30%;"> <div index="6" class="photoGalleryThumbs animated  flex column width-50" data-index="6"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Kitesurfer airborne on a choppy ocean, board beneath him, kite overhead, against a blue sky." data-dm-force-device="mobile" class="u_1754379050" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/wind-6-20180.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-6-20180-640w.jpg');"><img id="1230747908" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-6-20180-1920w.jpg" alt="Kitesurfer airborne on a choppy ocean, board beneath him, kite overhead, against a blue sky." aria-label="Kitesurfer airborne on a choppy ocean, board beneath him, kite overhead, against a blue sky." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1648463034" class="caption-container u_1648463034" style="display:none"> <span class="caption-inner"> <a id="1856632719" class="caption-button dmWidget  clearfix u_1856632719" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="7" class="photoGalleryThumbs animated  flex column width-50" data-index="7"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Person wing-foiling on ocean, bright pink wing, orange foil board. Blue sky, water." data-dm-force-device="mobile" class="u_1140312646" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/wind-2-1080.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-2-1080-640w.jpg');"><img id="1338538976" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-2-1080-1920w.jpg" alt="Person wing-foiling on ocean, bright pink wing, orange foil board. Blue sky, water." aria-label="Person wing-foiling on ocean, bright pink wing, orange foil board. Blue sky, water." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1189228786" class="caption-container u_1189228786" style="display:none"> <span class="caption-inner"> <a id="1828417462" class="caption-button dmWidget  clearfix u_1828417462" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="8" class="photoGalleryThumbs animated  flex column width-50" data-index="8"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Man paddleboarding on a wave in front of mountains. He wears a red shirt, shorts, and a hat. Turquoise water." data-dm-force-device="mobile" class="u_1538176327" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/wind-3-1080.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-3-1080-640w.jpg');"><img id="1879522097" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-3-1080-1920w.jpg" alt="Man paddleboarding on a wave in front of mountains. He wears a red shirt, shorts, and a hat. Turquoise water." aria-label="Man paddleboarding on a wave in front of mountains. He wears a red shirt, shorts, and a hat. Turquoise water." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1350247825" class="caption-container u_1350247825" style="display:none"> <span class="caption-inner"> <a id="1619666713" class="caption-button dmWidget  clearfix u_1619666713" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="9" class="photoGalleryThumbs animated  flex column width-50" data-index="9"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Person in black wetsuit, hat, and harness, holding a surfboard on a beach, preparing to kitesurf. " data-dm-force-device="mobile" class="u_1480275420" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/wind-10-1080.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-10-1080-640w.jpg');"><img id="1401326837" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-10-1080-1920w.jpg" alt="Person in black wetsuit, hat, and harness, holding a surfboard on a beach, preparing to kitesurf. " aria-label="Person in black wetsuit, hat, and harness, holding a surfboard on a beach, preparing to kitesurf. " onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1172195073" class="caption-container u_1172195073" style="display:none"> <span class="caption-inner"> <a id="1855437131" class="caption-button dmWidget  clearfix u_1855437131" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row  photogallery-hidden-row " data-index=""> <div class="photogallery-column row-direction column-2" data-index="0" style="width: 30%;"> <div index="10" class="photoGalleryThumbs animated  flex column width-50" data-index="10"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Person wing foiling on a board, red wing, blue water, mountains in the background." data-dm-force-device="mobile" class="u_1412499264" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/wind-9-1080.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-9-1080-640w.jpg');"><img id="1170454980" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-9-1080-1920w.jpg" alt="Person wing foiling on a board, red wing, blue water, mountains in the background." aria-label="Person wing foiling on a board, red wing, blue water, mountains in the background." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1750583743" class="caption-container u_1750583743" style="display:none"> <span class="caption-inner"> <a id="1225042724" class="caption-button dmWidget  clearfix u_1225042724" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="11" class="photoGalleryThumbs animated  flex column width-50" data-index="11"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Person with kitesurfing equipment standing in shallow water, beach, blue sky." data-dm-force-device="mobile" class="u_1121052327" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/wind-11-1080.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-11-1080-640w.jpg');"><img id="1300038457" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/wind-11-1080-1920w.jpg" alt="Person with kitesurfing equipment standing in shallow water, beach, blue sky." aria-label="Person with kitesurfing equipment standing in shallow water, beach, blue sky." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1818918040" class="caption-container u_1818918040" style="display:none"> <span class="caption-inner"> <a id="1546767148" class="caption-button dmWidget  clearfix u_1546767148" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="12" class="photoGalleryThumbs animated  flex column width-50" data-index="12"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Woman paddles a stand-up board on calm ocean, wearing sun-protective clothing, with distant land in the background." data-dm-force-device="mobile" class="u_1618448956" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_1531-scaled.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_1531-scaled-640w.jpeg');"><img id="1893370915" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_1531-scaled-1920w.jpeg" alt="Woman paddles a stand-up board on calm ocean, wearing sun-protective clothing, with distant land in the background." aria-label="Woman paddles a stand-up board on calm ocean, wearing sun-protective clothing, with distant land in the background." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1205994998" class="caption-container u_1205994998" style="display:none"> <span class="caption-inner"> <a id="1373990950" class="caption-button dmWidget  clearfix u_1373990950" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="13" class="photoGalleryThumbs animated  flex column width-50" data-index="13"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Woman wing foiling on water with a blue sail, wearing red bikini in sunny weather." data-dm-force-device="mobile" class="u_1013095309" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/csm_Wingfoil_Parajuru_Brazil_82d67fc675.jpg.webp" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/csm_Wingfoil_Parajuru_Brazil_82d67fc675.jpg-640w.webp');"><img id="1182305969" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/csm_Wingfoil_Parajuru_Brazil_82d67fc675.jpg-1920w.webp" alt="Woman wing foiling on water with a blue sail, wearing red bikini in sunny weather." aria-label="Woman wing foiling on water with a blue sail, wearing red bikini in sunny weather." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1697182721" class="caption-container u_1697182721" style="display:none"> <span class="caption-inner"> <a id="1048602444" class="caption-button dmWidget  clearfix u_1048602444" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-2" data-index="1"> <div index="14" class="photoGalleryThumbs animated  asymetric-big-image" data-index="14"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Woman paddleboards on a calm, turquoise sea with mountains in the distance under a clear blue sky." data-dm-force-device="mobile" class="u_1423977546" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/la-ventana-baja-peninsula-mexico-30.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/la-ventana-baja-peninsula-mexico-30-640w.jpeg');"><img id="1153044968" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/la-ventana-baja-peninsula-mexico-30-1920w.jpeg" alt="Woman paddleboards on a calm, turquoise sea with mountains in the distance under a clear blue sky." aria-label="Woman paddleboards on a calm, turquoise sea with mountains in the distance under a clear blue sky." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1774892093" class="caption-container u_1774892093" style="display:none"> <span class="caption-inner"> <a id="1262190652" class="caption-button dmWidget  clearfix u_1262190652" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photoGalleryViewAll link" data-auto="photo-gallery-view-all" isall="true" data-viewall="View more" data-viewless="View less">View more</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1936501656 hasBackgroundOverlay dmSectionNoParallax" id="1936501656"> <div class="dmRespColsWrapper" id="1534142562"> <div class="u_1523932248 dmRespCol empty-column small-12 medium-12 large-12" id="1523932248"></div> 
+</div> 
+</div> 
+ <div class="u_1404502033 dmRespRow mobile-columns-reversed" id="1404502033"> <div class="dmRespColsWrapper" id="1837781864"> <div class="u_1292684413 dmRespCol small-12 medium-12 large-12" id="1292684413"> <div class="dmNewParagraph u_1234258548" data-element-type="paragraph" data-version="5" id="1234258548" style="transition: none; text-align: left; display: block;"> <h2 class="text-align-center"><strong style="text-shadow:none;color:var(--color_7);font-weight:bold;display:unset;font-family:Arial, 'Arial Fallback';">Ocean</strong></h2> 
+</div> 
+ <div class="dmNewParagraph u_1863009186" data-element-type="paragraph" data-version="5" id="1863009186" style="transition: none; text-align: left; display: block;"><p class="text-align-center m-size-19 size-24" style="letter-spacing: 0.3px;"><span class="font-size-24 m-font-size-19" style="display:initial;font-family:Arial, 'Arial Fallback';">&nbsp;The Sea of Cortez is the most biologically diverse body of water on earth</span></p><p class="text-align-center m-size-19 size-24" style="letter-spacing: 0.3px;"><span class="font-size-24 m-font-size-19" style="display:initial;font-family:Arial, 'Arial Fallback';">including the widest variety of whales and dolphins.</span><span class="font-size-24 m-font-size-19" style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1104677006" style="text-align: center;" id="1104677006" data-page-element-type="section" data-page-element-id="1371821896"> <div class="dmRespColsWrapper" id="1057635867"> <div class="u_1928040937 dmRespCol small-12 medium-4 large-4" id="1928040937"> <div class="imageWidget align-center u_1629968043" data-element-type="image" data-widget-type="image" id="1629968043"> <a id="1997256582"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/SUP-800x533-1-1920w.jpg" alt="Man paddleboarding in ocean, wearing sunglasses and hat, holding a paddle." id="1068366992" height="533" class="" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/SUP-800x533-1.jpg" width="800" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="dmNewParagraph u_1128101147" id="1128101147" style="transition-duration: 1s; transition-timing-function: ease-in-out; transition-delay: initial; transition-property: opacity; display: block;" data-element-type="paragraph" data-version="5"> <h2 class="text-align-center"><span style="text-shadow:none;color:var(--color_7);display:initial;font-family:Arial, 'Arial Fallback';">Snorkel &amp; Stand Up Paddling (SUP)</span></h2> 
+</div> <div class="dmNewParagraph u_1882228475" id="1882228475" style="transition: none; text-align: left; display: block;" data-version="5"><p class="m-size-16 text-align-justify" style="line-height: 1.5;"><span class="m-font-size-16" style="font-weight:normal;display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">Todo Bien offers complimentary paddle boards, kayaks, and snorkel gear directly in front of the hotel. Mornings and summer months typically bring clear, calm water, ideal for exploring and observing marine life. We recommend paddling north first for an easier return with the wind at your back.&nbsp;</span><span class="m-font-size-16" style="background-color: transparent; color: rgb(0, 0, 0); display: initial;"><br/></span></p></div></div> 
+ <div class="u_1142666803 dmRespCol small-12 medium-4 large-4" id="1142666803"> <div class="imageWidget align-center u_1819523164" data-widget-type="image" id="1819523164" data-element-type="image"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/pangas-800x533-1-768x512-1920w.jpg" id="1660513247" height="512" class="" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/pangas-800x533-1-768x512.jpg" width="768" alt="Boy on a small boat holding a fish, near shore. Clear blue water, sunny day." onerror="handleImageLoadError(this)"/></div> 
+ <div class="u_1939379130 dmNewParagraph" id="1939379130" style="transition-duration: 1s; transition-timing-function: ease-in-out; transition-delay: initial; transition-property: opacity; display: block;" data-element-type="paragraph" data-version="5"> <h2 class="text-align-center"><span style="text-shadow:none;color:var(--color_7);font-weight:400;display:initial;font-family:Arial, 'Arial Fallback';"><span style="text-shadow:none;color:var(--color_7);font-weight:400;display:initial;font-family:Arial, 'Arial Fallback';">Pangas (boating)</span> 
+</span></h2> 
+</div> <div class="u_1801614505 dmNewParagraph" id="1801614505" style="line-height:initial;" data-version="5"><p class="text-align-justify" style="line-height: 1.5;"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">Whether you enjoy fishing, searching for whales, marine life, exploring secluded beaches, or snorkeling with sea lions, we encourage you to get on the water with one of our trusted local panga captains. We&rsquo;ll set it up, and you&rsquo;ll get picked up on the beach in front of the hotel. Ask about pre-packaged lunches and coolers to take on the boat.</span></p><p class="text-align-left"><span style="display: initial;"><br/></span></p></div></div> 
+ <div class="u_1537859695 dmRespCol small-12 medium-4 large-4" id="1537859695"> <div class="imageWidget align-center u_1216253230" data-widget-type="image" id="1216253230" data-element-type="image"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/scuba-800x533-1-768x512-1920w.jpg" id="1804531392" height="512" class="" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/scuba-800x533-1-768x512.jpg" width="768" alt="Scuba diver in shorts, finned, swims underwater above ocean floor, bubbles rise, blue water." onerror="handleImageLoadError(this)"/></div> 
+ <div class="dmNewParagraph u_1821331190" id="1821331190" style="transition: none; text-align: left; display: block;" data-element-type="paragraph" data-version="5"> <h2 class="text-align-center"><span style="text-shadow:none;color:var(--color_7);font-weight:400;display:initial;font-family:Arial, 'Arial Fallback';">Spearfishing, Freediving, Scuba</span></h2> 
+</div> <div class="dmNewParagraph u_1299284021" id="1299284021" style="line-height:initial;" data-version="5"><p style="line-height: 1.5;" class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">Explore La Ventana&rsquo;s underwater world, where clear waters, abundant marine life, and warm seas create ideal conditions for spearfishing, freediving, and scuba. From beginners to experienced divers, we can connect you with local operators for unforgettable ocean experiences.</span></p><p class="text-align-left"><span style="display: initial;"><br/></span></p></div></div> 
+</div> 
+</div> 
+ <div class="u_1474035000 dmRespRow" style="text-align: center;" id="1474035000" data-page-element-type="section" data-page-element-id="1371821896" data-anim-desktop="none"> <div class="dmRespColsWrapper" id="1155929498"> <div class="u_1010476620 dmRespCol small-12 large-4 medium-4" id="1010476620"> <div class="u_1218124453 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1218124453"> <a id="1916252201"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/cah-whale-1-1920w.png" alt="Whale shark swims underwater; dark body with white spots, in turquoise water." id="1197330940" height="532" class="" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/cah-whale-1.png" width="800" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="dmNewParagraph u_1354927247" id="1354927247" style="transition-duration: 1s; transition-timing-function: ease-in-out; transition-delay: initial; transition-property: opacity; display: block;" data-element-type="paragraph" data-version="5"> <h2 class="text-align-center"><span style="text-shadow:none;color:var(--color_7);font-weight:400;display:initial;font-family:Arial, 'Arial Fallback';">Whales</span></h2> 
+</div> <div class="u_1152621935 dmNewParagraph" id="1152621935" style="line-height:initial;" data-version="5"><p style="line-height: 1.5;" class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">On any given day, whales, dolphins, turtles, and rays migrate through La Ventana Bay. Join a day trip with a local guide and watch for blue, fin, sperm, and humpback whales, along with orcas and other species. Our team will arrange the boat and captain, with beach pickup directly in front of the hotel.</span></p></div></div> 
+ <div class="u_1536753732 dmRespCol small-12 dmSectionNoParallax large-4 medium-4" id="1536753732" data-gallery-bg="eyJzbGlkZXMiOltdfQ=="> <div class="u_1885641974 imageWidget align-center hasFullWidth" data-element-type="image" data-widget-type="image" id="1885641974"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Killer-Whale-18f80e2c-248d2e91-1920w.png" alt="Person snorkeling near a large orca whale in blue ocean water." id="1561200339" class="" width="800" height="532" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/Killer-Whale-18f80e2c-248d2e91.png" onerror="handleImageLoadError(this)"/></div> 
+ <div class="u_1606269950 dmNewParagraph" id="1606269950" style="transition: none; text-align: left; display: block;" data-version="5"><p class="size-32 text-align-center" style="line-height: 1.5;"><span class="font-size-32" style="display:initial;font-family:Arial, 'Arial Fallback';">Swimming with Orcas</span></p></div> <div class="u_1239202697 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1239202697" style="transition: none; text-align: left; display: block;"><p style="line-height: 1.5;" class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">La Ventana is one of only two places in the world where swimming with orcas is legally permitted.</span></p><p style="line-height: 0.5;" class="text-align-justify"><br/></p><p style="line-height: 1.5;" class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">A small number of locally operated boats carry the proper permits to take people out to respectfully observe these animals. While encounters are never guaranteed, La Ventana&rsquo;s calm, crystal-clear blue waters and warm ocean temperatures, especially in summer, offer an extraordinary opportunity to witness orcas in their natural environment</span></p><p><span style="display: initial;"><br/></span></p></div> 
+</div> 
+ <div class="u_1653019912 dmRespCol small-12 large-4 medium-4" id="1653019912"> <div class="u_1057312631 imageWidget align-center" data-widget-type="image" id="1057312631" data-element-type="image"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/What-is-Tow-Foiling-8fb4c4a7-1920w.png" id="1411701380" height="384" class="" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/What-is-Tow-Foiling-8fb4c4a7.png" width="581" alt="Beach scene with mountains, blue water, and birds on rocks." onerror="handleImageLoadError(this)"/></div> 
+ <div class="u_1742605265 dmNewParagraph" id="1742605265" style="transition-duration: 1s; transition-timing-function: ease-in-out; transition-delay: initial; transition-property: opacity; display: block;" data-element-type="paragraph" data-version="5"> <h2 class="text-align-center"><span style="text-shadow:none;color:var(--color_7);font-weight:400;display:initial;font-family:Arial, 'Arial Fallback';">E-foiling &amp; Boat Towing</span></h2> 
+</div> <div class="dmNewParagraph u_1887659378" id="1887659378" style="transition: none; text-align: left; display: block;" data-version="5"><p style="line-height: 1.5;" class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">On calm mornings or non-windy days, e-foil rentals and towing sessions offer the perfect way to refine your foiling skills. E-foiling or boat-foiling is an ideal introduction to wing foiling, helping you build balance and confidence on the foil before adding wind to the experience.</span></p><p style="line-height: 1.5;"><span style="display: initial;"><br/></span></p></div></div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1610291270 dmSectionParallaxNew hasBackgroundOverlay" id="1610291270"> <div class="dmRespColsWrapper" id="1053938979"> <div class="u_1394550433 dmRespCol empty-column small-12 medium-12 large-12" id="1394550433"></div> 
+</div> 
+</div> 
+ <div class="u_1618975721 dmRespRow mobile-columns-reversed" id="1618975721"> <div class="dmRespColsWrapper" id="1179724627"> <div class="u_1363789431 dmRespCol small-12 medium-12 large-12" id="1363789431"> <div class="u_1038786820 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1038786820" style="transition: opacity 1s ease-in-out 0s;"> <h2 class="text-align-center"><strong style="text-shadow:none;color:var(--color_7);font-weight:bold;display:unset;font-family:Arial, 'Arial Fallback';">Land</strong></h2> 
+</div> 
+ <div class="dmNewParagraph u_1021911836" data-element-type="paragraph" data-version="5" id="1021911836" style="transition: none; text-align: left; display: block;"><p class="text-align-center m-size-19 size-24" style="line-height: 1.5;"><span class="font-size-24 m-font-size-19" style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">&nbsp; &nbsp; &nbsp;You&rsquo;ll be charmed by local culture, awed by scenic mountains, and calmed by the desert&nbsp; &nbsp;landscape. The area boasts an incredible network of trails and over 100 species of cacti alone.</span><span class="font-size-24 m-font-size-19" style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1055447525" style="text-align: center;" id="1055447525" data-page-element-type="section" data-page-element-id="1371821896"> <div class="dmRespColsWrapper" id="1890592598"> <div class="u_1022487930 dmRespCol small-12 medium-4 large-4" id="1022487930"> <div class="imageWidget align-center u_1545588952" data-element-type="image" data-widget-type="image" id="1545588952"> <a id="1426913532"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/mountainbike-cardon-800x533-1-1920w.jpg" alt="Woman on a mountain bike rides past a large tree on a desert trail; blue shirt, shorts." id="1312667831" height="533" class="" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/mountainbike-cardon-800x533-1.jpg" width="800" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="dmNewParagraph u_1696454921" id="1696454921" style="transition-duration: 1s; transition-timing-function: ease-in-out; transition-delay: initial; transition-property: opacity; display: block;" data-element-type="paragraph" data-version="5"> <h2 class="text-align-center"><span style="text-shadow:none;color:var(--color_7);display:initial;font-family:Arial, 'Arial Fallback';">Mountain Biking</span></h2> 
+</div> <div class="dmNewParagraph u_1240656887" id="1240656887" style="transition: none; text-align: left; display: block;" data-version="5"><p style="line-height: 1.5;" class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">Explore 70+ miles of bike trails using the Trailforks app for easy navigation. We can recommend local rental shops and encourage you to consider an e-bike to cover more terrain. Southern trails are well-suited for beginner to intermediate riders, while northern routes offer more advanced riding. For an all-day guided experience, look at</span><span style="display: initial;"><span style="display: initial;">&nbsp;</span> 
+</span><a href="https://www.ranchocacachilas.com/day-tours" target="_blank" runtime_url="https://www.ranchocacachilas.com/day-tours" type="url" style="color:var(--color_1);font-weight:bold;display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;"><strong>Rancho Cacachilas.</strong></a></p><p style="letter-spacing: 0.3px;"><span style="display: initial;"><br/></span></p></div></div> 
+ <div class="u_1176487085 dmRespCol small-12 medium-4 large-4" id="1176487085"> <div class="imageWidget align-center u_1266485886" data-widget-type="image" id="1266485886" data-element-type="image"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/hiking-1920w.png" id="1906827634" height="533" class="" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/hiking.png" width="800" alt="Red finch perched on a palm frond, against a pale blue sky." onerror="handleImageLoadError(this)"/></div> 
+ <div class="u_1604868130 dmNewParagraph" id="1604868130" style="transition: none; display: block; text-align: left;" data-element-type="paragraph" data-version="5"> <h2 class="text-align-center"><span style="text-shadow:none;color:var(--color_7);font-weight:400;display:initial;font-family:Arial, 'Arial Fallback';">Hiking &amp; Trail Running</span></h2> 
+</div> <div class="u_1985761442 dmNewParagraph" id="1985761442" data-version="5" data-styletopreserve="{" background-image":""}"=""><p style="line-height: 1.5;" class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">The Punta Gorda Trail winds through the cactus forest north of town, offering beautiful views of the island along the way. The trail ends at the water, where you can enjoy a refreshing swim. The trailhead is a 15&ndash;20-minute drive from the hotel, and the hike typically takes 2&ndash;3 hours self-guided. The trailhead location can be found on</span> 
+</span><a href="https://www.trailforks.com/tracker/map/?ping=24.133378828177015,-110.0015204274467" target="_blank" runtime_url="https://www.trailforks.com/tracker/map/?ping=24.133378828177015,-110.0015204274467" type="url" style="color:var(--color_1);font-weight:bold;display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;"><strong>Trailforks.</strong></a></p><p style="line-height: normal;" class="text-align-justify"><span style="display: initial;"><br/></span></p><p style="line-height: normal;" class="text-align-justify"><span style="display: initial;"><br/></span></p><p class="text-align-left" style="line-height: 1.5;"><span style="display: initial;"><br/></span></p></div></div> 
+ <div class="u_1205180843 dmRespCol small-12 medium-4 large-4" id="1205180843"> <div class="imageWidget align-center u_1134142894" data-widget-type="image" id="1134142894" data-element-type="image"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/massage-800x533-1-768x512-1920w.jpg" id="1170985169" height="512" class="" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/massage-800x533-1-768x512.jpg" width="768" alt="Person receiving back massage in a spa setting with candles and flowers." onerror="handleImageLoadError(this)"/></div> 
+ <div class="u_1812520995 dmNewParagraph" id="1812520995" style="transition-duration: 1s; transition-timing-function: ease-in-out; transition-delay: initial; transition-property: opacity; display: block;" data-element-type="paragraph" data-version="5"> <h2 class="text-align-center"><span style="text-shadow:none;color:var(--color_7);font-weight:400;display:initial;font-family:Arial, 'Arial Fallback';">Massage &amp; Body Work</span></h2> 
+</div> <div class="u_1591674015 dmNewParagraph" id="1591674015" style="line-height:initial;" data-version="5"><p style="line-height: 1.5;" class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">Unwind with a personalized massage designed to balance movement, breath, and deep relaxation. Whether you prefer firm, therapeutic pressure or a calming, restorative treatment, we&rsquo;ll bring the experience to you. Simply let the front desk know, and we&rsquo;ll arrange everything.&nbsp;</span><span style="font-style: normal; display: initial;" single-space="true"> <span style="font-style: normal; display: initial;"></span> 
+</span></p><p class="text-align-left" style="line-height: 1.5;"><span style="display: initial;"><br/></span></p></div></div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1328152872" style="text-align: center;" id="1328152872" data-page-element-type="section" data-page-element-id="1371821896"> <div class="dmRespColsWrapper" id="1247453849"> <div class="u_1401793578 dmRespCol small-12 medium-4 large-4" id="1401793578"> <div class="imageWidget align-center u_1552393442" data-element-type="image" data-widget-type="image" id="1552393442"> <a id="1767120712"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/yoga-800x533-1-768x512-1920w.jpg" alt="Woman on a mountain bike rides past a large tree on a desert trail; blue shirt, shorts." id="1152000131" height="512" class="" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/yoga-800x533-1-768x512.jpg" width="768" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="dmNewParagraph u_1677423497" id="1677423497" style="transition: none; display: block; text-align: left;" data-element-type="paragraph" data-version="5"> <h2 class="text-align-center"><span style="text-shadow:none;color:var(--color_7);display:initial;font-family:Arial, 'Arial Fallback';">Yoga</span></h2> 
+</div> <div class="dmNewParagraph u_1071057110" id="1071057110" style="transition: none; text-align: left; display: block;" data-version="5"><p class="m-size-16 text-align-justify" style="letter-spacing: 0.3px;"><span class="m-font-size-16" style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;"><span class="m-font-size-16" style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">Yoga is everywhere. For your own personal practice, each room is equipped with a yoga mat and blocks.&nbsp; To see the many local class listings, check out the</span> 
+</span><a href="https://www.theventanaview.com/health-and-wellness/" target="_blank" runtime_url="https://www.theventanaview.com/health-and-wellness/" type="url" class="m-font-size-16" style="color:var(--color_1);font-weight:bold;display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;"><strong>Ventana View Health and Wellness Calendar.</strong></a></p><p class="text-align-left" style="letter-spacing: 0.3px;"><span style="display: initial;"><br/></span></p></div></div> 
+ <div class="u_1028485834 dmRespCol small-12 medium-4 large-4" id="1028485834"> <div class="imageWidget align-center u_1146858935" data-widget-type="image" id="1146858935" data-element-type="image"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/farmers-market-800x533-1-768x512-1920w.png" id="1657362545" height="512" class="" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/farmers-market-800x533-1-768x512.png" width="768" alt="Red finch perched on a palm frond, against a pale blue sky." onerror="handleImageLoadError(this)"/></div> 
+ <div class="dmNewParagraph u_1239492839" id="1239492839" style="transition-duration: 1s; transition-timing-function: ease-in-out; transition-delay: initial; transition-property: opacity; display: block;" data-element-type="paragraph" data-version="5"> <h2 class="text-align-center"><span style="text-shadow:none;color:var(--color_7);font-weight:400;display:initial;font-family:Arial, 'Arial Fallback';">Farmer's Market</span></h2> 
+</div> <div class="dmNewParagraph u_1590302255" id="1590302255" style="transition: none; text-align: left; display: block;" data-version="5"><p class="m-size-16 text-align-justify" style="letter-spacing: 0.3px;"><span class="m-font-size-16" style="display:initial;font-family:Arial, 'Arial Fallback';"><span class="m-font-size-16" style="display:initial;font-family:Arial, 'Arial Fallback';">Enjoy the</span> 
+</span><a href="https://www.fb.com/laventanafarmersmarket/" target="_blank" runtime_url="https://www.fb.com/laventanafarmersmarket/" type="url" class="m-font-size-16" style="color:var(--color_1);font-weight:bold;display:initial;font-family:Arial, 'Arial Fallback';"><strong>Farmer&rsquo;s Market</strong></a><span class="m-font-size-16" style="display:initial;font-family:Arial, 'Arial Fallback';"> <span class="m-font-size-16" style="display:initial;font-family:Arial, 'Arial Fallback';">every Thursday from 8:00am &ndash; 12:00pm. A short walk from the hotel, featuring organic foods and local arts &amp; crafts.</span></span><span style="display: initial;"><br/></span></p></div></div> 
+ <div class="u_1233343247 dmRespCol small-12 medium-4 large-4" id="1233343247"> <div class="imageWidget align-center u_1602669172" data-widget-type="image" id="1602669172" data-element-type="image"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/481306804_623702513738753_2364926440071110185_n-47fb88bf-1920w.png" id="1770774958" height="1153" class="" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/481306804_623702513738753_2364926440071110185_n-47fb88bf.png" width="1731" alt="Person receiving back massage in a spa setting with candles and flowers." onerror="handleImageLoadError(this)"/></div> 
+ <div class="dmNewParagraph u_1970081825" id="1970081825" style="transition-duration: 1s; transition-timing-function: ease-in-out; transition-delay: initial; transition-property: opacity; display: block;" data-element-type="paragraph" data-version="5"> <h2 class="text-align-center"><span style="text-shadow:none;color:var(--color_7);font-weight:400;display:initial;font-family:Arial, 'Arial Fallback';">Pickleball</span></h2> 
+</div> <div class="dmNewParagraph u_1809552692" id="1809552692" style="transition: none; text-align: left; display: block;" data-version="5"><p class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;"><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">Pack your paddles! Pickleball with an ocean view.</span> 
+</span><a href="https://www.facebook.com/people/Tango-Azul-Pickleball-Resort/100082970300231/" target="_blank" runtime_url="https://www.facebook.com/people/Tango-Azul-Pickleball-Resort/100082970300231/" type="url" style="color:var(--color_1);font-weight:bold;display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;"><strong>Tango Azul</strong></a><span style="display: initial;"><span style="display: initial;">&nbsp;</span> 
+</span><span style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">courts are a 5-minute drive from the hotel, offering open-play suitable for players of all levels. Drop-ins welcome five days a week for $15 USD ($250 MXN).</span></p></div></div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1150958913 dmSectionParallaxNew hasBackgroundOverlay" id="1150958913"> <div class="dmRespColsWrapper" id="1647714033"> <div class="u_1380319831 dmRespCol empty-column small-12 medium-12 large-12" id="1380319831"></div> 
+</div> 
+</div> 
+ <div class="u_1033634476 dmRespRow mobile-columns-reversed" id="1033634476"> <div class="dmRespColsWrapper" id="1274792940"> <div class="u_1475796698 dmRespCol small-12 medium-12 large-12" id="1475796698"> <div class="u_1768215093 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1768215093" style="transition: opacity 1s ease-in-out 0s;"> <h2 class="text-align-center"><strong style="text-shadow:none;color:var(--color_7);font-weight:bold;display:unset;font-family:Arial, 'Arial Fallback';">Day Trips</strong></h2> 
+</div> 
+ <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1595527620"><p class="m-size-19 text-align-center size-24" style="letter-spacing: 0.3px;"><span class="m-font-size-19 font-size-24" style="font-weight:400;display:initial;font-family:Arial, 'Arial Fallback';">Here&rsquo;s a partial list of the many day trips available:</span></p></div> 
+ <div class="dmPhotoGallery newPhotoGallery dmPhotoGalleryResp u_1064285516 photo-gallery-done text-layout-fixed captionAlignment-center_center photoGallery" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="asymetric2" data-desktop-columns="2" data-element-type="dPhotoGalleryId" data-desktop-text-layout="fixed" id="1064285516" data-placeholder="false" data-rows-to-show="1" data-desktop-caption-alignment="center_center"> <div class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1362986591"></div> 
+ <div class="layout-container asymetric2"> <div class="photogallery-row " data-index=""> <div class="photogallery-column row-direction column-2" data-index="0" style="width: 30%;"> <div index="0" class="photoGalleryThumbs animated  flex column width-50" data-index="0"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Three people on mules in a rocky, outdoor setting near a pool of water." data-dm-force-device="mobile" class="u_1750180793" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Loreto-San-Javier-Mission-Mule-Ride-Tour-Baja-Mexico.JPEG.webp" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Loreto-San-Javier-Mission-Mule-Ride-Tour-Baja-Mexico.JPEG-640w.webp');"><img id="1948993957" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Loreto-San-Javier-Mission-Mule-Ride-Tour-Baja-Mexico.JPEG-1920w.webp" alt="Three people on mules in a rocky, outdoor setting near a pool of water." aria-label="Three people on mules in a rocky, outdoor setting near a pool of water." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1779997200" class="caption-container u_1779997200" style="display:none"> <span class="caption-inner"> <a id="1115874723" class="caption-button dmWidget  clearfix u_1115874723" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="1" class="photoGalleryThumbs animated  flex column width-50" data-index="1"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Sea turtle swims underwater near coral, turquoise water and sunlight." data-dm-force-device="mobile" class="u_1368776616" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/green-turtle-under-water-e1653061702615-1024x535.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/green-turtle-under-water-e1653061702615-1024x535-640w.jpeg');"><img id="1984367494" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/green-turtle-under-water-e1653061702615-1024x535-1920w.jpeg" alt="Sea turtle swims underwater near coral, turquoise water and sunlight." aria-label="Sea turtle swims underwater near coral, turquoise water and sunlight." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1528063326" class="caption-container u_1528063326" style="display:none"> <span class="caption-inner"> <a id="1105080773" class="caption-button dmWidget  clearfix u_1105080773" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="2" class="photoGalleryThumbs animated  flex column width-50" data-index="2"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Woman on a boat, wearing snorkel gear, waves. Blue canopy, white boat in the water. Clear sky." data-dm-force-device="mobile" class="u_1189425511" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Todobien+Safari+Trip+6-2.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Todobien+Safari+Trip+6-2-640w.jpeg');"><img id="1250049350" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Todobien+Safari+Trip+6-2-1920w.jpeg" alt="Woman on a boat, wearing snorkel gear, waves. Blue canopy, white boat in the water. Clear sky." aria-label="Woman on a boat, wearing snorkel gear, waves. Blue canopy, white boat in the water. Clear sky." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1334680581" class="caption-container u_1334680581" style="display:none"> <span class="caption-inner"> <a id="1169587163" class="caption-button dmWidget  clearfix u_1169587163" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="3" class="photoGalleryThumbs animated  flex column width-50" data-index="3"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="White Jeep driving on a dirt road in a desert with large cacti." data-dm-force-device="mobile" class="u_1513730651" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/FV7A0497.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/FV7A0497-640w.jpeg');"><img id="1422213457" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/FV7A0497-1920w.jpeg" alt="White Jeep driving on a dirt road in a desert with large cacti." aria-label="White Jeep driving on a dirt road in a desert with large cacti." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1286745277" class="caption-container u_1286745277" style="display:none"> <span class="caption-inner"> <a id="1793075865" class="caption-button dmWidget  clearfix u_1793075865" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-2" data-index="1"> <div index="4" class="photoGalleryThumbs animated  asymetric-big-image" data-index="4"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="A woman in a swimsuit swims underwater towards several dark sea lions." data-dm-force-device="mobile" class="u_1599256565" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Todobien+Safari+Trip+1.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Todobien+Safari+Trip+1-640w.jpeg');"><img id="1689863814" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Todobien+Safari+Trip+1-1920w.jpeg" alt="A woman in a swimsuit swims underwater towards several dark sea lions." aria-label="A woman in a swimsuit swims underwater towards several dark sea lions." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1389959282" class="caption-container u_1389959282" style="display:none"> <span class="caption-inner"> <a id="1513387201" class="caption-button dmWidget  clearfix u_1513387201" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row  photogallery-hidden-row " data-index=""> <div class="photogallery-column column-2" data-index="0"> <div index="5" class="photoGalleryThumbs animated  asymetric-big-image" data-index="5"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Woman relaxes in a stone-lined pool on a beach, turquoise water, blue sky with clouds, mountains in the distance." data-dm-force-device="mobile" class="u_1502877171" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/6F41221A-1DDC-48E4-B245-5DBD3084AE1C_1_201_a-768x1024.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/6F41221A-1DDC-48E4-B245-5DBD3084AE1C_1_201_a-768x1024-640w.jpeg');"><img id="1091637775" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/6F41221A-1DDC-48E4-B245-5DBD3084AE1C_1_201_a-768x1024-1920w.jpeg" alt="Woman relaxes in a stone-lined pool on a beach, turquoise water, blue sky with clouds, mountains in the distance." aria-label="Woman relaxes in a stone-lined pool on a beach, turquoise water, blue sky with clouds, mountains in the distance." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1023290287" class="caption-container u_1023290287" style="display:none"> <span class="caption-inner"> <a id="1659374517" class="caption-button dmWidget  clearfix u_1659374517" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column row-direction column-2" data-index="1" style="width: 30%;"> <div index="6" class="photoGalleryThumbs animated  flex column width-50" data-index="6"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Brown pelican perched on a large, tan rock at the ocean's edge." data-dm-force-device="mobile" class="u_1826269446" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/dt-2-1080-600x600.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/dt-2-1080-600x600-640w.jpg');"><img id="1426390030" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/dt-2-1080-600x600-1920w.jpg" alt="Brown pelican perched on a large, tan rock at the ocean's edge." aria-label="Brown pelican perched on a large, tan rock at the ocean's edge." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1492119210" class="caption-container u_1492119210" style="display:none"> <span class="caption-inner"> <a id="1639542441" class="caption-button dmWidget  clearfix u_1639542441" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="7" class="photoGalleryThumbs animated  flex column width-50" data-index="7"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="A person riding a mountain bike on a dirt trail, overlooking a coastal landscape." data-dm-force-device="mobile" class="u_1711273579" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/LAND-HEADER-1920x900-3.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/LAND-HEADER-1920x900-3-640w.jpg');"><img id="1000689063" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/LAND-HEADER-1920x900-3-1920w.jpg" alt="A person riding a mountain bike on a dirt trail, overlooking a coastal landscape." aria-label="A person riding a mountain bike on a dirt trail, overlooking a coastal landscape." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1999511331" class="caption-container u_1999511331" style="display:none"> <span class="caption-inner"> <a id="1904669805" class="caption-button dmWidget  clearfix u_1904669805" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="8" class="photoGalleryThumbs animated  flex column width-50" data-index="8"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Cactus-filled desert landscape with mountains on the horizon under a cloudy sky." data-dm-force-device="mobile" class="u_1128031624" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/dt-3-1080-600x600.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/dt-3-1080-600x600-640w.jpg');"><img id="1813945664" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/dt-3-1080-600x600-1920w.jpg" alt="Cactus-filled desert landscape with mountains on the horizon under a cloudy sky." aria-label="Cactus-filled desert landscape with mountains on the horizon under a cloudy sky." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1668154413" class="caption-container u_1668154413" style="display:none"> <span class="caption-inner"> <a id="1419050754" class="caption-button dmWidget  clearfix u_1419050754" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="9" class="photoGalleryThumbs animated  flex column width-50" data-index="9"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Beach with white sand, turquoise water, blue umbrellas, and mountains in the background under a blue sky." data-dm-force-device="mobile" class="u_1576780544" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/dt-5-1080-600x600.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/dt-5-1080-600x600-640w.jpg');"><img id="1983412125" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/dt-5-1080-600x600-1920w.jpg" alt="Beach with white sand, turquoise water, blue umbrellas, and mountains in the background under a blue sky." aria-label="Beach with white sand, turquoise water, blue umbrellas, and mountains in the background under a blue sky." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1817639327" class="caption-container u_1817639327" style="display:none"> <span class="caption-inner"> <a id="1187561142" class="caption-button dmWidget  clearfix u_1187561142" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row  photogallery-hidden-row " data-index=""> <div class="photogallery-column row-direction column-2" data-index="0" style="width: 30%;"> <div index="10" class="photoGalleryThumbs animated  flex column width-50" data-index="10"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Cactus on a hillside overlooking the ocean, under a blue sky with fluffy clouds." data-dm-force-device="mobile" class="u_1268674677" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/daytrip-HEADER-3-1920x900-1.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/daytrip-HEADER-3-1920x900-1-640w.jpg');"><img id="1394434516" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/daytrip-HEADER-3-1920x900-1-1920w.jpg" alt="Cactus on a hillside overlooking the ocean, under a blue sky with fluffy clouds." aria-label="Cactus on a hillside overlooking the ocean, under a blue sky with fluffy clouds." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1057767561" class="caption-container u_1057767561" style="display:none"> <span class="caption-inner"> <a id="1118434657" class="caption-button dmWidget  clearfix u_1118434657" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="11" class="photoGalleryThumbs animated  flex column width-50" data-index="11"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Person sitting on rocky outcrop, blue sky overhead." data-dm-force-device="mobile" class="u_1574657489" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/dt-9-1080-600x600.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/dt-9-1080-600x600-640w.jpg');"><img id="1476419805" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/dt-9-1080-600x600-1920w.jpg" alt="Person sitting on rocky outcrop, blue sky overhead." aria-label="Person sitting on rocky outcrop, blue sky overhead." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1887734391" class="caption-container u_1887734391" style="display:none"> <span class="caption-inner"> <a id="1401147842" class="caption-button dmWidget  clearfix u_1401147842" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="12" class="photoGalleryThumbs animated  flex column width-50" data-index="12"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Dirt road winding between brown hills, blue sky, yellow curve sign." data-dm-force-device="mobile" class="u_1638669624" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/dt-8-1080-600x600.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/dt-8-1080-600x600-640w.jpg');"><img id="1041647227" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/dt-8-1080-600x600-1920w.jpg" alt="Dirt road winding between brown hills, blue sky, yellow curve sign." aria-label="Dirt road winding between brown hills, blue sky, yellow curve sign." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1450014298" class="caption-container u_1450014298" style="display:none"> <span class="caption-inner"> <a id="1108695729" class="caption-button dmWidget  clearfix u_1108695729" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="13" class="photoGalleryThumbs animated  flex column width-50" data-index="13"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Humpback whale breaching from ocean water into the bright sky, splashes visible." data-dm-force-device="mobile" class="u_1954420876" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/dt-4-1080-600x600.jpg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/dt-4-1080-600x600-640w.jpg');"><img id="1063823906" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/dt-4-1080-600x600-1920w.jpg" alt="Humpback whale breaching from ocean water into the bright sky, splashes visible." aria-label="Humpback whale breaching from ocean water into the bright sky, splashes visible." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1039575916" class="caption-container u_1039575916" style="display:none"> <span class="caption-inner"> <a id="1120172605" class="caption-button dmWidget  clearfix u_1120172605" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photoGalleryViewAll link" data-auto="photo-gallery-view-all" isall="true" data-viewall="View more" data-viewless="View less">View more</div> 
+</div> 
+ <div class="dmNewParagraph u_1850836327" data-element-type="paragraph" data-version="5" id="1850836327" style="transition: none; text-align: left; display: block;"><p class="m-size-14 size-18 text-align-justify"><span class="font-size-18 m-font-size-14" style="display:initial;font-family:Arial, 'Arial Fallback';"><br/></span><strong class="font-size-18 m-font-size-14" style="font-weight:bold;display:initial;text-decoration:underline;font-family:Arial, 'Arial Fallback';font-style:normal;">Mule Rides:</strong></p><p class="m-size-14 size-18 text-align-justify" style="line-height: 1.5;"><span class="font-size-18 m-font-size-14" style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">Rancho Cacachiles, about a 20 minute drive from the hotel, offers mule rides for all ages, followed by a farm to table lunch.</span></p><p class="m-size-14 size-18 text-align-justify" style="line-height: 1.5;"><a href="https://www.ranchocacachilas.com/day-tours" target="_blank" runtime_url="https://www.ranchocacachilas.com/day-tours" class="font-size-18 m-font-size-14" style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">https://www.ranchocacachilas.com/day-tours</a></p><p style="line-height: 1.5;" class="text-align-justify"><span class="font-size-18 m-font-size-14" style="display:initial;font-family:Arial, 'Arial Fallback';"><br/></span></p><p class="m-size-14 size-18 text-align-justify"><strong class="font-size-18 m-font-size-14" style="font-weight:bold;display:initial;text-decoration:underline;font-family:Arial, 'Arial Fallback';">Giant Card&oacute;n Forest:</strong></p><p class="m-size-14 size-18 text-align-justify"><span class="font-size-18 m-font-size-14" style="display:initial;font-family:Arial, 'Arial Fallback';"><span class="font-size-18 m-font-size-14" style="display:initial;font-family:Arial, 'Arial Fallback';">Drive approximately 30 minutes south around the bay to find a</span> 
+</span><strong class="font-size-18 m-font-size-14" style="color:var(--color_1);font-weight:bold;display:initial;font-family:Arial, 'Arial Fallback';">Forest of Giant Card&oacute;n</strong><span style="display: initial;"><span style="display: initial;">&nbsp;</span> 
+</span><span style="display:initial;font-family:Arial, 'Arial Fallback';" class="font-size-18 m-font-size-14">cacti, the tallest growing cacti in the world, only found in Baja California and Sonora.These massive Card&oacute;ns have tapped into an aquifer. They have heights over 60 feet, weigh up to 25 tons and can live over 300 years. Finding the forest of giant card&oacute;ns can be tricky. Driving out of La Ventana, take a left toward Los Planes (instead of a right toward La Paz). Drive through the town of Los Planes and when the road begins to curve left around the bay, continue straight onto a dirt road instead of curving left. Then take your first right on another dirt road and drive south for about 10 minutes and you will start seeing the giants.</span></p><p class="text-align-justify"><span class="font-size-18 m-font-size-14" style="display:initial;font-family:Arial, 'Arial Fallback';"><br/></span></p><p class="m-size-14 size-18 text-align-justify"><strong class="font-size-18 m-font-size-14" style="font-weight:bold;display:initial;text-decoration:underline;font-family:Arial, 'Arial Fallback';">Swim with the Whale Sharks:</strong></p><p class="m-size-14 size-18 text-align-justify" style="line-height: 1.5;"><span class="font-size-18 m-font-size-14" style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">For a unique full-day experience, travel 45 minutes by car to La Paz and snorkel with the world&rsquo;s largest fish. Whale Sharks can reach lengths of more than 40 feet and live up to 70 years. Juvenile whale sharks come to the Bay of La Paz from October to February each year. Swimming with whale sharks is a safe activity for all ages. Let the front desk help arrange this activity for you.&nbsp;</span></p><p class="text-align-justify"><span class="font-size-18 m-font-size-14" style="display:initial;font-family:Arial, 'Arial Fallback';"><br/></span></p><p class="m-size-14 size-18 text-align-justify"><strong class="font-size-18 m-font-size-14" style="font-weight:bold;display:initial;text-decoration:underline;font-family:Arial, 'Arial Fallback';">Lighthouse Beach:</strong></p><p class="m-size-14 size-18 text-align-justify" style="line-height: 1.5;"><span class="font-size-18 m-font-size-14" style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">Venture across the bay to discover Lighthouse Beach, a beautiful, uncrowded stretch of coastline perfect for a refreshing swim. To get there, turn left onto the main road and follow it to the end, then turn left again. Continue through the town of Los Planes, staying left as the road winds around the bay. After about 25 minutes, you&rsquo;ll see a guard gate on your left. Turn there and follow the dirt road all the way to the lighthouse and the water.</span><span style="display: initial;"><br/></span><span class="font-size-18 m-font-size-14" style="display:initial;font-family:Arial, 'Arial Fallback';"><br/></span></p><p class="m-size-14 size-18 text-align-justify"><strong class="font-size-18 m-font-size-14" style="font-weight:bold;display:initial;text-decoration:underline;font-family:Arial, 'Arial Fallback';">Balandra Bay:</strong></p><p class="m-size-14 size-18 text-align-justify" style="line-height: 1.5;"><span class="font-size-18 m-font-size-14" style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">Just beyond La Paz, Balandra Bay is consistently ranked among the most beautiful beaches in the world. Pristine white sand meets calm, crystal-clear water, creating ideal swimming conditions, especially for families, thanks to the bay&rsquo;s shallow, protected shoreline. Arrive early, as visitor numbers are sometimes capped. When wading in shallow water, always remember to shuffle your feet along the sand to allow rays time to move and avoid accidental contact.&nbsp;</span></p><p class="text-align-justify"><span class="font-size-18 m-font-size-14" style="display:initial;font-family:Arial, 'Arial Fallback';"><br/></span></p><p class="m-size-14 size-18 text-align-justify"><strong class="font-size-18 m-font-size-14" style="font-weight:bold;display:initial;text-decoration:underline;font-family:Arial, 'Arial Fallback';">El Triunfo:</strong></p><p class="m-size-14 size-18 text-align-justify" style="line-height: 1.5;"><span class="m-font-size-14 font-size-18" style="display:initial;font-family:Arial, 'Arial Fallback';font-style:normal;">About a 45-minute drive from the hotel, El Triunfo is a historic mining town tucked into the mountains of Southern Baja. Once nearly forgotten, this charming village is enjoying a quiet renaissance, with beautifully restored colonial buildings, small museums, inviting caf&eacute;s and restaurants, and the occasional lively festival that brings its storied past back to life.</span><span style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="sticky-widgets-container-global" id="1274624917"></div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="u_1898626460 dmRespRow" id="1898626460"> <div class="dmRespColsWrapper" id="1896467429"> <div class="dmRespCol small-12 u_1226448943 medium-4 large-4" id="1226448943"> <div class="u_1952677645 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1952677645" style="transition: opacity 1s ease-in-out 0s; text-align: left;"><p><strong style="display: initial; font-weight: bold;">LOCATION</strong></p></div> 
+ <div class="u_1953920576 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1953920576" style="transition: opacity 1s ease-in-out 0s;" new-inline-bind-applied="true" data-diy-text=""><p class="m-text-align-center"><span style="display: initial;"><span class="inline-data-binding" data-encoded-value="Q29ycmVkb3IgSXNsYSBDZXJyYWx2bywgMjMyMzIgTGEgUGF6LCBCYWphIENhbGlmb3JuaWEgU3VyLCBNZXhpY28=" data-inline-binding="content_library.global" data-inline-binding-encoded="Y29udGVudF9saWJyYXJ5Lmdsb2JhbA==">Corredor Isla Cerralvo, 23232 La Paz, Baja California Sur, Mexico</span></span></p><p class="m-text-align-center"><a href="https://maps.app.goo.gl/y7zMewr65m2bzooo7" target="_blank" runtime_url="https://maps.app.goo.gl/y7zMewr65m2bzooo7" type="url" style="display: initial;">Google maps</a></p></div> 
+ <div class="u_1703879172 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1703879172" style="transition: opacity 1s ease-in-out 0s;"><p><strong style="display: initial; font-weight: bold;">HOURS</strong></p></div> 
+ <div class="u_1467632689 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1467632689" style="transition: opacity 1s ease-in-out 0s;"><p class="text-align-left m-text-align-center m-size-15 size-16"><span class="font-size-16 m-font-size-15" m-font-size-set="true" style="display: initial;">Reception: 8am - 8pm</span></p><p class="text-align-left m-text-align-center m-size-15 size-16"><span class="font-size-16 m-font-size-15" m-font-size-set="true" style="display: initial;">Check-in: after 3pm</span></p><p class="text-align-left m-text-align-center m-size-15 size-16"><span class="font-size-16 m-font-size-15" m-font-size-set="true" style="display: initial;">Check-out: before 11am</span></p></div> 
+</div> 
+ <div class="dmRespCol small-12 u_1898799141 medium-4 large-4" id="1898799141"> <div class="u_1259536960 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1259536960" style="transition: opacity 1s ease-in-out 0s;"><p><strong style="display: initial; font-weight: bold;">NAVIGATION</strong></p></div> 
+ <nav class="u_1966393557 effect-text-color unifiednav_vertical main-navigation unifiednav dmLinksMenu" data-auto="links-menu" role="navigation" layout-main="vertical_nav_layout_1" layout-sub="" data-show-vertical-sub-items="HOVER" id="1966393557" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://lirp.cdn-website.com/fab44011/dms3rep/multi/opt/todo-bien-logo-white-1920w.png" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container unav-top  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="home"> <span class="nav-item-text " data-link-text="
+         HOME
+        " data-auto="page-text-style">HOME<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/about" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="about"> <span class="nav-item-text " data-link-text="
+         ABOUT
+        " data-auto="page-text-style">ABOUT<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/rooms" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="rooms"> <span class="nav-item-text " data-link-text="
+         ROOMS
+        " data-auto="page-text-style">ROOMS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/villas" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="villas"> <span class="nav-item-text " data-link-text="VILLAS" data-auto="page-text-style">VILLAS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/restaurant" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="restaurant"> <span class="nav-item-text " data-link-text="
+         RESTAURANT
+        " data-auto="page-text-style">RESTAURANT<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/menus" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="menus"> <span class="nav-item-text " data-link-text="MENUS" data-auto="page-text-style">MENUS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/activities" class="unifiednav__item unav-item unav-top-item  dmNavItemSelected    " target="" data-target-page-alias="activities" aria-current="page" data-auto="selected-page"> <span class="nav-item-text " data-link-text="
+         ACTIVITIES
+        " data-auto="page-text-style">ACTIVITIES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/events" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="events"> <span class="nav-item-text " data-link-text="EVENTS" data-auto="page-text-style">EVENTS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/Residential" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="real-estate"> <span class="nav-item-text " data-link-text="RESIDENTIAL" data-auto="page-text-style">RESIDENTIAL<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact-us" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="contact-us"> <span class="nav-item-text " data-link-text="
+         CONTACT
+        " data-auto="page-text-style">CONTACT<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/spa-info" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="spa-info"> <span class="nav-item-text " data-link-text="SPA INFO" data-auto="page-text-style">SPA INFO<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/guestinfo" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="guestinfo"> <span class="nav-item-text " data-link-text="GUEST INFO" data-auto="page-text-style">GUEST INFO<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/privacy-and-cookies" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="privacy-and-cookies"> <span class="nav-item-text " data-link-text="
+         PRIVACY & COOKIES
+        " data-auto="page-text-style">PRIVACY &amp; COOKIES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/terms-and-conditions" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="terms-and-conditions"> <span class="nav-item-text " data-link-text="
+         TERMS & CONDITIONS
+        " data-auto="page-text-style">TERMS &amp; CONDITIONS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+ <div class="dmRespCol small-12 u_1574624583 medium-4 large-4" id="1574624583"> <div class="u_1080237171 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1080237171" style="transition: opacity 1s ease-in-out 0s;"><p><strong style="display: initial; font-weight: bold; text-transform: uppercase;">Contact</strong></p></div> 
+ <div class="u_1536258478 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1536258478" style="transition: opacity 1s ease-in-out;" new-inline-bind-applied="true" data-diy-text="" data-binding="W3siYmluZGluZ05hbWUiOiJ0ZXh0IiwidmFsdWUiOiJjb250ZW50X2xpYnJhcnkuZ2xvYmFsLnBob25lLnBob25lIn1d"><p class="m-text-align-center"><a href="tel:+52 612 111 4520" type="call" style="display: initial;" runtime_url="tel:+52 612 111 4520"><span class="inline-data-binding" data-encoded-value="KzUyIDYxMiAxMTEgNDUyMA==" data-inline-binding="" data-inline-binding-encoded="Y29udGVudF9saWJyYXJ5Lmdsb2JhbC5waG9uZS4zMTY3ODg4NTE=">+52 612 111 4520</span></a></p><p class="m-text-align-center"><a href="mailto:manager@hoteltodobien.com" type="email" style="display: initial;"><span class="inline-data-binding" data-encoded-value="bWFuYWdlckBob3RlbHRvZG9iaWVuLmNvbQ==" data-inline-binding="" data-inline-binding-encoded="Y29udGVudF9saWJyYXJ5Lmdsb2JhbC5lbWFpbC5mcm9udCBkZXNr">manager@hoteltodobien.com</span></a></p></div> 
+ <div class="u_1983391348 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1983391348" style="transition: opacity 1s ease-in-out 0s;"><p><strong style="display: initial; font-weight: bold;">FOLLOW US</strong></p></div> 
+ <div class="u_1623150787 align-center text-align-center dmSocialHub gapSpacing" id="1623150787" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv " data-auto="social-hub-inner"> <a href="https://facebook.com/hoteltodobien" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://instagram.com/hoteltodobien" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1294391794 widget-9cfad1 dmCustomWidget" data-lazy-load="false" data-title="" id="1294391794" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="9cfad1cdccff47ffa02488c211e09fd0" data-widget-version="87" data-widget-config="eyJsYW5ndWFnZURyb3Bkb3duIjoiZW4iLCJndGJhY2tncm91bmRjb2xvciI6IiNmZmZmZmYiLCJsY2IxIjp0cnVlLCJsY2IxOSI6dHJ1ZX0="> <div id="google_translate_element"></div> 
+ <script type="text/javascript" data-cookieconsent="functional" data-cookieconsent-ignore="true"></script> 
+ <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" data-cookieconsent="functional" data-cookieconsent-ignore="true"></script> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1976417913 dmRespRow fullBleedChanged fullBleedMode mobile-columns-reversed" id="1976417913"> <div class="dmRespColsWrapper" id="1994438319"> <div class="dmRespCol small-12 medium-12 large-12" id="1026142224"> <div class="dmRespRow u_1543485245" id="1543485245"> <div class="dmRespColsWrapper" id="1069151705"> <div class="dmRespCol large-6 medium-6 small-12" id="1939602424"> <div class="widget-1f5975 u_1106274564 dmCustomWidget" data-lazy-load="" data-title="" id="1106274564" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="1f5975986930429f819d4cd2154b5c4a" data-widget-version="25" data-widget-config="eyJyZXZlcnNlRmxhZyI6bnVsbCwiY29weXJpZ2h0VGV4dCI6IjxwIGNsYXNzPVwicnRlQmxvY2tcIj5BbGwgUmlnaHRzIFJlc2VydmVkIHwgSG90ZWwgVG9kbyBCaWVuIHwgUG93ZXJlZCBieSA8YSB2YWx1ZT1cImh0dHBzOi8vd3d3LmNsb3VkYmVkcy5jb20vaG90ZWwtbWFuYWdlbWVudC1zb2Z0d2FyZS9cIiBsYWJlbD1cIlwiIHR5cGU9XCJ1cmxcIiB0YXJnZXQ9XCJfYmxhbmtcIiBocmVmPVwiaHR0cHM6Ly93d3cuY2xvdWRiZWRzLmNvbS9ob3RlbC1tYW5hZ2VtZW50LXNvZnR3YXJlL1wiIGRhdGEtcnVudGltZS11cmw9XCJodHRwczovL3d3dy5jbG91ZGJlZHMuY29tL2hvdGVsLW1hbmFnZW1lbnQtc29mdHdhcmUvXCI+Q2xvdWRiZWRzIEhvdGVsIFNvZnR3YXJlPC9hPjwvcD4ifQ=="> <div class="copyright"> <div>&copy; 2026&nbsp;</div> 
+ <div><p class="rteBlock">All Rights Reserved | Hotel Todo Bien | Powered by <a value="https://www.cloudbeds.com/hotel-management-software/" label="" type="url" target="_blank" href="https://www.cloudbeds.com/hotel-management-software/" data-runtime-url="https://www.cloudbeds.com/hotel-management-software/">Cloudbeds Hotel Software</a></p></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespCol large-6 medium-6 small-12" id="1394893350"> <div class="dmNewParagraph u_1897906576" data-element-type="paragraph" data-version="5" id="1897906576" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="text-align-center m-size-14 size-15"><a href="/terms-and-conditions" runtime_url="/terms-and-conditions" type="page" class="font-size-15 m-font-size-14" m-font-size-set="true" style="display: initial;">Terms &amp; Conditions</a><span single-space="true" class="font-size-15 m-font-size-14" style="display: initial;"> <span class="font-size-15 m-font-size-14" style="display: initial;"></span> 
+</span><span class="font-size-15 m-font-size-14" style="display: initial;" m-font-size-set="true">/</span><span single-space="true" class="font-size-15 m-font-size-14" style="display: initial;"> <span class="font-size-15 m-font-size-14" style="display: initial;"></span> 
+</span><a href="/privacy-and-cookies" runtime_url="/privacy" type="page" class="font-size-15 m-font-size-14" m-font-size-set="true" style="display: initial;">Privacy &amp; Cookie Statement</a></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+    </div>
+</div>
+<script type="text/javascript" id="d_track_sp"></script>
+<div style="display:none;" id="P6iryBW0Wu"></div>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" data-auto="pswp-close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" data-auto="pswp-share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="fb-root"
+        data-locale="en"></div>
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup" data-auto="popup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" data-auto="popup-close" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization"></script>
+<script type="text/javascript"></script>
+<script></script>
+<style></style>
+</body>
+</html>

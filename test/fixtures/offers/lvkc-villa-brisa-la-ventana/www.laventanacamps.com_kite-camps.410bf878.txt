@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script></script>
+<script></script>
+<script defer src="/_vercel/insights/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kite Camp La Ventana, Mexico | La Ventana Kite Camp</title>
+  <meta name="description" content="Premium kite camp in La Ventana, Mexico. Up to 15 hours of private kiteboarding lessons, beachfront villa, chef meals &amp; yoga - all-inclusive, all levels.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="canonical" href="https://www.laventanacamps.com/kite-camps">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/icon.png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/apple-icon.png">
+  <meta name="theme-color" content="#1D3E93">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="La Ventana Kite Camp">
+  <meta property="og:title" content="Kite Camp La Ventana, Mexico | La Ventana Kite Camp">
+  <meta property="og:description" content="Premium kite camp in La Ventana, Mexico. Up to 15 hours of private kiteboarding lessons, beachfront villa, chef meals &amp; yoga - all-inclusive, all levels.">
+  <meta property="og:url" content="https://www.laventanacamps.com/kite-camps">
+  <meta property="og:image" content="https://www.laventanacamps.com/og.png">
+  <meta property="og:image:width" content="2000">
+  <meta property="og:image:height" content="949">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_MX">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kite Camp La Ventana, Mexico | La Ventana Kite Camp">
+  <meta name="twitter:description" content="Premium kite camp in La Ventana, Mexico. Up to 15 hours of private kiteboarding lessons, beachfront villa, chef meals &amp; yoga - all-inclusive, all levels.">
+  <meta name="twitter:image" content="https://www.laventanacamps.com/og.png">
+</head>
+<body class="lang-en">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX27HBP6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <header data-section-id="header">
+    <div class="container header-container">
+      <a href="/" class="logo">
+        <img class="logo-img" src="/assets/images/lvkc_logo.png" alt="LVKC — La Ventana Kite Camp">
+      </a>
+      <nav>
+        <div class="nav-links">
+          <a href="/"><span lang="en">Home</span><span lang="es">Inicio</span></a>
+          <a href="/kite-camps" class="active"><span lang="en">Camps</span><span lang="es">Campamentos</span></a>
+          <a href="/la-ventana-kite-lessons"><span lang="en">Kite School</span><span lang="es">Escuela de Kite</span></a>
+          <a href="/about-us-meet-the-team"><span lang="en">About Us</span><span lang="es">Nosotros</span></a>
+        </div>
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+      </nav>
+      <button class="burger-menu" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <section class="hero" style="min-height: 60vh; padding: 12rem 0 6rem;" data-section-id="hero">
+    <div class="hero-bg" style="background-image: url('assets/images/LVKC_MARZO_19-131.jpg');" data-bg-mobile="assets/images/LVKC_MARZO_19-132__1_.jpg">
+      <video id="hero-video" src="" poster="" playsinline="" muted="" loop="" autoplay="" preload="metadata"></video>
+    </div>
+    <div class="container">
+      <div class="hero-content">
+        <h1><span lang="en"><span style="font-size: 0.7em;">Spend a week kiting with us in La Ventana.</span>
+</span><span lang="es">Kite Camps <strong>Temporada 2026/27</strong></span></h1>
+        <p lang="en">Six nights by the beach, private coaching, fresh meals and a small group to share the week with. We host five camp weeks during La Ventana's winter wind season.
+</p>
+        <p lang="es">Tu camp de lujo frente al mar con todo incluido para tu progreso rápido.</p>
+        <div class="hero-ctas">
+          <a href="#pricing" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.85rem;">
+            <span lang="en">Reserve a Camp Week</span>
+            <span lang="es">Reservar una Semana de Camp</span>
+          </a>
+          <a href="https://calendly.com/lvkc/30min" class="btn btn-white" target="_blank" rel="noopener" style="padding: 0.65rem 1.4rem; font-size: 0.85rem;">
+            <span lang="en">Book a Call with Louis</span>
+            <span lang="es">Agendar una Llamada con Louis</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="fullscreen-video-section" data-section-id="camp-fullscreen-video" data-section-name="Camps — Video Full Screen" style="display: none !important;">
+    <video src="assets/images/camp-fullscreen-video-placeholder.mp4" poster="" playsinline="" muted="" loop="" autoplay="" preload="metadata"></video>
+  </section>
+  <section class="section-bg-dark" data-section-id="vibe-section" style="padding: 5rem 0px; display: none !important;">
+    <div class="container">
+      <div class="split-grid">
+        <div class="grid-content-wrapper">
+          <span class="tagline"><span lang="en"><strong>WHAT THE CAMP IS</strong>
+</span><span lang="es">La Experiencia</span></span>
+          <h2 lang="en" style="color: white;"><span>What is an LVKC camp?</span>
+</h2>
+          <h2 lang="es" style="color: white;">Una Escapada Premium y Relajada</h2>
+          <p lang="en" style="color: rgba(255,255,255,0.85);"><br>It's a hosted week built around kiteboarding and the daily rythm of La Ventana. You stay together at Villa Brisa, kite with a private coach, share breakfast and lunch, and have time to relax or explore between sessions. We take care of the planning so you can focus on the wind and the week.
+</p>
+          <p lang="es" style="color: rgba(255,255,255,0.85);">La semana en el camp sigue el ritmo de La Ventana: mañanas tranquilas, tardes en el agua y noches entre el relax en la casa y explorar de los restaurantes y spots de la zona.
+Entre sesiones de kite, el grupo comparte comidas, los huéspedes toman algo en el jacuzzi o, simplemente, descansar tranquilamente.
+Todo está resuelto para que tú solo tengas que instalarte y disfrutar de tu semana.</p>
+          <p lang="en" style="color: rgba(255,255,255,0.75);"><br></p>
+          <p lang="es" style="color: rgba(255,255,255,0.75);">Buen viento, comidita increíble y gente maravillosa. Todo está aquí esperándote.</p>
+        </div>
+        <div class="grid-image-wrapper">
+          <img src="assets/images/9b533cad-72af-43cb-9eac-692f615f1457.jpg" alt="Group of friends on the beach in La Ventana">
+        </div>
+      </div>
+    </div>
+  </section><section class="section-bg-light" data-section-id="camp-day" data-section-name="Camps — Un día en el campamento" style="padding-top: 3rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="tagline"><span lang="en"><strong>What The Camp Is</strong></span><span lang="es">Rutina Diaria</span></span>
+        <h2 lang="en">What is an LVKC camp?<br></h2>
+        <h2 lang="es">Un Día en el Campamento</h2>
+        <p lang="en">
+<br><span style="color: rgb(34, 43, 50);">It's a hosted week built around kiteboarding and the daily rhythm of La Ventana. You stay together at Villa Brisa, kite with a private coach, share breakfast and lunch, and have time to relax or explore between sessions. We take care of the planning so you can focus on the wind and the week.</span>
+</p>
+        <p lang="es">Así pasamos nuestros días, equilibrando el deporte con la relajación y la convivencia.</p>
+      </div>
+      <div class="camp-day-video" data-camp-day-video="">
+        <video class="camp-day-video__media" poster="" playsinline="" muted="" loop="" autoplay="" preload="metadata" data-camp-day-src="https://cgticbdohoebbfyparus.supabase.co/storage/v1/object/public/site-media/video/1787984405405-wc3pkq.mp4"></video>
+        <button class="camp-day-video__sound" type="button" data-camp-day-sound="" aria-pressed="false">
+          <span class="camp-day-video__sound-icon" aria-hidden="true"></span>
+          <span class="camp-day-video__sound-label" lang="en">Tap for sound</span>
+          <span class="camp-day-video__sound-label" lang="es">Toca para activar el sonido</span>
+        </button>
+      </div>
+    </div>
+  </section><section class="section-bg-light" data-section-id="camp-day-schedule" data-section-name="Camps — Rutina Diaria (timeline)" style="padding-top: 3rem; border-top: 1px solid rgba(0, 0, 0, 0.08); display: none !important;">
+    <div class="container">
+      <div class="section-header">
+        <span class="tagline"><span lang="en"><strong>How The Week Feels</strong></span><span lang="es">Hora por Hora</span></span>
+        <h2 lang="en"><span style="color: rgb(34, 43, 50);">A Day at the Camp</span></h2>
+        <h2 lang="es">Tu Día, Hora por Hora</h2>
+        <p lang="en"><span style="color: rgb(34, 43, 50);"><br>Slow mornings, breakfast together and time to settle in before the wind builds. Then we head to the water for private sessions. Later, everyone comes back to the house for food, a jacuzzi, a drink or a quiet evening. Some nights we stay in; some nights we go out. The wind sets the schedule, not the clock.</span><br></p>
+        <p lang="es">Una guía aproximada de cómo transcurren los días. El viento y el clima siempre tienen la última palabra.</p>
+      </div>
+      <div class="camp-day">
+        <div class="camp-day-viewport">
+          <button class="camp-day-nav camp-day-nav--prev" type="button" aria-label="Previous moments">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"></svg>
+          </button>
+          <div class="camp-day-track" id="campDayTrack">
+            <article class="camp-day-card">
+              <div class="camp-day-card__media">
+                <img src="assets/images/destination_la_ventana.jpg" alt="Sunrise from the villa terrace" loading="lazy">
+                <span class="camp-day-card__tab">
+                  <span class="camp-day-card__time">7:00 AM</span>
+                  <span class="camp-day-card__title"><span lang="en">Rise &amp; Shine</span><span lang="es">Amanecer</span></span>
+                </span>
+              </div>
+              <p class="camp-day-card__caption">
+                <span lang="en">A peaceful sunrise from the terrace — or sleep in and rest up.</span>
+                <span lang="es">Un amanecer tranquilo en la terraza, o quédate en la cama y descansa.</span>
+              </p>
+            </article>
+            <article class="camp-day-card">
+              <div class="camp-day-card__media">
+                <img src="assets/images/lvkc_stills_11.jpg" alt="Morning yoga at the camp villa" loading="lazy">
+                <span class="camp-day-card__tab">
+                  <span class="camp-day-card__time">8:00 AM</span>
+                  <span class="camp-day-card__title"><span lang="en">Guided Yoga</span><span lang="es">Yoga Guiado</span></span>
+                </span>
+              </div>
+              <p class="camp-day-card__caption">
+                <span lang="en">Guided morning yoga three times a week — or a slow start on the terrace.</span>
+                <span lang="es">Yoga guiado por la mañana tres veces por semana, o un comienzo tranquilo en la terraza.</span>
+              </p>
+            </article>
+            <article class="camp-day-card">
+              <div class="camp-day-card__media">
+                <img src="assets/images/chef_food.jpg" alt="Chef's breakfast buffet at Villa Brisa" loading="lazy">
+                <span class="camp-day-card__tab">
+                  <span class="camp-day-card__time">9:00 AM</span>
+                  <span class="camp-day-card__title"><span lang="en">Chef's Breakfast</span><span lang="es">Desayuno del Chef</span></span>
+                </span>
+              </div>
+              <p class="camp-day-card__caption">
+                <span lang="en">A breakfast buffet prepared by our chef at Villa Brisa.</span>
+                <span lang="es">Un desayuno buffet preparado por nuestra chef en Villa Brisa.</span>
+              </p>
+            </article>
+            <article class="camp-day-card">
+              <div class="camp-day-card__media">
+                <img src="assets/images/kiteboarding_lessons_la_ventana.jpg" alt="Private kite lesson on the beach in La Ventana" loading="lazy">
+                <span class="camp-day-card__tab">
+                  <span class="camp-day-card__time">11:00 AM</span>
+                  <span class="camp-day-card__title"><span lang="en">Private Kite Lesson</span><span lang="es">Sesión de Kite Privada</span></span>
+                </span>
+              </div>
+              <p class="camp-day-card__caption">
+                <span lang="en">Hit the beach as the thermal wind fills in for your private 1-on-1 lesson.</span>
+                <span lang="es">A la playa cuando entra el viento térmico, para tu clase privada 1 a 1.</span>
+              </p>
+            </article>
+            <article class="camp-day-card">
+              <div class="camp-day-card__media">
+                <img src="assets/images/lvkc_marzo_112.jpg" alt="Group lunch back at the camp house" loading="lazy">
+                <span class="camp-day-card__tab">
+                  <span class="camp-day-card__time">2:00 PM</span>
+                  <span class="camp-day-card__title"><span lang="en">Gourmet Lunch</span><span lang="es">Almuerzo Gourmet</span></span>
+                </span>
+              </div>
+              <p class="camp-day-card__caption">
+                <span lang="en">Back to the house for a local lunch made by our chef.</span>
+                <span lang="es">De vuelta a la villa para un almuerzo local hecho por nuestra chef.</span>
+              </p>
+            </article>
+            <article class="camp-day-card">
+              <div class="camp-day-card__media">
+                <img src="assets/images/LVKC_EDIT-62.jpg" alt="Sunset from the jacuzzi on the deck" loading="lazy">
+                <span class="camp-day-card__tab">
+                  <span class="camp-day-card__time">5:00 PM</span>
+                  <span class="camp-day-card__title"><span lang="en">Jacuzzi &amp; Sunset</span><span lang="es">Jacuzzi al Atardecer</span></span>
+                </span>
+              </div>
+              <p class="camp-day-card__caption">
+                <span lang="en">Sunset colors from the jacuzzi, stories and cold beers with the group.</span>
+                <span lang="es">Los colores del atardecer desde el jacuzzi, historias y cervezas frías con el grupo.</span>
+              </p>
+            </article>
+            <article class="camp-day-card">
+              <div class="camp-day-card__media">
+                <img src="assets/images/wa_image_3.jpeg" alt="Group dinner at a favorite spot in town" loading="lazy">
+                <span class="camp-day-card__tab">
+                  <span class="camp-day-card__time">7:00 PM</span>
+                  <span class="camp-day-card__title"><span lang="en">Group Dinner</span><span lang="es">Cena Grupal</span></span>
+                </span>
+              </div>
+              <p class="camp-day-card__caption">
+                <span lang="en">Some of our favorite spots in town for drinks, dinner and a taste of local life.</span>
+                <span lang="es">Algunos de nuestros lugares favoritos del pueblo para tomar algo, cenar y probar la vida local.</span>
+              </p>
+            </article>
+            <article class="camp-day-card">
+              <div class="camp-day-card__media">
+                <img src="assets/images/lvkc_14.jpg" alt="Evening around the fire pit under the Baja sky" loading="lazy">
+                <span class="camp-day-card__tab">
+                  <span class="camp-day-card__time">9:00 PM</span>
+                  <span class="camp-day-card__title"><span lang="en">Firepit Chill</span><span lang="es">Fogata Nocturna</span></span>
+                </span>
+              </div>
+              <p class="camp-day-card__caption">
+                <span lang="en">Wind down around the fire pit under the starry Baja sky.</span>
+                <span lang="es">Cierra el día junto a la fogata bajo el cielo estrellado de Baja.</span>
+              </p>
+            </article>
+          </div>
+          <button class="camp-day-nav camp-day-nav--next" type="button" aria-label="More moments">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section><section class="section-bg-light" data-section-id="camp-day-timeline" data-section-name="Camps — Rutina Diaria (hora por hora)" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="tagline"><span lang="en"><strong>How The Week Feels</strong></span><span lang="es"><strong>Hora Por Hora</strong></span></span>
+        <h2 lang="en">Example of a day at LVKC</h2>
+        <h2 lang="es">El Día Completo de un Vistazo</h2>
+        <p lang="en">Slow mornings, breakfast together and time to settle in before the wind builds. Then
+we head to the water for private sessions. Later, everyone comes back to the house for
+food, a jacuzzi, a drink or a quiet evening. Some nights we stay in; some nights we go out.
+The wind sets the schedule, not the clock.</p>
+        <p lang="es">El mismo día, ordenado hora por hora. Lee primero la columna izquierda de arriba abajo —la mañana— y luego la derecha para la tarde y la noche.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></div>
+          <span class="timeline-connector" aria-hidden="true">—</span>
+          <div class="timeline-content">
+            <div class="timeline-heading">
+              <span class="timeline-time">7:00 AM</span>
+              <h4 lang="en">Rise &amp; Shine</h4>
+              <h4 lang="es">Amanecer</h4>
+            </div>
+            <p lang="en">Enjoy a peaceful sunrise from the terrace, or sleep in and rest up.</p>
+            <p lang="es">Disfruta de un amanecer tranquilo en la terraza, o quédate en la cama hasta tarde y descansa.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></div>
+          <span class="timeline-connector" aria-hidden="true">—</span>
+          <div class="timeline-content">
+            <div class="timeline-heading">
+              <span class="timeline-time">8:00 AM</span>
+              <h4 lang="en">Guided Yoga</h4>
+              <h4 lang="es">Yoga Guiado</h4>
+            </div>
+            <p lang="en">Guided morning yoga (3 sessions per week), or time to enjoy a relaxed start to the day.</p>
+            <p lang="es">Yoga guiado por la mañana (3 sesiones por semana), o tiempo para comenzar el día con calma.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></div>
+          <span class="timeline-connector" aria-hidden="true">—</span>
+          <div class="timeline-content">
+            <div class="timeline-heading">
+              <span class="timeline-time">9:00 AM</span>
+              <h4 lang="en">Chef's Breakfast</h4>
+              <h4 lang="es">Desayuno</h4>
+            </div>
+            <p lang="en">Enjoy a breakfast buffet prepared by our chef at Villa Brisa.</p>
+            <p lang="es">Disfruta de un desayuno buffet preparado por nuestra chef en Villa Brisa.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></div>
+          <span class="timeline-connector" aria-hidden="true">—</span>
+          <div class="timeline-content">
+            <div class="timeline-heading">
+              <span class="timeline-time">11:00 AM</span>
+              <h4 lang="en">Private Kiting Session</h4>
+              <h4 lang="es">Sesión de Kite Privada</h4>
+            </div>
+            <p lang="en">Head to the beach as the thermal wind picks up. Gear up for your private 1-1 lesson with your assigned coach.</p>
+            <p lang="es">Vamos a la playa mientras entra el viento. Prepárate para tu clase privada 1-1 con tu instructor.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></div>
+          <span class="timeline-connector" aria-hidden="true">—</span>
+          <div class="timeline-content">
+            <div class="timeline-heading">
+              <span class="timeline-time">2:00 PM</span>
+              <h4 lang="en">Local Gourmet Lunch</h4>
+              <h4 lang="es">Almuerzo Gourmet Local</h4>
+            </div>
+            <p lang="en">Regroup at the camp house for lunch prepared by our chef.</p>
+            <p lang="es">Regresamos a la villa para disfrutar del almuerzo preparado por nuestra chef.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></div>
+          <span class="timeline-connector" aria-hidden="true">—</span>
+          <div class="timeline-content">
+            <div class="timeline-heading">
+              <span class="timeline-time">5:00 PM</span>
+              <h4 lang="en">Jacuzzi Sunset &amp; Beers</h4>
+              <h4 lang="es">Jacuzzi al Atardecer</h4>
+            </div>
+            <p lang="en">Relax after kiting. Watch the sunset colors from the jacuzzi on the deck, sharing stories and cold beers with the group.</p>
+            <p lang="es">Relájate después de navegar. Disfruta de los colores del atardecer desde el jacuzzi con una cerveza fría y el grupo.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></div>
+          <span class="timeline-connector" aria-hidden="true">—</span>
+          <div class="timeline-content">
+            <div class="timeline-heading">
+              <span class="timeline-time">7:00 PM</span>
+              <h4 lang="en">Group Dinner</h4>
+              <h4 lang="es">Cena Grupal</h4>
+            </div>
+            <p lang="en">We’ll take you to some of our favorite spots in town for drinks and dinner, and share a little bit of our La Ventana with you.</p>
+            <p lang="es">Llevamos el grupo a algunos de nuestros lugares favoritos de La Ventana para tomar algo, cenar y disfrutar juntos un poco de la vida local.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></div>
+          <span class="timeline-connector" aria-hidden="true">—</span>
+          <div class="timeline-content">
+            <div class="timeline-heading">
+              <span class="timeline-time">9:00 PM</span>
+              <h4 lang="en">Firepit Chill</h4>
+              <h4 lang="es">Fogata Nocturna</h4>
+            </div>
+            <p lang="en">Unwind around the camp house fire pit under the starry Baja sky.</p>
+            <p lang="es">Relájate alrededor de la fogata de la villa bajo el cielo estrellado de Baja.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><section class="section-bg-dark" data-section-id="kite-instruction" style="border-top: 1px solid rgba(255, 255, 255, 0.05); padding: 5rem 0 0;">
+    <div class="container">
+      <div class="split-grid">
+        <div class="grid-content-wrapper">
+          <span class="tagline"><span lang="en"><strong>Kite + Coaching</strong><br></span><span lang="es">El Elemento Central</span></span>
+          <h2 lang="en" style="color: white;">Private coaching, at your level
+</h2>
+          <h2 lang="es" style="color: white;">Entrenamiento de Kite Personalizado</h2>
+          <p lang="en">
+<br>Every kiter gets up to three hours of 1-to-1 coaching per day, for up to 15 hours over five days. Your instructor adapts each session to your experience, goals and the conditions. Gear, safety equipment and BbTALKIN radios are included.<br><br>
+</p>
+          <p lang="es">Cada clase es uno a uno y se construye alrededor de tus objetivos, tiempo en la tabla y el viento del día, ya sea tu primer paseo o tu próximo truco.</p>
+          <div class="lvkc-accordion lvkc-accordion--dark">
+            <div class="lvkc-accordion-item">
+              <button class="lvkc-accordion-trigger" type="button" aria-expanded="false">
+                <span class="lvkc-accordion-label"><span lang="en">For Complete Beginners</span><span lang="es">Para Principiantes</span></span>
+                <span class="lvkc-accordion-icon" aria-hidden="true"></span>
+              </button>
+              <div class="lvkc-accordion-panel">
+                <div class="lvkc-accordion-panel-inner">
+                  <p lang="en"><span style="color: rgb(255, 255, 255);">Learning to kiteboard is about much more than getting up on the board. It's about building the skills and confidence to ride safely on your own, wherever your next trip takes you.<br>We'll start with the fundamentals on the beach before moving into the water as your confidence grows. Every session builds on the last, with your instructor adapting the pace to you and coaching you every step of the way.<br>Our goal isn't simply to get you riding by the end of the week, it's to give you the knowledge, judgment, and independence to call yourself a kiteboarder.</span><br>
+</p>
+                  <p lang="es">Aprende de forma segura desde cero con una clase privada adaptada a tu nivel, objetivos y ritmo. Seguimos los estándares IKO y utilizamos equipo Ozone y radios impermeables BbTALKIN para darte indicaciones en tiempo real en el agua.</p>
+                </div>
+              </div>
+            </div>
+            <div class="lvkc-accordion-item">
+              <button class="lvkc-accordion-trigger" type="button" aria-expanded="false">
+                <span class="lvkc-accordion-label"><span lang="en">For Intermediate &amp; Advanced Riders</span><span lang="es">Para Kiters Intermedios y Avanzados</span></span>
+                <span class="lvkc-accordion-icon" aria-hidden="true"></span>
+              </button>
+              <div class="lvkc-accordion-panel">
+                <div class="lvkc-accordion-panel-inner">
+                  <p lang="en"><span style="color: rgb(255, 255, 255);">If you already ride, the week is about progressing with experienced local coaches who know La Ventana's conditions inside and out.<br>Whether you're refining transitions, learning to jump, riding a surfboard, or simply becoming a more confident rider, every session is adapted to your goals. You'll also have the opportunity to discover different spots, explore the bay, and experience some of La Ventana's iconic downwinders.</span><br></p>
+                  <p lang="es">Progresa con entrenamiento personalizado. Ya sea que quieras perfeccionar transiciones, aprender a saltar o navegar en tabla de surf, adaptamos cada clase a tu nivel, objetivos y ritmo.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-image-wrapper">
+          <img src="assets/images/Image_copie.jpg" alt="Personalized kite coaching on the beach">
+        </div>
+      </div>
+    </div>
+  </section><section class="section-bg-dark" data-section-id="offer-strip" data-section-name="Camps — Qué Incluye (iconos)" style="padding: 2.5rem 0 5rem;">
+    <div class="container">
+      <div class="offer-strip">
+        <div class="offer-strip-item">
+          <span class="brand-mask brand-icon-instructor" aria-hidden="true"></span>
+          <h5><span lang="en">Private Instructor</span><span lang="es">Instructor Privado</span></h5>
+          <p><span lang="en">Dedicated 1-on-1 coach.</span><span lang="es">Coach dedicado 1 a 1.</span></p>
+        </div>
+        <div class="offer-strip-item">
+          <span class="brand-mask brand-icon-kite" aria-hidden="true"></span>
+          <h5><span lang="en">Kite Gear</span><span lang="es">Equipo Ozone y Mystic</span></h5>
+          <p><span lang="en"><span style="color: rgb(77, 94, 112);">Ozone kites, boards, and Mystic accessories are included.</span></span><span lang="es">Kites y arneses premium.</span></p>
+        </div>
+        <div class="offer-strip-item">
+          <span class="brand-mask brand-icon-vest" aria-hidden="true"></span>
+          <h5><span lang="en">Wetsuit &amp; Safety Equipment</span><span lang="es">Equipo de Seguridad</span></h5>
+          <p><span lang="en">Wetsuits, helmet &amp; life vests.</span><span lang="es">Neopreno, casco y chalecos.</span></p>
+        </div>
+        <div class="offer-strip-item">
+          <span class="brand-mask brand-icon-radio" aria-hidden="true"></span>
+          <h5><span lang="en">Waterproof Radios</span><span lang="es">Radios Impermeables</span></h5>
+          <p><span lang="en">Two-way real-time coaching.</span><span lang="es">Coaching en tiempo real.</span></p>
+        </div>
+      </div>
+    </div>
+  </section><section class="section-bg-dark" data-section-id="camp-inclusions" data-section-name="Camps — Qué incluye">
+    <div class="container">
+      <div class="section-header">
+        <span class="tagline"><span lang="en"><b>What's Included</b></span><span lang="es">Detalles de Todo Incluido</span></span>
+        <h2><span lang="en">Everything you need for the week
+</span><span lang="es">Qué Incluye tu Estancia</span></h2>
+        <p style="color: rgba(255,255,255,0.7);"><span lang="en"><br></span><span lang="es">Nos encargamos de cada detalle para que te enfoques solo en disfrutar del viento y la vibra.</span></p>
+      </div>
+      <div class="inclusions-grid">
+        <div class="inclusion-card">
+          <div class="inclusion-card-content">
+            <div class="inclusion-card-top">
+              <div class="inclusion-card-icon-wrapper">
+                <svg viewBox="0 0 24 24"></svg>
+              </div>
+            </div>
+            <div class="inclusion-card-details">
+              <span class="inclusion-card-subtitle">
+                <span lang="en">Stay</span>
+                <span lang="es">Hospedaje</span>
+              </span>
+              <h4 class="inclusion-card-title">
+                <span lang="en">Beachfront Accommodation</span>
+                <span lang="es">Hospedaje Frente al Mar</span>
+              </h4>
+              <div class="inclusion-card-overview-title">OVERVIEW / DETALLES</div>
+              <p class="inclusion-card-text">
+                <span lang="en">6 nights in a premium beachfront property (Villa Brisa) directly on the kite spot.</span>
+                <span lang="es">6 noches de hospedaje en una hermosa villa frente al mar (Villa Brisa) directamente en el spot.</span>
+              </p>
+            </div>
+            <div class="inclusion-card-bottom">
+              <div class="inclusion-card-price-wrapper">
+                <span class="inclusion-card-status">
+                  <span lang="en">Package Inclusion</span>
+                  <span lang="es">Incluido en Paquete</span>
+                </span>
+                <div class="inclusion-card-badge">
+                  <span lang="en">Included</span>
+                  <span lang="es">Incluido</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><div class="inclusion-card">
+          <div class="inclusion-card-content">
+            <div class="inclusion-card-top">
+              <div class="inclusion-card-icon-wrapper">
+                <svg viewBox="0 0 24 24"></svg>
+              </div>
+            </div>
+            <div class="inclusion-card-details">
+              <span class="inclusion-card-subtitle">
+                <span lang="en">Coaching</span>
+                <span lang="es">Entrenamiento</span>
+              </span>
+              <h4 class="inclusion-card-title">
+                <span lang="en">Kiteboarding Lessons</span>
+                <span lang="es">Clases de Kitesurf</span>
+              </h4>
+              <div class="inclusion-card-overview-title">OVERVIEW / DETALLES</div>
+              <p class="inclusion-card-text">
+                <span lang="en">Up to 15 hours of private 1-to-1 coaching across five days
+</span>
+                <span lang="es">Hasta 3 horas diarias de instrucción privada 1-1 (15 horas en total) durante 5 días, adaptada para principiantes y navegantes intermedios o avanzados.</span>
+              </p>
+            </div>
+            <div class="inclusion-card-bottom">
+              <div class="inclusion-card-price-wrapper">
+                <span class="inclusion-card-status">
+                  <span lang="en">Package Inclusion</span>
+                  <span lang="es">Incluido en Paquete</span>
+                </span>
+                <div class="inclusion-card-badge">
+                  <span lang="en">Included</span>
+                  <span lang="es">Incluido</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inclusion-card">
+          <div class="inclusion-card-content">
+            <div class="inclusion-card-top">
+              <div class="inclusion-card-icon-wrapper">
+                <svg viewBox="0 0 24 24"></svg>
+              </div>
+            </div>
+            <div class="inclusion-card-details">
+              <span class="inclusion-card-subtitle">
+                <span lang="en">Equipment</span>
+                <span lang="es">Equipo</span>
+              </span>
+              <h4 class="inclusion-card-title">
+                <span lang="en">Kiteboarding Gear</span>
+                <span lang="es">Equipo de Kitesurf</span>
+              </h4>
+              <div class="inclusion-card-overview-title">OVERVIEW / DETALLES</div>
+              <p class="inclusion-card-text">
+                <span lang="en">Kite gear, wetsuit, safety equipment and BbTALKIN radio system
+</span>
+                <span lang="es">Todo el equipo de kitesurf está incluido en el paquete. Junto con equipo de seguridad y sistemas de comunicación por radio BBTALKIN. No necesitas traer nada</span>
+              </p>
+            </div>
+            <div class="inclusion-card-bottom">
+              <div class="inclusion-card-price-wrapper">
+                <span class="inclusion-card-status">
+                  <span lang="en">Package Inclusion</span>
+                  <span lang="es">Incluido en Paquete</span>
+                </span>
+                <div class="inclusion-card-badge">
+                  <span lang="en">Included</span>
+                  <span lang="es">Incluido</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inclusion-card">
+          <div class="inclusion-card-content">
+            <div class="inclusion-card-top">
+              <div class="inclusion-card-icon-wrapper">
+                <svg viewBox="0 0 24 24"></svg>
+              </div>
+            </div>
+            <div class="inclusion-card-details">
+              <span class="inclusion-card-subtitle">
+                <span lang="en">Dining</span>
+                <span lang="es">Comidas</span>
+              </span>
+              <h4 class="inclusion-card-title">
+                <span lang="en">Daily Chef Meals</span>
+                <span lang="es">Comidas de la Chef</span>
+              </h4>
+              <div class="inclusion-card-overview-title">OVERVIEW / DETALLES</div>
+              <p class="inclusion-card-text">
+                <span lang="en">Daily buffet breakfast and lunch prepared by the camp chef, plus snacks
+</span>
+                <span lang="es">Deliciosos desayunos y almuerzos buffet preparados diariamente por nuestra chef en la villa, más botanas.</span>
+              </p>
+            </div>
+            <div class="inclusion-card-bottom">
+              <div class="inclusion-card-price-wrapper">
+                <span class="inclusion-card-status">
+                  <span lang="en">Package Inclusion</span>
+                  <span lang="es">Incluido en Paquete</span>
+                </span>
+                <div class="inclusion-card-badge">
+                  <span lang="en">Included</span>
+                  <span lang="es">Incluido</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inclusion-card">
+          <div class="inclusion-card-content">
+            <div class="inclusion-card-top">
+              <div class="inclusion-card-icon-wrapper">
+                <svg viewBox="0 0 24 24"></svg>
+              </div>
+            </div>
+            <div class="inclusion-card-details">
+              <span class="inclusion-card-subtitle">
+                <span lang="en">Social</span>
+                <span lang="es">Social</span>
+              </span>
+              <h4 class="inclusion-card-title">
+                <span lang="en">Group Gourmet Dinner</span>
+                <span lang="es">Cena Gourmet Grupal</span>
+              </h4>
+              <div class="inclusion-card-overview-title">OVERVIEW / DETALLES</div>
+              <p class="inclusion-card-text">
+                <span lang="en">One hosted family-style dinner at&nbsp;
+one of our favorite local restaurants.</span>
+                <span lang="es">Una cena grupal estilo familiar en uno de nuestros restaurantes locales favoritos del pueblo.</span>
+              </p>
+            </div>
+            <div class="inclusion-card-bottom">
+              <div class="inclusion-card-price-wrapper">
+                <span class="inclusion-card-status">
+                  <span lang="en">Package Inclusion</span>
+                  <span lang="es">Incluido en Paquete</span>
+                </span>
+                <div class="inclusion-card-badge">
+                  <span lang="en">Included</span>
+                  <span lang="es">Incluido</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inclusion-card">
+          <div class="inclusion-card-content">
+            <div class="inclusion-card-top">
+              <div class="inclusion-card-icon-wrapper">
+                <svg viewBox="0 0 24 24"></svg>
+              </div>
+            </div>
+            <div class="inclusion-card-details">
+              <span class="inclusion-card-subtitle">
+                <span lang="en">Wellness</span>
+                <span lang="es">Bienestar</span>
+              </span>
+              <h4 class="inclusion-card-title">
+                <span lang="en">Morning Activities &amp; Yoga</span>
+                <span lang="es">Actividades y Yoga Matutino</span>
+              </h4>
+              <div class="inclusion-card-overview-title">OVERVIEW / DETALLES</div>
+              <p class="inclusion-card-text">
+                <span lang="en">Three guided morning yoga sessions and paddleboards
+</span>
+                <span lang="es">3 clases guiadas de yoga por la mañana en la casa del campamento y paddleboard.</span>
+              </p>
+            </div>
+            <div class="inclusion-card-bottom">
+              <div class="inclusion-card-price-wrapper">
+                <span class="inclusion-card-status">
+                  <span lang="en">Package Inclusion</span>
+                  <span lang="es">Incluido en Paquete</span>
+                </span>
+                <div class="inclusion-card-badge">
+                  <span lang="en">Included</span>
+                  <span lang="es">Incluido</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inclusion-card">
+          <div class="inclusion-card-content">
+            <div class="inclusion-card-top">
+              <div class="inclusion-card-icon-wrapper">
+                <svg viewBox="0 0 24 24"></svg>
+              </div>
+            </div>
+            <div class="inclusion-card-details">
+              <span class="inclusion-card-subtitle">
+                <span lang="en">Facilities</span>
+                <span lang="es">Instalaciones</span>
+              </span>
+              <h4 class="inclusion-card-title">
+                <span lang="en">Villa Brisa Amenities</span>
+                <span lang="es">Amenidades de Villa Brisa</span>
+              </h4>
+              <div class="inclusion-card-overview-title">OVERVIEW / DETALLES</div>
+              <p class="inclusion-card-text">
+                <span lang="en">Pool, jacuzzi, firepit, terraces, common areas and laundry
+&nbsp;</span>
+                <span lang="es">Acceso total a las instalaciones que incluyen alberca, jacuzzi, fogata, paddleboards y lavandería.</span>
+              </p>
+            </div>
+            <div class="inclusion-card-bottom">
+              <div class="inclusion-card-price-wrapper">
+                <span class="inclusion-card-status">
+                  <span lang="en">Package Inclusion</span>
+                  <span lang="es">Incluido en Paquete</span>
+                </span>
+                <div class="inclusion-card-badge">
+                  <span lang="en">Included</span>
+                  <span lang="es">Incluido</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inclusion-card">
+          <div class="inclusion-card-content">
+            <div class="inclusion-card-top">
+              <div class="inclusion-card-icon-wrapper">
+                <svg viewBox="0 0 24 24"></svg>
+              </div>
+            </div>
+            <div class="inclusion-card-details">
+              <span class="inclusion-card-subtitle">
+                <span lang="en">Transport</span>
+                <span lang="es">Transporte</span>
+              </span>
+              <h4 class="inclusion-card-title">
+                <span lang="en">Town Transport</span>
+                <span lang="es">Transporte en el Pueblo</span>
+              </h4>
+              <div class="inclusion-card-overview-title">OVERVIEW / DETALLES</div>
+              <p class="inclusion-card-text">
+                <span lang="en">Group transport around La Ventana with the camp vehicles
+</span>
+                <span lang="es">Usamos los vehículos del campamento para movernos en grupo por el pueblo. No necesitas rentar auto.</span>
+              </p>
+            </div>
+            <div class="inclusion-card-bottom">
+              <div class="inclusion-card-price-wrapper">
+                <span class="inclusion-card-status">
+                  <span lang="en">Package Inclusion</span>
+                  <span lang="es">Incluido en Paquete</span>
+                </span>
+                <div class="inclusion-card-badge">
+                  <span lang="en">Included</span>
+                  <span lang="es">Incluido</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="inclusion-card">
+          <div class="inclusion-card-content">
+            <div class="inclusion-card-top">
+              <div class="inclusion-card-icon-wrapper">
+                <svg viewBox="0 0 24 24"></svg>
+              </div>
+            </div>
+            <div class="inclusion-card-details">
+              <span class="inclusion-card-subtitle">
+                <span lang="en">Hospitality</span>
+                <span lang="es">Hospitalidad</span>
+              </span>
+              <h4 class="inclusion-card-title">
+                <span lang="en">Host Attentive Service</span>
+                <span lang="es">Servicio Atento 24/7</span>
+              </h4>
+              <div class="inclusion-card-overview-title">OVERVIEW / DETALLES</div>
+              <p class="inclusion-card-text">
+                <span lang="en">Attentive hosting by Alina and Louis, available 24/7 to ensure a seamless and fun stay.</span>
+                <span lang="es">Servicio atento y personalizado por Alina y Louis, disponibles 24/7 para garantizar una estancia perfecta.</span>
+              </p>
+            </div>
+            <div class="inclusion-card-bottom">
+              <div class="inclusion-card-price-wrapper">
+                <span class="inclusion-card-status">
+                  <span lang="en">Package Inclusion</span>
+                  <span lang="es">Incluido en Paquete</span>
+                </span>
+                <div class="inclusion-card-badge">
+                  <span lang="en">Included</span>
+                  <span lang="es">Incluido</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><div class="inclusion-card">
+          <div class="inclusion-card-content">
+            <div class="inclusion-card-top">
+              <div class="inclusion-card-icon-wrapper">
+                <svg viewBox="0 0 24 24"></svg>
+              </div>
+            </div>
+            <div class="inclusion-card-details">
+              <span class="inclusion-card-subtitle">
+                <span lang="en">Hospitality</span>
+                <span lang="es">Hospitalidad</span>
+              </span>
+              <h4 class="inclusion-card-title">
+                <span lang="en">No Wind Day Activities</span>
+                <span lang="es">Servicio Atento 24/7</span>
+              </h4>
+              <div class="inclusion-card-overview-title">OVERVIEW / DETALLES</div>
+              <p class="inclusion-card-text">
+                <span lang="en"><span style="color: rgb(255, 255, 255);">Alternative activities at no extra cost if conditions are not safe for kiting</span>
+<br></span>
+                <span lang="es"><span style="color: rgb(255, 255, 255);">Servicio atento y personalizado por Alina y Louis, disponibles 24/7 para garantizar una estancia perfecta.</span></span>
+              </p>
+            </div>
+            <div class="inclusion-card-bottom">
+              <div class="inclusion-card-price-wrapper">
+                <span class="inclusion-card-status">
+                  <span lang="en">Package Inclusion</span>
+                  <span lang="es">Incluido en Paquete</span>
+                </span>
+                <div class="inclusion-card-badge">
+                  <span lang="en">Included</span>
+                  <span lang="es">Incluido</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><section class="section-bg-alt" data-section-id="host">
+    <div class="container">
+      <div class="split-grid">
+        <div class="grid-image-wrapper">
+          <img src="assets/images/ddc21fa1-3fd2-4b44-b976-31b89176434a.jpg" alt="Alina and Louis at the beach">
+        </div>
+        <div class="grid-content-wrapper">
+          <span class="tagline"><span lang="en"><strong><span style="color: rgb(176, 85, 49);">Hosts</span></strong></span><span lang="es"><span style="color: rgb(176, 85, 49);">Conoce a los Fundadores</span></span></span>
+          <h2><span lang="en">You'll be hosted by us
+</span><span lang="es">Hospedado por Alina y Louis</span></h2>
+          <p lang="en">
+<br>Alina takes care of the house, meals, logistics and local details. Louis leads the kite operation and coaching team. We're both there throughout the week - sharing meals, coordinating sessions and helping you get to know La Ventana.</p>
+          <p lang="es">Convertimos nuestra pasión por el kitesurf y las conexiones auténticas en LVKC. Somos los anfitriones de cada camp y nos aseguramos de que todo fluya durante tu estancia.<br>
+Nos ocupamos todo: alojamiento cómodo, comidas frescas, experiencias locales y todo lo que necesites para disfrutar en el agua. Estaremos allí para guiarte, compartir comidas, mostrarte los alrededores y asegurarnos de que aproveches al máximo tu tiempo en La Ventana.</p>
+          <p lang="en"><br></p>
+          <p lang="es">Queremos hacerte sentir como si llegaras a la casa de un amigo. Es una experiencia de alta calidad, pero relajada, y cálida .</p>
+        </div>
+      </div>
+    </div>
+  </section><section class="section-bg-light" data-section-id="camp-house-experience" data-section-name="Camps — La Villa y sus amenidades" style="padding: 5rem 0;">
+    <div class="container">
+      <div class="villa-experience-grid">
+        <figure class="villa-experience-media">
+          <video src="assets/images/WhatsApp_Video_2026-08-17_at_14.56.19.mp4" poster="assets/images/included_accommodation.jpg" autoplay="" loop="" muted="" playsinline="" preload="metadata"></video>
+        </figure>
+        <div class="villa-experience-details">
+          <span class="tagline"><span lang="en"><strong><span style="color: rgb(176, 85, 49);">Where You'll Stay</span></strong></span><span lang="es"><span style="color: rgb(176, 85, 49);">Lujo Frente al Mar</span></span></span>
+          <h2><span lang="en"><strong>Villa Brisa&nbsp;</strong></span><span lang="es">La Villa y la Experiencia del Camp</span></h2>
+          <p class="villa-experience-intro" lang="en">Our camp house is a beachfront villa located right on the kite spot.</p>
+          <p class="villa-experience-intro" lang="es">Nuestra casa del camp es una lujosa villa frente a la playa, diseñada para una experiencia perfecta en grupo.</p>
+          <h3><span lang="en">Villa Details &amp; Amenities</span><span lang="es">Detalles y Amenidades de la Villa</span></h3>
+          <ul class="villa-amenities-list">
+            <li class="villa-amenity"><span lang="en">Prime Location: right on the kite spot</span><span lang="es">Ubicación privilegiada, junto al spot de kite</span></li>
+            <li class="villa-amenity"><span lang="en">Private Suites</span><span lang="es">Suites privadas</span></li>
+            <li class="villa-amenity"><span lang="en">Pool, Jacuzzi &amp; Fire Pit</span><span lang="es">Alberca, Jacuzzi y Fogatero</span></li>
+            <li class="villa-amenity"><span lang="en">Large Common Areas, Indoors &amp; Outdoors</span><span lang="es">Amplias Áreas Comunes, Interiores y Exteriores</span></li>
+            <li class="villa-amenity"><span lang="en">Starlink Wi-Fi</span><span lang="es">Wi-Fi Starlink</span></li>
+            <li class="villa-amenity"><span lang="en">In-Unit Washer/Dryer</span><span lang="es">Lavadora y Secadora en la Villa</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section><section class="section-bg-alt" data-section-id="google-reviews-camps" data-section-name="Reseñas de Google (Camps)" style="padding: 5rem 0px;">
+    <div class="container">
+      <div class="reviews-platform-block">
+        <div class="reviews-platform-header">
+          <div class="platform-logo-wrapper">
+            <span class="google-logo-text"><span style="color: #4285F4;">G</span><span style="color: #EA4335;">o</span><span style="color: #FBBC05;">o</span><span style="color: #4285F4;">g</span><span style="color: #34A853;">l</span><span style="color: #EA4335;">e</span> Reviews</span>
+          </div>
+        </div>
+        <div class="reviews-cards-row">
+          <a href="https://maps.app.goo.gl/rJLRqxbAchnrfpvw7" class="review-card-modern google-card" target="_blank" rel="noopener noreferrer">
+            <div class="review-card-header">
+              <div class="review-stars" aria-hidden="true">★★★★★</div>
+              <span class="review-card-eyebrow"><span lang="en"><span style="color: rgb(11, 23, 51);">Patrick O'Brien</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Experiencia del camp</span></span></span>
+              <p class="review-text">
+                <span lang="en"><span style="color: rgb(31, 31, 31);">Amazing and lovely hosts, fantastic venue, beautiful beach, delicious food, and patient/knowledgable instructors who can take you from zero to hero in the world of kiteboarding. Oh, and if there’s a rare no wind day? They are so flexible in offering other activities to keep you active and engaged, like tow foiling, sea safaris, biking, etc. can’t recommend highly enough.</span><br><br><span style="color: rgb(31, 31, 31);">Update: I returned for a second week of kite camp and it only got better. Welcoming and positive vibes all around.</span></span>
+                <span lang="es">Lee lo que dicen huéspedes anteriores sobre la enseñanza, la comida y la estancia en Villa Brisa.</span>
+              </p>
+            </div>
+            <div class="review-card-footer">
+              <div class="reviewer-avatar google-g-avatar" aria-hidden="true">
+                <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"></svg>
+              </div>
+              <div class="reviewer-info">
+                <h4>Google Business <span class="blue-check">✓</span></h4>
+                <span><span lang="en"><span style="color: rgb(11, 23, 51);">Official LVKC listing</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Perfil oficial de LVKC</span></span></span>
+              </div>
+            </div>
+          </a>
+          <a href="https://maps.app.goo.gl/rJLRqxbAchnrfpvw7" class="review-card-modern google-card" target="_blank" rel="noopener noreferrer">
+            <div class="review-card-header">
+              <div class="review-stars" aria-hidden="true">★★★★★</div>
+              <span class="review-card-eyebrow"><span lang="en"><span style="color: rgb(11, 23, 51);">Jens Driller</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Habitaciones y comida</span></span></span>
+              <p class="review-text">
+                <span lang="en"><span style="color: rgb(31, 31, 31);">Most epic kite camp! Instructors were incredible and the hosts Alina and Louis were two of the most fun, caring people! They went over the top to accommodate everyone and ensure each person got the most out of their experience. If you're new to kiting, I'd highly recommend going to LV early and booking lessons ahead of time. I did two extra days of lessons through Louis and it was super rewarding to have the extra progress by the end of the week! 1000% coming back next year!</span><br><br></span>
+                <span lang="es">Los huéspedes suelen mencionar las habitaciones, la comida casera y el ambiente de grupo reducido del camp.</span>
+              </p>
+            </div>
+            <div class="review-card-footer">
+              <div class="reviewer-avatar google-g-avatar" aria-hidden="true">
+                <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"></svg>
+              </div>
+              <div class="reviewer-info">
+                <h4>Google Business <span class="blue-check">✓</span></h4>
+                <span><span lang="en"><span style="color: rgb(34, 43, 50);">Official LVKC listing</span></span><span lang="es">Fuente externa de reseñas</span></span>
+              </div>
+            </div>
+          </a>
+          <a href="https://maps.app.goo.gl/rJLRqxbAchnrfpvw7" class="review-card-modern google-card" target="_blank" rel="noopener noreferrer">
+            <div class="review-card-header">
+              <div class="review-stars" aria-hidden="true">★★★★★</div>
+              <span class="review-card-eyebrow"><span lang="en"><span style="color: rgb(11, 23, 51);">Gabby Rath</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Información actual</span></span></span>
+              <p class="review-text">
+                <span lang="en"><span style="color: rgb(11, 23, 51);">La Ventana Kite Camp is incredible!!! I can't recommend this more. Alina and Louis are thoughtful and amazing hosts and humans. The instructors were super knowledgable and the lessons were phenomenal. They did everything they could to give us the best experience. 10/10, I hope to be back someday soon!</span><br></span>
+                <span lang="es"><span style="color: rgb(11, 23, 51);">Las calificaciones y el total de reseñas pueden cambiar. Abre el perfil oficial para ver lo que Google publica actualmente.</span></span>
+              </p>
+            </div>
+            <div class="review-card-footer">
+              <div class="reviewer-avatar google-g-avatar" aria-hidden="true">
+                <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"></svg>
+              </div>
+              <div class="reviewer-info">
+                <h4>Google Business <span class="blue-check">✓</span></h4>
+                <span><span lang="en"><span style="color: rgb(34, 43, 50);">Official LVKC listing</span></span><span lang="es">Información en vivo</span></span>
+              </div>
+            </div>
+          </a>
+          <a href="https://maps.app.goo.gl/rJLRqxbAchnrfpvw7" class="review-card-modern google-card" target="_blank" rel="noopener noreferrer">
+            <div class="review-card-header">
+              <div class="review-stars" aria-hidden="true">★★★★★</div>
+              <span class="review-card-eyebrow"><span lang="en"><span style="color: rgb(11, 23, 51);">David Stepanis</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Comparte tu experiencia</span></span></span>
+              <p class="review-text">
+                <span lang="en"><span style="color: rgb(11, 23, 51);">This was my second time at LVKC. It was great to learn even more with Alina and Louis again. Their enthusiasm for their business and the sport is obvious and overflowing. The instructors are all super friendly and knowledgeable. At the end of another week of learning skills and having a good time, you can feel really good about doing business with LVKC.</span><br></span>
+                <span lang="es"><span style="color: rgb(11, 23, 51);">¿Ya viviste un camp con nosotros? Usa el perfil oficial para compartir tu propia experiencia.</span></span>
+              </p>
+            </div>
+            <div class="review-card-footer">
+              <div class="reviewer-avatar google-g-avatar" aria-hidden="true">
+                <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"></svg>
+              </div>
+              <div class="reviewer-info">
+                <h4>Google Business <span class="blue-check">✓</span></h4>
+                <span><span lang="en"><span style="color: rgb(11, 23, 51);">Official LVKC listing</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Perfil oficial de LVKC</span></span></span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section><section id="pricing" class="section-bg-light texture-watermark" data-section-id="camp-booking-widget" data-section-name="Camps — Fechas y Habitaciones">
+    <div class="container">
+      <div class="section-header">
+        <span class="tagline"><span lang="en"><strong>Season 2026/27</strong></span><span lang="es">Temporada 2026/27</span></span>
+        <h2 lang="en">Dates And Prices</h2>
+        <h2 lang="es">Elige tu Campamento</h2>
+        <p lang="en">We host five camp weeks during the winter wind season. Room availability is
+confirmed after you submit your request.</p>
+        <p lang="es">Selecciona tu semana y tu habitación para comenzar tu experiencia en La Ventana.</p>
+        <div class="combo-discount-badge">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"></svg>
+          <span><span lang="en"><strong>10% discount per guest</strong> when two guests travelling together share a room.</span><span lang="es"><strong>10% de descuento por persona</strong> al compartir habitación entre dos huéspedes.</span></span>
+        </div>
+      </div>
+      <div class="camp-combo-layout">
+        <div class="camp-combo-col">
+          <div class="combo-step-label">
+            <span class="combo-step-num">01</span>
+            <span class="combo-step-text"><span lang="en">Select Your Dates</span><span lang="es">Selecciona tus Fechas</span></span>
+          </div>
+          <div class="camp-dates-list">
+            <div class="camp-date-card selected" data-camp-id="camp-2026-12-december">
+              <span class="camp-date-radio" aria-hidden="true"></span>
+              <div class="camp-date-info">
+                <h4 lang="en">December Camp</h4>
+                <h4 lang="es">Campamento de Diciembre</h4>
+                <span class="camp-date-days">Nov 30 - Dec 6, 2026</span>
+              </div>
+              <div class="camp-date-status-col">
+                <span class="camp-date-status status-open">
+                  <span lang="en">Available</span>
+                  <span lang="es">Disponible</span>
+                </span>
+                <span class="camp-date-spots"><span lang="en">6 spots left</span><span lang="es">6 lugares disponibles</span></span>
+              </div>
+            </div>
+            <div class="camp-date-card" data-camp-id="camp-2027-01-january-1">
+              <span class="camp-date-radio" aria-hidden="true"></span>
+              <div class="camp-date-info">
+                <h4 lang="en">January Camp 1</h4>
+                <h4 lang="es">Campamento de Enero 1</h4>
+                <span class="camp-date-days">Jan 16 - 22, 2027</span>
+              </div>
+              <div class="camp-date-status-col">
+                <span class="camp-date-status status-open">
+                  <span lang="en">Available</span>
+                  <span lang="es">Disponible</span>
+                </span>
+                <span class="camp-date-spots"><span lang="en">4 spots left</span><span lang="es">4 lugares disponibles</span></span>
+              </div>
+            </div>
+            <div class="camp-date-card" data-camp-id="camp-2027-01-january-2">
+              <span class="camp-date-radio" aria-hidden="true"></span>
+              <div class="camp-date-info">
+                <h4 lang="en">January Camp 2</h4>
+                <h4 lang="es">Campamento de Enero 2</h4>
+                <span class="camp-date-days">Jan 23 - 29, 2027</span>
+              </div>
+              <div class="camp-date-status-col">
+                <span class="camp-date-status status-open">
+                  <span lang="en">Available</span>
+                  <span lang="es">Disponible</span>
+                </span>
+                <span class="camp-date-spots"><span lang="en">1 spot left</span><span lang="es">1 lugar disponible</span></span>
+              </div>
+            </div>
+            <div class="camp-date-card" data-camp-id="camp-2027-02-february">
+              <span class="camp-date-radio" aria-hidden="true"></span>
+              <div class="camp-date-info">
+                <h4 lang="en">February Camp</h4>
+                <h4 lang="es">Campamento de Febrero</h4>
+                <span class="camp-date-days">Feb 21 - 27, 2027</span>
+              </div>
+              <div class="camp-date-status-col">
+                <span class="camp-date-status status-open">
+                  <span lang="en">Available</span>
+                  <span lang="es">Disponible</span>
+                </span>
+                <span class="camp-date-spots"><span lang="en">6 spots left</span><span lang="es">6 lugares disponibles</span></span>
+              </div>
+            </div>
+            <div class="camp-date-card" data-camp-id="camp-2027-03-march">
+              <span class="camp-date-radio" aria-hidden="true"></span>
+              <div class="camp-date-info">
+                <h4 lang="en">March Camp</h4>
+                <h4 lang="es">Campamento de Marzo</h4>
+                <span class="camp-date-days">Feb 28 - Mar 6, 2027</span>
+              </div>
+              <div class="camp-date-status-col">
+                <span class="camp-date-status status-open">
+                  <span lang="en">Available</span>
+                  <span lang="es">Disponible</span>
+                </span>
+                <span class="camp-date-spots"><span lang="en">6 spots left</span><span lang="es">6 lugares disponibles</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="camp-combo-col">
+          <div class="combo-step-label">
+            <span class="combo-step-num">02</span>
+            <span class="combo-step-text"><span lang="en">Choose Your Room</span><span lang="es">Elige tu Habitación</span></span>
+          </div>
+          <div class="room-selector-layout">
+            <div class="room-tabs">
+              <button class="room-tab-btn active" data-room-image="" data-room-floorplan="assets/images/floorplan_standard.jpg" data-room-title-en="Standard Suite" data-room-title-es="Suite Estándar" data-room-count-en="7 suites available" data-room-count-es="7 suites disponibles" data-room-price="3,250" data-room-desc-en="A private room in Villa Brisa with a shared bathroom." data-room-desc-es="Habitación privada en Villa Brisa con baño compartido." data-room-features-en="[&quot;King size bed&quot;, &quot;Shared bath&quot;, &quot;A/C&quot;, &quot;Private room&quot;]" data-room-features-es="[&quot;Cama Queen-size&quot;, &quot;Baño compartido&quot;, &quot;A/C&quot;, &quot;Habitación privada&quot;]">
+                <h4 lang="en">Standard Suite</h4>
+                <h4 lang="es">Suite Estándar</h4>
+              </button>
+              <button class="room-tab-btn" data-room-image="" data-room-floorplan="assets/images/floorplan_premium.jpg" data-room-title-en="Premium Suite" data-room-title-es="Suite Premium" data-room-count-en="2 suites available" data-room-count-es="2 suites disponibles" data-room-price="3,450" data-room-desc-en="A private room in Villa Brisa with a private bathroom." data-room-desc-es="Habitación privada en Villa Brisa con baño privado." data-room-features-en="[&quot;King size bed&quot;, &quot;Private bath&quot;, &quot;A/C&quot;, &quot;Private room&quot;]" data-room-features-es="[&quot;Cama King-size&quot;, &quot;Baño privado&quot;, &quot;A/C&quot;, &quot;Habitación privada&quot;]">
+                <h4 lang="en">Premium Suite</h4>
+                <h4 lang="es">Suite Premium</h4>
+              </button>
+              <button class="room-tab-btn" data-room-image="" data-room-floorplan="assets/images/floorplan_primary.jpg" data-room-title-en="Primary Suite" data-room-title-es="Suite Principal" data-room-count-en="1 suite available" data-room-count-es="1 única suite disponible" data-room-price="3,700" data-room-desc-en="A private room in Villa Brisa with a king-size bed and private bathroom." data-room-desc-es="Habitación privada en Villa Brisa con cama King-size y baño privado." data-room-features-en="[&quot;King size bed&quot;, &quot;Private bath&quot;, &quot;A/C&quot;, &quot;Private room&quot;]" data-room-features-es="[&quot;Cama King-size&quot;, &quot;Baño privado&quot;, &quot;A/C&quot;, &quot;Habitación privada&quot;]">
+                <h4 lang="en">Primary Suite</h4>
+                <h4 lang="es">Suite Principal</h4>
+              </button>
+            </div>
+            <div class="room-preview-display">
+              <div class="room-preview-media-row">
+                <div class="room-preview-image" id="room-display-image" style="background-image: url('');"></div>
+                <div class="room-preview-header-block">
+                  <div class="room-preview-header">
+                    <h3>
+                      <span id="room-title-en" lang="en">Standard Suite</span>
+                      <span id="room-title-es" lang="es">Suite Estándar</span>
+                    </h3>
+                    <div class="room-count">
+                      <span id="room-count-en" lang="en">7 suites available</span>
+                      <span id="room-count-es" lang="es">7 suites disponibles</span>
+                    </div>
+                  </div>
+                  <p id="room-desc-en" lang="en"><span style="font-size: 0.8em;">A private room in Villa Brisa with a shared bathroom.</span></p>
+                  <p id="room-desc-es" lang="es">Habitación privada en Villa Brisa con baño compartido.</p>
+                </div>
+              </div>
+              <div class="room-preview-footer">
+                <div class="room-price-row">
+                  <div>
+                    <span style="font-size: 0.9rem; color: var(--color-text-light); display: block;"><span lang="en">Package Price</span><span lang="es">Precio del Paquete</span></span>
+                    <span id="room-price-display" style="font-size: 2.2rem; font-weight: 800; color: var(--color-sea-primary);"><span id="room-price-value">3,250</span><span style="font-size: 1.1rem; font-weight: 600;"> USD</span></span>
+                    <span style="font-size: 0.8rem; color: var(--color-copper-dark); display: block; margin-top: 0.25rem; font-weight: 600;">
+                      <span lang="en">*Special pricing for non-kiter partners available</span>
+                      <span lang="es">*Descuento disponible para acompañantes no-kiters</span>
+                    </span>
+                  </div>
+                  <a href="#" class="btn btn-primary" data-open-modal="booking-modal" data-camp-room-request="true">
+                    <span lang="en">Request This Room</span>
+                    <span lang="es">Solicitar esta Habitación</span>
+                  </a>
+                </div>
+                <ul id="room-display-features" class="room-preview-details">
+                  <li class="has-amenity-icon">
+                    <span class="brand-mask amenity-icon brand-amenity-bed" aria-hidden="true"></span>
+                    <span lang="en">King size bed</span>
+                    <span lang="es">Cama Queen-size</span>
+                  </li>
+                  <li class="has-amenity-icon">
+                    <span class="brand-mask amenity-icon brand-amenity-bath" aria-hidden="true"></span>
+                    <span lang="en">Shared bath</span>
+                    <span lang="es">Baño compartido</span>
+                  </li>
+                  <li class="has-amenity-icon">
+                    <span class="brand-mask amenity-icon brand-amenity-ac" aria-hidden="true"></span>
+                    <span lang="en">A/C</span>
+                    <span lang="es">A/C</span>
+                  </li>
+                  <li>
+                    <span lang="en">Private room</span>
+                    <span lang="es">Habitación privada</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="camp-combo-summary" id="camp-combo-summary">
+            <div class="combo-summary-item">
+              <svg class="combo-summary-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"></svg>
+              <div class="combo-summary-text">
+                <span class="combo-summary-title">
+                  <span id="combo-summary-camp-en" lang="en">December Camp</span>
+                  <span id="combo-summary-camp-es" lang="es">Campamento de Diciembre</span>
+                </span>
+                <span class="combo-summary-sub" id="combo-summary-days">Nov 30 - Dec 6, 2026</span>
+              </div>
+            </div>
+            <div class="combo-summary-divider" aria-hidden="true"></div>
+            <div class="combo-summary-item">
+              <span class="combo-summary-icon brand-mask brand-amenity-bed" aria-hidden="true"></span>
+              <div class="combo-summary-text">
+                <span class="combo-summary-title">
+                  <span id="combo-summary-room-en" lang="en">Standard Suite</span>
+                  <span id="combo-summary-room-es" lang="es">Suite Estándar</span>
+                </span>
+                <span class="combo-summary-sub"><span lang="en">1 guest</span><span lang="es">1 huésped</span></span>
+              </div>
+            </div>
+            <div class="combo-summary-divider" aria-hidden="true"></div>
+            <div class="combo-summary-item combo-summary-total">
+              <div class="combo-summary-text">
+                <span class="combo-summary-sub"><span lang="en">Total</span><span lang="es">Total</span></span>
+                <span class="combo-summary-title combo-summary-price"><span id="combo-summary-total">3,250</span> USD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section><section class="section-bg-light" data-section-id="reviews-strip" data-section-name="Barra de reseñas (5 estrellas)" style="padding: 3.5rem 0px; display: none !important;">
+    <div class="container">
+      <div class="reviews-strip">
+        <div class="reviews-strip-copy">
+          <h2><span lang="en">Our guests’ experience speaks for itself</span><span lang="es">La experiencia de nuestros huéspedes habla por sí sola</span></h2>
+          <div class="reviews-strip-rating">
+            <span class="reviews-strip-stars" aria-hidden="true">★★★★★</span>
+            <span class="reviews-strip-score"><span data-google-rating="">5.0</span> <span lang="en">on Google Reviews</span><span lang="es">en Reseñas de Google</span><span class="reviews-count" data-google-rating-count-wrapper="" hidden=""> · <span data-google-rating-count=""></span> <span lang="en">reviews</span><span lang="es">reseñas</span></span></span>
+          </div>
+        </div>
+        <a href="/testimonials" class="btn btn-primary">
+          <span lang="en">See all testimonials</span><span lang="es">Ver todos los testimonios</span>
+        </a>
+      </div>
+    </div>
+  </section><section class="section-bg-light" style="padding: 6rem 0px; border-top: 1px solid rgba(21, 62, 92, 0.08); display: none !important;" data-section-id="camp-booking-steps" data-section-name="Camps — Proceso de Reserva">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+        <span class="tagline"><span lang="en">Simple Booking Process</span><span lang="es">Proceso Sencillo de Reserva</span></span>
+        <h2><span lang="en">What Happens After You Book</span><span lang="es">Qué Pasa Después de Reservar</span></h2>
+        <p lang="en">We keep the booking process transparent and direct, so you can focus on getting ready for the wind.</p>
+        <p lang="es">Mantenemos el proceso transparente y directo para que te concentres en prepararte para el viento.</p>
+      </div>
+      <div class="booking-steps">
+        <div class="booking-step">
+          <div class="step-number">1</div>
+          <h3>
+            <span lang="en">Submit Your Request</span>
+            <span lang="es">Envía tu Solicitud</span>
+          </h3>
+          <p lang="en">Fill out the booking form with your preferred dates, kite level, and room type. We will review it and contact you within 24 hours to confirm room availability and answer any questions.</p>
+          <p lang="es">Llena el formulario con tus fechas y tipo de habitación preferida, nivel de kite, etc. Revisaremos tu solicitud y nos pondremos en contacto en menos de 24 horas para confirmar la habitación y responder tus dudas.</p>
+        </div>
+        <div class="booking-step">
+          <div class="step-number">2</div>
+          <h3>
+            <span lang="en">Confirm &amp; Pay Deposit</span>
+            <span lang="es">Confirma y Paga el Depósito</span>
+          </h3>
+          <p lang="en">Once you select your package details, we will send you a secure payment link to pay the deposit. This locks in your suite and private instructor for the camp week.</p>
+          <p lang="es">Una vez confirmados tus detalles, te enviaremos un enlace de pago para realizar el depósito. Esto asegura tu cuarto y tu instructor para la semana del camp.</p>
+        </div>
+        <div class="booking-step">
+          <div class="step-number">3</div>
+          <h3>
+            <span lang="en">Prepare for Camp</span>
+            <span lang="es">Prepárate para el Camp</span>
+          </h3>
+          <p lang="en">Before the camp starts, we will coordinate your airport transfers, dietary preferences, and pre-arrival logistics. The week before, we will send you a brief with all the check-in details.</p>
+          <p lang="es">Antes del camp, coordinaremos los traslados desde y hacia el aeropuerto, preferencias alimentarias y la logísticas de tu llegada. </p>
+        </div>
+      </div>
+    </div>
+  </section><section class="section-bg-alt" data-section-id="camp-faq" data-section-name="Camps — Preguntas Frecuentes">
+    <div class="container">
+      <div class="section-header">
+        <span class="tagline"><span lang="en"><br></span><span lang="es">Preguntas Frecuentes</span></span>
+        <h2><span lang="en">FAQ</span><span lang="es">Políticas de Reserva y Viento</span></h2>
+        <p lang="en"><br></p>
+        <p lang="es">Detalles operativos clave para resolver dudas antes de solicitar tu reserva.</p>
+      </div>
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span lang="en"><span style="color: rgb(11, 23, 51);">Is the camp suitable for complete beginners?</span>
+</span>
+            <span lang="es"><span style="color: rgb(11, 23, 51);">¿Cómo funciona la reserva y los pagos?</span></span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p lang="en">Yes. Every kiter has a private coach, so you can start from the fundamentals and progress at your own pace.</p>
+              <p lang="es">Cuando estés listo para reservar, requerimos un <strong>depósito no reembolsable del 30%</strong> para asegurar tu suite. El saldo restante debe liquidarse <strong>60 días antes</strong> del inicio del campamento. Recibimos todos los pagos internacionales vía <strong>Wise</strong> (funciona como transferencia internacional sencilla y de bajo costo).</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span lang="en">What if I already ride independently?<br></span>
+            <span lang="es">¿Cómo llego a La Ventana desde el aeropuerto?</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p lang="en"><span style="color: rgb(34, 43, 50);">Your coach will build the week around what you want to improve, including transitions, jumps, strapless riding or overall confidence.</span><br></p>
+              <p lang="es">Puedes volar a cualquiera de estos dos aeropuertos:</p>
+              <ul>
+                <li lang="es"><strong>Aeropuerto de La Paz (LAP)</strong>: A 45 minutos. Podemos coordinar un auto privado por aprox. $35 USD.</li>
+                <li lang="es"><strong>Aeropuerto de Los Cabos (SJD)</strong>: A 2 horas. Hay traslados colectivos dos veces al día ($50 USD) o autos privados que coordinamos por aprox. $120 USD.</li>
+              </ul>
+            </div>
+          </div>
+        </div><div class="faq-item">
+          <div class="faq-question">
+            <span lang="en">Do I need to bring my own gear?
+</span>
+            <span lang="es">¿Puede mi pareja no-kiter unirse al campamento?</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p lang="en">No. Kite gear, wetsuit, safety equipment and the BbTALKIN radio system are included.
+</p>
+              <p lang="es">¡Sí! Los paquetes para no-kiters incluyen hospedaje, alimentos y sesiones de yoga por la mañana, pero no incluyen clases de kite ni actividades adicionales en días sin viento. Contáctanos para conocer los detalles.</p>
+            </div>
+          </div>
+        </div><div class="faq-item">
+          <div class="faq-question">
+            <span lang="en">What happens if there is no wind?</span>
+            <span lang="es">¿Qué pasa si no hay viento durante el camp?</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p lang="en">If conditions are not suitable for lessons, we'll offer an alternative activity at no extra cost. Options may include snorkeling, hiking, mountain biking or a massage.
+</p>
+              <p lang="es">Aunque La Ventana tiene un viento térmico invernal muy confiable, el clima nunca está garantizado al 100%. Si hay días sin viento en los que sea imposible navegar, reemplazaremos las clases con actividades increíbles por nuestra cuenta: snorkel en la bahía, senderismo por el desierto, mountain bike o masajes locales.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">
+            <span lang="en">Can my non-kiter partner join the camp?</span>
+            <span lang="es">¿Puede mi pareja no-kiter unirse al campamento?</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p lang="en">Yes! Non-kiter packages include accommodation, food, and morning yoga sessions, but do not include kite coaching or extra activities on no-wind days. Contact us to discuss the details.</p>
+              <p lang="es">¡Sí! Los paquetes para no-kiters incluyen hospedaje, alimentos y sesiones de yoga por la mañana, pero no incluyen clases de kite ni actividades adicionales en días sin viento. Contáctanos para conocer los detalles.</p>
+            </div>
+          </div>
+        </div><div class="faq-item">
+          <div class="faq-question">
+            <span lang="en">How does payment work?
+</span>
+            <span lang="es">¿Puede mi pareja no-kiter unirse al campamento?</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p lang="en">A 30% non-refundable deposit secures your room and private instructor. The remaining balance is due 60 days before camp. International payments are accepted through Wise or via payment link (credit card).
+</p>
+              <p lang="es">¡Sí! Los paquetes para no-kiters incluyen hospedaje, alimentos y sesiones de yoga por la mañana, pero no incluyen clases de kite ni actividades adicionales en días sin viento. Contáctanos para conocer los detalles.</p>
+            </div>
+          </div>
+        </div><div class="faq-item">
+          <div class="faq-question">
+            <span lang="en">How do I get to La Ventana?</span>
+            <span lang="es">¿Cómo llego a La Ventana desde el aeropuerto?</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p lang="en">You can fly into one of two main airports:</p>
+              <p lang="es">Puedes volar a cualquiera de estos dos aeropuertos:</p>
+              <ul>
+                <li lang="en"><strong>La Paz Airport (LAP)</strong>: 45 minutes away. We can arrange private transfers for around $35 USD.</li>
+                <li lang="es"><strong>Aeropuerto de La Paz (LAP)</strong>: A 45 minutos. Podemos coordinar un auto privado por aprox. $35 USD.</li>
+                <li lang="en"><strong>Los Cabos Airport (SJD)</strong>: 2 hours away. Shared shuttle buses run twice a day (approx $50 USD) or we can arrange private cars for around $120 USD.</li>
+                <li lang="es"><strong>Aeropuerto de Los Cabos (SJD)</strong>: A 2 horas. Hay traslados colectivos dos veces al día ($50 USD) o autos privados que coordinamos por aprox. $120 USD.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-bg-light" style="padding-bottom: 8rem;" data-section-id="camps-cta">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 lang="en">Ready to join a camp week?</h2>
+        <h2 lang="es">¿Listo para Vivir tu Camp?</h2>
+        <p lang="en">Send us your preferred dates and we'll confirm availability. Not sure what fits your level or trip? Book a call with us.</p>
+        <p lang="es">Elige las fechas de tu camp y envía una solicitud. Nos pondremos en contacto contigo para coordinar los detalles.</p>
+        <div class="cta-banner-actions">
+          <a href="#" class="btn btn-white" data-open-modal="booking-modal">
+            <span lang="en">Book a Camp</span>
+            <span lang="es">Reservar un Camp</span>
+          </a>
+          <a href="https://calendly.com/lvkc/30min" class="btn btn-ghost" target="_blank" rel="noopener">
+            <span lang="en">Book a Call</span>
+            <span lang="es">Agendar una Llamada</span>
+          </a>
+        </div>
+        <p class="cta-direct-contact">
+          <span lang="en">Or contact us directly: <a href="https://wa.me/526121974886" target="_blank">WhatsApp</a> | <a href="mailto:laventanacamps@gmail.com">Email</a></span>
+          <span lang="es">O contáctanos directo: <a href="https://wa.me/526121974886" target="_blank">WhatsApp</a> | <a href="mailto:laventanacamps@gmail.com">Email</a></span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer data-section-id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col brand">
+          <h2 class="footer-brand-mark"><img class="footer-logo-img" src="/assets/images/lvkc_logo.png" alt="LVKC — La Ventana Kite Camp"></h2>
+          <p lang="en">A premium yet laid-back kiteboarding experience in La Ventana, Baja California Sur, Mexico.</p>
+          <p lang="es">Una experiencia de kitesurf premium pero relajada en La Ventana, Baja California Sur, México.</p>
+          <div class="social-links">
+            <a href="https://instagram.com/laventana_kitecamp" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></a>
+            <a href="https://www.facebook.com/laventanakitecamp/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3><span lang="en">Information</span><span lang="es">Información</span></h3>
+          <ul>
+            <li><a href="/la-ventana-baja-california-sur"><span lang="en">About La Ventana</span><span lang="es">Sobre La Ventana</span></a></li>
+            <li><a href="/about-us-meet-the-team#founders"><span lang="en">Meet the Team</span><span lang="es">El Equipo</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3><span lang="en">Others</span><span lang="es">Otros</span></h3>
+          <ul>
+            <li><a href="/faq"><span lang="en">FAQs</span><span lang="es">Preguntas Frecuentes</span></a></li>
+            <li><a href="/blog"><span lang="en">Blog</span><span lang="es">Blog</span></a></li>
+            <li><a href="/gallery-kite-camp"><span lang="en">Gallery</span><span lang="es">Galería</span></a></li>
+            <li><a href="/testimonials"><span lang="en">Testimonials</span><span lang="es">Testimonios</span></a></li>
+            <li><a href="/faq#booking-policy"><span lang="en">Booking Policy</span><span lang="es">Políticas de Reserva</span></a></li>
+            <li><a href="/terms-conditions"><span lang="en">Terms &amp; Conditions</span><span lang="es">Términos y Condiciones</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3><span lang="en">Get in Touch</span><span lang="es">Contacto</span></h3>
+          <div class="footer-contact-info">
+            <p lang="en">Get in touch to book your spot or request more information.</p>
+            <p lang="es">Ponte en contacto para reservar tu lugar o solicitar más información.</p>
+            <a href="https://wa.me/526121974886" class="btn btn-primary" style="margin-top: 1rem;" target="_blank">
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 La Ventana Kite Camp. All rights reserved.</p>
+        <p>laventanacamps@gmail.com | +52 612 197 4886</p>
+      </div>
+    </div>
+  </footer>
+  <div class="modal-overlay" id="booking-modal" data-section-id="booking-modal">
+    <div class="modal-container">
+      <button class="modal-close" aria-label="Close Modal">×</button>
+      <div class="wetravel-header">
+        <span class="wetravel-logo">LVKC Camps</span>
+        <h3>
+          <span lang="en">Camp Booking Request</span>
+          <span lang="es">Solicitud de Reserva de Camp</span>
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0;">
+          <span lang="en">We will be in touch with you within 24 hours.</span>
+          <span lang="es"><br></span>
+        </p>
+      </div>
+      <form class="wetravel-body" id="camp-booking-form">
+        <div class="form-group">
+          <label for="camp-name"><span lang="en">Full Name</span><span lang="es">Nombre Completo</span></label>
+          <input type="text" id="camp-name" class="form-control" required="" placeholder="e.g. John Doe">
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="camp-email"><span lang="en">Email Address</span><span lang="es">Correo Electrónico</span></label>
+            <input type="email" id="camp-email" class="form-control" required="" placeholder="name@domain.com">
+          </div>
+          <div class="form-group">
+            <label for="camp-phone"><span lang="en">WhatsApp Number</span><span lang="es">Número de WhatsApp</span></label>
+            <div class="phone-input-group">
+              <select id="camp-phone-code" class="form-control phone-code" required="">
+                <option value="" disabled="" selected="">Código</option>
+                <option value="1">+1 EE. UU. / Canadá</option>
+                <option value="52">+52 México</option>
+                <option value="44">+44 Reino Unido</option>
+                <option value="49">+49 Alemania</option>
+                <option value="33">+33 Francia</option>
+                <option value="34">+34 España</option>
+                <option value="39">+39 Italia</option>
+                <option value="41">+41 Suiza</option>
+                <option value="31">+31 Países Bajos</option>
+                <option value="32">+32 Bélgica</option>
+                <option value="43">+43 Austria</option>
+                <option value="351">+351 Portugal</option>
+                <option value="353">+353 Irlanda</option>
+                <option value="45">+45 Dinamarca</option>
+                <option value="46">+46 Suecia</option>
+                <option value="47">+47 Noruega</option>
+                <option value="358">+358 Finlandia</option>
+                <option value="48">+48 Polonia</option>
+                <option value="420">+420 Chequia</option>
+                <option value="30">+30 Grecia</option>
+                <option value="36">+36 Hungría</option>
+                <option value="90">+90 Turquía</option>
+                <option value="7">+7 Rusia</option>
+                <option value="27">+27 Sudáfrica</option>
+                <option value="61">+61 Australia</option>
+                <option value="64">+64 Nueva Zelanda</option>
+                <option value="81">+81 Japón</option>
+                <option value="82">+82 Corea del Sur</option>
+                <option value="86">+86 China</option>
+                <option value="91">+91 India</option>
+                <option value="65">+65 Singapur</option>
+                <option value="852">+852 Hong Kong</option>
+                <option value="971">+971 EAU</option>
+                <option value="966">+966 Arabia Saudita</option>
+                <option value="972">+972 Israel</option>
+                <option value="55">+55 Brasil</option>
+                <option value="54">+54 Argentina</option>
+                <option value="56">+56 Chile</option>
+                <option value="57">+57 Colombia</option>
+                <option value="51">+51 Perú</option>
+                <option value="598">+598 Uruguay</option>
+                <option value="593">+593 Ecuador</option>
+                <option value="other">+ Otro / Other</option>
+              </select>
+              <input type="tel" id="camp-phone" class="form-control phone-number" required="" placeholder="612 197 4886">
+            </div>
+            <p class="phone-hint"><span lang="en">Select your country code, then enter your number (no leading 0).</span><span lang="es">Selecciona tu código de país e ingresa tu número (sin el 0 inicial).</span></p>
+          </div>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="camp-level"><span lang="en">Kiteboarding Level</span><span lang="es">Nivel de Kitesurf</span></label>
+            <select id="camp-level" class="form-control" required="">
+              <option value="" disabled="" selected="">Select / Selecciona</option>
+              <option value="beginner">Beginner (Zero experience) </option><option value="beginner">Beginner (some experience)</option>
+              <option value="intermediate">Intermediate (Riding upwind) </option>
+              <option value="advanced">Other (please explain below) </option>
+            </select>
+          </div><div class="form-group">
+            <label for="camp-heard"><span lang="en">Where did you hear about us?</span><span lang="es">Cómo supiste de nosotros?</span></label>
+            <select id="camp-heard" class="form-control" required="">
+              <option value="" disabled="" selected="">Select / Selecciona</option>
+              <option value="friend">From a Friend</option><option value="facebook-group">On a Facebook Group</option>
+              <option value="instagram">On Instagram</option>
+              <option value="alina-louis">Directly from Alina &amp; Louis</option><option value="google">On Google</option><option value="chatgpt">On Chatgpt</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="camp-date"><span lang="en">Preferred Camp Week</span><span lang="es">Semana de Interés</span></label>
+            <select id="camp-date" class="form-control" required="">
+              <option value="" disabled="" selected="">Select / Selecciona</option>
+              <option value="dec2026">Dec 2026 (Nov 30 - Dec 6)</option>
+              <option value="jan2027-1">Jan 2027 Week 1 (Jan 16 - 22)</option>
+              <option value="jan2027-2">Jan 2027 Week 2 (Jan 23 - 29)</option>
+              <option value="feb2027">Feb 2027 (Feb 21 - 27)</option>
+              <option value="mar2027">Mar 2027 (Feb 28 - Mar 6)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="camp-companion"><span lang="en">Who are you traveling with?</span><span lang="es">¿Con quién viajas?</span></label>
+            <select id="camp-companion" class="form-control" required="">
+              <option value="" disabled="" selected="">Select / Selecciona</option>
+              <option value="single">Just me / Solo yo</option>
+              <option value="kiter-partner">With another kiter / Con otro kiter</option>
+              <option value="non-kiter-partner">With a non-kiter partner / Con acompañante no-navegante (tarifa especial)</option>
+              <option value="group">With a group / En grupo</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="camp-transfer"><span lang="en">Airport Transfer Assistance?</span><span lang="es">Apoyo con traslado de aeropuerto?</span></label>
+            <select id="camp-transfer" class="form-control" required="">
+              <option value="" disabled="" selected="">Select / Selecciona</option>
+              <option value="no">No, I have my own transport </option>
+              <option value="yes-lap">Yes, from La Paz (LAP) </option>
+              <option value="yes-sjd">Yes, from Cabo (SJD) </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="camp-contact-method"><span lang="en">Best way to reach you?</span><span lang="es">¿Cómo prefieres que te contactemos?</span></label>
+            <select id="camp-contact-method" class="form-control" required="">
+              <option value="" disabled="" selected="">Select / Selecciona</option>
+              <option value="whatsapp">WhatsApp</option>
+              <option value="email">Email / Correo</option>
+              <option value="either">Either / Cualquiera</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="camp-message"><span lang="en">Questions or Special Requests</span><span lang="es">Preguntas o Solicitudes Especiales</span></label>
+          <textarea id="camp-message" class="form-control" rows="3" placeholder=""></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <span lang="en">Submit Request</span>
+          <span lang="es">Enviar Solicitud</span>
+        </button>
+      </form>
+    </div>
+  </div>
+  <div class="floating-cta-container" data-section-id="floating-cta-container">
+    <div class="floating-cta-menu" id="floatingCtaMenu">
+      <a href="/kite-camps?booking=camps" class="floating-menu-item">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+        <span lang="en">Book Camp Week</span>
+        <span lang="es">Reservar Campamento</span>
+      </a>
+      <a href="/la-ventana-kite-lessons?booking=school" class="floating-menu-item">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+        <span lang="en">Book Kite Lessons</span>
+        <span lang="es">Reservar Clases de Kite</span>
+      </a>
+      <a href="https://wa.me/526121974886" target="_blank" rel="noopener" class="floating-menu-item">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+        <span lang="en">Chat on WhatsApp</span>
+        <span lang="es">Chat por WhatsApp</span>
+      </a>
+      <button class="floating-menu-item" id="shareWaBtn">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+        <span lang="en">Share with a Friend</span>
+        <span lang="es">Compartir con un Amigo</span>
+      </button>
+    </div>
+    <button class="floating-cta-btn" id="floatingCtaToggle">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></svg>
+      <span lang="en">Book Now</span>
+      <span lang="es">Reservar</span>
+    </button>
+  </div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/camps.js"></script>
+  <script></script>
+</body></html>

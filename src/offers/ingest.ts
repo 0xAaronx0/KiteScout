@@ -225,6 +225,9 @@ const KNOWN_PINS: Record<string, { lat: number; lng: number }> = {
   'drejby strand, kegnæs': { lat: 54.8628, lng: 10.0011 }, // the campsite (OSM); the spot name alone finds nothing
   'dranske, wittow': { lat: 54.6276, lng: 13.2283 }, // NoHotel (OSM hostel node); the spot name alone finds nothing
   saal: { lat: 54.3099, lng: 12.4992 }, // Saal am Saaler Bodden (OSM); the geocoder picks Saal an der Donau
+  avon: { lat: 35.3523, lng: -75.5033 }, // Avon on Hatteras Island (OSM village); "Avon" alone finds nothing in region
+  // Cascade's camp page only says "Maui North Shore"; the geocoder returns the island centroid on Haleakala
+  maui: { lat: 20.8975, lng: -156.4339 },
 };
 
 export async function locateSpots(c: OfferContent, stored: unknown): Promise<StoredSpot[]> {

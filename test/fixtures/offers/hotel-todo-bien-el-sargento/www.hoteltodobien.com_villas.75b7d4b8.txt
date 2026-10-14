@@ -1,0 +1,822 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      class="">
+<head>
+    <meta charset="utf-8">
+<script type="text/javascript"></script>
+<meta name="google-site-verification" content="WKhmVEwiv4KciLHauQcbvdyqeU38tT_QDaUXy1yadog" data-swh-uuid="285c917b988d4f0cb24d11c963553dcd"/>
+<meta name="d-service-worker" content="register">
+<link rel="canonical" href="https://www.hoteltodobien.com/villas">
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/fab44011/site_favicon_16_1767038754960.ico"/>
+<link rel="preconnect" href="https://irp.cdn-website.com"/>
+<link rel="preconnect" href="https://irp.cdn-website.com" crossorigin/>
+<link rel="preconnect" href="https://static.cdn-website.com"/>
+<script id='d-js-dmapi'></script>
+<script id="d-js-load-css"></script>
+<script data-role="deferred-init" type="text/javascript"></script>
+<style id="forceCssIncludes"></style>
+<style id="cssVariables" type="text/css"></style>
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial:ital,wght@0,400&amp;subset=latin-ext&amp;display=swap"  />
+<link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/6853/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-structured-global.min.css" />
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/765f0dba662dce947037c6e07c4888c0.css" id="widgetCSS" />
+<style></style>
+<style></style>
+<style id="pageAdditionalWidgetsCss" type="text/css"></style>
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fab44011/files/fab44011_1.min.css?v=b991f58d40ef9333b43723a90c27d884" id="siteGlobalCss" />
+<style id="customWidgetStyle" type="text/css"></style>
+<style id="innerPagesStyle" type="text/css"></style>
+<style
+        id="additionalGlobalCss" type="text/css"
+></style>
+<style id="pagestyle" type="text/css"></style>
+<style id="pagestyleDevice" type="text/css"></style>
+<style id="globalFontSizeStyle" type="text/css"></style>
+<style id="pageFontSizeStyle" type="text/css"></style>
+<script></script>
+<script></script>
+<script></script>
+<script type="text/javascript"></script>
+<script type="text/javascript" id='d-js-jquery'
+        src="https://static.cdn-website.com/libs/jquery/jquery-3.7.0.min.js"></script>
+<script src="https://app.termly.io/resource-blocker/24fddb63-55d0-4cf3-93aa-d66703e54d7c?autoBlock=on" data-swh-uuid="880c8f1884664765b6a8354cea182854"></script>
+<script type="text/javascript" id="d_track_campaign" data-entry-referrer data-utm-cookies></script>
+<script type="text/javascript" ></script>
+<script></script>
+<script></script>
+<script id='d-js-params'></script>
+<script src="https://static.cdn-website.com/mnlt/production/6853/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js"  id="d-js-core"></script>
+    <script src="https://static.cdn-website.com/mnlt/production/6853/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js" ></script>
+<script></script>
+<style id="hideAnimFix"></style>
+<style id="fontFallbacks"></style>
+  <link type="application/rss+xml" rel="alternate" href="https://www.hoteltodobien.com/feed/rss2"/>
+  <link type="application/atom+xml" rel="alternate" href="https://www.hoteltodobien.com/feed/atom"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://www.hoteltodobien.com/villas"/>
+  <title>
+    Private Villas | Hotel Todo Bien | La Ventana, Mexico
+  </title>
+  <meta name="description" content="Enjoy luxury private villas with beachfront access &amp; stunning views. Book your perfect getaway at Todo Bien today!"/>
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="Private Villas | Hotel Todo Bien | La Ventana, Mexico"/>
+  <meta name="twitter:description" content="Enjoy luxury private villas with beachfront access &amp; stunning views. Book your perfect getaway at Todo Bien today!"/>
+  <meta name="twitter:image" content="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Background-1920w.png"/>
+  <meta property="og:description" content="Enjoy luxury private villas with beachfront access &amp; stunning views. Book your perfect getaway at Todo Bien today!"/>
+  <meta property="og:title" content="Private Villas | Hotel Todo Bien | La Ventana, Mexico"/>
+  <meta property="og:image" content="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Background-1920w.png"/>
+</head>
+<body id="dmRoot" data-page-alias="villas"  class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody responsiveTablet "
+      style="padding:0;margin:0;"
+    >
+<div id="dm" class='dmwr'>
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-sec hasAnimations rows-1200 inMiniHeaderMode hasStickyHeader hamburger-reverse dmPageBody d-page-1716942098 inputs-css-clean dmFreeHeader" id="dm-outer-wrapper" data-page-class="1716942098" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner" data-auto="page-inner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer" freeheader="true" headerlayout="b58ba5b5703b4cd7b5f5f7951565dc87===horizontal-layout-5" layout="7f3c1de367df47d5b45ab63d33101c7b===header" data-scrollable-target="body" data-scrollable-target-threshold="1" data-scroll-responder-id="1" logo-size-target="80%" secondary-image="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/todo-bien-logo-white-1920w.png" has-secondary-image="true" data-auto="header"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="u_1715915041 dmRespRow dmDefaultListContentRow fullBleedChanged fullBleedMode" style="text-align:center" id="1715915041"> <div class="dmRespColsWrapper" id="1951897559"> <div class="u_1657460522 small-12 dmRespCol large-2 medium-2" id="1657460522"> <div class="u_1223751667 imageWidget align-center" data-widget-type="image" id="1223751667" data-element-type="image"><img src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/todo-bien-logo-white-cf01a6c3-1920w.png" id="1826725239" class="" data-dm-image-path="https://irp.cdn-website.com/fab44011/dms3rep/multi/todo-bien-logo-white-cf01a6c3.png" width="510" height="450" alt=""TODO BIEN" in bold, black block letters, meaning "everything is fine" in Spanish." onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div class="u_1525381962 dmRespCol small-12 large-7 medium-7" id="1525381962"> <nav class="u_1670011220 effect-bottom main-navigation unifiednav dmLinksMenu" data-auto="links-menu" role="navigation" layout-main="horizontal_nav_layout_2" layout-sub="submenu_horizontal_2" data-show-vertical-sub-items="HOVER" id="1670011220" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-nav-structure="HORIZONTAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container unav-top  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="home"> <span class="nav-item-text " data-link-text="
+         HOME
+        " data-auto="page-text-style">HOME<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/rooms" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="rooms"> <span class="nav-item-text " data-link-text="
+         ROOMS
+        " data-auto="page-text-style">ROOMS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/villas" class="unifiednav__item unav-item unav-top-item  dmNavItemSelected    " target="" data-target-page-alias="villas" aria-current="page" data-auto="selected-page"> <span class="nav-item-text " data-link-text="VILLAS" data-auto="page-text-style">VILLAS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/restaurant" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="restaurant"> <span class="nav-item-text " data-link-text="
+         RESTAURANT
+        " data-auto="page-text-style">RESTAURANT<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/activities" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="activities"> <span class="nav-item-text " data-link-text="
+         ACTIVITIES
+        " data-auto="page-text-style">ACTIVITIES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/events" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="events"> <span class="nav-item-text " data-link-text="EVENTS" data-auto="page-text-style">EVENTS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/Residential" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="real-estate"> <span class="nav-item-text " data-link-text="RESIDENTIAL" data-auto="page-text-style">RESIDENTIAL<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+ <div class="u_1005315039 dmRespCol small-12 large-3 medium-3" id="1005315039"> <a data-display-type="block" class="u_1316554538 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="https://hotels.cloudbeds.com/reservation/5r6IWY" id="1316554538" data-element-type="dButtonLinkId" target="_blank"> <span class="iconBg" id="1941951503"> <span class="icon hasFontIcon icon-star" id="1596228024"></span> 
+</span> 
+ <span class="text" id="1945693725">BOOK NOW</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-auto="sticky-header-spacer" data-new="true"></div> 
+ <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow "> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None"> <div class="titleLine display_None"><hr/></div> 
+ <div id="pageTitleText"> <div class="innerPageTitle">VILLAS</div> 
+</div> 
+ <div class="titleLine display_None"><hr/></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_villas dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper" data-auto="all-wrapper"> <div id="dm_content" class="dmContent" role="main"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl" id="1716942098"> <div class="u_1243667655 dmRespRow hasBackgroundOverlay dmSectionParallaxNew" style="text-align: center;" id="1243667655"> <div class="dmRespColsWrapper" id="1173148036"> <div class="dmRespCol small-12 u_1620106714 medium-12 large-12" id="1620106714"> <span id="1479169930"></span> 
+ <div class="u_1243236030 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1243236030"> <h1 class="text-align-center"><span style="display:unset;font-family:Arial, 'Arial Fallback';">The Privacy of a Home</span></h1> 
+ <h1 class="text-align-center"><span style="display:unset;font-family:Arial, 'Arial Fallback';">The Privileges of a Hotel</span></h1> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1587562612 hasBackgroundOverlay" id="1587562612"> <div class="dmRespColsWrapper" id="1799009715"> <div class="u_1910550135 dmRespCol small-12 large-7 medium-7" id="1910550135"> <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1448863439" style="transition: opacity 1s ease-in-out 0s;"> <h2><span style="text-shadow: none; display: initial; color: var(--color_7);">Villa Cortez</span></h2> 
+</div> 
+ <a data-display-type="block" class="u_1577357463 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton" file="false" href="https://hotels.cloudbeds.com/reservation/5r6IWY" data-element-type="dButtonLinkId" id="1577357463" target="_blank"> <span class="iconBg" aria-hidden="true" id="1265101362"> <span class="icon hasFontIcon icon-star" id="1883901053"></span> 
+</span> 
+ <span class="text" id="1297807269">CHECK AVAILABILITY</span> 
+</a> 
+ <div class="dmNewParagraph u_1590362958" data-element-type="paragraph" data-version="5" id="1590362958" data-styletopreserve="{" background-image":""}"=""><p class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';">Villa Cortez is a stunning four-bedroom, four-bathroom resort home just steps from the hotel and beach, with sweeping views of La Ventana Bay and Cerralvo Island from every room. The villa features three king bedrooms and one double-queen bedroom, each with a private bath, plush linens, all-natural bath amenities, ceiling fan, individual A/C, and blackout shades.</span></p><p class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';"><br/></span></p><p class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';">The home includes a chef&rsquo;s kitchen with purified reverse-osmosis drinking water, a comfortable living area with a 75&rdquo; TV, and dining for six.</span></p><p class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';"><br/></span></p><p class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';">Outdoor spaces include a first-floor patio with a hot-and-cold jacuzzi, fireplace, and outdoor shower, plus an expansive rooftop deck with 360-degree views, built-in seating, and a fire pit. Villa Cortez combines spacious indoor and outdoor living for an exceptional Baja stay.</span></p><p><span style="display:initial;font-family:Arial, 'Arial Fallback';"><br/></span></p></div> 
+</div> 
+ <div class="u_1895895385 dmRespCol small-12 large-5 medium-5" id="1895895385"> <div class="u_1383436800 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1383436800" style="transition: opacity 1s ease-in-out 0s;"><p style="line-height: 1.5;"><strong style="font-weight:bold;display:initial;font-family:Questrial, 'Questrial Fallback';">Configuration:</strong><span style="display:initial;font-family:Questrial, 'Questrial Fallback';">&nbsp;4 Bedrooms / 4 Bathrooms</span></p><p style="line-height: 1.5;"><strong style="font-weight:bold;display:initial;font-family:Questrial, 'Questrial Fallback';">Bed Setup:</strong><span style="display:initial;font-family:Questrial, 'Questrial Fallback';">&nbsp;3 Kings + 1 Double Queen</span></p><p style="line-height: 1.5;"><strong style="font-weight:bold;display:initial;font-family:Questrial, 'Questrial Fallback';">Max Occupancy:</strong><span style="display:initial;font-family:Questrial, 'Questrial Fallback';"> <span style="display:initial;font-family:Questrial, 'Questrial Fallback';">Up to 10 Guests</span></span></p><p style="line-height: 1.5;"><strong style="font-weight:bold;display:initial;font-family:Questrial, 'Questrial Fallback';">Minimum Stay:</strong><span style="display:initial;font-family:Questrial, 'Questrial Fallback';"> <span style="display:initial;font-family:Questrial, 'Questrial Fallback';">6 Nights</span></span></p><p style="line-height: 1.5;"><span style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1385899902 hasBackgroundOverlay" id="1385899902"> <div class="dmRespColsWrapper" id="1535996289"> <div class="dmRespCol large-12 medium-12 small-12" id="1533719391"> <div class="dmPhotoGallery newPhotoGallery dmPhotoGalleryResp u_1547339299 photo-gallery-done text-layout-fixed captionAlignment-center_center photoGallery" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="asymetric2" data-desktop-columns="2" data-element-type="dPhotoGalleryId" data-desktop-text-layout="fixed" id="1547339299" data-placeholder="false" data-rows-to-show="1" data-desktop-caption-alignment="center_center"> <div class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1362986591"></div> 
+ <div class="layout-container asymetric2"> <div class="photogallery-row " data-index=""> <div class="photogallery-column row-direction column-2" data-index="0" style="width: 30%;"> <div index="0" class="photoGalleryThumbs animated  flex column width-50" data-index="0"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1126468908" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Frontal-View.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Frontal-View-640w.jpeg');"><img id="1312647083" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Frontal-View-1920w.jpeg" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1023308260" class="caption-container u_1023308260" style="display:none"> <span class="caption-inner"> <a id="1562093649" class="caption-button dmWidget  clearfix u_1562093649" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="1" class="photoGalleryThumbs animated  flex column width-50" data-index="1"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1783058917" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Dining-LivingRoom.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Dining-LivingRoom-640w.jpeg');"><img id="1162454293" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Dining-LivingRoom-1920w.jpeg" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1855871620" class="caption-container u_1855871620" style="display:none"> <span class="caption-inner"> <a id="1380134346" class="caption-button dmWidget  clearfix u_1380134346" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="2" class="photoGalleryThumbs animated  flex column width-50" data-index="2"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Elegant open-concept living room with panoramic ocean views." data-dm-force-device="mobile" class="u_1901765446" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Dining-Living-Main-View.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Dining-Living-Main-View-640w.jpeg');"><img id="1935014886" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Dining-Living-Main-View-1920w.jpeg" alt="Elegant open-concept living room with panoramic ocean views." aria-label="Elegant open-concept living room with panoramic ocean views." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1016782534" class="caption-container u_1016782534" style="display:none"> <span class="caption-inner"> <a id="1642715452" class="caption-button dmWidget  clearfix u_1642715452" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="3" class="photoGalleryThumbs animated  flex column width-50" data-index="3"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1478209959" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/LivingRoomViewCloseup.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/LivingRoomViewCloseup-640w.jpeg');"><img id="1637964494" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/LivingRoomViewCloseup-1920w.jpeg" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1436573275" class="caption-container u_1436573275" style="display:none"> <span class="caption-inner"> <a id="1904967856" class="caption-button dmWidget  clearfix u_1904967856" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-2" data-index="1"> <div index="4" class="photoGalleryThumbs animated  asymetric-big-image" data-index="4"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1607790258" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Cool-Island-View.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Cool-Island-View-640w.jpeg');"><img id="1847462783" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Cool-Island-View-1920w.jpeg" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1059620671" class="caption-container u_1059620671" style="display:none"> <span class="caption-inner"> <a id="1189961774" class="caption-button dmWidget  clearfix u_1189961774" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row  photogallery-hidden-row " data-index=""> <div class="photogallery-column column-2" data-index="0"> <div index="5" class="photoGalleryThumbs animated  asymetric-big-image" data-index="5"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Spacious living area with a gray sectional sofa, kitchen with wooden cabinets, and sunset view." data-dm-force-device="mobile" class="u_1394293606" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Copy+of+Villa+4+Kitchen+View.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Copy+of+Villa+4+Kitchen+View-640w.jpeg');"><img id="1259192339" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Copy+of+Villa+4+Kitchen+View-1920w.jpeg" alt="Spacious living area with a gray sectional sofa, kitchen with wooden cabinets, and sunset view." aria-label="Spacious living area with a gray sectional sofa, kitchen with wooden cabinets, and sunset view." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1849269602" class="caption-container u_1849269602" style="display:none"> <span class="caption-inner"> <a id="1899611227" class="caption-button dmWidget  clearfix u_1899611227" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column row-direction column-2" data-index="1" style="width: 30%;"> <div index="6" class="photoGalleryThumbs animated  flex column width-50" data-index="6"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Modern kitchen with premium finishes in a luxury villa in La Ventana." data-dm-force-device="mobile" class="u_1630592439" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Kitchen-back-view.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Kitchen-back-view-640w.jpeg');"><img id="1530425991" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Kitchen-back-view-1920w.jpeg" alt="Modern kitchen with premium finishes in a luxury villa in La Ventana." aria-label="Modern kitchen with premium finishes in a luxury villa in La Ventana." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1184191366" class="caption-container u_1184191366" style="display:none"> <span class="caption-inner"> <a id="1033932793" class="caption-button dmWidget  clearfix u_1033932793" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="7" class="photoGalleryThumbs animated  flex column width-50" data-index="7"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Open-concept kitchen leading to a private terrace with Sea of Cortez views." data-dm-force-device="mobile" class="u_1760242709" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Kitchen-View-Balcony.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Kitchen-View-Balcony-640w.jpeg');"><img id="1742033902" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Kitchen-View-Balcony-1920w.jpeg" alt="Open-concept kitchen leading to a private terrace with Sea of Cortez views." aria-label="Open-concept kitchen leading to a private terrace with Sea of Cortez views." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1778291180" class="caption-container u_1778291180" style="display:none"> <span class="caption-inner"> <a id="1620535946" class="caption-button dmWidget  clearfix u_1620535946" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="8" class="photoGalleryThumbs animated  flex column width-50" data-index="8"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Luxury primary bedroom with sunrise views and contemporary design." data-dm-force-device="mobile" class="u_1586529950" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Master-Bdr2-Sunrise.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Master-Bdr2-Sunrise-640w.jpeg');"><img id="1956067957" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Master-Bdr2-Sunrise-1920w.jpeg" alt="Luxury primary bedroom with sunrise views and contemporary design." aria-label="Luxury primary bedroom with sunrise views and contemporary design." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1507764486" class="caption-container u_1507764486" style="display:none"> <span class="caption-inner"> <a id="1945742995" class="caption-button dmWidget  clearfix u_1945742995" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="9" class="photoGalleryThumbs animated  flex column width-50" data-index="9"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Bedroom with a wooden bed, desk, and gray window shade. Bright natural light." data-dm-force-device="mobile" class="u_1506494492" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Copy+of+Villa+4+Primary+Bedroom.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Copy+of+Villa+4+Primary+Bedroom-640w.jpeg');"><img id="1779486449" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Copy+of+Villa+4+Primary+Bedroom-1920w.jpeg" alt="Bedroom with a wooden bed, desk, and gray window shade. Bright natural light." aria-label="Bedroom with a wooden bed, desk, and gray window shade. Bright natural light." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1980321032" class="caption-container u_1980321032" style="display:none"> <span class="caption-inner"> <a id="1925709287" class="caption-button dmWidget  clearfix u_1925709287" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row  photogallery-hidden-row " data-index=""> <div class="photogallery-column row-direction column-2" data-index="0" style="width: 30%;"> <div index="10" class="photoGalleryThumbs animated  flex column width-50" data-index="10"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Bedroom with wooden bed, nightstands, and concrete wall accent. Open doorway to kitchen." data-dm-force-device="mobile" class="u_1137332815" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/16C13BF2-6BC3-485C-A598-465F87750D93+2.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/16C13BF2-6BC3-485C-A598-465F87750D93+2-640w.jpeg');"><img id="1222097448" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/16C13BF2-6BC3-485C-A598-465F87750D93+2-1920w.jpeg" alt="Bedroom with wooden bed, nightstands, and concrete wall accent. Open doorway to kitchen." aria-label="Bedroom with wooden bed, nightstands, and concrete wall accent. Open doorway to kitchen." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1817840893" class="caption-container u_1817840893" style="display:none"> <span class="caption-inner"> <a id="1107047682" class="caption-button dmWidget  clearfix u_1107047682" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="11" class="photoGalleryThumbs animated  flex column width-50" data-index="11"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Bedroom with a bed, nightstands, decorative lights, and a small window." data-dm-force-device="mobile" class="u_1906204660" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/16C59D0B-CDA7-48A0-8CA8-A4B6897E95FF+2.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/16C59D0B-CDA7-48A0-8CA8-A4B6897E95FF+2-640w.jpeg');"><img id="1307254430" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/16C59D0B-CDA7-48A0-8CA8-A4B6897E95FF+2-1920w.jpeg" alt="Bedroom with a bed, nightstands, decorative lights, and a small window." aria-label="Bedroom with a bed, nightstands, decorative lights, and a small window." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1188003965" class="caption-container u_1188003965" style="display:none"> <span class="caption-inner"> <a id="1629620336" class="caption-button dmWidget  clearfix u_1629620336" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="12" class="photoGalleryThumbs animated  flex column width-50" data-index="12"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1106151333" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Kitchenettevertical.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Kitchenettevertical-640w.jpeg');"><img id="1675355786" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Kitchenettevertical-1920w.jpeg" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1013285693" class="caption-container u_1013285693" style="display:none"> <span class="caption-inner"> <a id="1851552296" class="caption-button dmWidget  clearfix u_1851552296" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="13" class="photoGalleryThumbs animated  flex column width-50" data-index="13"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Spacious double queen bedroom in a modern minimalistic luxury villa." data-dm-force-device="mobile" class="u_1277402833" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/DoubleQueenHorizontal.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/DoubleQueenHorizontal-640w.jpeg');"><img id="1445309962" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/DoubleQueenHorizontal-1920w.jpeg" alt="Spacious double queen bedroom in a modern minimalistic luxury villa." aria-label="Spacious double queen bedroom in a modern minimalistic luxury villa." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1716098380" class="caption-container u_1716098380" style="display:none"> <span class="caption-inner"> <a id="1179903024" class="caption-button dmWidget  clearfix u_1179903024" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-2" data-index="1"> <div index="14" class="photoGalleryThumbs animated  asymetric-big-image" data-index="14"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Bathroom with concrete sinks and shower, geometric tile accent wall, pendant lights." data-dm-force-device="mobile" class="u_1780291558" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/5BE1C6FD-F820-4A84-AFB5-8AFA2677721C+2.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/5BE1C6FD-F820-4A84-AFB5-8AFA2677721C+2-640w.jpeg');"><img id="1168449211" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/5BE1C6FD-F820-4A84-AFB5-8AFA2677721C+2-1920w.jpeg" alt="Bathroom with concrete sinks and shower, geometric tile accent wall, pendant lights." aria-label="Bathroom with concrete sinks and shower, geometric tile accent wall, pendant lights." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1406624477" class="caption-container u_1406624477" style="display:none"> <span class="caption-inner"> <a id="1251753874" class="caption-button dmWidget  clearfix u_1251753874" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row  photogallery-hidden-row " data-index=""> <div class="photogallery-column column-2" data-index="0"> <div index="15" class="photoGalleryThumbs animated  asymetric-big-image" data-index="15"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Bathroom with concrete sinks, patterned tile, black fixtures, and pendant lights." data-dm-force-device="mobile" class="u_1553120178" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Copy+of+Villa+4+Bathroom.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Copy+of+Villa+4+Bathroom-640w.jpeg');"><img id="1178824395" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Copy+of+Villa+4+Bathroom-1920w.jpeg" alt="Bathroom with concrete sinks, patterned tile, black fixtures, and pendant lights." aria-label="Bathroom with concrete sinks, patterned tile, black fixtures, and pendant lights." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1169206686" class="caption-container u_1169206686" style="display:none"> <span class="caption-inner"> <a id="1716220906" class="caption-button dmWidget  clearfix u_1716220906" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column row-direction column-2" data-index="1" style="width: 30%;"> <div index="16" class="photoGalleryThumbs animated  flex column width-50" data-index="16"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Private terrace with plunge pool and ocean views in La Ventana." data-dm-force-device="mobile" class="u_1472933949" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Patio-Main-Wide-Day.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Patio-Main-Wide-Day-640w.jpeg');"><img id="1796065778" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Patio-Main-Wide-Day-1920w.jpeg" alt="Private terrace with plunge pool and ocean views in La Ventana." aria-label="Private terrace with plunge pool and ocean views in La Ventana." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1358992647" class="caption-container u_1358992647" style="display:none"> <span class="caption-inner"> <a id="1333653601" class="caption-button dmWidget  clearfix u_1333653601" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="17" class="photoGalleryThumbs animated  flex column width-50" data-index="17"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1232599928" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Patio-Day-View-simple-a2a0e9f9.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Patio-Day-View-simple-a2a0e9f9-640w.jpeg');"><img id="1683037135" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Patio-Day-View-simple-a2a0e9f9-1920w.jpeg" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1730811067" class="caption-container u_1730811067" style="display:none"> <span class="caption-inner"> <a id="1670436378" class="caption-button dmWidget  clearfix u_1670436378" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="18" class="photoGalleryThumbs animated  flex column width-50" data-index="18"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1727330109" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Patio-Full-Day+%281%29.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Patio-Full-Day+%281%29-640w.jpeg');"><img id="1293687936" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Patio-Full-Day+%281%29-1920w.jpeg" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1116457533" class="caption-container u_1116457533" style="display:none"> <span class="caption-inner"> <a id="1530300188" class="caption-button dmWidget  clearfix u_1530300188" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="19" class="photoGalleryThumbs animated  flex column width-50" data-index="19"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Outdoor fire pit lounge at a luxury villa overlooking the Sea of Cortez." data-dm-force-device="mobile" class="u_1477422432" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Patio-Fireplace.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Patio-Fireplace-640w.jpeg');"><img id="1151034977" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Patio-Fireplace-1920w.jpeg" alt="Outdoor fire pit lounge at a luxury villa overlooking the Sea of Cortez." aria-label="Outdoor fire pit lounge at a luxury villa overlooking the Sea of Cortez." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1675492558" class="caption-container u_1675492558" style="display:none"> <span class="caption-inner"> <a id="1151211079" class="caption-button dmWidget  clearfix u_1151211079" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row  photogallery-hidden-row " data-index=""> <div class="photogallery-column row-direction column-2" data-index="0" style="width: 30%;"> <div index="20" class="photoGalleryThumbs animated  flex column width-50" data-index="20"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1384358581" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Rooftop-Deck-Clouds.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Rooftop-Deck-Clouds-640w.jpeg');"><img id="1928104279" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Rooftop-Deck-Clouds-1920w.jpeg" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1144247763" class="caption-container u_1144247763" style="display:none"> <span class="caption-inner"> <a id="1378747214" class="caption-button dmWidget  clearfix u_1378747214" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="21" class="photoGalleryThumbs animated  flex column width-50" data-index="21"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Private rooftop terrace with lounge seating and panoramic Sea of Cortez views." data-dm-force-device="mobile" class="u_1828553376" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Roof-Top-Deck.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Roof-Top-Deck-640w.jpeg');"><img id="1509638415" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Roof-Top-Deck-1920w.jpeg" alt="Private rooftop terrace with lounge seating and panoramic Sea of Cortez views." aria-label="Private rooftop terrace with lounge seating and panoramic Sea of Cortez views." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1682908399" class="caption-container u_1682908399" style="display:none"> <span class="caption-inner"> <a id="1239601394" class="caption-button dmWidget  clearfix u_1239601394" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="22" class="photoGalleryThumbs animated  flex column width-50" data-index="22"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1635667999" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Roof-Top-Deck-Sunrise2.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Roof-Top-Deck-Sunrise2-640w.jpeg');"><img id="1764541181" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Roof-Top-Deck-Sunrise2-1920w.jpeg" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1904859483" class="caption-container u_1904859483" style="display:none"> <span class="caption-inner"> <a id="1436810863" class="caption-button dmWidget  clearfix u_1436810863" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="23" class="photoGalleryThumbs animated  flex column width-50" data-index="23"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1607815850" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Roof-Top-Deck-Sunrise-3119c8ee.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Roof-Top-Deck-Sunrise-3119c8ee-640w.jpeg');"><img id="1640042375" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Roof-Top-Deck-Sunrise-3119c8ee-1920w.jpeg" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1941156305" class="caption-container u_1941156305" style="display:none"> <span class="caption-inner"> <a id="1303192283" class="caption-button dmWidget  clearfix u_1303192283" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-2" data-index="1"> <div index="24" class="photoGalleryThumbs animated  asymetric-big-image" data-index="24"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Beachfront villa with a sunrise view in La Ventana, Baja California Sur." data-dm-force-device="mobile" class="u_1320610364" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Sunrise-View2.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Sunrise-View2-640w.jpeg');"><img id="1836963694" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Sunrise-View2-1920w.jpeg" alt="Beachfront villa with a sunrise view in La Ventana, Baja California Sur." aria-label="Beachfront villa with a sunrise view in La Ventana, Baja California Sur." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1993403793" class="caption-container u_1993403793" style="display:none"> <span class="caption-inner"> <a id="1377784623" class="caption-button dmWidget  clearfix u_1377784623" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row  photogallery-hidden-row " data-index=""> <div class="photogallery-column column-2" data-index="0"> <div index="25" class="photoGalleryThumbs animated  asymetric-big-image" data-index="25"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Full moon rising over the Sea of Cortez viewed from a luxury villa in La Ventana." data-dm-force-device="mobile" class="u_1517662753" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Moon-View.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Moon-View-640w.jpeg');"><img id="1551988259" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Moon-View-1920w.jpeg" alt="Full moon rising over the Sea of Cortez viewed from a luxury villa in La Ventana." aria-label="Full moon rising over the Sea of Cortez viewed from a luxury villa in La Ventana." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1658678472" class="caption-container u_1658678472" style="display:none"> <span class="caption-inner"> <a id="1900995507" class="caption-button dmWidget  clearfix u_1900995507" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photoGalleryViewAll link" data-auto="photo-gallery-view-all" isall="true" data-viewall="View more" data-viewless="View less">View more</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1530765397" id="1530765397"> <div class="dmRespColsWrapper" id="1596310420"> <div class="u_1702951051 dmRespCol small-12 large-7 medium-7" id="1702951051"> <div class="u_1944837991 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1944837991" style="transition: opacity 1s ease-in-out 0s;"> <h2><span style="text-shadow: none; display: initial; color: var(--color_7);"><span style="text-shadow: none; display: initial; color: var(--color_7);">Villa Tres</span> 
+</span><span style="text-shadow: none; display: initial; color: var(--color_7); font-style: normal;">Ni&ntilde;os</span></h2> 
+</div> 
+ <a data-display-type="block" class="u_1904861625 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton" file="false" href="https://hotels.cloudbeds.com/reservation/5r6IWY" data-element-type="dButtonLinkId" id="1904861625" target="_blank"> <span class="iconBg" aria-hidden="true" id="1005024878"> <span class="icon hasFontIcon icon-star" id="1588631672"></span> 
+</span> 
+ <span class="text" id="1413640711">CHECK AVAILABILITY</span> 
+</a> 
+ <div class="u_1455615295 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1455615295" style="text-align: left; display: block; transition: none;"><p class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';">Villa Tres Ni&ntilde;os is a beautifully appointed three-bedroom, three-bathroom home with panoramic views of La Ventana Bay. The villa features two king bedrooms and one double-queen bedroom, each with a private bath, plush linens, all-natural bath amenities, individual A/C, and blackout shades.</span></p><p class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';"><br/></span></p><p class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';"><span style="display:initial;font-family:Arial, 'Arial Fallback';">Private outdoor spaces include a hot-and-cold jacuzzi, outdoor shower, multiple lounge areas, and secluded outdoor dining, with the convenience of restaurant service from</span> 
+</span></p><p class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';">the hotel.</span></p><p class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';"><br/></span></p><p class="text-align-justify"><span style="display:initial;font-family:Arial, 'Arial Fallback';">The open-concept second floor features two master suites, a comfortable living area, and a fully equipped kitchen with a gas range, full-size refrigerator, purified reverse-osmosis drinking water, and dining for six. A spacious terrace overlooking the Sea of Cortez is ideal for morning coffee, sunset cocktails, or simply taking in the view.</span></p><p><span style="display: initial;"><br/></span></p></div> 
+</div> 
+ <div class="u_1961152409 dmRespCol small-12 large-5 medium-5" id="1961152409"> <div class="u_1570619281 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1570619281" background-image":""}"="" style="transition: none; text-align: left; display: block;"><p><span style="display:initial;font-family:Questrial, 'Questrial Fallback';"><br/></span></p><p><span style="display:initial;font-family:Questrial, 'Questrial Fallback';"><br/></span></p><p><span style="display:initial;font-family:Questrial, 'Questrial Fallback';"><br/></span></p><p><span style="display:initial;font-family:Questrial, 'Questrial Fallback';"><br/></span></p><p><strong style="display:initial;font-family:Questrial, 'Questrial Fallback';">Configuration:</strong><span style="display:initial;font-family:Questrial, 'Questrial Fallback';"> <span style="display:initial;font-family:Questrial, 'Questrial Fallback';">3 Bedrooms / 3 Bathrooms</span></span></p><p><strong style="display:initial;font-family:Questrial, 'Questrial Fallback';">Bed Setup:</strong><span style="display:initial;font-family:Questrial, 'Questrial Fallback';"> <span style="display:initial;font-family:Questrial, 'Questrial Fallback';">2 Kings + 1 Double Queen</span></span></p><p><strong style="display:initial;font-family:Questrial, 'Questrial Fallback';">Max Occupancy:</strong><span style="display:initial;font-family:Questrial, 'Questrial Fallback';"> <span style="display:initial;font-family:Questrial, 'Questrial Fallback';">Up to 8 Guests</span></span></p><p><strong style="display:initial;font-family:Questrial, 'Questrial Fallback';">Minimum Stay:</strong><span style="display:initial;font-family:Questrial, 'Questrial Fallback';"> <span style="display:initial;font-family:Questrial, 'Questrial Fallback';">6 Nights</span></span></p><p style="line-height: 1.5;"><span style="display:initial;font-family:Arial, 'Arial Fallback';"><br/></span><span style="display: initial;"><br/></span></p></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1839732660" id="1839732660"> <div class="dmRespColsWrapper" id="1413709002"> <div class="dmRespCol large-12 medium-12 small-12" id="1187225886"> <div class="dmPhotoGallery newPhotoGallery dmPhotoGalleryResp u_1867010600 photo-gallery-done text-layout-fixed captionAlignment-center_center photoGallery" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="asymetric2" data-desktop-columns="2" data-element-type="dPhotoGalleryId" data-desktop-text-layout="fixed" id="1867010600" data-placeholder="false" data-rows-to-show="1" data-desktop-caption-alignment="center_center"> <div class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1362986591"></div> 
+ <div class="layout-container asymetric2"> <div class="photogallery-row " data-index=""> <div class="photogallery-column row-direction column-2" data-index="0" style="width: 30%;"> <div index="0" class="photoGalleryThumbs animated  flex column width-50" data-index="0"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Modern, two-story white stucco house with wooden deck and concrete accents under a bright blue sky." data-dm-force-device="mobile" class="u_1590836922" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Villa+1+-+Front.png" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Villa+1+-+Front-640w.png');"><img id="1507490823" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Villa+1+-+Front-1920w.png" alt="Modern, two-story white stucco house with wooden deck and concrete accents under a bright blue sky." aria-label="Modern, two-story white stucco house with wooden deck and concrete accents under a bright blue sky." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1559065880" class="caption-container u_1559065880" style="display:none"> <span class="caption-inner"> <a id="1773965733" class="caption-button dmWidget  clearfix u_1773965733" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="1" class="photoGalleryThumbs animated  flex column width-50" data-index="1"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Patio with gray chairs and ocean view under a bright blue sky." data-dm-force-device="mobile" class="u_1144900038" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/villa+1+-+Patio.png" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/villa+1+-+Patio-640w.png');"><img id="1965785210" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/villa+1+-+Patio-1920w.png" alt="Patio with gray chairs and ocean view under a bright blue sky." aria-label="Patio with gray chairs and ocean view under a bright blue sky." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1813349814" class="caption-container u_1813349814" style="display:none"> <span class="caption-inner"> <a id="1558242226" class="caption-button dmWidget  clearfix u_1558242226" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="2" class="photoGalleryThumbs animated  flex column width-50" data-index="2"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Two beds with white linens, flanked by black wall lamps. Nightstand with small pitcher and outlet." data-dm-force-device="mobile" class="u_1520376247" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_2357.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2357-640w.jpeg');"><img id="1007449407" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2357-1920w.jpeg" alt="Two beds with white linens, flanked by black wall lamps. Nightstand with small pitcher and outlet." aria-label="Two beds with white linens, flanked by black wall lamps. Nightstand with small pitcher and outlet." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1988340427" class="caption-container u_1988340427" style="display:none"> <span class="caption-inner"> <a id="1841694713" class="caption-button dmWidget  clearfix u_1841694713" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="3" class="photoGalleryThumbs animated  flex column width-50" data-index="3"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Living room with ocean view, gray sofas, marble coffee table, sliding glass doors, dining area." data-dm-force-device="mobile" class="u_1715059568" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_2384.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2384-640w.jpeg');"><img id="1979383391" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2384-1920w.jpeg" alt="Living room with ocean view, gray sofas, marble coffee table, sliding glass doors, dining area." aria-label="Living room with ocean view, gray sofas, marble coffee table, sliding glass doors, dining area." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1528974448" class="caption-container u_1528974448" style="display:none"> <span class="caption-inner"> <a id="1705594550" class="caption-button dmWidget  clearfix u_1705594550" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-2" data-index="1"> <div index="4" class="photoGalleryThumbs animated  asymetric-big-image" data-index="4"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Modern kitchen with island, stainless steel appliances, and wooden cabinets." data-dm-force-device="mobile" class="u_1714289537" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_2364.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2364-640w.jpeg');"><img id="1266343717" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2364-1920w.jpeg" alt="Modern kitchen with island, stainless steel appliances, and wooden cabinets." aria-label="Modern kitchen with island, stainless steel appliances, and wooden cabinets." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1867924979" class="caption-container u_1867924979" style="display:none"> <span class="caption-inner"> <a id="1321034283" class="caption-button dmWidget  clearfix u_1321034283" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row  photogallery-hidden-row " data-index=""> <div class="photogallery-column column-2" data-index="0"> <div index="5" class="photoGalleryThumbs animated  asymetric-big-image" data-index="5"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Bathroom with a speckled countertop, a large mirror, and a wooden door." data-dm-force-device="mobile" class="u_1722944547" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_2378-b37745fc.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2378-b37745fc-640w.jpeg');"><img id="1521315524" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2378-b37745fc-1920w.jpeg" alt="Bathroom with a speckled countertop, a large mirror, and a wooden door." aria-label="Bathroom with a speckled countertop, a large mirror, and a wooden door." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1164249247" class="caption-container u_1164249247" style="display:none"> <span class="caption-inner"> <a id="1690730729" class="caption-button dmWidget  clearfix u_1690730729" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column row-direction column-2" data-index="1" style="width: 30%;"> <div index="6" class="photoGalleryThumbs animated  flex column width-50" data-index="6"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Two lounge chairs on a concrete deck overlook a landscape with mountains in the distance." data-dm-force-device="mobile" class="u_1123696672" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_2386.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2386-640w.jpeg');"><img id="1555404848" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2386-1920w.jpeg" alt="Two lounge chairs on a concrete deck overlook a landscape with mountains in the distance." aria-label="Two lounge chairs on a concrete deck overlook a landscape with mountains in the distance." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1719800015" class="caption-container u_1719800015" style="display:none"> <span class="caption-inner"> <a id="1827638175" class="caption-button dmWidget  clearfix u_1827638175" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="7" class="photoGalleryThumbs animated  flex column width-50" data-index="7"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Open-concept living space with kitchen island and dining area. Neutral colors, natural light, and modern fixtures." data-dm-force-device="mobile" class="u_1115238009" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_2382.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2382-640w.jpeg');"><img id="1558313177" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2382-1920w.jpeg" alt="Open-concept living space with kitchen island and dining area. Neutral colors, natural light, and modern fixtures." aria-label="Open-concept living space with kitchen island and dining area. Neutral colors, natural light, and modern fixtures." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1239097671" class="caption-container u_1239097671" style="display:none"> <span class="caption-inner"> <a id="1144849401" class="caption-button dmWidget  clearfix u_1144849401" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="8" class="photoGalleryThumbs animated  flex column width-50" data-index="8"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Bedroom with a bed, white bedding, window, and a dark rug. Sunlight streams in." data-dm-force-device="mobile" class="u_1335740384" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_2368.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2368-640w.jpeg');"><img id="1838393215" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2368-1920w.jpeg" alt="Bedroom with a bed, white bedding, window, and a dark rug. Sunlight streams in." aria-label="Bedroom with a bed, white bedding, window, and a dark rug. Sunlight streams in." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1462635695" class="caption-container u_1462635695" style="display:none"> <span class="caption-inner"> <a id="1338084861" class="caption-button dmWidget  clearfix u_1338084861" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="9" class="photoGalleryThumbs animated  flex column width-50" data-index="9"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Two lounge chairs face the ocean on a sunny terrace." data-dm-force-device="mobile" class="u_1829865805" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_2387.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2387-640w.jpeg');"><img id="1869823054" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2387-1920w.jpeg" alt="Two lounge chairs face the ocean on a sunny terrace." aria-label="Two lounge chairs face the ocean on a sunny terrace." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1720306691" class="caption-container u_1720306691" style="display:none"> <span class="caption-inner"> <a id="1465050612" class="caption-button dmWidget  clearfix u_1465050612" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row  photogallery-hidden-row " data-index=""> <div class="photogallery-column row-direction column-2" data-index="0" style="width: 30%;"> <div index="10" class="photoGalleryThumbs animated  flex column width-50" data-index="10"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Modern kitchen with a long countertop, wooden cabinets, and large window." data-dm-force-device="mobile" class="u_1656830228" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_2406-7e3e5fb3.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2406-7e3e5fb3-640w.jpeg');"><img id="1464105094" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2406-7e3e5fb3-1920w.jpeg" alt="Modern kitchen with a long countertop, wooden cabinets, and large window." aria-label="Modern kitchen with a long countertop, wooden cabinets, and large window." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1100606035" class="caption-container u_1100606035" style="display:none"> <span class="caption-inner"> <a id="1200160456" class="caption-button dmWidget  clearfix u_1200160456" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="11" class="photoGalleryThumbs animated  flex column width-50" data-index="11"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Balcony with modern gray chairs, wooden accents, and a blue sky and ocean view." data-dm-force-device="mobile" class="u_1955694805" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_2392.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2392-640w.jpeg');"><img id="1767558386" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2392-1920w.jpeg" alt="Balcony with modern gray chairs, wooden accents, and a blue sky and ocean view." aria-label="Balcony with modern gray chairs, wooden accents, and a blue sky and ocean view." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1766989558" class="caption-container u_1766989558" style="display:none"> <span class="caption-inner"> <a id="1714419161" class="caption-button dmWidget  clearfix u_1714419161" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="12" class="photoGalleryThumbs animated  flex column width-50" data-index="12"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Shower with wood-look tile on one wall, a concrete-look wall with a shelf and small window, and dark fixtures." data-dm-force-device="mobile" class="u_1862310043" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_2377.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2377-640w.jpeg');"><img id="1896114334" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2377-1920w.jpeg" alt="Shower with wood-look tile on one wall, a concrete-look wall with a shelf and small window, and dark fixtures." aria-label="Shower with wood-look tile on one wall, a concrete-look wall with a shelf and small window, and dark fixtures." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1190844102" class="caption-container u_1190844102" style="display:none"> <span class="caption-inner"> <a id="1484359777" class="caption-button dmWidget  clearfix u_1484359777" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+ <div index="13" class="photoGalleryThumbs animated  flex column width-50" data-index="13"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Bathroom with long speckled countertop, two sinks, large mirror, and wood door." data-dm-force-device="mobile" class="u_1180808836" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_2378.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2378-640w.jpeg');"><img id="1642541842" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2378-1920w.jpeg" alt="Bathroom with long speckled countertop, two sinks, large mirror, and wood door." aria-label="Bathroom with long speckled countertop, two sinks, large mirror, and wood door." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1960673202" class="caption-container u_1960673202" style="display:none"> <span class="caption-inner"> <a id="1123793564" class="caption-button dmWidget  clearfix u_1123793564" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-2" data-index="1"> <div index="14" class="photoGalleryThumbs animated  asymetric-big-image" data-index="14"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Modern kitchen with large island, wood cabinets, and large window overlooking neighborhood." data-dm-force-device="mobile" class="u_1511526403" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/IMG_2406.jpeg" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2406-640w.jpeg');"><img id="1411377355" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/IMG_2406-1920w.jpeg" alt="Modern kitchen with large island, wood cabinets, and large window overlooking neighborhood." aria-label="Modern kitchen with large island, wood cabinets, and large window overlooking neighborhood." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1650808609" class="caption-container u_1650808609" style="display:none"> <span class="caption-inner"> <a id="1132150653" class="caption-button dmWidget  clearfix u_1132150653" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row  photogallery-hidden-row " data-index=""> <div class="photogallery-column column-2" data-index="0"> <div index="15" class="photoGalleryThumbs animated  asymetric-big-image" data-index="15"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Kitchen with a large window overlooking a beach with palm trees and a view of the sea." data-dm-force-device="mobile" class="u_1915178122" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Villa+1+-+Kitchen.png" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Villa+1+-+Kitchen-640w.png');"><img id="1004379744" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Villa+1+-+Kitchen-1920w.png" alt="Kitchen with a large window overlooking a beach with palm trees and a view of the sea." aria-label="Kitchen with a large window overlooking a beach with palm trees and a view of the sea." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1547199648" class="caption-container u_1547199648" style="display:none"> <span class="caption-inner"> <a id="1289607616" class="caption-button dmWidget  clearfix u_1289607616" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column row-direction column-2" data-index="1" style="width: 30%;"> <div index="16" class="photoGalleryThumbs animated  flex column width-50" data-index="16"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-label="Living room with gray furniture, large windows overlooking the ocean." data-dm-force-device="mobile" class="u_1074361581" data-image-url="https://irp.cdn-website.com/fab44011/dms3rep/multi/Villa+1+-+Living+room.png" style="background-image: url('https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Villa+1+-+Living+room-640w.png');"><img id="1241203788" data-src="https://irp.cdn-website.com/fab44011/dms3rep/multi/opt/Villa+1+-+Living+room-1920w.png" alt="Living room with gray furniture, large windows overlooking the ocean." aria-label="Living room with gray furniture, large windows overlooking the ocean." onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1398602781" class="caption-container u_1398602781" style="display:none"> <span class="caption-inner"> <a id="1571905776" class="caption-button dmWidget  clearfix u_1571905776" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photoGalleryViewAll link" data-auto="photo-gallery-view-all" isall="true" data-viewall="View more" data-viewless="View less">View more</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="sticky-widgets-container-global" id="1274624917"></div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="u_1898626460 dmRespRow" id="1898626460"> <div class="dmRespColsWrapper" id="1896467429"> <div class="dmRespCol small-12 u_1226448943 medium-4 large-4" id="1226448943"> <div class="u_1952677645 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1952677645" style="transition: opacity 1s ease-in-out 0s; text-align: left;"><p><strong style="display: initial; font-weight: bold;">LOCATION</strong></p></div> 
+ <div class="u_1953920576 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1953920576" style="transition: opacity 1s ease-in-out 0s;" new-inline-bind-applied="true" data-diy-text=""><p class="m-text-align-center"><span style="display: initial;"><span class="inline-data-binding" data-encoded-value="Q29ycmVkb3IgSXNsYSBDZXJyYWx2bywgMjMyMzIgTGEgUGF6LCBCYWphIENhbGlmb3JuaWEgU3VyLCBNZXhpY28=" data-inline-binding="content_library.global" data-inline-binding-encoded="Y29udGVudF9saWJyYXJ5Lmdsb2JhbA==">Corredor Isla Cerralvo, 23232 La Paz, Baja California Sur, Mexico</span></span></p><p class="m-text-align-center"><a href="https://maps.app.goo.gl/y7zMewr65m2bzooo7" target="_blank" runtime_url="https://maps.app.goo.gl/y7zMewr65m2bzooo7" type="url" style="display: initial;">Google maps</a></p></div> 
+ <div class="u_1703879172 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1703879172" style="transition: opacity 1s ease-in-out 0s;"><p><strong style="display: initial; font-weight: bold;">HOURS</strong></p></div> 
+ <div class="u_1467632689 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1467632689" style="transition: opacity 1s ease-in-out 0s;"><p class="text-align-left m-text-align-center m-size-15 size-16"><span class="font-size-16 m-font-size-15" m-font-size-set="true" style="display: initial;">Reception: 8am - 8pm</span></p><p class="text-align-left m-text-align-center m-size-15 size-16"><span class="font-size-16 m-font-size-15" m-font-size-set="true" style="display: initial;">Check-in: after 3pm</span></p><p class="text-align-left m-text-align-center m-size-15 size-16"><span class="font-size-16 m-font-size-15" m-font-size-set="true" style="display: initial;">Check-out: before 11am</span></p></div> 
+</div> 
+ <div class="dmRespCol small-12 u_1898799141 medium-4 large-4" id="1898799141"> <div class="u_1259536960 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1259536960" style="transition: opacity 1s ease-in-out 0s;"><p><strong style="display: initial; font-weight: bold;">NAVIGATION</strong></p></div> 
+ <nav class="u_1966393557 effect-text-color unifiednav_vertical main-navigation unifiednav dmLinksMenu" data-auto="links-menu" role="navigation" layout-main="vertical_nav_layout_1" layout-sub="" data-show-vertical-sub-items="HOVER" id="1966393557" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" data-logo-src="https://lirp.cdn-website.com/fab44011/dms3rep/multi/opt/todo-bien-logo-white-1920w.png" alt="" data-nav-structure="VERTICAL" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container unav-top  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="home"> <span class="nav-item-text " data-link-text="
+         HOME
+        " data-auto="page-text-style">HOME<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/about" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="about"> <span class="nav-item-text " data-link-text="
+         ABOUT
+        " data-auto="page-text-style">ABOUT<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/rooms" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="rooms"> <span class="nav-item-text " data-link-text="
+         ROOMS
+        " data-auto="page-text-style">ROOMS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/villas" class="unifiednav__item unav-item unav-top-item  dmNavItemSelected    " target="" data-target-page-alias="villas" aria-current="page" data-auto="selected-page"> <span class="nav-item-text " data-link-text="VILLAS" data-auto="page-text-style">VILLAS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/restaurant" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="restaurant"> <span class="nav-item-text " data-link-text="
+         RESTAURANT
+        " data-auto="page-text-style">RESTAURANT<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/menus" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="menus"> <span class="nav-item-text " data-link-text="MENUS" data-auto="page-text-style">MENUS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/activities" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="activities"> <span class="nav-item-text " data-link-text="
+         ACTIVITIES
+        " data-auto="page-text-style">ACTIVITIES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/events" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="events"> <span class="nav-item-text " data-link-text="EVENTS" data-auto="page-text-style">EVENTS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/Residential" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="real-estate"> <span class="nav-item-text " data-link-text="RESIDENTIAL" data-auto="page-text-style">RESIDENTIAL<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/contact-us" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="contact-us"> <span class="nav-item-text " data-link-text="
+         CONTACT
+        " data-auto="page-text-style">CONTACT<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/spa-info" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="spa-info"> <span class="nav-item-text " data-link-text="SPA INFO" data-auto="page-text-style">SPA INFO<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/guestinfo" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="guestinfo"> <span class="nav-item-text " data-link-text="GUEST INFO" data-auto="page-text-style">GUEST INFO<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/privacy-and-cookies" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="privacy-and-cookies"> <span class="nav-item-text " data-link-text="
+         PRIVACY & COOKIES
+        " data-auto="page-text-style">PRIVACY &amp; COOKIES<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="/terms-and-conditions" class="unifiednav__item unav-item unav-top-item    " target="" data-target-page-alias="terms-and-conditions"> <span class="nav-item-text " data-link-text="
+         TERMS & CONDITIONS
+        " data-auto="page-text-style">TERMS &amp; CONDITIONS<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+</div> 
+ <div class="dmRespCol small-12 u_1574624583 medium-4 large-4" id="1574624583"> <div class="u_1080237171 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1080237171" style="transition: opacity 1s ease-in-out 0s;"><p><strong style="display: initial; font-weight: bold; text-transform: uppercase;">Contact</strong></p></div> 
+ <div class="u_1536258478 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1536258478" style="transition: opacity 1s ease-in-out;" new-inline-bind-applied="true" data-diy-text="" data-binding="W3siYmluZGluZ05hbWUiOiJ0ZXh0IiwidmFsdWUiOiJjb250ZW50X2xpYnJhcnkuZ2xvYmFsLnBob25lLnBob25lIn1d"><p class="m-text-align-center"><a href="tel:+52 612 111 4520" type="call" style="display: initial;" runtime_url="tel:+52 612 111 4520"><span class="inline-data-binding" data-encoded-value="KzUyIDYxMiAxMTEgNDUyMA==" data-inline-binding="" data-inline-binding-encoded="Y29udGVudF9saWJyYXJ5Lmdsb2JhbC5waG9uZS4zMTY3ODg4NTE=">+52 612 111 4520</span></a></p><p class="m-text-align-center"><a href="mailto:manager@hoteltodobien.com" type="email" style="display: initial;"><span class="inline-data-binding" data-encoded-value="bWFuYWdlckBob3RlbHRvZG9iaWVuLmNvbQ==" data-inline-binding="" data-inline-binding-encoded="Y29udGVudF9saWJyYXJ5Lmdsb2JhbC5lbWFpbC5mcm9udCBkZXNr">manager@hoteltodobien.com</span></a></p></div> 
+ <div class="u_1983391348 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1983391348" style="transition: opacity 1s ease-in-out 0s;"><p><strong style="display: initial; font-weight: bold;">FOLLOW US</strong></p></div> 
+ <div class="u_1623150787 align-center text-align-center dmSocialHub gapSpacing" id="1623150787" dmle_extension="social_hub" data-element-type="social_hub" wr="true" networks="" icon="true" surround="true" adwords=""> <div class="socialHubWrapper"> <div class="socialHubInnerDiv " data-auto="social-hub-inner"> <a href="https://facebook.com/hoteltodobien" target="_blank" dm_dont_rewrite_url="true" aria-label="facebook" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Facebook&apos;)"> <span class="dmSocialFacebook dm-social-icons-facebook oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+ <a href="https://instagram.com/hoteltodobien" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style3" aria-hidden="true" data-hover-effect=""></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1294391794 widget-9cfad1 dmCustomWidget" data-lazy-load="false" data-title="" id="1294391794" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="9cfad1cdccff47ffa02488c211e09fd0" data-widget-version="87" data-widget-config="eyJsYW5ndWFnZURyb3Bkb3duIjoiZW4iLCJndGJhY2tncm91bmRjb2xvciI6IiNmZmZmZmYiLCJsY2IxIjp0cnVlLCJsY2IxOSI6dHJ1ZX0="> <div id="google_translate_element"></div> 
+ <script type="text/javascript" data-cookieconsent="functional" data-cookieconsent-ignore="true"></script> 
+ <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit" data-cookieconsent="functional" data-cookieconsent-ignore="true"></script> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1976417913 dmRespRow fullBleedChanged fullBleedMode mobile-columns-reversed" id="1976417913"> <div class="dmRespColsWrapper" id="1994438319"> <div class="dmRespCol small-12 medium-12 large-12" id="1026142224"> <div class="dmRespRow u_1543485245" id="1543485245"> <div class="dmRespColsWrapper" id="1069151705"> <div class="dmRespCol large-6 medium-6 small-12" id="1939602424"> <div class="widget-1f5975 u_1106274564 dmCustomWidget" data-lazy-load="" data-title="" id="1106274564" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="1f5975986930429f819d4cd2154b5c4a" data-widget-version="25" data-widget-config="eyJyZXZlcnNlRmxhZyI6bnVsbCwiY29weXJpZ2h0VGV4dCI6IjxwIGNsYXNzPVwicnRlQmxvY2tcIj5BbGwgUmlnaHRzIFJlc2VydmVkIHwgSG90ZWwgVG9kbyBCaWVuIHwgUG93ZXJlZCBieSA8YSB2YWx1ZT1cImh0dHBzOi8vd3d3LmNsb3VkYmVkcy5jb20vaG90ZWwtbWFuYWdlbWVudC1zb2Z0d2FyZS9cIiBsYWJlbD1cIlwiIHR5cGU9XCJ1cmxcIiB0YXJnZXQ9XCJfYmxhbmtcIiBocmVmPVwiaHR0cHM6Ly93d3cuY2xvdWRiZWRzLmNvbS9ob3RlbC1tYW5hZ2VtZW50LXNvZnR3YXJlL1wiIGRhdGEtcnVudGltZS11cmw9XCJodHRwczovL3d3dy5jbG91ZGJlZHMuY29tL2hvdGVsLW1hbmFnZW1lbnQtc29mdHdhcmUvXCI+Q2xvdWRiZWRzIEhvdGVsIFNvZnR3YXJlPC9hPjwvcD4ifQ=="> <div class="copyright"> <div>&copy; 2026&nbsp;</div> 
+ <div><p class="rteBlock">All Rights Reserved | Hotel Todo Bien | Powered by <a value="https://www.cloudbeds.com/hotel-management-software/" label="" type="url" target="_blank" href="https://www.cloudbeds.com/hotel-management-software/" data-runtime-url="https://www.cloudbeds.com/hotel-management-software/">Cloudbeds Hotel Software</a></p></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespCol large-6 medium-6 small-12" id="1394893350"> <div class="dmNewParagraph u_1897906576" data-element-type="paragraph" data-version="5" id="1897906576" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="text-align-center m-size-14 size-15"><a href="/terms-and-conditions" runtime_url="/terms-and-conditions" type="page" class="font-size-15 m-font-size-14" m-font-size-set="true" style="display: initial;">Terms &amp; Conditions</a><span single-space="true" class="font-size-15 m-font-size-14" style="display: initial;"> <span class="font-size-15 m-font-size-14" style="display: initial;"></span> 
+</span><span class="font-size-15 m-font-size-14" style="display: initial;" m-font-size-set="true">/</span><span single-space="true" class="font-size-15 m-font-size-14" style="display: initial;"> <span class="font-size-15 m-font-size-14" style="display: initial;"></span> 
+</span><a href="/privacy-and-cookies" runtime_url="/privacy" type="page" class="font-size-15 m-font-size-14" m-font-size-set="true" style="display: initial;">Privacy &amp; Cookie Statement</a></p></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+    </div>
+</div>
+<script type="text/javascript" id="d_track_sp"></script>
+<div style="display:none;" id="P6iryBW0Wu"></div>
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" data-auto="pswp-close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" data-auto="pswp-share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="fb-root"
+        data-locale="en"></div>
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup" data-auto="popup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" data-auto="popup-close" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization"></script>
+<script type="text/javascript"></script>
+<script></script>
+<style></style>
+</body>
+</html>

@@ -232,6 +232,23 @@ side were built: Oasis Kite's camp (kind camp, Leão per-event API `GET /api/eve
 the call the engine's own calendar makes; helpers in the adapter, candidate for `src/offers/engines/leao.ts`), the
 Djerbakite villa and Kite Aventure's AMWEJ camp (both price on request, on the request backlog for current prices).
 
+## Baja California and USA (2026-10-14)
+
+Baja (13 adapters): La Ventana (Aqua Ventana, La Ventana Beach Resort + the KiteMex camp, Chilochill, La Ventana
+Hotel, the LVKC Villa Brisa camp, Playa Central camps), El Sargento (Azul, Todo Bien), Los Barriles (Vela Baja at
+Playa del Sol, Wahoo Wind / Hotel Hondo). USA (6): Hatteras Island (Watermen's Retreat, Kite Club Hatteras house +
+camp, Hatteras Island Vacation Rentals), Cascade Kiteboarding's Maui camp, Floras Lake House (Oregon). Deferred:
+Cascade's Hatteras and Hood River camps (no 2027 dates); Waves Village is on the request backlog.
+
+Live engines: ThinkReservations' published Markdown availability (Aqua Ventana, `/accommodations.md?...`, anonymous
+and robots-allowed), Streamline via the WordPress plugin proxy (Watermen's), LVKC's own camps JSON, Squarespace
+product stock (Playa Central). Not used: Cloudbeds `/booking/*` (403 / not-used list), eZee ipms247 (403),
+ThinkReservations' secure.thinkreservations.com (robots `Disallow: /`), OwnerRez widgets (robots), Mirai, Acuity cart.
+Pins: "Avon" (Hatteras) and "Maui" (North Shore, the camp page names no beach) in `KNOWN_PINS`.
+
+Known gap: `lib/images.ts` downloads photos with a browser User-Agent; velabaja.com answers that with 403 (and our
+honest bot UA with 200), so Vela Baja has no photos yet.
+
 ## Refresh strategy (recommendation)
 
 - Booking-engine / Shopify / app JSON: daily `--slots` (in the 06:00 UTC monitor cron, job `offer-slots`,

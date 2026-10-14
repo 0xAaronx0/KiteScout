@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script></script>
+<script></script>
+<script defer src="/_vercel/insights/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Ventana Kite Camp | Kiteboarding School</title>
+  <meta name="description" content="Kiteboarding school and premium kite camp experience in La Ventana Baja California Sur, Mexico.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script></script>
+  <link rel="canonical" href="https://www.laventanacamps.com/">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/icon.png" sizes="512x512">
+  <link rel="apple-touch-icon" href="/apple-icon.png">
+  <meta name="theme-color" content="#1D3E93">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="La Ventana Kite Camp">
+  <meta property="og:title" content="La Ventana Kite Camp | Kiteboarding School">
+  <meta property="og:description" content="Kiteboarding school and premium kite camp experience in La Ventana Baja California Sur, Mexico.">
+  <meta property="og:url" content="https://www.laventanacamps.com/">
+  <meta property="og:image" content="https://www.laventanacamps.com/og.png">
+  <meta property="og:image:width" content="2000">
+  <meta property="og:image:height" content="949">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_MX">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="La Ventana Kite Camp | Kiteboarding School">
+  <meta name="twitter:description" content="Kiteboarding school and premium kite camp experience in La Ventana Baja California Sur, Mexico.">
+  <meta name="twitter:image" content="https://www.laventanacamps.com/og.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "SportsActivityLocation",
+    "LocalBusiness"
+  ],
+  "name": "La Ventana Kite Camp",
+  "alternateName": "LVKC",
+  "url": "https://www.laventanacamps.com/",
+  "logo": "https://www.laventanacamps.com/assets/images/lvkc_logo.png",
+  "image": "https://www.laventanacamps.com/og.png",
+  "description": "Premium yet laid-back kiteboarding camps and private lessons in La Ventana, Baja California Sur, Mexico.",
+  "telephone": "+52 612 197 4886",
+  "email": "laventanacamps@gmail.com",
+  "priceRange": "$$",
+  "sport": "Kiteboarding",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "La Ventana",
+    "addressRegion": "Baja California Sur",
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 24.0522,
+    "longitude": -109.993
+  },
+  "sameAs": [
+    "https://www.instagram.com/laventana_kitecamp",
+    "https://www.facebook.com/laventanakitecamp"
+  ]
+}
+  </script>
+</head>
+<body class="lang-en editorial-experiment">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX27HBP6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <header data-section-id="header">
+    <div class="container header-container">
+      <a href="/" class="logo">
+        <img class="logo-img" src="/assets/images/lvkc_logo.png" alt="LVKC — La Ventana Kite Camp">
+      </a>
+      <nav>
+        <div class="nav-links">
+          <a href="/" class="active"><span lang="en">Home</span><span lang="es">Inicio</span></a>
+          <a href="/kite-camps"><span lang="en">Camps</span><span lang="es">Camps</span></a>
+          <a href="/la-ventana-kite-lessons"><span lang="en">Kite School</span><span lang="es">Escuela de Kite</span></a>
+          <a href="/about-us-meet-the-team"><span lang="en">About Us</span><span lang="es">Nosotros</span></a>
+        </div>
+        <div class="lang-switch">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="es">ES</button>
+        </div>
+      </nav>
+      <button class="burger-menu" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  <section class="hero" id="hero" data-section-id="hero">
+    <div class="hero-video-container">
+      <video id="hero-video" src="La_ventana_Hero.mp4" poster="assets/images/hero_poster.jpg" playsinline="" muted="" loop="" autoplay="" preload="metadata"></video>
+      <div class="hero-video-overlay"></div>
+    </div>
+    <div class="container hero-overlay-stage">
+      <div class="hero-content">
+        <h1><span lang="en"><strong><span style="font-size: 0.7em;">Kite Camps &amp; Private Lessons<br></span></strong><span style="font-size: 0.7em;">La Ventana, México</span><br></span><span lang="es">Premium Kite Camp y <strong>Escuela de Kitesurf</strong></span></h1>
+        <p lang="en"><span style="font-size: 0.9em;">We're a small kiteboarding community led by Alina and Louis.<br>Join us for a hosted camp week or book private 1-to-1 coaching while you're in La Ventana.</span>
+<br></p>
+        <p lang="es"><br></p>
+        <div class="hero-ctas">
+          <a href="/kite-camps" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.85rem; min-width: 190px;">
+            <span lang="en">Explore Camps</span>
+            <span lang="es">Explorar los Camps</span>
+          </a>
+          <a href="/la-ventana-kite-lessons" class="btn btn-white" style="padding: 0.65rem 1.4rem; font-size: 0.85rem; min-width: 190px;">
+            <span lang="en">Explore Lessons</span>
+            <span lang="es">Reservar Clases</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <span lang="en">Scroll to explore</span>
+      <span lang="es">Desliza para explorar</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+    </div>
+  </section>
+  <section class="coastal-quote-section" data-section-id="brand-quote">
+    <div class="coastal-quote-container">
+      <p class="coastal-quote-text">
+        <span lang="en">LVKC is the people who welcome you here.</span>
+        <span lang="es">Algunos vienen por el kite. Se quedan por la gente, el lugar y la forma en que La Ventana los hace sentir.</span>
+      </p>
+      <p class="coastal-quote-author">We organize small-group kite camps and personalized coaching in La Ventana. We'll help you make the most of the wind, progress at your own pace and meet other people who came here to kite.</p>
+    </div>
+  </section>
+  <section class="stats-strip" data-section-id="stats" data-section-name="Inicio — Trayectoria">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-count="5">
+          <div class="stat-number">
+            <span class="stat-value">0</span><span class="stat-unit">years</span>
+          </div>
+          <div class="stat-label">
+            <span lang="en">Rooted in La Ventana <br> since 2021</span>
+            <span lang="es">Con raíces en La Ventana desde 2021</span>
+          </div>
+        </div>
+        <div class="stat-item" data-count="100">
+          <div class="stat-number">
+            <span class="stat-value">0</span><span class="stat-unit">%</span>
+          </div>
+          <div class="stat-label">
+            <span lang="en">Personalized service</span>
+            <span lang="es">Servicio personalizado</span>
+          </div>
+        </div><div class="stat-item" data-count="30">
+          <div class="stat-number">
+            <span class="stat-value">0</span><span class="stat-unit">%</span>
+          </div>
+          <div class="stat-label">
+            <span lang="en">Returning rate</span>
+            <span lang="es">Tasa de clientes recurrentes</span>
+          </div>
+        </div><div class="stat-item" data-count="120">
+          <div class="stat-number">
+            <span class="stat-value">0</span>
+          </div>
+          <div class="stat-label">
+            <span lang="en">Satisfied camp guests</span>
+            <span lang="es">Huéspedes de camps satisfechos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="ventana-connection" data-section-id="ventana-connection" data-section-name="Inicio — Conexión con La Ventana">
+    <div class="ventana-connection-media">
+      <img src="assets/images/LVKC_EDIT-3.jpg" alt="la ventana kite camp">
+    </div>
+    <div class="ventana-connection-inner">
+      <div class="ventana-connection-heading">
+        <span class="ventana-connection-eyebrow">
+          <span lang="en">Our home base</span><span lang="es">Nuestra base</span>
+        </span>
+        <h2>
+          <span lang="en">La Ventana sets the rhythm.</span><span lang="es">La Ventana marca el ritmo.</span>
+        </h2>
+      </div>
+      <div class="ventana-connection-text">
+        <p lang="en">Between the Sea of Cortez and the desert, La Ventana has steady winter wind from November to April and conditions for every level. Mornings are slow. When the wind comes up, we head to the water. That rhythm shapes everything we do.</p>
+        <p lang="es">Entre el Mar de Cortés y el desierto, La Ventana tiene viento constante de invierno de noviembre a abril y condiciones para todos los niveles. Las mañanas son tranquilas. Cuando entra el viento, nos vamos al agua. Ese ritmo define todo lo que hacemos.</p>
+      </div>
+    </div>
+  </section><section class="editorial-experience texture-watermark" id="selector" data-section-id="editorial-selector">
+    <div class="editorial-shell">
+      <div class="editorial-intro editorial-intro--center">
+        <h2>
+          <span lang="en"><span style="font-size: 0.8em;">Two ways </span><span style="color: rgb(176, 85, 49); font-size: 0.8em;">to kite with us</span>
+<em></em></span>
+          <span lang="es"><span style="color: rgb(176, 85, 49);">Elige tu experiencia</span></span>
+        </h2>
+        <p lang="en"><span style="font-size: 1.1em;">Join a week-long camp or book your lessons around your own trip.</span></p>
+        <p lang="es"><span style="font-size: 1.1em;">Únete a un camp de una semana o reserva coaching durante tu propio viaje.</span></p>
+      </div>
+      <div class="experience-path-grid">
+        <article class="experience-path-card experience-path-card--camps">
+          <img src="assets/images/c4d12728-53a6-4fd9-a5a0-91029ac24618.jpg" alt="la ventana kiteboarding">
+          <div class="experience-path-overlay"></div>
+          <div class="experience-path-content">
+            <span class="editorial-index">01 · Season 2026/27</span>
+            <div>
+              <h3><span lang="en"><span style="font-size: 0.8em;">Join a Camp</span></span><span lang="es">Kite Camps</span></h3>
+              <p lang="en">Spend six nights with us in a beachfront house, share meals with a small group and get up to 15 hours of private coaching over five days.
+</p>
+              <p lang="es">Una experiencia de seis noches frente al mar, 15 horas de coaching privado, comidas preparadas por un chef, y un grupo increíble con el que compartir la experiencia.</p>
+            </div>
+            <a class="editorial-link" href="/kite-camps">
+              <span lang="en">Explore camps</span><span lang="es">Explorar camps y fechas</span><span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+        <article class="experience-path-card experience-path-card--school">
+          <img src="assets/images/LVKC-11.jpg" alt="kiteboarding lessons la ventana mexico">
+          <div class="experience-path-overlay"></div>
+          <div class="experience-path-content">
+            <span class="editorial-index">02 · Private 1 to 1</span>
+            <div>
+              <h3><span lang="en"><span style="font-size: 0.8em;">Book<br>Private Lessons</span></span><span lang="es">Escuela de Kite</span></h3>
+              <p lang="en">Already staying in La Ventana? Book 1-to-1 sessions with us. All levels welcome. All gear included.</p>
+              <p lang="es">Sesiones personalizadas para principiantes o riders con experiencia que buscan su siguiente avance.</p>
+            </div>
+            <a class="editorial-link" href="/la-ventana-kite-lessons">
+              <span lang="en">Explore Lessons</span><span lang="es">Explorar paquetes de clases privadas</span><span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section class="kite-gallery-strip" data-section-id="kite-gallery-strip" data-section-name="Inicio — Galería Carrusel">
+    <div class="kite-gallery-head">
+      <span class="tagline"><span lang="en">Life on the Water</span><span lang="es">Vida en el Agua</span></span>
+      <h2><span lang="en"><span style="font-size: 0.8em;">Scenes from the season</span></span><span lang="es">Escenas de la temporada</span></h2>
+      <p class="kite-gallery-hint"><span lang="en"><span style="font-size: 0.9em;">A glimpse of life at LVKC</span></span><span lang="es">Un vistazo a la vida del campamento, desde el primer despegue hasta las sesiones al atardecer.</span></p>
+    </div>
+    <div class="kite-gallery-viewport">
+      <button class="kite-gallery-nav kite-gallery-nav--prev" type="button" aria-label="Previous photos">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"></svg>
+      </button>
+      <div class="kite-gallery-track" id="kiteGalleryTrack">
+        <img src="assets/images/lvkc_marzo_104.jpg" alt="all inclusive kite camp mexico" loading="lazy">
+        <img src="assets/images/lvkc_marzo_161.jpg" alt="kitesurfing la ventana mexico" loading="lazy">
+        <img src="assets/images/lvkc_marzo_73.jpg" alt="kiteboarding camp baja" loading="lazy">
+        <img src="assets/images/lvkc_enero_121.jpg" alt="kite camp mexico" loading="lazy">
+        <img src="assets/images/lvkc_enero_79.jpg" alt="learn to kitesurf la ventana" loading="lazy">
+        <img src="assets/images/lvkc_enero_91.jpg" alt="la ventana kiteboarding" loading="lazy">
+        <img src="assets/images/lvkc_canon_70.jpg" alt="la ventana kiteboarding" loading="lazy">
+        <img src="assets/images/lvkc_14.jpg" alt="la ventana kiteboarding" loading="lazy">
+        <img src="assets/images/lvkc_10.jpg" alt="la ventana kiteboarding" loading="lazy">
+        <img src="assets/images/pau_2.jpg" alt="kiteboarding lessons la ventana mexico" loading="lazy">
+        <img src="assets/images/IMG_2543.jpeg" alt="la ventana kite camp" loading="lazy">
+        <img src="assets/images/IMG_2695.jpeg" alt="all inclusive kite camp mexico" loading="lazy">
+        <img src="assets/images/wa_image_1.jpeg" alt="kitesurfing la ventana mexico" loading="lazy">
+        <img src="assets/images/wa_image_2.jpeg" alt="kiteboarding camp baja" loading="lazy">
+        <img src="assets/images/wa_image_3.jpeg" alt="kite camp mexico" loading="lazy">
+        <img src="assets/images/wa_image_4.jpeg" alt="learn to kitesurf la ventana" loading="lazy">
+        <img src="assets/images/wa_image_5.jpeg" alt="la ventana kiteboarding" loading="lazy">
+        <img src="assets/images/wa_image_6.jpeg" alt="la ventana kiteboarding" loading="lazy">
+      </div>
+      <button class="kite-gallery-nav kite-gallery-nav--next" type="button" aria-label="More photos">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"></svg>
+      </button>
+    </div>
+  </section>
+  <section class="section-bg-light our-hosts-section" data-section-id="our-hosts" data-section-name="Inicio — Anfitriones (Bienvenida)" style="display: none !important;">
+    <div class="container">
+      <div class="split-grid our-hosts-grid">
+        <div class="grid-content-wrapper our-hosts-content">
+          <span class="tagline our-hosts-eyebrow">
+            <span lang="en">Our Hosts</span><span lang="es">Tus Anfitriones</span>
+          </span>
+          <h2>
+            <span lang="en">LVKC is the people who welcome you here.</span><span lang="es">LVKC son las personas que te reciben aquí.</span>
+          </h2>
+          <span class="our-hosts-rule" aria-hidden="true"></span>
+          <p lang="en">We organize small-group kite camps and personalized coaching in La Ventana. We'll help you make the most of the wind, progress at your own pace and meet other people who came here to kite.</p>
+          <p lang="es">Organizamos kite camps en grupos reducidos y coaching personalizado en La Ventana. Te ayudamos a aprovechar el viento al máximo, avanzar a tu propio ritmo y conocer a otras personas que vinieron a hacer kite.</p>
+        </div>
+        <div class="grid-image-wrapper our-hosts-image">
+          <img src="assets/images/WhatsApp_Image_2026-08-26_at_10.27.58.jpeg" alt="LVKC hosts welcoming guests on the beach in La Ventana">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-bg-alt" data-section-id="host" style="padding-bottom: 3rem;">
+    <div class="container">
+      <div class="split-grid">
+        <div class="grid-image-wrapper">
+          <img src="assets/images/ddc21fa1-3fd2-4b44-b976-31b89176434a.jpg" alt="la ventana kiteboarding">
+        </div>
+        <div class="grid-content-wrapper">
+          <span class="tagline"><span lang="en">Meet the Founders</span><span lang="es">Conoce a los Fundadores</span></span>
+          <h2><span lang="en">Alina &amp; Louis</span><span lang="es">Alina y Louis</span></h2>
+          <p lang="en"><br>We live in La Ventana and run LVKC together. Alina looks after the hosting, logistics and daily details. Louis leads our kite school and coaching team. We host every camp ourselves, so you'll know who you're talking to before you arrive.
+<strong>Owner-operated business. 100% hands-on service.</strong>&nbsp;</p>
+          <p lang="es"><strong>Negocio operado por sus dueños. Servicio 100% personalizado.</strong> Tus guías expertos, tanto dentro como fuera del agua. Alina se encarga de la experiencia, la hospitalidad y la logística, mientras que Louis dirige nuestras operaciones profesionales de kitesurf.</p>
+          <p lang="en"><br></p>
+          <p lang="es">Convertimos nuestra pasión por el kitesurf, los viajes y las conexiones significativas en la experiencia LVKC.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-bg-light" data-section-id="testimonials" style="padding: 2rem 0;">
+    <div class="container">
+      <div class="section-header" style="text-align: center; margin-bottom: 0;">
+        <span class="tagline"><span lang="en"><span style="color: rgb(34, 43, 50);">First-hand Experience</span></span><span lang="es">Opiniones de Huéspedes</span></span>
+        <h2><span lang="en">From people who have kited with us
+</span><span lang="es">Testimonios y Buena Vibra</span></h2>
+      </div>
+    </div>
+  </section>
+  <section class="section-bg-light" data-section-id="google-reviews-home" data-section-name="Reseñas de Google (Inicio)" style="padding: 0 0 5rem 0;">
+    <div class="container">
+      <div class="reviews-platform-block">
+        <div class="reviews-platform-header">
+          <div class="platform-logo-wrapper">
+            <span class="google-logo-text"><span style="color: #4285F4;">G</span><span style="color: #EA4335;">o</span><span style="color: #FBBC05;">o</span><span style="color: #4285F4;">g</span><span style="color: #34A853;">l</span><span style="color: #EA4335;">e</span> Reviews</span>
+          </div>
+        </div>
+        <div class="reviews-cards-row">
+          <a href="https://maps.app.goo.gl/rJLRqxbAchnrfpvw7" class="review-card-modern google-card" target="_blank" rel="noopener noreferrer">
+            <div class="review-card-header">
+              <div class="review-stars" aria-hidden="true">★★★★★</div>
+              <span class="review-card-eyebrow"><span lang="en"><span style="color: rgb(11, 23, 51);">Alex Callan</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Experiencias de huéspedes</span></span></span>
+              <p class="review-text">
+                <span lang="en"><span style="color: rgb(11, 23, 51);">A magical week with the best hosts (Alina and Louis) in La Ventana! First time kiteboarding for me! Also - tried a hydrofoil on a no wind day. I am hooked! On top of an amazing kite experience - the food is amazing and the house is gorgeous! Highly recommend!</span><br></span>
+                <span lang="es"><span style="color: rgb(11, 23, 51);">Lee las opiniones más recientes compartidas por huéspedes directamente en el perfil oficial de LVKC en Google Business.</span></span>
+              </p>
+            </div>
+            <div class="review-card-footer">
+              <div class="reviewer-avatar google-g-avatar" aria-hidden="true">
+                <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"></svg>
+              </div>
+              <div class="reviewer-info">
+                <h4>Google Business <span class="blue-check">✓</span></h4>
+                <span><span lang="en"><span style="color: rgb(11, 23, 51);">Official LVKC listing</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Perfil oficial de LVKC</span></span></span>
+              </div>
+            </div>
+          </a>
+          <a href="https://maps.app.goo.gl/rJLRqxbAchnrfpvw7" class="review-card-modern google-card" target="_blank" rel="noopener noreferrer">
+            <div class="review-card-header">
+              <div class="review-stars" aria-hidden="true">★★★★★</div>
+              <span class="review-card-eyebrow"><span lang="en"><span style="color: rgb(11, 23, 51);">Matthew Cook</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Contexto original</span></span></span>
+              <p class="review-text">
+                <span lang="en"><span style="color: rgb(31, 31, 31);">My wife(non kiter) and I(kiter) had an amazing experience. Accommodations, food, instructors, activities and hosts (Alina and Louis) exceeded my expectations. Also shout out to all the other guests. Everyone was super chill and fun to be around. I guess kiting attracts the coolest people. I would definitely like to return to do another camp.</span><br></span>
+                <span lang="es">Consulta cada reseña con sus datos originales de publicación, calificación y cualquier actualización hecha por su autor.</span>
+              </p>
+            </div>
+            <div class="review-card-footer">
+              <div class="reviewer-avatar google-g-avatar" aria-hidden="true">
+                <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"></svg>
+              </div>
+              <div class="reviewer-info">
+                <h4>Google Business <span class="blue-check">✓</span></h4>
+                <span><span lang="en"><span style="color: rgb(11, 23, 51);">Official LVKC listing</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Fuente externa de reseñas</span></span></span>
+              </div>
+            </div>
+          </a>
+          <a href="https://maps.app.goo.gl/rJLRqxbAchnrfpvw7" class="review-card-modern google-card" target="_blank" rel="noopener noreferrer">
+            <div class="review-card-header">
+              <div class="review-stars" aria-hidden="true">★★★★★</div>
+              <span class="review-card-eyebrow"><span lang="en"><span style="color: rgb(11, 23, 51);">Katherine Warren</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Información actual</span></span></span>
+              <p class="review-text">
+                <span lang="en"><span style="color: rgb(11, 23, 51);">LVKC is amazing! Louis and Alina handled all of the logistics so all I had to focus on was enjoying time in the water. The accommodation was ideal for being at the beach, gathering with the group and big enough to alone for some alone time when needed. I cannot recommend them enough and ready to go back!</span><br></span>
+                <span lang="es"><span style="color: rgb(11, 23, 51);">Las calificaciones y el total de reseñas pueden cambiar. Abre el perfil oficial para consultar la información publicada actualmente por Google.</span></span>
+              </p>
+            </div>
+            <div class="review-card-footer">
+              <div class="reviewer-avatar google-g-avatar" aria-hidden="true">
+                <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"></svg>
+              </div>
+              <div class="reviewer-info">
+                <h4>Google Business <span class="blue-check">✓</span></h4>
+                <span><span lang="en"><span style="color: rgb(11, 23, 51);">Official LVKC listing</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Información en vivo</span></span></span>
+              </div>
+            </div>
+          </a>
+          <a href="https://maps.app.goo.gl/rJLRqxbAchnrfpvw7" class="review-card-modern google-card" target="_blank" rel="noopener noreferrer">
+            <div class="review-card-header">
+              <div class="review-stars" aria-hidden="true">★★★★★</div>
+              <span class="review-card-eyebrow"><span lang="en"><span style="color: rgb(11, 23, 51);">Luis Miguel Krasovsky</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Comparte tu experiencia</span></span></span>
+              <p class="review-text">
+                <span lang="en"><span style="color: rgb(11, 23, 51);">Amazing experience ! Louis and Alina are great hosts. The instructors are super friendly and great at teaching. The house is phenomenal ! I learned how to kite in a week, will be back soon !</span><br></span>
+                <span lang="es"><span style="color: rgb(11, 23, 51);">¿Ya viajaste con LVKC? Usa el perfil oficial para compartir tu propia experiencia de primera mano.</span></span>
+              </p>
+            </div>
+            <div class="review-card-footer">
+              <div class="reviewer-avatar google-g-avatar" aria-hidden="true">
+                <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"></svg>
+              </div>
+              <div class="reviewer-info">
+                <h4>Google Business <span class="blue-check">✓</span></h4>
+                <span><span lang="en"><span style="color: rgb(11, 23, 51);">Official LVKC listing</span></span><span lang="es"><span style="color: rgb(11, 23, 51);">Perfil oficial de LVKC</span></span></span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-bg-light" style="padding-bottom: 8rem;" data-section-id="cta">
+    <div class="container">
+      <div class="cta-banner">
+        <h2 lang="en">How do you want to join us?</h2>
+        <h2 lang="es">¿Listo para Vivir La Ventana?</h2>
+        <p lang="en">Join a camp week or book private coaching. If you're not sure what fits your level or
+trip, book a call with Louis.</p>
+        <p lang="es">Elige las fechas de tu camp o tu paquete de clases y reserva tu lugar. Nos pondremos en contacto contigo para coordinar los detalles.</p>
+        <div class="cta-banner-actions">
+          <a href="/kite-camps#pricing" class="btn btn-white">
+            <span lang="en">Join the Camp</span>
+            <span lang="es">Únete al Camp</span>
+          </a>
+          <a href="/la-ventana-kite-lessons#packages" class="btn btn-white">
+            <span lang="en">Book Lessons</span>
+            <span lang="es">Reservar Coaching</span>
+          </a>
+          <a href="https://calendly.com/lvkc/30min" class="btn btn-ghost" target="_blank" rel="noopener">
+            <span lang="en">Book a Call with Us</span>
+            <span lang="es">Agendar una Llamada con Nosotros</span>
+          </a>
+        </div>
+        <p class="cta-direct-contact">
+          <span lang="en">Or contact us directly: <a href="https://wa.me/526121974886" target="_blank">WhatsApp</a> | <a href="mailto:laventanacamps@gmail.com">Email</a></span>
+          <span lang="es">O contáctanos directo: <a href="https://wa.me/526121974886" target="_blank">WhatsApp</a> | <a href="mailto:laventanacamps@gmail.com">Email</a></span>
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer data-section-id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col brand">
+          <h2 class="footer-brand-mark"><img class="footer-logo-img" src="/assets/images/lvkc_logo.png" alt="LVKC — La Ventana Kite Camp"></h2>
+          <p lang="en">A premium yet laid-back kiteboarding experience in La Ventana, Baja California Sur, Mexico.</p>
+          <p lang="es">Una experiencia de kitesurf premium pero relajada en La Ventana, Baja California Sur, México.</p>
+          <div class="social-links">
+            <a href="https://instagram.com/laventana_kitecamp" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></a>
+            <a href="https://www.facebook.com/laventanakitecamp/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3><span lang="en">Information</span><span lang="es">Información</span></h3>
+          <ul>
+            <li><a href="/la-ventana-baja-california-sur"><span lang="en">About La Ventana</span><span lang="es">Sobre La Ventana</span></a></li>
+            <li><a href="/about-us-meet-the-team#founders"><span lang="en">Meet the Team</span><span lang="es">El Equipo</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3><span lang="en">Others</span><span lang="es">Otros</span></h3>
+          <ul>
+            <li><a href="/faq"><span lang="en">FAQs</span><span lang="es">Preguntas Frecuentes</span></a></li>
+            <li><a href="/blog"><span lang="en">Blog</span><span lang="es">Blog</span></a></li>
+            <li><a href="/gallery-kite-camp"><span lang="en">Gallery</span><span lang="es">Galería</span></a></li>
+            <li><a href="/testimonials"><span lang="en">Testimonials</span><span lang="es">Testimonios</span></a></li>
+            <li><a href="/faq#booking-policy"><span lang="en">Booking Policy</span><span lang="es">Políticas de Reserva</span></a></li>
+            <li><a href="/terms-conditions"><span lang="en">Terms &amp; Conditions</span><span lang="es">Términos y Condiciones</span></a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3><span lang="en">Get in Touch</span><span lang="es">Contacto</span></h3>
+          <div class="footer-contact-info">
+            <p lang="en">Get in touch to book your spot or request more information.</p>
+            <p lang="es">Ponte en contacto para reservar tu lugar o solicitar más información.</p>
+            <a href="https://wa.me/526121974886" class="btn btn-primary" style="margin-top: 1rem;" target="_blank">
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 La Ventana Kite Camp. All rights reserved.</p>
+        <p>laventanacamps@gmail.com | +52 612 197 4886</p>
+      </div>
+    </div>
+  </footer>
+  <div class="modal-overlay" id="booking-modal" data-section-id="booking-modal">
+    <div class="modal-container">
+      <button class="modal-close" aria-label="Close Modal">×</button>
+      <div class="wetravel-header">
+        <span class="wetravel-logo">LVKC Camps</span>
+        <h3>
+          <span lang="en">Camp Booking Request</span>
+          <span lang="es">Solicitud de Reserva de Camp</span>
+        </h3>
+        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 0;">
+          <span lang="en">Let us know your details. We will get in touch to follow up.</span>
+          <span lang="es">Cuéntanos tus detalles. Te contactaremos para dar seguimiento.</span>
+        </p>
+      </div>
+      <form class="wetravel-body" id="camp-booking-form">
+        <div class="form-group">
+          <label for="camp-name"><span lang="en">Full Name</span><span lang="es">Nombre Completo</span></label>
+          <input type="text" id="camp-name" class="form-control" required="" placeholder="e.g. John Doe">
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="camp-email"><span lang="en">Email Address</span><span lang="es">Correo Electrónico</span></label>
+            <input type="email" id="camp-email" class="form-control" required="" placeholder="name@domain.com">
+          </div>
+          <div class="form-group">
+            <label for="camp-phone"><span lang="en">WhatsApp Number</span><span lang="es">Número de WhatsApp</span></label>
+            <div class="phone-input-group">
+              <select id="camp-phone-code" class="form-control phone-code" required="">
+                <option value="" disabled="" selected="">Código</option><option value="" disabled="" selected="">Código</option>
+                <option value="1">+1 EE. UU. / Canadá</option>
+                <option value="52">+52 México</option>
+                <option value="44">+44 Reino Unido</option>
+                <option value="49">+49 Alemania</option>
+                <option value="33">+33 Francia</option>
+                <option value="34">+34 España</option>
+                <option value="39">+39 Italia</option>
+                <option value="41">+41 Suiza</option>
+                <option value="31">+31 Países Bajos</option>
+                <option value="32">+32 Bélgica</option>
+                <option value="43">+43 Austria</option>
+                <option value="351">+351 Portugal</option>
+                <option value="353">+353 Irlanda</option>
+                <option value="45">+45 Dinamarca</option>
+                <option value="46">+46 Suecia</option>
+                <option value="47">+47 Noruega</option>
+                <option value="358">+358 Finlandia</option>
+                <option value="48">+48 Polonia</option>
+                <option value="420">+420 Chequia</option>
+                <option value="30">+30 Grecia</option>
+                <option value="36">+36 Hungría</option>
+                <option value="90">+90 Turquía</option>
+                <option value="7">+7 Rusia</option>
+                <option value="27">+27 Sudáfrica</option>
+                <option value="61">+61 Australia</option>
+                <option value="64">+64 Nueva Zelanda</option>
+                <option value="81">+81 Japón</option>
+                <option value="82">+82 Corea del Sur</option>
+                <option value="86">+86 China</option>
+                <option value="91">+91 India</option>
+                <option value="65">+65 Singapur</option>
+                <option value="852">+852 Hong Kong</option>
+                <option value="971">+971 EAU</option>
+                <option value="966">+966 Arabia Saudita</option>
+                <option value="972">+972 Israel</option>
+                <option value="55">+55 Brasil</option>
+                <option value="54">+54 Argentina</option>
+                <option value="56">+56 Chile</option>
+                <option value="57">+57 Colombia</option>
+                <option value="51">+51 Perú</option>
+                <option value="598">+598 Uruguay</option>
+                <option value="593">+593 Ecuador</option>
+                <option value="other">+ Otro / Other</option>
+              </select>
+              <input type="tel" id="camp-phone" class="form-control phone-number" required="" placeholder="612 197 4886">
+            </div>
+            <p class="phone-hint"><span lang="en">Select your country code, then enter your number (no leading 0).</span><span lang="es">Selecciona tu código de país e ingresa tu número (sin el 0 inicial).</span></p>
+          </div>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="camp-level"><span lang="en">Kiteboarding Level</span><span lang="es">Nivel de Kitesurf</span></label>
+            <select id="camp-level" class="form-control" required="">
+              <option value="" disabled="" selected="">Select / Selecciona</option>
+              <option value="beginner">Beginner (Zero experience) </option><option value="beginner">Beginner (Some experience) </option>
+              <option value="intermediate">Intermediate (Riding upwind) </option>
+              <option value="advanced">Other (please explain below)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="camp-date"><span lang="en">Preferred Camp Week</span><span lang="es">Semana de Interés</span></label>
+            <select id="camp-date" class="form-control" required="">
+              <option value="" disabled="" selected="">Select / Selecciona</option>
+              <option value="dec2026">Dec 2026 (Nov 30 - Dec 6)</option>
+              <option value="jan2027-1">Jan 2027 Week 1 (Jan 16 - 22)</option>
+              <option value="jan2027-2">Jan 2027 Week 2 (Jan 23 - 29)</option>
+              <option value="feb2027">Feb 2027 (Feb 21 - 27)</option>
+              <option value="mar2027">Mar 2027 (Feb 28 - Mar 6)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="camp-companion"><span lang="en">Traveling with non-kiter partner?</span><span lang="es">¿Viajas con acompañante no-navegante?</span></label>
+            <select id="camp-companion" class="form-control" required="">
+              <option value="" disabled="" selected="">Select / Selecciona</option>
+              <option value="no">No</option>
+              <option value="yes">Yes (Request special package)</option>
+            </select>
+          </div>
+        </div><div class="form-row-2">
+          <div class="form-group">
+            <label for="camp-heard"><span lang="en">Where did you hear about us?&nbsp;</span><span lang="es">¿Cómo supiste de nosotros?</span></label>
+            <select id="camp-heard" class="form-control" required="">
+              <option value="" disabled="" selected="">Select / Selecciona</option>
+              <option value="google">On Google</option>
+              <option value="facebook-group">On a Facebook Group</option><option value="instagram">On Instagram</option><option value="friend">From a friend</option><option value="alina-louis">Directly from Alina &amp; Louis</option><option value="chatgpt">On Chatgpt</option>
+            </select>
+          </div>
+        </div><div class="form-row-2">
+          <div class="form-group">
+            <label for="camp-contact-method"><span lang="en">What’s the best way to reach you?</span><span lang="es">¿Cuál es la mejor forma de contactarte?</span></label>
+            <select id="camp-contact-method" class="form-control" required="">
+              <option value="" disabled="" selected="">Select / Selecciona</option>
+              <option value="whatsapp">Whatsapp</option>
+              <option value="email">Email</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="camp-message"><span lang="en">Questions or Special Requests</span><span lang="es">Preguntas o Solicitudes Especiales</span></label>
+          <textarea id="camp-message" class="form-control" rows="3" placeholder="..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <span lang="en">Submit Request</span>
+          <span lang="es">Enviar Solicitud</span>
+        </button>
+      </form>
+    </div>
+  </div>
+  <svg style="display: none;" aria-hidden="true"></svg>
+  <div class="floating-cta-container" data-section-id="floating-cta-container">
+    <div class="floating-cta-menu" id="floatingCtaMenu">
+      <a href="/kite-camps?booking=camps" class="floating-menu-item">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+        <span lang="en">Book Camp Week</span>
+        <span lang="es">Reservar Campamento</span>
+      </a>
+      <a href="/la-ventana-kite-lessons?booking=school" class="floating-menu-item">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+        <span lang="en">Book Kite Lessons</span>
+        <span lang="es">Reservar Clases de Kite</span>
+      </a>
+      <a href="https://wa.me/526121974886" target="_blank" rel="noopener" class="floating-menu-item">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+        <span lang="en">Chat on WhatsApp</span>
+        <span lang="es">Chat por WhatsApp</span>
+      </a>
+      <button class="floating-menu-item" id="shareWaBtn">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></svg>
+        <span lang="en">Share with a Friend</span>
+        <span lang="es">Compartir con un Amigo</span>
+      </button>
+    </div>
+    <button class="floating-cta-btn" id="floatingCtaToggle">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></svg>
+      <span lang="en">Book Now</span>
+      <span lang="es">Reservar</span>
+    </button>
+  </div>
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/camps.js"></script>
+  <script></script>
+</body></html>
