@@ -10,24 +10,33 @@
 //            /mietwohnwagen, /ferienhaeuser-im-baltic-park, /ferienhaeuser-im-duenenpark, /mobilheimpark,
 //            /strandbungalow, /ferienwohnungen-am-strand, /ferienwohnungen-am-pool (unit headings <h2>, size /
 //            capacity line, equipment <ul>, original photos files/bilder/...).
-//   slots    /specials-angebote: the specials table (thead "Special | Description | Term | Nights | Campground |
-//            Economy Rental Trailers"): per special a term "02.10.-02.11.2026*" (* / ** / *** = 1 / 2 / 3 weeks
-//            within the term, else exactly the term), nights and a package price for the Economy rental trailer
-//            (up to 4 people of one family). Only the rental-trailer column is used (pitches are not listed).
-//            The camping price list /preise covers pitches only; rental prices are otherwise only in a 9.8 MiB PDF
-//            and the Compusoft booking engine.
-// Booking engine: Compusoft onlinebooking (v3.onlinebooking.dk, portal key in the page). robots.txt allows all
-//   and the profile list answers without a session, but prices need one extra call per unit type and stay
-//   (GetCSProfilePriceList) - not built; documented for a shared engine module.
-// robots.txt (2026-10-12): www.wulfenerhals.de disallows only /contao/ and /_contao/.
-// Requests per run: content 10, slots 1 (memoised: 0 extra when content ran in the same process).
-// Parsed: one slot per still bookable special (check-in not in the past), EUR per rental trailer per stay
-//   (priceUnit 'package', packageNights = nights), availability 'unknown'. When the current table has no future
-//   special (e.g. after 2 Nov 2026 until the 2027 specials appear) fetchSlots returns [] ("price on request").
+//   slots    Compusoft online booking: the site's search (/suchen-buchen -> /unterkuenfte-ergebnisliste) embeds csobV2 with
+//            portal key d8d8969d-… (checked 2026-10-14). Through the shared helpers of hvide-sande-camping.ts, per sample week
+//            the widget's anonymous profile list (getCSProfileListViewModel) + one price call for all free units
+//            (GetCSProfilePriceListMultipleProfilesV2, the GET csob.bundle.min.js makes; no login, cookie or token). The park
+//            is open all year: one Saturday-to-Saturday week per month (the first Saturday from tomorrow), 12 within 12 months.
+//            Units = profiles of the rental groups (subTitle "…, Mietwohnwagen / Ferienhaus / Mobilheim / Ferienwohnung") and
+//            the rental-trailer specials ("…, Special Angebote Mietwohnwagen"); pitches, the motorhome park, camping
+//            specials, the "Gruppen" trailer profile and the sleeping beach chair are left out.
+//   fallback /specials-angebote: the specials table (thead "Special | Description | Term | Nights | Campground | Economy
+//            Rental Trailers"): per special a term "02.10.-02.11.2026*" (* / ** / *** = 1 / 2 / 3 weeks within the term, else
+//            exactly the term), nights and a package price for the Economy rental trailer. Used only when the engine returns
+//            no priced unit (not seen on 2026-10-14). The camping price list /preise covers pitches only.
+// robots.txt (2026-10-14): www.wulfenerhals.de disallows only /contao/ and /_contao/; v3.onlinebooking.dk "Allow: /".
+// Requests per run: content 10, slots up to 2 per sample week (12) = 24 (+1 specials page only in the fallback) = max 35.
+// Parsed (engine): slot = unit type x sample week ("comfort-rental-trailer|2027-06-05"), EUR per unit for 7 nights as quoted
+//   by the engine (priceUnit 'package', packageNights 7, priceBasis 'room'); available (>= 3 free) / limited (1-2 free,
+//   spotsLeft) / sold_out (0 free while another unit of the SAME rental group is free that week). When a whole group has
+//   nothing free in a week (e.g. rental trailers in winter) the group is skipped for that week (closed or not offered, not
+//   "sold out"); each special counts as its own group (0 = outside its term); unit types free in none of the sampled weeks
+//   are left out. Limit: a group that is fully booked (all its types 0) is skipped too, never shown as sold out.
+// Parsed (fallback): one slot per still bookable special (check-in not in the past), EUR per rental trailer per stay
+//   (priceUnit 'package', packageNights = nights), availability 'unknown'.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, iso, parse, parseAmount, todayIso } from '../parse.js';
-import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
+import type { ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { csobAddDays, csobKeyPart, csobSaturdaySamples, csobSlots, fetchCsobSamples, type CsobPortal, type CsobProfile, type CsobSample } from './hvide-sande-camping.js';
 
 const SITE = 'https://www.wulfenerhals.de';
 export const WH_HOME_URL = `${SITE}/`;
@@ -277,6 +286,70 @@ export async function fetchWhSlots(today: string): Promise<Slot[]> {
   return buildWhSlots(specials, today);
 }
 
+// --- Compusoft engine ------------------------------------------------------------------------------
+const WH_RENTAL_GROUP = /,\s*(Mietwohnwagen|Ferienhaus|Mobilheim|Ferienwohnung|Special Angebote Mietwohnwagen)\)$/;
+export const WH_PORTAL: CsobPortal = {
+  portalKey: 'd8d8969d-04b9-4145-b912-dea6ecb852b4',
+  language: 'de',
+  currency: 'EUR',
+  isUnit: p => WH_RENTAL_GROUP.test(p.subTitle) && !/^Gruppen$/i.test(p.title),
+};
+/** rental group of a profile ("Mietwohnwagen", "Ferienhaus", ..., "Special Angebote Mietwohnwagen") */
+export const whGroup = (p: Pick<CsobProfile, 'subTitle'>): string => p.subTitle.match(WH_RENTAL_GROUP)?.[1] ?? '';
+
+/** Engine profile -> English unit name ("Komfort" trailer -> "Comfort rental trailer", "Mobilheim Chatel" -> "Mobile home Chatel"). */
+export function whUnitName(p: Pick<CsobProfile, 'title' | 'subTitle'>): string {
+  const t = clean(p.title);
+  switch (whGroup(p)) {
+    case 'Mietwohnwagen': return `${t.replace(/^Komfort$/i, 'Comfort')} rental trailer`;
+    case 'Special Angebote Mietwohnwagen': return `Economy rental trailer special: ${t.replace(/^Special\s+/i, '').replace(/\s+Mietwohnwagen$/i, '')}`;
+    case 'Ferienhaus': return t.replace(/^Ferienhaus\s+/i, 'Holiday home ');
+    case 'Mobilheim': return t.replace(/^Mobilheim\s+/i, 'Mobile home ');
+    case 'Ferienwohnung':
+      if (/Golfplatz/i.test(t)) return 'Holiday apartment at the golf course';
+      if (/Campingplatz/i.test(t)) return 'Holiday apartment on the campsite';
+      return t.replace(/^Ferienwohnung(en)?\s+/i, 'Holiday apartment ');
+    default: return t;
+  }
+}
+
+/** Availability group: the rental group, but every special on its own (a special at 0 is outside its term, not sold out). */
+const whAvailGroup = (p: Pick<CsobProfile, 'title' | 'subTitle'>): string => {
+  const g = whGroup(p);
+  return g === 'Special Angebote Mietwohnwagen' ? `${g}|${p.title}` : g;
+};
+
+/** Per sample week, rental groups with no free unit at all are dropped (closed / not offered that week, not sold out). */
+export function whOpenGroupsOnly(samples: CsobSample[]): CsobSample[] {
+  return samples.map(s => {
+    const open = new Set(s.profiles.filter(p => p.units > 0).map(whAvailGroup));
+    return { ...s, profiles: s.profiles.filter(p => open.has(whAvailGroup(p))) };
+  });
+}
+
+/** Engine samples -> slots with English unit names and keys "<unit>|<check-in>". */
+export function buildWhEngineSlots(samples: CsobSample[], ctx?: Pick<FetchContext, 'note'>): Slot[] {
+  const names = new Map<string, string>();
+  for (const s of samples) for (const p of s.profiles) names.set(p.title, whUnitName(p));
+  return csobSlots(whOpenGroupsOnly(samples), ctx).map(s => {
+    const unit = s.unit ? names.get(s.unit) ?? s.unit : s.unit;
+    return { ...s, unit, key: `${csobKeyPart(unit ?? '')}|${s.startDate}` };
+  });
+}
+
+/** Sample check-ins: first Saturday from tomorrow in each of the next 12 months (the park is open all year). */
+export function whSampleCheckIns(today: string): string[] {
+  return csobSaturdaySamples(today, [{ start: today, end: csobAddDays(today, 400) }], { max: 12, horizonMonths: 12 });
+}
+
+/** Engine first; the specials table only when the engine has no priced unit. */
+export async function fetchWhLiveSlots(today: string, ctx: FetchContext): Promise<Slot[]> {
+  const engine = buildWhEngineSlots(await fetchCsobSamples(WH_PORTAL, whSampleCheckIns(today), ctx), ctx);
+  if (engine.some(s => s.price != null)) return engine;
+  ctx.note('wulfener-hals: no rental unit priced by the compusoft engine in any sample week - specials table used');
+  return fetchWhSlots(today);
+}
+
 export const campingparkWulfenerHalsFehmarn: OfferAdapter = {
   key: 'campingpark-wulfener-hals-fehmarn',
   name: 'Campingpark Wulfener Hals Fehmarn',
@@ -289,10 +362,10 @@ export const campingparkWulfenerHalsFehmarn: OfferAdapter = {
     phone: '+49437186280',
   },
   url: WH_KITE_URL,
-  slotMethod: 'price_table',
+  slotMethod: 'booking_engine',
   instantBooking: true,
-  fetchBudget: 11,
-  confidence: 'medium', // prices only for the Economy rental trailer specials; other units on request
+  liveAvailability: true,
+  fetchBudget: 35,
   async fetchContent() {
     const home = await page(WH_HOME_URL);
     const kite = await page(WH_KITE_URL);
@@ -303,8 +376,8 @@ export const campingparkWulfenerHalsFehmarn: OfferAdapter = {
     return parseWulfenerHalsContent({ home, kite, specials, rentals });
   },
   async fetchSlots(ctx) {
-    const slots = await fetchWhSlots(todayIso());
-    if (slots.length === 0) ctx.note('wulfener-hals: no rental-trailer special still bookable in the current table - price on request until the next season\'s specials appear');
+    const slots = await fetchWhLiveSlots(todayIso(), ctx);
+    if (slots.length === 0) ctx.note('wulfener-hals: neither the engine nor the specials table has a bookable unit - price on request');
     return slots;
   },
 };

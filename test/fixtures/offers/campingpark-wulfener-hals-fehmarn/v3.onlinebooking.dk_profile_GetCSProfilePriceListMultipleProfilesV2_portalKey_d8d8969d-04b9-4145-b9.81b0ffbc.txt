@@ -1,0 +1,1 @@
+{"success": true, "csProfilePriceModelList": [{"UniqueId": "c786a194-9e8e-7646-1e1b-6169ff652a81", "Rates": [{"currencyShortName": "EUR", "price": 451.5, "profileItemPrice": 0.0}]}, {"UniqueId": "eabe405e-88f7-13cd-ae9a-12d983ead5dd", "Rates": [{"currencyShortName": "EUR", "price": 850.5, "profileItemPrice": 0.0}]}]}

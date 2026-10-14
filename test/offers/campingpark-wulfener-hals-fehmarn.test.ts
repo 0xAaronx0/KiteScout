@@ -1,12 +1,16 @@
 // Campingpark Wulfener Hals (Fehmarn): replays the English (machine-translated) pages recorded 2026-10-12: home,
-// kite page, specials table and seven rental pages (script / style bodies, SVGs and comments trimmed).
+// kite page, specials table and seven rental pages (script / style bodies, SVGs and comments trimmed), plus the Compusoft
+// answers recorded 2026-10-14 for the 12 sample weeks (profile lists and price answers trimmed to the fields the parser
+// reads). Engine slots are built with today pinned to the recording day so the sample weeks (and fixtures) stay the same.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  campingparkWulfenerHalsFehmarn, buildWhSlots, fetchWhSlots, parseWhKitePrices, parseWhSpecials, parseWhSpecialsNotes, parseWhUnits,
+  campingparkWulfenerHalsFehmarn, buildWhEngineSlots, buildWhSlots, fetchWhLiveSlots, fetchWhSlots, parseWhKitePrices, parseWhSpecials,
+  parseWhSpecialsNotes, parseWhUnits, whOpenGroupsOnly, whSampleCheckIns, whUnitName, WH_PORTAL,
 } from '../../src/offers/adapters/campingpark-wulfener-hals-fehmarn.js';
+import { parseCsobList, type CsobSample } from '../../src/offers/adapters/hvide-sande-camping.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/campingpark-wulfener-hals-fehmarn');
@@ -72,4 +76,59 @@ test('wulfener-hals: content', async () => {
   assert.ok(c.rooms.some(r => r.name === 'Holiday home Dünenpark: Seagull Model' && /35 m²/.test(r.description ?? '')));
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://www.wulfenerhals.de/files/bilder/') && !/Grundriss|logo/i.test(u)));
+});
+
+const TODAY = '2026-10-14';
+
+test('wulfener-hals engine: 12 monthly sample weeks, rental units only, English names', () => {
+  assert.deepEqual(whSampleCheckIns(TODAY), [
+    '2026-10-17', '2026-11-07', '2026-12-05', '2027-01-02', '2027-02-06', '2027-03-06',
+    '2027-04-03', '2027-05-01', '2027-06-05', '2027-07-03', '2027-08-07', '2027-09-04',
+  ]);
+  const list = files.filter(f => f.startsWith('v3.onlinebooking.dk_profile_getCSProfileListViewModel')).flatMap(f => parseCsobList(readFileSync(join(DIR, f), 'utf8')));
+  const units = [...new Set(list.filter(WH_PORTAL.isUnit).map(whUnitName))].sort();
+  assert.ok(['Premium rental trailer', 'Comfort rental trailer', 'Economy rental trailer', 'Holiday home Dünenpark', 'Mobile home Chatel',
+    'Holiday apartment at the golf course', 'Holiday apartment on the campsite', 'Economy rental trailer special: Indian-Summer'].every(u => units.includes(u)));
+  // pitches, the motorhome park, camping specials, the group trailer profile and the sleeping beach chair are not rental units
+  assert.ok(list.filter(WH_PORTAL.isUnit).every(p => !/Pl(a|ä)tze|Wohnmobilpark|Camping$|^Gruppen$|Strandkorb/.test(p.title)));
+});
+
+test('wulfener-hals engine: replay 2026-10-14 -> 99 slots, EUR per unit for 7 nights', async () => {
+  const incomplete: string[] = [];
+  const slots = await fetchWhLiveSlots(TODAY, { note: () => {}, incomplete: r => { incomplete.push(r); } });
+  assert.deepEqual(incomplete, []);
+  const { ok, problems } = checkSlots(slots);
+  assert.deepEqual(problems, []);
+  assert.equal(ok.length, 99);
+  const eco = slots.find(x => x.key === 'economy-rental-trailer|2027-06-05')!;
+  assert.deepEqual([eco.unit, eco.startDate, eco.endDate, eco.price, eco.currency, eco.priceUnit, eco.packageNights, eco.priceBasis, eco.availability, eco.spotsLeft],
+    ['Economy rental trailer', '2027-06-05', '2027-06-11', 639.1, 'EUR', 'package', 7, 'room', 'available', 18]);
+  const prem = slots.find(x => x.key === 'premium-rental-trailer|2027-08-07')!;
+  assert.deepEqual([prem.price, prem.availability, prem.spotsLeft], [1409.1, 'limited', 1]);
+  const ecoAug = slots.find(x => x.key === 'economy-rental-trailer|2027-08-07')!;
+  assert.deepEqual([ecoAug.price, ecoAug.availability, ecoAug.spotsLeft], [null, 'sold_out', 0]); // Premium / Comfort free that week
+  assert.equal(Math.min(...slots.filter(x => x.price != null).map(x => x.price!)), 309.5); // special "Kennenlernangebot", 03.-10.04.2027
+  // rental trailers are not offered in winter: the whole group is 0 -> skipped, not sold out
+  assert.ok(!slots.some(x => /rental trailer$/.test(x.unit ?? '') && x.startDate! >= '2026-11-01' && x.startDate! <= '2027-03-31'));
+  // specials outside their term are skipped, never sold out
+  assert.ok(slots.filter(x => /special/.test(x.unit ?? '')).every(x => x.availability !== 'sold_out'));
+});
+
+test('wulfener-hals engine: group rule (sold out only next to a free unit of the same group)', () => {
+  const p = (title: string, sub: string, units: number) => ({ id: title.length, uniqueId: title, siteId: 1, title, subTitle: `(Camping- und Ferienpark Wulfener Hals, ${sub})`, units, customerType: '' });
+  const s: CsobSample = {
+    checkIn: '2027-07-03', nights: 7, open: true, prices: new Map(),
+    profiles: [p('Premium', 'Mietwohnwagen', 0), p('Komfort', 'Mietwohnwagen', 2), p('Mobilheim Chatel', 'Mobilheim', 0)],
+  };
+  assert.deepEqual(whOpenGroupsOnly([s])[0].profiles.map(x => x.title), ['Premium', 'Komfort']);
+  const next: CsobSample = { ...s, checkIn: '2027-07-10', profiles: [p('Premium', 'Mietwohnwagen', 3)], prices: new Map([['Premium', { total: 1269.1, accommodation: null, currency: 'EUR' }]]) };
+  assert.deepEqual(buildWhEngineSlots([s, next]).filter(x => x.key.startsWith('premium')).map(x => [x.key, x.price, x.availability]), [
+    ['premium-rental-trailer|2027-07-03', null, 'sold_out'], ['premium-rental-trailer|2027-07-10', 1269.1, 'available'],
+  ]);
+});
+
+test('wulfener-hals: adapter flags', () => {
+  assert.equal(campingparkWulfenerHalsFehmarn.slotMethod, 'booking_engine');
+  assert.equal(campingparkWulfenerHalsFehmarn.liveAvailability, true);
+  assert.equal(campingparkWulfenerHalsFehmarn.instantBooking, true);
 });

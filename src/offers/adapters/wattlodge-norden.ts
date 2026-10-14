@@ -8,25 +8,39 @@
 //
 // Data path (checked 2026-10-14), WordPress / Bricks builder:
 //   content  / (intro, rooms, kite link), /zimmer/, /huetten-hostel/, /sportangebot/ (kite weekend / kite week prices).
-//   slots    /preise/: Bricks pricing tables (li.pricing-table: title, subtitle, "€ 62 p.P", meta, features) with
-//            "*alle Preise pro Person zzgl. Kurtaxe". The Bulli-Stellplatz card is a pitch and is left out.
-// Booking engine: /buchen/ embeds Easy-Booking (easy-booking.at, customer 10928; the widget's API calls send a random
-//   client-side X-Session-Id). Not used: the room search is a Backbone app whose request shape we did not establish
-//   (views load dynamically); robots.txt there only disallows /enquiryForm/ and /bookingManager/. Candidate for later.
+//   slots    Easy-Booking (easy-booking.at, customer 10928, locale 2 = de), the engine /buchen/ embeds
+//            (jquery.easybooking.frontend.js -> /bookingengine2/ app). Its step-two view asks
+//            POST /easybooking/index.php/api/searchCatAvailability/10928/2 with a form body (customerId, numAdults,
+//            numChildren, arrivalDate, departureDate yyyy-MM-dd, childrenDOB, localeId) and a random client-side
+//            X-Session-Id (utils.getSessionId: two Math.random() strings, no server handshake); no login, cookie, CSRF
+//            token or signature (the X-CSRF-Token header exists only on the booking / customer models, which we never call).
+//            The answer lists the categories bookable for that stay (catName, min/maxPersons, roomCount = free rooms,
+//            priceDetails with totalPrice, breakfast and Kurtaxe, room labels, photos) - no guest data. One stay of 7
+//            nights for 2 adults from the first Saturday of each month, always all 12 within 12 months (on 2026-10-14 only
+//            17.10. was bookable; Nov / Dec answered "FrontEndNoResult" = rates but nothing bookable, from Jan 2027
+//            "FrontEndNoResultNoPrice" = rates not loaded).
+//   fallback /preise/: Bricks pricing tables (li.pricing-table: title, subtitle, "€ 62 p.P", meta, features) with
+//            "*alle Preise pro Person zzgl. Kurtaxe", used only when the engine prices no category (one slot per room
+//            type without dates, EUR per person per night - "per night" INFERRED, availability 'unknown').
 // Liveness: the WattLodge pages were last edited 2024-12 / 2025-03-27 (/preise/, WP REST `modified`); the 2026 evidence
 //   is the working online booking and the school's own home page ("Wir sind noch bis Ende Oktober für euch in Norddeich.
 //   Nächstes Jahr sind wir spätestens am 01.04.2027 wieder vorne für euch am Strand!", checked 2026-10-14).
-// robots.txt (2026-10-14): WordPress defaults (only /wp-admin/).
-// Requests per run: content 5, slots 1 (memoised with content).
-// Parsed: slots = one per room type without dates (the table has no season or year), EUR per person per night
-//   (priceBasis 'person'; "per night" is INFERRED: the cards print "€ 62 p.P" plus "Zuschlag für eine Nacht 20 Euro" and a
-//   Kurtaxe "pro Nacht"), occupancy 2 for the suites, 1 for a hostel bed; availability 'unknown' (online booking exists,
-//   we do not read it).
+// robots.txt (2026-10-14): wattlodge.de WordPress defaults (only /wp-admin/); www.easy-booking.at disallows only
+//   /enquiryForm/ and /bookingManager/.
+// Requests per run: content 5, slots 12 engine POSTs (+1 /preise/ only in the fallback, memoised with content) = max 18.
+// Parsed (engine): slot = category x sample week ("doppelzimmer-superior|2026-11-07"), EUR per room for 7 nights and
+//   2 adults incl. breakfast where the category includes it, WITHOUT the Kurtaxe (priceUnit 'package', packageNights 7,
+//   priceBasis 'room', occupancy 2); available (>= 2 free rooms) / limited (1 free, spotsLeft) / sold_out (a category seen
+//   in another sampled week is missing from an answer that lists other categories). Empty answers are skipped (closed or
+//   not loaded). The "Womo Stellplatz" (camper pitch) category is left out.
+// Parsed (fallback): one slot per room type without dates, EUR per person per night (priceBasis 'person'), occupancy 2 for
+//   the suites, 1 for a hostel bed; availability 'unknown'.
 // Known limits: no coordinates on the site (a maps.app.goo.gl short link only) -> no spotCoords.
 // ---------------------------------------------------------------------------
-import { fetchText } from '../http.js';
-import { clean, collapse, imageCandidates, parse, parseAmount } from '../parse.js';
-import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { BlockedByHost, fetchText } from '../http.js';
+import { clean, collapse, imageCandidates, parse, parseAmount, todayIso } from '../parse.js';
+import type { Availability, ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { csobAddDays, csobSaturdaySamples } from './hvide-sande-camping.js';
 
 const SITE = 'https://wattlodge.de';
 export const WL_HOME_URL = `${SITE}/`;
@@ -223,6 +237,112 @@ export async function fetchWlSlots(): Promise<Slot[]> {
   return buildWlSlots(rates);
 }
 
+// --- Easy-Booking engine ------------------------------------------------------------------------------
+export const WL_EB_CUSTOMER = 10928;
+export const WL_EB_LOCALE = 2;
+export const WL_EB_SEARCH_URL = `https://www.easy-booking.at/easybooking/index.php/api/searchCatAvailability/${WL_EB_CUSTOMER}/${WL_EB_LOCALE}`;
+/** the widget's own anonymous id (utils.getSessionId: random, client-side, no handshake) - one per process */
+const WL_EB_SESSION = Math.random().toString(36).slice(2, 10) + Math.random().toString(36).slice(2, 10);
+
+/** Form body of the widget's category search for one stay (yyyy-MM-dd dates, no children). */
+export function wlSearchBody(checkIn: string, nights = 7, adults = 2): string {
+  return new URLSearchParams({
+    customerId: String(WL_EB_CUSTOMER), numAdults: String(adults), numChildren: '0',
+    arrivalDate: checkIn, departureDate: csobAddDays(checkIn, nights), childrenDOB: '', localeId: String(WL_EB_LOCALE),
+  }).toString();
+}
+
+export interface WlCat { name: string; minPersons: number; maxPersons: number; free: number; total: number; tax: number; catering: string | null }
+export interface WlSample { checkIn: string; nights: number; adults: number; cats: WlCat[]; error: string | null }
+
+type Json = Record<string, unknown>;
+
+/** searchCatAvailability answer -> bookable categories (camper pitches dropped); catArr is [] when nothing is bookable. */
+export function parseWlSearch(json: string, checkIn: string, nights = 7, adults = 2): WlSample {
+  const d = JSON.parse(json) as { catArr?: unknown; errorMsg?: string } | null;
+  if (!d || typeof d !== 'object' || !('catArr' in d)) throw new Error('easy-booking: answer without catArr');
+  const raw = (Array.isArray(d.catArr) ? d.catArr : Object.values((d.catArr ?? {}) as Json)) as Json[];
+  const cats: WlCat[] = [];
+  for (const c of raw) {
+    const name = clean(String(c.catName ?? ''));
+    const rooms = (Array.isArray(c.rooms) ? c.rooms : Object.values((c.rooms ?? {}) as Json)) as Json[];
+    const pd = (c.priceDetails && typeof c.priceDetails === 'object' ? c.priceDetails : rooms[0]?.priceDetails) as Json | undefined;
+    const total = Number(pd?.totalPrice);
+    if (!name || /stellplatz/i.test(name) || !Number.isFinite(total) || total <= 0) continue;
+    const catering = (c.catering as Array<{ stl_name?: string; isDefault?: boolean }> | undefined)?.find(x => x.isDefault)?.stl_name ?? null;
+    cats.push({
+      name, minPersons: Number(c.minPersons) || 1, maxPersons: Number(c.maxPersons) || adults,
+      free: Number(c.roomCount) || rooms.length, total, tax: Number(pd?.totalPriceVisitorsTax) || 0, catering,
+    });
+  }
+  return { checkIn, nights, adults, cats, error: d.errorMsg ? String(d.errorMsg) : null };
+}
+
+export async function fetchWlSample(checkIn: string, nights = 7, adults = 2): Promise<WlSample> {
+  const text = await fetchText(WL_EB_SEARCH_URL, {
+    method: 'POST', body: wlSearchBody(checkIn, nights, adults), contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+    accept: 'application/json, text/javascript, */*; q=0.01', headers: { 'X-Session-Id': WL_EB_SESSION },
+  });
+  return parseWlSearch(text, checkIn, nights, adults);
+}
+
+/** First Saturday from tomorrow in each of the next 12 months. */
+export function wlSampleCheckIns(today: string): string[] {
+  return csobSaturdaySamples(today, [{ start: today, end: csobAddDays(today, 400) }], { max: 12, horizonMonths: 12 });
+}
+
+/** Samples -> slots; a category seen in another sample but missing from a non-empty answer is sold out for that stay. */
+export function buildWlEngineSlots(samples: WlSample[]): Slot[] {
+  const names: string[] = [];
+  for (const s of samples) for (const c of s.cats) if (!names.includes(c.name)) names.push(c.name);
+  const out: Slot[] = [];
+  for (const s of samples) {
+    if (s.cats.length === 0) continue;
+    for (const name of names) {
+      const c = s.cats.find(x => x.name === name);
+      const availability: Availability = !c ? 'sold_out' : c.free <= 1 ? 'limited' : 'available';
+      out.push({
+        key: `${keyPart(name)}|${s.checkIn}`,
+        startDate: s.checkIn,
+        endDate: csobAddDays(s.checkIn, s.nights - 1),
+        unit: name,
+        price: c ? Math.round((c.total - c.tax) * 100) / 100 : null,
+        currency: c ? 'EUR' : null,
+        priceUnit: c ? 'package' : null,
+        priceBasis: 'room',
+        occupancy: s.adults,
+        availability,
+        availabilityText: c
+          ? `${c.free} free for ${s.nights} nights from ${s.checkIn} (${s.adults} adults${c.catering ? `, ${c.catering}` : ''}; Kurtaxe EUR ${c.tax} extra)`
+          : `not offered for ${s.nights} nights from ${s.checkIn} (${s.adults} adults)`,
+        spotsLeft: c ? c.free : 0,
+        packageNights: s.nights,
+      });
+    }
+  }
+  return out;
+}
+
+/** Engine first; the printed /preise/ cards only when the engine prices no category. */
+export async function fetchWlLiveSlots(today: string, ctx: FetchContext): Promise<Slot[]> {
+  // no early stop: a winter closure ("FrontEndNoResult") lies between two seasons
+  const samples: WlSample[] = [];
+  for (const d of wlSampleCheckIns(today)) {
+    try {
+      samples.push(await fetchWlSample(d));
+    } catch (e) {
+      if (e instanceof BlockedByHost) throw e;
+      ctx.incomplete(`easy-booking sample ${d}: ${(e as Error).message}`);
+    }
+  }
+  const empty = samples.filter(s => s.cats.length === 0).map(s => `${s.checkIn} ${s.error ?? 'empty'}`);
+  if (empty.length) ctx.note(`wattlodge-norden: easy-booking had nothing bookable for ${empty.join(', ')}`);
+  const engine = buildWlEngineSlots(samples);
+  if (engine.some(s => s.price != null)) return engine;
+  ctx.note('wattlodge-norden: easy-booking priced no category in any sample week - /preise/ cards used');
+  return fetchWlSlots();
+}
+
 export const wattlodgeNorden: OfferAdapter = {
   key: 'wattlodge-norden',
   name: 'WattLodge Norden',
@@ -235,10 +355,10 @@ export const wattlodgeNorden: OfferAdapter = {
     phone: '+4915129903392',
   },
   url: WL_HOME_URL,
-  slotMethod: 'price_table',
+  slotMethod: 'booking_engine',
   instantBooking: true,
-  fetchBudget: 6,
-  confidence: 'medium', // year-less table, per-night unit inferred
+  liveAvailability: true,
+  fetchBudget: 18,
   async fetchContent() {
     const home = await page(WL_HOME_URL);
     const prices = await page(WL_PRICES_URL);
@@ -248,7 +368,7 @@ export const wattlodgeNorden: OfferAdapter = {
     if (!/Surfschule Norddeich/.test(home)) throw new Error('wattlodge-norden: kite link (Surfschule Norddeich) missing on the home page');
     return parseWattlodgeContent({ home, prices, rooms, hostel, sport });
   },
-  async fetchSlots() {
-    return fetchWlSlots();
+  async fetchSlots(ctx) {
+    return fetchWlLiveSlots(todayIso(), ctx);
   },
 };

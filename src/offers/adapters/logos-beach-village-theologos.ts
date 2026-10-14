@@ -12,22 +12,38 @@
 //   content  /en/ (village, breakfast, kite center), /en/accommodation/<room>/ x3 (studio, lodge XL,
 //            lodge XXL: text, capacity, equipment, masonry gallery), /en/sports/kite/ (station, wind,
 //            rental and course prices, contact e-mail).
-// Booking engine: the "book now" pages (/en/accommodation/<room>/booking/) redirect to a Leão Booking
-//   self-service form (tag 14219, minDate 2026-04-01, maxDate 2026-10-31 on 2026-10-12). Its XHR
-//   /api/product/availability/id/<tag>/start/<d>/end/<d>/<lang> answered HTTP 500 without the form's
-//   session, so it is NOT used: slots carry no live inventory ('unknown').
-// robots.txt (2026-10-12): Yoast default, nothing disallowed.
-// Requests per run: content 6, slots 1.
+//   engine   (since 2026-10-14) Leão Booking self-service forms, where the site's "book now" pages
+//            (/en/accommodation/<room>/booking/) redirect: studio -> www.myleao.com/product/14219/en?style=logos,
+//            lodge XL -> /product/14305/..., lodge XXL -> /product/14435/... Per form we read the page once
+//            (hidden inputs tag_id, lang "de", minDate / maxDate = the window the engine has loaded; on 2026-10-14
+//            2026-04-01..2026-10-31), then per sample stay the call the form's date picker
+//            (/static/js/daterangepicker_available_product.js) makes:
+//              GET www.myleao.com/api/product/availability/id/<tag>/start/<YYYY-MM-DD>/end/<YYYY-MM-DD>/de
+//              -> {status:1, data:[{id, name "Beach Lodge XL - 2 Personen 7 Nächte", price?, priceLocale?, ...}]}
+//            The picker renders a product without `price` as "ausgebucht" (booked out); status 0 = "period too
+//            long". Anonymous: no cookie, token or session (the form's session_id is only used by the later
+//            add-to-cart POST, which we never make). It answered HTTP 500 on 2026-10-12 and 200 on 2026-10-14.
+//            One 7-night sample per month (arrival on the 2nd Saturday, or the next Saturday from tomorrow in
+//            the current month), 12 months ahead, only inside the loaded window.
+// robots.txt (2026-10-14): logosbeachvillage.com Yoast default, nothing disallowed; www.myleao.com/robots.txt
+//   is 404 (= allow all).
+// Requests per run: content 6; slots 1 (prices) + 3 form pages + one availability call per form and loaded
+//   sample month (3 on 2026-10-14, at most 36) -> 7 on 2026-10-14.
 // Parsed: slot = unit x occupancy x season date range ("beach-lodge-xl-3p|2026-04-01"), EUR per person
 //   per night, real date limits as printed (inclusive), minNights 7 inside the weekly-booking high season,
-//   availability 'on_request' where the cell says "(only on request)", else 'unknown'.
+//   availability 'on_request' where the cell says "(only on request)", else 'unknown'. The engine samples
+//   split these bands per unit size (studio / XL / XXL; the shared lodge has no own form): inside a sample
+//   stay's nights the band takes the engine state ('sold_out' for "ausgebucht", 'available' when a product
+//   has a price); when the engine prices a product, that unit + occupancy gets the engine price for the
+//   sample week instead of the table rate (EUR per unit for the stay: priceUnit 'package', packageNights 7,
+//   basis room). Sample weeks outside every table band become engine-only slots.
 // Known limits: the table is dated 2026 (".26"); on 2026-10-12 only the Season A band 09.10.-31.10.2026
 //   is still ahead. Children/teen prices (EUR 26 / 36 per night) are in the room features, not slots.
 //   No map pin on the site (the OpenStreetMap embed is a consent placeholder) -> spot geocoded.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
-import { collapse, iso, parse, parseAmount, type HTMLElement } from '../parse.js';
-import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { clean, collapse, iso, parse, parseAmount, todayIso, type HTMLElement } from '../parse.js';
+import type { Availability, ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
 
 const SITE = 'https://www.logosbeachvillage.com';
 export const LOGOS_PRICES_URL = `${SITE}/en/prices/`;
@@ -288,6 +304,168 @@ export function parseLogosContent(p: LogosPages): OfferContent {
   };
 }
 
+// --- Leão engine (live availability) ----------------------------------------------------------
+const LEAO = 'https://www.myleao.com';
+/** Leão self-service forms behind the site's "book now" pages (redirect targets, 2026-10-14) per unit size. */
+export const LOGOS_FORMS: Array<{ size: 'Studio' | 'XL' | 'XXL'; tag: number; unit: string }> = [
+  { size: 'Studio', tag: 14219, unit: 'Beach Village Studio' },
+  { size: 'XL', tag: 14305, unit: 'Beach Lodge XL' },
+  { size: 'XXL', tag: 14435, unit: 'Family Beach Lodge XXL' },
+];
+export const logosFormUrl = (tag: number): string => `${LEAO}/product/${tag}/en?style=logos`;
+export const logosAvailabilityUrl = (tag: number, start: string, end: string, lang: string): string =>
+  `${LEAO}/api/product/availability/id/${tag}/start/${start}/end/${end}/${lang}`;
+const SAMPLE_NIGHTS = 7;
+const SAMPLE_MONTHS = 12;
+
+export interface LogosForm { tag: number; lang: string; minDate: string; maxDate: string }
+export interface LogosEngineProduct { id: number; name: string; persons: number | null; nights: number | null; price: number | null }
+export interface LogosSample {
+  size: 'Studio' | 'XL' | 'XXL'; tag: number; checkIn: string; checkOut: string;
+  /** 0 = the engine's "period too long" answer */
+  status: number; products: LogosEngineProduct[];
+}
+
+function addDays(isoDate: string, n: number): string {
+  const d = new Date(`${isoDate}T00:00:00Z`);
+  d.setUTCDate(d.getUTCDate() + n);
+  return d.toISOString().slice(0, 10);
+}
+
+/** Hidden inputs of the form page: tag_id, lang, minDate, maxDate. */
+export function parseLogosForm(html: string): LogosForm | null {
+  const val = (id: string) => html.match(new RegExp(`<input[^>]*id="${id}"[^>]*value="([^"]*)"`))?.[1] ?? null;
+  const tag = Number(val('tag_id')); const minDate = val('minDate'); const maxDate = val('maxDate');
+  if (!tag || !minDate || !maxDate || !/^\d{4}-\d{2}-\d{2}$/.test(minDate) || !/^\d{4}-\d{2}-\d{2}$/.test(maxDate)) return null;
+  return { tag, lang: val('lang') || 'de', minDate, maxDate };
+}
+
+/** One 7-night stay per month for 12 months (2nd Saturday, or the next Saturday from tomorrow), inside [minDate, maxDate]. */
+export function logosSampleStays(today: string, minDate: string, maxDate: string): Array<{ checkIn: string; checkOut: string }> {
+  const y = Number(today.slice(0, 4)); const m = Number(today.slice(5, 7));
+  const tomorrow = addDays(today, 1);
+  const out: Array<{ checkIn: string; checkOut: string }> = [];
+  for (let k = 0; k < SAMPLE_MONTHS; k++) {
+    const mm = ((m - 1 + k) % 12) + 1; const yy = y + Math.floor((m - 1 + k) / 12);
+    const first = new Date(Date.UTC(yy, mm - 1, 1)).getUTCDay();
+    let checkIn = iso(yy, mm, 1 + ((6 - first + 7) % 7) + 7);
+    if (checkIn < tomorrow) checkIn = addDays(tomorrow, (6 - new Date(`${tomorrow}T00:00:00Z`).getUTCDay() + 7) % 7);
+    if (checkIn.slice(0, 7) !== iso(yy, mm, 1).slice(0, 7)) continue;
+    const checkOut = addDays(checkIn, SAMPLE_NIGHTS);
+    // the form's date picker allows dates from minDate to maxDate (the departure day included)
+    if (checkIn < minDate || checkOut > maxDate) continue;
+    out.push({ checkIn, checkOut });
+  }
+  return out;
+}
+
+/** Availability answer -> status + products (price only when the engine prices it; no price = "ausgebucht"). */
+export function parseLogosAvailability(json: string): { status: number; products: LogosEngineProduct[] } {
+  const d = JSON.parse(json) as { status?: number; data?: Array<{ id?: number; name?: string; price?: unknown; priceLocale?: unknown }> };
+  const products: LogosEngineProduct[] = [];
+  for (const p of Array.isArray(d.data) ? d.data : []) {
+    if (!p?.name) continue;
+    const name = clean(p.name);
+    let price: number | null = null;
+    if (p.price !== undefined && p.price !== null && p.price !== '') {
+      const n = typeof p.price === 'number' ? p.price : Number(p.price);
+      price = Number.isFinite(n) && n > 0 ? n : (typeof p.priceLocale === 'string' ? parseAmount(p.priceLocale) : null);
+    }
+    products.push({
+      id: Number(p.id), name,
+      persons: Number(name.match(/(\d+)\s*Person/i)?.[1]) || null,
+      nights: Number(name.match(/(\d+)\s*(?:Nächte|Naechte|Nacht|nights?)/i)?.[1]) || null,
+      price,
+    });
+  }
+  return { status: Number(d.status ?? 0), products };
+}
+
+/** Engine state of one unit size for a sample stay; null = the engine said nothing usable. */
+function sampleState(s: LogosSample): { a: Availability; text: string } | null {
+  const stay = `${s.checkIn}..${s.checkOut}`;
+  if (s.status !== 1 || s.products.length === 0) return null;
+  const priced = s.products.filter(p => p.price !== null);
+  if (priced.length === 0) return { a: 'sold_out', text: `Leão: "ausgebucht" for the sample stay ${stay} (${s.products.map(p => p.name).join(', ')})` };
+  return { a: 'available', text: `Leão: bookable for the sample stay ${stay} (${priced.map(p => `${p.name} EUR ${p.price}`).join(', ')})` };
+}
+
+/** Table bands split by the engine samples of the same unit size; engine-only slots for sample weeks outside the table. */
+export function applyLogosSamples(table: Slot[], samples: LogosSample[]): Slot[] {
+  const out: Slot[] = [];
+  const formOf = (unit: string | null) => LOGOS_FORMS.find(f => f.size === sizeOf(unit ?? ''));
+  for (const slot of table) {
+    const form = formOf(slot.unit);
+    const hits = !form || !slot.startDate || !slot.endDate ? []
+      : samples.filter(s => s.size === form.size && sampleState(s) && s.checkIn <= slot.endDate! && addDays(s.checkOut, -1) >= slot.startDate!)
+        .sort((a, b) => (a.checkIn < b.checkIn ? -1 : 1));
+    if (hits.length === 0) { out.push(slot); continue; }
+    const base = slot.key.slice(0, slot.key.lastIndexOf('|'));
+    let cursor = slot.startDate!;
+    for (const s of hits) {
+      const from = s.checkIn > cursor ? s.checkIn : cursor;
+      const to = addDays(s.checkOut, -1) < slot.endDate! ? addDays(s.checkOut, -1) : slot.endDate!;
+      if (from > cursor) out.push({ ...slot, key: `${base}|${cursor}`, startDate: cursor, endDate: addDays(from, -1) });
+      const st = sampleState(s)!;
+      const own = s.products.find(p => p.price !== null && p.persons === slot.occupancy);
+      out.push(own
+        ? { ...slot, key: `${base}|${from}`, startDate: from, endDate: to, price: own.price, priceUnit: 'package', priceBasis: 'room',
+          packageNights: own.nights ?? SAMPLE_NIGHTS, availability: st.a, availabilityText: st.text, spotsLeft: null }
+        : { ...slot, key: `${base}|${from}`, startDate: from, endDate: to, availability: st.a, availabilityText: st.text });
+      cursor = addDays(to, 1);
+    }
+    if (cursor <= slot.endDate!) out.push({ ...slot, key: `${base}|${cursor}`, startDate: cursor, endDate: slot.endDate });
+  }
+  // sample weeks no table band covers (e.g. a season the engine has loaded before the price page shows it)
+  for (const s of samples) {
+    const st = sampleState(s);
+    if (!st) continue;
+    const form = LOGOS_FORMS.find(f => f.size === s.size)!;
+    const last = addDays(s.checkOut, -1);
+    if (table.some(t => formOf(t.unit)?.size === s.size && t.startDate! <= last && t.endDate! >= s.checkIn)) continue;
+    for (const p of s.products) {
+      const persons = p.persons ?? 2;
+      out.push({
+        key: `${keyPart(form.unit)}-${persons}p|${s.checkIn}`,
+        startDate: s.checkIn, endDate: last, unit: form.unit,
+        price: p.price, currency: p.price !== null ? 'EUR' : null, priceUnit: p.price !== null ? 'package' : null,
+        priceBasis: 'room', occupancy: persons,
+        availability: p.price !== null ? 'available' : 'sold_out', availabilityText: st.text, spotsLeft: null,
+        packageNights: p.price !== null ? p.nights ?? SAMPLE_NIGHTS : null,
+      });
+    }
+  }
+  return out.sort((a, b) => (a.startDate! < b.startDate! ? -1 : a.startDate! > b.startDate! ? 1 : a.key < b.key ? -1 : 1));
+}
+
+export async function fetchLogosSamples(ctx: FetchContext, today: string): Promise<LogosSample[]> {
+  const samples: LogosSample[] = [];
+  for (const f of LOGOS_FORMS) {
+    let form: LogosForm | null = null;
+    try { form = parseLogosForm(await fetchText(logosFormUrl(f.tag), { accept: 'text/html' })); }
+    catch (e) { ctx.incomplete(`Leão form ${f.tag}: ${(e as Error).message}`); continue; }
+    if (!form || form.tag !== f.tag) { ctx.incomplete(`Leão form ${f.tag}: hidden inputs (tag_id/minDate/maxDate) not found or changed`); continue; }
+    const stays = logosSampleStays(today, form.minDate, form.maxDate);
+    if (stays.length === 0) ctx.note(`Leão form ${f.tag} (${f.size}): no sample stay inside the loaded window ${form.minDate}..${form.maxDate}`);
+    for (const s of stays) {
+      try {
+        const r = parseLogosAvailability(await fetchText(logosAvailabilityUrl(f.tag, s.checkIn, s.checkOut, form.lang), { accept: 'application/json' }));
+        samples.push({ size: f.size, tag: f.tag, ...s, ...r });
+      } catch (e) { ctx.incomplete(`Leão availability ${f.tag} ${s.checkIn}..${s.checkOut}: ${(e as Error).message}`); }
+    }
+  }
+  return samples;
+}
+
+export async function fetchLogosSlots(ctx: FetchContext, today: string): Promise<Slot[]> {
+  const html = await fetchText(LOGOS_PRICES_URL, { accept: 'text/html' });
+  const { seasons, rates } = parseLogosTable(html);
+  if (seasons.length === 0 || rates.length < 5) throw new Error(`logos-beach-village: season price table not found or changed (${seasons.length} seasons, ${rates.length} rates)`);
+  if (seasons.some(s => s.ranges.length === 0)) throw new Error('logos-beach-village: a season column has no parsable date range');
+  const table = buildLogosSlots(seasons, rates, parseLogosWeeklyRange(html));
+  return applyLogosSamples(table, await fetchLogosSamples(ctx, today));
+}
+
 export const logosBeachVillageTheologos: OfferAdapter = {
   key: 'logos-beach-village-theologos',
   name: 'LOGOS Beach Village Theologos',
@@ -299,9 +477,10 @@ export const logosBeachVillageTheologos: OfferAdapter = {
     contactEmail: 'info@logos-rhodos.com',
   },
   url: HOME_URL,
-  slotMethod: 'price_table',
+  slotMethod: 'booking_engine',
   instantBooking: true,
-  fetchBudget: 8,
+  liveAvailability: true,
+  fetchBudget: 46,
   async fetchContent() {
     const home = await fetchText(HOME_URL, { accept: 'text/html' });
     const rooms: string[] = [];
@@ -310,11 +489,5 @@ export const logosBeachVillageTheologos: OfferAdapter = {
     const prices = await fetchText(LOGOS_PRICES_URL, { accept: 'text/html' });
     return parseLogosContent({ home, rooms, kite, prices });
   },
-  async fetchSlots() {
-    const html = await fetchText(LOGOS_PRICES_URL, { accept: 'text/html' });
-    const { seasons, rates } = parseLogosTable(html);
-    if (seasons.length === 0 || rates.length < 5) throw new Error(`logos-beach-village: season price table not found or changed (${seasons.length} seasons, ${rates.length} rates)`);
-    if (seasons.some(s => s.ranges.length === 0)) throw new Error('logos-beach-village: a season column has no parsable date range');
-    return buildLogosSlots(seasons, rates, parseLogosWeeklyRange(html));
-  },
+  fetchSlots: ctx => fetchLogosSlots(ctx, todayIso()),
 };

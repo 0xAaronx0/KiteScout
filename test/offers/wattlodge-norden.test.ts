@@ -1,10 +1,13 @@
-// WattLodge (Norden / Norddeich): replays the site pages recorded 2026-10-14 (script / style / svg bodies dropped).
+// WattLodge (Norden / Norddeich): replays the site pages recorded 2026-10-14 (script / style / svg bodies dropped) and the
+// 12 Easy-Booking category searches recorded 2026-10-14 (the one non-empty answer trimmed to the fields the parser reads:
+// photos, descriptions and CDN paths dropped). Engine slots are built with today pinned to the recording day.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  wattlodgeNorden, buildWlSlots, parseWlNotes, parseWlPackages, parseWlRates,
+  wattlodgeNorden, buildWlEngineSlots, buildWlSlots, fetchWlLiveSlots, fetchWlSample, fetchWlSlots, parseWlNotes, parseWlPackages, parseWlRates,
+  parseWlSearch, wlSampleCheckIns, wlSearchBody,
 } from '../../src/offers/adapters/wattlodge-norden.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
@@ -31,8 +34,8 @@ test('wattlodge: kite packages on /sportangebot/', () => {
   assert.deepEqual(parseWlPackages(read('wattlodge.de_sportangebot_.')), { kiteWeekend: 307, kiteWeek: 755 });
 });
 
-test('wattlodge: slots = room types without dates, EUR per person per night', async () => {
-  const slots = await wattlodgeNorden.fetchSlots(ctx);
+test('wattlodge: table fallback = room types without dates, EUR per person per night', async () => {
+  const slots = await fetchWlSlots();
   assert.deepEqual(slots, buildWlSlots(parseWlRates(prices)));
   assert.deepEqual(checkSlots(slots).problems, []);
   assert.deepEqual(slots.map(s => [s.key, s.price, s.occupancy]), [
@@ -57,4 +60,64 @@ test('wattlodge: content', async () => {
   assert.ok(c.optionalServices.some(s => /Kite week Monday-Friday: .* from EUR 755 per person/.test(s)));
   assert.match(c.sourceText ?? '', /In unserem Wassersportzentrum, der Surfschule Norddeich/);
   assert.ok(c.imageUrls.length >= 10 && c.imageUrls.every(u => u.startsWith('https://wattlodge.de/wp-content/uploads/') && !/logo|favicon/i.test(u)));
+});
+
+const TODAY = '2026-10-14';
+
+test('wattlodge engine: request shape and sample weeks', () => {
+  assert.equal(wlSearchBody('2026-10-17'), 'customerId=10928&numAdults=2&numChildren=0&arrivalDate=2026-10-17&departureDate=2026-10-24&childrenDOB=&localeId=2');
+  assert.deepEqual(wlSampleCheckIns(TODAY), [
+    '2026-10-17', '2026-11-07', '2026-12-05', '2027-01-02', '2027-02-06', '2027-03-06',
+    '2027-04-03', '2027-05-01', '2027-06-05', '2027-07-03', '2027-08-07', '2027-09-04',
+  ]);
+});
+
+test('wattlodge engine: category answer (camper pitch dropped) and empty answers', async () => {
+  const s = await fetchWlSample('2026-10-17');
+  assert.equal(s.error, null);
+  assert.deepEqual(s.cats.map(c => [c.name, c.free, c.total, c.tax]), [
+    ['Zweibettzimmer Standard', 2, 917, 49], ['Doppelzimmer Einfach - Bad extern', 1, 917, 49], ['Doppelzimmer Standard +', 1, 959, 49],
+    ['Doppelzimmer Zimmer +', 3, 1015, 49], ['Doppelzimmer Superior', 2, 1141, 49], ['Doppel-/ Familiensuite', 1, 1015, 49],
+    ['Hütten-Suite Superior', 1, 1015, 49],
+  ]);
+  assert.deepEqual([(await fetchWlSample('2026-11-07')).cats, (await fetchWlSample('2026-11-07')).error], [[], 'FrontEndNoResult']);
+  assert.equal((await fetchWlSample('2027-06-05')).error, 'FrontEndNoResultNoPrice');
+  assert.deepEqual(parseWlSearch('{"catArr":[],"errorMsg":"FrontEndNoResultNoPrice"}', '2027-06-05').cats, []);
+  assert.throws(() => parseWlSearch('{"error":"x"}', '2027-06-05'), /without catArr/);
+});
+
+test('wattlodge engine: replay 2026-10-14 -> 7 category slots for 17.-24.10.2026', async () => {
+  const notes: string[] = [];
+  const incomplete: string[] = [];
+  const slots = await fetchWlLiveSlots(TODAY, { note: t => { notes.push(t); }, incomplete: t => { incomplete.push(t); } });
+  assert.deepEqual(incomplete, []);
+  assert.deepEqual(checkSlots(slots).problems, []);
+  assert.ok(notes.some(n => /2026-11-07 FrontEndNoResult, .*2027-09-04 FrontEndNoResultNoPrice/.test(n)));
+  assert.deepEqual(slots.map(x => [x.key, x.price, x.availability, x.spotsLeft]), [
+    ['zweibettzimmer-standard|2026-10-17', 868, 'available', 2], ['doppelzimmer-einfach-bad-extern|2026-10-17', 868, 'limited', 1],
+    ['doppelzimmer-standard|2026-10-17', 910, 'limited', 1], ['doppelzimmer-zimmer|2026-10-17', 966, 'available', 3],
+    ['doppelzimmer-superior|2026-10-17', 1092, 'available', 2], ['doppel-familiensuite|2026-10-17', 966, 'limited', 1],
+    ['hutten-suite-superior|2026-10-17', 966, 'limited', 1],
+  ]);
+  const s = slots[0];
+  assert.deepEqual([s.unit, s.startDate, s.endDate, s.currency, s.priceUnit, s.packageNights, s.priceBasis, s.occupancy],
+    ['Zweibettzimmer Standard', '2026-10-17', '2026-10-23', 'EUR', 'package', 7, 'room', 2]);
+  assert.match(s.availabilityText ?? '', /2 free for 7 nights from 2026-10-17 \(2 adults, Frühstück; Kurtaxe EUR 49 extra\)/);
+});
+
+test('wattlodge engine: a category missing from a non-empty answer is sold out', () => {
+  const cat = (name: string, free: number) => ({ name, minPersons: 1, maxPersons: 2, free, total: 917, tax: 49, catering: null });
+  const a = { checkIn: '2027-06-05', nights: 7, adults: 2, error: null, cats: [cat('Hütten-Suite', 2), cat('Doppelzimmer Superior', 1)] };
+  const b = { checkIn: '2027-07-03', nights: 7, adults: 2, error: null, cats: [cat('Doppelzimmer Superior', 4)] };
+  const closed = { checkIn: '2027-12-04', nights: 7, adults: 2, error: 'FrontEndNoResult', cats: [] };
+  assert.deepEqual(buildWlEngineSlots([a, b, closed]).map(x => [x.key, x.price, x.availability]), [
+    ['hutten-suite|2027-06-05', 868, 'available'], ['doppelzimmer-superior|2027-06-05', 868, 'limited'],
+    ['hutten-suite|2027-07-03', null, 'sold_out'], ['doppelzimmer-superior|2027-07-03', 868, 'available'],
+  ]);
+});
+
+test('wattlodge: adapter flags', () => {
+  assert.equal(wattlodgeNorden.slotMethod, 'booking_engine');
+  assert.equal(wattlodgeNorden.liveAvailability, true);
+  assert.equal(wattlodgeNorden.instantBooking, true);
 });

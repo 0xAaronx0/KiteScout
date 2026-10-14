@@ -1,0 +1,3 @@
+<html><body>
+<div class="search-form__error notification is-warning is-light sirvoy-flexible-text" data-translation-key="booking_engine.error.not_enough_beds1" > No selection available for chosen dates/length of stay/number of guests. Please make another choice, or contact us via email/phone. </div>
+</body></html>

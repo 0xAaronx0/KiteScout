@@ -249,6 +249,18 @@ Pins: "Avon" (Hatteras) and "Maui" (North Shore, the camp page names no beach) i
 Known gap: `lib/images.ts` downloads photos with a browser User-Agent; velabaja.com answers that with 403 (and our
 honest bot UA with 200), so Vela Baja has no photos yet.
 
+## Live availability upgrade (2026-10-14)
+
+Flags: `liveAvailability` / `instantBooking` on every adapter (migration 20261014120000). 20 instantly bookable
+adapters were re-checked for a compliant engine read; 6 now read live: Salty's (Sirvoy), LOGOS (Leão availability
+API; engine loaded only to 31.10.2026), Kite Hostel Stagnone (Octorate public calendar, whole hostel, printed
+prices), Thorsminde and Wulfener Hals (Compusoft; Thorsminde has no 2027 units yet, table fallback), WattLodge
+(Easy-Booking `searchCatAvailability` with the widget's own random `X-Session-Id`; rates from Jan 2027 not loaded).
+Not usable (robots / 403 / bot filter / session-only results): Mews, Clock PMS+, RoomRaccoon, Amenitiz (2), Beds24
+(3, answer "service unavailable" to our bot; on the request backlog), Lodgify checkout API (403), freetobook,
+Exely (hopenapi), Booking Expert, Danline (Skaven; results only in the session basket), Kite Passion's own system
+(a price calculator, no inventory).
+
 ## Refresh strategy (recommendation)
 
 - Booking-engine / Shopify / app JSON: daily `--slots` (in the 06:00 UTC monitor cron, job `offer-slots`,

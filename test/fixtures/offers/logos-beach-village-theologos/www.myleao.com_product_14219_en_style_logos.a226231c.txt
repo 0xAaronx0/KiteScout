@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<!-- Google Font -->
+	
+	<!-- Google Font -->
+			<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald:400,300,700" media="screen">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+	
+	    <title>
+        			Buchung			</title>
+		    <link href="/static/responsive/css/bootstrap.min.css" rel="stylesheet">
+	
+	<link href="/static/responsive/font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link href="/static/responsive/css/plugins/awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css" rel="stylesheet">
+
+	<link href="/static/responsive/css/animate.css" rel="stylesheet">
+			<link href="/static/responsive/css/style.css" rel="stylesheet">
+	
+	<!-- CSS Jquery UI -->
+	<link rel="stylesheet" href="/static/js/jquery-ui-1.11.4/jquery-ui.css">
+
+	<!-- CSS FancyBox -->
+	<link href="/static/js/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet">
+
+	<!-- CSS Toastr -->
+    <link href="/static/responsive/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+	<!-- Tooltipster -->
+	<link rel="stylesheet" type="text/css" href="/static/js/tooltipster/dist/css/tooltipster.bundle.min.css" />
+
+	<!-- CSS of the bookingform -->
+			<link href="/static/css/bookingform.css" rel="stylesheet">
+	
+	<!-- Unitegallery -->
+	<link rel='stylesheet' href='/static/js/unitegallery/css/unite-gallery.css' type='text/css' />
+	<!--link rel='stylesheet' href='/static/js/unitegallery/themes/compact/ug-theme-compact.css' type='text/css' /-->
+
+	<!-- FullCalendar -->
+	<link rel="stylesheet" href="/static/js/fullcalendar/fullcalendar.min.css" />
+	<link rel="stylesheet" href="/static/js/fullcalendar/scheduler.min.css" />
+	<link rel="stylesheet" href="/static/js/intPhone/css/intlTelInput.css" />
+
+
+	<link href="/vendor/daterangepicker/daterangepicker.css" rel="stylesheet" />
+	<!-- CSS of a center -->
+						<link href="/assets/surf_n_kite/theologos/stylesheet.css?v=1791969507" rel="stylesheet">
+			
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="57x57" href="/static/images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/static/images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/static/images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/static/images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/static/images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/static/images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/static/images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/static/images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/static/images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/static/images/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<!--script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="e100b842-c85a-4fcd-9a1d-68a203b2b5eb" data-blockingmode="auto" type="text/javascript"></script-->
+
+
+	
+    <!-- Cookie Hinweis -->
+		    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+	    <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+	    <script></script>
+	</head>
+
+<body id="iframe-leao">
+				<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TF7HG2Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	<div class="overlayLoader text-center" style="display: none;">
+        <div class="loader"></div>
+        <div class="overlayLoaderText">
+            <div class="text-white container text-center">
+                <h5>Vielen Dank! Deine Buchung wird gespeichert. Wir bitten um ein wenig Geduld...</h5>
+            </div>
+        </div>
+    </div>
+
+	<!-- Header mit Logo -->
+			<div id="header-bg">
+		<div class="container">
+			<div class="col-xs-12" id="header-bookingform">
+				<a href="http://www.surftheologos.com" target="_blank">
+			<img id="logo" src="/assets/surf_n_kite/theologos/images/logo.png" alt="Surf Theologos / LOGOS Beach Village">
+	</a>
+
+<div id="langbox">
+	<div id="station_phone"><a href="tel:+30 694 345 1381 (Mobil) oder +30 224 108 2203 (Station)"><i class="fa fa-phone"></i>&nbsp;+30 694 345 1381 (Mobil) oder +30 224 108 2203 (Station)</a></div>
+
+	
+			<div id="lang_selection_flags">
+					<a href="?setLanguage=de"><img src="/static/images/flags-xl/de.png" border="0" width="25"></a>
+					<a href="?setLanguage=en"><img src="/static/images/flags-xl/en.png" border="0" width="25"></a>
+					<a href="?setLanguage=fr"><img src="/static/images/flags-xl/fr.png" border="0" width="25"></a>
+				</div>
+	</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Menu -->
+	<div id="menu-bg">
+		<div class="container">
+			<div class="col-xs-12" id="menu-bookingform">
+				<div class="nav">
+<ul>
+
+
+<!-- ab hier bearbeitet -->
+<li class="hidden-xs"><a href="/selfservice/destination-date">Aufenthalt</a></li>				<li class="hidden-xs"><div>Teilnehmer</div></li>			<li class="hidden-xs"><div>Leistungen</div></li>		<li class="hidden-xs"><div>Kundendaten</div></li>		<li class="hidden-xs"><div>Zusammenfassung</div></li>		</ul>	<div class="visible-xs col-xs-12 col-12 li-select-menu">
+		<select class="w-100 select-menu  mb-5" onChange="document.location.href=this.value" style="padding: 10px;">
+			<option value="/selfservice/destination-date">Schritt 1: Aufenthalt</option><option disabled>Schritt 2: Teilnehmer</option><option disabled>Schritt 3: Leistungen</option><option disabled>Schritt 4: Kundendaten</option><option disabled>Schritt 5: Zusammenfassung</option>		</select>
+	</div>
+</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Content, Formular -->
+	<div id="content-bg" class="pb-5">
+		<div class="container">
+							<div class="col-xs-12" id="content-bookingform">
+                    					<!-- linke Spalte -->
+					
+					<div class="col-xs-12 padding-xs" id="content-bookingform-left">
+						<div id="left-col">
+							<script></script>
+
+
+    <div class="modal inmodal" id="delete_all_from_booking-modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content animated bounceInRight">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Schließen</span></button>
+				<i class="fa fa-trash modal-icon"></i>
+				<h4 class="modal-title">Alle Eingaben löschen</h4>
+			</div>
+			<form role="form" id="delete_all_from_booking-form" novalidate="novalidate">
+				<div class="modal-body">
+					Möchtest du wirklich alles löschen? Alle bisherigen Eingaben gehen dadurch unwideruflich verloren!				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-white" data-dismiss="modal"><i class="fa fa-close"></i>&nbsp;&nbsp;Nein, doch nicht</button>
+					<button type="submit" id="delete_all_from_booking-save" class="btn btn-primary"><i class="fa fa-trash"></i>&nbsp;&nbsp;Alles löschen</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>    
+    <script></script>
+
+<style></style>
+
+<input type="hidden" name="currencySymbol" id="currencySymbol" value="&euro;">
+<input type="hidden" name="session_id" id="session_id" value="REDACTED">
+
+<input type="hidden" name="tag_id" id="tag_id" value="14219">
+<input type="hidden" name="lang" id="lang" value="de">
+<input type="hidden" name="minDate" id="minDate" value="2026-04-01">
+<input type="hidden" name="maxDate" id="maxDate" value="2026-10-31">
+<div class="ibox-margin-bottom clearfix">
+    <div id="loading-layer" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); color: white; text-align: center; padding-top: 20%; font-size: 20px; z-index: 9999;">
+        <div class="spinner"></div>
+        Lade Verfügbarkeiten...
+    </div>
+    <div class="ibox-title"><h4>Wann möchtest du verreisen?</h4></div>
+    <div class="row">
+    	<div class="col-xs-12 col-12"><input class="form-control" type="text" name="checkinDates" id="checkinDates"></div>
+
+
+        <div id="bookedOut" class="alert alert-danger text-center col-xs-12 col-12" style="border-left-width: 10px; display:none;">
+            <i class="fa fa-exclamation-triangle"></i> Die Leistung ist leider ausgebucht. Bitte versuche es noch einmal mit anderen Daten.        </div>
+        <div id="productAvailableContainer" style="display: none;" class="col-xs-12 col-12">
+            <br>
+            <a class="btn btn-primary" href="/selfservice/beneficiary">Ohne Unterkunft buchen</a>
+            <br><br>
+            <div id="productAvailable" class="overEffect"></div>
+        </div>
+    </div>
+</div>
+
+							
+													</div>
+					</div>
+					<!-- Ende linke Spalte -->
+
+					<!-- rechte Spalte -->
+										<!-- Ende rechte Spalte -->
+				</div>
+			
+                            <div class="clearfix"></div>
+				                                    <img src="/static/images/paypal/medium_paypal_logo_white_background.jpeg" border="0" alt="PayPal Logo" style="margin: 20px; float:left;" id="logo-paypal" />
+                                                <div style="margin: 20px; float:left;" id="payment-methods"><strong>
+                                </div>
+            		</div>
+		<input type="hidden" name="exchangeCurrency" id="exchangeCurrency" value="EUR">
+		<input type="hidden" name="exchangeRate" id="exchangeRate" value="1">
+	</div>
+
+
+	<!-- Footer -->
+	<div id="footer-bg">
+		<div class="container">
+			<div class="col-xs-12" id="footer-bookingform">
+				<div class="pull-right">
+				   Urheberrechtlich geschützt.				</div>
+				<div>
+					<strong>Leão Booking</strong> &copy; <a href="https://www.myleao.com" target="_blank">Nerdsquad UG (haftungsbeschränkt), 2014-2026</a>&nbsp;/&nbsp;
+					<a href="https://www.myleao.com/impressum" target="_blank">Impressum</a>&nbsp;
+					<a href="https://www.myleao.com/datenschutz" target="_blank">Datenschutzerklärung</a>&nbsp;
+					<a href="https://www.facebook.com/LeaoBooking" target="_blank"><i class="fa fa-facebook-official"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- JavaScript -->
+	<script></script>
+
+    <script src="/static/responsive/js/jquery-2.1.1.js"></script>
+	<script src="/static/js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+	    	<script src="/static/responsive/js/bootstrap.min.js"></script>
+	    <script src="/static/responsive/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="/static/responsive/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+	<!-- Jquery Validate -->
+	<script src="/static/responsive/js/plugins/validate/jquery.validate.min.js"></script>
+	<script src="/static/responsive/js/plugins/validate/messages_de.js"></script>
+
+	<!-- moment.js -->
+	<script src="/static/js/moment.js"></script>
+
+	<!-- Fancy Box -->
+	<script src="/static/js/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+	<!-- Toastr script -->
+    <script src="/static/responsive/js/plugins/toastr/toastr.min.js"></script>
+
+	<!-- Unitegallery -->
+	<script type='text/javascript' src='/static/js/unitegallery/js/unitegallery.min.js'></script>
+	<script type='text/javascript' src='/static/js/unitegallery/themes/compact/ug-theme-compact.js'></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="/static/responsive/js/inspinia.js"></script>
+    <script src="/static/responsive/js/plugins/pace/pace.min.js"></script>
+    <script src="/static/js/leaobooking2.js"></script>
+
+	<!-- Tooltipster -->
+	<script src="/static/js/tooltipster/dist/js/tooltipster.bundle.min.js"></script>
+	<script></script>
+
+	<!-- Fullcalendar -->
+	<script src='/static/js/fullcalendar/fullcalendar.min.js'></script>
+	<script src='/static/js/fullcalendar/scheduler.min.js'></script>
+	<script src="/static/js/fullcalendar/locale-all.js"></script>
+
+	<script type='text/javascript'></script>
+
+    <!-- Signature Pad -->
+    <script src="/static/js/signature_pad/js/signature_pad.umd.js"></script>
+    <script src="/static/js/signature_pad/js/app.js"></script>
+    <script src="/static/js/signature_pad/js/accommodation.js"></script>
+	<script src="/static/js/intPhone/js/intlTelInput.min.js"></script>
+
+	<!-- Datepicker -->
+	<script></script>
+
+	<script src="//cdn.jsdelivr.net/momentjs/latest/moment-with-locales.min.js"></script><script src="/vendor/daterangepicker/daterangepicker.js"></script><script src="/static/js/daterangepicker_available_product.js"></script>	<script></script>
+</body>
+</html>

@@ -13,19 +13,33 @@
 //            LAVSÆSON "27/3-26/6 og 17/8-18/10" and HØJSÆSON. The cabin table prints the high season as "27/6-18/10", which
 //            overlaps the low season; the high band is taken from the pitch-fee line of the same page
 //            ("Pladsgebyr i højsæson 27/6-16/8") - inferred, see report.
-// Booking engine: Compusoft (v3.onlinebooking.dk/v3thorsmin, the "Book nu" button) lists the cabins, but on 2026-10-12 it had
-//   no bookable unit at all for 2027 (season not loaded) - not used; the shared Compusoft helpers in hvide-sande-camping.ts
-//   could take over once 2027 is bookable.
-// robots.txt (2026-10-12): WordPress defaults (nothing we read).
-// Requests per run: content 4, slots 1 (memoised with content).
-// Parsed: slot = cabin type x season band (real limits, last night before the closing day 18/10), DKK per cabin per night
-//   (priceUnit 'per_night', priceBasis 'room'), availability 'unknown'; past bands dropped -> [] after 17.10.2026 until the
-//   2027 prices are published.
+//   engine   Compusoft online booking (v3.onlinebooking.dk/v3thorsmin, the "Book nu" button, portal key 35d6258a-… in that
+//            page), through the shared helpers of hvide-sande-camping.ts: per sample week the widget's anonymous profile list
+//            (getCSProfileListViewModel) + one price call (GetCSProfilePriceListMultipleProfilesV2, the call csob.bundle.min.js
+//            makes; no login, cookie or token). Units = the three cabin profiles (subTitle "…, Hytte"); pitches and the
+//            year-round "motorhome in front of the gate" are never listed. One Saturday-to-Saturday week per month inside the
+//            printed season of /priser/ or, for a year without printed prices, 1 April - 31 October (the fjord's water-sport
+//            period on /en/kitesurfing/), max 9 within 12 months; sampling stops after 3 closed weeks in a row.
+// Slot source: the engine whenever it returns a priced cabin week; otherwise (2027 not loaded yet: on 2026-10-12 and
+//   2026-10-14 every cabin and pitch profile was 0 for all 2027 weeks, only the motorhome spot was bookable) the printed
+//   price table below. Engine prices matched the table on 2026-10-14 (15.-18.10.: meadow 2,370 = 3 x 790, family 2,220 =
+//   3 x 740, fishing 1,350 = 3 x 450).
+// robots.txt (2026-10-14): thorsmindecamping.dk WordPress defaults (nothing we read); v3.onlinebooking.dk "Allow: /".
+// Requests per run: content 4, slots 1 (price page, memoised with content) + up to 2 per sample week (max 9) = max 23.
+// Parsed (engine): slot = cabin type x sample week ("enghytte|2027-06-05"), DKK per cabin for 7 nights as quoted by the
+//   engine (priceUnit 'package', packageNights 7, priceBasis 'room'), available (>= 3 free) / limited (1-2 free, spotsLeft)
+//   / sold_out (0 free while other campsite profiles are bookable that week); weeks with nothing bookable are skipped.
+// Parsed (table fallback): slot = cabin type x season band (real limits, last night before the closing day 18/10), DKK per
+//   cabin per night (priceUnit 'per_night', priceBasis 'room'), availability 'unknown'; past bands dropped -> [] after
+//   17.10.2026 until the 2027 prices are published or the engine has 2027 loaded.
 // Known limits: no map pin on the site (address link only) - spotCoords omitted; weekly prices go into the room features.
 // ---------------------------------------------------------------------------
-import { fetchText } from '../http.js';
+import { BlockedByHost, fetchText } from '../http.js';
 import { clean, iso, parseAmount, todayIso } from '../parse.js';
-import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
+import type { ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
+import {
+  csobListUrl, csobPriceUrl, csobSaturdaySamples, csobSlots, parseCsobList, parseCsobPrices, type CsobPortal, type CsobPrice, type CsobSample,
+} from './hvide-sande-camping.js';
 
 const SITE = 'https://thorsmindecamping.dk';
 export const TMC_HOME_URL = `${SITE}/en/`;
@@ -224,6 +238,78 @@ export function parseThorsmindeContent(p: TmcPages): OfferContent {
   };
 }
 
+// --- Compusoft engine ------------------------------------------------------------------------------
+export const TMC_PORTAL: CsobPortal = {
+  portalKey: '35d6258a-80d9-4e26-a28c-13b70cc5436b',
+  language: 'en',
+  currency: 'DKK',
+  // the three cabin profiles carry the filter group "Hytte" in their subTitle ("(Thorsminde Camping, Hytte)")
+  isUnit: p => /,\s*Hytte\)?$/i.test(p.subTitle),
+};
+/** bookable all year in front of the gate - says nothing about the campsite season */
+const TMC_YEAR_ROUND = /in front of the gate/i;
+const CSOB_ACCEPT = 'application/json, text/javascript, */*; q=0.01';
+
+/**
+ * One sample stay: profile list + one price call when a cabin is free. `open` = any campsite profile except the year-round
+ * motorhome spot is bookable (that spot is free even when the season is not loaded).
+ */
+export async function fetchTmcSample(checkIn: string, nights = 7): Promise<CsobSample> {
+  const all = parseCsobList(await fetchText(csobListUrl(TMC_PORTAL, checkIn, nights), { accept: CSOB_ACCEPT }));
+  const profiles = all.filter(p => TMC_PORTAL.isUnit(p));
+  const free = profiles.filter(p => p.units > 0);
+  const prices = free.length
+    ? parseCsobPrices(await fetchText(csobPriceUrl(TMC_PORTAL, free, checkIn, nights), { accept: CSOB_ACCEPT }), TMC_PORTAL.currency)
+    : new Map<string, CsobPrice>();
+  return { checkIn, nights, profiles, open: all.some(p => p.units > 0 && !TMC_YEAR_ROUND.test(p.title)), prices };
+}
+
+/** Sample seasons: the printed season of its year, else 1 April - 31 October (water sports on the fjord) for this and next year. */
+export function tmcSampleSeasons(p: TmcPrices, today: string): Array<{ start: string; end: string }> {
+  const y = Number(today.slice(0, 4));
+  return [y, y + 1].map(year => (p.year === year && p.open && p.close ? { start: p.open, end: p.close } : { start: iso(year, 4, 1), end: iso(year, 10, 31) }));
+}
+
+/** engine profile title -> price-table type (fiskehytte / familiehytte / enghytte) */
+export function tmcTypeOf(title: string): string | null {
+  return /meadow/i.test(title) ? 'enghytte' : /family/i.test(title) ? 'familiehytte' : /fishing/i.test(title) ? 'fiskehytte' : null;
+}
+
+/** Engine samples -> slots with the table's unit names ("Meadow cabin (6 people)") and keys "<type>|<check-in>". */
+export function buildTmcEngineSlots(samples: CsobSample[], p: TmcPrices, ctx?: Pick<FetchContext, 'note'>): Slot[] {
+  return csobSlots(samples, ctx).map(s => {
+    const type = s.unit ? tmcTypeOf(s.unit) : null;
+    if (!type) return s;
+    const persons = p.rates.find(r => r.type === type)?.persons;
+    return { ...s, key: `${type}|${s.startDate}`, unit: persons ? tmcUnit({ type, persons }) : TMC_UNITS[type] };
+  });
+}
+
+/** Engine first; the printed table only when the engine has no priced cabin week (season not loaded yet). */
+export async function fetchTmcLiveSlots(today: string, ctx: FetchContext): Promise<Slot[]> {
+  const prices = parseTmcPrices(await page(TMC_PRICES_URL));
+  const checkIns = csobSaturdaySamples(today, tmcSampleSeasons(prices, today), { max: 9 });
+  const samples: CsobSample[] = [];
+  let closed = 0;
+  for (const d of checkIns) {
+    try {
+      const s = await fetchTmcSample(d);
+      samples.push(s);
+      closed = s.open ? 0 : closed + 1;
+      if (closed >= 3) { ctx.note(`thorsminde-camping: compusoft has nothing bookable for 3 sample weeks in a row (last ${d}) - stopped sampling`); break; }
+    } catch (e) {
+      if (e instanceof BlockedByHost) throw e;
+      ctx.incomplete(`compusoft sample ${d}: ${(e as Error).message}`);
+    }
+  }
+  const engine = buildTmcEngineSlots(samples, prices, ctx);
+  if (engine.some(s => s.price != null)) return engine;
+  ctx.note('thorsminde-camping: no cabin bookable in the compusoft engine for any sample week (season not loaded) - printed price table used');
+  if (prices.bands.length === 0 || prices.rates.length === 0) throw new Error('thorsminde-camping: cabin prices (LAVSÆSON / HØJSÆSON blocks) not found on /priser/');
+  return buildTmcSlots(prices, today);
+}
+
+/** Printed price table only (the fallback of fetchTmcLiveSlots). */
 export async function fetchTmcSlots(today: string): Promise<Slot[]> {
   const prices = parseTmcPrices(await page(TMC_PRICES_URL));
   if (prices.bands.length === 0 || prices.rates.length === 0) throw new Error('thorsminde-camping: cabin prices (LAVSÆSON / HØJSÆSON blocks) not found on /priser/');
@@ -242,9 +328,10 @@ export const thorsmindeCamping: OfferAdapter = {
     phone: '+4520451976',
   },
   url: TMC_KITE_URL,
-  slotMethod: 'price_table',
+  slotMethod: 'booking_engine',
   instantBooking: true,
-  fetchBudget: 5,
+  liveAvailability: true,
+  fetchBudget: 23,
   async fetchContent() {
     const home = await page(TMC_HOME_URL);
     const kite = await page(TMC_KITE_URL);
@@ -254,8 +341,8 @@ export const thorsmindeCamping: OfferAdapter = {
     return parseThorsmindeContent({ home, kite, cabins, prices });
   },
   async fetchSlots(ctx) {
-    const slots = await fetchTmcSlots(todayIso());
-    if (slots.length === 0) ctx.note('thorsminde-camping: no future band in the printed cabin prices - price on request until the next season is published');
+    const slots = await fetchTmcLiveSlots(todayIso(), ctx);
+    if (slots.length === 0) ctx.note('thorsminde-camping: neither the engine nor the printed cabin prices have a future week - price on request until the next season is loaded');
     return slots;
   },
 };

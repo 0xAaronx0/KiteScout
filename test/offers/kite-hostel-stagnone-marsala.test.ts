@@ -1,14 +1,16 @@
-// Kite Hostel Stagnone (Marsala, Lo Stagnone): replays the pages recorded 2026-10-12. Slots = the undated "Per night
-// from" cards on /rooms/ (edited 2026-04-08), kept while the page is fresh (gate tested with fixed dates).
+// Kite Hostel Stagnone (Marsala, Lo Stagnone): replays the pages recorded 2026-10-12 and the Octorate availability
+// calendar recorded 2026-10-14. Slots = the "Per night from" cards on /rooms/ (edited 2026-04-08), kept while the page is
+// fresh (gate tested with fixed dates), banded by the calendar's open / closed days.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readdirSync, readFileSync } from 'node:fs';
+import { copyFileSync, mkdtempSync, readdirSync, readFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import {
-  kiteHostelStagnoneMarsala, buildKhsSlots, khsFresh, khsImages, khsModified, parseKhsFaq, parseKhsPrices, parseKhsRoomPage,
+  kiteHostelStagnoneMarsala, buildKhsCalendarSlots, buildKhsSlots, fetchKhsSlots, khsFresh, khsImages, khsModified, parseKhsCalendar,
+  parseKhsFaq, parseKhsPrices, parseKhsRoomPage,
 } from '../../src/offers/adapters/kite-hostel-stagnone-marsala.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
-import { todayIso } from '../../src/offers/parse.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/kite-hostel-stagnone-marsala');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -16,6 +18,8 @@ const files = readdirSync(DIR);
 const read = (prefix: string) => readFileSync(join(DIR, files.find(f => f.startsWith(prefix))!), 'utf8');
 const roomsHtml = read('www.kitehostelstagnone.com_rooms_.');
 const ctx = { note: () => {}, incomplete: () => {} };
+const TODAY = '2026-10-14';
+const calJs = read('api.octorate.com_connect_rest_v1_reservation_calendar_390941');
 
 test('khs: /rooms/ price cards + page date', () => {
   assert.deepEqual(parseKhsPrices(roomsHtml).map(p => [p.title, p.amount]), [
@@ -44,11 +48,60 @@ test('khs: freshness gate (15 months after the page edit)', () => {
   assert.deepEqual(buildKhsSlots(roomsHtml, '2027-08-01'), []);
 });
 
-test('khs: fetchSlots replays /rooms/ (result follows the gate for today)', async () => {
+test('khs: Octorate calendar script -> day flags, minimum stays, messages', () => {
+  const cal = parseKhsCalendar(calJs);
+  assert.equal(Object.keys(cal.days).length, 700);
+  assert.deepEqual([cal.days['2026-10-14'], cal.days['2026-10-15'], cal.days['2026-11-02'], cal.days['2026-11-03'], cal.days['2027-07-10']], [0, undefined, 1, 0, 0]);
+  assert.deepEqual(cal.minstay, {});
+  assert.equal(cal.messages.closed, 'Not available');
+  assert.throws(() => parseKhsCalendar('var x = 1;'), /without "octorateAvailCalendar"/);
+});
+
+test('khs: slots = room cards banded by the calendar (open -> available with the card price, 0 -> closed)', async () => {
+  const slots = await fetchKhsSlots(ctx, TODAY);
+  assert.deepEqual(checkSlots(slots).problems, []);
+  assert.equal(slots.length, 16);
+  assert.deepEqual(slots.filter(s => s.unit === 'Mixed dorm (bed)').map(s => [s.key, s.endDate, s.price, s.availability]), [
+    ['mixed-dorm-bed|2026-10-14', '2026-10-14', null, 'closed'],
+    ['mixed-dorm-bed|2026-10-15', '2026-11-01', 33, 'available'],
+    ['mixed-dorm-bed|2026-11-02', '2026-11-02', 33, 'available'],
+    ['mixed-dorm-bed|2026-11-03', '2027-09-30', null, 'closed'],
+  ]);
+  const pixel = slots.find(s => s.key === 'private-double-room-pixel|2026-10-15')!;
+  assert.deepEqual([pixel.price, pixel.currency, pixel.priceUnit, pixel.priceBasis, pixel.occupancy], [95, 'EUR', 'per_night', 'room', 2]);
+  assert.match(slots.find(s => s.key === 'mixed-dorm-bed|2026-11-02')!.availabilityText!, /Closed to arrival/);
+  // minimum stays split the bands and set minNights
+  const withMin = buildKhsCalendarSlots(buildKhsSlots(roomsHtml, TODAY).slice(0, 1),
+    { days: { '2026-11-03': 0 }, minstay: { '2026-10-20': 3 }, messages: {} }, TODAY);
+  assert.deepEqual(withMin.map(s => [s.startDate, s.endDate, s.availability, s.minNights ?? null]), [
+    ['2026-10-14', '2026-10-19', 'available', null], ['2026-10-20', '2026-10-20', 'available', 3],
+    ['2026-10-21', '2026-11-02', 'available', null], ['2026-11-03', '2026-11-03', 'closed', null], ['2026-11-04', '2027-09-30', 'available', null],
+  ]);
+  assert.equal(kiteHostelStagnoneMarsala.liveAvailability, true);
+});
+
+test('khs: calendar not readable -> the undated cards, reported as incomplete', async () => {
+  const dir = mkdtempSync(join(tmpdir(), 'khs-'));
+  const roomsFile = files.find(f => f.startsWith('www.kitehostelstagnone.com_rooms_.'))!;
+  copyFileSync(join(DIR, roomsFile), join(dir, roomsFile));
+  process.env.OFFERS_FIXTURE_DIR = dir;
+  try {
+    const missing: string[] = [];
+    const slots = await fetchKhsSlots({ note: () => {}, incomplete: r => missing.push(r) }, TODAY);
+    assert.deepEqual(slots, buildKhsSlots(roomsHtml, TODAY));
+    assert.match(missing[0], /Octorate calendar not read \(fixture missing/);
+  } finally {
+    process.env.OFFERS_FIXTURE_DIR = DIR;
+    rmSync(dir, { recursive: true, force: true });
+  }
+});
+
+test('khs: stale /rooms/ -> [] ("price on request") without asking the engine', async () => {
+  const missing: string[] = [];
   const notes: string[] = [];
-  const slots = await kiteHostelStagnoneMarsala.fetchSlots({ note: t => notes.push(t), incomplete: () => {} });
-  assert.deepEqual(slots, buildKhsSlots(roomsHtml, todayIso()));
-  if (slots.length === 0) assert.match(notes[0], /last edited 2026-04-08/);
+  assert.deepEqual(await fetchKhsSlots({ note: n => notes.push(n), incomplete: r => missing.push(r) }, '2027-08-01'), []);
+  assert.match(notes[0], /last edited 2026-04-08/);
+  assert.deepEqual(missing, []);
 });
 
 test('khs: room pages, FAQ, media photos', () => {
