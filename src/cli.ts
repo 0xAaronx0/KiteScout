@@ -12,6 +12,7 @@ import { runExtractCruiseOffers, runReviewCruiseOffers } from './pipeline/extrac
 import { runExtractCruiseReviews, recomputeAllAvgRatings } from './pipeline/extract-cruise-reviews.js';
 import { runCollectMediaCandidates, runApplySelectedMedia } from './pipeline/media-candidates.js';
 import { runRegionConditions } from './pipeline/region-conditions.js';
+import { runSpotConditions } from './pipeline/spot-conditions.js';
 import { runMonitor, showChanges, applyApprovedChanges, type DetectedChange } from './pipeline/monitor.js';
 import {
   newCtx, confirmOpenObservations, observeBackfill, observeUrl, revertChange,
@@ -335,6 +336,12 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'spot-conditions': {
+      const at = (f: string) => { const i = args.indexOf(f); return i >= 0 ? args[i + 1] : undefined; };
+      await runSpotConditions({ dryRun: args.includes('--dry-run'), out: at('--out'), from: at('--from') });
+      break;
+    }
+
     case 'monitor': {
       if (args.includes('--apply-approved')) {
         // Apply user-approved changes (from /changes) via full re-extraction.
@@ -568,6 +575,7 @@ async function main(): Promise<void> {
       console.log('  cruise-diff               Review: show what a fresh extraction WOULD change vs the DB (no writes); --domain to scope');
       console.log('  cruise-reviews            Match bstoked/TripAdvisor review links (domain-corroborated; --all to re-check)');
       console.log('  region-conditions         Build per-country water/wind conditions consensus from extracted offers');
+      console.log('  spot-conditions           Per-spot water/wind/level for stays+camps (clusters offer locations; --dry-run --out f.json, then --from f.json)');
       console.log('  monitor [n]               Detect changes on cruise provider sites (flags: --loop --all --baseline-only --interval-days <d>)');
       console.log('  changes [n]               Show recent detected provider changes (default 20; --unseen for new only)');
   console.log('  restore <domain> [...]    Restore wrongly-rejected providers back to status=new');
