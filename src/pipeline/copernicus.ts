@@ -16,9 +16,22 @@ const BASE: Record<Store, string> = {
   ads: 'https://ads.atmosphere.copernicus.eu/api/retrieve/v1',
 };
 
-/** CDSAPI_KEY for the CDS; ADSAPI_KEY for the ADS when it shows a different token. */
-export function storeToken(store: Store): string | undefined {
-  return (store === 'ads' ? process.env.ADSAPI_KEY : undefined) || process.env.CDSAPI_KEY || undefined;
+/**
+ * Personal access token as pasted: tolerates a .cdsapirc "key: ..." line, the old
+ * "UID:KEY" form and surrounding whitespace/quotes. shape() describes it without the value.
+ */
+export function normalizeToken(raw: string): { token: string; shape: string } {
+  const notes: string[] = [];
+  let t = raw;
+  const keyLine = /(?:^|\n)\s*key\s*:\s*(\S+)/i.exec(t);
+  if (keyLine) { t = keyLine[1]; notes.push('took .cdsapirc key line'); }
+  const trimmed = t.trim().replace(/^["']|["']$/g, '');
+  if (trimmed !== t) notes.push('trimmed');
+  t = trimmed;
+  const uid = /^\d+:(.+)$/.exec(t);
+  if (uid) { t = uid[1]; notes.push('dropped UID: prefix'); }
+  const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(t);
+  return { token: t, shape: `length ${t.length}, ${uuid ? 'uuid-like' : 'NOT uuid-like'}${notes.length ? `, ${notes.join(', ')}` : ''}` };
 }
 
 export class CopernicusError extends Error {}

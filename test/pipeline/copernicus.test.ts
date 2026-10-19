@@ -140,3 +140,13 @@ test('checkPlausible rejects Kelvin temperatures and UV above clear sky', () => 
   assert.throws(() => checkPlausible({ ...ok, air_temp_max_months: Array(12).fill(303) }), /implausible/);
   assert.throws(() => checkPlausible({ ...ok, uv_months: Array(12).fill(15) }), /implausible/);
 });
+
+test('normalizeToken tolerates .cdsapirc lines, UID prefixes and whitespace', async () => {
+  const { normalizeToken } = await import('../../src/pipeline/copernicus.js');
+  const u = '0123abcd-0000-4000-8000-0123456789ab';
+  assert.deepEqual(normalizeToken(u), { token: u, shape: 'length 36, uuid-like' });
+  assert.equal(normalizeToken(`url: https://cds.climate.copernicus.eu/api\nkey: ${u}\n`).token, u);
+  assert.equal(normalizeToken(`12345:${u}`).token, u);
+  assert.equal(normalizeToken(` "${u}"\n`).token, u);
+  assert.match(normalizeToken('abc').shape, /NOT uuid-like/);
+});

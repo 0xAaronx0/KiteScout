@@ -18,7 +18,7 @@ import {
   type ClimateCell, type OfferRef, type PortPoint, RateLimitError,
   fetchCellClimate, findCell, portKey, resolvePoint, round10,
 } from './climate.js';
-import { COPERNICUS_SOURCES, fetchCellCopernicus } from './copernicus.js';
+import { COPERNICUS_SOURCES, fetchCellCopernicus, normalizeToken } from './copernicus.js';
 
 const SOURCES = 'UV: CAMS global via Open-Meteo Air Quality API 2023-2025; air temp: ERA5 via Open-Meteo Historical API 2016-2025; water temp: Open-Meteo Marine API SST 2023-2025';
 
@@ -57,8 +57,11 @@ interface CountryPoint { country: string; is_alias: boolean; spot_name: string; 
 
 export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: number; budgetMin?: number } = {}): Promise<ClimateRunReport> {
   const apiKey = process.env.OPEN_METEO_API_KEY || undefined;
-  const cdsToken = process.env.CDSAPI_KEY || process.env.CDS_API_KEY || undefined;
-  const adsToken = process.env.ADSAPI_KEY || process.env.ADS_API_KEY || undefined;
+  const rawCds = process.env.CDSAPI_KEY || process.env.CDS_API_KEY || undefined;
+  const rawAds = process.env.ADSAPI_KEY || process.env.ADS_API_KEY || undefined;
+  const cds = rawCds ? normalizeToken(rawCds) : undefined, ads = rawAds ? normalizeToken(rawAds) : undefined;
+  if (cds) console.log(`Copernicus token: ${cds.shape}${ads ? `; ADS token: ${ads.shape}` : ''}`);
+  const cdsToken = cds?.token, adsToken = ads?.token;
   const deadline = opts.budgetMin != null ? Date.now() + opts.budgetMin * 60_000 : Infinity;
 
   const cruises = await selectAll<any>('app_cruise_offer_cards', 'offer_id,title,country,departure_port,itinerary_spots');
