@@ -1,4 +1,6 @@
 import { getSupabase } from '../../lib/supabase';
+import { isAdminKey } from '../../lib/admin-key';
+import AdminLocked from '../../components/AdminLocked';
 
 // Query Supabase at request time; never prerender at build (no env vars then).
 export const dynamic = 'force-dynamic';
@@ -434,14 +436,14 @@ export default async function ChangesPage({
 }: {
   searchParams: Promise<{ key?: string; error?: string }>;
 }) {
-  const supabase = getSupabase();
   const { key, error: errorParam } = await searchParams;
+  // No valid key, no data: the queue is no longer public read-only (2026-10-19).
+  if (!isAdminKey(key)) return <AdminLocked path="/changes" />;
+  const adminKey = key;
+  const supabase = getSupabase();
   const errorBanner = errorParam
     ? (ERROR_BANNERS[errorParam] ?? `Aktion fehlgeschlagen (${errorParam}) — Details im Server-Log.`)
     : null;
-  // The key is only honoured when it matches the server-side secret — a wrong
-  // key renders the page read-only (the API rejects it anyway).
-  const adminKey = key && process.env.CHANGES_ADMIN_KEY && key === process.env.CHANGES_ADMIN_KEY ? key : null;
 
   const COLUMNS = `
         id, detected_at, change_type, summary, url, significant, seen, details,
@@ -541,12 +543,6 @@ export default async function ChangesPage({
       </header>
 
       <main className="max-w-5xl mx-auto px-6 py-8">
-        {!adminKey && (
-          <div className="mb-6 rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm text-amber-800">
-            🔒 <span className="font-semibold">Read-only-Ansicht</span> — Re-run/Approve/Dismiss sind ausgeblendet.
-            Öffne die Seite mit deinem Admin-Key: <code className="bg-white px-1.5 py-0.5 rounded border border-amber-200">/changes?key=&lt;CHANGES_ADMIN_KEY&gt;</code>
-          </div>
-        )}
         {errorBanner && (
           <div className="mb-6 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
             ⚠ {errorBanner}
@@ -623,7 +619,7 @@ export default async function ChangesPage({
             </div>
             <div className="px-4 py-3 flex gap-3 items-start">
               <span className="mt-0.5">🔐</span>
-              <p className="text-slate-600">The dashboard is public read-only; actions require the admin key (<code className="bg-slate-100 px-1 rounded text-xs">/changes?key=…</code>, server env <code className="bg-slate-100 px-1 rounded text-xs">CHANGES_ADMIN_KEY</code>).</p>
+              <p className="text-slate-600">Dashboard and actions both require the admin key (<code className="bg-slate-100 px-1 rounded text-xs">/changes?key=…</code>, server env <code className="bg-slate-100 px-1 rounded text-xs">CHANGES_ADMIN_KEY</code>).</p>
             </div>
           </div>
         </section>

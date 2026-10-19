@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabase } from '../../../../lib/supabase';
+import { isAdminKey } from '../../../../lib/admin-key';
 
 // "Re-run" button on /changes: trigger the rerun-change.yml GitHub workflow for
 // one change row. The workflow re-extracts the provider WITHOUT writing offers
@@ -23,7 +24,7 @@ export async function POST(req: NextRequest) {
   const form = await req.formData();
   const id = String(form.get('id') ?? '');
   const key = String(form.get('key') ?? '');
-  if (key !== adminKey) return NextResponse.json({ error: 'invalid key' }, { status: 403 });
+  if (!isAdminKey(key)) return NextResponse.json({ error: 'invalid key' }, { status: 403 });
   if (!id) return NextResponse.json({ error: 'id required' }, { status: 400 });
 
   const token = process.env.GITHUB_ACTIONS_TOKEN;

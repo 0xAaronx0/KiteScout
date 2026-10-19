@@ -1,4 +1,6 @@
 import { getSupabase } from '../../../lib/supabase';
+import { isAdminKey } from '../../../lib/admin-key';
+import AdminLocked from '../../../components/AdminLocked';
 
 // Admin index: every offer with its current image count, hero-video status and
 // pending-selection indicator. Detail/selection lives at /admin/media/[offerId].
@@ -24,8 +26,9 @@ export default async function MediaAdminIndex({
   searchParams: Promise<{ key?: string }>;
 }) {
   const { key } = await searchParams;
+  if (!isAdminKey(key)) return <AdminLocked path="/admin/media" />;
+  const adminKey = key;
   const supabase = getSupabase();
-  const adminKey = key && process.env.CHANGES_ADMIN_KEY && key === process.env.CHANGES_ADMIN_KEY ? key : null;
 
   // Reseller offers are hard-inactive (Aaron, 2026-07-10): the app view excludes
   // them entirely, so curating their media would be wasted work — hide them here too.
@@ -52,7 +55,7 @@ export default async function MediaAdminIndex({
   const mediaCount = (o: OfferRow) => (o.images?.length ?? 0) + (o.hero_video_url ? 1 : 0);
   const needsWork = (o: OfferRow) => mediaCount(o) < 8 || (o.images ?? []).some(i => i.fallback);
 
-  const qs = adminKey ? `?key=${encodeURIComponent(adminKey)}` : '';
+  const qs = `?key=${encodeURIComponent(adminKey)}`;
   // Curation state per offer, computed once — drives both row display and ordering.
   const decorated = offers.map(o => {
     const imgs = o.images ?? [];
@@ -84,7 +87,6 @@ export default async function MediaAdminIndex({
         <h1 className="text-lg font-bold">🪁 Media Curation — {offers.length} offers</h1>
         <p className="text-xs text-slate-400 mt-0.5">
           Pick up to 12 media per offer — images + optional hero video combined (first image = hero).
-          {!adminKey && <span className="text-amber-400"> — read-only: append ?key=… to select</span>}
           {selectedRes.error && <span className="text-amber-400"> — candidates table missing: run migration 20260709000000</span>}
         </p>
       </header>

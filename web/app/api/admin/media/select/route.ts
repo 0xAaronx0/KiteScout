@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabase } from '../../../../../lib/supabase';
+import { isAdminKey } from '../../../../../lib/admin-key';
 
 // Persist the admin's media selection for one offer:
 //   images: up to 5 candidate ids in display order (index 0 = hero image)
@@ -22,7 +23,7 @@ export async function POST(req: NextRequest) {
 
   let body: Body;
   try { body = await req.json(); } catch { return NextResponse.json({ error: 'invalid JSON' }, { status: 400 }); }
-  if (body.key !== adminKey) return NextResponse.json({ error: 'invalid key' }, { status: 403 });
+  if (!isAdminKey(body.key)) return NextResponse.json({ error: 'invalid key' }, { status: 403 });
 
   const offerId = String(body.offerId ?? '');
   const imageIds = Array.isArray(body.imageIds) ? body.imageIds.map(String).slice(0, 12) : [];

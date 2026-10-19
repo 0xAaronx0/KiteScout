@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getSupabase } from '../../../../lib/supabase';
+import { isAdminKey } from '../../../../lib/admin-key';
 
 // Resolve a monitored provider change from the /changes dashboard:
 //   approve     → queued for full re-extraction (daily cron applies it) —
@@ -10,7 +11,7 @@ import { getSupabase } from '../../../../lib/supabase';
 //   reopen      → back to pending
 //   revert      → undo an auto-applied observation (writes its logged "before" values back)
 //   restore-provider → un-hide a provider the monitor hid after a site-loss signal
-// Guarded by CHANGES_ADMIN_KEY (the dashboard itself stays public read-only).
+// Guarded by CHANGES_ADMIN_KEY (the dashboard needs the same key since 2026-10-19).
 
 export const dynamic = 'force-dynamic';
 
@@ -48,7 +49,7 @@ export async function POST(req: NextRequest) {
   const key = String(form.get('key') ?? '');
   const offerSlug = String(form.get('slug') ?? '');
 
-  if (key !== adminKey) return NextResponse.json({ error: 'invalid key' }, { status: 403 });
+  if (!isAdminKey(key)) return NextResponse.json({ error: 'invalid key' }, { status: 403 });
   if (!id || (!ACTIONS[action] && !['apply-rerun', 'remove-offer', 'revert', 'restore-provider'].includes(action))) {
     return NextResponse.json({ error: 'invalid id/action' }, { status: 400 });
   }

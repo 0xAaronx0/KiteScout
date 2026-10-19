@@ -1,5 +1,7 @@
 import { getSupabase } from '../../../../lib/supabase';
 import Selector, { type CandidateView } from './Selector';
+import { isAdminKey } from '../../../../lib/admin-key';
+import AdminLocked from '../../../../components/AdminLocked';
 
 // Per-offer media curation: current live images + every scraped image/video
 // candidate; the admin picks up to 5 images (first = hero) + a hero video.
@@ -16,8 +18,10 @@ export default async function OfferMediaPage({
 }) {
   const { offerId } = await params;
   const { key } = await searchParams;
+  // Before any query: this page also signs URLs from the private cruise-images bucket.
+  if (!isAdminKey(key)) return <AdminLocked path={`/admin/media/${offerId}`} />;
+  const adminKey = key;
   const supabase = getSupabase();
-  const adminKey = key && process.env.CHANGES_ADMIN_KEY && key === process.env.CHANGES_ADMIN_KEY ? key : null;
 
   const [offerRes, candRes] = await Promise.all([
     supabase
