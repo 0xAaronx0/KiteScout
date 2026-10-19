@@ -14,6 +14,7 @@
 // mints short-lived signed URLs (or proxies) when it eventually reads them.
 // ---------------------------------------------------------------------------
 
+import { robotsAllowsUrl } from '../offers/http.js';
 import Anthropic from '@anthropic-ai/sdk';
 import exifReader from 'exif-reader';
 import { parse, type HTMLElement } from 'node-html-parser';
@@ -349,10 +350,18 @@ export async function extractImageRights(buf: Buffer, sourceUrl: string): Promis
   return { status, source_host: host, copyright, credit, license, license_url: licenseUrl };
 }
 
+// Honest bot UA (same as src/offers/http.ts), used only as a second try: some hosts block the browser UA from
+// Node (TLS fingerprint mismatch) but serve our bot, e.g. velabaja.com, freeridekitesurf.com.
+const BOT_UA = process.env.OFFERS_USER_AGENT ?? 'KiteScoutBot/0.1 (+https://kitescout.tech; kite travel catalog)';
+
 async function fetchImage(url: string): Promise<Buffer | null> {
+  return (await fetchImageAs(url, BROWSER_UA)) ?? fetchImageAs(url, BOT_UA);
+}
+
+async function fetchImageAs(url: string, userAgent: string): Promise<Buffer | null> {
   try {
     const res = await fetch(url, {
-      headers: { 'User-Agent': BROWSER_UA, Accept: 'image/avif,image/webp,image/*,*/*;q=0.8' },
+      headers: { 'User-Agent': userAgent, Accept: 'image/avif,image/webp,image/*,*/*;q=0.8' },
       redirect: 'follow',
       signal: AbortSignal.timeout(25000),
     });
@@ -368,6 +377,10 @@ async function fetchImage(url: string): Promise<Buffer | null> {
 }
 
 export async function downloadImage(url: string): Promise<Buffer | null> {
+  // respect the image host's robots.txt for our bot (e.g. kitewest.com.au disallows /wp-content/)
+  try {
+    if (!(await robotsAllowsUrl(url))) return null;
+  } catch { return null; }
   // Wix: a bare media URL serves the untouched original (routinely 20+ MB,
   // ~15 s — timeouts). Ask Wix for a server-side bounded transform instead;
   // w_1920 is comfortably above our 1280 px target. Fall back to the bare

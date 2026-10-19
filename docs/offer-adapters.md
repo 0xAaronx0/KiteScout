@@ -312,6 +312,8 @@ Republic WooCommerce variations (kite-republic-aitutaki-winter-escape.ts, live s
 Freeride Kitesurf, Travel Active Club, Kitesurf Adventure, Global Kite Trips, Escape Eco. Pins: Rhodes (Fanes,
 Theologos, Kremasti), Famara and the Norway snowkite bases in `KNOWN_PINS`.
 
-Open: four adapters have no photos because their image hosts refuse the browser UA that `lib/images.ts` sends
-(freeridekitesurf.com, road2adventure.com.au, redstarsurf.com; also velabaja.com) while they serve our bot UA.
+Photos (Aaron 2026-10-19): `lib/images.ts` now checks the image host's robots.txt for our bot before downloading
+(`robotsAllowsUrl` from `src/offers/http.ts`; e.g. kitewest.com.au disallows `/wp-content/`, so that listing has no
+photos), and retries with our honest bot UA when the browser UA fails (freeridekitesurf.com, road2adventure.com.au,
+redstarsurf.com and velabaja.com refuse the browser UA from Node but serve the bot).
 

@@ -128,6 +128,12 @@ async function robotsFor(origin: string): Promise<RobotsGroup[]> {
   return groups;
 }
 
+/** robots.txt verdict for one URL and our bot token (same cache as fetchText); used by lib/images downloads */
+export async function robotsAllowsUrl(url: string): Promise<boolean> {
+  const u = new URL(url);
+  return robotsAllows(await robotsFor(u.origin), u.pathname + u.search);
+}
+
 // --- throttle -------------------------------------------------------------------
 const hostChain = new Map<string, Promise<unknown>>();
 const hostLast = new Map<string, number>();
