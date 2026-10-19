@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Contact Haggerstone Island</title>
+      <meta name="description" content="" />
+      <base href="https://www.haggerstoneisland.com.au/" id="baseTag" />
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Organization",
+    "name" : "Haggerstone Island",
+    "url" : "https://www.haggerstoneisland.com.au/",
+    "sameAs" : [
+      "https://www.facebook.com/pages/Haggerstone-Island-Resort/153484668064316", 
+      "", 
+      "", 
+      "", 
+      "", 
+      "https://www.instagram.com/haggerstoneisland",
+      ""
+    ]
+  }
+  </script>
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="msapplication-config" content="include/resources/haggerstoneisland/images/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body class="">
+              <div class="page-region" id="top">
+        <div class="header-wrapper with-panels">
+          <div class="header-constrain">
+        <div class="header-section">
+          <div class="header-column header-left">
+            <a class="logo logo-white" href="./"><img src="https://www.haggerstoneisland.com.au/include/resources/haggerstoneisland/images/i-logo.svg" width="40" alt="Haggerstone Island" class="svg-used" data-alt-src="include/modules/core/resource/images/g-resource-not-found.png" /></a>
+            <a class="logo logo-black" href="./"><img src="https://www.haggerstoneisland.com.au/include/resources/haggerstoneisland/images/i-logo-black.svg" width="40" alt="Haggerstone Island" class="svg-used" data-alt-src="include/modules/core/resource/images/g-resource-not-found.png" /></a>
+          </div>
+          <div class="header-column header-middle">
+            <div class="nav-wrapper">
+              <div class="nav-constrain">
+                <div class="nav-block">
+                  <div id="nav-toggle" class="nav-toggle">
+                    <div class="toggle-logo-area">
+                      <a class="toggle-logo logo-white" href="./"><img src="https://www.haggerstoneisland.com.au/include/resources/haggerstoneisland/images/i-logo-white.svg" width="40" alt="Haggerstone Island" class="svg-used" data-alt-src="include/modules/core/resource/images/g-resource-not-found.png" /></a>
+                      <a class="toggle-logo logo-teal" href="./"><img src="https://www.haggerstoneisland.com.au/include/resources/haggerstoneisland/images/i-logo-teal.svg" width="40" alt="Haggerstone Island" class="svg-used" data-alt-src="include/modules/core/resource/images/g-resource-not-found.png" /></a>
+                    </div>
+                    <div class="toggle-icon">
+                      <i class="open fal fa-fw fa-bars" aria-hidden="true"></i>
+                      <i class="close fal fa-fw fa-times" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="nav-cell">
+                    <ul><li class="nav stay-section has_children"><a href="stay" class="nav stay-section has_children">Stay</a><ul class="nav stay-section has_children"><li class="nav stay-section"><a href="stay/haus-mawu" class="nav stay-section">Haus Mawu</a></li><li class="nav stay-section"><a href="stay/lagoon-hut" class="nav stay-section">Lagoon Hut</a></li><li class="nav stay-section"><a href="stay/kwilla-hut" class="nav stay-section">Kwilla Hut</a></li><li class="nav stay-section"><a href="stay/beach-hut" class="nav stay-section">Beach Hut</a></li><li class="nav stay-section"><a href="stay/lighthouse" class="nav stay-section">The Lighthouse</a></li></ul></li><li class="nav adventure-section has_children"><a href="adventure" class="nav adventure-section has_children">Adventure</a><ul class="nav adventure-section has_children"><li class="nav adventure-section"><a href="adventure/snorkelling-spearfishing" class="nav adventure-section">Snorkelling &amp; Spearfishing</a></li><li class="nav adventure-section"><a href="adventure/fishing" class="nav adventure-section">Fishing</a></li><li class="nav adventure-section"><a href="adventure/on-the-island" class="nav adventure-section">On the Island</a></li><li class="nav adventure-section"><a href="adventure/helicopters-waterfalls" class="nav adventure-section">Helicopters &amp; Waterfalls</a></li><li class="nav adventure-section"><a href="adventure/kiteboarding-the-great-barrier-reef" class="nav adventure-section">Kiteboarding the Great Barrier Reef</a></li></ul></li><li class="nav indulge-section"><a href="indulge" class="nav indulge-section">Indulge</a></li><li class="nav exclusive-section"><a href="exclusive" class="nav exclusive-section">Exclusive</a></li><li class="nav discover-section"><a href="discover" class="nav discover-section">Discover</a></li><li class="nav travel-section"><a href="travel" class="nav travel-section">Travel</a></li><li class="nav expanded current contact-section"><a href="contact" class="nav expanded current contact-section">Enquire</a></li></ul>
+                    <div class="header-content-wrapper">
+                      <div class="social-icons-wrapper">
+                        <a class="social-icon instagram" href="https://www.instagram.com/haggerstoneisland" target="_blank" title="Follow Haggerstone Island on Instagram" alt="Follow Haggerstone Island on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+<a class="social-icon facebook" href="https://www.facebook.com/pages/Haggerstone-Island-Resort/153484668064316" target="_blank" title="Find Haggerstone Island on Facebook" alt="Find Haggerstone Island on Facebook"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>          
+          </div>
+          <div class="header-column header-right">
+            <div class="header-content-wrapper">
+              <div class="social-icons-wrapper">
+                <a class="social-icon instagram" href="https://www.instagram.com/haggerstoneisland" target="_blank" title="Follow Haggerstone Island on Instagram" alt="Follow Haggerstone Island on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+<a class="social-icon facebook" href="https://www.facebook.com/pages/Haggerstone-Island-Resort/153484668064316" target="_blank" title="Find Haggerstone Island on Facebook" alt="Find Haggerstone Island on Facebook"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </div>
+        <div class="content-wrapper with-panels">
+<div id="taipan-contentpanel-panelset-0" class="taipan-contentpanel-panelset no-js constrain transition-scroll nav-none" data-options="{ &quot;TRANSITION&quot;:&quot;scroll&quot;,&quot;NAV&quot;:&quot;none&quot;,&quot;CONSTRAIN&quot;:&quot;true&quot; }">
+  <div class="taipan-contentpanel-panelregion">
+<div id="taipan-contentpanel-panelset-0-panel-0" class="taipan-contentpanel-panel bg-image bg-image-slides">
+  <div class="panel-background-image" ></div>
+  <div class="panel-constrain">
+    <div class="panel-block">
+      <div class="panel-cell">
+<div id="hero-slider" class="taipan-contentpanel-panelset no-js constrain transition-fade nav-horizontal" data-options="{ &quot;ID&quot;:&quot;hero-slider&quot;,&quot;AUTOSTART&quot;:true,&quot;TRANSITION&quot;:&quot;fade&quot;,&quot;NAV&quot;:&quot;horizontal&quot;,&quot;CONSTRAIN&quot;:&quot;true&quot; }">
+  <div class="taipan-contentpanel-panelregion">
+<div id="hero-slider-panel-0" class="taipan-contentpanel-panel ">
+  <div class="panel-background-image"  style="background-image: url('files/media/thumbcache/00b/eca/360/IMG_0682.jpg');"></div>
+  <div class="panel-constrain">
+    <div class="panel-block">
+      <div class="panel-cell">
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="taipan-contentpanel-navregion">
+    <ul class="taipan-contentpanel-nav">
+  </ul>
+<div class="taipan-contentpanel-nav-arrows">
+  </div>
+<ul class="taipan-contentpanel-controls">
+  <li><a href="javascript:void(0);" class="taipan-contentpanel-link taipan-hero-link-global taipan-hero-link-control taipan-hero-link-control-playpause"></a></li>
+</ul>
+  </div>
+</div>
+<h1>Enquiries</h1>
+<p><a class="arrow-down" href="contact#content">Arrow Down</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="content" class="taipan-contentpanel-panel ">
+  <div class="panel-background-image" ></div>
+  <div class="panel-constrain">
+    <div class="panel-block">
+      <div class="panel-cell">
+<h2>To make a booking with us, simply fill out the enquiry form and we will get back to you within a day.</h2>
+<p>Given that Haggerstone Island only caters to a small number of people at a time, we often have limited availability. With this being the case we have implemented reduced deposit amounts for guests who wish to make bookings some time in advance.</p>
+<p>In the panel below and to the left you will find a calendar which give an indication of when we are full and when we have availability. If the dates of interest are shaded in green then there is availability for at least two people. Please send through an enquiry using the form to the right if you would like any more information.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="taipan-contentpanel-panelset-0-panel-2" class="taipan-contentpanel-panel bg-image-text-right">
+    <div class="availability-overlap">
+    <iframe
+      id="ac-t51y5pIknIcb1mKBKb4q"
+      src="https://www.availabilitycalendar.com/embed/t51y5pIknIcb1mKBKb4q/en-0-0-1-1-0-0-0-0-0-0-0-1-0/?css=https://haggerstoneisland.com.au/include/resources/haggerstoneisland/css/availability-calendar.css"
+      frameborder="0"
+      allowtransparency="true"
+      scrolling="no"
+    ></iframe>
+  </div>
+    <div
+    class="panel-background-image"
+    style="
+          background-image: url('files/media/thumbcache/003/fa3/15e/Screen-Shot-2016-09-03-at-7.21.27-AM.png');
+        "
+  ></div>
+  <div class="panel-constrain">
+    <div class="panel-block">
+      <div class="panel-cell">
+<h2>Contact Us</h2>
+<form id="enquiry_form" class="validate f medium-label" method="post" action="enquiry.post" novalidate data-fieldMapJson="{&quot;id&quot;:&quot;enquiry_form&quot;,&quot;ajaxSave&quot;:false,&quot;fields&quot;:[{&quot;id&quot;:&quot;name_field&quot;,&quot;displayName&quot;:&quot;Name&quot;,&quot;type&quot;:&quot;string&quot;,&quot;displayType&quot;:&quot;value&quot;,&quot;required&quot;:true,&quot;prefix&quot;:&quot;the&quot;,&quot;isArray&quot;:false,&quot;missingMessage&quot;:false,&quot;validationRules&quot;:false,&quot;fieldIsValid&quot;:false},{&quot;id&quot;:&quot;phone_field&quot;,&quot;displayName&quot;:&quot;Phone&quot;,&quot;type&quot;:&quot;string&quot;,&quot;displayType&quot;:&quot;value&quot;,&quot;required&quot;:false,&quot;prefix&quot;:&quot;the&quot;,&quot;isArray&quot;:false,&quot;missingMessage&quot;:false,&quot;validationRules&quot;:false,&quot;fieldIsValid&quot;:false},{&quot;id&quot;:&quot;email_field&quot;,&quot;displayName&quot;:&quot;Email&quot;,&quot;type&quot;:&quot;email_address&quot;,&quot;displayType&quot;:&quot;value&quot;,&quot;required&quot;:true,&quot;prefix&quot;:&quot;your&quot;,&quot;isArray&quot;:false,&quot;missingMessage&quot;:false,&quot;validationRules&quot;:&quot;is_email&quot;,&quot;fieldIsValid&quot;:false},{&quot;id&quot;:&quot;enquiry_field&quot;,&quot;displayName&quot;:&quot;Enquiry&quot;,&quot;type&quot;:&quot;text&quot;,&quot;displayType&quot;:&quot;value&quot;,&quot;required&quot;:true,&quot;prefix&quot;:&quot;the&quot;,&quot;isArray&quot;:false,&quot;missingMessage&quot;:false,&quot;validationRules&quot;:false,&quot;fieldIsValid&quot;:false},{&quot;id&quot;:&quot;captcha_field&quot;,&quot;displayName&quot;:&quot;Captcha&quot;,&quot;type&quot;:&quot;captcha&quot;,&quot;displayType&quot;:&quot;value&quot;,&quot;required&quot;:true,&quot;prefix&quot;:&quot;the&quot;,&quot;isArray&quot;:false,&quot;missingMessage&quot;:false,&quot;validationRules&quot;:false,&quot;fieldIsValid&quot;:false}]}">
+      <div class="form-row large"><label for="name_field" class='required'>Name <span class="note required" id="name_field_note">*</span></label>
+  <div class="field">
+<input type="text" name="name" id="name_field" class="required name-field large" />  </div></div>
+      <div class="form-row large"><label for="phone_field">Phone</label>
+  <div class="field">
+<input type="text" name="phone" id="phone_field" class="phone-field large" />  </div></div>
+      <div class="form-row large"><label for="email_field" class='required'>Email <span class="note required" id="email_field_note">*</span></label>
+  <div class="field">
+<input type="text" name="email" id="email_field" class="required email-field large" />  </div></div>
+            <div class="form-row"><label for="enquiry_field" class='required'>Enquiry <span class="note required" id="enquiry_field_note">*</span></label>
+  <div class="field">
+<textarea name="enquiry" id="enquiry_field" class="required enquiry-field" cols="20" rows="5"></textarea>  </div></div>
+            <div class="form-row"><label for="captcha_field" class='required'>Captcha <span class="note required" id="captcha_field_note">*</span></label>
+  <div class="field">
+<div class="captcha-image">      <div class="g-recaptcha" data-sitekey="REDACTED"></div>
+      </div>  </div></div>          
+  <div class="buttons form-row"><button type="submit" class="submit">Submit</button></div>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="taipan-contentpanel-panelset-0-panel-3" class="taipan-contentpanel-panel bg-image-text-left">
+  <div class="panel-background-image"  style="background-image: url('files/media/thumbcache/005/73e/f5d/Haggerstone-Island-Resort-Australia.jpg');"></div>
+  <div class="panel-constrain">
+    <div class="panel-block">
+      <div class="panel-cell">
+<h2>Our Details</h2>
+<h4>All enquiries:</h4>
+<p>+61 7 4060 3399</p>
+<h4>Connection problems:</h4>
+<p>+61 7 4060 3413</p>
+<h4>Email:</h4>
+<p><a href="email/info)(haggerstoneisland.com.au" rel="nofollow"><span class="obfuscated-email">email/info)(haggerstoneisland.com.au</span></a></p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="taipan-contentpanel-navregion">
+  </div>
+</div>
+    </div>
+    <div class="footer-wrapper">
+            <div class="footer-constrain">
+        <div class="footer-section">
+          <div class="footer-column footer-nav">
+            <ul><li class="nav stay-section has_children"><a href="stay" class="nav stay-section has_children">Accommodation</a><ul class="nav stay-section has_children"><li class="nav https://www.haggerstoneisland.com.au/files/media/original/05e/bb7/c20/Haggerstone-Rates-Page.pdf-section"><a href="https://www.haggerstoneisland.com.au/files/media/original/05e/bb7/c20/Haggerstone-Rates-Page.pdf" class="nav https://www.haggerstoneisland.com.au/files/media/original/05e/bb7/c20/Haggerstone-Rates-Page.pdf-section" target="_blank">Rates</a></li><li class="nav stay-section"><a href="stay/haus-mawu" class="nav stay-section">Haus Mawu</a></li><li class="nav stay-section"><a href="stay/lagoon-hut" class="nav stay-section">Lagoon Hut</a></li><li class="nav stay-section"><a href="stay/kwilla-hut" class="nav stay-section">Kwilla Hut</a></li><li class="nav stay-section"><a href="stay/beach-hut" class="nav stay-section">Beach Hut</a></li><li class="nav stay-section"><a href="stay/the-lighthouse" class="nav stay-section">The Lighthouse</a></li></ul></li><li class="nav adventure-section has_children"><a href="adventure" class="nav adventure-section has_children">Adventure</a><ul class="nav adventure-section has_children"><li class="nav adventure-section"><a href="adventure/snorkelling-spearfishing" class="nav adventure-section">Snorkelling &amp; Spearfishing</a></li><li class="nav adventure-section"><a href="adventure/fishing" class="nav adventure-section">Fishing</a></li><li class="nav adventure-section"><a href="adventure/on-the-island" class="nav adventure-section">On the Island</a></li><li class="nav adventure-section"><a href="adventure/helicopters-waterfalls" class="nav adventure-section">Helicopters &amp; Waterfalls</a></li><li class="nav adventure-section"><a href="adventure/kiteboarding-the-great-barrier-reef" class="nav adventure-section">kiteboarding-the-great-barrier-reef</a></li></ul></li><li class="nav indulge-section has_children"><a href="indulge" class="nav indulge-section has_children">Indulge</a><ul class="nav indulge-section has_children"><li class="nav indulge-section"><a href="indulge" class="nav indulge-section">Island Cuisine</a></li></ul></li><li class="nav exclusive-section has_children"><a href="exclusive" class="nav exclusive-section has_children">Exclusive</a><ul class="nav exclusive-section has_children"><li class="nav exclusive-section"><a href="exclusive" class="nav exclusive-section">Book the Whole Island</a></li></ul></li><li class="nav discover-section has_children"><a href="discover" class="nav discover-section has_children">Discover</a><ul class="nav discover-section has_children"><li class="nav discover-section"><a href="discover" class="nav discover-section">Our Story</a></li></ul></li><li class="nav travel-section"><a href="travel" class="nav travel-section">Travel</a></li></ul>
+          </div>
+          <div class="footer-column footer-contact">
+            <div class="contact-details-wrapper">
+              <h5>Reservations &amp; Enquiries</h5>
+              <dl>
+                <dt><i class="fas fa-fw fa-phone" data-fa-transform="flip-h" aria-hidden="true"></i></dt><dd><span class="nosplit"><a href="tel:+61740603399">07 4060 3399</a></span></dd>
+                <dt><i class="fas fa-fw fa-envelope" aria-hidden="true"></i></dt><dd><span class="nosplit"><a href="email/info)(haggerstoneisland.com.au" rel="nofollow"><span class="obfuscated-email">email/info)(haggerstoneisland.com.au</span></a></span></dd>
+              </dl>
+            </div>
+            <div class="social-icons-wrapper">
+              <h5>Connect With Us</h5>
+              <a class="social-icon instagram" href="https://www.instagram.com/haggerstoneisland" target="_blank" title="Follow Haggerstone Island on Instagram" alt="Follow Haggerstone Island on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+<a class="social-icon facebook" href="https://www.facebook.com/pages/Haggerstone-Island-Resort/153484668064316" target="_blank" title="Find Haggerstone Island on Facebook" alt="Find Haggerstone Island on Facebook"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
+            </div>            
+          </div>
+        </div>
+      </div>
+    </div>   
+  </div>
+    </body>
+</html>

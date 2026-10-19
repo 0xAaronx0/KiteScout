@@ -1,0 +1,52 @@
+// KITECLUB Okinawa Kohama Island kite tour: replays the shared tours index recorded 2026-10-19. The 2026 edition
+// (16-20 Oct) had started on the recording day, so the adapter returns no slots; the parser is checked with an earlier "today".
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { fetchKohamaSlots, kiteclubOkinawaKohamaKiteTour } from '../../src/offers/adapters/kiteclub-okinawa-kohama-kite-tour.js';
+import { kcoAnnouncements, parseKcoPosts, parseKcoTour } from '../../src/offers/adapters/kiteclub-okinawa-kumejima-tour.js';
+import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+
+const DIR = join(import.meta.dirname, '../fixtures/offers/kiteclub-okinawa-kohama-kite-tour');
+process.env.OFFERS_FIXTURE_DIR = DIR;
+const index = readFileSync(join(DIR, readdirSync(DIR).find(f => f.startsWith('kiteclub-okinawa.biz_category_info_tours_'))!), 'utf8');
+const ctx = { note: () => {}, incomplete: () => {} };
+
+test('kohama: newest announcement is the 2026 edition, 2025 found as earlier edition', () => {
+  const ann = kcoAnnouncements(parseKcoPosts(index), /小浜島/);
+  assert.deepEqual(ann.map(p => p.id), [13191, 12592]); // 12840 is the 2025 trip report
+  const t = parseKcoTour(ann[0]);
+  assert.equal(t.year, 2026);
+  assert.deepEqual(t.departures.map(d => [d.start, d.end, d.nights, d.price]), [
+    ['2026-10-16', '2026-10-20', 4, 63000], ['2026-10-16', '2026-10-19', 3, 53000],
+  ]);
+  assert.deepEqual(parseKcoTour(ann[1]).departures.map(d => [d.start, d.end]), [
+    ['2025-10-24', '2025-10-28'], ['2025-10-24', '2025-10-27'], ['2025-10-24', '2025-10-26'],
+  ]);
+});
+
+test('kohama: slots before the start, none once it started', async () => {
+  const early = await fetchKohamaSlots('2026-09-20');
+  assert.deepEqual(checkSlots(early).problems, []);
+  assert.deepEqual(early.map(s => [s.key, s.price, s.currency, s.priceUnit, s.priceBasis, s.packageNights, s.endDate, s.availability]), [
+    ['2026-10-16|4n', 63000, 'JPY', 'package', 'person', 4, '2026-10-20', 'on_request'],
+    ['2026-10-16|3n', 53000, 'JPY', 'package', 'person', 3, '2026-10-19', 'on_request'],
+  ]);
+  const notes: string[] = [];
+  assert.deepEqual(await fetchKohamaSlots('2026-10-19', { note: t => notes.push(t) }), []);
+  assert.match(notes[0], /only has started\/past dates/);
+});
+
+test('kohama: content', async () => {
+  const c = await kiteclubOkinawaKohamaKiteTour.fetchContent(ctx);
+  assert.equal(contentProblem(c), null);
+  assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot, c.sourceUrl], ['camp', 5, 'Japan', 'Yaeyama Islands, Okinawa', 'Kohama Island', 'https://kiteclub-okinawa.biz/info/blog/13191/']);
+  assert.match(c.summary, /Runs every year in autumn \(2025, 2026\); 2027 dates not yet published \(2026 edition: 16-20 Oct 2026, 4 nights, JPY 63,000; 16-19 Oct 2026, 3 nights, JPY 53,000, per person\)/);
+  assert.deepEqual(c.includedServices, [
+    'Return ferry Ishigaki - Kohama', 'Nights at the guesthouse Kohama no Yado panapana, breakfast included',
+    'Rental car (fuel included)', 'Guiding at the kite spots (spot attendance by the school)',
+  ]);
+  assert.ok(c.imageUrls.length >= 1);
+  assert.ok(!/[–—]/.test(c.summary));
+});

@@ -258,6 +258,7 @@ const KNOWN_PINS: Record<string, { lat: number; lng: number }> = {
   'finse, hardangervidda': { lat: 60.603, lng: 7.502 },
   'ryfylkeheiane': { lat: 58.9494, lng: 7.3039 },
   'ryfylkeheiane, rogaland': { lat: 58.9494, lng: 7.3039 },
+  'gnaraloo homestead': { lat: -23.8218, lng: 113.5257 }, // OSM "Gnaraloo Station"; the homestead is not mapped
 };
 
 export async function locateSpots(c: OfferContent, stored: unknown): Promise<StoredSpot[]> {

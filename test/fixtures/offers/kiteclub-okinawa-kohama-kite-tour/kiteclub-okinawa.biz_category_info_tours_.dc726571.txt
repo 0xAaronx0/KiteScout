@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html><head>
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, minimum-scale=1.0">
+<meta charset="UTF-8" />
+<title>ツアー | KITECLUB沖縄</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel="https://api.w.org/" href="https://kiteclub-okinawa.biz/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://kiteclub-okinawa.biz/wp-json/wp/v2/categories/13" /><link rel="icon" href="https://kiteclub-okinawa.biz/wp-content/themes/kiteclub2020/images/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="shortcut icon" href="https://kiteclub-okinawa.biz/wp-content/themes/kiteclub2020/images/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="apple-touch-icon" sizes="152x152" href="https://kiteclub-okinawa.biz/wp-content/themes/kiteclub2020/images/apple-touch-icon.png">
+<meta name="description" content="沖縄でカイトボード・カイトサーフィンのスクールならカイトクラブへ！人気のウィングフォイル(wingfoil）やSUP、ジェットスキーなど。1日体験・スクール・販売も。風がある時も風がない時も楽しめるマリンスポーツ各種準備しています。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://kiteclub-okinawa.biz/wp-content/themes/kiteclub2020/images/og-image.png">
+<meta property="og:url" content="https://kiteclub-okinawa.biz/category/info/tours/">
+<meta property="og:title" content="ツアー || カイトクラブ沖縄">
+<meta property="og:description" content="沖縄でカイトボードのスクールならカイトクラブ！ウィングフォイルやSUPの体験・スクール・販売も">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="KITECLUB沖縄">
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="ツアー | KITECLUB沖縄">
+<meta name="twitter:image" content="https://kiteclub-okinawa.biz/wp-content/themes/kiteclub2020/images/og-image.png">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+</head>
+<body class="archive category category-tours category-13 wp-theme-kiteclub2020">
+<div id="fb-root"></div>
+<div id="wrapall">
+<header>
+<div id="headline">
+<div class="inn-fr">
+<div id="hlogosp"><a href="https://kiteclub-okinawa.biz" title="カイトクラブ沖縄│カイトサーフィン・カイトボード・体験・SUP・ウィングサーフ・フォイル│マリンスポーツのスクール"><img src="https://kiteclub-okinawa.biz/wp-content/themes/kiteclub2020/images/hlogo.png" alt="KITECLUB沖縄" /></a></div><!-- / #hlogosp -->
+<div class="hsitetit">KITECLUB沖縄</div>
+<div id="hkeyw">
+</div><!-- / #hkeyw -->
+<div id="hdisc">カイトボード/カイトサーフィンのスクール・体験・販売、SUP・パドルサーフィンレッスン・ウィングフォイル</div>
+</div><!-- / .inn-fr -->
+</div><!-- / #headline -->
+<div id="header">
+<div class="inn-fr flex">
+<div id="hlogo" class="flexitem"><a href="https://kiteclub-okinawa.biz" title="KITECLUB沖縄"><img src="https://kiteclub-okinawa.biz/wp-content/themes/kiteclub2020/images/hlogo.png" alt="KITECLUB沖縄" /></a></div><!-- / #hlogo -->
+<!-- Global Navigation -->
+<div id="globlmenu">
+<nav>
+<div class="menu-gmenu-container"><ul id="menu-gmenu" class="gnavi"><li id="menu-item-7100" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-7100"><a href="https://kiteclub-okinawa.biz/">ホーム</a></li>
+<li id="menu-item-7040" class="menu-item menu-item-type-taxonomy menu-item-object-category current-category-ancestor current-menu-ancestor current-menu-parent current-category-parent menu-item-has-children menu-item-7040"><a href="https://kiteclub-okinawa.biz/category/info/">ブログ一覧</a>
+<ul class="sub-menu">
+	<li id="menu-item-7160" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7160"><a href="https://kiteclub-okinawa.biz/category/info/blog/">日々ブログ</a></li>
+	<li id="menu-item-7164" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7164"><a href="https://kiteclub-okinawa.biz/category/info/kiteboard-lesson/">カイトボードブログ</a></li>
+	<li id="menu-item-7161" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7161"><a href="https://kiteclub-okinawa.biz/category/info/sup-tours/">SUPブログ</a></li>
+	<li id="menu-item-8203" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8203"><a href="https://kiteclub-okinawa.biz/category/info/wing-surf/">WING FOILブログ</a></li>
+	<li id="menu-item-7167" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7167"><a href="https://kiteclub-okinawa.biz/category/info/infoblog/">お知らせブログ</a></li>
+	<li id="menu-item-7162" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item menu-item-7162"><a href="https://kiteclub-okinawa.biz/category/info/tours/" aria-current="page">ツアーブログ</a></li>
+	<li id="menu-item-7163" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7163"><a href="https://kiteclub-okinawa.biz/category/info/event/">イベントブログ</a></li>
+</ul>
+</li>
+<li id="menu-item-12469" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-12469"><a href="https://kiteclub-okinawa.biz/product-info/">商品情報</a>
+<ul class="sub-menu">
+	<li id="menu-item-8264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8264"><a href="https://kiteclub-okinawa.biz/product-info/products/">取扱いメーカー一覧</a></li>
+	<li id="menu-item-7041" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-7041"><a href="https://kiteclub-okinawa.biz/category/used/">中古･特価品情報</a></li>
+	<li id="menu-item-12451" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-12451"><a href="https://kiteclub-okinawa.biz/category/tshirts/">オリジナルTシャツ</a></li>
+	<li id="menu-item-12304" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12304"><a href="https://kiteclub-okinawa.biz/product-info/custom-wetsuit/">オーダーウエットスーツ</a></li>
+</ul>
+</li>
+<li id="menu-item-7038" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7038"><a href="https://kiteclub-okinawa.biz/shop/">ショップ</a>
+<ul class="sub-menu">
+	<li id="menu-item-7090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7090"><a href="https://kiteclub-okinawa.biz/shop/instructor/">インストラクター紹介</a></li>
+	<li id="menu-item-7094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7094"><a href="https://kiteclub-okinawa.biz/shop/kitespot/">沖縄カイトゲレンデ情報</a></li>
+	<li id="menu-item-7756" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7756"><a href="https://kiteclub-okinawa.biz/shop/teiko/">カイト・ボードお預かりサービス</a></li>
+	<li id="menu-item-8209" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8209"><a href="https://kiteclub-okinawa.biz/shop/safety/">安全について</a></li>
+	<li id="menu-item-7091" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7091"><a href="https://kiteclub-okinawa.biz/movies/">店長一押し動画集！</a></li>
+	<li id="menu-item-7743" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7743"><a href="https://kiteclub-okinawa.biz/shop/%e9%81%8e%e5%8e%bb%e3%81%ae%e5%8b%95%e7%94%bb%e9%9b%86/">過去の動画集</a></li>
+</ul>
+</li>
+<li id="menu-item-7036" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7036"><a href="https://kiteclub-okinawa.biz/kiteboard/">カイトボード</a>
+<ul class="sub-menu">
+	<li id="menu-item-7083" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7083"><a href="https://kiteclub-okinawa.biz/kiteboard/cyokotto/">カイト陸上ちょこっと体験</a></li>
+	<li id="menu-item-7084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7084"><a href="https://kiteclub-okinawa.biz/kiteboard/trial-course/">カイトボード体験</a></li>
+	<li id="menu-item-7085" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7085"><a href="https://kiteclub-okinawa.biz/kiteboard/master-course/">カイトボードマスタースクール</a></li>
+	<li id="menu-item-7086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7086"><a href="https://kiteclub-okinawa.biz/kiteboard/stepup-lesson/">カイトボードステップUPレッスン</a></li>
+	<li id="menu-item-7087" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7087"><a href="https://kiteclub-okinawa.biz/kiteboard/bring-yourself-course/">手ぶらで沖縄カイトボードレンタル</a></li>
+	<li id="menu-item-8208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8208"><a href="https://kiteclub-okinawa.biz/kiteboard/kiteboard/">カイトボードとは？</a></li>
+	<li id="menu-item-7490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7490"><a href="https://kiteclub-okinawa.biz/reservation/">体験＆スクールご予約フォーム</a></li>
+</ul>
+</li>
+<li id="menu-item-7042" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7042"><a href="https://kiteclub-okinawa.biz/sup/">SUP</a>
+<ul class="sub-menu">
+	<li id="menu-item-8221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8221"><a href="https://kiteclub-okinawa.biz/sup/basic/">SUPちょこっと体験</a></li>
+	<li id="menu-item-11300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11300"><a href="https://kiteclub-okinawa.biz/sup/sup%e4%bd%93%e9%a8%93%ef%bc%86%e3%82%b7%e3%83%a5%e3%83%8e%e3%83%bc%e3%82%b1%e3%83%ab%e3%83%97%e3%83%a9%e3%83%b3/">SUP＆シュノーケル体験</a></li>
+	<li id="menu-item-8229" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8229"><a href="https://kiteclub-okinawa.biz/sup/cruising/">SUP冒険クルージング体験</a></li>
+	<li id="menu-item-8230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8230"><a href="https://kiteclub-okinawa.biz/sup/wave/">手ぶらでSUP波乗り体験</a></li>
+	<li id="menu-item-12125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12125"><a href="https://kiteclub-okinawa.biz/reservation/">体験＆スクールご予約フォーム</a></li>
+</ul>
+</li>
+<li id="menu-item-8206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8206"><a href="https://kiteclub-okinawa.biz/wing-foil-surf-lesson/">WING FOIL</a>
+<ul class="sub-menu">
+	<li id="menu-item-8285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8285"><a href="https://kiteclub-okinawa.biz/wing-foil-surf-lesson/day-lesson/">WING SUP体験</a></li>
+	<li id="menu-item-8286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8286"><a href="https://kiteclub-okinawa.biz/wing-foil-surf-lesson/%ef%bd%8daster-lesson/">WING FOIL体験</a></li>
+	<li id="menu-item-11449" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11449"><a href="https://kiteclub-okinawa.biz/wing-foil-surf-lesson/%e3%82%a6%e3%82%a4%e3%83%b3%e3%82%b0%e3%83%95%e3%82%a9%e3%82%a4%e3%83%ab%e3%83%9e%e3%82%b9%e3%82%bf%e3%83%bc%e3%82%b9%e3%82%af%e3%83%bc%e3%83%ab/">WING FOILマスタースクール</a></li>
+	<li id="menu-item-8287" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8287"><a href="https://kiteclub-okinawa.biz/wing-foil-surf-lesson/wing-foil-surf-up-lesson/">WING FOILステップUPレッスン</a></li>
+	<li id="menu-item-9636" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9636"><a href="https://kiteclub-okinawa.biz/wing-foil-surf-lesson/wingfoil-rental-okinawa/">手ぶらで沖縄WING FOILレンタル</a></li>
+	<li id="menu-item-8823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8823"><a href="https://kiteclub-okinawa.biz/wing-foil-surf-lesson/how-to-wing-foil-surf/">WING FOIL SURFとは！！？</a></li>
+	<li id="menu-item-12126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12126"><a href="https://kiteclub-okinawa.biz/reservation/">体験＆スクールご予約フォーム</a></li>
+</ul>
+</li>
+<li id="menu-item-8004" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-8004"><a href="https://kiteclub-okinawa.biz/parawing/">PARA WING</a>
+<ul class="sub-menu">
+	<li id="menu-item-8301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8301"><a href="https://kiteclub-okinawa.biz/parawing/parawing-lesson/">PARA WING SUP体験</a></li>
+	<li id="menu-item-8341" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8341"><a href="https://kiteclub-okinawa.biz/parawing/parawingfoil-lesson/">PARA WING FOIL体験</a></li>
+	<li id="menu-item-8319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8319"><a href="https://kiteclub-okinawa.biz/parawing/parawingfoil-school/">PARA WING FOILマスタースクール</a></li>
+	<li id="menu-item-12969" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12969"><a href="https://kiteclub-okinawa.biz/parawing/k-wing-%e4%bd%93%e9%a8%93/">K-WING SUP体験</a></li>
+	<li id="menu-item-12127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12127"><a href="https://kiteclub-okinawa.biz/reservation/">体験＆スクールご予約フォーム</a></li>
+</ul>
+</li>
+</ul></div></nav>
+</div>
+<!-- /Global Navigation -->
+<div id="htel"><i class="fas fa-phone-volume fa-fw"></i>098-851-0180<span>お気軽にお電話ください</span>
+<span><i class="fas fa-envelope fa-fw f18"></i><a href="https://kiteclub-okinawa.biz/reservation" title="カイトボード・SUPスクール予約│体験・ステップアップ・レンタル">スクール予約</a></span></div>
+</div><!-- / .inn-fr -->
+</div><!-- / #header -->
+</header>
+<!-- main -->
+<main>
+<article>
+<!-- contents -->
+<h1 class="pagetit">「ツアー」</h1>
+<div id="wrap" class="inn-fr">
+<div id="maincontents">
+<div id="contentstxt">
+<section>
+<div id="post-13988" class="post-13988 post type-post status-publish format-standard hentry category-tours category-info category-blog tag-kiteboard tag-kiteclub tag-kitesurfing tag-okinawa tag-40 tag-51 tag-48 tag-42"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/13988/" title="久米島ツアー2027/4/2(金)-4(日)開催！">久米島ツアー2027/4/2(金)-4(日)開催！</a></h2>
+<p class="postcat">2026年10月15日│<a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">春の大大イベント～「久米島ツアー2027」の開催決定致しました！！<br />暖かな春の風を、無人島「はての浜」で思う存分楽しむツアーです♪♪<br />皆様のご参加心よりお待ちしております！！<br /><strong><mark>※ご参加希望の方は「フルネームと年齢」を御返信下さいませ。<br />※今回は宿泊ホテルが変わっております。<br />※飛行代が含まれるため、遅いタイミングでのご予約は料金がUPする場合が御座います。</mark></strong><br /><strong><mark>※人数限定ですがレンタルプランあり。個別にお問い合せ下さい</mark></strong></p>
+<p class="wp-block-paragraph"><br /><strong>＜日程</strong>＞<br /><strong>・4月2(金)-3(日) 2泊3日</strong></p>
+<p class="wp-block-paragraph">＜<strong>料金</strong>＞<strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">※まずは日程まで、料金決まり次第更新いたします。</mark></strong><br /><strong>・</strong>3-4名1室(スタンダードルーム)：￥00000-<br />・2名1室(ツインルーム)：￥00000-<br />・1名1室(シングル利用)：￥00000-</p>
+<p class="wp-block-paragraph">＜料金には下記が含まれます＞<br /><strong><mark>①本島～久米島間の往復飛行機代金</mark></strong><br />・往路：RAC871便（那覇07：45～久米島08：15）<br />・復路：RAC882便（久米18：10～那覇着19：00）<br /><strong>※帰りの飛行機、乗り継ぎの都合ある際は予め申し出ください。</strong><br /><strong><mark>②イーフビーチホテル宿泊代（朝食付き）</mark><br /><mark>③送迎＆レンタカー代</mark><br /><mark>④ボートチャーター料（３日間）</mark></strong></p>
+<p class="wp-block-paragraph"><strong>※安全とレスキューの都合上アップウインドウが出来る方のみご参加頂けます。<br />※お申込みご入金締め切りは3月3日までとなります。参加人数に限りあり。<br />※予約成立後、翌日よりキャンセル代金が発生いたします。</strong></p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/13988/" data-a2a-title="久米島ツアー2027/4/2(金)-4(日)開催！"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/13988/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/13988/" data-text="久米島ツアー2027/4/2(金)-4(日)開催！"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13988%2F&amp;linkname=%E4%B9%85%E7%B1%B3%E5%B3%B6%E3%83%84%E3%82%A2%E3%83%BC2027%2F4%2F2%28%E9%87%91%29-4%28%E6%97%A5%29%E9%96%8B%E5%82%AC%EF%BC%81" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13988%2F&amp;linkname=%E4%B9%85%E7%B1%B3%E5%B3%B6%E3%83%84%E3%82%A2%E3%83%BC2027%2F4%2F2%28%E9%87%91%29-4%28%E6%97%A5%29%E9%96%8B%E5%82%AC%EF%BC%81" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-13169" class="post-13169 post type-post status-publish format-standard hentry category-tours category-info category-blog tag-kiteclub tag-okinawa tag-tour tag-trip tag-40 tag-56 tag-66 tag-42"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/13169/" title="2027年1月ベトナムツアー 開催のお知らせ">2027年1月ベトナムツアー 開催のお知らせ</a></h2>
+<p class="postcat">2026年9月23日│<a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph"><strong><mark>日程(現地)：2027年1月25日(月)~30日(土)・5泊6日 </mark><br /><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-luminous-vivid-orange-color">※沖縄からの参加は24日(日)夜便搭乗～31日(日)午前便帰りになります</mark>。</strong></p>
+<p class="wp-block-paragraph"><strong><mark>費用：￥00000‐　・シングル利用￥00000-</mark></strong><br />※為替等の都合で3～6ヶ月前に決定致します。<br /><br /><strong>☆料金には下記が含まれます☆</strong><br />・宿泊費　（OzFarm-kiteboarding school）<br />・往復タクシーチャーター代金（ホーチミン空港～ファンランビーチ）<br />・ビーチ＆施設利用料（ビーチスタッフへのチップ込み）<br />・外食２回分往復タクシーチャーター代<br />・アテンド費<br /><strong><mark>※飛行機の手配は個人にて宜しくお願い致します</mark>。<br /><mark>※ツアー代金に保険代は含まれません。個人で加入宜しくお願い致します。</mark></strong></p>
+<p class="wp-block-paragraph">★いっちゃん搭乗便★</p>
+<div class="wp-block-image">
+<figure class="aligncenter size-large is-resized"><img fetchpriority="high" decoding="async" width="756" height="940" src="https://kiteclub-okinawa.biz/wp-content/uploads/2026/03/05E3E8C7-8FB3-4C9E-8BD7-24FB7B96610F-756x940.jpeg" alt="" class="wp-image-13173" style="width:273px;height:auto" srcset="https://kiteclub-okinawa.biz/wp-content/uploads/2026/03/05E3E8C7-8FB3-4C9E-8BD7-24FB7B96610F-756x940.jpeg 756w, https://kiteclub-okinawa.biz/wp-content/uploads/2026/03/05E3E8C7-8FB3-4C9E-8BD7-24FB7B96610F-515x640.jpeg 515w, https://kiteclub-okinawa.biz/wp-content/uploads/2026/03/05E3E8C7-8FB3-4C9E-8BD7-24FB7B96610F-768x955.jpeg 768w, https://kiteclub-okinawa.biz/wp-content/uploads/2026/03/05E3E8C7-8FB3-4C9E-8BD7-24FB7B96610F-1235x1536.jpeg 1235w, https://kiteclub-okinawa.biz/wp-content/uploads/2026/03/05E3E8C7-8FB3-4C9E-8BD7-24FB7B96610F.jpeg 1290w" sizes="(max-width: 756px) 100vw, 756px" /></figure>
+</div>
+<p class="wp-block-paragraph"><br />①：1月24日(日)：<mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">JAL便 那覇19:55～羽田22:05（JL920便）</mark><br />②：1月25日(月)：<mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">JAL便 羽田01:25～ホーチミン05:50（JL079便）</mark><br />③：1月25日(月)：ホーチミン8:00頃発～タクシー～ファンラン14:00頃着<br />25日(月)　07:11 31cm～15:10 124cm<br />26日(火)　07:38 49cm～14:44 127cm<br />27日(水)　07:55 68cm～14:44 134cm<br />28日(木)　07:57 84cm～14:52 143cm<br />29日(金)　07:39 94cm～15:08 153cm<br />30日(土)　06:23 97cm～15:32 160cm<br />④：1月30日(土)：ファンラン16:00頃までにはタクシーにて出発<br />⑤：1月30日(土)：<mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">JAL便 ホーチミン23:40～羽田31日06:50（JL070便）</mark><br />⑥：1月31日(日)：<mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">JAL便 羽田08:45～那覇11:45（JAL907便</mark>）</p>
+<p class="wp-block-paragraph"><br /><strong>参加にあたって</strong><br />・今回の日程はトレードが吹く１月の一番いい潮位で決定しました。<br />・③④のホーチミン空港～ファンランビーチ間はタクシーをチャーターして移動します。<br />休憩含め約５時間。代金は一律で乗車人数で割ります。<br />もし日程が合わない参加の場合、ここの移動がちょっと寂しいのとチャーター代の負担が増えちゃいます。</p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】魅惑の風吹く国ベトナム！カイトボードトリップ 2026♪♪&nbsp;<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe title="【沖縄発】魅惑の風吹く国ベトナムへ！ カイトボードトリップ2026【KITECLUB-OKINAWA】" width="500" height="281" src="https://www.youtube.com/embed/te6Mp_HiyRo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/13169/" data-a2a-title="2027年1月ベトナムツアー 開催のお知らせ"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/13169/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/13169/" data-text="2027年1月ベトナムツアー 開催のお知らせ"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13169%2F&amp;linkname=2027%E5%B9%B41%E6%9C%88%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E3%83%84%E3%82%A2%E3%83%BC%20%E9%96%8B%E5%82%AC%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13169%2F&amp;linkname=2027%E5%B9%B41%E6%9C%88%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E3%83%84%E3%82%A2%E3%83%BC%20%E9%96%8B%E5%82%AC%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-13191" class="post-13191 post type-post status-publish format-standard hentry category-tours category-info category-blog tag-kiteboard tag-kiteclub tag-kitesurfing tag-lesson tag-okinawa tag-wingfoil tag-141 tag-40 tag-51 tag-48 tag-50 tag-42"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/13191/" title="2026年10月小浜島ツアー開催のお知らせ">2026年10月小浜島ツアー開催のお知らせ</a></h2>
+<p class="postcat">2026年9月16日│<a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph"><strong>＜日程＞</strong><br /><strong>・10月16日(金)~10月20日(火) 4泊5日 ￥63,000-</strong><br /><strong>・10月16日(金)~10月19日(月) 3泊4日 ￥53,000-</strong><br />※お部屋指定等のご要望は個別にお問い合せください。</p>
+<p class="wp-block-paragraph">沖縄の秋に吹き出す風「ミーニシ(新北風)」を狙って、小浜島ツアーを開催致します♪<br /><mark>※今回は北風狙いのため、全泊「小浜の宿 panapana」に宿泊致します！！</mark></p>
+<p class="wp-block-paragraph">この時期はカーチバイと違う<strong><mark>フラット海面</mark></strong>ポイント狙いなので、練習にも最適です！！<br />時間帯によっては潮位もあるので<strong><mark>フォイル&amp;ウイングもOK</mark></strong>！！<br /><mark><strong>メインイベントは！</strong></mark>風向きによっては<mark><strong>幻の無人島</strong></mark>に上陸出来るかも！？<br />またまた～<strong><mark>夜はマッタリ釣り</mark></strong>も楽しんじゃいま～す♪♪</p>
+<p class="wp-block-paragraph"><strong>※料金には下記が含まれます※</strong><br />①石垣－小浜島間　往復乗船券<br />②パナパナ宿泊代 （朝食付き）<br />③レンタカー代（ガソリン代込み）<br />④ゲレンデアテンド費<br /><mark><strong>※飛行機の手配は、基本個人にて宜しくお願い致します。</strong><br /><strong>※現地集合現地解散となりますので、開催期間内であれば時間の指定はありません。</strong></mark><br />いっちゃん搭乗飛行機（予定）<br />・10月16(金)　JTA601便　07：15-08：15<br />・10月20(火)　JTA626便　18：50-19：50</p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】小浜島カイトボード&amp;釣りツアー 2025♪♪&nbsp;<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe title="【小浜島】カイトボード&amp;釣りツアー2025・秋【KITECLUB-OKINAWA】" width="500" height="281" src="https://www.youtube.com/embed/4CT-arRUE4Q?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="940" height="358" src="https://kiteclub-okinawa.biz/wp-content/uploads/2026/03/838FBEFF-29D7-459B-853D-C36E4F6B13C6-940x358.jpeg" alt="" class="wp-image-13199" srcset="https://kiteclub-okinawa.biz/wp-content/uploads/2026/03/838FBEFF-29D7-459B-853D-C36E4F6B13C6-940x358.jpeg 940w, https://kiteclub-okinawa.biz/wp-content/uploads/2026/03/838FBEFF-29D7-459B-853D-C36E4F6B13C6-640x244.jpeg 640w, https://kiteclub-okinawa.biz/wp-content/uploads/2026/03/838FBEFF-29D7-459B-853D-C36E4F6B13C6-768x293.jpeg 768w, https://kiteclub-okinawa.biz/wp-content/uploads/2026/03/838FBEFF-29D7-459B-853D-C36E4F6B13C6-1536x585.jpeg 1536w, https://kiteclub-okinawa.biz/wp-content/uploads/2026/03/838FBEFF-29D7-459B-853D-C36E4F6B13C6-2048x780.jpeg 2048w" sizes="auto, (max-width: 940px) 100vw, 940px" /></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/13191/" data-a2a-title="2026年10月小浜島ツアー開催のお知らせ"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/13191/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/13191/" data-text="2026年10月小浜島ツアー開催のお知らせ"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13191%2F&amp;linkname=2026%E5%B9%B410%E6%9C%88%E5%B0%8F%E6%B5%9C%E5%B3%B6%E3%83%84%E3%82%A2%E3%83%BC%E9%96%8B%E5%82%AC%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13191%2F&amp;linkname=2026%E5%B9%B410%E6%9C%88%E5%B0%8F%E6%B5%9C%E5%B3%B6%E3%83%84%E3%82%A2%E3%83%BC%E9%96%8B%E5%82%AC%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-13926" class="post-13926 post type-post status-publish format-standard hentry category-tours category-info category-blog tag-hawaii tag-kiteboard tag-kiteclub tag-kitesurfing tag-maui tag-okinawa tag-parawingfoil tag-sup tag-surfing tag-wingfoil tag-141 tag-40 tag-51 tag-48 tag-72 tag-237 tag-467 tag-527 tag-42"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/13926/" title="【HAWAII】The Relax lsland MAUI KITE &amp;SUP 2026/8/19-24">【HAWAII】The Relax lsland MAUI KITE &amp;SUP 2026/8/19-24</a></h2>
+<p class="postcat">2026年8月24日│<a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">【ハワイ】癒しの島マウイへ！<br />カイトサーフィン&amp;SUPサーフィン満喫を満喫するトリップに行って来ました。<br />マウイは早朝、無風でオフショア！<br />そんな時はSUPが最高です。この時期は場所によって初心者でも上級者でも楽しめる波が常時あり、レベルに合った最高の波をキャッチ出来ます！<br />昼を過ぎると、東からのトレードウインド(貿易風)が吹きはじめ、10-15m前後の強めの風でカイトサーフィンやウインドサーフィンやウイングフォイルが楽しめちゃいます。</p>
+<p class="wp-block-paragraph">1日で違った2種のマリンスポーツが楽しめる最高の環境なんです！<br />欲張れば釣りや登山まで行けちゃいます〜ww</p>
+<p class="wp-block-paragraph">この動画で少しでも「最高の環境」をお伝え出来れば幸いです♪♪</p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】The Relax lsland MAUI KITE &amp;SUP <mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="【HAWAII】The Relax lsland MAUI KITE &amp;SUP【KITECLUB OKINAWA】" width="500" height="281" src="https://www.youtube.com/embed/MHFQYKxgOHs?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/13926/" data-a2a-title="【HAWAII】The Relax lsland MAUI KITE &amp;SUP 2026/8/19-24"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/13926/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/13926/" data-text="【HAWAII】The Relax lsland MAUI KITE &amp;SUP 2026/8/19-24"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13926%2F&amp;linkname=%E3%80%90HAWAII%E3%80%91The%20Relax%20lsland%20MAUI%20KITE%20%26SUP%202026%2F8%2F19-24" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13926%2F&amp;linkname=%E3%80%90HAWAII%E3%80%91The%20Relax%20lsland%20MAUI%20KITE%20%26SUP%202026%2F8%2F19-24" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-13285" class="post-13285 post type-post status-publish format-standard hentry category-event category-tours category-info category-blog tag-kiteboard tag-kiteclub tag-kitesurfing tag-lesson tag-okinawa tag-344 tag-40 tag-51 tag-48 tag-50 tag-63 tag-42 tag-434"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/13285/" title="久米島ツアー2026 漫喫してきました～♪">久米島ツアー2026 漫喫してきました～♪</a></h2>
+<p class="postcat">2026年3月15日│<a href="https://kiteclub-okinawa.biz/category/info/event/" rel="category tag">イベント</a> <a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">今年も行って来ました！「カイトボード久米島ツアー2026」 <br />1日目は超超爆風17-18ｍになり、はての浜上陸は断念。久々の観光モードでした。 <br />お化け坂・洞窟・宇江城・釣り～っと色々満喫。 <br />2日目は北東野風10m前後。無人島「はての浜」にGO！ ばっちりカイトボードを満喫～最高でした～ <br />3日目は東になり最初は6ｍくらいなんでフォイルを満喫～～ <br />最後は優しい風になり島でマッタリゆんたくモード。 <br />何はともあれ、遊びまくりの3日間となりました～～ 2026/3/13-15</p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】久米島ツアー2026/3/13-15♪ <mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="【kiteboard】久米島ツアー2026【カイトクラブ沖縄】" width="500" height="281" src="https://www.youtube.com/embed/tBfQHn_tflI?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/13285/" data-a2a-title="久米島ツアー2026 漫喫してきました～♪"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/13285/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/13285/" data-text="久米島ツアー2026 漫喫してきました～♪"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13285%2F&amp;linkname=%E4%B9%85%E7%B1%B3%E5%B3%B6%E3%83%84%E3%82%A2%E3%83%BC2026%20%E6%BC%AB%E5%96%AB%E3%81%97%E3%81%A6%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%EF%BD%9E%E2%99%AA" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13285%2F&amp;linkname=%E4%B9%85%E7%B1%B3%E5%B3%B6%E3%83%84%E3%82%A2%E3%83%BC2026%20%E6%BC%AB%E5%96%AB%E3%81%97%E3%81%A6%E3%81%8D%E3%81%BE%E3%81%97%E3%81%9F%EF%BD%9E%E2%99%AA" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-12687" class="post-12687 post type-post status-publish format-standard hentry category-infoblog category-tours category-info category-blog tag-kiteboard tag-kitesurfing tag-okinawa tag-51 tag-48 tag-63 tag-495 tag-42 tag-418"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/12687/" title="久米島ツアー2026/3/13(金)-15(日)開催">久米島ツアー2026/3/13(金)-15(日)開催</a></h2>
+<p class="postcat">2026年3月1日│<a href="https://kiteclub-okinawa.biz/category/info/infoblog/" rel="category tag">お知らせ</a> <a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">春の大大イベント～「久米島ツアー2026」の開催決定致しました！！<br />暖かな春の風を、無人島「はての浜」で思う存分楽しむツアーです♪♪<br />皆様のご参加心よりお待ちしております！！<br /><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">※ご参加希望の方は「フルネームと年齢」を御返信下さいませ。<br />※今回は宿泊ホテルが変わっております。<br />※飛行代が含まれるため、遅いタイミングでのご予約は料金がUPする場合が御座います。</mark></strong><br /><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">※人数限定ですがレンタルプランあり。個別にお問い合せ下さい</mark></strong></p>
+<p class="wp-block-paragraph"><br /><strong>＜日程</strong>＞<br /><strong>・3月13(金)-15(日) 2泊3日</strong></p>
+<p class="wp-block-paragraph">＜<strong>料金</strong>＞<br /><strong>・</strong>3-4名1室(スタンダードルーム)：￥58,000-<br />・2名1室(ツインルーム)：￥68,000-<br />・1名1室(シングル利用)：￥78,000-<br /></p>
+<p class="wp-block-paragraph">＜料金には下記が含まれます＞<br /><strong><mark style="background-color:#fcb900" class="has-inline-color">①本島～久米島間の往復飛行機代金</mark></strong><br />・往路：RAC871便（那覇07：45～久米島08：15）<br />・復路：RAC882便（久米18：10～那覇着19：00）<br /><strong>※帰りの飛行機、乗り継ぎの都合ある際は予め申し出ください。</strong><br /><strong><mark style="background-color:#fcb900" class="has-inline-color">②ウォーターマークホテル沖縄久米アイランド宿泊代（朝食付き）</mark><br /><mark style="background-color:#fcb900" class="has-inline-color">③送迎＆レンタカー代</mark><br /><mark style="background-color:#fcb900" class="has-inline-color">④ボートチャーター料（３日間）</mark></strong></p>
+<p class="wp-block-paragraph"><strong>※安全とレスキューの都合上アップウインドウが出来る方のみご参加頂けます。<br />※お申込みご入金締め切りは3月3日までとなります。参加人数に限りあり。<br />※予約成立後、翌日よりキャンセル代金が発生いたします。</strong></p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】久米島ツアー2024ダイジェスト♪♪&nbsp;<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="【KITE PARADISE】久米島ツアー2024【KITECLUB-OKINAWA】" width="500" height="281" src="https://www.youtube.com/embed/h_eMYXl4Ui4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】久米島カイト＆釣りツアー2025ダイジェスト♪♪&nbsp;<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="【果ての浜漫喫】久米島カイトボード＆釣りツアー2025" width="500" height="281" src="https://www.youtube.com/embed/UeRTfUL5fUc?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/12687/" data-a2a-title="久米島ツアー2026/3/13(金)-15(日)開催"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/12687/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/12687/" data-text="久米島ツアー2026/3/13(金)-15(日)開催"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F12687%2F&amp;linkname=%E4%B9%85%E7%B1%B3%E5%B3%B6%E3%83%84%E3%82%A2%E3%83%BC2026%2F3%2F13%28%E9%87%91%29-15%28%E6%97%A5%29%E9%96%8B%E5%82%AC" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F12687%2F&amp;linkname=%E4%B9%85%E7%B1%B3%E5%B3%B6%E3%83%84%E3%82%A2%E3%83%BC2026%2F3%2F13%28%E9%87%91%29-15%28%E6%97%A5%29%E9%96%8B%E5%82%AC" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-13063" class="post-13063 post type-post status-publish format-standard hentry category-kiteboard-lesson category-tours category-info category-blog tag-kiteboard tag-kiteclub tag-kitesurfing tag-lesson tag-tour tag-trip tag-vietnam tag-40 tag-51 tag-48 tag-56 tag-66 tag-412 tag-50"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/13063/" title="魅惑の風吹く国ベトナムへ！ カイトボードトリップ2026">魅惑の風吹く国ベトナムへ！ カイトボードトリップ2026</a></h2>
+<p class="postcat">2026年2月2日│<a href="https://kiteclub-okinawa.biz/category/info/kiteboard-lesson/" rel="category tag">カイトボード</a> <a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">真冬の日本を旅立ち、「魅惑の風吹く国ベトナム」へカイトボードツアーに行ってきました。<br /> 沖縄から羽田そしてホーチミンへ。そこから車で６時間！ ベトナムの秘境「PhanRang」に到着です！！<br /> どんな場所なのかは～と～～っても良い場所過ぎるので詳細は内緒～～ｗｗ <br />（来年是非ツアーにご参加下さい！！） 少しだけ動画で紹介です～～～。是非見てね！</p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】【沖縄発】魅惑の風吹く国ベトナムへ！ カイトボードトリップ2026♪<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="【沖縄発】魅惑の風吹く国ベトナムへ！ カイトボードトリップ2026【KITECLUB-OKINAWA】" width="500" height="281" src="https://www.youtube.com/embed/te6Mp_HiyRo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/13063/" data-a2a-title="魅惑の風吹く国ベトナムへ！ カイトボードトリップ2026"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/13063/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/13063/" data-text="魅惑の風吹く国ベトナムへ！ カイトボードトリップ2026"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13063%2F&amp;linkname=%E9%AD%85%E6%83%91%E3%81%AE%E9%A2%A8%E5%90%B9%E3%81%8F%E5%9B%BD%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E3%81%B8%EF%BC%81%20%E3%82%AB%E3%82%A4%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%E3%83%88%E3%83%AA%E3%83%83%E3%83%972026" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13063%2F&amp;linkname=%E9%AD%85%E6%83%91%E3%81%AE%E9%A2%A8%E5%90%B9%E3%81%8F%E5%9B%BD%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E3%81%B8%EF%BC%81%20%E3%82%AB%E3%82%A4%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%E3%83%88%E3%83%AA%E3%83%83%E3%83%972026" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-13061" class="post-13061 post type-post status-publish format-standard hentry category-tours category-info category-blog tag-kiteboard tag-kiteclub tag-kitesurfing tag-lesson tag-trip tag-vietnam tag-40 tag-51 tag-48 tag-66 tag-412 tag-50"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/13061/" title="ベトナムツアー•沖合までロングライド♪ DAY5">ベトナムツアー•沖合までロングライド♪ DAY5</a></h2>
+<p class="postcat">2026年1月30日│<a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">ベトナムツアー5日目•この日は沖合にある波ポイントまで皆んなでロングライドしました〜♪♪初めての人でも楽しめる小波ライド〜♪ツアーならではの楽しみですね♪</p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】ベトナムツアー•沖合までロングライド♪<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-9-16 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="ベトナムツアー5日目•沖合までロングライド♪ #kitesurfing #vietnam #kiteclub #trip #tour" width="422" height="750" src="https://www.youtube.com/embed/kycUZQjV1gw?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/13061/" data-a2a-title="ベトナムツアー•沖合までロングライド♪ DAY5"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/13061/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/13061/" data-text="ベトナムツアー•沖合までロングライド♪ DAY5"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13061%2F&amp;linkname=%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E3%83%84%E3%82%A2%E3%83%BC%E2%80%A2%E6%B2%96%E5%90%88%E3%81%BE%E3%81%A7%E3%83%AD%E3%83%B3%E3%82%B0%E3%83%A9%E3%82%A4%E3%83%89%E2%99%AA%20DAY5" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13061%2F&amp;linkname=%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E3%83%84%E3%82%A2%E3%83%BC%E2%80%A2%E6%B2%96%E5%90%88%E3%81%BE%E3%81%A7%E3%83%AD%E3%83%B3%E3%82%B0%E3%83%A9%E3%82%A4%E3%83%89%E2%99%AA%20DAY5" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-13059" class="post-13059 post type-post status-publish format-standard hentry category-tours category-info category-blog tag-kiteboard tag-kiteclub tag-kitesurfing tag-trip tag-vietnam tag-40 tag-51 tag-48 tag-66 tag-412"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/13059/" title="カイト以外も楽しい魅惑のベトナム♪ DAY4">カイト以外も楽しい魅惑のベトナム♪ DAY4</a></h2>
+<p class="postcat">2026年1月29日│<a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">トリップの楽しみは～「観光」も絶対絶対必須ですね～！！！<br />動画ではお伝えしきれない魅惑の体験が出来ちゃいます～～♪♪<br />以下動画にてちょっとだけご紹介～～～<br /></p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】カイト以外も楽しい魅惑のベトナム♪<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-9-16 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="カイト以外も楽しい魅惑のベトナム♪ #kitesurfing #vietnam #kiteclub #trip #tour #kiteboarding" width="422" height="750" src="https://www.youtube.com/embed/bizXtl8xMVg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/13059/" data-a2a-title="カイト以外も楽しい魅惑のベトナム♪ DAY4"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/13059/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/13059/" data-text="カイト以外も楽しい魅惑のベトナム♪ DAY4"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13059%2F&amp;linkname=%E3%82%AB%E3%82%A4%E3%83%88%E4%BB%A5%E5%A4%96%E3%82%82%E6%A5%BD%E3%81%97%E3%81%84%E9%AD%85%E6%83%91%E3%81%AE%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E2%99%AA%20DAY4" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13059%2F&amp;linkname=%E3%82%AB%E3%82%A4%E3%83%88%E4%BB%A5%E5%A4%96%E3%82%82%E6%A5%BD%E3%81%97%E3%81%84%E9%AD%85%E6%83%91%E3%81%AE%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E2%99%AA%20DAY4" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-13055" class="post-13055 post type-post status-publish format-standard hentry category-tours category-info category-blog tag-kiteclub tag-kitesurfing tag-okinawa tag-trip tag-40 tag-51 tag-66 tag-412 tag-42"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/13055/" title="amazing!!slingshot world riders in Vietnam!! DAY3">amazing!!slingshot world riders in Vietnam!! DAY3</a></h2>
+<p class="postcat">2026年1月28日│<a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">この日は早朝から良い風吹いて11～13ｍ<br />そうなると当然上級者が続々海に出てきます！！<br />今回同じタイミングで来ていたSLINGSHOTのワールドライダー<br />「＠jeremyburlandkiter」と「＠zacadamskite」が登場～～～<br />目の前で世界トップクラスのライディングを見れてめっちゃ刺激をうけました！！<br />そんなシーンを見れるのもトリップならではですね！！！</p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】amazing!!slingshot world riders in Vietnam!!<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-9-16 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="amazing!!slingshot world riders in Vietnam!!!  #kitesurfing #kiteclub #vietnam #tour #trip" width="422" height="750" src="https://www.youtube.com/embed/EdFxm_cIlBE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/13055/" data-a2a-title="amazing!!slingshot world riders in Vietnam!! DAY3"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/13055/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/13055/" data-text="amazing!!slingshot world riders in Vietnam!! DAY3"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13055%2F&amp;linkname=amazing%21%21slingshot%20world%20riders%20in%20Vietnam%21%21%20DAY3" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13055%2F&amp;linkname=amazing%21%21slingshot%20world%20riders%20in%20Vietnam%21%21%20DAY3" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-13052" class="post-13052 post type-post status-publish format-standard hentry category-tours category-info category-blog tag-kiteclub tag-kitesurfing tag-lesson tag-okinawa tag-vietnam tag-40 tag-51 tag-412 tag-42"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/13052/" title="VIETNAM TRIP DAY2">VIETNAM TRIP DAY2</a></h2>
+<p class="postcat">2026年1月27日│<a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">ベトナムトリップDay2<br />2日目も朝から良い風8～10ｍで昼過ぎには11ｍ位に上がり1日乗りまくりでした！！<br />ちなみに気温は昼間で22～25度前後。風がついよいのでスプリング位は着用がいいですが、水着で乗ってる人もいるくらい良い気温～～♪♪<br />練習にも程よくテンションもUPUPですね～～</p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】VIETNAM TRIP DAY2♪<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-9-16 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="VIETNAM TRIP DAY2 #kiteclub #vietnam #kitesurfing #trip #kiteboarding" width="422" height="750" src="https://www.youtube.com/embed/UfnkCu8beB8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/13052/" data-a2a-title="VIETNAM TRIP DAY2"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/13052/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/13052/" data-text="VIETNAM TRIP DAY2"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13052%2F&amp;linkname=VIETNAM%20TRIP%20DAY2" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13052%2F&amp;linkname=VIETNAM%20TRIP%20DAY2" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-13044" class="post-13044 post type-post status-publish format-standard hentry category-tours category-info category-blog tag-kiteboard tag-kiteclub tag-kitesurfing tag-tour tag-trip tag-vietnam tag-40 tag-51 tag-48 tag-56 tag-66 tag-412"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/13044/" title="カイトクラブベトナムツアー2025 DAY1">カイトクラブベトナムツアー2025 DAY1</a></h2>
+<p class="postcat">2026年1月26日│<a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">真冬の日本を旅立ち、「魅惑の風吹く国ベトナム」へカイトボードツアーに行ってきました！<br />沖縄から羽田そしてホーチミンへ。そこから車で６時間！ <br />ベトナムの秘境「PhanRang」に到着です！！<br />深夜に日本を出発して現地には早朝到着。なので～到着日からすぐにカイト出来ちゃうんです！<br />↓↓以下到着日1日目のショート動画！是非見てね♪♪</p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】VIETNAM TOUR 2026 DAY1♪<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-9-16 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="KITECLUB VIETNAM TOUR 2026 DAY1 #kitesurfing #vietnam #kiteclub" width="422" height="750" src="https://www.youtube.com/embed/1lfqiPKIuzY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/13044/" data-a2a-title="カイトクラブベトナムツアー2025 DAY1"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/13044/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/13044/" data-text="カイトクラブベトナムツアー2025 DAY1"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13044%2F&amp;linkname=%E3%82%AB%E3%82%A4%E3%83%88%E3%82%AF%E3%83%A9%E3%83%96%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E3%83%84%E3%82%A2%E3%83%BC2025%20DAY1" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F13044%2F&amp;linkname=%E3%82%AB%E3%82%A4%E3%83%88%E3%82%AF%E3%83%A9%E3%83%96%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E3%83%84%E3%82%A2%E3%83%BC2025%20DAY1" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-12626" class="post-12626 post type-post status-publish format-standard has-post-thumbnail hentry category-tours category-info category-blog tag-kiteboard tag-kiteclub tag-kitesurfing tag-okinawa tag-phanrang tag-vietnam tag-40 tag-51 tag-48 tag-413 tag-412 tag-42"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/12626/" title="ベトナムカイトボードツアー2026 開催決定！">ベトナムカイトボードツアー2026 開催決定！</a></h2>
+<p class="postcat">2025年11月6日│<a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph"><strong><mark style="background-color:#fcb900" class="has-inline-color has-black-color">日程：2026年1月26日(月)～31日(土)・５泊６日 (現地)</mark></strong><br /><br /><strong><mark style="background-color:#fcb900" class="has-inline-color">費用：￥75,000‐　・シングル利用￥88,000-</mark></strong>　<br /><strong>☆料金には下記が含まれます☆</strong><br />・宿泊費　（OzFarm-kiteboarding school）<br />・往復タクシーチャーター代金（ホーチミン空港～ファンランビーチ）<br />・ビーチ＆施設利用料（ビーチスタッフへのチップ込み）<br />・外食２回分往復タクシーチャーター代<br />・アテンド費<br /><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">※飛行機の手配は個人にて宜しくお願い致します</mark>。<br /><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">※ツアー代金に保険代は含まれません。個人で加入宜しくお願い致します。</mark></strong></p>
+<p class="wp-block-paragraph">★いっちゃん搭乗便★<br /><strong>①：1月25日(日)：JAL便 那覇19:10～羽田21:15（JL918便）<br />②：1月26日(月)：JAL便 羽田01:30～ホーチミン05:50（JL079便）<br />③：1月26日(月)：ホーチミン8:00頃発～約5時間タクシー～ファンラン14:00頃着</strong><br />26日(月)　08:21 83cm～15:24 154cm〇〇<br />27日(火)　07:03 93cm～15:49 165cm〇〇〇<br />28日(水)　01:05 67cm～16:26 175cm〇〇〇<br />29日(木)　02:21 48cm～17:25 183cm　〇〇<br />30日(金)　03:22 63cm～18:33 190cm　〇〇<br />31日(土)　04:15 22cm～19:43 196cm　　〇<br /><strong>④：1月31日(土)：ファンラン16:30頃までにはタクシーにて出発<br />⑤：1月31日(土)：JAL便 ホーチミン23:40～２月１日(月)羽田06:50（JL070便）<br />⑥：2月1日(月)：JAL便 羽田08:45～那覇11:45（JAL907便）</strong></p>
+<p class="has-vivid-red-color has-text-color wp-block-paragraph"><br /><strong>参加にあたって</strong><br />・今回の日程はトレードが吹く１月の一番いい潮位で決定しました。<br />・③④のホーチミン空港～ファンランビーチ間はタクシーをチャーターして移動します。<br />休憩含め約５時間。代金は一律で乗車人数で割ります。<br />もし日程が合わない参加の場合、ここの移動がちょっと寂しいのとチャーター代の負担が増えちゃいます。</p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】ベトナムPhan Rang kiteboard tour 2025/1/21-28♪♪&nbsp;<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="【Vietnam】Phan Rang kiteboard tour 2025【KITECLUB】" width="500" height="281" src="https://www.youtube.com/embed/Qi3pjHA-hrk?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】ベトナム リラックス　カイトボーディング　2023/11/11-19♪♪&nbsp;<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="Vietnam Relax Kiteboarding 2023/11/11-19【kiteclub-okinawa】" width="500" height="281" src="https://www.youtube.com/embed/ySHhj2j4_F8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/12626/" data-a2a-title="ベトナムカイトボードツアー2026 開催決定！"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/12626/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/12626/" data-text="ベトナムカイトボードツアー2026 開催決定！"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F12626%2F&amp;linkname=%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E3%82%AB%E3%82%A4%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%E3%83%84%E3%82%A2%E3%83%BC2026%20%E9%96%8B%E5%82%AC%E6%B1%BA%E5%AE%9A%EF%BC%81" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F12626%2F&amp;linkname=%E3%83%99%E3%83%88%E3%83%8A%E3%83%A0%E3%82%AB%E3%82%A4%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%E3%83%84%E3%82%A2%E3%83%BC2026%20%E9%96%8B%E5%82%AC%E6%B1%BA%E5%AE%9A%EF%BC%81" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-12840" class="post-12840 post type-post status-publish format-standard hentry category-kiteboard-lesson category-tours category-info category-blog tag-fishing tag-kiteboard tag-kitesurfing tag-kohamajima tag-lesson tag-okinawa tag-51 tag-48 tag-50 tag-67 tag-42"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/12840/" title="[小浜島]カイトボード&amp;釣りツアー2025・秋2025/10/24～28">[小浜島]カイトボード&amp;釣りツアー2025・秋2025/10/24～28</a></h2>
+<p class="postcat">2025年10月28日│<a href="https://kiteclub-okinawa.biz/category/info/kiteboard-lesson/" rel="category tag">カイトボード</a> <a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">沖縄の秋に吹く風「ミーニシ(新北風)」を満喫する為、 小浜島へ「カイト&amp;釣りツアー」に行ってきました！ <br />カイトクラブとしてカイトボードは当然なんですが、今回は「釣り」も存分に満喫～！！ <br />最高に楽しいツアーになりました～<br />文章よりも動画を見て頂くのが一番！！以下是非ご覧下さいませ～♪</p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】小浜島・カイトボード&amp;釣りツアー2025・秋！&nbsp;<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="【小浜島】カイトボード&amp;釣りツアー2025・秋【KITECLUB-OKINAWA】" width="500" height="281" src="https://www.youtube.com/embed/4CT-arRUE4Q?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<p class="wp-block-paragraph"></p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】「沖縄離島釣り」小浜島の漁港は初心者でもいっぱい釣れちゃいます♪♪ <mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="【沖縄離島・釣り】小浜島の漁港は初心者でもいっぱい釣れます♪♪" width="500" height="281" src="https://www.youtube.com/embed/6g9fZ-e14zE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/12840/" data-a2a-title="[小浜島]カイトボード&amp;釣りツアー2025・秋2025/10/24～28"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/12840/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/12840/" data-text="[小浜島]カイトボード&amp;釣りツアー2025・秋2025/10/24～28"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F12840%2F&amp;linkname=%5B%E5%B0%8F%E6%B5%9C%E5%B3%B6%5D%E3%82%AB%E3%82%A4%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%26%E9%87%A3%E3%82%8A%E3%83%84%E3%82%A2%E3%83%BC2025%E3%83%BB%E7%A7%8B2025%2F10%2F24%EF%BD%9E28" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F12840%2F&amp;linkname=%5B%E5%B0%8F%E6%B5%9C%E5%B3%B6%5D%E3%82%AB%E3%82%A4%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%26%E9%87%A3%E3%82%8A%E3%83%84%E3%82%A2%E3%83%BC2025%E3%83%BB%E7%A7%8B2025%2F10%2F24%EF%BD%9E28" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-12592" class="post-12592 post type-post status-publish format-standard has-post-thumbnail hentry category-tours category-info category-blog tag-fishing tag-kiteboard tag-kiteclub tag-lesson tag-okinawa tag-wingfoil tag-141 tag-40 tag-48 tag-50 tag-285"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/12592/" title="ミーニシ(新北風)小浜島ツアー2025/10/24-28 開催決定">ミーニシ(新北風)小浜島ツアー2025/10/24-28 開催決定</a></h2>
+<p class="postcat">2025年9月17日│<a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">沖縄の秋に吹き出す風「ミーニシ(新北風)」を狙って、小浜島ツアーを開催致します♪<br /><mark style="background-color:#ffffff" class="has-inline-color has-luminous-vivid-orange-color">※今回は北風狙いのため、全泊「小浜の宿 panapana」に宿泊致します！！</mark></p>
+<p class="wp-block-paragraph"><strong>＜日程&amp;参加費用＞<br />・10月24日(金)～10月28日(火) 　4泊5日　￥62,000-<br />・10月24日(金)～10月27日(月) 　3泊4日　￥52,000-<br />・10月24日(金)～10月26日(日) 　2泊3日　￥39,800-</strong></p>
+<p class="wp-block-paragraph">この時期はカーチバイと違う<strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-cyan-blue-color">フラット海面</mark></strong>ポイント狙いなので、練習にも最適です！！<br />時間帯によっては潮位もあるので<strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-cyan-blue-color">フォイル&amp;ウイングもOK</mark></strong>！！<br /><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color"><strong>メインイベントは！</strong></mark>風向きによっては<mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-cyan-blue-color"><strong>幻の無人島</strong></mark>に上陸出来るかも！？<br />またまた～<strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-cyan-blue-color">夜はマッタリ釣り</mark></strong>も楽しんじゃいま～す♪♪<br /><br /><strong>※料金には下記が含まれます※</strong><br />①石垣－小浜島間　往復乗船券<br />②パナパナ宿泊代 （朝食付き）<br />③レンタカー代（ガソリン代込み）<br />④ゲレンデアテンド費<br /><mark style="background-color:#fcb900" class="has-inline-color"><strong>※飛行機の手配は、基本個人にて宜しくお願い致します。</strong><br /><strong>※現地集合現地解散となりますので、開催期間内であれば時間の指定はありません。</strong></mark></p>
+<p class="wp-block-paragraph">いっちゃん搭乗飛行機<br />・10月24(金)　JTA601便　07：15-08：15<br />・10月28(火)　JTA626便　18：45-19：45</p>
+<p class="has-text-align-center wp-block-paragraph"><br /><br /><strong><mark>↓↓↓</mark>【YouTube】秋の小浜島ツアー2022/10/13-18♪♪&nbsp;<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="【小浜島】秋のステップUPツアー【KITECLUBOKINAWA】" width="500" height="281" src="https://www.youtube.com/embed/1UuPtjliElY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<p class="wp-block-paragraph"><br />＜潮位表＞</p>
+<figure class="wp-block-image size-large"><img loading="lazy" decoding="async" width="940" height="705" src="https://kiteclub-okinawa.biz/wp-content/uploads/2025/08/IMG_7359-940x705.jpeg" alt="" class="wp-image-12601" srcset="https://kiteclub-okinawa.biz/wp-content/uploads/2025/08/IMG_7359-940x705.jpeg 940w, https://kiteclub-okinawa.biz/wp-content/uploads/2025/08/IMG_7359-640x480.jpeg 640w, https://kiteclub-okinawa.biz/wp-content/uploads/2025/08/IMG_7359-768x576.jpeg 768w, https://kiteclub-okinawa.biz/wp-content/uploads/2025/08/IMG_7359-1536x1152.jpeg 1536w, https://kiteclub-okinawa.biz/wp-content/uploads/2025/08/IMG_7359-2048x1536.jpeg 2048w" sizes="auto, (max-width: 940px) 100vw, 940px" /></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/12592/" data-a2a-title="ミーニシ(新北風)小浜島ツアー2025/10/24-28 開催決定"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/12592/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/12592/" data-text="ミーニシ(新北風)小浜島ツアー2025/10/24-28 開催決定"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F12592%2F&amp;linkname=%E3%83%9F%E3%83%BC%E3%83%8B%E3%82%B7%28%E6%96%B0%E5%8C%97%E9%A2%A8%29%E5%B0%8F%E6%B5%9C%E5%B3%B6%E3%83%84%E3%82%A2%E3%83%BC2025%2F10%2F24-28%20%E9%96%8B%E5%82%AC%E6%B1%BA%E5%AE%9A" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F12592%2F&amp;linkname=%E3%83%9F%E3%83%BC%E3%83%8B%E3%82%B7%28%E6%96%B0%E5%8C%97%E9%A2%A8%29%E5%B0%8F%E6%B5%9C%E5%B3%B6%E3%83%84%E3%82%A2%E3%83%BC2025%2F10%2F24-28%20%E9%96%8B%E5%82%AC%E6%B1%BA%E5%AE%9A" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-12668" class="post-12668 post type-post status-publish format-standard hentry category-sup-tours category-event category-kiteboard-lesson category-tours category-info category-blog tag-hawaii tag-kiteboard tag-kiteclub tag-kitesurfing tag-maui tag-okinawa tag-parawing tag-sup tag-trip tag-wingfoil tag-141 tag-40 tag-51 tag-48 tag-363 tag-66 tag-467 tag-480 tag-469 tag-42"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/12668/" title="風と波の聖地「MAUI(マウイ)」へ！！KITE &amp; SUP TRIP 2025/8/27-9/2">風と波の聖地「MAUI(マウイ)」へ！！KITE &amp; SUP TRIP 2025/8/27-9/2</a></h2>
+<p class="postcat">2025年9月2日│<a href="https://kiteclub-okinawa.biz/category/info/sup-tours/" rel="category tag">SUP(サップ)</a> <a href="https://kiteclub-okinawa.biz/category/info/event/" rel="category tag">イベント</a> <a href="https://kiteclub-okinawa.biz/category/info/kiteboard-lesson/" rel="category tag">カイトボード</a> <a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">maui trip 2025のダイジェスト動画です。文章よりも～動画見てもらうのが一番ですね！！<br />ちょっと長めの13分～♪♪御時間ある時に是非ご覧下さいませ</p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】KITE ＆ SUP MAUI TRIP 2025<mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="風と波の聖地「MAUI(マウイ)」へ！！KITE &amp; SUP TRIP 2025" width="500" height="281" src="https://www.youtube.com/embed/b8Mq1xzSgNo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/12668/" data-a2a-title="風と波の聖地「MAUI(マウイ)」へ！！KITE &amp; SUP TRIP 2025/8/27-9/2"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/12668/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/12668/" data-text="風と波の聖地「MAUI(マウイ)」へ！！KITE &amp; SUP TRIP 2025/8/27-9/2"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F12668%2F&amp;linkname=%E9%A2%A8%E3%81%A8%E6%B3%A2%E3%81%AE%E8%81%96%E5%9C%B0%E3%80%8CMAUI%28%E3%83%9E%E3%82%A6%E3%82%A4%29%E3%80%8D%E3%81%B8%EF%BC%81%EF%BC%81KITE%20%26%20SUP%20TRIP%202025%2F8%2F27-9%2F2" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F12668%2F&amp;linkname=%E9%A2%A8%E3%81%A8%E6%B3%A2%E3%81%AE%E8%81%96%E5%9C%B0%E3%80%8CMAUI%28%E3%83%9E%E3%82%A6%E3%82%A4%29%E3%80%8D%E3%81%B8%EF%BC%81%EF%BC%81KITE%20%26%20SUP%20TRIP%202025%2F8%2F27-9%2F2" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-12645" class="post-12645 post type-post status-publish format-standard hentry category-tours category-info category-blog tag-hawai tag-kiteclub tag-kitesurfing tag-maui tag-okinawa tag-sup tag-trip tag-40 tag-51 tag-48 tag-42"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/blog/12645/" title="【HAWAII 】KITE＆SUP TOUR IN MAUI 2025 day1">【HAWAII 】KITE＆SUP TOUR IN MAUI 2025 day1</a></h2>
+<p class="postcat">2025年8月27日│<a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a> <a href="https://kiteclub-okinawa.biz/category/info/blog/" rel="category tag">日々ブログ</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">風と波の聖地MAUIへ！<br />5泊7日【8月27日(水)～9月2日(火)】のトリップに行ってきました。<br />今回のトリップはなんと言っても～<br />「カイトボードとSUP波乗りを1日で楽しめちゃう」最高のトリップなんです！<br />と言うことで、今回の動画は「DAY1 出発&amp;KITE編」見てね！！</p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark>↓↓↓</mark>【YouTube】MAUI TOUR 2025 day1 </strong>到着&amp;KITE<strong> <mark>↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-9-16 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="MAUI TOUR 2025 day1 到着＆KITE #kiteclub #surfing #sup #hawaii #maui" width="422" height="750" src="https://www.youtube.com/embed/DS0ne8Gbsys?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/blog/12645/" data-a2a-title="【HAWAII 】KITE＆SUP TOUR IN MAUI 2025 day1"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/blog/12645/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/blog/12645/" data-text="【HAWAII 】KITE＆SUP TOUR IN MAUI 2025 day1"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F12645%2F&amp;linkname=%E3%80%90HAWAII%20%E3%80%91KITE%EF%BC%86SUP%20TOUR%20IN%20MAUI%202025%20day1" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2Fblog%2F12645%2F&amp;linkname=%E3%80%90HAWAII%20%E3%80%91KITE%EF%BC%86SUP%20TOUR%20IN%20MAUI%202025%20day1" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div id="post-12358" class="post-12358 post type-post status-publish format-standard has-post-thumbnail hentry category-event category-tours category-info tag-hawaii tag-kihei-beach tag-kiteboard tag-kiteclub tag-kitesurfing tag-maui tag-okinawa tag-sup tag-surfing tag-40 tag-51 tag-48 tag-363 tag-237 tag-467 tag-472 tag-469 tag-468 tag-42 tag-122"> 
+<article class="clearfix">
+<h2><a href="https://kiteclub-okinawa.biz/info/12358/" title="8/27~9/2ハワイ(MAUI)ツアー開催決定！！">8/27~9/2ハワイ(MAUI)ツアー開催決定！！</a></h2>
+<p class="postcat">2025年6月27日│<a href="https://kiteclub-okinawa.biz/category/info/event/" rel="category tag">イベント</a> <a href="https://kiteclub-okinawa.biz/category/info/tours/" rel="category tag">ツアー</a> <a href="https://kiteclub-okinawa.biz/category/info/" rel="category tag">ブログ一覧</a></p>
+<div class="entry">
+<p class="wp-block-paragraph">風と波の聖地「MAUI(マウイ)」へ！<br />カイトボード&amp;SUP波乗りを満喫する欲張りツアー開催致します！<br /><br />日程：8月27(水)～9月2日(火) 　5泊7日<br /> </p>
+<p class="wp-block-paragraph">【このツアーのオススメポイント！！】<br />マウイは特殊な環境で、早朝からお昼頃までは、ほぼ無風で穏やか～～。 <br />そんな時はもちろん<strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-black-color">SUP波乗りが最高</mark></strong>～！！ <br />その後徐々に風が強くなり、午後からは<strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-black-color">至極のカイトボードコンディション</mark></strong>になります！ <br /><strong><mark style="background-color:#f78da7" class="has-inline-color has-black-color">1日で2つのマリンスポーツを存分に満喫出来るのはこのツアーだけですよ～♪</mark></strong><br /><br /><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-luminous-vivid-orange-color">☆☆<strong>ご興味ある方は是非是非ご連絡下さいませ</strong>☆☆<br /></mark></p>
+<p class="has-text-align-center wp-block-paragraph"><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">↓↓↓</mark>【YouTube】HAWAII KITE&amp;SUPツアー2024<mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="【HAWAII】KITE＆SUP trip in MAUI【KITECLUB OKINAWA】" width="500" height="281" src="https://www.youtube.com/embed/DepYiV8oTgM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<p class="has-text-align-center wp-block-paragraph"><strong></strong><strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">↓↓↓</mark>【YouTube】</strong>SUP波乗り•オワフ島ワイキキビーチ＆マウイ島キヘイビーチ<strong><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">↓↓↓</mark></strong></p>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
+<iframe loading="lazy" title="【HAWAII】SUP波乗り•マウイ島キヘイビーチ&amp;オワフ島ワイキキビーチ【okinawa-kiteclub】" width="500" height="281" src="https://www.youtube.com/embed/jr2H64zAn78?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div></figure>
+<p class="wp-block-paragraph"></p>
+<div class="addtoany_share_save_container addtoany_content addtoany_content_bottom"><div class="a2a_kit a2a_kit_size_32 addtoany_list" data-a2a-url="https://kiteclub-okinawa.biz/info/12358/" data-a2a-title="8/27~9/2ハワイ(MAUI)ツアー開催決定！！"><a class="a2a_button_facebook_like addtoany_special_service" data-layout="button" data-href="https://kiteclub-okinawa.biz/info/12358/"></a><a class="a2a_button_twitter_tweet addtoany_special_service" data-url="https://kiteclub-okinawa.biz/info/12358/" data-text="8/27~9/2ハワイ(MAUI)ツアー開催決定！！"></a><a class="a2a_button_line" href="https://www.addtoany.com/add_to/line?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2F12358%2F&amp;linkname=8%2F27~9%2F2%E3%83%8F%E3%83%AF%E3%82%A4%28MAUI%29%E3%83%84%E3%82%A2%E3%83%BC%E9%96%8B%E5%82%AC%E6%B1%BA%E5%AE%9A%EF%BC%81%EF%BC%81" title="Line" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_print" href="https://www.addtoany.com/add_to/print?linkurl=https%3A%2F%2Fkiteclub-okinawa.biz%2Finfo%2F12358%2F&amp;linkname=8%2F27~9%2F2%E3%83%8F%E3%83%AF%E3%82%A4%28MAUI%29%E3%83%84%E3%82%A2%E3%83%BC%E9%96%8B%E5%82%AC%E6%B1%BA%E5%AE%9A%EF%BC%81%EF%BC%81" title="Print" rel="nofollow noopener" target="_blank"></a></div></div></div><!-- / .entry -->
+</article>
+</div><!-- / #post- -->
+<hr  class="hrtext" data-content="AND" />
+<div class='wp-pagenavi' role='navigation'>
+<span class='pages'>1 / 5</span><span aria-current='page' class='current'>1</span><a class="page larger" title="ページ 2" href="https://kiteclub-okinawa.biz/category/info/tours/page/2/">2</a><a class="page larger" title="ページ 3" href="https://kiteclub-okinawa.biz/category/info/tours/page/3/">3</a><a class="page larger" title="ページ 4" href="https://kiteclub-okinawa.biz/category/info/tours/page/4/">4</a><a class="page larger" title="ページ 5" href="https://kiteclub-okinawa.biz/category/info/tours/page/5/">5</a><a class="nextpostslink" rel="next" aria-label="次のページ" href="https://kiteclub-okinawa.biz/category/info/tours/page/2/">&raquo;</a>
+</div>
+</div><!-- / #contentstxt -->
+<!-- pan -->
+<div id="breadcrumbs" ><ul><li class="breadcrumb-top" itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://kiteclub-okinawa.biz/" itemprop="url"><span itemprop="title">ホーム</span></a></li><li>&nbsp; &raquo; &nbsp;</li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://kiteclub-okinawa.biz/category/info/" itemprop="url"><span itemprop="title">ブログ一覧</span></a></li><li>&nbsp; &raquo; &nbsp;</li><li>ツアー</li></ul></div>
+</div><!-- / #maincontents -->
+</div><!-- / .inn-fr -->
+</article>
+</main>
+<footer>
+<div id="pagetop"><a href="#wrapall" data-scroll>&#9650;</a></div><!-- / #pagetop -->
+<div id="footer">
+<div class="inn-fr flex">
+<ul><li id="text-10" class="widget widget_text">
+<div class="textwidget"><p>カイトクラブ沖縄<br />
+住所：901-0244<br />
+沖縄県豊見城市宜保2丁目6番地1<br />
+プランタンA102号<br />
+電話：098－851－0180<br />
+携帯：000－0000－0000<br />
+<a href="https://kiteclub-okinawa.biz/contact/">お問い合わせ</a></p>
+<p>&nbsp;</p>
+</div>
+</li>
+</ul>
+  <ul><li id="block-8" class="widget widget_block"> <ul><li id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d57289.7054327682!2d127.676573!3d26.176939!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x922ef9d45c4c6db8!2z44Kr44Kk44OI44Kv44Op44OW!5e0!3m2!1sja!2sjp!4v1548945108932" width="240" height="200" frameborder="0" style="border:0" allowfullscreen></iframe></div></li>
+</ul></li>
+</ul>
+  <ul><li id="block-12" class="widget widget_block widget_media_image">
+<figure class="wp-block-image size-full"><a href="tel:098-851-0180"><img loading="lazy" decoding="async" width="230" height="60" src="https://kiteclub-okinawa.biz/wp-content/uploads/2019/03/btn_tel.png" alt="098-851-0180" class="wp-image-7104"/></a></figure>
+</li>
+<li id="block-11" class="widget widget_block widget_media_image">
+<figure class="wp-block-image size-full"><a href="https://kiteclub-okinawa.biz/reservation/"><img loading="lazy" decoding="async" width="230" height="60" src="https://kiteclub-okinawa.biz/wp-content/uploads/2019/04/btn_contact.png" alt="スクール予約" class="wp-image-7488"/></a></figure>
+</li>
+<li id="block-13" class="widget widget_block widget_media_image">
+<figure class="wp-block-image size-full"><a href="https://kiteclub-okinawa.biz/member/"><img loading="lazy" decoding="async" width="230" height="60" src="https://kiteclub-okinawa.biz/wp-content/uploads/2022/04/btn_member.png" alt="会員専用" class="wp-image-9914"/></a></figure>
+</li>
+</ul>
+</div><!-- / .inn-fr -->
+<div id="copy">&copy; 2001-2026KITECLUB沖縄. </div><!-- / #copy -->
+</div><!-- / #footer -->
+</footer>
+</div><!-- /#wrapall -->
+</body>
+</html>

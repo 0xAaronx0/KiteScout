@@ -4,6 +4,7 @@
 // ---------------------------------------------------------------------------
 import type { OfferAdapter } from './types.js';
 import { thirtyFiveKnotsMacapa } from './adapters/35-knots-macapa.js';
+import { airzoneKiteWingCampRangiputa } from './adapters/airzone-kite-wing-camp-rangiputa.js';
 import { algarveWatersportZeroToHero } from './adapters/algarve-watersport-zero-to-hero.js';
 import { alvorkitecenterGuesthouseAlvor } from './adapters/alvorkitecenter-guesthouse-alvor.js';
 import { amagaliPousadaGalinhos } from './adapters/amagali-pousada-galinhos.js';
@@ -11,6 +12,7 @@ import { amanpuloPamalican } from './adapters/amanpulo-pamalican.js';
 import { amigosDoVentoTouros } from './adapters/amigos-do-vento-touros.js';
 import { anapnoeParoskitePounda } from './adapters/anapnoe-paroskite-pounda.js';
 import { antonyBoyViganj } from './adapters/antony-boy-viganj.js';
+import { apexSnowKitingTourKosciuszko } from './adapters/apex-snow-kiting-tour-kosciuszko.js';
 import { aquaVentanaLaVentana } from './adapters/aqua-ventana-la-ventana.js';
 import { azulBeachKiteResortElSargento } from './adapters/azul-beach-kite-resort-el-sargento.js';
 import { babaombyIslandLodgeDiegoSuarez } from './adapters/babaomby-island-lodge-diego-suarez.js';
@@ -69,8 +71,11 @@ import { getHighKiteCampTheologos } from './adapters/get-high-kite-camp-theologo
 import { gksKiteHouseEsposende } from './adapters/gks-kite-house-esposende.js';
 import { globalKiteTripsKiteSafariColombia } from './adapters/global-kite-trips-kite-safari-colombia.js';
 import { globalKiteTripsProgressionCampCumbuco } from './adapters/global-kite-trips-progression-camp-cumbuco.js';
+import { gnaralooStation3MileCamp } from './adapters/gnaraloo-station-3-mile-camp.js';
+import { gnaralooStationHomestead } from './adapters/gnaraloo-station-homestead.js';
 import { grassyFlatsResortMarathon } from './adapters/grassy-flats-resort-marathon.js';
 import { habagatAissatouBoracay } from './adapters/habagat-aissatou-boracay.js';
+import { haggerstoneIslandResort } from './adapters/haggerstone-island-resort.js';
 import { hatterasIslandVacationRentalsAvon } from './adapters/hatteras-island-vacation-rentals-avon.js';
 import { highFlyersKiteHouseTarifa } from './adapters/high-flyers-kite-house-tarifa.js';
 import { hotel100FunValdevaqueros } from './adapters/hotel-100-fun-valdevaqueros.js';
@@ -114,6 +119,8 @@ import { kiteSistersMoroccoRetreat } from './adapters/kite-sisters-morocco-retre
 import { kiteVillageHamata } from './adapters/kite-village-hamata.js';
 import { kiteactiveXxxlDownwinder } from './adapters/kiteactive-xxxl-downwinder.js';
 import { kiteadventureColombiaCourseStayMayapo } from './adapters/kiteadventure-colombia-course-stay-mayapo.js';
+import { kiteclubOkinawaKohamaKiteTour } from './adapters/kiteclub-okinawa-kohama-kite-tour.js';
+import { kiteclubOkinawaKumejimaTour } from './adapters/kiteclub-okinawa-kumejima-tour.js';
 import { kiteforceTyrolSnowkiteTrip } from './adapters/kiteforce-tyrol-snowkite-trip.js';
 import { kitefreedomSantaFeBantayan } from './adapters/kitefreedom-santa-fe-bantayan.js';
 import { kitefunSurfHouseTarifa } from './adapters/kitefun-surf-house-tarifa.js';
@@ -133,6 +140,7 @@ import { kitesurfingGuimarasSanLorenzo } from './adapters/kitesurfing-guimaras-s
 import { kitesurfingLankaKalpitiya } from './adapters/kitesurfing-lanka-kalpitiya.js';
 import { kitesurfmarocEssaouira } from './adapters/kitesurfmaroc-essaouira.js';
 import { kitetribeElGouna } from './adapters/kitetribe-el-gouna.js';
+import { kitewestWaveFreestyleCampCoronationBeach } from './adapters/kitewest-wave-freestyle-camp-coronation-beach.js';
 import { kokohauBungalowsSantaVeronica } from './adapters/kokohau-bungalows-santa-veronica.js';
 import { laBallenaAlegreSantPerePescador } from './adapters/la-ballena-alegre-sant-pere-pescador.js';
 import { laVentanaBeachResort } from './adapters/la-ventana-beach-resort.js';
@@ -170,6 +178,7 @@ import { mySaltySistersRetreatKremasti } from './adapters/my-salty-sisters-retre
 import { namotuIslandResortMamanuca } from './adapters/namotu-island-resort-mamanuca.js';
 import { naneakite8DayCampEssaouira } from './adapters/naneakite-8-day-camp-essaouira.js';
 import { newSpiritDakhla } from './adapters/new-spirit-dakhla.js';
+import { nicekiteLessonCampKaseda } from './adapters/nicekite-lesson-camp-kaseda.js';
 import { no22RidersInnAkyaka } from './adapters/no22-riders-inn-akyaka.js';
 import { nohotelLampesPiratenKojeDranske } from './adapters/nohotel-lampes-piraten-koje-dranske.js';
 import { nordseeSurfschuleDomeSeeschwalbeHooksiel } from './adapters/nordsee-surfschule-dome-seeschwalbe-hooksiel.js';
@@ -213,6 +222,7 @@ import { redStarSurfKiteCampFamara } from './adapters/red-star-surf-kite-camp-fa
 import { regenbogenBorn } from './adapters/regenbogen-born.js';
 import { regenbogenUmmanz } from './adapters/regenbogen-ummanz.js';
 import { rewitaDelfinJurata } from './adapters/rewita-delfin-jurata.js';
+import { rideKitesurfingTroubridgeIslandTrip } from './adapters/ride-kitesurfing-troubridge-island-trip.js';
 import { road2adventureKiteSafariPerthExmouth } from './adapters/road2adventure-kite-safari-perth-exmouth.js';
 import { ruegenKiteHostelMartinshafen } from './adapters/ruegen-kite-hostel-martinshafen.js';
 import { ruukVillageKalpitiya } from './adapters/ruuk-village-kalpitiya.js';
@@ -290,8 +300,11 @@ import { windhoekBoutiqueResortBonaire } from './adapters/windhoek-boutique-reso
 import { windloopGlampingNeuharlingersiel } from './adapters/windloop-glamping-neuharlingersiel.js';
 import { windsurfVillagePortoPollo } from './adapters/windsurf-village-porto-pollo.js';
 import { windtownLagoonHotelLangebaan } from './adapters/windtown-lagoon-hotel-langebaan.js';
+import { xFlyKiteboardingCampMiyako } from './adapters/x-fly-kiteboarding-camp-miyako.js';
+import { zephyrWaOffroadAdventureExmouth } from './adapters/zephyr-wa-offroad-adventure-exmouth.js';
 
 export const adapters: OfferAdapter[] = [
+  airzoneKiteWingCampRangiputa,
   algarveWatersportZeroToHero,
   alvorkitecenterGuesthouseAlvor,
   amagaliPousadaGalinhos,
@@ -299,6 +312,7 @@ export const adapters: OfferAdapter[] = [
   amigosDoVentoTouros,
   anapnoeParoskitePounda,
   antonyBoyViganj,
+  apexSnowKitingTourKosciuszko,
   aquaVentanaLaVentana,
   azulBeachKiteResortElSargento,
   babaombyIslandLodgeDiegoSuarez,
@@ -357,8 +371,11 @@ export const adapters: OfferAdapter[] = [
   gksKiteHouseEsposende,
   globalKiteTripsKiteSafariColombia,
   globalKiteTripsProgressionCampCumbuco,
+  gnaralooStation3MileCamp,
+  gnaralooStationHomestead,
   grassyFlatsResortMarathon,
   habagatAissatouBoracay,
+  haggerstoneIslandResort,
   hatterasIslandVacationRentalsAvon,
   highFlyersKiteHouseTarifa,
   hotel100FunValdevaqueros,
@@ -388,6 +405,8 @@ export const adapters: OfferAdapter[] = [
   kiteBuenHombreEcoLodge,
   kiteClubHatterasAvon,
   kiteClubHatterasCampAvon,
+  kiteclubOkinawaKohamaKiteTour,
+  kiteclubOkinawaKumejimaTour,
   kiteCollegeDaenemarkRingkobingFjord,
   kiteCrewCaravansChalupy,
   kiteforceTyrolSnowkiteTrip,
@@ -421,6 +440,7 @@ export const adapters: OfferAdapter[] = [
   kitesurfTofo,
   kitetribeElGouna,
   kiteVillageHamata,
+  kitewestWaveFreestyleCampCoronationBeach,
   kokohauBungalowsSantaVeronica,
   laBallenaAlegreSantPerePescador,
   lakesideParadiseSportHostelKnokkeHeist,
@@ -458,6 +478,7 @@ export const adapters: OfferAdapter[] = [
   namotuIslandResortMamanuca,
   naneakite8DayCampEssaouira,
   newSpiritDakhla,
+  nicekiteLessonCampKaseda,
   no22RidersInnAkyaka,
   nohotelLampesPiratenKojeDranske,
   nordseeSurfschuleDomeSeeschwalbeHooksiel,
@@ -501,6 +522,7 @@ export const adapters: OfferAdapter[] = [
   regenbogenBorn,
   regenbogenUmmanz,
   rewitaDelfinJurata,
+  rideKitesurfingTroubridgeIslandTrip,
   road2adventureKiteSafariPerthExmouth,
   ruegenKiteHostelMartinshafen,
   ruukVillageKalpitiya,
@@ -581,6 +603,8 @@ export const adapters: OfferAdapter[] = [
   windSportsFijiNananuIRa,
   windsurfVillagePortoPollo,
   windtownLagoonHotelLangebaan,
+  xFlyKiteboardingCampMiyako,
+  zephyrWaOffroadAdventureExmouth,
 ];
 
 export function adapterByKey(key: string): OfferAdapter | undefined {
