@@ -311,9 +311,51 @@ function contentRow(a: OfferAdapter, c: OfferContent, operatorId: string, spots:
   };
 }
 
-function roomsWithPrices(c: OfferContent, slots: Slot[], today: string) {
+/**
+ * The content room a slot belongs to: the adapter's explicit `room`, else the room named like the unit
+ * (case-insensitive), else the longest room name the unit starts with before a qualifier
+ * ("Mixed dorm (bed)", "Tiny House, Mon-Fri nights"). Packages named "Rider package, double room" stay unmatched.
+ */
+export function slotRoom(roomNames: string[], s: Pick<Slot, 'unit' | 'room'>): string | null {
+  if (s.room) return roomNames.includes(s.room) ? s.room : null;
+  if (!s.unit) return null;
+  const unit = s.unit.trim().toLowerCase();
+  const exact = roomNames.find(n => n.trim().toLowerCase() === unit);
+  if (exact) return exact;
+  const prefixed = roomNames.filter(n => {
+    const name = n.trim().toLowerCase();
+    return [' (', ', ', ' - ', ' · '].some(sep => unit.startsWith(name + sep));
+  });
+  return prefixed.sort((x, y) => y.length - x.length)[0] ?? null;
+}
+
+const nextDay = (d: string) => new Date(Date.parse(`${d}T00:00:00Z`) + 86_400_000).toISOString().slice(0, 10);
+
+/** Dated future ranges of one room, adjacent days with the same status and price merged (for the app's date check). */
+export function roomAvailability(slots: Slot[]) {
+  const dated = slots.filter(s => s.startDate).sort((x, y) => x.startDate!.localeCompare(y.startDate!));
+  const out: Array<{ start_date: string; end_date: string; status: string; price: number | null; currency: string | null }> = [];
+  for (const s of dated) {
+    const end = s.endDate ?? s.startDate!;
+    const last = out[out.length - 1];
+    if (last && last.status === s.availability && last.price === s.price && last.currency === s.currency
+      && s.startDate! <= nextDay(last.end_date)) {
+      if (end > last.end_date) last.end_date = end;
+    } else out.push({ start_date: s.startDate!, end_date: end, status: s.availability, price: s.price, currency: s.currency });
+  }
+  return out.slice(0, 120);
+}
+
+export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string) {
+  const names = c.rooms.map(r => r.name);
+  const byRoom = new Map<string, Slot[]>();
+  for (const s of slots) {
+    const room = slotRoom(names, s);
+    if (room) byRoom.set(room, [...(byRoom.get(room) ?? []), s]);
+  }
   return c.rooms.map(r => {
-    const priced = slots.filter(s => s.unit === r.name && s.price !== null && isBookable(s.availability) && isAhead(c.kind, s, today));
+    const own = (byRoom.get(r.name) ?? []).filter(s => isAhead(c.kind, s, today));
+    const priced = own.filter(s => s.price !== null && isBookable(s.availability));
     const min = priced.sort((x, y) => x.price! - y.price!)[0];
     const months = [...new Set(priced.filter(s => s.startDate).map(s => Number(s.startDate!.slice(5, 7))))].sort((x, y) => x - y);
     return {
@@ -322,6 +364,8 @@ function roomsWithPrices(c: OfferContent, slots: Slot[], today: string) {
       price_unit: min ? (min.priceUnit === 'per_week' ? 'other' : min.priceUnit) : null,
       // basis of price_from (room / person / group); KCS shows it as "per room" etc.
       price_source: 'provider_site', price_basis: min?.priceBasis ?? null, priced_months: months, image_sort: null,
+      // dated ranges from the provider's calendar/price list; [] = no dated data for this room
+      availability: roomAvailability(own),
     };
   });
 }

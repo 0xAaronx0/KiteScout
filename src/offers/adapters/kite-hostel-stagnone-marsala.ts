@@ -107,6 +107,8 @@ export function buildKhsSlots(roomsHtml: string, today: string): Slot[] {
       startDate: null,
       endDate: null,
       unit: u.unit,
+      // the room page is titled "Girls dorm", the price card "Female dorm"
+      ...(/female|girls/i.test(p.title) ? { room: 'Girls dorm' } : {}),
       price: p.amount,
       currency: 'EUR',
       priceUnit: 'per_night' as const,

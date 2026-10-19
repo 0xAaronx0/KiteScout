@@ -45,6 +45,8 @@ export interface Slot {
   endDate: string | null;       // YYYY-MM-DD (inclusive last night / last day)
   /** room type, package variant or route; null = the offer itself */
   unit: string | null;
+  /** the content room (ContentRoom.name) this slot prices, when `unit` names it differently */
+  room?: string | null;
   price: number | null;         // null = price on request
   currency: string | null;      // ISO 4217, original currency (never converted)
   priceUnit: SlotPriceUnit | null;
