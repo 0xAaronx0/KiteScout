@@ -519,15 +519,21 @@ async function main(): Promise<void> {
     }
 
     case 'climate-stats': {
-      // UV + air/water temperature per offer spot -> offer_climate_stats (weekly GitHub Action).
+      // UV + air/water temperature per offer spot -> offer_climate_stats, and per
+      // country kite spot -> country_climate_stats (weekly GitHub Action).
       const { runClimateStats } = await import('./pipeline/climate-stats.js');
-      const max = flagStr('--max-fetch');
-      const r = await runClimateStats({ dryRun: args.includes('--dry-run'), maxFetch: max ? Number(max) : undefined });
-      console.log(`${r.offers} offers -> ${r.rowsWritten} rows written${args.includes('--dry-run') ? ' (dry run)' : ''}, ${r.rowsDeleted} stale rows deleted, ${r.cellsFetched} new climate cells fetched`);
+      const max = flagStr('--max-fetch'), budget = flagStr('--budget-min');
+      const dry = args.includes('--dry-run');
+      const r = await runClimateStats({ dryRun: dry, maxFetch: max ? Number(max) : undefined, budgetMin: budget ? Number(budget) : undefined });
+      console.log(`${r.offers} offers -> ${r.rowsWritten} rows written${dry ? ' (dry run)' : ''}, ${r.rowsDeleted} stale rows deleted, ${r.cellsFetched} new climate cells fetched via ${r.fetcher}${dry ? ' (not stored)' : ''}`);
       if (r.unknownPorts.length) console.log(`Unknown departure ports (add to climate_port_points; first itinerary spot used meanwhile):\n  ${r.unknownPorts.join('\n  ')}`);
       if (r.noPoint.length) console.log(`No point (no port, no itinerary coordinates):\n  ${r.noPoint.join('\n  ')}`);
       if (r.deferred.length) console.log(`Deferred to next run (${r.deferred.length}):\n  ${r.deferred.join('\n  ')}`);
-      if (r.stoppedBy) console.log(`Open-Meteo quota reached: ${r.stoppedBy}`);
+      console.log(`${r.countries} countries -> ${dry ? `${r.countries - r.countriesDeferred.length} rows computed (dry run)` : `${r.countryRowsWritten} rows written`}`);
+      for (const c of r.countrySample) console.log(`  ${c.country} (${c.point_name}): air min ${c.air_temp_min_months.join(' ')} | air max ${c.air_temp_max_months.join(' ')} | water ${c.water_temp_months?.join(' ') ?? 'none'} | uv ${c.uv_months.join(' ')}`);
+      if (r.countriesDeferred.length) console.log(`Countries deferred to next run (${r.countriesDeferred.length}):\n  ${r.countriesDeferred.join('\n  ')}`);
+      if (r.failed.length) console.log(`Failed fetches (${r.failed.length}):\n  ${r.failed.join('\n  ')}`);
+      if (r.stoppedBy) console.log(`Fetching stopped: ${r.stoppedBy}`);
       break;
     }
 

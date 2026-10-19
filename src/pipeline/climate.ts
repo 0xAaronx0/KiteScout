@@ -113,6 +113,19 @@ export function monthlyMeanOfDailyMax(time: string[], values: (number | null)[])
   return monthlyMean([...day.entries()]);
 }
 
+/** hourly series -> per month: mean of the daily minimum (local time stamps). */
+export function monthlyMeanOfDailyMin(time: string[], values: (number | null)[]): number[] {
+  const day = new Map<string, number>();
+  time.forEach((t, i) => {
+    const v = values[i];
+    if (v == null) return;
+    const d = t.slice(0, 10);
+    const cur = day.get(d);
+    if (cur === undefined || v < cur) day.set(d, v);
+  });
+  return monthlyMean([...day.entries()]);
+}
+
 /** hourly series -> per month: mean of daily means; null if any month has < minDays days. */
 export function monthlyMeanOfDailyMean(time: string[], values: (number | null)[], minDays = 20): number[] | null {
   const day = new Map<string, [number, number]>();

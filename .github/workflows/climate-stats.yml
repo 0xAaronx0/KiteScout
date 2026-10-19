@@ -1,9 +1,14 @@
 name: Offer climate stats
 
 # Weekly refresh of offer_climate_stats (UV, air temperature, water temperature per
-# offer spot). New offers and moved pins (e.g. corrected accommodation locations) get
-# their spot's climate; only cells not yet cached in climate_points hit Open-Meteo.
+# offer spot) and country_climate_stats (same per country kite spot from
+# climate_country_points, the map layers next to wind_stats). New offers and moved
+# pins (e.g. corrected accommodation locations) get their spot's climate; only cells
+# not yet cached in climate_points are fetched.
 # Unknown departure ports are listed in the log -> add them to climate_port_points.
+# Fetcher: Copernicus (ERA5 via CDS + CAMS via ADS, CC-BY 4.0) with the CDS_API_KEY secret;
+# the free Open-Meteo API is non-commercial only. New cells are stored as they arrive, so a
+# run stopped by max_fetch / the time budget / the timeout continues on the next run.
 # Lives outside web/**, so it never triggers the Docker build/deploy workflow.
 on:
   schedule:
@@ -16,6 +21,11 @@ on:
         type: boolean
         required: false
         default: false
+      max_fetch:
+        description: 'Max new climate cells to fetch (empty = all)'
+        type: string
+        required: false
+        default: ''
 
 concurrency:
   group: offer-climate-stats
@@ -24,7 +34,7 @@ concurrency:
 jobs:
   climate:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
 
@@ -39,7 +49,7 @@ jobs:
 
       - run: pnpm install
 
-      - name: Refresh climate per offer
+      - name: Refresh climate per offer and country
         # TAVILY/OPENROUTER keys are not used by climate-stats, but src/cli.ts's static
         # import graph pulls in src/lib/tavily.ts, which throws at module load if absent.
         env:
@@ -47,11 +57,15 @@ jobs:
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+          # Copernicus personal access token (works for CDS and ADS); without it Open-Meteo is used
+          CDSAPI_KEY: ${{ secrets.CDS_API_KEY }}
           # optional: commercial Open-Meteo key (customer-* hosts); free tier is used without it
           OPEN_METEO_API_KEY: ${{ secrets.OPEN_METEO_API_KEY }}
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
+          MAX_FETCH: ${{ github.event.inputs.max_fetch }}
+        # budget stops starting new fetches ~80 min before the job timeout so the rows still get written
         run: |
-          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
-            pnpm cli climate-stats --dry-run
-          else
-            pnpm cli climate-stats
-          fi
+          args="--budget-min 270"
+          if [ "$DRY_RUN" = "true" ]; then args="$args --dry-run"; fi
+          if [ -n "$MAX_FETCH" ]; then args="$args --max-fetch $MAX_FETCH"; fi
+          pnpm cli climate-stats $args
