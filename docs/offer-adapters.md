@@ -294,3 +294,24 @@ keeps the last state. `instantBooking` was verified per site on 2026-10-14 (prov
 - Shared helper follow-ups: `visibleRoot()` (drop script/style/hidden blocks before `.text`),
   `imageCandidates` exclude list + unwrap escaped-quote URLs, Elementor `[data-thumbnail]`,
   `htmlToText` entity bug in `src/lib/content.ts` (NOT fixed: the cruise monitor hashes its output).
+
+## Kite camps and tours worldwide (2026-10-19)
+
+63 camp and tour adapters from a global research round (bstoked, Book Surf Camps via search snippets and web search
+as leads; data from the operators' own sites). Camps: Canaries, Rhodes, Sicily, Sardinia, Montenegro, Cyprus,
+Denmark, Sweden, Switzerland / Norway / Finland snowkite, Egypt, Dakhla, Essaouira, Sidi Kaouki, Djerba, Cape Verde,
+Mauritius, Kenya, Cape Town, Brazil, Colombia, Los Roques, Baja, Vietnam, Fiji, Sulawesi, Cook Islands, Western
+Australia. Tours: Morocco, Brazil downwinders and safari, Colombia, Vietnam, WA safari, Oman, Madagascar, Tyrol,
+Norway / Iceland snowkite, Greenland crossing.
+
+Rules applied (Aaron 2026-10-19): a provider or property may have a stay plus several camp/tour listings; products
+whose only dates are past 2026 dates are listed with no slots ("2027 dates not yet published") and their parsers pick
+up new dated rows automatically. Shared parsers: UCPA calendar JSON (ucpa-kitesurf-debutant-hurghada.ts, anonymous
+`/api/product/<id>`, live), Latitudes Nord listing + PDF prices (latitudes-nord-finse-snowkite-weeks.ts), Kite
+Republic WooCommerce variations (kite-republic-aitutaki-winter-escape.ts, live stock), Swiss Kitesurf, ION Club,
+Freeride Kitesurf, Travel Active Club, Kitesurf Adventure, Global Kite Trips, Escape Eco. Pins: Rhodes (Fanes,
+Theologos, Kremasti), Famara and the Norway snowkite bases in `KNOWN_PINS`.
+
+Open: four adapters have no photos because their image hosts refuse the browser UA that `lib/images.ts` sends
+(freeridekitesurf.com, road2adventure.com.au, redstarsurf.com; also velabaja.com) while they serve our bot UA.
+

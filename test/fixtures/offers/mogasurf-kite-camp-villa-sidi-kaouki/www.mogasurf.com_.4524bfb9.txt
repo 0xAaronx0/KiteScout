@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="fr-FR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="alternate" href="https://www.mogasurf.com/" hreflang="fr" />
+<link rel="alternate" href="https://www.mogasurf.com/en/mogasurf-school/" hreflang="en" />
+	<!-- This site is optimized with the Yoast SEO plugin v28.7 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Accueil - MOGASURF</title>
+	<meta name="description" content="Mogasurf, école de surf et kitesurf à Essaouira depuis 2012. Cours, camps et coaching pour tous niveaux. Réservez en ligne." />
+	<link rel="canonical" href="https://www.mogasurf.com/" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:locale:alternate" content="en_GB" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Accueil - MOGASURF" />
+	<meta property="og:description" content="Mogasurf, école de surf et kitesurf à Essaouira depuis 2012. Cours, camps et coaching pour tous niveaux. Réservez en ligne." />
+	<meta property="og:url" content="https://www.mogasurf.com/" />
+	<meta property="og:site_name" content="MOGASURF" />
+	<meta property="article:modified_time" content="2026-10-16T19:32:50+00:00" />
+	<meta property="og:image" content="https://www.mogasurf.com/wp-content/uploads/2026/05/12-1.png" />
+	<meta property="og:image:width" content="1080" />
+	<meta property="og:image:height" content="1350" />
+	<meta property="og:image:type" content="image/png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.mogasurf.com\/","url":"https:\/\/www.mogasurf.com\/","name":"Accueil - MOGASURF","isPartOf":{"@id":"https:\/\/www.mogasurf.com\/#website"},"about":{"@id":"https:\/\/www.mogasurf.com\/#organization"},"primaryImageOfPage":{"@id":"https:\/\/www.mogasurf.com\/#primaryimage"},"image":{"@id":"https:\/\/www.mogasurf.com\/#primaryimage"},"thumbnailUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1-819x1024.png","datePublished":"2026-06-05T12:55:37+00:00","dateModified":"2026-10-16T19:32:50+00:00","description":"Mogasurf, école de surf et kitesurf à Essaouira depuis 2012. Cours, camps et coaching pour tous niveaux. Réservez en ligne.","breadcrumb":{"@id":"https:\/\/www.mogasurf.com\/#breadcrumb"},"inLanguage":"fr-FR","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.mogasurf.com\/"]}]},{"@type":"ImageObject","inLanguage":"fr-FR","@id":"https:\/\/www.mogasurf.com\/#primaryimage","url":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1.png","contentUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1.png","width":1080,"height":1350},{"@type":"BreadcrumbList","@id":"https:\/\/www.mogasurf.com\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https:\/\/www.mogasurf.com\/#website","url":"https:\/\/www.mogasurf.com\/","name":"MOGASURF","description":"Surf Kite School &amp; Camp Essaouira","publisher":{"@id":"https:\/\/www.mogasurf.com\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.mogasurf.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"fr-FR"},{"@type":"Organization","@id":"https:\/\/www.mogasurf.com\/#organization","name":"MOGASURF","url":"https:\/\/www.mogasurf.com\/","logo":{"@type":"ImageObject","inLanguage":"fr-FR","@id":"https:\/\/www.mogasurf.com\/#\/schema\/logo\/image\/","url":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/06\/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png","contentUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/06\/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png","width":2553,"height":729,"caption":"MOGASURF"},"image":{"@id":"https:\/\/www.mogasurf.com\/#\/schema\/logo\/image\/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+<link rel="alternate" type="application/rss+xml" title="MOGASURF &raquo; Flux" href="https://www.mogasurf.com/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.mogasurf.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mogasurf.com%2F&#038;lang=fr" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.mogasurf.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mogasurf.com%2F&#038;format=xml&#038;lang=fr" />
+<link rel="https://api.w.org/" href="https://www.mogasurf.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.mogasurf.com/wp-json/wp/v2/pages/2039" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.mogasurf.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 7.1.3" />
+<link rel='shortlink' href='https://www.mogasurf.com/' />
+<!-- Facebook Domain Verification -->
+<meta name="facebook-domain-verification" content="nmmvwi5mill0fnbt7kxhgb86h93noc" />
+<!-- Google Tag Manager -->
+<!-- End Google Tag Manager -->
+<!-- Meta Pixel -->
+<!-- End Meta Pixel --><meta name="ti-site-data" content="eyJyIjoiMTowITc6MCEzMDowIiwibyI6Imh0dHBzOlwvXC93d3cubW9nYXN1cmYuY29tP3RpLW9ubGluZS11c2Vycy1nb29nbGU9MSZhbXA7cD0lMkYmYW1wO193cG5vbmNlPTlkNmI3MmUzNTkifQ==" />		
+		<meta name="generator" content="Elementor 4.3.5; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+<!-- Meta Pixel Code -->
+<!-- End Meta Pixel Code -->
+			<!-- 
+  COLLE CE CODE dans WPCode → Nouveau Snippet → HTML/JS
+  Ou dans Elementor → HTML widget sur chaque page
+  Ce script gère l'affichage/masquage des formulaires au clic des boutons.
+  Les boutons Elementor doivent avoir comme lien : #ms-resa-surf (ou autre ID)
+-->
+<link rel="icon" href="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-1-1-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-1-1-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-1-1-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-1-1-1-270x270.png" />
+</head>
+<body class="home wp-singular page-template-default page page-id-2039 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor cookies-not-set hello-elementor-default elementor-default elementor-kit-1606 elementor-page elementor-page-2039 modula-best-grid-gallery">
+<!-- Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager (noscript) -->
+<div id="moga-hdr">
+  <a href="https://www.mogasurf.com/" class="logo">
+    <img data-src="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-LOGO-MOGASURF-2-scaled-1.png" alt="Mogasurf" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" class="lazyload" style="--smush-placeholder-width: 2557px; --smush-placeholder-aspect-ratio: 2557/731;">
+  </a>
+  <nav>
+          <a href="https://www.mogasurf.com/">Accueil</a>
+      <a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/">Surf</a>
+      <a href="https://www.mogasurf.com/packs-kitesurf-essaouira-maroc/">Kitesurf</a>
+      <a href="https://www.mogasurf.com/surf-camp-moga/">Camp</a>
+      <a href="https://www.mogasurf.com/ismail-adarzane-fr/">A Propos</a>
+      <a href="https://www.mogasurf.com/contact-fr/">Contact</a>
+      </nav>
+  <div class="right">
+    <a href="https://www.mogasurf.com/" class="lang active">FR</a>
+    <span class="sep">/</span>
+    <a href="https://www.mogasurf.com/en/mogasurf-school/" class="lang ">EN</a>
+    <a href="https://wa.me/212618910431" target="_blank" class="btn-resa">Contactez-nous</a>
+    <button class="burger" id="moga-open-btn">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</div>
+<div id="moga-hdr-sp"></div>
+<div id="moga-mob">
+  <div class="mob-top">
+    <img data-src="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-LOGO-MOGASURF-2-scaled-1.png" alt="Mogasurf" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" class="lazyload" style="--smush-placeholder-width: 2557px; --smush-placeholder-aspect-ratio: 2557/731;">
+    <button class="close-btn" id="moga-close-btn">x</button>
+  </div>
+      <a href="https://www.mogasurf.com/" class="mob-link">Accueil</a>
+    <a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/" class="mob-link">Surf</a>
+    <a href="https://www.mogasurf.com/packs-kitesurf-essaouira-maroc/" class="mob-link">Kitesurf</a>
+    <a href="https://www.mogasurf.com/surf-camp-moga/" class="mob-link">Camp</a>
+    <a href="https://www.mogasurf.com/ismail-adarzane-fr/" class="mob-link">A Propos</a>
+    <a href="https://www.mogasurf.com/contact-fr/" class="mob-link">Contact</a>
+    <div class="mob-bottom">
+    <a href="https://wa.me/212618910431" target="_blank" class="mob-resa">Reserver Maintenant</a>
+    <div class="mob-info">
+      <a href="https://www.mogasurf.com/">FR</a>
+      <span>/</span>
+      <a href="https://www.mogasurf.com/en/mogasurf-school/">EN</a>
+      <span>·</span>
+      <a href="https://www.instagram.com/mogasurf/" target="_blank">Instagram</a>
+      <span>·</span>
+      <span>+212 618 910 431</span>
+    </div>
+  </div>
+</div>
+<!-- Meta Pixel Code -->
+<!-- End Meta Pixel Code -->
+<a class="skip-link screen-reader-text" href="#content">Aller au contenu</a>
+<header id="site-header" class="site-header dynamic-header menu-dropdown-tablet">
+	<div class="header-inner">
+		<div class="site-branding show-logo">
+							<div class="site-logo show">
+					<a href="https://www.mogasurf.com/" class="custom-logo-link" rel="home" aria-current="page"><img fetchpriority="high" width="2553" height="729" src="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png" class="custom-logo" alt="MOGASURF" decoding="async" srcset="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png 2553w, https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1-300x86.png 300w, https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1-1024x292.png 1024w, https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1-768x219.png 768w, https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1-1536x439.png 1536w, https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1-2048x585.png 2048w" sizes="(max-width: 2553px) 100vw, 2553px" /></a>				</div>
+							<p class="site-description show">
+					Surf Kite School &amp; Camp Essaouira				</p>
+					</div>
+					<nav class="site-navigation show" aria-label="Menu principal">
+				<ul id="menu-menu-fr-elementor" class="menu"><li id="menu-item-2485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2039 current_page_item menu-item-2485"><a href="https://www.mogasurf.com/" aria-current="page" data-ps2id-api="true">Accueil</a></li>
+<li id="menu-item-2489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2489"><a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/" data-ps2id-api="true">Surf</a></li>
+<li id="menu-item-2487" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2487"><a href="https://www.mogasurf.com/packs-kitesurf-essaouira-maroc/" data-ps2id-api="true">Kitesurf</a></li>
+<li id="menu-item-2484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2484"><a href="https://www.mogasurf.com/contact-fr/" data-ps2id-api="true">Contact</a></li>
+<li id="menu-item-2486" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2486"><a href="https://www.mogasurf.com/ismail-adarzane-fr/" data-ps2id-api="true">À Propos</a></li>
+</ul>			</nav>
+							<div class="site-navigation-toggle-holder show">
+				<button type="button" class="site-navigation-toggle" aria-expanded="false" aria-label="Menu">
+					<span class="site-navigation-toggle-icon" aria-hidden="true"></span>
+				</button>
+			</div>
+			<nav class="site-navigation-dropdown show" aria-label="Menu mobile" aria-hidden="true" inert>
+				<ul id="menu-menu-fr-elementor-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2039 current_page_item menu-item-2485"><a href="https://www.mogasurf.com/" aria-current="page" data-ps2id-api="true">Accueil</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2489"><a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/" data-ps2id-api="true">Surf</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2487"><a href="https://www.mogasurf.com/packs-kitesurf-essaouira-maroc/" data-ps2id-api="true">Kitesurf</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2484"><a href="https://www.mogasurf.com/contact-fr/" data-ps2id-api="true">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2486"><a href="https://www.mogasurf.com/ismail-adarzane-fr/" data-ps2id-api="true">À Propos</a></li>
+</ul>			</nav>
+			</div>
+</header>
+<main id="content" class="site-main post-2039 page type-page status-publish hentry">
+			<div class="page-header">
+			<h1 class="entry-title">Accueil</h1>		</div>
+	<div class="page-content">
+				<div data-elementor-type="wp-page" data-elementor-id="2039" class="elementor elementor-2039">
+				<div class="elementor-element elementor-element-ad52de8 e-flex e-con-boxed e-con e-parent" data-id="ad52de8" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;video&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-7a3f1d9 e-con-full e-flex e-con e-child" data-id="7a3f1d9" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-19db004 elementor-widget elementor-widget-heading" data-id="19db004" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h1 class="elementor-heading-title elementor-size-default">École de Surf, Kitesurf &amp; Camp à Essaouira</h1>				</div>
+				</div>
+					<p class="e-fc2dffd-0cd086c e-paragraph-base e-default-p" data-interaction-id="fc2dffd">On vient pour apprendre. <br>On repart inspiré.</p>
+		<div class="elementor-element elementor-element-e3f5c61 e-con-full e-flex e-con e-child" data-id="e3f5c61" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-82d5462 elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="82d5462" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm" href="https://mogasurf.com/reservation-camp-fr/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Réserver un camp</span>
+					</span>
+					</a>
+								</div>
+				<div class="elementor-element elementor-element-64956fe elementor-widget elementor-widget-button" data-id="64956fe" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm" href="/reservation-02">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Réserver un cours</span>
+					</span>
+					</a>
+								</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-3a86783 e-con-full e-flex e-con e-parent" data-id="3a86783" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-882e413 elementor-widget__width-inherit elementor-widget elementor-widget-html" data-id="882e413" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+<div class="moga-ticker">
+  <div class="moga-label">
+    <div class="moga-dot"></div>
+    ESSAOUIRA LIVE
+  </div>
+  <div class="moga-track">
+    <div class="moga-content">
+      <div class="moga-item"><span class="lbl">Vent :</span><span class="val" id="mg-wind">...</span></div>
+      <div class="moga-item"><span class="lbl">Vagues :</span><span class="val" id="mg-wave">...</span></div>
+      <div class="moga-item"><span class="lbl">Température :</span><span class="val" id="mg-temp">...</span></div>
+      <div class="moga-item"><span class="lbl">Surf</span><span class="dot-rose"></span><span class="val" id="mg-surf">...</span></div>
+      <div class="moga-item"><span class="lbl">Kitesurf</span><span class="dot-rose"></span><span class="val" id="mg-kite">...</span></div>
+      <div class="moga-item"><span class="lbl">Spot</span><span class="val">Essaouira — Sidi Kaouki</span></div>
+      <div class="moga-item"><span class="lbl">Vent :</span><span class="val" id="mg-wind2">...</span></div>
+      <div class="moga-item"><span class="lbl">Vagues :</span><span class="val" id="mg-wave2">...</span></div>
+      <div class="moga-item"><span class="lbl">Température :</span><span class="val" id="mg-temp2">...</span></div>
+      <div class="moga-item"><span class="lbl">Surf</span><span class="dot-rose"></span><span class="val" id="mg-surf2">...</span></div>
+      <div class="moga-item"><span class="lbl">Kitesurf</span><span class="dot-rose"></span><span class="val" id="mg-kite2">...</span></div>
+      <div class="moga-item"><span class="lbl">Spot</span><span class="val">Essaouira — Sidi Kaouki</span></div>
+    </div>
+  </div>
+</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-265310f e-flex e-con-boxed e-con e-parent" data-id="265310f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-40ff770 e-con-full e-flex e-con e-child" data-id="40ff770" data-element_type="container" data-e-type="container">
+					<p class="e-434b1e7-031a686 e-paragraph-base e-default-p" data-interaction-id="434b1e7">Art de vivre  <br><em>Au coeur d’Essaouira.</em></p>
+				</div>
+		<div class="elementor-element elementor-element-ce8e4c3 e-con-full e-flex e-con e-child" data-id="ce8e4c3" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-4e4b83d e-con-full e-flex e-con e-child" data-id="4e4b83d" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-79a98c0 e-con-full e-flex e-con e-child" data-id="79a98c0" data-element_type="container" data-e-type="container">
+					<p class="e-9d2b467-1965126 e-paragraph-base e-default-p" data-interaction-id="9d2b467">14</p>
+					<p class="e-f5da85a-f1a1357 e-paragraph-base e-default-p" data-interaction-id="f5da85a">Années d’école&nbsp;</p>
+				</div>
+		<div class="elementor-element elementor-element-0cc6670 e-con-full e-flex e-con e-child" data-id="0cc6670" data-element_type="container" data-e-type="container">
+					<p class="e-1e6907b-d20e332 e-paragraph-base e-default-p" data-interaction-id="1e6907b">3500+</p>
+					<p class="e-d7564ba-4d6a4b7 e-paragraph-base e-default-p" data-interaction-id="d7564ba">Riders accompagnés</p>
+				</div>
+		<div class="elementor-element elementor-element-e9734a1 e-con-full e-flex e-con e-child" data-id="e9734a1" data-element_type="container" data-e-type="container">
+					<p class="e-b081098-1483ca8 e-paragraph-base e-default-p" data-interaction-id="b081098">400+</p>
+					<p class="e-8fb41ed-7366baa e-paragraph-base e-default-p" data-interaction-id="8fb41ed">Avis 5 étoiles</p>
+				</div>
+				</div>
+					<p class="e-fa3818e-193c599 e-paragraph-base e-default-p" data-interaction-id="fa3818e"></p>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-b429bbe e-flex e-con-boxed e-con e-parent" data-id="b429bbe" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-68bed75 e-con-full e-flex e-con e-child" data-id="68bed75" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-2c16f06 elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading" data-id="2c16f06" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">NOS DISCIPLINES</h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-3cd933e e-con-full e-flex e-con e-child" data-id="3cd933e" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-6d979f6 elementor-align-right elementor-widget__width-initial elementor-mobile-align-center elementor-widget-mobile__width-initial elementor-widget elementor-widget-button" data-id="6d979f6" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm" href="/reservation-02">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Réserver votre session →</span>
+					</span>
+					</a>
+								</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-009730f e-flex e-con-boxed e-con e-parent" data-id="009730f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-44f46d2 e-con-full e-transform e-flex e-con e-child" data-id="44f46d2" data-element_type="container" data-e-type="container" data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.04,&quot;sizes&quot;:[]},&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[],&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_duration&quot;:5000,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;,&quot;background_slideshow_transition_duration&quot;:500,&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+				<div class="elementor-element elementor-element-b1f86cf elementor-widget elementor-widget-image" data-id="b1f86cf" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+																<a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/">
+							<img decoding="async" width="800" height="1000" data-src="https://www.mogasurf.com/wp-content/uploads/2026/05/12-1-819x1024.png" class="attachment-large size-large wp-image-1778 lazyload" alt="" data-srcset="https://www.mogasurf.com/wp-content/uploads/2026/05/12-1-819x1024.png 819w, https://www.mogasurf.com/wp-content/uploads/2026/05/12-1-240x300.png 240w, https://www.mogasurf.com/wp-content/uploads/2026/05/12-1-768x960.png 768w, https://www.mogasurf.com/wp-content/uploads/2026/05/12-1.png 1080w" data-sizes="(max-width: 800px) 100vw, 800px" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" style="--smush-placeholder-width: 800px; --smush-placeholder-aspect-ratio: 800/1000;" />								</a>
+															</div>
+					<p class="e-51896bb-f3d5bea e-paragraph-base e-default-p" data-interaction-id="51896bb">DISCIPLINE 01</p>
+				<div class="elementor-element elementor-element-102a38d elementor-widget elementor-widget-heading" data-id="102a38d" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h3 class="elementor-heading-title elementor-size-default"><a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/">Cours de surf</a></h3>				</div>
+					<p class="e-8b0dbab-b7cbfc9 e-paragraph-base e-default-p" data-interaction-id="8b0dbab">Apprenez à lire l'océan, comprendre la vague et progresser à votre rythme. Petits groupes, pédagogie claire, feedback personnalisé. tous niveaux acceptés.</p>
+					<p class="e-1eccfc2-994bca9 e-paragraph-base e-default-p" data-interaction-id="1eccfc2"><a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/" target="_self" class="e-paragraph-link-base e-default-a">
+		En savoir plus →
+	</a></p>
+				</div>
+		<div class="elementor-element elementor-element-4956f43 e-con-full e-transform e-flex e-con e-child" data-id="4956f43" data-element_type="container" data-e-type="container" data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.04,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+				<div class="elementor-element elementor-element-93435aa elementor-widget elementor-widget-image" data-id="93435aa" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+																<a href="https://www.mogasurf.com/packs-kitesurf-essaouira-maroc/">
+							<img decoding="async" width="800" height="1000" data-src="https://www.mogasurf.com/wp-content/uploads/2026/05/2-819x1024.jpeg" class="attachment-large size-large wp-image-1925 lazyload" alt="" data-srcset="https://www.mogasurf.com/wp-content/uploads/2026/05/2-819x1024.jpeg 819w, https://www.mogasurf.com/wp-content/uploads/2026/05/2-240x300.jpeg 240w, https://www.mogasurf.com/wp-content/uploads/2026/05/2-768x960.jpeg 768w, https://www.mogasurf.com/wp-content/uploads/2026/05/2.jpeg 1080w" data-sizes="(max-width: 800px) 100vw, 800px" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" style="--smush-placeholder-width: 800px; --smush-placeholder-aspect-ratio: 800/1000;" />								</a>
+															</div>
+					<p class="e-15a8817-96cc955 e-paragraph-base e-default-p" data-interaction-id="15a8817">DISCIPLINE 02</p>
+				<div class="elementor-element elementor-element-86abe19 elementor-widget elementor-widget-heading" data-id="86abe19" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h3 class="elementor-heading-title elementor-size-default"><a href="https://www.mogasurf.com/packs-kitesurf-essaouira-maroc/">Cours de Kitesurf</a></h3>				</div>
+					<p class="e-1d2bfe3-52aac03 e-paragraph-base e-default-p" data-interaction-id="1d2bfe3">Essaouira est l'un des meilleurs spots de kitesurf. Du contrôle de l'aile aux premières navigations, chaque étape est assurée avec précision et sécurité.</p>
+					<p class="e-dc59d67-b876220 e-paragraph-base e-default-p" data-interaction-id="dc59d67"><a href="https://www.mogasurf.com/packs-kitesurf-essaouira-maroc/" target="_self" class="e-paragraph-link-base e-default-a">
+		En savoir plus →
+	</a></p>
+				</div>
+		<div class="elementor-element elementor-element-28df09b e-con-full e-transform e-flex e-con e-child" data-id="28df09b" data-element_type="container" data-e-type="container" data-settings="{&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.04,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+				<div class="elementor-element elementor-element-eb48e5f elementor-widget elementor-widget-image" data-id="eb48e5f" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+																<a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/">
+							<img decoding="async" width="800" height="1000" data-src="https://www.mogasurf.com/wp-content/uploads/2026/05/3-819x1024.jpeg" class="attachment-large size-large wp-image-1926 lazyload" alt="" data-srcset="https://www.mogasurf.com/wp-content/uploads/2026/05/3-819x1024.jpeg 819w, https://www.mogasurf.com/wp-content/uploads/2026/05/3-240x300.jpeg 240w, https://www.mogasurf.com/wp-content/uploads/2026/05/3-768x960.jpeg 768w, https://www.mogasurf.com/wp-content/uploads/2026/05/3.jpeg 1080w" data-sizes="(max-width: 800px) 100vw, 800px" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" style="--smush-placeholder-width: 800px; --smush-placeholder-aspect-ratio: 800/1000;" />								</a>
+															</div>
+					<p class="e-a8c5ccd-073d0b0 e-paragraph-base e-default-p" data-interaction-id="a8c5ccd">Excursion&nbsp;</p>
+				<div class="elementor-element elementor-element-d77ad10 elementor-widget elementor-widget-heading" data-id="d77ad10" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h3 class="elementor-heading-title elementor-size-default"><a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/">Day surf trip</a></h3>				</div>
+					<p class="e-80ebbbe-3817945 e-paragraph-base e-default-p" data-interaction-id="80ebbbe">Partez à l'aventure autour d'Essaouira pour une journée inoubliable. Spots d'exception, matériel fourni et déjeuner inclus face à l'océan.</p>
+					<p class="e-08aba08-54f4499 e-paragraph-base e-default-p" data-interaction-id="08aba08"><a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/" target="_self" class="e-paragraph-link-base e-default-a">
+		En savoir plus →
+	</a></p>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-7c20f97 e-con-full e-flex e-con e-parent" data-id="7c20f97" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-9e44993 e-con-full e-flex e-con e-child" data-id="9e44993" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-b899385 elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading" data-id="b899385" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">SURF &amp; KITESURF CAMP <br></h2>				</div>
+					<p class="e-4de740a-61bb0a9 e-paragraph-base e-default-p" data-interaction-id="4de740a">Immersion totale</p>
+					<p class="e-fc0807f-8928339 e-paragraph-base e-default-p" data-interaction-id="fc0807f"><em>Tout inclus</em></p>
+					<p class="e-789e927-b3e30eb e-paragraph-base e-default-p" data-interaction-id="789e927">Notre villa est pensée pour allier confort, intimité et moments de partage. Piscine, jardin, terrasses et espaces communs créent un équilibre parfait entre détente et énergie du camp. </p>
+		<div class="elementor-element elementor-element-ea41271 e-con-full e-flex e-con e-child" data-id="ea41271" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-f7ce950 e-con-full e-flex e-con e-child" data-id="f7ce950" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-df2b325 elementor-widget elementor-widget-heading" data-id="df2b325" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Petits groupes</h2>				</div>
+					<p class="e-163c819-db0b722 e-paragraph-base e-default-p" data-interaction-id="163c819">Jusqu'à 10 riders</p>
+					<p class="e-b75e68f-051f886 e-paragraph-base e-default-p" data-interaction-id="b75e68f">Ambiance conviviale, villa privée avec piscine</p>
+				</div>
+		<div class="elementor-element elementor-element-dda0088 e-con-full e-flex e-con e-child" data-id="dda0088" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-909d96b elementor-widget elementor-widget-heading" data-id="909d96b" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Débutant → Confirmé</h2>				</div>
+					<p class="e-c241eb9-1097f25 e-paragraph-base e-default-p" data-interaction-id="c241eb9">Tous niveaux</p>
+					<p class="e-7d08ba6-b6c2d7f e-paragraph-base e-default-p" data-interaction-id="7d08ba6">Cours, hébergement repas et transferts </p>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-3c25b10 elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="3c25b10" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm" href="https://www.mogasurf.com/surf-camp-moga/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">découvrir le camp→</span>
+					</span>
+					</a>
+								</div>
+				</div>
+		<div class="elementor-element elementor-element-f566048 e-con-full e-flex e-con e-child" data-id="f566048" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:3447,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/17.jpeg&quot;},{&quot;id&quot;:3439,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/9.jpeg&quot;},{&quot;id&quot;:1876,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/DSC00181-HDR-Grande.jpeg&quot;},{&quot;id&quot;:3443,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/13.jpeg&quot;},{&quot;id&quot;:3434,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/4.jpeg&quot;},{&quot;id&quot;:3448,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/18.jpeg&quot;},{&quot;id&quot;:3442,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/12.jpeg&quot;},{&quot;id&quot;:3445,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/15.jpeg&quot;},{&quot;id&quot;:1934,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/image00024.jpeg&quot;},{&quot;id&quot;:1935,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/image00009.jpeg&quot;},{&quot;id&quot;:1933,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/image00028.jpeg&quot;},{&quot;id&quot;:1883,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/DSC00337-HDR-Grande.jpeg&quot;},{&quot;id&quot;:1928,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/DSC00166-HDR-Grande.jpeg&quot;},{&quot;id&quot;:1880,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/DSC00283-HDR-Grande.jpeg&quot;},{&quot;id&quot;:1881,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/DSC00405-HDR-Grande.jpeg&quot;}],&quot;background_slideshow_slide_duration&quot;:500,&quot;background_slideshow_transition_duration&quot;:2500,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;}">
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-5a8d4a0 e-con-full e-flex e-con e-parent" data-id="5a8d4a0" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-39b0865 e-con-full e-flex e-con e-child" data-id="39b0865" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-ed969ea e-con-full e-flex e-con e-child" data-id="ed969ea" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-aeae50f elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading" data-id="aeae50f" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Nos prochains camps</h2>				</div>
+					<p class="e-828818a-c91445c e-paragraph-base e-default-p" data-interaction-id="828818a">Choisissez votre semaine. On s'occupe du reste.</p>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-ec3a4b9 e-flex e-con-boxed e-con e-parent" data-id="ec3a4b9" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-308969e elementor-widget elementor-widget-html" data-id="308969e" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+<div class="bk" id="reservation">
+<div class="bk-main">
+  <div class="bk-left">
+    <div class="bk-mini-card">
+      <span class="bk-mini-badge">🏡 ACCOMMODATION</span>
+      <h3 class="bk-mini-title">Two villas, two pools</h3>
+      <hr class="bk-mini-divider">
+      <p class="bk-mini-text">Two adjoining villas, each with its own pool and garden. Homemade Moroccan meals around one table, BBQ nights and people from around the world. Groups organised by level, so everyone progresses at their own pace. Come for the surf, stay for the atmosphere!</p>
+    </div>
+    <div class="bk-mini-card">
+      <span class="bk-mini-badge" id="bk-act-badge">🌊 INCLUDED IN YOUR WEEK</span>
+      <h3 class="bk-mini-title">Your week in Essaouira</h3>
+      <hr class="bk-mini-divider">
+      <ul class="bk-mini-list" id="bk-act-list"><li>Choose an activity to see the details</li></ul>
+    </div>
+  </div>
+  <div class="bk-right">
+    <span class="bk-r-eyebrow">Booking</span>
+    <h2 class="bk-r-title">Book <em>your week</em></h2>
+    <div id="bk-fields">
+      <div class="bk-step on" id="bk-s1">
+        <div class="bk-prog-wrap"><span class="bk-prog-dot on"></span><span class="bk-prog-dot"></span><span class="bk-prog-lbl">Step 1/2 · Your stay</span></div>
+        <div class="bk-sec">
+          <span class="bk-lbl">1. Activity</span>
+          <div class="bk-acts">
+            <button class="bk-act" onclick="bkAct('surf',this)">🏄 Surf · €550 <s>€790</s></button>
+            <button class="bk-act" onclick="bkAct('kite',this)">🪁 Kitesurf · €750 <s>€890</s></button>
+          </div>
+          <div style="margin-top:8px;font-size:10.5px;color:var(--mt);line-height:1.5">Special rate valid for stays until the end of February 2027. Regular rate from March. Arrivals on Saturdays.</div>
+        </div>
+        <div class="bk-sec">
+          <span class="bk-lbl">2. Month</span>
+          <div class="bk-months" id="bk-months">
+            <button class="bk-mbtn" onclick="bkMonth('nov',this)">🔥 November</button>
+            <button class="bk-mbtn" onclick="bkMonth('dec',this)">December</button>
+            <button class="bk-mbtn" onclick="bkMonth('jan',this)">January</button>
+            <button class="bk-mbtn other" onclick="bkMonth('custom',this)">✏️ Choose my own dates</button>
+          </div>
+          <div class="bk-dates-wrap" id="bk-dates-wrap">
+            <span class="bk-lbl" style="margin-top:4px">3. Dates</span>
+            <div class="bk-dates" id="bk-dates"></div>
+          </div>
+          <div class="bk-custom-block" id="bk-custom-block">
+            <span class="bk-lbl">3. Your dates</span>
+            <div class="bk-row" style="margin-bottom:0">
+              <div class="bk-field"><input class="bk-inp" id="bk-date-from" type="date" onchange="bkUpd()"></div>
+              <div class="bk-field"><input class="bk-inp" id="bk-date-to" type="date"></div>
+            </div>
+          </div>
+          <div id="bk-urgency" style="margin-top:8px;font-size:10.5px;color:var(--mt);line-height:1.5;min-height:16px"></div>
+        </div>
+        <div class="bk-sec">
+          <span class="bk-lbl">Number of people</span>
+          <div class="bk-counter">
+            <button class="bk-cnt-btn" onclick="bkCnt(-1)">−</button>
+            <span class="bk-cnt-val" id="bk-cnt">1</span>
+            <button class="bk-cnt-btn" onclick="bkCnt(1)">+</button>
+          </div>
+        </div>
+        <div class="bk-price-box hidden" id="bk-price">
+          <div class="bk-price-top">
+            <div><div class="bk-price-lbl">Estimated total</div><div class="bk-price-sub" id="bk-psub"></div></div>
+            <span class="bk-price-amt" id="bk-pamt">-</span>
+          </div>
+        </div>
+        <button class="bk-btn" onclick="bkNext()">Book my week →</button>
+        <p class="bk-micro">No payment required at this stage · We confirm availability together</p>
+        <span class="bk-badge-item">✓ <strong>No commitment at this stage</strong></span>
+        <span class="bk-badge-item">✓ <strong>Availability confirmed before any payment</strong></span>
+        <span class="bk-badge-item">✓ <strong>Private or shared room</strong>, tell us in the message</span>
+        <a class="bk-wa" href="https://wa.me/212618910431?text=Hi%20MogaSurf%2C%20I%27d%20like%20to%20know%20more%20about%20your%20surf%20and%20kitesurf%20weeks." target="_blank" rel="noopener">💬 Questions? Chat with us on WhatsApp</a>
+      </div>
+      <div class="bk-step" id="bk-s2">
+        <button class="bk-back" onclick="bkBack()">← Edit my stay</button>
+        <div class="bk-prog-wrap"><span class="bk-prog-dot on"></span><span class="bk-prog-dot on"></span><span class="bk-prog-lbl">Step 2/2 · Your details</span></div>
+        <div class="bk-summary" id="bk-sum"></div>
+        <div class="bk-row">
+          <div class="bk-field"><label class="bk-lbl">First name</label><input class="bk-inp" id="bk-fn" type="text" placeholder="Sophie"></div>
+          <div class="bk-field"><label class="bk-lbl">Last name</label><input class="bk-inp" id="bk-ln" type="text" placeholder="Smith"></div>
+        </div>
+        <div class="bk-row"><div class="bk-field full"><label class="bk-lbl">Email</label><input class="bk-inp" id="bk-email" type="email" placeholder="sophie@email.com"></div></div>
+        <div class="bk-row">
+          <div class="bk-field full">
+            <label class="bk-lbl">Phone</label>
+            <div class="bk-phone-row">
+              <select class="bk-cc" id="bk-cc">
+                <option value="+44">🇬🇧 +44</option><option value="+33">🇫🇷 +33</option>
+                <option value="+1">🇺🇸 +1</option><option value="+32">🇧🇪 +32</option>
+                <option value="+41">🇨🇭 +41</option><option value="+49">🇩🇪 +49</option>
+                <option value="+212">🇲🇦 +212</option><option value="+34">🇪🇸 +34</option>
+                <option value="+39">🇮🇹 +39</option><option value="+31">🇳🇱 +31</option>
+              </select>
+              <input class="bk-inp bk-phone-inp" id="bk-phone" type="tel" placeholder="7 12 34 56 78">
+            </div>
+          </div>
+        </div>
+        <div class="bk-row"><div class="bk-field full"><label class="bk-lbl">Message (optional)</label><textarea class="bk-ta" id="bk-msg" placeholder="Private or shared room, level, dietary requirements, questions..."></textarea></div></div>
+        <button class="bk-btn" id="bk-btn2" onclick="bkSubmit()">Confirm my booking →</button>
+      </div>
+    </div>
+    <div class="bk-ok" id="bk-ok">
+      <div class="bk-okico">✓</div>
+      <div class="bk-ok-title">Request sent!</div>
+      <p class="bk-ok-sub">Our team will get back to you within 24h. See you soon in Essaouira! 🌊</p>
+      <a class="bk-wa" href="https://wa.me/212618910431" target="_blank" rel="noopener" style="max-width:260px;margin:14px auto 0">💬 Faster? Message us on WhatsApp</a>
+    </div>
+  </div>
+</div>
+</div>
+<script>
+(function(){
+var ACT={
+  surf:{badge:"🏄 SURF WEEK INCLUDES",items:["7 nights at Villa Sunset or Villa Zephyr (shared room, max 3 people)","Full board: fresh, homemade meals","12h of surf lessons, groups formed by level","Equipment included: boards adapted to your level and wetsuit","BBQ night and an evening out in town","Visit to a local argan cooperative of 100 women","Transfers to the spots and Essaouira airport, return"]},
+  kite:{badge:"🪁 KITESURF WEEK INCLUDES",items:["7 nights at Villa Sunset or Villa Zephyr (shared room, max 3 people)","Full board: fresh, homemade meals","12h of kitesurf lessons, maximum 4 people per instructor, groups formed by level","Equipment included: helmet, wetsuit, harness, kites...","BBQ night and an evening out in town","Visit to a local argan cooperative of 100 women","Transfers to the spots and Essaouira airport, return"]}
+};
+var MONTHS={
+  nov:{name:'Nov',dates:[{t:'7 → 14'},{t:'14 → 21'},{t:'21 → 28'},{t:'28 → Dec 5'}]},
+  dec:{name:'Dec',dates:[{t:'5 → 12'},{t:'12 → 19'},{t:'19 → 26',off:1},{t:'26 → Jan 2',off:1}]},
+  jan:{name:'Jan',dates:[{t:'2 → 9'},{t:'9 → 16'},{t:'16 → 23'},{t:'23 → 30'},{t:'30 → Feb 6'}]},
+  feb:{name:'Feb',dates:[{t:'6 → 13'},{t:'13 → 20'},{t:'20 → 27'},{t:'27 → Mar 6'}]},
+  mar:{name:'Mar',full:1,dates:[{t:'6 → 13'},{t:'13 → 20'},{t:'20 → 27'},{t:'27 → Apr 3'}]}
+};
+var PRICE={surf:550,kite:750};
+var FULL={surf:790,kite:890};
+var PROMO_END='2027-03-01';
+function isFull(){
+  if(s.date==='custom'){var f=g('bk-date-from').value;return !!f&&f>=PROMO_END;}
+  return !!(s.month&&MONTHS[s.month]&&MONTHS[s.month].full);
+}
+function price(){return isFull()?FULL[s.act]:PRICE[s.act];}
+var s={act:null,month:null,date:null,n:1};
+function g(id){return document.getElementById(id)}
+function warn(t){var u=g('bk-urgency');u.textContent=t;u.style.color='#c0392b';}
+function clr(){g('bk-urgency').textContent='';}
+function fmt(m,d){return MONTHS[m].name+' '+d.t;}
+window.bkAct=function(a,btn){
+  s.act=a;
+  document.querySelectorAll('.bk-act').forEach(function(b){b.classList.remove('on')});
+  btn.classList.add('on');clr();
+  g('bk-act-badge').textContent=ACT[a].badge;
+  g('bk-act-list').innerHTML=ACT[a].items.map(function(t){return '<li>'+t+'</li>'}).join('');
+  upd();
+};
+window.bkMonth=function(m,btn){
+  s.month=m;s.date=null;clr();
+  document.querySelectorAll('#bk-months .bk-mbtn').forEach(function(b){b.classList.remove('on')});
+  btn.classList.add('on');
+  if(m==='custom'){
+    s.date='custom';
+    g('bk-dates-wrap').classList.remove('show');
+    g('bk-custom-block').classList.add('show');
+  }else{
+    g('bk-custom-block').classList.remove('show');
+    var box=g('bk-dates');box.innerHTML='';
+    MONTHS[m].dates.forEach(function(d,i){
+      var b=document.createElement('button');
+      if(d.off){
+        b.className='bk-date off';
+        b.disabled=true;
+        b.innerHTML=fmt(m,d)+'<small>Not available</small>';
+      }else{
+        b.className='bk-date';
+        b.textContent=fmt(m,d);
+        b.onclick=function(){
+          s.date=m+i;
+          box.querySelectorAll('.bk-date').forEach(function(x){x.classList.remove('on')});
+          b.classList.add('on');clr();upd();
+        };
+      }
+      box.appendChild(b);
+    });
+    g('bk-dates-wrap').classList.add('show');
+  }
+  upd();
+};
+window.bkUpd=function(){upd();};
+window.bkCnt=function(d){s.n=Math.max(1,Math.min(13,s.n+d));g('bk-cnt').textContent=s.n;upd();};
+function upd(){
+  if(!s.act||!s.date){g('bk-price').classList.add('hidden');return;}
+  var p=price();
+  g('bk-price').classList.remove('hidden');
+  g('bk-pamt').textContent='€'+(p*s.n).toLocaleString('en-GB');
+  g('bk-psub').textContent='€'+p+' × '+s.n+(s.n>1?' people':' person')+(isFull()?' · regular rate':' · special rate (instead of €'+FULL[s.act]+')')+(s.n>=2?' · discount applied on confirmation':'');
+}
+function dlabel(){
+  if(s.date==='custom')return 'From '+g('bk-date-from').value+' to '+g('bk-date-to').value;
+  var m=s.month,i=parseInt(s.date.slice(3),10);
+  return fmt(m,MONTHS[m].dates[i]);
+}
+window.bkNext=function(){
+  if(!s.act){warn('⚠️ Please choose an activity');return;}
+  if(!s.month){warn('⚠️ Please choose a month');return;}
+  if(!s.date){warn('⚠️ Please choose your dates');return;}
+  if(s.date==='custom'&&(!g('bk-date-from').value||!g('bk-date-to').value)){warn('⚠️ Please enter your dates');return;}
+  var a=s.act==='surf'?'🏄 Surf':'🪁 Kitesurf';
+  g('bk-sum').innerHTML='<strong>'+a+'</strong><br>'+dlabel()+' · '+s.n+(s.n>1?' people':' person')+' · €'+(price()*s.n).toLocaleString('en-GB');
+  g('bk-s1').classList.remove('on');g('bk-s2').classList.add('on');
+};
+window.bkBack=function(){g('bk-s2').classList.remove('on');g('bk-s1').classList.add('on');};
+window.bkSubmit=function(){
+  var ok=true;
+  ['bk-fn','bk-ln','bk-email'].forEach(function(id){var e=g(id);if(!e.value.trim()){e.classList.add('err');ok=false;}else{e.classList.remove('err');}});
+  if(!ok)return;
+  var btn=g('bk-btn2');btn.disabled=true;btn.textContent='Sending...';
+  var a=s.act==='surf'?'Surf':'Kitesurf';
+  var fd=new FormData();
+  fd.append('access_key','REDACTED');
+  fd.append('subject','🏄 Landing Booking · '+a+' · Mogasurf');
+  fd.append('from_name','Mogasurf Website');
+  fd.append('cc','info@mogasurf.com,redacted@example.com,redacted@example.com');
+  fd.append('botcheck','');
+  fd.append('Activity',a);
+  fd.append('Stay dates',dlabel());
+  fd.append('People',s.n);
+  fd.append('Estimated total',(price()*s.n)+'€');
+  fd.append('Rate',isFull()?'Normal rate':'Special rate (until end of Feb 2027)');
+  fd.append('First name',g('bk-fn').value.trim());
+  fd.append('Last name',g('bk-ln').value.trim());
+  fd.append('Email',g('bk-email').value.trim());
+  fd.append('Phone',g('bk-cc').value+' '+g('bk-phone').value.trim());
+  if(g('bk-msg').value.trim())fd.append('Message',g('bk-msg').value.trim());
+  fetch('https://api.web3forms.com/submit',{method:'POST',body:fd})
+  .then(function(r){return r.json()})
+  .then(function(d){
+    if(d.success){
+      g('bk-fields').style.display='none';g('bk-ok').classList.add('show');
+      if(typeof fbq==='function')fbq('track','Lead');
+      window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'camp_booking_success'});
+    }else{alert('Error. Please contact us on WhatsApp.');}
+    btn.disabled=false;btn.textContent='Confirm my booking →';
+  })
+  .catch(function(){alert('Network error. WhatsApp: +212 618 910 431');btn.disabled=false;btn.textContent='Confirm my booking →';});
+};
+})();
+</script>				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-a49864c elementor-hidden-mobile e-flex e-con-boxed e-con e-parent" data-id="a49864c" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-2d24ed0 e-con-full e-flex e-con e-child" data-id="2d24ed0" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-287d695 e-con-full e-flex e-con e-child" data-id="287d695" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				</div>
+		<div class="elementor-element elementor-element-881c935 e-con-full e-flex e-con e-child" data-id="881c935" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-5eb4f2e e-con-full e-flex e-con e-parent" data-id="5eb4f2e" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-2a47e8c e-con-full e-flex e-con e-child" data-id="2a47e8c" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-16621bb e-con-full e-flex e-con e-child" data-id="16621bb" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-caf7c6c elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading" data-id="caf7c6c" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">CE QUE DISENT NOS RIDERS</h2>				</div>
+					<p class="e-f2979a8-abd89a2 e-paragraph-base e-default-p" data-interaction-id="f2979a8"><em>Travellers' Choice 2026.</em></p>
+				</div>
+		<div class="elementor-element elementor-element-029ade5 e-con-full e-flex e-con e-child" data-id="029ade5" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-bb9d5cb elementor-align-right elementor-widget__width-initial elementor-mobile-align-center elementor-widget-mobile__width-initial elementor-widget elementor-widget-button" data-id="bb9d5cb" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm" href="https://share.google/I9hhvBFI2Kl8repGm" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Voir les avis </span>
+					</span>
+					</a>
+								</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-d20a280 e-flex e-con-boxed e-con e-parent" data-id="d20a280" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-313aa5d e-con-full e-flex e-con e-child" data-id="313aa5d" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-ff0a7b6 elementor-widget__width-initial elementor-widget elementor-widget-shortcode" data-id="ff0a7b6" data-element_type="widget" data-e-type="widget" data-widget_type="shortcode.default">
+							<div class="elementor-shortcode">
+<pre class="ti-widget"><div style="opacity: 0;height: 0 !important;overflow: hidden !important" data-css-url="https://www.mogasurf.com/wp-content/uploads/trustindex-google-widget.css?1791935604" class=" ti-widget  ti-goog ti-disable-font ti-review-text-mode-readmore ti-text-align-left" data-no-translation="true" data-time-locale="%d %s ago|today|day|days|week|weeks|month|months|year|years" data-plugin-version="14.2" data-layout-id="4" data-layout-category="slider" data-set-id="drop-shadow" data-pid="wp-widget" data-language="en" data-close-locale="Close" data-review-target-width="300" data-css-version="2" data-reply-by-locale="Owner&apos;s reply" data-only-rating-locale="This user only left a rating." data-pager-autoplay-timeout="6"> <div class="ti-widget-container ti-col-3"> <div class="ti-reviews-container"> <div class="ti-controls"> <div class="ti-next" aria-label="Next review" role="button" tabindex="0"></div> <div class="ti-prev" aria-label="Previous review" role="button" tabindex="0"></div> </div> <div class="ti-reviews-container-wrapper">  <div data-empty="0" data-time="1789430400" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjUIb-CPtVwqV7Cd8hcMbzY9b00uZ94GgwR7DWlO2IHz-MUcYNID=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjUIb-CPtVwqV7Cd8hcMbzY9b00uZ94GgwR7DWlO2IHz-MUcYNID=w80-h80-c-rp-mo-br100 2x" alt="Lucas Arminjon profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Lucas Arminjon </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Super séjour avec MOGASURF !&#010;&#010;La villa est extraordinaire, un petit coin de paradis avec un très beau jardin et une piscine, très appréciée après les activités.&#010;&#010;Ismaël et Mimi ont été aux petits soins, avec une très grande gentillesse et beaucoup de bienveillance. Ils ont également partagé avec nous de très bons moments festifs.&#010;Nous avons mangé de délicieux plats typiques du Maroc. 🇲🇦&#010;&#010;Le planning a été adapté en fonction des conditions météorologiques, ce qui m’a permis de faire du kite et du surf dans les meilleures conditions.&#010;&#010;Pour résumer, une superbe semaine de vacances grâce à toute l’équipe de MOGASURF !&#010;Je recommande vivement ! 🏄‍♂️🤙<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1789344000" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocJdFDwNfgRnVQgAz3bW4iIrO-ZWa4uXWiq5ThEApJOA6oE4jQ=w40-h40-c-rp-mo-ba12-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocJdFDwNfgRnVQgAz3bW4iIrO-ZWa4uXWiq5ThEApJOA6oE4jQ=w80-h80-c-rp-mo-ba12-br100 2x" alt="A W profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> A W </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Wir waren zu zweit für eine Woche da. Ich denke ich übertreibe nicht, wenn ich sage, dass es eine der besten Wochen in meinem Leben war. Mimi und Ismail sind super liebe Menschen, die wir jetzt schon vermissen. Auch die anderen Gäste waren super. Es gab jeden Tag drei Mahlzeiten, die jedes mal super lecker waren und frisch vor Ort zubereitet wurden. Die Villa ist schön groß und war noch besser als erwartet. Wir haben alle den Kitesurf Kurs belegt und hatten auch dort einen super Instructor (Mohammed und Ismail). Der Mix zwischen Sport, Chillen, Party und Städtetrip. Definitiv eine 10/10 und wir wissen jetzt schon, dass wir jedes Jahr wiederkommen wollen. Wer das nicht macht hat was verpasst!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1789344000" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjV0tTDsQAbq3Weo4DdHZdLVV_-rMypPdMMTwGBT7VIMrjmTub0=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjV0tTDsQAbq3Weo4DdHZdLVV_-rMypPdMMTwGBT7VIMrjmTub0=w80-h80-c-rp-mo-br100 2x" alt="Thomas DOLLER profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Thomas DOLLER </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->J’ai passé un excellent séjour : la villa est top, les cours permettent de bon progrès et sont assurés par une super équipe. Tout est pensé pour nous mettre dans les meilleures conditions, et les repas sont exceptionnels. Je recommande vivement cette adresse !<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1789257600" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocIJ7n1WaodOb8xthO14xWTc3yrpJmTCJ6BMKBmV-YhVRw9bsw=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocIJ7n1WaodOb8xthO14xWTc3yrpJmTCJ6BMKBmV-YhVRw9bsw=w80-h80-c-rp-mo-br100 2x" alt="Astrid Courbet profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Astrid Courbet </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Très bonne école de kitesurf ! Ismail est là pour partager sa passion et transmettre son expérience. Il est très pédagogue et ses conseils nous permettent de progresser rapidement. Il nous emmène sur des spots où il n’y a pas trop de monde, ce qui permet d’évoluer sereinement sur l’eau🪁&#010;&#010;La formule Kite Camp est idéale : une magnifique villa avec piscine, des repas locaux délicieux, du kite et surtout de très belles rencontres🌞&#010;&#010;Merci Mogasurf pour les souvenirs💙<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1789171200" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocLoANyc1ymPuMGuau2yUoJD4nrcGdMo79y8gEKAdC4L21O5Og=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocLoANyc1ymPuMGuau2yUoJD4nrcGdMo79y8gEKAdC4L21O5Og=w80-h80-c-rp-mo-br100 2x" alt="Samuel Gebhard profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Samuel Gebhard </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Une petite équipe incroyable qui vous fais vous sentir comme à la maison.<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1788652800" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjWKOKh9jPHOkb1wRMHDEG0eHk2R94-Cjc0XbhMFeuR01UmOqHew=w40-h40-c-rp-mo-ba12-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjWKOKh9jPHOkb1wRMHDEG0eHk2R94-Cjc0XbhMFeuR01UmOqHew=w80-h80-c-rp-mo-ba12-br100 2x" alt="Ainhoa Humanes profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Ainhoa Humanes </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Muy buenos profesores, hicieron lo posible por entenderse con nosotros!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  </div> <div class="ti-controls-line"> <div class="dot"></div> </div> </div>    </div> </div> </pre><pre class="ti-hidden-markup" hidden style="display: none">
+</pre></div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-e3806b3 elementor-widget elementor-widget-spacer" data-id="e3806b3" data-element_type="widget" data-e-type="widget" data-widget_type="spacer.default">
+							<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+						</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-d656b83 e-flex e-con-boxed e-con e-parent" data-id="d656b83" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-d8b1024 e-con-full e-flex e-con e-child" data-id="d8b1024" data-element_type="container" data-e-type="container">
+		<div class="elementor-element elementor-element-8e486d9 e-con-full elementor-hidden-mobile e-flex e-con e-child" data-id="8e486d9" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-698c5ec elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading" data-id="698c5ec" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Follow us. : @mogasurf
+</h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-8ce778f e-con-full e-flex e-con e-child" data-id="8ce778f" data-element_type="container" data-e-type="container">
+				<div class="elementor-element elementor-element-7b06e10 elementor-align-right elementor-widget__width-initial elementor-mobile-align-center elementor-widget-mobile__width-initial elementor-widget elementor-widget-button" data-id="7b06e10" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm" href="https://www.instagram.com/mogasurf/" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Our instagram</span>
+					</span>
+					</a>
+								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+			</div>
+</main>
+	<footer id="site-footer" class="site-footer dynamic-footer footer-has-copyright">
+	<div class="footer-inner">
+		<div class="site-branding show-logo">
+							<div class="site-logo show">
+					<a href="https://www.mogasurf.com/" class="custom-logo-link" rel="home" aria-current="page"><img width="2553" height="729" data-src="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png" class="custom-logo lazyload" alt="MOGASURF" decoding="async" data-srcset="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png 2553w, https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1-300x86.png 300w, https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1-1024x292.png 1024w, https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1-768x219.png 768w, https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1-1536x439.png 1536w, https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-cropped-LOGO-MOGASURF-2-scaled-1-2048x585.png 2048w" data-sizes="(max-width: 2553px) 100vw, 2553px" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" style="--smush-placeholder-width: 2553px; --smush-placeholder-aspect-ratio: 2553/729;" /></a>				</div>
+							<p class="site-description show">
+					Surf Kite School &amp; Camp Essaouira				</p>
+					</div>
+					<nav class="site-navigation show" aria-label="Menu du pied de page">
+				<ul id="menu-menu-fr-elementor-2" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2039 current_page_item menu-item-2485"><a href="https://www.mogasurf.com/" aria-current="page" data-ps2id-api="true">Accueil</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2489"><a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/" data-ps2id-api="true">Surf</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2487"><a href="https://www.mogasurf.com/packs-kitesurf-essaouira-maroc/" data-ps2id-api="true">Kitesurf</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2484"><a href="https://www.mogasurf.com/contact-fr/" data-ps2id-api="true">Contact</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2486"><a href="https://www.mogasurf.com/ismail-adarzane-fr/" data-ps2id-api="true">À Propos</a></li>
+</ul>			</nav>
+					<div class="copyright show">
+				<p>All rights reserved</p>
+			</div>
+			</div>
+</footer>
+        <!-- Meta Pixel Event Code -->
+        <!-- End Meta Pixel Event Code -->
+                <!-- Meta Pixel Event Code -->
+        <!-- End Meta Pixel Event Code -->
+		<!-- Click to Chat - https://holithemes.com/plugins/click-to-chat/  v4.45 -->
+									<div class="ht-ctc ht-ctc-chat ctc-analytics ctc_wp_desktop style-2  ht_ctc_entry_animation ht_ctc_an_entry_corner " id="ht-ctc-chat"  
+				style="display: none;  position: fixed; bottom: 15px; right: 15px;"   >
+												<div class="ht_ctc_style ht_ctc_chat_style">
+								<div  style="display: flex; justify-content: center; align-items: center;  " class="ctc-analytics ctc_s_2">
+	<p class="ctc-analytics ctc_cta ctc_cta_stick ht-ctc-cta  ht-ctc-cta-hover " style="padding: 0px 16px; line-height: 1.6; font-size: 15px; background-color: #25D366; color: #ffffff; border-radius:10px; margin:0 10px;  display: none; order: 0; ">WhatsApp us</p>
+	</div>
+								</div>
+							</div>
+							<span class="ht_ctc_chat_data" data-settings="{&quot;number&quot;:&quot;212618910431&quot;,&quot;pre_filled&quot;:&quot;Hello! \ud83d\udc4b I visited your website and I&#039;d love to get more information. \r\nThank you!\r\n\r\n-- \r\n\r\nBonjour ! \ud83d\udc4b J&#039;ai visit\u00e9 votre site et j&#039;aimerais avoir plus d&#039;informations. \r\nMerci !&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;side_d&quot;:&quot;right&quot;,&quot;side_m&quot;:&quot;right&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:150,&quot;ani&quot;:&quot;no-animation&quot;,&quot;page_id&quot;:2039,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;ga&quot;:&quot;yes&quot;,&quot;gtm&quot;:&quot;1&quot;,&quot;fb&quot;:&quot;yes&quot;,&quot;webhook_format&quot;:&quot;json&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;gtm_event_name&quot;:&quot;Click to Chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}" data-rest="3db77cc637"></span>
+				    <!-- Meta Pixel Event Code -->
+    <!-- End Meta Pixel Event Code -->
+        <div id="fb-pxl-ajax-code"></div><!-- Instagram Feed JS -->
+<!-- NEWSLETTER -->
+<div id="moga-nl">
+  <div>
+    <h2>La houle dans<br><em>votre boite mail.</em></h2>
+  </div>
+  <div class="nl-form" id="moga-nl-form">
+    <input type="email" id="moga-nl-email" placeholder="votre@email.com">
+    <button onclick="mogaNlSend()">S inscrire</button>
+  </div>
+  <div id="moga-nl-ok">Merci ! On vous ecrit tres vite.</div>
+</div>
+<!-- FOOTER -->
+<footer id="moga-ftr">
+  <div class="fg">
+    <div class="fi">
+      <img data-src="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-LOGO-MOGASURF-2-scaled-1.png" alt="Mogasurf" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" class="lazyload" style="--smush-placeholder-width: 2557px; --smush-placeholder-aspect-ratio: 2557/731;">
+      <p class="fd">Ecole et camp de surf et kitesurf a Essaouira. On ne vend pas des cours, on construit des riders.</p>
+      <div class="fs">
+        <a href="https://www.instagram.com/mogasurf/" target="_blank">IG</a>
+        <a href="https://web.facebook.com/mogasurf" target="_blank">FB</a>
+        <a href="https://wa.me/212618910431" target="_blank">WA</a>
+      </div>
+    </div>
+    <div class="fcols" style="display:contents">
+      <div class="fc">
+        <h4>Activites</h4>
+                  <a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/">Cours de surf</a>
+          <a href="https://www.mogasurf.com/packs-kitesurf-essaouira-maroc/">Cours de kitesurf</a>
+          <a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/">Surf Day Trip</a>
+          <a href="https://www.mogasurf.com/packs-kitesurf-essaouira-maroc/">Coaching prive</a>
+              </div>
+      <div class="fc">
+        <h4>Le Camp</h4>
+        <a href="https://www.mogasurf.com/surf-camp-moga/">Surf Camp</a>
+        <a href="https://www.mogasurf.com/surf-camp-moga/">Kite Camp</a>
+        <a href="https://www.mogasurf.com/surf-camp-moga/">Camp en famille</a>
+        <a href="https://www.mogasurf.com/surf-camp-moga/">Villa Sunset</a>
+      </div>
+      <div class="fc">
+        <h4>Contact</h4>
+        <p>+212 618 910 431</p>
+        <p>info@mogasurf.com</p>
+        <p>1 DR Ait yassine,<br>Sidi Kaouki, Essaouira</p>
+        <p><strong>Lun - Dim · 9h00 - 22h30</strong></p>
+      </div>
+    </div>
+  </div>
+  <div class="fb">
+    <p>© 2026 Mogasurf · Tous droits reserves</p>
+    <div class="fbg">
+      <span class="badge">Certifie FFS</span>
+      <span class="badge">Certifie IKO</span>
+      <span class="badge">Travellers Choice</span>
+    </div>
+  </div>
+</footer>
+		<!-- Cookie Compliance for WordPress (formerly Compliance by Hu-manity.co) plugin v3.1.16 https://cookie-compliance.co/ -->
+		<div id="cookie-notice" role="dialog" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom" aria-label="Cookie Compliance" style="background-color: rgba(50,50,58,1);"><div class="cookie-notice-container" style="color: #fff"><span id="cn-notice-text" class="cn-text-container">Nous utilisons des cookies pour vous garantir la meilleure expérience sur notre site web. Si vous continuez à utiliser ce site, nous supposerons que vous en êtes satisfait.</span><span id="cn-notice-buttons" class="cn-buttons-container"><button id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button" aria-label="OK" style="background-color: #00a99d">OK</button></span><button type="button" id="cn-close-notice" data-cookie-set="accept" class="cn-close-icon" aria-label="Non" tabindex="0"></button></div>
+		</div>
+		<!-- / Cookie Compliance for WordPress plugin -->
+</body>
+</html>
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
+Mise en cache de page à l’aide de Disk: Enhanced 
+Minified using Disk
+Served from: www.mogasurf.com @ 2026-10-19 20:12:25 by W3 Total Cache
+-->

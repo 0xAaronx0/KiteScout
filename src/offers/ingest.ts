@@ -247,6 +247,17 @@ const KNOWN_PINS: Record<string, { lat: number; lng: number }> = {
   avon: { lat: 35.3523, lng: -75.5033 }, // Avon on Hatteras Island (OSM village); "Avon" alone finds nothing in region
   // Cascade's camp page only says "Maui North Shore"; the geocoder returns the island centroid on Haleakala
   maui: { lat: 20.8975, lng: -156.4339 },
+  // Rhodes and Lanzarote spots the geocoder cannot place (pins of the existing Fanes / Theologos stays; OSM beach / village)
+  'fanes, rhodes': { lat: 36.3504, lng: 27.9827 },
+  'theologos, rhodes': { lat: 36.3739, lng: 28.036 },
+  'kremasti, rhodes': { lat: 36.4198, lng: 28.132 },
+  'famara, lanzarote': { lat: 29.1188, lng: -13.566 },
+  // Hardangervidda snowkite bases and the Ryfylke / Setesdal plateau (OSM village, waterfall, hamlet, protected area)
+  'haugastøl, hardangervidda': { lat: 60.512, lng: 7.8631 },
+  'vøringsfoss, hardangervidda': { lat: 60.4271, lng: 7.2509 },
+  'finse, hardangervidda': { lat: 60.603, lng: 7.502 },
+  'ryfylkeheiane': { lat: 58.9494, lng: 7.3039 },
+  'ryfylkeheiane, rogaland': { lat: 58.9494, lng: 7.3039 },
 };
 
 export async function locateSpots(c: OfferContent, stored: unknown): Promise<StoredSpot[]> {

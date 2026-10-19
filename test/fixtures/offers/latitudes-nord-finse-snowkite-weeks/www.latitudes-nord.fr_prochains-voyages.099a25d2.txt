@@ -1,0 +1,171 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Latitudes-Nord : Séjours encadrés</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <meta name="viewport" content="width=device-width">
+
+        <meta property="og:image" content="http://lat.letmecraft.com/images/mc-portrait.jpg"/>
+        <meta property="og:title" content="Michael Charavin, guide spécialiste des régions polaires"/>
+
+    </head>
+
+    <body class="journey">
+
+        <header>
+    <p class="h1">
+        <a href="/"><img class="logo" src="/images/header-logo.png" alt="Latitudes nord" /></a> - Séjours encadrés    </p>
+    <hr />
+    <p class="headline">    <b>Michael Charavin</b> - <b>Guide spécialiste des régions polaires</b>, vous présente
+    ses photographies <img src="/images/picto-carnet-photos.png" alt="carnet photos" /> et ses expéditions
+    <img src="/images/picto-carnet-expe.png" alt="carnet expéditions" />
+    <span class="copyright"> tous droits reservés</span>
+    </p>
+</header>
+
+<div id="content">
+
+    <section id="content-header">
+        <h2 class="h2">Séjours encadrés</h2>
+    </section>
+
+    <section id="frame">
+        <ul class="slidee">
+
+            <li class="type-small insert">
+                <h3 class="h3">Fil rouge de mes séjours</h3>
+                <ul>
+                    <li>Destinations atypiques & Voyages inédits (investigation sur des territoires peu ou pas pratiqués par les agences).</li>
+                    <li>Expéditions & Thématiques spécifiques (itinérance, autonomie, snowkite, rando-voile).</li>
+                    <li>Une réelle connaissance des milieux polaires.</li>
+                    <li>Un savoir-faire technique et logistique.</li>
+                    <li>Co-encadrement et/ou petits groupes.</li>
+                    <li>Le partage d'aventures authentiques.</li>
+                </ul>
+            </li>
+
+                                    <li class="type-text">
+                <h3 class="h3">Voyages Hiver 2026</h3>
+
+                <table>
+                                        <tr>
+                        <td class="image"><img src="/ups/images/journey/45/51289676756_c4ccf8c529_k (1).jpg" alt="Vignette" /></td>
+                        <td class="title">
+                        Snowkite itinérant en « mode LIGHT » - Plateaux du SETESDAL-RYFYLKE, NORVEGE<br /><span class="details">
+                                                Du 24 février au 08 mars 2026</span>
+                        <br />
+                        </td>
+                        <td class="details">Norvège</td>
+                        <td class="file"><a target="_blank" href="/ups/files/journey/45/Snowkite itinerant LIGHT Norvege RYFYLKE - SETESDAL_fiche presentation 2026.pdf"><img src="/images/file.png" alt="Présentation"</a></td>
+                    </tr>
+                                        <tr>
+                        <td class="image"><img src="/ups/images/journey/28/P1230583.jpg" alt="Vignette" /></td>
+                        <td class="title">
+                        Snowkite « exploration » au Cap Nord - Extrême nord de la Norvège<br /><span class="details">
+                                                Du 10 mars au 20 mars 2026</span>
+                        <br />
+                        </td>
+                        <td class="details">Norvège</td>
+                        <td class="file"><a target="_blank" href="/ups/files/journey/28/Snowkite Norvege Cap Nord_fiche presentation 2026.pdf"><img src="/images/file.png" alt="Présentation"</a></td>
+                    </tr>
+                                    </table>
+
+            </li>
+                        <li class="type-text">
+                <h3 class="h3">Voyages Printemps 2026</h3>
+
+                <table>
+                                        <tr>
+                        <td class="image"><img src="/ups/images/journey/46/P1002784.jpg" alt="Vignette" /></td>
+                        <td class="title">
+                        Snowkite « exploration » Péninsules Nordkinn &amp; Varanger - Extrême nord de la Norvège<br /><span class="details">
+                                                Du 22 mars au 01 avril 2026</span>
+                        <br />
+                        </td>
+                        <td class="details">Norvège</td>
+                        <td class="file"><a target="_blank" href="/ups/files/journey/46/Snowkite Norvege Varanger-Nordkinn_fiche presentation 2026.pdf"><img src="/images/file.png" alt="Présentation"</a></td>
+                    </tr>
+                                        <tr>
+                        <td class="image"><img src="/ups/images/journey/48/P1000788 bis.jpg" alt="Vignette" /></td>
+                        <td class="title">
+                        Snowkite «exploration» sur les Volcans islandais<br /><span class="details">
+                                                Du 17 avril au 01 mai 2026</span>
+                        <br />
+                        </td>
+                        <td class="details">Islande</td>
+                        <td class="file"><a target="_blank" href="/ups/files/journey/48/Snowkite Exploration Volcans d&#039;Islande_fiche presentation 2026.pdf"><img src="/images/file.png" alt="Présentation"</a></td>
+                    </tr>
+                                    </table>
+
+            </li>
+                                                <li class="type-text">
+                <h3 class="h3">Voyages Hiver 2027</h3>
+
+                <table>
+                                        <tr>
+                        <td class="image"><img src="/ups/images/journey/47/51290442605_1c95779087_o (1) (1).jpg" alt="Vignette" /></td>
+                        <td class="title">
+                        	Snowkite TOURING DECOUVERTE Finse (Skarvheimen), NORVEGE<br /><span class="details">
+                                                Du 06 février au 13 février 2027</span>
+                        <br />
+                        </td>
+                        <td class="details">Norvège</td>
+                        <td class="file"><a target="_blank" href="/ups/files/journey/47/Snowkite FINSE_DECOUVERTE_NORVEGE_fiche présentation 2027.pdf"><img src="/images/file.png" alt="Présentation"</a></td>
+                    </tr>
+                                        <tr>
+                        <td class="image"><img src="/ups/images/journey/14/51289454246_5705f66ed6_o (2).jpg" alt="Vignette" /></td>
+                        <td class="title">
+                        Snowkite rando PERFECTIONNEMENT Finse (Skarvheimen), NORVEGE<br /><span class="details">
+                                                Du 13 février au 20 février 2027</span>
+                        <br />
+                        </td>
+                        <td class="details">Norvège</td>
+                        <td class="file"><a target="_blank" href="/ups/files/journey/14/Snowkite FINSE_PERFECTIONNEMENT_NORVEGE_fiche présentation 2027.pdf"><img src="/images/file.png" alt="Présentation"</a></td>
+                    </tr>
+                                    </table>
+
+            </li>
+
+            <li class="type-empty"></li>
+    </ul>
+</section>
+
+<section id="controls">
+        <div id="scrollbar">
+            <div class="handle"></div>
+        </div>
+    </section>
+</div>
+
+        <footer>
+    <ul>
+                <li><a href="/" >Carnets d'expéditions & photographies</a></li>
+        <li><a href="/michael-charavin-guide-polaire" >Bio</a></li>
+
+        <li><a href="/prochains-voyages" class="active">Séjours encadrés</a></li>
+        <li><a href="/me-contacter" >Contact</a></li>
+        <li>
+            <form action="/newsletter" method="post">
+                <input type="text" id="email" name="email" value="S'inscrire à la newsletter..." data-value="S'inscrire à la newsletter..." />
+                <input type="submit" href="#" class="button" value="" />
+            </form>
+        </li>
+
+    </ul>
+
+    <div class="fb-like-wrapper"><div class="fb-like" data-href="https://www.facebook.com/pages/Latitudes-Nord/422362331202323" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div></div>
+
+</footer>
+
+        <div id="fb-root"></div>
+
+    </body>
+</html>
