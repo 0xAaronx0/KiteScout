@@ -519,10 +519,10 @@ async function main(): Promise<void> {
     }
 
     case 'climate-uv-cloudy': {
-      // One-off: CAMS all-sky UV for the cells of country/region points (resumable).
+      // One-off: CAMS all-sky UV for country/region cells - submits all ADS jobs, collects in later runs.
       const { runUvCloudy } = await import('./pipeline/uv-cloudy-run.js');
-      const budget = flagStr('--budget-min');
-      await runUvCloudy({ budgetMin: budget ? Number(budget) : undefined });
+      const wait = flagStr('--wait-min');
+      await runUvCloudy({ waitMin: wait ? Number(wait) : undefined });
       break;
     }
 

@@ -70,6 +70,40 @@ export async function retrieve(
   return Buffer.from(await file.arrayBuffer());
 }
 
+// Asynchronous use (CAMS jobs queue for hours): submit now, check and download in later runs.
+const jsonOrThrow = async (res: Response, what: string) => {
+  const body = await res.json().catch(() => null) as any;
+  if (!res.ok) throw new CopernicusError(`${what}: HTTP ${res.status} ${body?.title ?? ''} ${body?.detail ?? ''}`.trim());
+  return body;
+};
+const authHeaders = (token: string) => ({ 'PRIVATE-TOKEN': token, 'Content-Type': 'application/json' });
+
+/** Submits a request and returns its job id without waiting. */
+export async function submitJob(store: Store, dataset: string, inputs: Record<string, unknown>, token: string): Promise<string> {
+  const job = await jsonOrThrow(await fetch(`${BASE[store]}/processes/${dataset}/execution`, {
+    method: 'POST', headers: authHeaders(token), body: JSON.stringify({ inputs }),
+  }), `${store} ${dataset} submit`);
+  if (!job?.jobID) throw new CopernicusError(`${store} ${dataset}: no job id`);
+  return job.jobID;
+}
+
+/** Job status: accepted | running | successful | failed | rejected | dismissed (or 'gone' on HTTP 404). */
+export async function jobStatus(store: Store, jobId: string, token: string): Promise<string> {
+  const res = await fetch(`${BASE[store]}/jobs/${jobId}`, { headers: authHeaders(token) });
+  if (res.status === 404) return 'gone';
+  return (await jsonOrThrow(res, `${store} job ${jobId}`)).status;
+}
+
+/** Downloads the result of a successful job. */
+export async function jobResult(store: Store, jobId: string, token: string): Promise<Buffer> {
+  const results = await jsonOrThrow(await fetch(`${BASE[store]}/jobs/${jobId}/results`, { headers: authHeaders(token) }), `${store} job ${jobId} results`);
+  const href = results?.asset?.value?.href;
+  if (!href) throw new CopernicusError(`${store} job ${jobId}: no result href`);
+  const file = await fetch(href);
+  if (!file.ok) throw new CopernicusError(`${store} job ${jobId}: download HTTP ${file.status}`);
+  return Buffer.from(await file.arrayBuffer());
+}
+
 /** retrieve() with up to 3 attempts on transient server errors (HTTP 5xx, network). */
 export async function retrieveRetrying(...args: Parameters<typeof retrieve>): Promise<Buffer> {
   const sleep = args[3].sleep ?? ((ms: number) => new Promise(r => setTimeout(r, ms)));

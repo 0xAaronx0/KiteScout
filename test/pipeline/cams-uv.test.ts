@@ -76,3 +76,12 @@ test('parseCamsNetcdf picks each point\'s own noon lead hours from a wider box r
   assert.deepEqual(out.get('x')!.dates, ['2023-01-01']);
   assert.deepEqual(out.get('x')!.uv[0].map(v => Math.round(v * 100)), [12, 13, 14, 15]);
 });
+
+test('camsRequest and uvCloudyMonths', async () => {
+  const { camsRequest, uvCloudyMonths } = await import('../../src/pipeline/cams-uv.js');
+  const r = camsRequest({ area: [1, 2, 3, 4], leadtimes: [10, 11] }, 2024) as any;
+  assert.deepEqual([r.date, r.leadtime_hour, r.area], [['2024-01-01/2024-12-31'], ['10', '11'], [1, 2, 3, 4]]);
+  const days: [string, number][] = Array.from({ length: 12 }, (_, m) => [`2024-${String(m + 1).padStart(2, '0')}-15`, m + 0.4] as [string, number]);
+  assert.deepEqual(uvCloudyMonths(days), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
+  assert.throws(() => uvCloudyMonths(days.map(([d]) => [d, 40] as [string, number])), /implausible/);
+});
