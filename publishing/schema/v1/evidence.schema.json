@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/0xAaronx0/KiteScout/publishing/schema/v1/evidence.schema.json",
+  "title": "KiteScout publishing evidence manifest v1",
+  "description": "Mirror of PublishingEvidenceSchema in MartinMarzi/KiteCruiseScout src/features/publishing/offer-eligibility.server.ts (origin/main c596d41). One manifest file holds entries[] of this shape; claims[].valueHash = sha256 of the gate's canonical() JSON of {source, offerId, revision, field, value}, value built like the gate's `values` mapping. Field semantics: snapshot.revision = sha256 of the canonical snapshot (shared by all entries of one manifest); snapshot.observedAt = time of the confirming database re-read (every claim was observed before it); snapshot.complete = the operator page was readable, the verifier ran and the row did not change during verification; claims[].observedAt = when the operator page was fetched; verifiedAt = when the verifier finished; expiresAt = observedAt + the policy's maxAgeHours.",
+  "type": "object",
+  "required": ["version", "kind", "revision", "observedAt", "verifier", "refs", "evidence", "entries"],
+  "properties": {
+    "version": { "const": 1 },
+    "kind": { "const": "kitescout.publishing-evidence-manifest" },
+    "revision": { "$ref": "#/$defs/digest" },
+    "observedAt": { "$ref": "#/$defs/time" },
+    "verifier": { "type": "string", "description": "kitescout-ai-verifier/<model id>@<generator git sha>" },
+    "refs": { "type": "object" },
+    "evidence": { "type": "string", "description": "file name of the evidence sidecar next to this manifest" },
+    "entries": { "type": "array", "items": { "$ref": "#/$defs/entry" } }
+  },
+  "$defs": {
+    "text": { "type": "string", "minLength": 1, "maxLength": 4000 },
+    "time": { "type": "string", "format": "date-time" },
+    "digest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "revision": { "type": "string", "pattern": "^[a-f0-9]{40,64}$" },
+    "publicUrl": { "type": "string", "format": "uri", "pattern": "^https://[^/?#@]+\\.[^/?#@]+(/[^?#]*)?$" },
+    "field": { "enum": ["title", "description", "type", "operator", "location", "price", "departures"] },
+    "entry": {
+      "type": "object",
+      "required": ["version", "status", "source", "offerId", "snapshot", "policyRef", "rights", "claims"],
+      "properties": {
+        "version": { "const": 1 },
+        "status": { "enum": ["active", "removed", "revoked"] },
+        "source": { "const": "package_offers" },
+        "offerId": { "$ref": "#/$defs/text" },
+        "snapshot": {
+          "type": "object",
+          "required": ["revision", "schemaRef", "schemaRevision", "generatorRef", "generatorRevision", "observedAt", "complete"],
+          "properties": {
+            "revision": { "$ref": "#/$defs/revision" },
+            "schemaRef": { "$ref": "#/$defs/publicUrl" },
+            "schemaRevision": { "$ref": "#/$defs/revision" },
+            "generatorRef": { "$ref": "#/$defs/publicUrl" },
+            "generatorRevision": { "$ref": "#/$defs/revision" },
+            "observedAt": { "$ref": "#/$defs/time" },
+            "complete": { "type": "boolean" }
+          }
+        },
+        "policyRef": { "$ref": "#/$defs/publicUrl" },
+        "rights": {
+          "type": "object",
+          "required": ["status", "scope", "grantRef", "owner", "expiresAt"],
+          "properties": {
+            "status": { "enum": ["permitted", "unknown", "revoked"] },
+            "scope": { "const": "text" },
+            "grantRef": { "$ref": "#/$defs/publicUrl" },
+            "owner": { "$ref": "#/$defs/text" },
+            "expiresAt": { "$ref": "#/$defs/time" }
+          }
+        },
+        "claims": {
+          "type": "array", "maxItems": 7,
+          "items": {
+            "type": "object",
+            "required": ["field", "valueHash", "sourceUrl", "observedAt", "verifiedAt", "verifiedBy", "method", "expiresAt"],
+            "properties": {
+              "field": { "$ref": "#/$defs/field" },
+              "valueHash": { "$ref": "#/$defs/digest" },
+              "sourceUrl": { "$ref": "#/$defs/publicUrl" },
+              "observedAt": { "$ref": "#/$defs/time" },
+              "verifiedAt": { "$ref": "#/$defs/time" },
+              "verifiedBy": { "$ref": "#/$defs/text" },
+              "method": { "const": "source_reviewed" },
+              "expiresAt": { "$ref": "#/$defs/time" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

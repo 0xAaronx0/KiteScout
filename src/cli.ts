@@ -24,6 +24,7 @@ import {
 } from './pipeline/bstoked-packages.js';
 import { runCruiseRooms } from './pipeline/cruise-rooms.js';
 import { supabase } from './lib/supabase.js';
+import { geoVerify } from './publishing/geo-verify.js';
 
 const [command, ...args] = process.argv.slice(2);
 
@@ -525,6 +526,12 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'geo-verify': {
+      // GEO P2b evidence manifest for KCS#267: re-fetch operator pages, verify the 7 gate facts, write JSON
+      await geoVerify(args);
+      break;
+    }
+
     case 'climate-stats': {
       // UV + air/water temperature per offer spot -> offer_climate_stats, and per
       // country kite spot -> country_climate_stats (weekly GitHub Action).
@@ -602,6 +609,7 @@ async function main(): Promise<void> {
       console.log('  extract [n]               Extract providers from raw URLs (batch n, default 30)');
       console.log('  dedupe                    Identify and mark cross-domain duplicate providers');
       console.log('  status                    Show pipeline stats');
+      console.log('  geo-verify [--offer ids]  Verify pilot camps against operator pages, write publishing/manifest');
       console.log('  reextract [n]             Re-extract providers missing location data (batch n, default 20)');
       console.log('  blocklist-candidates [n]  Show top n most-rejected domains (default 50)');
       console.log('  map [file]                Generate provider map HTML (default: map.html)');

@@ -1,0 +1,17 @@
+{
+  "status": "proposal - not approved",
+  "note": "PublishingPolicySchema v1 shape. On approval, approvalRef becomes the pinned URL of the approved revision of this file (or Martin's approval record) and approvedAt the approval time; every manifest then carries that same URL as policyRef.",
+  "version": 1,
+  "approvalRef": null,
+  "owner": "KiteScout data (Aaron Lindner) with Kite Cruise Scout app (Martin Marzidovsek)",
+  "approvedAt": null,
+  "rules": [
+    { "field": "title", "maxAgeHours": 4320, "why": "A product name changes rarely; 180 days, and the daily monitor flags renames earlier." },
+    { "field": "type", "maxAgeHours": 4320, "why": "A camp does not turn into a tour or a hotel within a season; 180 days." },
+    { "field": "operator", "maxAgeHours": 4320, "why": "Business name and official site are stable; 180 days, ownership changes are caught by the monitor." },
+    { "field": "location", "maxAgeHours": 4320, "why": "A camp's spot and country are fixed for the season; 180 days." },
+    { "field": "description", "maxAgeHours": 2160, "why": "Our summary carries services, accommodation and season facts that change between seasons; 90 days." },
+    { "field": "price", "maxAgeHours": 720, "why": "Operators reprice per season and run promotions; 30 days keeps a shown price inside one pricing cycle." },
+    { "field": "departures", "maxAgeHours": 168, "why": "Dates fill up and get added weekly; the monitor re-reads them daily, 7 days leaves room for a few failed runs." }
+  ]
+}

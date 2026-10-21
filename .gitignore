@@ -21,3 +21,6 @@ src/_*
 .claude/settings.local.json
 .claude/scheduled_tasks.lock
 .claude/worktrees/
+
+# geo-verify --preview output (never committed; real manifests live in publishing/manifest/v1)
+publishing/manifest/preview/
