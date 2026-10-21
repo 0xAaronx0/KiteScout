@@ -518,6 +518,14 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'climate-uv-cloudy': {
+      // One-off: CAMS all-sky UV for the cells of country/region points (resumable).
+      const { runUvCloudy } = await import('./pipeline/uv-cloudy-run.js');
+      const budget = flagStr('--budget-min');
+      await runUvCloudy({ budgetMin: budget ? Number(budget) : undefined });
+      break;
+    }
+
     case 'climate-wind-check': {
       // READ-ONLY: ERA5 kiteable-day shares per country/region point for the Bstoked comparison.
       const { runWindCheck } = await import('./pipeline/wind-check.js');
@@ -539,6 +547,7 @@ async function main(): Promise<void> {
       console.log(`${r.countries} countries -> ${dry ? `${r.countries - r.countriesDeferred.length} rows computed (dry run)` : `${r.countryRowsWritten} rows written`}`);
       for (const c of r.countrySample) console.log(`  ${c.country} (${c.point_name}): air min ${c.air_temp_min_months.join(' ')} | air max ${c.air_temp_max_months.join(' ')} | water ${c.water_temp_months?.join(' ') ?? 'none'} | uv ${c.uv_months.join(' ')}`);
       if (r.countriesDeferred.length) console.log(`Countries deferred to next run (${r.countriesDeferred.length}):\n  ${r.countriesDeferred.join('\n  ')}`);
+      if (r.windFetched) console.log(`${r.windFetched} cells got ERA5 wind`);
       if (r.countriesAdded.length) console.log(`Offer countries given a point (${r.countriesAdded.length}):\n  ${r.countriesAdded.join('\n  ')}`);
       console.log(`${r.regions} regions -> ${dry ? `${r.regions - r.regionsDeferred.length} rows computed (dry run)` : `${r.regionRowsWritten} rows written`}`);
       if (r.regionsDeferred.length) console.log(`Regions deferred to next run: ${r.regionsDeferred.join(', ')}`);

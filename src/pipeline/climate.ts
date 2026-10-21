@@ -39,6 +39,27 @@ export interface ClimateCell {
   air_temp_max_months: number[];
   air_temp_min_months: number[];
   water_temp_months: number[] | null;
+  /** ERA5 share of kiteable days per month, % (Copernicus cells only) */
+  wind_kiteable_months?: (number | null)[] | null;
+  /** CAMS all-sky UV, whole numbers (one-off fill for country/region cells) */
+  uv_cloudy_months?: number[] | null;
+  uv_cloudy_source?: string | null;
+}
+
+/**
+ * Wind value per month for the map (Aaron 2026-10-21): Bstoked windProbability where it is a
+ * real number (the stored 10 is the "< 40 %" placeholder); otherwise the ERA5 share of
+ * kiteable days, but only in months whose water temperature is >= 10 C; else null (no data).
+ * Points without water temperature get no ERA5 fill.
+ */
+export function combineWind(bstoked: number[] | null, era5: (number | null)[] | null | undefined, water: number[] | null) {
+  const months: (number | null)[] = [], sources: ('bstoked' | 'era5' | null)[] = [];
+  for (let i = 0; i < 12; i++) {
+    if (bstoked && bstoked[i] != null && bstoked[i] !== 10) { months.push(bstoked[i]); sources.push('bstoked'); }
+    else if (era5 && era5[i] != null && water && water[i] != null && water[i] >= 10) { months.push(era5[i]); sources.push('era5'); }
+    else { months.push(null); sources.push(null); }
+  }
+  return { wind_months: months, wind_source_months: sources };
 }
 
 /** Tolerance for re-using a cached cell (degrees, per axis) — matches the migration. */

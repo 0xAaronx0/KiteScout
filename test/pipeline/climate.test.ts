@@ -88,3 +88,13 @@ test('medianOfferSpot: the offer spot nearest the median of all spots', async ()
   ]);
   assert.equal(s.name, 'Icarai');
 });
+
+test('combineWind: Bstoked where real, ERA5 only in months with water >= 10 C, else null', async () => {
+  const { combineWind } = await import('../../src/pipeline/climate.js');
+  const water = [4, 3, 4, 7, 11, 16, 18, 19, 17, 13, 10, 5];
+  const r = combineWind([10, 10, 10, 55, 55, 55, 50, 50, 70, 70, 10, 10], [80, 74, 66, 57, 60, 54, 62, 54, 65, 81, 76, 79], water);
+  assert.deepEqual(r.wind_months, [null, null, null, 55, 55, 55, 50, 50, 70, 70, 76, null]);
+  assert.deepEqual(r.wind_source_months.slice(9, 12), ['bstoked', 'era5', null]);
+  assert.deepEqual(combineWind(null, Array(12).fill(40), null).wind_months, Array(12).fill(null)); // lake: no fill
+  assert.deepEqual(combineWind(null, Array(12).fill(40), Array(12).fill(15)).wind_source_months, Array(12).fill('era5'));
+});
