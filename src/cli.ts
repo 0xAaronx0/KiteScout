@@ -527,6 +527,15 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'bookable-months': {
+      // Daily: known bookable months per offer (season + open future slots) -> offer_bookable_months (KCS map filter).
+      const { runBookableMonths } = await import('./pipeline/bookable-months.js');
+      const dry = args.includes('--dry-run');
+      const r = await runBookableMonths({ dryRun: dry });
+      console.log(`${r.offers} offers -> ${r.known} with known months (${Object.entries(r.byBasis).map(([k, v]) => `${k} ${v}`).join(', ')})${dry ? ' (dry run, nothing written)' : `, ${r.written} upserted, ${r.deleted} stale rows deleted`}`);
+      break;
+    }
+
     case 'climate-wind-check': {
       // READ-ONLY: ERA5 kiteable-day shares per country/region point for the Bstoked comparison.
       const { runWindCheck } = await import('./pipeline/wind-check.js');
