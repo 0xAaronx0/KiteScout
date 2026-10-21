@@ -118,3 +118,24 @@ test('normalizeToken tolerates .cdsapirc lines, UID prefixes and whitespace', as
   assert.equal(normalizeToken(` "${u}"\n`).token, u);
   assert.match(normalizeToken('abc').shape, /NOT uuid-like/);
 });
+
+test('retrieveRetrying retries HTTP 5xx, not 4xx', async () => {
+  const { retrieveRetrying } = await import('../../src/pipeline/copernicus.js');
+  const real = globalThis.fetch;
+  let posts = 0;
+  const run = async (status: number) => {
+    posts = 0;
+    globalThis.fetch = (async (url: string) => {
+      if (url.endsWith('/execution')) { posts++; if (posts < 2) return new Response('{}', { status }); return new Response(JSON.stringify({ jobID: 'j', status: 'successful' })); }
+      if (url.endsWith('/results')) return new Response(JSON.stringify({ asset: { value: { href: 'https://dl.example/x' } } }));
+      return new Response('ok');
+    }) as typeof fetch;
+    return retrieveRetrying('cds', 'ds', {}, { token: 't', sleep: async () => {} });
+  };
+  try {
+    assert.equal((await run(502)).toString(), 'ok');
+    assert.equal(posts, 2);
+    await assert.rejects(run(401), /HTTP 401/);
+    assert.equal(posts, 1);
+  } finally { globalThis.fetch = real; }
+});

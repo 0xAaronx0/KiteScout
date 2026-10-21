@@ -69,6 +69,20 @@ export async function retrieve(
   return Buffer.from(await file.arrayBuffer());
 }
 
+/** retrieve() with up to 3 attempts on transient server errors (HTTP 5xx, network). */
+export async function retrieveRetrying(...args: Parameters<typeof retrieve>): Promise<Buffer> {
+  const sleep = args[3].sleep ?? ((ms: number) => new Promise(r => setTimeout(r, ms)));
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return await retrieve(...args);
+    } catch (e) {
+      const transient = !(e instanceof CopernicusError) || /HTTP 5\d\d/.test((e as Error).message);
+      if (!transient || attempt >= 3) throw e;
+      await sleep(attempt * 15_000);
+    }
+  }
+}
+
 /** Files of a zip archive (stored or deflated entries), or the buffer itself if it is no zip. */
 export function unzip(buf: Buffer, name = 'data'): { name: string; data: Buffer }[] {
   if (buf.readUInt32LE(0) !== 0x04034b50) return [{ name, data: buf }];
@@ -160,7 +174,7 @@ function logOnce(log: Log | undefined, key: string, msg: () => string) {
 }
 
 async function era5Series(lat: number, lng: number, variables: string[], token: string, log?: Log): Promise<PointSeries> {
-  const buf = await retrieve('cds', ERA5_DATASET, {
+  const buf = await retrieveRetrying('cds', ERA5_DATASET, {
     variable: variables,
     location: { latitude: Number(lat.toFixed(4)), longitude: Number(lng.toFixed(4)) },
     date: [`${ERA5_YEARS[0]}/${ERA5_YEARS[1]}`],
