@@ -1,3 +1,4 @@
+import { EVERGREEN_PILOT_SUMMARIES } from '../evergreen-pilot-summaries.js';
 // ---------------------------------------------------------------------------
 // Dakhla Evasion "Free Ride & Bien être" kite camp, Dakhla lagoon (Morocco) - the resort's all-inclusive kite week:
 // 7 nights in a private bungalow facing the lagoon, full board, airport transfers, pool / gym / yoga room, one 75-min
@@ -132,12 +133,7 @@ export function parseDevContent(html: string, lodging: string | null = null): Of
   const by = (id: string) => p.offers.find(o => o.id === id);
   const fr = by('free-ride');
   const re = by('ride-evolution');
-  const prices = p.offers.map(o => `${o.heading.replace(/^Offre\s+/i, '')} EUR ${o.price?.toLocaleString('en-US') ?? '?'}`).join(', ');
-  const summary = [
-    `Dakhla Evasion's all-inclusive kite weeks on the Dakhla lagoon: 7 nights in a private bungalow facing the lagoon, full board, airport transfers, pool, gym and yoga room, one 75-minute massage and one 60-minute hammam.`,
-    `Free Ride is for beginners (${fr?.hours ?? 16} hours of semi-private kite lessons), Ride Evolution for intermediates (${re?.hours ?? 12} hours of semi-private lessons plus 3 days of unlimited gear rental), and Freedom Ride for independent riders with their own gear (storage, boat assistance, downwinders to the Dune Blanche and the Speed Spot with 4x4 return); each is also sold for wing foil.`,
-    `Prices per person ("from"): ${prices}${p.validFrom && p.validTo ? `, for stays between ${p.validFrom} and ${p.validTo}` : ''}; booking on request.`,
-  ].join(' ');
+  const summary = EVERGREEN_PILOT_SUMMARIES['dakhla-evasion-free-ride-camp'];
   return {
     kind: 'camp',
     title: 'Dakhla Evasion Free Ride & Wellness Kite Camp',

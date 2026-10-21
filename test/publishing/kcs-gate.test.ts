@@ -88,3 +88,22 @@ test('samples: each sanitized sample gets its expected gate outcome', { skip: !h
     assert.deepEqual(out[i].diagnostics, s.expect.diagnostics, s.name);
   }
 });
+
+test('evergreen pilot summaries: actual KCS gate drops stale optional facts and holds unverified scarcity', { skip: !haveKcs }, async () => {
+  const { evergreenKcsCases } = await import('./evergreen-kcs-cases.js');
+  const cases = evergreenKcsCases();
+  const out = runGate(cases);
+  assert.equal(out.length,16);
+  for (const [i,c] of cases.entries()) {
+    const actual = out[i];
+    assert.equal(actual.status,c.expected,`${c.name}: ${JSON.stringify(actual.diagnostics)}`);
+    if (actual.status === 'editorial_preview') {
+      const facts = actual.facts!;
+      assert.equal(facts.description,c.row.summary,c.name);
+      if (c.name.endsWith('day8') || c.name.endsWith('day31') || c.name.endsWith('missing-optional'))
+        assert.equal(facts.departures,null,c.name);
+      if (c.name.endsWith('day31') || c.name.endsWith('missing-optional')) assert.equal(facts.price,null,c.name);
+      assert.doesNotMatch(String(facts.description), /\b(?:EUR|USD|CHF|\d+|sold out|fully booked)\b|[€$]|\brooms? left\b/i);
+    } else assert.ok(actual.diagnostics.some(d=>d.field==='description'&&d.code==='fact_changed'),c.name);
+  }
+});

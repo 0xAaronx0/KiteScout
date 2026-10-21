@@ -1,3 +1,4 @@
+import { EVERGREEN_PILOT_SUMMARIES } from '../../src/offers/evergreen-pilot-summaries.js';
 // Swiss Kitesurf Kite Camp Egypt (Soma Bay): replays the camp page + request form recorded 2026-10-19 (trimmed).
 // The status rows carry no year; the request form gives it.
 import { test } from 'node:test';
@@ -50,9 +51,8 @@ test('sk egypt: content', async () => {
   const c = parseSkEgyptContent(pages, '2026-10-19');
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot, c.mealPlan], ['camp', 8, 'Egypt', 'Red Sea', 'Soma Bay', 'full_board']);
-  assert.match(c.summary, /lessons package CHF 1750, board & lodging \+ rental gear CHF 1350, board & lodging only CHF 950; single room \+ CHF 300/);
-  assert.match(c.summary, /Camp weeks 2026: 24 Oct - 31 Oct, 31 Oct - 7 Nov/);
-  assert.match(parseSkEgyptContent(pages, '2026-11-10').summary, /next dates are not published yet \(2026: 3 Oct/);
+  assert.equal(c.summary, EVERGREEN_PILOT_SUMMARIES['swiss-kitesurf-camp-soma-bay']);
+  assert.equal(parseSkEgyptContent(pages, '2026-11-10').summary, c.summary);
   assert.ok(c.imageUrls.length >= 15);
   assert.equal((await swissKitesurfCampSomaBay.fetchContent({ note: () => {}, incomplete: () => {} })).title, c.title);
 });

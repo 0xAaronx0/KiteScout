@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "status": "proposal_only",
+  "issue": "https://github.com/MartinMarzi/KiteCruiseScout/issues/354",
+  "sourceCommit": "6b172a633f748fadcb7847ad46c19f264a09f329",
+  "claimsRegenerated": false,
+  "inventoryChanged": false,
+  "entries": [
+    {
+      "source": "package_offers",
+      "offerId": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
+      "field": "summary",
+      "expectedRawSummarySha256": "43ce201d2a59e3ad3cff48a814e8573df7baebd0d9cee14db138925b15c2529d",
+      "proposedSummary": "Coached kite camp in Tatajuba, Brazil, hosted by Ruben Lenten and Stig Hoefnagel. The programme combines on-water coaching and video feedback with accommodation, meals, spot transport and activities. It is aimed at confident upwind riders seeking progression. Confirm the current package and inclusions with the operator.",
+      "referenceUrls": [
+        "https://www.len10.com/experience"
+      ],
+      "newSourceVerificationRequired": true
+    },
+    {
+      "source": "package_offers",
+      "offerId": "1710050d-0e4a-4222-ae35-84059772d354",
+      "field": "summary",
+      "expectedRawSummarySha256": "d569109885a0d92768e4b1e42bb415cf268af5a023f0d029f4ef6df0d5accc7d",
+      "proposedSummary": "Kite camp in Soma Bay, Egypt, organised by Swiss Kitesurf. Hotel-based options combine accommodation with instruction or rental equipment according to the chosen package. Confirm the current accommodation arrangement, lesson language, package inclusions and booking terms with the operator.",
+      "referenceUrls": [
+        "https://kitesailing.ch/en/school/camps/kite-camp-egypt"
+      ],
+      "newSourceVerificationRequired": true
+    },
+    {
+      "source": "package_offers",
+      "offerId": "d2e723d2-f3d3-4234-a766-27122931188d",
+      "field": "summary",
+      "expectedRawSummarySha256": "a13283adc66961a14a3a3e0de4da06cf75dea7530d9964896bcbb80241918cbe",
+      "proposedSummary": "Kite and wingfoil coaching camp in La Ventana, Baja California Sur, Mexico. The programme combines private coaching with shared beachfront accommodation, equipment and yoga or SUP activities. Coaching and alternative activities depend on conditions. Confirm the current package, room arrangement and inclusions with the operator.",
+      "referenceUrls": [
+        "https://kitemex.com/kitesurf-and-wingfoil-camps/"
+      ],
+      "newSourceVerificationRequired": true
+    },
+    {
+      "source": "package_offers",
+      "offerId": "d56117f0-242c-4e61-b0d2-e640aa5dd925",
+      "field": "summary",
+      "expectedRawSummarySha256": "6838bd4093692aa6274a8853909002491f9fb16cbf1f2de6f63df36c12e98a13",
+      "proposedSummary": "Kitesurf and wingfoil packages on the Dakhla lagoon from Dakhla Evasion. Options combine accommodation and meals with instruction or services for independent riders. Wellness additions and rental arrangements vary by package. Choose the variant for your riding level and confirm its current inclusions with the operator.",
+      "referenceUrls": [
+        "https://www.dakhla-evasion.com/en/",
+        "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/"
+      ],
+      "newSourceVerificationRequired": true
+    }
+  ]
+}

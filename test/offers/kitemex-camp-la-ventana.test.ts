@@ -1,3 +1,4 @@
+import { EVERGREEN_PILOT_SUMMARIES } from '../../src/offers/evergreen-pilot-summaries.js';
 // KiteMex Kite & Wingfoil Camp (La Ventana Beach Resort, BCS): replays the camp page recorded 2026-10-14.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -42,7 +43,7 @@ test('kitemex camp: content', async () => {
   assert.equal(c.durationDays, 7);
   assert.equal(c.region, 'La Ventana, Baja California Sur');
   assert.deepEqual(c.spotCoords, { lat: 24.0467991, lng: -109.9883454 });
-  assert.match(c.summary, /USD 2,799 per person; dates: December 6-12, 2026/);
+  assert.equal(c.summary, EVERGREEN_PILOT_SUMMARIES['kitemex-camp-la-ventana']);
   assert.ok(!/[–—]/.test(c.summary));
   assert.equal(c.mealPlan, 'breakfast and lunch');
   assert.ok(c.imageUrls.length >= 8 && c.imageUrls.every(u => !/removebg|IMAGOTIPO/i.test(u)));

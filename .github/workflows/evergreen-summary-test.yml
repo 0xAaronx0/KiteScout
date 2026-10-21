@@ -1,0 +1,24 @@
+name: Evergreen summary source tests
+on:
+  pull_request:
+    paths: ['src/offers/**', 'src/publishing/**', 'test/offers/**', 'test/publishing/**', 'test/helpers/offline-only.mjs', 'publishing/corrections/**', 'package.json', 'pnpm-lock.yaml', '.github/workflows/evergreen-summary-test.yml']
+  push:
+    branches: ['codex/issue-354-*']
+permissions:
+  contents: read
+jobs:
+  offline-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: pnpm install --frozen-lockfile --ignore-scripts --filter kitescout
+      - run: pnpm exec tsc --noEmit
+      - name: Recorded adapter and synthetic evidence regressions (network forbidden)
+        run: node --import ./test/helpers/offline-only.mjs --import tsx --test test/offers/{len10-stig-ruben-brazil-tatajuba,swiss-kitesurf-camp-soma-bay,kitemex-camp-la-ventana,dakhla-evasion-free-ride-camp}.test.ts test/publishing/evergreen-summaries.test.ts
