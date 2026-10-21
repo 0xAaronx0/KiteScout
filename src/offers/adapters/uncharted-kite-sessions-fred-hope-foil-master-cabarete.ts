@@ -209,6 +209,7 @@ export async function uksVillas(ctx: FetchContext): Promise<string | null> {
 export const unchartedKiteSessionsFredHopeFoilMasterCabarete: OfferAdapter = {
   key: 'uncharted-kite-sessions-fred-hope-foil-master-cabarete',
   name: 'Uncharted Kite Sessions - Fred Hope Foil Master, Cabarete',
+  disciplines: ['kitesurf', 'wingfoil'],
   kind: 'camp',
   operator: UKS_OPERATOR,
   url: UKS_FRED_URL,

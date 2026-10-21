@@ -212,6 +212,7 @@ export async function fetchSkcSlots(today: string, ctx?: Pick<FetchContext, 'not
 export const sakalavaLodgeAllInclusiveKiteWingHoliday: OfferAdapter = {
   key: 'sakalava-lodge-all-inclusive-kite-wing-holiday',
   name: 'Sakalava Lodge All-inclusive Kitesurf and Wingfoil Holiday',
+  disciplines: ['kitesurf', 'wingfoil'],
   kind: 'camp',
   operator: sakalavaLodgeDiegoSuarez.operator,
   url: SKC_OFFERS_URL,

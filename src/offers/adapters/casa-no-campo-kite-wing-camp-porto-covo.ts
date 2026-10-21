@@ -160,6 +160,7 @@ export function parseCncContent(html: string): OfferContent {
 export const casaNoCampoKiteWingCampPortoCovo: OfferAdapter = {
   key: 'casa-no-campo-kite-wing-camp-porto-covo',
   name: 'Casa no Campo CNC Kite&Wing Camp, Porto Covo',
+  disciplines: ['kitesurf', 'wingfoil'],
   kind: 'camp',
   operator: {
     name: 'Casa no Campo (CNC Kite&Wing Center)',
