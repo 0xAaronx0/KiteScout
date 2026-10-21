@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+  "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:sioc="http://rdfs.org/sioc/ns#"
+  xmlns:sioct="http://rdfs.org/sioc/types#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Mega Downwinder | Freerider&#039;s Kite Tours</title>
+  <meta name="robots" content="index,follow"/>
+  <meta name="googlebot" content="index,follow"/>
+  <meta property="og:title" content="Freeriders Kite Tours is Sri Lanka">
+  <meta property="og:description" content="We organize amazing downwind freeride kite tours in undiscovered places of Sri Lanka.">
+  <meta property="og:image" content="http://freeriderskitetours.com/img/fkt-social.jpg">
+  <meta property="og:url" content="http://freeriderskitetours.com/">
+  <meta name="description" content="Freeriders Kite Tours is Sri Lanka premier downwind company."/>
+  <meta name="keywords" content="kitesurfing sri lanka downwind kite kitesurf srilanka"/>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-5 node-type-tour" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <ul id="slide-out" class="sidenav">
+    <img src="/img/close.png" class="close-menu" onClick="jQuery('.sidenav').sidenav('close');">
+    <img src="/img/logo.png" class="side-logo">
+    <div class="side-menu">
+        <li><a href="/" class="sidenav-close"><img src="/img/ics/home.png" class="ics">Home</a></li>
+        <li><a href="/#tours" class="sidenav-close"><img src="/img/ics/tours.png" class="ics">Our tours</a></li>
+        <div class="view view-tour-menu view-id-tour_menu view-display-id-default view-dom-id-80fb21f46f62d4bd7cbfbde8e9f7c3ac">
+      <div class="view-content">
+        <div class="views-row views-row-1 views-row-odd views-row-first">
+          <a href="/node/7"><img src="/img/ics/tours.png" class="ics">Local Downwinders</a>    </div>
+  <div class="views-row views-row-2 views-row-even">
+          <a href="/node/6"><img src="/img/ics/tours.png" class="ics">Extreme Freeride</a>    </div>
+  <div class="views-row views-row-3 views-row-odd views-row-last">
+          <a href="/node/5" class="active"><img src="/img/ics/tours.png" class="ics">Mega Downwinder</a>    </div>
+    </div>
+</div>        <!--    <li><a href="#team">Our team</a></li>-->
+        <li><a href="#contacts" class="sidenav-close"><img src="/img/ics/contact.png" class="ics">Contact info</a></li>
+        <li><a href="#booking" class="modal-trigger sidenav-close"><img src="/img/ics/booking.png" class="ics">Book now</a></li>
+    </div>
+    <br />
+    <p class="fmail"><img src="/img/phone.png" class="fcont"> +94 0777277554 (whatsapp)</p>
+    <p class="fmail"><img src="/img/mail.png" class="fcont"> keira@adventureoncommunity.lk</p>
+</ul>
+<a href="#" data-target="slide-out" class="sidenav-trigger menu-btn"><img src="/img/menu.png"></a>
+    <div id="messages" onClick="jQuery('#messages').css('display', 'none');">
+        <div class="messages error">
+<h2 class="element-invisible">Error message</h2>
+ <ul>
+  <li><em class="placeholder">Deprecated function</em>: implode(): Passing glue string after array is deprecated. Swap the parameters in <em class="placeholder">drupal_get_feeds()</em> (line <em class="placeholder">394</em> of <em class="placeholder">/www/htdocs/w013040a/freeriderskitetours.com/includes/common.inc</em>).</li>
+  <li><em class="placeholder">Deprecated function</em>: The each() function is deprecated. This message will be suppressed on further calls in <em class="placeholder">_menu_load_objects()</em> (line <em class="placeholder">579</em> of <em class="placeholder">/www/htdocs/w013040a/freeriderskitetours.com/includes/menu.inc</em>).</li>
+ </ul>
+</div>
+    </div>
+<div class="tour-page">
+    <div class="parallax-container">
+        <img src="/img/logo.png" class="page-logo">
+        <h1>from Kalpitiya to Mannar</h1>
+        <div class="parallax"><img src="https://www.freeriderskitetours.com/sites/default/files/tours/mainslider-9.jpg"></div>
+    </div>
+    <div class="row tour-rools">
+        <div class="col s12 m4 tour-skill">
+            <h3><img src="/img/skill.png"><br />
+            Skill level</h3>
+            <ul><li>Capable of Strong upwind tack</li>
+<li>Fast board recovery</li>
+<li>Moderate fitness level</li>
+<li>Capable of small jump</li>
+<li>Good emergency pack down</li>
+<li>Emergency pack down for boat rescue</li>
+<li>Positive mental attitude</li>
+<li>Prior downwind and/or ocean experience</li>
+</ul>        </div>
+        <div class="col s12 m4 tour-provide">
+            <h3><img src="/img/weprovide.png"><br />
+            We provide</h3>
+            <ul><li>Experienced IKO certified Guides with first aid and rescue training</li>
+<li>All Meals, snacks and refreshments</li>
+<li>General Camping/sleeping material</li>
+<li>Transportation to launch point on first day</li>
+<li>Extensive briefing pre trip and on the water briefings</li>
+<li>Return transport to Kalpitiya</li>
+</ul>        </div>
+        <div class="col s12 m4 tour-need">
+            <h3><img src="/img/needs.png"><br />
+            You will need</h3>
+            <ul><li>Kite Material in Good Condition! (Ask us about rental)</li>
+<li>Personal material for on the water and camping</li>
+<li>Rain Jacket/Windbreaker or warm hoodie</li>
+<li>Sunglasses and good sun cream</li>
+<li>Personal medical and sanitary items (in remote areas good pharmacies are few)</li>
+</ul>        </div>
+    </div>
+    <div class="tour-info">
+        <h3>Mega Downwinder from Kalpitiya to Mannar</h3>
+        <div class="tour-description">
+            <p>Join us for one of the most amazing kite adventures in the world and downwind the wild and beautiful North West coast of Sri Lanka. This is a multi day trip like no other and the goal is to kite from Kalpitiya to Mannar an approximate 135km with consistent trade winds pumping 20-25 knots +. This trip crosses approximately 45km of Wilpattu National Park coast line leaving you with breathtaking scenery that few people have ever seen. Along the national park crossing you will be greeted by countless eagles including Sri Lankas largest eagle, the Sea Eagle, and if your lucky you might spot and elephant.</p>
+<p><a class="colorbox-load" href="/img/tourmap.jpg"><img class="tourmap" src="/img/tourmap.jpg" style="width: 450px; height: 362px; float: left;" /></a>After the park the terrain is always changing, from large cliffs, to arid landscapes, with historical monuments and remote fishing villages along the way. On the water you have a non stop playground constantly challenging you. Water conditions vary from mirror flat water to playful shore break to chop. This is a dynamic trip-the ultimate freeride, you get long near flat water/ shore break runs along the national park and close to Mannar. In places like “the cliffs” you get some choppy water but also the amazing back drop making this a challenging and memorable moment.  Along the way are several remote river mouths creating small lagoons with perfect flat water and not a person in sight, paradise!</p>
+<p>The team will start in the Dutch Bay/Kalpitiya area near the Islands and mangroves and head North towards Mannar, trip duration is 2 days. All trips will be led by guides who are very experienced in navigating the North West. All guides are IKO certified and trained for emergency medical rescue. The downwind team is supported full time by land support crew who are always one step ahead of us and part time by experienced boat support crew. Along the way we make many stops to rest, check on gear and so the team can have some refreshments.</p>
+<p><a class="colorbox-load" href="/img/dwnwnd1.jpg"><img class="tourmap" src="/img/dwnwnd1.jpg" style="width: 450px; height: 300px; float: right;" /></a></p>
+<p>After the first day we make camp in a jungle location next to the beach and celebrate. During the first day we cover a majority of the downwind distance leaving an easy run to Mannar on the second day. The team then has the option to stay the night in the Mannar area or head back to Kalpitiya.</p>
+<p>Day 1: Approximately 85km</p>
+<p><strong>Day 2: Approximately 45km</strong></p>
+<p>During the trip we stop many times for a rest and to enjoy amazing kite spots. We also provide tons of food and refreshments on the trip to give you full power!</p>
+<p>We run trips with min 4 and max 10 kiters depending on rider experience. Each season will have preset tour dates but trips can be organised at any point in the season on request.</p>
+<p><strong>Main season for this downwinder: June to September</strong></p>
+        </div>
+    </div>
+    <div class="tour-price">
+        <h3>Mega Downwinder from Kalpitiya to Mannar</h3>
+        Our standard rate for the full trip is 250 euros<br />
+        <a class="btn2 modal-trigger" href="#booking">Book now</a>
+    </div>
+    <div class="tour-photos">
+        <div class="slick slick--optionset--default" id="slick-1" dir="ltr"><div id="slick-1-slider" class="slick__slider" data-slick="{&quot;mobileFirst&quot;:true,&quot;autoplay&quot;:true,&quot;pauseOnHover&quot;:false,&quot;lazyLoad&quot;:&quot;progressive&quot;,&quot;slidesToShow&quot;:3,&quot;rtl&quot;:false}"><div class="slick__slide slide slide--0"><div class="slide__content"><img src="https://www.freeriderskitetours.com/sites/default/files/styles/900x600/public/tours/mainslider-1.jpg?itok=vaCu4s7w" /></div></div><div class="slick__slide slide slide--1"><div class="slide__content"><img src="https://www.freeriderskitetours.com/sites/default/files/styles/900x600/public/tours/mainslider-2.jpg?itok=1ak1t9P5" /></div></div><div class="slick__slide slide slide--2"><div class="slide__content"><img src="https://www.freeriderskitetours.com/sites/default/files/styles/900x600/public/tours/mainslider-3.jpg?itok=xH-VCsZN" /></div></div><div class="slick__slide slide slide--3"><div class="slide__content"><img src="https://www.freeriderskitetours.com/sites/default/files/styles/900x600/public/tours/mainslider-4.jpg?itok=BMPEV2Zo" /></div></div><div class="slick__slide slide slide--4"><div class="slide__content"><img src="https://www.freeriderskitetours.com/sites/default/files/styles/900x600/public/tours/mainslider-5.jpg?itok=b7jKJpaP" /></div></div><div class="slick__slide slide slide--5"><div class="slide__content"><img src="https://www.freeriderskitetours.com/sites/default/files/styles/900x600/public/tours/mainslider-6.jpg?itok=HrlA9wAB" /></div></div></div><nav class="slick__arrow" role="navigation"><div class="slick-prev"></div><div class="slick-next"></div></nav></div>    </div>
+</div>
+<div id="contacts" class="contacts scrollspy">
+    <div class="container row">
+        <div class="col s12 m4">
+            <h3>Main contact</h3>
+            <p class="keira"><img src="/img/sri.png" class="sri-flag"><img src="/img/eng.png" class="sri-flag">Keira Perera</p>
+            <p class="keira-func">Info, Bookings, Travel Assistance</p>
+            <p class="fmail"><img src="/img/phone.png" class="fcont"> +94 0777277554 (whatsapp)</p>
+            <p class="fmail"><img src="/img/mail.png" class="fcont"> keira@adventureoncommunity.lk</p>
+            <a href="#letter" class="btn2 modal-trigger">Contact now</a>
+        </div>
+        <div class="col s12 m4 additional-contacts">
+            <h3>Additional contacts</h3>
+            <p class="name"><img src="/img/france.png" class="flag">Axel P</p>
+            <p>+00 REDACTED (whatsapp)<br />
+                redacted@example.invalid</p>
+            <p class="name"><img src="/img/germany.png" class="flag">Michael L</p>
+            <p>+49 15209733731 (whatsapp)<br />
+                michael@freeriderskitetours.com</p>
+            <p class="name"><img src="/img/spain.png" class="flag">Anais G</p>
+            <p>+94 077 993 4453 (whatsapp)<br />
+                anais@adventureoncommunity.lk</p>
+        </div>
+        <div class="col s12 m4">
+            <h3>Home base</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7908.034049056676!2d79.70614887817767!3d8.142068277153673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afd6d1a5a34221f%3A0x717da97c2279192a!2sKite+House+Cafe+and+Restaurant!5e0!3m2!1sen!2slk!4v1559563512911!5m2!1sen!2slk" width="350" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<div class="copyright">
+    Freeridres Kitesurfing Tours in Sri Lanka<br />
+    All rights reserved &copy; 2015 - 2026</div>
+<div id="letter" class="modal">
+    <div class="modal-content">
+        <img src="/img/close.png" class="close-modal" onClick="jQuery('#letter').modal('close');">
+        <h3 class="center-align">Contact us</h3>
+        <form class="webform-client-form webform-client-form-8" action="/node/5" method="post" id="webform-client-form-8" accept-charset="UTF-8"><div><div  class="form-item webform-component webform-component-textfield webform-component--name">
+  <label class="element-invisible" for="edit-submitted-name">Name </label>
+ <input placeholder="Name" type="text" id="edit-submitted-name" name="submitted[name]" value="" size="60" maxlength="128" class="form-text" />
+</div>
+<div  class="form-item webform-component webform-component-email webform-component--e-mail">
+  <label class="element-invisible" for="edit-submitted-e-mail">E-mail <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" class="email form-text form-email required" placeholder="E-mail" type="email" id="edit-submitted-e-mail" name="submitted[e_mail]" size="60" />
+</div>
+<div  class="form-item webform-component webform-component-textarea webform-component--message">
+  <label class="element-invisible" for="edit-submitted-message">Message </label>
+ <div class="form-textarea-wrapper"><textarea placeholder="Message" class="materialize-textarea form-textarea" id="edit-submitted-message" name="submitted[message]" cols="60" rows="5"></textarea></div>
+</div>
+<input type="hidden" name="details[sid]" />
+<input type="hidden" name="details[page_num]" value="1" />
+<input type="hidden" name="details[page_count]" value="1" />
+<input type="hidden" name="details[finished]" value="0" />
+<input type="hidden" name="form_build_id" value="REDACTED" />
+<input type="hidden" name="form_id" value="webform_client_form_8" />
+<div class="captcha"><input type="hidden" name="captcha_sid" value="267913" />
+<input type="hidden" name="captcha_token" value="REDACTED" />
+<input type="hidden" name="captcha_response" value="Google no captcha" />
+<div class="g-recaptcha" data-sitekey="6LfLyKgUAAAAAPdoifYy6Fru_xrUfsZTAHLY9cSp" data-theme="light" data-type="image"></div></div><div class="form-actions"><input class="webform-submit button-primary form-submit" type="submit" name="op" value="Send message" /></div></div></form>    </div>
+</div>
+<div id="booking" class="modal">
+    <div class="modal-content">
+        <img src="/img/close.png" class="close-modal" onClick="jQuery('#booking').modal('close');">
+        <h3 class="center-align">Book now</h3>
+        <form class="webform-client-form webform-client-form-9" action="/node/5" method="post" id="webform-client-form-9" accept-charset="UTF-8"><div><div  class="form-item webform-component webform-component-textfield webform-component--name">
+  <label class="element-invisible" for="edit-submitted-name--2">Name <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" placeholder="Name" type="text" id="edit-submitted-name--2" name="submitted[name]" value="" size="60" maxlength="128" class="form-text required" />
+</div>
+<div  class="form-item webform-component webform-component-email webform-component--e-mail">
+  <label class="element-invisible" for="edit-submitted-e-mail--2">E-mail <span class="form-required" title="This field is required.">*</span></label>
+ <input required="required" class="email form-text form-email required" placeholder="E-mail" type="email" id="edit-submitted-e-mail--2" name="submitted[e_mail]" size="60" />
+</div>
+<div  class="form-item webform-component webform-component-select webform-component--tour-type">
+  <label class="element-invisible" for="edit-submitted-tour-type">Tour type <span class="form-required" title="This field is required.">*</span></label>
+ <select required="required" id="edit-submitted-tour-type" name="submitted[tour_type]" class="form-select required"><option value="1t" selected="selected">Tour type</option><option value="2t">Mega Downwinder</option><option value="3t">Extreme Freeride</option><option value="4t">Local Downwinders</option></select>
+</div>
+<div  class="form-item webform-component webform-component-date webform-component--date">
+  <label>Preferable date </label>
+ <div class="webform-container-inline"><div class="form-item form-type-select form-item-submitted-date-month">
+  <label class="element-invisible" for="edit-submitted-date-month">Month </label>
+ <select class="month form-select" id="edit-submitted-date-month" name="submitted[date][month]"><option value="" selected="selected">Month</option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select>
+</div>
+<div class="form-item form-type-select form-item-submitted-date-day">
+  <label class="element-invisible" for="edit-submitted-date-day">Day </label>
+ <select class="day form-select" id="edit-submitted-date-day" name="submitted[date][day]"><option value="" selected="selected">Day</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select>
+</div>
+<div class="webform-date-field-wrapper element-invisible"><div class="form-item form-type-select form-item-submitted-date-year">
+  <label class="element-invisible" for="edit-submitted-date-year">Year </label>
+ <select class="year form-select" id="edit-submitted-date-year" name="submitted[date][year]"><option value="">Year</option><option value="2025">2025</option><option value="2026" selected="selected">2026</option><option value="2027">2027</option></select>
+</div>
+</div></div>
+</div>
+<div  class="form-item webform-component webform-component-textarea webform-component--comment">
+  <label class="element-invisible" for="edit-submitted-comment">Comment </label>
+ <div class="form-textarea-wrapper"><textarea placeholder="How many people and skill level" class="materialize-textarea form-textarea" id="edit-submitted-comment" name="submitted[comment]" cols="60" rows="5"></textarea></div>
+</div>
+<input type="hidden" name="details[sid]" />
+<input type="hidden" name="details[page_num]" value="1" />
+<input type="hidden" name="details[page_count]" value="1" />
+<input type="hidden" name="details[finished]" value="0" />
+<input type="hidden" name="form_build_id" value="REDACTED" />
+<input type="hidden" name="form_id" value="webform_client_form_9" />
+<div class="captcha"><input type="hidden" name="captcha_sid" value="267914" />
+<input type="hidden" name="captcha_token" value="REDACTED" />
+<input type="hidden" name="captcha_response" value="Google no captcha" />
+<div class="g-recaptcha" data-sitekey="6LfLyKgUAAAAAPdoifYy6Fru_xrUfsZTAHLY9cSp" data-theme="light" data-type="image"></div></div><div class="form-actions"><input class="webform-submit button-primary form-submit" type="submit" name="op" value="Book now" /></div></div></form>    </div>
+</div>
+     </body>
+</html>
