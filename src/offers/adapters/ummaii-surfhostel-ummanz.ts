@@ -91,6 +91,15 @@ export function umUnitName(name: string): string {
   return name;
 }
 
+export const UM_ROOM_MAIN_HOUSE = 'Main house room (1-4 beds)';
+export const UM_ROOM_BUNGALOW = 'Bungalow room (6 or 8 beds)';
+/** Content room an engine unit prices: the per-size main-house and bungalow types share one room each; others are named alike. */
+export function umRoom(unit: string): string | null {
+  if (/^Main house (?:single|\d-bed) room$/.test(unit)) return UM_ROOM_MAIN_HOUSE;
+  if (/^Bungalow \d-bed room$/.test(unit)) return UM_ROOM_BUNGALOW;
+  return null;
+}
+
 /** Visible text lines (scripts, styles dropped), split at block tags. */
 export function umLines(html: string): string[] {
   return html
@@ -183,6 +192,7 @@ export function buildUmSlots(samples: UmSample[], today: string): Slot[] {
         startDate: run.start,
         endDate: run.end,
         unit: umUnitName(name),
+        ...(umRoom(umUnitName(name)) ? { room: umRoom(umUnitName(name)) } : {}),
         price: priced ? t!.rates[occOf(t!)] : null,
         currency: priced ? run.first.sample.currency : null,
         priceUnit: priced ? 'per_night' : null,
@@ -319,7 +329,7 @@ export function parseUmmaiiContent(p: UmPages): OfferContent {
 
   const rooms: ContentRoom[] = [
     {
-      name: 'Main house room (1-4 beds)',
+      name: UM_ROOM_MAIN_HOUSE,
       description: 'Simple heated 1- to 4-bed rooms on the first floor of the main house (renovated 2019), shower and WC on the floor; reception, dining rooms and kitchen downstairs.',
       features: [
         price(/Haupthaus 1 er/i) ? `Price list (no year printed): single use ${pp(price(/Haupthaus 1 er/i))}, double use ${pp(price(/Haupthaus 2 er/i))}, 3 or more ${pp(price(/Haupthaus ab 3/i))} per night incl. breakfast` : null,
@@ -327,7 +337,7 @@ export function parseUmmaiiContent(p: UmPages): OfferContent {
       ].filter((x): x is string => !!x),
     },
     {
-      name: 'Bungalow room (6 or 8 beds)',
+      name: UM_ROOM_BUNGALOW,
       description: `${nBungalows ?? 'Five'} heated bungalows (redesigned 2017), each with one 8-bed and one 6-bed room with bunk beds; shared central washrooms like on a campsite.`,
       features: [
         price(/Bungalow 1 er/i) ? `Price list (no year printed): single use ${pp(price(/Bungalow 1 er/i))}, double use ${pp(price(/Bungalow 2 er/i))}, 3 or more ${pp(price(/Bungalow ab 3/i))} per night incl. breakfast` : null,

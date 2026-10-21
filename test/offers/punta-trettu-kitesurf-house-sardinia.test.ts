@@ -7,6 +7,7 @@ import {
   puntaTrettuKitesurfHouseSardinia, buildPtkSlots, parseMonthRange, parsePtkTables, parsePuntaTrettuContent, seasonBand,
 } from '../../src/offers/adapters/punta-trettu-kitesurf-house-sardinia.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/punta-trettu-kitesurf-house-sardinia');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -68,4 +69,12 @@ test('ptk: content', () => {
   assert.ok(c.rooms[0].features.some(f => /cleaning fee is €100/.test(f)));
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://puntatrettukitesurfhouse.com/wp-content/uploads/') && !/logo|favicon|-\d+x\d+\./i.test(u)));
+});
+
+test('ptk: every villa rate links to the whole-villa room (slot.room), never to the single suite', () => {
+  const c = parsePuntaTrettuContent({ home: read('puntatrettukitesurfhouse.com_.'), prices, rooms: read('puntatrettukitesurfhouse.com_punta-trettu-rooms_.') }, '2026-10-12');
+  const names = c.rooms.map(r => r.name);
+  const slots = buildPtkSlots(parsePtkTables(prices), '2026-10-12');
+  assert.ok(slots.every(s => slotRoom(names, s) === 'Entire villa (exclusive use)'));
+  assert.equal(Math.min(...slots.map(s => s.price!)), 270);
 });

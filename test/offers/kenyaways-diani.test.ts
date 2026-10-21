@@ -8,6 +8,7 @@ import {
   kenyawaysDiani, buildKwSlots, mapPin, parseKenyawaysContent, parseKwRooms, rateLinks,
 } from '../../src/offers/adapters/kenyaways-diani.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/kenyaways-diani');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -38,15 +39,18 @@ test('kenyaways: season bands with real limits, USD per person per night, min ni
     '2026-10-01..2026-10-31', '2026-11-01..2026-11-30', '2026-12-01..2026-12-17',
     '2026-12-18..2027-01-17', '2027-01-18..2027-02-28', '2027-03-01..2027-05-31',
   ]);
-  assert.equal(ok.length, 16 * 5 + 15); // peak: no single rate for the apartment
+  // per band and room: super sea view 4 x 2 rooms, aircon 4 x 3, small sea view 2 x 2, budget 2 x 1, apartment 4
+  // (peak: no single rate for the apartment)
+  assert.equal(ok.length, 30 * 5 + 29);
   const k = (key: string) => ok.find(s => s.key === key)!;
-  assert.equal(k('super-sea-view-2p|2026-12-18').price, 101);
-  assert.equal(k('super-sea-view-2p|2026-12-18').minNights, 7);
-  assert.equal(k('aircon-1p|2027-01-18').price, 135);
-  assert.equal(k('pool-garden-budget-2p|2026-11-01').price, 43);
-  assert.equal(k('pool-apartment-4p|2027-03-01').price, 62);
-  assert.match(k('pool-apartment-4p|2027-03-01').availabilityText!, /usually closed after Easter/);
-  assert.equal(ok.find(s => s.key === 'pool-apartment-1p|2026-12-18'), undefined);
+  assert.equal(k('super-sea-view-2p|2026-12-18|Rebel').price, 101);
+  assert.equal(k('super-sea-view-2p|2026-12-18|Tribal').price, 101);
+  assert.equal(k('super-sea-view-2p|2026-12-18|Rebel').minNights, 7);
+  assert.equal(k('aircon-1p|2027-01-18|Crossbow').price, 135);
+  assert.equal(k('pool-garden-budget-2p|2026-11-01|Cult').price, 43);
+  assert.equal(k('pool-apartment-4p|2027-03-01|Bandit').price, 62);
+  assert.match(k('pool-apartment-4p|2027-03-01|Bandit').availabilityText!, /usually closed after Easter/);
+  assert.equal(ok.find(s => s.key === 'pool-apartment-1p|2026-12-18|Bandit'), undefined);
   assert.ok(ok.every(s => s.currency === 'USD' && s.priceUnit === 'per_night' && s.priceBasis === 'person'
     && s.availability === 'unknown' && (s.minNights === 3 || s.minNights === 7)));
 });
@@ -56,6 +60,8 @@ test('kenyaways: liveness - unlinked sheets and vanished rooms are not released'
   assert.ok(noPeak.every(s => s.startDate !== '2026-12-18'));
   const noCult = buildKwSlots(ALL, NAMES.filter(n => n !== 'Cult'), TODAY);
   assert.ok(noCult.every(s => !s.key.startsWith('pool-garden-budget')));
+  const noPark = buildKwSlots(ALL, NAMES.filter(n => n !== 'Park'), TODAY);
+  assert.ok(noPark.every(s => s.room !== 'Park') && noPark.some(s => s.room === 'Bolt'));
   assert.equal(buildKwSlots(ALL, NAMES, '2027-06-01').length, 0);
 });
 
@@ -83,4 +89,20 @@ test('kenyaways: content', () => {
   assert.equal(c.kiteLessons, true);
   assert.ok(c.imageUrls.length >= 20 && c.imageUrls.every(u => u.startsWith('https://images.squarespace-cdn.com/')));
   assert.match(c.bookingUrl!, /freetobook\.com\/reservations\?w_id=11210/);
+});
+
+test('kenyaways: each category rate is released once per named room of the category', () => {
+  const c = parseKenyawaysContent({ rooms, facilities, terms }, TODAY);
+  const slots = buildKwSlots(ALL, NAMES, TODAY);
+  const names = c.rooms.map(r => r.name);
+  const roomsOf = (unit: string) => [...new Set(slots.filter(s => s.unit === unit).map(s => slotRoom(names, s)))].sort();
+  assert.deepEqual(roomsOf('Super Sea View room (Rebel, Tribal)'), ['Rebel', 'Tribal']);
+  assert.deepEqual(roomsOf('Aircon room (Bolt, Park, Crossbow)'), ['Bolt', 'Crossbow', 'Park']);
+  assert.deepEqual(roomsOf('Small Sea View room (Raven, Fuel)'), ['Fuel', 'Raven']);
+  assert.deepEqual(roomsOf('Pool Garden Budget room (Cult)'), ['Cult']);
+  assert.deepEqual(roomsOf('Pool Apartment (Bandit)'), ['Bandit']);
+  assert.equal(new Set(slots.map(s => s.key)).size, slots.length);
+  // each room carries its category's full rate set
+  const rate = (room: string) => slots.filter(s => s.room === room).map(s => `${s.key.split('|')[0]}|${s.startDate}=${s.price}`);
+  assert.deepEqual(rate('Rebel'), rate('Tribal'));
 });

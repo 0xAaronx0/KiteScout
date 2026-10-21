@@ -102,6 +102,8 @@ export function buildOslSlots(rates: OslRate[], year: number): Slot[] {
         startDate: iso(year, run.from, 1),
         endDate: iso(year, run.to, lastDay(year, run.to)),
         unit,
+        // the price table row is "Dorm", the room headline "Dorm Room"
+        ...(/^dorm$/i.test(unit) ? { room: 'Dorm Room' } : {}),
         price: run.rate.amount,
         currency: run.rate.currency,
         priceUnit: 'per_night',

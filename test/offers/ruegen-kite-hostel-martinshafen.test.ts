@@ -8,6 +8,7 @@ import {
   ruegenKiteHostelMartinshafen, buildRkSlots, parseRkCamp, parseRkCampForm, parseRkPriceList, rkCoords,
 } from '../../src/offers/adapters/ruegen-kite-hostel-martinshafen.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/ruegen-kite-hostel-martinshafen');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -62,4 +63,14 @@ test('ruegen-kite: content', async () => {
   assert.ok(c.optionalServices.includes('Kite camp (main season) incl. 4 nights, 6-bed room: EUR 549'));
   assert.ok(c.imageUrls.length >= 20 && c.imageUrls.every(u => !/-\d+x\d+\.|logo|Rund_Blau/i.test(u)));
   assert.match(c.imageUrls[0], /2020\/07\/wohnzimmerHostel\.jpg$/);
+});
+
+test('ruegen-kite: every slot prices one content room (triple = the double room with its extra bed)', async () => {
+  const names = (await ruegenKiteHostelMartinshafen.fetchContent(ctx)).rooms.map(r => r.name);
+  const slots = await ruegenKiteHostelMartinshafen.fetchSlots(ctx);
+  assert.deepEqual(slots.map(s => [s.unit, slotRoom(names, s)]), [
+    ['Bed in a 6-bed room', '6-bed room (Hostel 1)'],
+    ['Double room', 'Double room (Hostel 2)'],
+    ['Double room with extra bed (3 people)', 'Double room (Hostel 2)'],
+  ]);
 });

@@ -8,10 +8,11 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   campingparkWulfenerHalsFehmarn, buildWhEngineSlots, buildWhSlots, fetchWhLiveSlots, fetchWhSlots, parseWhKitePrices, parseWhSpecials,
-  parseWhSpecialsNotes, parseWhUnits, whOpenGroupsOnly, whSampleCheckIns, whUnitName, WH_PORTAL,
+  parseWhSpecialsNotes, parseWhUnits, whOpenGroupsOnly, whSampleCheckIns, whUnitName, WH_PORTAL, WH_ROOMS,
 } from '../../src/offers/adapters/campingpark-wulfener-hals-fehmarn.js';
 import { parseCsobList, type CsobSample } from '../../src/offers/adapters/hvide-sande-camping.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/campingpark-wulfener-hals-fehmarn');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -131,4 +132,19 @@ test('wulfener-hals: adapter flags', () => {
   assert.equal(campingparkWulfenerHalsFehmarn.slotMethod, 'booking_engine');
   assert.equal(campingparkWulfenerHalsFehmarn.liveAvailability, true);
   assert.equal(campingparkWulfenerHalsFehmarn.instantBooking, true);
+});
+
+test('wulfener-hals: engine units link to their content rooms, ambiguous ones and specials stay unlinked', async () => {
+  const names = (await campingparkWulfenerHalsFehmarn.fetchContent(ctx)).rooms.map(r => r.name);
+  assert.ok(Object.values(WH_ROOMS).every(r => names.includes(r)));
+  const slots = await fetchWhLiveSlots('2026-10-14', ctx);
+  const linked = new Map(slots.map(s => [s.unit!, slotRoom(names, s)]));
+  assert.equal(linked.get('Economy rental trailer'), 'Rental trailer');
+  assert.equal(linked.get('Premium rental trailer'), 'Rental trailer');
+  assert.equal(linked.get('Holiday home Baltikpark'), 'Holiday home Baltic-Park: Seeschwalbe');
+  assert.equal(linked.get('Mobile home Ocala'), 'Mobile home: Ocala Model');
+  assert.deepEqual([...linked].filter(([, r]) => !r).map(([u]) => u).sort(), [
+    'Economy rental trailer special: Indian-Summer', 'Economy rental trailer special: Kennenlernangebot',
+    'Holiday apartment at the golf course', 'Holiday apartment on the campsite', 'Holiday home Dünenpark',
+  ]);
 });

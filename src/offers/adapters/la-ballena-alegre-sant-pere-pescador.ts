@@ -30,6 +30,8 @@
 //   month's sample price for a 7-night stay (priceUnit 'package', packageNights 7, priceBasis 'room'),
 //   availability 'available' when a 7-night stay can start that week, 'limited' when the sample week had <= 2
 //   free units, 'sold_out' for change-over weeks inside the season without a bookable 7-night stay.
+// Rooms: engine products are linked to the site's bungalow rooms via BA_ROOMS (slot.room); "Cortal" and "Empúries"
+//   price both their Garden and Pool bungalows, so those slots are repeated per room (shared availability).
 // Known limits: prices are sampled once per month and group (the engine prices by exact stay); short stays at
 //   season start/end and weekend offers are ignored; tourist tax (0.50 EUR pp/night) is extra.
 // ---------------------------------------------------------------------------
@@ -254,6 +256,31 @@ export function baSamples(products: McProduct[], avail: Map<number, McArrival[]>
 export interface BaPriced { sample: BaSample; budgets: McBudget[] }
 
 /**
+ * Engine product -> content room(s) where the names differ (content rooms are "Bungalow <site title>", see
+ * parseBallenaContent; checked against the 2026-10-12 fixture). "Cortal" and "Empúries" are one engine product each
+ * for the Garden and Pool bungalows of that type: same size, same description and the same printed "from" price
+ * per night on the site, so the product price is each bungalow's price and the slot is repeated per room.
+ */
+export const BA_ROOMS: Record<string, string[]> = {
+  'Bungalow Cortal': ['Bungalow Cortal Garden', 'Bungalow Cortal Pool'],
+  'Bungalow Empúries': ['Bungalow Empúries Garden', 'Bungalow Empúries Pool'],
+  'Bungalow Empúries SUITES': ['Bungalow Empuries Suite'],
+  'Bungalow Fluvià Saturday': ['Bungalow Fluvia Saturday'],
+  'Bungalow Fluvià Special': ['Bungalow Fluvia Especial'],
+  'Bungalow Xaloc (duplex)': ['Bungalow Xaloc'],
+  'Bungalow e-Devesa': ['Bungalow E-Devesa'],
+};
+
+/** Link slots to their content room (slot.room); one copy per room (key + "|<room>") for shared products. */
+export function withBaRooms(slots: Slot[]): Slot[] {
+  return slots.flatMap(s => {
+    const rooms = s.unit ? BA_ROOMS[s.unit] : undefined;
+    if (!rooms) return [s];
+    return rooms.length === 1 ? [{ ...s, room: rooms[0] }] : rooms.map(room => ({ ...s, key: `${s.key}|${room}`, room }));
+  });
+}
+
+/**
  * Bands per bungalow type. Every change-over week from the first to the last weekly arrival is a 7-night block
  * (available / sold out); its price is the sample of its group and arrival month. Consecutive nights with the same
  * price and availability merge into one band (runsOf).
@@ -325,7 +352,7 @@ export async function fetchBaSlots(ctx: FetchContext, today: string): Promise<Sl
     }
   }
   if (failed > 0) ctx.incomplete(`${failed} of ${samples.length} sample prices failed`);
-  const slots = buildBaSlots(products, avail, priced, today);
+  const slots = withBaRooms(buildBaSlots(products, avail, priced, today));
   if (samples.length > 0 && slots.length === 0) throw new Error('la-ballena-alegre: sample stays found but no bands built');
   return slots;
 }

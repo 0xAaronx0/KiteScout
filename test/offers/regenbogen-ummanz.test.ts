@@ -7,6 +7,7 @@ import {
   regenbogenUmmanz, RUM_SHEET, buildRgbSlots, rgbOpening, rgbPin, rgbPriceListHref, rgbRentalOffers, rgbRooms, rgbSlotsFromPage,
 } from '../../src/offers/adapters/regenbogen-ummanz.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/regenbogen-ummanz');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -60,4 +61,21 @@ test('rum: adapter slots and content', async () => {
   assert.ok(c.rooms[0].features.includes('Mietwohnwagen: 2026 from EUR 51 (season A+B) / 59 (C) / 62 (D) per night'));
   assert.ok(c.optionalServices.some(s => /example 15\.10\.26 - 22\.10\.26 from EUR 257/.test(s)));
   assert.ok(c.imageUrls.length >= 10 && c.imageUrls.every(u => u.startsWith('https://www.regenbogen.ag/_img/') && !/unsplash|Tiki_Bar/i.test(u)));
+});
+
+test('rum: Ferienhaus rows price the Ferienunterkunft panes (occupancy and pet variants), Boddennähe and the ambiguous pet 2/3-person rows stay unlinked', async () => {
+  const names = (await regenbogenUmmanz.fetchContent(ctx)).rooms.map(r => r.name);
+  const slots = rgbSlotsFromPage(html, RUM_SHEET, '2026-10-14');
+  assert.deepEqual(slots.map(s => [s.unit, slotRoom(names, s)]), [
+    ['Mietwohnwagen', 'Mietwohnwagen'],
+    ['Ferienhaus Holli® Boddenblick 2 Personen', 'Ferienunterkunft Holli Boddenblick'],
+    ['Ferienhaus Holli® 2 Personen mit Haustiererlaubnis', null],
+    ['Ferienhaus Holli® Boddenblick 3 Personen', 'Ferienunterkunft Holli Boddenblick'],
+    ['Ferienhaus Holli® 3 Personen mit Haustiererlaubnis', null],
+    ['Ferienhaus Holli®', 'Ferienunterkunft Holli'],
+    ['Ferienhaus Holli® mit Haustiererlaubnis', 'Ferienunterkunft Holli'],
+    ['Ferienhaus Holli® Boddennähe', null],
+    ['Ferienhaus Holli® Boddenblick', 'Ferienunterkunft Holli Boddenblick'],
+  ]);
+  assert.ok(RUM_SHEET.units.every(u => !u.room || names.includes(u.room)));
 });

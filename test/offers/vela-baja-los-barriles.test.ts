@@ -8,6 +8,7 @@ import {
 } from '../../src/offers/adapters/vela-baja-los-barriles.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import { todayIso } from '../../src/offers/parse.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/vela-baja-los-barriles');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -74,4 +75,23 @@ test('vela: content', async () => {
   assert.ok(c.optionalServices.includes('Palmas de Cortez: 9-hole golf course'));
   assert.ok(c.imageUrls.length >= 20);
   assert.ok(c.imageUrls.every(u => !/logo|velatransfer|socialThumbnail|-\d+x\d+\./i.test(u)));
+});
+
+test('vela: every rate links to its content room (king and condo / suite / penthouse rows included)', async () => {
+  const names = (await velaBajaLosBarriles.fetchContent(ctx)).rooms.map(r => r.name);
+  const slots = buildVbSlots(parseVbHotels(acc), vbBands(parseVbSeason(home)!, parseVbNotes(acc)), '2026-10-14');
+  const linked = new Map(slots.map(s => [s.unit!, slotRoom(names, s)]));
+  assert.ok(slots.every(s => s.room && names.includes(s.room)));
+  assert.deepEqual([...linked].filter(([u]) => /King|Condo|Suite|Penthouse/.test(u)), [
+    ['Palmas de Cortez - King Garden', 'Palmas de Cortez - Garden Room'],
+    ['Palmas de Cortez - King Poolside', 'Palmas de Cortez - Poolside Room'],
+    ['Palmas de Cortez - King Ocean', 'Palmas de Cortez - Ocean View Room'],
+    ['Palmas de Cortez - Two Bedroom Condo', 'Palmas de Cortez - Condo / Suite / Penthouse'],
+    ['Palmas de Cortez - One Bedroom Master Suite', 'Palmas de Cortez - Condo / Suite / Penthouse'],
+    ['Palmas de Cortez - Two Bedroom Presidential Suite', 'Palmas de Cortez - Condo / Suite / Penthouse'],
+    ['Palmas de Cortez - One Bedroom Deluxe Master Suite', 'Palmas de Cortez - Condo / Suite / Penthouse'],
+    ['Palmas de Cortez - Three Bedroom Penthouse', 'Palmas de Cortez - Condo / Suite / Penthouse'],
+  ]);
+  assert.equal(linked.get('Playa Del Sol - Garden Room, 1 king bed'), 'Playa Del Sol - Garden Room');
+  assert.equal(linked.get('Palmas de Cortez - Cabana Room'), 'Palmas de Cortez - Cabana Room');
 });

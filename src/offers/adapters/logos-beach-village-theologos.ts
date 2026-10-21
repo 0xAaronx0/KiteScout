@@ -61,6 +61,16 @@ const cellText = (el: HTMLElement): string => collapse(el.text);
 /** room page "Beach Village Lodge XL" <-> price row "Beach Lodge XL" / "Family Beach Lodge XXL" */
 const sizeOf = (name: string): string => (/\bXXL\b/i.test(name) ? 'XXL' : /\bXL\b/i.test(name) ? 'XL' : /studio/i.test(name) ? 'Studio' : name);
 
+/**
+ * Price-table / engine unit -> room page name (h1 of /en/accommodation/<room>/, as parseLogosRoom reads it; checked
+ * against the 2026-10-12 fixtures). "Beach Village Studio" and "Shared Beach Lodge" already carry their room's name.
+ */
+export const LOGOS_ROOMS: Record<string, string> = {
+  'Beach Lodge XL': 'Beach Village Lodge XL',
+  'Family Beach Lodge XXL': 'Beach Village Lodge XXL',
+};
+const roomOf = (unit: string): { room?: string } => (LOGOS_ROOMS[unit] ? { room: LOGOS_ROOMS[unit] } : {});
+
 /** "01.04. – 20.05.26" / "15.06. – 09.09.2026" -> ISO range (2-digit years are 20xx; a year only at the end applies to both). */
 export function parseLogosRanges(text: string): LogosRange[] {
   const out: LogosRange[] = [];
@@ -118,6 +128,7 @@ export function buildLogosSlots(seasons: LogosSeason[], rates: LogosRate[], week
         startDate: range.start,
         endDate: range.end,
         unit: r.unit,
+        ...roomOf(r.unit),
         price: r.amount,
         currency: 'EUR',
         priceUnit: 'per_night',
@@ -427,7 +438,7 @@ export function applyLogosSamples(table: Slot[], samples: LogosSample[]): Slot[]
       const persons = p.persons ?? 2;
       out.push({
         key: `${keyPart(form.unit)}-${persons}p|${s.checkIn}`,
-        startDate: s.checkIn, endDate: last, unit: form.unit,
+        startDate: s.checkIn, endDate: last, unit: form.unit, ...roomOf(form.unit),
         price: p.price, currency: p.price !== null ? 'EUR' : null, priceUnit: p.price !== null ? 'package' : null,
         priceBasis: 'room', occupancy: persons,
         availability: p.price !== null ? 'available' : 'sold_out', availabilityText: st.text, spotsLeft: null,

@@ -7,6 +7,7 @@ import {
   kitesurfingLankaKalpitiya, buildKslSlots, kslRoomName, parseKslRates, parseKslRoomCards,
 } from '../../src/offers/adapters/kitesurfing-lanka-kalpitiya.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/kitesurfing-lanka-kalpitiya');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -62,4 +63,21 @@ test('ksl: content', async () => {
   assert.match(c.sourceText ?? '', /dateModified 2026-06-09/);
   assert.ok(c.imageUrls.length >= 20);
   assert.ok(c.imageUrls.every(u => !/themes\/ksl\/assets|logo|\.svg/i.test(u)));
+});
+
+test('ksl: every rate-table unit prices its /stay/ card room', async () => {
+  const c = await kitesurfingLankaKalpitiya.fetchContent(ctx);
+  const slots = await kitesurfingLankaKalpitiya.fetchSlots(ctx);
+  const names = c.rooms.map(r => r.name);
+  const map = Object.fromEntries(slots.map(s => [s.unit, slotRoom(names, s)]));
+  assert.deepEqual(map, {
+    'Luxury Beach bungalow': 'Luxury Beach Bungalow',
+    'Beach bungalow': 'Beach Bungalow',
+    'Premium Bungalow': 'Premium Bungalows',
+    'Lagoon view bungalow': 'Lagoon View Bungalows',
+    'Garden view bungalow': 'Garden View Bungalows',
+    'Double bedroom garden bungalow': 'Double Bedroom Garden Bungalow',
+    'Glamping tent': 'Glamping',
+    'KSL Villa': 'Four Bedroom Villa',
+  });
 });

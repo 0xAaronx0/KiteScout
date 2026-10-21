@@ -83,17 +83,29 @@ export function kslRoomName(room: string): string {
   return collapse(room.replace(/\(?\s*\d+\s*-\s*\d+\s*pax\s*\)?/i, '').replace(/\(\s*\d+\s*pax per room\s*\)/i, ''));
 }
 
+/** Rate-table unit -> /stay/ card name (the content room), where the two name the same room differently.
+ *  "Family and Group Options" is a card without its own table row; units named like their card match without this. */
+export const KSL_ROOM_BY_UNIT: Record<string, string> = {
+  'premium bungalow': 'Premium Bungalows',
+  'lagoon view bungalow': 'Lagoon View Bungalows',
+  'garden view bungalow': 'Garden View Bungalows',
+  'glamping tent': 'Glamping',
+  'ksl villa': 'Four Bedroom Villa',
+};
+
 export function buildKslSlots(rates: KslRate[]): Slot[] {
   const out: Slot[] = [];
   for (const r of rates) {
     const unit = kslRoomName(r.room);
     const key = `${keyPart(unit)}|${r.occupancy}p`;
     if (out.some(s => s.key === key)) continue;
+    const room = KSL_ROOM_BY_UNIT[unit.toLowerCase()];
     out.push({
       key,
       startDate: null,
       endDate: null,
       unit,
+      ...(room ? { room } : {}),
       price: r.price,
       currency: 'EUR',
       priceUnit: 'per_night',

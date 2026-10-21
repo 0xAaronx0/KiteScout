@@ -6,6 +6,7 @@ import { join } from 'node:path';
 import { regenbogenBorn, RBO_SHEET } from '../../src/offers/adapters/regenbogen-born.js';
 import { rgbOpening, rgbPin, rgbPriceListHref, rgbRentalOffers, rgbSlotsFromPage } from '../../src/offers/adapters/regenbogen-ummanz.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/regenbogen-born');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -47,4 +48,16 @@ test('rbo: adapter slots and content', async () => {
   assert.ok(c.rooms[2].features.includes('Ferienhaus Holli® Exklusiv: 2026 from EUR 76 (season A+B) / 129 (C) / 173 (D) per night'));
   assert.ok(!c.optionalServices.some(s => /Mietwohnwagen|caravan/i.test(s)));
   assert.ok(c.imageUrls.length >= 15 && c.imageUrls.every(u => u.startsWith('https://www.regenbogen.ag/_img/')));
+});
+
+test('rbo: Ferienhaus rows price the Ferienunterkunft panes (pet variants included, Komfort has no row)', async () => {
+  const names = (await regenbogenBorn.fetchContent(ctx)).rooms.map(r => r.name);
+  const slots = rgbSlotsFromPage(html, RBO_SHEET, '2026-10-14');
+  assert.deepEqual(slots.map(s => [s.unit, slotRoom(names, s)]), [
+    ['Ferienhaus Holli®', 'Ferienunterkunft Holli®'],
+    ['Ferienhaus Holli® mit Haustiererlaubnis', 'Ferienunterkunft Holli®'],
+    ['Ferienhaus Holli® Exklusiv', 'Ferienunterkunft Holli® Exklusiv'],
+    ['Ferienhaus Holli® Exklusiv mit Haustiererlaubnis', 'Ferienunterkunft Holli® Exklusiv'],
+  ]);
+  assert.ok(RBO_SHEET.units.every(u => !u.room || names.includes(u.room)));
 });

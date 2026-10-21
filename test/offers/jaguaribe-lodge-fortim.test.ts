@@ -5,12 +5,13 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  jaguaribeLodgeFortim, JL_HOTEL, decodeTwice, fixOmnibeesUnits, mapsPlacePin, parseJlLodges, parseOmnibeesHotelPage,
+  jaguaribeLodgeFortim, JL_HOTEL, JL_ROOMS, decodeTwice, withOmnibeesRooms, fixOmnibeesUnits, mapsPlacePin, parseJlLodges, parseOmnibeesHotelPage,
 } from '../../src/offers/adapters/jaguaribe-lodge-fortim.js';
 import {
   buildRoomMonthSlots, buildRunSlots, calendarWindows, parseCalendar, parseResults, resultsUrl, sampleStay,
 } from '../../src/offers/engines/omnibees.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 import type { Slot } from '../../src/offers/types.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/jaguaribe-lodge-fortim');
@@ -103,4 +104,19 @@ test('jaguaribe: content', async () => {
   assert.ok(c.imageUrls.every(u => !/logo|Vila-Selvagem|award|\d+x\d+\//i.test(u)));
   assert.match(c.sourceText!, /omnibees rooms: Double Room \(Up to 4 guests, Sea view\); Lodge Vista Mar/);
   assert.deepEqual(jaguaribeLodgeFortim.quote, { engine: 'omnibees', hotelId: 19604, chainId: 10325, currencyId: 16, currency: 'BRL' });
+});
+
+test('jaguaribe: engine rooms link to own-site lodge types (slot.room), the unnamed Double Room stays unlinked', async () => {
+  const c = await jaguaribeLodgeFortim.fetchContent(ctx);
+  const names = c.rooms.map(r => r.name);
+  assert.deepEqual(Object.keys(JL_ROOMS).sort(), ROOMS.filter(r => r !== 'Double Room').sort());
+  assert.ok(Object.values(JL_ROOMS).every(r => names.includes(r)));
+  const slots = withOmnibeesRooms(ROOMS.map(unit => ({ key: `x|2026-11`, unit } as Slot)), JL_ROOMS);
+  assert.deepEqual(slots.map(s => [s.unit, slotRoom(names, s)]), [
+    ['Lodge Vista Piscina', 'Pool View Lodge'], ['Double Room', null], ['Lodge Família Vista Mar', 'Family Lodge'],
+    ['Lodge Família Vista Rio', 'Family Lodge'], ['Lodge Família Oceano', 'Family Lodge'], ['Lodge Vista Jardim', 'Garden View Lodge'],
+    ['Lodge Vista Mar', 'Sea View Lodge'], ['Lodge Vista Rio', 'River View Lodge'],
+  ]);
+  // calendar bands (hotel-wide lowest price) stay unlinked
+  assert.equal(withOmnibeesRooms([{ key: 'lowest|2026-10-12', unit: null } as Slot], JL_ROOMS)[0].room, undefined);
 });

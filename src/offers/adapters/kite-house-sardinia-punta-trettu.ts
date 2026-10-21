@@ -87,6 +87,7 @@ export function buildKhsSlots(apts: KhsApartment[]): Slot[] {
     startDate: null,
     endDate: null,
     unit: `${a.name} (${a.kind.toLowerCase()}${a.maxGuests ? `, up to ${a.maxGuests} guests` : ''})`,
+    room: a.heading, // the content room of this apartment type (parseKiteHouseSardiniaContent names rooms by heading)
     price: a.rateMin,
     currency: a.currency,
     priceUnit: 'per_night',

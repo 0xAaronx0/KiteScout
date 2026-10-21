@@ -8,10 +8,11 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   thorsmindeCamping, buildTmcEngineSlots, buildTmcSlots, fetchTmcLiveSlots, fetchTmcSample, fetchTmcSlots, parseTmcCabins, parseTmcPrices,
-  tmcSampleSeasons, TMC_PORTAL,
+  tmcSampleSeasons, TMC_PORTAL, TMC_ROOMS,
 } from '../../src/offers/adapters/thorsminde-camping.js';
 import { csobSaturdaySamples } from '../../src/offers/adapters/hvide-sande-camping.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/thorsminde-camping');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -120,4 +121,17 @@ test('tmc: adapter flags', () => {
   assert.equal(thorsmindeCamping.slotMethod, 'booking_engine');
   assert.equal(thorsmindeCamping.liveAvailability, true);
   assert.equal(thorsmindeCamping.instantBooking, true);
+});
+
+test('tmc: table and engine slots link to the cabin rooms', async () => {
+  const names = (await thorsmindeCamping.fetchContent(ctx)).rooms.map(r => r.name);
+  assert.deepEqual(Object.values(TMC_ROOMS).sort(), [...names].sort());
+  const table = await fetchTmcSlots('2026-10-14');
+  assert.deepEqual(table.map(s => [s.unit, slotRoom(names, s)]), [
+    ['Fishing hut (2 people)', 'Fishing cabin with shared toilet and shower'],
+    ['Family cabin (4-6 people)', 'Family cabin with toilet and shower'],
+    ['Meadow cabin (6 people)', 'Meadow cabin with toilet and shower'],
+  ]);
+  const engine = buildTmcEngineSlots([await fetchTmcSample('2026-10-15', 3)], parseTmcPrices(prices));
+  assert.deepEqual(engine.map(s => slotRoom(names, s)), ['Meadow cabin with toilet and shower', 'Family cabin with toilet and shower', 'Fishing cabin with shared toilet and shower']);
 });

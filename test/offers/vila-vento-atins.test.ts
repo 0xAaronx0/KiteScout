@@ -9,6 +9,7 @@ import {
   vvOffersUrl, vvSampleStays, vvWindow, type VvSampleResult,
 } from '../../src/offers/adapters/vila-vento-atins.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/vila-vento-atins');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -86,4 +87,19 @@ test('vila-vento: content', async () => {
   assert.ok(c.rooms[2].features.includes('Marked "coming soon" on the website'));
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => /^https:\/\/www\.vilavento\.com\/(data\/sites\/1\/GalleryImages|SPages\/home_files\/images)\//.test(u) && !/captura|logo/i.test(u)));
+});
+
+test('vila-vento: every BedBooking unit prices its site unit (content room)', async () => {
+  const c = await vilaVentoAtins.fetchContent(ctx);
+  const results: VvSampleResult[] = vvSampleStays(settings, busy, TODAY)
+    .map(stay => ({ stay, prices: parseVvOffers(readUrl(vvOffersUrl(stay.checkIn, stay.checkOut))) }));
+  const slots = buildVvSlots(settings, busy, results, TODAY);
+  const names = c.rooms.map(r => r.name);
+  assert.deepEqual(Object.fromEntries(slots.map(s => [s.unit, slotRoom(names, s)])), {
+    Meltemi: 'Bungalow Meltemi',
+    'Vila Alize': 'Vila Alize Beach House',
+    Mistral: 'Bungalow Mistral',
+    Monsoon: 'Bungalow Monsoon',
+    'Casa Pescador': 'Casa do Pescador',
+  });
 });

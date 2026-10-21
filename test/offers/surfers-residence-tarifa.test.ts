@@ -7,6 +7,7 @@ import {
   surfersResidenceTarifa, buildFrSlots, parseFrLodge, parseSrRooms,
 } from '../../src/offers/adapters/surfers-residence-tarifa.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/surfers-residence-tarifa');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -52,4 +53,10 @@ test('surfers-residence: content', async () => {
   assert.ok(c.includedServices.includes('Storage Space'));
   assert.equal(c.imageUrls.length, 13);
   assert.ok(c.imageUrls.every(u => !/-\d+x\d+\./.test(u))); // full-size photos, no 600x600 thumbnails
+});
+
+test('surfers-residence: the lodge-wide "from" price stays unlinked (it does not name one of the three room types)', async () => {
+  const names = (await surfersResidenceTarifa.fetchContent(ctx)).rooms.map(r => r.name);
+  const slots = await surfersResidenceTarifa.fetchSlots(ctx);
+  assert.deepEqual(slots.map(s => [s.unit, s.room ?? null, slotRoom(names, s)]), [['Private room', null, null]]);
 });

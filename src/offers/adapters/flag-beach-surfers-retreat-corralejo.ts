@@ -8,9 +8,14 @@
 //            packages: "7 nights surf hostel stay, 4 day kitesurfing course", "hostel B&B (shared room)").
 //   slots    the "Prices" table on the retreat page: per bed / per room occupancy a "from €23/night" price,
 //            no dates, no season, no year; "Book your stay now (minimum stay 3 nights)".
-// Booking engine: Cloudbeds (hotels.cloudbeds.com/reservation/kn1mGC + widget). Not used: Cloudbeds
-//   answers its /booking/* data calls with HTTP 403 to non-browser clients (seen on keros-blue-limnos,
-//   2026-10-09), so there is no live price or inventory here -> availability 'unknown'.
+// Redesign 2026-10-19: the "Prices" table became a per-night picker ("1 bed in dorm room, lowest price per
+//   night") whose full list is only in the page's JSON-LD Offers (same 4 rows and amounts); minimum stay is
+//   the fact row "Min. stay 3 nights"; the facilities list is gone; "Other stays" cards (other houses' photos)
+//   follow the panel; the kite packages moved to /packages/kitesurf/ (cards, no longer naming the hostel).
+//   Both layouts are parsed (table first, JSON-LD otherwise).
+// Booking: "Send us your dates" through the contact form, confirmed by email against a small deposit (no
+//   instant booking). Until 2026-10-19 the page linked Cloudbeds (hotels.cloudbeds.com/reservation/kn1mGC),
+//   which answers its /booking/* data calls with HTTP 403 to non-browser clients -> availability 'unknown'.
 // 2026/27 operation: WP REST "modified" of the retreat, accommodation and kite-package pages =
 //   2026-05-08 (checked 2026-10-12); online booking link live. No text names 2026 or 2027; the school
 //   runs year-round (no season on the pages).
@@ -23,14 +28,19 @@
 //   only hostel among Flag Beach's six accommodations and is called "Flag Beach's new hostel").
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
-import { collapse, detectCurrency, imageCandidates, parse, parseAmount } from '../parse.js';
+import { collapse, detectCurrency, imageCandidates, jsonLd, parse, parseAmount } from '../parse.js';
 import type { OfferAdapter, OfferContent, Slot, SlotPriceBasis } from '../types.js';
 
 const SITE = 'https://www.flagbeach.com';
 export const FBR_PAGE_URL = `${SITE}/accommodation/surfers-retreat/`;
-export const FBR_KITE_PACKAGES_URL = `${SITE}/kite-surfing/kite-surfing-packages/`;
-const BOOKING_URL = 'https://hotels.cloudbeds.com/reservation/kn1mGC';
+// the old /kite-surfing/kite-surfing-packages/ redirects here since the redesign of 2026-10-19
+export const FBR_KITE_PACKAGES_URL = `${SITE}/packages/kitesurf/`;
+// contact form preset to this stay ("Send us your dates"); the Cloudbeds link is gone since 2026-10-19
+const BOOKING_URL = `${SITE}/contact-us/?fb_pkg=83#contact-form`;
 export const FBR_UNIT_DORM = '1 bed in dorm room';
+export const FBR_ROOM_DORM = 'Dorm room';
+export const FBR_ROOM_TWIN = 'Twin room';
+export const FBR_ROOM_DOUBLE = 'Double room';
 
 // --- local helpers ----------------------------------------------------------------------------
 const memo = new Map<string, { at: number; p: Promise<string> }>();
@@ -58,28 +68,66 @@ export function unPhoton(u: string): string {
 // --- pure parsers -----------------------------------------------------------------------------
 export interface FbrRate { unit: string; amount: number; currency: string; from: boolean; basis: SlotPriceBasis; occupancy: number }
 
-/** "Prices" table: label cell + "from €23/night" cell. */
+const fbrOccupancy = (label: string) => ({
+  perBed: /^\d+\s+bed\b/i.test(label),
+  occupancy: /^\d+\s+bed\b/i.test(label) || /single occupancy/i.test(label) ? 1 : /double occupancy/i.test(label) ? 2 : 1,
+});
+
+/** Offers of the page's JSON-LD (redesign 2026-10-19: the rates moved from a table into a per-night picker,
+ *  "1 bed in dorm room, lowest price per night", whose full list is only in the schema.org Offers). */
+export function parseFbrLdRates(html: string): FbrRate[] {
+  const offers: Array<Record<string, unknown>> = [];
+  const walk = (x: unknown): void => {
+    if (Array.isArray(x)) x.forEach(walk);
+    else if (x && typeof x === 'object') {
+      const o = x as Record<string, unknown>;
+      if (o['@type'] === 'Offer') offers.push(o);
+      Object.values(o).forEach(walk);
+    }
+  };
+  walk(jsonLd(html));
+  const out: FbrRate[] = [];
+  for (const o of offers) {
+    const unit = typeof o.name === 'string' ? collapse(o.name) : '';
+    const amount = Number(o.price);
+    const spec = (o.priceSpecification ?? {}) as Record<string, unknown>;
+    if (!unit || !(amount > 0) || !/night/i.test(String(spec.unitText ?? '')) || out.some(r => r.unit === unit)) continue;
+    const { perBed, occupancy } = fbrOccupancy(unit);
+    out.push({ unit, amount, currency: typeof o.priceCurrency === 'string' ? o.priceCurrency : 'EUR', from: /lowest price/i.test(html), basis: perBed ? 'person' : 'room', occupancy });
+  }
+  return out;
+}
+
+/** "Prices" table (label cell + "from €23/night" cell, until 2026-10-19), else the JSON-LD Offers. */
 export function parseFbrRates(html: string): FbrRate[] {
   const root = parse(html);
   const h = root.querySelectorAll('h2, h3').find(x => /^prices$/i.test(collapse(x.text)));
   const table = root.querySelectorAll('table').find(t => /per\s*night|\/night/i.test(t.text) && /bed/i.test(t.text));
-  if (!h || !table) return [];
+  if (!h || !table) return parseFbrLdRates(html);
   const out: FbrRate[] = [];
   for (const tr of table.querySelectorAll('tr')) {
     const [label, value] = tr.querySelectorAll('td').map(td => collapse(td.text));
     if (!label || !value || !/night/i.test(value)) continue;
     const amount = parseAmount(value);
     if (!amount) continue;
-    const perBed = /^\d+\s+bed\b/i.test(label);
-    const occupancy = perBed || /single occupancy/i.test(label) ? 1 : /double occupancy/i.test(label) ? 2 : 1;
+    const { perBed, occupancy } = fbrOccupancy(label);
     out.push({ unit: label, amount, currency: detectCurrency(value) ?? 'EUR', from: /\bfrom\b/i.test(value), basis: perBed ? 'person' : 'room', occupancy });
   }
   return out;
 }
 
 export function parseFbrMinNights(html: string): number | null {
-  const m = mainText(html).match(/minimum stay (\d+) nights?/i);
+  // "Book your stay now (minimum stay 3 nights)" until 2026-10-19, then the fact row "Min. stay 3 nights"
+  const m = mainText(html).match(/min(?:imum|\.)\s*stay:?\s*(\d+)\s*nights?/i);
   return m ? Number(m[1]) : null;
+}
+
+/** content room a price-table row prices: "1 bed in dorm room" -> Dorm room, "Double bed single occupancy" -> Double room */
+export function fbrRoom(unit: string): string | null {
+  if (/\bdorm\b/i.test(unit)) return FBR_ROOM_DORM;
+  if (/\btwin\b/i.test(unit)) return FBR_ROOM_TWIN;
+  if (/^double bed\b/i.test(unit)) return FBR_ROOM_DOUBLE;
+  return null;
 }
 
 export function buildFbrSlots(rates: FbrRate[], minNights: number | null): Slot[] {
@@ -88,6 +136,7 @@ export function buildFbrSlots(rates: FbrRate[], minNights: number | null): Slot[
     startDate: null,
     endDate: null,
     unit: r.unit,
+    room: fbrRoom(r.unit),
     price: r.amount,
     currency: r.currency,
     priceUnit: 'per_night',
@@ -139,7 +188,9 @@ export function parseFlagBeachRetreatContent(p: FbrPages): OfferContent {
 
   const seen = new Set<string>();
   const imageUrls: string[] = [];
-  for (const raw of imageCandidates(p.retreat, FBR_PAGE_URL, null, 60)) {
+  // the "Other stays" cards below the panel show the photos of Flag Beach's other houses
+  const own = p.retreat.split(/<h2[^>]*>\s*Other stays\s*<\/h2>/i)[0];
+  for (const raw of imageCandidates(own, FBR_PAGE_URL, null, 60)) {
     const u = unPhoton(raw);
     if (/\.svg|logo|icon|Pastilla|ECOACT/i.test(u)) continue;
     if (!/\/wp-content\/uploads\//.test(u) || seen.has(u)) continue;
@@ -149,7 +200,10 @@ export function parseFlagBeachRetreatContent(p: FbrPages): OfferContent {
   const summary = [
     `Surfer's Retreat is the boutique hostel of the Flag Beach Watersports Centre in Corralejo, Fuerteventura, halfway between Flag Beach and the town centre and across the road from the Campanario shopping centre.`,
     `The house sleeps ${sleeps ?? '14'} in twin and double rooms and a dorm with bunk beds, with ${baths ?? '3'} bathrooms, a shared kitchen and living room, a BBQ, two terraces and a private pool${dorm && dbl ? `; beds start at €${dorm.amount} per night in the dorm and €${dbl.amount} for a double room for two` : ''}${minNights ? `, minimum stay ${minNights} nights` : ''}.`,
-    `Flag Beach teaches kitesurfing, windsurfing, surfing, wing foiling and SUP and rents equipment; its kite packages combine a 4-day course, equipment and daily beach transfers with a hostel stay on bed and breakfast${cheapestPkg ? ` (7 nights from €${cheapestPkg})` : ''}.`,
+    // the kite cards of the redesigned packages page no longer name the house (only "7 nights B&B")
+    packages.length
+      ? `Flag Beach teaches kitesurfing, windsurfing, surfing, wing foiling and SUP and rents equipment; its kite packages combine a 4-day course, equipment and daily beach transfers with a hostel stay on bed and breakfast (7 nights from €${cheapestPkg}).`
+      : `Flag Beach teaches kitesurfing, windsurfing, surfing, wing foiling and SUP and rents equipment; its kite camps combine a 4-day course with 7 or 14 nights B&B in Corralejo.`,
   ].join(' ');
 
   return {
@@ -164,8 +218,9 @@ export function parseFlagBeachRetreatContent(p: FbrPages): OfferContent {
     durationDays: null,
     // kite packages page: "Kitesurfing courses on Fuerteventura - from beginner to advanced levels"
     skillLevels: ['beginner', 'intermediate', 'advanced'],
-    kiteLessons: /kitesurfing course/i.test(kite),
-    equipmentRental: /equipment rentals?/i.test(kite),
+    kiteLessons: /kitesurfing (?:course|camp)/i.test(kite),
+    // since the redesign the packages page only links the rental page (tab "Rental")
+    equipmentRental: /equipment rentals?/i.test(kite) || /href="[^"]*flagbeach\.com\/rental\//i.test(p.kitePackages),
     beginnerFriendly: /beginner/i.test(kite),
     includedServices: facilities,
     optionalServices: [
@@ -179,9 +234,9 @@ export function parseFlagBeachRetreatContent(p: FbrPages): OfferContent {
     mealPlan: null,
     languages: ['en', 'de', 'es', 'it'],
     rooms: [
-      { name: 'Dorm room', description: 'Shared dorm with bunk beds, sold per bed.', features: rates.filter(r => /dorm/i.test(r.unit)).map(r => `${r.unit}: ${r.from ? 'from ' : ''}€${r.amount} per night`) },
-      { name: 'Twin room', description: 'Twin room, sold per bed.', features: rates.filter(r => /twin/i.test(r.unit)).map(r => `${r.unit}: ${r.from ? 'from ' : ''}€${r.amount} per night`) },
-      { name: 'Double room', description: 'Double room; single travellers can take it at a reduced rate.', features: rates.filter(r => /double bed/i.test(r.unit)).map(r => `${r.unit}: ${r.from ? 'from ' : ''}€${r.amount} per night`) },
+      { name: FBR_ROOM_DORM, description: 'Shared dorm with bunk beds, sold per bed.', features: rates.filter(r => fbrRoom(r.unit) === FBR_ROOM_DORM).map(r => `${r.unit}: ${r.from ? 'from ' : ''}€${r.amount} per night`) },
+      { name: FBR_ROOM_TWIN, description: 'Twin room, sold per bed.', features: rates.filter(r => fbrRoom(r.unit) === FBR_ROOM_TWIN).map(r => `${r.unit}: ${r.from ? 'from ' : ''}€${r.amount} per night`) },
+      { name: FBR_ROOM_DOUBLE, description: 'Double room; single travellers can take it at a reduced rate.', features: rates.filter(r => fbrRoom(r.unit) === FBR_ROOM_DOUBLE).map(r => `${r.unit}: ${r.from ? 'from ' : ''}€${r.amount} per night`) },
     ],
     imageUrls: imageUrls.slice(0, 30),
     heroVideoUrl: null,
@@ -209,7 +264,8 @@ export const flagBeachSurfersRetreatCorralejo: OfferAdapter = {
   },
   url: FBR_PAGE_URL,
   slotMethod: 'price_table',
-  instantBooking: true,
+  // booking = dates through the contact form, confirmed by email against a deposit (since 2026-10-19)
+  instantBooking: false,
   fetchBudget: 3,
   async fetchContent() {
     const [retreat, kitePackages] = [await page(FBR_PAGE_URL), await page(FBR_KITE_PACKAGES_URL)];

@@ -24,7 +24,8 @@
 //   ("lodge-vista-mar|2026-11"), BRL per lodge per night for 2 adults. Omnibees double-encodes "&" in some room names
 //   ("Ocean &amp;amp; Pool"); the shared fixOmnibeesUnits() decodes unit names and keys once.
 // Known limits: the own site's lodge types ("Sea View Lodge") and the engine's room names ("Lodge Vista Mar") differ;
-//   content rooms follow the own site, slots the engine. No air conditioning and no TV in the lodges (by design).
+//   content rooms follow the own site, slots the engine; JL_ROOMS links each engine room to its lodge type (slot.room).
+//   No air conditioning and no TV in the lodges (by design).
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, collapse, parse } from '../parse.js';
@@ -106,6 +107,11 @@ export function fixOmnibeesUnits(slots: Slot[]): Slot[] {
   });
 }
 
+/** Link engine room slots to the own site's room type (slot.room) via a unit -> content room name table. */
+export function withOmnibeesRooms(slots: Slot[], rooms: Record<string, string>): Slot[] {
+  return slots.map(s => (s.unit && rooms[s.unit] ? { ...s, room: rooms[s.unit] } : s));
+}
+
 /** Google Maps place link "…/maps/place/<name>/@-4.4203648,-37.7689256,17z…" on the own site. */
 export function mapsPlacePin(html: string): { lat: number; lng: number } | null {
   const m = html.match(/google\.[a-z.]+\/maps\/place\/[^"'\s]*?@(-?\d+\.\d+),(-?\d+\.\d+)/);
@@ -123,6 +129,22 @@ export const JL_PAGES = {
   lodges: `${SITE}/lodges/?lang=en`,
   kite: `${SITE}/kitesurf/?lang=en`,
 } as const;
+
+/**
+ * Omnibees room -> own-site lodge type (names as parseJlLodges() builds them). The engine's room cards say the
+ * same as the lodge pages: "Vista Mar" = "Sea Side View" (partial sea view = Sea View Lodge), the three "Lodge
+ * Família" rooms (up to 6 guests) are the Family Lodge facing ocean / sea side / river. "Double Room" (up to 4
+ * guests, "Sea view") stays unlinked: only elimination points at the Ocean Lodge, the engine does not name it.
+ */
+export const JL_ROOMS: Record<string, string> = {
+  'Lodge Vista Mar': 'Sea View Lodge',
+  'Lodge Vista Jardim': 'Garden View Lodge',
+  'Lodge Vista Rio': 'River View Lodge',
+  'Lodge Vista Piscina': 'Pool View Lodge',
+  'Lodge Família Oceano': 'Family Lodge',
+  'Lodge Família Vista Mar': 'Family Lodge',
+  'Lodge Família Vista Rio': 'Family Lodge',
+};
 
 export interface JlLodge { name: string; text: string }
 
@@ -276,6 +298,6 @@ export const jaguaribeLodgeFortim: OfferAdapter = {
     return parseJaguaribeLodgeContent({ hotel, lodges, kite, omnibees });
   },
   async fetchSlots(ctx) {
-    return fixOmnibeesUnits(await fetchOmnibeesSlots(JL_HOTEL, ctx, 'jaguaribe-lodge'));
+    return withOmnibeesRooms(fixOmnibeesUnits(await fetchOmnibeesSlots(JL_HOTEL, ctx, 'jaguaribe-lodge')), JL_ROOMS);
   },
 };

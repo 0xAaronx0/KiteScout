@@ -6,10 +6,11 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  drejbyStrandCampingAls, DSC_PORTAL, fetchDscSlots, parseDscSeasons, parseDscUnits,
+  drejbyStrandCampingAls, DSC_PORTAL, DSC_ROOMS, fetchDscSlots, parseDscSeasons, parseDscUnits,
 } from '../../src/offers/adapters/drejby-strand-camping-als.js';
 import { csobSaturdaySamples, parseCsobList } from '../../src/offers/adapters/hvide-sande-camping.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/drejby-strand-camping-als');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -77,4 +78,17 @@ test('drejby: content', async () => {
   assert.equal(c.rooms.length, 10);
   assert.match(c.sourceText ?? '', /possibility to lean to surf or kite\. We cooperate with Surfers Paradise\./);
   assert.ok(c.imageUrls.length >= 12 && c.imageUrls.every(u => /^https:\/\/www\.drejby\.com\/wp-content\/uploads\//.test(u)));
+});
+
+test('drejby: engine units link to their cabin / apartment rooms', async () => {
+  const names = (await drejbyStrandCampingAls.fetchContent(ctx)).rooms.map(r => r.name);
+  assert.ok(Object.values(DSC_ROOMS).every(r => names.includes(r)));
+  const slots = await fetchDscSlots(TODAY, ctx);
+  assert.ok(slots.every(s => slotRoom(names, s) !== null));
+  const room = (unit: string) => slotRoom(names, slots.find(s => s.unit === unit)!);
+  assert.equal(room('Apartment no 1'), 'Holiday apartment 1');
+  assert.equal(room('Apartment no. 5'), 'Holiday apartment 5');
+  assert.equal(room('Rice Cabins'), 'Rice inspired cabins');
+  assert.equal(room('Ourdoor Cabins'), 'Cabin in the Outdoor oasis');
+  assert.equal(room('Economy Cabin'), 'Economy cabin'); // by name
 });

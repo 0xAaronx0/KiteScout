@@ -32,6 +32,9 @@ export const PTK_PRICES_URL = `${SITE}/prices/`;
 export const PTK_ROOMS_URL = `${SITE}/punta-trettu-rooms/`;
 const BOOKING_URL = `${SITE}/booking/`;
 
+/** The content room the villa rates price: the whole property for one group (the villa is never rented by the room). */
+export const PTK_VILLA_ROOM = 'Entire villa (exclusive use)';
+
 export interface PtkColumn { rooms: number; persons: number; label: string }
 export interface PtkRow { code: string; nightsLabel: string; minNights: number | null; prices: number[] }
 export interface PtkTable { season: string; startMonth: number; endMonth: number; monthsLabel: string; columns: PtkColumn[]; rows: PtkRow[] }
@@ -102,6 +105,7 @@ export function buildPtkSlots(tables: PtkTable[], today: string): Slot[] {
         startDate: band.start,
         endDate: band.end,
         unit: `Entire villa, ${c.rooms} room${c.rooms > 1 ? 's' : ''} (up to ${c.persons} people)`,
+        room: PTK_VILLA_ROOM,
         price: base.prices[i],
         currency: 'EUR',
         priceUnit: 'per_night',
@@ -159,7 +163,7 @@ export function parsePuntaTrettuContent(p: PtkPages, today = todayIso()): OfferC
     `${t.season === 'low' ? 'Low' : t.season === 'high' ? 'High' : 'Mid'} season (${t.monthsLabel}), ${c.label}: ${t.rows.map(r => `${r.nightsLabel} EUR ${r.prices[i]}`).join(' / ')} per night`));
   const contentRooms: ContentRoom[] = [
     {
-      name: 'Entire villa (exclusive use)',
+      name: PTK_VILLA_ROOM,
       description: `The whole property for one group, priced per night by the number of suites used (1 to ${nSuites}) and the length of stay.`,
       features: [...rateFeatures, ...(cleaning ? [cleaning] : []), 'Security deposit, refunded at check-out'],
     },

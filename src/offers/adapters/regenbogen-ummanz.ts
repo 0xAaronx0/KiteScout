@@ -49,7 +49,11 @@ export const RGB_OPERATOR = {
 };
 
 export type RgbSeason = 'A+B' | 'C' | 'D';
-export interface RgbUnitRow { name: string; persons: number | null; pets: boolean; prices: Record<RgbSeason, number> }
+export interface RgbUnitRow {
+  name: string; persons: number | null; pets: boolean; prices: Record<RgbSeason, number>;
+  /** the content room (tab pane name) this row prices, when the sheet names it differently ("Ferienhaus Holli®" -> pane "Ferienunterkunft Holli") */
+  room?: string;
+}
 export interface RgbPriceSheet {
   /** path of the PDF the page links (the constants are valid for this file only) */
   href: string;
@@ -230,6 +234,7 @@ export function buildRgbSlots(sheet: RgbPriceSheet, opening: { start: string; en
         startDate: start,
         endDate: end,
         unit: u.name,
+        ...(u.room ? { room: u.room } : {}),
         price: u.prices[s.season],
         currency: 'EUR',
         priceUnit: 'per_night',
@@ -272,6 +277,9 @@ export const RUM_URL = `${RGB_SITE}/ferienanlagen/ummanz.html`;
 const RUM_BOOKING_URL = 'https://buchen.regenbogen.ag/SIHOTWebRegenbogenAG/client/?HN=55';
 
 const ab = (a: number, c: number, d: number): Record<RgbSeason, number> => ({ 'A+B': a, C: c, D: d });
+/** Tab pane names of the park page (= content room names, no ® on this page; checked against the 2026-10-14 fixture). */
+export const RUM_ROOM_HOLLI = 'Ferienunterkunft Holli';
+export const RUM_ROOM_BODDENBLICK = 'Ferienunterkunft Holli Boddenblick';
 /** Ummanz_Preisliste-2026-1.pdf, page 1 "Camping & Mietobjekte", rental rows (read by hand 2026-10-14). */
 export const RUM_SHEET: RgbPriceSheet = {
   href: '/resources/persistent/7dfbf8d60fc6a65793d4b106fa9e0e3fa9f1f24c/Ummanz_Preisliste-2026-1.pdf',
@@ -280,14 +288,16 @@ export const RUM_SHEET: RgbPriceSheet = {
   opening: { start: '2026-03-20', end: '2026-11-01' },
   units: [
     { name: 'Mietwohnwagen', persons: null, pets: false, prices: ab(51, 59, 62) },
-    { name: 'Ferienhaus Holli® Boddenblick 2 Personen', persons: 2, pets: false, prices: ab(84, 124, 132) },
+    // occupancy and pet variants price the pane's unit; "Boddennähe" has no pane of its own and the pet 2/3-person rows
+    // cost the same as the Boddenblick 2/3-person rows (house type unclear) -> no room
+    { name: 'Ferienhaus Holli® Boddenblick 2 Personen', persons: 2, pets: false, prices: ab(84, 124, 132), room: RUM_ROOM_BODDENBLICK },
     { name: 'Ferienhaus Holli® 2 Personen mit Haustiererlaubnis', persons: 2, pets: true, prices: ab(84, 124, 132) },
-    { name: 'Ferienhaus Holli® Boddenblick 3 Personen', persons: 3, pets: false, prices: ab(89, 129, 137) },
+    { name: 'Ferienhaus Holli® Boddenblick 3 Personen', persons: 3, pets: false, prices: ab(89, 129, 137), room: RUM_ROOM_BODDENBLICK },
     { name: 'Ferienhaus Holli® 3 Personen mit Haustiererlaubnis', persons: 3, pets: true, prices: ab(89, 129, 137) },
-    { name: 'Ferienhaus Holli®', persons: null, pets: false, prices: ab(94, 136, 142) },
-    { name: 'Ferienhaus Holli® mit Haustiererlaubnis', persons: null, pets: true, prices: ab(94, 136, 142) },
+    { name: 'Ferienhaus Holli®', persons: null, pets: false, prices: ab(94, 136, 142), room: RUM_ROOM_HOLLI },
+    { name: 'Ferienhaus Holli® mit Haustiererlaubnis', persons: null, pets: true, prices: ab(94, 136, 142), room: RUM_ROOM_HOLLI },
     { name: 'Ferienhaus Holli® Boddennähe', persons: null, pets: false, prices: ab(98, 140, 145) },
-    { name: 'Ferienhaus Holli® Boddenblick', persons: null, pets: false, prices: ab(109, 151, 156) },
+    { name: 'Ferienhaus Holli® Boddenblick', persons: null, pets: false, prices: ab(109, 151, 156), room: RUM_ROOM_BODDENBLICK },
   ],
   extras: [
     'Final cleaning: Holli EUR 89, Mietwohnwagen EUR 85',

@@ -157,6 +157,15 @@ export function vvSampleStays(s: VvSettings, busy: Map<number, Set<string>>, tod
   return out;
 }
 
+/** BedBooking unit name -> the unit's name on the site (the content room), verified against the 2026-10-12 fixtures. */
+export const VV_ROOM_BY_UNIT: Record<string, string> = {
+  mistral: 'Bungalow Mistral',
+  meltemi: 'Bungalow Meltemi',
+  monsoon: 'Bungalow Monsoon',
+  'vila alize': 'Vila Alize Beach House',
+  'casa pescador': 'Casa do Pescador',
+};
+
 /** Bands per unit where the calendar state or the month's sampled price changes. */
 export function buildVvSlots(s: VvSettings, busy: Map<number, Set<string>>, samples: VvSampleResult[], today: string): Slot[] {
   const win = vvWindow(today);
@@ -185,6 +194,7 @@ export function buildVvSlots(s: VvSettings, busy: Map<number, Set<string>>, samp
         startDate: run.start,
         endDate: run.end,
         unit: room.name,
+        ...(VV_ROOM_BY_UNIT[room.name.toLowerCase()] ? { room: VV_ROOM_BY_UNIT[room.name.toLowerCase()] } : {}),
         price: sample?.price ?? null,
         currency: sample ? CURRENCY : null,
         priceUnit: sample ? 'per_night' : null,

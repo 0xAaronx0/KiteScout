@@ -98,6 +98,10 @@ export function parsePmSeasons(html: string): PmSeason[] {
 
 const addDays = (d: string, n: number): string => new Date(Date.parse(d) + n * 86400000).toISOString().slice(0, 10);
 
+/** The content room the season rates price. The rates (per room for 2, per person sharing, single) fit a twin room;
+ *  the family rooms sleep more than 2 and only an extra-child surcharge is printed, so they stay without a price. */
+export const PM_TWIN_ROOM = 'En-suite twin bedroom';
+
 export function buildPmSlots(seasons: PmSeason[], today: string): Slot[] {
   const dated = seasons.flatMap(s => s.ranges).filter(r => r.start);
   const out: Slot[] = [];
@@ -106,7 +110,7 @@ export function buildPmSlots(seasons: PmSeason[], today: string): Slot[] {
       // unreadable start ("2830. March"): the day after the latest earlier-ending range of another season (inferred)
       const start = r.start ?? addDays(dated.filter(d => d.end < r.end).map(d => d.end).sort().pop() ?? r.end, 1);
       if (r.end < today) continue;
-      const base = { startDate: start, endDate: r.end, unit: 'En-suite room', currency: 'ZAR', priceUnit: 'per_night' as const, availability: 'on_request' as const, spotsLeft: null };
+      const base = { startDate: start, endDate: r.end, unit: 'En-suite room', room: PM_TWIN_ROOM, currency: 'ZAR', priceUnit: 'per_night' as const, availability: 'on_request' as const, spotsLeft: null };
       const label = `${s.season} season${r.label ? ` ${r.label}` : ''}`;
       if (s.perRoom) out.push({ ...base, key: `room|${start}`, price: s.perRoom, priceBasis: 'room', occupancy: 2, availabilityText: label });
       if (s.perPersonShared) out.push({ ...base, key: `room-shared-pp|${start}`, price: s.perPersonShared, priceBasis: 'person', occupancy: 2, availabilityText: label });
@@ -145,7 +149,7 @@ export function parsePmContent(p: PmPages): OfferContent {
   const fmt = (n: number) => `R${n.toLocaleString('en-US')}`;
 
   const rooms: ContentRoom[] = [
-    { name: 'En-suite twin bedroom', description: 'Twin room with bath, shower and toilet, own entrance from the courtyard.', features: [twins ? `${twins} rooms` : null, 'Bar fridge, safe, heaters and electric blankets', 'DSTV and Wi-Fi'].filter((x): x is string => !!x) },
+    { name: PM_TWIN_ROOM, description: 'Twin room with bath, shower and toilet, own entrance from the courtyard.', features: [twins ? `${twins} rooms` : null, 'Bar fridge, safe, heaters and electric blankets', 'DSTV and Wi-Fi'].filter((x): x is string => !!x) },
     { name: 'En-suite family room', description: 'Family room with bath, shower and toilet, own entrance from the courtyard.', features: [families ? `${families} rooms` : null, 'Child friendly', 'DSTV and Wi-Fi'].filter((x): x is string => !!x) },
   ];
 

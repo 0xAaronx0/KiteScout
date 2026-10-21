@@ -26,7 +26,7 @@
 // Slots: one per hotel x room x occupancy x season band ("palmas-de-cortez-ocean-view-room-3p|2027-01-01"),
 //   USD per room per night, taxes (16% sales + 4% bed tax) not included -> room features.
 // Known limits: the Cabana table repeats "King Garden : $240" from the Garden Room table; king rows
-//   that name their own room ("King Garden") are kept once per hotel. Extended-stay rates (14+ nights)
+//   that name their own room ("King Garden") are kept once per hotel and priced to that room (vbRoom). Extended-stay rates (14+ nights)
 //   and the airport transfer price sheet (an image) are not parsed. No map pin on the site.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
@@ -130,6 +130,19 @@ export function vbBands(season: { from: [number, number]; to: [number, number] }
   return [{ start, end: dayBefore, add: 0 }, { start: notes.increaseFrom, end, add: notes.increase ?? 0 }];
 }
 
+/**
+ * The content room (`<hotel> - <table>`, as parseVbContent names it) a rate prices: its own table, except the
+ * "King Garden / King Poolside / King Ocean" rows, which are the king-bed variant of the hotel's Garden / Poolside /
+ * Ocean View room ("King Garden" is also printed under the Cabana table). Condo, suite and penthouse rates price
+ * the "Condo / Suite / Penthouse" room. null = no table of that name (left to slotRoom's name match).
+ */
+export function vbRoom(h: VbHotel, t: VbTable, r: VbRate): string | null {
+  const king = r.unit.match(/^King (\w+)/)?.[1];
+  if (!king) return `${h.name} - ${t.room}`;
+  const own = h.tables.find(x => x.room.toLowerCase().startsWith(king.toLowerCase()));
+  return own ? `${h.name} - ${own.room}` : null;
+}
+
 export function buildVbSlots(hotels: VbHotel[], bands: Array<{ start: string; end: string; add: number }>, today = todayIso()): Slot[] {
   const out: Slot[] = [];
   for (const h of hotels) {
@@ -137,6 +150,7 @@ export function buildVbSlots(hotels: VbHotel[], bands: Array<{ start: string; en
     for (const t of h.tables) {
       for (const r of t.rates) {
         const unit = `${h.name} - ${r.unit}`;
+        const room = vbRoom(h, t, r);
         const id = `${slug(unit)}${r.occupancy ? `-${r.occupancy}p` : ''}`;
         if (seen.has(id)) continue;                      // "King Garden" printed under two tables
         seen.add(id);
@@ -147,6 +161,7 @@ export function buildVbSlots(hotels: VbHotel[], bands: Array<{ start: string; en
             startDate: b.start,
             endDate: b.end,
             unit,
+            ...(room ? { room } : {}),
             price: r.price + b.add,
             currency: 'USD',
             priceUnit: 'per_night',

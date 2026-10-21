@@ -122,6 +122,12 @@ export function parseTmcPrices(html: string): TmcPrices {
 }
 
 export const tmcUnit = (r: Pick<TmcRate, 'type' | 'persons'>): string => `${TMC_UNITS[r.type] ?? r.type} (${r.persons} people)`;
+/** price-table type -> content room (cabin heading of /en/cabins/, "Meadow cabins" singularised); prices are per cabin */
+export const TMC_ROOMS: Record<string, string> = {
+  enghytte: 'Meadow cabin with toilet and shower',
+  familiehytte: 'Family cabin with toilet and shower',
+  fiskehytte: 'Fishing cabin with shared toilet and shower',
+};
 
 export function buildTmcSlots(p: TmcPrices, today: string): Slot[] {
   const out: Slot[] = [];
@@ -133,6 +139,7 @@ export function buildTmcSlots(p: TmcPrices, today: string): Slot[] {
         startDate: b.start,
         endDate: b.end,
         unit: tmcUnit(r),
+        ...(TMC_ROOMS[r.type] ? { room: TMC_ROOMS[r.type] } : {}),
         price: r.night,
         currency: 'DKK',
         priceUnit: 'per_night',
@@ -281,7 +288,7 @@ export function buildTmcEngineSlots(samples: CsobSample[], p: TmcPrices, ctx?: P
     const type = s.unit ? tmcTypeOf(s.unit) : null;
     if (!type) return s;
     const persons = p.rates.find(r => r.type === type)?.persons;
-    return { ...s, key: `${type}|${s.startDate}`, unit: persons ? tmcUnit({ type, persons }) : TMC_UNITS[type] };
+    return { ...s, key: `${type}|${s.startDate}`, unit: persons ? tmcUnit({ type, persons }) : TMC_UNITS[type], room: TMC_ROOMS[type] };
   });
 }
 

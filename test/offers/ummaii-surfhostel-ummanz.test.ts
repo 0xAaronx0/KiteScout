@@ -9,6 +9,7 @@ import {
   parseUmResults, umCoords, umSampleStays, umUnitName, umWidgetBody,
 } from '../../src/offers/adapters/ummaii-surfhostel-ummanz.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/ummaii-surfhostel-ummanz');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -91,4 +92,21 @@ test('ummaii: content', async () => {
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => /^https:\/\/www\.ummaii\.de\/fileadmin\/(redaktion|_processed_)\//.test(u) && !/logo|Karte_|teaser-small/i.test(u)));
   assert.equal(ummaiiSurfhostelUmmanz.fetchBudget, 19);
+});
+
+test('ummaii: per-size main-house and bungalow units price their shared content room', async () => {
+  const names = (await ummaiiSurfhostelUmmanz.fetchContent(ctx)).rooms.map(r => r.name);
+  const slots = await fetchUmSlots(ctx, TODAY);
+  const map = [...new Map(slots.map(s => [s.unit, slotRoom(names, s)])).entries()];
+  assert.deepEqual(map, [
+    ['Main house single room', 'Main house room (1-4 beds)'],
+    ['Main house 2-bed room', 'Main house room (1-4 beds)'],
+    ['Main house 3-bed room', 'Main house room (1-4 beds)'],
+    ['Main house 4-bed room', 'Main house room (1-4 beds)'],
+    ['Bungalow 6-bed room', 'Bungalow room (6 or 8 beds)'],
+    ['Bungalow 8-bed room', 'Bungalow room (6 or 8 beds)'],
+    ['Tree house', 'Tree house'],
+    ['Tiny House 2', 'Tiny House 2'],
+    ['Tiny House 1', 'Tiny House 1'],
+  ]);
 });

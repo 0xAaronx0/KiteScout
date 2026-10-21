@@ -23,7 +23,7 @@
 import { fetchText } from '../http.js';
 import { clean, imageCandidates, ldOfType, todayIso } from '../parse.js';
 import type { ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
-import { csobAddDays, csobSaturdaySamples, csobSlots, fetchCsobSamples, type CsobPortal } from './hvide-sande-camping.js';
+import { csobAddDays, csobRooms, csobSaturdaySamples, csobSlots, fetchCsobSamples, type CsobPortal } from './hvide-sande-camping.js';
 
 const SITE = 'https://feddet.dk';
 export const FSR_HOME_URL = `${SITE}/en/`;
@@ -169,10 +169,27 @@ export function parseFeddetContent(p: FsrPages): OfferContent {
   };
 }
 
+/**
+ * Engine unit -> content room (unit card of /en/accomodation/) where the names differ; each engine price is for that one
+ * unit. "Vacation Home Elvira" has no card and stays unlinked; "Spa Glamping Tent" and "Spa villa" match by name.
+ */
+export const FSR_ROOMS: Record<string, string> = {
+  "Lark's cabin": 'Larchcabin',
+  'Spa mobile home': 'Spa Mobilehome',
+  'Comfort Lodge without pets': 'Pet-free Comfort Lodge',
+  'Rental Camp-Let tent trailer': 'Camp-Let tent rental trailer',
+  'Luxury Glamping Tent': 'Glamping tent', // the only glamping tent without spa on both sides
+  'The holiday home Paradiso': 'The Beach House Paradiso',
+  'Caroline Holiday House': 'The Beach House Caroline',
+  'Amalie Holiday House': 'The Beach House Amalie',
+  'Vacation rentals Thalia': 'Holiday house Thalia',
+  'Olivia Ocean Suite': 'The Olivia Ocean Suite',
+};
+
 export async function fetchFsrSlots(today: string, ctx: FetchContext): Promise<Slot[]> {
   // open all year: one season window covering the sampling horizon
   const checkIns = csobSaturdaySamples(today, [{ start: today, end: csobAddDays(today, 400) }], { horizonMonths: SAMPLE_MONTHS, max: SAMPLE_MONTHS });
-  return csobSlots(await fetchCsobSamples(FSR_PORTAL, checkIns, ctx, 7, STOP_AFTER_CLOSED), ctx);
+  return csobRooms(csobSlots(await fetchCsobSamples(FSR_PORTAL, checkIns, ctx, 7, STOP_AFTER_CLOSED), ctx), FSR_ROOMS);
 }
 
 export const feddetStrandResort: OfferAdapter = {

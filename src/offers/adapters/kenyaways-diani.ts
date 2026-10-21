@@ -22,8 +22,8 @@
 // robots.txt www.thekenyaway.com (2026-10-12): Squarespace defaults (/config, /search, /api/, /static/,
 //   ?format=json ...) - the pages above are allowed.
 // Requests per run: content 3, slots 1 (the rooms page is memoised for 10 minutes).
-// Parsed: slot = rate category x persons sharing x season band with the sheet's real date limits
-//   ("super-sea-view-2p|2026-12-18"), USD per person per night incl. breakfast (sheet: "All rates are in
+// Parsed: slot = rate category x persons sharing x season band x named room of the category (Slot.room), with
+//   the sheet's real date limits ("super-sea-view-2p|2026-12-18|Rebel"), USD per person per night incl. breakfast (sheet: "All rates are in
 //   US Dollars ($) per Person sharing in a Room, including breakfast"), minNights from the sheet; bands that
 //   ended before today are dropped.
 // Known limits:
@@ -170,15 +170,18 @@ export function buildKwSlots(links: string[], roomNames: string[], today = today
     for (const band of sheet.bands) {
       if (band.end < today) continue;
       for (const cat of KW_CATEGORIES) {
-        if (!cat.rooms.some(r => roomNames.includes(r))) continue;
+        // one slot per listed room of the category: every room of a category has the same per-person rate
+        const listed = cat.rooms.filter(r => roomNames.includes(r));
+        if (!listed.length) continue;
         sheet.seasons[band.season][cat.id].forEach((price, i) => {
           if (price === null) return;
           const n = i + 1;
-          slots.push({
-            key: `${cat.id}-${n}p|${band.start}`,
+          for (const room of listed) slots.push({
+            key: `${cat.id}-${n}p|${band.start}|${room}`,
             startDate: band.start,
             endDate: band.end,
             unit: `${cat.name} (${cat.rooms.join(', ')})`,
+            room,
             price,
             currency: 'USD',
             priceUnit: 'per_night',

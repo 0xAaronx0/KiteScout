@@ -5,6 +5,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { primesurfKiteCampHvideSande, buildPsSlots, parsePsPrices } from '../../src/offers/adapters/primesurf-kite-camp-hvide-sande.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/primesurf-kite-camp-hvide-sande');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -39,4 +40,10 @@ test('ps: content', async () => {
   assert.equal(c.rooms.length, 6);
   assert.ok(c.imageUrls.length >= 15);
   assert.ok(!c.imageUrls.some(u => /-uai\./.test(u) && c.imageUrls.includes(u.replace('-uai', ''))));
+});
+
+test('ps: camp-week prices (kite camp included) never price a room', async () => {
+  const names = (await primesurfKiteCampHvideSande.fetchContent(ctx)).rooms.map(r => r.name);
+  const slots = await primesurfKiteCampHvideSande.fetchSlots(ctx);
+  assert.ok(slots.every(s => !s.room && slotRoom(names, s) === null));
 });

@@ -8,6 +8,7 @@ import {
   puzaMoyaCapeSportsLangebaan, buildPmSlots, parsePmSeasons, pmRange,
 } from '../../src/offers/adapters/puza-moya-cape-sports-langebaan.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/puza-moya-cape-sports-langebaan');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -69,4 +70,13 @@ test('pm: content', async () => {
   assert.ok(c.optionalServices.includes('Breakfast at the Wunderbar: R180 per person'));
   assert.equal(c.imageUrls.length, 10);
   assert.ok(c.imageUrls.every(u => /puza-?moya/i.test(u) && !/Villa2/.test(u)));
+});
+
+test('pm: season rates price the twin room, the family room stays unpriced', async () => {
+  const c = await puzaMoyaCapeSportsLangebaan.fetchContent(ctx);
+  const slots = await puzaMoyaCapeSportsLangebaan.fetchSlots(ctx);
+  const names = c.rooms.map(r => r.name);
+  assert.deepEqual(names, ['En-suite twin bedroom', 'En-suite family room']);
+  assert.ok(slots.length > 0);
+  assert.ok(slots.every(s => s.unit === 'En-suite room' && slotRoom(names, s) === 'En-suite twin bedroom'));
 });

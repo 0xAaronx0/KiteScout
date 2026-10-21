@@ -23,13 +23,14 @@
 //   ("coconut-bungalow|2026-11"), BRL per unit per night for 2 adults; double-encoded "&" in Omnibees room names is
 //   decoded (fixOmnibeesUnits).
 // Known limits: the own site's names (Portuguese "Bangalô Coqueiral") and the engine's room names ("Coconut
-//   Bungalow") differ; content rooms follow the own site, slots the engine. The kite school is a partner on the
+//   Bungalow") differ; content rooms follow the own site, slots the engine; JV_ROOMS links each engine room to its
+//   own-site type (slot.room). The kite school is a partner on the
 //   beach, not part of the hotel.
 // ---------------------------------------------------------------------------
 import { collapse, parse } from '../parse.js';
 import type { ContentRoom, OfferAdapter, OfferContent } from '../types.js';
 import { fetchOmnibeesSlots, hotelUrl, type OmnibeesHotel } from '../engines/omnibees.js';
-import { JAGUARIBE_CHAIN, blockLines, fixOmnibeesUnits, parseOmnibeesHotelPage, sisterPage } from './jaguaribe-lodge-fortim.js';
+import { JAGUARIBE_CHAIN, blockLines, fixOmnibeesUnits, parseOmnibeesHotelPage, sisterPage, withOmnibeesRooms } from './jaguaribe-lodge-fortim.js';
 
 const SITE = 'https://www.jaguarindiavillage.com';
 export const JV_HOTEL: OmnibeesHotel = { hotelId: 13994, chainPath: JAGUARIBE_CHAIN, chainId: JAGUARIBE_CHAIN, currencyId: 16 /* BRL, data-curr="16" */, currency: 'BRL', adults: 2, months: 6 };
@@ -41,6 +42,23 @@ export const JV_PAGES = {
 } as const;
 
 // --- pure parsers -----------------------------------------------------------------------------
+/**
+ * Omnibees room (decoded) -> own-site accommodation card (names as parseJvUnits() reads them). Coqueiral = coconut
+ * grove, Jardim = garden, Família = family; "Bungalow Familiar" (no pool) is the Bangalô Família. "Double Room"
+ * (up to 3 guests, "Ocean View") stays unlinked: only elimination points at the Bangalô Oceano, the engine does
+ * not name it.
+ */
+export const JV_ROOMS: Record<string, string> = {
+  'Coconut Bungalow': 'Bangalô Coqueiral',
+  'Coqueiral Bungalow & Swimming Pool': 'Bangalô Coqueiral & Pool',
+  'Bungalow Familiar': 'Bangalô Família',
+  'Family Bungalow & Swimming Pool': 'Bangalô Família & Pool',
+  'Ocean & Pool Bungalow': 'Bangalô Oceano & Pool',
+  'Garden villa': 'Villa Jardim',
+  'Superior Garden Villa': 'Villa Jardim Superior',
+  'Grand Villa Garden Superior': 'Grand Villa Jardim Superior',
+};
+
 export interface JvUnit { name: string; text: string; sizeM2: number | null; maxGuests: number | null; photo: string | null }
 
 /** /acomodacoes: cards <div data-reveal="rise"> with <h3> name, <p> text ("— 120 m² for up to 4 guests") and photo. */
@@ -178,6 +196,6 @@ export const jaguarindiaVillageFortim: OfferAdapter = {
     return parseJaguarindiaContent({ about, rooms, kite, omnibees });
   },
   async fetchSlots(ctx) {
-    return fixOmnibeesUnits(await fetchOmnibeesSlots(JV_HOTEL, ctx, 'jaguarindia-village'));
+    return withOmnibeesRooms(fixOmnibeesUnits(await fetchOmnibeesSlots(JV_HOTEL, ctx, 'jaguarindia-village')), JV_ROOMS);
   },
 };

@@ -6,10 +6,11 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  hvideSandeCamping, HSC_PORTAL, csobListUrl, csobPriceUrl, csobSaturdaySamples, csobSlots, fetchHscSlots, parseCsobList,
+  hvideSandeCamping, HSC_PORTAL, HSC_ROOMS, csobListUrl, csobPriceUrl, csobSaturdaySamples, csobSlots, fetchHscSlots, parseCsobList,
   parseCsobPrices, parseHscCabinPrices, parseHscCabins, parseHscSeasons,
 } from '../../src/offers/adapters/hvide-sande-camping.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/hvide-sande-camping');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -89,4 +90,14 @@ test('hsc: content', async () => {
     .includes('2027 (Strandhytte, type 11): low season from DKK 900, high season from DKK 1,250 per night, final cleaning DKK 700'));
   assert.ok(c.imageUrls.length >= 12 && c.imageUrls.every(u => u.startsWith('https://hvidesandecamping.dk/wp-content/uploads/') && !/imgi_1_A|\.svg/.test(u)));
   assert.match(c.sourceText ?? '', /perfect conditions for windsurfing, kitesurfing and SUP/);
+});
+
+test('hsc: every engine cabin type links to its cabin card', async () => {
+  const names = (await hvideSandeCamping.fetchContent(ctx)).rooms.map(r => r.name);
+  assert.deepEqual(Object.values(HSC_ROOMS).sort(), [...names].sort()); // 11 types, 11 cards, one to one
+  const slots = await fetchHscSlots(TODAY, { note: () => {}, incomplete: () => {} });
+  assert.ok(slots.every(s => slotRoom(names, s) !== null));
+  assert.equal(slotRoom(names, slots.find(s => s.unit === 'Beach Cabins')!), 'The Beach Cottage (Strandhytten)');
+  assert.equal(slotRoom(names, slots.find(s => s.unit === 'Cabin 4')!), 'Cottage 4');
+  assert.equal(slotRoom(names, slots.find(s => s.unit === 'Troldebjerg Cabin')!), 'The Troll Cottage (Troldehytten)');
 });

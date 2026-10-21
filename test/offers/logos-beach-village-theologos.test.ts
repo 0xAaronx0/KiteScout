@@ -5,11 +5,12 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  logosBeachVillageTheologos, applyLogosSamples, buildLogosSlots, fetchLogosSamples, fetchLogosSlots, logosSampleStays,
+  logosBeachVillageTheologos, LOGOS_ROOMS, applyLogosSamples, buildLogosSlots, fetchLogosSamples, fetchLogosSlots, logosSampleStays,
   parseLogosAvailability, parseLogosForm, parseLogosNotes, parseLogosRanges, parseLogosRoom, parseLogosTable, parseLogosWeeklyRange,
   type LogosSample,
 } from '../../src/offers/adapters/logos-beach-village-theologos.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/logos-beach-village-theologos');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -146,4 +147,20 @@ test('logos: content', async () => {
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => /\/wp-content\/uploads\/logos-beach-village-.*\.jpg$/.test(u)));
   assert.match(c.sourceText ?? '', /contact: info@logos-rhodos\.com/);
+});
+
+test('logos: every unit links to its room page (slot.room), table and engine-only slots', async () => {
+  const names = (await logosBeachVillageTheologos.fetchContent(ctx)).rooms.map(r => r.name);
+  assert.ok(Object.values(LOGOS_ROOMS).every(r => names.includes(r)));
+  const sample: LogosSample = { size: 'XXL', tag: 14435, checkIn: '2027-05-08', checkOut: '2027-05-15', status: 1,
+    products: [{ id: 1, name: 'Family Beach Lodge XXL - 4 Personen 7 Nächte', persons: 4, nights: 7, price: 1500 }] };
+  const slots = applyLogosSamples(tableSlots(), [sample]);
+  const linked = new Map(slots.map(s => [s.unit!, slotRoom(names, s)]));
+  assert.deepEqual(Object.fromEntries([...linked].sort()), {
+    'Beach Lodge XL': 'Beach Village Lodge XL',
+    'Beach Village Studio': 'Beach Village Studio',
+    'Family Beach Lodge XXL': 'Beach Village Lodge XXL',
+    'Shared Beach Lodge': 'Shared Beach Lodge',
+  });
+  assert.equal(slots.find(s => s.key === 'family-beach-lodge-xxl-4p|2027-05-08')!.room, 'Beach Village Lodge XXL');
 });

@@ -4,8 +4,9 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { jaguarindiaVillageFortim, JV_HOTEL, parseJvUnits } from '../../src/offers/adapters/jaguarindia-village-fortim.js';
-import { fixOmnibeesUnits } from '../../src/offers/adapters/jaguaribe-lodge-fortim.js';
+import { jaguarindiaVillageFortim, JV_HOTEL, JV_ROOMS, parseJvUnits } from '../../src/offers/adapters/jaguarindia-village-fortim.js';
+import { fixOmnibeesUnits, withOmnibeesRooms } from '../../src/offers/adapters/jaguaribe-lodge-fortim.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 import { buildRoomMonthSlots, buildRunSlots, parseCalendar, parseResults, resultsUrl, sampleStay } from '../../src/offers/engines/omnibees.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
@@ -83,4 +84,31 @@ test('jaguarindia: content', async () => {
   assert.ok(c.imageUrls.some(u => u.startsWith('https://media.omnibees.com/Images/13994/')));
   assert.ok(c.imageUrls.every(u => !/\.png|logo|\d+x\d+\//i.test(u)));
   assert.deepEqual(jaguarindiaVillageFortim.quote, { engine: 'omnibees', hotelId: 13994, chainId: 10325, currencyId: 16, currency: 'BRL' });
+});
+
+test('jaguarindia: engine rooms link to own-site accommodation cards (slot.room), the unnamed Double Room stays unlinked', async () => {
+  const c = await jaguarindiaVillageFortim.fetchContent(ctx);
+  const names = c.rooms.map(r => r.name);
+  const yms = ['2026-10', '2026-11', '2026-12', '2027-01', '2027-02', '2027-03'];
+  const months = yms.map(ym => {
+    const stay = sampleStay(days, ym);
+    return { ym, stay, results: stay ? results(stay.checkIn, stay.checkOut) : null };
+  });
+  const units = [...new Set(months.flatMap(m => (m.results ?? []).map(r => r.room)))];
+  const slots = withOmnibeesRooms(fixOmnibeesUnits([...buildRunSlots(JV_HOTEL, days), ...buildRoomMonthSlots(JV_HOTEL, units, days, months)]), JV_ROOMS);
+  assert.ok(Object.values(JV_ROOMS).every(r => names.includes(r)));
+  const linked = new Map(slots.filter(s => s.unit).map(s => [s.unit!, slotRoom(names, s)]));
+  assert.deepEqual(Object.fromEntries([...linked].sort()), {
+    'Bungalow Familiar': 'Bangalô Família',
+    'Coconut Bungalow': 'Bangalô Coqueiral',
+    'Coqueiral Bungalow & Swimming Pool': 'Bangalô Coqueiral & Pool',
+    'Double Room': null,
+    'Family Bungalow & Swimming Pool': 'Bangalô Família & Pool',
+    'Garden villa': 'Villa Jardim',
+    'Grand Villa Garden Superior': 'Grand Villa Jardim Superior',
+    'Grand Villa Jardim': 'Grand Villa Jardim',
+    'Ocean & Pool Bungalow': 'Bangalô Oceano & Pool',
+    'Superior Garden Villa': 'Villa Jardim Superior',
+  });
+  assert.ok(slots.filter(s => s.key.startsWith('lowest|')).every(s => slotRoom(names, s) === null));
 });

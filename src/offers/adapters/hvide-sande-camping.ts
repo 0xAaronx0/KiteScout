@@ -198,6 +198,11 @@ export function csobSlots(samples: CsobSample[], ctx?: Pick<FetchContext, 'note'
   return out;
 }
 
+/** Links slots to their content room when the engine names the unit differently (engine unit title -> ContentRoom.name). */
+export function csobRooms(slots: Slot[], rooms: Record<string, string>): Slot[] {
+  return slots.map(s => (s.unit && rooms[s.unit] ? { ...s, room: rooms[s.unit] } : s));
+}
+
 /**
  * All samples of a portal; a failing sample marks the run incomplete, a block stops it. `stopAfterClosed` ends the run after
  * that many consecutive weeks in which nothing at all is bookable (engine not loaded further ahead - saves requests).
@@ -424,12 +429,27 @@ export function parseHvideSandeCampingContent(p: HscPages): OfferContent {
   };
 }
 
+/** Engine cabin type -> content room (card heading with the Danish name); every engine price is per cabin of that type. */
+export const HSC_ROOMS: Record<string, string> = {
+  'Troldebjerg Cabin': 'The Troll Cottage (Troldehytten)', // price list: "Troldebjerghytten"
+  'Surfer Cabins': "The Surfer's Cottage (Surferhytten)",
+  'Fjord Cabins': 'The Fjord Cottage (Fjordhytten)',
+  'Dune Cabins': 'The Dune Cottage (Klithytten)',
+  "Fishermen's Cabins": "The Fisherman's Cottage (Fiskerhytten)",
+  'Hvide Sande Cabins': 'The Hvide Sande Cottage (Hvide Sande Hytten)',
+  'North Sea Cabins': 'The North Sea Cottage (Vesterhavshytten)',
+  'Beach Cabins': 'The Beach Cottage (Strandhytten)',
+  'Cabin 4': 'Cottage 4',
+  'The Harbor Cabin': 'The Harbour Cottage (Havnehytten)',
+  'Holiday Apartment': 'Holiday flat',
+};
+
 export async function fetchHscSlots(today: string, ctx: FetchContext): Promise<Slot[]> {
   const seasons = parseHscSeasons(await page(HSC_PRICES_URL));
   if (seasons.length === 0) throw new Error('hvide-sande-camping: no "Sæson YYYY" block on /priser/ (layout changed?)');
   const checkIns = csobSaturdaySamples(today, seasons, { max: 9 });
   if (checkIns.length === 0) { ctx.note('hvide-sande-camping: no sample week inside a published season within 12 months'); return []; }
-  return csobSlots(await fetchCsobSamples(HSC_PORTAL, checkIns, ctx), ctx);
+  return csobRooms(csobSlots(await fetchCsobSamples(HSC_PORTAL, checkIns, ctx), ctx), HSC_ROOMS);
 }
 
 export const hvideSandeCamping: OfferAdapter = {

@@ -7,10 +7,11 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  laBallenaAlegreSantPerePescador, baBudgetsUrl, baSamples, changeoverDay, fetchBaSlots, parseBaBungalows, parseBaSeason,
+  laBallenaAlegreSantPerePescador, BA_ROOMS, baBudgetsUrl, baSamples, changeoverDay, fetchBaSlots, parseBaBungalows, parseBaSeason,
   parseMcAvailability, parseMcBudgets, parseMcGeo, parseMcProducts,
 } from '../../src/offers/adapters/la-ballena-alegre-sant-pere-pescador.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/la-ballena-alegre-sant-pere-pescador');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -62,12 +63,12 @@ test('ballena: slots = bands per bungalow type (weekly stays, month samples)', a
   const slots = await fetchBaSlots(ctx, TODAY);
   assert.deepEqual(incomplete, []);
   assert.deepEqual(checkSlots(slots).problems, []);
-  assert.equal(slots.length, 68);
+  assert.equal(slots.length, 81); // 68 bands, the 13 of the shared Cortal / Empúries products once per Garden + Pool room
   const pick = (key: string) => slots.find(s => s.key === key)!;
   const jul = pick('bungalow-e-devesa|2027-07-04');
   assert.deepEqual([jul.startDate, jul.endDate, jul.unit, jul.price, jul.currency, jul.priceUnit, jul.priceBasis, jul.packageNights, jul.availability],
     ['2027-07-04', '2027-07-31', 'Bungalow e-Devesa', 2703.48, 'EUR', 'package', 'room', 7, 'available']);
-  const soldOut = pick('bungalow-cortal|2027-05-28');
+  const soldOut = pick('bungalow-cortal|2027-05-28|Bungalow Cortal Garden');
   assert.deepEqual([soldOut.endDate, soldOut.price, soldOut.availability], ['2027-06-10', null, 'sold_out']);
   const limited = pick('bungalow-xaloc-duplex|2027-08-06');
   assert.deepEqual([limited.endDate, limited.price, limited.availability, limited.spotsLeft], ['2027-08-12', 2916.48, 'limited', 1]);
@@ -91,4 +92,32 @@ test('ballena: content', async () => {
   assert.ok(c.rooms[0].features.includes('From EUR 223 per night (as printed on the site)'));
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://www.ballena-alegre.com/costabrava/wp-content/uploads/') && !/plano/i.test(u)));
+});
+
+test('ballena: engine products link to the site bungalow rooms (slot.room)', async () => {
+  const names = (await laBallenaAlegreSantPerePescador.fetchContent(ctx)).rooms.map(r => r.name);
+  assert.ok(Object.values(BA_ROOMS).flat().every(r => names.includes(r)));
+  const slots = await fetchBaSlots(ctx, TODAY);
+  const linked = new Map<string, Set<string | null>>();
+  for (const s of slots) linked.set(s.unit!, (linked.get(s.unit!) ?? new Set()).add(slotRoom(names, s)));
+  assert.deepEqual(Object.fromEntries([...linked].map(([u, r]) => [u, [...r].sort()]).sort()), {
+    'Bungalow Cortal': ['Bungalow Cortal Garden', 'Bungalow Cortal Pool'],
+    'Bungalow Empúries': ['Bungalow Empúries Garden', 'Bungalow Empúries Pool'],
+    'Bungalow Empúries SUITES': ['Bungalow Empuries Suite'],
+    'Bungalow Fluvià Friday': ['Bungalow Fluvià Friday'],
+    'Bungalow Fluvià Saturday': ['Bungalow Fluvia Saturday'],
+    'Bungalow Garbí': ['Bungalow Garbí'],
+    'Bungalow Mare Nostrum': ['Bungalow Mare Nostrum'],
+    'Bungalow Tamariu': ['Bungalow Tamariu'],
+    'Bungalow Tamariu Suite': ['Bungalow Tamariu Suite'],
+    'Bungalow Xaloc (duplex)': ['Bungalow Xaloc'],
+    'Bungalow e-Devesa': ['Bungalow E-Devesa'],
+  });
+  // shared products: one copy per room with its own key, same price
+  const cortal = slots.filter(s => s.key.startsWith('bungalow-cortal|2027-05-28|'));
+  assert.deepEqual(cortal.map(s => [s.key, s.room, s.availability]), [
+    ['bungalow-cortal|2027-05-28|Bungalow Cortal Garden', 'Bungalow Cortal Garden', 'sold_out'],
+    ['bungalow-cortal|2027-05-28|Bungalow Cortal Pool', 'Bungalow Cortal Pool', 'sold_out'],
+  ]);
+  assert.equal(new Set(slots.map(s => s.key)).size, slots.length);
 });

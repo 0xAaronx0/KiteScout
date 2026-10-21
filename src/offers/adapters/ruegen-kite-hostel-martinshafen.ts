@@ -29,6 +29,8 @@ import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js'
 const SITE = 'https://www.ruegen-kite.de';
 export const RK_STAY_URL = `${SITE}/unterkunft`;
 export const RK_CAMP_URL = `${SITE}/kurse/kitecamp-ruegen`;
+export const RK_ROOM_DORM = '6-bed room (Hostel 1)';
+export const RK_ROOM_DOUBLE = 'Double room (Hostel 2)';
 
 const memo = new Map<string, { at: number; p: Promise<string> }>();
 /** one fetch per page per 10 minutes: fetchContent + fetchSlots in the same run share the pages */
@@ -85,11 +87,12 @@ export function buildRkSlots(list: RkPrice[], form: RkCampForm): Slot[] {
   const out: Slot[] = [];
   const base = { startDate: null, endDate: null, currency: 'EUR', priceUnit: 'per_night' as const, availability: 'on_request' as const, availabilityText: null, spotsLeft: null };
   const dorm = list.find(x => /kitehostel/i.test(x.badge) && /^6.?Bett/i.test(x.title));
-  if (dorm) out.push({ ...base, key: 'bed-6-bed-room', unit: 'Bed in a 6-bed room', price: dorm.price, priceBasis: 'person', occupancy: 1 });
+  if (dorm) out.push({ ...base, key: 'bed-6-bed-room', unit: 'Bed in a 6-bed room', room: RK_ROOM_DORM, price: dorm.price, priceBasis: 'person', occupancy: 1 });
   const dbl = list.find(x => /kitehostel/i.test(x.badge) && /^Doppelzimmer$/i.test(x.title));
-  if (dbl) out.push({ ...base, key: 'double-room', unit: 'Double room', price: dbl.price, priceBasis: 'room', occupancy: 2 });
+  if (dbl) out.push({ ...base, key: 'double-room', unit: 'Double room', room: RK_ROOM_DOUBLE, price: dbl.price, priceBasis: 'room', occupancy: 2 });
+  // the same Hostel 2 double room with its extra bed (/unterkunft: "Aufbettung für 3. Person +15€" = 60 + 15)
   const triple = form.options.find(o => /Doppelzimmer mit Aufbettung für 3/i.test(o.label));
-  if (dbl && triple) out.push({ ...base, key: 'double-room-3', unit: 'Double room with extra bed (3 people)', price: triple.price, priceBasis: 'room', occupancy: 3 });
+  if (dbl && triple) out.push({ ...base, key: 'double-room-3', unit: 'Double room with extra bed (3 people)', room: RK_ROOM_DOUBLE, price: triple.price, priceBasis: 'room', occupancy: 3 });
   return out;
 }
 
@@ -151,7 +154,7 @@ export function parseRuegenKiteContent(p: RkPages): OfferContent {
 
   const rooms: ContentRoom[] = [
     {
-      name: '6-bed room (Hostel 1)',
+      name: RK_ROOM_DORM,
       description: 'Simple 6-bed rooms in Hostel 1, which has two of them, a large shared kitchen and a lounge; showers in the house.',
       features: [
         price('bed-6-bed-room') ? `EUR ${price('bed-6-bed-room')} per person and night` : null,
@@ -160,7 +163,7 @@ export function parseRuegenKiteContent(p: RkPages): OfferContent {
       ].filter((x): x is string => !!x),
     },
     {
-      name: 'Double room (Hostel 2)',
+      name: RK_ROOM_DOUBLE,
       description: 'Two double rooms in Hostel 2 with a small kitchen and bathroom; an extra bed for a third person is possible.',
       features: [
         price('double-room') ? `EUR ${price('double-room')} per room (per night inferred)` : null,

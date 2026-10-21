@@ -8,6 +8,7 @@ import {
   oceanSpiritsLodgeBurgau, buildOslSlots, oslTableYear, parseOslFacilities, parseOslRates, parseOslRooms,
 } from '../../src/offers/adapters/ocean-spirits-lodge-burgau.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/ocean-spirits-lodge-burgau');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -76,4 +77,13 @@ test('osl: content', async () => {
   assert.ok(c.imageUrls.length >= 15);
   assert.ok(c.imageUrls.every(u => !/logo|social-share|ProfilePic|\.svg|-\d+x\d+\.jpg$/i.test(u)));
   assert.equal(new Set(c.imageUrls.map(u => u.replace(/-e\d{10,}(?=\.[a-z]+$)/, ''))).size, c.imageUrls.length);
+});
+
+test('osl: every price-table unit prices its room headline ("Dorm" -> "Dorm Room")', async () => {
+  const c = await oceanSpiritsLodgeBurgau.fetchContent(ctx);
+  const slots = await oceanSpiritsLodgeBurgau.fetchSlots(ctx);
+  const names = c.rooms.map(r => r.name);
+  assert.deepEqual(names, ['Suite w/ balcony', 'Suite', 'Dorm Room']);
+  assert.deepEqual(Object.fromEntries(slots.map(s => [s.unit, slotRoom(names, s)])),
+    { Dorm: 'Dorm Room', Suite: 'Suite', 'Suite w/ balcony': 'Suite w/ balcony' });
 });

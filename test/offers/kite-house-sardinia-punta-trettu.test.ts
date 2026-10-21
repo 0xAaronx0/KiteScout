@@ -7,6 +7,7 @@ import {
   kiteHouseSardiniaPuntaTrettu, buildKhsSlots, parseKhsApartments, parseKhsDistances,
 } from '../../src/offers/adapters/kite-house-sardinia-punta-trettu.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/kite-house-sardinia-punta-trettu');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -70,4 +71,16 @@ test('khs: content', async () => {
   assert.ok(c.optionalServices.every(s => s.length < 60));
   assert.equal(c.imageUrls[0], 'https://kitehousesardinia.com/wp-content/uploads/kite-house-sardinia-drone-hero.jpg');
   assert.ok(c.imageUrls.every(u => !/logo|plan-kite|screenshot|-\d+x\d+\./i.test(u)));
+});
+
+test('khs: every apartment slot links to its content room (slot.room)', async () => {
+  const names = (await kiteHouseSardiniaPuntaTrettu.fetchContent(ctx)).rooms.map(r => r.name);
+  const slots = await kiteHouseSardiniaPuntaTrettu.fetchSlots(ctx);
+  assert.deepEqual(slots.map(s => [s.key, slotRoom(names, s)]), [
+    ['palme', 'Two-room Apartments "Palme"'],
+    ['eucalipti', 'Three-room Apartments "Eucalipti"'],
+    ['ulivi', 'Three-room Apartments "Ulivi"'],
+    ['melone', 'Two-room Apartment "Melone"'],
+    ['datteri', 'Studio Apartments "Datteri"'],
+  ]);
 });

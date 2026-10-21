@@ -35,6 +35,9 @@ export const RBO_URL = `${RGB_SITE}/ferienanlagen/born.html`;
 const RBO_BOOKING_URL = 'https://buchen.regenbogen.ag/SIHOTWebRegenbogenAG/client/?HN=40';
 
 const ab = (a: number, c: number, d: number): Record<RgbSeason, number> => ({ 'A+B': a, C: c, D: d });
+/** Tab pane names of the park page (= content room names, with ® on this page; checked against the 2026-10-14 fixture). */
+export const RBO_ROOM_HOLLI = 'Ferienunterkunft Holli®';
+export const RBO_ROOM_EXKLUSIV = 'Ferienunterkunft Holli® Exklusiv';
 /** Born_Preisliste-2026-1.pdf, page 1 "Camping & Mietobjekte", rental rows (read by hand 2026-10-14). */
 export const RBO_SHEET: RgbPriceSheet = {
   href: '/resources/persistent/e268412daa5c3c52dea96a920914c188d4b55993/Born_Preisliste-2026-1.pdf',
@@ -42,10 +45,11 @@ export const RBO_SHEET: RgbPriceSheet = {
   seasons: RGB_SEASONS_2026,
   opening: { start: '2026-03-20', end: '2026-11-01' },
   units: [
-    { name: 'Ferienhaus Holli®', persons: null, pets: false, prices: ab(55, 107, 151) },
-    { name: 'Ferienhaus Holli® mit Haustiererlaubnis', persons: null, pets: true, prices: ab(55, 107, 151) },
-    { name: 'Ferienhaus Holli® Exklusiv', persons: 6, pets: false, prices: ab(76, 129, 173) },
-    { name: 'Ferienhaus Holli® Exklusiv mit Haustiererlaubnis', persons: 6, pets: true, prices: ab(76, 129, 173) },
+    // pet-friendly rows price the same pane's unit; "Holli® Komfort" has no row -> stays unpriced
+    { name: 'Ferienhaus Holli®', persons: null, pets: false, prices: ab(55, 107, 151), room: RBO_ROOM_HOLLI },
+    { name: 'Ferienhaus Holli® mit Haustiererlaubnis', persons: null, pets: true, prices: ab(55, 107, 151), room: RBO_ROOM_HOLLI },
+    { name: 'Ferienhaus Holli® Exklusiv', persons: 6, pets: false, prices: ab(76, 129, 173), room: RBO_ROOM_EXKLUSIV },
+    { name: 'Ferienhaus Holli® Exklusiv mit Haustiererlaubnis', persons: 6, pets: true, prices: ab(76, 129, 173), room: RBO_ROOM_EXKLUSIV },
   ],
   extras: ['Final cleaning: Holli EUR 89, Holli Exklusiv EUR 109', ...RGB_EXTRAS_2026],
 };

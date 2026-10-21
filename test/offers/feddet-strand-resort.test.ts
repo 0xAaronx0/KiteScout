@@ -6,10 +6,11 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  feddetStrandResort, FSR_PORTAL, fetchFsrSlots, parseFsrGeo, parseFsrKite, parseFsrUnits,
+  feddetStrandResort, FSR_PORTAL, FSR_ROOMS, fetchFsrSlots, parseFsrGeo, parseFsrKite, parseFsrUnits,
 } from '../../src/offers/adapters/feddet-strand-resort.js';
 import { parseCsobList } from '../../src/offers/adapters/hvide-sande-camping.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/feddet-strand-resort');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -67,4 +68,18 @@ test('feddet: content', async () => {
   assert.equal(c.rooms.length, 15);
   assert.ok(c.imageUrls[0].endsWith('/2021/12/kite-surfing-feddet-5.jpg'));
   assert.ok(c.imageUrls.length >= 20 && c.imageUrls.every(u => u.startsWith('https://feddet.dk/wp-content/uploads/') && !/\.png$|flags/.test(u)));
+});
+
+test('feddet: engine units link to their content rooms', async () => {
+  const names = (await feddetStrandResort.fetchContent(ctx)).rooms.map(r => r.name);
+  assert.ok(Object.values(FSR_ROOMS).every(r => names.includes(r)));
+  const slots = await fetchFsrSlots(TODAY, { note: () => {}, incomplete: () => {} });
+  const linked = new Map(slots.map(s => [s.unit, slotRoom(names, s)]));
+  assert.equal(linked.get("Lark's cabin"), 'Larchcabin');
+  assert.equal(linked.get('Comfort Lodge without pets'), 'Pet-free Comfort Lodge');
+  assert.equal(linked.get('Olivia Ocean Suite'), 'The Olivia Ocean Suite');
+  assert.equal(linked.get('Amalie Holiday House'), 'The Beach House Amalie');
+  assert.equal(linked.get('Spa villa'), 'Spa Villa'); // by name
+  assert.equal(linked.get('Vacation Home Elvira'), null); // no unit card on the site
+  assert.deepEqual([...linked].filter(([u, r]) => !r).map(([u]) => u), ['Vacation Home Elvira']);
 });

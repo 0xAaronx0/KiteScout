@@ -23,7 +23,7 @@
 import { fetchText } from '../http.js';
 import { clean, iso, monthOf, todayIso } from '../parse.js';
 import type { ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
-import { csobSaturdaySamples, csobSlots, fetchCsobSamples, type CsobPortal } from './hvide-sande-camping.js';
+import { csobRooms, csobSaturdaySamples, csobSlots, fetchCsobSamples, type CsobPortal } from './hvide-sande-camping.js';
 
 const SITE = 'https://www.drejby.com';
 export const DSC_HOME_URL = `${SITE}/`;
@@ -162,12 +162,26 @@ export function parseDrejbyContent(p: DscPages): OfferContent {
   };
 }
 
+/** Engine unit -> content room (<h3> of the cabins / apartments page); each engine price is for one unit of that type. */
+export const DSC_ROOMS: Record<string, string> = {
+  'Standard Cabin': 'Standard cabin with a terrace',
+  'Rice Cabins': 'Rice inspired cabins',
+  'Ourdoor Cabins': 'Cabin in the Outdoor oasis', // sic, the engine's spelling
+  'Apartment no 1': 'Holiday apartment 1',
+  'Apartment no 2': 'Holiday apartment 2',
+  'Apartment no 3': 'Holiday apartment 3',
+  'Apartment no 4': 'Holiday apartment 4',
+  'Apartment no. 5': 'Holiday apartment 5',
+  // the site's heading carries an en dash; "Veranda" = the apartment "with the porch"
+  'Apartment "Veranda" - 4 people': 'Holiday apartment 6 \u2013 The Porch',
+};
+
 export async function fetchDscSlots(today: string, ctx: FetchContext): Promise<Slot[]> {
   const seasons = parseDscSeasons(await page(DSC_CABINS_URL));
   if (seasons.length === 0) throw new Error('drejby: footer line "Season YYYY starts on … and ends on …" not found');
   const checkIns = csobSaturdaySamples(today, seasons, { max: 9 });
   if (checkIns.length === 0) { ctx.note('drejby: no sample week inside a published season within 12 months'); return []; }
-  return csobSlots(await fetchCsobSamples(DSC_PORTAL, checkIns, ctx), ctx);
+  return csobRooms(csobSlots(await fetchCsobSamples(DSC_PORTAL, checkIns, ctx), ctx), DSC_ROOMS);
 }
 
 export const drejbyStrandCampingAls: OfferAdapter = {

@@ -327,13 +327,30 @@ export function whOpenGroupsOnly(samples: CsobSample[]): CsobSample[] {
   });
 }
 
-/** Engine samples -> slots with English unit names and keys "<unit>|<check-in>". */
+/**
+ * English engine unit -> content room, only where one engine profile prices exactly one content room (or variants of it:
+ * the three trailer classes all rent the "Rental trailer" of /mietwohnwagen). Left unlinked: "Holiday home Dünenpark"
+ * (one profile for two different house models), the two apartment profiles (golf course = apartments at the Golf Park in
+ * Burg, not on our pages; "on the campsite" = beach or pool apartments, not said which) and the trailer specials (offers).
+ */
+export const WH_ROOMS: Record<string, string> = {
+  'Economy rental trailer': 'Rental trailer',
+  'Comfort rental trailer': 'Rental trailer',
+  'Premium rental trailer': 'Rental trailer',
+  'Holiday home Baltikpark': 'Holiday home Baltic-Park: Seeschwalbe', // the only house of the Baltic-Park page
+  'Mobile home Sumba': 'Mobile home: Sumba Model',
+  'Mobile home Ocala': 'Mobile home: Ocala Model',
+  'Mobile home Chatel': 'Mobile home: Chatel Model',
+};
+
+/** Engine samples -> slots with English unit names, keys "<unit>|<check-in>" and the content room (WH_ROOMS). */
 export function buildWhEngineSlots(samples: CsobSample[], ctx?: Pick<FetchContext, 'note'>): Slot[] {
   const names = new Map<string, string>();
   for (const s of samples) for (const p of s.profiles) names.set(p.title, whUnitName(p));
   return csobSlots(whOpenGroupsOnly(samples), ctx).map(s => {
     const unit = s.unit ? names.get(s.unit) ?? s.unit : s.unit;
-    return { ...s, unit, key: `${csobKeyPart(unit ?? '')}|${s.startDate}` };
+    const room = unit ? WH_ROOMS[unit] : undefined;
+    return { ...s, unit, key: `${csobKeyPart(unit ?? '')}|${s.startDate}`, ...(room ? { room } : {}) };
   });
 }
 
