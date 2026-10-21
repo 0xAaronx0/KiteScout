@@ -23,9 +23,6 @@ importers:
       ffmpeg-static:
         specifier: 5.3.0
         version: 5.3.0
-      h5wasm:
-        specifier: 0.10.3
-        version: 0.10.3
       node-html-parser:
         specifier: 7.1.0
         version: 7.1.0
@@ -580,9 +577,6 @@ packages:
   gopd@1.2.0:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
-
-  h5wasm@0.10.3:
-    resolution: {integrity: sha512-W4Jy5ExtX/VNbyD8GdOBckDuj6AL16TemppVNxZsV3rJZEWCv2sxlCzOttZLer3zkMttbDYsWHl0qt1z3Bln+Q==}
 
   has-symbols@1.1.0:
     resolution: {integrity: sha512-1cDNdwJ2Jaohmb3sg4OmKaMBwuC48sYni5HUw2DvsC8LjGTLK9h+eb1X6RyuOHe4hT0ULCW68iomhjUoKUqlPQ==}
@@ -1207,8 +1201,6 @@ snapshots:
       resolve-pkg-maps: 1.0.0
 
   gopd@1.2.0: {}
-
-  h5wasm@0.10.3: {}
 
   has-symbols@1.1.0: {}
 

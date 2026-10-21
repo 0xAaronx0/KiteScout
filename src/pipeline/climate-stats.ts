@@ -6,7 +6,7 @@
 //   4. upsert offer_climate_stats, delete rows of offers that are gone
 //   5. same for every country in climate_country_points -> country_climate_stats
 //      (one kite spot per wind_stats country; map layers next to wind_stats)
-// Fetcher: Copernicus (ERA5 + CAMS, CC-BY 4.0) when CDSAPI_KEY / CDS_API_KEY is set,
+// Fetcher: Copernicus ERA5 (CC-BY 4.0) + computed UV guide value when CDSAPI_KEY / CDS_API_KEY is set,
 // else Open-Meteo (free API = non-commercial only; OPEN_METEO_API_KEY = commercial hosts).
 // Countries only use Copernicus cells while a Copernicus token is set (Aaron, 2026-10-19).
 // New cells are written as soon as they are fetched, so a run cut short by the quota,
@@ -57,10 +57,9 @@ interface CountryPoint { country: string; is_alias: boolean; spot_name: string; 
 export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: number; budgetMin?: number } = {}): Promise<ClimateRunReport> {
   const apiKey = process.env.OPEN_METEO_API_KEY || undefined;
   const rawCds = process.env.CDSAPI_KEY || process.env.CDS_API_KEY || undefined;
-  const rawAds = process.env.ADSAPI_KEY || process.env.ADS_API_KEY || undefined;
-  const cds = rawCds ? normalizeToken(rawCds) : undefined, ads = rawAds ? normalizeToken(rawAds) : undefined;
-  if (cds) console.log(`Copernicus token: ${cds.shape}${ads ? `; ADS token: ${ads.shape}` : ''}`);
-  const cdsToken = cds?.token, adsToken = ads?.token;
+  const cds = rawCds ? normalizeToken(rawCds) : undefined;
+  if (cds) console.log(`Copernicus token: ${cds.shape}`);
+  const cdsToken = cds?.token;
   const deadline = opts.budgetMin != null ? Date.now() + opts.budgetMin * 60_000 : Infinity;
 
   const cruises = await selectAll<any>('app_cruise_offer_cards', 'offer_id,title,country,departure_port,itinerary_spots');
@@ -104,7 +103,7 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
   offers.forEach((o, i) => { const p = offerPoints[i]; if (p) add({ lat: p.lat, lng: p.lng, label: o.title ?? o.offer_id, copernicusOnly: false }); });
   if (needs.length) console.log(`${needs.length} climate cells to fetch via ${report.fetcher}`);
 
-  // ---- 2. fetch them (Copernicus: ERA5 per point + CAMS per regional box; Open-Meteo one by one)
+  // ---- 2. fetch them (Copernicus: ERA5 per point, 6 in parallel, UV computed; Open-Meteo one by one)
   const store = async (n: Need, c: Omit<ClimateCell, 'lat10' | 'lng10'>, started: number) => {
     const cell: Cell = { ...c, lat10: round10(n.lat), lng10: round10(n.lng), sources: cdsToken ? COPERNICUS_SOURCES : SOURCES };
     if (!opts.dryRun) {
@@ -124,8 +123,8 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
   if (cdsToken) {
     const started = Date.now();
     const byKey = new Map(batch.map((n, i) => [String(i), n]));
-    await fetchCellsCopernicus(batch.map((n, i) => ({ key: String(i), lat: n.lat, lng: n.lng, label: n.label })), {
-      token: cdsToken, adsToken, log: console.log,
+    await fetchCellsCopernicus(batch.map((n, i) => ({ key: String(i), lat: n.lat, lng: n.lng, label: n.label, elevation: n.elevation })), {
+      token: cdsToken, log: console.log,
       shouldStart: () => Date.now() <= deadline,
       onCell: (p, c) => store(byKey.get(p.key)!, c, started),
       onFail: (p, e) => fail(byKey.get(p.key)!, e),

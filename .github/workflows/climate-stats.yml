@@ -6,7 +6,7 @@ name: Offer climate stats
 # pins (e.g. corrected accommodation locations) get their spot's climate; only cells
 # not yet cached in climate_points are fetched.
 # Unknown departure ports are listed in the log -> add them to climate_port_points.
-# Fetcher: Copernicus (ERA5 via CDS + CAMS via ADS, CC-BY 4.0) with the CDS_API_KEY secret;
+# Fetcher: Copernicus ERA5 via CDS (CC-BY 4.0, UV computed) with the CDS_API_KEY secret;
 # the free Open-Meteo API is non-commercial only. New cells are stored as they arrive, so a
 # run stopped by max_fetch / the time budget / the timeout continues on the next run.
 # Lives outside web/**, so it never triggers the Docker build/deploy workflow.
@@ -57,7 +57,7 @@ jobs:
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          # Copernicus personal access token (works for CDS and ADS); without it Open-Meteo is used
+          # Copernicus CDS personal access token; without it Open-Meteo is used
           CDSAPI_KEY: ${{ secrets.CDS_API_KEY }}
           # optional: commercial Open-Meteo key (customer-* hosts); free tier is used without it
           OPEN_METEO_API_KEY: ${{ secrets.OPEN_METEO_API_KEY }}

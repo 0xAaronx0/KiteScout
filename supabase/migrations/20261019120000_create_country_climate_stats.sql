@@ -17,8 +17,9 @@
 --                                    (ERA5 hourly point series via CDS, 2016-2025)
 --   water_temp_months                mean SST, deg C (ERA5, nearest sea grid point);
 --                                    NULL without a sea grid point within 0.25 deg
---   uv_months / uv_clear_sky_months  mean daily max UV index (CAMS global forecasts
---                                    via ADS, 40 x UV dose, 2023-2025)
+--   uv_months / uv_clear_sky_months  typical monthly MAX UV index, whole numbers (guide
+--                                    value: clear-sky noon UV from sun angle + ozone,
+--                                    Aaron 2026-10-21; both columns hold the same value)
 -- See src/pipeline/copernicus.ts; climate_points.sources names the source of each cell.
 -- All *_months arrays: 12 values, January..December.
 --
