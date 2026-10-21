@@ -124,6 +124,8 @@ export function parseSunsetWaveContent(p: SwrPages): OfferContent {
     country: 'Italy',
     region: 'Lo Stagnone, Sicily',
     spot: 'Lo Stagnone',
+    // the resort's own Google Maps place (linked from stagnonekiteboarding.com): the 'Lo Stagnone' spot pin lies in the lagoon
+    spotCoords: { lat: 37.8922, lng: 12.486 },
     itinerarySpots: [],
     durationDays: null,
     // season article: "corsi per principianti", "lezioni individuali e di progressione" (2026)

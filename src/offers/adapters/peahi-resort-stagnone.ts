@@ -100,6 +100,8 @@ export function parsePeahiIntro(html: string): string {
   return parse(html).querySelectorAll('.zn_text_box p').map(p => textOf(p)).find(t => /accommodation directly at our kite spot/i.test(t)) ?? '';
 }
 
+const PEAHI_SHORE = { lat: 37.8877, lng: 12.4747 };
+
 /** Kallyas map: `new Zn_google_map('zn_google_map_x', [37.887818, 12.471306], ...)`. */
 export function parsePkCoords(html: string): { lat: number; lng: number } | null {
   const m = html.match(/new Zn_google_map\(\s*'[^']*'\s*,\s*\[\s*(-?\d+\.\d+)\s*,\s*(-?\d+\.\d+)\s*\]/);
@@ -174,7 +176,8 @@ export function parsePeahiContent(p: PeahiPages): OfferContent {
     region: 'Lo Stagnone, Sicily',
     spot: 'Lo Stagnone',
     // Kallyas Google map on the kite center's home page (checked 2026-10-12)
-    spotCoords: coords,
+    // the site's map pin sits ~300 m out in the lagoon; Via Torre Sances (Birgi Vecchi, OSM) is the shore street of its address
+    spotCoords: PEAHI_SHORE,
     itinerarySpots: [],
     durationDays: null,
     // lessons: "Courses for all levels; from complete beginners to advanced freestyle lesson"

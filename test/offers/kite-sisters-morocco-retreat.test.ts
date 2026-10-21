@@ -30,11 +30,11 @@ test('ksm: edition line parser and status words', () => {
   assert.deepEqual(editionStatus('Last 3 spots!', null), { availability: 'limited', text: 'Last 3 spots', spotsLeft: 3 });
 });
 
-test('ksm: content (tour with three stops)', async () => {
+test('ksm: content (tour, kite stops only on the map)', async () => {
   const c = await kiteSistersMoroccoRetreat.fetchContent(ctx);
   assert.equal(contentProblem(c), null);
-  assert.deepEqual([c.kind, c.durationDays, c.country, c.spot], ['tour', 11, 'Morocco', 'Marrakech']);
-  assert.deepEqual(c.itinerarySpots.map(s => s.name), ['Marrakech', 'Essaouira', 'Dakhla']);
+  assert.deepEqual([c.kind, c.durationDays, c.country, c.spot], ['tour', 11, 'Morocco', 'Essaouira']);
+  assert.deepEqual(c.itinerarySpots.map(s => s.name), ['Essaouira', 'Dakhla']);
   assert.ok(c.includedServices.includes('6 Nights at an Exclusive Ecolodge in Dakhla'));
   assert.ok(c.imageUrls.length >= 10);
   const dir = process.env.OFFERS_FIXTURE_DIR!;

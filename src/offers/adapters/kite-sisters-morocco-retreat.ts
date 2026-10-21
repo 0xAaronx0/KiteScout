@@ -134,11 +134,11 @@ export function parseKsmContent(html: string, today: string): OfferContent {
     continent: 'Africa',
     country: 'Morocco',
     region: 'Marrakech-Safi',
-    spot: 'Marrakech',
+    spot: 'Essaouira',
+    // map stops = the kite spots only; Marrakech (arrival + one riad night) would pin the tour 140 km inland
     itinerarySpots: [
-      { name: 'Marrakech', country: 'Morocco', region: 'Marrakech-Safi', order: 1 },
-      { name: 'Essaouira', country: 'Morocco', region: 'Marrakech-Safi', order: 2 },
-      { name: 'Dakhla', country: 'Morocco', region: 'Dakhla-Oued Ed-Dahab', order: 3 },
+      { name: 'Essaouira', country: 'Morocco', region: 'Marrakech-Safi', order: 1 },
+      { name: 'Dakhla', country: 'Morocco', region: 'Dakhla-Oued Ed-Dahab', order: 2 },
     ],
     durationDays: days,
     skillLevels: ['beginner', 'intermediate', 'advanced'],

@@ -45,7 +45,7 @@ test('lakeside: content says honestly where the kiting happens', async () => {
   assert.equal(c.title, 'Lakeside Paradise Sport Hostel');
   assert.equal(c.country, 'Belgium');
   assert.equal(c.region, 'Knokke-Heist, West Flanders');
-  assert.equal(c.spotCoords, undefined);
+  assert.deepEqual(c.spotCoords, { lat: 51.3396, lng: 3.2742 }); // Lake Duinenwater, not the municipality centroid
   assert.match(c.summary, /The hostel has no kite school of its own: the same club runs the Surfers Paradise water sports center with a kitesurf center on the beach of Knokke-Heist, about 5 km away/);
   assert.match(c.summary, /10 rooms with bunk beds for 4, 8 or 12 people \(64 beds\)/);
   assert.match(c.summary, /EUR 25 to 39 per night/);

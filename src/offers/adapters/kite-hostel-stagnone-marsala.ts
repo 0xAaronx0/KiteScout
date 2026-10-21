@@ -202,6 +202,8 @@ export function parseKiteHostelContent(p: KhsPages, today = todayIso()): OfferCo
     country: 'Italy',
     region: 'Lo Stagnone, Sicily',
     spot: 'Lo Stagnone',
+    // the hostel's street (Via Torre Lupa, San Leonardo; OSM): the 'Lo Stagnone' spot pin lies in the lagoon
+    spotCoords: { lat: 37.8751, lng: 12.4924 },
     itinerarySpots: [],
     durationDays: null,
     // /kitesurfing-marsala/: "From beginner to pro" - the lagoon suits every level; the hostel itself does not teach

@@ -169,6 +169,8 @@ export function parseLakesideContent(p: LpPages): OfferContent {
     country: 'Belgium',
     region: 'Knokke-Heist, West Flanders',
     spot: 'Knokke-Heist',
+    // the hostel on Lake Duinenwater (OSM); the geocoder returns the municipality centroid, 6 km inland
+    spotCoords: { lat: 51.3396, lng: 3.2742 },
     itinerarySpots: [],
     durationDays: null,
     skillLevels: [],

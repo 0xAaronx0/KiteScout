@@ -72,7 +72,7 @@ test('peahi: content', async () => {
   assert.equal(c.country, 'Italy');
   assert.equal(c.region, 'Lo Stagnone, Sicily');
   assert.equal(c.spot, 'Lo Stagnone');
-  assert.deepEqual(c.spotCoords, { lat: 37.887818, lng: 12.471306 });
+  assert.deepEqual(c.spotCoords, { lat: 37.8877, lng: 12.4747 }); // shore street; the site's map pin lies in the lagoon
   assert.equal(c.mealPlan, 'breakfast');
   assert.equal(c.kiteLessons, true);
   assert.equal(c.equipmentRental, true);

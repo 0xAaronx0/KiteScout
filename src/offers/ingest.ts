@@ -247,6 +247,16 @@ const KNOWN_PINS: Record<string, { lat: number; lng: number }> = {
   avon: { lat: 35.3523, lng: -75.5033 }, // Avon on Hatteras Island (OSM village); "Avon" alone finds nothing in region
   // Cascade's camp page only says "Maui North Shore"; the geocoder returns the island centroid on Haleakala
   maui: { lat: 20.8975, lng: -156.4339 },
+  // inland-pin audit 2026-10-19: the geocoder returned a municipality/area centroid 3-34 km inland (OSM places)
+  riohacha: { lat: 11.5449, lng: -72.9151 },
+  'máncora': { lat: -4.1031, lng: -81.0481 },
+  fortaleza: { lat: -3.7206, lng: -38.5085 }, // Praia de Iracema
+  'sidi kaouki': { lat: 31.3557, lng: -9.7978 },
+  'lençóis maranhenses (atíns)': { lat: -2.5717, lng: -42.7428 }, // Atins village
+  'bar al hikman': { lat: 20.6172, lng: 58.194 }, // Filim on the lagoon
+  'erriadh (djerbahood), djerba': { lat: 33.7176, lng: 10.9484 }, // the Kite Aventure club on the lagoon (OSM node)
+  'corralejo, fuerteventura': { lat: 28.7401, lng: -13.8693 },
+  kaseda: { lat: 31.418, lng: 130.287 }, // Fukiage beach at Kaseda; the geocoder picks the bus station 3.6 km inland
   // Rhodes and Lanzarote spots the geocoder cannot place (pins of the existing Fanes / Theologos stays; OSM beach / village)
   'fanes, rhodes': { lat: 36.3504, lng: 27.9827 },
   'theologos, rhodes': { lat: 36.3739, lng: 28.036 },
