@@ -42,7 +42,7 @@ test('retrieve submits, polls until successful and downloads the asset', async (
 
 // ---------------------------------------------------------------- parsers (synthetic fixtures)
 import {
-  checkPlausible, dailyMaxUvi, era5Monthly, noonLeadtimes, parseCamsNetcdf, parseEra5Csv, seaNeighbours, toLocal,
+  camsBoxes, checkPlausible, dailyMaxUvi, era5Monthly, noonLeadtimes, parseCamsNetcdf, parseEra5Csv, seaNeighbours, toLocal,
 } from '../../src/pipeline/copernicus.js';
 
 /** two years of hourly UTC stamps with a value function */
@@ -124,7 +124,9 @@ test('parseCamsNetcdf: (time, step, lat, lon) with packing, nearest cell', async
     d.create_attribute('add_offset', 0);
   }
   f.close();
-  const r = await parseCamsNetcdf(rf(path), 9.8, 20.2); // nearest = la 1, lo 1
+  const out = await parseCamsNetcdf(rf(path), [{ key: 'a', lat: 9.8, lng: 20.2 }, { key: 'b', lat: 10.3, lng: 19.7 }]);
+  const r = out.get('a')!; // nearest = la 1, lo 1
+  assert.deepEqual(out.get('b')!.uv[0].map(v => Math.round(v * 1000)), [1, 2]); // la 0, lo 0
   assert.deepEqual(r.dates, ['2023-01-01', '2023-01-02', '2023-02-01']);
   assert.deepEqual(r.uv.map(s => s.map(v => Math.round(v * 1000))), [[101, 102], [111, 112], [121, 122]]);
   assert.deepEqual(r.uvClear[0].map(v => Math.round(v * 1000)), [102, 103]);
@@ -149,4 +151,41 @@ test('normalizeToken tolerates .cdsapirc lines, UID prefixes and whitespace', as
   assert.equal(normalizeToken(`12345:${u}`).token, u);
   assert.equal(normalizeToken(` "${u}"\n`).token, u);
   assert.match(normalizeToken('abc').shape, /NOT uuid-like/);
+});
+
+test('camsBoxes: 50 x 60 degree buckets, split above the size cap, padded area, noon lead hours', () => {
+  const boxes = camsBoxes([
+    { key: 'tarifa', lat: 36.01, lng: -5.6 }, { key: 'dakhla', lat: 23.77, lng: -15.94 },
+    { key: 'cumbuco', lat: -3.63, lng: -38.73 }, { key: 'fiji', lat: -17.85, lng: 177.19 },
+  ]);
+  assert.equal(boxes.length, 3);
+  const med = boxes.find(b => b.points.length === 2)!;
+  assert.deepEqual(med.area, [36.41, -16.34, 23.37, -5.2]);
+  assert.deepEqual(med.leadtimes, [9, 10, 11, 12, 13, 14, 15]); // noon 12 UTC (Tarifa), 13 UTC (Dakhla)
+  // one bucket, but 28 x 36 deg > 600 deg^2 -> split
+  const big = camsBoxes([
+    { key: 'a', lat: 36, lng: -10 }, { key: 'b', lat: 10, lng: 25 }, { key: 'c', lat: 38, lng: 26 },
+  ]);
+  assert.ok(big.length >= 2 && big.every(b => (b.area[0] - b.area[2] - 0.8) * (b.area[3] - b.area[1] - 0.8) <= 600));
+  assert.deepEqual(boxes.find(b => b.points[0].key === 'fiji')!.leadtimes, [21, 22, 23, 24, 25, 26]);
+});
+
+test('parseCamsNetcdf picks each point\'s own noon lead hours from a wider box request', async () => {
+  const h5 = (await import('h5wasm/node')).default; await h5.ready;
+  const { mkdtempSync, readFileSync: rf } = await import('node:fs');
+  const { join } = await import('node:path');
+  const { tmpdir } = await import('node:os');
+  const path = join(mkdtempSync(join(tmpdir(), 'nc-')), 'f.nc');
+  const f = new h5.File(path, 'w');
+  const steps = [9, 10, 11, 12, 13, 14, 15, 16];
+  const t = f.create_dataset({ name: 'forecast_reference_time', data: new Float64Array([1672531200]), shape: [1] });
+  t.create_attribute('units', 'seconds since 1970-01-01');
+  f.create_dataset({ name: 'forecast_period', data: new Float64Array(steps), shape: [8] });
+  f.create_dataset({ name: 'latitude', data: new Float64Array([0]), shape: [1] });
+  f.create_dataset({ name: 'longitude', data: new Float64Array([0]), shape: [1] });
+  for (const name of ['uvbed', 'uvbedcs']) f.create_dataset({ name, data: new Float32Array(steps.map(s => s / 100)), shape: [8, 1, 1, 1] });
+  f.close();
+  const out = await parseCamsNetcdf(rf(path), [{ key: 'x', lat: 0, lng: -30 }]); // noon 14 UTC -> 11..16
+  assert.deepEqual(out.get('x')!.dates, ['2023-01-01']);
+  assert.deepEqual(out.get('x')!.uv[0].map(v => Math.round(v * 100)), [11, 12, 13, 14, 15, 16]);
 });

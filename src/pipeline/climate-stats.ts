@@ -12,13 +12,12 @@
 // New cells are written as soon as they are fetched, so a run cut short by the quota,
 // --max-fetch, --budget-min or the workflow timeout resumes where it stopped.
 // Moved pins (e.g. corrected accommodation locations) simply resolve to another cell.
-import pLimit from 'p-limit';
 import { supabase } from '../lib/supabase.js';
 import {
   type ClimateCell, type OfferRef, type PortPoint, RateLimitError,
   fetchCellClimate, findCell, portKey, resolvePoint, round10,
 } from './climate.js';
-import { COPERNICUS_SOURCES, fetchCellCopernicus, normalizeToken } from './copernicus.js';
+import { COPERNICUS_SOURCES, fetchCellsCopernicus, normalizeToken } from './copernicus.js';
 
 const SOURCES = 'UV: CAMS global via Open-Meteo Air Quality API 2023-2025; air temp: ERA5 via Open-Meteo Historical API 2016-2025; water temp: Open-Meteo Marine API SST 2023-2025';
 
@@ -101,39 +100,49 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
     if (needs.some(m => findCell([{ lat10: round10(m.lat), lng10: round10(m.lng) }], n.lat, n.lng))) return;
     needs.push(n);
   };
-  offers.forEach((o, i) => { const p = offerPoints[i]; if (p) add({ lat: p.lat, lng: p.lng, label: o.title ?? o.offer_id, copernicusOnly: false }); });
   for (const cp of countryPoints) add({ lat: cp.lat, lng: cp.lng, label: cp.country, elevation: cp.elevation_m, copernicusOnly: !!cdsToken });
+  offers.forEach((o, i) => { const p = offerPoints[i]; if (p) add({ lat: p.lat, lng: p.lng, label: o.title ?? o.offer_id, copernicusOnly: false }); });
   if (needs.length) console.log(`${needs.length} climate cells to fetch via ${report.fetcher}`);
 
-  // ---- 2. fetch them (Copernicus jobs run a few in parallel; Open-Meteo one by one)
-  const limit = pLimit(cdsToken ? 4 : 1);
-  let attempts = 0;
-  await Promise.all(needs.map(n => limit(async () => {
-    if (report.stoppedBy || Date.now() > deadline || (opts.maxFetch != null && attempts >= opts.maxFetch)) return;
-    attempts++;
+  // ---- 2. fetch them (Copernicus: ERA5 per point + CAMS per regional box; Open-Meteo one by one)
+  const store = async (n: Need, c: Omit<ClimateCell, 'lat10' | 'lng10'>, started: number) => {
+    const cell: Cell = { ...c, lat10: round10(n.lat), lng10: round10(n.lng), sources: cdsToken ? COPERNICUS_SOURCES : SOURCES };
+    if (!opts.dryRun) {
+      const { error } = await supabase.from('climate_points').upsert({ ...cell, fetched_at: new Date().toISOString() }, { onConflict: 'lat10,lng10' });
+      if (error) throw new Error(`climate_points upsert: ${error.message}`);
+    }
+    const same = cells.findIndex(x => x.lat10 === cell.lat10 && x.lng10 === cell.lng10);
+    if (same >= 0) cells[same] = cell; else cells.push(cell);
+    report.cellsFetched++;
+    console.log(`  + cell ${cell.lat10 / 10},${cell.lng10 / 10} for ${n.label} (${Math.round((Date.now() - started) / 1000)} s)`);
+  };
+  const fail = (n: Need, e: Error) => {
+    report.failed.push(`${n.label} @ ${n.lat},${n.lng}: ${e.message}`);
+    console.warn(`  climate fetch failed for ${n.label} @ ${n.lat},${n.lng}: ${e.message}`);
+  };
+  const batch = opts.maxFetch != null ? needs.slice(0, opts.maxFetch) : needs;
+  if (cdsToken) {
     const started = Date.now();
-    try {
-      const c = cdsToken
-        ? await fetchCellCopernicus(n.lat, n.lng, { token: cdsToken, adsToken, log: console.log })
-        : await fetchCellClimate(n.lat, n.lng, { fetchJson: url => fetch(url).then(r => r.json()), apiKey, elevation: n.elevation });
-      const cell: Cell = { ...c, lat10: round10(n.lat), lng10: round10(n.lng), sources: cdsToken ? COPERNICUS_SOURCES : SOURCES };
-      if (!opts.dryRun) {
-        const { error } = await supabase.from('climate_points').upsert({ ...cell, fetched_at: new Date().toISOString() }, { onConflict: 'lat10,lng10' });
-        if (error) throw new Error(`climate_points upsert: ${error.message}`);
-      }
-      const same = cells.findIndex(x => x.lat10 === cell.lat10 && x.lng10 === cell.lng10);
-      if (same >= 0) cells[same] = cell; else cells.push(cell);
-      report.cellsFetched++;
-      console.log(`  + cell ${cell.lat10 / 10},${cell.lng10 / 10} for ${n.label} (${Math.round((Date.now() - started) / 1000)} s)`);
-      if (!cdsToken) await new Promise(r => setTimeout(r, 1500));
-    } catch (e) {
-      if (e instanceof RateLimitError) report.stoppedBy = e.message;
-      else {
-        report.failed.push(`${n.label} @ ${n.lat},${n.lng}: ${(e as Error).message}`);
-        console.warn(`  climate fetch failed for ${n.label} @ ${n.lat},${n.lng}: ${(e as Error).message}`);
+    const byKey = new Map(batch.map((n, i) => [String(i), n]));
+    await fetchCellsCopernicus(batch.map((n, i) => ({ key: String(i), lat: n.lat, lng: n.lng, label: n.label })), {
+      token: cdsToken, adsToken, log: console.log,
+      shouldStart: () => Date.now() <= deadline,
+      onCell: (p, c) => store(byKey.get(p.key)!, c, started),
+      onFail: (p, e) => fail(byKey.get(p.key)!, e),
+    });
+  } else {
+    for (const n of batch) {
+      if (report.stoppedBy || Date.now() > deadline) break;
+      const started = Date.now();
+      try {
+        await store(n, await fetchCellClimate(n.lat, n.lng, { fetchJson: url => fetch(url).then(r => r.json()), apiKey, elevation: n.elevation }), started);
+        await new Promise(r => setTimeout(r, 1500));
+      } catch (e) {
+        if (e instanceof RateLimitError) report.stoppedBy = e.message;
+        else fail(n, e as Error);
       }
     }
-  })));
+  }
   if (!report.stoppedBy && Date.now() > deadline) report.stoppedBy = `time budget of ${opts.budgetMin} min used up`;
 
   // ---- 3. rows
