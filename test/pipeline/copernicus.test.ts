@@ -156,3 +156,21 @@ test('kiteableShare: >= 12 kn for >= 3 consecutive daylight hours, local solar t
   assert.deepEqual(share.slice(0, 4), [100, 0, 0, 0]);
   assert.deepEqual(kiteableShare(s, 0, 12, 1).slice(0, 2), [100, 100]);
 });
+
+test('submitJob / jobStatus / jobResult: async ADS job handling', async () => {
+  const { submitJob, jobStatus, jobResult } = await import('../../src/pipeline/copernicus.js');
+  const real = globalThis.fetch;
+  globalThis.fetch = (async (url: string, init?: RequestInit) => {
+    if (url.endsWith('/execution')) return new Response(JSON.stringify({ jobID: 'j9', status: 'accepted' }));
+    if (url.endsWith('/jobs/j9')) return new Response(JSON.stringify({ jobID: 'j9', status: 'running' }));
+    if (url.endsWith('/jobs/old')) return new Response('{}', { status: 404 });
+    if (url.endsWith('/jobs/j9/results')) return new Response(JSON.stringify({ asset: { value: { href: 'https://dl.example/r' } } }));
+    return new Response('data');
+  }) as typeof fetch;
+  try {
+    assert.equal(await submitJob('ads', 'ds', {}, 't'), 'j9');
+    assert.equal(await jobStatus('ads', 'j9', 't'), 'running');
+    assert.equal(await jobStatus('ads', 'old', 't'), 'gone');
+    assert.equal((await jobResult('ads', 'j9', 't')).toString(), 'data');
+  } finally { globalThis.fetch = real; }
+});

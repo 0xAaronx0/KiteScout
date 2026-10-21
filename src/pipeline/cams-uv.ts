@@ -177,6 +177,37 @@ export function camsBoxes<T extends GeoPoint>(points: T[]): { points: T[]; area:
 
 /** Rejects numbers that cannot be real climate (unit or layout mix-ups). */
 
+/** ADS request inputs for one box and year. */
+export function camsRequest(box: { area: number[]; leadtimes: number[] }, year: number): Record<string, unknown> {
+  return {
+    variable: ['uv_biologically_effective_dose', 'uv_biologically_effective_dose_clear_sky'],
+    date: [`${year}-01-01/${year}-12-31`],
+    time: ['00:00'],
+    leadtime_hour: box.leadtimes.map(String),
+    type: ['forecast'],
+    data_format: 'netcdf_zip',
+    area: box.area,
+  };
+}
+
+/** Daily max all-sky UV per point from one downloaded box result: key -> [date, uvi][]. */
+export async function camsDailyMax(buf: Buffer, points: GeoPoint[], log?: Log): Promise<Map<string, [string, number][]>> {
+  const out = new Map(points.map(p => [p.key, [] as [string, number][]]));
+  for (const file of unzip(buf, 'cams.nc').filter(f => !/\.(txt|json|csv)$/i.test(f.name))) {
+    for (const [key, d] of await parseCamsNetcdf(file.data, points, log)) {
+      dailyMaxUvi(d.uv).forEach((v, i) => { if (Number.isFinite(v)) out.get(key)!.push([d.dates[i], v]); });
+    }
+  }
+  return out;
+}
+
+/** Monthly whole-number all-sky UV from daily maxima of all years; throws when implausible. */
+export function uvCloudyMonths(days: [string, number][]): number[] {
+  const uv = monthlyMean(days).map(v => Math.round(v));
+  if (uv.some(v => !(v >= 0 && v <= 20))) throw new CopernicusError(`implausible all-sky UV ${uv}`);
+  return uv;
+}
+
 /**
  * All-sky UV per point: one CAMS request per box and year. onPoint fires once a box has all
  * years, so callers store incrementally; shouldStart() is checked before every request.

@@ -55,6 +55,15 @@ jobs:
 
       - run: pnpm install
 
+      # CAMS job state (climate-uv-cloudy): ADS jobs queue for hours, so ids persist between runs
+      - name: Restore CAMS job state
+        if: github.event.inputs.task == 'climate-uv-cloudy'
+        uses: actions/cache/restore@v4
+        with:
+          path: ~/.cache/kitescout/cams-uv-jobs.json
+          key: cams-uv-jobs-${{ github.run_id }}
+          restore-keys: cams-uv-jobs-
+
       - name: Refresh climate per offer and country
         # TAVILY/OPENROUTER keys are not used by climate-stats, but src/cli.ts's static
         # import graph pulls in src/lib/tavily.ts, which throws at module load if absent.
@@ -73,8 +82,15 @@ jobs:
         # budget stops starting new fetches ~80 min before the job timeout so the rows still get written
         run: |
           if [ "$TASK" = "climate-wind-check" ]; then pnpm cli climate-wind-check; exit 0; fi
-          if [ "$TASK" = "climate-uv-cloudy" ]; then pnpm cli climate-uv-cloudy --budget-min 240; pnpm cli climate-stats --budget-min 20; exit 0; fi
+          if [ "$TASK" = "climate-uv-cloudy" ]; then pnpm cli climate-uv-cloudy --wait-min 300; pnpm cli climate-stats --budget-min 20; exit 0; fi
           args="--budget-min 270"
           if [ "$DRY_RUN" = "true" ]; then args="$args --dry-run"; fi
           if [ -n "$MAX_FETCH" ]; then args="$args --max-fetch $MAX_FETCH"; fi
           pnpm cli climate-stats $args
+
+      - name: Save CAMS job state
+        if: always() && github.event.inputs.task == 'climate-uv-cloudy'
+        uses: actions/cache/save@v4
+        with:
+          path: ~/.cache/kitescout/cams-uv-jobs.json
+          key: cams-uv-jobs-${{ github.run_id }}
