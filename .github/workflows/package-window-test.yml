@@ -1,0 +1,22 @@
+name: Package window source tests
+on:
+  pull_request:
+    paths: ['supabase/migrations/**', 'test/offers/package-window-view.test.ts', 'test/fixtures/package-window-schema.sql', 'package.json', 'pnpm-lock.yaml', '.github/workflows/package-window-test.yml']
+  push:
+    branches: ['codex/issue-345-*']
+permissions:
+  contents: read
+jobs:
+  offline-postgres:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: pnpm install --frozen-lockfile --ignore-scripts --filter kitescout
+      - run: node --import tsx --test test/offers/package-window-view.test.ts
