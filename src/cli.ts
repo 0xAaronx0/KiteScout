@@ -547,6 +547,26 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'gfs-wind': {
+      // NOAA GFS 10 m u/v -> leaflet-velocity JSON (+ .gz) for the animated map wind layer
+      // (gfs-wind GitHub Action, every 6 h). --newer-than <refTime ISO> = the published
+      // file's run: nothing newer -> nothing written, exit 0 (keep the published file), but
+      // exit 1 once the published run is older than 18 h so the Action goes red.
+      const { runGfsWind } = await import('./pipeline/gfs-wind.js');
+      const res = (flagStr('--res') ?? '1p00') as '1p00' | '0p50' | '0p25';
+      const prev = flagStr('--newer-than');
+      const newerThan = prev && !Number.isNaN(Date.parse(prev)) ? new Date(prev) : null;
+      const r = await runGfsWind({ out: flagStr('--out') ?? 'out/wind/gfs-10m-latest.json', res, newerThan });
+      for (const t of r.tried) console.log(`  ${t}`);
+      if (r.skipped) {
+        console.log(r.skipped);
+        if (!newerThan || Date.now() - newerThan.getTime() > 18 * 3_600_000) process.exitCode = 1;
+      } else {
+        console.log(`GFS ${r.refTime} +${r.forecastTime}h (valid ${r.validTime}) via ${r.source} -> ${r.out} ${r.bytes} B, .gz ${r.gzBytes} B`);
+      }
+      break;
+    }
+
     case 'restore': {
       const domains = args.filter(a => !a.startsWith('-'));
       if (domains.length === 0) {

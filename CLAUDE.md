@@ -155,6 +155,11 @@ pnpm cli cruise-media apply   [--domain X]   # apply admin selection → buckets
 pnpm cli monitor                    # daily change detection (also runs in the GitHub cron)
 pnpm cli cruise-diff <domain>|all   # targeted / full before-after re-extraction diff
 pnpm cli changes                    # inspect the change queue (approval happens on /changes)
+
+# Map wind layer (KCS#238): NOAA GFS 10 m u/v -> leaflet-velocity JSON, every 6 h via
+# .github/workflows/gfs-wind.yml -> release asset `wind-data` -> served at
+# https://kitescout.tech/data/wind/gfs-10m-latest.json (web/app/data/wind/). Not Supabase Storage.
+pnpm cli gfs-wind [--res 1p00|0p50] [--newer-than <refTime>] [--out f.json]
 ```
 
 ## Pipeline Architecture

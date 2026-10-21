@@ -1,0 +1,93 @@
+name: GFS wind (map layer)
+
+# NOAA GFS 10 m u/v wind -> one leaflet-velocity JSON for the animated wind layer on the
+# KCS world map (MartinMarzi/KiteCruiseScout#238). The gzipped file is published as the
+# asset of the `wind-data` (pre)release; kitescout.tech/data/wind/gfs-10m-latest.json serves
+# it from memory with CORS + 1 h caching (web/app/data/wind/). Not Supabase Storage (egress).
+#
+# Stale rules: a run is only published when it is newer than the published one; if the
+# newest run is not out yet nothing changes and the last file stays. The job fails (red)
+# once the published run is older than 18 h, consumers treat the file as stale after
+# header.staleAfter (= generatedAt + 12 h).
+# Lives outside web/**, so it never triggers the Docker build/deploy workflow.
+on:
+  schedule:
+    # GFS runs 00/06/12/18 UTC; the 1.0 deg files are on NOMADS ~3.5-4 h later.
+    # First slot picks up the fresh run, the second catches a late one (no-op otherwise).
+    - cron: '15 4,10,16,22 * * *'
+    - cron: '15 5,11,17,23 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Publish the newest run even if it is not newer than the published one'
+        type: boolean
+        required: false
+        default: false
+      res:
+        description: 'Grid resolution'
+        type: choice
+        options: ['1p00', '0p50']
+        default: '1p00'
+
+permissions:
+  contents: write # update the wind-data release asset
+
+concurrency:
+  group: gfs-wind
+  cancel-in-progress: false
+
+jobs:
+  wind:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      RELEASE_TAG: wind-data
+      ASSET: gfs-10m-latest.json.gz
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install
+
+      - name: Read the published run
+        id: prev
+        run: |
+          ref=""
+          if gh release download "$RELEASE_TAG" -p "$ASSET" -O prev.json.gz --clobber 2>/dev/null; then
+            # a corrupt asset counts as "none published" so the next good run replaces it
+            ref=$(gunzip -c prev.json.gz 2>/dev/null | jq -r '.[0].header.refTime // empty' 2>/dev/null || true)
+          fi
+          echo "published refTime: ${ref:-none}"
+          echo "ref=$ref" >> "$GITHUB_OUTPUT"
+
+      - name: Build from the newest GFS run
+        # gfs-wind needs no secrets; src/cli.ts's static import graph only checks that these exist
+        env:
+          TAVILY_API_KEY: unused
+          SUPABASE_URL: https://unused.invalid
+          SUPABASE_SERVICE_ROLE_KEY: unused
+          PREV: ${{ steps.prev.outputs.ref }}
+          FORCE: ${{ github.event.inputs.force }}
+          RES: ${{ github.event.inputs.res || '1p00' }}
+        run: |
+          args="--out out/gfs-10m-latest.json --res $RES"
+          if [ "$FORCE" != "true" ] && [ -n "$PREV" ]; then args="$args --newer-than $PREV"; fi
+          pnpm cli gfs-wind $args
+
+      - name: Publish
+        if: hashFiles('out/gfs-10m-latest.json.gz') != ''
+        run: |
+          gh release view "$RELEASE_TAG" >/dev/null 2>&1 || gh release create "$RELEASE_TAG" --prerelease --latest=false \
+            --title "GFS wind data (auto-updated)" \
+            --notes "NOAA GFS 10 m u/v wind as leaflet-velocity JSON, refreshed every 6 h by .github/workflows/gfs-wind.yml. Served at https://kitescout.tech/data/wind/gfs-10m-latest.json - use that URL, not this asset."
+          gh release upload "$RELEASE_TAG" out/gfs-10m-latest.json.gz --clobber
+          ls -l out/
