@@ -204,6 +204,7 @@ export const pensaoAlcindaSantaKiteSal: OfferAdapter = {
   key: 'pensao-alcinda-santa-kite-sal',
   name: 'Pensão Alcinda Bettencourt (Santa Kite) Sal',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Pensão Alcinda Bettencourt / Santa Kite Cabo Verde',
     websiteUrl: PASK_PENSAO_URL,

@@ -176,6 +176,7 @@ export const bkcHousesBilene: OfferAdapter = {
   key: 'bkc-houses-bilene',
   name: 'Bilene Kite Center Houses',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Bilene Kite Center',
     websiteUrl: SITE,

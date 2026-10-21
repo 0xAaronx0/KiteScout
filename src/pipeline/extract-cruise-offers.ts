@@ -11,6 +11,7 @@ import { discoverImageUrls, curateAndStoreImages, slugify, type StoredImage } fr
 import { discoverSiteUrls, PAGE_VALUE_RE } from '../lib/crawl.js';
 import { renderPage, closeRenderer } from '../lib/render.js';
 import { mergeItinerarySpots } from '../lib/itinerary-spots.js';
+import { cruiseDisciplines } from '../lib/disciplines.js';
 
 const CONCURRENCY = 3;                  // providers in parallel
 const PAGE_CONCURRENCY = 8;             // global page fetches in flight (across providers)
@@ -1095,6 +1096,10 @@ async function processProvider(cp: {
       wind_strength: cleanStrArray(offer.wind_strength, WIND_STRENGTHS),
       included_services: cleanStrArray(offer.included_services),
       optional_services: cleanStrArray(offer.optional_services),
+      disciplines: cruiseDisciplines({
+        title: offer.title, summary: offer.summary ?? null,
+        included_services: cleanStrArray(offer.included_services), optional_services: cleanStrArray(offer.optional_services),
+      }),
       comfort_level: cleanEnum(offer.comfort_level, COMFORT_LEVELS),
       suitable_for_non_kiters: cleanBool(offer.suitable_for_non_kiters),
       family_friendly: cleanBool(offer.family_friendly),

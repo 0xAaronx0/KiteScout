@@ -210,6 +210,7 @@ export const puzaMoyaCapeSportsLangebaan: OfferAdapter = {
   key: 'puza-moya-cape-sports-langebaan',
   name: 'Puza Moya Guest House (Cape Sports Center)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Cape Sports Center',
     websiteUrl: SITE,

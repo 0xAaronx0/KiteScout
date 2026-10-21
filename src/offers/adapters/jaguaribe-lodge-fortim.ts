@@ -280,6 +280,7 @@ export const jaguaribeLodgeFortim: OfferAdapter = {
   key: 'jaguaribe-lodge-fortim',
   name: 'Jaguaribe Lodge & Kite Fortim',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Jaguaribe Lodge & Kite',
     websiteUrl: SITE,

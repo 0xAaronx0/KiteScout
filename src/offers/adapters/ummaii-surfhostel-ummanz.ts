@@ -439,6 +439,7 @@ export const ummaiiSurfhostelUmmanz: OfferAdapter = {
   key: 'ummaii-surfhostel-ummanz',
   name: 'UMMAII Surfhostel, Ummanz (Rügen)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'UMMAII Surfhostel (Uns eigen eG)',
     websiteUrl: SITE,

@@ -248,6 +248,7 @@ export const urlaSurfHouseGulbahce: OfferAdapter = {
   key: 'urla-surf-house-gulbahce',
   name: 'Urla Surf House Gülbahçe',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Urla Surf House',
     websiteUrl: SITE,

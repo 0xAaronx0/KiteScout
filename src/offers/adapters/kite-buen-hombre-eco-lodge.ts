@@ -275,6 +275,7 @@ export const kiteBuenHombreEcoLodge: OfferAdapter = {
   key: 'kite-buen-hombre-eco-lodge',
   name: 'Kite Buen Hombre Eco-Lodge, Buen Hombre',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Kite Buen Hombre',
     websiteUrl: SITE,

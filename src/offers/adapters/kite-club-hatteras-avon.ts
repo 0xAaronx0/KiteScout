@@ -177,6 +177,7 @@ export const kiteClubHatterasAvon: OfferAdapter = {
   key: 'kite-club-hatteras-avon',
   name: 'Kite Club Hatteras guest house, Avon',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: KCH_OPERATOR,
   url: KCH_ACCOM_URL,
   slotMethod: 'price_table',

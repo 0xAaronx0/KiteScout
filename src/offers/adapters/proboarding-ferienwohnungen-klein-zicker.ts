@@ -308,6 +308,7 @@ export const proboardingFerienwohnungenKleinZicker: OfferAdapter = {
   key: 'proboarding-ferienwohnungen-klein-zicker',
   name: 'ProBoarding Rügen Ferienwohnungen, Klein Zicker',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'ProBoarding Rügen',
     websiteUrl: SITE,

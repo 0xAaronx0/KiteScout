@@ -239,6 +239,7 @@ export const watersportOmanCampBarAlHikman: OfferAdapter = {
   key: 'watersport-oman-camp-bar-al-hikman',
   name: 'Watersport Oman Kitesurf Camp, Bar al Hikman',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Watersport Oman',
     websiteUrl: SITE,

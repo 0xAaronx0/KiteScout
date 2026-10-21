@@ -224,6 +224,7 @@ export const versusSnowkiteTripHaugastol: OfferAdapter = {
   key: 'versus-snowkite-trip-haugastol',
   name: 'Versus Snowkite Trip, Hardangervidda (Haugastøl)',
   kind: 'camp',
+  disciplines: ['snowkite'],
   operator: {
     name: 'Versus Kiteboarding (Versusshop)',
     websiteUrl: `${SITE}/en`,

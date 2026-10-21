@@ -349,6 +349,7 @@ export const pousadaMareAltaParajuru: OfferAdapter = {
   key: 'pousada-mare-alta-parajuru',
   name: 'Pousada Maré Alta Parajuru',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Kiteboarding Club Parajuru',
     websiteUrl: SITE,

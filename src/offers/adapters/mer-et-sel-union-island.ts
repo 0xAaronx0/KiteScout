@@ -272,6 +272,7 @@ export const merEtSelUnionIsland: OfferAdapter = {
   key: 'mer-et-sel-union-island',
   name: 'Mer & Sel Villa & Suites, Union Island',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'JT Pro Center',
     websiteUrl: SITE,

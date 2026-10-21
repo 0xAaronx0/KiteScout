@@ -187,6 +187,7 @@ export const kitePassionGlampingPuttgarden: OfferAdapter = {
   key: 'kite-passion-glamping-puttgarden',
   name: 'Kite Passion Glamping Puttgarden',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Surfschule Kite Passion',
     websiteUrl: SITE,

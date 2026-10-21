@@ -186,6 +186,7 @@ export const lakeunitedSnowkitecampNorwayVoringsfoss: OfferAdapter = {
   key: 'lakeunited-snowkitecamp-norway-voringsfoss',
   name: 'LakeUnited - Snowkitecamp Norway (Vøringsfoss, Hardangervidda)',
   kind: 'camp',
+  disciplines: ['snowkite'],
   operator: {
     name: 'LakeUnited',
     websiteUrl: 'https://www.lakeunited.com/',

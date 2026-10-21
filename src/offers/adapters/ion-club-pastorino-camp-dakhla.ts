@@ -159,6 +159,7 @@ export const ionClubPastorinoCampDakhla: OfferAdapter = {
   key: 'ion-club-pastorino-camp-dakhla',
   name: 'ION CLUB Kitesurf & Wingfoil Camp with Mathieu Pastorino, Dakhla',
   kind: 'camp',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: ION_OPERATOR,
   url: ION_CAMP_URL,
   slotMethod: 'html_dates',

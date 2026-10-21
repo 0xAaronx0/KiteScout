@@ -236,6 +236,7 @@ export const hotelCopacabanaBeachValdevaqueros: OfferAdapter = {
   key: 'hotel-copacabana-beach-valdevaqueros',
   name: 'Hotel Copacabana Beach',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Hotel Copacabana Beach Tarifa',
     websiteUrl: SITE,

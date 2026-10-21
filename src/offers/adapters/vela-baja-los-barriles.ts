@@ -283,6 +283,7 @@ export const velaBajaLosBarriles: OfferAdapter = {
   key: 'vela-baja-los-barriles',
   name: 'Vela Baja at Hotel Playa del Sol & Palmas de Cortez',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Vela Baja',
     websiteUrl: VB_HOME_URL,

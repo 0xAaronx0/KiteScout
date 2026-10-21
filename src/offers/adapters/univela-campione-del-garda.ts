@@ -167,6 +167,7 @@ export const univelaCampioneDelGarda: OfferAdapter = {
   key: 'univela-campione-del-garda',
   name: 'Campione Univela',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Univela Sailing',
     websiteUrl: SITE,

@@ -147,6 +147,7 @@ export const anapnoeParoskitePounda: OfferAdapter = {
   key: 'anapnoe-paroskite-pounda',
   name: 'Anapnoe by ParosKite Pounda',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Paros Kite Anapnoe Resort',
     websiteUrl: SITE,

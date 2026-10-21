@@ -203,6 +203,7 @@ export const airzoneKiteWingCampRangiputa: OfferAdapter = {
   key: 'airzone-kite-wing-camp-rangiputa',
   name: 'Airzone Kite & Wing Foil Camp, Rangiputa',
   kind: 'camp',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Airzone Kitesurf School NZ',
     websiteUrl: `${SITE}/`,

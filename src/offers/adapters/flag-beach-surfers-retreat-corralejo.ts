@@ -257,6 +257,7 @@ export const flagBeachSurfersRetreatCorralejo: OfferAdapter = {
   key: 'flag-beach-surfers-retreat-corralejo',
   name: "Flag Beach Surfer's Retreat Corralejo",
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Flag Beach Watersports Centre',
     websiteUrl: SITE,

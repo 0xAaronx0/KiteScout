@@ -82,6 +82,7 @@ export const kiteHostelAfricaTarifa: OfferAdapter = {
   key: 'kite-hostel-africa-tarifa',
   name: 'Kite Hostel Africa (Freeride Tarifa)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: FR_OPERATOR,
   url: KHA_URL,
   slotMethod: 'price_table',

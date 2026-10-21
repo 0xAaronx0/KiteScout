@@ -240,6 +240,7 @@ export const realLaVentanaSupercamp: OfferAdapter = {
   key: 'real-la-ventana-supercamp',
   name: 'REAL Watersports - La Ventana SuperCamp',
   kind: 'camp',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'REAL Watersports',
     websiteUrl: `${ORIGIN}/`,

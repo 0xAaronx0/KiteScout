@@ -249,6 +249,7 @@ export const antonyBoyViganj: OfferAdapter = {
   key: 'antony-boy-viganj',
   name: 'Antony Boy Camping Viganj',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Antony Boy Camping d.o.o.',
     websiteUrl: SITE,

@@ -481,6 +481,7 @@ export const logosBeachVillageTheologos: OfferAdapter = {
   key: 'logos-beach-village-theologos',
   name: 'LOGOS Beach Village Theologos',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'LOGOS Theologos',
     websiteUrl: SITE,

@@ -197,6 +197,7 @@ export const kiteforceTyrolSnowkiteTrip: OfferAdapter = {
   key: 'kiteforce-tyrol-snowkite-trip',
   name: 'Kiteforce - Tyrol Kite Trip (snowkite motorhome trip, Reschensee / Bernina / Silvaplana)',
   kind: 'tour',
+  disciplines: ['snowkite'],
   operator: {
     name: 'Kiteforce (CZECH KITE FORCE, s.r.o.)',
     websiteUrl: `${SITE}/en/`,

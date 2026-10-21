@@ -186,6 +186,7 @@ export const pousadaPaisTropicalIcarai: OfferAdapter = {
   key: 'pousada-pais-tropical-icarai',
   name: 'Pousada País Tropical Icaraí de Amontada',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Pousada País Tropical',
     websiteUrl: SITE,

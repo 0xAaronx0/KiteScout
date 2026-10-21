@@ -16,7 +16,7 @@ import { geocodeSpot } from '../lib/geocode.js';
 import { mergeItinerarySpots, type StoredSpot } from '../lib/itinerary-spots.js';
 import { checkSlots, contentProblem } from './validate.js';
 import { BlockedByHost, countRequests } from './http.js';
-import { isBookable, type OfferAdapter, type OfferContent, type OfferKind, type Slot } from './types.js';
+import { DEFAULT_DISCIPLINES, isBookable, type OfferAdapter, type OfferContent, type OfferKind, type Slot } from './types.js';
 
 export const SOURCE_PREFIX = 'site:';
 /** an empty slot list while at least this many slots were active keeps the stock (kiezdad LEER_SCHUTZ_AB) */
@@ -282,6 +282,7 @@ export async function locateSpots(c: OfferContent, stored: unknown): Promise<Sto
 function contentRow(a: OfferAdapter, c: OfferContent, operatorId: string, spots: StoredSpot[]) {
   return {
     package_type: c.kind,
+    disciplines: a.disciplines ?? DEFAULT_DISCIPLINES,
     title: c.title,
     slug: slugify(c.title),
     source_listing_id: SOURCE_PREFIX + a.key,

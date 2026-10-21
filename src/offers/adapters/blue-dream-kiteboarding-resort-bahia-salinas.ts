@@ -194,6 +194,7 @@ export const blueDreamKiteboardingResortBahiaSalinas: OfferAdapter = {
   key: 'blue-dream-kiteboarding-resort-bahia-salinas',
   name: 'Blue Dream Kiteboarding Resort Bahia Salinas',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Blue Dream Kiteboarding Resort',
     websiteUrl: SITE,

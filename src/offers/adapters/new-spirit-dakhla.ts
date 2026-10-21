@@ -167,6 +167,7 @@ export const newSpiritDakhla: OfferAdapter = {
   key: 'new-spirit-dakhla',
   name: 'New Spirit Dakhla',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'New Spirit Dakhla',
     websiteUrl: SITE,

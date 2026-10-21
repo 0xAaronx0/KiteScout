@@ -238,6 +238,7 @@ export const escapePousadaBarraNova: OfferAdapter = {
   key: 'escape-pousada-barra-nova',
   name: 'Escape Kiteboarding Pousada (Barra Nova)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Escape Pousada Kiteschool',
     websiteUrl: SITE,

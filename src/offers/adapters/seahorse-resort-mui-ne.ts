@@ -201,6 +201,7 @@ export const seahorseResortMuiNe: OfferAdapter = {
   key: 'seahorse-resort-mui-ne',
   name: 'Seahorse Resort & Spa (Mui Ne)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Seahorse Resort & Spa',
     websiteUrl: SITE,

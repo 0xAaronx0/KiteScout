@@ -207,6 +207,7 @@ export const westpointDakhla: OfferAdapter = {
   key: 'westpoint-dakhla',
   name: 'WestPoint Dakhla',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'WestPoint Dakhla (Dakhla Hospitality Group)',
     websiteUrl: SITE,

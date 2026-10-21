@@ -200,6 +200,7 @@ export const apexSnowKitingTourKosciuszko: OfferAdapter = {
   key: 'apex-snow-kiting-tour-kosciuszko',
   name: 'Apex Kitesurfing 5 Day Snow Kiting Tour, Kosciuszko',
   kind: 'tour',
+  disciplines: ['snowkite'],
   operator: APEX_OPERATOR,
   url: APEX_TOURS_URL,
   slotMethod: 'html_dates',

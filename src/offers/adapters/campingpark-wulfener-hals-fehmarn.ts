@@ -371,6 +371,7 @@ export const campingparkWulfenerHalsFehmarn: OfferAdapter = {
   key: 'campingpark-wulfener-hals-fehmarn',
   name: 'Campingpark Wulfener Hals Fehmarn',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Campingpark Wulfener Hals',
     websiteUrl: SITE,

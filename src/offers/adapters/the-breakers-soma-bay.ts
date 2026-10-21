@@ -237,6 +237,7 @@ export const theBreakersSomaBay: OfferAdapter = {
   key: 'the-breakers-soma-bay',
   name: 'The Breakers Diving & Surfing Lodge Soma Bay',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'The Breakers Diving & Surfing Lodge',
     websiteUrl: SITE,

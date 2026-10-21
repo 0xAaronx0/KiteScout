@@ -269,6 +269,18 @@ keeps the last state. `instantBooking` was verified per site on 2026-10-14 (prov
 4 turned out request-only (Windchaser, Panama Kite House, Drivethru, Inchcape) and 11 could not be confirmed
 (Beds24 x3, Smoobu x2, Beddy, Guesty, Wix Hotels, Too Wet To Shred, Loissin, Surf House Chalupy); all 15 are false.
 
+## Disciplines (2026-10-21)
+
+`disciplines` on every adapter (migration 20261021120000, KCS#239): the sports an offer can be booked for, multi-value,
+independent of `kind`. Values `kitesurf` / `snowkite` / `wingfoil` (`DISCIPLINES` in `src/offers/types.ts`); omitted =
+`['kitesurf']`. **A new adapter must set it when it is not a plain kitesurf offer:** snowkite = `['snowkite']`;
+`['kitesurf', 'wingfoil']` only when the package itself offers wing foil (wing included, a wing variant of the same
+package, or wing lessons / rental by the operator or the school the listing is built around, as listed in its
+included / optional services). Not wingfoil: a spot that merely suits wing foiling, nearby third-party clubs, site
+menus or shop categories, cross-links to the operator's other products, instructor bios, "wing" meaning a kite.
+The registry test enforces valid values and that snowkite / "wing" names carry them. State 2026-10-21: 194 kitesurf,
+99 kitesurf+wingfoil, 13 snowkite. Cruises derive theirs from the trip text (`src/lib/disciplines.ts`, 63 of 164).
+
 ## Refresh strategy (recommendation)
 
 - Booking-engine / Shopify / app JSON: daily `--slots` (in the 06:00 UTC monitor cron, job `offer-slots`,

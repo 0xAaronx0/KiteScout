@@ -249,6 +249,7 @@ export const penghuKitesurfSunriseBnbGuoye: OfferAdapter = {
   key: 'penghu-kitesurf-sunrise-bnb-guoye',
   name: 'Sunrise BnB at Penghu Kitesurf & Wing Foil Center',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Penghu Kitesurf & Wing Foil Center',
     websiteUrl: SITE,

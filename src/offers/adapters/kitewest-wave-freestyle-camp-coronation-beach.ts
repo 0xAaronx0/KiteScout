@@ -200,6 +200,7 @@ export const kitewestWaveFreestyleCampCoronationBeach: OfferAdapter = {
   key: 'kitewest-wave-freestyle-camp-coronation-beach',
   name: 'KiteWest Wave & Freestyle Kite Camp, Coronation Beach',
   kind: 'camp',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: KITEWEST_OPERATOR,
   url: KITEWEST_WAVE_URL,
   slotMethod: 'html_dates',

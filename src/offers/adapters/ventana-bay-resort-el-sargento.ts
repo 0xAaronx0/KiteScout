@@ -160,6 +160,7 @@ export const ventanaBayResortElSargento: OfferAdapter = {
   key: 'ventana-bay-resort-el-sargento',
   name: 'Ventana Bay Resort El Sargento',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Ventana Bay Resort',
     websiteUrl: SITE,

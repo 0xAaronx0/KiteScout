@@ -201,6 +201,7 @@ export const surfersResidenceTarifa: OfferAdapter = {
   key: 'surfers-residence-tarifa',
   name: 'Surfers Residence (Freeride Tarifa Kite House)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: FR_OPERATOR,
   url: SR_URL,
   slotMethod: 'price_table',

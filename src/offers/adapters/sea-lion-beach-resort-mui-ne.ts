@@ -233,6 +233,7 @@ export const seaLionBeachResortMuiNe: OfferAdapter = {
   key: 'sea-lion-beach-resort-mui-ne',
   name: 'Sea Lion Beach Resort (Mui Ne)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Sea Lion Beach Resort Mui Ne',
     websiteUrl: SITE,

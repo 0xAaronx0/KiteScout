@@ -298,6 +298,7 @@ export const costaKiteBahiaSalinas: OfferAdapter = {
   key: 'costa-kite-bahia-salinas',
   name: 'Costa Kite - Nandel Beach Resort (Bahia Salinas)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Costa Kite',
     websiteUrl: SITE,

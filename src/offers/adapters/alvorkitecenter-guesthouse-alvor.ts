@@ -167,6 +167,7 @@ export const alvorkitecenterGuesthouseAlvor: OfferAdapter = {
   key: 'alvorkitecenter-guesthouse-alvor',
   name: 'AlvorKiteCenter Guesthouse Alvor',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'AlvorKiteCenter',
     websiteUrl: SITE,

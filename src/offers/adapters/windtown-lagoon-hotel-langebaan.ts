@@ -142,6 +142,7 @@ export const windtownLagoonHotelLangebaan: OfferAdapter = {
   key: 'windtown-lagoon-hotel-langebaan',
   name: 'Windtown Lagoon Hotel',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Windtown Lagoon Hotel',
     websiteUrl: SITE,

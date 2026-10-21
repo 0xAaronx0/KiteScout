@@ -171,6 +171,7 @@ export const kitemexCampLaVentana: OfferAdapter = {
   key: 'kitemex-camp-la-ventana',
   name: 'KiteMex Kite & Wingfoil Camp La Ventana',
   kind: 'camp',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'KiteMex',
     websiteUrl: 'https://kitemex.com',

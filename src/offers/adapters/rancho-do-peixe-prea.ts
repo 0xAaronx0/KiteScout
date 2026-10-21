@@ -171,6 +171,7 @@ export const ranchoDoPeixePrea: OfferAdapter = {
   key: 'rancho-do-peixe-prea',
   name: 'Rancho do Peixe Preá',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Rancho do Peixe',
     websiteUrl: SITE,

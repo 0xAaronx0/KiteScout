@@ -173,6 +173,7 @@ export const cantoDasAguasIcarai: OfferAdapter = {
   key: 'canto-das-aguas-icarai',
   name: 'Canto das Águas Icaraí de Amontada',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Pousada Canto das Águas',
     websiteUrl: SITE,

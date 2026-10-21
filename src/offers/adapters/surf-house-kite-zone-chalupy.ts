@@ -237,6 +237,7 @@ export const surfHouseKiteZoneChalupy: OfferAdapter = {
   key: 'surf-house-kite-zone-chalupy',
   name: 'Surf House Chałupy 3 (Kite Zone)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Kite Zone',
     websiteUrl: SITE,

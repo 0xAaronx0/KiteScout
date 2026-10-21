@@ -235,6 +235,7 @@ export const villaTainaCabarete: OfferAdapter = {
   key: 'villa-taina-cabarete',
   name: 'Villa Taina, Cabarete',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Villa Taina',
     websiteUrl: SITE,

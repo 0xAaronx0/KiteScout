@@ -234,6 +234,7 @@ export const kitesurfMindoroBulalacao: OfferAdapter = {
   key: 'kitesurf-mindoro-bulalacao',
   name: 'Kitesurf Mindoro - Makani Resort & Glamping (Bulalacao)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Kitesurf Mindoro',
     websiteUrl: SITE,

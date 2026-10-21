@@ -347,6 +347,7 @@ export const wattlodgeNorden: OfferAdapter = {
   key: 'wattlodge-norden',
   name: 'WattLodge Norden',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'WattLodge',
     websiteUrl: SITE,

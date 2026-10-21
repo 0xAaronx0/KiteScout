@@ -339,6 +339,7 @@ export const kiteRepublicAitutakiWinterEscape: OfferAdapter = {
   key: 'kite-republic-aitutaki-winter-escape',
   name: 'Kite Republic Aitutaki Winter Escape',
   kind: 'camp',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: KR_OPERATOR,
   url: KR_AITUTAKI_URL,
   slotMethod: 'booking_engine',

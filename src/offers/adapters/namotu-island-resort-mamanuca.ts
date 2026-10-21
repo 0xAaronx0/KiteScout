@@ -157,6 +157,7 @@ export const namotuIslandResortMamanuca: OfferAdapter = {
   key: 'namotu-island-resort-mamanuca',
   name: 'Namotu Island Resort',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Namotu Island Resort',
     websiteUrl: SITE,

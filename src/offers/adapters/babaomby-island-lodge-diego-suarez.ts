@@ -284,6 +284,7 @@ export const babaombyIslandLodgeDiegoSuarez: OfferAdapter = {
   key: 'babaomby-island-lodge-diego-suarez',
   name: 'Babaomby Island Lodge',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Babaomby Island Lodge',
     websiteUrl: SITE,

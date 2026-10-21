@@ -236,6 +236,7 @@ export const sakalavaLodgeDiegoSuarez: OfferAdapter = {
   key: 'sakalava-lodge-diego-suarez',
   name: 'Sakalava Lodge',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Sakalava Lodge',
     websiteUrl: SITE,

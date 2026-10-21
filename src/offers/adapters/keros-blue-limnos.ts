@@ -241,6 +241,7 @@ export const kerosBlueLimnos: OfferAdapter = {
   key: 'keros-blue-limnos',
   name: 'Keros Blue Limnos',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Keros Blue',
     websiteUrl: SITE,

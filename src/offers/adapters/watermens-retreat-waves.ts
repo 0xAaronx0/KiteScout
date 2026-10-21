@@ -349,6 +349,7 @@ export const watermensRetreatWaves: OfferAdapter = {
   key: 'watermens-retreat-waves',
   name: "Watermen's Retreat, Waves (Hatteras Island)",
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: "Watermen's Retreat",
     websiteUrl: SITE,

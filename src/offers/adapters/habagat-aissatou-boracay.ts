@@ -212,6 +212,7 @@ export const habagatAissatouBoracay: OfferAdapter = {
   key: 'habagat-aissatou-boracay',
   name: 'Habagat Kiteboarding Center & Aissatou Beach Resort (Boracay)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Habagat Kiteboarding Center',
     websiteUrl: SITE,

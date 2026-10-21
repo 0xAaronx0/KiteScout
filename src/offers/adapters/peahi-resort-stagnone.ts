@@ -221,6 +221,7 @@ export const peahiResortStagnone: OfferAdapter = {
   key: 'peahi-resort-stagnone',
   name: 'Peahi Resort Lo Stagnone',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'ProKite Alby Rondina',
     websiteUrl: SITE,

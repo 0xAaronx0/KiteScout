@@ -12,6 +12,14 @@
 /** Product types we ingest through adapters (package_offers.package_type). */
 export type OfferKind = 'accommodation' | 'tour' | 'camp' | 'course' | 'experience';
 
+/**
+ * Sports an offer can be booked for (package_offers.disciplines, filterable across kinds).
+ * Adding one = this list + the CHECK constraint on package_offers / cruise_offers.
+ */
+export const DISCIPLINES = ['kitesurf', 'snowkite', 'wingfoil'] as const;
+export type Discipline = (typeof DISCIPLINES)[number];
+export const DEFAULT_DISCIPLINES: readonly Discipline[] = ['kitesurf'];
+
 /** Availability of one slot. Ordered roughly from best to worst. */
 export const AVAILABILITY = [
   'available',   // bookable, no shortage signal
@@ -157,6 +165,10 @@ export interface OfferAdapter {
   key: string;
   name: string;
   kind: OfferKind;
+  /** sports this offer can be booked for (default ['kitesurf']); 'wingfoil' only when the package itself offers
+   *  wing foil (included, a wing variant, or lessons/rental by the operator or its school), never for a spot that
+   *  merely suits it; written to package_offers.disciplines */
+  disciplines?: Discipline[];
   operator: OperatorRef;
   /** the page a human would open */
   url: string;

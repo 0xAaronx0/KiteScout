@@ -174,6 +174,7 @@ export const cascadeKiteboardingMauiWinterCamp: OfferAdapter = {
   key: 'cascade-kiteboarding-maui-winter-camp',
   name: 'Cascade Kiteboarding Maui Winter Camp',
   kind: 'camp',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Cascade Kiteboarding',
     websiteUrl: `${SITE}/`,

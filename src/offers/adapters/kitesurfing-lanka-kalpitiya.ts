@@ -218,6 +218,7 @@ export const kitesurfingLankaKalpitiya: OfferAdapter = {
   key: 'kitesurfing-lanka-kalpitiya',
   name: 'Kitesurfing Lanka (Kalpitiya)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Kitesurfing Lanka',
     websiteUrl: SITE,

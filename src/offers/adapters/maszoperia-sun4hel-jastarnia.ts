@@ -247,6 +247,7 @@ export const maszoperiaSun4helJastarnia: OfferAdapter = {
   key: 'maszoperia-sun4hel-jastarnia',
   name: 'Maszoperia Sun4Hel Jastarnia',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Maszoperia Sun4Hel',
     websiteUrl: SITE,

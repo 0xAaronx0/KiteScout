@@ -338,6 +338,7 @@ export const dakhlaAttitudeDakhla: OfferAdapter = {
   key: 'dakhla-attitude-dakhla',
   name: 'Dakhla Attitude',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Dakhla Attitude (Dakhla Hospitality Group)',
     websiteUrl: SITE,

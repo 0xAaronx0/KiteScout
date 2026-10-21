@@ -239,6 +239,7 @@ export const jejuKiteLabSinyang: OfferAdapter = {
   key: 'jeju-kite-lab-sinyang',
   name: 'Jeju Kite Lab Beach Guesthouse, Sinyang Beach',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Jeju Kite Lab',
     websiteUrl: SITE,

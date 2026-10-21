@@ -268,6 +268,7 @@ export const campingStrukkamphukFehmarnsund: OfferAdapter = {
   key: 'camping-strukkamphuk-fehmarnsund',
   name: 'Camping Strukkamphuk Fehmarnsund',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Camping Strukkamphuk',
     websiteUrl: SITE,

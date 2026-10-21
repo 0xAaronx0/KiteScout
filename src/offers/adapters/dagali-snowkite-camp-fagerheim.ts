@@ -240,6 +240,7 @@ export const dagaliSnowkiteCampFagerheim: OfferAdapter = {
   key: 'dagali-snowkite-camp-fagerheim',
   name: 'Fagerheim Snowkite Camp (Dagali Fjellpark, Hardangervidda)',
   kind: 'camp',
+  disciplines: ['snowkite'],
   operator: {
     name: 'Dagali Fjellpark',
     websiteUrl: `${SITE}/en/`,

@@ -198,6 +198,7 @@ export const wildKitePeruLaMaisonMancora: OfferAdapter = {
   key: 'wild-kite-peru-la-maison-mancora',
   name: 'La Maison by Wild Kite Peru, Mancora',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Wild Kite Peru',
     websiteUrl: SITE,

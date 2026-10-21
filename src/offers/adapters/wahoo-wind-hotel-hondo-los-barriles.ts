@@ -199,6 +199,7 @@ export const wahooWindHotelHondoLosBarriles: OfferAdapter = {
   key: 'wahoo-wind-hotel-hondo-los-barriles',
   name: 'Hotel Hondo (Wahoo Wind Co.)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Hotel Hondo',
     websiteUrl: HH_HOME_URL,

@@ -203,6 +203,7 @@ export const cabareteBoutiqueKiteHotel: OfferAdapter = {
   key: 'cabarete-boutique-kite-hotel',
   name: 'Cabarete Boutique Kite Hotel (Kite Buen Hombre)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Kite Buen Hombre',
     websiteUrl: SITE,

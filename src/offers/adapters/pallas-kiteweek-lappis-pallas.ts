@@ -203,6 +203,7 @@ export const pallasKiteweekLappisPallas: OfferAdapter = {
   key: 'pallas-kiteweek-lappis-pallas',
   name: 'Pallas Kiteweek (Kiteschool Lappis), Pallastunturi',
   kind: 'camp',
+  disciplines: ['snowkite'],
   operator: {
     name: 'Kiteschool Lappis',
     websiteUrl: 'https://www.lappis.fi/',

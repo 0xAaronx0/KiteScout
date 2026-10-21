@@ -198,6 +198,7 @@ export const margaritaVillageKalpitiya: OfferAdapter = {
   key: 'margarita-village-kalpitiya',
   name: 'Margarita Village (Kalpitiya)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Margarita Village',
     websiteUrl: SITE,

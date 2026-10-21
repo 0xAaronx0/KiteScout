@@ -171,6 +171,7 @@ export const hotelTodoBienElSargento: OfferAdapter = {
   key: 'hotel-todo-bien-el-sargento',
   name: 'Hotel Todo Bien, El Sargento',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Hotel Todo Bien',
     websiteUrl: SITE,

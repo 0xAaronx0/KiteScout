@@ -157,6 +157,7 @@ export const pandanusResortMuiNe: OfferAdapter = {
   key: 'pandanus-resort-mui-ne',
   name: 'Pandanus Resort (Mui Ne)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Pandanus Resort',
     websiteUrl: SITE,

@@ -184,6 +184,7 @@ export const exotikiteBajaWaveCamps: OfferAdapter = {
   key: 'exotikite-baja-wave-camps',
   name: 'ExotiKite Baja Wave Camps',
   kind: 'camp',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'ExotiKite',
     websiteUrl: SITE,

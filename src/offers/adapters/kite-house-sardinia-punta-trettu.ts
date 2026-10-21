@@ -212,6 +212,7 @@ export const kiteHouseSardiniaPuntaTrettu: OfferAdapter = {
   key: 'kite-house-sardinia-punta-trettu',
   name: 'Kite House Sardinia Punta Trettu',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Kite House Sardinia',
     websiteUrl: SITE,

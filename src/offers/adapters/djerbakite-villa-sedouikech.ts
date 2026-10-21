@@ -232,6 +232,7 @@ export const djerbakiteVillaSedouikech: OfferAdapter = {
   key: 'djerbakite-villa-sedouikech',
   name: 'Djerbakite Villa Sedouikech',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Djerbakite',
     websiteUrl: SITE,

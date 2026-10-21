@@ -204,6 +204,7 @@ export const laVentanaBeachResort: OfferAdapter = {
   key: 'la-ventana-beach-resort',
   name: 'La Ventana Beach Resort',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'La Ventana Beach Resort',
     websiteUrl: SITE,

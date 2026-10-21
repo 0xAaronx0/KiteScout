@@ -186,6 +186,7 @@ export const dakhlaEvasionFreeRideCamp: OfferAdapter = {
   key: 'dakhla-evasion-free-ride-camp',
   name: 'Dakhla Evasion Free Ride & Bien-être kite camp, Dakhla',
   kind: 'camp',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: DEV_OPERATOR,
   url: DEV_URL,
   slotMethod: 'price_table',

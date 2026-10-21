@@ -253,6 +253,7 @@ export const playaCentralCampsLaVentana: OfferAdapter = {
   key: 'playa-central-camps-la-ventana',
   name: 'Playa Central Windsports Camps (kiting camps), La Ventana',
   kind: 'camp',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Playa Central Kiteboarding',
     websiteUrl: SITE,

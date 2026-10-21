@@ -404,6 +404,7 @@ export const funbaseUruma: OfferAdapter = {
   key: 'funbase-uruma',
   name: 'FUNBASE Uruma',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'FUNBASE Co., Ltd. (FUNBASE Uruma)',
     websiteUrl: FB_HOME_URL,

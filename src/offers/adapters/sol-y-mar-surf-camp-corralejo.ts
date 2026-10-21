@@ -210,6 +210,7 @@ export const solYMarSurfCampCorralejo: OfferAdapter = {
   key: 'sol-y-mar-surf-camp-corralejo',
   name: 'Sol y Mar Surf Camp Corralejo (Flag Beach)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Flag Beach Watersports Centre',
     websiteUrl: SITE,

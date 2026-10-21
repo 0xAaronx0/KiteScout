@@ -211,6 +211,7 @@ export const windSportsFijiNananuIRa: OfferAdapter = {
   key: 'wind-sports-fiji-nananu-i-ra',
   name: 'Wind Sports Fiji',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Wind Sports Fiji',
     websiteUrl: SITE,

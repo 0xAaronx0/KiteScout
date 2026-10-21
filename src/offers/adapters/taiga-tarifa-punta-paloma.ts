@@ -111,6 +111,7 @@ export const taigaTarifaPuntaPaloma: OfferAdapter = {
   key: 'taiga-tarifa-punta-paloma',
   name: 'TAIGA Tarifa Punta Paloma',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'TAIGA Campings & Resorts',
     websiteUrl: SITE,

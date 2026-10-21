@@ -263,6 +263,7 @@ export const florasLakeHouseLanglois: OfferAdapter = {
   key: 'floras-lake-house-langlois',
   name: 'Floras Lake House By The Sea',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Floras Lake House By The Sea',
     websiteUrl: FL_HOME_URL,

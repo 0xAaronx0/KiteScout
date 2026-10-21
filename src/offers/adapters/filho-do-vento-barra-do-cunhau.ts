@@ -164,6 +164,7 @@ export const filhoDoVentoBarraDoCunhau: OfferAdapter = {
   key: 'filho-do-vento-barra-do-cunhau',
   name: 'Filho do Vento Kite Lodge Barra do Cunhaú',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Filho do Vento Kite Lodge',
     websiteUrl: SITE,

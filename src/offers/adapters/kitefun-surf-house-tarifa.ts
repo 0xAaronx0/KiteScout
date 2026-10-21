@@ -205,6 +205,7 @@ export const kitefunSurfHouseTarifa: OfferAdapter = {
   key: 'kitefun-surf-house-tarifa',
   name: 'Kite Fun Tarifa Surf House',
   kind: 'camp',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Kite Fun Tarifa',
     websiteUrl: `${SITE}/en/`,

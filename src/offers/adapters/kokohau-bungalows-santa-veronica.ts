@@ -201,6 +201,7 @@ export const kokohauBungalowsSantaVeronica: OfferAdapter = {
   key: 'kokohau-bungalows-santa-veronica',
   name: 'Kokohau Bungalows Santa Verónica',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'KiteSurf Experience Colombia',
     websiteUrl: SITE,

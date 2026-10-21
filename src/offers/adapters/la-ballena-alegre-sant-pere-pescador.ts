@@ -435,6 +435,7 @@ export const laBallenaAlegreSantPerePescador: OfferAdapter = {
   key: 'la-ballena-alegre-sant-pere-pescador',
   name: 'La Ballena Alegre Sant Pere Pescador',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'La Ballena Alegre',
     websiteUrl: BA_HOME_URL,

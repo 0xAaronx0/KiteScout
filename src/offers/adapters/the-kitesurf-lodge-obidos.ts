@@ -172,6 +172,7 @@ export const theKitesurfLodgeObidos: OfferAdapter = {
   key: 'the-kitesurf-lodge-obidos',
   name: 'The Kitesurf Lodge Lagoa de Óbidos',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'The Kitesurf Lodge',
     websiteUrl: SITE,

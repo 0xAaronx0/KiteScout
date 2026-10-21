@@ -506,6 +506,7 @@ export function lnAdapter(product: LnProduct): OfferAdapter {
     key: product.key,
     name: product.name,
     kind: product.kind,
+    disciplines: ['snowkite'], // every Latitudes Nord product we ingest is a snowkite trip
     operator: LN_OPERATOR,
     url: LN_LIST_URL,
     slotMethod: 'html_dates',

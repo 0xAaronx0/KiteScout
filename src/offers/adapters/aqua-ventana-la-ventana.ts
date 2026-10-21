@@ -290,6 +290,7 @@ export const aquaVentanaLaVentana: OfferAdapter = {
   key: 'aqua-ventana-la-ventana',
   name: 'Aqua Ventana La Ventana',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Aqua Ventana',
     websiteUrl: SITE,

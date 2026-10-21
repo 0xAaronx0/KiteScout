@@ -223,6 +223,7 @@ export const ruegenKiteHostelMartinshafen: OfferAdapter = {
   key: 'ruegen-kite-hostel-martinshafen',
   name: 'Rügen Kite Hostel, Martinshafen',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Rügen Kite',
     websiteUrl: SITE,

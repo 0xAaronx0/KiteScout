@@ -110,6 +110,7 @@ export const casaNomadeIlhaDoGuajiru: OfferAdapter = {
   key: 'casa-nomade-ilha-do-guajiru',
   name: 'Casa Nomade (Ilha do Guajiru)',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Nomade do Kite',
     websiteUrl: SITE,

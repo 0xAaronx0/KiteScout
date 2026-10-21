@@ -156,6 +156,7 @@ export const tarifaKiteHostelTarifa: OfferAdapter = {
   key: 'tarifa-kite-hostel-tarifa',
   name: 'Tarifa Kite Hostel',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Tarifa Kite Hostel',
     websiteUrl: SITE,

@@ -201,6 +201,7 @@ export const expeditionsUnlimitedGreenlandSnowkiteCrossing: OfferAdapter = {
   key: 'expeditions-unlimited-greenland-snowkite-crossing',
   name: 'Expeditions Unlimited - South to North crossing of Greenland by snowkite',
   kind: 'tour',
+  disciplines: ['snowkite'],
   operator: {
     name: 'Expeditions Unlimited',
     websiteUrl: `${SITE}/en/`,

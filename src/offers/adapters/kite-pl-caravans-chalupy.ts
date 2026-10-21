@@ -327,6 +327,7 @@ export const kitePlCaravansChalupy: OfferAdapter = {
   key: 'kite-pl-caravans-chalupy',
   name: 'Kite.pl caravans Chałupy 6',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Kite.pl',
     websiteUrl: SITE,

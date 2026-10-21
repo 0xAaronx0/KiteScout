@@ -224,6 +224,7 @@ export const lazyKiteSurfHouseTarifa: OfferAdapter = {
   key: 'lazy-kite-surf-house-tarifa',
   name: 'LazyKite Surf House Tarifa',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'LazyKite School Tarifa',
     websiteUrl: `${SITE}/`,

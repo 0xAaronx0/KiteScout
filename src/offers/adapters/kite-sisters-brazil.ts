@@ -174,6 +174,7 @@ export const kiteSistersBrazil: OfferAdapter = {
   key: 'kite-sisters-brazil',
   name: 'Kite Sisters - Boutique Kitesurf Retreat Brazil (Moitas)',
   kind: 'camp',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Kite Sisters',
     websiteUrl: 'https://kite-sisters.com/',

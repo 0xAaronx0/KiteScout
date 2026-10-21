@@ -225,6 +225,7 @@ export const villaRasaBuzios: OfferAdapter = {
   key: 'villa-rasa-buzios',
   name: 'Villa Rasa Búzios',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Villa Rasa',
     websiteUrl: SITE,

@@ -223,6 +223,7 @@ export const ionClubOasis212LessonsPackageDakhla: OfferAdapter = {
   key: 'ion-club-oasis212-lessons-package-dakhla',
   name: 'ION CLUB Dakhla Oasis212 Lessons Package',
   kind: 'camp',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: ION_OPERATOR,
   url: ION_PKG_URL,
   slotMethod: 'price_table',

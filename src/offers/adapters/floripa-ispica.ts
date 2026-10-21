@@ -231,6 +231,7 @@ export const floripaIspica: OfferAdapter = {
   key: 'floripa-ispica',
   name: 'Floripa Yoga & Kitesurf House Ispica',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Floripa Yoga & Kitesurf House',
     websiteUrl: SITE,

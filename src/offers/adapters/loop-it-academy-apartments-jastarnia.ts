@@ -237,6 +237,7 @@ export const loopItAcademyApartmentsJastarnia: OfferAdapter = {
   key: 'loop-it-academy-apartments-jastarnia',
   name: 'Loop It Academy apartments Jastarnia',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Loop It Academy',
     websiteUrl: SITE,

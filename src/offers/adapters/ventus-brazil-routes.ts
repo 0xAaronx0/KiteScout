@@ -255,6 +255,7 @@ export const ventusBrazilRoutes: OfferAdapter = {
   key: 'ventus-brazil-routes',
   name: 'Ventus Brazil kitesurf & wing foil group trips',
   kind: 'tour',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Ventus Kitesurf',
     websiteUrl: 'https://www.ventuskitesurf.com',

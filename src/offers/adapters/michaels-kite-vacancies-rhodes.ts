@@ -195,6 +195,7 @@ export const michaelsKiteVacanciesRhodes: OfferAdapter = {
   key: 'michaels-kite-vacancies-rhodes',
   name: "Michael's Kite Vacancies Rhodes",
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: "Michael's Kite Vacancies",
     websiteUrl: SITE,

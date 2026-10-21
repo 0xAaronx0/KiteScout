@@ -206,6 +206,7 @@ export const ikarusKiteboardMexicoIslaBlanca: OfferAdapter = {
   key: 'ikarus-kiteboard-mexico-isla-blanca',
   name: 'Ikarus Kiteboard Mexico Isla Blanca',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Ikarus Cancun Kite Center',
     websiteUrl: SITE,

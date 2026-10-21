@@ -227,6 +227,7 @@ export const casaSuicaKiteVillasPraiaDoFarol: OfferAdapter = {
   key: 'casa-suica-kite-villas-praia-do-farol',
   name: 'CSKV Casa Suiça Kite Villas Praia do Farol',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'CSKV Casa Suiça Kite Villas',
     websiteUrl: SITE,

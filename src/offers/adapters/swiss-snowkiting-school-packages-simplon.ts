@@ -220,6 +220,7 @@ export const swissSnowkitingSchoolPackagesSimplon: OfferAdapter = {
   key: 'swiss-snowkiting-school-packages-simplon',
   name: 'Swiss Snowkiting School - Snowkite Packages, Simplon Pass',
   kind: 'camp',
+  disciplines: ['snowkite'],
   operator: {
     name: 'Swiss Snowkiting School (Kite Rider GmbH)',
     websiteUrl: `${SITE}/en/`,

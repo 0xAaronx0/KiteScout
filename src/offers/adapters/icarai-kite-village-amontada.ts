@@ -162,6 +162,7 @@ export const icaraiKiteVillageAmontada: OfferAdapter = {
   key: 'icarai-kite-village-amontada',
   name: 'Icarai Kite Village Icaraí de Amontada',
   kind: 'accommodation',
+  disciplines: ['kitesurf', 'wingfoil'],
   operator: {
     name: 'Icarai Kite Village',
     websiteUrl: SITE,
