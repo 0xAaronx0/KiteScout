@@ -22,7 +22,7 @@ let geocodeFailStreak = 0;
 // Nominatim's 1 req/s policy or blow through the fail streak in one blip.
 let nominatimQueue: Promise<void> = Promise.resolve();
 
-type NominatimHit = { lat: string; lon: string; class?: string; type?: string; display_name?: string };
+type NominatimHit = { lat: string; lon: string; class?: string; type?: string; addresstype?: string; display_name?: string };
 
 /**
  * One throttled Nominatim request.
@@ -134,7 +134,51 @@ function pickHit(hits: NominatimHit[], strictOpts: { region: string | null } | n
       (h.display_name && tokens.some(t => h.display_name!.toLowerCase().includes(t)))
     );
   }
-  return usable[0] ? { lat: parseFloat(usable[0].lat), lng: parseFloat(usable[0].lon) } : null;
+  const hit = preferPopulatedPlace(usable);
+  return hit ? { lat: parseFloat(hit.lat), lng: parseFloat(hit.lon) } : null;
+}
+
+// Nominatim often ranks a municipality boundary first, and its centroid sits
+// far inland of the town it is named after ("Riohacha, La Guajira" 34 km,
+// "Máncora, Piura" 7 km, "Sidi Kaouki" 7 km; inland-pin audit 2026-10-19).
+// When the top hit is an administrative boundary, prefer from the same answer:
+// a place node for the town, else the top boundary if it is the settlement
+// itself (addresstype suburb/village, e.g. Cumbuco), else a beach, else a
+// boundary that is the town (city/town/village) over a county one. A
+// city_district is no substitute: in Rio Grande do Norte the municipality hit
+// sits on the town and the district centroid 12-23 km inland. Alternatives
+// must lie 5-50 km from the top hit: nearer, the boundary centroid is as good
+// as the village node (Taíba, Gülbahçe, Sabaki: 2-3 km, coast distance mixed);
+// farther, it is a namesake elsewhere.
+const POPULATED_TYPES = new Set([
+  'city', 'town', 'village', 'hamlet', 'suburb', 'city_district', 'borough',
+  'neighbourhood', 'quarter', 'locality', 'isolated_dwelling',
+]);
+const TOWN_TYPES = new Set(['city', 'town', 'village', 'hamlet']);
+const PREFER_MIN_KM = 5;
+const PREFER_MAX_KM = 50;
+
+function kmBetween(a: NominatimHit, b: NominatimHit): number {
+  const rad = Math.PI / 180;
+  const dLat = (parseFloat(b.lat) - parseFloat(a.lat)) * rad;
+  const dLng = (parseFloat(b.lon) - parseFloat(a.lon)) * rad;
+  const x = Math.sin(dLat / 2) ** 2 +
+    Math.cos(parseFloat(a.lat) * rad) * Math.cos(parseFloat(b.lat) * rad) * Math.sin(dLng / 2) ** 2;
+  return 2 * 6371 * Math.asin(Math.sqrt(x));
+}
+
+function preferPopulatedPlace(hits: NominatimHit[]): NominatimHit | undefined {
+  const top = hits[0];
+  if (!top || top.class !== 'boundary') return top;
+  const near = hits.slice(1).filter(h => { const km = kmBetween(top, h); return km >= PREFER_MIN_KM && km <= PREFER_MAX_KM; });
+  const settlement = (t?: string) => !!t && POPULATED_TYPES.has(t);
+  // Máncora / Sidi Kaouki: the municipality says addresstype "city" too, so a
+  // place node beats any boundary.
+  return near.find(h => h.class === 'place' && settlement(h.type))
+    ?? (settlement(top.addresstype) ? top : undefined)
+    ?? near.find(h => h.type === 'beach')
+    ?? near.find(h => h.class === 'boundary' && !!h.addresstype && TOWN_TYPES.has(h.addresstype))
+    ?? top;
 }
 
 /**

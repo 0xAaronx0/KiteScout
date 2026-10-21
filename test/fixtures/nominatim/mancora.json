@@ -1,0 +1,24 @@
+{
+  "query": "Máncora, Piura, Peru",
+  "recorded": "2026-10-21",
+  "hits": [
+    {
+      "lat": "-4.1551963",
+      "lon": "-81.0061242",
+      "class": "boundary",
+      "type": "administrative",
+      "addresstype": "city",
+      "name": "Máncora",
+      "display_name": "Máncora, Province of Talara, Piura, Peru"
+    },
+    {
+      "lat": "-4.1030531",
+      "lon": "-81.0481341",
+      "class": "place",
+      "type": "town",
+      "addresstype": "town",
+      "name": "Máncora",
+      "display_name": "Máncora, Province of Talara, Piura, 20851, Peru"
+    }
+  ]
+}

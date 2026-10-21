@@ -1,0 +1,24 @@
+{
+  "query": "Riohacha, La Guajira, Colombia",
+  "recorded": "2026-10-21",
+  "hits": [
+    {
+      "lat": "11.2361913",
+      "lon": "-72.8820456",
+      "class": "boundary",
+      "type": "administrative",
+      "addresstype": "county",
+      "name": "Riohacha",
+      "display_name": "Riohacha, La Guajira, RAP Caribe, Colombia"
+    },
+    {
+      "lat": "11.5449387",
+      "lon": "-72.9150522",
+      "class": "boundary",
+      "type": "administrative",
+      "addresstype": "city",
+      "name": "Riohacha",
+      "display_name": "Riohacha, La Guajira, RAP Caribe, Colombia"
+    }
+  ]
+}

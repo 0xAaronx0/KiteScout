@@ -1,0 +1,24 @@
+{
+  "query": "Sidi Kaouki, Marrakesh-Safi, Morocco",
+  "recorded": "2026-10-21",
+  "hits": [
+    {
+      "lat": "31.3875171",
+      "lon": "-9.7295113",
+      "class": "boundary",
+      "type": "administrative",
+      "addresstype": "city",
+      "name": "Sidi Kaouki",
+      "display_name": "Sidi Kaouki, caïdat de Smimou, cercle de Tamanar, Essaouira Province, Marrakech-Safi, 44125, Morocco"
+    },
+    {
+      "lat": "31.3556693",
+      "lon": "-9.7978441",
+      "class": "place",
+      "type": "village",
+      "addresstype": "village",
+      "name": "Sidi Kaouki",
+      "display_name": "Sidi Kaouki, caïdat de Smimou, cercle de Tamanar, Essaouira Province, Marrakech-Safi, 44125, Morocco"
+    }
+  ]
+}
