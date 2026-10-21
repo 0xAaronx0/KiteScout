@@ -27,9 +27,9 @@ on:
         required: false
         default: ''
       task:
-        description: 'climate-stats (default) or climate-wind-check (read-only ERA5 wind comparison)'
+        description: 'climate-stats (default), climate-wind-check (read-only ERA5 wind comparison) or climate-uv-cloudy (one-off CAMS fill, then climate-stats)'
         type: choice
-        options: [climate-stats, climate-wind-check]
+        options: [climate-stats, climate-wind-check, climate-uv-cloudy]
         required: false
         default: climate-stats
 
@@ -73,6 +73,7 @@ jobs:
         # budget stops starting new fetches ~80 min before the job timeout so the rows still get written
         run: |
           if [ "$TASK" = "climate-wind-check" ]; then pnpm cli climate-wind-check; exit 0; fi
+          if [ "$TASK" = "climate-uv-cloudy" ]; then pnpm cli climate-uv-cloudy --budget-min 240; pnpm cli climate-stats --budget-min 20; exit 0; fi
           args="--budget-min 270"
           if [ "$DRY_RUN" = "true" ]; then args="$args --dry-run"; fi
           if [ -n "$MAX_FETCH" ]; then args="$args --max-fetch $MAX_FETCH"; fi

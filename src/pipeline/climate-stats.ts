@@ -18,9 +18,9 @@
 import { supabase } from '../lib/supabase.js';
 import {
   type ClimateCell, type OfferRef, type PortPoint, RateLimitError,
-  fetchCellClimate, findCell, medianOfferSpot, portKey, resolvePoint, round10,
+  combineWind, fetchCellClimate, findCell, medianOfferSpot, portKey, resolvePoint, round10,
 } from './climate.js';
-import { COPERNICUS_SOURCES, fetchCellsCopernicus, normalizeToken } from './copernicus.js';
+import { COPERNICUS_SOURCES, era5WindSeries, fetchCellsCopernicus, kiteableShare, normalizeToken } from './copernicus.js';
 
 const SOURCES = 'UV: CAMS global via Open-Meteo Air Quality API 2023-2025; air temp: ERA5 via Open-Meteo Historical API 2016-2025; water temp: Open-Meteo Marine API SST 2023-2025';
 
@@ -43,6 +43,7 @@ export interface ClimateRunReport {
   rowsWritten: number;
   rowsDeleted: number;
   cellsFetched: number;
+  windFetched: number;
   noPoint: string[];
   unknownPorts: string[];
   deferred: string[];
@@ -82,10 +83,11 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
   const cells = await selectAll<Cell>('climate_points', '*');
   const countryPoints = await selectAll<CountryPoint>('climate_country_points', 'country,is_alias,spot_name,lat,lng,elevation_m');
   const regionPoints = await selectAll<RegionPoint>('climate_region_points', 'region_key,country,region_name,iso_3166_2,spot_name,lat,lng,elevation_m');
+  const bstoked = new Map((await selectAll<{ country: string; months: number[] }>('wind_stats', 'country,months')).map(w => [w.country, w.months]));
 
   const report: ClimateRunReport = {
     fetcher: cdsToken ? 'copernicus' : 'open-meteo',
-    offers: offers.length, rowsWritten: 0, rowsDeleted: 0, cellsFetched: 0,
+    offers: offers.length, rowsWritten: 0, rowsDeleted: 0, cellsFetched: 0, windFetched: 0,
     noPoint: [], unknownPorts: [], deferred: [],
     countries: countryPoints.length, countryRowsWritten: 0, countriesDeferred: [], countriesAdded: [], countrySample: [], failed: [],
     regions: regionPoints.length, regionRowsWritten: 0, regionsDeferred: [],
@@ -173,6 +175,29 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
       }
     }
   }
+  // ---- 2b. ERA5 wind for Copernicus cells of country/region points that lack it (one ~30 s
+  //          request each; new cells already carry it from the combined request)
+  if (cdsToken) {
+    const pts = [...countryPoints.map(c => [c.lat, c.lng] as const), ...regionPoints.map(r => [r.lat, r.lng] as const)];
+    const todo = [...new Set(pts.map(([la, lo]) => usable(la, lo, true)).filter((c): c is Cell => !!c && !c.wind_kiteable_months))];
+    if (todo.length) console.log(`${todo.length} cells get ERA5 wind`);
+    const { default: pLimit } = await import('p-limit');
+    const limit = pLimit(6);
+    await Promise.all(todo.map(c => limit(async () => {
+      if (Date.now() > deadline) return;
+      try {
+        const lat = c.sample_lat, lng = c.sample_lng;
+        const wind = kiteableShare(await era5WindSeries(lat, lng, cdsToken), lng);
+        if (!opts.dryRun) {
+          const { error } = await supabase.from('climate_points').update({ wind_kiteable_months: wind }).eq('lat10', c.lat10).eq('lng10', c.lng10);
+          if (error) throw new Error(`climate_points wind update: ${error.message}`);
+        }
+        c.wind_kiteable_months = wind;
+        report.windFetched++;
+      } catch (e) { report.failed.push(`wind @ ${c.lat10 / 10},${c.lng10 / 10}: ${(e as Error).message}`); }
+    })));
+  }
+
   if (!report.stoppedBy && Date.now() > deadline) report.stoppedBy = `time budget of ${opts.budgetMin} min used up`;
 
   // ---- 3. rows
@@ -204,6 +229,8 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
       water_temp_months: cell.water_temp_months,
       uv_months: cell.uv_months, uv_clear_sky_months: cell.uv_clear_sky_months,
       sources: cell.sources, updated_at: new Date().toISOString(),
+      ...combineWind(bstoked.get(cp.country) ?? null, cell.wind_kiteable_months, cell.water_temp_months),
+      uv_cloudy_months: cell.uv_cloudy_months ?? null, uv_cloudy_source: cell.uv_cloudy_source ?? null,
     });
   }
   const regionRows: any[] = [];
@@ -217,6 +244,8 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
       water_temp_months: cell.water_temp_months,
       uv_months: cell.uv_months, uv_clear_sky_months: cell.uv_clear_sky_months,
       sources: cell.sources, updated_at: new Date().toISOString(),
+      ...combineWind(null, cell.wind_kiteable_months, cell.water_temp_months),
+      uv_cloudy_months: cell.uv_cloudy_months ?? null, uv_cloudy_source: cell.uv_cloudy_source ?? null,
     });
   }
   report.countrySample = countryRows.filter(r => !r.is_alias).slice(0, 5).map(r => ({

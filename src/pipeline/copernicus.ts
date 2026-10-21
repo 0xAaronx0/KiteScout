@@ -10,10 +10,11 @@ import {
   type ClimateCell, monthlyMeanOfDailyMax, monthlyMeanOfDailyMean, monthlyMeanOfDailyMin,
 } from './climate.js';
 
-export type Store = 'cds';
+export type Store = 'cds' | 'ads';
 
 const BASE: Record<Store, string> = {
   cds: 'https://cds.climate.copernicus.eu/api/retrieve/v1',
+  ads: 'https://ads.atmosphere.copernicus.eu/api/retrieve/v1', // CAMS (cams-uv.ts); same token
 };
 
 /**
@@ -217,10 +218,10 @@ export function era5Monthly(s: PointSeries, lng: number) {
 /**
  * Share of kiteable days per month, whole percent: a day counts when the 10 m wind is
  * >= minKn for at least minRun consecutive hours between 08:00 and 19:00 local solar time
- * (Aaron 2026-10-21: "mind 2h am Stueck mit 12+ Knoten"). Days with < 8 daylight values
+ * (Aaron 2026-10-21: 12+ knots, first "mind 2h am Stueck", then "lass uns auf 3h gehen"). Days with < 8 daylight values
  * are skipped; months without days return null.
  */
-export function kiteableShare(s: PointSeries, lng: number, minKn = 12, minRun = 2): (number | null)[] {
+export function kiteableShare(s: PointSeries, lng: number, minKn = 12, minRun = 3): (number | null)[] {
   if (!s.wind) throw new CopernicusError('kiteableShare: series has no wind');
   const days = new Map<string, (number | null)[]>();
   s.time.forEach((t, i) => {
@@ -301,8 +302,9 @@ export async function fetchCellsCopernicus(points: CellRequest[], opts: {
   await Promise.all(points.map(p => limit(async () => {
     if (!go()) return;
     try {
-      const series = await era5Series(p.lat, p.lng, ['2m_temperature', 'sea_surface_temperature'], opts.token, opts.log);
+      const series = await era5Series(p.lat, p.lng, ['2m_temperature', 'sea_surface_temperature', '10m_u_component_of_wind', '10m_v_component_of_wind'], opts.token, opts.log);
       const m = era5Monthly(series, p.lng);
+      const wind = series.wind ? kiteableShare(series, p.lng) : null;
       if (!m.water_temp_months) {
         for (const [la, lo] of seaNeighbours(p.lat, p.lng)) {
           const s = await era5Series(la, lo, ['sea_surface_temperature'], opts.token, opts.log);
@@ -312,7 +314,7 @@ export async function fetchCellsCopernicus(points: CellRequest[], opts: {
       const uv = clearSkyUvMonths(p.lat, p.elevation ?? 0);
       const cell: CellOut = {
         sample_lat: Number(p.lat.toFixed(4)), sample_lng: Number(p.lng.toFixed(4)), elevation_m: p.elevation ?? null,
-        uv_months: uv, uv_clear_sky_months: uv, ...m,
+        uv_months: uv, uv_clear_sky_months: uv, ...m, wind_kiteable_months: wind,
       };
       checkPlausible(cell);
       await opts.onCell(p, cell);

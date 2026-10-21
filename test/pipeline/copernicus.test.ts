@@ -140,13 +140,13 @@ test('retrieveRetrying retries HTTP 5xx, not 4xx', async () => {
   } finally { globalThis.fetch = real; }
 });
 
-test('kiteableShare: >= 12 kn for >= 2 consecutive daylight hours, local solar time', async () => {
+test('kiteableShare: >= 12 kn for >= 3 consecutive daylight hours, local solar time', async () => {
   const { kiteableShare } = await import('../../src/pipeline/copernicus.js');
-  // u/v columns in m/s; 7 m/s = 13.6 kn. January: 14:00-15:00 UTC windy (2 h) -> kiteable;
+  // u/v columns in m/s; 7 m/s = 13.6 kn. January: 14:00-16:00 UTC windy (3 h) -> kiteable;
   // February: only 14:00 windy (1 h) -> not; March: windy at 03:00 UTC only (night) -> not.
   const lines = hourly(d => {
     const m = d.getUTCMonth(), h = d.getUTCHours();
-    const windy = (m === 0 && (h === 14 || h === 15)) || (m === 1 && h === 14) || (m === 2 && h === 3);
+    const windy = (m === 0 && h >= 14 && h <= 16) || (m === 1 && h === 14) || (m === 2 && h === 3);
     return `${d.toISOString()},${windy ? 7 : 2},0`;
   });
   const csv = ['valid_time,u10,v10', ...lines].join('\n');
