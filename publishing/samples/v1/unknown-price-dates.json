@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "manifestRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+  "title": "Price and dates unverified: published as unknown (real)",
+  "cases": [
+    {
+      "name": "departures unknown, price verified",
+      "synthetic": false,
+      "note": "real entry: departures listed in our data but not printed on the operator page",
+      "now": "2026-10-21T10:54:00.490Z",
+      "expectedRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+      "row": {
+        "offer_id": "d56117f0-242c-4e61-b0d2-e640aa5dd925",
+        "provider_id": "d56117f0-242c-4e61-b0d2-e640aa5dd925",
+        "title": "Dakhla Evasion Free Ride & Wellness Kite Camp",
+        "slug": "dakhla-evasion-free-ride-wellness-kite-camp",
+        "summary": "Dakhla Evasion's all-inclusive kite weeks on the Dakhla lagoon: 7 nights in a private bungalow facing the lagoon, full board, airport transfers, pool, gym and yoga room, one 75-minute massage and one 60-minute hammam. Free Ride is for beginners (16 hours of semi-private kite lessons), Ride Evolution for intermediates (12 hours of semi-private lessons plus 3 days of unlimited gear rental), and Freedom Ride for independent riders with their own gear (storage, boat assistance, downwinders to the Dune Blanche and the Speed Spot with 4x4 return); each is also sold for wing foil. Prices per person (\"from\"): Free Ride & Bien être EUR 1,550, Ride Evolution & Bien être EUR 1,500, Freedom Ride Pack & Bien être EUR 990, for stays between 2026-11-21 and 2027-03-13; booking on request.",
+        "package_type": "camp",
+        "country": "Morocco",
+        "countries": [
+          "Morocco"
+        ],
+        "region": "Dakhla-Oued Ed-Dahab",
+        "source_url": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+        "operator_id": "b5fb5311-9ac9-46d9-83cd-e714aa88db55",
+        "provider_name": "Dakhla Evasion Resort & Spa",
+        "provider_website_url": "https://www.dakhla-evasion.com/en/",
+        "price_pp_cabin": 990,
+        "price_from_eur": 990,
+        "price_pp_cabin_currency": "EUR",
+        "currency": "EUR",
+        "price_unit": "package",
+        "price_basis_note": "From EUR 990 / 7 nights p.p. (cheapest bookable: Freedom Ride Pack & Bien-être (independent riders, own gear, downwinders), 2026-11-21; as of 2026-10-20)",
+        "dates": [
+          {
+            "unit": "Free Ride & Bien-être (beginners, 16 h semi-private lessons)",
+            "price": 1550,
+            "status": "on_request",
+            "currency": "EUR",
+            "end_date": "2027-03-13",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-11-21",
+            "price_basis": "person",
+            "date_precision": "season",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Freedom Ride Pack & Bien-être (independent riders, own gear, downwinders)",
+            "price": 990,
+            "status": "on_request",
+            "currency": "EUR",
+            "end_date": "2027-03-13",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-11-21",
+            "price_basis": "person",
+            "date_precision": "season",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Ride Evolution & Bien-être (intermediates, 12 h semi-private lessons + 3 days rental)",
+            "price": 1500,
+            "status": "on_request",
+            "currency": "EUR",
+            "end_date": "2027-03-13",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-11-21",
+            "price_basis": "person",
+            "date_precision": "season",
+            "price_valid_until": null
+          }
+        ],
+        "updated_at": "2026-10-21T10:18:37.604836+00:00"
+      },
+      "evidence": {
+        "version": 1,
+        "status": "active",
+        "source": "package_offers",
+        "offerId": "d56117f0-242c-4e61-b0d2-e640aa5dd925",
+        "snapshot": {
+          "revision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/schema/v1/evidence.schema.json",
+          "schemaRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/fb8f4989fd796674641f8b936eeb11cd34caf52d/src/publishing",
+          "generatorRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "observedAt": "2026-10-21T10:53:00.490Z",
+          "complete": true
+        },
+        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "rights": {
+          "status": "permitted",
+          "scope": "text",
+          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/docs/publishing/text-policy.md",
+          "owner": "KiteScout (Aaron Lindner)",
+          "expiresAt": "2027-10-21T10:53:00.490Z"
+        },
+        "claims": [
+          {
+            "field": "title",
+            "valueHash": "12bd4960e163cae760b59893ad8ac10f614d8d1d15fa8577bac580e6e549c3ff",
+            "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+            "observedAt": "2026-10-21T10:52:48.822Z",
+            "verifiedAt": "2026-10-21T10:52:53.386Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:48.822Z"
+          },
+          {
+            "field": "description",
+            "valueHash": "fc96c5492c57e7c1e73c9ee7c21de1c136ff0bc341a9a1c360f7f005f59233bb",
+            "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+            "observedAt": "2026-10-21T10:52:48.822Z",
+            "verifiedAt": "2026-10-21T10:52:53.386Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-01-19T10:52:48.822Z"
+          },
+          {
+            "field": "type",
+            "valueHash": "d75ed54b7302cbd79ddbd3c1db3c7ac01821771a4320daa075a629cd848dfada",
+            "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+            "observedAt": "2026-10-21T10:52:48.822Z",
+            "verifiedAt": "2026-10-21T10:52:53.386Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:48.822Z"
+          },
+          {
+            "field": "operator",
+            "valueHash": "d216cce167a2c7ea9239080854e620960775b39214aabca70f38f2b609fb30f3",
+            "sourceUrl": "https://www.dakhla-evasion.com/en/",
+            "observedAt": "2026-10-21T10:52:50.615Z",
+            "verifiedAt": "2026-10-21T10:52:53.386Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:50.615Z"
+          },
+          {
+            "field": "location",
+            "valueHash": "ab6605f4bb2b9f0a604e51c49d342526e087d7ccdc8f5020f283cfd1806251e5",
+            "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+            "observedAt": "2026-10-21T10:52:48.822Z",
+            "verifiedAt": "2026-10-21T10:52:53.386Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:48.822Z"
+          },
+          {
+            "field": "price",
+            "valueHash": "9ce1ad92fdc2531637bc786a6c39e0a4ba1d2898ebec10d6dc9092a5e47011fa",
+            "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+            "observedAt": "2026-10-21T10:52:48.822Z",
+            "verifiedAt": "2026-10-21T10:52:53.386Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2026-11-20T10:52:48.822Z"
+          }
+        ]
+      },
+      "policy": {
+        "version": 1,
+        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "owner": "KiteScout data (Aaron Lindner) with Kite Cruise Scout app (Martin Marzidovsek)",
+        "approvedAt": "2026-10-21T10:53:00.490Z",
+        "rules": [
+          {
+            "field": "title",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "type",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "operator",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "location",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "description",
+            "maxAgeHours": 2160
+          },
+          {
+            "field": "price",
+            "maxAgeHours": 720
+          },
+          {
+            "field": "departures",
+            "maxAgeHours": 168
+          }
+        ]
+      },
+      "expect": {
+        "status": "editorial_preview",
+        "diagnostics": [
+          {
+            "field": "departures",
+            "code": "missing_evidence"
+          }
+        ]
+      }
+    }
+  ]
+}

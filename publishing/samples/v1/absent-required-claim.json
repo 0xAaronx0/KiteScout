@@ -1,0 +1,510 @@
+{
+  "version": 1,
+  "manifestRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+  "title": "Required claim absent (real)",
+  "cases": [
+    {
+      "name": "held: title missing_evidence, description missing_evidence, location missing_evidence",
+      "synthetic": false,
+      "note": "real entry: a required fact did not verify against the operator page, so no claim was written",
+      "now": "2026-10-21T10:54:00.490Z",
+      "expectedRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+      "row": {
+        "offer_id": "01f8cd23-cea2-49f4-b10c-3a4df418715a",
+        "provider_id": "01f8cd23-cea2-49f4-b10c-3a4df418715a",
+        "title": "Kitereizen Kite Camp Vietnam with Marc Jacobs, My Hoa Lagoon",
+        "slug": "kitereizen-kite-camp-vietnam-with-marc-jacobs-my-hoa-lagoon",
+        "summary": "Dutch kite-travel organiser Kitereizen runs a one-week big-air coaching camp on the My Hoa lagoon near Phan Rang, Vietnam, with King of the Air winner Marc Jacobs coaching through BB-talkin radio headsets, evening video analysis and photos of your jumps; January winds there typically blow 15-40 knots. The 7 nights are spent at a basecamp directly on the lagoon (deluxe room, infinity pool, recovery bath) with full board, Cam Ranh airport transfers, an own scooter and daily laundry; extra clinics, gear rental and a partner place can be added. Weeks 2027: January 1-8 and January 8-15, EUR 1,995 per person in a shared room, EUR 2,395 in a private room.",
+        "package_type": "camp",
+        "country": "Vietnam",
+        "countries": [
+          "Vietnam"
+        ],
+        "region": "Ninh Thuan",
+        "source_url": "https://kitereizen.nl/en/vietnam",
+        "operator_id": "516e09dc-7756-4e3c-93a4-f6eb09ac54c0",
+        "provider_name": "Kitereizen",
+        "provider_website_url": "https://kitereizen.nl/en/kitecamps",
+        "price_pp_cabin": 1995,
+        "price_from_eur": 1995,
+        "price_pp_cabin_currency": "EUR",
+        "currency": "EUR",
+        "price_unit": "package",
+        "price_basis_note": "From EUR 1,995 p.p. (cheapest bookable: Shared deluxe room, 2027-01-01; as of 2026-10-20)",
+        "dates": [
+          {
+            "unit": "Private deluxe room",
+            "price": 2395,
+            "status": "limited",
+            "currency": "EUR",
+            "end_date": "2027-01-08",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2027-01-01",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Shared deluxe room",
+            "price": 1995,
+            "status": "limited",
+            "currency": "EUR",
+            "end_date": "2027-01-08",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2027-01-01",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Private deluxe room",
+            "price": 2395,
+            "status": "limited",
+            "currency": "EUR",
+            "end_date": "2027-01-15",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2027-01-08",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Shared deluxe room",
+            "price": 1995,
+            "status": "limited",
+            "currency": "EUR",
+            "end_date": "2027-01-15",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2027-01-08",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          }
+        ],
+        "updated_at": "2026-10-20T10:59:30.504952+00:00"
+      },
+      "evidence": {
+        "version": 1,
+        "status": "active",
+        "source": "package_offers",
+        "offerId": "01f8cd23-cea2-49f4-b10c-3a4df418715a",
+        "snapshot": {
+          "revision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/schema/v1/evidence.schema.json",
+          "schemaRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/fb8f4989fd796674641f8b936eeb11cd34caf52d/src/publishing",
+          "generatorRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "observedAt": "2026-10-21T10:53:00.490Z",
+          "complete": true
+        },
+        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "rights": {
+          "status": "permitted",
+          "scope": "text",
+          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/docs/publishing/text-policy.md",
+          "owner": "KiteScout (Aaron Lindner)",
+          "expiresAt": "2027-10-21T10:53:00.490Z"
+        },
+        "claims": [
+          {
+            "field": "type",
+            "valueHash": "44f0640dcf41cf91ff01edae7b0b14c5d59523a99a68ad6622a0a5e77d80ca2e",
+            "sourceUrl": "https://kitereizen.nl/en/vietnam",
+            "observedAt": "2026-10-21T10:51:00.181Z",
+            "verifiedAt": "2026-10-21T10:51:01.939Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:00.181Z"
+          },
+          {
+            "field": "operator",
+            "valueHash": "75a28179d04ec97c4e2c6cf8d39503cb20cd7eed19758d81c246248b5f299917",
+            "sourceUrl": "https://kitereizen.nl/en/vietnam",
+            "observedAt": "2026-10-21T10:51:00.181Z",
+            "verifiedAt": "2026-10-21T10:51:01.939Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:00.181Z"
+          },
+          {
+            "field": "price",
+            "valueHash": "acba30a19c87c8893629bd49525ae894614d61a3b702ff0b43277d07b496abda",
+            "sourceUrl": "https://kitereizen.nl/en/vietnam",
+            "observedAt": "2026-10-21T10:51:00.181Z",
+            "verifiedAt": "2026-10-21T10:51:01.939Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2026-11-20T10:51:00.181Z"
+          },
+          {
+            "field": "departures",
+            "valueHash": "d625f9c72e4dc98a764f0e045e635e34647ce7955a97123518dec78849f37a5a",
+            "sourceUrl": "https://kitereizen.nl/en/vietnam",
+            "observedAt": "2026-10-21T10:51:00.181Z",
+            "verifiedAt": "2026-10-21T10:51:01.939Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2026-10-28T10:51:00.181Z"
+          }
+        ]
+      },
+      "policy": {
+        "version": 1,
+        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "owner": "KiteScout data (Aaron Lindner) with Kite Cruise Scout app (Martin Marzidovsek)",
+        "approvedAt": "2026-10-21T10:53:00.490Z",
+        "rules": [
+          {
+            "field": "title",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "type",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "operator",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "location",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "description",
+            "maxAgeHours": 2160
+          },
+          {
+            "field": "price",
+            "maxAgeHours": 720
+          },
+          {
+            "field": "departures",
+            "maxAgeHours": 168
+          }
+        ]
+      },
+      "expect": {
+        "status": "held",
+        "diagnostics": [
+          {
+            "field": "title",
+            "code": "missing_evidence"
+          },
+          {
+            "field": "description",
+            "code": "missing_evidence"
+          },
+          {
+            "field": "location",
+            "code": "missing_evidence"
+          }
+        ]
+      }
+    },
+    {
+      "name": "held: description missing_evidence",
+      "synthetic": false,
+      "note": "real entry: a required fact did not verify against the operator page, so no claim was written",
+      "now": "2026-10-21T10:54:00.490Z",
+      "expectedRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+      "row": {
+        "offer_id": "06f07a80-1157-48b2-bfdb-e203cb295d2d",
+        "provider_id": "06f07a80-1157-48b2-bfdb-e203cb295d2d",
+        "title": "Fagerheim Snowkite Camp",
+        "slug": "fagerheim-snowkite-camp",
+        "summary": "Fagerheim Snowkite Camp is a 7-night snowkiting camp - kiting on snow with skis or a snowboard, not on water - on the Hardangervidda mountain plateau in Norway, sold by Dagali Fjellpark and taught by the Upwind snowkite school. Guests stay directly on the spot at the Fagerheim base in renovated apartments for 4 (two double bedrooms, living room with fireplace) with full board, pick-up at Haugastøl station, gear storage, sauna and yoga; the stay costs 13,930 NOK. Courses are added on top: beginners 10,900 NOK, kitesurfers 4,900 NOK, snowkiters 3,900 NOK, with equipment rental at 4,000 NOK. The published season runs 7 February 2026 to 25 April 2026 in Saturday-to-Saturday weeks; booking is by e-mail.",
+        "package_type": "camp",
+        "country": "Norway",
+        "countries": [
+          "Norway"
+        ],
+        "region": "Hardangervidda",
+        "source_url": "https://dagalifjellpark.no/en/snowkite-camp-fagerheim/",
+        "operator_id": "c44a7ca9-292f-478f-80fa-d7d4e3439cad",
+        "provider_name": "Dagali Fjellpark",
+        "provider_website_url": "https://dagalifjellpark.no/en/",
+        "price_pp_cabin": null,
+        "price_from_eur": null,
+        "price_pp_cabin_currency": null,
+        "currency": null,
+        "price_unit": "package",
+        "price_basis_note": "Price on request",
+        "dates": null,
+        "updated_at": "2026-10-21T10:18:37.604836+00:00"
+      },
+      "evidence": {
+        "version": 1,
+        "status": "active",
+        "source": "package_offers",
+        "offerId": "06f07a80-1157-48b2-bfdb-e203cb295d2d",
+        "snapshot": {
+          "revision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/schema/v1/evidence.schema.json",
+          "schemaRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/fb8f4989fd796674641f8b936eeb11cd34caf52d/src/publishing",
+          "generatorRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "observedAt": "2026-10-21T10:53:00.490Z",
+          "complete": true
+        },
+        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "rights": {
+          "status": "permitted",
+          "scope": "text",
+          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/docs/publishing/text-policy.md",
+          "owner": "KiteScout (Aaron Lindner)",
+          "expiresAt": "2027-10-21T10:53:00.490Z"
+        },
+        "claims": [
+          {
+            "field": "title",
+            "valueHash": "3fee9919afc98ad861de9dcafc97fcbbcf621cf357d36016b65f3ee57c0659ea",
+            "sourceUrl": "https://dagalifjellpark.no/en/snowkite-camp-fagerheim/",
+            "observedAt": "2026-10-21T10:51:56.553Z",
+            "verifiedAt": "2026-10-21T10:51:58.673Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:56.553Z"
+          },
+          {
+            "field": "type",
+            "valueHash": "3ccb1695be5b78c6a5e45ef7975b30dd091bb1e3c04a001c4fa9ee81d19b0fbc",
+            "sourceUrl": "https://dagalifjellpark.no/en/snowkite-camp-fagerheim/",
+            "observedAt": "2026-10-21T10:51:56.553Z",
+            "verifiedAt": "2026-10-21T10:51:58.673Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:56.553Z"
+          },
+          {
+            "field": "operator",
+            "valueHash": "64e0e8bc3eebb0292f81f55967c3c65102641879fcd82396252852be6a4939fa",
+            "sourceUrl": "https://dagalifjellpark.no/en/snowkite-camp-fagerheim/",
+            "observedAt": "2026-10-21T10:51:56.553Z",
+            "verifiedAt": "2026-10-21T10:51:58.673Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:56.553Z"
+          },
+          {
+            "field": "location",
+            "valueHash": "80ed96d8270d99614c520ce422655f283629dd8ebb84398a78a105030f59c47d",
+            "sourceUrl": "https://dagalifjellpark.no/en/snowkite-camp-fagerheim/",
+            "observedAt": "2026-10-21T10:51:56.553Z",
+            "verifiedAt": "2026-10-21T10:51:58.673Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:56.553Z"
+          }
+        ]
+      },
+      "policy": {
+        "version": 1,
+        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "owner": "KiteScout data (Aaron Lindner) with Kite Cruise Scout app (Martin Marzidovsek)",
+        "approvedAt": "2026-10-21T10:53:00.490Z",
+        "rules": [
+          {
+            "field": "title",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "type",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "operator",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "location",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "description",
+            "maxAgeHours": 2160
+          },
+          {
+            "field": "price",
+            "maxAgeHours": 720
+          },
+          {
+            "field": "departures",
+            "maxAgeHours": 168
+          }
+        ]
+      },
+      "expect": {
+        "status": "held",
+        "diagnostics": [
+          {
+            "field": "description",
+            "code": "missing_evidence"
+          },
+          {
+            "field": "price",
+            "code": "missing_evidence"
+          },
+          {
+            "field": "departures",
+            "code": "missing_evidence"
+          }
+        ]
+      }
+    },
+    {
+      "name": "held: description missing_evidence",
+      "synthetic": false,
+      "note": "real entry: a required fact did not verify against the operator page, so no claim was written",
+      "now": "2026-10-21T10:54:00.490Z",
+      "expectedRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+      "row": {
+        "offer_id": "0eff8573-b1cf-4837-a291-2f0fe82a0644",
+        "provider_id": "0eff8573-b1cf-4837-a291-2f0fe82a0644",
+        "title": "Ölandkite Progression Kitecamp, Öland",
+        "slug": "olandkite-progression-kitecamp-oland",
+        "summary": "Ölandkite, a kite school on the Swedish island of Öland, runs a yearly Progression Kitecamp for riders who have taken a course but are not yet independent: its instructors coach them over a long weekend towards riding on their own. The camp includes 3 nights in the school's Surf & Sleep Kitehouse near Färjestaden (shared bedrooms, wood-fired hot tub) with breakfast buffet and dinners; lunch is not included and guests bring their own bed linen. The price is 6,995 Swedish kronor per participant, max 6 participants, registration by e-mail. Held in 2026 over the Ascension long weekend (14-17 May); the 2027 date is not yet published.",
+        "package_type": "camp",
+        "country": "Sweden",
+        "countries": [
+          "Sweden"
+        ],
+        "region": "Färjestaden, Öland",
+        "source_url": "https://olandkite.se/kitecamps/oland/",
+        "operator_id": "c284f1e2-6899-4bb1-bc32-120c4d317dbf",
+        "provider_name": "Ölandkite",
+        "provider_website_url": "https://olandkite.se",
+        "price_pp_cabin": null,
+        "price_from_eur": null,
+        "price_pp_cabin_currency": null,
+        "currency": null,
+        "price_unit": "package",
+        "price_basis_note": "Price on request",
+        "dates": null,
+        "updated_at": "2026-10-20T11:01:09.929655+00:00"
+      },
+      "evidence": {
+        "version": 1,
+        "status": "active",
+        "source": "package_offers",
+        "offerId": "0eff8573-b1cf-4837-a291-2f0fe82a0644",
+        "snapshot": {
+          "revision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/schema/v1/evidence.schema.json",
+          "schemaRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/fb8f4989fd796674641f8b936eeb11cd34caf52d/src/publishing",
+          "generatorRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "observedAt": "2026-10-21T10:53:00.490Z",
+          "complete": true
+        },
+        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "rights": {
+          "status": "permitted",
+          "scope": "text",
+          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/docs/publishing/text-policy.md",
+          "owner": "KiteScout (Aaron Lindner)",
+          "expiresAt": "2027-10-21T10:53:00.490Z"
+        },
+        "claims": [
+          {
+            "field": "title",
+            "valueHash": "bab0fe4ff4e2a2ab3d84411a946e1694e720447d61af15ea7cadda03d4bffa63",
+            "sourceUrl": "https://olandkite.se/kitecamps/oland/",
+            "observedAt": "2026-10-21T10:51:41.336Z",
+            "verifiedAt": "2026-10-21T10:51:43.261Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:41.336Z"
+          },
+          {
+            "field": "type",
+            "valueHash": "91e9679cb8c5fa1490b4b5527a455a85d8ab16fe6ec2ebed6ec991a7f9028a57",
+            "sourceUrl": "https://olandkite.se/kitecamps/oland/",
+            "observedAt": "2026-10-21T10:51:41.336Z",
+            "verifiedAt": "2026-10-21T10:51:43.261Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:41.336Z"
+          },
+          {
+            "field": "operator",
+            "valueHash": "8e08d1bbed378b079ccc9d7134004d350fd0c5a6bbdb159d5977726443eee613",
+            "sourceUrl": "https://olandkite.se/kitecamps/oland/",
+            "observedAt": "2026-10-21T10:51:41.336Z",
+            "verifiedAt": "2026-10-21T10:51:43.261Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:41.336Z"
+          },
+          {
+            "field": "location",
+            "valueHash": "7fcf7eedf81b6d4595a3568cc00758c8a1a2e5452559f7e02f1a25b6d1cd8ea5",
+            "sourceUrl": "https://olandkite.se/kitecamps/oland/",
+            "observedAt": "2026-10-21T10:51:41.336Z",
+            "verifiedAt": "2026-10-21T10:51:43.261Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:41.336Z"
+          }
+        ]
+      },
+      "policy": {
+        "version": 1,
+        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "owner": "KiteScout data (Aaron Lindner) with Kite Cruise Scout app (Martin Marzidovsek)",
+        "approvedAt": "2026-10-21T10:53:00.490Z",
+        "rules": [
+          {
+            "field": "title",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "type",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "operator",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "location",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "description",
+            "maxAgeHours": 2160
+          },
+          {
+            "field": "price",
+            "maxAgeHours": 720
+          },
+          {
+            "field": "departures",
+            "maxAgeHours": 168
+          }
+        ]
+      },
+      "expect": {
+        "status": "held",
+        "diagnostics": [
+          {
+            "field": "description",
+            "code": "missing_evidence"
+          },
+          {
+            "field": "price",
+            "code": "missing_evidence"
+          },
+          {
+            "field": "departures",
+            "code": "missing_evidence"
+          }
+        ]
+      }
+    }
+  ]
+}

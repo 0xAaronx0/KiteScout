@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "manifestRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+  "title": "Partial source failure",
+  "cases": [
+    {
+      "name": "verification incomplete",
+      "synthetic": false,
+      "note": "real entry, snapshot.complete = false: judge failed: judge answer is not JSON (stop_reason max_tokens, 8000 output tokens): Unexpected end of JSON input",
+      "now": "2026-10-21T10:54:00.490Z",
+      "expectedRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+      "row": {
+        "offer_id": "35f343cf-6381-4b7a-b596-f10bafda4653",
+        "provider_id": "35f343cf-6381-4b7a-b596-f10bafda4653",
+        "title": "Kite Fun Tarifa Surf House",
+        "slug": "kite-fun-tarifa-surf-house",
+        "summary": "The Kite Fun Tarifa Surf House is the kite school's own guest house in a quiet street of Tarifa's town centre, Spain, a few minutes' walk from the beach and the old town; most guests come to learn or practise kitesurfing. It is sold as a pack: any group or private kite course plus 3 nights in a double room for 2 people, from EUR 520 to 760 for both (June/October and July/September; August on request). Lessons include a certified instructor, full equipment (North Kiteboarding, Ocean Rodeo and Mystic), radio helmets and insurance; the school also offers surf, SUP and wing foil courses and rental.",
+        "package_type": "camp",
+        "country": "Spain",
+        "countries": [
+          "Spain"
+        ],
+        "region": "Tarifa town",
+        "source_url": "https://kitefuntarifa.com/en/kitesurf-courses-tarifa/kitesurf-courses-accommodation-tarifa.html",
+        "operator_id": "9c8df2d2-815c-4fd0-bf73-32b559a120de",
+        "provider_name": "Kite Fun Tarifa",
+        "provider_website_url": "https://kitefuntarifa.com/en/",
+        "price_pp_cabin": 260,
+        "price_from_eur": 260,
+        "price_pp_cabin_currency": "EUR",
+        "currency": "EUR",
+        "price_unit": "package",
+        "price_basis_note": "From EUR 260 / 3 nights p.p. (cheapest bookable: 9h Kite Course + 3 nights in a double room, 2026-10-01; as of 2026-10-20)",
+        "dates": null,
+        "updated_at": "2026-10-21T10:18:37.604836+00:00"
+      },
+      "evidence": {
+        "version": 1,
+        "status": "active",
+        "source": "package_offers",
+        "offerId": "35f343cf-6381-4b7a-b596-f10bafda4653",
+        "snapshot": {
+          "revision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/schema/v1/evidence.schema.json",
+          "schemaRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/fb8f4989fd796674641f8b936eeb11cd34caf52d/src/publishing",
+          "generatorRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "observedAt": "2026-10-21T10:53:00.490Z",
+          "complete": false
+        },
+        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "rights": {
+          "status": "permitted",
+          "scope": "text",
+          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/docs/publishing/text-policy.md",
+          "owner": "KiteScout (Aaron Lindner)",
+          "expiresAt": "2027-10-21T10:53:00.490Z"
+        },
+        "claims": [
+          {
+            "field": "operator",
+            "valueHash": "54108b27208a20668da641045a52f6a01d97bd29918242bb58bb76a3751321d4",
+            "sourceUrl": "https://kitefuntarifa.com/en/kitesurf-courses-tarifa/kitesurf-courses-accommodation-tarifa.html",
+            "observedAt": "2026-10-21T10:51:41.821Z",
+            "verifiedAt": "2026-10-21T10:52:12.909Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:41.821Z"
+          }
+        ]
+      },
+      "policy": {
+        "version": 1,
+        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "owner": "KiteScout data (Aaron Lindner) with Kite Cruise Scout app (Martin Marzidovsek)",
+        "approvedAt": "2026-10-21T10:53:00.490Z",
+        "rules": [
+          {
+            "field": "title",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "type",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "operator",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "location",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "description",
+            "maxAgeHours": 2160
+          },
+          {
+            "field": "price",
+            "maxAgeHours": 720
+          },
+          {
+            "field": "departures",
+            "maxAgeHours": 168
+          }
+        ]
+      },
+      "expect": {
+        "status": "held",
+        "diagnostics": [
+          {
+            "field": "record",
+            "code": "incomplete_snapshot"
+          }
+        ]
+      }
+    }
+  ]
+}
