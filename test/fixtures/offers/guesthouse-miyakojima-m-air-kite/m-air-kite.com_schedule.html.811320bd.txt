@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>レンタル | カイトボードショップ　M-air</title>
+<link rel="stylesheet" type="text/css" media="all" href="img/jquery.fs.boxer.css">
+<link rel="stylesheet" type="text/css" href="style.css"></head>
+<body class="basic2" id="hpb-sp-20-0010-30">
+<div id="page" class="site">
+<header id="masthead" class="site-header sp-part-top sp-header2" role="banner">
+<div id="masthead-inner" class="sp-part-top sp-header-inner">
+<div id="sp-site-branding2-1" class="sp-part-top sp-site-branding2">
+<h1 class="site-title sp-part-top sp-site-title" id=""><a href="index.html">カイトボードショップ　M-air</a></h1>
+<h2 class="site-description sp-part-top sp-catchphrase" id="">宮古島で唯一のカイトボードShop</h2>
+<div class="extra sp-part-top sp-site-branding-extra" id="sp-site-branding-extra-1">
+<p class="paragraph">TEL.090-1583-6520 〒906-0305沖縄県宮古島市下地与那覇233</p></div></div>
+<nav id="sp-site-navigation-1" class="navigation-main button-menu sp-part-top sp-site-navigation horizontal" role="navigation">
+<h1 class="menu-toggle">メニュー</h1>
+<div class="screen-reader-text skip-link"><a title="コンテンツへスキップ" href="#content">コンテンツへスキップ</a></div>
+<ul id="menu-mainnav">
+  <li class="menu-item"><a href="index.html">トップページ</a>
+  <li class="menu-item"><a href="information.html">スクール</a>
+  <li class="menu-item current_page_item"><a href="schedule.html">レンタル</a>
+  <li class="menu-item"><a href="recruit.html">ゲレンデガイド</a>
+  <li class="menu-item"><a href="report.html">トリップの方に来る皆様にお願い</a>
+  <li class="menu-item"><a href="profile.html">スタッフ紹介</a>
+  <li class="menu-item"><a href="custom.html">ショップ案内</a>
+  <li class="menu-item"><a href="contact.html">お問い合わせ</a>
+  <li class="menu-item"><a href="custom1.html">中古情報</a>
+  <li class="menu-item"><a href="http://m-air-kite.com/en/">English</a></ul></nav></div></header>
+<div id="main" class="site-main sp-part-top sp-main">
+<div id="main-inner">
+<div id="primary" class="content-area">
+<div id="contenthead" class="sp-part-top sp-content-header">
+<div id="breadcrumb-list" class="sp-part-top sp-bread-crumb">
+<div><a href="index.html">トップ</a></div>
+<div>></div>
+<div>レンタル</div></div></div>
+<div id="content" class="site-content sp-part-top sp-content page-schedule" role="main">
+<header id="sp-page-title-3" class="entry-header sp-part-top sp-page-title">
+<h1 class="entry-title">レンタルメニュー（税別）</h1></header>
+<table id="sp-table-2" class="sp-part-top sp-table">
+  <tbody>
+    <tr>
+      <th class="col-title">カイト</th>
+      <td class="">1日8000円</td>
+      <td class="" width="160">経験者のみ<br>
+      レンタル可</td>
+      <td class="">メーカー、機種、サイズはお尋ね下さい</td></tr>
+    <tr>
+      <th class="col-title">ボード</th>
+      <td>1日4000円</td>
+      <td width="160">経験者のみ<br>
+      レンタル可</td>
+      <td>メーカー、機種、サイズはお尋ね下さい</td></tr>
+    <tr>
+      <th class="col-title">ハーネス</th>
+      <td>1日1000円</td>
+      <td width="160">各サイズあり</td>
+      <td>パンツハーネス、ウエストハーネス各種</td></tr>
+    <tr>
+      <th class="col-title">ウェットスーツ</th>
+      <td>1日1000円</td>
+      <td width="160">各サイズあり</td>
+      <td>スプリング～セミドライまで各種</td></tr>
+    <tr>
+      <th class="col-title">電動ポンプ</th>
+      <td>1日1000円</td>
+      <td width="160"></td>
+      <td></td></tr>
+    <tr>
+      <th class="col-title">その他小物</th>
+      <td>1個につき<br>
+      1日500円</td>
+      <td width="160"></td>
+      <td>リーシュ類、バー＆ラインのみ、サングラス、ヘルメット、ハンドポンプ等</td></tr></tbody></table>
+<div id="sp-block-container-3" class="sp-part-top sp-block-container">
+<p class="paragraph"><b class="character">※レンタル道具の著しい破損、紛失時には修理代、もしくは道具代を実費にてお申し受けますのでご了承願います。</b></p></div>
+<header id="sp-page-title-4" class="entry-header sp-part-top sp-page-title">
+<h1 class="entry-title">その他のメニュー(税別)</h1></header>
+<table id="sp-table-3" class="sp-part-top sp-table">
+  <tbody>
+    <tr>
+      <th class="col-title" width="98">カイト道具のお預かりサービス</th>
+      <td class="" width="112">1ヶ月2000円<br>
+      (1バッグにつき)</td>
+      <td class="" width="230">近日中に再度トリップに来られる方で荷物を預けて行きたい方はご利用下さい。</td>
+      <td class="">ゲストハウス宮古島の倉庫に保管いたします。</td></tr></tbody></table>
+<table id="sp-table-4" class="sp-part-top sp-table">
+  <tbody>
+    <tr>
+      <th class="col-title" width="110">カイトの修理</th>
+      <td width="93">お見積もり致します</td>
+      <td>パネルの損傷、バルブの剥離、ブラダーのパンクやねじれ、バーやラインの調整など簡単な修理は承ります。リーディングエッジの破損など大きな破損はお買い上げショップにご相談下さい。<br>
+      Ex. 破損箇所の確認作業（パンク、破れなど）　5000円<br>
+      　　チューブの交換作業　10000円<br>
+      　　その他の破損の修理、部品の交換等お尋ね下さい。</td></tr></tbody></table></div></div></div>
+<div id="sidebar2" class="sp-part-top sp-sidebar">
+<div id="sp-block-container-1" class="sp-part-top sp-block-container">
+<h3 class="paragraph">LINK</h3></div>
+<div id="sp-item-gallery-1" class="grid sp-part-top sp-item-gallery">
+<ul id="grid-sp-item-gallery-1">
+  <li class="item-gallery-item">
+  <p class="item-gallery-title">M-airのFacebookページ</p>
+  <div class="item-gallery-photo"><a class="item-gallery-link" href="https://www.facebook.com/kiteboardshopmair" title="M-airのFacebookページ" target="_self"><img class="item-gallery-thumbnail" src="il20180130161110/img/image13.jpg" alt="M-airのFacebookページ"></a> </div>
+  <p class="item-gallery-content"></p>
+  <li class="item-gallery-item">
+  <p class="item-gallery-title">ゲストハウス宮古島</p>
+  <div class="item-gallery-photo"><a class="item-gallery-link" href="http://g-miyakojima.com/" title="ゲストハウス宮古島" target="_self"><img class="item-gallery-thumbnail" src="il20180130161110/img/image26.jpg" alt="ゲストハウス宮古島"></a> </div>
+  <p class="item-gallery-content"></p>
+  <li class="item-gallery-item">
+  <p class="item-gallery-title">M's Nail　facebook</p>
+  <div class="item-gallery-photo"><a class="item-gallery-link" href="https://www.facebook.com/ms.nail.bodyjewelry/?fref=ts" title="M's Nail　facebook" target="_self"><img class="item-gallery-thumbnail" src="il20180130161110/img/image11.jpg" alt="M's Nail　facebook"></a> </div>
+  <p class="item-gallery-content"></p></ul></div></div></div>
+<footer id="colophon" class="site-footer sp-part-top sp-footer2" role="contentinfo">
+<div id="colophon-inner" class="sp-part-top sp-footer-inner">
+<nav id="sp-site-navigation-2" class="navigation-main sp-part-top sp-site-navigation minimal" role="navigation">
+<h1 class="menu-toggle">メニュー</h1>
+<div class="screen-reader-text skip-link"><a title="コンテンツへスキップ" href="#content">コンテンツへスキップ</a></div>
+<ul id="menu-mainnav">
+  <li class="menu-item"><a href="index.html">トップページ</a></ul></nav>
+<div id="sp-block-container-2" class="sp-part-top sp-block-container">
+<p class="copyright paragraph">Copyright &copy; M-air L.L.C, All rights reserved.</p></div></div></footer></div></body></html>

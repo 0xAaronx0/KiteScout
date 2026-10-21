@@ -1,0 +1,246 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="keywords" content="沖縄県,離島,民宿,ゲストハウス宮古島,宿泊,プラン,オンライン,予約">
+<meta name="Description" content="沖縄県離島にある民宿,ゲストハウス宮古島のオンライン予約">
+<link href="../style/style.css" rel="stylesheet" type="text/css" media="all" />
+<title>ゲストハウス宮古島 オンライン予約 宿泊プラン 料金一覧</title>
+</head>
+<body>
+<div class="bodyback">
+<div id="wrapper">
+<div id="contener">
+	<div id="header">
+	<div id="headbox">
+	<h1><a href='https://g-miyakojima.com/' target='_blank'><img src='' alt='ゲストハウス宮古島' border='0' /></a></h1>
+<p><a href='https://g-miyakojima.com/' target='_blank'><strong>宿の詳細ホームページを見る</strong></a></p>
+	  <p>ゲストハウス宮古島：プラン一覧</p>
+	</div>
+	<div id="menubox02">
+	<ul>
+	 <li class="btn_reserve"></li>
+	 <li class="btn_planlist01"></li>
+	 <li class="btn_planinfo"></li>
+	 <li class="btn_price"></li>
+	 <li class="btn_infoinput"></li>
+	 <li class="btn_infocheck"></li>
+	 <li class="btn_finish"></li>
+	</ul>
+	<hr />
+	</div>
+	<div id="languagebox">
+	<ul>
+	 <li><img src="../img/t_languages.gif" alt="ユーザーログイン/user login" border="0"/></li>
+	<li class="btn_japan"><a href="../plan/ulogin"><strong>ログイン/login</strong></a></li>  
+	</ul>
+	</div>
+	<p id="containerBtm">&nbsp;</p>
+	</div>
+	<div id="plantitle">
+	<div class="leftbox"><h4><img src="../img/plankensaku.gif" alt="宿泊プランの検索" border="0"/></h4></div>
+	<div class="rightlistbox"></div>
+	<p id="containerBtm">&nbsp;</p>
+	</div>
+	<div id="searchbox">
+	<div id="subbox">
+	<form method="POST" action="/yoyaku/plan/index2.jsp" name="frmplist">
+	<input type="hidden" name="yid" value="92728865459041">
+	<input type="hidden" name="cmfrm" value="0">
+	<table border="0" cellpadding="0" cellspacing="0">
+			<tr>
+			<td><p><span class="li01">
+			<input type="text" size="12" maxlength="10" style="ime-mode:inactive" name="checkinday" id="checkinday" value="" onClick="winopen(1);">
+			日程未定
+			<input type="checkbox" name="fixed" onclick="DateEnable();">
+			</td>
+			<td  width='450' colspan='2'><p><span class="li04">
+			<select name="tanka1"><option value="0" selected>気にしない</option><option value="1">4000円未満</option><option value="2">4000円</option><option value="3">5000円</option><option value="4">6000円</option></select> ～
+<select name="tanka2"><option value="0" selected>気にしない</option><option value="1">4000円</option><option value="2">5000円</option><option value="3">6000円</option><option value="4">6001円以上</option></select>
+(消費税込み)
+			</span></p></td>
+ 			  <td rowspan="2" class="boder"><p class="p10rbot"><input type="image" src="../img/kensaku01.gif" name="cmdKensaku"  value="検索" /></p></td>
+			</tr>
+			<tr><td><p><span class="li03">
+			<select name="people"><option value="0" selected>未選択</option><option value="1">1名</option><option value="2">2名以上</option></select>
+			</span></p></td><td><p><span class="li05">
+<input type='checkbox' name='roomtype' value='1'  checked>シングル　
+<input type='checkbox' name='roomtype' value='2'  checked>ツイン　
+	 </span></p></td></tr></table>
+	</form>
+	</div>
+	<p class="right">表示の料金は大人１泊１名様当たりの料金です</p>
+	</div>
+	<div id="plantitle">
+	<div class="leftbox"><h4><img src="../img/t_planlist02.gif" border="0" alt="宿泊プラン一覧"/></h4></div>
+	<div class="rightvewbox"><p><a href="/yoyaku/plan/index2.jsp?all=1&cmfrm=0&yid=92728865459041"><strong>料金・宿泊プラン一覧へ</strong></a></p>
+	</div>
+	<p id="containerBtm">&nbsp;</p>
+	</div>
+<div class='planlisttitle'>
+<table width='0' height='0' border='0' cellpadding='0' cellspacing='0'>
+<tr><td><h2><a name='1'>スタンダードプラン　個室Aタイプ Standard Plan private room A-type</a></h2></td>
+<td width='35%' align='right'><DIV style='font-weight:bold;font-size:10pt;color:yellow'>最安価格 4,000円 (税込 4,400円)　</DIV></td></tr></table></div>
+<div id='planlistbox'><div class='plan_top'><div class='plan_btm'>
+<div class='subbox'><div class='leftbox'>
+<p><img src='../image/gh-miyakojima_240625093059/t1.jpg?1792572434572' alt='スタンダードプラン　個室Aタイプ Standard Plan private room A-type' width='206' border='0'></p></div>
+<div class='rightbox'><p><pre>ゲストハウス宮古島の個室Aタイプ（禁煙ツインルーム、定員1～2名）の素泊まりのプランです。
+1泊より予約できます。
+この部屋タイプは1～2名で御予約可能です。
+This plan is non-smoking pribate room A-type.
+Guests possible to book from 1night.Also guest posibble to stay 1 or 2peason.</pre></p>
+<table border='0' cellpadding='0' cellspacing='0'>
+<tr><td class='titlebox'><br></td><td class='box'><br></td><td class='box'><br></td></tr>
+<tr><td><p class='bn02'>
+<a href="javascript:void(0);" onclick="open2('92728865459041',1,'','1','2026/10/22',0); return false;">
+個室A(1名～2名) 1泊から予約可能</a></p></td>
+<td width='35%' align='right'><p><strong>4,000円 ～<p>(税込 4,400円～)</strong></p></td>
+<td><p class='boton'>
+<a href="javascript:void(0);" onclick="open2('92728865459041',1,'','1','2026/10/22',0); return false;">
+<strong>詳細・予約へ</strong></a></p></td></tr>
+</table></div><p id='containerBtm'> </p></div></div></div></div>
+<div class='planlisttitle'>
+<table width='0' height='0' border='0' cellpadding='0' cellspacing='0'>
+<tr><td><h2><a name='3'>連泊プラン　個室AタイプConsecutive night plan　Private room A type (value plan for stays of 2 nights or more)</a></h2></td>
+<td width='35%' align='right'><DIV style='font-weight:bold;font-size:10pt;color:yellow'>最安価格 3,800円 (税込 4,180円)　</DIV></td></tr></table></div>
+<div id='planlistbox'><div class='plan_top'><div class='plan_btm'>
+<div class='subbox'><div class='leftbox'>
+<p><img src='../image/gh-miyakojima_240625093059/t1.jpg?1792572434572' alt='連泊プラン　個室AタイプConsecutive night plan　Private room A type (value plan for stays of 2 nights or more)' width='206' border='0'></p></div>
+<div class='rightbox'><p><pre>個室Aタイプを2泊以上ご利用のお得なプランです。
+1～2名でご利用可能です。
+スタンダードプランより5％の割引価格となります。
+This is a great value plan for staying in a private room type A for 2 nights or more.
+Available for 1 to 2 people.
+5％ discount off the standard plan.</pre></p>
+<table border='0' cellpadding='0' cellspacing='0'>
+<tr><td class='titlebox'><br></td><td class='box'><br></td><td class='box'><br></td></tr>
+<tr><td><p class='bn02'>
+<a href="javascript:void(0);" onclick="open2('92728865459041',3,'','1','2026/10/22',0); return false;">
+個室A(1名～2名) 2泊から予約可能</a></p></td>
+<td width='35%' align='right'><p><strong>3,800円 ～<p>(税込 4,180円～)</strong></p></td>
+<td><p class='boton'>
+<a href="javascript:void(0);" onclick="open2('92728865459041',3,'','1','2026/10/22',0); return false;">
+<strong>詳細・予約へ</strong></a></p></td></tr>
+</table></div><p id='containerBtm'> </p></div></div></div></div>
+<div class='planlisttitle'>
+<table width='0' height='0' border='0' cellpadding='0' cellspacing='0'>
+<tr><td><h2><a name='5'>早割60プラン個室A（60日前までにご予約でお得なプラン）Early bird 60 type A (great deal if booked at least 60 days in advance)</a></h2></td>
+<td width='35%' align='right'><DIV style='font-weight:bold;font-size:10pt;color:yellow'>最安価格 3,600円 (税込 3,960円)　</DIV></td></tr></table></div>
+<div id='planlistbox'><div class='plan_top'><div class='plan_btm'>
+<div class='subbox'><div class='leftbox'>
+<p><img src='../image/gh-miyakojima_240625093059/t1.jpg?1792572434572' alt='早割60プラン個室A（60日前までにご予約でお得なプラン）Early bird 60 type A (great deal if booked at least 60 days in advance)' width='206' border='0'></p></div>
+<div class='rightbox'><p><pre>個室Aタイプを60日前までの早期予約割引のお得なプランです。
+スタンダードプランの10％OFFでご利用いただけます。
+1～2名でご利用可能です。
+最低宿泊日数は2泊です。
+This is a great plan with a discount for early bookings made up to 60 days in advanceof private room type A. .
+Get 10％ off the standard plan.
+Minimum or maximum occupancy are 1or 2 adults.
+Minimum stay is 2 nights.</pre></p>
+<table border='0' cellpadding='0' cellspacing='0'>
+<tr><td class='titlebox'><br></td><td class='box'><br></td><td class='box'><br></td></tr>
+<tr><td><p class='bn02'>
+<a href="javascript:void(0);" onclick="open2('92728865459041',5,'','1','2026/12/21',0); return false;">
+個室A(1名～2名) 2泊から予約可能</a></p></td>
+<td width='35%' align='right'><p><strong>3,600円 ～<p>(税込 3,960円～)</strong></p></td>
+<td><p class='boton'>
+<a href="javascript:void(0);" onclick="open2('92728865459041',5,'','1','2026/12/21',0); return false;">
+<strong>詳細・予約へ</strong></a></p></td></tr>
+</table></div><p id='containerBtm'> </p></div></div></div></div>
+<div class='planlisttitle'>
+<table width='0' height='0' border='0' cellpadding='0' cellspacing='0'>
+<tr><td><h2><a name='2'>スタンダードプラン　個室Bタイプ Standard Plan private single room B-type</a></h2></td>
+<td width='35%' align='right'><DIV style='font-weight:bold;font-size:10pt;color:yellow'>最安価格 5,000円 (税込 5,500円)　</DIV></td></tr></table></div>
+<div id='planlistbox'><div class='plan_top'><div class='plan_btm'>
+<div class='subbox'><div class='leftbox'>
+<p><img src='../image/gh-miyakojima_240625093059/t4.jpg?1792572434572' alt='スタンダードプラン　個室Bタイプ Standard Plan private single room B-type' width='206' border='0'></p></div>
+<div class='rightbox'><p><pre>ゲストハウス宮古島の個室Bタイプ（禁煙シングルルーム、定員1名）の素泊まりのプランです。
+1泊より予約できます。
+この部屋タイプは1名で御予約可能です。
+This plan is non-smoking pribate room B-type.
+Guests possible to book from 1night.Also guest posibble to stay 1 peason.</pre></p>
+<table border='0' cellpadding='0' cellspacing='0'>
+<tr><td class='titlebox'><br></td><td class='box'><br></td><td class='box'><br></td></tr>
+<tr><td><p class='bn01'>
+<a href="javascript:void(0);" onclick="open2('92728865459041',2,'','1','2026/10/22',0); return false;">
+個室B(1名～1名) 1泊から予約可能</a></p></td>
+<td width='35%' align='right'><p><strong>5,000円 ～<p>(税込 5,500円～)</strong></p></td>
+<td><p class='boton'>
+<a href="javascript:void(0);" onclick="open2('92728865459041',2,'','1','2026/10/22',0); return false;">
+<strong>詳細・予約へ</strong></a></p></td></tr>
+</table></div><p id='containerBtm'> </p></div></div></div></div>
+<div class='planlisttitle'>
+<table width='0' height='0' border='0' cellpadding='0' cellspacing='0'>
+<tr><td><h2><a name='4'>連泊プラン個室BタイプConsecutive night plan　Private room B type (value plan for stays of 2 nights or more)</a></h2></td>
+<td width='35%' align='right'><DIV style='font-weight:bold;font-size:10pt;color:yellow'>最安価格 4,750円 (税込 5,225円)　</DIV></td></tr></table></div>
+<div id='planlistbox'><div class='plan_top'><div class='plan_btm'>
+<div class='subbox'><div class='leftbox'>
+<p><img src='../image/gh-miyakojima_240625093059/t4.jpg?1792572434572' alt='連泊プラン個室BタイプConsecutive night plan　Private room B type (value plan for stays of 2 nights or more)' width='206' border='0'></p></div>
+<div class='rightbox'><p><pre>個室Bタイプを2泊以上ご利用のお得なプランです。
+1名でご利用可能です。
+スタンダードプランより5％の割引価格となります。
+バス、トイレは共同になります。
+This is a great value plan for staying in a private room type A for 2 nights or more.
+Available for 1 people.
+5％ discount off the standard plan.
+This room is shared bath room and toiret.</pre></p>
+<table border='0' cellpadding='0' cellspacing='0'>
+<tr><td class='titlebox'><br></td><td class='box'><br></td><td class='box'><br></td></tr>
+<tr><td><p class='bn01'>
+<a href="javascript:void(0);" onclick="open2('92728865459041',4,'','1','2026/10/22',0); return false;">
+個室B(1名～1名) 1泊から予約可能</a></p></td>
+<td width='35%' align='right'><p><strong>4,750円 ～<p>(税込 5,225円～)</strong></p></td>
+<td><p class='boton'>
+<a href="javascript:void(0);" onclick="open2('92728865459041',4,'','1','2026/10/22',0); return false;">
+<strong>詳細・予約へ</strong></a></p></td></tr>
+</table></div><p id='containerBtm'> </p></div></div></div></div>
+<div class='planlisttitle'>
+<table width='0' height='0' border='0' cellpadding='0' cellspacing='0'>
+<tr><td><h2><a name='6'>早割60プラン個室B（60日前までにご予約でお得なプラン） Early bird 60 type B(great deal if booked at least 60 days in advance)</a></h2></td>
+<td width='35%' align='right'><DIV style='font-weight:bold;font-size:10pt;color:yellow'>最安価格 4,500円 (税込 4,950円)　</DIV></td></tr></table></div>
+<div id='planlistbox'><div class='plan_top'><div class='plan_btm'>
+<div class='subbox'><div class='leftbox'>
+<p><img src='../image/gh-miyakojima_240625093059/t4.jpg?1792572434572' alt='早割60プラン個室B（60日前までにご予約でお得なプラン） Early bird 60 type B(great deal if booked at least 60 days in advance)' width='206' border='0'></p></div>
+<div class='rightbox'><p><pre>個室Bタイプを60日前までの早期予約割引のお得なプランです。
+スタンダードプランの10％OFFでご利用いただけます。
+最低宿泊日数は2泊です。
+1名で御予約可能です。
+バス、トイレは共同になります。
+This is a great plan with a discount for early bookings made up to 60 days in advance o private room type B.
+Get 10％ off the standard plan.
+Minimum stay is 2 nights.
+Minimum or maximum occupancy are 1 adults.
+This room is shared bath room and toiret.</pre></p>
+<table border='0' cellpadding='0' cellspacing='0'>
+<tr><td class='titlebox'><br></td><td class='box'><br></td><td class='box'><br></td></tr>
+<tr><td><p class='bn01'>
+<a href="javascript:void(0);" onclick="open2('92728865459041',6,'','1','2026/12/21',0); return false;">
+個室B(1名～1名) 2泊から予約可能</a></p></td>
+<td width='35%' align='right'><p><strong>4,500円 ～<p>(税込 4,950円～)</strong></p></td>
+<td><p class='boton'>
+<a href="javascript:void(0);" onclick="open2('92728865459041',6,'','1','2026/12/21',0); return false;">
+<strong>詳細・予約へ</strong></a></p></td></tr>
+</table></div><p id='containerBtm'> </p></div></div></div></div>
+	</div>
+	<p class="pagetop"><a href="#top"><strong>ページ上部へ</strong></a></p>
+	</div>
+	<div id="footer">
+	<div id="footerbox">
+	<div id="f_infoleft">
+	<h5><span>▼</span>宿情報</h5>
+	<p class="submenu"><strong>ゲストハウス宮古島</strong><br />
+	〒906-0305 沖縄県宮古島市下地与那覇233下地字与那覇233<br />
+	<a href='https://g-miyakojima.com/' target='_blank'>https://g-miyakojima.com/</a>
+	</p>
+	</div>
+	<div id="f_inforight">
+	<p class="submenu02"><a href="http://www.yado-sagashi.com/" target="_blank"><img src="../img/libertybn04_ss.gif" border="0" alt="宿さがし.com" /></a></p>
+	<address>Copyright (C) liberty All Rights Reserved.</address>
+	</div>
+	<hr />
+	</div>
+	</div>
+</div>
+</body>
+</html>

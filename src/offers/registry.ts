@@ -4,6 +4,7 @@
 // ---------------------------------------------------------------------------
 import type { OfferAdapter } from './types.js';
 import { thirtyFiveKnotsMacapa } from './adapters/35-knots-macapa.js';
+import { airjunkTokoname } from './adapters/airjunk-tokoname.js';
 import { airzoneKiteWingCampRangiputa } from './adapters/airzone-kite-wing-camp-rangiputa.js';
 import { algarveWatersportZeroToHero } from './adapters/algarve-watersport-zero-to-hero.js';
 import { alvorkitecenterGuesthouseAlvor } from './adapters/alvorkitecenter-guesthouse-alvor.js';
@@ -67,6 +68,7 @@ import { flyHouseLeba } from './adapters/fly-house-leba.js';
 import { freerideKitesurfDownwindRioGrandeDoNorte } from './adapters/freeride-kitesurf-downwind-rio-grande-do-norte.js';
 import { freerideKitesurfDownwindWildNorth } from './adapters/freeride-kitesurf-downwind-wild-north.js';
 import { ftfWatersportsZipke } from './adapters/ftf-watersports-zipke.js';
+import { funbaseUruma } from './adapters/funbase-uruma.js';
 import { getHighKiteCampTheologos } from './adapters/get-high-kite-camp-theologos.js';
 import { gksKiteHouseEsposende } from './adapters/gks-kite-house-esposende.js';
 import { globalKiteTripsKiteSafariColombia } from './adapters/global-kite-trips-kite-safari-colombia.js';
@@ -74,6 +76,7 @@ import { globalKiteTripsProgressionCampCumbuco } from './adapters/global-kite-tr
 import { gnaralooStation3MileCamp } from './adapters/gnaraloo-station-3-mile-camp.js';
 import { gnaralooStationHomestead } from './adapters/gnaraloo-station-homestead.js';
 import { grassyFlatsResortMarathon } from './adapters/grassy-flats-resort-marathon.js';
+import { guesthouseMiyakojimaMAirKite } from './adapters/guesthouse-miyakojima-m-air-kite.js';
 import { habagatAissatouBoracay } from './adapters/habagat-aissatou-boracay.js';
 import { haggerstoneIslandResort } from './adapters/haggerstone-island-resort.js';
 import { hatterasIslandVacationRentalsAvon } from './adapters/hatteras-island-vacation-rentals-avon.js';
@@ -92,6 +95,7 @@ import { ionClubOasis212LessonsPackageDakhla } from './adapters/ion-club-oasis21
 import { ionClubPastorinoCampDakhla } from './adapters/ion-club-pastorino-camp-dakhla.js';
 import { jaguaribeLodgeFortim } from './adapters/jaguaribe-lodge-fortim.js';
 import { jaguarindiaVillageFortim } from './adapters/jaguarindia-village-fortim.js';
+import { jejuKiteLabSinyang } from './adapters/jeju-kite-lab-sinyang.js';
 import { kahunaAdultsKiteCampKiti } from './adapters/kahuna-adults-kite-camp-kiti.js';
 import { kailuaLodgePelzerhaken } from './adapters/kailua-lodge-pelzerhaken.js';
 import { kenyawaysDiani } from './adapters/kenyaways-diani.js';
@@ -198,6 +202,7 @@ import { panamaKiteHouse } from './adapters/panama-kite-house.js';
 import { pandanusResortMuiNe } from './adapters/pandanus-resort-mui-ne.js';
 import { paracuruKiteVillage } from './adapters/paracuru-kite-village.js';
 import { peahiResortStagnone } from './adapters/peahi-resort-stagnone.js';
+import { penghuKitesurfSunriseBnbGuoye } from './adapters/penghu-kitesurf-sunrise-bnb-guoye.js';
 import { pensaoAlcindaSantaKiteSal } from './adapters/pensao-alcinda-santa-kite-sal.js';
 import { playLosRoquesAdvancedKiteCampGranRoque } from './adapters/play-los-roques-advanced-kite-camp-gran-roque.js';
 import { playLosRoquesKitesurfDiscoveryGranRoque } from './adapters/play-los-roques-kitesurf-discovery-gran-roque.js';
@@ -304,6 +309,7 @@ import { xFlyKiteboardingCampMiyako } from './adapters/x-fly-kiteboarding-camp-m
 import { zephyrWaOffroadAdventureExmouth } from './adapters/zephyr-wa-offroad-adventure-exmouth.js';
 
 export const adapters: OfferAdapter[] = [
+  airjunkTokoname,
   airzoneKiteWingCampRangiputa,
   algarveWatersportZeroToHero,
   alvorkitecenterGuesthouseAlvor,
@@ -367,6 +373,7 @@ export const adapters: OfferAdapter[] = [
   freerideKitesurfDownwindRioGrandeDoNorte,
   freerideKitesurfDownwindWildNorth,
   ftfWatersportsZipke,
+  funbaseUruma,
   getHighKiteCampTheologos,
   gksKiteHouseEsposende,
   globalKiteTripsKiteSafariColombia,
@@ -374,6 +381,7 @@ export const adapters: OfferAdapter[] = [
   gnaralooStation3MileCamp,
   gnaralooStationHomestead,
   grassyFlatsResortMarathon,
+  guesthouseMiyakojimaMAirKite,
   habagatAissatouBoracay,
   haggerstoneIslandResort,
   hatterasIslandVacationRentalsAvon,
@@ -392,6 +400,7 @@ export const adapters: OfferAdapter[] = [
   ionClubPastorinoCampDakhla,
   jaguaribeLodgeFortim,
   jaguarindiaVillageFortim,
+  jejuKiteLabSinyang,
   kahunaAdultsKiteCampKiti,
   kailuaLodgePelzerhaken,
   kenyawaysDiani,
@@ -498,6 +507,7 @@ export const adapters: OfferAdapter[] = [
   pandanusResortMuiNe,
   paracuruKiteVillage,
   peahiResortStagnone,
+  penghuKitesurfSunriseBnbGuoye,
   pensaoAlcindaSantaKiteSal,
   playaCentralCampsLaVentana,
   playLosRoquesAdvancedKiteCampGranRoque,

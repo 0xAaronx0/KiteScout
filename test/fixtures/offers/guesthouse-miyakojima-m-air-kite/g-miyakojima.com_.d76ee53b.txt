@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<title>ゲストハウス宮古島【公式サイト】</title>
+<meta name="keywords" content="ゲストハウス宮古島,沖縄,宮古島市,サトウキビ畑,カイトボード,アクティビティ,1棟貸し,ペット,キッチンカー,朝食宅配,旅行,観光,宿泊,予約">
+<meta name="description" content="サトウキビ畑に囲まれた集落にあるゲストハウス宮古島は、昔ながらの宮古島の古民家を自分たちで改装した素朴なゲストハウスです。決してホテルのような設備やサービスはありませんが、地元の空気感を感じることができる雰囲気とゲストハウスらしい精一杯のおもてなしがあります。私たちオーナー夫婦は、ゲストハウスのほかにカイトボードショップやキッチンカーなどさまざまなことをやっています。そんな私たちだからこその楽しみ方や過ごし方をゲストの皆さまと共有しながら、できる範囲の中でサービスをご提供。">
+<meta property="og:title" content="ゲストハウス宮古島【公式サイト】" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://g-miyakojima.com/" />
+<meta property="og:image" content="https://g-miyakojima.com/image/ap01.jpg" />
+<meta property="og:site_name" content="ゲストハウス宮古島【公式サイト】" />
+<meta property="og:description" content="サトウキビ畑に囲まれた集落にあるゲストハウス宮古島は、昔ながらの宮古島の古民家を自分たちで改装した素朴なゲストハウスです。決してホテルのような設備やサービスはありませんが、地元の空気感を感じることができる雰囲気とゲストハウスらしい精一杯のおもてなしがあります。私たちオーナー夫婦は、ゲストハウスのほかにカイトボードショップやキッチンカーなどさまざまなことをやっています。そんな私たちだからこその楽しみ方や過ごし方をゲストの皆さまと共有しながら、できる範囲の中でサービスをご提供。" />
+<meta property="og:locale" content="ja_JP">
+<link rel="canonical" href="https://g-miyakojima.com/">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="format-detection" content="telephone=no">
+<link href="css/style.css?var1.1" rel="stylesheet" type="text/css">
+<link href="css/top.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/remodal.css">
+<link rel="stylesheet" href="css/remodal-default-theme.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="splash">
+<div id="splash-logo"><img src="image/logo01.png" width="116" alt="ゲストハウス宮古島"/></div>
+</div>
+<div class="splashbg1"></div>
+<div class="splashbg2"></div>
+<div id="container">
+<div class="overflow">
+<header class="top_h">
+  <div class="header-container">
+  <div class="head_line_sp">
+	  <h1 class="head_h1_sp"><a href="https://g-miyakojima.com/"><img src="image/logo01.png" width="116" height="120" alt="ゲストハウス宮古島"/></a></h1>
+	  <div class="menu_btn">
+	  <div class="openbtn"><span></span><span></span><span></span></div>
+	  </div>
+<nav id="g-nav">
+<div id="g-nav-list">
+	<div class="box">
+		<h1 class="menu_h1"><a href="https://g-miyakojima.com/"><img src="image/logo01.png" width="116" height="120" alt="ゲストハウス宮古島"/></a></h1>
+  <ul class="menu-nav">
+  <li><a href="https://g-miyakojima.com/" class="menu_main">トップページ</a></li>
+	<li><a href="facilities.html" class="menu_main">館内・サービス</a></li>
+	<li><a href="kiteboard.html" class="menu_main">アクティビティ</a></li>
+	<li><a href="price.html" class="menu_main">料金・予約</a></li>
+	<li><a href="#access" class="menu_main">アクセス</a></li>
+	<li><a href="company.html" class="menu_main">会社概要</a></li>
+	<li><a href="itto.html" class="menu_sub">シーズン限定…1棟貸しの宿</a></li>
+	<li><a href="pets.html" class="menu_sub">ペットの受け入れについて</a></li>
+	  <li><a href="https://www.yado-sagashi.net/yoyaku/plan/index2.jsp?yid=92728865459041" target="_blank" class="menu_sub">ご予約はこちら</a></li>
+</ul>
+	</div>
+</div>
+</nav>  
+  </div>
+	  <div class="head_line_pc">
+  <nav class="head_nav_box">
+	  <h1 class="head_h1_pc"><a href="https://g-miyakojima.com/"><img src="image/logo01.png" width="116" height="120" alt="ゲストハウス宮古島"/></a></h1>
+<ul class="head_nav">
+	<li><a href="facilities.html" class="menu_main">館内・サービス</a></li>
+	<li><a href="kiteboard.html" class="menu_main">アクティビティ</a></li>
+	<li><a href="price.html" class="menu_main">料金・予約</a></li>
+	<li><a href="#access" class="menu_main">アクセス</a></li>
+	<li><a href="company.html" class="menu_main">会社概要</a></li>
+	<li><a href="itto.html" class="menu_sub">シーズン限定…1棟貸しの宿</a></li>
+	<li><a href="pets.html" class="menu_sub">ペットの受け入れについて</a></li>
+	<li><a href="https://www.yado-sagashi.net/yoyaku/plan/index2.jsp?yid=92728865459041" target="_blank" class="menu_sub">ご予約はこちら</a></li>
+  </ul>
+</nav>
+  </div>
+      <div class="plan_bn pc_on">
+          <a href="https://www.yado-sagashi.net/yoyaku/plan/index2.jsp?yid=92728865459041" target="_blank"><span>プラン予約<br>
+          はこちら<span>▶</span></span></a>
+      </div>
+  </div>
+</header>
+<main class="top">
+  <div class="main-container">
+	  <section class="hero">
+	<div class="top_head_box">
+  <video poster="movie/top.jpg" autoplay loop muted playsinline>
+		  <source src="movie/top.mp4" type="video/mp4">
+	  </video>
+    </div>
+		  <div class="top_hero_tex">Guest House MIYAKOJIMA</div>	
+	</section>
+	  <section class="sec01">
+	    <div class="box_main">
+			<div class="topai_wrap">
+			  <div class="topai_box1">
+				<div class="box1">
+		  <h2 class="top_ai_h2" data-emergence="hidden"><span class="sub_en01">Greeting</span><br><span class="kaigyo">宮古島のローカルな雰囲気を</span><span class="kaigyo">感じる</span><span class="kaigyo">ゲストハウス</span></h2>
+					<p class="text_style01">サトウキビ畑に囲まれた集落にある当宿は、昔ながらの宮古島の古民家を自分たちで改装した素朴なゲストハウスです。決してホテルのような設備やサービスはありませんが、地元の空気感を感じることができる雰囲気とゲストハウスらしい精一杯のおもてなしがあります。
+						<br>私たちオーナー夫婦は、ゲストハウスのほかにカイトボードショップやキッチンカーなどさまざまなことをやっています。そんな私たちだからこその楽しみ方や過ごし方をゲストの皆さまと共有しながら、できる範囲の中でサービスをご提供。</p>
+				  </div>
+			    <div class="box2"><img src="image/topai.jpg" width="600" height="400" alt="看板犬のコタロー"/></div>
+              </div>
+			  <div class="topai_box2">
+				<p class="text_style01">施設はゲストハウスならではのゲスト同士の交流ができる共同リビングがありますが、プライベートを大切にしたいというお客様も安心して過ごせるよう客室は個室のみです。お食事は外に食べに行ってもよし、食材を買ってきて自炊することもできるキッチンも完備。ゲストの皆さまがそれぞれのペースでご自由にお過ごしください。
+					<br>私たち夫婦のほかに、看板犬のコタローもみなさんのことをお待ちしています。のんびりとした時間の中で宮古島での滞在をお楽しみください。</p>
+				</div>
+            </div>
+		  </div>
+      </section>
+	  <section class="sec02">
+	    <div class="box_main">
+			<div class="ap_box box_flex shitakara" data-emergence="hidden">
+				<div class="box1">
+				  <div class="ap_tex">
+					<h2 class="tit_style01" data-emergence="hidden">Guest House<br>ゲストハウス</h2>
+					<div class="ap_link"><a href="facilities.html" class="btn06 btnarrow1">館内・サービス</a></div>
+					</div>
+				</div>
+				<div class="box2"><img src="image/ap01.jpg" width="600" height="400" alt="ゲストハウス"/></div>
+            </div>
+		  <div class="ap_box box_flex_r shitakara" data-emergence="hidden">
+				<div class="box1">
+				  <div class="ap_tex">
+					<h2 class="tit_style01" data-emergence="hidden">Kiteboard<br>カイトボード</h2>
+					<div class="ap_link"><a href="kiteboard.html" class="btn06 btnarrow1">カイトボード</a></div>
+					</div>
+				</div>
+				<div class="box2"><img src="image/ap02.jpg" width="600" height="400" alt="カイトボード"/></div>
+            </div>
+        </div>
+      </section>
+	  <section class="sec03">
+	    <ul class="photo_g">
+		  <li><img src="image/pg01.jpg" width="450" height="300" alt="宮古島"/></li>
+			<li><img src="image/pg02.jpg" width="450" height="300" alt="宮古島"/></li>
+			<li><img src="image/pg03.jpg" width="450" height="300" alt="宮古島"/></li>
+			<li><img src="image/pg04.jpg" width="450" height="300" alt="宮古島"/></li>
+	    </ul>
+      </section>
+	  <section class="sec04">
+	    <div class="box_main">
+		  <ul class="bana_list01">
+			<li><a href="itto.html"><img src="image/bana01.jpg" width="400" height="150" alt="シーズン限定…1棟貸しの宿"/></a></li>
+			  <li><a href="pets.html"><img src="image/bana02.jpg" width="400" height="150" alt="ペットの受け入れについて"/></a></li>
+			</ul>
+		  <div class="bana_help">
+			<h2 data-emergence="hidden">ヘルパーさん募集中！</h2>
+			  <ul class="help_list">
+				  <li>最低日数　2週間～</li>
+				  <li>1日3時間ほどの業務をお手伝いいただく代わりに、当館に滞在することができます</li>
+				  <li>業務内容は相談の上決めます</li>
+			  </ul>
+		  </div>
+        </div>
+      </section>
+	  <section class="sec05">
+	    <div class="box_main">
+      	<div class="plan_rss_box">
+			<h2 class="tit_style02 plan_tit" data-emergence="hidden"><span class="sub_en01">Accommodation plan</span><br>宿泊プラン
+				</h2>
+<div class="plan_rss">
+<div class="mini"><div class="plan_img"><a href="https://www.yado-sagashi.net/yoyaku/plan/index2.jsp?beg&all&yid=92728865459041#1" target="_blank"><img src="https://www.yado-sagashi.net/yoyaku/image/gh-miyakojima_240625093059/1.jpg" alt="スタンダードプラン　個室Aタイプ Standard Plan private room A-type" /></a></div><div class="plan_text"><h4><a href="https://www.yado-sagashi.net/yoyaku/plan/index2.jsp?beg&all&yid=92728865459041#1" target="_blank">スタンダードプラン　個室Aタイプ Standard Plan private room A-type</a></h4><p>ゲストハウス宮古島の個室Aタイプ（禁煙ツインルーム、定員1～2名）の素泊まりのプランです。
+1泊より予約できます。
+この部屋タイプは1～2名で...</p></div></div><div class="mini"><div class="plan_img"><a href="https://www.yado-sagashi.net/yoyaku/plan/index2.jsp?beg&all&yid=92728865459041#3" target="_blank"><img src="https://www.yado-sagashi.net/yoyaku/image/gh-miyakojima_240625093059/1.jpg" alt="連泊プラン　個室AタイプConsecutive night plan　Private room A type (value plan for stays of 2 nights or more)" /></a></div><div class="plan_text"><h4><a href="https://www.yado-sagashi.net/yoyaku/plan/index2.jsp?beg&all&yid=92728865459041#3" target="_blank">連泊プラン　個室AタイプConsecutive night plan　Private room A type (value plan for stays of 2 nights or more)</a></h4><p>個室Aタイプを2泊以上ご利用のお得なプランです。
+1～2名でご利用可能です。
+スタンダードプランより5％の割引価格となります。
+This is a great val...</p></div></div><div class="mini"><div class="plan_img"><a href="https://www.yado-sagashi.net/yoyaku/plan/index2.jsp?beg&all&yid=92728865459041#5" target="_blank"><img src="https://www.yado-sagashi.net/yoyaku/image/gh-miyakojima_240625093059/1.jpg" alt="早割60プラン個室A（60日前までにご予約でお得なプラン）Early bird 60 type A (great deal if booked at least 60 days in advance)" /></a></div><div class="plan_text"><h4><a href="https://www.yado-sagashi.net/yoyaku/plan/index2.jsp?beg&all&yid=92728865459041#5" target="_blank">早割60プラン個室A（60日前までにご予約でお得なプラン）Early bird 60 type A (great deal if booked at least 60 days in advance)</a></h4><p>個室Aタイプを60日前までの早期予約割引のお得なプランです。
+スタンダードプランの10％OFFでご利用いただけます。
+1～2名でご利用可能です。
+最...</p></div></div>
+</div>
+        </div>
+			<div class="akiken shutsugen" data-emergence="hidden">
+		  <h2 class="tit_style02 akiken_tit" data-emergence="hidden"><span class="sub_en01">Plan search</span><br>空室検索</h2>
+    <div class="box form_frame">
+    <div class="plan_form">
+      <form method="POST" action="https://www.yado-sagashi.net/yoyaku/plan/index2.jsp" name="frmplist" target="_blank">
+        <input type="hidden" name="yid" value="92728865459041">
+        <div class="form_box">
+          <div class="check_in">
+            <p><label>宿泊日<br>
+              <input type="text" size="10" maxlength="10" name="checkinday" id="datepicker" value="" readonly></label></p>
+            </div>
+          <div class="undecided">
+            <p><label>日程未定<br>
+              　<input type="checkbox" name="fixed" class="option-input" onclick="DateEnable();"></label></p>
+            </div>
+          <div class="guests">
+            <p><label>１室人数<br>
+<select name="people"><option value="0" selected>未選択</option><option value="1">1名</option><option value="2">2名以上</option></select>
+</label></p>
+            </div>
+          <div class="type">
+            <p><label>部屋タイプ<br>
+              <select name="roomtype">
+	<option value="0" selected>未選択</option>
+<option value='1'>シングル</option>
+<option value='2'>ツイン</option>
+</select></label></p>
+            </div>
+          <div class="price">
+            <p><label>ご予算<br>
+              <select name="tanka1"><option value="0" selected>気にしない</option><option value="1">4000円未満</option><option value="2">4000円</option><option value="3">5000円</option><option value="4">6000円</option><option value="5">7000円</option></select>
+              <span>～</span>
+              <select name="tanka2"><option value="0" selected>気にしない</option><option value="1">4000円</option><option value="2">5000円</option><option value="3">6000円</option><option value="4">7000円</option><option value="5">7001円以上</option></select></label></p>
+            </div>
+          </div>
+        <div class="search_btn">
+          <input type="hidden" name="beg" value="">
+          <input type="submit" class="btn" name="cmdKensaku" value="空室検索" />
+          </div>
+        </form>
+		</div></div>
+	  </div>
+			<div class="planbana shutsugen" data-emergence="hidden">
+       		  <a href="https://www.yado-sagashi.net/yoyaku/plan/index2.jsp?yid=92728865459041" target="_blank">
+				  <div class="planbana_sp"><img src="image/planbanas.jpg" width="600" height="300" alt="オンラインのご予約はこちらから"/></div>
+				  <div class="planbana_pc"><img src="image/planbana.jpg" width="1200" height="300" alt="オンラインのご予約はこちらから"/></div>
+          </a>
+       	</div>
+			<ul class="bana_list02">
+			<li><a href="https://www.facebook.com/groups/419217791476101/" target="_blank"><img src="image/bana_fb.jpg" width="600" height="150" alt="ゲストハウス宮古島Facebook"/></a></li>
+			  <li><a href="kiteboard.html"><img src="image/bana_ka.jpg" width="600" height="150" alt="カイトボード"/></a></li>
+			</ul>
+			<ul class="bana_list03">
+			<li><a href="https://www.facebook.com/kiteboardshopmair" target="_blank"><img src="image/bana04.jpg" width="400" height="150" alt="カイトボードショップ　M-air"/></a></li>
+			  <li><a href="https://www.facebook.com/MsKebabMiyakojima/" target="_blank"><img src="image/bana05.jpg" width="400" height="150" alt="M’s　Kebabu"/></a></li>
+			  <li><a href="https://www.facebook.com/ms.nail.bodyjewelry/?fref=ts" target="_blank"><img src="image/bana06.jpg" width="400" height="150" alt="M’s Nail"/></a></li>
+			</ul>
+		  </div>
+      </section>
+	  <section class="sec06" id="access">
+		  <div class="g_map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14493.578631281007!2d125.2680948!3d24.7476542!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34f455a49478b457%3A0xdc02888a51cdaf1!2z44Ky44K544OI44OP44Km44K55a6u5Y-k5bO2!5e0!3m2!1sja!2sjp!4v1724946657410!5m2!1sja!2sjp" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		  </div>
+      </section>
+  </div>
+</main>
+<p id="pageTop"><a href="#"><img src="image/backto_off.png" width="45" alt="上へ戻る"/></a></p>
+<footer>
+  <div class="footer-container">
+<div class="box">
+  <div class="f_logo"><a href="https://g-miyakojima.com/"><img src="image/logo02.png" width="116" height="120" alt="ゲストハウス宮古島"/></a></div>
+	  <div class="f_yadojyo">
+  <p>ゲストハウス宮古島<br>〒906-0305　沖縄県宮古島市下地与那覇233<br>E-mail　yonaha233mair@yahoo.co.jp
+	  <br>チェックイン　14：00～20：00<br>チェックアウト～　12：00</p>
+</div>
+	<ul class="f_sns">
+	<li><a href="https://www.facebook.com/groups/419217791476101/" target="_blank"><img src="image/fb_icon.png" width="33" height="33" alt="facebook"/></a></li>
+</ul>
+</div>
+<address><a href="https://yado-sagashi.com/" target="_blank"><img src="image/yadosagashi_bn.gif" width="44" height="13" alt="宿さがし"></a>&emsp;&copy;2024 Liberty. All Rights Reserved.</address>
+  </div>
+</footer>
+<div class="remodal" data-remodal-id="modal">
+	 <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+<div class="modal_box">
+<div class="message">
+<h3>朝食宅配サービス</h3>
+    <p class="text_style02">宮古島にはお食事がついていないホテルやヴィラがたくさんあります。そこで、朝食宅配サービスを始めました！事前のご予約で当館特製のケバブ朝食をお宿までお届けします。</p>
+	<div class="chotak_p"><img src="image/cho01.jpg" width="600" height="400" alt="朝食宅配サービス"></div>
+	<div class="cho_menu">
+	<h4>メニュー</h4>
+<ul class="cho_menu_list">
+  <li>coming soon</li>
+  </ul>
+		<div class="cho_chumon">
+		<h4>ご注文</h4>
+			<p>ゲストハウス宮古島<br>住所：〒906-0305　沖縄県宮古島市下地与那覇233<br>TEL：0980-76-2330</p>
+		</div>
+    </div>
+</div>    
+<button data-remodal-action="close" class="remodal-confirm">閉じる</button>
+</div>
+</div>
+</div>
+</div>
+<link rel="stylesheet" href="rss/jquery-ui.css" >
+</body>
+</html>

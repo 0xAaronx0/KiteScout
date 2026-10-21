@@ -317,3 +317,23 @@ Photos (Aaron 2026-10-19): `lib/images.ts` now checks the image host's robots.tx
 photos), and retries with our honest bot UA when the browser UA fails (freeridekitesurf.com, road2adventure.com.au,
 redstarsurf.com and velabaja.com refuse the browser UA from Node but serve the bot).
 
+
+Photo QC (2026-10-21, after Aaron flagged tide-table screenshots on the Kohama tour): an empty vision pick used to
+fall back to the largest images without captions, and a JSON answer behind a short analysis failed to parse and took
+the same silent fallback; 12 live listings had only such unvetted images. Now the vision answer is parsed from a
+```json block or the first array, the prompt accepts genuine photos of the accommodation and the place (not only
+kiting) and rejects only junk or other places, and an empty pick is asked once more, then stores nothing. Audit query:
+active rows whose images all lack a caption. Kohama now takes photos from KITECLUB's own trip reports (WordPress REST
+search), max 3 per report.
+
+## Taiwan, Korea, Japan (2026-10-21)
+
+Research (2026-10-19): no kite stay in these countries exists only on social media; every confirmed one has its own
+site. Kakao channel pages give only name and image without JS (their JSON has contacts and posts, no rooms or
+prices), so Kakao is at most a liveness signal. Built: Penghu Kitesurf + Sunrise BnB (Squarespace, undated price
+table, pin from the site's map block), Jeju Kite Lab (MotoPress price list; its calendar is nonce-gated, not read),
+Guesthouse Miyakojima + M-air (own yado-sagashi.net engine, server-rendered month calendars without cookies or
+tokens: live + instant), AIRJUNK Tokoname (stay rates; school closed for 2026, reopens Feb 2027, wording drops
+automatically; pin = OSM coast of the Sakai quarter) and FUNBASE Uruma (fee tables incl. the revised rates from
+2026-12-30). X-FLY Miyako was already in the catalog (c1ba9e9). Gap: `fetchText` decodes everything as UTF-8, so
+Shift_JIS pages (older Japanese sites, e.g. airjunk.jp home) lose their text.

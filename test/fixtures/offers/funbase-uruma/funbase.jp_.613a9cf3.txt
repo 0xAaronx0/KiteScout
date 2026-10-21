@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# website: https://ogp.me/ns/website#">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0, minimum-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://funbase.jp/"><meta name="description" content="マリンスポーツを中心に沖縄を遊ぶために特化した宿泊施設。ロードバイクやゴルフなどスポーツを楽しむ方々の“こんなサービスが欲しかった”を形にした小さなコンセプトホテル/沖縄本島中部">
+<title>FUNBASEうるま [コンセプトホテル・沖縄中部・宿泊]</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel="https://api.w.org/" href="https://funbase.jp/wp-json/" /><link rel="icon" href="https://funbase.jp/wp/wp-content/uploads/2021/11/logo-f-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://funbase.jp/wp/wp-content/uploads/2021/11/logo-f.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://funbase.jp/wp/wp-content/uploads/2021/11/logo-f.png" />
+<meta name="msapplication-TileImage" content="https://funbase.jp/wp/wp-content/uploads/2021/11/logo-f.png" />
+<link rel="icon" href="https://funbase.jp/wp/wp-content/themes/funbase/images/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="shortcut icon" href="https://funbase.jp/wp/wp-content/themes/funbase/images/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="apple-touch-icon" sizes="152x152" href="https://funbase.jp/wp/wp-content/themes/funbase/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://funbase.jp/wp/wp-content/themes/funbase/images/og-image.jpg">
+<meta property="og:description" content="観光だけではなく、とことん沖縄を遊ぶための宿泊施設・マリンスポーツ[カイトボード・ウィンドサーフィン・ウィングフォイル・パドルボード(SUP)・スキューバ、その他マリンアクティビティ]を中心に、ロードバイクやゴルフなどスポーツを楽しむ方々の“こんなサービスが欲しかった”を形にした小さなコンセプトホテル/沖縄本島中部">
+<meta property="og:url" content="https://funbase.jp/">
+<meta property="og:title" content="FUNBASEうるま [コンセプトホテル・沖縄中部・宿泊]">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="FUNBASEうるま [コンセプトホテル・沖縄中部・宿泊]">
+<meta property="og:region" content="沖縄県" />
+<meta property="og:locality" content="うるま市"/>
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="FUNBASEうるま [コンセプトホテル・沖縄]" />
+<meta name="twitter:description" content="観光だけではなく、とことん沖縄を遊ぶための宿泊施設・マリンスポーツを中心に、ロードバイクやゴルフなどスポーツを楽しむ方々の“こんなサービスが欲しかった”を形にした小さなコンセプトホテル/沖縄本島中部" />
+<meta name="twitter:image" content="https://funbase.jp/wp/wp-content/themes/funbase/images/og-image.jpg">
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type": "Hotel",
+  "image": [
+   "https://funbase.jp/wp/wp-content/uploads/2021/10/slideshow01.jpg",
+   "https://funbase.jp/wp/wp-content/uploads/2021/10/IMG_0915-scaled.jpg"
+   ],
+  "@id": "https://funbase.jp/",
+  "name" : "FUNBASEうるま",
+  "telephone" : "+8080095050",
+  "address" : {
+    "@type" : "PostalAddress",
+     "streetAddress": "与那城811-1",
+     "addressLocality": "うるま市",
+     "addressRegion": "沖縄県",
+     "postalCode": "9042303",
+     "addressCountry": "JP"
+  },
+  "url": "https://funbase.jp/",
+  "priceRange": "5,700円～",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "26.327414637273257",
+    "longitude": "127.89681537069367"
+  },
+  "logo" : "https://funbase.jp/wp/wp-content/themes/funbase/images/hlogo.svg",
+  "photo" : "https://funbase.jp/wp/wp-content/uploads/2021/10/slideshow01.jpg",
+  "description": "ファンベースうるま。沖縄を観光＆遊ぶための宿泊施設。マリンスポーツを中心に、ロードバイクやゴルフなどスポーツを楽しむ方々の“こんなサービスが欲しかった”を形にした小さなコンセプトホテルです。沖縄県中部"
+}
+</script>
+</head>
+<body class="home blog wp-theme-funbase">
+<div id="wrapall">
+<header>
+<div id="header">
+<div id="header_logo">
+<h1 id="hlogo"><a href="https://funbase.jp" title="FUNBASEうるま [コンセプトホテル・沖縄中部・宿泊]" rel="home"><img src="https://funbase.jp/wp/wp-content/themes/funbase/images/hlogo.svg" alt="FUNBASEうるま [コンセプトホテル・沖縄中部・宿泊]" ></a></h1>
+</div>
+<!-- Global Navigation -->
+<div id="globlmenu">
+<nav>
+<div class="menu-gmenu-container"><ul id="menu-gmenu" class="gnavi"><li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-26"><a href="https://funbase.jp/floorguide/">館内紹介</a>
+<ul class="sub-menu">
+	<li id="menu-item-1898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1898"><a href="https://funbase.jp/funbase-kitchen/">FUNBASE Kitchen（ファンベースキッチン）</a></li>
+	<li id="menu-item-945" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-945"><a href="https://funbase.jp/floorguide/teiko-rule/">用具預かりサービスと規約</a></li>
+</ul>
+</li>
+<li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-24"><a href="https://funbase.jp/roomguide/">客室案内</a>
+<ul class="sub-menu">
+	<li id="menu-item-897" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-897"><a href="https://funbase.jp/roomguide/pet-rule/">ペット宿泊規約</a></li>
+</ul>
+</li>
+<li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="https://funbase.jp/fee/">料金</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-23"><a href="https://funbase.jp/access/">アクセス</a>
+<ul class="sub-menu">
+	<li id="menu-item-1899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1899"><a href="https://funbase.jp/spot/">ゲレンデ紹介</a></li>
+</ul>
+</li>
+<li id="menu-item-27" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-27"><a href="https://funbase.jp/category/info/">お知らせ</a></li>
+<li id="menu-item-1169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1169"><a href="https://funbase.jp/yoyaku/">ご予約</a>
+<ul class="sub-menu">
+	<li id="menu-item-1863" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1863"><a href="https://funbase.jp/yoyaku/booking-status/">客室スケジュール</a></li>
+</ul>
+</li>
+<li id="menu-item-2093" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2093"><a href="#">SNS</a>
+<ul class="sub-menu">
+	<li id="menu-item-2095" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2095"><a target="_blank" href="http://lin.ee/CQ0S2J0">LINE</a></li>
+	<li id="menu-item-2096" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2096"><a target="_blank" href="https://www.instagram.com/funbase50uruma/">Instagram</a></li>
+	<li id="menu-item-2094" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2094"><a target="_blank" href="https://www.youtube.com/@sayaka-umikazediary">Youtube</a></li>
+</ul>
+</li>
+<li id="menu-item-1946" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1946"><a href="https://funbase.jp/wingfoil/">WINGFOIL ACADEMY</a></li>
+</ul></div></nav>
+</div>
+<!-- /Global Navigation -->
+<div id="hyoyaku" class="clearfix">
+<!--<a href="https://reserva.be/funbase/reserve?simple=1" target="_blank"><img src="https://reserva.be/reserva/images/btn_reserve_2.png" alt="RESERVA予約システムから予約する" width="120"></a> -->
+</div>
+</div><!-- / #header -->
+<nav>
+  <div id="snavi">
+      <input id="snavi_input" type="checkbox">
+      <label id="snavi_open" for="snavi_input"><span></span></label>
+      <label class="snavi_unshown" id="snavi_close" for="snavi_input"></label>
+      <div id="snavi_menu">
+      <div class="snavi_tit">&nbsp;</div>
+		<div class="menu-smenu-container"><ul id="menu-smenu" class="menu"><li id="menu-item-1120" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1120"><a href="https://funbase.jp/" aria-current="page">ホーム</a></li>
+<li id="menu-item-1173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1173"><a href="https://funbase.jp/yoyaku/">予約フォーム</a>
+<ul class="sub-menu">
+	<li id="menu-item-1861" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1861"><a href="https://funbase.jp/yoyaku/booking-status/">客室スケジュール</a></li>
+</ul>
+</li>
+<li id="menu-item-1128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1128"><a href="https://funbase.jp/floorguide/">館内紹介</a>
+<ul class="sub-menu">
+	<li id="menu-item-1862" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1862"><a href="https://funbase.jp/funbase-kitchen/">FUNBASE Kitchen（ファンベースキッチン）</a></li>
+	<li id="menu-item-1129" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1129"><a href="https://funbase.jp/floorguide/teiko-rule/">用具預かりサービスと規約</a></li>
+</ul>
+</li>
+<li id="menu-item-1125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1125"><a href="https://funbase.jp/roomguide/">客室案内</a>
+<ul class="sub-menu">
+	<li id="menu-item-1126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1126"><a href="https://funbase.jp/roomguide/pet-rule/">ペット宿泊規約</a></li>
+</ul>
+</li>
+<li id="menu-item-1127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1127"><a href="https://funbase.jp/fee/">料金</a></li>
+<li id="menu-item-1122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1122"><a href="https://funbase.jp/access/">アクセス</a>
+<ul class="sub-menu">
+	<li id="menu-item-1901" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1901"><a href="https://funbase.jp/spot/">ゲレンデ紹介</a></li>
+</ul>
+</li>
+<li id="menu-item-1131" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1131"><a href="https://funbase.jp/category/info/">お知らせ</a></li>
+<li id="menu-item-1121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1121"><a href="https://funbase.jp/contact/">お問い合わせ</a></li>
+<li id="menu-item-1156" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1156"><a target="_blank" href="http://lin.ee/CQ0S2J0">LINE公式アカウント</a></li>
+<li id="menu-item-1823" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1823"><a target="_blank" href="https://www.instagram.com/funbase50uruma/">Instagram</a></li>
+<li id="menu-item-2092" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2092"><a target="_blank" href="https://www.youtube.com/@sayaka-umikazediary">Youtubeチャンネル</a></li>
+<li id="menu-item-1902" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1902"><a href="https://funbase.jp/aboutus/">会社概要</a></li>
+<li id="menu-item-1943" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1943"><a href="https://funbase.jp/wingfoil/">WINGFOIL ACADEMY</a></li>
+</ul></div>	</div><!-- / #snavi_menu -->
+  </div><!-- / #snavi -->
+</nav>
+<div class="inn-fr flex">
+</div><!-- / .inn-fr -->
+</header>
+<main>
+<div id="topss">
+<div id="topslider">
+<div class="ssimg" style="background-image: url(https://funbase.jp/wp/wp-content/uploads/2021/10/slideshow01.jpg)"></div>
+<div class="ssimg" style="background-image: url(https://funbase.jp/wp/wp-content/uploads/2021/10/IMG_0911-scaled.jpg)"></div>
+<div class="ssimg" style="background-image: url(https://funbase.jp/wp/wp-content/uploads/2021/10/IMG_1039-scaled.jpg)"></div>
+<div class="ssimg" style="background-image: url(https://funbase.jp/wp/wp-content/uploads/2021/10/IMG_1081-scaled.jpg)"></div>
+<div class="ssimg" style="background-image: url(https://funbase.jp/wp/wp-content/uploads/2021/10/IMG_0956-scaled.jpg)"></div>
+<div class="ssimg" style="background-image: url(https://funbase.jp/wp/wp-content/uploads/2021/10/IMG_0969-scaled.jpg)"></div>
+</div><!-- / #topslider -->
+<div id="topssbnr">
+<div class="topcatch"><strong><span>沖縄</span>を<span>楽</span>しむみんなの基地</strong><br>小さなコンセプトホテル</div><!-- / .topcatch -->
+</div><!-- / #topssbnr -->
+</div><!-- / #topss -->
+<div class="topvoicearea">
+<ul class=" flex flexbetw slidelist">
+<li>
+<div class="topvoicebox">
+  <div class="topvoicedate">2026年10月14日</div>
+  <div class="topvoice">
+  <div class="topvoicemeter"><span>本日の風速：</span>7m</div>
+    <div class="topvoicedirec"><span>風向き：</span>北北東</div>     <div class="topvoicespot"><span>場所：</span>うるま市 海中道路海の駅</div></div>
+</div><!-- / .topvoicebox --></li><li>
+<div class="topvoicebox">
+    <div class="topvoicedate">2024年11月26日（火）</div>
+    <p class="topcolumn"><a href="https://funbase.jp/info/1907/">
+	<img src="https://funbase.jp/wp/wp-content/uploads/2024/11/chirashi-windfoil.jpg" alt="ウイングフォイル初心者向けスクール開設" class="topcolumnimg">ウイングフォイル初心者向けスクール開設</a></p>
+</div>
+</li>
+<li>
+<div class="topvoicebox">
+    <div class="topvoicedate">2026年09月26日（土）</div>
+    <p class="topcolumn"><a href="https://funbase.jp/info/1601/">
+	<img src="https://funbase.jp/wp/wp-content/themes/funbase/images/noimg-logo.png" alt="宿泊料金改定のお知らせ" class="topcolumnimg">宿泊料金改定のお知らせ</a></p>
+</div>
+</li>
+<li>
+<div class="topvoicebox">
+    <div class="topvoicedate">2026年04月21日（火）</div>
+    <p class="topcolumn"><a href="https://funbase.jp/info/2163/">
+	<img src="https://funbase.jp/wp/wp-content/uploads/2026/04/6b43ff2c95b51a04a738ad9433435eab-1024x1024.png" alt="海のある日常、始めませんか？スタッフ募集" class="topcolumnimg">海のある日常、始めませんか？スタッフ募集</a></p>
+</div>
+</li>
+</ul><!-- / . flex flexbetw slidelist -->
+</div><!-- / .topvoicearea -->
+<!--<video autoplay muted playsinline width="100%" poster="https://funbase.jp/wp/wp-content/themes/funbase/images/topmv.jpg">
+<source src="https://funbase.jp/wp/wp-content/themes/funbase/images/topmv.mp4" type="video/mp4">
+</video> -->
+<br class="clear clearfix" clear="all" />
+<div id="maincontents">
+<div class="inn-fr">
+<!--コンセプト -->
+<section itemscope itemtype="http://schema.org/AboutPage">
+<div id="topconcept">
+<p class="topconcepttit">心地よい空間とこだわりの専用エリア</p>
+<p>「FUNBASEうるま」は<span class="sc_01">マリンスポーツ[カイトサーフィン(カイトボード)・ウィンドサーフィン・ウィングフォイル・パドルボード(SUP)・スキューバ、その他マリンアクティビティ]</span>を中心に<span class="sc_03">ロードバイク</span>や<span class="sc_04">ゴルフ</span>などスポーツを楽しむ方々の<strong>”こんなサービスが欲しかった”</strong>を形にした小さなコンセプトホテルです。<span class="underline">ウェットスーツのまま入れる屋外シャワールームや屋外トイレ、マリン用具の洗い場や各部屋専用の鍵付マリンロッカー（干場）を完備し、ロードバイクのメンテナンスルームもご用意しました。</span></p>
+<p>観光だけではなく、とことん沖縄を遊ぶための宿泊施設として、自然と文化が融合する沖縄本島うるま市に2021年6月オープン!</p>
+</div><!-- / #topconcept -->
+<!--　通知用 -->
+</div><!-- / .inn-fr -->
+</section>
+<!--写真ギャラリー -->
+<section itemscope itemtype="http://schema.org/ImageGallery">
+<div id="topgallery">
+<div class="slider">
+<div><img data-lazy="https://funbase.jp/wp/wp-content/uploads/2021/04/topgallery07.jpg" alt="#ウィンドサーフィン"><span>#ウィンドサーフィン</span></div>
+<div><img data-lazy="https://funbase.jp/wp/wp-content/uploads/2021/04/topgallery02.jpg" alt="#カイトサーフィン "><span>#カイトサーフィン </span></div>
+<div><img data-lazy="https://funbase.jp/wp/wp-content/uploads/2021/05/topgallery01.jpg" alt="#ウィングフォイル"><span>#ウィングフォイル</span></div>
+<div><img data-lazy="https://funbase.jp/wp/wp-content/uploads/2021/04/topgallery04.jpg" alt="#ロードバイク"><span>#ロードバイク</span></div>
+<div><img data-lazy="https://funbase.jp/wp/wp-content/uploads/2021/04/topgallery03.jpg" alt="#SUP"><span>#SUP</span></div>
+<div><img data-lazy="https://funbase.jp/wp/wp-content/uploads/2021/04/topgallery05.jpg" alt="#ゴルフ"><span>#ゴルフ</span></div>
+<div><img data-lazy="https://funbase.jp/wp/wp-content/uploads/2021/04/topgallery06.jpg" alt="#スキューバダイビング"><span>#スキューバダイビング</span></div>
+</div><!-- / .slider -->
+</div><!-- / #topgallery -->
+</section>
+<div class="inn-fr">
+<!--アピールエリア -->
+<div id="topboxarea">
+<div class="topbox topbox01">
+<div class="topboximg"><a href="https://funbase.jp/floorguide/"><img src="https://funbase.jp/wp/wp-content/uploads/2021/03/topbox01.gif" alt="" width="200" height="50" /></a></div>
+<div class="topboximg"><img src="https://funbase.jp/wp/wp-content/uploads/2021/05/topboxphoto02.jpg" alt="" width="280" height="260" /></div>
+<h2 class="toph2">遊びに特化した専用エリア</h2>
+<p>遊びから帰ったらそのままシャワー・道具のケアも済ませられる！そんな設備をご用意しました。</p>
+<p class="txtcenter"><i class="fas fa-arrow-circle-right" aria-hidden="true"></i><a href="https://funbase.jp/floorguide/">詳しく見る</a></p>
+</div>
+<div class="topbox topbox02">
+<div class="topboximg"><a href="https://funbase.jp/roomguide/"><img src="https://funbase.jp/wp/wp-content/uploads/2021/03/topbox02.gif" alt="" width="200" height="50" /></a></div>
+<div class="topboximg"><img src="https://funbase.jp/wp/wp-content/uploads/2021/05/topboxphoto01.jpg" alt="" width="280" height="260" /></div>
+<h2 class="toph2">全館フリーWi-Fi</h2>
+<p>1Fはコミュニティスペースや合宿にも使える4～5人対応のお部屋もあり、賑やかなホステルスタイルのフロアです。2Ｆは外階段で上がる独立スタイルのお部屋で広い共用テラスを設けています。大事な家族でもあるペットも同伴可能です。<span class="fs85">※[新北風(ミーニシ)のみ。<a href="https://funbase.jp/roomguide/pet-rule/">ペット同伴規約</a>参照]</span></p>
+<p class="txtcenter"><i class="fas fa-arrow-circle-right" aria-hidden="true"></i><a href="https://funbase.jp/roomguide/">詳しく見る</a></p>
+</div>
+<div class="topbox topbox03">
+<div class="topboximg"><a href="https://funbase.jp/fee/"><img src="https://funbase.jp/wp/wp-content/uploads/2021/11/topbox03.png" alt="" width="200" height="50" /></a></div>
+<div class="topboximg"><img src="https://funbase.jp/wp/wp-content/uploads/2021/05/topboxphoto03.jpg" alt="" width="280" height="260" /></div>
+<h2 class="toph2">泊まるほどお得！</h2>
+<p>一度お泊まりいただくと次回からは会員価格で更にリーズナブル!（年会費無料）連泊割引もあり、泊まれば泊まるほどお得な料金設定です。</p>
+<p class="txtcenter"><i class="fas fa-arrow-circle-right" aria-hidden="true"></i><a href="https://funbase.jp/fee/">詳しく見る</a></p>
+</div>
+<div class="topbox topbox04">
+<div class="topboximg"><a href="https://funbase.jp/access/"><img src="https://funbase.jp/wp/wp-content/uploads/2021/03/topbox04.gif" alt="" width="200" height="50" /></a></div>
+<div class="topboximg"><img src="https://funbase.jp/wp/wp-content/uploads/2021/05/topboxphoto04.jpg" alt="" width="280" height="260" /></div>
+<h2 class="toph2">アクセスの良さを重視！</h2>
+<p>那覇空港から車で約1時間、沖縄県中部うるま市だからどこに行くのも動きやすい！海中道路マリンスポーツゲレンデまで車で2分！</p>
+<p class="txtcenter"><i class="fas fa-arrow-circle-right" aria-hidden="true"></i><a href="https://funbase.jp/access/">詳しく見る</a></p>
+</div>
+</div><!-- / #topboxarea -->
+<!--　コロナのお知らせ -->
+<section itemscope itemtype="http://schema.org/Article">
+<div id="topinfo">
+<span>information</span>
+<dl>
+<dt>2026年09月26日（土）</dt>
+<dd><a href="https://funbase.jp/info/1601/">宿泊料金改定のお知らせ</a></dd>
+<dt>2026年04月21日（火）</dt>
+<dd><a href="https://funbase.jp/info/2163/">海のある日常、始めませんか？スタッフ募集</a></dd>
+<dt>2026年01月23日（金）</dt>
+<dd><a href="https://funbase.jp/info/2135/">’26夏ステイプランの案内</a></dd>
+<dt>2026年01月01日（木）</dt>
+<dd><a href="https://funbase.jp/info/2127/">あけましておめでとうございます</a></dd>
+<dt>2025年10月02日（木）</dt>
+<dd><a href="https://funbase.jp/info/2075/">STAFF・YouTubeチャンネル開設！</a></dd>
+<dt>2025年08月06日（水）</dt>
+<dd><a href="https://funbase.jp/info/2048/">Instagramアカウント移行のお知らせ</a></dd>
+</dl>
+</div>
+</section>
+<!-- / frompage -->
+<!-- wp:columns -->
+<div class="wp-block-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"id":1154,"sizeSlug":"large","linkDestination":"custom"} -->
+<figure class="wp-block-image size-large"><a href="http://lin.ee/CQ0S2J0" target="_blank" rel="noopener"><img src="https://funbase.jp/wp/wp-content/uploads/2021/07/bnr_line.png" alt="LINE公式アカウントはじめました！│チャットで気軽に相談＆お得な限定クーポンも♪" class="wp-image-1154"/></a></figure>
+<!-- /wp:image -->
+<!-- wp:image {"lightbox":{"enabled":false},"id":1866,"sizeSlug":"full","linkDestination":"custom"} -->
+<figure class="wp-block-image size-full"><a href="https://funbase.jp/yoyaku/"><img src="https://funbase.jp/wp/wp-content/uploads/2024/09/bnr_sche.png" alt="空き室状況・宿泊スケジュール始めました。" class="wp-image-1866"/></a></figure>
+<!-- /wp:image -->
+<!-- wp:image {"lightbox":{"enabled":false},"id":2086,"sizeSlug":"full","linkDestination":"custom"} -->
+<figure class="wp-block-image size-full"><a href="https://www.youtube.com/@sayaka-umikazediary" target="_blank" rel=" noreferrer noopener"><img src="https://funbase.jp/wp/wp-content/uploads/2025/10/bnr_youtube.png" alt="ファンベースうるまYoutubeチャンネル～さやかの海風日記～" class="wp-image-2086"/></a></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column -->
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:image {"id":1445,"sizeSlug":"full","linkDestination":"custom"} -->
+<figure class="wp-block-image size-full"><a href="https://funbase.jp/funbase-kitchen/"><img src="https://funbase.jp/wp/wp-content/uploads/2021/11/topbnr_04.gif" alt="FUNBASE Kitchen（ファンベースキッチン）" class="wp-image-1445"/></a></figure>
+<!-- /wp:image -->
+<!-- wp:image {"lightbox":{"enabled":false},"id":1820,"sizeSlug":"full","linkDestination":"custom"} -->
+<figure class="wp-block-image size-full"><a href="https://www.instagram.com/funbase50uruma/" target="_blank" rel="noreferrer noopener"><img src="https://funbase.jp/wp/wp-content/uploads/2024/06/topbnr_05.png" alt="ファンベースうるまのインスタグラム。フォローしてね。" class="wp-image-1820"/></a></figure>
+<!-- /wp:image -->
+<!-- wp:spacer {"height":"34px"} -->
+<div style="height:34px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
+<!-- wp:image {"id":1423,"sizeSlug":"full","linkDestination":"custom"} -->
+<figure class="wp-block-image size-full"><a href="https://funbase.jp/spot/"><img src="https://funbase.jp/wp/wp-content/uploads/2021/11/topbnr_03.gif" alt="ゲレンデ紹介" class="wp-image-1423"/></a></figure>
+<!-- /wp:image -->
+<!-- wp:image {"lightbox":{"enabled":false},"id":1957,"sizeSlug":"full","linkDestination":"custom"} -->
+<figure class="wp-block-image size-full"><a href="https://www.youtube.com/watch?v=wIMhoD1jQQA" target="_blank" rel=" noreferrer noopener"><img src="https://funbase.jp/wp/wp-content/uploads/2024/12/topbnr_6.png" alt="ウィングフォイルの体験スクールをYoutubeで見る！" class="wp-image-1957"/></a></figure>
+<!-- /wp:image --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">メーカー・ショップ紹介</h3>
+<!-- /wp:heading -->
+<!-- wp:list {"className":"affilishop flex flexwrap flexbetw"} -->
+<ul class="wp-block-list affilishop flex flexwrap flexbetw"><!-- wp:list-item -->
+<li><a href="https://kiteclub-okinawa.biz/" target="_blank" rel="noreferrer noopener">沖縄カイトクラブ</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><a href="http://ww61.tiki.ne.jp/~popolo/" target="_blank" rel="noreferrer noopener">ポポロポイント</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><a href="https://cyp-ikehara.com/" target="_blank" rel="noreferrer noopener">サイクルプラザ池原</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><a href="https://www.proshopsuperfly.com/" target="_blank" rel="noreferrer noopener">SUPERFLY</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><a href="http://wing81.com/" target="_blank" rel="noreferrer noopener">WING81</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><a href="https://academy46.com/" target="_blank" rel="noreferrer noopener">ACADEMY46</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><a href="https://uruma-ru.jp/" target="_blank" rel="noreferrer noopener">うるま市観光物産協会</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><a href="https://88rentacar-okinawa.com/" target="_blank" rel="noreferrer noopener">88レンタカー</a></li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li><a href="http://www.carvy.jp/" target="_blank" rel="noreferrer noopener">カービーウエットスーツ</a></li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+<!-- wp:paragraph {"align":"right","style":{"typography":{"fontSize":"12px"}}} -->
+<p class="has-text-align-right" style="font-size:12px">（順不同）</p>
+<!-- /wp:paragraph -->
+<br class="clear clearfix" clear="all" />
+</div><!-- / #maincontents -->
+</div>
+</main>
+<footer>
+<div id="pagetop" class="ScrollTop"><a href="#wrapall" data-scroll><img src="https://funbase.jp/wp/wp-content/themes/funbase/images/pagetop.svg" alt="ページのトップへ" /></a></div><!-- / #pagetop -->
+<!--<section class="inn-fr">
+<div class="bg02"><p class="txtcenter"><a href="https://funbase.jp/yoyaku/"><img class="size-full wp-image-402 alignnone aligncenter" src="https://funbase.jp/wp/wp-content/themes/funbase/images/bnr_yoyaku.svg" alt="2021年6月19日～8月31日の期間、 先行ご予約受付中です" width="400" height="100" /></a></p>
+<div class="txtcenter"><a href="https://reserva.be/funbase/reserve?simple=1" target="_blank"><img src="https://reserva.be/reserva/images/btn_reserve_2.png" alt="RESERVA予約システムから予約する" width="120"></a></div>
+</div>
+</section> -->
+<div id="fbg" class="inn-fr">&nbsp;</div>
+<div id="footer">
+<div class="inn-fr 2column flexpc">
+<div id="fleft">
+<strong class="fs18">FUNBASEうるま</strong><br>
+〒904-2303　沖縄県うるま市与那城811-1
+</div>
+<div id="fright">
+<a href="https://funbase.jp/contact/">お問い合わせ</a>│<a href="https://funbase.jp/privacy-policy//">プライバシーポリシー</a>│<a href="https://funbase.jp/aboutus/">会社概要</a><br>
+<div id="copy">&copy; 2020-2026FUNBASEうるま [コンセプトホテル・沖縄中部・宿泊]. </div><!-- / #copy -->
+</div>
+</div>
+</div><!-- / #footer -->
+</footer>
+</div><!-- /#wrapall -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+</body>
+</html>

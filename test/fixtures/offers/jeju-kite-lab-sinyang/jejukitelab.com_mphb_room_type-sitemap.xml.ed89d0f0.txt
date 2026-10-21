@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="https://jejukitelab.com/default-sitemap.xsl?sitemap=mphb_room_type"?>
+<urlset
+	xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml"
+	xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+	<url>
+		<loc><![CDATA[https://jejukitelab.com/index.php/accommodation/coastal-breeze-room/]]></loc>
+		<lastmod><![CDATA[2026-05-04T13:55:32+00:00]]></lastmod>
+		<changefreq><![CDATA[weekly]]></changefreq>
+		<priority><![CDATA[0.7]]></priority>
+		<image:image>
+			<image:loc>
+				<![CDATA[https://jejukitelab.com/wp-content/uploads/2025/08/IMG_5432.jpg]]>			</image:loc>
+		</image:image>
+		<image:image>
+			<image:loc>
+				<![CDATA[https://jejukitelab.com/wp-content/uploads/2025/08/IMG_5433.jpg]]>			</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc><![CDATA[https://jejukitelab.com/index.php/accommodation/nomad-room/]]></loc>
+		<lastmod><![CDATA[2026-05-04T13:55:32+00:00]]></lastmod>
+		<changefreq><![CDATA[weekly]]></changefreq>
+		<priority><![CDATA[0.7]]></priority>
+		<image:image>
+			<image:loc>
+				<![CDATA[https://jejukitelab.com/wp-content/uploads/2025/08/IMG_5406.jpg]]>			</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc><![CDATA[https://jejukitelab.com/index.php/accommodation/friends-room/]]></loc>
+		<lastmod><![CDATA[2026-05-04T13:55:32+00:00]]></lastmod>
+		<changefreq><![CDATA[weekly]]></changefreq>
+		<priority><![CDATA[0.7]]></priority>
+		<image:image>
+			<image:loc>
+				<![CDATA[https://jejukitelab.com/wp-content/uploads/2025/08/IMG_5439.jpg]]>			</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc><![CDATA[https://jejukitelab.com/index.php/accommodation/jeju-kite-stay/]]></loc>
+		<lastmod><![CDATA[2026-05-04T13:55:32+00:00]]></lastmod>
+		<changefreq><![CDATA[weekly]]></changefreq>
+		<priority><![CDATA[0.7]]></priority>
+		<image:image>
+			<image:loc>
+				<![CDATA[https://jejukitelab.com/wp-content/uploads/2025/08/IMG_5422.jpg]]>			</image:loc>
+		</image:image>
+	</url>
+	<url>
+		<loc><![CDATA[https://jejukitelab.com/index.php/accommodation/whole-guesthouse-family-stay/]]></loc>
+		<lastmod><![CDATA[2026-05-04T13:55:32+00:00]]></lastmod>
+		<changefreq><![CDATA[weekly]]></changefreq>
+		<priority><![CDATA[0.7]]></priority>
+		<image:image>
+			<image:loc>
+				<![CDATA[https://jejukitelab.com/wp-content/uploads/2025/08/IMG_5419.jpg]]>			</image:loc>
+		</image:image>
+	</url>
+</urlset>

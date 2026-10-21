@@ -1,0 +1,288 @@
+<html><body>
+<div class="cal1reserv">
+	<div id="planform02x"><div class="plan_top02x"><div class="plan_btm02x">
+	<div class="plan_cont02x">
+	<div class="calxl_title">
+	<h2><img src="../img/cal02_title.gif" alt="料金・宿泊状況" border="0" /></h2>
+	<h4>「予約」は下のカレンダーをクリックしてください。</h4>
+	</div>
+<form method="POST" action="/yoyaku/plan/plcal.jsp#01">
+<div class='calxr_title'>
+<div class='month_box'>
+<input type="hidden" name="yyyy" value="2026">
+<input type="hidden" name="mm" value="12">
+<input type="hidden" name="tar" value="">
+<input type="hidden" name="cmfrm" value="0">
+<input type="hidden" name="f" value="null">
+<input type="hidden" name="pe" value="2">
+<input type="hidden" name="y" value="92728865459041">
+<input type="hidden" name="p" value="3">
+<p class='right1'>
+<input type="submit" name="cmdPre" value="<< 前月" disabled><span>　　</span>
+<input type="submit" name="cmdNext" value="次月 >>"></p>
+</div></div>
+<div class='titlebox'>
+<div class='leftbox'>
+<h3>2026年12月</h3>
+</div>
+<div class='rightbox'><p>
+<input type="submit" name="pees1" value='1 人'>
+<input type="submit" name="pees2" style='color:#ff0000' value='2 人'>
+</p></div><p id='containerBtm'></p></div>
+</form>
+	<table border="0" cellpadding="0" cellspacing="0" style='table-layout:fixed'>
+	<tr>
+	<th><p><font color="#FF0000">日</font></p></th>
+	<th><p>月</p></th>
+	<th><p>火</p></th>
+	<th><p>水</p></th>
+	<th><p>木</p></th>
+	<th><p>金</p></th>
+	<th><p><font color="#0000FF">土</font></p></th></tr>
+<form name="f1">
+<input type="hidden" name="yyyy" value="2026">
+<input type="hidden" name="mm" value="12">
+<input type="hidden" name="tar" value="">
+<input type="hidden" name="cmfrm" value="0">
+<input type="hidden" name="f" value="null">
+<tr>
+<td class="grday" bgcolor="#F4F0DF" height="86"><p><br></p></td>
+<td class="grday" bgcolor="#F4F0DF" height="86"><p><br></p></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<div class="cal_p_day">1</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">×</div>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/2',0); return false;">
+<div class="cal_p_day">2</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/3',0); return false;">
+<div class="cal_p_day">3</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/4',0); return false;">
+<div class="cal_p_day">4</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#CCEAEA" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/5',0); return false;">
+<div class="cal_p_day">5</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+</tr>
+<tr>
+<td class="day" bgcolor="#F2D7E2" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/6',0); return false;">
+<div class="cal_p_day">6</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/7',0); return false;">
+<div class="cal_p_day">7</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/8',0); return false;">
+<div class="cal_p_day">8</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/9',0); return false;">
+<div class="cal_p_day">9</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/10',0); return false;">
+<div class="cal_p_day">10</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/11',0); return false;">
+<div class="cal_p_day">11</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#CCEAEA" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/12',0); return false;">
+<div class="cal_p_day">12</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+</tr>
+<tr>
+<td class="day" bgcolor="#F2D7E2" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/13',0); return false;">
+<div class="cal_p_day">13</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/14',0); return false;">
+<div class="cal_p_day">14</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/15',0); return false;">
+<div class="cal_p_day">15</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/16',0); return false;">
+<div class="cal_p_day">16</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/17',0); return false;">
+<div class="cal_p_day">17</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/18',0); return false;">
+<div class="cal_p_day">18</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#CCEAEA" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/19',0); return false;">
+<div class="cal_p_day">19</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+</tr>
+<tr>
+<td class="day" bgcolor="#F2D7E2" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/20',0); return false;">
+<div class="cal_p_day">20</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/21',0); return false;">
+<div class="cal_p_day">21</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/22',0); return false;">
+<div class="cal_p_day">22</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<a href="javascript:void(0);" onclick="openpl('92728865459041',3,2,'2026/12/23',0); return false;">
+<div class="cal_p_day">23</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">1室</div></a>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<div class="cal_p_day">24</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">×</div>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<div class="cal_p_day">25</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">×</div>
+</div></td>
+<td class="day" bgcolor="#CCEAEA" height='86'>
+<div class="callink">
+<div class="cal_p_day">26</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">×</div>
+</div></td>
+</tr>
+<tr>
+<td class="day" bgcolor="#F2D7E2" height='86'>
+<div class="callink">
+<div class="cal_p_day">27</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">×</div>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<div class="cal_p_day">28</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">×</div>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<div class="cal_p_day">29</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">×</div>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<div class="cal_p_day">30</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">×</div>
+</div></td>
+<td class="day" bgcolor="#F4F0DF" height='86'>
+<div class="callink">
+<div class="cal_p_day">31</div>
+<div class="cal_p_all"><b>4,180円</b></div>
+<div class="cal_bg">×</div>
+</div></td>
+<td class="grday" bgcolor="#F4F0DF" height="86"><p><br></p></td>
+<td class="grday" bgcolor="#F4F0DF" height="86"><p><br></p></td>
+</tr>
+	</form></table>
+	</div>
+	</div></div></div>
+	</div>
+	<div id="explanation">
+	 <table border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+	   <td>
+<p><strong>日付</strong><br /><strong class='black'>大人1名の単価　(消費税込み)</strong><br /></p>
+<p class='line'>部屋提供数(「1～9」：残室数、「×」：満室、「-」：部屋提供なし)</p>
+	   </td>
+	   <th>
+		<h4>カレンダーの見方</h4>
+		<p><strong class="black">カレンダーの色説明</strong></p>
+		<p class="line"><span class="bday">平日</span>、 <span class="bsaturday">休前日</span>、 <span class="bsunday">日祭日</span>、 <span class="bnoday">前日以降</span></p>
+	   </th>
+	  </tr>
+	 </table>
+</body></html>

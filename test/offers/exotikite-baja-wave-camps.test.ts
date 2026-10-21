@@ -36,7 +36,7 @@ test('exotikite: slots only for future weeks', async () => {
 test('exotikite: content, region-level location without a spot', async () => {
   const c = parseExoContent(html, '2026-10-19');
   assert.equal(contentProblem(c), null);
-  assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot], ['camp', 8, 'Mexico', 'Baja California Sur Pacific coast', null]);
+  assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot], ['camp', 8, 'Mexico', 'Baja California Sur Pacific coast', 'Pacific coast near San Juanico']);
   assert.match(c.summary, /The 2027 weeks are not published yet/);
   assert.equal(contentProblem(await exotikiteBajaWaveCamps.fetchContent(ctx)), null);
 });

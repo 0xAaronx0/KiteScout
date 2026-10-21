@@ -5,8 +5,8 @@
 // accommodation, three meals a day, all gear, rescue boat, transfers from Loreto airport. Kind 'camp'.
 //
 // LOCATION: the page names no beach or town, only "the Baja Pacific coast", "a gentle right point break off a huge
-//   sandbar" and transfers "to and from Loreto airport" -> region-level "Baja California Sur Pacific coast", spot
-//   null, no pin (a specific break would be a guess; ask ExotiKite before naming one).
+//   sandbar" and transfers "to and from Loreto airport" -> region-level "Baja California Sur Pacific coast". Spot
+//   "Pacific coast near San Juanico" + pin (2026-10-21, Aaron): APPROXIMATE at San Juanico, see spotCoords; replace once ExotiKite names the break.
 //
 // Data path (checked 2026-10-19), WordPress + Divi:
 //   slots    "Baja Wave Camps 2026" heading followed by week boxes "April 4 – 11", "April 11 – 18", "April 18-25",
@@ -106,13 +106,17 @@ export function parseExoContent(html: string, today = todayIso()): OfferContent 
     title: 'ExotiKite Baja Wave Camps',
     summary: [
       `Spring wave camps on the Pacific coast of Baja California Sur, Mexico, run by the Los Barriles kite school ExotiKite: ${nights} nights with single accommodation and three meals a day at a gentle right-hand point break off a sandbar (no reef), surfing and tow-in foiling in the calm mornings and kiting in the 20-25 knot afternoon wind.`,
-      'Daily clinics with video feedback (wave riding, jibes, tacks, jumps), yoga, all ExotiKite kites, boards, foils and SUPs, a rescue boat and transfers from Loreto airport are included. The page does not name the beach.',
+      'Daily clinics with video feedback (wave riding, jibes, tacks, jumps), yoga, all ExotiKite kites, boards, foils and SUPs, a rescue boat and transfers from Loreto airport are included. The page does not name the beach; the map pin near San Juanico is approximate.',
       `${datesLine}${c.price ? ` Price: $${c.price.toLocaleString('en-US')} per person.` : ''}`,
     ].join(' '),
     continent: 'North America',
     country: 'Mexico',
     region: 'Baja California Sur Pacific coast',
-    spot: null,
+    spot: 'Pacific coast near San Juanico',
+    // APPROXIMATE (Aaron 2026-10-21: show it on the map): San Juanico town (OSM). Inferred from the page (Pacific
+    // right point break off a sandbar, transfers from Loreto) + old ExotiKite forum posts ("remote little village"
+    // ~4 h from Loreto, boat to the sandbar); Magdalena Bay is the other candidate. Asked ExotiKite (backlog).
+    spotCoords: { lat: 26.2575, lng: -112.4785 },
     itinerarySpots: [],
     durationDays: nights + 1,
     skillLevels: ['intermediate', 'advanced'],

@@ -440,9 +440,9 @@ async function visionSelect(
   const prompt = `You are curating photos for this ${brief.offerLabel}:
 ${context}
 
-From the numbered images above, pick up to ${MAX_STORED} that best depict ${brief.wanted}.
-REJECT: logos, icons, UI screenshots, maps or charts, text graphics, stock illustrations, headshots / portraits, payment or partner badges, and anything unrelated to this offer.
-Order them best-first. Respond with ONLY a JSON array: [{"index": <number>, "caption": "<max 8 word description>"}]. If none are suitable, respond with [].`;
+From the numbered images above, pick up to ${MAX_STORED} real photos for this offer, best-first: prefer ${brief.wanted}. Genuine photos of the accommodation, the place and its scenery also count, even without anyone kiting.
+REJECT only: logos, icons, UI screenshots, tables or text graphics, maps or charts, stock illustrations, headshots / portraits, payment or partner badges, and photos clearly from another place or activity.
+Respond with ONLY a JSON array: [{"index": <number>, "caption": "<max 8 word description>"}]. Respond with [] only if every image must be rejected.`;
   blocks.push({ type: 'text', text: prompt });
 
   let text: string;
@@ -450,7 +450,7 @@ Order them best-first. Respond with ONLY a JSON array: [{"index": <number>, "cap
     const msg = await withRetry(() =>
       anthropic.messages.create({
         model: ANALYSIS_MODEL,
-        max_tokens: 512,
+        max_tokens: 1024, // room for the occasional analysis preamble before the JSON
         messages: [{ role: 'user', content: blocks }],
       }),
       5,    // ride out transient 529s — vision is the only content filter for a broad pool
@@ -461,7 +461,12 @@ Order them best-first. Respond with ONLY a JSON array: [{"index": <number>, "cap
     return null;
   }
 
-  const json = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '').trim();
+  // The model sometimes writes a short analysis before a ```json block: take the fenced block, else the first
+  // JSON array in the text. (A parse failure falls back to largest-by-area without captions.)
+  const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/i)?.[1];
+  const body = (fenced ?? text).trim();
+  const start = body.search(/\[\s*[{\]]/);
+  const json = start >= 0 ? body.slice(start, body.lastIndexOf(']') + 1) : body;
   try {
     const parsed = JSON.parse(json);
     if (!Array.isArray(parsed)) return null;
@@ -587,8 +592,11 @@ export async function curateAndStoreImages(opts: {
 
   // 2. Select the keepers.
   let selected: Array<{ img: DownloadedImage; caption: string | null }>;
-  const visionPick = USE_VISION_QC ? await visionSelect(downloaded, context, opts.brief) : null;
-  if (visionPick && visionPick.length > 0) {
+  let visionPick = USE_VISION_QC ? await visionSelect(downloaded, context, opts.brief) : null;
+  // An empty pick is a rejection of every candidate (e.g. only tide-table screenshots); ask once more since the
+  // model is not deterministic, then store nothing rather than the rejected images.
+  if (visionPick?.length === 0) visionPick = await visionSelect(downloaded, context, opts.brief);
+  if (visionPick) {
     selected = visionPick.slice(0, cap);
   } else {
     // Vision unavailable/failed → fall back to largest-by-area. Obvious junk

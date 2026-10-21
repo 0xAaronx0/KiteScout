@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>スクール | カイトボードショップ　M-air</title>
+<link rel="stylesheet" type="text/css" media="all" href="img/jquery.fs.boxer.css">
+<link rel="stylesheet" type="text/css" href="style.css"></head>
+<body class="basic2" id="hpb-sp-20-0010-30">
+<div id="page" class="site">
+<header id="masthead" class="site-header sp-part-top sp-header2" role="banner">
+<div id="masthead-inner" class="sp-part-top sp-header-inner">
+<div id="sp-site-branding2-1" class="sp-part-top sp-site-branding2">
+<h1 class="site-title sp-part-top sp-site-title" id=""><a href="index.html">カイトボードショップ　M-air</a></h1>
+<h2 class="site-description sp-part-top sp-catchphrase" id="">宮古島で唯一のカイトボードShop</h2>
+<div class="extra sp-part-top sp-site-branding-extra" id="sp-site-branding-extra-1">
+<p class="paragraph">TEL.090-1583-6520 〒906-0305沖縄県宮古島市下地与那覇233</p></div></div>
+<nav id="sp-site-navigation-1" class="navigation-main button-menu sp-part-top sp-site-navigation horizontal" role="navigation">
+<h1 class="menu-toggle">メニュー</h1>
+<div class="screen-reader-text skip-link"><a title="コンテンツへスキップ" href="#content">コンテンツへスキップ</a></div>
+<ul id="menu-mainnav">
+  <li class="menu-item"><a href="index.html">トップページ</a>
+  <li class="menu-item current_page_item"><a href="information.html">スクール</a>
+  <li class="menu-item"><a href="schedule.html">レンタル</a>
+  <li class="menu-item"><a href="recruit.html">ゲレンデガイド</a>
+  <li class="menu-item"><a href="report.html">トリップの方に来る皆様にお願い</a>
+  <li class="menu-item"><a href="profile.html">スタッフ紹介</a>
+  <li class="menu-item"><a href="custom.html">ショップ案内</a>
+  <li class="menu-item"><a href="contact.html">お問い合わせ</a>
+  <li class="menu-item"><a href="custom1.html">中古情報</a>
+  <li class="menu-item"><a href="http://m-air-kite.com/en/">English</a></ul></nav></div></header>
+<div id="main" class="site-main sp-part-top sp-main">
+<div id="main-inner">
+<div id="primary" class="content-area">
+<div id="contenthead" class="sp-part-top sp-content-header">
+<div id="breadcrumb-list" class="sp-part-top sp-bread-crumb">
+<div><a href="index.html">トップ</a></div>
+<div>></div>
+<div>スクール</div></div></div>
+<div id="content" class="site-content sp-part-top sp-content page-information" role="main">
+<header id="sp-page-title-2" class="entry-header sp-part-top sp-page-title">
+<h1 class="entry-title">カイトボードスクール</h1></header>
+<article>
+<div id="page-content" class="sp-part-top sp-block-container">
+<p class="paragraph">カイトボードは、カッコよくて最高に楽しいスポーツ・・・だけど、他のマリンスポーツと同様に、正しい知識と確かな技術がなければ危険を伴います。<br></p>
+<p class="paragraph">まず、道具の取り扱いや操作方法を学ぶ必要があるので、サーフィンやスノーボードのように見よう見真似ではできませんし、技術を習得するまでに多少時間がかかります。</p>
+<p class="paragraph">これからカイトボードを始める方・興味のある方は、安全にカイトボードをエンジョイするために、必ず専門ショップで講習を受けることをお勧めします。</p>
+<h2 class="paragraph">コース＆金額（税別）　</h2>
+<table id="sp-table-1" class="sp-part-top sp-table">
+  <tbody>
+    <tr>
+      <th class="col-title row-title" width="212" style="text-align : center;">コース</th>
+      <th class="row-title" width="111" style="text-align : center;">所要時間</th>
+      <th class="row-title" width="105" style="text-align : center;">料金</th>
+      <th class="row-title" style="text-align : center;">内容</th></tr>
+    <tr>
+      <th class="col-title" width="212">カイト操作体験コース<a style="display: block"><img id="sp-image-5" src="img/4392011.jpg" class="sp-part-top sp-image"></a></th>
+      <td width="111">1～2時間<br>道具レンタル料込み</td>
+      <td width="105">￥12,000<br></td>
+      <td>練習用の凧を使って、カイト操作を体験してもらうコースです。カイトが体を引っ張るパワーを体感し、その難しさと楽しさを味わっていただけます。<br><br>
+          ※ボードを履く事はなく、凧を扱うだけのコースとなります。</td></tr>
+    <tr>
+      <th class="col-title" width="212">マスターコース<a style="display: block"><img id="sp-image-6" src="img/DSCF2.jpg" class="sp-part-top sp-image"></a></th>
+      <td width="111">4日間<br><br>道具レンタル料込(受講初日から1年以内まで受講可能)<br></td>
+      <td width="105">￥60,000<br></td>
+      <td>「ボードを履くまでやりたい、ボードに立って走りたい」、「自分一人で出来るようにマスターしたい！」という方は、このコースを受講して下さい。<br>
+          カイトのセッティングからの基礎知識、基本操作から応用技術までのステップアップ、トラブル対処法、そしてウォータースタート（海面でボードに立つ～滑る）までを教えます。<br><br>
+          基本は1日約3時間×4日間のコースです。<br>
+          （カイト道具＆ウエットスーツのレンタルも込み）<br><br>
+          ※風などの条件により連日レッスンできない事も多々あります。出来れば日数に余裕を持っていらしてください。<br>
+          連続した4日間でなくてもかまいません。<br>
+          また有効期限はレッスン初日から1年間ですので、旅行滞在中や休日に4日間消化できなかった場合でも、有効期間中に続きを受講できます。</td></tr>
+    <tr>
+      <th class="col-title" width="212">マスターコースの追加レッスン<br>（当店でのマスターコース受講者のみ対象）</th>
+      <td width="111">1回(約1.5時間）<br>カイト道具・ウェットスーツレンタル料込み</td>
+      <td width="105">\8,000</td>
+      <td>４日のマスターコース終了後、更に続けてレッスンを受けたい方への追加スクールです。マスターコース期間内で上手く乗れなかった方や、次のステップまでを教わりたい方にもお勧めです。<br>
+          カイト道具のレンタルも込みです。<br><br>※マスターコース終了時から10回まで受講可能</td></tr>
+    <tr>
+      <th class="col-title" width="212">他店での経験者対象の１日スクール<a style="display: block"><img id="sp-image-7" src="img/11921730_823913597720525_6529870560158989104_o2.jpg" class="sp-part-top sp-image"></a></th>
+      <td width="111">1日(3時間)<br>スクール代金のみ、レンタルは別途料金</td>
+      <td width="105">￥12,000</td>
+      <td>すでに他のショップ等でカイトボードを経験している方対象で、マスターコースを受講したがまだサポートなしでは出来ない方、ブランクがあり不安な方、さらにスキルアップしたい方にオススメです。<br>
+          ※このコースは道具のレンタルは含まれません。<br>ご自身の道具で受講いただくか、別料金でのレンタルも可能です。<br><br>
+          <span class="character" style="font-size : 1rem;">このコースでのレンタル料：<br>
+                                                            カイト（バー、ポンプ付き）3000円<br>
+                                                            ボード2000円<br>
+                                                            ウェットスーツ1000円<br>
+                                                            ハーネス1000円<br>
+                                                            コントロールバーのみ1000円<br>
+                                                            ヘルメット等小物500円</span></td></tr>
+    <tr>
+      <th class="col-title" width="212">プライベートレッスン</th>
+      <td width="111">1日(約3時間)<br>カイト道具、ウェットスーツレンタル込</td>
+      <td width="105">\20,000</td>
+      <td>お客様1名に対し、インストラクター1名で対応するマンツーマンレッスンです。（カイト道具＆ウエットスーツのレンタル込み）</td></tr>
+    <tr>
+      <th class="col-title" width="212">ゲレンデガイド<br><span class="character" style="font-size : 1.2rem;">(トリップのお客様用)</span></th>
+      <td width="111">1グループ1回のご案内につき</td>
+      <td width="105">\5,000</td>
+      <td><span class="character" style="font-size : 1.3rem;">
+          ゲレンデへお連れして、実際にその場でゲレンデの注意点や特徴を説明します。</span><br>
+          <span class="character" style="font-size : 1.3rem;">
+          初めて宮古へ来られる方などご利用下さい。（カイト中のビーチでの留守番、サポートはいたしませんのでご了承下さい）</span>
+      </td></tr>
+    <tr>
+      <th class="col-title" colspan="2" width="212">カイトボードインストラクター養成コース</th>
+      <td colspan="2"><a href="https://mairshop.exblog.jp/243131414/">「詳細はこちらをご覧ください」</a></td></tr>
+     </tbody></table>
+<p class="paragraph">※全てのコースに傷害保険(ゲレンデガイド以外)を適用いたします。<br>
+※表示の開催時間は目安で、潮目や風力などによって多少の時間の変更があることがございます。<br>
+※マスターコースは、3日以下しか受講できない場合でも受講可能ですが、風がないなどで４日未満しか開催できない場合でも、返金はできませんのでご了承ください。<br>
+※宮古在住の方は20％の割引料金となります。</p><br>
+<p class="paragraph"><b class="character" style="font-size : 1.9rem;color : #0468bf;">◆注意事項◆</b><br><b class="character" style="font-size : 1.9rem;color : #0468bf;">※各コースとも</b><b class="character" style="font-size : 1.9rem;color : #0468bf;">に、ご予約頂いていても天候等により当日の判断で中止になる事もございますので、ご了承ください。</b><br></p></div></article></div></div></div>
+<div id="sidebar2" class="sp-part-top sp-sidebar">
+<div id="sp-block-container-1" class="sp-part-top sp-block-container">
+<h3 class="paragraph">LINK</h3></div>
+<div id="sp-item-gallery-1" class="grid sp-part-top sp-item-gallery">
+<ul id="grid-sp-item-gallery-1">
+  <li class="item-gallery-item">
+  <p class="item-gallery-title">M-airのFacebookページ</p>
+  <div class="item-gallery-photo"><a class="item-gallery-link" href="https://www.facebook.com/kiteboardshopmair" title="M-airのFacebookページ" target="_self"><img class="item-gallery-thumbnail" src="il20180130161110/img/image13.jpg" alt="M-airのFacebookページ"></a> </div>
+  <p class="item-gallery-content"></p>
+  <li class="item-gallery-item">
+  <p class="item-gallery-title">ゲストハウス宮古島</p>
+  <div class="item-gallery-photo"><a class="item-gallery-link" href="http://g-miyakojima.com/" title="ゲストハウス宮古島" target="_self"><img class="item-gallery-thumbnail" src="il20180130161110/img/image26.jpg" alt="ゲストハウス宮古島"></a> </div>
+  <p class="item-gallery-content"></p>
+  <li class="item-gallery-item">
+  <p class="item-gallery-title">M's Nail　facebook</p>
+  <div class="item-gallery-photo"><a class="item-gallery-link" href="https://www.facebook.com/ms.nail.bodyjewelry/?fref=ts" title="M's Nail　facebook" target="_self"><img class="item-gallery-thumbnail" src="il20180130161110/img/image11.jpg" alt="M's Nail　facebook"></a> </div>
+  <p class="item-gallery-content"></p></ul></div></div></div>
+<footer id="colophon" class="site-footer sp-part-top sp-footer2" role="contentinfo">
+<div id="colophon-inner" class="sp-part-top sp-footer-inner">
+<nav id="sp-site-navigation-2" class="navigation-main sp-part-top sp-site-navigation minimal" role="navigation">
+<h1 class="menu-toggle">メニュー</h1>
+<div class="screen-reader-text skip-link"><a title="コンテンツへスキップ" href="#content">コンテンツへスキップ</a></div>
+<ul id="menu-mainnav">
+  <li class="menu-item"><a href="index.html">トップページ</a></ul></nav>
+<div id="sp-block-container-2" class="sp-part-top sp-block-container">
+<p class="copyright paragraph">Copyright &copy; M-air L.L.C, All rights reserved.</p></div></div></footer></div></body></html>

@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { fetchKohamaSlots, kiteclubOkinawaKohamaKiteTour } from '../../src/offers/adapters/kiteclub-okinawa-kohama-kite-tour.js';
+import { fetchKohamaSlots, kiteclubOkinawaKohamaKiteTour, parseKohamaReportImages } from '../../src/offers/adapters/kiteclub-okinawa-kohama-kite-tour.js';
 import { kcoAnnouncements, parseKcoPosts, parseKcoTour } from '../../src/offers/adapters/kiteclub-okinawa-kumejima-tour.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
@@ -47,6 +47,20 @@ test('kohama: content', async () => {
     'Return ferry Ishigaki - Kohama', 'Nights at the guesthouse Kohama no Yado panapana, breakfast included',
     'Rental car (fuel included)', 'Guiding at the kite spots (spot attendance by the school)',
   ]);
-  assert.ok(c.imageUrls.length >= 1);
+  // photos from the trip reports (max 3 per report), never the announcements' tide-table screenshots
+  assert.equal(c.imageUrls.length, 20);
+  assert.equal(c.imageUrls[0], 'https://kiteclub-okinawa.biz/wp-content/uploads/2020/07/20E8BED0-E7EF-42CA-965E-D35372AE8F03.jpeg');
+  assert.ok(c.imageUrls.includes('https://kiteclub-okinawa.biz/wp-content/uploads/2018/06/P6160230.jpg'));
+  assert.ok(!c.imageUrls.some(u => /IMG_7359|838FBEFF|05E3E8C7/.test(u)));
   assert.ok(!/[–—]/.test(c.summary));
+});
+
+test('kohama: report photos skip announcements and cap per report', () => {
+  const img = (n: number) => `<img src="https://kiteclub-okinawa.biz/wp-content/uploads/2020/07/p${n}-940x704.jpeg">`;
+  const posts = [
+    { id: 3, title: { rendered: '2026年10月小浜島ツアー開催のお知らせ' }, content: { rendered: img(9) } },
+    { id: 2, title: { rendered: 'カーチバイ小浜島ツアー2020' }, content: { rendered: [1, 2, 3, 4].map(img).join('') } },
+    { id: 1, title: { rendered: '久米島ツアー' }, content: { rendered: img(8) } },
+  ];
+  assert.deepEqual(parseKohamaReportImages(posts), [1, 2, 3].map(n => `https://kiteclub-okinawa.biz/wp-content/uploads/2020/07/p${n}.jpeg`));
 });
