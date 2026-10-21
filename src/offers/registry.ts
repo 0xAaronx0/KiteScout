@@ -28,6 +28,7 @@ import { borkHavnCamping } from './adapters/bork-havn-camping.js';
 import { bretterbudeHeiligenhafen } from './adapters/bretterbude-heiligenhafen.js';
 import { bscAtlanticzinEssaouira } from './adapters/bsc-atlanticzin-essaouira.js';
 import { cabareteBoutiqueKiteHotel } from './adapters/cabarete-boutique-kite-hotel.js';
+import { cabareteKitePoint7DayAllInclusive } from './adapters/cabarete-kite-point-7-day-all-inclusive.js';
 import { campBayLodgeRoatan } from './adapters/camp-bay-lodge-roatan.js';
 import { campingFlueggerStrandFehmarn } from './adapters/camping-fluegger-strand-fehmarn.js';
 import { campingInternationalHyeres } from './adapters/camping-international-hyeres.js';
@@ -37,6 +38,7 @@ import { campingparkWulfenerHalsFehmarn } from './adapters/campingpark-wulfener-
 import { campingplatzLoissin } from './adapters/campingplatz-loissin.js';
 import { campingplatzStrandgutCuxhaven } from './adapters/campingplatz-strandgut-cuxhaven.js';
 import { cantoDasAguasIcarai } from './adapters/canto-das-aguas-icarai.js';
+import { casaNoCampoKiteWingCampPortoCovo } from './adapters/casa-no-campo-kite-wing-camp-porto-covo.js';
 import { casaNomadeIlhaDoGuajiru } from './adapters/casa-nomade-ilha-do-guajiru.js';
 import { casaSuicaKiteVillasPraiaDoFarol } from './adapters/casa-suica-kite-villas-praia-do-farol.js';
 import { cascadeKiteboardingMauiWinterCamp } from './adapters/cascade-kiteboarding-maui-winter-camp.js';
@@ -54,6 +56,7 @@ import { drivethruKiteSurfCampHvideSande } from './adapters/drivethru-kite-surf-
 import { dunasLuxuryBeachResortValdevaqueros } from './adapters/dunas-luxury-beach-resort-valdevaqueros.js';
 import { escapeEcoFijiKitesurfTourKorolevu } from './adapters/escape-eco-fiji-kitesurf-tour-korolevu.js';
 import { escapeEcoIndonesiaKitesurfTourJeneponto } from './adapters/escape-eco-indonesia-kitesurf-tour-jeneponto.js';
+import { escapeEcoSriLankaKitesurfTourKalpitiya } from './adapters/escape-eco-sri-lanka-kitesurf-tour-kalpitiya.js';
 import { escapePousadaBarraNova } from './adapters/escape-pousada-barra-nova.js';
 import { essaouiraWatersportsKitePackage } from './adapters/essaouira-watersports-kite-package-essaouira.js';
 import { exotikiteBajaWaveCamps } from './adapters/exotikite-baja-wave-camps.js';
@@ -67,8 +70,11 @@ import { floripaIspica } from './adapters/floripa-ispica.js';
 import { flyHouseLeba } from './adapters/fly-house-leba.js';
 import { freerideKitesurfDownwindRioGrandeDoNorte } from './adapters/freeride-kitesurf-downwind-rio-grande-do-norte.js';
 import { freerideKitesurfDownwindWildNorth } from './adapters/freeride-kitesurf-downwind-wild-north.js';
+import { freeridersMegaDownwinderKalpitiyaMannar } from './adapters/freeriders-mega-downwinder-kalpitiya-mannar.js';
 import { ftfWatersportsZipke } from './adapters/ftf-watersports-zipke.js';
 import { funbaseUruma } from './adapters/funbase-uruma.js';
+import { getHighKiteCampHamata } from './adapters/get-high-kite-camp-hamata.js';
+import { getHighKiteCampLoStagnone } from './adapters/get-high-kite-camp-lo-stagnone.js';
 import { getHighKiteCampTheologos } from './adapters/get-high-kite-camp-theologos.js';
 import { gksKiteHouseEsposende } from './adapters/gks-kite-house-esposende.js';
 import { globalKiteTripsKiteSafariColombia } from './adapters/global-kite-trips-kite-safari-colombia.js';
@@ -98,12 +104,15 @@ import { jaguarindiaVillageFortim } from './adapters/jaguarindia-village-fortim.
 import { jejuKiteLabSinyang } from './adapters/jeju-kite-lab-sinyang.js';
 import { kahunaAdultsKiteCampKiti } from './adapters/kahuna-adults-kite-camp-kiti.js';
 import { kailuaLodgePelzerhaken } from './adapters/kailua-lodge-pelzerhaken.js';
+import { kbcAdventureWeekLoStagnone } from './adapters/kbc-adventure-week-lo-stagnone.js';
 import { kenyawaysDiani } from './adapters/kenyaways-diani.js';
 import { kerosBlueLimnos } from './adapters/keros-blue-limnos.js';
 import { kilomboVillasSibauma } from './adapters/kilombo-villas-sibauma.js';
 import { kiteAventureAmwejDjerbahood } from './adapters/kite-aventure-amwej-djerbahood.js';
 import { kiteBasecampPodsLangebaan } from './adapters/kite-basecamp-pods-langebaan.js';
 import { kiteBeachInnCabarete } from './adapters/kite-beach-inn-cabarete.js';
+import { kiteBuenHombre10DaySpecial } from './adapters/kite-buen-hombre-10-day-special.js';
+import { kiteBuenHombre7DaySpecial } from './adapters/kite-buen-hombre-7-day-special.js';
 import { kiteBuenHombreEcoLodge } from './adapters/kite-buen-hombre-eco-lodge.js';
 import { kiteClubHatterasAvon } from './adapters/kite-club-hatteras-avon.js';
 import { kiteClubHatterasCampAvon } from './adapters/kite-club-hatteras-camp-avon.js';
@@ -114,15 +123,22 @@ import { kiteHostelStagnoneMarsala } from './adapters/kite-hostel-stagnone-marsa
 import { kiteHouseSardiniaPuntaTrettu } from './adapters/kite-house-sardinia-punta-trettu.js';
 import { kiteLodgeBrazilPrea } from './adapters/kite-lodge-brazil-prea.js';
 import { kiteMarinaSarbsk } from './adapters/kite-marina-sarbsk.js';
+import { kiteMeUpHostelKiteCampLoStagnone } from './adapters/kite-me-up-hostel-kite-camp-lo-stagnone.js';
 import { kitePassionGlampingPuttgarden } from './adapters/kite-passion-glamping-puttgarden.js';
 import { kitePlCaravansChalupy } from './adapters/kite-pl-caravans-chalupy.js';
 import { kiteRepublicAitutakiWinterEscape } from './adapters/kite-republic-aitutaki-winter-escape.js';
 import { kiteRepublicBrazilKiteSafari } from './adapters/kite-republic-brazil-kite-safari.js';
+import { kiteRepublicMauritiusWavesDreamWinterEscape } from './adapters/kite-republic-mauritius-waves-dream-winter-escape.js';
 import { kiteSistersBrazil } from './adapters/kite-sisters-brazil.js';
+import { kiteSistersEssentialCampPeru } from './adapters/kite-sisters-essential-camp-peru.js';
 import { kiteSistersMoroccoRetreat } from './adapters/kite-sisters-morocco-retreat.js';
+import { kiteThailandPackageAPranburi } from './adapters/kite-thailand-package-a-pranburi.js';
+import { kiteThailandPackageBHuaHin } from './adapters/kite-thailand-package-b-hua-hin.js';
+import { kiteThailandPackageBKohPhangan } from './adapters/kite-thailand-package-b-koh-phangan.js';
 import { kiteVillageHamata } from './adapters/kite-village-hamata.js';
 import { kiteactiveXxxlDownwinder } from './adapters/kiteactive-xxxl-downwinder.js';
 import { kiteadventureColombiaCourseStayMayapo } from './adapters/kiteadventure-colombia-course-stay-mayapo.js';
+import { kiteboardingColombiaWildNorthKiteTrip } from './adapters/kiteboarding-colombia-wild-north-kite-trip.js';
 import { kiteclubOkinawaKohamaKiteTour } from './adapters/kiteclub-okinawa-kohama-kite-tour.js';
 import { kiteclubOkinawaKumejimaTour } from './adapters/kiteclub-okinawa-kumejima-tour.js';
 import { kiteforceTyrolSnowkiteTrip } from './adapters/kiteforce-tyrol-snowkite-trip.js';
@@ -135,22 +151,28 @@ import { kitemexCampLaVentana } from './adapters/kitemex-camp-la-ventana.js';
 import { kitemotionCourseStayDiani } from './adapters/kitemotion-course-stay-diani.js';
 import { kiteparadiseSakalavaBay } from './adapters/kiteparadise-sakalava-bay.js';
 import { kitereizenKiteCampMyHoaPhanRang } from './adapters/kitereizen-kite-camp-my-hoa-phan-rang.js';
+import { kitereizenMauritiusResidencyBelOmbre } from './adapters/kitereizen-mauritius-residency-bel-ombre.js';
 import { kiteridersMontenegroCampUlcinj } from './adapters/kiteriders-montenegro-camp-ulcinj.js';
 import { kitesurfAdventureCumbucoClassic } from './adapters/kitesurf-adventure-cumbuco-classic.js';
 import { kitesurfAdventureIlhaExperienceGuajiru } from './adapters/kitesurf-adventure-ilha-experience-guajiru.js';
 import { kitesurfMindoroBulalacao } from './adapters/kitesurf-mindoro-bulalacao.js';
+import { kitesurfMindoroIslandKiteSafariBulalacao } from './adapters/kitesurf-mindoro-island-kite-safari-bulalacao.js';
+import { kitesurfSchoolDubaiSriLankaCampKalpitiya } from './adapters/kitesurf-school-dubai-sri-lanka-camp-kalpitiya.js';
 import { kitesurfTofo } from './adapters/kitesurf-tofo.js';
 import { kitesurfingGuimarasSanLorenzo } from './adapters/kitesurfing-guimaras-san-lorenzo.js';
 import { kitesurfingLankaKalpitiya } from './adapters/kitesurfing-lanka-kalpitiya.js';
+import { kitesurfingLankaLearnToKiteKalpitiya } from './adapters/kitesurfing-lanka-learn-to-kite-kalpitiya.js';
 import { kitesurfmarocEssaouira } from './adapters/kitesurfmaroc-essaouira.js';
 import { kitetribeElGouna } from './adapters/kitetribe-el-gouna.js';
 import { kitewestWaveFreestyleCampCoronationBeach } from './adapters/kitewest-wave-freestyle-camp-coronation-beach.js';
+import { kitexciteStayAndPlayCabarete } from './adapters/kitexcite-stay-and-play-cabarete.js';
 import { kokohauBungalowsSantaVeronica } from './adapters/kokohau-bungalows-santa-veronica.js';
 import { laBallenaAlegreSantPerePescador } from './adapters/la-ballena-alegre-sant-pere-pescador.js';
 import { laVentanaBeachResort } from './adapters/la-ventana-beach-resort.js';
 import { laVentanaHotel } from './adapters/la-ventana-hotel.js';
 import { lakesideParadiseSportHostelKnokkeHeist } from './adapters/lakeside-paradise-sport-hostel-knokke-heist.js';
 import { lakeunitedDjerba } from './adapters/lakeunited-djerba.js';
+import { lakeunitedKitecampSouthAfricaLangebaanCapeTown } from './adapters/lakeunited-kitecamp-south-africa-langebaan-cape-town.js';
 import { lakeunitedSnowkitecampNorwayVoringsfoss } from './adapters/lakeunited-snowkitecamp-norway-voringsfoss.js';
 import { latitudesNordFinseSnowkiteWeeks } from './adapters/latitudes-nord-finse-snowkite-weeks.js';
 import { latitudesNordSnowkiteCapNord } from './adapters/latitudes-nord-snowkite-cap-nord.js';
@@ -158,6 +180,7 @@ import { latitudesNordSnowkiteIcelandVolcanoes } from './adapters/latitudes-nord
 import { latitudesNordSnowkiteLightRyfylkeSetesdal } from './adapters/latitudes-nord-snowkite-light-ryfylke-setesdal.js';
 import { latitudesNordSnowkiteNordkinnVaranger } from './adapters/latitudes-nord-snowkite-nordkinn-varanger.js';
 import { lazyKiteSurfHouseTarifa } from './adapters/lazy-kite-surf-house-tarifa.js';
+import { lePapayerEcolodgeKitesurfCampCapSkirring } from './adapters/le-papayer-ecolodge-kitesurf-camp-cap-skirring.js';
 import { learnkiteboardingnowCampingBbOostvoorne } from './adapters/learnkiteboardingnow-camping-bb-oostvoorne.js';
 import { len10StigRubenBrazilTatajuba } from './adapters/len10-stig-ruben-brazil-tatajuba.js';
 import { letsgokiteWestaustralienKitesafari } from './adapters/letsgokite-westaustralien-kitesafari.js';
@@ -178,6 +201,7 @@ import { mfKiteStageCasaAlmaAlmanarre } from './adapters/mf-kite-stage-casa-alma
 import { michaelsKiteVacanciesRhodes } from './adapters/michaels-kite-vacancies-rhodes.js';
 import { mogasurfKiteCampVillaSidiKaouki } from './adapters/mogasurf-kite-camp-villa-sidi-kaouki.js';
 import { mounuIslandResortVavau } from './adapters/mounu-island-resort-vavau.js';
+import { mySaltySistersRetreatElGouna } from './adapters/my-salty-sisters-retreat-el-gouna.js';
 import { mySaltySistersRetreatKremasti } from './adapters/my-salty-sisters-retreat-kremasti.js';
 import { namotuIslandResortMamanuca } from './adapters/namotu-island-resort-mamanuca.js';
 import { naneakite8DayCampEssaouira } from './adapters/naneakite-8-day-camp-essaouira.js';
@@ -220,6 +244,8 @@ import { primesurfKiteCampHvideSande } from './adapters/primesurf-kite-camp-hvid
 import { proboardingFerienwohnungenKleinZicker } from './adapters/proboarding-ferienwohnungen-klein-zicker.js';
 import { puntaTrettuKitesurfHouseSardinia } from './adapters/punta-trettu-kitesurf-house-sardinia.js';
 import { puzaMoyaCapeSportsLangebaan } from './adapters/puza-moya-cape-sports-langebaan.js';
+import { questIslandHoppingKiteSafariRameswaram } from './adapters/quest-island-hopping-kite-safari-rameswaram.js';
+import { questSpiceCoastExpeditionKiteSafariTamilNadu } from './adapters/quest-spice-coast-expedition-kite-safari-tamil-nadu.js';
 import { ranchoDoPeixePrea } from './adapters/rancho-do-peixe-prea.js';
 import { rascalsKiteResortKalpitiya } from './adapters/rascals-kite-resort-kalpitiya.js';
 import { realLaVentanaSupercamp } from './adapters/real-la-ventana-supercamp.js';
@@ -231,6 +257,8 @@ import { rideKitesurfingTroubridgeIslandTrip } from './adapters/ride-kitesurfing
 import { road2adventureKiteSafariPerthExmouth } from './adapters/road2adventure-kite-safari-perth-exmouth.js';
 import { ruegenKiteHostelMartinshafen } from './adapters/ruegen-kite-hostel-martinshafen.js';
 import { ruukVillageKalpitiya } from './adapters/ruuk-village-kalpitiya.js';
+import { ruukVillageZeroToHeroKalpitiya } from './adapters/ruuk-village-zero-to-hero-kalpitiya.js';
+import { sakalavaLodgeAllInclusiveKiteWingHoliday } from './adapters/sakalava-lodge-all-inclusive-kite-wing-holiday.js';
 import { sakalavaLodgeDiegoSuarez } from './adapters/sakalava-lodge-diego-suarez.js';
 import { saltysKitesurfVillageKilifi } from './adapters/saltys-kitesurf-village-kilifi.js';
 import { seaLionBeachResortMuiNe } from './adapters/sea-lion-beach-resort-mui-ne.js';
@@ -270,9 +298,12 @@ import { ucpaKitesurfDebutantHurghada } from './adapters/ucpa-kitesurf-debutant-
 import { ucpaKitesurfSafariCapeTown } from './adapters/ucpa-kitesurf-safari-cape-town.js';
 import { umiliPodCyprysamiJastarnia } from './adapters/umili-pod-cyprysami-jastarnia.js';
 import { ummaiiSurfhostelUmmanz } from './adapters/ummaii-surfhostel-ummanz.js';
+import { unchartedKiteSessionsFredHopeFoilMasterCabarete } from './adapters/uncharted-kite-sessions-fred-hope-foil-master-cabarete.js';
+import { unchartedKiteSessionsStraplessWeekCabarete } from './adapters/uncharted-kite-sessions-strapless-week-cabarete.js';
 import { univelaCampioneDelGarda } from './adapters/univela-campione-del-garda.js';
 import { urlaKiteCampGulbahce } from './adapters/urla-kite-camp-gulbahce.js';
 import { urlaSurfHouseGulbahce } from './adapters/urla-surf-house-gulbahce.js';
+import { valampuriBungalowWeekKalpitiya } from './adapters/valampuri-bungalow-week-kalpitiya.js';
 import { valampuriResortKalpitiya } from './adapters/valampuri-resort-kalpitiya.js';
 import { velaBajaLosBarriles } from './adapters/vela-baja-los-barriles.js';
 import { ventanaBayResortElSargento } from './adapters/ventana-bay-resort-el-sargento.js';
@@ -333,6 +364,7 @@ export const adapters: OfferAdapter[] = [
   bretterbudeHeiligenhafen,
   bscAtlanticzinEssaouira,
   cabareteBoutiqueKiteHotel,
+  cabareteKitePoint7DayAllInclusive,
   campBayLodgeRoatan,
   campingFlueggerStrandFehmarn,
   campingInternationalHyeres,
@@ -342,6 +374,7 @@ export const adapters: OfferAdapter[] = [
   campingStrukkamphukFehmarnsund,
   campingTarifaLosLances,
   cantoDasAguasIcarai,
+  casaNoCampoKiteWingCampPortoCovo,
   casaNomadeIlhaDoGuajiru,
   casaSuicaKiteVillasPraiaDoFarol,
   cascadeKiteboardingMauiWinterCamp,
@@ -359,6 +392,7 @@ export const adapters: OfferAdapter[] = [
   dunasLuxuryBeachResortValdevaqueros,
   escapeEcoFijiKitesurfTourKorolevu,
   escapeEcoIndonesiaKitesurfTourJeneponto,
+  escapeEcoSriLankaKitesurfTourKalpitiya,
   escapePousadaBarraNova,
   essaouiraWatersportsKitePackage,
   exotikiteBajaWaveCamps,
@@ -372,8 +406,11 @@ export const adapters: OfferAdapter[] = [
   flyHouseLeba,
   freerideKitesurfDownwindRioGrandeDoNorte,
   freerideKitesurfDownwindWildNorth,
+  freeridersMegaDownwinderKalpitiyaMannar,
   ftfWatersportsZipke,
   funbaseUruma,
+  getHighKiteCampHamata,
+  getHighKiteCampLoStagnone,
   getHighKiteCampTheologos,
   gksKiteHouseEsposende,
   globalKiteTripsKiteSafariColombia,
@@ -403,6 +440,7 @@ export const adapters: OfferAdapter[] = [
   jejuKiteLabSinyang,
   kahunaAdultsKiteCampKiti,
   kailuaLodgePelzerhaken,
+  kbcAdventureWeekLoStagnone,
   kenyawaysDiani,
   kerosBlueLimnos,
   kilomboVillasSibauma,
@@ -411,6 +449,9 @@ export const adapters: OfferAdapter[] = [
   kiteAventureAmwejDjerbahood,
   kiteBasecampPodsLangebaan,
   kiteBeachInnCabarete,
+  kiteboardingColombiaWildNorthKiteTrip,
+  kiteBuenHombre10DaySpecial,
+  kiteBuenHombre7DaySpecial,
   kiteBuenHombreEcoLodge,
   kiteClubHatterasAvon,
   kiteClubHatterasCampAvon,
@@ -429,31 +470,43 @@ export const adapters: OfferAdapter[] = [
   kitekahunasKiteVillaSunsetBeach,
   kiteLodgeBrazilPrea,
   kiteMarinaSarbsk,
+  kiteMeUpHostelKiteCampLoStagnone,
   kitemexCampLaVentana,
   kitemotionCourseStayDiani,
   kiteparadiseSakalavaBay,
   kitePassionGlampingPuttgarden,
   kitePlCaravansChalupy,
   kitereizenKiteCampMyHoaPhanRang,
+  kitereizenMauritiusResidencyBelOmbre,
   kiteRepublicAitutakiWinterEscape,
   kiteRepublicBrazilKiteSafari,
+  kiteRepublicMauritiusWavesDreamWinterEscape,
   kiteridersMontenegroCampUlcinj,
   kiteSistersBrazil,
+  kiteSistersEssentialCampPeru,
   kiteSistersMoroccoRetreat,
   kitesurfAdventureCumbucoClassic,
   kitesurfAdventureIlhaExperienceGuajiru,
   kitesurfingGuimarasSanLorenzo,
   kitesurfingLankaKalpitiya,
+  kitesurfingLankaLearnToKiteKalpitiya,
   kitesurfmarocEssaouira,
   kitesurfMindoroBulalacao,
+  kitesurfMindoroIslandKiteSafariBulalacao,
+  kitesurfSchoolDubaiSriLankaCampKalpitiya,
   kitesurfTofo,
+  kiteThailandPackageAPranburi,
+  kiteThailandPackageBHuaHin,
+  kiteThailandPackageBKohPhangan,
   kitetribeElGouna,
   kiteVillageHamata,
   kitewestWaveFreestyleCampCoronationBeach,
+  kitexciteStayAndPlayCabarete,
   kokohauBungalowsSantaVeronica,
   laBallenaAlegreSantPerePescador,
   lakesideParadiseSportHostelKnokkeHeist,
   lakeunitedDjerba,
+  lakeunitedKitecampSouthAfricaLangebaanCapeTown,
   lakeunitedSnowkitecampNorwayVoringsfoss,
   latitudesNordFinseSnowkiteWeeks,
   latitudesNordSnowkiteCapNord,
@@ -465,6 +518,7 @@ export const adapters: OfferAdapter[] = [
   lazyKiteSurfHouseTarifa,
   learnkiteboardingnowCampingBbOostvoorne,
   len10StigRubenBrazilTatajuba,
+  lePapayerEcolodgeKitesurfCampCapSkirring,
   letsgokiteWestaustralienKitesafari,
   lineupKiteSurfHouseTaiba,
   lionHostelTarifa,
@@ -483,6 +537,7 @@ export const adapters: OfferAdapter[] = [
   michaelsKiteVacanciesRhodes,
   mogasurfKiteCampVillaSidiKaouki,
   mounuIslandResortVavau,
+  mySaltySistersRetreatElGouna,
   mySaltySistersRetreatKremasti,
   namotuIslandResortMamanuca,
   naneakite8DayCampEssaouira,
@@ -525,6 +580,8 @@ export const adapters: OfferAdapter[] = [
   proboardingFerienwohnungenKleinZicker,
   puntaTrettuKitesurfHouseSardinia,
   puzaMoyaCapeSportsLangebaan,
+  questIslandHoppingKiteSafariRameswaram,
+  questSpiceCoastExpeditionKiteSafariTamilNadu,
   ranchoDoPeixePrea,
   rascalsKiteResortKalpitiya,
   realLaVentanaSupercamp,
@@ -536,6 +593,8 @@ export const adapters: OfferAdapter[] = [
   road2adventureKiteSafariPerthExmouth,
   ruegenKiteHostelMartinshafen,
   ruukVillageKalpitiya,
+  ruukVillageZeroToHeroKalpitiya,
+  sakalavaLodgeAllInclusiveKiteWingHoliday,
   sakalavaLodgeDiegoSuarez,
   saltysKitesurfVillageKilifi,
   seahorseResortMuiNe,
@@ -578,9 +637,12 @@ export const adapters: OfferAdapter[] = [
   ucpaKitesurfSafariCapeTown,
   umiliPodCyprysamiJastarnia,
   ummaiiSurfhostelUmmanz,
+  unchartedKiteSessionsFredHopeFoilMasterCabarete,
+  unchartedKiteSessionsStraplessWeekCabarete,
   univelaCampioneDelGarda,
   urlaKiteCampGulbahce,
   urlaSurfHouseGulbahce,
+  valampuriBungalowWeekKalpitiya,
   valampuriResortKalpitiya,
   velaBajaLosBarriles,
   ventanaBayResortElSargento,

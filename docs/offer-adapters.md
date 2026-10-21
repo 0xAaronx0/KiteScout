@@ -359,3 +359,24 @@ North Cape (no report) and Iceland (only summer trek photos, misleading for a wi
 Experience Los Roques. `lib/images.ts`: `canonicalKey` keeps identifying query params for extension-less image
 scripts (`/thumb?file=...` used to collapse every photo into one) and the vision thumbnails honour EXIF rotation.
 Audit: `src/_fewimgs.ts` (gitignored) lists active rows below N photos.
+
+## Camps and tours round 3 (2026-10-21)
+
+Gap research (camps Med/Red Sea/East Africa, Asia/Indian Ocean/Americas, tours worldwide, Senegal, snowkite Canada
+and Alaska) -> 31 adapters, all from the operators' own sites: Sri Lanka (KSL Learn to Kite, Ruuk Zero to Hero,
+Valampuri bungalow week, Escape Eco 2027 at Rascals, Kitesurf School Dubai winter camp, Freerider's Kalpitiya-Mannar
+downwinder), Dominican Republic (Kite Buen Hombre 10-day and 7-day specials, Cabarete Kite Point, Uncharted Foil
+Master and Strapless Week, KiteXcite), Peru (Kite Sisters), Colombia (Kite Boarding Colombia Wild North, past-only),
+Egypt (My Salty Sisters El Gouna, GET HIGH Hamata), Sicily (KBC Adventure Week via its public Leão events endpoint,
+GET HIGH, Kite Me Up), Thailand (Kite Thailand x3, WooCommerce = instant), Madagascar (Sakalava all-inclusive),
+Mauritius (Kite Republic Waves Dream, live WooCommerce; Kitereizen Residency, past-only), Portugal (Casa no Campo
+CNC camp), South Africa (LakeUnited Langebaan + Cape Town), Philippines (Kitesurf Mindoro island safari), India
+(Quest Island Hopping and Spice Coast) and Senegal (Le Papayer, kite stay, price on request).
+
+Decisions (Aaron 2026-10-21): KiteWorldWide is not built; it is on the inquiry backlog for permission (image rights).
+Course weeks without a stay (KBC/Primesurf/Let's Go Kite El Gouna, Primesurf Sicily) are not camps. lepapayer.com
+photos are marked "tous droits réservés" and are not used. Senegal has no other live own-site kite product; Canada
+and Alaska snowkiting is day lessons and events only (NorthWinds and AdrenaJen on the inquiry backlog). Pins for the
+Cabarete Kite Beach and Pak Nam Pran listings reuse the existing stays' coordinates (the geocoder misses those names).
+Follow-up: kite-buen-hombre-eco-lodge.ts still reads the old Product JSON-LD; the live page now has a Service offer
+list, so its package sentence comes back empty.

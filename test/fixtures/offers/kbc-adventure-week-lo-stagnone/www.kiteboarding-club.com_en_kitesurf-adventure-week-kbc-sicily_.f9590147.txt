@@ -1,0 +1,2489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+<!-- 
+	This website is powered by TYPO3 - inspiring people to share!
+	TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+	TYPO3 is copyright 1998-2026 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+	Information and contribution at https://typo3.org/
+-->
+
+
+<title>KBC: Kitesurf Adventure Week KBC Sicily</title>
+<meta name="generator" content="TYPO3 CMS">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="INDEX,FOLLOW">
+<meta name="twitter:card" content="summary">
+<meta name="language" content="en">
+<meta name="publisher" content="Kiteboarding Club">
+<meta name="facebook-domain-verification" content="o10xbfqglio4h4gf1b1d5j407tqp9a">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style></style>    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><meta name="apple-mobile-web-app-title" content="KBC"><script></script><script></script><script></script><script></script><script></script><meta property="og:site_name" content="KBC" /><meta property="og:type" content="website" /><meta property="og:locale" content="en_US" /><meta property="fb:admins" content="100001026641167" /><meta property="fb:admins" content="543031521" /><meta property="fb:app_id" content="181558791908239" /><meta name="p:domain_verify" content="c3a99bf461e1236d78b43d647a768ce7"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.kiteboarding-club.com/#organization",
+      "name": "Kiteboarding Club",
+      "alternateName": "KBC",
+      "url": "https://www.kiteboarding-club.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.kiteboarding-club.com/typo3conf/ext/kbc/Resources/Public/Images/logo.webp",
+        "width": 200,
+        "height": 258
+      },
+      "description": "Kitesurf Reisen zu den schönsten Spots weltweit. Kitesurfen und Wingfoilen lernen an professionellen Kiteschulen.",
+      "foundingDate": "2003",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+49-234-36718800",
+        "contactType": "customer service",
+        "availableLanguage": ["German", "English", "Dutch", "French", "Spanish", "Portuguese", "Italian"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/KBCworld/",
+        "https://www.instagram.com/kiteboardingclub/",
+        "https://www.youtube.com/c/KiteboardingClub",
+        "https://de.pinterest.com/kbcworldwide/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.kiteboarding-club.com/#website",
+      "url": "https://www.kiteboarding-club.com",
+      "name": "Kiteboarding Club",
+      "publisher": {
+        "@id": "https://www.kiteboarding-club.com/#organization"
+      },
+      "inLanguage": ["de-DE", "en-US", "nl-NL", "fr-FR", "es-ES", "pt-BR", "it-IT"]
+    },
+    {
+      "@type": ["LocalBusiness", "SportsActivityLocation"],
+      "@id": "https://www.kiteboarding-club.com/#localbusiness",
+      "name": "Kiteboarding Club",
+      "image": "https://www.kiteboarding-club.com/typo3conf/ext/kbc/Resources/Public/Images/logo.webp",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bochum",
+        "addressCountry": "DE"
+      },
+      "telephone": "+49-234-36718800",
+      "url": "https://www.kiteboarding-club.com",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+        "opens": "07:30",
+        "closes": "12:30"
+      }
+    }
+  ]
+}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":"1","item":"https://www.kiteboarding-club.com/en/","name":"KBC"},{"@type":"ListItem","position":"2","item":"https://www.kiteboarding-club.com/en/","name":"destinations"},{"@type":"ListItem","position":"3","item":"https://www.kiteboarding-club.com/en/brazil/","name":"Worldwide"},{"@type":"ListItem","position":"4","item":"https://www.kiteboarding-club.com/en/sicily/","name":"SICILY | Italy"},{"@type":"ListItem","position":"5","item":"https://www.kiteboarding-club.com/en/kitesurf-adventure-week-kbc-sicily/","name":"Kite Adventure Week KBC Sicily"}]}</script><script></script><script></script>
+<link rel="canonical" href="https://www.kiteboarding-club.com/en/kitesurf-adventure-week-kbc-sicily/">
+
+<link rel="alternate" hreflang="de-DE" href="https://www.kiteboarding-club.com/kitesurf-adventure-week-sizilien/">
+<link rel="alternate" hreflang="en-US" href="https://www.kiteboarding-club.com/en/kitesurf-adventure-week-kbc-sicily/">
+<link rel="alternate" hreflang="nl-NL" href="https://www.kiteboarding-club.com/nl/kitesurf-adventure-week-kbc-sicily/">
+<link rel="alternate" hreflang="fr-FR" href="https://www.kiteboarding-club.com/fr/sicile/kitesurf-adventure-week-kbc-sicile/">
+<link rel="alternate" hreflang="es-ES" href="https://www.kiteboarding-club.com/es/kitesurf-adventure-week-kbc-sicily/">
+<link rel="alternate" hreflang="pt-BR" href="https://www.kiteboarding-club.com/pt/kitesurf-adventure-week-kbc-sicily/">
+<link rel="alternate" hreflang="it-IT" href="https://www.kiteboarding-club.com/it/camp-avventura-kitesurf-sicilia/">
+<link rel="alternate" hreflang="x-default" href="https://www.kiteboarding-club.com/kitesurf-adventure-week-sizilien/">
+</head>
+<body>
+
+    <main class="container lightbox">
+   		
+    
+
+            <div id="c32378" class="frame frame-default frame-type-image frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <div class="ce-image ce-center ce-above">
+        
+
+    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+        
+            <div class="ce-outer">
+                <div class="ce-inner">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" alt="Kite Adventure Week - Colorful kiteboarding kite over turquoise waters at KBC Kitesurf Center Sizilien Lo Stagnone" src="/fileadmin/_processed_/a/0/csm_Kitesurf-Adventure_Week-teaser_4b762a652f.jpg" width="1140" height="836" loading="lazy" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+                </div>
+            </div>
+        
+    </div>
+
+
+
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+    
+
+            <div id="c31101" class="frame frame-default frame-type-1col frame-layout-0">
+                
+                    <a id="c31120"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    
+    
+
+            <div id="c31103" class="frame frame-default frame-type-text frame-layout-0">
+                
+                    <a id="c31122"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <h1><strong>Kite Adventure Week Sicily - all inclusive</strong></h1>
+<h3><br><strong>Ready for memories that will last forever?</strong></h3>
+<p>The Kitesurf Adventure Camp in Sicily at KBC Sicily offers a magnificent experience for independent kitesurfers who want to discover the breathtaking Lo Stagnone lagoon. This all-inclusive event guarantees an unforgettable week. Perfect your skills on the water, explore hidden spots, and enjoy warm Sicilian hospitality at Villa Vajarassa<strong> </strong>– 6 action-packed days!<br><br><strong>+ Kitesurfing with the community</strong><br><strong>+ Discover exclusive</strong><br><strong>kitesurfing spots + Island tour</strong><br><strong>+ Downwinder</strong><br><strong>+ High-quality F-ONE equipment</strong><br><strong>+ Professionally guided sessions</strong><br><strong>+ Accommodation at Villa Vajarassa</strong><br><strong>+ Full board &amp; drinks</strong><br><strong>+ Transfers</strong><br><br>The event starts at KBC Sicily, the kitesurfing center on the only sandy beach of Lo Stagnone – the huge kitesurfing lagoon in Sicily.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31104" class="frame frame-default frame-type-image frame-layout-0 frame-space-before-medium frame-space-after-medium">
+                
+                    <a id="c31123"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <div class="ce-image ce-center ce-above">
+        
+
+    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+        
+            <div class="ce-outer">
+                <div class="ce-inner">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" alt="KBC Sicily Kitesurf Adventure Week - Kite trip Lo Stagnone Italy" src="/fileadmin/user_upload/Contentpictures/Sizilien/Adventure_Week/Kitesurf-Adventure-Week_Sicily_Kitesurfing.jpg" width="1140" height="642" loading="lazy" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+                </div>
+            </div>
+        
+    </div>
+
+
+
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31105" class="frame frame-default frame-type-text frame-layout-0">
+                
+                    <a id="c31124"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h2 id="" class="">
+                Your accommodation: Villa Vajarassa
+                
+            </h2>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+
+    <p>You will stay in the enchanting Villa Vajarassa surrounded by vineyards and olive groves. Our renovated winery - now a wonderful bed &amp; breakfast.</p>
+<p>You will find cozy corners to relax in the villa: in the hammock under the large trees in the courtyard, on the roof terrace, in the living room in front of the fireplace or in the reading room. From the roof terrace, you have a great view of the lagoon (just 400 m away) and the sunset.</p>
+<p><a href="/en/villavajarassa/" target="_blank">&gt; Villa Vajarassa</a></p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31106" class="frame frame-default frame-type-image frame-layout-0 frame-space-before-medium frame-space-after-medium">
+                
+                    <a id="c31125"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <div class="ce-image ce-center ce-above">
+        
+
+    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+        
+            <div class="ce-outer">
+                <div class="ce-inner">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" alt="Villa Vajarassa Sicily - Kitesurfing Accommodation Lo Stagnone Italy" src="/fileadmin/user_upload/Contentpictures/Sizilien/Adventure_Week/Kitesurf-Adventure-Week_Sicily_Villa-Vajarassa.jpg" width="1140" height="642" loading="lazy" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+                </div>
+            </div>
+        
+    </div>
+
+
+
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31107" class="frame frame-default frame-type-text frame-layout-0">
+                
+                    <a id="c31126"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h2 id="" class="">
+                Your room in the villa
+                
+            </h2>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+
+    <p>You will stay in a single room - if you are traveling as a couple, you can also stay in a double room (with a €200 discount on the total price) with your own bathroom. The rooms at Villa Vajarassa are all unique - so your room may differ from the picture below.</p>
+<p><a href="/en/villavajarassa/" target="_blank">More about the rooms at Villa Vajarassa</a></p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31108" class="frame frame-default frame-type-image frame-layout-0 frame-space-before-medium frame-space-after-medium">
+                
+                    <a id="c31127"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <div class="ce-image ce-center ce-above">
+        
+
+    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+        
+            <div class="ce-outer">
+                <div class="ce-inner">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" alt="Villa Vajarassa Room - KBC Sicily Kitesurf Accommodation Lo Stagnone" src="/fileadmin/user_upload/Contentpictures/Sizilien/Adventure_Week/Kitesurf-Adventure-Week_Sicily_Villa-Vajarassa2.jpg" width="1140" height="642" loading="lazy" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+                </div>
+            </div>
+        
+    </div>
+
+
+
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31146" class="frame frame-default frame-type-text frame-layout-0">
+                
+                    <a id="c31147"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h2 id="" class="">
+                Food &amp; drinks
+                
+            </h2>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+
+    <p>Enjoy all-inclusive dining throughout the event, ensuring you're well-nourished every day. Start your morning with a hearty breakfast buffet at Villa Vajarassa, refuel at midday with fresh lunch snacks (sandwiches) right at the kitesurf spots, and end the day in great company with a shared dinner at the long table in the courtyard of Villa Vajarassa or in one of the nearby restaurants. Soft drinks, beer, and wine are included all week, so you can relax and refresh at any time!</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31145" class="frame frame-default frame-type-image frame-layout-0 frame-space-before-medium frame-space-after-medium">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <div class="ce-image ce-center ce-above">
+        
+
+    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+        
+            <div class="ce-outer">
+                <div class="ce-inner">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" alt="Kitesurf Adventure Week Sicily - Kiteboarding Club Lo Stagnone Italy" src="/fileadmin/user_upload/Contentpictures/Sizilien/Adventure_Week/Kitesurf-Adventure-Week_Sicily_Food.jpg" width="1140" height="642" loading="lazy" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+                </div>
+            </div>
+        
+    </div>
+
+
+
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c32262" class="frame frame-default frame-type-text frame-layout-0">
+                
+                    <a id="c32263"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <p>A delicious, healthy breakfast buffet is served in the morning and in the evening, we meet for dinner at the long table in the idyllic inner courtyard. Dolce Vita!</p>
+<p>The villa is about 15 minutes away from our kitesurfing spot in the south of the lagoon. We all take our bus to the spot every morning.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c32264" class="frame frame-default frame-type-image frame-layout-0 frame-space-before-medium frame-space-after-medium">
+                
+                    <a id="c32265"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <div class="ce-image ce-center ce-above">
+        
+
+    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+        
+            <div class="ce-outer">
+                <div class="ce-inner">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" alt="Kitesurf Adventure Week Sicily Equipment - Female kitesurfer with kiteboard at KBC Kitesurf Center Sizilien Lo Stagnone" src="/fileadmin/_processed_/c/a/csm_Kitesurf-Adventure-Week_Sicily_Equipment_452043baa9.jpg" width="2400" height="1348" loading="lazy" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+                </div>
+            </div>
+        
+    </div>
+
+
+
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31117" class="frame frame-default frame-type-text frame-layout-0">
+                
+                    <a id="c31128"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h2 id="" class="">
+                Kitesurfing equipment
+                
+            </h2>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+
+    <p>During the entire Adventure Week, you can hire equipment from our premium brand F-ONE. If the wind changes, you can easily change board or kite size.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31113" class="frame frame-default frame-type-image frame-layout-0 frame-space-before-medium frame-space-after-medium">
+                
+                    <a id="c31129"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <div class="ce-image ce-center ce-above">
+        
+
+    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+        
+            <div class="ce-outer">
+                <div class="ce-inner">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" alt="Kitesurfing Adventure Week Lo Stagnone - KBC Sicily Italy" src="/fileadmin/user_upload/Contentpictures/Sizilien/Adventure_Week/Kitesurf-Adventure-Week_Sicily_Kitesurfing2.jpg" width="1140" height="642" loading="lazy" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+                </div>
+            </div>
+        
+    </div>
+
+
+
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31109" class="frame frame-custom-21 frame-type-text frame-layout-0">
+                
+                    <a id="c31130"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h2 id="" class="">
+                The Adventure Week program*
+                
+            </h2>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+
+    <p><strong>Day 1: Arrival &amp; first kitesurf session</strong></p><ul> 	<li>Welcome &amp; presentation of the camp</li> 	<li>Spot check in Lo Stagnone</li> 	<li>First kitesurf session at the home spot of KBC Sicily</li> </ul><p><strong>Day 2: Upwind &amp; downwind trip</strong></p><ul> 	<li>Explore the unique conditions of Lo Stagnone during a guided upwind and downwind session.</li> </ul><p><strong>Day 3: Secret spot &amp; overnight stay in the open air</strong></p><ul> 	<li>Exclusive kitesurfing session at a secret spot.</li> 	<li>Overnight stay in a tent under the stars with BBQ dinner.</li> </ul><p><strong>Day 4: Remote Spot Adventure</strong></p><ul> 	<li>Boat transfer to a remote kitesurfing paradise.</li> </ul><p><strong>Day 5: Kitesurfing in Capofeto</strong></p><ul> 	<li>Kitesurfing session in <strong>Capofeto</strong>, a spectacular spot accessible by car.</li> </ul><p><strong>Day 6: Home spot finale</strong></p><ul> 	<li>Final kitesurfing session in Lo Stagnone before departure.</li> </ul><p>*Kitesurfing is a natural sport: if the wind conditions require it, we reserve the right to adjust the order of the program points or modify the contents.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31114" class="frame frame-default frame-type-image frame-layout-0 frame-space-before-medium frame-space-after-medium">
+                
+                    <a id="c31131"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <div class="ce-image ce-center ce-above">
+        
+
+    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+        
+            <div class="ce-outer">
+                <div class="ce-inner">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" alt="Kitesurf Adventure Week KBC Sicily Lo Stagnone Italy Kiteboarding" src="/fileadmin/user_upload/Contentpictures/Sizilien/Adventure_Week/Kitesurf-Adventure-Week_Sicily_Beach.jpg" width="1140" height="642" loading="lazy" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+                </div>
+            </div>
+        
+    </div>
+
+
+
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31110" class="frame frame-default frame-type-text frame-layout-0">
+                
+                    <a id="c31132"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h2 id="" class="">
+                Alternative program
+                
+            </h2>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+
+    <p>If the wind doesn't blow, a breathtaking <strong>boat trip to the Egadi Islands</strong> awaits you - an unforgettable tour to the beautiful islands off the north-western coast of Sicily.</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31111" class="frame frame-default frame-type-image frame-layout-0 frame-space-before-medium frame-space-after-medium">
+                
+                    <a id="c31133"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <div class="ce-image ce-center ce-above">
+        
+
+    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+        
+            <div class="ce-outer">
+                <div class="ce-inner">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" alt="Kitesurf Adventure Week KBC Lagoon Bar Sicily Lo Stagnone Italy" src="/fileadmin/user_upload/Contentpictures/Sizilien/Adventure_Week/Kitesurf-Adventure-Week_Sicily_Beachbar.jpg" width="1140" height="642" loading="lazy" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+                </div>
+            </div>
+        
+    </div>
+
+
+
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31118" class="frame frame-custom-21 frame-type-1col frame-layout-0">
+                
+                    <a id="c31134"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    
+    
+
+            <div id="c31115" class="frame frame-default frame-type-list frame-layout-0">
+                
+                    <a id="c31135"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    
+        
+	<div class="tx-leaoconnector">
+		
+
+<div class="leao-product" id="leao-product_45438">
+	<h2 class="leao-product-name" id="leao-product-name_45438">Kitesurf Adventure Week KBC Sicily</h2>
+	<div class="leao-product-short_description" id="leao-product-short_description_45438"><p>6-Day All-Inclusive Kitesurf Event – Including Kite Rental, Full Board, Accommodation & More</p>
+<p> </p>
+<p>
+	The Adventure Kitesurf Event for confident kitesurfers (from VDWS Level 5 or equivalent), promising an unforgettable kitesurfing experience:</p></div>
+	<!--
+		cleanDescription strips the <br> at end-of-line and the blank lines that
+		f:format.html (lib.parseFunc_RTE) would otherwise render on top of its own
+		paragraph wrapping, which made every break land twice. Keeping
+		f:format.html preserves the paragraph-per-line layout and the inline
+		markup; see CleanDescriptionViewHelper.
+	-->
+	<div class="leao-product-description" id="leao-product-description_45438"><p><strong>Included Services:</strong></p>
+<p>		Premium F-ONE Kitesurf Equipment (Kite + Board) for 6 days</p>
+<p>		Accommodation in a single room at Villa Vajarassa</p>
+<p>		Daily Meals:</p>
+<p>		Breakfast at Villa Vajarassa</p>
+<p>		Lunch snacks at the kitesurf spots (sandwiches)</p>
+<p>		Dinner at Villa Vajarassa</p>
+<p>		Drinks (soft drinks, beer, and wine) throughout the week</p>
+<p>		Boat transfer to remote kitesurf spots</p>
+<p>		Airport transfer from Trapani Airport</p>
+<p>		Beach shuttle & event shuttle</p>
+<p>	<em>The event will only take place with a minimum of 6 participants. If fewer participants register, the package will be adjusted to include only accommodation and equipment rental, with a partial refund of the total amount. However, even in this case, you will still enjoy an amazing kitesurfing week with us at KBC Sicily!</em></p>
+<p>	<strong>Are you a group of 6 kitesurfing friends or more?</strong></p>
+<p>	We’ll be happy to plan your Kitesurf Adventure Week at your preferred date!</p>
+<p>	<strong>15% discount until the end of February – instead of €1700, only €1445 per person.</strong></p></div>
+	<a href="https://myleao.com/calendar/product/45438/en" class="button leao-product-btn_book leao-button" id="leao-product-btn_book_45438" data-productname="Kitesurf Adventure Week KBC Sicily" target="_blank">Book</a>
+	<div class="leao-product-price leao-price" id="leao-product-price_45438">1700€</div>
+</div>
+
+
+<script></script>
+
+	</div>
+
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31116" class="frame frame-default frame-type-list frame-layout-0 frame-space-before-medium">
+                
+                    <a id="c31136"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            <h2 id="" class="">
+                Dates
+                
+            </h2>
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+
+    
+        
+	<div class="tx-leaoconnector">
+		
+
+<div class="leao-booking-error">ERROR: Please check the configuration of the plugin!</div>
+
+
+	</div>
+
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31119" class="frame frame-default frame-type-text frame-layout-0 frame-space-before-medium">
+                
+                    <a id="c31137"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <p><strong>No date that fits you?</strong> Start your own Kitesurf Adventure Week! Bring 5 kitesurfing friends and the event will take place on your preferred date:</p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31148" class="frame frame-default frame-type-text frame-layout-0">
+                
+                    <a id="c31149"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+		<header>
+			
+
+
+
+
+    
+            
+                
+
+
+
+
+    
+            <h1 id="" class="">
+                Your own kite adventure week
+                
+            </h1>
+        
+
+
+
+            
+        
+
+
+
+			
+
+
+
+			
+
+
+
+		</header>
+	
+
+
+
+                
+                
+
+    <p>Are you coming with a large group (6 or more people) and want to experience a Kitesurfing Adventure Week? We would be happy to organize this event week exclusively for you on your desired date.</p>
+<p><a href="mailto:sizilien@KBC-World.com?subject=Anfrage%20KBC%20Sizilien"><strong>Send us an email.</strong></a></p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31102" class="frame frame-default frame-type-image frame-layout-0 frame-space-after-extra-small">
+                
+                    <a id="c31121"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <div class="ce-image ce-center ce-above">
+        
+
+    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+        
+            <div class="ce-outer">
+                <div class="ce-inner">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            
+                    
+<img class="image-embed-item" alt="Kitesurfing group at beach - Custom Kitesurf Week Sicily participants at Kiteboarding Club KBC Sizilien Lo Stagnone" src="/fileadmin/_processed_/f/5/csm_Custom-Kitesurf-Week_Sicily_Header_0e3a95a116.jpg" width="1140" height="640" loading="lazy" />
+
+
+                
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+                </div>
+            </div>
+        
+    </div>
+
+
+
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c32266" class="frame frame-default frame-type-1col frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    
+    
+
+            <div id="c32261" class="frame frame-default frame-type-shortcut frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    
+    
+
+            <div id="c16145" class="frame frame-default frame-type-textpic frame-layout-0">
+                
+                    <a id="c17692"></a>
+                
+                
+                    
+
+
+
+                
+                
+
+    
+        
+
+
+
+
+
+
+    
+
+
+                
+
+    <div class="ce-textpic ce-left ce-above">
+        
+            
+
+
+
+        
+
+        
+                <div class="ce-bodytext">
+                    
+                    <h2>Flights</h2>
+<p>Daily <strong>arrival</strong></p>
+<p>You can reach KBC Sicily very easily, quickly (only about 2 hours from Germany and Switzerland), and affordably:</p>
+<h3><strong>Trapani Airport</strong>&nbsp;</h3>
+<p>(just a 10-minute drive from the spot):<br><a href="https://www.ryanair.com/de/de" target="_blank" rel="noreferrer">Direct flights with Ryanair</a> to Trapani Airport are available from Düsseldorf Weeze, Karlsruhe Baden-Baden, Brussels Charleroi, London, Turin, Milan, Pisa, and other airports.</p>
+<h3><strong>Palermo Airport&nbsp;</strong></h3>
+<p>(1-hour drive from the spot):</p>
+<p><strong>New: </strong><a href="https://www.wizzair.com/de-de/fluege/flugpreisassistent/dortmund/palermo-sizilien/0/0/0/1/0/0/2026-09-01/2026-11-30?flexible=2026-09,2026-10,2026-11&amp;duration=1_week" target="_blank" rel="noreferrer">Direct flights with WizzAir</a> from Dortmund starting in September 2026.</p>
+<p><a href="https://www.ryanair.com/de/de" target="_blank" rel="noreferrer">Direct flights with Ryanair</a> to Palermo Airport from Zurich, Geneva, Basel, Munich, Berlin, Cologne, Stuttgart, Düsseldorf, Weeze, Nuremberg, Memmingen, Vienna, Brussels, Amsterdam, Rotterdam, and many other airports in Europe and, of course, Italy</p>
+<h3><strong>Catania Airport</strong>&nbsp;</h3>
+<p>(3.5-hour drive from the spot – can be combined with a round trip):<br><a href="https://www.ryanair.com/de/de" target="_blank" rel="noreferrer">Direct flights with Ryanair</a> to Catania Airport are available from Berlin, Cologne, Dortmund, Düsseldorf, Frankfurt, Hamburg, Hanover, Memmingen, Stuttgart, Amsterdam, Eindhoven, Basel, Genoa, Zurich, Vienna, Luxembourg, Brussels, Lille, Copenhagen, Stockholm, and many other airports in Europe.</p>
+                </div>
+            
+
+        
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31139" class="frame frame-default frame-type-shortcut frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c31142" class="frame frame-default frame-type-shortcut frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c43750" class="frame frame-default frame-type-shortcut frame-layout-0">
+                
+                
+                    
+
+
+
+                
+                
+                
+
+    
+    
+
+            <div id="c43740" class="frame frame-default frame-type-1col frame-layout-0">
+                
+                    <a id="c43818"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+        <div class="section">
+            
+                
+                    
+    
+
+            <div id="c43839" class="frame frame-default frame-type-text frame-layout-0 frame-space-before-medium">
+                
+                    <a id="c43840"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <p><a href="/en/offer/" class="button fancyframe" target="fancyframe"><strong>Request a complete quote</strong></a></p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c19466" class="frame frame-default frame-type-text frame-layout-0 frame-space-before-medium">
+                
+                    <a id="c26951"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <p><a href="/en/sicily/" target="_blank" class="button"><strong>to KBC Sicily</strong></a></p>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+                    
+    
+
+            <div id="c43741" class="frame frame-default frame-type-image frame-layout-0">
+                
+                    <a id="c43819"></a>
+                
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+
+	
+
+
+
+                
+                
+
+    <div class="ce-image ce-center ce-above">
+        
+
+    <div class="ce-gallery" data-ce-columns="1" data-ce-images="1">
+        
+            <div class="ce-outer">
+                <div class="ce-inner">
+        
+        
+            <div class="ce-row">
+                
+                    
+                        <div class="ce-column">
+                            
+
+        
+<figure class="image">
+    
+            <a href="/en/sicily/" target="_blank">
+                
+<img class="image-embed-item" alt="Kitesurf Schule Sizilien KBC Lo Stagnone" src="/fileadmin/_processed_/1/a/csm_KBC_Center_Teaser_Sizilien_Kitesurf_e43b0a112f.jpg" width="1140" height="874" loading="lazy" />
+
+
+            </a>
+        
+    
+</figure>
+
+
+    
+
+
+                        </div>
+                    
+                
+            </div>
+        
+        
+                </div>
+            </div>
+        
+    </div>
+
+
+
+    </div>
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+
+
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+
+                
+            
+        </div>
+    
+                
+                    
+
+
+
+                
+                
+                    
+
+
+
+                
+            </div>
+
+        
+
+   
+    </main>
+
+
+<script></script>
+
+
+<script></script>
+<script></script>
+<script></script>
+
+
+
+<script></script><!--
+  ~ Copyright (c) 2021.
+  ~
+  ~ @category   TYPO3
+  ~
+  ~ @copyright  2021 Dirk Persky (https://github.com/DirkPersky)
+  ~ @author     Dirk Persky <info@dp-wired.de>
+  ~ @license    MIT
+  -->
+
+
+
+
+
+<!-- Begin Cookie Consent plugin by Dirk Persky - https://github.com/DirkPersky/typo3-dp_cookieconsent -->
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<script></script>
+<!-- End Cookie Consent plugin -->
+
+
+
+</body>
+</html>
