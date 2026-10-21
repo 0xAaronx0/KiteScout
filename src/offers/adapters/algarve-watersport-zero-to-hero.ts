@@ -132,7 +132,6 @@ export function parseAlgarveContent(html: string, url = ALGARVE_URL): OfferConte
   const heroName = txt(hero?.querySelector('.hero-package-name')) || 'Zero to Hero Kite Camp';
   const level = txt(hero?.querySelector('.hero-package-level'));             // "7 nights · 5 kite days · beginner"
   const nights = Number(level.match(/(\d+)\s*nights?/i)?.[1] ?? NaN);
-  const heroDesc = txt(hero?.querySelector('.hero-package-desc'));
   const pricingIntro = txt(root.querySelector('#section-pricing .subtitle'));
   const features = (hero?.querySelectorAll('.package-features li') ?? []).map(li => txt(li)).filter(Boolean);
 
@@ -168,7 +167,21 @@ export function parseAlgarveContent(html: string, url = ALGARVE_URL): OfferConte
   const imageUrls = [...new Set([...ldImages, ...imageCandidates(html, url, null, 40)])];
 
   const bookingUrl = hero?.querySelector('a[href*="bookinglayer"]')?.getAttribute('href') ?? null;
-  const summary = [heroDesc.replace(/[^.]*most popular[^.]*\.\s*/gi, '').trim(), pricingIntro].filter(Boolean).join(' ');
+  // our own wording from the page's facts (only our own texts, no operator prose - Aaron 2026-10-21)
+  const n = (re: RegExp) => features.join(' ').match(re)?.[1] ?? null;
+  const groupLessons = n(/(\d+)\s*group kite lessons?/i);
+  const semiLessons = n(/(\d+)\s*semi-private kite lessons?/i);
+  const dinners = n(/(\d+)\s*dinners/i);
+  const lessonLine = [
+    groupLessons ? `${groupLessons} group lessons` : null,
+    semiLessons ? `${semiLessons} semi-private lessons on a kite of your own` : null,
+    /wake park/i.test(features.join(' ')) ? 'a wake park session to practise water starts' : null,
+  ].filter((x): x is string => !!x).reduce((acc, x, i, all) => (i === 0 ? x : `${acc}${i === all.length - 1 ? ' and ' : ', '}${x}`), '');
+  const nightsText = Number.isFinite(nights) ? `${nights} nights` : 'a week';
+  const summary = [
+    `Algarve Watersport's beginner kite week in Lagos (Portugal)${/Ria de Alvor/i.test(pageText) ? ', taught on the Ria de Alvor lagoon' : ''}: ${nightsText} at the school's Kitehouse${rooms.length ? ` (${rooms[0].name.toLowerCase()} in the base price, other rooms as upgrades)` : ''}${lessonLine ? ` with ${lessonLine}` : ''}.`,
+    `Kite gear, the VDWS licence, daily breakfast${dinners ? `, ${dinners} dinners` : ''}, yoga and rides to the kite spots are part of the price${transfer ? '; the Faro airport transfer is extra' : ''}.`,
+  ].join(' ');
 
   return {
     kind: 'camp',

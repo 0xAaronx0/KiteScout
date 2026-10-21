@@ -1,4 +1,4 @@
-// Never Too Wet To Shred Kite Camp Greece (Fanes, Rhodes): replays the page recorded 2026-10-19 (trimmed).
+// Too Wet to Shred Kite Camp Greece (Fanes, Rhodes): replays the page recorded 2026-10-19 (trimmed).
 // <title>/og/JSON-LD still say "22-30 August 2026"; only the visible "28 August to 5 September 2027" counts.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -39,6 +39,8 @@ test('twts greece: content', async () => {
   assert.equal(c.spotCoords, undefined);
   assert.match(c.summary, /twin room EUR 1150, triple room EUR 1075/);
   assert.match(c.summary, /Next camp: 28 August 2027 - 5 September 2027/);
+  // the brand is "Too Wet to Shred"; "Never ..." is only the WordPress site name (#267 verifier)
+  assert.ok(!/Never Too Wet/i.test(`${c.title} ${c.summary} ${toowettoshredKiteCampFanes.operator.name}`));
   assert.ok(!c.includedServices.some(i => /kite kite/i.test(i)));
   assert.ok(c.imageUrls.length >= 5 && c.imageUrls.every(u => !/unsplash|logo/i.test(u)));
   assert.equal((await toowettoshredKiteCampFanes.fetchContent({ note: () => {}, incomplete: () => {} })).title, c.title);

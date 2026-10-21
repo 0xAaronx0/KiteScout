@@ -172,6 +172,12 @@ export function parseRealContent(landingHtml: string, p: ShopifyProduct, url = R
   const nights = Number(descText.match(/(\d+)\s*Nights?/i)?.[1] ?? NaN);
   const dateText = p.variants.map(v => opt(v, datePos)).find(Boolean) ?? '';
   const openTo = descText.match(/is open to ([^.]+)\./i)?.[1] ?? null;   // "wing foilers of all levels plus intermediate and advanced kiters"
+  // our own wording of the level line (only our own texts, no operator prose - Aaron 2026-10-21)
+  const levelParts = openTo ? [
+    /wing\s*foilers of all levels/i.test(openTo) ? 'wing foilers can join at any level' : null,
+    /intermediate(?: and advanced)? kiters/i.test(openTo) ? 'kiters should already ride at intermediate level or above'
+      : /advanced kiters/i.test(openTo) ? 'kiters should be advanced riders' : null,
+  ].filter(Boolean) : [];
   const coaches = mainText.match(/coaching from professional athletes ([^.]+?)\./i)?.[1] ?? null;
   const productImages = p.images.map(u => (u.startsWith('//') ? `https:${u}` : u));
   const imageUrls = [...new Set([...productImages, ...imageCandidates(landingHtml, url, null, 40)])];
@@ -180,7 +186,7 @@ export function parseRealContent(landingHtml: string, p: ShopifyProduct, url = R
     `${p.title}: a ${Number.isFinite(nights) ? `${nights}-night` : 'week-long'} kiteboarding and wing foil camp by REAL Watersports and Strut Kiteboarding at The Kite House at Casa Cortez in La Ventana, Baja California Sur${dateText ? `, ${dateText}${year ? ` ${year}` : ''}` : ''}.`,
     coaches ? `Coaching by ${coaches}, 2-4 hours a day on the water when conditions allow.` : null,
     'Three meals a day, daily yoga and off-the-water workshops are included; flights, airport transfer and kite gear are not.',
-    openTo ? `Open to ${openTo}.` : null,
+    levelParts.length ? `Level: ${levelParts.join('; ')}.` : null,
   ].filter(Boolean).join(' ');
 
   return {

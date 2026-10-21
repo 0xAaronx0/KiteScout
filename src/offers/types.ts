@@ -86,6 +86,9 @@ export interface OperatorRef {
   contactEmail?: string | null;
   whatsapp?: string | null;
   phone?: string | null;
+  /** known-wrong values on an existing providers row (e.g. a centre name on a multi-centre domain): ingest
+   *  replaces them with `name` / `websiteUrl` while the row still holds exactly these; otherwise fill-gaps-only */
+  correct?: { name?: string; websiteUrl?: string };
 }
 
 export interface ItinerarySpot {

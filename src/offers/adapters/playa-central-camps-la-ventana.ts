@@ -199,10 +199,11 @@ export function parsePcContent(campsHtml: string, camps: PcCamp[]): OfferContent
   const prices = camps.flatMap(c => c.product.variants.map(v => v.price));
   const campList = camps.map(c => c.item.title.replace(/:\s*/, ' (') + ')').join('; ');
 
+  // our own wording from the page's facts (only our own texts, no operator prose - Aaron 2026-10-21)
   const summary = [
-    `Playa Central is a kite and wing school with shop, rentals and a beach restaurant on the beach of La Ventana, Baja California Sur, and runs all-inclusive 7-day camps in the winter wind season.`,
-    `Kiting camps for 2026/27: ${campList || 'see the camps page'}; lessons are private one-on-one (6 hours in the beginner and women's camps), the adventure camp is guided foiling for intermediate and advanced riders with their own or rented gear.`,
-    `Every camp includes a private bedroom and bathroom in a villa with pool and hot tub, daily yoga, breakfast by a private chef, lunch at Playa Central and airport and local transport${prices.length ? `; prices run from USD ${Math.min(...prices).toLocaleString('en-US')} to ${Math.max(...prices).toLocaleString('en-US')} per person by room type` : ''}.`,
+    `All-inclusive ${durationDays}-day kite and wing camps in the winter wind season, run by Playa Central, the La Ventana (Baja California Sur) beach school with its own shop, rental and restaurant.`,
+    `Kiting camps for 2026/27: ${campList || 'see the camps page'}; the beginner and women's camps come with 6 hours of one-to-one instruction, the adventure camp is guided foiling for intermediate and advanced riders on their own or rented gear.`,
+    `Guests sleep in en-suite private rooms of a camp villa with pool and hot tub; yoga every day, a private chef's breakfast, lunch at Playa Central and the airport and local transfers are part of every camp${prices.length ? `, at USD ${Math.min(...prices).toLocaleString('en-US')} to ${Math.max(...prices).toLocaleString('en-US')} per person depending on the room` : ''}.`,
   ].join(' ');
 
   return {

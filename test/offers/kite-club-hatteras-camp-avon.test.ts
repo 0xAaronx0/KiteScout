@@ -32,7 +32,7 @@ test('kcc: slots only for weeks that have not started', async () => {
   const s = early[0];
   assert.deepEqual([s.price, s.currency, s.priceUnit, s.priceBasis, s.occupancy, s.availability, s.endDate],
     [1500, 'USD', 'package', 'person', 1, 'unknown', '2026-05-02']);
-  assert.match(s.availabilityText!, /USD 1500-1600 per camp week .*second person sharing the room \+USD 395/);
+  assert.match(s.availabilityText!, /USD 1500-1600 per camp week .*sharing the package with a second person \+USD 395/);
   const notes: string[] = [];
   assert.deepEqual(await fetchKccSlots('2026-10-14', { note: t => notes.push(t) }), []);
   assert.match(notes[0], /all 2026 camp weeks are past/);
@@ -43,6 +43,9 @@ test('kcc: content', async () => {
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot], ['camp', 8, 'United States', 'Hatteras Island, North Carolina', 'Avon']);
   assert.match(c.summary, /Camp dates 2026: April 4 - 11, April 25 - May 2, September 12 - 19, September 26 - October 3, at USD 1,500 to 1,600 per person/);
+  // $395 is the surcharge for sharing the package, not a room price; a friend stays free (#267 verifier)
+  assert.match(c.summary, /sharing the package with a second person costs USD 395 extra, and a friend or partner can stay in the private room for free\./);
+  assert.ok(!/sharing the room pays/.test(c.summary));
   assert.ok(c.imageUrls.length >= 10);
   assert.equal(c.imageUrls[1], 'https://kiteclubhatteras.com/wp-content/uploads/2023/10/Kiteboarding-Camp-Group-Photo.webp');
 });

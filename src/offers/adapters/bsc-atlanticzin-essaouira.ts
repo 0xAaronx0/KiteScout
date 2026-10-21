@@ -173,8 +173,6 @@ export function parseBscContent(html: string, url = BSC_URL): OfferContent {
   const root = parse(html);
   for (const el of root.querySelectorAll('script, style, noscript, template')) el.remove();
   const title = txt(root.querySelector('h1'));
-  const intro = txt(root.querySelector('.listing-overview__introduction'));
-  const summary = (intro.match(/[^.!?]+[.!?]/g) ?? [intro]).slice(0, 3).join(' ').replace(/\s+/g, ' ').trim();
   const list = (sel: string) => root.querySelectorAll(`${sel} li`).map(li => txt(li)).filter(Boolean);
   const listAfter = (heading: RegExp) => {
     const h = root.querySelectorAll('h3').find(x => heading.test(txt(x)));
@@ -203,7 +201,25 @@ export function parseBscContent(html: string, url = BSC_URL): OfferContent {
   const imageUrls = [...new Set([...ldImages, ...pkgs.flatMap(p => p.images), ...imageCandidates(html, url, null, 40)])]
     .filter(u => !/\/static\/|unpkg\.com/.test(u));
 
-  const accommodationFirst = pkgs[0]?.accommodation.match(/^[^.]+\./)?.[0] ?? null;
+  // our own wording from the listing's facts (only our own texts, no operator prose - Aaron 2026-10-21);
+  // the listing's intro and accommodation text stay in sourceText only
+  const firstAccom = pkgs[0]?.accommodation ?? '';
+  const riad = firstAccom.match(/^(Riad [A-Z][\w'-]*)/)?.[1] ?? null;
+  const inMedina = /\bmedina\b/i.test(firstAccom);
+  const accommodation = riad ? `${riad}${inMedina ? ' in the Essaouira medina' : ''}: private double or triple rooms with bathroom.` : null;
+  const inc = included.join(' | ');
+  const hours = inc.match(/(\d+)[-\s]*hours? kitesurf lessons/i)?.[1];
+  const nights = inc.match(/(\d+)\s*nights/i)?.[1];
+  const has = (re: RegExp) => re.test(inc);
+  const parts = [
+    nights ? `${nights} nights${riad ? ` at ${riad}${inMedina ? ' in the medina' : ''}` : ''}` : null,
+    hours ? `${hours} hours of kite lessons with gear` : 'kite lessons with gear',
+    has(/unlimited surf rental/i) ? 'free use of surfboards' : null,
+    has(/daily breakfast/i) ? 'breakfast every day' : null,
+    has(/dinner with the team/i) ? 'a dinner with the team and the other guests' : null,
+  ].filter(Boolean);
+  const levels = skills.length ? `${skills.join(' and ')} riders` : 'kite learners';
+  const summary = `Atlanticzin Watersports' ${Number.isFinite(days) ? `${days}-day ` : ''}kite camp in Essaouira (Morocco) for ${levels}: ${parts.join(', ')}.${transfers.length ? ' Airport transfers cost extra.' : ''}`;
 
   return {
     kind: 'camp',
@@ -221,7 +237,7 @@ export function parseBscContent(html: string, url = BSC_URL): OfferContent {
     beginnerFriendly: skills.includes('beginner'),
     includedServices: included,
     optionalServices: transfers,
-    accommodation: accommodationFirst ? `${accommodationFirst} Private double or triple rooms with bathroom.` : null,
+    accommodation,
     mealPlan: meals.length === 1 && meals[0] === 'breakfast' ? 'breakfast' : (meals.join(', ') || null),
     languages,
     rooms,

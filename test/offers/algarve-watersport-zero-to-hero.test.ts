@@ -48,6 +48,10 @@ test('algarve content', async () => {
   assert.equal(c.country, 'Portugal');
   assert.equal(c.region, 'Algarve');
   assert.equal(c.spot, 'Ria de Alvor lagoon, Lagos');
+  // our own text from the page's facts, not the hero/pricing sentences (#267 verifier: 27 shared words before)
+  assert.match(c.summary, /^Algarve Watersport's beginner kite week in Lagos \(Portugal\), taught on the Ria de Alvor lagoon: 7 nights at the school's Kitehouse/);
+  assert.match(c.summary, /with 2 group lessons, 3 semi-private lessons on a kite of your own and a wake park session/);
+  assert.ok(!/All packages include|The full beginner experience/.test(c.summary));
   assert.equal(c.durationDays, 8);
   assert.deepEqual(c.skillLevels, ['beginner', 'intermediate']);
   assert.equal(c.mealPlan, 'half_board');

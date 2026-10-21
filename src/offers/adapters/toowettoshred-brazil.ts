@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// Never Too Wet To Shred - Kite Camp Brazil (moving group trip Cumbuco -> Jericoacoara / Barra Grande)
+// Too Wet to Shred - Kite Camp Brazil (moving group trip Cumbuco -> Jericoacoara / Barra Grande)
 //
 // Data path (checked 2026-10-09): one WordPress (Divi) page,
 //   https://www.toowettoshred.com/camps/kitesurf-camp-brazil/
@@ -232,10 +232,10 @@ export function parseToowettoshredContent(html: string): OfferContent {
 
 export const toowettoshredBrazil: OfferAdapter = {
   key: 'toowettoshred-brazil',
-  name: 'Never Too Wet To Shred - Kite Camp Brazil',
+  name: 'Too Wet to Shred - Kite Camp Brazil',
   kind: 'tour',
   operator: {
-    name: 'Never Too Wet To Shred',
+    name: 'Too Wet to Shred',
     websiteUrl: 'https://www.toowettoshred.com',
     rootDomain: 'toowettoshred.com',
     contactEmail: 'never@toowettoshred.com',

@@ -144,7 +144,7 @@ export function wscModified(html: string): string | null {
 }
 
 // --- content ------------------------------------------------------------------------------------
-export function parseWscContent(html: string, today: string): OfferContent {
+export function parseWscContent(html: string, _today: string): OfferContent {
   const root = parse(html);
   for (const el of root.querySelectorAll('script, style, noscript')) el.remove();
   const text = collapse(root.structuredText);
@@ -152,15 +152,17 @@ export function parseWscContent(html: string, today: string): OfferContent {
   const listP = head?.closest('.qodef-section-title-holder')?.nextElementSibling?.nextElementSibling?.querySelector('p');
   const included = (listP?.innerHTML ?? '').split(/<br\s*\/?>/i).map(s => collapse(parse(s).text).replace(/^\*\s*/, '')).filter(Boolean);
   const levels = parseWscLevels(html);
-  const slots = buildWscSlots(levels, wscModified(html) ?? today, today);
-  const cheapest = slots.filter(s => s.occupancy === 1).sort((a, b) => a.price! - b.price!)[0];
-  const minAll = slots.slice().sort((a, b) => a.price! - b.price!)[0];
+  // the "from" prices quote the page's whole table (every season), not only the bands still ahead: the
+  // summer band is dated past by the anchor rule, but the page prints it as the current price list
+  const table = levels.flatMap(l => l.seasons.flatMap(s => s.rows.map(r => ({ ...r, season: s.label, pp: r.total / r.pax }))));
+  const cheapest = table.filter(r => r.pax === 1).sort((a, b) => a.total - b.total)[0];
+  const minAll = table.slice().sort((a, b) => a.pp - b.pp)[0];
   const hours = included.join(' ').match(/\((\d+)\s*hours\)/i)?.[1];
 
   const summary = [
     `Wind Sports Center's kite camp week (Kitehouse - Kiteweek) at Praia de Estoril in Sal Rei, Boa Vista (Cape Verde): 7 nights in apartments 300-500 m from the centre, a 5-day kite course${hours ? ` (${hours} hours)` : ''} with gear and radio headsets during the lessons, breakfasts and meals in Sal Rei restaurants, daily cleaning and transport to the beach.`,
     `Beginners get 2 couple and 3 semi-private lessons, intermediate riders who handle their own kite 5 semi-private lessons.`,
-    cheapest ? `Prices depend on season (June-September, October/November/April/May, December-March) and room: from EUR ${cheapest.price!.toLocaleString('en-US')} for one person in a single room${minAll && minAll.price! < cheapest.price! && minAll.priceTotal ? ` or EUR ${minAll.priceTotal.toLocaleString('en-US')} for ${minAll.occupancy} sharing a room` : ''}; the price table carries no year, booking by request.` : 'Prices on request.',
+    cheapest ? `Prices depend on season (June-September, October/November/April/May, December-March) and room: from EUR ${cheapest.total.toLocaleString('en-US')} for one person in a single room (${cheapest.season})${minAll && minAll.pp < cheapest.total && minAll.pax > 1 ? ` or EUR ${minAll.total.toLocaleString('en-US')} for ${minAll.pax} sharing a room (${minAll.season})` : ''}; the price table carries no year, booking by request.` : 'Prices on request.',
   ].join(' ');
 
   const imgs = imageCandidates(html, WSC_URL, null, 40)

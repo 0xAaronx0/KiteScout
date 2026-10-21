@@ -6,8 +6,9 @@
 // Data path (checked 2026-10-14): WordPress + WooCommerce (helpers in kite-club-hatteras-avon.ts).
 //   slots    /kitesurfing-camps/ prints "<year> Kite Camp Dates:" with the weeks ("April 4 - 11th", "April 25 - May 2nd",
 //            "September 12 - 19th", "September 26 - October 3rd" for 2026) and the price range of the camp product
-//            ("$1,500.00 - $1,600.00"; USD is the shop's currency in the Store API), "+$395" for a second person
-//            sharing the private room. One slot per week that has not started yet, USD per person (package),
+//            ("$1,500.00 - $1,600.00"; USD is the shop's currency in the Store API), "an additional $395" to share
+//            the package with a second person (a surcharge, not a price; the next sentence says a friend or spouse
+//            can stay free in the private room, so the $395 is not a room charge - #267 verifier, 2026-10-21). One slot per week that has not started yet, USD per person (package),
 //            the lower end of the range (the page does not say which week costs which); availability 'unknown'.
 //            The WooCommerce product's own variations ("April 15 - 22nd", "May 6 - 13th", "Sep 16 - 23rd", no year)
 //            are older than the page's dated list and are not used.
@@ -25,7 +26,7 @@ export const KCC_CAMPS_URL = `${KCH_SITE}/kitesurfing-camps/`;
 const NIGHTS = 7;
 
 export interface KccWeek { start: string; end: string; label: string }
-export interface KccCamp { year: number | null; weeks: KccWeek[]; priceMin: number | null; priceMax: number | null; secondPerson: number | null }
+export interface KccCamp { year: number | null; weeks: KccWeek[]; priceMin: number | null; priceMax: number | null; secondPerson: number | null; friendStaysFree: boolean }
 
 /** "<year> Kite Camp Dates: April 4 - 11th April 25 - May 2nd ..." + the price range of the camps page. */
 export function parseKccCamp(html: string): KccCamp {
@@ -52,6 +53,7 @@ export function parseKccCamp(html: string): KccCamp {
     priceMin: range ? parseAmount(range[1]) : null,
     priceMax: range ? parseAmount(range[2]) : null,
     secondPerson: second ? parseAmount(second[1]) : null,
+    friendStaysFree: /friend or spouse can come for free/i.test(t),
   };
 }
 
@@ -68,7 +70,7 @@ export function buildKccSlots(c: KccCamp, today: string): Slot[] {
     occupancy: 1,
     availability: 'unknown',
     availabilityText: c.priceMin !== null
-      ? `USD ${c.priceMin}${c.priceMax && c.priceMax !== c.priceMin ? `-${c.priceMax}` : ''} per camp week (${w.label})${c.secondPerson ? `; a second person sharing the room +USD ${c.secondPerson}` : ''}`
+      ? `USD ${c.priceMin}${c.priceMax && c.priceMax !== c.priceMin ? `-${c.priceMax}` : ''} per camp week (${w.label})${c.secondPerson ? `; sharing the package with a second person +USD ${c.secondPerson}` : ''}`
       : null,
     spotsLeft: null,
   }));
@@ -88,7 +90,7 @@ export function parseKiteClubCampContent(p: KccPages): OfferContent {
   const summary = [
     `Kite Club Hatteras runs kite camp weeks in Avon on Hatteras Island, North Carolina: 7 nights in a private room of the school's canal-front guest house with shared kitchen and Wi-Fi, plus the 3-day express course (three 3-hour private lessons: kite control, getting moving, learning to ride).`,
     `Lessons leave by boat or jet ski from the house's own canal to shallow, flat water on Pamlico Sound; kite, bar, harness, board, life vest, helmet and wetsuit are provided.`,
-    `${c.year && c.weeks.length ? `Camp dates ${c.year}: ${c.weeks.map(w => w.label.replace(/(\d)(?:st|nd|rd|th)\b/g, '$1').replace(/\s*-\s*/, ' - ')).join(', ')}` : 'Camp weeks are dated on the camps page'}${c.priceMin ? `, at USD ${c.priceMin.toLocaleString('en-US')}${c.priceMax && c.priceMax !== c.priceMin ? ` to ${c.priceMax.toLocaleString('en-US')}` : ''} per person` : ''}${c.secondPerson ? `; a second person sharing the room pays USD ${c.secondPerson}` : ''}.`,
+    `${c.year && c.weeks.length ? `Camp dates ${c.year}: ${c.weeks.map(w => w.label.replace(/(\d)(?:st|nd|rd|th)\b/g, '$1').replace(/\s*-\s*/, ' - ')).join(', ')}` : 'Camp weeks are dated on the camps page'}${c.priceMin ? `, at USD ${c.priceMin.toLocaleString('en-US')}${c.priceMax && c.priceMax !== c.priceMin ? ` to ${c.priceMax.toLocaleString('en-US')}` : ''} per person` : ''}${c.secondPerson ? `; sharing the package with a second person costs USD ${c.secondPerson} extra` : ''}${c.friendStaysFree ? `${c.secondPerson ? ', and' : ';'} a friend or partner can stay in the private room for free` : ''}.`,
   ].join(' ');
 
   return {
@@ -110,7 +112,10 @@ export function parseKiteClubCampContent(p: KccPages): OfferContent {
       '3-day express course: three 3-hour private lessons with boat / jet ski support',
       'Lesson gear: Cabrinha kite, bar, harness, board, life vest, helmet, wetsuit',
     ],
-    optionalServices: c.secondPerson ? [`Second person sharing the private room (+USD ${c.secondPerson})`] : [],
+    optionalServices: [
+      ...(c.secondPerson ? [`Second person sharing the package (+USD ${c.secondPerson})`] : []),
+      ...(c.friendStaysFree ? ['A friend or partner staying in the private room (free)'] : []),
+    ],
     accommodation: 'private room in the kite school guest house',
     mealPlan: 'self_catering',
     languages: ['en'],

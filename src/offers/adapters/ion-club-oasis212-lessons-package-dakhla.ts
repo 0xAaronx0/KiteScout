@@ -29,6 +29,9 @@ export const ION_OPERATOR: OperatorRef = {
   websiteUrl: ION_SITE,
   rootDomain: 'ion-club.net',
   contactEmail: 'bookings@ion-club.net',
+  // ion-club.net hosts every ION CLUB centre; the providers row for the domain came from discovery as the Zanzibar
+  // centre, so the Dakhla offers showed "ION CLUB Zanzibar Kite Center" (#267 verifier, 2026-10-21) -> brand name
+  correct: { name: 'ION CLUB Zanzibar Kite Center', websiteUrl: 'https://www.ion-club.net/de/zanzibar/' },
 };
 
 // --- shared helpers -----------------------------------------------------------------------------------------

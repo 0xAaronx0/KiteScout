@@ -63,6 +63,9 @@ test('bsc content', async () => {
   assert.equal(c.durationDays, 8);
   assert.deepEqual(c.skillLevels, ['beginner', 'intermediate']);
   assert.equal(c.mealPlan, 'breakfast');
+  // our own text from the listing's facts, not the listing's intro sentences (#267 verifier, Aaron 2026-10-21)
+  assert.equal(c.summary, "Atlanticzin Watersports' 8-day kite camp in Essaouira (Morocco) for beginner and intermediate riders: 7 nights at Riad Inna in the medina, 12 hours of kite lessons with gear, free use of surfboards, breakfast every day, a dinner with the team and the other guests. Airport transfers cost extra.");
+  assert.equal(c.accommodation, 'Riad Inna in the Essaouira medina: private double or triple rooms with bathroom.');
   assert.deepEqual(c.languages, ['en', 'ar', 'fr', 'es']);
   assert.equal(c.includedServices.length, 9);
   assert.equal(c.optionalServices.length, 4, 'airport transfers');

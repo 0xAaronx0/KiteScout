@@ -1,8 +1,10 @@
 // ---------------------------------------------------------------------------
-// Never Too Wet To Shred - Kite Camp Greece, Fanes (Rhodes): one late-summer group week (8 nights) at Club Meltemi's
+// Too Wet to Shred - Kite Camp Greece, Fanes (Rhodes): one late-summer group week (8 nights) at Club Meltemi's
 // kite station and the basic hotel next door, breakfast and dinner, airport transfers, clinics and coaching, day trips
 // to Prasonisi and Rhodes old town; focus on intermediate / independent riders (beginner lessons as add-on).
 // Same operator as toowettoshred-brazil (separate product, separate listing).
+// Brand: "Too Wet to Shred" (page title, body, logo). "Never Too Wet to Shred" is only the WordPress site name in
+//   the feed links and the mail address never@ - not the operator's public name (#267 verifier, 2026-10-21).
 //
 // Data path (checked 2026-10-19): ONE WordPress (Divi) page, https://www.toowettoshred.com/camps/kite-camp-greece/
 //   - dates: Divi text modules with a date line ("28 August to 5 September 2027"). The page <title>, og:title and
@@ -170,7 +172,7 @@ export function parseTwtsGrContent(html: string, today = todayIso()): OfferConte
   const nights = future[0] ? Math.round((Date.parse(future[0].end) - Date.parse(future[0].start)) / 86400000) : (Number(text.match(/(\d+) nights in a beachfront/i)?.[1]) || 8);
   const fmt = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
   const summary = [
-    `Never Too Wet To Shred runs a one-week kite camp in Fanes on the west coast of Rhodes, staying in a basic hotel right behind the beach next to Club Meltemi's kite station, with daily Meltemi wind of 15 to 25 knots and no wetsuit needed.`,
+    `Too Wet to Shred runs a one-week kite camp in Fanes on the west coast of Rhodes, staying in a basic hotel right behind the beach next to Club Meltemi's kite station, with daily Meltemi wind of 15 to 25 knots and no wetsuit needed.`,
     `The ${nights} nights include breakfast and dinner, airport transfers, kite storage and rescue, two clinics with coaching, day trips to Prasonisi and Rhodes old town, two Greek dinners in town and yoga; the focus is on intermediate and independent riders, beginners can add a lesson pack.`,
     rooms.length ? `Per person: ${rooms.map(r => `${r.name.toLowerCase()} EUR ${r.price}`).join(', ')}; gear rental and lessons are add-ons.` : '',
     future.length
@@ -182,7 +184,7 @@ export function parseTwtsGrContent(html: string, today = todayIso()): OfferConte
   const imageUrls = imageCandidates(html, TWTS_GR_URL, null, 40).filter(u => !/logo|icon|favicon|flag|sweater|t-shirt|shirt|unsplash/i.test(u));
   return {
     kind: 'camp',
-    title: 'Never Too Wet To Shred Kite Camp Greece, Fanes (Rhodes)',
+    title: 'Too Wet to Shred Kite Camp Greece, Fanes (Rhodes)',
     summary,
     continent: 'Europe',
     country: 'Greece',
@@ -215,10 +217,10 @@ export function parseTwtsGrContent(html: string, today = todayIso()): OfferConte
 
 export const toowettoshredKiteCampFanes: OfferAdapter = {
   key: 'toowettoshred-kite-camp-fanes',
-  name: 'Never Too Wet To Shred - Kite Camp Greece (Fanes, Rhodes)',
+  name: 'Too Wet to Shred - Kite Camp Greece (Fanes, Rhodes)',
   kind: 'camp',
   operator: {
-    name: 'Never Too Wet To Shred',
+    name: 'Too Wet to Shred',
     websiteUrl: 'https://www.toowettoshred.com',
     rootDomain: 'toowettoshred.com',
     contactEmail: 'never@toowettoshred.com',

@@ -99,6 +99,26 @@ export async function slotTablesExist(): Promise<boolean> {
 }
 
 // --- operator --------------------------------------------------------------------
+export interface StoredOperator {
+  name: string | null; website_url: string | null; contact_email: string | null;
+  whatsapp: string | null; phone: string | null; trip_types: string[] | null;
+}
+
+/** Patch for an existing providers row: fill gaps only (a human may have curated the row), except a value the
+ *  adapter names in `operator.correct` as known-wrong, which is replaced while the row still holds exactly it. */
+export function operatorPatch(found: StoredOperator, a: Pick<OfferAdapter, 'operator' | 'kind'>): Record<string, unknown> {
+  const op = a.operator;
+  const patch: Record<string, unknown> = {};
+  if (!found.name || (op.correct?.name !== undefined && found.name === op.correct.name)) patch.name = op.name;
+  if (!found.website_url || (op.correct?.websiteUrl !== undefined && found.website_url === op.correct.websiteUrl)) patch.website_url = op.websiteUrl;
+  if (!found.contact_email && op.contactEmail) patch.contact_email = op.contactEmail;
+  if (!found.whatsapp && op.whatsapp) patch.whatsapp = op.whatsapp;
+  if (!found.phone && op.phone) patch.phone = op.phone;
+  const types = found.trip_types ?? [];
+  if (!types.includes(a.kind)) patch.trip_types = [...types, a.kind];
+  return patch;
+}
+
 async function upsertOperator(a: OfferAdapter): Promise<string> {
   const op = a.operator;
   const { data: found, error } = await supabase
@@ -106,15 +126,7 @@ async function upsertOperator(a: OfferAdapter): Promise<string> {
     .eq('root_domain', op.rootDomain).maybeSingle();
   if (error) throw new Error(`providers read failed: ${error.message}`);
   if (found) {
-    // fill gaps only; a human may have curated the existing row
-    const patch: Record<string, unknown> = {};
-    if (!found.name) patch.name = op.name;
-    if (!found.website_url) patch.website_url = op.websiteUrl;
-    if (!found.contact_email && op.contactEmail) patch.contact_email = op.contactEmail;
-    if (!found.whatsapp && op.whatsapp) patch.whatsapp = op.whatsapp;
-    if (!found.phone && op.phone) patch.phone = op.phone;
-    const types = (found.trip_types as string[] | null) ?? [];
-    if (!types.includes(a.kind)) patch.trip_types = [...types, a.kind];
+    const patch = operatorPatch(found as StoredOperator, a);
     if (Object.keys(patch).length) {
       const { error: upErr } = await supabase.from('providers').update(patch).eq('id', found.id);
       if (upErr) throw new Error(`providers update failed: ${upErr.message}`);

@@ -62,6 +62,9 @@ test('real content', async () => {
   assert.ok(c.includedServices.some(s => /Kite House at Casa Cortez/.test(s)));
   assert.equal(c.optionalServices.length, 2);
   assert.ok(c.summary.includes('Brandon Scheid and Sensi Graves'));
+  // our own level line, not the page's "open to ..." sentence (#267 verifier)
+  assert.match(c.summary, /Level: wing foilers can join at any level; kiters should already ride at intermediate level or above\./);
+  assert.ok(!/Open to wing foilers of all levels/.test(c.summary));
   assert.ok(c.imageUrls.length >= 15, `images: ${c.imageUrls.length}`);
   assert.equal(c.bookingUrl, 'https://www.realwatersports.com/products/la-ventana-supercamp-2027');
   assert.ok(!/function\s*\(|var\s+\w+\s*=/.test(c.sourceText ?? ''), 'no inline script text in sourceText');

@@ -26,5 +26,8 @@ test('ucpa cape town: content (not for beginners)', async () => {
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot, c.beginnerFriendly], ['camp', 8, 'South Africa', 'Western Cape', 'Cape Town', false]);
   assert.deepEqual(c.skillLevels, ['intermediate', 'advanced']);
   assert.match(c.summary, /Buffelsfontein game reserve/);
+  // full board, but lunch is a picnic or in local restaurants, not cooked at the villa (#267 verifier)
+  assert.match(c.summary, /lunch as a picnic or in local restaurants/);
+  assert.ok(!/Full board is cooked at the villa/.test(c.summary));
   assert.ok(c.imageUrls.every(u => /cape-town/.test(u)));
 });

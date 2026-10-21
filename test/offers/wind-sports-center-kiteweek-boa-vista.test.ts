@@ -38,7 +38,8 @@ test('wsc: content', async () => {
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot], ['camp', 8, 'Cape Verde', 'Boa Vista', 'Sal Rei, Boa Vista']);
   assert.equal(c.includedServices[0], '5 days of kitesurf course (15 hours)');
-  assert.match(c.summary, /from EUR 1,255 for one person in a single room or EUR 4,205 for 4 sharing a room/);
+  // the page's lowest prices (June to September), even though that band is dated past for the slots (#267 verifier)
+  assert.match(c.summary, /from EUR 1,195 for one person in a single room \(June to September\) or EUR 3,795 for 4 sharing a room \(June to September\)/);
   assert.ok(c.imageUrls.length >= 15);
   assert.ok(c.imageUrls.every(u => !/logo|favicon/i.test(u)));
 });

@@ -85,6 +85,8 @@ test('playa-central: content', async () => {
   assert.match(c.summary, /Beginner Kiteboarding Camp \(Jan 10-16, 2027\)/);
   assert.match(c.summary, /USD 2,599 to 3,599 per person/);
   assert.ok(!/Wingfoil Camps|Downwinder Foiling Camp/.test(c.summary));
+  // our own wording, not the page's include list (#267 verifier: 17 shared words before)
+  assert.ok(!/Every camp includes a private bedroom and bathroom/.test(c.summary));
   assert.deepEqual(c.rooms.map(r => r.name), ['Private Queen Bedroom', 'Double Room', 'Deluxe Suite']);
   assert.ok(c.includedServices.includes('Daily yoga'));
   assert.ok(c.optionalServices.includes('Non-riding companion sharing a room: USD 1,899'));
