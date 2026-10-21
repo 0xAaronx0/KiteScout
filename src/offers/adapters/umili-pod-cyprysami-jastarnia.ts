@@ -9,6 +9,15 @@
 //            "Holidays 2027 SURF INCLUSIVE"), /cottages (12 unit cards: m², max persons, gallery photos
 //            /thumb?file=...&w=1440, common equipment) and /holidays-surf-inclusive (2027 package: 25 Jun - 31 Aug,
 //            breakfast + dinner, daily 2 h water sports training "at our base SurfPoint").
+//   photos   (2026-10-21) /gallery adds the resort's own water-sports photos: kiters and a kite lesson on the Bay of
+//            Puck, the SurfPoint group on the beach. Why only 1 photo was stored before: every candidate was a
+//            /thumb?file=... URL and the shared image dedup keys a URL on its PATH only, so all 30 collapsed into
+//            the first one. Each candidate now carries "&url=%2F<file>" (the server ignores it: identical bytes,
+//            checked 2026-10-21), which the dedup reads as the photo's own key; and every candidate asks for the
+//            same 1440x960 crop ("&w=1440&h=960", centre crop), so all have equal area and the vision QC's
+//            "10 largest" are simply the first 10 in our order: og photo, then kite/beach photos interleaved with
+//            the first photo of each unit type. The kite photos are named in PC_KITE_PHOTOS (checked by eye
+//            2026-10-21); if the gallery renames them, the pool falls back to cottages + home photos.
 //   slots    none. The site prints no prices ("Check prices and availability"). Booking runs on Bookassist
 //            (hotel_id 4317, guide 823): the engine loads js.bookassist.com/scripts/BA/be.2-min.jsp and books
 //            through www.bookassist.com/conduit/bookassist.do - robots.txt of both hosts disallows /scripts/ and
@@ -16,7 +25,7 @@
 //            (bookassistpolska.pl/_rangepicker/podcyprysami) only builds the redirect form, no prices.
 //            fetchSlots returns [] ("price on request") without a request.
 // robots.txt (2026-10-12): podcyprysami.pl "Allow: /".
-// Requests per run: content 3, slots 0.
+// Requests per run: content 4 (home, cottages, surf inclusive, gallery for photos; the gallery is best effort), slots 0.
 // 2026/27 operation: offers "May Weekend 2027" (30.04 - 03.05), "June long weekend 2027" (26.05 - 30.05) and
 //   "Holidays 2027 SURF INCLUSIVE" (25 Jun - 31 Aug) on the home page.
 // Known limits: the Surf Inclusive package lists windsurfing, surfing, skimboard and SUP, not kite lessons;
@@ -30,7 +39,11 @@ const SITE = 'https://podcyprysami.pl';
 export const PC_HOME_URL = `${SITE}/en`;
 export const PC_COTTAGES_URL = `${SITE}/cottages`;
 export const PC_SURF_URL = `${SITE}/holidays-surf-inclusive`;
+export const PC_GALLERY_URL = `${SITE}/gallery`;
 const BOOKING_URL = `${SITE}/bookassist-en`;
+/** gallery photos that show kiting / the SurfPoint beach (file names, checked by eye 2026-10-21), best first */
+export const PC_KITE_PHOTOS = ['54-DSC02354.jpg', '109-DSC06210.jpg', '86-Kopia+DSC07881.jpg', '70-DSC06706.jpg', '55-DSC02778.jpg', 'DJI_0044.jpg'];
+const PC_MAX_PHOTOS = 24; // = the ingest's download cap
 
 // --- local helpers ----------------------------------------------------------------------------
 /** Visible text lines, split at block tags (scripts, styles, SVGs dropped). */
@@ -41,8 +54,39 @@ export function pcLines(html: string): string[] {
     .map(s => clean(s.replace(/<[^>]+>/g, ' ')))
     .filter(Boolean);
 }
-/** ZUU image file id -> the site's own 1440 px rendition. */
-const thumb = (file: string): string => `${SITE}/thumb?file=${file}&w=1440`;
+/**
+ * ZUU image file id -> photo candidate: a 1440x960 centre crop (equal area for every candidate, so the vision QC's
+ * "10 largest" are the first 10 in order) plus "url=%2F<file>" - ignored by the server, but the shared image dedup
+ * keys a URL on that path instead of the common "/thumb" path (which collapsed every candidate into one).
+ */
+export const pcPhoto = (file: string): string => `${SITE}/thumb?file=${file}&w=1440&h=960&url=%2F${file}`;
+/** the file id of a /thumb?file=... URL (still percent-encoded, as the site writes it) */
+export const pcFileOf = (url: string): string | null => url.match(/[?&]file=([^&"]+)/)?.[1] ?? null;
+
+/** File ids of the /gallery cards tagged "attractions" (water sports, beach, events), page order. */
+export function parsePcGalleryAttractions(html: string): string[] {
+  const out: string[] = [];
+  for (const m of html.matchAll(/class="[^"]*\btag-attractions\b[^"]*"/g)) {
+    const f = pcFileOf(html.slice(m.index!, m.index! + 1500).match(/data-zuu-image-src="([^"]+)"/)?.[1] ?? '');
+    if (f && !out.includes(f)) out.push(f);
+  }
+  return out;
+}
+
+/** Photo pool: og photo, kite/beach gallery photos interleaved with each unit's first photo, then the rest. */
+export function pcPhotoCandidates(ogUrl: string | null, units: PcUnit[], galleryHtml: string | null, homeFiles: string[]): string[] {
+  const gallery = galleryHtml ? parsePcGalleryAttractions(galleryHtml) : [];
+  const kite = PC_KITE_PHOTOS.map(n => gallery.find(f => f.endsWith(`%2F${n}`))).filter((f): f is string => !!f);
+  const firsts = units.map(u => (u.photos[0] ? pcFileOf(u.photos[0]) : null)).filter((f): f is string => !!f);
+  const og = ogUrl ? pcFileOf(ogUrl) : null;
+  const files: string[] = og ? [og] : [];
+  for (let i = 0; i < Math.max(kite.length, firsts.length); i++) {
+    if (kite[i]) files.push(kite[i]);
+    if (firsts[i]) files.push(firsts[i]);
+  }
+  files.push(...units.flatMap(u => u.photos.slice(1, 3).map(pcFileOf).filter((f): f is string => !!f)), ...homeFiles);
+  return [...new Set(files)].slice(0, PC_MAX_PHOTOS).map(pcPhoto);
+}
 
 // --- pure parsers -----------------------------------------------------------------------------
 export interface PcUnit { id: string; name: string; group: string; areaM2: number | null; maxPersons: number | null; photos: string[] }
@@ -109,7 +153,7 @@ export function parsePcSurfInclusive(html: string): { season: string | null; ite
   return { season, items };
 }
 
-export interface PcPages { home: string; cottages: string; surf: string }
+export interface PcPages { home: string; cottages: string; surf: string; gallery?: string | null }
 
 export function parsePodCyprysamiContent(p: PcPages): OfferContent {
   const home = pcLines(p.home);
@@ -131,13 +175,10 @@ export function parsePodCyprysamiContent(p: PcPages): OfferContent {
     features: u.group === 'lodges' ? equipment : [],
   }));
 
-  const imageUrls: string[] = [];
   const og = meta(p.home, 'og:image');
   const homeFiles = [...p.home.matchAll(/data-zuu-image-file="([^"]+)"/g)].map(m => m[1])
     .filter(f => /^domki-pod-cyprysami%2Fuser%2F(Atuty|Domki|Restauracja|Joga|Atrakcje|Galeria|temp)%2F/.test(f) && !/Ustronie|Ruciane|logo|\.svg/i.test(f));
-  for (const u of [og ? og.replace(/&amp;/g, '&') : null, ...units.flatMap(x => x.photos.slice(0, 3)), ...homeFiles.map(thumb)]) {
-    if (u && !imageUrls.includes(u)) imageUrls.push(u);
-  }
+  const imageUrls = pcPhotoCandidates(og ? og.replace(/&amp;/g, '&') : null, units, p.gallery ?? null, homeFiles);
 
   const summary = [
     `Umili Pod Cyprysami is a surf and family resort in Jastarnia on the Hel Peninsula in northern Poland, close to the Baltic beach and the Bay of Puck, with ${cottages.length || 9} types of heated, air-conditioned cottages${areas.length ? ` (${Math.min(...areas)}-${Math.max(...areas)} m², up to ${Math.max(...persons)} persons)` : ''} with terrace or garden, plus double rooms, a 6-bed apartment and a 6-bed hostel room.`,
@@ -175,7 +216,7 @@ export function parsePodCyprysamiContent(p: PcPages): OfferContent {
     mealPlan: null, // room-only by default; breakfast a la carte, half board in packages
     languages: ['pl', 'en'],
     rooms,
-    imageUrls: imageUrls.slice(0, 30),
+    imageUrls,
     heroVideoUrl: null,
     sourceUrl: PC_HOME_URL,
     bookingUrl: BOOKING_URL,
@@ -207,9 +248,9 @@ export const umiliPodCyprysamiJastarnia: OfferAdapter = {
   url: PC_HOME_URL,
   slotMethod: 'booking_engine',
   instantBooking: true,
-  fetchBudget: 3,
+  fetchBudget: 4,
   confidence: 'low', // no prices or availability readable (Bookassist robots-blocked)
-  async fetchContent() {
+  async fetchContent(ctx) {
     const [home, cottages, surf] = [
       await fetchText(PC_HOME_URL, { accept: 'text/html' }),
       await fetchText(PC_COTTAGES_URL, { accept: 'text/html' }),
@@ -217,7 +258,10 @@ export const umiliPodCyprysamiJastarnia: OfferAdapter = {
     ];
     const units = parsePcUnits(cottages);
     if (units.length < 5) throw new Error(`umili-pod-cyprysami: unit cards not found on /cottages (${units.length} parsed)`);
-    return parsePodCyprysamiContent({ home, cottages, surf });
+    let gallery: string | null = null;
+    try { gallery = await fetchText(PC_GALLERY_URL, { accept: 'text/html' }); }
+    catch (e) { ctx.note(`umili-pod-cyprysami: photo page ${PC_GALLERY_URL} failed (${(e as Error).message})`); }
+    return parsePodCyprysamiContent({ home, cottages, surf, gallery });
   },
   async fetchSlots(ctx): Promise<Slot[]> {
     ctx.note('umili-pod-cyprysami: no prices on the site; Bookassist (/scripts/, /conduit/) is disallowed by robots.txt - price on request');

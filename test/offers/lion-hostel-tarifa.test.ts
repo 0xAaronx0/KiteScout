@@ -1,10 +1,12 @@
-// Lion Hostel Tarifa by Rebels: replays the hostel and packs pages recorded 2026-10-12 (scripts and styles trimmed).
+// Lion Hostel Tarifa by Rebels: replays the hostel and packs pages recorded 2026-10-12 (scripts and styles trimmed) and
+// the media-library search (photos) recorded 2026-10-21 (trimmed to source_url + width/height/file).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   lionHostelTarifa, buildLionSlots, lionCoords, lionLines, parseLionPacks, parseLionRooms,
+  lionMediaPhotos, lionPhotoCandidates, lionStyleBackgrounds, type LionMedia,
 } from '../../src/offers/adapters/lion-hostel-tarifa.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
@@ -15,6 +17,7 @@ const read = (prefix: string) => readFileSync(join(DIR, files.find(f => f.starts
 const ctx = { note: () => {}, incomplete: () => {} };
 const hostel = read('rebelstarifa.com_tarifa-hostel_.');
 const packs = read('rebelstarifa.com_packs-kitesurf-accommodation_.');
+const media = JSON.parse(read('rebelstarifa.com_wp-json_wp_v2_media_search_hostel')) as LionMedia[];
 
 test('lion: pack cards (3/5/7 days, price per person by group size)', () => {
   const p = parseLionPacks(packs);
@@ -56,6 +59,21 @@ test('lion: content', async () => {
   assert.match(c.summary, /packs of 3, 5 or 7 days .* from EUR 199 per person in a shared room/);
   assert.ok(c.includedServices.includes('Free WIFI'));
   assert.ok(!c.includedServices.some(s => /Happy Hours/.test(s)));
-  assert.equal(c.imageUrls.length, 21);
+  assert.equal(c.imageUrls.length, 24);
   assert.ok(c.imageUrls.every(u => /\.jpe?g$/.test(u)));
+  assert.deepEqual(c.imageUrls, lionPhotoCandidates(hostel, media));
+});
+
+test('lion: photos = media-library hostel photos (largest first), hero background, page gallery', () => {
+  const up = 'https://rebelstarifa.com/wp-content/uploads/';
+  assert.ok(lionStyleBackgrounds(hostel).includes(`${up}2024/05/DSC0633-scaled.jpg`)); // hero, only in a <style> rule
+  const m = lionMediaPhotos(media);
+  assert.deepEqual(m.slice(0, 3), [`${up}2024/05/DSC0633-scaled.jpg`, `${up}2024/05/2-1682081947564.jpg`, `${up}2024/05/3-_DSC0630-e1768842275997.jpg`]);
+  assert.ok(!m.some(u => /tarifa-beach-hostel|kite-tarifa-hostel\.jpg/.test(u))); // < 500x330 per media_details
+  const all = lionPhotoCandidates(hostel, media);
+  assert.deepEqual(all.slice(0, m.length), m);
+  assert.equal(new Set(all).size, all.length);
+  assert.ok(all.every(u => !/\.png|logo|special-offer|unidad|icon/i.test(u)));
+  // media search failed: hero + gallery only
+  assert.equal(lionPhotoCandidates(hostel, null)[0], `${up}2024/05/DSC0633-scaled.jpg`);
 });

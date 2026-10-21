@@ -1,4 +1,5 @@
-// Kahuna Adults Kitesurf & Surf Camp (Kiti, Larnaca): replays the page recorded 2026-10-19 (trimmed, form token redacted).
+// Kahuna Adults Kitesurf & Surf Camp (Kiti, Larnaca): replays the page recorded 2026-10-19 (trimmed, form token redacted)
+// and the station's /kitesurf and /gallery pages recorded 2026-10-21 (trimmed; photos only).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
@@ -39,5 +40,14 @@ test('kahuna: content', async () => {
   assert.deepEqual(c.spotCoords, { lat: 34.8171, lng: 33.5469 });
   assert.match(c.summary, /next dates are not published yet \(2026: 11 June - 13 June, 8 July - 10 July\)/);
   assert.ok(c.imageUrls.length >= 1 && c.imageUrls.every(u => !/redbull|logo/i.test(u)));
-  assert.equal((await kahunaAdultsKiteCampKiti.fetchContent({ note: () => {}, incomplete: () => {} })).title, c.title);
+  const live = await kahunaAdultsKiteCampKiti.fetchContent({ note: () => {}, incomplete: () => {} });
+  assert.equal(live.title, c.title);
+  // the camp page's two logo tiles + the /assets/ originals of the /kitesurf lesson photos and the /gallery event photos
+  const A = 'https://kahunasurfhouse.eu/assets/';
+  assert.equal(live.imageUrls.length, 16);
+  for (const f of ['dsc09753.jpg', 'k03--sma-1704192041.JPG', 'del-1704192878.jpg', 'kahuna_surfhouse_king_of_kite103.jpg', 'kahuna_surfhouse_king_of_kite1.jpg']) {
+    assert.ok(live.imageUrls.includes(A + f), f);
+  }
+  // no theme images, SEO banner, logos or resized /img/containers copies
+  assert.ok(!live.imageUrls.some(u => /redbull|logo|banner|icon--|\/site\/themes\/|\/img\/containers\/main\/\.\/kahuna_surfhouse/i.test(u)));
 });

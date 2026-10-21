@@ -16,10 +16,19 @@
 //            package, person; "FULL" -> sold_out, else on_request (contact by phone / mail; no online booking ->
 //            instantBooking false).
 //   content  the same page (wind / wave text, inclusions, coach photos).
+//   photos   (2026-10-21) the camp page only carries the 4 coach portraits (400x400, below the size floor). The site
+//            has no gallery, blog or post sitemap (sitemap.xml lists only page-sitemap.xml), and no photo on it is
+//            labelled or recognisable as the Pacific wave camp: all action shots are from the Los Barriles school on
+//            the Sea of Cortez. So, per Aaron's brief, only a few ExotiKite kiting photos are added (EXO_KITE_PHOTOS):
+//            the home page's "Wave Camps" tile (wave-camps-los-barriles-baja), a rider jumping in chop (lessons page),
+//            the kiters on the wind page and the school's lesson photo (about page), read from the page sitemap's
+//            <image:loc> list (1 request; robots allows /wp-content/uploads/, only /assets/ is disallowed). Lifestyle,
+//            yoga, kids, rental-house, efoil and SUP photos are not used.
 // robots.txt (2026-10-19): only /assets/ disallowed.
 // State 2026-10-19: all five 2026 weeks are past -> 0 slots until the page shows the 2027 weeks; the parser reads
 //   whatever year and weeks the heading block lists.
-// Requests per run: 1 (memoised across content + slots).
+// Requests per run: slots 1, content 2 (camp page memoised + page-sitemap.xml for photos; a failing sitemap only
+//   drops those photos).
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { imageCandidates, iso, monthOf, parseAmount, todayIso } from '../parse.js';
@@ -28,6 +37,22 @@ import { wixLines } from './kite-buen-hombre-eco-lodge.js';
 
 const SITE = 'https://exotikite.com';
 export const EXO_URL = `${SITE}/baja-wave-camps/`;
+export const EXO_PAGE_SITEMAP_URL = `${SITE}/page-sitemap.xml`;
+/** ExotiKite kiting photos used for the wave camps (Los Barriles, no Pacific wave-camp photo exists on the site). */
+const EXO_KITE_PHOTOS = new Set([
+  'wave-camps-los-barriles-baja.webp', 'advanced-kiteboarding-lessons.jpg',
+  'kite-wind-conditions-los-barriles-baja-mexico.webp', 'exotikite-los-barriles-kite-boarding-school.webp',
+]);
+
+/** The chosen kiting photos from the page sitemap's <image:loc> entries (original uploads). */
+export function parseExoSitePhotos(xml: string): string[] {
+  const out: string[] = [];
+  for (const m of xml.matchAll(/<image:loc>\s*(https?:\/\/exotikite\.com\/wp-content\/uploads\/[^<\s]+)\s*<\/image:loc>/g)) {
+    const u = m[1].replace(/^http:/, 'https:');
+    if (EXO_KITE_PHOTOS.has(u.split('/').pop() ?? '') && !out.includes(u)) out.push(u);
+  }
+  return out;
+}
 /** The site prints "$" only; USD inferred (see header). */
 const CURRENCY = 'USD';
 
@@ -91,7 +116,7 @@ export function buildExoSlots(c: ExoCamps, today: string): Slot[] {
   }));
 }
 
-export function parseExoContent(html: string, today = todayIso()): OfferContent {
+export function parseExoContent(html: string, today = todayIso(), sitePhotos: string[] = []): OfferContent {
   const c = parseExoCamps(html);
   const text = lines(html).join(' | ');
   const next = c.weeks.filter(w => w.start >= today);
@@ -135,7 +160,7 @@ export function parseExoContent(html: string, today = todayIso()): OfferContent 
     mealPlan: 'full_board',
     languages: ['en'],
     rooms: [],
-    imageUrls: imgs.slice(0, 30),
+    imageUrls: [...new Set([...imgs, ...sitePhotos])].slice(0, 30),
     heroVideoUrl: null,
     sourceUrl: EXO_URL,
     bookingUrl: EXO_URL,
@@ -170,7 +195,16 @@ export const exotikiteBajaWaveCamps: OfferAdapter = {
   slotMethod: 'html_dates',
   liveAvailability: false,
   instantBooking: false,
-  fetchBudget: 2,
-  async fetchContent() { return parseExoContent(await page(EXO_URL)); },
+  fetchBudget: 3,
+  async fetchContent(ctx) {
+    const html = await page(EXO_URL);
+    let photos: string[] = [];
+    try {
+      photos = parseExoSitePhotos(await fetchText(EXO_PAGE_SITEMAP_URL, { accept: 'application/xml' }));
+    } catch (e) {
+      ctx.note(`page sitemap for photos unavailable: ${e instanceof Error ? e.message : String(e)}`);
+    }
+    return parseExoContent(html, todayIso(), photos);
+  },
   fetchSlots: ctx => fetchExoSlots(todayIso(), ctx),
 };

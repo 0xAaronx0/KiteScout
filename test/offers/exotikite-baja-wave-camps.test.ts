@@ -1,4 +1,5 @@
-// ExotiKite Baja Wave Camps: replays the camp page recorded 2026-10-19 (all 2026 weeks past -> no slots).
+// ExotiKite Baja Wave Camps: replays the camp page recorded 2026-10-19 (all 2026 weeks past -> no slots) and the
+// page sitemap recorded 2026-10-21 (image list for the kiting photos).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
@@ -38,5 +39,15 @@ test('exotikite: content, region-level location without a spot', async () => {
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot], ['camp', 8, 'Mexico', 'Baja California Sur Pacific coast', 'Pacific coast near San Juanico']);
   assert.match(c.summary, /The 2027 weeks are not published yet/);
-  assert.equal(contentProblem(await exotikiteBajaWaveCamps.fetchContent(ctx)), null);
+  const live = await exotikiteBajaWaveCamps.fetchContent(ctx);
+  assert.equal(contentProblem(live), null);
+  // the 4 coach portraits of the camp page + 4 ExotiKite kiting photos from the page sitemap (Los Barriles; the site
+  // has no Pacific wave-camp photo); no lifestyle, yoga, kids, rental-house or real-estate pictures
+  const U = 'https://exotikite.com/wp-content/uploads/2022/10/';
+  assert.deepEqual(live.imageUrls, [
+    'Justi.jpg', 'megan.jpg', 'ian.jpg', 'jose.jpg', 'wave-camps-los-barriles-baja.webp',
+    'exotikite-los-barriles-kite-boarding-school.webp', 'advanced-kiteboarding-lessons.jpg',
+    'kite-wind-conditions-los-barriles-baja-mexico.webp',
+  ].map(f => U + f));
+  assert.ok(!live.imageUrls.some(u => /yoga|kid|vacation|hotel|Megan\.jpeg|\/assets\//.test(u)));
 });

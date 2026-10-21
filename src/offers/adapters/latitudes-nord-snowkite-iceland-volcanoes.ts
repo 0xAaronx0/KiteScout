@@ -2,6 +2,7 @@
 // Latitudes Nord tour (kind 'tour', itinerarySpots = the route): Snowkite exploration on Iceland's volcanoes: Snæfellsnes, Langjökull / Kerlingarfjöll, Fjallabak, Eyjafjallajökull / Mýrdalsjökull; price on request; presented as an exploration project, so the summary does not claim it runs yearly.
 // Listing row = journey 48 on www.latitudes-nord.fr/prochains-voyages; facts hand-read from its trip-sheet PDF.
 // State 2026-10-19: only the 2026 date is listed (17 Apr - 1 May 2026, past) -> 0 slots, summary "2027 dates not yet published".
+// Photos: only the listing vignette - the own Iceland reports are summer treks (misleading for a winter trip).
 // Parser, product data, robots / request notes and limits: latitudes-nord-finse-snowkite-weeks.ts (shared, memoised:
 // the five Latitudes Nord adapters need 1 request per run together).
 // ---------------------------------------------------------------------------

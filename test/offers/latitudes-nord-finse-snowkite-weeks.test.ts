@@ -1,11 +1,12 @@
 // Latitudes Nord (Finse camp + the four tours that share its parser): replays /prochains-voyages recorded 2026-10-19
-// (scripts and comments trimmed). Trip-sheet facts are constants (LN_PDF), released only while the same PDF is linked.
+// (scripts and comments trimmed) and the three trip reports recorded 2026-10-21 (photos). Trip-sheet facts are constants (LN_PDF), released only while the same PDF is linked.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  latitudesNordFinseSnowkiteWeeks, buildLnSlots, LN_PRODUCTS, parseFrenchRange, parseLnContent, parseLnRows,
+  latitudesNordFinseSnowkiteWeeks, buildLnSlots, LN_PRODUCTS, LN_STORIES, lnStoryImageUrls, parseFrenchRange, parseLnContent,
+  parseLnRows, parseLnStoryImages,
 } from '../../src/offers/adapters/latitudes-nord-finse-snowkite-weeks.js';
 import { latitudesNordSnowkiteLightRyfylkeSetesdal } from '../../src/offers/adapters/latitudes-nord-snowkite-light-ryfylke-setesdal.js';
 import { latitudesNordSnowkiteCapNord } from '../../src/offers/adapters/latitudes-nord-snowkite-cap-nord.js';
@@ -100,6 +101,73 @@ test('latitudes nord: every adapter content passes the gate', async () => {
     const c = await a.fetchContent(ctx);
     assert.equal(contentProblem(c), null, a.key);
     assert.equal(c.kind, a.kind);
-    assert.ok(c.imageUrls.length >= 1 && c.imageUrls.every(u => u.startsWith('https://www.latitudes-nord.fr/ups/images/journey/')), a.key);
+    assert.ok(c.imageUrls.length >= 1 && c.imageUrls.every(u => /^https:\/\/www\.latitudes-nord\.fr\/ups\/images\/(journey|story)\//.test(u)), a.key);
   }
+});
+
+// --- photos from the operator's own trip reports (recorded 2026-10-21, text blocks trimmed) ----------------------
+const story = (path: string): string =>
+  readFileSync(join(DIR, readdirSync(DIR).find(f => f.startsWith(`www.latitudes-nord.fr_${path.slice(1).replace(/\//g, '_')}`.slice(0, 80)))!), 'utf8');
+const allStories = (): Record<string, string> =>
+  Object.fromEntries(Object.values(LN_STORIES).flat().map(st => [st.path, story(st.path)]));
+const names = (urls: string[]): string[] => urls.map(u => decodeURIComponent(u.split('/').pop()!));
+
+test('latitudes nord: trip-report photos parse with captions (cover first)', () => {
+  const imgs = parseLnStoryImages(story('/carnets-et-photos/snowkite-dans-le-skarvheimen-hardanger-norvege'));
+  assert.equal(imgs.length, 46);
+  assert.equal(imgs[0].src, '/ups/images/story/13/IMG_0483.jpg');
+  assert.match(imgs.find(i => i.src.endsWith('/P1100745.jpg'))!.caption, /refuge de Finsehytta/);
+  const varanger = parseLnStoryImages(story('/carnets-et-photos/snowkite-en-peninsule-du-varanger-extremite-nord-est-de-la-norvege'));
+  assert.equal(varanger.length, 45);
+  assert.ok(varanger.slice(1).every(i => i.src.startsWith('/ups/images/journey/38/')));
+});
+
+test('latitudes nord: every hand-picked photo is on its recorded report', () => {
+  for (const [key, list] of Object.entries(LN_STORIES)) {
+    for (const st of list) assert.equal(lnStoryImageUrls(story(st.path), st).length, st.pick.length, `${key} ${st.path}`);
+  }
+});
+
+test('latitudes nord: each trip gets photos of its own region, junk and other trips excluded', async () => {
+  const st = allStories();
+  const img = (p: keyof typeof LN_PRODUCTS) => parseLnContent(html, LN_PRODUCTS[p], TODAY, st).imageUrls;
+  const finse = img('finse');
+  assert.equal(finse.length, 12);
+  assert.ok(finse.slice(0, 2).every(u => u.includes('/ups/images/journey/')), 'listing vignettes stay first');
+  assert.ok(names(finse).includes('P1100745.jpg') && names(finse).includes('P1130401.jpg'), 'Finsehytta hut + Finse village');
+  assert.ok(finse.slice(2).every(u => u.includes('/ups/images/story/13/')));
+  const light = img('light');
+  assert.equal(light.length, 10);
+  assert.ok(light.slice(1).every(u => u.includes('/ups/images/story/36/')));
+  assert.ok(!names(light).includes('IMG_4330 copie.jpg'), 'no portrait of the guides');
+  const varanger = img('varanger');
+  assert.equal(varanger.length, 12);
+  for (const junk of ['P1110685bis.jpg', 'P1110991bis.jpg', 'Photo Klemet.jpg', 'P1120159bis.jpg']) {
+    assert.ok(!names(varanger).includes(junk), `walrus / road / third-party / reindeer excluded: ${junk}`);
+  }
+  // Iceland: the own Iceland reports are summer treks (misleading for a winter trip) -> listing vignette only
+  assert.equal(LN_STORIES[LN_PRODUCTS.iceland.key], undefined);
+  assert.deepEqual(names(img('iceland')), ['P1000788 bis.jpg']);
+  // Cap Nord: no report on the site, and the Varanger report is not borrowed
+  assert.deepEqual(names(img('capnord')), ['P1230583.jpg']);
+});
+
+test('latitudes nord: photos only while the report still shows them; a missing report keeps the vignette', () => {
+  const path = '/carnets-et-photos/snowkite-dans-le-skarvheimen-hardanger-norvege';
+  const trimmed = story(path).replace(/<img class="test" src="\/ups\/images\/story\/13\/P1100745\.jpg"[^>]*>/, '');
+  const urls = parseLnContent(html, LN_PRODUCTS.finse, TODAY, { [path]: trimmed }).imageUrls;
+  assert.equal(urls.length, 11);
+  assert.ok(!names(urls).includes('P1100745.jpg'));
+  assert.equal(parseLnContent(html, LN_PRODUCTS.finse, TODAY, {}).imageUrls.length, 2);
+});
+
+test('latitudes nord: Iceland content asks for the listing only (no report request)', async () => {
+  // replay throws on any page without a fixture (the Iceland reports have none), the adapter would turn that into a note
+  const notes: string[] = [];
+  const c = await latitudesNordSnowkiteIcelandVolcanoes.fetchContent({ note: n => notes.push(n), incomplete: () => {} });
+  assert.deepEqual(notes, []);
+  assert.deepEqual(names(c.imageUrls), ['P1000788 bis.jpg']);
+  assert.equal(latitudesNordSnowkiteIcelandVolcanoes.fetchBudget, 2);
+  assert.equal(latitudesNordFinseSnowkiteWeeks.fetchBudget, 3);
+  assert.deepEqual(await latitudesNordSnowkiteIcelandVolcanoes.fetchSlots(ctx), buildLnSlots(parseLnRows(html), LN_PRODUCTS.iceland, todayIso()));
 });

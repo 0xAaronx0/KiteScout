@@ -11,10 +11,18 @@
 //            No dates, no year, no booking engine: requests go through a contact form, e-mail or WhatsApp.
 //   content  the same page (levels, spot, inclusions) + /contact-us/ ("Location: Kitepower, El Gouna",
 //            e-mail, phone/WhatsApp).
+//   photos   (2026-10-21) the lessons page only carries one real photo (the rest are 512x512 skill-level
+//            icons), so photo candidates also come from three own pages that show the El Gouna station and
+//            its lessons: / (private coaching, teaching on the beach, students jumping, team banner),
+//            /about-us/why-kite-tribe/ (beginner course, lesson splashes, station beach) and
+//            /about-us/el-gouna/ (Kitepower station, kite launch), plus the contact page's beach photo.
+//            Kite-safari / camp / girls-trip / wing-foil teasers, staff headshots, skill icons and the
+//            weather chart are dropped (other products or not photos). Best effort: a failed photo page
+//            only costs its photos.
 // Current operation: page dateModified 2026-03-05 (JSON-LD WebPage); the site's kite safari page lists
 //   "2026 Safari Dates" up to 3-10 October (not read per run).
 // robots.txt www.kitetribe.org (2026-10-12): only /wp-admin/ disallowed.
-// Requests per run: content 2, slots 1 (the lessons page is memoised for 10 minutes).
+// Requests per run: content 5 (lessons, contact, 3 photo pages), slots 1 (pages memoised for 10 minutes).
 // Parsed: 10 slots = one per course card, EUR per student for the whole course (priceUnit 'package',
 //   priceBasis 'person'), occupancy 1 for private courses, no dates, availability 'on_request'.
 // Known limits:
@@ -30,6 +38,8 @@ import type { OfferAdapter, OfferContent, Slot } from '../types.js';
 const SITE = 'https://www.kitetribe.org';
 export const KT_LESSONS_URL = `${SITE}/lessons/kitesurfing/`;
 export const KT_CONTACT_URL = `${SITE}/contact-us/`;
+/** own pages with El Gouna station / lesson photos (the lessons page has only one) */
+export const KT_PHOTO_URLS = [`${SITE}/`, `${SITE}/about-us/why-kite-tribe/`, `${SITE}/about-us/el-gouna/`];
 
 // --- local helpers ----------------------------------------------------------------
 const memo = new Map<string, { at: number; p: Promise<string> }>();
@@ -113,7 +123,25 @@ export function parseKtContact(html: string): KtContact {
 }
 
 // --- content ----------------------------------------------------------------------
-export function parseKtContent(lessonsHtml: string, contactHtml: string): OfferContent {
+/**
+ * Photo candidates across the own pages. Dropped: the "Explore your options" teasers (kite safari boat,
+ * group travel, girls trip, camps), wing-foil photos, the 512x512 skill-level icons (Kite_beginner /
+ * Kite_intermediate / Kite_advanced), staff headshots named after a person only, testimonials, the
+ * weather chart and site chrome.
+ */
+export function ktPhotoCandidates(pages: Array<{ html: string; url: string }>): string[] {
+  const out: string[] = [];
+  for (const p of pages) {
+    if (!p.html) continue;
+    for (const u of imageCandidates(p.html, p.url, null, 40)) {
+      if (/logo|trustindex|hyperdrop|gravatar|googleusercontent|\.svg|cropped-|safari|grouptravel|girlstrip|zodiac|ocean-dream|kite-camp|wing-?foil|testimonial|weather-chart|\/Kite_(?:beginner|intermediate|advanced)\.|\/(?:Ursi|Mia|Wael|naquib|Abdallah)\.|Kitetribe_team_|Kite-Tribe-Team-/i.test(u)) continue;
+      if (!out.includes(u)) out.push(u);
+    }
+  }
+  return out;
+}
+
+export function parseKtContent(lessonsHtml: string, contactHtml: string, photoPages: Array<{ html: string; url: string }> = []): OfferContent {
   const root = visible(lessonsHtml);
   const main = root.querySelector('#main-content') ?? root.querySelector('main') ?? root;
   const text = txt(main);
@@ -150,9 +178,11 @@ export function parseKtContent(lessonsHtml: string, contactHtml: string): OfferC
     if (/IKO Li[cs]en[cs]e/i.test(b)) included.add('IKO licence after successful completion (beginner courses)');
   }
 
-  const imageUrls = imageCandidates(lessonsHtml, KT_LESSONS_URL, null, 40)
-    // the "Explore your options" teasers (safari boat, group travel, girls trip) are not course photos
-    .filter(u => !/logo|trustindex|hyperdrop|gravatar|googleusercontent|\.svg|cropped-|safari|grouptravel/i.test(u));
+  const imageUrls = ktPhotoCandidates([
+    { html: lessonsHtml, url: KT_LESSONS_URL },
+    ...photoPages,
+    { html: contactHtml, url: KT_CONTACT_URL },
+  ]);
 
   return {
     kind: 'course',
@@ -202,9 +232,16 @@ export const kitetribeElGouna: OfferAdapter = {
   },
   url: KT_LESSONS_URL,
   slotMethod: 'price_table',
-  fetchBudget: 3,
-  async fetchContent() {
-    return parseKtContent(await page(KT_LESSONS_URL), await page(KT_CONTACT_URL));
+  fetchBudget: 6,
+  async fetchContent(ctx) {
+    const lessons = await page(KT_LESSONS_URL);
+    const contact = await page(KT_CONTACT_URL);
+    const photoPages: Array<{ html: string; url: string }> = [];
+    for (const url of KT_PHOTO_URLS) {
+      try { photoPages.push({ html: await page(url), url }); }
+      catch (e) { ctx.note(`kitetribe: photo page ${url} failed (${(e as Error).message})`); }
+    }
+    return parseKtContent(lessons, contact, photoPages);
   },
   async fetchSlots() {
     const courses = parseKtCourses(await page(KT_LESSONS_URL));

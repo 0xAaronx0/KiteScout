@@ -3,7 +3,8 @@
 // flights Naha - Kumejima, 2 nights hotel with breakfast, transfers + rental car and a boat charter on all three days
 // to the uninhabited Hatenohama sandbar for riding. Riders only ("only those who can go upwind", safety / rescue).
 // Kind 'tour' (flight + island + daily boat trips; itinerarySpots Naha -> Kumejima -> Hatenohama).
-// This file also holds the shared KITECLUB tour-post parser used by kiteclub-okinawa-kohama-kite-tour.ts.
+// This file also holds the shared KITECLUB tour-post parser and trip-report photo helper used by
+// kiteclub-okinawa-kohama-kite-tour.ts.
 //
 // Data path (checked 2026-10-19): WordPress, server-rendered, Japanese only.
 //   index    /category/info/tours/ - the "ツアー" (tours) blog category. Page 1 prints the newest ~18 posts IN FULL
@@ -21,12 +22,21 @@
 //            go into availabilityText as "last edition". Availability 'on_request' (apply by replying with full
 //            name and age; "参加人数に限りあり" = limited places is generic, no count). Past dates are dropped.
 //   content  the same announcement (inclusions, hotel, rules) + the previous edition (prices) from the index.
+//   photos   (2026-10-21) the 2021+ Kumejima posts are text / YouTube only, so photos come from the operator's own
+//            older Kumejima posts via the WordPress REST search /wp-json/wp/v2/posts?search=久米島 (per_page 50: all
+//            56 matches back to 2013 minus the oldest, small ones): trip reports 2017-2019 (Hatenohama sandbar,
+//            kiting, charter boat, groups) and the 2016-2020 announcements, which here carry real photos of the
+//            previous trip (group at the Eef Beach Hotel, sandbar kiting), not screenshots. General event-plan posts
+//            ("予定" / "情報") are skipped, max 3 photos per post, duplicates re-uploaded under the same file name
+//            (IMG_8519, P4080354) or as "...-コピー" (copy) are dropped, newest 14 kept (2013-2015 photos are small or
+//            hotel / dinner shots). Shared helper parseKcoReportImages.
 // robots.txt (2026-10-19): only /wp-admin/ disallowed.
-// Requests per run: 1 (the index page, memoised across content + slots and shared with the Kohama adapter).
-// Known limits / doubts: no photos in the Kumejima posts (imageUrls may be empty; the ingest reports it). No
+// Requests per run: 1 for slots (the index page, memoised across content + slots and shared with the Kohama
+//   adapter), +1 for content (the REST search for the photos).
+// Known limits / doubts: the photos are 2016-2020 editions (same sandbar, older hotel in some years). No
 //   spotCoords (none on the site). The 2027 hotel is "Eef Beach Hotel" (changed from 2026).
 // ---------------------------------------------------------------------------
-import { fetchText } from '../http.js';
+import { fetchJson, fetchText } from '../http.js';
 import { collapse, iso, parse, parseAmount, todayIso, type HTMLElement } from '../parse.js';
 import type { FetchContext, OfferAdapter, OfferContent, OperatorRef, Slot } from '../types.js';
 
@@ -212,6 +222,58 @@ export function kcoIncluded(t: KcoTour): string[] {
   });
 }
 
+// --- shared KITECLUB trip-report photos (WordPress REST search) --------------------------------------------------
+export interface KcoWpPost { id: number; title?: { rendered?: string }; content?: { rendered?: string } }
+
+/** WordPress REST search over the operator's own posts (robots.txt only disallows /wp-admin/). */
+export function kcoSearchUrl(term: string, perPage = 30): string {
+  return `${KCO_SITE}/wp-json/wp/v2/posts?search=${encodeURIComponent(term)}&per_page=${perPage}&_fields=id,title,content`;
+}
+
+/** Announcement / event-plan titles ("開催のお知らせ", "開催決定", "イベント予定", "イベント情報"); everything else naming
+ *  the place is a trip report. (A body test for "日程" would drop the 2018 Kohama report, which mentions its schedule.) */
+const KCO_ANNOUNCEMENT_TITLE = /お知らせ|開催決定|予定|情報/;
+/** General yearly event plans: skipped even when announcements are allowed (their photos can show other events). */
+const KCO_EVENT_PLAN_TITLE = /予定|情報/;
+
+export interface KcoReportImageOpts {
+  /** photos per post: the vision QC only sees the 10 largest candidates, so a cap keeps that pool mixed across
+   *  editions instead of one report's dinner shots (default 3) */
+  perPost?: number;
+  /** also use tour announcements (not event plans): right where they carry trip photos, wrong where they carry
+   *  tide-table / flight screenshots (Kohama 2025/2026) (default false) */
+  announcements?: boolean;
+  /** drop re-uploads of the same photo: same file name in another month folder, or a "-コピー" (copy) file (default false) */
+  dedupe?: boolean;
+}
+
+/** Photos from the operator's own posts whose title names the place, newest post first, original uploads. */
+export function parseKcoReportImages(posts: KcoWpPost[], place: RegExp, opts: KcoReportImageOpts = {}): string[] {
+  const perPost = opts.perPost ?? 3;
+  const out: string[] = [];
+  const names = new Set<string>();
+  for (const p of [...posts].sort((a, b) => b.id - a.id)) {
+    const html = p.content?.rendered ?? '';
+    const title = p.title?.rendered ?? '';
+    if (!place.test(title) || (opts.announcements ? KCO_EVENT_PLAN_TITLE : KCO_ANNOUNCEMENT_TITLE).test(title)) continue;
+    const imgs = [...html.matchAll(/<img[^>]+src="([^"]+)"/g)].map(m => m[1])
+      .filter(s => /\/wp-content\/uploads\//.test(s) && !/btn_|logo/i.test(s))
+      .map(s => s.replace(/-\d{2,4}x\d{2,4}(?=\.(?:jpe?g|png|webp)$)/i, ''));
+    let n = 0;
+    for (const u of imgs) {
+      if (n >= perPost || out.includes(u)) continue;
+      if (opts.dedupe) {
+        const name = decodeURIComponent(u.split('/').pop() ?? '').toLowerCase();
+        if (/コピー|[-_ ]copy\b/i.test(name) || names.has(name)) continue;
+        names.add(name);
+      }
+      out.push(u);
+      n++;
+    }
+  }
+  return out;
+}
+
 export function kcoImages(posts: KcoPost[]): string[] {
   const out: string[] = [];
   for (const p of posts) for (const u of p.images) if (!out.includes(u)) out.push(u);
@@ -271,7 +333,16 @@ export function kcoDateText(t: KcoTour): string {
 // --- Kumejima ----------------------------------------------------------------------------------------
 const PLACE = /久米島/;
 
-export function parseKumejimaContent(indexHtml: string, today: string): OfferContent {
+/** The REST search behind the Kumejima photos (per_page 50 so the 2016-2020 posts stay in the window for years). */
+export const KUMEJIMA_REPORTS_URL = kcoSearchUrl('久米島', 50);
+
+/** Newest 14 photos (the 2016-2020 editions today): the 2013-2015 day reports are small or hotel / dinner shots
+ *  and, being larger than the 2018 sandbar photos, would crowd the kiting out of the 10-image vision pool. */
+export function parseKumejimaReportImages(posts: KcoWpPost[]): string[] {
+  return parseKcoReportImages(posts, PLACE, { announcements: true, dedupe: true }).slice(0, 14);
+}
+
+export function parseKumejimaContent(indexHtml: string, today: string, reportImages: string[] = []): OfferContent {
   const posts = parseKcoPosts(indexHtml);
   const ann = kcoAnnouncements(posts, PLACE);
   const cur = ann[0];
@@ -315,7 +386,7 @@ export function parseKumejimaContent(indexHtml: string, today: string): OfferCon
     mealPlan: 'breakfast',
     languages: ['ja'],
     rooms: [],
-    imageUrls: kcoImages(posts.filter(p => PLACE.test(p.title))).slice(0, 20),
+    imageUrls: [...new Set([...kcoImages(posts.filter(p => PLACE.test(p.title))), ...reportImages])].slice(0, 20),
     heroVideoUrl: null, // YouTube embeds only
     sourceUrl: cur.url,
     bookingUrl: KCO_CONTACT_URL,
@@ -350,10 +421,11 @@ export const kiteclubOkinawaKumejimaTour: OfferAdapter = {
   url: `${KCO_SITE}/info/blog/13988/`,
   slotMethod: 'html_dates',
   instantBooking: false, // request only (e-mail / phone / message), no online checkout
-  fetchBudget: 2,
+  fetchBudget: 3,
   confidence: 'medium',
   async fetchContent() {
-    return parseKumejimaContent(await kcoPage(KCO_TOURS_URL), todayIso());
+    const reports = await fetchJson<KcoWpPost[]>(KUMEJIMA_REPORTS_URL);
+    return parseKumejimaContent(await kcoPage(KCO_TOURS_URL), todayIso(), parseKumejimaReportImages(reports));
   },
   fetchSlots: ctx => fetchKumejimaSlots(todayIso(), ctx),
 };

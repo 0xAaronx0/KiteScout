@@ -1,11 +1,13 @@
 // KITECLUB Okinawa Kumejima tour: replays the tours index (/category/info/tours/) recorded 2026-10-19, which prints the
-// 2027 announcement (dates, placeholder prices) and the 2026 edition (prices) in full.
+// 2027 announcement (dates, placeholder prices) and the 2026 edition (prices) in full, and the WordPress REST search
+// for "久米島" recorded 2026-10-21 (trimmed to id, title and the <img> tags of each post) for the photos.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  buildKcoSlots, fetchKumejimaSlots, kcoAnnouncements, kcoPriceText, kiteclubOkinawaKumejimaTour, parseKcoPosts, parseKcoTour,
+  buildKcoSlots, fetchKumejimaSlots, kcoAnnouncements, kcoPriceText, kiteclubOkinawaKumejimaTour, parseKcoPosts,
+  parseKcoReportImages, parseKcoTour,
 } from '../../src/offers/adapters/kiteclub-okinawa-kumejima-tour.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
@@ -61,4 +63,29 @@ test('kco kumejima: content', async () => {
   assert.deepEqual(c.includedServices, ['Return flights Naha - Kumejima', 'Hotel nights at Eef Beach Hotel, breakfast included', 'Transfers and rental car', 'Boat charter (3 days)']);
   assert.match(c.summary, /Next trip: 2 Apr - 4 Apr 2027 \(2 nights\); prices not yet published \(2026 edition: JPY 58,000/);
   assert.ok(!/[–—]/.test(c.summary));
+  // photos from the older Kumejima reports and announcements (2021+ posts have none), newest first, max 14
+  const U = 'https://kiteclub-okinawa.biz/wp-content/uploads/';
+  assert.equal(c.imageUrls.length, 14);
+  assert.equal(c.imageUrls[0], `${U}2020/02/IMG_8519.jpg`);
+  for (const f of ['2019/04/P3300045.jpg', '2018/03/P3100327.jpg', '2018/01/P4080354.jpg', '2017/02/P3200265.jpg', '2016/01/１-73.jpg']) {
+    assert.ok(c.imageUrls.includes(U + f), f);
+  }
+  // re-uploads of the same photo are dropped: IMG_8519 (2019/04 = 2020/02), P4080354 (2017/04 = 2018/01), the "コピー" copy
+  assert.ok(!c.imageUrls.some(u => /2019\/04\/IMG_8519|2017\/04\/P4080354|コピー/.test(u)));
+  // no event-plan post photos (2015/09 "2016年度イベント情報") and no thumbnails
+  assert.ok(!c.imageUrls.some(u => /2015\/09\/|-\d+x\d+\./.test(u)));
+});
+
+test('kco: report photos, announcements optional, event plans skipped, re-uploads deduped', () => {
+  const img = (f: string) => `<img src="https://kiteclub-okinawa.biz/wp-content/uploads/${f}">`;
+  const posts = [
+    { id: 5, title: { rendered: '2027年・カイトクラブイベント予定' }, content: { rendered: img('2027/01/plan.jpg') } },
+    { id: 4, title: { rendered: '第20回・久米島ツアー2024開催のお知らせ' }, content: { rendered: img('2024/01/a-940x705.jpg') } },
+    { id: 3, title: { rendered: '久米島ツアー2023' }, content: { rendered: [img('2023/03/b.jpg'), img('2023/03/a.jpg'), img('2023/03/c-コピー.jpg')].join('') } },
+    { id: 2, title: { rendered: '小浜島ツアー2023' }, content: { rendered: img('2023/07/k.jpg') } },
+  ];
+  const U = 'https://kiteclub-okinawa.biz/wp-content/uploads/';
+  assert.deepEqual(parseKcoReportImages(posts, /久米島/), [`${U}2023/03/b.jpg`, `${U}2023/03/a.jpg`, `${U}2023/03/c-コピー.jpg`]);
+  assert.deepEqual(parseKcoReportImages(posts, /久米島/, { announcements: true, dedupe: true }), [`${U}2024/01/a.jpg`, `${U}2023/03/b.jpg`]);
+  assert.deepEqual(parseKcoReportImages(posts, /久米島/, { perPost: 1 }), [`${U}2023/03/b.jpg`]);
 });

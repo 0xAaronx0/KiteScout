@@ -15,10 +15,20 @@
 //            "* Private single 1 bed $3395/pers", "* Private double bed $3595/pers", "From AU$3295*" -> AUD (the
 //            "AU$" of the From line), per person, package. Used for dated slots once dates appear, and in the summary.
 //   content  the same page (inclusions, camp, meals, travel, optional activities).
-// robots.txt (2026-10-19): "Disallow: /wp-content/" (only plugin / cache JS and CSS re-allowed) -> every photo of the
-//   site sits under a robots-disallowed path, so NO image URLs are returned (the ingest's image download does not
-//   check robots itself). Aaron's call whether to ask KiteWest for photos (see report).
-// Requests per run: content 1, slots 1 (memoised in the same run).
+//   photos   (2026-10-21) kitewest.com.au serves every photo under the robots-disallowed /wp-content/, so its own
+//            uploads are never used. The same camp is also sold on the co-operator's site Shark Bay Kitesurfing (same
+//            business: same phone +61 449 021 784, the camp page says "KiteWest Water Sports and Shark Bay
+//            Kitesurfing have linked up"): /product/wave-riding-kite-camp-coronation-beach/ carries the same camp
+//            photos (yurt tents, Coronation Beach sign, kiters on the beach, FullSizeRender-8 / IMG_1756 ...) under
+//            sharkbaykitesurfing.com/wp-content/uploads/, which that host's robots.txt allows. Taken from <img> and
+//            the GenerateBlocks CSS backgrounds, minus logos, the pexels food / lifestyle stock, the F-ONE Madagascar
+//            promo shot, the optional-activity tiles (fishing, diving, Abrolhos, wing foil), drinks, fins and the gear
+//            shop (PARTNER_NOT_CAMP). The partner's prices differ from KiteWest's (AUD 2,695-2,995 vs 3,295-3,595,
+//            2026-10-21); prices stay KiteWest's, only photos come from the partner page.
+// robots.txt (2026-10-19): kitewest.com.au "Disallow: /wp-content/" (only plugin / cache JS and CSS re-allowed);
+//   sharkbaykitesurfing.com (2026-10-21) only WooCommerce internals, /wp-admin/ and add-to-cart disallowed.
+// Requests per run: content 2 (camp page + partner camp page for photos; a failing partner page only drops the
+//   photos), slots 1 (memoised in the same run).
 // Flags: liveAvailability / instantBooking unset (contact form + bank transfer deposit).
 // spotCoords: none on the site (footer address "Coronation Beach Camp, Coronation Beach road, Chapman Valley WA 6532";
 //   "Coronation Beach, Western Australia" is left to the geocoder).
@@ -30,6 +40,8 @@ import { memoPage, wpLines } from './kite-republic-aitutaki-winter-escape.js';
 export const KITEWEST_SITE = 'https://kitewest.com.au';
 export const KITEWEST_WAVE_URL = `${KITEWEST_SITE}/wave-freestyle/`;
 export const KITEWEST_CONTACT_URL = `${KITEWEST_SITE}/contact/`;
+/** The co-operator's page for the same camp; photos only (kitewest.com.au disallows /wp-content/ for bots). */
+export const KITEWEST_PARTNER_CAMP_URL = 'https://sharkbaykitesurfing.com/product/wave-riding-kite-camp-coronation-beach/';
 
 export const KITEWEST_OPERATOR: OperatorRef = {
   name: 'KiteWest Water Sports',
@@ -70,6 +82,23 @@ export function parseKwCamp(html: string): KwCamp {
   return { weeks, rooms, currency, days, nights, datesNote, lines };
 }
 
+/** Partner-page uploads that are not camp photos: logos, stock (pexels), the F-ONE Madagascar promo and the
+ *  Kite-slide-show board ad, the optional-activity tiles (IMG_0015 fishing, r7EwU Abrolhos, dive-ocean-Park, LLfOS
+ *  wing foil), the lobster plate (uePQj), fins (YhwqG), the gear shop (2CyKD), the drinks (09-pm) and kite-silhouette
+ *  (58-pm) graphics, the kangaroo banner and the Shark Bay downwinder background (SBDW22). */
+const PARTNER_NOT_CAMP = /logo|pexels|map-grey|accredited|action-sport|fone_|f-one|slide-show|kangooro|(?:09|58)-pm[.-]|IMG_0015|uePQj|YhwqG|2CyKD|LLfOS|r7EwU|dive-ocean|SBDW22/i;
+
+/** Camp photos from the partner page: <img> sources and CSS background images under /wp-content/uploads/, WordPress
+ *  "-WxH" thumbnails mapped to the original (a re-upload suffix like "-600x600-1.jpg" is the file itself). */
+export function parseKwPartnerImages(html: string): string[] {
+  const out: string[] = [];
+  for (const m of html.matchAll(/https:\/\/sharkbaykitesurfing\.com\/wp-content\/uploads\/[^"'\s)<>,]+?\.(?:jpe?g|png|webp)/gi)) {
+    const u = m[0].replace(/-\d{2,4}x\d{2,4}(?=\.(?:jpe?g|png|webp)$)/i, '');
+    if (!PARTNER_NOT_CAMP.test(u) && !out.includes(u)) out.push(u);
+  }
+  return out;
+}
+
 const slug = (s: string): string => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 export function buildKwSlots(c: KwCamp, today: string): Slot[] {
@@ -96,7 +125,7 @@ export function buildKwSlots(c: KwCamp, today: string): Slot[] {
   return out;
 }
 
-export function parseKwContent(html: string, today = todayIso()): OfferContent {
+export function parseKwContent(html: string, today = todayIso(), imageUrls: string[] = []): OfferContent {
   const c = parseKwCamp(html);
   if (!c.rooms.length) throw new Error('kitewest-wave: no "$.../pers" price lines (layout changed?)');
   const future = c.weeks.filter(w => w.start >= today);
@@ -147,7 +176,7 @@ export function parseKwContent(html: string, today = todayIso()): OfferContent {
     mealPlan: 'full_board',
     languages: ['en'],
     rooms: c.rooms.map(r => ({ name: r.unit, description: null, features: [] })),
-    imageUrls: [], // every photo is under the robots-disallowed /wp-content/ path
+    imageUrls, // the co-operator's camp page (kitewest.com.au's own /wp-content/ is robots-disallowed)
     heroVideoUrl: null,
     sourceUrl: KITEWEST_WAVE_URL,
     bookingUrl: KITEWEST_CONTACT_URL,
@@ -174,9 +203,16 @@ export const kitewestWaveFreestyleCampCoronationBeach: OfferAdapter = {
   operator: KITEWEST_OPERATOR,
   url: KITEWEST_WAVE_URL,
   slotMethod: 'html_dates',
-  fetchBudget: 2,
-  async fetchContent() {
-    return parseKwContent(await memoPage(KITEWEST_WAVE_URL));
+  fetchBudget: 3,
+  async fetchContent(ctx) {
+    const html = await memoPage(KITEWEST_WAVE_URL);
+    let images: string[] = [];
+    try {
+      images = parseKwPartnerImages(await memoPage(KITEWEST_PARTNER_CAMP_URL));
+    } catch (e) {
+      ctx.note(`partner camp page for photos unavailable: ${e instanceof Error ? e.message : String(e)}`);
+    }
+    return parseKwContent(html, todayIso(), images);
   },
   fetchSlots: ctx => fetchKwSlots(todayIso(), ctx),
 };

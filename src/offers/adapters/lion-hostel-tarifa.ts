@@ -10,24 +10,34 @@
 //            "PACKS 7 DAYS", each "Price per person" with "(199€- 3 px min- 3h/day)", "(299€- 2 px min- 3h/day)",
 //            "(345€- 1 px min- 2h/day)" and "(Shared room Accommodation)"; lessons, full equipment, rescue boat and
 //            insurance included. The hostel page sells these packs ("Stay in our Tarifa Hostel ... Book Packs").
+//   photos   (2026-10-21) the hostel page's gallery is 2018 uploads of 420-600 px (most fail the 500x330 floor), and its
+//            hero photo (2024, 2560 px) sits in a Flatsome <style> rule ("#banner-... .bg.bg-loaded {background-image:
+//            url(...)}") that the generic image discovery does not read: this adapter reads it. More hostel photos come
+//            from the site's own WordPress media library, /wp-json/wp/v2/media?search=hostel (titles "kite hostel en
+//            tarifa", alt "habitaciones hostel en tarifa": the 2024 room photos, 1365-2560 px, and the larger 2018
+//            ones), taken largest first and only when >= 500x330 per the library's own media_details. Order: library
+//            photos, the page's style backgrounds (the hero is also in the library; the other style backgrounds are
+//            small 2018 strips), then the page gallery; capped at 24 (the ingest's download cap). Best effort.
 // Kind 'accommodation': the hostel takes stay-only guests (FAQ: check-in times, cancellation of "your booking"), but
 //   the site prints prices only for the packs, so the slots are the packs (stay + lessons), per person.
 // No booking engine: contact form / e-mail / WhatsApp ("CONTACT US") -> 'on_request'.
 // Liveness (rule 5b): hostel page dateModified 2026-04-10, packs page 2026-02-21 (JSON-LD), footer "Copyright 2026".
 // robots.txt (2026-10-12): Yoast block, "User-Agent: * / Disallow:" (allow all).
-// Requests per run: content 2, slots 1 (memoised: 2 in total).
+// Requests per run: content 3 (hostel page, packs page, media-library search for photos), slots 1 (memoised: 3 in total).
 // Parsed: 9 slots = pack length x lesson format ("pack-3-days|3p"), EUR per person, priceUnit 'package',
 //   packageNights = the pack's days of accommodation (inferred: "3 Days of accommodation" read as 3 nights),
 //   occupancy = the minimum group size the price assumes (3 / 2 / 1 people), no dates, availability 'on_request'.
 // Map pin: the hostel page's own Google Maps embed, place label 36°00'51.6"N 5°36'14.3"W (decoded from its !2z field).
 // ---------------------------------------------------------------------------
-import { fetchText } from '../http.js';
+import { fetchJson, fetchText } from '../http.js';
 import { clean, collapse, imageCandidates, ldOfType, parse, parseAmount } from '../parse.js';
 import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
 
 const SITE = 'https://rebelstarifa.com';
 export const LION_URL = `${SITE}/tarifa-hostel/`;
 export const LION_PACKS_URL = `${SITE}/packs-kitesurf-accommodation/`;
+export const LION_MEDIA_URL = `${SITE}/wp-json/wp/v2/media?search=hostel&per_page=50&_fields=source_url,media_details`;
+const LION_MAX_PHOTOS = 24;
 
 const memo = new Map<string, { at: number; p: Promise<string> }>();
 function page(url: string): Promise<string> {
@@ -131,7 +141,43 @@ export function parseLionRooms(lines: string[]): ContentRoom[] {
   return out;
 }
 
-export interface LionPages { hostel: string; packs: string }
+export interface LionPages { hostel: string; packs: string; media?: LionMedia[] | null }
+export interface LionMedia { source_url?: string; media_details?: { width?: number; height?: number } }
+
+/** Background photos set in the page's <style> rules (the Flatsome hero banner). */
+export function lionStyleBackgrounds(html: string): string[] {
+  const out: string[] = [];
+  for (const st of html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/gi)) {
+    for (const m of st[1].matchAll(/background-image:\s*url\((['"]?)(https:\/\/rebelstarifa\.com\/wp-content\/uploads\/[^'")]+\.(?:jpe?g|webp))\1\)/gi)) {
+      if (!out.includes(m[2])) out.push(m[2]);
+    }
+  }
+  return out;
+}
+
+/** Media-library photos of the hostel, largest first, only those >= 500x330 (the ingest's floor). */
+export function lionMediaPhotos(media: LionMedia[]): string[] {
+  return media
+    .filter(m => typeof m.source_url === 'string' && /\/wp-content\/uploads\/[^?]+\.(?:jpe?g|webp)$/i.test(m.source_url)
+      && (m.media_details?.width ?? 0) >= 500 && (m.media_details?.height ?? 0) >= 330)
+    .sort((a, b) => (b.media_details!.width! * b.media_details!.height!) - (a.media_details!.width! * a.media_details!.height!))
+    .map(m => m.source_url!)
+    .filter((u, i, all) => all.indexOf(u) === i);
+}
+
+/** Media-library photos (largest first), the page's style backgrounds (hero), then its gallery; one per photo, capped. */
+export function lionPhotoCandidates(hostelHtml: string, media: LionMedia[] | null): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  const page = imageCandidates(hostelHtml, LION_URL, null, 60);
+  for (const u of [...(media ? lionMediaPhotos(media) : []), ...lionStyleBackgrounds(hostelHtml), ...page]) {
+    if (/\.svg|\.png$|logo|special-offer|unidad|icon/i.test(u)) continue;
+    const k = u.replace(/-\d+x\d+(?=\.[a-z]+$)/i, '');
+    if (seen.has(k)) continue;
+    seen.add(k); out.push(u);
+  }
+  return out.slice(0, LION_MAX_PHOTOS);
+}
 
 export function parseLionContent(p: LionPages): OfferContent {
   const lines = lionLines(p.hostel);
@@ -144,14 +190,7 @@ export function parseLionContent(p: LionPages): OfferContent {
   const cheapest = packs[0]?.options.length ? Math.min(...packs[0].options.map(o => o.amount)) : null;
   const ld = ldOfType(p.hostel, 'WebPage').find(o => typeof o.dateModified === 'string');
 
-  const seen = new Set<string>();
-  const imageUrls: string[] = [];
-  for (const u of imageCandidates(p.hostel, LION_URL, null, 60)) {
-    if (/\.svg|\.png$|logo|special-offer|unidad|icon/i.test(u)) continue;
-    const k = u.replace(/-\d+x\d+(?=\.[a-z]+$)/i, '');
-    if (seen.has(k)) continue;
-    seen.add(k); imageUrls.push(u);
-  }
+  const imageUrls = lionPhotoCandidates(p.hostel, p.media ?? null);
 
   const summary = [
     `Lion Hostel Tarifa by Rebels is the Rebels Tarifa kite school's hostel in a renovated 19th-century house in the historic centre of Tarifa, Spain, in front of the Puerta de Jerez and a few minutes' walk from the beaches.`,
@@ -183,7 +222,7 @@ export function parseLionContent(p: LionPages): OfferContent {
     mealPlan: 'self_catering',
     languages: [],
     rooms,
-    imageUrls: imageUrls.slice(0, 30),
+    imageUrls,
     heroVideoUrl: null,
     sourceUrl: LION_URL,
     bookingUrl: LION_PACKS_URL,
@@ -212,9 +251,14 @@ export const lionHostelTarifa: OfferAdapter = {
   },
   url: LION_URL,
   slotMethod: 'price_table',
-  fetchBudget: 3,
-  async fetchContent() {
-    return parseLionContent({ hostel: await page(LION_URL), packs: await page(LION_PACKS_URL) });
+  fetchBudget: 4,
+  async fetchContent(ctx) {
+    const hostel = await page(LION_URL);
+    const packs = await page(LION_PACKS_URL);
+    let media: LionMedia[] | null = null;
+    try { media = await fetchJson<LionMedia[]>(LION_MEDIA_URL); }
+    catch (e) { ctx.note(`lion-hostel: media-library search failed (${(e as Error).message}); page photos only`); }
+    return parseLionContent({ hostel, packs, media: Array.isArray(media) ? media : null });
   },
   async fetchSlots() {
     const packs = parseLionPacks(await page(LION_PACKS_URL));

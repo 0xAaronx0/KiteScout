@@ -22,10 +22,30 @@
 // Slots: one per listed date that has not started (all four tours list only 2026 dates -> [] and the summary says the
 //   next dates are not published yet; Finse lists Feb 2027 -> 2 slots). EUR per person ("2500 € / personne", base 4
 //   participants), priceUnit 'package'; availability 'on_request' (booking by e-mail / phone, no engine).
-// robots.txt (2026-10-19): only commented lines -> all allowed.
-// Requests per run: 1 (listing page, memoised across the five adapters).
-// Known limits: one photo per trip (the listing vignette; the trip sheets link Google Photos albums, not used);
-//   no spotCoords (the site prints none); Finse meals: "un cuisinier s'occupe de nos repas" read as full board.
+// Photos (2026-10-21): the listing has ONE vignette per trip (all the live listings had 1-2 photos). The operator's
+//   own "Carnets d'expéditions & photographies" (/carnets-et-photos/<slug>, plain HTML, 25-45 photos of 1920x1080
+//   each in <li class="type-image"> with a French caption) hold the trip reports of the same products, so
+//   fetchContent reads the report of THAT trip/region and adds a hand-picked subset (LN_STORIES: picked by caption
+//   and by looking at the photos, best-first, ~10 per trip so the vision QC sees all of them; a pick is released
+//   only while the page still shows it):
+//     Finse        "Snowkite dans les massifs du Skarvheimen & du Hardanger" (story 13: Finse base camp, riders on the
+//                   Hardangerjøkulen and the Finse lake, the Finsehytta hut, the village)
+//     Ryfylke LIGHT "Nomads of the wind !" (story 36: hut-to-hut snowkite raid on the Setesdal / Ryfylke / Bykle
+//                   heiane - Blåsjø, Vassdalstjørn, Jonstølen and Storsteinen huts; the site files it under Iceland
+//                   but the captions are all southern Norway)
+//     Varanger     "Snowkite en Péninsule du Varanger" (journey 38 images: the 2018 Varanger trip, kiting above
+//                   Båtsfjord and the Barents Sea, the coast and villages)
+//     Iceland      NONE: the two own Iceland reports ("Wilderness islandaise", "Quelques très beaux coins d'Islande")
+//                   show the route areas only as summer trekking landscapes, which would mislead for a winter
+//                   snowkite trip (lead decision 2026-10-21) -> stays at the listing vignette.
+//     Cap Nord     NONE: no North Cape / Porsanger / Kvaløya report exists on the site (the Varanger report is the
+//                   other end of Finnmark and is not reused) -> stays at the listing vignette.
+//   A story page that fails only drops its photos (note), never the content.
+// robots.txt (2026-10-19, re-checked 2026-10-21): only commented lines -> all allowed.
+// Requests per run: listing 1 (memoised across the five adapters) + story pages in fetchContent: Finse 1, LIGHT 1,
+//   Varanger 1, Iceland 0, Cap Nord 0 (4 for all five together; fetchSlots needs none of them).
+// Known limits: the trip sheets link Google Photos albums (not used, not the own site); no spotCoords (the site
+//   prints none); Finse meals: "un cuisinier s'occupe de nos repas" read as full board.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { collapse, iso, parse, todayIso } from '../parse.js';
@@ -140,6 +160,85 @@ export const LN_PDF: Record<number, LnSheet> = {
     priceNote: 'EUR 2,500 per person on a basis of 4 participants (+EUR 100 with 3), flights, train and any Oslo nights not included' },
   14: { pdf: '/ups/files/journey/14/Snowkite FINSE_PERFECTIONNEMENT_NORVEGE_fiche présentation 2027.pdf', price: 2500,
     priceNote: 'EUR 2,500 per person on a basis of 4 participants (+EUR 100 with 3), flights, train and any Oslo nights not included' },
+};
+
+// --- trip reports ("carnets et photos") -----------------------------------------------------------
+export interface LnStoryImage { src: string; caption: string }
+
+/** Photos of a /carnets-et-photos page: <li class="type-image"> blocks (cover included) with their caption. */
+export function parseLnStoryImages(html: string): LnStoryImage[] {
+  const out: LnStoryImage[] = [];
+  for (const part of html.split(/<li class="type-/).slice(1)) {
+    if (!part.startsWith('image')) continue;
+    const src = part.match(/<img[^>]*\ssrc="([^"]+)"/)?.[1];
+    if (!src || !/^\/ups\/images\//.test(src)) continue;
+    out.push({ src: decode(src), caption: decode(part.match(/<p class="caption">\s*<span>([\s\S]*?)<\/span>/)?.[1] ?? '') });
+  }
+  return out;
+}
+
+export interface LnStory {
+  /** path of the trip report on the own site */
+  path: string;
+  /** hand-picked file names (2026-10-21), best-first; released only while the page still shows them */
+  pick: string[];
+}
+
+const fileName = (src: string): string => src.split('/').pop() ?? src;
+
+/** The picked photos of one report, in pick order, as absolute URLs. */
+export function lnStoryImageUrls(html: string, story: LnStory): string[] {
+  const byName = new Map(parseLnStoryImages(html).map(i => [fileName(i.src), i.src]));
+  return story.pick.map(n => byName.get(n)).filter((s): s is string => !!s).map(s => new URL(s, SITE).toString());
+}
+
+/** Trip reports per product key; picks avoid portraits, animals, roads, food and near-duplicates. */
+export const LN_STORIES: Record<string, LnStory[]> = {
+  'latitudes-nord-finse-snowkite-weeks': [{
+    path: '/carnets-et-photos/snowkite-dans-le-skarvheimen-hardanger-norvege',
+    pick: [
+      'P1100745.jpg', // the Finsehytta hut above the Finse lake, Middalen glacier behind
+      'IMG_0483.jpg', // cover: rider on the south summit of the Hardangerjøkulen
+      'P1160365.jpg', // Bukkeskinn cirque, rider
+      'P1040514bb.jpg', // freestyle in front of the Finsenuten
+      'P1130401.jpg', // the village of Finse (1,222 m)
+      'IMG_0437.jpg', // rider above the Blåisen glacier
+      'P1030049.jpg', // rider on the Hardangerjøkulen summit
+      'P1160273.jpg', // parawing on the Finse lake
+      'P1100856.jpg', // two riders at dusk, Finsefetene moraines
+      'IMG_0293.jpg', // Bukkeskinnsbotn slopes, rider
+    ],
+  }],
+  'latitudes-nord-snowkite-light-ryfylke-setesdal': [{
+    path: '/carnets-et-photos/nomads-of-the-wind',
+    pick: [
+      'P1080359 copie.jpg', // rider above the Kringlevatn hut, Blåsjø
+      'P1080021 copie.jpg', // the Jonstølen hut
+      'P1080216 copie.jpg', // natural half-pipe, Vassdalstjørn hut area
+      'P1080660 copie.jpg', // strong wind on the plateau
+      '26349130004_bac8ff346c_o (1).jpg', // living room of the Jonstølen hut
+      'P1130336 copie.jpg', // riding on to the next hut, Blåsjø
+      'P1070414 copie.jpg', // the Storsteinen huts
+      'P1080715 copie.jpg', // rider, Valleheiane (Bossbu)
+      '34752655265_f844f7ef67_o.jpg', // barns at the Bleskestadmoen hut
+    ],
+  }],
+  'latitudes-nord-snowkite-nordkinn-varanger': [{
+    path: '/carnets-et-photos/snowkite-en-peninsule-du-varanger-extremite-nord-est-de-la-norvege',
+    pick: [
+      'P1110776bis.jpg', // cover: rider in blowing snow
+      'P1110842bis.jpg', // hills of Båtsfjordalen
+      'P1120061bis.jpg', // rider on Mount Mattavarri
+      'P1110778bis.jpg', // strong wind, snow drift
+      'P1110830bis.jpg', // "perfect wind, perfect snow"
+      'P1120238bis.jpg', // rider over birch scrub, south side
+      'P1110861bis.jpg', // Båtsfjord fishing village
+      'P1110993bis.jpg', // fjord and mountains, west of the peninsula
+      'P1120030bis.jpg', // kiting up from the chalet towards Mattavarri
+      'P1110852bis.jpg', // steep north coast of the peninsula
+      'P1110785bis.jpg', // rider in rounded hills
+    ],
+  }],
 };
 
 // --- products -----------------------------------------------------------------------------------
@@ -332,7 +431,8 @@ export function buildLnSlots(rows: LnRow[], product: LnProduct, today: string, n
 // --- content ----------------------------------------------------------------------------------
 const day = (d: string, year = true): string => new Date(`${d}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', ...(year ? { year: 'numeric' } : {}), timeZone: 'UTC' });
 
-export function parseLnContent(html: string, product: LnProduct, today = todayIso()): OfferContent {
+/** `stories`: report path -> its HTML (the photos of LN_STORIES[product.key]); missing pages add no photos. */
+export function parseLnContent(html: string, product: LnProduct, today = todayIso(), stories: Record<string, string> = {}): OfferContent {
   const rows = parseLnRows(html);
   const matches = lnMatches(rows, product);
   const future = matches.filter(m => m.row.start && m.row.start >= today);
@@ -351,7 +451,10 @@ export function parseLnContent(html: string, product: LnProduct, today = todayIs
   } else {
     dates = 'Dates are announced on the operator\'s "Séjours encadrés" page; booking by request.';
   }
-  const imageUrls = [...new Set(matches.map(m => m.row.imagePath).filter((p): p is string => !!p).map(p => new URL(p, SITE).toString()))];
+  const imageUrls = [...new Set([
+    ...matches.map(m => m.row.imagePath).filter((p): p is string => !!p).map(p => new URL(p, SITE).toString()),
+    ...(LN_STORIES[product.key] ?? []).flatMap(st => (stories[st.path] ? lnStoryImageUrls(stories[st.path], st) : [])),
+  ])];
   const pdfs = [...new Set(matches.map(m => m.row.pdfPath).filter((p): p is string => !!p))];
 
   return {
@@ -407,10 +510,20 @@ export function lnAdapter(product: LnProduct): OfferAdapter {
     url: LN_LIST_URL,
     slotMethod: 'html_dates',
     instantBooking: false,
-    fetchBudget: 2,
+    fetchBudget: 2 + (LN_STORIES[product.key]?.length ?? 0),
     confidence: 'medium', // prices hand-read from the trip-sheet PDFs
-    async fetchContent() {
-      return parseLnContent(await page(LN_LIST_URL), product);
+    async fetchContent(ctx) {
+      const html = await page(LN_LIST_URL);
+      const stories: Record<string, string> = {};
+      for (const st of LN_STORIES[product.key] ?? []) {
+        try {
+          stories[st.path] = await page(`${SITE}${st.path}`);
+          if (!lnStoryImageUrls(stories[st.path], st).length) ctx?.note(`${product.key}: no picked photo left on ${st.path} (re-pick)`);
+        } catch (e) {
+          ctx?.note(`${product.key}: trip report ${st.path} failed (${(e as Error).message}); listing photo only`);
+        }
+      }
+      return parseLnContent(html, product, todayIso(), stories);
     },
     fetchSlots: ctx => fetchLnSlots(product, todayIso(), ctx),
   };

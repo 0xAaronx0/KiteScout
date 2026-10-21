@@ -119,6 +119,14 @@ function canonicalKey(absUrl: string): string {
       const originPath = u.pathname.replace(/^\/[^/]+/, '');
       if (originPath) return originPath;
     }
+    // A path without an image extension (e.g. `/thumb?file=a.jpg`, `/image.php?id=7`) is a script that picks the
+    // photo by query: keep the identifying params (drop only size/format ones) or every photo collapses into one.
+    if (!/\.(?:jpe?g|png|webp|gif|avif)$/i.test(u.pathname)) {
+      const keep = [...u.searchParams.entries()]
+        .filter(([k]) => !/^(?:w|h|width|height|q|quality|fit|crop|format|fm|auto|dpr|s|size)$/i.test(k))
+        .sort(([a], [b]) => a.localeCompare(b));
+      if (keep.length) return `${u.pathname}?${new URLSearchParams(keep).toString()}`;
+    }
     return u.pathname;
   } catch {
     return absUrl.split('?')[0];
@@ -424,7 +432,7 @@ async function visionSelect(
   for (const img of batch) {
     let small: Buffer;
     try {
-      small = await sharp(img.buf).resize({ width: 512, withoutEnlargement: true }).webp({ quality: 60 }).toBuffer();
+      small = await sharp(img.buf).rotate().resize({ width: 512, withoutEnlargement: true }).webp({ quality: 60 }).toBuffer();
     } catch {
       continue;
     }

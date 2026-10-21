@@ -13,8 +13,14 @@
 // Booking: "Enquire and book" form (Statamic form with arrival / departure date) -> availability 'on_request'; flags unset.
 // Location: the contact page prints "Mazotos to Pervolia Road, GPS: 34.817133, 33.54686" (checked 2026-10-19, not fetched
 //   per run) -> spotCoords.
+// Photos (2026-10-21): the camp page only shows two "The Kahuna Summer Surf Camp" logo tiles, so the content run also
+//   reads the station's own /kitesurf page (4 lesson photos at the Kahuna beach: instructor with student in the water,
+//   on the beach, at the station) and /gallery (8 "King of Kite" event photos: riders jumping and carving in front of
+//   the station, team on the beach). Statamic serves resized copies under /img/containers/main/./<file>/<hash>.jpg
+//   and the originals under /assets/<file> (the gallery links them) -> the /assets/ originals (1000-3500 px).
 // robots.txt kahunasurfhouse.eu (2026-10-19): "Disallow:" (everything allowed).
-// Requests per run: 1 (memoised page).
+// Requests per run: slots 1 (memoised page), content 3 (camp page memoised + /kitesurf + /gallery; a failing photo
+//   page only drops its photos).
 // State 2026-10-19: both 2026 camps (June, July) are past -> 0 slots ("price on request") until new dates are printed.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
@@ -23,6 +29,8 @@ import type { FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js
 
 export const KAHUNA_URL = 'https://kahunasurfhouse.eu/camps/the-kahuna-summer-surf-camp';
 const KAHUNA_SITE = 'https://kahunasurfhouse.eu';
+/** The station's own pages with real kite photos (lessons; King of Kite event at the station). */
+export const KAHUNA_PHOTO_PAGES = [`${KAHUNA_SITE}/kitesurf`, `${KAHUNA_SITE}/gallery`];
 
 const memo = new Map<string, { at: number; p: Promise<string> }>();
 function page(url: string): Promise<string> {
@@ -122,7 +130,20 @@ export function kahunaImages(html: string): string[] {
   return out;
 }
 
-export function parseKahunaContent(html: string, today = todayIso()): OfferContent {
+/** Original /assets/ photos of a Statamic page: resized "/img/containers/main/./<file>/<hash>.jpg" copies and
+ *  "/assets/<file>" links, without the theme images (/site/themes/), SEO banner and logos. */
+export function kahunaPagePhotos(html: string): string[] {
+  const out: string[] = [];
+  const re = /["'(](?:\/img\/containers\/main\/\.\/|\/assets\/)([^"'()\s\/]+\.(?:jpe?g|png|webp))/gi;
+  for (const m of html.matchAll(re)) {
+    if (/logo|icon|banner|redbull/i.test(m[1])) continue;
+    const u = `${KAHUNA_SITE}/assets/${m[1]}`;
+    if (!out.includes(u)) out.push(u);
+  }
+  return out;
+}
+
+export function parseKahunaContent(html: string, today = todayIso(), extraPhotos: string[] = []): OfferContent {
   const d = parseKahunaDetails(html);
   const camps = parseKahunaDates(d.DATES ?? []);
   const price = parseKahunaPrice(html);
@@ -161,7 +182,7 @@ export function parseKahunaContent(html: string, today = todayIso()): OfferConte
     mealPlan: 'full_board',
     languages: ['en'],
     rooms: [],
-    imageUrls: kahunaImages(html),
+    imageUrls: [...new Set([...kahunaImages(html), ...extraPhotos])],
     heroVideoUrl: null,
     sourceUrl: KAHUNA_URL,
     bookingUrl: KAHUNA_URL,
@@ -183,9 +204,18 @@ export const kahunaAdultsKiteCampKiti: OfferAdapter = {
   },
   url: KAHUNA_URL,
   slotMethod: 'html_dates',
-  fetchBudget: 2,
-  async fetchContent() {
-    return parseKahunaContent(await page(KAHUNA_URL));
+  fetchBudget: 4,
+  async fetchContent(ctx) {
+    const html = await page(KAHUNA_URL);
+    const photos: string[] = [];
+    for (const url of KAHUNA_PHOTO_PAGES) {
+      try {
+        photos.push(...kahunaPagePhotos(await fetchText(url)));
+      } catch (e) {
+        ctx.note(`photo page ${url} unavailable: ${e instanceof Error ? e.message : String(e)}`);
+      }
+    }
+    return parseKahunaContent(html, todayIso(), photos);
   },
   fetchSlots: ctx => fetchKahunaSlots(ctx),
 };

@@ -1,11 +1,11 @@
 // LazyKite Surf House (Tarifa): replays the accommodation page recorded 2026-10-12 (scripts trimmed; styles trimmed to
-// their background-image declarations, which carry the house photo).
+// their background-image declarations, which carry the house photo) and the course page (photos) recorded 2026-10-21.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  lazyKiteSurfHouseTarifa, buildLazySlots, lazyImages, parseLazyFaq, parseLazyPriceNote, parseLazyRates,
+  lazyKiteSurfHouseTarifa, buildLazySlots, lazyCoursePhotos, lazyImages, lazyPhotoCandidates, parseLazyFaq, parseLazyPriceNote, parseLazyRates,
 } from '../../src/offers/adapters/lazy-kite-surf-house-tarifa.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
@@ -15,6 +15,7 @@ const files = readdirSync(DIR);
 const read = (prefix: string) => readFileSync(join(DIR, files.find(f => f.startsWith(prefix))!), 'utf8');
 const ctx = { note: () => {}, incomplete: () => {} };
 const html = read('lazykiteschooltarifa.com_en_accommodation-tarifa_.');
+const courses = read('lazykiteschooltarifa.com_en_kitesurfing-courses-tarifa_.');
 
 test('lazy: TablePress price table = room type x season, per person per night', () => {
   const rates = parseLazyRates(html);
@@ -55,4 +56,18 @@ test('lazy: content', async () => {
   assert.match(c.summary, /from EUR 18 to 80 per person per night/);
   assert.deepEqual(c.rooms.map(r => r.name), ['Private Room', 'Double Room', 'Triple Room', 'Quadruple Room']);
   assert.match(c.sourceText!, /carril playa, N-340, km 80/i);
+  assert.deepEqual(c.imageUrls, lazyPhotoCandidates(html, courses));
+});
+
+test('lazy: photo candidates = house photo first + course-page kite photos, capped at 10', () => {
+  const up = 'https://lazykiteschooltarifa.com/wp-content/uploads/';
+  const all = lazyPhotoCandidates(html, courses);
+  assert.equal(all.length, 10);
+  assert.equal(all[0], `${up}DSC_6444-scaled.jpg`); // the house: must stay among the 10 the vision QC sees
+  for (const f of ['clases-kitesurf-tarifa-privado.jpg', 'DSC_4267.jpg', 'curso-kitesurf-tarifa-barco.jpg', 'MAX-@_boeri-21.jpg']) {
+    assert.ok(all.includes(up + f), `missing ${f}`);
+  }
+  assert.ok(lazyCoursePhotos(courses).every(u => !/logo|gorra|diseno-sin-titulo|\.png|\.svg/i.test(u)));
+  // course page down: the house photo alone
+  assert.deepEqual(lazyPhotoCandidates(html, null), [`${up}DSC_6444-scaled.jpg`]);
 });

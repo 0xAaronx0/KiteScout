@@ -21,7 +21,7 @@
 //            via the WordPress REST search /wp-json/wp/v2/posts?search=小浜島ツアー: reports 2015-2020 carry real
 //            photos (kiting on the reef, the sandbar, beach groups, sunset); 2021+ reports are YouTube-only. Max 3 per
 //            report so the 10-image vision pool spans several editions. Photos show the summer "Kachibai" editions
-//            on the same island, not the autumn trip specifically.
+//            on the same island, not the autumn trip specifically. Shared helper parseKcoReportImages (Kumejima file).
 // robots.txt (2026-10-19): only /wp-admin/ disallowed.
 // Requests per run: 1 for slots (the index page, memoised; shared with the Kumejima adapter in the same process),
 //   +1 for content (the REST search for the trip-report photos).
@@ -32,39 +32,19 @@ import { fetchJson } from '../http.js';
 import { todayIso } from '../parse.js';
 import type { FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
 import {
-  KCO_CONTACT_URL, KCO_OPERATOR, KCO_SITE, KCO_TOURS_URL, buildKcoSlots, kcoAnnouncements, kcoIncluded,
-  kcoPage, kcoPriceText, parseKcoPosts, parseKcoTour,
+  KCO_CONTACT_URL, KCO_OPERATOR, KCO_TOURS_URL, buildKcoSlots, kcoAnnouncements, kcoIncluded,
+  kcoPage, kcoPriceText, kcoSearchUrl, parseKcoPosts, parseKcoReportImages, parseKcoTour, type KcoWpPost,
 } from './kiteclub-okinawa-kumejima-tour.js';
 
 const PLACE = /小浜島/;
 
 /** WordPress REST search over the operator's own posts (robots.txt only disallows /wp-admin/). */
-export const KOHAMA_REPORTS_URL = `${KCO_SITE}/wp-json/wp/v2/posts?search=${encodeURIComponent('小浜島ツアー')}&per_page=30&_fields=id,title,content`;
-/** Photos per trip report: the vision QC only sees the 10 largest candidates, so a cap keeps that pool mixed across
- *  editions (kiting, sandbar, beach groups) instead of one report's dinner and fishing shots. */
-const PHOTOS_PER_REPORT = 3;
+export const KOHAMA_REPORTS_URL = kcoSearchUrl('小浜島ツアー');
 
-interface WpPost { id: number; title?: { rendered?: string }; content?: { rendered?: string } }
-
-/** Announcement / event-plan titles ("開催のお知らせ", "開催決定", "イベント予定", "イベント情報"); everything else naming
- *  Kohama is a trip report. (A body test for "日程" would drop the 2018 report, which mentions its schedule.) */
-const ANNOUNCEMENT_TITLE = /お知らせ|開催決定|予定|情報/;
-
-/** Photos from the operator's own Kohama trip reports, newest first, original uploads. The 2025/2026 announcements
- *  only carry tide-table and flight screenshots, so announcement images are not used. */
-export function parseKohamaReportImages(posts: WpPost[]): string[] {
-  const out: string[] = [];
-  for (const p of [...posts].sort((a, b) => b.id - a.id)) {
-    const html = p.content?.rendered ?? '';
-    const title = p.title?.rendered ?? '';
-    if (!PLACE.test(title) || ANNOUNCEMENT_TITLE.test(title)) continue;
-    const imgs = [...html.matchAll(/<img[^>]+src="([^"]+)"/g)].map(m => m[1])
-      .filter(s => /\/wp-content\/uploads\//.test(s) && !/btn_|logo/i.test(s))
-      .map(s => s.replace(/-\d{2,4}x\d{2,4}(?=\.(?:jpe?g|png|webp)$)/i, ''));
-    let n = 0;
-    for (const u of imgs) if (n < PHOTOS_PER_REPORT && !out.includes(u)) { out.push(u); n++; }
-  }
-  return out;
+/** Photos from the operator's own Kohama trip reports, newest first, original uploads, max 3 per report. The
+ *  2025/2026 announcements only carry tide-table and flight screenshots, so announcement images are not used. */
+export function parseKohamaReportImages(posts: KcoWpPost[]): string[] {
+  return parseKcoReportImages(posts, PLACE);
 }
 
 /** "16-20 Oct 2026, 4 nights, JPY 63,000" per departure. */
@@ -151,7 +131,7 @@ export const kiteclubOkinawaKohamaKiteTour: OfferAdapter = {
   fetchBudget: 3,
   confidence: 'medium',
   async fetchContent() {
-    const reports = await fetchJson<WpPost[]>(KOHAMA_REPORTS_URL);
+    const reports = await fetchJson<KcoWpPost[]>(KOHAMA_REPORTS_URL);
     return parseKohamaContent(await kcoPage(KCO_TOURS_URL), todayIso(), parseKohamaReportImages(reports));
   },
   fetchSlots: ctx => fetchKohamaSlots(todayIso(), ctx),

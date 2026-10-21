@@ -2,6 +2,7 @@
 // Latitudes Nord tour (kind 'tour', itinerarySpots = the route): Snowkite exploration at the North Cape: Alta, Magerøya, Porsanger peninsula, Kvaløya (Finnmark).
 // Listing row = journey 28 on www.latitudes-nord.fr/prochains-voyages; facts hand-read from its trip-sheet PDF.
 // State 2026-10-19: only the 2026 date is listed (10 - 20 Mar 2026, past) -> 0 slots, summary "2027 dates not yet published".
+// Photos: only the listing vignette - the site has no North Cape trip report (see LN_STORIES in the shared file).
 // Parser, product data, robots / request notes and limits: latitudes-nord-finse-snowkite-weeks.ts (shared, memoised:
 // the five Latitudes Nord adapters need 1 request per run together).
 // ---------------------------------------------------------------------------

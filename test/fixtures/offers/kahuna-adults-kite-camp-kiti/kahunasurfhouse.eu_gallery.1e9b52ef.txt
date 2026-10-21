@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="sitemap" type="application/xml" href="/sitemap" />
+      <title>Kitesurfing Cyprus Kahuna Surfhouse &mdash; the Kahuna Surfhouse kitesurfing, Stand Up Paddle and Surf School</title>
+  <meta property="og:title" content="the Kahuna Surfhouse kitesurfing, Stand Up Paddle and Surf School" />
+  <meta property="twitter:title" content="the Kahuna Surfhouse kitesurfing, Stand Up Paddle and Surf School" />
+<meta name="description" content="check out the photo gallery and photographs the team and the kitesurfers surfing the waves, practising freestyle and wakestyle tricks, old school aerodynamics and having an adrenalin filled fun time" />
+<meta property="og:description" content="check out the photo gallery and photographs the team and the kitesurfers surfing the waves, practising freestyle and wakestyle tricks, old school aerodynamics and having an adrenalin filled fun time" />
+<meta name="twitter:description" content="check out the photo gallery and photographs the team and the kitesurfers surfing the waves, practising freestyle and wakestyle tricks, old school aerodynamics and having an adrenalin filled fun time" />
+      <meta property="og:image" content="https://kahunasurfhouse.eu/assets/seo/kahuna_banner.jpg" />
+    <meta property="twitter:image:src" content="https://kahunasurfhouse.eu/assets/seo/kahuna_banner.jpg" />
+<link rel="canonical" href="https://kahunasurfhouse.eu/gallery">
+<meta property="og:url" content="https://kahunasurfhouse.eu/gallery" />
+<link
+  rel="shortcut icon"
+  href="/img/containers/main/img/seo/logo_kahunasurfhouse.png/1a7ec35074eeeba05db9663b86b14ecb.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/img/containers/main/seo/logo_kahunasurfhouse.png/a15bd08b31d47c30d5086dcfd692c07e.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="144x144"
+  href="/img/containers/main/seo/logo_kahunasurfhouse.png/2b01a5079d9373a4991711b85987184f.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="120x120"
+  href="/img/containers/main/seo/logo_kahunasurfhouse.png/26cc8cbca2b8ac5c862e83aaabe10318.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="114x114"
+  href="/img/containers/main/seo/logo_kahunasurfhouse.png/80d79992e9eacf2dbd91578c853ff1e1.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="76x76"
+  href="/img/containers/main/seo/logo_kahunasurfhouse.png/658be89108cb5f60682de193ae5be47d.png"
+/>
+<link
+  rel="apple-touch-icon"
+  sizes="72x72"
+  href="/img/containers/main/seo/logo_kahunasurfhouse.png/6fe5e70c4c94481cb42742115f33992a.png"
+/>
+  <meta name="robots" content="index, follow">
+  </head>
+  <body>
+    <div id="root" class="root relative template--gallery" v-cloak>
+		<sticky-nav  class="fixed pin-t pin-l z-10 w-full border-b transition  text-white border-transparent ">
+	<header class="header w-full py-18" role="banner">
+		<div class="container flex justify-between items-center">
+			<a class="header__logo text-current pr-24 xs:pr-0  sm:w-90 " href=" https://kahunasurfhouse.eu " title="Home">
+		  <svg></svg>
+	</a>
+			<nav class="header__nav flex items-center sm:hidden" role="navigation">
+	<ul role="menubar" class="flex list-reset">
+	      <li role="menuitem" class="md:text-12 whitespace-no-wrap">
+	         <a href="/kitesurf" class="inline-block text-current p-18 md:p-10 font-display uppercase hover:transition-linear tracking-1 hover:text-hover ">KITESURF</a>
+	      </li>
+	      <li role="menuitem" class="md:text-12 whitespace-no-wrap">
+	         <a href="/sup-surf" class="inline-block text-current p-18 md:p-10 font-display uppercase hover:transition-linear tracking-1 hover:text-hover ">SUP & SURF</a>
+	      </li>
+	      <li role="menuitem" class="md:text-12 whitespace-no-wrap">
+	         <a href="/foil" class="inline-block text-current p-18 md:p-10 font-display uppercase hover:transition-linear tracking-1 hover:text-hover ">FOIL</a>
+	      </li>
+	      <li role="menuitem" class="md:text-12 whitespace-no-wrap">
+	         <a href="/events-camps" class="inline-block text-current p-18 md:p-10 font-display uppercase hover:transition-linear tracking-1 hover:text-hover ">ACTIVITIES & CAMPS</a>
+	      </li>
+	      <li role="menuitem" class="md:text-12 whitespace-no-wrap">
+	         <a href="/king-of-kite" class="inline-block text-current p-18 md:p-10 font-display uppercase hover:transition-linear tracking-1 hover:text-hover ">KING OF KITE</a>
+	      </li>
+	      <li role="menuitem" class="md:text-12 whitespace-no-wrap">
+	         <a href="/weather-station" class="inline-block text-current p-18 md:p-10 font-display uppercase hover:transition-linear tracking-1 hover:text-hover ">WEATHER STATION</a>
+	      </li>
+	      <li role="menuitem" class="md:text-12 whitespace-no-wrap">
+	         <a href="/shop" class="inline-block text-current p-18 md:p-10 font-display uppercase hover:transition-linear tracking-1 hover:text-hover ">SHOP</a>
+	      </li>
+	      <li role="menuitem" class="md:text-12 whitespace-no-wrap">
+	         <a href="/contact" class="inline-block text-current p-18 md:p-10 font-display uppercase hover:transition-linear tracking-1 hover:text-hover ">CONTACT</a>
+	      </li>
+	  		</ul>
+	<ul role="menubar" class="flex list-reset sm:ml-0 ml-20 sm:pt-40">
+		  <li role="menuitem" class="mx-2">
+	  	<a class="text-current relative inline-block rounded-full border-2 w-30 h-30 transition-linear  border-current  hover:border-current" title="View in English" href="/gallery">
+	  		<img class="lang-icon absolute block w-20 h-20 m-auto" src="/site/themes/kahuna/images/icon--en.png"
+	  			 srcset="/site/themes/kahuna/images/icon--en@2x.png 2x, /site/themes/kahuna/images/icon--en@3x.png 3x" alt="English">
+	  	</a>
+	  </li>
+		  <li role="menuitem" class="mx-2">
+	  	<a class="text-current relative inline-block rounded-full border-2 w-30 h-30 transition-linear  border-transparent  hover:border-current" title="View in German" href="/de/gallery">
+	  		<img class="lang-icon absolute block w-20 h-20 m-auto" src="/site/themes/kahuna/images/icon--de.png"
+	  			 srcset="/site/themes/kahuna/images/icon--de@2x.png 2x, /site/themes/kahuna/images/icon--de@3x.png 3x" alt="German">
+	  	</a>
+	  </li>
+		  <li role="menuitem" class="mx-2">
+	  	<a class="text-current relative inline-block rounded-full border-2 w-30 h-30 transition-linear  border-transparent  hover:border-current" title="View in Russian" href="/ru/gallery">
+	  		<img class="lang-icon absolute block w-20 h-20 m-auto" src="/site/themes/kahuna/images/icon--ru.png"
+	  			 srcset="/site/themes/kahuna/images/icon--ru@2x.png 2x, /site/themes/kahuna/images/icon--ru@3x.png 3x" alt="Russian">
+	  	</a>
+	  </li>
+</ul>
+</nav>
+			<nav class="mobile__nav hidden sm:block">
+	<nav-toggle class="relative z-200 w-20 h-16 text-current"></nav-toggle>
+	<div class="mobile__menu overflow-y-scroll z-100 fixed pin-y max-w-500 w-full bg-black text-white--full p-20 flex flex-col ">
+		<a class="header__logo text-current  max-w-90 mb-24 " href=" https://kahunasurfhouse.eu " title="Home">
+						  <svg></svg>
+					</a>
+      <ul class="list-reset -mx-20">
+			 					<li class="font-body text-18 leading-1  mt-18  border-b border-white--faint">
+						<a
+              class="text-current block py-12 px-20"
+              href="/kitesurf"
+            >
+              KITESURF
+            </a>
+					</li>
+								<li class="font-body text-18 leading-1  border-b border-white--faint">
+						<a
+              class="text-current block py-12 px-20"
+              href="/sup-surf"
+            >
+              SUP & SURF
+            </a>
+					</li>
+								<li class="font-body text-18 leading-1  border-b border-white--faint">
+						<a
+              class="text-current block py-12 px-20"
+              href="/foil"
+            >
+              FOIL
+            </a>
+					</li>
+								<li class="font-body text-18 leading-1  border-b border-white--faint">
+						<a
+              class="text-current block py-12 px-20"
+              href="/events-camps"
+            >
+              ACTIVITIES & CAMPS
+            </a>
+					</li>
+								<li class="font-body text-18 leading-1  border-b border-white--faint">
+						<a
+              class="text-current block py-12 px-20"
+              href="/king-of-kite"
+            >
+              KING OF KITE
+            </a>
+					</li>
+								<li class="font-body text-18 leading-1  border-b border-white--faint">
+						<a
+              class="text-current block py-12 px-20"
+              href="/weather-station"
+            >
+              WEATHER STATION
+            </a>
+					</li>
+								<li class="font-body text-18 leading-1  border-b border-white--faint">
+						<a
+              class="text-current block py-12 px-20"
+              href="/shop"
+            >
+              SHOP
+            </a>
+					</li>
+								<li class="font-body text-18 leading-1  border-b border-white--faint">
+						<a
+              class="text-current block py-12 px-20"
+              href="/contact"
+            >
+              CONTACT
+            </a>
+					</li>
+    </ul>
+    <ul role="menubar" class="flex list-reset sm:ml-0 ml-20 sm:pt-40">
+		  <li role="menuitem" class="mx-2">
+	  	<a class="text-current relative inline-block rounded-full border-2 w-30 h-30 transition-linear  border-current  hover:border-current" title="View in English" href="/gallery">
+	  		<img class="lang-icon absolute block w-20 h-20 m-auto" src="/site/themes/kahuna/images/icon--en.png"
+	  			 srcset="/site/themes/kahuna/images/icon--en@2x.png 2x, /site/themes/kahuna/images/icon--en@3x.png 3x" alt="English">
+	  	</a>
+	  </li>
+		  <li role="menuitem" class="mx-2">
+	  	<a class="text-current relative inline-block rounded-full border-2 w-30 h-30 transition-linear  border-transparent  hover:border-current" title="View in German" href="/de/gallery">
+	  		<img class="lang-icon absolute block w-20 h-20 m-auto" src="/site/themes/kahuna/images/icon--de.png"
+	  			 srcset="/site/themes/kahuna/images/icon--de@2x.png 2x, /site/themes/kahuna/images/icon--de@3x.png 3x" alt="German">
+	  	</a>
+	  </li>
+		  <li role="menuitem" class="mx-2">
+	  	<a class="text-current relative inline-block rounded-full border-2 w-30 h-30 transition-linear  border-transparent  hover:border-current" title="View in Russian" href="/ru/gallery">
+	  		<img class="lang-icon absolute block w-20 h-20 m-auto" src="/site/themes/kahuna/images/icon--ru.png"
+	  			 srcset="/site/themes/kahuna/images/icon--ru@2x.png 2x, /site/themes/kahuna/images/icon--ru@3x.png 3x" alt="Russian">
+	  	</a>
+	  </li>
+</ul>
+		<ul class="list-reset pt-30 pb-50">
+							<li class="mr-10 inline-block">
+					<a class="flex items-center justify-center w-45 h-45 rounded-full border text-white border-black--light hover:bg-facebook hover:border-facebook transition-linear" href="https://www.facebook.com/Kahuna.kitesurfing.cyprus" target="_blank">
+						<svg></svg>
+					</a>
+				</li>
+							<li class="mr-10 inline-block">
+					<a class="flex items-center justify-center w-45 h-45 rounded-full border text-white border-black--light hover:bg-twitter hover:border-twitter transition-linear" href="https://twitter.com/KahunaSurfhouse" target="_blank">
+						<svg></svg>
+					</a>
+				</li>
+							<li class="mr-10 inline-block">
+					<a class="flex items-center justify-center w-45 h-45 rounded-full border text-white border-black--light hover:bg-instagram hover:border-instagram transition-linear" href="https://www.instagram.com/kahunasurfhouse/" target="_blank">
+						<svg></svg>
+					</a>
+				</li>
+			<li class="inline-block w-80 uppercase tracking-1 font-display">
+				<a class="redbull-social text-current hover:text-yellow flex items-center" target="_blank" href="https://facebook.com/redbull">
+					<span>Redbull</span>
+					<img class="inline-block ml-40 sm:ml-10" src="/site/themes/kahuna/images/img--redbull.png" alt="">
+				</a>
+			</li>
+		</ul>
+		<div>
+		  	<nav role="navigation" class="text-13 mb-12">
+		  		<ul class="list-reset flex flex-wrap leading-normal">
+	  							      <li role="menuitem" class="mr-10">
+				         <a href="/terms-and-conditions" class="text-current opacity-50 hover:opacity-1">Terms & Conditions</a>
+				      </li>
+				   				      <li role="menuitem" class="mr-10">
+				         <a href="/the-history-of-kitesurfing-in-cyprus" class="text-current opacity-50 hover:opacity-1">The History of Kitesurfing in Cyprus</a>
+				      </li>
+		  		</ul>
+		  	</nav>
+		  	<small class="inline-block leading-normal text-10">
+		  		<span class="text-current opacity-50">&copy; 2026 Kahuna Surfhouse Cyprus Kitesurfing |</span>
+		  		<a class="text-current opacity-50 hover:opacity-1" href="http://serieseight.com" target="_blank">Powered by SERIES EIGHT</a>
+		  	</small>
+		</div>
+	</div>
+</nav>
+		</div>
+	</header>
+</sticky-nav>
+		<main>
+		<off-scroller opacity="0" speed="20" offset="400">
+	<section class="banner relative bg-white--full  pt-192 xs:pt-106 xs:pb-54 pb-156 text-white  ">
+		<div class="container">
+			<off-scroller y="-50px" opacity="0" speed="20">
+				<h1 class="text-center relative xs:text-20 z-1 m-0">
+											Kahuna Gallery
+									</h1>
+			</off-scroller>
+				<div class="absolute pin bg-black">
+					<img data-object-fit class="absolute pin opacity-60" src="/img/containers/main/./kahuna_surfhouse_king_of_kite103.jpg/371f3148bca7e0a8c1316fb768109776.jpg" alt=""
+						 srcset="/img/containers/main/./kahuna_surfhouse_king_of_kite103.jpg/371f3148bca7e0a8c1316fb768109776.jpg 1920w,
+						 		 /img/containers/main/./kahuna_surfhouse_king_of_kite103.jpg/220adffa10f84cf4bf1e7c2623bfaf43.jpg 1024w,
+						 		 /img/containers/main/./kahuna_surfhouse_king_of_kite103.jpg/9adbb5e92df3b8b97b5d464dc3f97c47.jpg 768w,
+						 		 /img/containers/main/./kahuna_surfhouse_king_of_kite103.jpg/c99dfdd47b93ee3bb4e499b97b4773a2.jpg 414w">
+		 		 </div>
+		</div>
+	</section>
+</off-scroller>
+<section class="py-60 xs:py-30">
+	<gallery-tabs>
+    <div class="container" slot-scope="props">
+      <div class="flex justify-center mb-40 border-b border-black">
+                  <div
+            :class="{ 'text-hover' : props.active == 1 }"
+            class="text-center text-20 font-medium p-18 px-50 mx-10 md:p-10 font-display uppercase transition-linear tracking-1 cursor-pointer hover:text-hover"
+            @click="props.change(1)"
+          >
+            2020
+          </div>
+      </div>
+      <div>
+                  <modal-gallery items="a" class="g" v-show="props.active == 1">
+                <div class="w-1/4 g__col pb-32 sm:w-1/3 xs:w-1/2 sm:pb-16">
+                  <a class="block" href="/assets/kahuna_surfhouse_king_of_kite1.jpg">
+                    <img
+                      class="block w-full h-auto"
+                      src="/img/containers/main/./kahuna_surfhouse_king_of_kite1.jpg/905c42eb5d1ba75c932defce8939c93e.jpg"
+                      width="288"
+                      height="216"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="w-1/4 g__col pb-32 sm:w-1/3 xs:w-1/2 sm:pb-16">
+                  <a class="block" href="/assets/kahuna_surfhouse_king_of_kite105.jpg">
+                    <img
+                      class="block w-full h-auto"
+                      src="/img/containers/main/./kahuna_surfhouse_king_of_kite105.jpg/1f2dd6caa1b9f19e377d3f44460d8206.jpg"
+                      width="288"
+                      height="216"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="w-1/4 g__col pb-32 sm:w-1/3 xs:w-1/2 sm:pb-16">
+                  <a class="block" href="/assets/kahuna_surfhouse_king_of_kite10.jpg">
+                    <img
+                      class="block w-full h-auto"
+                      src="/img/containers/main/./kahuna_surfhouse_king_of_kite10.jpg/b380ad65029cfa09c354a206359bb317.jpg"
+                      width="288"
+                      height="216"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="w-1/4 g__col pb-32 sm:w-1/3 xs:w-1/2 sm:pb-16">
+                  <a class="block" href="/assets/kahuna_surfhouse_king_of_kite100.jpg">
+                    <img
+                      class="block w-full h-auto"
+                      src="/img/containers/main/./kahuna_surfhouse_king_of_kite100.jpg/b2566058407e96a6915a72d73f034b8c.jpg"
+                      width="288"
+                      height="216"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="w-1/4 g__col pb-32 sm:w-1/3 xs:w-1/2 sm:pb-16">
+                  <a class="block" href="/assets/kahuna_surfhouse_king_of_kite101.jpg">
+                    <img
+                      class="block w-full h-auto"
+                      src="/img/containers/main/./kahuna_surfhouse_king_of_kite101.jpg/1fe23b462e0bf4af7ceda9b8950b3af1.jpg"
+                      width="288"
+                      height="216"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="w-1/4 g__col pb-32 sm:w-1/3 xs:w-1/2 sm:pb-16">
+                  <a class="block" href="/assets/kahuna_surfhouse_king_of_kite102.jpg">
+                    <img
+                      class="block w-full h-auto"
+                      src="/img/containers/main/./kahuna_surfhouse_king_of_kite102.jpg/aaa657daa4b032e4b42698eb411dfd63.jpg"
+                      width="288"
+                      height="216"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="w-1/4 g__col pb-32 sm:w-1/3 xs:w-1/2 sm:pb-16">
+                  <a class="block" href="/assets/kahuna_surfhouse_king_of_kite104.jpg">
+                    <img
+                      class="block w-full h-auto"
+                      src="/img/containers/main/./kahuna_surfhouse_king_of_kite104.jpg/cfb0a2e925784dff7dd2e9fe6f0fdb58.jpg"
+                      width="288"
+                      height="216"
+                      alt=""
+                    />
+                  </a>
+                </div>
+                <div class="w-1/4 g__col pb-32 sm:w-1/3 xs:w-1/2 sm:pb-16">
+                  <a class="block" href="/assets/kahuna_surfhouse_king_of_kite103.jpg">
+                    <img
+                      class="block w-full h-auto"
+                      src="/img/containers/main/./kahuna_surfhouse_king_of_kite103.jpg/61309f8c6e46ea24c619dfb866193323.jpg"
+                      width="288"
+                      height="216"
+                      alt=""
+                    />
+                  </a>
+                </div>
+          </modal-gallery>
+      </div>
+    </div>
+  </gallery-tabs>
+</section>
+		</main>
+      	<footer class="footer bg-black text-white pt-75 pb-35 sm:py-30 xs:pt-10 xs:pb-15" role="contentinfo">
+	<div class="container flex flex-wrap justify-between">
+		<div class="w-1/4 md:w-full md:pb-40 sm:pt-20 sm:text-center">
+	<a class="footer__logo text-current opacity-15 hover:opacity-1 transition-linear" href="https://kahunasurfhouse.eu" title="Home">
+		<svg></svg>
+	</a>
+</div>
+		<nav class="footer__nav flex flex-wrap w-1/2 md:w-3/4 sm:w-full" role="navigation">
+	<ul role="menubar" class="w-auto flex-0 sm:w-1/2 sm:text-center list-reset mt-20 lg:mt-0 px-20">
+		<li role="menuitem" class="uppercase tracking-1 font-display mb-15"><a href="/" class="block text-current hover:text-hover">Kahuna</a></li>
+		<li role="menuitem" class="text-13 leading-loose"><a href="/about" class="block text-current hover:text-hover">About</a></li>
+		<li role="menuitem" class="text-13 leading-loose"><a href="/news" class="block text-current hover:text-hover">News</a></li>
+		<li role="menuitem" class="text-13 leading-loose"><a href="/gallery" class="block text-current hover:text-hover">Gallery</a></li>
+		<li role="menuitem" class="text-13 leading-loose"><a href="/contact" class="block text-current hover:text-hover">Contact</a></li>
+	</ul>
+	<ul role="menubar" class="w-auto flex-0 sm:w-1/2 sm:text-center list-reset mt-20 lg:mt-0 px-20">
+		<li role="menuitem" class="uppercase tracking-1 font-display mb-15"><a href="/events-camps" class="block text-current hover:text-hover">Events & Camps</a></li>
+	</ul>
+	<ul role="menubar" class="w-auto flex-0 sm:w-1/2 sm:text-center list-reset mt-20 lg:mt-0 px-20 sm:mb-20">
+		<li role="menuitem" class="uppercase tracking-1 font-display mb-15"><a href="/shop" class="block text-current hover:text-hover">Shop</a></li>
+	</ul>
+	<ul role="menubar" class="w-auto flex-0 sm:w-1/2 sm:text-center list-reset mt-20 lg:mt-0 px-20">
+		<li role="menuitem" class="uppercase tracking-1 font-display mb-15"><a href="/king-of-kite" class="block text-current hover:text-hover">King of Kite</a></li>
+	</ul>
+	<ul role="menubar" class="w-auto flex-0 sm:hidden list-reset mt-20 lg:mt-0 px-20">
+		<li role="menuitem" class="uppercase tracking-1 font-display mb-15"><a href="/weather-station" class="block text-current hover:text-hover">Weather Station</a></li>
+	</ul>
+</nav>
+		<div class="footer__social w-1/4 sm:w-full sm:justify-center sm:py-30 relative">
+	<ul class="list-reset flex items-center justify-end sm:justify-center relative z-0">
+          <li class="mx-5">
+        <a class="flex items-center justify-center w-45 h-45 rounded-full border text-white border-black--light  transition-linear" href="https://www.instagram.com/kahunasurfhouse/" target="_blank">
+          <svg></svg>
+        </a>
+      </li>
+					<li class="mx-5">
+				<a class="flex items-center justify-center w-45 h-45 rounded-full border text-white border-black--light  transition-linear" href="https://www.facebook.com/Kahuna.kitesurfing.cyprus" target="_blank">
+					<svg></svg>
+				</a>
+			</li>
+    			<li class="mx-5">
+				<a class="flex items-center justify-center w-45 h-45 rounded-full border text-white border-black--light  transition-linear" href="https://www.youtube.com/c/KahunaSurfhouse" target="_blank">
+					<svg></svg>
+				</a>
+			</li>
+		<li class="absolute pin-t pin-r z--1 uppercase tracking-1 font-display sm:relative sm:ml-10">
+			<a class="redbull-social text-current hover:text-yellow flex items-center" target="_blank" href="https://facebook.com/redbull">
+				<span>Redbull</span>
+				<img class="inline-block ml-40 sm:ml-10" src="/site/themes/kahuna/images/img--redbull.png" alt="">
+			</a>
+		</li>
+	</ul>
+</div>
+		<div class="w-full footer__legal text-center mt-140 sm:mt-0">
+  	<nav role="navigation" class="inline-block text-13 xs:hidden">
+  		<ul class="list-reset inline-block leading-normal">
+					      <li role="menuitem" class="mx-15 inline-block">
+		         <a href="/terms-and-conditions" class="text-current opacity-50 hover:opacity-1">Terms & Conditions</a>
+		      </li>
+		   		      <li role="menuitem" class="mx-15 inline-block">
+		         <a href="/the-history-of-kitesurfing-in-cyprus" class="text-current opacity-50 hover:opacity-1">The History of Kitesurfing in Cyprus</a>
+		      </li>
+  		</ul>
+  	</nav>
+  	<small class="inline-block text-13 mx-15 leading-normal xs:text-10">
+  		<span class="text-current opacity-50">&copy; 2026 Kahuna Surfhouse Cyprus Kitesurfing |</span> 
+  		<a class="text-current opacity-50 hover:opacity-1" href="http://serieseight.com" target="_blank">Powered by SERIES EIGHT</a>
+  	</small>
+</div>
+	</div>
+</footer>
+   		<baseline-grid></baseline-grid>
+    </div>
+  </body>
+</html>

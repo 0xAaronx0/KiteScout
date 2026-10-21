@@ -1,4 +1,5 @@
-// Kite Tribe (El Gouna): replays the lessons + contact pages recorded 2026-10-12.
+// Kite Tribe (El Gouna): replays the lessons + contact pages recorded 2026-10-12 and the three photo pages
+// (/, /about-us/why-kite-tribe/, /about-us/el-gouna/) recorded 2026-10-21.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
@@ -58,6 +59,13 @@ test('kitetribe: content', async () => {
   assert.deepEqual(c.skillLevels, ['beginner', 'intermediate', 'advanced']);
   assert.equal(c.equipmentRental, true);
   assert.ok(c.includedServices.includes('IKO licence after successful completion (beginner courses)'));
-  assert.ok(c.imageUrls.length >= 4);
-  assert.ok(c.imageUrls.every(u => !/logo|safari|trustindex|\.svg/i.test(u)));
+  assert.ok(c.imageUrls.length >= 12, `only ${c.imageUrls.length} photo candidates`);
+  const up = 'https://www.kitetribe.org/wp-content/uploads/';
+  for (const f of ['2025/03/kitesurfing-lessons.jpg', '2025/04/el-gouna-kitepower-station.jpg', '2025/04/el-gouna-kitepower-kite-launch.jpg',
+    '2025/03/Kitesurfing_privatecoaching.jpg', '2025/03/Tony-teaching-on-the-beach.jpg', '2024/03/Kite-Tribe_student-learn-jumping.png',
+    '2025/03/Kitesurfing_beginnercourse.jpg', '2025/03/kitesurfing-lesson-splashes.jpg', '2025/03/Kitetribe_beach_life.jpg']) {
+    assert.ok(c.imageUrls.includes(up + f), `missing ${f}`);
+  }
+  // no other products (safari boat, camps, girls trip, wing foil), skill icons, headshots, weather chart, chrome
+  assert.ok(c.imageUrls.every(u => !/logo|safari|trustindex|\.svg|girlstrip|zodiac|grouptravel|wing-?foil|Kite_beginner|Kite_advanced|Ursi\.|testimonial|weather-chart/i.test(u)));
 });

@@ -11,6 +11,12 @@
 //            request by email or phone. Prices include service and cleaning charges."
 //   content  the same page (surf house text, FAQ: rooms, services, towels/bedding, garage, minimum two people for
 //            shared rooms, cancellation policy; contact footer), hero photo from the Elementor section background.
+//   photos   (2026-10-21) the accommodation page has a single house photo, so the school's own kitesurfing course page
+//            https://lazykiteschooltarifa.com/en/kitesurfing-courses-tarifa/ adds Tarifa kite photos (private and group
+//            lessons on the beach, boat-assisted lessons, the station at the beach, the group). Capped so that house
+//            photo + course photos stay <= 10: the vision QC only sees the 10 largest, and the course originals are
+//            much larger than the house photo, which must not be crowded out. The about-us page (staff portraits)
+//            and the camp page (no house photos) are not used. Best effort: a failed course page only costs photos.
 // Season months: "/" lists months ("Mid (July / September)" around "High (August)"), so the table prices June and
 //   October (low), July and September (mid) and August (high); November-May are not in it.
 // Year: the table has none and the page carries no date (WordPress REST says the page was last modified 2025-05-20,
@@ -19,17 +25,22 @@
 //   carry the season label but NO dates (like bkc-houses-bilene) instead of an invented or expired year.
 // No booking engine: contact form / e-mail / phone -> 'on_request'.
 // robots.txt (2026-10-12): only /wp-admin/ disallowed (admin-ajax allowed).
-// Requests per run: 1 (content and slots share one memoised fetch).
+// Requests per run: content 2 (accommodation page + course page for photos), slots 1 (memoised, shared with content).
 // Parsed: 12 slots = room type x season ("double-room|low"), EUR per person per night, occupancy = beds in the room
 //   type (private 1, double 2, triple 3, quadruple 4), datePrecision 'season', availability 'on_request'.
-// Known limits: only one photo of the house on the page; no address or map of the house (no spotCoords).
+// Known limits: only one photo of the house itself on the whole site (WordPress media library checked 2026-10-21);
+//   no address or map of the house (no spotCoords).
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
-import { clean, collapse, detectCurrency, parse, parseAmount } from '../parse.js';
+import { clean, collapse, detectCurrency, imageCandidates, parse, parseAmount } from '../parse.js';
 import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
 
 const SITE = 'https://lazykiteschooltarifa.com';
 export const LAZY_URL = `${SITE}/en/accommodation-tarifa/`;
+/** the school's own course page: Tarifa kite photos (the accommodation page has one house photo only) */
+export const LAZY_PHOTOS_URL = `${SITE}/en/kitesurfing-courses-tarifa/`;
+/** the vision QC sees the 10 largest candidates; keep the total at that so the house photo always reaches it */
+const LAZY_MAX_PHOTOS = 10;
 
 const keyPart = (s: string): string => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
@@ -132,7 +143,26 @@ export function lazyImages(html: string): string[] {
   });
 }
 
-export function parseLazyContent(html: string): OfferContent {
+/** Kite photos of the school's course page (graphics, logos, flags and screenshots dropped). */
+export function lazyCoursePhotos(html: string): string[] {
+  return imageCandidates(html, LAZY_PHOTOS_URL, null, 40)
+    .filter(u => /^https:\/\/lazykiteschooltarifa\.com\/wp-content\/uploads\/[^?]+\.(?:jpe?g|webp)$/i.test(u))
+    .filter(u => !/logo|gorra|diseno-sin-titulo|icon|bandera|screenshot/i.test(u));
+}
+
+/** House photo(s) first, then course photos, capped at LAZY_MAX_PHOTOS. */
+export function lazyPhotoCandidates(houseHtml: string, courseHtml: string | null): string[] {
+  const house = lazyImages(houseHtml);
+  const out = [...house];
+  for (const u of courseHtml ? lazyCoursePhotos(courseHtml) : []) {
+    if (out.length >= LAZY_MAX_PHOTOS) break;
+    const k = u.replace(/-scaled(?:-\d+)?|\.(?:jpe?g|webp)$/gi, '');
+    if (!out.some(o => o.replace(/-scaled(?:-\d+)?|\.(?:jpe?g|webp)$/gi, '') === k)) out.push(u);
+  }
+  return out;
+}
+
+export function parseLazyContent(html: string, courseHtml: string | null = null): OfferContent {
   const lines = lazyLines(html);
   const intro = lines.filter(l => /Surf House|duplex/i.test(l) && l.length > 150);
   const faq = parseLazyFaq(html);
@@ -174,7 +204,7 @@ export function parseLazyContent(html: string): OfferContent {
     mealPlan: 'self_catering',
     languages: [],
     rooms,
-    imageUrls: lazyImages(html),
+    imageUrls: lazyPhotoCandidates(html, courseHtml),
     heroVideoUrl: null,
     sourceUrl: LAZY_URL,
     bookingUrl: `${LAZY_URL}#contact`,
@@ -203,10 +233,14 @@ export const lazyKiteSurfHouseTarifa: OfferAdapter = {
   },
   url: LAZY_URL,
   slotMethod: 'price_table',
-  fetchBudget: 2,
+  fetchBudget: 3,
   confidence: 'medium', // year-less season table on a page last edited 2025
-  async fetchContent() {
-    return parseLazyContent(await page(LAZY_URL));
+  async fetchContent(ctx) {
+    const html = await page(LAZY_URL);
+    let courseHtml: string | null = null;
+    try { courseHtml = await page(LAZY_PHOTOS_URL); }
+    catch (e) { ctx.note(`lazy-kite: photo page ${LAZY_PHOTOS_URL} failed (${(e as Error).message})`); }
+    return parseLazyContent(html, courseHtml);
   },
   async fetchSlots() {
     const html = await page(LAZY_URL);

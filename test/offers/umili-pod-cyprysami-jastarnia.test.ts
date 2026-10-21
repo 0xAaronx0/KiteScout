@@ -1,11 +1,13 @@
 // Umili Pod Cyprysami (Jastarnia): replays /en, /cottages and /holidays-surf-inclusive recorded 2026-10-12
-// (script / style bodies, SVGs and comments trimmed). Bookassist is not called (robots.txt disallows it).
+// (script / style bodies, SVGs and comments trimmed) and /gallery (photos) recorded 2026-10-21. Bookassist is not
+// called (robots.txt disallows it).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  umiliPodCyprysamiJastarnia, parsePcCoords, parsePcEquipment, parsePcPackages, parsePcSurfInclusive, parsePcUnits,
+  umiliPodCyprysamiJastarnia, parsePcCoords, parsePcEquipment, parsePcGalleryAttractions, parsePcPackages, parsePcSurfInclusive,
+  parsePcUnits, pcPhotoCandidates, PC_KITE_PHOTOS,
 } from '../../src/offers/adapters/umili-pod-cyprysami-jastarnia.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
@@ -18,6 +20,7 @@ const ctx = { note: (t: string) => { notes.push(t); }, incomplete: () => {} };
 const home = read('podcyprysami.pl_en.');
 const cottages = read('podcyprysami.pl_cottages.');
 const surf = read('podcyprysami.pl_holidays-surf-inclusive.');
+const gallery = read('podcyprysami.pl_gallery.');
 
 test('pod-cyprysami: unit cards (m², max persons, group, gallery)', () => {
   const units = parsePcUnits(cottages);
@@ -71,7 +74,28 @@ test('pod-cyprysami: content', async () => {
   assert.match(c.summary, /"Holidays 2027 Surf Inclusive" package \(25 Jun - 31 Aug\)/);
   assert.equal(c.rooms.length, 12);
   assert.equal(c.rooms[0].description, '14 m², up to 3 persons');
-  assert.equal(c.imageUrls.length, 30);
+  assert.equal(c.imageUrls.length, 24);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://podcyprysami.pl/thumb?') && !/Ustronie|Ruciane|logo/i.test(u)));
   assert.match(c.sourceText ?? '', /May Weekend 2027/);
+});
+
+test('umili-pod-cyprysami: photo pool (gallery kite photos interleaved with the cottages, distinct dedup keys)', async () => {
+  const c = await umiliPodCyprysamiJastarnia.fetchContent(ctx);
+  // the shared dedup (src/lib/images.ts canonicalKey) keys a URL on its "url" query param's path, else on its own
+  // path - which is "/thumb" for every candidate here; mirror it and require one key per photo
+  const key = (u: string) => { const x = new URL(u); const inner = x.searchParams.get('url'); return inner ? new URL(inner, x.origin).pathname : x.pathname; };
+  assert.equal(new Set(c.imageUrls.map(key)).size, c.imageUrls.length);
+  // one crop size for all: equal area, so the vision QC's 10 largest = the first 10
+  assert.ok(c.imageUrls.every(u => u.includes('&w=1440&h=960&url=%2Fdomki-pod-cyprysami%2Fuser%2F')));
+  const first10 = c.imageUrls.slice(0, 10).map(u => decodeURIComponent(new URL(u).searchParams.get('file')!));
+  assert.match(first10[0], /Atuty\/20220512MP16/); // og: cottages with surfboards
+  assert.equal(first10.filter(f => /Galeria/.test(f)).length, 5); // kite / beach photos
+  assert.equal(first10.filter(f => /Domki/.test(f)).length, 4);   // cottages
+  assert.match(first10[1], /54-DSC02354\.jpg$/);
+  const attractions = parsePcGalleryAttractions(gallery);
+  assert.ok(attractions.length >= 40);
+  for (const n of PC_KITE_PHOTOS) assert.ok(attractions.some(f => f.endsWith(`%2F${n}`)), `gallery lacks ${n}`);
+  // without the gallery the pool is cottages + home photos only
+  const noGallery = pcPhotoCandidates(null, parsePcUnits(cottages), null, []);
+  assert.ok(noGallery.length > 10 && noGallery.every(u => !/Galeria/.test(u)));
 });

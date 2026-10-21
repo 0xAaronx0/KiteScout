@@ -1,11 +1,12 @@
 // KiteWest Wave & Freestyle Kite Camp, Coronation Beach: replays /wave-freestyle/ recorded 2026-10-19
-// ("2027 Calendar dates TBA" -> no slots). The date parser is checked with a synthetic dated line.
+// ("2027 Calendar dates TBA" -> no slots) and the co-operator's camp page on sharkbaykitesurfing.com recorded
+// 2026-10-21 (photos only). The date parser is checked with a synthetic dated line.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  buildKwSlots, kitewestWaveFreestyleCampCoronationBeach, parseKwCamp,
+  buildKwSlots, kitewestWaveFreestyleCampCoronationBeach, parseKwCamp, parseKwPartnerImages,
 } from '../../src/offers/adapters/kitewest-wave-freestyle-camp-coronation-beach.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
@@ -36,13 +37,31 @@ test('kitewest: no slots today; dated lines become slots once printed', async ()
   assert.ok(slots.every(s => s.startDate === '2027-02-07' && s.currency === 'AUD' && s.priceBasis === 'person'));
 });
 
-test('kitewest: valid camp content, no images (robots disallows /wp-content/)', async () => {
+test('kitewest: valid camp content, photos from the partner camp page only', async () => {
   const c = await kitewestWaveFreestyleCampCoronationBeach.fetchContent(ctx);
   assert.equal(contentProblem(c), null);
   assert.equal(c.kind, 'camp');
   assert.equal(c.durationDays, 7);
-  assert.deepEqual(c.imageUrls, []);
+  const U = 'https://sharkbaykitesurfing.com/wp-content/uploads/';
+  assert.deepEqual(c.imageUrls, [
+    'slider-3-image-new19.jpg', 'F8nWa.webp', 'FullSizeRender-8-600x600-1.jpg', 'IMG_1029-350x350-1.jpg',
+    'IMG_1756-2-600x600-1.jpg', '054LR.jpg', 'yurts-camp.webp', 'IMG_1480.webp', 'Camp.webp', '52-pm.webp', 'AM5_4346-scaled-1.webp',
+    '3c893fc1-b8cd-40be-8eb2-1bb4df9780af-copy-600x600-1.jpg',
+  ].map(f => U + f));
+  // never kitewest.com.au (robots disallows /wp-content/), no logos, stock, other places or optional-activity tiles
+  assert.ok(!c.imageUrls.some(u => /kitewest\.com\.au|logo|pexels|fone_|uePQj|IMG_0015|r7EwU|dive-ocean|LLfOS|2CyKD|(09|58)-pm/i.test(u)));
   assert.match(c.summary, /2027 dates are not published yet/);
   assert.match(c.summary, /AUD 3,295 in a shared tent to AUD 3,595/);
   assert.doesNotMatch(c.summary, /[–—]/);
+});
+
+test('kitewest: partner images map thumbnails to originals and keep re-upload names', () => {
+  const html = `<img src="https://sharkbaykitesurfing.com/wp-content/uploads/slider-3-image-new19-1024x427.jpg">
+    <style>.gb-a{background-image:url(https://sharkbaykitesurfing.com/wp-content/uploads/IMG_1756-2-600x600-1.jpg);}
+    .gb-b{background-image:url(https://sharkbaykitesurfing.com/wp-content/uploads/pexels-pixabay-262945-600x600-1.jpg);}</style>
+    <img src="https://sharkbaykitesurfing.com/wp-content/uploads/SharkBayKiteSurfing-Logo-img-2.png">`;
+  assert.deepEqual(parseKwPartnerImages(html), [
+    'https://sharkbaykitesurfing.com/wp-content/uploads/slider-3-image-new19.jpg',
+    'https://sharkbaykitesurfing.com/wp-content/uploads/IMG_1756-2-600x600-1.jpg',
+  ]);
 });

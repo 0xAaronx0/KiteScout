@@ -337,3 +337,13 @@ tokens: live + instant), AIRJUNK Tokoname (stay rates; school closed for 2026, r
 automatically; pin = OSM coast of the Sakai quarter) and FUNBASE Uruma (fee tables incl. the revised rates from
 2026-12-30). X-FLY Miyako was already in the catalog (c1ba9e9). Gap: `fetchText` decodes everything as UTF-8, so
 Shift_JIS pages (older Japanese sites, e.g. airjunk.jp home) lose their text.
+
+Photo gaps (2026-10-21): 17 live listings had 0-2 photos; 13 now carry 4-10 vetted own-site photos (trip reports via
+WordPress REST for KITECLUB Kumejima/Kohama and Latitudes Nord's `/carnets-et-photos/` reports; extra own pages for
+Kite Tribe, LazyKite, Kahuna, Lion Hostel (WP media library + CSS backgrounds), My Salty Sisters (the operator's
+Rhodes 2026 photo page); KiteWest via its camp co-operator sharkbaykitesurfing.com because kitewest.com.au disallows
+/wp-content/ for bots; ExotiKite only 4 Los Barriles kiting photos). Still 1 photo, no own-site source: Latitudes Nord
+North Cape (no report) and Iceland (only summer trek photos, misleading for a winter trip), LEN10 Tatajuba, The Rider
+Experience Los Roques. `lib/images.ts`: `canonicalKey` keeps identifying query params for extension-less image
+scripts (`/thumb?file=...` used to collapse every photo into one) and the vision thumbnails honour EXIF rotation.
+Audit: `src/_fewimgs.ts` (gitignored) lists active rows below N photos.

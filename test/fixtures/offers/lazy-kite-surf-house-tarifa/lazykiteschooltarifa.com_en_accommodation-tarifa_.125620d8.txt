@@ -563,7 +563,7 @@ Esperienza bellissima, sicuramente da ripetere!<!-- R-CONTENT --></div> <span cl
 		</div>
 						</div>
 								<div class="elementor-field-type-recaptcha_v3 elementor-field-group elementor-column elementor-field-group-field_ed1b07a elementor-col-100 recaptcha_v3-bottomleft">
-					<div class="elementor-field" id="form-field-field_ed1b07a"><div class="elementor-g-recaptcha" data-sitekey="6LffLEErAAAAAPCBVc3DyplSmTHL55YLqWdWB9hb" data-type="v3" data-action="Form" data-badge="bottomleft" data-size="invisible"></div></div>				</div>
+					<div class="elementor-field" id="form-field-field_ed1b07a"><div class="elementor-g-recaptcha" data-sitekey="REDACTED" data-type="v3" data-action="Form" data-badge="bottomleft" data-size="invisible"></div></div>				</div>
 								<div class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
 					<button class="elementor-button elementor-size-sm elementor-animation-grow" type="submit">
 						<span class="elementor-button-content-wrapper">

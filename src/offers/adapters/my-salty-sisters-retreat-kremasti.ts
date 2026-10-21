@@ -14,9 +14,19 @@
 //   - "Included Features:" / "Not Included:" lists.
 // Booking: "BOOK NOW" -> /hidden/booking-rhodes-kite-retreats/, a form ("You will receive your booking confirmation ...
 //   within 1-3 days") -> availability 'on_request'; flags unset. The booking page repeats dates and prices; not fetched.
-// robots.txt www.mysaltysisters.info (2026-10-19): /app/ and /j/ disallowed, "Crawl-Delay: 5"; we make 1 request per run.
+// robots.txt www.mysaltysisters.info (2026-10-19): /app/ and /j/ disallowed, "Crawl-Delay: 5"; this module waits 5 s
+//   between its own requests (skipped on fixture replay; http.ts has no crawl-delay support).
 // Photos: the page reuses the operator's Colombia retreat photos (file names say "colombia"); those are dropped, the
-//   remaining generic retreat photos are kept (few; no Rhodes-specific photo on the page).
+//   remaining generic retreat photos are kept (few; no Rhodes-specific photo on the page). (2026-10-21) Rhodes photos
+//   come from the operator's own photo page of the latest past Rhodes retreat: /retreats/en/previous-retreats/ links
+//   one page per past retreat ("/hidden/pictures-of-rhodes-2026/", "-2025/", ...; /hidden/ is not robots-disallowed);
+//   the newest Rhodes one is read (40 photos of the June 2026 retreat at Kremasti: kiting, the station, the group).
+//   Those photos are taken in the page's own Jimdo rendition (dimension=2048x2048 / 4096x4096, with the page's
+//   ":rotate=90" where it rotates a sideways original; the bare originals are up to 5712 px and sideways). Gallery
+//   photos go first (capped at 16), the generic page photos after; Jimdo's default-named "image.png" on the trip page
+//   is the "LIMITED SPACES" badge and is dropped. Best effort: failed photo pages only cost their photos.
+// Requests per run: content 3 (trip page, previous-retreats page, latest Rhodes photo page; ~10 s with the crawl
+//   delay), slots 1 (memoised with content).
 // State 2026-10-19: 1 week 19.-26.06.2027 -> 1 slot, early bird EUR 1,290 valid until 2027-02-01.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
@@ -26,11 +36,27 @@ import type { FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js
 export const MSS_RHODES_URL = 'https://www.mysaltysisters.info/retreats/en/kitetrip-to-rhodes/';
 const MSS_BOOKING_URL = 'https://www.mysaltysisters.info/hidden/booking-rhodes-kite-retreats/';
 
+const MSS_SITE = 'https://www.mysaltysisters.info';
+export const MSS_PREVIOUS_URL = `${MSS_SITE}/retreats/en/previous-retreats/`;
+const CRAWL_DELAY_MS = 5_000; // robots.txt "Crawl-Delay: 5"
+const MSS_MAX_GALLERY = 16;
+const MSS_MAX_PHOTOS = 20;
+
+/** Memoised fetch, serialised with the robots.txt crawl delay (skipped on fixture replay). */
 const memo = new Map<string, { at: number; p: Promise<string> }>();
+let chain: Promise<unknown> = Promise.resolve();
+let lastSiteFetch = 0;
 function page(url: string): Promise<string> {
   const hit = memo.get(url);
   if (hit && Date.now() - hit.at < 10 * 60_000) return hit.p;
-  const p = fetchText(url);
+  const p = chain.then(async () => {
+    if (!process.env.OFFERS_FIXTURE_DIR) {
+      const wait = lastSiteFetch + CRAWL_DELAY_MS - Date.now();
+      if (wait > 0) await new Promise(r => setTimeout(r, wait));
+    }
+    try { return await fetchText(url); } finally { lastSiteFetch = Date.now(); }
+  });
+  chain = p.catch(() => undefined);
   memo.set(url, { at: Date.now(), p });
   p.catch(() => memo.delete(url));
   return p;
@@ -157,7 +183,45 @@ export function mssImages(html: string): string[] {
   return [...best.values()].filter(x => x.w >= 300).map(x => x.url);
 }
 
-export function parseMssContent(html: string, today = todayIso()): OfferContent {
+/** The newest Rhodes photo page linked from /retreats/en/previous-retreats/ (highest year in the link). */
+export function mssRhodesGalleryUrl(previousHtml: string): string | null {
+  let best: { url: string; year: number } | null = null;
+  for (const m of previousHtml.matchAll(/href="(\/hidden\/[^"]*rhodes[^"]*)"/gi)) {
+    const year = Number(m[1].match(/20\d{2}/)?.[0] ?? 0);
+    if (!best || year > best.year) best = { url: new URL(m[1], MSS_SITE).toString(), year };
+  }
+  return best ? best.url : null;
+}
+
+/** Photos of a Jimdo photo page in the page's own largest rendition (keeps its ":rotate=90" for sideways originals). */
+export function mssGalleryImages(html: string): string[] {
+  const best = new Map<string, { url: string; area: number }>();
+  for (const m of html.matchAll(/https:\/\/image\.jimcdn\.com\/app\/cms\/image\/transf\/(dimension=(\d+)x(\d+):format=jpg[^/]*)\/path\/([^/]+)\/image\/([^/]+)\/version\/(\d+)\/([^"'\s,?]+)/g)) {
+    const [, transf, w, h, site, id, ver, name] = m;
+    const area = Number(w) * Number(h);
+    if (Math.min(Number(w), Number(h)) < 1000 || /colombia|favicon/i.test(name)) continue;
+    const prev = best.get(id);
+    if (!prev || area > prev.area) best.set(id, { url: `https://image.jimcdn.com/app/cms/image/transf/${transf}/path/${site}/image/${id}/version/${ver}/${name}`, area });
+  }
+  return [...best.values()].map(x => x.url);
+}
+
+/** Rhodes photo-page photos first (capped), then the trip page's own photos (badge dropped), one per Jimdo image id. */
+export function mssPhotoCandidates(tripHtml: string, galleryHtml: string | null): string[] {
+  const out: string[] = [];
+  const ids = new Set<string>();
+  const add = (u: string) => {
+    const id = u.match(/\/image\/(i[0-9a-f]+)\//)?.[1] ?? u;
+    if (ids.has(id) || out.length >= MSS_MAX_PHOTOS) return;
+    ids.add(id);
+    out.push(u);
+  };
+  for (const u of (galleryHtml ? mssGalleryImages(galleryHtml) : []).slice(0, MSS_MAX_GALLERY)) add(u);
+  for (const u of mssImages(tripHtml)) if (!/\/image\.png$/i.test(u)) add(u);
+  return out;
+}
+
+export function parseMssContent(html: string, today = todayIso(), galleryHtml: string | null = null): OfferContent {
   const lines = mssLines(html);
   const weeks = parseMssWeeks(lines);
   const prices = parseMssPrices(lines);
@@ -199,7 +263,7 @@ export function parseMssContent(html: string, today = todayIso()): OfferContent 
     mealPlan: 'breakfast',
     languages: ['en', 'de'],
     rooms: [],
-    imageUrls: mssImages(html),
+    imageUrls: mssPhotoCandidates(html, galleryHtml),
     heroVideoUrl: null,
     sourceUrl: MSS_RHODES_URL,
     bookingUrl: MSS_BOOKING_URL,
@@ -223,9 +287,16 @@ export const mySaltySistersRetreatKremasti: OfferAdapter = {
   },
   url: MSS_RHODES_URL,
   slotMethod: 'html_dates',
-  fetchBudget: 2,
-  async fetchContent() {
-    return parseMssContent(await page(MSS_RHODES_URL));
+  fetchBudget: 4,
+  async fetchContent(ctx) {
+    const html = await page(MSS_RHODES_URL);
+    let gallery: string | null = null;
+    try {
+      const url = mssRhodesGalleryUrl(await page(MSS_PREVIOUS_URL));
+      if (url) gallery = await page(url);
+      else ctx.note('my-salty-sisters: no Rhodes photo page linked on the previous-retreats page');
+    } catch (e) { ctx.note(`my-salty-sisters: photo pages failed (${(e as Error).message})`); }
+    return parseMssContent(html, todayIso(), gallery);
   },
   fetchSlots: ctx => fetchMssSlots(ctx),
 };
