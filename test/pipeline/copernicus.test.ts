@@ -139,3 +139,20 @@ test('retrieveRetrying retries HTTP 5xx, not 4xx', async () => {
     assert.equal(posts, 1);
   } finally { globalThis.fetch = real; }
 });
+
+test('kiteableShare: >= 12 kn for >= 2 consecutive daylight hours, local solar time', async () => {
+  const { kiteableShare } = await import('../../src/pipeline/copernicus.js');
+  // u/v columns in m/s; 7 m/s = 13.6 kn. January: 14:00-15:00 UTC windy (2 h) -> kiteable;
+  // February: only 14:00 windy (1 h) -> not; March: windy at 03:00 UTC only (night) -> not.
+  const lines = hourly(d => {
+    const m = d.getUTCMonth(), h = d.getUTCHours();
+    const windy = (m === 0 && (h === 14 || h === 15)) || (m === 1 && h === 14) || (m === 2 && h === 3);
+    return `${d.toISOString()},${windy ? 7 : 2},0`;
+  });
+  const csv = ['valid_time,u10,v10', ...lines].join('\n');
+  const s = parseEra5Csv([{ name: 'w.csv', data: Buffer.from(csv) }]);
+  assert.ok(Math.abs(s.wind![0] - 3.89) < 0.01); // 2 m/s in knots
+  const share = kiteableShare(s, 0);
+  assert.deepEqual(share.slice(0, 4), [100, 0, 0, 0]);
+  assert.deepEqual(kiteableShare(s, 0, 12, 1).slice(0, 2), [100, 100]);
+});

@@ -123,7 +123,7 @@ export function toLocal(utc: string, lng: number): string {
   return new Date(ms + Math.round(lng / 15) * 3_600_000).toISOString().slice(0, 16);
 }
 
-export interface PointSeries { time: string[]; t2m: (number | null)[]; sst: (number | null)[] }
+export interface PointSeries { time: string[]; t2m: (number | null)[]; sst: (number | null)[]; /** 10 m wind speed, knots (when requested) */ wind?: (number | null)[] }
 
 const num = (s: string | undefined) => {
   if (s == null || s.trim() === '') return null;
@@ -139,7 +139,7 @@ const celsius = (v: number | null) => (v != null && v > 150 ? v - 273.15 : v);
  * sst|sea_surface_temperature. Throws with the header when the layout is unknown.
  */
 export function parseEra5Csv(files: { name: string; data: Buffer }[]): PointSeries {
-  const rows = new Map<string, { t2m: number | null; sst: number | null }>();
+  const rows = new Map<string, { t2m: number | null; sst: number | null; u: number | null; v: number | null }>();
   const headers: string[] = [];
   for (const f of files) {
     if (/\.(nc|grib)$/i.test(f.name)) continue;
@@ -150,20 +150,28 @@ export function parseEra5Csv(files: { name: string; data: Buffer }[]): PointSeri
     const ti = head.findIndex(h => /^(valid_time|time|date)$/i.test(h));
     const ai = head.findIndex(h => /^(t2m|2t|2m_temperature)$/i.test(h));
     const si = head.findIndex(h => /^(sst|sea_surface_temperature)$/i.test(h));
-    if (ti < 0 || (ai < 0 && si < 0)) continue;
+    const ui = head.findIndex(h => /^(u10|10u|10m_u_component_of_wind)$/i.test(h));
+    const vi = head.findIndex(h => /^(v10|10v|10m_v_component_of_wind)$/i.test(h));
+    if (ti < 0 || (ai < 0 && si < 0 && ui < 0 && vi < 0)) continue;
     for (const line of lines.slice(1)) {
       const c = line.split(',');
       const t = c[ti]?.trim().replace(/^"|"$/g, '').replace(' ', 'T').slice(0, 16);
       if (!t) continue;
-      const r = rows.get(t) ?? { t2m: null, sst: null };
+      const r = rows.get(t) ?? { t2m: null, sst: null, u: null, v: null };
       if (ai >= 0) r.t2m = celsius(num(c[ai]));
       if (si >= 0) r.sst = celsius(num(c[si]));
+      if (ui >= 0) r.u = num(c[ui]);
+      if (vi >= 0) r.v = num(c[vi]);
       rows.set(t, r);
     }
   }
   if (!rows.size) throw new CopernicusError(`ERA5 CSV: no time/t2m/sst columns found (${headers.join(' | ') || files.map(f => f.name).join(', ')})`);
   const time = [...rows.keys()].sort();
-  return { time, t2m: time.map(t => rows.get(t)!.t2m), sst: time.map(t => rows.get(t)!.sst) };
+  const out: PointSeries = { time, t2m: time.map(t => rows.get(t)!.t2m), sst: time.map(t => rows.get(t)!.sst) };
+  if (time.some(t => rows.get(t)!.u != null)) {
+    out.wind = time.map(t => { const r = rows.get(t)!; return r.u != null && r.v != null ? Math.hypot(r.u, r.v) * 1.943844 : null; });
+  }
+  return out;
 }
 
 const once = new Set<string>();
@@ -202,6 +210,43 @@ export function era5Monthly(s: PointSeries, lng: number) {
     air_temp_min_months: monthlyMeanOfDailyMin(local, s.t2m),
     water_temp_months: s.sst.some(v => v != null) ? monthlyMeanOfDailyMean(local, s.sst) : null,
   };
+}
+
+// ---------------------------------------------------------------------- kiteable days (wind)
+
+/**
+ * Share of kiteable days per month, whole percent: a day counts when the 10 m wind is
+ * >= minKn for at least minRun consecutive hours between 08:00 and 19:00 local solar time
+ * (Aaron 2026-10-21: "mind 2h am Stueck mit 12+ Knoten"). Days with < 8 daylight values
+ * are skipped; months without days return null.
+ */
+export function kiteableShare(s: PointSeries, lng: number, minKn = 12, minRun = 2): (number | null)[] {
+  if (!s.wind) throw new CopernicusError('kiteableShare: series has no wind');
+  const days = new Map<string, (number | null)[]>();
+  s.time.forEach((t, i) => {
+    const local = toLocal(t, lng);
+    const h = Number(local.slice(11, 13));
+    if (h < 8 || h > 19) return;
+    const d = local.slice(0, 10);
+    const arr = days.get(d) ?? Array(12).fill(null);
+    arr[h - 8] = s.wind![i];
+    days.set(d, arr);
+  });
+  const acc = Array.from({ length: 12 }, () => [0, 0]);
+  for (const [d, hours] of days) {
+    if (hours.filter(v => v != null).length < 8) continue;
+    let run = 0, ok = false;
+    for (const v of hours) { run = v != null && v >= minKn ? run + 1 : 0; if (run >= minRun) { ok = true; break; } }
+    const m = Number(d.slice(5, 7)) - 1;
+    acc[m][1]++;
+    if (ok) acc[m][0]++;
+  }
+  return acc.map(([k, n]) => (n ? Math.round((100 * k) / n) : null));
+}
+
+/** ERA5 10 m wind series for one point (knots), same request path as the climate cells. */
+export async function era5WindSeries(lat: number, lng: number, token: string, log?: Log): Promise<PointSeries> {
+  return era5Series(lat, lng, ['10m_u_component_of_wind', '10m_v_component_of_wind'], token, log);
 }
 
 // ---------------------------------------------------------------------- UV guide value

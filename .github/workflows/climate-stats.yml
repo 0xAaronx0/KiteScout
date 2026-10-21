@@ -26,6 +26,12 @@ on:
         type: string
         required: false
         default: ''
+      task:
+        description: 'climate-stats (default) or climate-wind-check (read-only ERA5 wind comparison)'
+        type: choice
+        options: [climate-stats, climate-wind-check]
+        required: false
+        default: climate-stats
 
 concurrency:
   group: offer-climate-stats
@@ -63,8 +69,10 @@ jobs:
           OPEN_METEO_API_KEY: ${{ secrets.OPEN_METEO_API_KEY }}
           DRY_RUN: ${{ github.event.inputs.dry_run }}
           MAX_FETCH: ${{ github.event.inputs.max_fetch }}
+          TASK: ${{ github.event.inputs.task }}
         # budget stops starting new fetches ~80 min before the job timeout so the rows still get written
         run: |
+          if [ "$TASK" = "climate-wind-check" ]; then pnpm cli climate-wind-check; exit 0; fi
           args="--budget-min 270"
           if [ "$DRY_RUN" = "true" ]; then args="$args --dry-run"; fi
           if [ -n "$MAX_FETCH" ]; then args="$args --max-fetch $MAX_FETCH"; fi

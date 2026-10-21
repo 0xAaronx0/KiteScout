@@ -518,6 +518,13 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'climate-wind-check': {
+      // READ-ONLY: ERA5 kiteable-day shares per country/region point for the Bstoked comparison.
+      const { runWindCheck } = await import('./pipeline/wind-check.js');
+      await runWindCheck();
+      break;
+    }
+
     case 'climate-stats': {
       // UV + air/water temperature per offer spot -> offer_climate_stats, and per
       // country kite spot -> country_climate_stats (weekly GitHub Action).
