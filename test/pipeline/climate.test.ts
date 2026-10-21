@@ -79,3 +79,12 @@ test('fetchCellClimate: no sea cell -> water NULL', async () => {
   assert.equal(c.air_temp_min_months[0], 20);
   assert.equal(c.water_temp_months, null);
 });
+
+test('medianOfferSpot: the offer spot nearest the median of all spots', async () => {
+  const { medianOfferSpot } = await import('../../src/pipeline/climate.js');
+  const s = medianOfferSpot([
+    { lat: -3.0, lng: -39.6, name: 'Icarai' }, { lat: -2.9, lng: -40.4, name: 'Jeri' },
+    { lat: -3.7, lng: -38.7, name: 'Cumbuco' }, { lat: -28.1, lng: -48.6, name: 'Ibiraquera' },
+  ]);
+  assert.equal(s.name, 'Icarai');
+});

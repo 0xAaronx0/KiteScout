@@ -5,7 +5,10 @@
 //   3. reuse a cached climate_points cell within 0.075°, or fetch a new one
 //   4. upsert offer_climate_stats, delete rows of offers that are gone
 //   5. same for every country in climate_country_points -> country_climate_stats
-//      (one kite spot per wind_stats country; map layers next to wind_stats)
+//      (one kite spot per wind_stats country; map layers next to wind_stats). An offer
+//      country without a point gets one: the offer spot nearest the median of its offers.
+//   6. same for every region in climate_region_points -> region_climate_stats
+//      (admin-1 regions of large countries; the country row is the fallback)
 // Fetcher: Copernicus ERA5 (CC-BY 4.0) + computed UV guide value when CDSAPI_KEY / CDS_API_KEY is set,
 // else Open-Meteo (free API = non-commercial only; OPEN_METEO_API_KEY = commercial hosts).
 // Countries only use Copernicus cells while a Copernicus token is set (Aaron, 2026-10-19).
@@ -15,7 +18,7 @@
 import { supabase } from '../lib/supabase.js';
 import {
   type ClimateCell, type OfferRef, type PortPoint, RateLimitError,
-  fetchCellClimate, findCell, portKey, resolvePoint, round10,
+  fetchCellClimate, findCell, medianOfferSpot, portKey, resolvePoint, round10,
 } from './climate.js';
 import { COPERNICUS_SOURCES, fetchCellsCopernicus, normalizeToken } from './copernicus.js';
 
@@ -46,6 +49,10 @@ export interface ClimateRunReport {
   countries: number;
   countryRowsWritten: number;
   countriesDeferred: string[];
+  countriesAdded: string[];
+  regions: number;
+  regionRowsWritten: number;
+  regionsDeferred: string[];
   /** first computed country rows, for dry runs */
   countrySample: { country: string; point_name: string; air_temp_min_months: number[]; air_temp_max_months: number[]; water_temp_months: number[] | null; uv_months: number[] }[];
   failed: string[];
@@ -53,6 +60,7 @@ export interface ClimateRunReport {
 }
 
 interface CountryPoint { country: string; is_alias: boolean; spot_name: string; lat: number; lng: number; elevation_m: number | null }
+interface RegionPoint { region_key: string; country: string; region_name: string; iso_3166_2: string[]; spot_name: string; lat: number; lng: number; elevation_m: number | null }
 
 export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: number; budgetMin?: number } = {}): Promise<ClimateRunReport> {
   const apiKey = process.env.OPEN_METEO_API_KEY || undefined;
@@ -73,12 +81,14 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
   const ports = new Map(portRows.map(p => [portKey(p.departure_port, p.country || null), p]));
   const cells = await selectAll<Cell>('climate_points', '*');
   const countryPoints = await selectAll<CountryPoint>('climate_country_points', 'country,is_alias,spot_name,lat,lng,elevation_m');
+  const regionPoints = await selectAll<RegionPoint>('climate_region_points', 'region_key,country,region_name,iso_3166_2,spot_name,lat,lng,elevation_m');
 
   const report: ClimateRunReport = {
     fetcher: cdsToken ? 'copernicus' : 'open-meteo',
     offers: offers.length, rowsWritten: 0, rowsDeleted: 0, cellsFetched: 0,
     noPoint: [], unknownPorts: [], deferred: [],
-    countries: countryPoints.length, countryRowsWritten: 0, countriesDeferred: [], countrySample: [], failed: [],
+    countries: countryPoints.length, countryRowsWritten: 0, countriesDeferred: [], countriesAdded: [], countrySample: [], failed: [],
+    regions: regionPoints.length, regionRowsWritten: 0, regionsDeferred: [],
   };
 
   // ---- 1. points and the cells they still miss
@@ -91,6 +101,26 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
   });
   report.unknownPorts = [...new Set(report.unknownPorts)];
 
+  // offer countries without a point get one (median offer spot); stored unless dry run
+  const known = new Set(countryPoints.map(c => c.country));
+  const byCountry = new Map<string, { lat: number; lng: number; name: string | null }[]>();
+  offers.forEach((o, i) => {
+    const p = offerPoints[i];
+    if (!p || !o.country || known.has(o.country)) return;
+    byCountry.set(o.country, [...(byCountry.get(o.country) ?? []), { lat: p.lat, lng: p.lng, name: p.name }]);
+  });
+  for (const [country, spots] of byCountry) {
+    const s = medianOfferSpot(spots);
+    const cp: CountryPoint = { country, is_alias: false, spot_name: s.name ?? country, lat: s.lat, lng: s.lng, elevation_m: 0 };
+    if (!opts.dryRun) {
+      const { error } = await supabase.from('climate_country_points').insert(cp);
+      if (error) throw new Error(`climate_country_points insert: ${error.message}`);
+    }
+    countryPoints.push(cp);
+    report.countriesAdded.push(`${country} (${cp.spot_name})`);
+  }
+  report.countries = countryPoints.length;
+
   const usable = (lat: number, lng: number, copernicusOnly: boolean) =>
     findCell(copernicusOnly ? cells.filter(isCopernicus) : cells, lat, lng);
   const needs: Need[] = [];
@@ -100,6 +130,7 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
     needs.push(n);
   };
   for (const cp of countryPoints) add({ lat: cp.lat, lng: cp.lng, label: cp.country, elevation: cp.elevation_m, copernicusOnly: !!cdsToken });
+  for (const rp of regionPoints) add({ lat: rp.lat, lng: rp.lng, label: `${rp.country} / ${rp.region_name}`, elevation: rp.elevation_m, copernicusOnly: !!cdsToken });
   offers.forEach((o, i) => { const p = offerPoints[i]; if (p) add({ lat: p.lat, lng: p.lng, label: o.title ?? o.offer_id, copernicusOnly: false }); });
   if (needs.length) console.log(`${needs.length} climate cells to fetch via ${report.fetcher}`);
 
@@ -175,6 +206,19 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
       sources: cell.sources, updated_at: new Date().toISOString(),
     });
   }
+  const regionRows: any[] = [];
+  for (const rp of regionPoints) {
+    const cell = usable(rp.lat, rp.lng, !!cdsToken);
+    if (!cell) { report.regionsDeferred.push(rp.region_key); continue; }
+    regionRows.push({
+      region_key: rp.region_key, country: rp.country, region_name: rp.region_name, iso_3166_2: rp.iso_3166_2,
+      point_basis: 'kite_spot', point_name: rp.spot_name, lat: rp.lat, lng: rp.lng, lat10: cell.lat10, lng10: cell.lng10,
+      air_temp_min_months: cell.air_temp_min_months, air_temp_max_months: cell.air_temp_max_months,
+      water_temp_months: cell.water_temp_months,
+      uv_months: cell.uv_months, uv_clear_sky_months: cell.uv_clear_sky_months,
+      sources: cell.sources, updated_at: new Date().toISOString(),
+    });
+  }
   report.countrySample = countryRows.filter(r => !r.is_alias).slice(0, 5).map(r => ({
     country: r.country, point_name: r.point_name, air_temp_min_months: r.air_temp_min_months,
     air_temp_max_months: r.air_temp_max_months, water_temp_months: r.water_temp_months, uv_months: r.uv_months,
@@ -201,6 +245,11 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
       if (error) throw new Error(`country_climate_stats upsert: ${error.message}`);
     }
     report.countryRowsWritten = countryRows.length;
+    if (regionRows.length) {
+      const { error } = await supabase.from('region_climate_stats').upsert(regionRows, { onConflict: 'region_key' });
+      if (error) throw new Error(`region_climate_stats upsert: ${error.message}`);
+    }
+    report.regionRowsWritten = regionRows.length;
   }
   return report;
 }

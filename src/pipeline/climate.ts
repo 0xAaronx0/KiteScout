@@ -80,6 +80,13 @@ export function resolvePoint(o: OfferRef, ports: Map<string, PortPoint>): Resolv
 
 export const portKey = (port: string, country: string | null) => `${port}\u0000${country ?? ''}`;
 
+/** Offer spot nearest the median lat/lng of a country's offers (the seed rule of 2026-10-21). */
+export function medianOfferSpot(spots: { lat: number; lng: number; name: string | null }[]) {
+  const med = (xs: number[]) => { const a = [...xs].sort((x, y) => x - y); const m = a.length >> 1; return a.length % 2 ? a[m] : (a[m - 1] + a[m]) / 2; };
+  const la = med(spots.map(s => s.lat)), lo = med(spots.map(s => s.lng));
+  return spots.reduce((b, s) => (s.lat - la) ** 2 + (s.lng - lo) ** 2 < (b.lat - la) ** 2 + (b.lng - lo) ** 2 ? s : b);
+}
+
 /** round half away from zero, like Postgres round(numeric) */
 export const round10 = (x: number) => Math.sign(x) * Math.round(Math.abs(x) * 10);
 
