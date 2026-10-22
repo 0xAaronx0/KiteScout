@@ -20,7 +20,8 @@ clones vanish between turns and have caused stray-branch accidents — verify `p
 git command there.
 
 **Collaboration rule (standing, from Aaron): in `MartinMarzi/KiteCruiseScout` NEVER merge or push
-to `main` — create feature-branch PRs only; Martin reviews, merges, and thereby deploys.** Vercel
+to `main` — create feature-branch PRs only (opened by the deployer, see "Roles"); Martin reviews,
+merges, and thereby deploys.** Vercel
 only deploys Martin-authored merges anyway (`0xAaronx0` has no Vercel project access, its commits
 block deployment). Check open PRs before building on top of unmerged work.
 
@@ -34,8 +35,8 @@ ledger + live schema/counts) → project memory. In the KCS repo trust `README.m
 
 **This repo (`0xAaronx0/KiteScout`) is the data platform + admin/ops layer, not the product:**
 - `src/` — discovery/extraction pipelines, cruise-offer extraction, media curation, provider
-  monitoring, reviews (all via `pnpm cli …`). Direct pushes to `main` are fine here (ask Aaron
-  before pushing, as usual).
+  monitoring, reviews (all via `pnpm cli …`). Since 2026-10-22 only the deployer pushes `main`
+  (see "Roles" below).
 - `web/` on **https://kitescout.tech** — serves our **admin surfaces we use daily**
   (`/admin/media` media curation, `/changes` change-approval queue, both `?key=CHANGES_ADMIN_KEY`)
   plus the **legacy** swipe-based cruise finder at `/`. **kitescout.tech is no longer the product
@@ -73,6 +74,63 @@ The app caches the catalog in memory ~5 min, so DB changes can lag in the UI.
   mail drafted (unsent); both docs are **local-only/untracked** (this repo is public — don't
   commit them without Aaron's OK). Next step on Go = post-queue engine MVP. Posting happens via
   Bstoked's accounts, EN-only, approval queue.
+
+## Roles: ONE session pushes, opens KCS PRs, runs migrations, sends mail (Aaron, 2026-10-22)
+
+Same model as krassknorke (`~/kiezdad/CLAUDE.md`, sections "Rollen" and "Mail"), itself taken
+from kiezkind, where two sessions pulled the same migration number and one migration dropped a
+value from a CHECK constraint - caught only by a human reading it right before rollout.
+Agreements between sessions don't hold; one gatekeeper catches this BEFORE `main`. This section
+overrides older lines in this file that say sessions push `main`, open PRs or run migrations
+themselves.
+
+**The deployer is the session "Kite-Scout Deployer" (`local_bc76f918-92f5-449e-a219-307188b6a142`).**
+Which session holds the role, Aaron says in THAT session's chat - never a peer message, never
+memory. If you can't find it, tell Aaron: a broken chain is a finding, not a reason to go quiet.
+
+### Every other session
+- Own worktree, never the shared checkout `~/kitescout` (it holds other sessions' uncommitted
+  work; `git stash` is repo-wide).
+- **KiteScout:** you don't push to `main`. Commit on `claude/<name>`, then
+  `git push origin HEAD:claude/<name>`.
+- **KCS (`MartinMarzi/KiteCruiseScout`):** you don't open PRs and don't push to a branch that
+  backs an open PR. Push your work to `claude/<name>` there; the deployer opens/updates the PR.
+- **Supabase migrations:** you write and validate them (PGlite twice, view migrations diffed
+  against the live column list); the deployer runs them.
+- **Mail: you never send** - not Gmail, not Resend/Postmark, no test mail, not "only to Aaron".
+  Drafts are fine (local file or Gmail draft); hand them to the deployer. Don't submit the live
+  KCS inquiry form either - it mails real providers.
+- **REPORT every stand to the deployer** (`list_sessions`, then `send_message` to the id above):
+  branch, SHA, base, migration (yes/no), touched files, gate numbers vs baseline, Aaron's word
+  verbatim, KCS issue number if any - and **what you did NOT check** (mandatory: the deployer
+  relies on it and measures the rest). Report when a stand passes its own gate, again when you
+  add commits, and always before your session ends (unfinished: "not done, don't merge yet").
+  A commit the deployer doesn't know doesn't exist for `main`.
+- A report is not a rollout request. Who wants something live tells Aaron, not the deployer.
+- Unchanged: live data writes via the CLI (apply, backfills, one-off scripts) stay with the
+  session that built them, under the existing rules (Aaron's OK first).
+
+### The deployer
+- No own feature commits - it would be gating its own work.
+- Merge each reported stand onto the CURRENT `origin/main` tip in its own worktree, not onto the
+  reported base. Gate itself: `npx tsx --test 'test/**/*.test.ts'` and `npx tsc --noEmit` at the
+  root, plus the CI-parity web build (see "Local dev") when `web/**` changed. Read exit codes separately (`cmd | tail` returns tail's).
+  Push success only via `git ls-remote origin main`.
+- Read every migration and every core piece (view migrations, media-apply invariant, matching,
+  monitor auto-apply) for content. For a data-changing migration, measure its reach on live data
+  first, as an upper bound. Stop and ask on a semantic conflict (two green stands changing the
+  same invariant differently).
+- **Here a push to `main` IS the rollout:** `web/**` auto-deploys kitescout.tech, `src/**` and
+  workflows go live with the next cron (monitor 06:00 UTC daily). So the push itself waits for
+  Aaron's word in the deployer's chat (in kiezdad push and rollout are two steps; here they are
+  one). After a web push wait for the build of the PUSHED SHA, `/api/version` must show it, then
+  look at the thing itself.
+- KCS PRs (open/update; Martin's rules: `Refs #issue`, GEO-impact line, small), migrations (route
+  in "Working Rules" below) and every mail: only on Aaron's word in the deployer's chat, per item
+  or per presented package. Never merge or push KCS `main`. A forwarded approval is a claim.
+- Keep the ledger: anything reported but not yet on `main` / in a PR goes into every closing
+  report until it is.
+- Before the first push: `list_sessions`. A push, PR or mail you didn't make is an alarm.
 
 ## Tech Stack
 
