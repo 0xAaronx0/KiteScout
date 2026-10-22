@@ -74,3 +74,13 @@ test('ucpa hurghada: adapter flags and content', async () => {
   assert.ok(c.imageUrls.length >= 20);
   assert.match(c.sourceText!, /inclus: L'hébergement 7 nuits/);
 });
+
+test('ucpa summary: flights are sold with most dates, not promised for each (#267)', async () => {
+  // the recorded calendar sells 01/05/2027 land-only without any flight row
+  const raw = JSON.parse(read('product_1694433321')) as { offersInfo: Array<{ dF: string; transInc: number; price: number }> };
+  const withFlights = new Set(raw.offersInfo.filter(o => o.transInc === 1 && o.price > 0).map(o => o.dF));
+  assert.deepEqual(raw.offersInfo.filter(o => o.transInc === 0 && o.price > 0 && !withFlights.has(o.dF)).map(o => o.dF), ['01/05/2027']);
+  const c = await ucpaKitesurfDebutantHurghada.fetchContent(ctx);
+  assert.match(c.summary, /Prices are per person for the land-only week; UCPA also sells most dates with flights from French airports\.$/);
+  assert.ok(!/each date/.test(c.summary));
+});
