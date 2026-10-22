@@ -39,6 +39,8 @@ test('twts greece: content', async () => {
   assert.equal(c.spotCoords, undefined);
   assert.match(c.summary, /twin room EUR 1150, triple room EUR 1075/);
   assert.match(c.summary, /Next camp: 28 August 2027 - 5 September 2027/);
+  // the stale 2026 edition in <title> / og:title / JSON-LD never reaches the row (#267)
+  assert.ok(!/22-30 August|2026/.test(`${c.title} ${c.summary}`));
   // the brand is "Too Wet to Shred"; "Never ..." is only the WordPress site name (#267 verifier)
   assert.ok(!/Never Too Wet/i.test(`${c.title} ${c.summary} ${toowettoshredKiteCampFanes.operator.name}`));
   assert.ok(!c.includedServices.some(i => /kite kite/i.test(i)));

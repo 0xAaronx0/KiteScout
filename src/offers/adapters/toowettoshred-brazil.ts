@@ -18,7 +18,7 @@
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import {
-  availabilityFromText, collapse, detectCurrency, imageCandidates, iso, monthOf, parse, parseAmount, spotsLeftFromText,
+  availabilityFromText, collapse, detectCurrency, imageCandidates, iso, monthOf, parse, parseAmount, spotsLeftFromText, todayIso,
   type HTMLElement,
 } from '../parse.js';
 import type { ContentRoom, ItinerarySpot, OfferAdapter, OfferContent, Slot } from '../types.js';
@@ -140,7 +140,7 @@ const REGIONS: Array<[RegExp, string]> = [
   [/barra grande|m[aá]cap[aá]|parna[ií]ba/i, 'Piauí'],
 ];
 
-export function parseToowettoshredContent(html: string): OfferContent {
+export function parseToowettoshredContent(html: string, today = todayIso()): OfferContent {
   const root = parse(html);
   const deps = parseTwtsDepartures(html);
   const rooms = parseTwtsRooms(html);
@@ -167,11 +167,13 @@ export function parseToowettoshredContent(html: string): OfferContent {
     .sort((a, b) => a.p - b.p)[0];
   const facilities = root.querySelectorAll('.rm-fac').map(f => txt(f).replace(/^[^A-Za-z]+/, '')).filter(Boolean);
   const maxRiders = text.match(/Max\s+(\d+)\s+riders/i)?.[1];
-  const depText = deps.map(d => `${d.start} (${d.days.join(' or ')} days${d.status ? `, ${d.status.toLowerCase()}` : ''})`).join(' and ');
+  // only departures that have not started: the page keeps a started trip's card ("21 Oct", "Spots available") for days
+  const ahead = deps.filter(d => d.start >= today);
+  const depText = ahead.map(d => `${d.start} (${d.days.join(' or ')} days${d.status ? `, ${d.status.toLowerCase()}` : ''})`).join(' and ');
 
   const summary = [
     `A moving kite camp along the Ceará coast of Brazil for intermediate and advanced riders: the group stays about three days at each stop (${names.slice(0, 4).join(', ')}${names.length > 4 ? ' and beyond' : ''}) for lagoon sessions, coaching and a few downwinders${maxRiders ? `, with at most ${maxRiders} riders` : ''}.`,
-    deps.length ? `Departures: ${depText}.` : null,
+    ahead.length ? `Departures: ${depText}.` : deps.length ? 'The next departures are not published yet.' : null,
     `Accommodation, transfers, breakfasts, five group dinners, trick coaching, yoga and airport pick-up are included; flights, other meals and insurance are not.`,
     cheapest ? `Prices start at EUR ${cheapest.p.toLocaleString('en-US')} per person (${cheapest.r.name}, ${cheapest.d} days) and depend on room type and trip length.` : null,
   ].filter(Boolean).join(' ');

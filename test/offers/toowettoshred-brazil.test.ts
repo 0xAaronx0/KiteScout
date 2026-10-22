@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  toowettoshredBrazil, parseToowettoshredSlots, parseTwtsDepartures, parseTwtsRooms,
+  toowettoshredBrazil, parseToowettoshredContent, parseToowettoshredSlots, parseTwtsDepartures, parseTwtsRooms,
 } from '../../src/offers/adapters/toowettoshred-brazil.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
@@ -69,4 +69,18 @@ test('twts: content', async () => {
   assert.ok(c.imageUrls.every(u => !/logo/i.test(u)));
   assert.match(c.summary, /EUR 1,725 per person/);
   assert.ok(!/[—–]/.test(c.summary), 'summary has no em/en dashes');
+});
+
+test('twts: summary names only departures that have not started (#267)', () => {
+  // recorded 2026-10-09: both departures ahead
+  assert.match(parseToowettoshredContent(html, '2026-10-09').summary,
+    /Departures: 2026-10-21 \(11 days, spots available\) and 2026-11-06 \(11 or 15 days, waitlist only\)\./);
+  // the 21 Oct trip has started but the page still shows its card as "Spots available"
+  const c = parseToowettoshredContent(html, '2026-10-22');
+  assert.match(c.summary, /Departures: 2026-11-06 \(11 or 15 days, waitlist only\)\./);
+  assert.ok(!c.summary.includes('2026-10-21'));
+  // all past: no stale dates
+  const later = parseToowettoshredContent(html, '2026-11-07');
+  assert.match(later.summary, /The next departures are not published yet\./);
+  assert.ok(!/2026-1[01]-/.test(later.summary));
 });
