@@ -86,6 +86,9 @@ export async function judge(page: EvidencePage, q: JudgeQuestions): Promise<Judg
   try {
     res = await anthropic.messages.create({
       model: VERIFIER_MODEL, max_tokens: MAX_OUTPUT_TOKENS, system: SYSTEM,
+      // greedy decoding: the same page and statements must get the same verdict on every run
+      // (without it "My Salty Sisters" passed one run and failed the next)
+      temperature: 0,
       // no reasoning: on long pages the model otherwise spends the whole output budget thinking and never answers
       // (budget_tokens / reasoning.effort are ignored for it on OpenRouter). Safety comes from the re-checked quote.
       thinking: { type: 'disabled' },
