@@ -104,3 +104,15 @@ test('capCloudyUv: UV with clouds never above the clear-sky value', async () => 
   assert.deepEqual(capCloudyUv({ uv_months: [12, 11, 9], uv_cloudy_months: [13, 10, 9] }), [12, 10, 9]);
   assert.equal(capCloudyUv({ uv_months: [1], uv_cloudy_months: null }), null);
 });
+
+test('combineWind policies: era5 replaces Bstoked (India), no-era5 blocks the model (Norway)', async () => {
+  const { combineWind, windPolicy } = await import('../../src/pipeline/climate.js');
+  const water = Array(12).fill(28);
+  const india = combineWind(Array(12).fill(49), [84, 78, 38, 28, 71, 94, 82, 78, 80, 44, 59, 78], water, windPolicy('India'));
+  assert.deepEqual(india.wind_months, [84, 78, 38, 28, 71, 94, 82, 78, 80, 44, 59, 78]);
+  assert.ok(india.wind_source_months.every(s => s === 'era5'));
+  const norway = combineWind([10, 10, 10, 49, 49, 49, 49, 49, 49, 10, 10, 10], Array(12).fill(80),
+    [6, 5, 4, 6, 10, 14, 16, 17, 16, 13, 10, 8], windPolicy('Norway'));
+  assert.deepEqual(norway.wind_months, [null, null, null, 49, 49, 49, 49, 49, 49, null, null, null]);
+  assert.equal(windPolicy('Germany'), 'default');
+});
