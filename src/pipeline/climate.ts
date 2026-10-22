@@ -47,16 +47,34 @@ export interface ClimateCell {
 }
 
 /**
+ * Per-country wind source policy (Aaron 2026-10-22, "Ja, beides"):
+ * - 'era5': Bstoked's row is a flat placeholder (49 almost every month) and ERA5 at the kite spot
+ *   matches the known seasons (Rameswaram monsoons, Jeju winter monsoon, Lake Nicaragua trades),
+ *   so ERA5 replaces Bstoked (still only in months with water >= 10 C).
+ * - 'no-era5': no ERA5 fill until the snowkite question is settled (Norway Oct/Nov would read 82/81).
+ * Everywhere else ('default'): Bstoked where real, ERA5 only for its gaps.
+ */
+export type WindPolicy = 'default' | 'era5' | 'no-era5';
+export const WIND_POLICY: Record<string, WindPolicy> = {
+  India: 'era5', 'South Korea': 'era5', Nicaragua: 'era5', Norway: 'no-era5',
+};
+export const windPolicy = (country: string): WindPolicy => WIND_POLICY[country] ?? 'default';
+
+/**
  * Wind value per month for the map (Aaron 2026-10-21): Bstoked windProbability where it is a
  * real number (the stored 10 is the "< 40 %" placeholder); otherwise the ERA5 share of
  * kiteable days, but only in months whose water temperature is >= 10 C; else null (no data).
  * Points without water temperature get no ERA5 fill.
  */
-export function combineWind(bstoked: number[] | null, era5: (number | null)[] | null | undefined, water: number[] | null) {
+export function combineWind(
+  bstoked: number[] | null, era5: (number | null)[] | null | undefined, water: number[] | null,
+  policy: WindPolicy = 'default',
+) {
   const months: (number | null)[] = [], sources: ('bstoked' | 'era5' | null)[] = [];
+  const useBstoked = policy !== 'era5', useEra5 = policy !== 'no-era5';
   for (let i = 0; i < 12; i++) {
-    if (bstoked && bstoked[i] != null && bstoked[i] !== 10) { months.push(bstoked[i]); sources.push('bstoked'); }
-    else if (era5 && era5[i] != null && water && water[i] != null && water[i] >= 10) { months.push(era5[i]); sources.push('era5'); }
+    if (useBstoked && bstoked && bstoked[i] != null && bstoked[i] !== 10) { months.push(bstoked[i]); sources.push('bstoked'); }
+    else if (useEra5 && era5 && era5[i] != null && water && water[i] != null && water[i] >= 10) { months.push(era5[i]); sources.push('era5'); }
     else { months.push(null); sources.push(null); }
   }
   return { wind_months: months, wind_source_months: sources };
