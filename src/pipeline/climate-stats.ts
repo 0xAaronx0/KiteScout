@@ -18,7 +18,7 @@
 import { supabase } from '../lib/supabase.js';
 import {
   type ClimateCell, type OfferRef, type PortPoint, RateLimitError,
-  combineWind, fetchCellClimate, findCell, medianOfferSpot, portKey, resolvePoint, round10,
+  capCloudyUv, combineWind, fetchCellClimate, findCell, medianOfferSpot, portKey, resolvePoint, round10,
 } from './climate.js';
 import { COPERNICUS_SOURCES, era5WindSeries, fetchCellsCopernicus, kiteableShare, normalizeToken } from './copernicus.js';
 
@@ -230,7 +230,7 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
       uv_months: cell.uv_months, uv_clear_sky_months: cell.uv_clear_sky_months,
       sources: cell.sources, updated_at: new Date().toISOString(),
       ...combineWind(bstoked.get(cp.country) ?? null, cell.wind_kiteable_months, cell.water_temp_months),
-      uv_cloudy_months: cell.uv_cloudy_months ?? null, uv_cloudy_source: cell.uv_cloudy_source ?? null,
+      uv_cloudy_months: capCloudyUv(cell), uv_cloudy_source: cell.uv_cloudy_source ?? null,
     });
   }
   const regionRows: any[] = [];
@@ -245,7 +245,7 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
       uv_months: cell.uv_months, uv_clear_sky_months: cell.uv_clear_sky_months,
       sources: cell.sources, updated_at: new Date().toISOString(),
       ...combineWind(null, cell.wind_kiteable_months, cell.water_temp_months),
-      uv_cloudy_months: cell.uv_cloudy_months ?? null, uv_cloudy_source: cell.uv_cloudy_source ?? null,
+      uv_cloudy_months: capCloudyUv(cell), uv_cloudy_source: cell.uv_cloudy_source ?? null,
     });
   }
   report.countrySample = countryRows.filter(r => !r.is_alias).slice(0, 5).map(r => ({

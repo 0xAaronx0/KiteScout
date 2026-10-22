@@ -108,6 +108,15 @@ export function medianOfferSpot(spots: { lat: number; lng: number; name: string 
   return spots.reduce((b, s) => (s.lat - la) ** 2 + (s.lng - lo) ** 2 < (b.lat - la) ** 2 + (b.lng - lo) ** 2 ? s : b);
 }
 
+/**
+ * UV with clouds never above the clear-sky value (Aaron 2026-10-22): the computed clear-sky max
+ * can sit ~1 below CAMS (e.g. Lancelin Jan 12 vs 13), and the app's cloud toggle must not show
+ * "with clouds" higher than "without". Cells keep the raw CAMS values.
+ */
+export function capCloudyUv(cell: { uv_months: number[]; uv_cloudy_months?: number[] | null }): number[] | null {
+  return cell.uv_cloudy_months ? cell.uv_cloudy_months.map((v, i) => Math.min(v, cell.uv_months[i])) : null;
+}
+
 /** round half away from zero, like Postgres round(numeric) */
 export const round10 = (x: number) => Math.sign(x) * Math.round(Math.abs(x) * 10);
 
