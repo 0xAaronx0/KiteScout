@@ -13,6 +13,9 @@
 //            The WooCommerce product's own variations ("April 15 - 22nd", "May 6 - 13th", "Sep 16 - 23rd", no year)
 //            are older than the page's dated list and are not used.
 //   content  /kitesurfing-camps/ + the Store API product list (camp and room photos; memoised with the stay adapter).
+//            "Pamlico Sound" (summary) is right but not on the camps page: /accommodations/ says "Our canal front property
+//            gives quick access to Pamlico Sound, so we can provide boat support for our guests and students", /about/
+//            "the famous shallow Pamlico Sound" (checked live 2026-10-22, #267 verifier).
 // robots.txt (2026-10-14): WooCommerce cart / wp-admin rules only; pages and /wp-json allowed.
 // Requests per run: content 2, slots 1 (camps page memoised).
 // State 2026-10-14: all four 2026 weeks are past and no 2027 dates are printed -> 0 slots ("price on request") until
