@@ -1,3 +1,4 @@
+import { EVERGREEN_PILOT_SUMMARIES } from '../../src/offers/evergreen-pilot-summaries.js';
 // LEN10 Experience Stig x Ruben Brazil (Tatajuba): replays /experience recorded 2026-10-19.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -34,7 +35,7 @@ test('len10: content', async () => {
   const c = parseLen10Content(html, '2026-10-19');
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot], ['camp', 7, 'Brazil', 'Ceará', 'Tatajuba']);
-  assert.match(c.summary, /Next dates: 2 November 2026 to 8 November 2026, from EUR 2,999 per person/);
+  assert.equal(c.summary, EVERGREEN_PILOT_SUMMARIES['len10-stig-ruben-brazil-tatajuba']);
   assert.equal(c.bookingUrl, 'https://tri.ps/OkCSC');
   assert.equal(len10StigRubenBrazilTatajuba.instantBooking, true);
   assert.equal(contentProblem(await len10StigRubenBrazilTatajuba.fetchContent(ctx)), null);

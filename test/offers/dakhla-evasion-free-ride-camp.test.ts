@@ -1,3 +1,4 @@
+import { EVERGREEN_PILOT_SUMMARIES } from '../../src/offers/evergreen-pilot-summaries.js';
 // Dakhla Evasion Free Ride & Bien-être camp: replays the offers page + the Logements page recorded 2026-10-19
 // (fixtures trimmed: scripts / styles removed).
 import { test } from 'node:test';
@@ -37,7 +38,7 @@ test('dev: content', async () => {
   const c = await dakhlaEvasionFreeRideCamp.fetchContent(ctx);
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot, c.mealPlan], ['camp', 8, 'Morocco', 'Dakhla-Oued Ed-Dahab', 'Dakhla Lagoon', 'full_board']);
-  assert.match(c.summary, /Free Ride & Bien être EUR 1,550, Ride Evolution & Bien être EUR 1,500, Freedom Ride Pack & Bien être EUR 990/);
+  assert.equal(c.summary, EVERGREEN_PILOT_SUMMARIES['dakhla-evasion-free-ride-camp']);
   assert.equal(c.imageUrls.length, 26);
   assert.ok(!c.imageUrls.some(u => /logo|\.svg/i.test(u)));
   assert.deepEqual([dakhlaEvasionFreeRideCamp.liveAvailability, dakhlaEvasionFreeRideCamp.instantBooking], [false, undefined]);

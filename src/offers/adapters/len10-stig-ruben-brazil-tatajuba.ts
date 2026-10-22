@@ -1,3 +1,4 @@
+import { EVERGREEN_PILOT_SUMMARIES } from '../evergreen-pilot-summaries.js';
 // ---------------------------------------------------------------------------
 // LEN10 Experience "Stig x Ruben Brazil" - a coached kite week with pro riders Ruben Lenten and Stig Hoefnagel at
 // La Ventana Tatajuba (Tatajuba, Ceará, Brazil): 7 days / 6 nights, shared or private room, three chef-cooked meals a
@@ -111,10 +112,6 @@ export function parseLen10Content(html: string, today = todayIso()): OfferConten
   const trips = parseLen10Trips(html).filter(isBrazil);
   const tr = trips.find(x => x.start >= today) ?? trips[0] ?? null;
   const nights = tr?.nights ?? (tr ? daysInclusive(tr.start, tr.end) - 1 : 6);
-  const human = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  const datesLine = tr && tr.start >= today
-    ? `Next dates: ${human(tr.start)} to ${human(tr.end)}${tr.price ? `, from ${tr.currency} ${tr.price.toLocaleString('en-US')} per person` : ''}${tr.badge ? ` (${tr.badge.toLowerCase()})` : ''}.`
-    : `Runs as a yearly trip; the next Brazil dates are not published yet${tr ? ` (last: ${human(tr.start)} to ${human(tr.end)})` : ''}.`;
   const gear = text.match(/gear rental \(available as an add-on for (€|EUR)\s?([\d.,]+)\)/i);
   const deposit = text.match(/initial deposit from (€|EUR)\s?([\d.,]+)/i);
   const imgs = ['kite-tropical', 'kite-heli', 'capetown', 'heli-cockpit']
@@ -124,11 +121,7 @@ export function parseLen10Content(html: string, today = todayIso()): OfferConten
   return {
     kind: 'camp',
     title: 'LEN10 Experience: Stig x Ruben Brazil',
-    summary: [
-      `A coached kite week in Tatajuba (Ceará, Brazil) with pro riders Ruben Lenten and Stig Hoefnagel: ${nights + 1} days / ${nights} nights at La Ventana Tatajuba in a shared or private room, three chef-cooked meals a day, on- and off-water coaching with video analysis, 4x4 transport to the spots, downwinders and yoga.`,
-      'Aimed at confident intermediate to pro riders who already ride upwind; flat-water lagoons, waves and downwinders in the November trade winds.',
-      datesLine,
-    ].join(' '),
+    summary: EVERGREEN_PILOT_SUMMARIES['len10-stig-ruben-brazil-tatajuba'],
     continent: 'South America',
     country: 'Brazil',
     region: 'Ceará',

@@ -1,3 +1,4 @@
+import { EVERGREEN_PILOT_SUMMARIES } from '../evergreen-pilot-summaries.js';
 // ---------------------------------------------------------------------------
 // KiteMex Kite & Wingfoil Camp, La Ventana (Baja California Sur, Mexico) - dated 6-night camp weeks of the KiteMex
 // kitesurf and wing foil school, which works from La Ventana Beach Resort (same address, Carretera Isla Cerralvo
@@ -116,12 +117,7 @@ export function parseKmcContent(campHtml: string, resortHome: string): OfferCont
     seen.add(k); imageUrls.push(u);
   }
 
-  const dates = camp.weeks.map(w => w.text.replace(/[–—]/g, '-')).join(', ');
-  const summary = [
-    `KiteMex, the kitesurf and wing foil school at La Ventana Beach Resort (Baja California Sur), runs ${nights}-night Kite & Wingfoil Camps with up to ${camp.hours ?? 15} hours of private kite or wing foil coaching over ${camp.coachingDays ?? 5} days.`,
-    `The camp includes ${nights} nights in a shared beachfront double room at the resort, continental breakfast and lunch, kite and wing foil gear with radio communication, four morning yoga / SUP sessions and no-wind activities.`,
-    `${camp.price ? `It costs USD ${camp.price.toLocaleString('en-US')} per person` : 'Prices are on request'}${dates ? `; dates: ${dates}` : ''}. Private coaching suits beginners and experienced riders.`,
-  ].join(' ');
+  const summary = EVERGREEN_PILOT_SUMMARIES['kitemex-camp-la-ventana'];
 
   return {
     kind: 'camp',

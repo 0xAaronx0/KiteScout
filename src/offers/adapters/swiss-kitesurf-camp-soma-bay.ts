@@ -1,3 +1,4 @@
+import { EVERGREEN_PILOT_SUMMARIES } from '../evergreen-pilot-summaries.js';
 // ---------------------------------------------------------------------------
 // Swiss Kitesurf (kitesailing.ch, Silvaplana) - Kite camp Egypt in Soma Bay (Kiloashara, Red Sea): autumn weeks with
 // transfers, 7 nights in a simple hotel next to the kite station, full board, an excursion to Safaga, and one of three
@@ -19,7 +20,7 @@ import { collapse, parse, todayIso } from '../parse.js';
 import type { OfferAdapter, OfferContent } from '../types.js';
 import {
   SK_OPERATOR, SK_REQUEST_URL, SK_SITE, fetchSkSlots, parseSkFormWeeks, parseSkStatus, parseSkVariants, skImages,
-  skListAfter, skNights, skPage, skWeeksSummary, type SkCampPages,
+  skListAfter, skNights, skPage, type SkCampPages,
 } from './swiss-kitesurf-camp-lo-stagnone.js';
 
 export const SK_EGYPT_URL = `${SK_SITE}/en/school/camps/kite-camp-egypt`;
@@ -32,16 +33,7 @@ export function parseSkEgyptContent(p: SkCampPages, today = todayIso()): OfferCo
   const nights = skNights(text) ?? 7;
   const { weeks } = parseSkStatus(p.camp, parseSkFormWeeks(p.request, 'Egypt'));
   const variants = parseSkVariants(p.camp);
-  const shared = variants.filter(v => v.occupancy === 2);
-  const surcharge = variants.find(v => v.occupancy === 1 && shared[0] && v.key.startsWith(shared[0].key.replace(/-shared$/, '')));
-  const summary = [
-    `Swiss Kitesurf, the kite school from Silvaplana, runs autumn camp weeks in Soma Bay on the Egyptian Red Sea coast, with the kite station (storage, rescue, compressor) right next to the hotel.`,
-    `A week includes airport transfers, ${nights} nights in a simple hotel, full board, rescue service and an excursion to Safaga; flights and visa are not included.`,
-    shared.length
-      ? `Three packages per person in a shared double room (bookable in pairs): ${shared.map(v => `${v.unit.replace(/, shared double room$/, '').toLowerCase()} CHF ${v.price}`).join(', ')}${surcharge ? `; single room + CHF ${surcharge.price - shared[0].price}` : ''}. Lessons are semi-private in German or English.`
-      : 'Lessons are semi-private in German or English.',
-    `A camp runs from 3 students; booking is by request. ${skWeeksSummary(weeks, today)}`,
-  ].join(' ');
+  const summary = EVERGREEN_PILOT_SUMMARIES['swiss-kitesurf-camp-soma-bay'];
   return {
     kind: 'camp',
     title: 'Swiss Kitesurf Kite Camp Egypt, Soma Bay',
