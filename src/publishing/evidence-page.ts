@@ -4,6 +4,7 @@
 // request, per-host throttle, and a host refusal (403 / captcha) is never bypassed. No browser UA
 // fallback here (unlike image downloads): evidence must come from a page the operator lets us read.
 // ---------------------------------------------------------------------------
+import { HTMLElement, parse } from 'node-html-parser';
 import { fetchText, BlockedByHost, HttpStatusError, RobotsDisallowed } from '../offers/http.js';
 import { sha256 } from './catalog-values.js';
 
@@ -43,6 +44,42 @@ export function decodeEntities(s: string): string {
 
 const squash = (s: string): string => s.replace(/[\s   ]+/g, ' ').trim();
 
+/**
+ * The page without elements carrying the `hidden` attribute (and their subtree): the browser does not
+ * render them. Every UCPA product page ships its "Ce séjour n'est plus proposé à la vente" / "complet"
+ * states this way (AMP, revealed by amp-bind only in that state), and the judge read them as current.
+ * Any value hides, `hidden="false"` too (Elementor writes it). Kept on purpose:
+ * - role="tabpanel": an inactive tab, real offer content one click away on the same page;
+ * - hidden="until-found": collapsed content the browser's find-in-page reveals;
+ * - id="S:<n>": a React streaming segment (Next.js), moved into the page by an inline $RC script on
+ *   load; kitesurfingcolombia.co ships its whole page body in one;
+ * - aria-hidden="true": rendered for sighted readers, only left out of the accessibility tree;
+ * - inline display:none: we never run the page's scripts, and sliders / tooltips start out that way.
+ * Elements are cut by their source range, so everything around them stays byte-identical.
+ */
+export function withoutHidden(html: string): string {
+  const root = parse(html, { blockTextElements: { script: true, style: true, noscript: true } });
+  const cuts: Array<readonly [number, number]> = [];
+  const stack: HTMLElement[] = [root];
+  const shown = (el: HTMLElement): boolean => el.getAttribute('hidden')?.toLowerCase() === 'until-found'
+    || el.getAttribute('role')?.toLowerCase() === 'tabpanel' || /^S:[0-9a-f]+$/i.test(el.getAttribute('id') ?? '');
+  while (stack.length) {
+    for (const node of stack.pop()!.childNodes) {
+      if (!(node instanceof HTMLElement)) continue;
+      if (node.getAttribute('hidden') !== undefined && !shown(node)) cuts.push(node.range);
+      else stack.push(node);
+    }
+  }
+  let out = '';
+  let at = 0;
+  for (const [start, end] of cuts.sort((a, b) => a[0] - b[0])) {
+    if (start < at) continue;
+    out += `${html.slice(at, start)} `;
+    at = end;
+  }
+  return out + html.slice(at);
+}
+
 export function pageZones(html: string): Record<Zone, string> {
   const meta: string[] = [];
   const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1];
@@ -56,7 +93,7 @@ export function pageZones(html: string): Record<Zone, string> {
   }
   const jsonld = [...html.matchAll(/<script[^>]*type\s*=\s*["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)]
     .map(m => m[1]);
-  const visible = html
+  const visible = withoutHidden(html)
     .replace(/<!--[\s\S]*?-->/g, ' ')
     .replace(/<(script|style|noscript|svg|template|head)\b[^>]*>[\s\S]*?<\/\1>/gi, ' ')
     .replace(/<(br|p|div|li|tr|td|th|h[1-6]|section|article|header|footer|option)\b[^>]*>/gi, ' \n ')
