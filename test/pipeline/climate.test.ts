@@ -98,3 +98,9 @@ test('combineWind: Bstoked where real, ERA5 only in months with water >= 10 C, e
   assert.deepEqual(combineWind(null, Array(12).fill(40), null).wind_months, Array(12).fill(null)); // lake: no fill
   assert.deepEqual(combineWind(null, Array(12).fill(40), Array(12).fill(15)).wind_source_months, Array(12).fill('era5'));
 });
+
+test('capCloudyUv: UV with clouds never above the clear-sky value', async () => {
+  const { capCloudyUv } = await import('../../src/pipeline/climate.js');
+  assert.deepEqual(capCloudyUv({ uv_months: [12, 11, 9], uv_cloudy_months: [13, 10, 9] }), [12, 10, 9]);
+  assert.equal(capCloudyUv({ uv_months: [1], uv_cloudy_months: null }), null);
+});
