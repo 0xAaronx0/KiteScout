@@ -316,7 +316,9 @@ export function parseUcpaContent(l: UcpaListing, pages: UcpaPage[]): OfferConten
   for (const pg of pages) for (const u of pg.images) if (!images.includes(u)) images.push(u);
   const summary = [
     l.summary(p),
-    `Prices are per person for the land-only week; UCPA also sells each date with flights from French airports.`,
+    // not "each date": the calendars sell some dates land-only without any flight row (2026-10-22: Hurghada 1 of 51,
+    // Dakhla 1 of 39, Djerba 3 of 35, Cape Town 1 of 6; #267 verifier)
+    `Prices are per person for the land-only week; UCPA also sells most dates with flights from French airports.`,
   ].join(' ');
   return {
     kind: 'camp',
