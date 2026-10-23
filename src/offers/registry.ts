@@ -54,6 +54,7 @@ import { djerbakiteVillaSedouikech } from './adapters/djerbakite-villa-sedouikec
 import { drejbyStrandCampingAls } from './adapters/drejby-strand-camping-als.js';
 import { drivethruKiteSurfCampHvideSande } from './adapters/drivethru-kite-surf-camp-hvide-sande.js';
 import { dunasLuxuryBeachResortValdevaqueros } from './adapters/dunas-luxury-beach-resort-valdevaqueros.js';
+import { elevationNitinatLakeKiteWingCamps } from './adapters/elevation-nitinat-lake-kite-wing-camps.js';
 import { escapeEcoFijiKitesurfTourKorolevu } from './adapters/escape-eco-fiji-kitesurf-tour-korolevu.js';
 import { escapeEcoIndonesiaKitesurfTourJeneponto } from './adapters/escape-eco-indonesia-kitesurf-tour-jeneponto.js';
 import { escapeEcoSriLankaKitesurfTourKalpitiya } from './adapters/escape-eco-sri-lanka-kitesurf-tour-kalpitiya.js';
@@ -207,6 +208,7 @@ import { namotuIslandResortMamanuca } from './adapters/namotu-island-resort-mama
 import { naneakite8DayCampEssaouira } from './adapters/naneakite-8-day-camp-essaouira.js';
 import { newSpiritDakhla } from './adapters/new-spirit-dakhla.js';
 import { nicekiteLessonCampKaseda } from './adapters/nicekite-lesson-camp-kaseda.js';
+import { nitinahtWindsurfParkCabinsNitinatLake } from './adapters/nitinaht-windsurf-park-cabins-nitinat-lake.js';
 import { no22RidersInnAkyaka } from './adapters/no22-riders-inn-akyaka.js';
 import { nohotelLampesPiratenKojeDranske } from './adapters/nohotel-lampes-piraten-koje-dranske.js';
 import { nordseeSurfschuleDomeSeeschwalbeHooksiel } from './adapters/nordsee-surfschule-dome-seeschwalbe-hooksiel.js';
@@ -390,6 +392,7 @@ export const adapters: OfferAdapter[] = [
   drejbyStrandCampingAls,
   drivethruKiteSurfCampHvideSande,
   dunasLuxuryBeachResortValdevaqueros,
+  elevationNitinatLakeKiteWingCamps,
   escapeEcoFijiKitesurfTourKorolevu,
   escapeEcoIndonesiaKitesurfTourJeneponto,
   escapeEcoSriLankaKitesurfTourKalpitiya,
@@ -543,6 +546,7 @@ export const adapters: OfferAdapter[] = [
   naneakite8DayCampEssaouira,
   newSpiritDakhla,
   nicekiteLessonCampKaseda,
+  nitinahtWindsurfParkCabinsNitinatLake,
   no22RidersInnAkyaka,
   nohotelLampesPiratenKojeDranske,
   nordseeSurfschuleDomeSeeschwalbeHooksiel,
