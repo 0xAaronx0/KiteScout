@@ -127,3 +127,11 @@ test('mapDisplay: regions only for USA/Brazil (incl. aliases), Canada hidden unt
   assert.equal(mapDisplay('Russia', false), 'hidden');
   assert.equal(mapDisplay('Germany', true), 'country');
 });
+
+test('regionBstoked: a region on the country point keeps Bstoked, other regions do not', async () => {
+  const { regionBstoked } = await import('../../src/pipeline/climate.js');
+  const b = [79, 61, 39, 30, 39, 59, 70, 90, 95, 95, 95, 95];
+  assert.equal(regionBstoked({ lat10: -36, lng10: -387 }, { lat10: -36, lng10: -387 }, b), b);
+  assert.equal(regionBstoked({ lat10: -228, lng10: -419 }, { lat10: -36, lng10: -387 }, b), null);
+  assert.equal(regionBstoked({ lat10: -36, lng10: -387 }, null, b), null);
+});

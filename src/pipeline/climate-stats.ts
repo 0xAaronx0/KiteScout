@@ -18,7 +18,7 @@
 import { supabase } from '../lib/supabase.js';
 import {
   type ClimateCell, type OfferRef, type PortPoint, RateLimitError,
-  capCloudyUv, combineWind, fetchCellClimate, mapDisplay, windPolicy, findCell, medianOfferSpot, portKey, resolvePoint, round10,
+  capCloudyUv, combineWind, fetchCellClimate, mapDisplay, regionBstoked, windPolicy, findCell, medianOfferSpot, portKey, resolvePoint, round10,
 } from './climate.js';
 import { COPERNICUS_SOURCES, era5WindSeries, fetchCellsCopernicus, kiteableShare, normalizeToken } from './copernicus.js';
 
@@ -235,6 +235,9 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
       uv_cloudy_months: capCloudyUv(cell), uv_cloudy_source: cell.uv_cloudy_source ?? null,
     });
   }
+  // the cell of each canonical country point: a region on that same cell is the country's own
+  // kite spot, so it keeps the country's Bstoked wind (BR-NE = Cumbuco, US-NC = Outer Banks)
+  const countryCell = new Map(countryPoints.filter(c => !c.is_alias).map(c => [c.country, usable(c.lat, c.lng, !!cdsToken)]));
   const regionRows: any[] = [];
   for (const rp of regionPoints) {
     const cell = usable(rp.lat, rp.lng, !!cdsToken);
@@ -246,7 +249,7 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
       water_temp_months: cell.water_temp_months,
       uv_months: cell.uv_months, uv_clear_sky_months: cell.uv_clear_sky_months,
       sources: cell.sources, updated_at: new Date().toISOString(),
-      ...combineWind(null, cell.wind_kiteable_months, cell.water_temp_months, windPolicy(rp.country)),
+      ...combineWind(regionBstoked(cell, countryCell.get(rp.country), bstoked.get(rp.country)), cell.wind_kiteable_months, cell.water_temp_months, windPolicy(rp.country)),
       uv_cloudy_months: capCloudyUv(cell), uv_cloudy_source: cell.uv_cloudy_source ?? null,
     });
   }
