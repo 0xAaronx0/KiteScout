@@ -61,6 +61,19 @@ export const WIND_POLICY: Record<string, WindPolicy> = {
 export const windPolicy = (country: string): WindPolicy => WIND_POLICY[country] ?? 'default';
 
 /**
+ * Bstoked row for a region's wind: only when the region sits on the same climate cell as its
+ * country's point (it IS the country's kite spot, e.g. BR-NE = Cumbuco); other regions get
+ * ERA5 only. Without this, BR-NE showed ERA5 0-10 % Jan-May where Bstoked has 79/61/39/30
+ * (ERA5 misses the thermal) - found 2026-10-23.
+ */
+export function regionBstoked(
+  regionCell: { lat10: number; lng10: number }, countryCell: { lat10: number; lng10: number } | null | undefined,
+  bstoked: number[] | null | undefined,
+): number[] | null {
+  return countryCell && bstoked && countryCell.lat10 === regionCell.lat10 && countryCell.lng10 === regionCell.lng10 ? bstoked : null;
+}
+
+/**
  * How the map colours a country, for all layers (Aaron 2026-10-23, migration 20261023120000):
  * 'country' = whole country, region rows override their admin-1 units; 'regions_only' = only
  * region rows' units (one point can't stand for the USA or Brazil); 'hidden' = no data.
