@@ -116,3 +116,14 @@ test('combineWind policies: era5 replaces Bstoked (India), no-era5 blocks the mo
   assert.deepEqual(norway.wind_months, [null, null, null, 49, 49, 49, 49, 49, 49, null, null, null]);
   assert.equal(windPolicy('Germany'), 'default');
 });
+
+test('mapDisplay: regions only for USA/Brazil (incl. aliases), Canada hidden until it has offers', async () => {
+  const { mapDisplay } = await import('../../src/pipeline/climate.js');
+  assert.equal(mapDisplay('United States', true), 'regions_only');
+  assert.equal(mapDisplay('usa', false), 'regions_only');
+  assert.equal(mapDisplay('Brazil', true), 'regions_only');
+  assert.equal(mapDisplay('Canada', false), 'hidden');
+  assert.equal(mapDisplay('Canada', true), 'regions_only');
+  assert.equal(mapDisplay('Russia', false), 'hidden');
+  assert.equal(mapDisplay('Germany', true), 'country');
+});
