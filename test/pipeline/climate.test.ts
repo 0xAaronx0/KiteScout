@@ -125,6 +125,9 @@ test('mapDisplay: regions only for USA/Brazil (incl. aliases), Canada hidden unt
   assert.equal(mapDisplay('Canada', false), 'hidden');
   assert.equal(mapDisplay('Canada', true), 'regions_only');
   assert.equal(mapDisplay('Russia', false), 'hidden');
+  assert.equal(mapDisplay('India', true), 'regions_only');
+  assert.equal(mapDisplay('China', false), 'hidden');
+  assert.equal(mapDisplay('China', true), 'regions_only');
   assert.equal(mapDisplay('Germany', true), 'country');
 });
 

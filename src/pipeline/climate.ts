@@ -85,7 +85,9 @@ export type MapDisplay = 'country' | 'regions_only' | 'hidden';
 const MAP_DISPLAY: Record<string, MapDisplay | 'hidden-until-offers'> = {
   'united states': 'regions_only', usa: 'regions_only', us: 'regions_only', 'united states of america': 'regions_only',
   brazil: 'regions_only',
+  india: 'regions_only', // Aaron 2026-10-23: regions with offers only (IN-TN Rameswaram)
   canada: 'hidden-until-offers',
+  china: 'hidden-until-offers',
   russia: 'hidden',
 };
 export function mapDisplay(country: string, hasOffers: boolean): MapDisplay {
