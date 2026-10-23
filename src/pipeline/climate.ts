@@ -61,6 +61,26 @@ export const WIND_POLICY: Record<string, WindPolicy> = {
 export const windPolicy = (country: string): WindPolicy => WIND_POLICY[country] ?? 'default';
 
 /**
+ * How the map colours a country, for all layers (Aaron 2026-10-23, migration 20261023120000):
+ * 'country' = whole country, region rows override their admin-1 units; 'regions_only' = only
+ * region rows' units (one point can't stand for the USA or Brazil); 'hidden' = no data.
+ * 'hidden-until-offers' resolves to 'hidden' without offers and to 'regions_only' with offers
+ * (Canada: "ausblenden, solange wir dort keine offers haben (und mit offers dann nur regions zeigen)").
+ * Keys are lower-case so alias rows (usa, us, united states of america) follow their country.
+ */
+export type MapDisplay = 'country' | 'regions_only' | 'hidden';
+const MAP_DISPLAY: Record<string, MapDisplay | 'hidden-until-offers'> = {
+  'united states': 'regions_only', usa: 'regions_only', us: 'regions_only', 'united states of america': 'regions_only',
+  brazil: 'regions_only',
+  canada: 'hidden-until-offers',
+  russia: 'hidden',
+};
+export function mapDisplay(country: string, hasOffers: boolean): MapDisplay {
+  const m = MAP_DISPLAY[country.toLowerCase()] ?? 'country';
+  return m === 'hidden-until-offers' ? (hasOffers ? 'regions_only' : 'hidden') : m;
+}
+
+/**
  * Wind value per month for the map (Aaron 2026-10-21): Bstoked windProbability where it is a
  * real number (the stored 10 is the "< 40 %" placeholder); otherwise the ERA5 share of
  * kiteable days, but only in months whose water temperature is >= 10 C; else null (no data).
