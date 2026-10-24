@@ -147,6 +147,8 @@ export function unzip(buf: Buffer, name = 'data'): { name: string; data: Buffer 
 export const ERA5_DATASET = 'reanalysis-era5-single-levels-timeseries';
 export const COPERNICUS_SOURCES = 'Copernicus (CC-BY 4.0): air temp + SST: ERA5 hourly point time series (CDS reanalysis-era5-single-levels-timeseries) 2016-2025, nearest 0.25 deg grid point (SST: nearest sea point); UV: computed clear-sky noon UV index, whole numbers (sun angle mid-month + ozone climatology, UVI = 12.5 mu^2.42 (O3/300)^-1.23, +6%/km)';
 
+/** ERA5-Land: same model, 0.1 deg land grid; point time series like the ERA5 one (CC-BY 4.0). */
+export const ERA5_LAND_DATASET = 'reanalysis-era5-land-timeseries';
 export const ERA5_YEARS = ['2016-01-01', '2025-12-31'] as const;
 
 type Log = (msg: string) => void;
@@ -216,15 +218,15 @@ function logOnce(log: Log | undefined, key: string, msg: () => string) {
   log(msg());
 }
 
-async function era5Series(lat: number, lng: number, variables: string[], token: string, log?: Log): Promise<PointSeries> {
-  const buf = await retrieveRetrying('cds', ERA5_DATASET, {
+async function era5Series(lat: number, lng: number, variables: string[], token: string, log?: Log, dataset = ERA5_DATASET): Promise<PointSeries> {
+  const buf = await retrieveRetrying('cds', dataset, {
     variable: variables,
     location: { latitude: Number(lat.toFixed(4)), longitude: Number(lng.toFixed(4)) },
     date: [`${ERA5_YEARS[0]}/${ERA5_YEARS[1]}`],
     data_format: 'csv',
   }, { token });
   const files = unzip(buf, 'era5.csv');
-  logOnce(log, 'era5', () => `  [ERA5 raw] ${files.map(f => `${f.name} (${f.data.length} B): ${f.data.toString('utf8', 0, 300).split('\n').slice(0, 3).join(' / ')}`).join(' || ')}`);
+  logOnce(log, dataset, () => `  [${dataset} raw] ${files.map(f => `${f.name} (${f.data.length} B): ${f.data.toString('utf8', 0, 300).split('\n').slice(0, 3).join(' / ')}`).join(' || ')}`);
   return parseEra5Csv(files);
 }
 
@@ -280,8 +282,8 @@ export function kiteableShare(s: PointSeries, lng: number, minKn = 12, minRun = 
 }
 
 /** ERA5 10 m wind series for one point (knots), same request path as the climate cells. */
-export async function era5WindSeries(lat: number, lng: number, token: string, log?: Log): Promise<PointSeries> {
-  return era5Series(lat, lng, ['10m_u_component_of_wind', '10m_v_component_of_wind'], token, log);
+export async function era5WindSeries(lat: number, lng: number, token: string, log?: Log, dataset = ERA5_DATASET): Promise<PointSeries> {
+  return era5Series(lat, lng, ['10m_u_component_of_wind', '10m_v_component_of_wind'], token, log, dataset);
 }
 
 // ---------------------------------------------------------------------- UV guide value

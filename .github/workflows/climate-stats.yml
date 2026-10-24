@@ -27,7 +27,7 @@ on:
         required: false
         default: ''
       task:
-        description: 'climate-stats (default), climate-wind-check (read-only ERA5 wind comparison) or climate-uv-cloudy (one-off CAMS fill, then climate-stats)'
+        description: 'climate-stats (default), climate-wind-check (read-only ERA5 wind comparison; with dry_run = candidate points only, ERA5 vs ERA5-Land) or climate-uv-cloudy (one-off CAMS fill, then climate-stats)'
         type: choice
         options: [climate-stats, climate-wind-check, climate-uv-cloudy]
         required: false
@@ -81,7 +81,7 @@ jobs:
           TASK: ${{ github.event.inputs.task }}
         # budget stops starting new fetches ~80 min before the job timeout so the rows still get written
         run: |
-          if [ "$TASK" = "climate-wind-check" ]; then pnpm cli climate-wind-check; exit 0; fi
+          if [ "$TASK" = "climate-wind-check" ]; then pnpm cli climate-wind-check $([ "$DRY_RUN" = "true" ] && echo --candidates-only); exit 0; fi
           if [ "$TASK" = "climate-uv-cloudy" ]; then pnpm cli climate-uv-cloudy --wait-min 300; pnpm cli climate-stats --budget-min 20; exit 0; fi
           args="--budget-min 270"
           if [ "$DRY_RUN" = "true" ]; then args="$args --dry-run"; fi

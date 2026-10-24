@@ -539,7 +539,7 @@ async function main(): Promise<void> {
     case 'climate-wind-check': {
       // READ-ONLY: ERA5 kiteable-day shares per country/region point for the Bstoked comparison.
       const { runWindCheck } = await import('./pipeline/wind-check.js');
-      await runWindCheck();
+      await runWindCheck({ candidatesOnly: args.includes('--candidates-only') });
       break;
     }
 
