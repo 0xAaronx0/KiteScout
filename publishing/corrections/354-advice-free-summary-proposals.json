@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "status": "proposal_only",
+  "issue": "https://github.com/MartinMarzi/KiteCruiseScout/issues/354",
+  "preparationIssue": "https://github.com/MartinMarzi/KiteCruiseScout/issues/434",
+  "sourceCommit": "1671eb8255f4ce7328a1afbde0547496c6c63cd4",
+  "supersedesProposal": "publishing/corrections/354-evergreen-summary-proposals.json",
+  "preconditionBasis": "SHA256 of the previous finite proposal reported applied by the source owner on2026-10-23; re-read each current row and stop on drift before any separately authorized update.",
+  "claimsRegenerated": false,
+  "inventoryChanged": false,
+  "entries": [
+    {
+      "source": "package_offers",
+      "offerId": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
+      "field": "summary",
+      "expectedRawSummarySha256": "b47db94a1eaabd27d1db9ad8b4bbe5a67294ec5a434a8ff169f0847aec6429d0",
+      "proposedSummary": "Coached kite camp in Tatajuba, Brazil, hosted by Ruben Lenten and Stig Hoefnagel. The programme combines on-water coaching and video feedback with accommodation, meals, spot transport and activities. It is aimed at confident upwind riders seeking progression.",
+      "referenceUrls": [
+        "https://www.len10.com/experience"
+      ],
+      "newSourceVerificationRequired": true
+    },
+    {
+      "source": "package_offers",
+      "offerId": "1710050d-0e4a-4222-ae35-84059772d354",
+      "field": "summary",
+      "expectedRawSummarySha256": "58882215718eca22d7aa70218b194cb74d8050d789e7b8e872c4e65eef31945d",
+      "proposedSummary": "Kite camp in Soma Bay, Egypt, organised by Swiss Kitesurf. Hotel-based options combine accommodation with instruction or rental equipment according to the chosen package.",
+      "referenceUrls": [
+        "https://kitesailing.ch/en/school/camps/kite-camp-egypt"
+      ],
+      "newSourceVerificationRequired": true
+    },
+    {
+      "source": "package_offers",
+      "offerId": "d2e723d2-f3d3-4234-a766-27122931188d",
+      "field": "summary",
+      "expectedRawSummarySha256": "a5874c6c5bf51bc59a4c99519012eb5c0b22c687394102f9a70617717cf24110",
+      "proposedSummary": "Kite and wingfoil coaching camp in La Ventana, Baja California Sur, Mexico. The programme combines private coaching with shared beachfront accommodation, equipment and yoga or SUP activities. Coaching and alternative activities depend on conditions.",
+      "referenceUrls": [
+        "https://kitemex.com/kitesurf-and-wingfoil-camps/"
+      ],
+      "newSourceVerificationRequired": true
+    },
+    {
+      "source": "package_offers",
+      "offerId": "d56117f0-242c-4e61-b0d2-e640aa5dd925",
+      "field": "summary",
+      "expectedRawSummarySha256": "f247898ed5802f0114ff3df8d1e79711e2bd3fd0ac970b68b78537b0261059a1",
+      "proposedSummary": "Kitesurf and wingfoil packages on the Dakhla lagoon from Dakhla Evasion. Options combine accommodation and meals with instruction or services for independent riders.",
+      "referenceUrls": [
+        "https://www.dakhla-evasion.com/en/",
+        "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/"
+      ],
+      "newSourceVerificationRequired": true
+    }
+  ]
+}

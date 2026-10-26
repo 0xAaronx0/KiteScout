@@ -7,7 +7,7 @@ import type { OfferVerification } from '../../src/publishing/verify.js';
 
 export function evergreenKcsCases() {
   const root = join(import.meta.dirname,'../..');
-  const proposals = JSON.parse(readFileSync(join(root,'publishing/corrections/354-evergreen-summary-proposals.json'),'utf8'));
+  const proposals = JSON.parse(readFileSync(join(root,'publishing/corrections/354-advice-free-summary-proposals.json'),'utf8'));
   const healthy = JSON.parse(readFileSync(join(root,'publishing/samples/v1/healthy.json'),'utf8'));
   const observedAt = '2026-10-21T19:00:00.000Z';
   const rules = loadPolicyRules(join(root,'publishing/policy/v1/freshness-proposal.json'));
