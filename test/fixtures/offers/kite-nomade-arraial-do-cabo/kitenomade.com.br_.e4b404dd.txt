@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kite Nômade</title>
+</head>
+<body>
+    <div id="header">
+        <div class="menu-header">
+            <div class="logo-header">
+                <img src="https://kitenomade.com.br/wp-content/themes/kitenomade/images/logo-branco.png" width="100%" alt="Logo Kite Nômade">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="https://kitenomade.com.br/#topo">Início</a></li>
+                    <li><a href="https://kitenomade.com.br/#localizacao">Localização</a></li>
+                    <li><a href="https://kitenomade.com.br/school/">School</a></li>
+                    <li><a href="https://kitenomade.com.br/bangalo/">Bangalôs</a></li>
+                    <li><a href="#footer">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Menu Responsivo -->
+        <div class="responsive-container">
+            <div class="logo-header">
+                <img src="https://kitenomade.com.br/wp-content/themes/kitenomade/images/logo-branco.png" width="100%" alt="Logo Kite Nômade">
+            </div>
+		    <div class="menuresponsive">
+			    <div class="responsive">
+				    <ul>
+                        <li><a href="https://kitenomade.com.br/#topo">Início</a></li>
+                        <li><a href="https://kitenomade.com.br/#localizacao">Localização</a></li>
+                        <li><a href="https://kitenomade.com.br/school/">School</a></li>
+                        <li><a href="https://kitenomade.com.br/bangalo/">Bangalôs</a></li>
+                        <li><a href="#footer">Contato</a></li>
+                    </ul>
+			    </div>
+		    </div>
+        </div>
+    </div>
+    <div id="topo"></div>
+    <div id="banner-home">
+        <div class="container-banner">
+            <h4>VIVA ESSA</h4>
+            <h5>experiência!</h5>
+        </div>
+    </div>
+    <div id="kitenomade">
+        <div class="container-text">
+            <div class="title">
+                <h2>SOBRE A</h2>
+                <h1>Kite Nômade</h1>
+            </div>
+            <div class="text">
+				<div>
+<p class="wp-block-paragraph">A Kite Nômade é um refúgio da agitação da cidade, onde você pode vivenciar momentos mágicos, cercado pela natureza em uma atmosfera única. Oferecemos uma experiência singular, seja na hospedagem, aprendendo a velejar ou para aqueles que já são experientes, velejando em águas cristalinas e mornas!</p>
+</div>            </div>
+        </div>
+    </div>
+    <div id="localizacao">
+        <div class="container-text">
+            <div class="title">
+                <h2>Um dos melhores</h2>
+                <h1>picos do Brasil!</h1>
+            </div>
+            <div class="text">
+				<div>
+<p class="wp-block-paragraph">Localizado na Lagoa de Araruama, em uma reserva ambiental, oferecemos o local perfeito para o aprendizado e a prática do Kitesurf. Aqui contamos com águas rasas, transparentes, quentes e com fundo de areia fina, tal cenário proporciona uma sensação de maior segurança.</p>
+</div>            </div>
+        </div>
+    </div>
+	<div class="google">
+		<div>
+<h2 class="wp-block-heading has-text-align-center">Avaliações no Google</h2>
+</div><div><p><pre class="ti-widget">[Trustindex review widget removed from fixture]</pre><pre class="ti-widget">[Trustindex review widget removed from fixture]</pre></p>
+</div>	</div>
+    <div class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.9455572842935!2d-42.26953908540016!3d-22.915378843937944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x976b03685fd13f%3A0x2f205a60d1ce439!2sKite%20N%C3%B4made%20School!5e0!3m2!1spt-BR!2sbr!4v1668255814212!5m2!1spt-BR!2sbr" width="100%" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div id="equipe">
+        <div class="equipe-text">
+            <div class="equipe-container">
+                <h2>DESCANSO</h2>
+                <h1>ou aventura?</h1>
+				<div>
+<p class="wp-block-paragraph">No Espaço Nômade, oferecemos uma experiência única para aqueles que buscam momentos de tranquilidade longe da agitação da cidade. Nossos bangalôs são cercados pela natureza exuberante da região, proporcionando um refúgio perfeito para relaxar e recarregar as energias.</p>
+</div><div>
+<p class="wp-block-paragraph">Para os mais aventureiros, também oferecemos aulas de Kite Surf. Seja para aprender esse esporte emocionante ou para aprimorar suas habilidades, nossas aulas proporcionam uma experiência inesquecível nas águas cristalinas da região.</p>
+</div><div>
+<p class="wp-block-paragraph">Qual experiência você está buscando? Escolha entre relaxar em nossa pousada ou se aventurar nas águas com nossas aulas de Kite Surf!</p>
+</div>				<a href="https://kitenomade.com.br/bangalo/"><button>Bangalôs</button></a>
+				<a href="https://kitenomade.com.br/school/"><button>Aulas de Kite</button></a>
+            </div>
+        </div>
+        <div class="equipe-photo"></div>
+    </div>
+<div class="tempo">
+	<div><h4></h4><iframe title="Ventus Weather Map Widget -22.91496 -42.26606" loading="lazy" style="box-sizing: border-box; width: 100%;  height: 200px;  border-radius: 0" src="https://embed.windy.com/embed2.html?lat=-22.91496&lon=-42.26606&zoom=5&overlay=wind&marker=&pressure=&detailLat=-22.91496&detailLon=-42.26606&metricWind=default&metricTemp=°C&detail=&calendar=now&product=ecmwf&level=surface&menu=&message=true&type=map&location=coordinates&radarRange=-1" frameborder="0"></iframe></div></div>
+<div id="footer">
+<div class="container-footer">
+    <div class="card-footer">
+        <img src="https://kitenomade.com.br/wp-content/themes/kitenomade/images/logo-footer.png" width="100%" alt="Logo Kite Nômade">
+    </div>
+    <div class="card-footer">
+        <h3>Contato</h3>
+        <div class="contact">
+            <div class="icon">
+                <img src="https://kitenomade.com.br/wp-content/themes/kitenomade/icons/telefone.png" width="100%" alt="Ícone telefone">
+            </div>
+            <div class="contact-text">
+				<div>
+<p class="wp-block-paragraph"><a href="tel:(22) 9 8158-2627">(22) 9 8158-2627</a></p>
+</div>            </div>
+        </div>
+        <div class="contact">
+            <div class="icon">
+                <img src="https://kitenomade.com.br/wp-content/themes/kitenomade/icons/email.png" width="100%" alt="Ícone email">
+            </div>
+            <div class="contact-text">
+				<div>
+<p class="wp-block-paragraph">contato@kitenomade.com.br</p>
+</div>            </div>
+        </div>
+        <div class="contact">
+            <div class="icon"><a href="https://www.facebook.com/KiteNomadeSchool/" target="_blank">
+                <img src="https://kitenomade.com.br/wp-content/themes/kitenomade/icons/facebook.png" width="100%" alt="Facebook"></a>
+            </div>
+            <div class="icon"><a href="https://www.instagram.com/kitenomade/" target="_blank">
+                <img src="https://kitenomade.com.br/wp-content/themes/kitenomade/icons/instagram.png" width="100%" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <h3>Endereço</h3>
+        <div class="contact">
+            <div class="icon">
+                <img src="https://kitenomade.com.br/wp-content/themes/kitenomade/icons/map.png" width="100%" alt="Ícone mapa">
+            </div>
+            <div class="contact-text">
+				<div>
+<p class="wp-block-paragraph">Rua das Samambaias, 05<br>Pernambuca, Arraial do Cabo/RJ</p>
+</div>            </div>
+        </div>
+    </div>
+</div>
+	<div class="pxtp">Site desenvolvido por 
+    	<a href="https://www.pxtp.com.br"><strong>PXTP</strong></a>
+    </div>
+</div>
+<div class="joinchat joinchat--right" data-settings='{"telephone":"5522981582627","mobile_only":false,"button_delay":3,"whatsapp_web":false,"qr":false,"message_views":2,"message_delay":-10,"message_badge":false,"message_send":"🌴 ☀️ Olá! Vim pelo site e gostaria de informações sobre hospedagem e aulas de kite no Espaço Nômade. 🪁","tracking_url":"https://kitenomade.com.br/wp-json/joinchat/v1/track-click","message_hash":"8cca323c"}' hidden aria-hidden="false">
+	<div class="joinchat__button" role="button" tabindex="0" aria-label="Abrir bate-papo">
+							</div>
+					<div class="joinchat__chatbox" role="dialog" aria-labelledby="joinchat__label" aria-modal="true">
+			<div class="joinchat__header">
+				<div id="joinchat__label">
+											<svg class="joinchat__wa" width="120" height="28" viewBox="0 0 120 28"><title>WhatsApp</title><path d="M117.2 17c0 .4-.2.7-.4 1-.1.3-.4.5-.7.7l-1 .2c-.5 0-.9 0-1.2-.2l-.7-.7a3 3 0 0 1-.4-1 5.4 5.4 0 0 1 0-2.3c0-.4.2-.7.4-1l.7-.7a2 2 0 0 1 1.1-.3 2 2 0 0 1 1.8 1l.4 1a5.3 5.3 0 0 1 0 2.3m2.5-3c-.1-.7-.4-1.3-.8-1.7a4 4 0 0 0-1.3-1.2c-.6-.3-1.3-.4-2-.4-.6 0-1.2.1-1.7.4a3 3 0 0 0-1.2 1.1V11H110v13h2.7v-4.5c.4.4.8.8 1.3 1 .5.3 1 .4 1.6.4a4 4 0 0 0 3.2-1.5c.4-.5.7-1 .8-1.6.2-.6.3-1.2.3-1.9s0-1.3-.3-2zm-13.1 3c0 .4-.2.7-.4 1l-.7.7-1.1.2c-.4 0-.8 0-1-.2-.4-.2-.6-.4-.8-.7a3 3 0 0 1-.4-1 5.4 5.4 0 0 1 0-2.3c0-.4.2-.7.4-1 .1-.3.4-.5.7-.7a2 2 0 0 1 1-.3 2 2 0 0 1 1.9 1l.4 1a5.4 5.4 0 0 1 0 2.3m1.7-4.7a4 4 0 0 0-3.3-1.6c-.6 0-1.2.1-1.7.4a3 3 0 0 0-1.2 1.1V11h-2.6v13h2.7v-4.5c.3.4.7.8 1.2 1 .6.3 1.1.4 1.7.4a4 4 0 0 0 3.2-1.5c.4-.5.6-1 .8-1.6s.3-1.2.3-1.9-.1-1.3-.3-2c-.2-.6-.4-1.2-.8-1.6m-17.5 3.2 1.7-5 1.7 5zm.2-8.2-5 13.4h3l1-3h5l1 3h3L94 7.3zm-5.3 9.1-.6-.8-1-.5a11.6 11.6 0 0 0-2.3-.5l-1-.3a2 2 0 0 1-.6-.3.7.7 0 0 1-.3-.6c0-.2 0-.4.2-.5l.3-.3h.5l.5-.1c.5 0 .9 0 1.2.3.4.1.6.5.6 1h2.5c0-.6-.2-1.1-.4-1.5a3 3 0 0 0-1-1 4 4 0 0 0-1.3-.5 7.7 7.7 0 0 0-3 0c-.6.1-1 .3-1.4.5l-1 1a3 3 0 0 0-.4 1.5 2 2 0 0 0 1 1.8l1 .5 1.1.3 2.2.6c.6.2.8.5.8 1l-.1.5-.4.4a2 2 0 0 1-.6.2 2.8 2.8 0 0 1-1.4 0 2 2 0 0 1-.6-.3l-.5-.5-.2-.8H77c0 .7.2 1.2.5 1.6.2.5.6.8 1 1 .4.3.9.5 1.4.6a8 8 0 0 0 3.3 0c.5 0 1-.2 1.4-.5a3 3 0 0 0 1-1c.3-.5.4-1 .4-1.6 0-.5 0-.9-.3-1.2M74.7 8h-2.6v3h-1.7v1.7h1.7v5.8c0 .5 0 .9.2 1.2l.7.7 1 .3a7.8 7.8 0 0 0 2 0h.7v-2.1a3.4 3.4 0 0 1-.8 0l-1-.1-.2-1v-4.8h2V11h-2zm-7.6 9v.5l-.3.8-.7.6c-.2.2-.7.2-1.2.2h-.6l-.5-.2a1 1 0 0 1-.4-.4l-.1-.6.1-.6.4-.4.5-.3a4.8 4.8 0 0 1 1.2-.2 8 8 0 0 0 1.2-.2l.4-.3v1zm2.6 1.5v-5c0-.6 0-1.1-.3-1.5l-1-.8-1.4-.4a10.9 10.9 0 0 0-3.1 0l-1.5.6c-.4.2-.7.6-1 1a3 3 0 0 0-.5 1.5h2.7c0-.5.2-.9.5-1a2 2 0 0 1 1.3-.4h.6l.6.2.3.4.2.7c0 .3 0 .5-.3.6-.1.2-.4.3-.7.4l-1 .1a22 22 0 0 0-2.4.4l-1 .5c-.3.2-.6.5-.8.9-.2.3-.3.8-.3 1.3s.1 1 .3 1.3c.1.4.4.7.7 1l1 .4c.4.2.9.2 1.3.2a6 6 0 0 0 1.8-.2c.6-.2 1-.5 1.5-1a4 4 0 0 0 .2 1H70l-.3-1zm-11-6.7c-.2-.4-.6-.6-1-.8-.5-.2-1-.3-1.8-.3-.5 0-1 .1-1.5.4a3 3 0 0 0-1.3 1.2v-5h-2.7v13.4H53v-5.1c0-1 .2-1.7.5-2.2.3-.4.9-.6 1.6-.6.6 0 1 .2 1.3.6s.4 1 .4 1.8v5.5h2.7v-6c0-.6 0-1.2-.2-1.6 0-.5-.3-1-.5-1.3zm-14 4.7-2.3-9.2h-2.8l-2.3 9-2.2-9h-3l3.6 13.4h3l2.2-9.2 2.3 9.2h3l3.6-13.4h-3zm-24.5.2L18 15.6c-.3-.1-.6-.2-.8.2A20 20 0 0 1 16 17c-.2.2-.4.3-.7.1-.4-.2-1.5-.5-2.8-1.7-1-1-1.7-2-2-2.4-.1-.4 0-.5.2-.7l.5-.6.4-.6v-.6L10.4 8c-.3-.6-.6-.5-.8-.6H9c-.2 0-.6.1-.9.5C7.8 8.2 7 9 7 10.7s1.3 3.4 1.4 3.6c.2.3 2.5 3.7 6 5.2l1.9.8c.8.2 1.6.2 2.2.1s2-.8 2.3-1.6c.3-.9.3-1.5.2-1.7l-.7-.4zM14 25.3c-2 0-4-.5-5.8-1.6l-.4-.2-4.4 1.1 1.2-4.2-.3-.5A11.5 11.5 0 0 1 22.1 5.7 11.5 11.5 0 0 1 14 25.3M14 0A13.8 13.8 0 0 0 2 20.7L0 28l7.3-2A13.8 13.8 0 1 0 14 0"/></svg>
+									</div>
+				<div class="joinchat__close" role="button" tabindex="0" aria-label="Fechar"></div>
+			</div>
+			<div class="joinchat__scroll">
+				<div class="joinchat__content">
+					<div class="joinchat__chat"><div class="joinchat__bubble">🌴 ☀️ Dúvidas sobre hospedagem ou aulas de kite? Clique aqui e fale conosco! 🪁</div></div>
+					<div class="joinchat__open" role="button" tabindex="0">
+													<div class="joinchat__open__text">Abrir bate-papo</div>
+												<svg class="joinchat__open__icon" width="60" height="60" viewbox="0 0 400 400">
+							<path class="joinchat__pa" d="M168.83 200.504H79.218L33.04 44.284a1 1 0 0 1 1.386-1.188L365.083 199.04a1 1 0 0 1 .003 1.808L34.432 357.903a1 1 0 0 1-1.388-1.187l29.42-99.427"/>
+							<path class="joinchat__pb" d="M318.087 318.087c-52.982 52.982-132.708 62.922-195.725 29.82l-80.449 10.18 10.358-80.112C18.956 214.905 28.836 134.99 81.913 81.913c65.218-65.217 170.956-65.217 236.174 0 42.661 42.661 57.416 102.661 44.265 157.316"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+					<a class="joinchat__powered" href="https://join.chat/en/powered/?utm_medium=widget&#038;utm_source=kitenomade.com.br" target="_blank" rel="nofollow noopener">Powered by <span>Joinchat</span></a>
+			</div>
+</body>
+</html>

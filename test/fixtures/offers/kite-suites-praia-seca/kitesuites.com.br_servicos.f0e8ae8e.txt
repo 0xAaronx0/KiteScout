@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang=pt-BR>
+<head>
+  <title>Kite Suites - Hospedagem e Gastronomia em Praia Seca - SERVIÇOS</title>
+</head>
+<body class="cs-main">
+  <div class="cs-page">
+    <header id="197915e9-8de4-45d5-9686-44285622d909" class="cs-section cs-section-full">
+  <div class="cs-section-inner">
+    <div class="cs-lines">
+        <div id="a5fc7820-4d15-4b17-bfa1-3a987dcea778" class="cs-line">
+  <div class="cs-boxes">
+      <div id="8afcdecf-8036-41ec-afd2-fa43f43a552e" class="cs-box">
+  <div class="cs-widgets">
+      <div id="bfee2af5-f4e5-436e-ac0e-2d2a47e9d99a"
+  class="cs-widget cs-image-widget cs-image-alignment-left">
+  <img class="cs-chosen-image"
+       src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/c8cc5d8a897a4c3db28daa60203d5f5a.png"
+       title="MARCA_KITESUITES_VETOR_07.png"
+       alt="MARCA_KITESUITES_VETOR_07.png"/>
+</div>
+  </div>
+</div>
+      <div id="bd71940a-7d7b-4258-bbcd-70d37218e5ad" class="cs-box">
+  <div class="cs-widgets">
+      <div id="37584400-cddb-4dbd-85cd-b4bca2f6229d"
+  class="cs-widget cs-menu-widget">
+      <nav class="cs-menu cs-menu-theme-2 cs-menu-horizontal cs-menu-right" role="navigation" aria-label="Menu principal do site">
+  <input aria-label="Se estiver em dispositivos móveis, cheque este item, para exibir o Menu de navegação" type="checkbox" name="cs-menu-control" id="cs-menu-control"/>
+  <label for="cs-menu-control" class="cs-menu-button">
+    <svg viewBox="0 0 24 24" class="cs-ico-menu" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" role="img">
+      <title>Ícone para exibir Menu</title>
+      <path d="M21.7,1.2H2.3C1,1.2,0,2.2,0,3.5s1,2.3,2.3,2.3h19.4c1.3,0,2.3-1,2.3-2.3S23,1.2,21.7,1.2z"></path>
+      <path d="M21.7,9.7H2.3C1,9.7,0,10.7,0,12s1,2.3,2.3,2.3h19.4c1.3,0,2.3-1,2.3-2.3S23,9.7,21.7,9.7z"></path>
+      <path d="M21.7,18.2H2.3c-1.3,0-2.3,1-2.3,2.3c0,1.3,1,2.3,2.3,2.3h19.4c1.3,0,2.3-1,2.3-2.3C24,19.2,23,18.2,21.7,18.2z"></path>
+    </svg>
+    <svg viewBox="0 0 24 24.009" class="cs-ico-menu-close" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" role="img">
+      <title>Ícone para fechar o menu</title>
+      <path d="M16.067,12.009l7.092-7.091c1.121-1.121,1.121-2.938,0-4.058c-1.121-1.121-2.938-1.121-4.058,0 l-7.092,7.092L4.918,0.84C3.797-0.28,1.98-0.28,0.86,0.84c-1.121,1.121-1.121,2.938,0,4.058l7.092,7.111L0.84,19.101 c-1.121,1.121-1.121,2.938,0,4.059c0.561,0.56,1.295,0.85,2.029,0.85c0.734,0,1.469-0.271,2.029-0.85l7.111-7.092l7.092,7.092 c0.561,0.56,1.294,0.85,2.028,0.85s1.469-0.271,2.029-0.85c1.121-1.121,1.121-2.938,0-4.059L16.067,12.009z"/>
+    </svg>
+  </label>
+  <label for="cs-menu-control" class="cs-menu-overlay"></label>
+  <ul class="cs-menu-items" role="menubar">
+      <li >
+          <a href="/" role="menuitem" tabindex="1">HOME</a>
+      </li>
+      <li >
+          <a href="/acomodacoes" role="menuitem" tabindex="1">ACOMODAÇÕES</a>
+      </li>
+      <li >
+          <a href="/servicos" role="menuitem" tabindex="1">SERVIÇOS</a>
+      </li>
+      <li >
+          <a href="/contato" role="menuitem" tabindex="1">CONTATO</a>
+      </li>
+      <li >
+          <a href="/cardapio" role="menuitem" tabindex="1">CARDÁPIO</a>
+      </li>
+  </ul>
+</nav>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </div>
+</header>
+      <section id="7949d05d-1e42-4c6f-b620-a56e7d571914" class="cs-section cs-section-full">
+  <div class="cs-section-inner">
+    <div class="cs-lines">
+        <div id="e3dc0766-c31b-4841-bd75-5938b52f1ca6" class="cs-line">
+  <div class="cs-boxes">
+      <div id="6739dd40-4a4e-4f0f-89a3-13f770f56e68" class="cs-box">
+  <div class="cs-widgets">
+      <div id="2d6b33c0-9a20-4a6a-bc75-a7b8465ed5b4"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <h3 style="text-align:center"><span style="color:#345a55"><span style="font-size:85px">Servi&ccedil;os</span></span></h3>
+</div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+        <div id="3659f6ba-de69-48bd-9f2b-8f6d27c84cbc" class="cs-line">
+  <div class="cs-boxes">
+      <div id="46a34c25-4e51-429c-b5a4-e753a96cc9a3" class="cs-box">
+  <div class="cs-widgets">
+      <div id="c8d557c5-9507-4db1-83ac-9998e47f56ee"
+  class="cs-widget cs-image-widget cs-image-alignment-center">
+  <img class="cs-chosen-image"
+       src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/3d8a9c71f5d7447c83e7da6702d10be2.png"
+       title="IMG_0188.png"
+       alt="IMG_0188.png"/>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+      <section id="8b4284de-cc49-47cc-a083-19aead71db5d" class="cs-section cs-section-full cs-section-vertical">
+  <div class="cs-section-inner">
+    <div class="cs-lines">
+        <div id="87a377a6-d576-4d71-8e2a-9f1f46810d74" class="cs-line">
+  <div class="cs-boxes">
+      <div id="aeb13cc0-f1a1-4a70-8e09-e1370b4568d9" class="cs-box">
+  <div class="cs-widgets">
+      <div id="7bf47314-30e7-44db-a5f3-d77be52256f2"
+  class="cs-widget cs-image-widget">
+  <img class="cs-chosen-image"
+       src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/2233505b38c0427498ca247f2129adf3.jpg"
+       title="IMG_0184.jpeg"
+       alt="IMG_0184.jpeg"/>
+</div>
+      <div id="dfcda526-b458-47c8-93b1-6fa655dd7f4f"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <h4 style="text-align:center"><strong>Gastronomia</strong></h4>
+<p>&nbsp;</p>
+<p style="text-align:center">Vennha tomar um caf&eacute; da manh&atilde;, almo&ccedil;ar ou tomar um a&ccedil;a&iacute; no nosso restaurante em frente a lagoa.</p>
+<p style="text-align:center">&nbsp;</p>
+</div>
+</div>
+      <div id="614905fe-4415-4ae7-8384-ccc66205cc30"
+  class="cs-widget cs-image-widget">
+  <img class="cs-chosen-image"
+       src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/bf912733deca4f04b911846310b32913.jpg"
+       title="PHOTO-2025-02-18-20-43-00.jpeg"
+       alt="PHOTO-2025-02-18-20-43-00.jpeg"/>
+</div>
+      <div id="7e6dc07b-96a1-4717-9150-7d0cdcc03be4"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <h4 style="text-align:center"><strong>Aulas de Kitesurf</strong></h4>
+<p style="text-align:center">Agende sua aula com nossos instrutores certificados e venha fazer parte desse mundo incr&iacute;vel do Kitesurf</p>
+</div>
+</div>
+      <div id="ae6acbf9-eef7-4602-be9a-4127f5ac17a6"
+  class="cs-widget cs-button-widget cs-button-alignment-center">
+      <a href="https://wa.me/5521988993604?text=Ol%C3%A1.%20Gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20aulas%20de%20Kitesurf.%20Vim%20atrav%C3%A9s%20do%20site%20da%20Kite%20Suites."
+   class="cs-button cs-button-theme-1"
+   role="button"
+   target="_self">
+  <span>AGENDE SUA AULA</span>
+</a>
+</div>
+  </div>
+</div>
+      <div id="22d44f72-03b4-4201-8fca-50b2afad1da9" class="cs-box">
+  <div class="cs-widgets">
+      <div id="a9030e25-5261-446c-bec9-972ec7018c9b"
+  class="cs-widget cs-image-widget">
+  <img class="cs-chosen-image"
+       src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/1503433d5886424ea3e378f4e526476e.jpg"
+       title="IMG_0185.jpeg"
+       alt="IMG_0185.jpeg"/>
+</div>
+      <div id="22dc9d47-229d-43ff-8d73-6ba3078de747"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <h4 style="text-align:center"><strong>Servi&ccedil;os de Praia</strong></h4>
+<p>&nbsp;</p>
+<p style="text-align:center">&nbsp; Para voc&ecirc; aproveitar da melhor maneira seu dia na lagoa ou na praia.</p>
+<p style="text-align:center">&nbsp;</p>
+</div>
+</div>
+      <div id="12329e47-f319-48c8-9329-2f2271b80e8c"
+  class="cs-widget cs-image-widget">
+  <img class="cs-chosen-image"
+       src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/1a74d6fd915849808993124ed29b8390.jpg"
+       title="PHOTO-2025-02-18-20-38-05.jpeg"
+       alt="PHOTO-2025-02-18-20-38-05.jpeg"/>
+</div>
+      <div id="fd5ff8c6-dc93-471a-983d-e5f496827afd"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <h4 style="text-align:center"><strong>Passeios</strong></h4>
+<p style="text-align:center">Passeios de bugre, jetski e barco em Praia Seca e Arraial do Cabo com nossos parceiros.</p>
+</div>
+</div>
+      <div id="fa462eda-ba3b-4e2c-9f3f-f3d891261be0"
+  class="cs-widget cs-button-widget cs-button-alignment-center">
+      <a href="https://wa.me/5522999886066?text=Ol%C3%A1.%20Gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20os%20passeios%20dispon%C3%ADveis."
+   class="cs-button cs-button-theme-1"
+   role="button"
+   target="_self">
+  <span>AGENDE SEU PASSEIO</span>
+</a>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+      <section id="ff095ded-af4c-461b-915b-c2d5200c158e" class="cs-section cs-section-full cs-section-vertical">
+  <div class="cs-section-inner">
+    <div class="cs-lines">
+        <div id="bbf6e7f8-a977-428c-8121-e8eb9e1f1470" class="cs-line">
+  <div class="cs-boxes">
+      <div id="5f894ea9-516b-45f6-a9b2-343370799d3d" class="cs-box">
+  <div class="cs-widgets">
+      <div id="8946dd77-9cfa-41b6-af3b-df680fcc63f5"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <h2 style="text-align:center"><span style="color:#ffffff">Saia da Rotina. Escolha a Kite Suites</span></h2>
+</div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+        <div id="ff027dfa-950a-44fa-b868-489c41ecb04a" class="cs-line">
+  <div class="cs-boxes">
+      <div id="14b2f32c-2985-4252-b75e-f63333230b87" class="cs-box">
+  <div class="cs-widgets">
+      <div id="6b491535-4f41-4016-9aef-9ecfc62fc637"
+  class="cs-widget cs-button-widget cs-button-alignment-center">
+      <a href="https://wa.me/5522999886066?text=Ol%C3%A1.%20Gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20as%20acomoda%C3%A7%C3%B5es%20e%20servi%C3%A7os%20oferecidos%20no%20site."
+   class="cs-button "
+   role="button"
+   target="_self">
+  <span>ENTRE EM CONTATO</span>
+</a>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+    <footer id="f694ba5a-0d86-49ba-bd8c-0fb5214295a3" class="cs-section cs-section-full cs-section-vertical">
+  <div class="cs-section-inner">
+    <div class="cs-lines">
+        <div id="ffd7c528-ea6c-4e2c-99f1-5fdd07e76cda" class="cs-line">
+  <div class="cs-boxes">
+      <div id="8c992bbd-c075-481c-a312-61919cf098c1" class="cs-box">
+  <div class="cs-widgets">
+      <div id="68d2c575-4fa7-4a21-a1b5-764c3b422052"
+  class="cs-widget cs-code-widget cs-widget-empty">
+</div>
+  </div>
+</div>
+  </div>
+</div>
+        <div id="441e35af-92a4-418d-a135-8ccbc064e47d" class="cs-line">
+  <div class="cs-boxes">
+      <div id="b2a52ede-b4c6-4990-adc7-5e56bbd3d274" class="cs-box">
+  <div class="cs-widgets">
+      <div id="1544dba7-b9e6-49df-942b-01eb03fab4e0"
+  class="cs-widget cs-image-widget cs-image-alignment-center">
+  <img class="cs-chosen-image"
+       src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/37d4d571d1d94a9cb06bbf520b53cff1.png"
+       title="MARCA_KITESUITES_VETOR_03.png"
+       alt="MARCA_KITESUITES_VETOR_03.png"/>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+        <div id="57a324cc-cb56-4f25-924a-0bd262d7d0f2" class="cs-line">
+  <div class="cs-boxes">
+      <div id="3bf17e87-a58f-4390-ba35-fc9410075b4d" class="cs-box">
+  <div class="cs-widgets">
+      <div id="5a267d2f-3ee8-482e-bfb9-87c20043a60b"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <p style="text-align:center">&nbsp;</p>
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#ffffff">Tel +55 22 999886066</span></span><br />
+<span style="font-size:18px"><span style="color:#ffffff">Av. Praia dos Nobres, 741 - Sao Tome, Praia Seca - Araruama - RJ, 28970-000</span></span></p>
+<p style="text-align:center">&nbsp;</p>
+</div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+        <div id="82b7658a-56f0-48a1-9a50-d14b337e90c3" class="cs-line">
+  <div class="cs-boxes">
+      <div id="87be2f64-0f7a-4bc5-96a7-258d0c3e079c" class="cs-box">
+  <div class="cs-widgets">
+      <div id="5d074d7d-fbec-4b91-b4e4-c137d20fefbf"
+  class="cs-widget cs-social-widget">
+<ul class="cs-social-colors cs-social-theme-1 cs-social-alignment-center cs-social-positioning-horizontal">
+    <li>
+      <a href="https://wa.me/5522999886066?text=Ol%C3%A1.%20Gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20as%20acomoda%C3%A7%C3%B5es%20e%20servi%C3%A7os%20oferecidos%20no%20site." target="_blank">
+        <img src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/6d3ebd382a464a43acaba5dbb010cca5.jpg" />
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/kite_suites?igsh=MWttdWhzYnRkajB0bg==" target="_blank">
+        <img src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/4cb99aba4d484f72acf88b8e4bae27df.png" />
+      </a>
+    </li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+        <div id="25057197-e381-4652-957b-349ed93224d9" class="cs-line">
+  <div class="cs-boxes">
+      <div id="1c46ca15-722b-4252-8c1e-87a20f52c44a" class="cs-box">
+  <div class="cs-widgets">
+      <div id="d88aca05-bf6c-4a61-bedd-c9ad74e430e1"
+  class="cs-widget cs-text-widget cs-widget-empty">
+      <div class="text-editor">
+</div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </div>
+</footer>
+  </div>
+</body>
+</html>

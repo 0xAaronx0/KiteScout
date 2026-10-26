@@ -1,0 +1,523 @@
+
+<!DOCTYPE html>
+<html lang=pt-BR>
+<head>
+  <title>Kite Suites - Hospedagem e Gastronomia em Praia Seca - HOME</title>
+</head>
+<body class="cs-main">
+  <div class="cs-page">
+    <header id="197915e9-8de4-45d5-9686-44285622d909" class="cs-section cs-section-full">
+  <div class="cs-section-inner">
+    <div class="cs-lines">
+        <div id="a5fc7820-4d15-4b17-bfa1-3a987dcea778" class="cs-line">
+  <div class="cs-boxes">
+      <div id="8afcdecf-8036-41ec-afd2-fa43f43a552e" class="cs-box">
+  <div class="cs-widgets">
+      <div id="bfee2af5-f4e5-436e-ac0e-2d2a47e9d99a"
+  class="cs-widget cs-image-widget cs-image-alignment-left">
+  <img class="cs-chosen-image"
+       src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/c8cc5d8a897a4c3db28daa60203d5f5a.png"
+       title="MARCA_KITESUITES_VETOR_07.png"
+       alt="MARCA_KITESUITES_VETOR_07.png"/>
+</div>
+  </div>
+</div>
+      <div id="bd71940a-7d7b-4258-bbcd-70d37218e5ad" class="cs-box">
+  <div class="cs-widgets">
+      <div id="37584400-cddb-4dbd-85cd-b4bca2f6229d"
+  class="cs-widget cs-menu-widget">
+      <nav class="cs-menu cs-menu-theme-2 cs-menu-horizontal cs-menu-right" role="navigation" aria-label="Menu principal do site">
+  <input aria-label="Se estiver em dispositivos móveis, cheque este item, para exibir o Menu de navegação" type="checkbox" name="cs-menu-control" id="cs-menu-control"/>
+  <label for="cs-menu-control" class="cs-menu-button">
+    <svg viewBox="0 0 24 24" class="cs-ico-menu" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" role="img">
+      <title>Ícone para exibir Menu</title>
+      <path d="M21.7,1.2H2.3C1,1.2,0,2.2,0,3.5s1,2.3,2.3,2.3h19.4c1.3,0,2.3-1,2.3-2.3S23,1.2,21.7,1.2z"></path>
+      <path d="M21.7,9.7H2.3C1,9.7,0,10.7,0,12s1,2.3,2.3,2.3h19.4c1.3,0,2.3-1,2.3-2.3S23,9.7,21.7,9.7z"></path>
+      <path d="M21.7,18.2H2.3c-1.3,0-2.3,1-2.3,2.3c0,1.3,1,2.3,2.3,2.3h19.4c1.3,0,2.3-1,2.3-2.3C24,19.2,23,18.2,21.7,18.2z"></path>
+    </svg>
+    <svg viewBox="0 0 24 24.009" class="cs-ico-menu-close" xmlns="http://www.w3.org/2000/svg" aria-labelledby="title" role="img">
+      <title>Ícone para fechar o menu</title>
+      <path d="M16.067,12.009l7.092-7.091c1.121-1.121,1.121-2.938,0-4.058c-1.121-1.121-2.938-1.121-4.058,0 l-7.092,7.092L4.918,0.84C3.797-0.28,1.98-0.28,0.86,0.84c-1.121,1.121-1.121,2.938,0,4.058l7.092,7.111L0.84,19.101 c-1.121,1.121-1.121,2.938,0,4.059c0.561,0.56,1.295,0.85,2.029,0.85c0.734,0,1.469-0.271,2.029-0.85l7.111-7.092l7.092,7.092 c0.561,0.56,1.294,0.85,2.028,0.85s1.469-0.271,2.029-0.85c1.121-1.121,1.121-2.938,0-4.059L16.067,12.009z"/>
+    </svg>
+  </label>
+  <label for="cs-menu-control" class="cs-menu-overlay"></label>
+  <ul class="cs-menu-items" role="menubar">
+      <li >
+          <a href="/" role="menuitem" tabindex="1">HOME</a>
+      </li>
+      <li >
+          <a href="/acomodacoes" role="menuitem" tabindex="1">ACOMODAÇÕES</a>
+      </li>
+      <li >
+          <a href="/servicos" role="menuitem" tabindex="1">SERVIÇOS</a>
+      </li>
+      <li >
+          <a href="/contato" role="menuitem" tabindex="1">CONTATO</a>
+      </li>
+      <li >
+          <a href="/cardapio" role="menuitem" tabindex="1">CARDÁPIO</a>
+      </li>
+  </ul>
+</nav>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </div>
+</header>
+      <section id="ff84034f-e71a-48a1-a5c1-39b33edd63f2" class="cs-section cs-section-full">
+  <div class="cs-section-inner">
+    <div class="cs-lines">
+        <div id="822fcd55-2c48-4d7e-8be6-f705ccdadbab" class="cs-line">
+  <div class="cs-boxes">
+      <div id="33bf79fb-2529-4675-9431-9ebe7763a8ff" class="cs-box">
+  <div class="cs-widgets">
+      <div id="10dfba7e-d723-4953-b320-cd955779dbc7"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <h3 style="text-align:center"><span style="color:#345a55"><span style="font-size:60px">A Espera de Novos Ventos</span></span></h3>
+</div>
+</div>
+      <div id="8bcff6dc-644d-48c3-8891-2427bd8043b2"
+  class="cs-widget cs-image-widget">
+  <img class="cs-chosen-image"
+       src="https://yata.s3-object.locaweb.com.br/c59e714aada30af417968f67ebae2206bf33d09cba593b98bbf1db386d41229b"
+       title="setinha.png"
+       alt="setinha.png"/>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+      <section id="aa111f04-bcd9-477e-892c-62d416bf5919" class="cs-section cs-section-full cs-section-vertical">
+  <div class="cs-section-inner">
+    <div class="cs-lines">
+        <div id="88879e6a-36b6-4781-a627-4a400d32ad3d" class="cs-line">
+  <div class="cs-boxes">
+      <div id="3fbd957e-945a-4ae8-b2c8-bea21af8be7d" class="cs-box">
+  <div class="cs-widgets">
+      <div id="dc59b320-c9cb-4090-9353-d34f095f46e5"
+  class="cs-widget cs-gallery-widget">
+      <div class="cs-gallery owl-carousel owl-theme"
+  data-arrow-navigation="false"
+  data-autoplay-timeout="3000"
+  data-autoplay="true"
+  data-dots="true"
+  data-full-image
+  data-images-per-row="3"
+  data-items=""
+  data-keep-original-size="true"
+  data-layout=""
+  data-lazy-load=true
+  data-lazy-load-eager="1"
+  data-loop=""
+  data-margin="5"
+  data-nav="false"
+  data-navigation-style="dot"
+  data-stage-padding="0"
+  data-show-more="false"
+  data-type="">
+    <div class="image-wrapper">
+      <img class="owl-lazy"
+        alt="INSTAGRAM_KITESUITES_02a.png"
+        data-height="5000"
+        data-href=""
+        data-index="0"
+        data-src-thumb="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/81417d825f4d4b1a8d068207beaaa212.png"
+        data-src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/8da8cd4167884076bf93f87ad87e3578.png"
+        data-target="_self"
+        data-width="5000"
+        title="INSTAGRAM_KITESUITES_02a.png" />
+    </div>
+    <div class="image-wrapper">
+      <img class="owl-lazy"
+        alt="INSTAGRAM_KITESUITES_09.png"
+        data-height="5000"
+        data-href=""
+        data-index="1"
+        data-src-thumb="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/0fb2a3cb944c4311a58841c80bf826d6.png"
+        data-src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/05baee99399a46ec86d1e12d3a92696a.png"
+        data-target="_self"
+        data-width="5000"
+        title="INSTAGRAM_KITESUITES_09.png" />
+    </div>
+    <div class="image-wrapper">
+      <img class="owl-lazy"
+        alt="INSTAGRAM_KITESUITES_19.png"
+        data-height="5000"
+        data-href=""
+        data-index="2"
+        data-src-thumb="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/ce93d90884a1423fb86258c38938a9da.png"
+        data-src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/693816d35c2f434395c8f8c327adf87f.png"
+        data-target="_self"
+        data-width="5000"
+        title="INSTAGRAM_KITESUITES_19.png" />
+    </div>
+    <div class="image-wrapper">
+      <img class="owl-lazy"
+        alt="PHOTO-2025-02-18-09-03-17.jpeg"
+        data-height="1280"
+        data-href=""
+        data-index="3"
+        data-src-thumb="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/0c8b34e7396d4b54b30ae58feaf9ec2d.jpg"
+        data-src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/92fb5d8e9b2e4e2cb3312cfb3237bc0e.jpg"
+        data-target="_self"
+        data-width="1280"
+        title="PHOTO-2025-02-18-09-03-17.jpeg" />
+    </div>
+    <div class="image-wrapper">
+      <img class="owl-lazy"
+        alt="INSTAGRAM_KITESUITES_03.png"
+        data-height="5000"
+        data-href=""
+        data-index="4"
+        data-src-thumb="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/66267669d45d46dc8f27d183f738ffa1.png"
+        data-src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/79c0c5e831534b108e1059ccb40831e7.png"
+        data-target="_self"
+        data-width="5000"
+        title="INSTAGRAM_KITESUITES_03.png" />
+    </div>
+    <div class="image-wrapper">
+      <img class="owl-lazy"
+        alt="PHOTO-2025-02-18-09-03-17 6.jpeg"
+        data-height="1280"
+        data-href=""
+        data-index="5"
+        data-src-thumb="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/baf9f250c28c4a1e9999b3e0ad01ec07.jpg"
+        data-src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/e822ea82d67b4f559aa689e1e9c9b112.jpg"
+        data-target="_self"
+        data-width="1280"
+        title="PHOTO-2025-02-18-09-03-17 6.jpeg" />
+    </div>
+    <div class="image-wrapper">
+      <img class="owl-lazy"
+        alt="PHOTO-2025-02-18-09-03-17 2.jpeg"
+        data-height="1280"
+        data-href=""
+        data-index="6"
+        data-src-thumb="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/726c421e096545e0b13945cfa907d5aa.jpg"
+        data-src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/ff623a4bb01f4e70ae6848096875c514.jpg"
+        data-target="_self"
+        data-width="1280"
+        title="PHOTO-2025-02-18-09-03-17 2.jpeg" />
+    </div>
+    <div class="image-wrapper">
+      <img class="owl-lazy"
+        alt="PHOTO-2025-02-18-09-03-17 5.jpeg"
+        data-height="1280"
+        data-href=""
+        data-index="7"
+        data-src-thumb="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/7f7a1edde4cb4a0ba6403cd28f745919.jpg"
+        data-src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/bac6beb7ecc2490b99230c874a9debd4.jpg"
+        data-target="_self"
+        data-width="1280"
+        title="PHOTO-2025-02-18-09-03-17 5.jpeg" />
+    </div>
+    <div class="image-wrapper">
+      <img class="owl-lazy"
+        alt="PHOTO-2025-02-18-09-03-17 4.jpeg"
+        data-height="1280"
+        data-href=""
+        data-index="8"
+        data-src-thumb="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/a109ba77d80948f2930bac0bc44c7ec6.jpg"
+        data-src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/a65b90011c944bc5b93724d4ce6d46c9.jpg"
+        data-target="_self"
+        data-width="1280"
+        title="PHOTO-2025-02-18-09-03-17 4.jpeg" />
+    </div>
+    <div class="image-wrapper">
+      <img class="owl-lazy"
+        alt="PHOTO-2025-02-18-09-03-17 3.jpeg"
+        data-height="1280"
+        data-href=""
+        data-index="9"
+        data-src-thumb="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/d32818f60c5c478eba98c41a953dbd4a.jpg"
+        data-src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/c80680ea0b204b79886a94d1bd8994a2.jpg"
+        data-target="_self"
+        data-width="1280"
+        title="PHOTO-2025-02-18-09-03-17 3.jpeg" />
+    </div>
+</div>
+</div>
+  </div>
+</div>
+      <div id="5caa9ea4-e31f-47c0-b4d5-1b87d435701d" class="cs-box">
+  <div class="cs-widgets">
+      <div id="66dd7971-5023-4771-839a-1c7e37b5107e"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <p>&nbsp;</p>
+<h3>Tempo para Voc&ecirc;</h3>
+<p>&nbsp;</p>
+<p>Desconecte-se da correria do dia a dia. Nossas acomoda&ccedil;&otilde;es &nbsp;s&atilde;o uma combina&ccedil;&atilde;o perfeita de natureza e sofistica&ccedil;&atilde;o. Nada mais prazeroso do que acordar de frente para a lagoa e praticar seu esporte favorito . Venha conhecer o Kite Suites, voc&ecirc; merece.</p>
+</div>
+</div>
+      <div id="28d0b16c-776c-4c3d-ba64-b3649da4cdfd"
+  class="cs-widget cs-button-widget cs-button-alignment-left">
+      <a href="http://www.kitesuites.com.br/acomodacoes"
+   class="cs-button "
+   role="button"
+   target="_self">
+  <span>CONHEÇA AS ACOMODAÇÕES</span>
+</a>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+        <div id="8118ec6a-4a8b-4cca-bf7b-a91328d6ed4b" class="cs-line">
+  <div class="cs-boxes">
+      <div id="fab3334c-1fff-443c-b051-44f5f51b2ec3" class="cs-box">
+  <div class="cs-widgets">
+      <div id="b70e9248-ac51-4f23-9b83-bc18e73dad04"
+  class="cs-widget cs-video-widget">
+      <div class="cs-video-player">
+  <iframe src="//www.youtube.com/embed/b8v-BaHqXec"
+    width="100%"
+    height="100%"
+    frameBorder="0"
+    allowFullScreen>
+  </iframe>
+</div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+      <section id="69d32a6b-660d-4d51-b3bd-6cf165a341df" class="cs-section cs-section-full">
+  <div class="cs-section-inner">
+    <div class="cs-lines">
+        <div id="d5214e7f-0271-4ec8-82fa-ea6b03498b5d" class="cs-line">
+  <div class="cs-boxes">
+      <div id="bd81dd23-cf1c-4adf-b3be-341c4b289755" class="cs-box">
+  <div class="cs-widgets">
+      <div id="071befe1-3261-49f0-b344-23070122339b"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <p style="text-align:center"><br />
+<br />
+&nbsp;</p>
+<h3 style="text-align:center">&nbsp;</h3>
+</div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+        <div id="7e758283-4c20-453e-8d97-13a6bae3e6be" class="cs-line">
+  <div class="cs-boxes">
+      <div id="114af3e6-963f-4f38-bfde-7998153d5711" class="cs-box">
+  <div class="cs-widgets">
+      <div id="98785a4f-329e-48a8-8904-178681bb4e7b"
+  class="cs-widget cs-image-widget">
+  <img class="cs-chosen-image"
+       src="https://yata.s3-object.locaweb.com.br/d9fd721a11a4cd148d1ea7659e194eb470d4bf9e5258288061e9633efe4d22bf"
+       title="i2.png"
+       alt="i2.png"/>
+</div>
+      <div id="a302084b-a581-495a-9edc-300544a62ec1"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <p style="text-align:center"><span style="font-size:14px"><span style="color:#000000"><strong>GASTRONOMIA</strong></span></span></p>
+</div>
+</div>
+  </div>
+</div>
+      <div id="51c37fd2-1a7d-4a13-bab6-6a6a72ea565c" class="cs-box">
+  <div class="cs-widgets">
+      <div id="c1ec44bd-a8c7-4511-9bc4-6ac4ca65776f"
+  class="cs-widget cs-image-widget">
+  <img class="cs-chosen-image"
+       src="https://yata.s3-object.locaweb.com.br/ebc92e83087e1ce719626eeb81502530482750cdb70f896418a67852b0743cd3"
+       title="i3.png"
+       alt="i3.png"/>
+</div>
+      <div id="800f2adc-a3fc-45b6-9f21-1ac9227fd775"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <p style="text-align:center"><span style="color:#000000"><span style="font-size:14px"><strong>DRINKS</strong></span></span></p>
+</div>
+</div>
+  </div>
+</div>
+      <div id="836ea174-7654-44bb-b10c-b0d00c191e54" class="cs-box">
+  <div class="cs-widgets">
+      <div id="124239b9-8a8a-4daa-9010-3bb04c41d287"
+  class="cs-widget cs-image-widget">
+  <img class="cs-chosen-image"
+       src="https://yata.s3-object.locaweb.com.br/c8050c280ef440d61b4fcccf819b6829900b2e63878d0cb4d8830cbef90efaa3"
+       title="i4.png"
+       alt="i4.png"/>
+</div>
+      <div id="41a8ff7f-6d68-4a64-b8e6-99141eeb9159"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <p style="text-align:center"><span style="color:#000000"><span style="font-size:14px"><strong>PISCINA</strong></span></span></p>
+</div>
+</div>
+  </div>
+</div>
+      <div id="3a40668e-c88e-4d8c-a0f8-aa0fab951f25" class="cs-box">
+  <div class="cs-widgets">
+      <div id="c789dec0-3edf-4446-b6a9-d1ee4718415d"
+  class="cs-widget cs-image-widget">
+  <img class="cs-chosen-image"
+       src="https://yata.s3-object.locaweb.com.br/996d790e5d3d463164ae9c0294be6e8bcadaacc53a73c52598a7db5c319e4700"
+       title="i5.png"
+       alt="i5.png"/>
+</div>
+      <div id="04ad14ca-1e26-4c2e-9e1d-fca8ce1ebf71"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <p style="text-align:center"><span style="color:#000000"><span style="font-size:14px"><strong>SERVI&Ccedil;O DE PRAIA</strong></span></span></p>
+</div>
+</div>
+  </div>
+</div>
+      <div id="c746a05f-31a1-44ef-87e8-0a408e4824f9" class="cs-box">
+  <div class="cs-widgets">
+      <div id="698ba110-20d7-4457-8c89-1b9959b28464"
+  class="cs-widget cs-image-widget">
+  <img class="cs-chosen-image"
+       src="https://yata.s3-object.locaweb.com.br/1be479f9b18edd4e91e0279a235d22f44c5c985c93d6d743116645323df8ac46"
+       title="i1.png"
+       alt="i1.png"/>
+</div>
+      <div id="5f048969-503a-4a7b-97c3-0b51de1f812c"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <p style="text-align:center"><span style="font-size:14px"><span style="color:#000000"><strong>PASSEIOS</strong></span></span></p>
+</div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+      <section id="79347057-c612-41bb-a4a1-2f900dd0b397" class="cs-section cs-section-full cs-section-vertical">
+  <div class="cs-section-inner">
+    <div class="cs-lines">
+        <div id="e26ba667-5486-4934-9b8d-29777b314494" class="cs-line">
+  <div class="cs-boxes">
+      <div id="fcc7e1b5-dc3e-43a1-b379-0d4ad7b968f7" class="cs-box">
+  <div class="cs-widgets">
+      <div id="5c711dc3-b02e-4830-801f-26c3303423ee"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <h1 style="text-align:center"><span style="font-size:60px"><span style="color:#ffffff">Voc&ecirc; Merece....</span></span></h1>
+</div>
+</div>
+      <div id="d3e7bb5d-b035-4909-b721-b6bdbeb440bc"
+  class="cs-widget cs-button-widget cs-button-alignment-center">
+      <a href="https://wa.me/5522999886066?text=Ol%C3%A1.%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20a%20Hospedagem."
+   class="cs-button "
+   role="button"
+   target="_self">
+  <span>RESERVE AQUI</span>
+</a>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+    <footer id="f694ba5a-0d86-49ba-bd8c-0fb5214295a3" class="cs-section cs-section-full cs-section-vertical">
+  <div class="cs-section-inner">
+    <div class="cs-lines">
+        <div id="ffd7c528-ea6c-4e2c-99f1-5fdd07e76cda" class="cs-line">
+  <div class="cs-boxes">
+      <div id="8c992bbd-c075-481c-a312-61919cf098c1" class="cs-box">
+  <div class="cs-widgets">
+      <div id="68d2c575-4fa7-4a21-a1b5-764c3b422052"
+  class="cs-widget cs-code-widget cs-widget-empty">
+</div>
+  </div>
+</div>
+  </div>
+</div>
+        <div id="441e35af-92a4-418d-a135-8ccbc064e47d" class="cs-line">
+  <div class="cs-boxes">
+      <div id="b2a52ede-b4c6-4990-adc7-5e56bbd3d274" class="cs-box">
+  <div class="cs-widgets">
+      <div id="1544dba7-b9e6-49df-942b-01eb03fab4e0"
+  class="cs-widget cs-image-widget cs-image-alignment-center">
+  <img class="cs-chosen-image"
+       src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/37d4d571d1d94a9cb06bbf520b53cff1.png"
+       title="MARCA_KITESUITES_VETOR_03.png"
+       alt="MARCA_KITESUITES_VETOR_03.png"/>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+        <div id="57a324cc-cb56-4f25-924a-0bd262d7d0f2" class="cs-line">
+  <div class="cs-boxes">
+      <div id="3bf17e87-a58f-4390-ba35-fc9410075b4d" class="cs-box">
+  <div class="cs-widgets">
+      <div id="5a267d2f-3ee8-482e-bfb9-87c20043a60b"
+  class="cs-widget cs-text-widget">
+      <div class="text-editor">
+  <p style="text-align:center">&nbsp;</p>
+<p style="text-align:center"><span style="font-size:20px"><span style="color:#ffffff">Tel +55 22 999886066</span></span><br />
+<span style="font-size:18px"><span style="color:#ffffff">Av. Praia dos Nobres, 741 - Sao Tome, Praia Seca - Araruama - RJ, 28970-000</span></span></p>
+<p style="text-align:center">&nbsp;</p>
+</div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+        <div id="82b7658a-56f0-48a1-9a50-d14b337e90c3" class="cs-line">
+  <div class="cs-boxes">
+      <div id="87be2f64-0f7a-4bc5-96a7-258d0c3e079c" class="cs-box">
+  <div class="cs-widgets">
+      <div id="5d074d7d-fbec-4b91-b4e4-c137d20fefbf"
+  class="cs-widget cs-social-widget">
+<ul class="cs-social-colors cs-social-theme-1 cs-social-alignment-center cs-social-positioning-horizontal">
+    <li>
+      <a href="https://wa.me/5522999886066?text=Ol%C3%A1.%20Gostaria%20de%20maiores%20informa%C3%A7%C3%B5es%20sobre%20as%20acomoda%C3%A7%C3%B5es%20e%20servi%C3%A7os%20oferecidos%20no%20site." target="_blank">
+        <img src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/6d3ebd382a464a43acaba5dbb010cca5.jpg" />
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/kite_suites?igsh=MWttdWhzYnRkajB0bg==" target="_blank">
+        <img src="https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/4cb99aba4d484f72acf88b8e4bae27df.png" />
+      </a>
+    </li>
+</ul>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+        <div id="25057197-e381-4652-957b-349ed93224d9" class="cs-line">
+  <div class="cs-boxes">
+      <div id="1c46ca15-722b-4252-8c1e-87a20f52c44a" class="cs-box">
+  <div class="cs-widgets">
+      <div id="d88aca05-bf6c-4a61-bedd-c9ad74e430e1"
+  class="cs-widget cs-text-widget cs-widget-empty">
+      <div class="text-editor">
+</div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+    </div>
+  </div>
+</footer>
+  </div>
+</body>
+</html>
