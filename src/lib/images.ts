@@ -22,6 +22,7 @@ import sharp from 'sharp';
 import { supabase } from './supabase.js';
 import { anthropic, ANALYSIS_MODEL } from './anthropic.js';
 import { withRetry } from './retry.js';
+import { dropNearDuplicates } from './image-dedup.js';
 
 export const CRUISE_IMAGE_BUCKET = 'cruise-images';
 
@@ -615,6 +616,11 @@ export async function curateAndStoreImages(opts: {
       .slice(0, cap)
       .map(img => ({ img, caption: null }));
   }
+
+  // 2b. Same photo twice (another crop / zoom / size of an already selected one): keep one, the wider view.
+  const dedup = await dropNearDuplicates(selected, s => s.img.buf);
+  if (dedup.dropped.length) console.warn(`  ↳ dropped ${dedup.dropped.length} near-duplicate image(s): ${dedup.dropped.map(d => d.img.sourceUrl).join(', ')}`);
+  selected = dedup.kept;
 
   // 3. Compress + upload to the private bucket.
   await ensureCruiseImageBucket();
