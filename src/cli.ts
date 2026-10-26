@@ -572,6 +572,17 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'wind-climate': {
+      // ERA5 monthly means 2016-2025 -> typical 10 m wind per calendar month (one bundle, 12
+      // leaflet-velocity pairs, + .gz) for the map's month animation (wind-climate GitHub
+      // Action, on demand + yearly). Needs CDSAPI_KEY / CDS_API_KEY.
+      const { runWindClimate } = await import('./pipeline/wind-climate.js');
+      const { normalizeToken } = await import('./pipeline/copernicus.js');
+      const raw = process.env.CDSAPI_KEY || process.env.CDS_API_KEY;
+      const r = await runWindClimate({ out: flagStr('--out') ?? 'out/wind/wind-climate.json', token: raw ? normalizeToken(raw).token : undefined });
+      console.log(`ERA5 monthly wind climatology ${r.period} -> ${r.out} ${r.bytes} B, .gz ${r.gzBytes} B`);
+      break;
+    }
     case 'gfs-wind': {
       // NOAA GFS 10 m u/v -> leaflet-velocity JSON (+ .gz) for the animated map wind layer
       // (gfs-wind GitHub Action, every 6 h). --newer-than <refTime ISO> = the published
