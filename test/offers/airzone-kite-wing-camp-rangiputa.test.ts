@@ -44,7 +44,9 @@ test('airzone: undated NZD slots per stay length', async () => {
   assert.match(notes[0], /no future dated instructor course/);
 });
 
-test('airzone: content', async () => {
+test('airzone: content', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const c = await airzoneKiteWingCampRangiputa.fetchContent(ctx);
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot], ['camp', 8, 'New Zealand', 'Karikari Peninsula, Northland', 'Rangiputa']);

@@ -35,7 +35,9 @@ test('lia: freshness gate on the page edit (15 months)', () => {
   assert.equal(liaFresh(null, '2026-10-12'), false);
 });
 
-test('lia: slots = unit x guest count, undated, on request', async () => {
+test('lia: slots = unit x guest count, undated, on request', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const slots = await fetchLiaSlots(ctx, '2026-10-12');
   assert.deepEqual(slots, buildLiaSlots(parseLiaUnits(page)));
   assert.deepEqual(await loopItAcademyApartmentsJastarnia.fetchSlots(ctx), slots);

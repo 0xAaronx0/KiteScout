@@ -49,7 +49,9 @@ test('kitereizen: slots per week x room, past weeks dropped, sold out from the s
   assert.deepEqual(buildKrSlots([w], [], '2027-01-09'), []);
 });
 
-test('kitereizen: content', async () => {
+test('kitereizen: content', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const c = await kitereizenKiteCampMyHoaPhanRang.fetchContent(ctx);
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot, c.mealPlan], ['camp', 8, 'Vietnam', 'Ninh Thuan', 'My Hoa Lagoon', 'full_board']);

@@ -33,7 +33,9 @@ test('lakeunited-sa: one future slot 5-19 Dec 2026, past dates dropped', async (
   assert.match(notes[0], /past; next edition not published/);
 });
 
-test('lakeunited-sa: content is a two-stop tour', async () => {
+test('lakeunited-sa: content is a two-stop tour', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const c = await lakeunitedKitecampSouthAfricaLangebaanCapeTown.fetchContent(ctx);
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot, c.kiteLessons, c.equipmentRental], ['tour', 15, 'South Africa', 'Western Cape', 'Langebaan', false, true]);

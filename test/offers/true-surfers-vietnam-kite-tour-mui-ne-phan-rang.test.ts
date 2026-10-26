@@ -40,7 +40,9 @@ test('true-surfers: after October 1 the later price applies; before it the early
   assert.deepEqual(notes, []); // the only other trip page in the menu is the past February 2026 one
 });
 
-test('true-surfers: content', async () => {
+test('true-surfers: content', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const c = await trueSurfersVietnamKiteTourMuiNePhanRang.fetchContent(ctx);
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot], ['tour', 14, 'Vietnam', 'Lam Dong (Binh Thuan)', 'Mui Ne']);

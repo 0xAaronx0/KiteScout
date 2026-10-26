@@ -86,7 +86,9 @@ test('end to end: adapter state vs the DB row of 2026-10-12 → the expected pro
   assert.equal(proposeUpdate(dive, items.find(i => i.sourceUrl.endsWith('/kite-dive'))!.state, { authoritative: true, today: TODAY }), null);
 });
 
-test('sickdogsurf: year-less weekly table gets the right years (handover 2026-10-12: was written as 2025)', async () => {
+test('sickdogsurf: year-less weekly table gets the right years (handover 2026-10-12: was written as 2025)', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const { sickdogsurf, parseSdsSchedule } = await import('../../src/cruise-adapters/adapters/sickdogsurf.js');
   const [item] = await sickdogsurf.fetchStates();
   const deps = item.state.departures!;
