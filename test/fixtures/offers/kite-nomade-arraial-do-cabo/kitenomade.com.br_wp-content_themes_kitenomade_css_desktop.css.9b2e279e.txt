@@ -1,0 +1,490 @@
+@charset "UTF-8";
+/* Tema: Kite Nômade
+Developer credit redacted from fixture*/
+
+body{
+    margin: auto;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Sora', sans-serif;}
+
+html{
+	scroll-behavior: smooth;}
+
+a{
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;}
+
+h1{
+    font-size: 70px;
+    font-family: 'Josefin Sans';
+    font-weight: 300;
+    margin: 0;}
+
+h2{
+    font-size: 40px;
+    font-family: 'Sora';
+    font-weight: 600;
+    margin: 0;}
+
+h3{
+    font-size: 28px;
+    font-family: 'Sora';
+    font-weight: 600;}
+
+h4{
+    font-size: 70px;
+    font-family: 'Sora';
+    font-weight: 600;
+    margin-bottom: 0;}
+
+h5{
+    font-size: 110px;
+    font-family: 'Josefin Sans';
+    font-weight: 300;
+    margin-top: 0;}
+
+/* Banner - home */
+
+#banner-home{
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    background-image: url("https://kitenomade.com.br/wp-content/themes/kitenomade/images/banner-home-menor.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+.container-banner{
+    width: 830px;
+    height: 500px;
+    margin: auto;
+    padding-top: 70px;
+    text-align: center;
+    color: #ffffff;
+    background-image: url("https://kitenomade.com.br/wp-content/themes/kitenomade/images/onda-banner.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;}
+
+.logo-header{
+    width: 225px;
+    height: auto;
+    margin-top: 25px;
+    float: left;}
+
+/* Menu */
+
+#header{
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    position: fixed;
+    z-index: 5000;
+
+    transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	-o-transition: all 0.2s;}
+
+.menu{
+    width: auto;
+    height: auto;
+    margin: 30px auto auto auto;
+    float: right;
+    display: flex;}
+
+ul{
+    list-style-type: none;
+    padding-inline-start: 0px;
+    margin-top: 7px;}
+
+li{
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 50px;
+    text-decoration: none;}
+
+.menu-header{
+    width: 90%;
+    height: 100px;
+    margin: auto;
+    color: #ffffff;}
+
+.responsive-container{
+    display: none;}
+
+.menuresponsive{
+    display: none;}
+
+.responive{
+    display: none;}
+
+/* Kite Nomade */
+
+#kitenomade{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    color: #000000;
+    padding-top: 230px;
+    padding-bottom: 130px;
+    background-image: url("https://kitenomade.com.br/wp-content/themes/kitenomade/images/onda-laranja.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 170px;}
+
+.container-text{
+    width: 1030px;
+    height: auto;
+    margin: auto;
+    display: flex;}
+
+.title{
+    width: 500px;
+    height: auto;
+    margin: auto;}
+
+.text{
+    width: 500px;
+    height: auto;
+    margin: auto;}
+
+/* Localização */
+
+#localizacao{
+    width: 100%;
+    height: 250px;
+    margin: 100px auto auto auto;
+    color: #ffffff;
+    padding-top: 130px;
+    background-image: url("https://kitenomade.com.br/wp-content/uploads/2024/04/kitenomade-espaco-site.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+.maps{
+    width: 100%;
+    height: 420px;
+    margin: auto;}
+
+/* Equipe */
+
+#equipe{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    color: #000000;
+    background-image: url("https://kitenomade.com.br/wp-content/themes/kitenomade/images/onda-laranja.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 170px;
+    display: flex;}
+
+.equipe-text{
+    width: 50%;
+    height: auto;
+    margin: auto;}
+
+.equipe-container{
+    width: 500px;
+    height: auto;
+    margin: auto;}
+
+button{
+    width: 200px;
+    height: 40px;
+    background-color: #FF6600;
+    color: #ffffff;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Sora';
+    border: none;
+    font-size: 16px;
+    margin-top: 40px;
+	margin-right:20px;}
+
+button:hover{
+    background-color: #D45500;}
+
+.equipe-photo{
+    width: 50%;
+    height: 1000px;
+    margin: auto;
+    background-image: url("https://kitenomade.com.br/wp-content/uploads/2024/04/imagem-home.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+/* Footer */
+
+#footer{
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    background-color: #000000;
+    background-image: url("https://kitenomade.com.br/wp-content/themes/kitenomade/images/onda-footer.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: auto 120px;}
+
+.container-footer{
+    width: 1170px;
+    height: auto;
+    margin: auto;
+    padding-top: 50px;
+    display: flex;
+    color: #FF6600;}
+
+.card-footer{
+    width: 400px;
+    height: auto;}
+
+.contact{
+    width: 100%;
+    height: auto;
+    display: flex;
+    color: #ffffff;
+    margin-bottom: 20px;}
+
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-right: 30px;}
+
+.contact-text{
+    width: auto;
+    height: auto;
+    margin-top: -12px;}
+
+/* Bangalo */
+
+#banner-bangalo{
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    background-image: url("https://kitenomade.com.br/wp-content/themes/kitenomade/images/banner-bangalo-menor.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+.container-banner-pages{
+    width: 830px;
+    height: auto;
+    margin: auto;
+    padding-top: 70px;
+    text-align: center;
+    color: #ffffff;}
+
+.bangalo{
+    width: auto;
+    height: auto;
+    margin: auto;
+    color: #000000;
+    padding-top: 70px;}
+
+.line-gray{
+    width: 630px;
+    height: 2px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #D9D9D9;}
+
+.bangalo-detail{
+    width: 880px;
+    height: auto;
+    margin: auto;
+    padding-top: 50px;}
+
+.bangalo-card{
+    width: 270px;
+    height: auto;
+    margin: auto 10px;
+    padding-top: 70px;
+    display: inline-block;}
+
+.bangalo-icon{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    float: left;}
+    
+.bangalo-text{
+    width: auto;
+    height: auto;
+    margin-top: -10px;}
+
+.galery{
+    width: 1170px;
+    height: auto;
+    margin: auto;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    text-align: center;
+    color: #000000;}
+
+.galery-text{
+    width: 500px;
+    height: auto;
+    margin: auto;}
+
+.galery-plugin{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding-top: 50px;}
+
+/* School */
+
+#banner-school{
+    width: 100%;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    background-image: url("https://kitenomade.com.br/wp-content/themes/kitenomade/images/banner-school-menor.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+#school{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    padding-top: 230px;
+    padding-bottom: 130px;
+    color: #000000;
+    background-image: url("https://kitenomade.com.br/wp-content/themes/kitenomade/images/onda-laranja.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 170px;}
+
+.school-container{
+    width: 1170px;
+    height: 730px;
+    margin: auto;}
+
+.school-text{
+    width: 500px;
+    height: auto;
+    float: left;}
+
+.school-cards{
+    width: 600px;
+    height: auto;
+    float: right;}
+
+.card-curso{
+    width: 200px;
+    height: auto;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    padding: 30px;
+    display: inline-block;
+
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.12);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.12);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.12);}
+
+.icon-curso{
+    width: 60px;
+    height: 60px;}
+
+.instrutor{
+    width: 100%;
+    height: 250px;
+    margin: 50px auto auto auto;
+    color: #ffffff;
+    padding-top: 130px;
+    background-image: url("https://kitenomade.com.br/wp-content/themes/kitenomade/images/bg-curso-menor.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+#curso{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    color: #000000;
+    background-image: url("https://kitenomade.com.br/wp-content/themes/kitenomade/images/onda-azul.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: auto 170px;
+    display: flex;}
+    
+.curso-text{
+    width: 50%;
+    height: auto;
+    margin: auto;}
+    
+.curso-container{
+    width: 500px;
+    height: auto;
+    margin: auto;}
+
+.curso-photo{
+    width: 50%;
+    height: 1250px;
+    margin: auto;
+    background-image: url("http://kitenomade.com.br/wp-content/uploads/2024/04/IMG_1885-1_Easy-Resize.com_.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+
+.curso-detail{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;}
+
+.curso-icon{
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+    margin-top: 30px;}
+
+.text-curso{
+    width: 420px;
+    height: auto;}
+
+/* School */
+
+.tempo{
+	width: 100%;
+	height: 200px;
+	margin-top: -93px;}
+
+/* PXTP */
+
+.pxtp{
+    width: 1170px;
+    font-size: 12px;
+    padding-top: 20px;
+    color: #ffffff;
+    margin: 30px auto;
+    text-align: center;
+    border-top: 1px solid #ffffff;}
+
+/* Google */
+
+.google{
+    width: 95%;
+    height: auto;
+    margin: 100px auto;}
+
+/* Botão reserva */
+
+.botao-reserva{
+    width: 95%;
+    height: auto;
+	text-align: center;
+    margin: auto;
+	margin-top: -100px;
+	padding-bottom: 100px;}
+
+.motor-reserva{
+	margin: auto;}

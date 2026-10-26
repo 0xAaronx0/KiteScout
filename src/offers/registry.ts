@@ -125,6 +125,7 @@ import { kiteHouseSardiniaPuntaTrettu } from './adapters/kite-house-sardinia-pun
 import { kiteLodgeBrazilPrea } from './adapters/kite-lodge-brazil-prea.js';
 import { kiteMarinaSarbsk } from './adapters/kite-marina-sarbsk.js';
 import { kiteMeUpHostelKiteCampLoStagnone } from './adapters/kite-me-up-hostel-kite-camp-lo-stagnone.js';
+import { kiteNomadeArraialDoCabo } from './adapters/kite-nomade-arraial-do-cabo.js';
 import { kitePassionGlampingPuttgarden } from './adapters/kite-passion-glamping-puttgarden.js';
 import { kitePlCaravansChalupy } from './adapters/kite-pl-caravans-chalupy.js';
 import { kiteRepublicAitutakiWinterEscape } from './adapters/kite-republic-aitutaki-winter-escape.js';
@@ -133,6 +134,7 @@ import { kiteRepublicMauritiusWavesDreamWinterEscape } from './adapters/kite-rep
 import { kiteSistersBrazil } from './adapters/kite-sisters-brazil.js';
 import { kiteSistersEssentialCampPeru } from './adapters/kite-sisters-essential-camp-peru.js';
 import { kiteSistersMoroccoRetreat } from './adapters/kite-sisters-morocco-retreat.js';
+import { kiteSuitesPraiaSeca } from './adapters/kite-suites-praia-seca.js';
 import { kiteThailandPackageAPranburi } from './adapters/kite-thailand-package-a-pranburi.js';
 import { kiteThailandPackageBHuaHin } from './adapters/kite-thailand-package-b-hua-hin.js';
 import { kiteThailandPackageBKohPhangan } from './adapters/kite-thailand-package-b-koh-phangan.js';
@@ -476,6 +478,7 @@ export const adapters: OfferAdapter[] = [
   kiteMeUpHostelKiteCampLoStagnone,
   kitemexCampLaVentana,
   kitemotionCourseStayDiani,
+  kiteNomadeArraialDoCabo,
   kiteparadiseSakalavaBay,
   kitePassionGlampingPuttgarden,
   kitePlCaravansChalupy,
@@ -488,6 +491,7 @@ export const adapters: OfferAdapter[] = [
   kiteSistersBrazil,
   kiteSistersEssentialCampPeru,
   kiteSistersMoroccoRetreat,
+  kiteSuitesPraiaSeca,
   kitesurfAdventureCumbucoClassic,
   kitesurfAdventureIlhaExperienceGuajiru,
   kitesurfingGuimarasSanLorenzo,
