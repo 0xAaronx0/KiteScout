@@ -90,7 +90,9 @@ test('mare-alta: slots = apartment x guests x run of nights', () => {
   assert.equal(slots.find(s => s.key === 'el-gouna-2p1c|2026-10-12')!.occupancy, 3);
 });
 
-test('mare-alta: live run over the fixtures (October 2026 only: the month windows follow today)', { skip: new Date().toISOString().slice(0, 7) !== '2026-10' }, async () => {
+test('mare-alta: live run over the fixtures (the month windows follow today, so the clock is pinned to October 2026)', async (t) => {
+  // pinned wall clock: the fixtures hold the engine's October 2026 month windows (was: skipped outside October 2026)
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const slots = await pousadaMareAltaParajuru.fetchSlots(ctx);
   assert.deepEqual(checkSlots(slots).problems, []);
   assert.ok(slots.length > 50);

@@ -27,7 +27,9 @@ test('ion camp: two slots before the start, none after', async () => {
   assert.deepEqual(buildIonCampSlots(parseIonCampPage(html), '2027-04-05'), []);
 });
 
-test('ion camp: content, and the summary once the edition has passed', async () => {
+test('ion camp: content, and the summary once the edition has passed', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const c = await ionClubPastorinoCampDakhla.fetchContent(ctx);
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.beginnerFriendly, c.spot], ['camp', 7, false, 'Dakhla Lagoon']);

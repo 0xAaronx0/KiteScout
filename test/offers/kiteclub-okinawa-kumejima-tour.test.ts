@@ -55,7 +55,9 @@ test('kco: slots per room type, price null with last-edition text; priced rooms 
   assert.deepEqual(await fetchKumejimaSlots('2027-04-03'), []);
 });
 
-test('kco kumejima: content', async () => {
+test('kco kumejima: content', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const c = await kiteclubOkinawaKumejimaTour.fetchContent(ctx);
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot, c.sourceUrl], ['tour', 3, 'Japan', 'Kumejima, Okinawa', 'Kumejima', 'https://kiteclub-okinawa.biz/info/blog/13988/']);
