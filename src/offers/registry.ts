@@ -4,6 +4,8 @@
 // ---------------------------------------------------------------------------
 import type { OfferAdapter } from './types.js';
 import { thirtyFiveKnotsMacapa } from './adapters/35-knots-macapa.js';
+import { aboveTheWaterKiteCampCapeTown } from './adapters/above-the-water-kite-camp-cape-town.js';
+import { aboveTheWaterKiteYogaCampLangebaan } from './adapters/above-the-water-kite-yoga-camp-langebaan.js';
 import { airjunkTokoname } from './adapters/airjunk-tokoname.js';
 import { airzoneKiteWingCampRangiputa } from './adapters/airzone-kite-wing-camp-rangiputa.js';
 import { algarveWatersportZeroToHero } from './adapters/algarve-watersport-zero-to-hero.js';
@@ -339,6 +341,8 @@ import { xFlyKiteboardingCampMiyako } from './adapters/x-fly-kiteboarding-camp-m
 import { zephyrWaOffroadAdventureExmouth } from './adapters/zephyr-wa-offroad-adventure-exmouth.js';
 
 export const adapters: OfferAdapter[] = [
+  aboveTheWaterKiteCampCapeTown,
+  aboveTheWaterKiteYogaCampLangebaan,
   airjunkTokoname,
   airzoneKiteWingCampRangiputa,
   algarveWatersportZeroToHero,
