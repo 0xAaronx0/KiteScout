@@ -295,11 +295,6 @@ import { toowettoshredKiteCampFanes } from './adapters/toowettoshred-kite-camp-f
 import { travelActiveClubMadagascarKiteTrip } from './adapters/travel-active-club-madagascar-kite-trip.js';
 import { travelActiveClubOmanKiteTrip } from './adapters/travel-active-club-oman-kite-trip.js';
 import { trueSurfersVietnamKiteTourMuiNePhanRang } from './adapters/true-surfers-vietnam-kite-tour-mui-ne-phan-rang.js';
-import { ucpaKitesurfDebutantDakhla } from './adapters/ucpa-kitesurf-debutant-dakhla.js';
-import { ucpaKitesurfDebutantDjerba } from './adapters/ucpa-kitesurf-debutant-djerba.js';
-import { ucpaKitesurfDebutantEssaouira } from './adapters/ucpa-kitesurf-debutant-essaouira.js';
-import { ucpaKitesurfDebutantHurghada } from './adapters/ucpa-kitesurf-debutant-hurghada.js';
-import { ucpaKitesurfSafariCapeTown } from './adapters/ucpa-kitesurf-safari-cape-town.js';
 import { umiliPodCyprysamiJastarnia } from './adapters/umili-pod-cyprysami-jastarnia.js';
 import { ummaiiSurfhostelUmmanz } from './adapters/ummaii-surfhostel-ummanz.js';
 import { unchartedKiteSessionsFredHopeFoilMasterCabarete } from './adapters/uncharted-kite-sessions-fred-hope-foil-master-cabarete.js';
@@ -638,11 +633,6 @@ export const adapters: OfferAdapter[] = [
   travelActiveClubMadagascarKiteTrip,
   travelActiveClubOmanKiteTrip,
   trueSurfersVietnamKiteTourMuiNePhanRang,
-  ucpaKitesurfDebutantDakhla,
-  ucpaKitesurfDebutantDjerba,
-  ucpaKitesurfDebutantEssaouira,
-  ucpaKitesurfDebutantHurghada,
-  ucpaKitesurfSafariCapeTown,
   umiliPodCyprysamiJastarnia,
   ummaiiSurfhostelUmmanz,
   unchartedKiteSessionsFredHopeFoilMasterCabarete,
