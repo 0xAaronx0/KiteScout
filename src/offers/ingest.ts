@@ -300,6 +300,11 @@ export async function locateSpots(c: OfferContent, stored: unknown): Promise<Sto
   return mergeItinerarySpots(out, stored).spots;
 }
 
+/** Aaron 2026-10-26: a listing is never shown without at least one photo. */
+export function isShowable(imageCount: number): boolean {
+  return imageCount > 0;
+}
+
 // --- content row ---------------------------------------------------------------------
 function contentRow(a: OfferAdapter, c: OfferContent, operatorId: string, spots: StoredSpot[]) {
   return {
@@ -482,7 +487,7 @@ async function runAdapterInner(
   let offerId: string | null = null;
   const hashes: { content?: string; slots?: string } = {};
   try {
-    const content = opts.mode === 'full' ? await withTimeout(a.fetchContent(ctx), ADAPTER_TIMEOUT_MS, `${a.key} content`) : null;
+    const content = opts.mode === 'full' ? await withTimeout(a.fetchContent(ctx), a.timeoutMs ?? ADAPTER_TIMEOUT_MS, `${a.key} content`) : null;
     if (content) {
       const p = contentProblem(content);
       if (p) throw new Error(`content rejected: ${p}`);
@@ -490,7 +495,7 @@ async function runAdapterInner(
     }
     let rawSlots: Slot[];
     try {
-      rawSlots = await withTimeout(a.fetchSlots(ctx), ADAPTER_TIMEOUT_MS, `${a.key} slots`);
+      rawSlots = await withTimeout(a.fetchSlots(ctx), a.timeoutMs ?? ADAPTER_TIMEOUT_MS, `${a.key} slots`);
     } catch (e) {
       // slots-only runs fail hard; a full run still lists the offer (price on request) and keeps old slots
       if (!content) throw e;
@@ -563,13 +568,14 @@ async function runAdapterInner(
     if (content) {
       const spots = await locateSpots(content, existing?.itinerary_spots);
       if (!spots.some(s => s.lat !== null)) rep.notes.push('no map pin: spot could not be geocoded');
-      const row = { ...contentRow(a, content, operatorId, spots), ...priceCols, ...liveCols, rooms: roomsWithPrices(content, slots, today) };
+      const before = (existing?.images as StoredImage[] | undefined) ?? [];
+      // never visible without a photo: a new row stays hidden until its images are stored (set again below)
+      const row = { ...contentRow(a, content, operatorId, spots), ...priceCols, ...liveCols, rooms: roomsWithPrices(content, slots, today), is_active: isShowable(before.length) };
       const { data: up, error: upErr } = await supabase
         .from('package_offers').upsert(noNul(row), { onConflict: 'source_listing_id' }).select('id').single();
       if (upErr) throw new Error(`package_offers upsert failed: ${upErr.message}`);
       offerId = up.id as string;
 
-      const before = (existing?.images as StoredImage[] | undefined) ?? [];
       if (before.length === 0 || opts.refreshImages) {
         const slug = slugify(content.title);
         const images = await curateAndStoreImages({
@@ -582,8 +588,8 @@ async function runAdapterInner(
           brief: BRIEFS[content.kind],
           minSize: a.imageMinSize,
         });
-        if (images.length === 0) rep.notes.push('no usable images found');
-        const { error: iErr } = await supabase.from('package_offers').update({ images: noNul(images) }).eq('id', offerId);
+        if (images.length === 0) rep.notes.push('no usable images found: listing hidden (is_active false) until it has a photo');
+        const { error: iErr } = await supabase.from('package_offers').update({ images: noNul(images), is_active: isShowable(images.length) }).eq('id', offerId);
         if (iErr) throw new Error(`images update failed: ${iErr.message}`);
         rep.images = images.length;
       } else {

@@ -115,6 +115,7 @@ test('combineWind policies: era5 replaces Bstoked (India), no-era5 blocks the mo
     [6, 5, 4, 6, 10, 14, 16, 17, 16, 13, 10, 8], windPolicy('Norway'));
   assert.deepEqual(norway.wind_months, [null, null, null, 49, 49, 49, 49, 49, 49, null, null, null]);
   assert.equal(windPolicy('Germany'), 'default');
+  assert.equal(windPolicy('Canada'), 'no-era5');
 });
 
 test('mapDisplay: regions only for USA/Brazil (incl. aliases), Canada hidden until it has offers', async () => {

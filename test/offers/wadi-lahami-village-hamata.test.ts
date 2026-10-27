@@ -57,7 +57,9 @@ test('wadi-lahami: periods split at the high/low months into bands with real lim
   assert.equal(buildWlSlots(periods, '2026-11-15').length, 16);
 });
 
-test('wadi-lahami: fetchSlots replays the three € lists', async () => {
+test('wadi-lahami: fetchSlots replays the three € lists', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const slots = await wadiLahamiVillageHamata.fetchSlots(ctx);
   assert.deepEqual(checkSlots(slots).problems, []);
   assert.ok(slots.length >= 12);

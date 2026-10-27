@@ -384,6 +384,9 @@ export const campingparkWulfenerHalsFehmarn: OfferAdapter = {
   instantBooking: true,
   liveAvailability: true,
   fetchBudget: 35,
+  // 12 sample weeks x 2 Compusoft calls, strictly sequential per host: ~6 s per answer locally, >10 s from the GitHub
+  // runner, so the default 240 s ran out every day (cron from 2026-10-17 on). Fewer weeks would drop bookable specials.
+  timeoutMs: 8 * 60_000,
   async fetchContent() {
     const home = await page(WH_HOME_URL);
     const kite = await page(WH_KITE_URL);

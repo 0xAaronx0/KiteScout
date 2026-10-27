@@ -48,7 +48,9 @@ test('sakalava camp: photos without -scaled twins or logos', () => {
   assert.ok(!imgs.some(u => /logo|icon|cropped-/i.test(u)));
 });
 
-test('sakalava camp: content is a valid camp with the lodge coordinates', async () => {
+test('sakalava camp: content is a valid camp with the lodge coordinates', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const c = await sakalavaLodgeAllInclusiveKiteWingHoliday.fetchContent(ctx);
   assert.equal(contentProblem(c), null);
   assert.equal(c.kind, 'camp');

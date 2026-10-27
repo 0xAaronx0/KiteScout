@@ -54,7 +54,9 @@ test('kr mauritius: content is a valid 14-day camp with Mauritius photos only', 
   assert.ok(!c.imageUrls.some(u => /Brazil|Aitutaki|reel|150x150/i.test(u)), c.imageUrls.join('\n'));
 });
 
-test('kr mauritius: fetchSlots replays (flags as the Aitutaki shop adapter)', async () => {
+test('kr mauritius: fetchSlots replays (flags as the Aitutaki shop adapter)', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const slots = await kiteRepublicMauritiusWavesDreamWinterEscape.fetchSlots(ctx);
   assert.equal(checkSlots(slots).ok.length, 2);
   assert.equal(kiteRepublicMauritiusWavesDreamWinterEscape.instantBooking, true);

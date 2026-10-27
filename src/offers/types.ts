@@ -185,6 +185,8 @@ export interface OfferAdapter {
   instantBooking?: boolean;
   /** max fetches per run we allow ourselves against this host (politeness budget) */
   fetchBudget: number;
+  /** per-adapter limit for one fetchContent / fetchSlots call (default 240 s); only for slow engines with many calls */
+  timeoutMs?: number;
   /** package_offers.extraction_confidence; 'low' when prices/dates cannot be read live (default 'high') */
   confidence?: 'high' | 'medium' | 'low';
   /** live quote recipe for exact dates (booking engines only) */

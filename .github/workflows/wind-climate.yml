@@ -1,0 +1,58 @@
+name: Wind climatology (map month animation)
+
+# Copernicus ERA5 monthly means 2016-2025 -> typical 10 m wind per calendar month for the
+# animated wind layer on the KCS world map when a visitor picks another month
+# (MartinMarzi/KiteCruiseScout#445). One bundle (12 leaflet-velocity pairs) is published as the
+# `wind-climate.json.gz` asset of the `wind-data` (pre)release, next to the GFS file;
+# kitescout.tech/data/wind/climate/MM.json serves one month each (web/app/data/wind/).
+# The data are long-term averages: run on demand and once a year (new ERA5 year).
+# Lives outside web/**, so it never triggers the Docker build/deploy workflow.
+on:
+  schedule:
+    - cron: '0 3 20 1 *' # 20 January: a full new ERA5 year is out
+  workflow_dispatch:
+
+permissions:
+  contents: write # update the wind-data release asset
+
+concurrency:
+  group: wind-climate
+  cancel-in-progress: false
+
+jobs:
+  climate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      RELEASE_TAG: wind-data
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install
+
+      - name: Build from ERA5 monthly means
+        # src/cli.ts's static import graph only checks that these exist
+        env:
+          TAVILY_API_KEY: unused
+          SUPABASE_URL: https://unused.invalid
+          SUPABASE_SERVICE_ROLE_KEY: unused
+          CDSAPI_KEY: ${{ secrets.CDS_API_KEY }}
+        run: pnpm cli wind-climate --out out/wind-climate.json
+
+      - name: Publish
+        run: |
+          gh release view "$RELEASE_TAG" >/dev/null 2>&1 || gh release create "$RELEASE_TAG" --prerelease --latest=false \
+            --title "Wind data (auto-updated)" \
+            --notes "Wind layers for the KCS world map. Served at https://kitescout.tech/data/wind/ - use those URLs, not these assets."
+          gh release upload "$RELEASE_TAG" out/wind-climate.json.gz --clobber
+          ls -l out/

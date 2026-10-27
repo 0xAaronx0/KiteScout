@@ -88,7 +88,7 @@ jobs:
     # a failing adapter never skips the cruise steps and vice versa. Hosts that block us
     # report "blocked" and keep exit 0; only a real adapter error turns the job red.
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 

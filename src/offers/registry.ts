@@ -4,6 +4,8 @@
 // ---------------------------------------------------------------------------
 import type { OfferAdapter } from './types.js';
 import { thirtyFiveKnotsMacapa } from './adapters/35-knots-macapa.js';
+import { aboveTheWaterKiteCampCapeTown } from './adapters/above-the-water-kite-camp-cape-town.js';
+import { aboveTheWaterKiteYogaCampLangebaan } from './adapters/above-the-water-kite-yoga-camp-langebaan.js';
 import { airjunkTokoname } from './adapters/airjunk-tokoname.js';
 import { airzoneKiteWingCampRangiputa } from './adapters/airzone-kite-wing-camp-rangiputa.js';
 import { algarveWatersportZeroToHero } from './adapters/algarve-watersport-zero-to-hero.js';
@@ -125,6 +127,7 @@ import { kiteHouseSardiniaPuntaTrettu } from './adapters/kite-house-sardinia-pun
 import { kiteLodgeBrazilPrea } from './adapters/kite-lodge-brazil-prea.js';
 import { kiteMarinaSarbsk } from './adapters/kite-marina-sarbsk.js';
 import { kiteMeUpHostelKiteCampLoStagnone } from './adapters/kite-me-up-hostel-kite-camp-lo-stagnone.js';
+import { kiteNomadeArraialDoCabo } from './adapters/kite-nomade-arraial-do-cabo.js';
 import { kitePassionGlampingPuttgarden } from './adapters/kite-passion-glamping-puttgarden.js';
 import { kitePlCaravansChalupy } from './adapters/kite-pl-caravans-chalupy.js';
 import { kiteRepublicAitutakiWinterEscape } from './adapters/kite-republic-aitutaki-winter-escape.js';
@@ -133,6 +136,7 @@ import { kiteRepublicMauritiusWavesDreamWinterEscape } from './adapters/kite-rep
 import { kiteSistersBrazil } from './adapters/kite-sisters-brazil.js';
 import { kiteSistersEssentialCampPeru } from './adapters/kite-sisters-essential-camp-peru.js';
 import { kiteSistersMoroccoRetreat } from './adapters/kite-sisters-morocco-retreat.js';
+import { kiteSuitesPraiaSeca } from './adapters/kite-suites-praia-seca.js';
 import { kiteThailandPackageAPranburi } from './adapters/kite-thailand-package-a-pranburi.js';
 import { kiteThailandPackageBHuaHin } from './adapters/kite-thailand-package-b-hua-hin.js';
 import { kiteThailandPackageBKohPhangan } from './adapters/kite-thailand-package-b-koh-phangan.js';
@@ -293,11 +297,6 @@ import { toowettoshredKiteCampFanes } from './adapters/toowettoshred-kite-camp-f
 import { travelActiveClubMadagascarKiteTrip } from './adapters/travel-active-club-madagascar-kite-trip.js';
 import { travelActiveClubOmanKiteTrip } from './adapters/travel-active-club-oman-kite-trip.js';
 import { trueSurfersVietnamKiteTourMuiNePhanRang } from './adapters/true-surfers-vietnam-kite-tour-mui-ne-phan-rang.js';
-import { ucpaKitesurfDebutantDakhla } from './adapters/ucpa-kitesurf-debutant-dakhla.js';
-import { ucpaKitesurfDebutantDjerba } from './adapters/ucpa-kitesurf-debutant-djerba.js';
-import { ucpaKitesurfDebutantEssaouira } from './adapters/ucpa-kitesurf-debutant-essaouira.js';
-import { ucpaKitesurfDebutantHurghada } from './adapters/ucpa-kitesurf-debutant-hurghada.js';
-import { ucpaKitesurfSafariCapeTown } from './adapters/ucpa-kitesurf-safari-cape-town.js';
 import { umiliPodCyprysamiJastarnia } from './adapters/umili-pod-cyprysami-jastarnia.js';
 import { ummaiiSurfhostelUmmanz } from './adapters/ummaii-surfhostel-ummanz.js';
 import { unchartedKiteSessionsFredHopeFoilMasterCabarete } from './adapters/uncharted-kite-sessions-fred-hope-foil-master-cabarete.js';
@@ -342,6 +341,8 @@ import { xFlyKiteboardingCampMiyako } from './adapters/x-fly-kiteboarding-camp-m
 import { zephyrWaOffroadAdventureExmouth } from './adapters/zephyr-wa-offroad-adventure-exmouth.js';
 
 export const adapters: OfferAdapter[] = [
+  aboveTheWaterKiteCampCapeTown,
+  aboveTheWaterKiteYogaCampLangebaan,
   airjunkTokoname,
   airzoneKiteWingCampRangiputa,
   algarveWatersportZeroToHero,
@@ -476,6 +477,7 @@ export const adapters: OfferAdapter[] = [
   kiteMeUpHostelKiteCampLoStagnone,
   kitemexCampLaVentana,
   kitemotionCourseStayDiani,
+  kiteNomadeArraialDoCabo,
   kiteparadiseSakalavaBay,
   kitePassionGlampingPuttgarden,
   kitePlCaravansChalupy,
@@ -488,6 +490,7 @@ export const adapters: OfferAdapter[] = [
   kiteSistersBrazil,
   kiteSistersEssentialCampPeru,
   kiteSistersMoroccoRetreat,
+  kiteSuitesPraiaSeca,
   kitesurfAdventureCumbucoClassic,
   kitesurfAdventureIlhaExperienceGuajiru,
   kitesurfingGuimarasSanLorenzo,
@@ -634,11 +637,6 @@ export const adapters: OfferAdapter[] = [
   travelActiveClubMadagascarKiteTrip,
   travelActiveClubOmanKiteTrip,
   trueSurfersVietnamKiteTourMuiNePhanRang,
-  ucpaKitesurfDebutantDakhla,
-  ucpaKitesurfDebutantDjerba,
-  ucpaKitesurfDebutantEssaouira,
-  ucpaKitesurfDebutantHurghada,
-  ucpaKitesurfSafariCapeTown,
   umiliPodCyprysamiJastarnia,
   ummaiiSurfhostelUmmanz,
   unchartedKiteSessionsFredHopeFoilMasterCabarete,

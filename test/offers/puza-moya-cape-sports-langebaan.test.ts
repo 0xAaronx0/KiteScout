@@ -72,7 +72,9 @@ test('pm: content', async () => {
   assert.ok(c.imageUrls.every(u => /puza-?moya/i.test(u) && !/Villa2/.test(u)));
 });
 
-test('pm: season rates price the twin room, the family room stays unpriced', async () => {
+test('pm: season rates price the twin room, the family room stays unpriced', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const c = await puzaMoyaCapeSportsLangebaan.fetchContent(ctx);
   const slots = await puzaMoyaCapeSportsLangebaan.fetchSlots(ctx);
   const names = c.rooms.map(r => r.name);

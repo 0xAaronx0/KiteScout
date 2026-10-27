@@ -61,7 +61,9 @@ test('bk: slots = bungalow type x price-list year, on request; ended years dropp
   assert.ok(ok.every(s => s.currency === 'IDR'));
 });
 
-test('bk: content', async () => {
+test('bk: content', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const c = await batikiteResortJeneponto.fetchContent(ctx);
   assert.equal(contentProblem(c), null);
   assert.equal(c.title, 'Batikite Resort');

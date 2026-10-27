@@ -41,7 +41,9 @@ test('breakers: slots = column x period ahead of today, EUR per person per night
   assert.ok(!slots.some(s => s.endDate! < TODAY));
 });
 
-test('breakers: fetchSlots reads the rooms page', async () => {
+test('breakers: fetchSlots reads the rooms page', async (t) => {
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
   const slots = await theBreakersSomaBay.fetchSlots(ctx);
   assert.ok(slots.length >= 16 && slots.every(s => s.currency === 'EUR'));
 });

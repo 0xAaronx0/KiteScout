@@ -7,7 +7,13 @@ import { pathToFileURL } from 'node:url';
 import { adapters } from '../../src/offers/registry.js';
 import { DEFAULT_DISCIPLINES, DISCIPLINES } from '../../src/offers/types.js';
 
-const NOT_REGISTERED: Record<string, string> = {};
+const NOT_REGISTERED: Record<string, string> = {
+  'ucpa-kitesurf-debutant-dakhla': "no general booking e-mail (phone + forms only), so KCS cannot offer an inquiry; hidden on Aaron's word 2026-10-27",
+  'ucpa-kitesurf-debutant-djerba': "no general booking e-mail (phone + forms only), so KCS cannot offer an inquiry; hidden on Aaron's word 2026-10-27",
+  'ucpa-kitesurf-debutant-essaouira': "no general booking e-mail (phone + forms only), so KCS cannot offer an inquiry; hidden on Aaron's word 2026-10-27",
+  'ucpa-kitesurf-debutant-hurghada': "no general booking e-mail (phone + forms only), so KCS cannot offer an inquiry; hidden on Aaron's word 2026-10-27",
+  'ucpa-kitesurf-safari-cape-town': "no general booking e-mail (phone + forms only), so KCS cannot offer an inquiry; hidden on Aaron's word 2026-10-27",
+};
 
 test('registry is complete and keys are unique', async () => {
   const dir = join(import.meta.dirname, '../../src/offers/adapters');
