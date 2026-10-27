@@ -12,7 +12,8 @@ import { buildManifest, refsAt } from '../../src/publishing/manifest.js';
 import type { OfferVerification } from '../../src/publishing/verify.js';
 
 const root = join(import.meta.dirname, '../..');
-const proposals = JSON.parse(readFileSync(join(root,'publishing/corrections/354-evergreen-summary-proposals.json'),'utf8'));
+const historical = JSON.parse(readFileSync(join(root,'publishing/corrections/354-evergreen-summary-proposals.json'),'utf8'));
+const proposals = JSON.parse(readFileSync(join(root,'publishing/corrections/354-advice-free-summary-proposals.json'),'utf8'));
 const healthy = JSON.parse(readFileSync(join(root,'publishing/samples/v1/healthy.json'),'utf8'));
 const read = (adapter: string, part: string) => {
   const dir = join(root,'test/fixtures/offers',adapter);
@@ -27,7 +28,7 @@ const parserOutputs = (extra: string) => [
   parseDevContent(read(keys[3],'offres-de-stage')+extra),
 ];
 
-test('four source adapters emit exactly the finite original proposals, despite dynamic page changes', () => {
+test('four source adapters emit exactly the finite advice-free proposals, despite dynamic page changes', () => {
   assert.equal(proposals.status,'proposal_only');
   assert.equal(proposals.claimsRegenerated,false);
   assert.equal(proposals.inventoryChanged,false);
@@ -45,12 +46,30 @@ test('corrected text needs new value hashes; old summaries/receipts are not sile
   for (const entry of proposals.entries) {
     const sample = healthy.cases.find((c: {row:{offer_id:string}})=>c.row.offer_id===entry.offerId);
     assert.ok(sample);
-    assert.equal(sha256(sample.row.summary),entry.expectedRawSummarySha256);
+    const prior = historical.entries.find((e: {offerId:string}) => e.offerId === entry.offerId);
+    assert.equal(sha256(sample.row.summary),prior.expectedRawSummarySha256);
+    assert.equal(sha256(prior.proposedSummary),entry.expectedRawSummarySha256);
+    assert.notEqual(entry.expectedRawSummarySha256,prior.expectedRawSummarySha256);
     assert.notEqual(sha256(entry.proposedSummary),entry.expectedRawSummarySha256);
     const revision = sample.evidence.snapshot.revision;
     assert.notEqual(claimValueHash(entry.offerId,revision,'description',entry.proposedSummary),
       sample.evidence.claims.find((c: {field:string})=>c.field==='description').valueHash);
   }
+});
+
+test('confirmation advice stays outside source claims without rewriting historical evidence', () => {
+  assert.equal(proposals.entries.length,4);
+  assert.equal(proposals.supersedesProposal,'publishing/corrections/354-evergreen-summary-proposals.json');
+  for (const entry of proposals.entries) {
+    assert.equal(entry.field,'summary');
+    assert.equal(entry.source,'package_offers');
+    assert.equal(entry.newSourceVerificationRequired,true);
+    assert.doesNotMatch(entry.proposedSummary,/\b(?:confirm|choose)\b/i);
+    const prior = historical.entries.find((e: {offerId:string}) => e.offerId === entry.offerId);
+    assert.ok(/\b(?:Confirm|Choose)\b/.test(prior.proposedSummary));
+    assert.deepEqual(entry.referenceUrls,prior.referenceUrls);
+  }
+  assert.doesNotMatch(summaries['dakhla-evasion-free-ride-camp'],/wellness.*vary/i);
 });
 
 test('synthetic regenerated claims keep independent optional expiry without dynamic description prose', () => {

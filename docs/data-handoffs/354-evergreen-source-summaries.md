@@ -1,5 +1,41 @@
 # Evergreen pilot summaries – source preparation only
 
+## Advice-free follow-up – 2026-10-26
+
+Prepared against source branch `claude/geo-354-evergreen` at
+`1671eb8255f4ce7328a1afbde0547496c6c63cd4`, following source-owner comment
+https://github.com/MartinMarzi/KiteCruiseScout/issues/354#issuecomment-6414792602.
+This follow-up removes the closing confirmation/choice advice from all four factual summaries;
+Dakhla's loose wellness-variation sentence is also removed, without inventing a replacement fact.
+The existing KCS card guidance says to confirm the current quote and inclusions with the provider.
+No verifier exception, UI duplication or new claim is introduced.
+
+`publishing/corrections/354-advice-free-summary-proposals.json` is inert. Its expected hashes
+refer to the advice-containing prior proposals reported applied on2026-10-23, not the original
+pre-correction snapshots. The original proposal file and every evidence/sample/manifest/latest
+file remain unchanged. Before any later authorized write, re-read each actual current row and
+compare its identity and exact text hash; stop on drift. Do not replay the earlier correction.
+Current direct KiteMex request on2026-10-26 still returnedHTTP200/zero bytes; an older searchable
+copy is not a fresh operator check. No price/date/scarcity or availability fact is moved into prose.
+
+This PR is source preparation, not a rollout request. Review into Aaron's working branch;
+source-main timing and its automatic monitor consumption remain with the source owner/deployer.
+No live inventory change, paid verification run, job activation, rights renewal, latest-pointer
+advance or application pin change is included. The latest failed0/4 result remains a hold.
+After source availability and separately authorized execution, supply an actual complete new
+immutable revision/checksums/rights/claim receipt for reviewed app reconciliation. Never approve
+new text using old description receipts. Keep parent354 and public catalog acceptance open.
+
+Focused checks: frozen script-disabled install in an isolated source archive, source types,
+the existing four adapter tests plus evergreen tests under `test/helpers/offline-only.mjs`,
+and `KCS_GATE_LIVE=0` cross-repo gate at the actual committed KCS main. Disposable.invalid
+credentials and a fetch rejection guard are mandatory. Synthetic hashes/claims prove gating
+only and are never persisted as operator verification. Exact heads/results are on this PR.
+
+GEO impact: finite description-channel correction only. No URL/indexing/markup/public pages,
+new verification/rights or data publication implied. No application dependency or settings change.
+
+
 Tracks https://github.com/MartinMarzi/KiteCruiseScout/issues/354. Martin requested source PRs
 and tests without live database changes or redirects. This PR changes four adapter summary
 outputs so the next authorized content refresh cannot restore dated prices, departure dates or
