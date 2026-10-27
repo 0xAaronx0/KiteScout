@@ -380,3 +380,7 @@ and Alaska snowkiting is day lessons and events only (NorthWinds and AdrenaJen o
 Cabarete Kite Beach and Pak Nam Pran listings reuse the existing stays' coordinates (the geocoder misses those names).
 Follow-up: kite-buen-hombre-eco-lodge.ts still reads the old Product JSON-LD; the live page now has a Service offer
 list, so its package sentence comes back empty.
+
+TLS (2026-10-28): some provider sites chain to Let's Encrypt "ISRG Root YR", which Node does not bundle yet
+(kitesuites.com.br failed daily with "fetch failed"). `pnpm cli` and the CI workflows pass `certs/isrg-root-yr.pem`
+via `NODE_EXTRA_CA_CERTS`; direct `npx tsx` runs need the variable set by hand. Details: `certs/README.md`.

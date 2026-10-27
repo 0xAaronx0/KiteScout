@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "cli": "tsx src/cli.ts",
+    "cli": "NODE_EXTRA_CA_CERTS=${NODE_EXTRA_CA_CERTS:-certs/isrg-root-yr.pem} tsx src/cli.ts",
     "pipeline:seed": "tsx src/cli.ts seed",
     "pipeline:search": "tsx src/cli.ts search",
     "pipeline:extract": "tsx src/cli.ts extract",

@@ -16,6 +16,10 @@ concurrency:
   group: rerun-change-${{ github.event.inputs.change_id }}
   cancel-in-progress: false
 
+# Let's Encrypt "ISRG Root YR" is not in Node's CA bundle; some provider sites chain to it (certs/README.md).
+env:
+  NODE_EXTRA_CA_CERTS: ${{ github.workspace }}/certs/isrg-root-yr.pem
+
 jobs:
   rerun:
     runs-on: ubuntu-latest
