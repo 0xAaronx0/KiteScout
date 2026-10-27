@@ -218,7 +218,7 @@ export function parseMounuContent(p: MouPages): OfferContent {
     /5 days of whale swimming/i.test(included)
       ? `Stays include return transfers from Vava'u airport, all meals and non-alcoholic drinks, five days of whale swimming (or water adventures outside whale season) with guides, boat and skipper; airfare, alcohol and extra excursions are paid separately.`
       : `Stays include return transfers from Vava'u airport, all meals and non-alcoholic drinks, guides, boat and skipper.`,
-    `${kite ? `The shallow lagoon is used for learning to kite and the deeper water for foiling and winging${wind ? `, with ${wind[3]} to ${wind[4]} trade winds from ${monthName(wind[1])} to ${monthName(wind[2])}` : ''}; no kite school or rental is named on the site. ` : ''}${prices.length ? `Rates are USD ${Math.min(...prices).toLocaleString('en-US')} to ${Math.max(...prices).toLocaleString('en-US')} per fale per night for two, by season.` : 'Prices on request.'}`,
+    `${kite ? `The shallow lagoon is used for learning to kite and the deeper water for foiling and winging${wind ? `, with ${wind[3]} to ${wind[4]} trade winds from ${monthName(wind[1])} to ${monthName(wind[2])}` : ''}. ` : ''}${prices.length ? `Rates are USD ${Math.min(...prices).toLocaleString('en-US')} to ${Math.max(...prices).toLocaleString('en-US')} per fale per night for two, by season.` : 'Prices on request.'}`,
   ].join(' ');
 
   return {
@@ -243,7 +243,7 @@ export function parseMounuContent(p: MouPages): OfferContent {
       ...(faq.some(f => /wi-fi/i.test(f.q) && /available/i.test(f.a)) ? ['Wi-Fi (intermittent)'] : []),
     ],
     optionalServices: [
-      ...(/kite/i.test(activities) || kite ? ['Kite surfing and winging in the lagoon (no kite school or rental named on the site)'] : []),
+      ...(/kite/i.test(activities) || kite ? ['Kite surfing and winging in the lagoon'] : []),
       'Kayaking, paddle boarding, snorkelling',
       'Scuba diving (dives coordinated on request)', 'Trips to Neiafu', 'Sailing, fishing, bird colonies, village visits (extra cost)',
       'Full island charter (on request)',

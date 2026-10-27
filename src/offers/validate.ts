@@ -3,6 +3,7 @@
 // returns a reason string for anything that must not be written, else null.
 // ---------------------------------------------------------------------------
 import { AVAILABILITY, type OfferContent, type Slot } from './types.js';
+import { internalNote, isPlayableVideoUrl } from '../lib/offer-text.js';
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 const ISO_CURRENCY = /^[A-Z]{3}$/;
@@ -21,6 +22,18 @@ export function contentProblem(c: OfferContent): string | null {
   }
   if ((c.kind === 'tour' || c.kind === 'camp' || c.kind === 'experience') && c.durationDays === null) return `${c.kind} without durationDays`;
   if (c.spotCoords && !(Math.abs(c.spotCoords.lat) <= 90 && Math.abs(c.spotCoords.lng) <= 180)) return 'spotCoords out of range';
+  if (c.heroVideoUrl !== null && !isPlayableVideoUrl(c.heroVideoUrl)) return `heroVideoUrl not a playable video file (${c.heroVideoUrl})`;
+  // sourceText is ours (audits); every other text field is shown in the app
+  const shown: Array<[string, string | null]> = [
+    ['title', c.title], ['summary', c.summary], ['accommodation', c.accommodation], ['region', c.region],
+    ...c.includedServices.map((t): [string, string] => ['includedServices', t]),
+    ...c.optionalServices.map((t): [string, string] => ['optionalServices', t]),
+    ...c.rooms.flatMap((r): Array<[string, string | null]> => [['rooms', r.name], ['rooms', r.description], ...r.features.map((f): [string, string] => ['rooms', f])]),
+  ];
+  for (const [field, text] of shown) {
+    const note = internalNote(text);
+    if (note) return `internal note in ${field} ("${note}")`;
+  }
   return null;
 }
 

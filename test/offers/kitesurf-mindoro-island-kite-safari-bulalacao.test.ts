@@ -44,7 +44,7 @@ test('mindoro-safari: content', async () => {
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot, c.equipmentRental, c.beginnerFriendly], ['tour', 3, 'Philippines', 'MIMAROPA (Oriental Mindoro)', 'Bislig Beach, Bulalacao', false, false]);
   assert.equal(c.itinerarySpots.length, 8);
-  assert.match(c.summary, /PHP 19,900 per person with a minimum of 2 people; the safari page does not state the length, the home page lists it as 3 days \/ 2 nights/);
+  assert.match(c.summary, /PHP 19,900 per person with a minimum of 2 people; the safari runs 3 days \/ 2 nights\. Guests/);
   assert.doesNotMatch(c.summary, /[–—]/);
   assert.equal(c.imageUrls.length, 6);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://image.jimcdn.com/')));

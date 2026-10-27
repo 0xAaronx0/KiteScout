@@ -148,6 +148,14 @@ export function cleanDepartures(raw: unknown, today: string): Departure[] {
 }
 
 const isFuture = (d: Departure, today: string): boolean => (d.end_date ?? d.start_date) >= today;
+/**
+ * Departures worth storing on a fresh write: cleaned (no all-null or year-less rows) and not yet over.
+ * null when none are left (the app shows "dates on request" either way).
+ */
+export function upcomingDepartures(raw: unknown, today: string): Departure[] | null {
+  const deps = cleanDepartures(raw, today).filter(d => isFuture(d, today));
+  return deps.length ? deps : null;
+}
 /** Canonical key of the UPCOMING departures (past ones never count as a change). */
 function futureKey(deps: Departure[], today: string): string {
   return JSON.stringify(deps.filter(d => isFuture(d, today)).map(d => [d.start_date, d.end_date, d.price, d.currency, d.status]));

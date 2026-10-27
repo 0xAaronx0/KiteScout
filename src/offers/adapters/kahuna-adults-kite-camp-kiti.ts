@@ -178,7 +178,7 @@ export function parseKahunaContent(html: string, today = todayIso(), extraPhotos
     beginnerFriendly: true,
     includedServices: d.INCLUDED ?? [],
     optionalServices: [],
-    accommodation: 'accommodation included (the page does not describe it)',
+    accommodation: `${nights} nights of accommodation included`, // the page lists it under INCLUDED, no room type
     mealPlan: 'full_board',
     languages: ['en'],
     rooms: [],

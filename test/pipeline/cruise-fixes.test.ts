@@ -1,0 +1,106 @@
+// Audit 2026-10-27 data fixes: the rules behind `pnpm cli data-fixes plan` (rows trimmed from the live audit dump).
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { derivePerPerson, planCruiseFix, planPackageFix, revertPlan, type CruiseRow } from '../../src/pipeline/cruise-fixes.js';
+
+const TODAY = '2026-10-28';
+const row = (over: Partial<CruiseRow>): CruiseRow => ({
+  id: '00000000-0000-0000-0000-000000000000', slug: 's', title: 'T', country: 'Egypt', countries: ['Egypt'], region: 'Red Sea',
+  continent: 'Africa', dates: null, pricing: null, price_from_eur: null, currency: 'EUR', price_pp_cabin: null,
+  price_pp_cabin_currency: null, price_basis_note: null, season_text: null, ...over,
+});
+
+test('derivePerPerson: skips upgrades, courses, rental, meals and per-night options', () => {
+  const egypsy = { raw: '€ 1350 Cruise Only package', currency: 'EUR', options: [
+    { basis: 'per_person', label: 'Cruise Only – Standard Shared Twin Cabin', price: 1350, currency: 'EUR' },
+    { basis: 'per_cabin', label: 'Panorama King Bed Cabin (upgrade, per couple)', price: 500, currency: 'EUR' },
+    { basis: 'per_person', label: 'Sea View Cabin (upgrade, per person)', price: 150, currency: 'EUR' },
+    { basis: 'per_person', label: 'Single Cabin (upgrade, solo use)', price: 950, currency: 'EUR' },
+    { basis: 'per_person', label: 'Beginner Kite Course (12h group + gear)', price: 550, currency: 'EUR' },
+    { basis: 'per_person', label: 'Refreshing Course (6h group + 2-day rental)', price: 250, currency: 'EUR' },
+  ] };
+  assert.deepEqual(derivePerPerson(egypsy), { price: 1350, currency: 'EUR', source: 'option "Cruise Only – Standard Shared Twin Cabin"' });
+  assert.equal(derivePerPerson({ raw: 'ab 249.- € pro Person pro Nacht', currency: 'EUR', per_person: 249,
+    options: [{ basis: 'per_person', label: 'Per person per night (freerider – kitesurfing / wingfoiling)', price: 249, currency: 'EUR' }] }), null);
+  assert.equal(derivePerPerson({ raw: 'starting at $7,470; Local fare at €575 per person', options: [
+    { basis: 'whole_boat', label: 'Whole Boat – 1 week private charter', price: 7470, currency: 'USD' },
+    { basis: 'per_person', label: 'Local fare meal package (per person)', price: 575, currency: 'EUR' },
+  ] }), null);
+  // the trip price itself may be called a fee
+  assert.equal(derivePerPerson({ raw: 'Camp Fee: 1800 – 2200 euro / kiter', options: [{ basis: 'per_person', label: 'Camp Fee (per kiter)', price: 1800, currency: 'EUR' }] })!.price, 1800);
+});
+
+test('planCruiseFix: Egypsy upgrade surcharge -> the cruise price', () => {
+  const e = planCruiseFix(row({
+    pricing: { raw: '€ 1350 Cruise Only package', currency: 'EUR', options: [
+      { basis: 'per_person', label: 'Cruise Only – Standard Shared Twin Cabin', price: 1350, currency: 'EUR' },
+      { basis: 'per_cabin', label: 'Panorama King Bed Cabin (upgrade, per couple)', price: 500, currency: 'EUR' },
+    ] },
+    price_from_eur: 1350, price_pp_cabin: 250, price_pp_cabin_currency: 'EUR',
+    price_basis_note: 'pp: cabin option "Panorama King Bed Cabin (upgrade, per couple)" ÷2 (double occupancy)',
+  }), TODAY);
+  assert.deepEqual(e.set.price_pp_cabin, { before: 250, after: 1350 });
+  assert.equal(e.set.price_pp_cabin_currency, undefined); // unchanged
+  assert.deepEqual(e.set.price_basis_note.after, 'pp: option "Cruise Only – Standard Shared Twin Cabin"');
+  assert.equal(e.set.price_from_eur, undefined);
+});
+
+test('planCruiseFix: Kiteme gear rental -> trip price; null and 2025 dates dropped', () => {
+  const e = planCruiseFix(row({
+    pricing: { raw: 'From: €1,600.00', currency: 'EUR', options: [
+      { basis: 'per_person', label: 'Kite Safari on the Red Sea (May 2025)', price: 1600, currency: 'EUR' },
+      { basis: 'per_person', label: 'Full Gear Rental (1 week)', price: 450, currency: 'EUR' },
+    ] },
+    price_from_eur: 1600, price_pp_cabin: 450, price_pp_cabin_currency: 'EUR', price_basis_note: 'pp: cheapest per-person option "Full Gear Rental (1 week)"',
+    dates: [{ price: 1750, status: null, currency: 'EUR', end_date: null, start_date: null }, { price: 1600, status: 'available', currency: 'EUR', end_date: null, start_date: '2025-05-01' }],
+  }), TODAY);
+  assert.deepEqual(e.set.price_pp_cabin, { before: 450, after: 1600 });
+  assert.equal(e.set.dates.after, null);
+  assert.match(e.why.join(' '), /add-on\/upgrade/);
+});
+
+test('planCruiseFix: per-night prices leave price_from_eur and p.p. empty, or use the EUR trip price', () => {
+  const kai = planCruiseFix(row({
+    pricing: { raw: 'ab 249.- € pro Person pro Nacht', currency: 'EUR', per_person: 249,
+      options: [{ basis: 'per_person', label: 'Per person per night (freerider – kitesurfing / wingfoiling)', price: 249, currency: 'EUR' }] },
+    price_from_eur: 249, price_pp_cabin: 249, price_pp_cabin_currency: 'EUR',
+    price_basis_note: 'pp: cheapest per-person option "Per person per night (freerider – kitesurfing / wingfoiling)"',
+  }), TODAY);
+  assert.deepEqual([kai.set.price_pp_cabin.after, kai.set.price_pp_cabin_currency.after, kai.set.price_from_eur.after], [null, null, null]);
+  const kai2027 = planCruiseFix(row({ pricing: { raw: 'ab 129€ pPpN', currency: 'EUR' }, price_from_eur: 129 }), TODAY);
+  assert.deepEqual(kai2027.set.price_from_eur, { before: 129, after: null });
+  const windlovers = planCruiseFix(row({
+    pricing: { raw: '179 € pro Person / Nacht* ab – *Preis für eine 14-tägige Reise', currency: 'EUR', per_person: 179,
+      options: [{ basis: 'per_person', label: 'Per person per night (low season, Croatia, max capacity, 14-day trip)', price: 179, currency: 'EUR' }] },
+    price_from_eur: 179, price_pp_cabin: 2506, price_pp_cabin_currency: 'EUR', price_basis_note: 'pp: AI-parsed from pricing.raw',
+  }), TODAY);
+  assert.deepEqual(windlovers.set, { price_from_eur: { before: 179, after: 2506 } });
+  // "7 nights" is a trip length, not a per-night price
+  assert.deepEqual(planCruiseFix(row({ pricing: { raw: 'From €1750 /pers – 8 days / 7 nights' }, price_from_eur: 1750 }), TODAY).set, {});
+});
+
+test('planCruiseFix: continent, region, German text; a clean row stays empty', () => {
+  const e = planCruiseFix(row({ id: '7bf8639b-3a24-462c-a75d-34e48909d680', continent: null, country: 'Bahamas', region: 'Bahamas / Exumas',
+    title: 'Kitesafari nach Wunsch – Custom Red Sea Safari', season_text: 'individuell, Hurghada, Ägypten' }), TODAY);
+  assert.deepEqual(e.set.continent, { before: null, after: 'North America' });
+  assert.deepEqual(e.set.region, { before: 'Bahamas / Exumas', after: 'Exumas' });
+  assert.equal(e.set.title.after, 'Custom Red Sea Kite Safari');
+  assert.equal(e.set.season_text.after, 'Dates on request, from Hurghada, Egypt');
+  assert.deepEqual(planCruiseFix(row({ dates: [{ start_date: '2027-03-01', end_date: '2027-03-08', price: 1500, currency: 'EUR', status: 'available' }] }), TODAY).set, {});
+});
+
+test('planPackageFix: YouTube hero and research notes', () => {
+  const e = planPackageFix({ id: 'p', title: 'P', hero_video_url: 'https://www.youtube.com/watch?v=nexERs_Z8bM', accommodation: 'accommodation included (the page does not describe it)',
+    summary: 'The price is PHP 19,900 per person with a minimum of 2 people; the safari page does not state the length, the home page lists it as 3 days / 2 nights. Guests choose.',
+    optional_services: ['Kite surfing and winging in the lagoon (no kite school or rental named on the site)', 'Kayaking'] });
+  assert.equal(e.set.hero_video_url.after, null);
+  assert.equal(e.set.accommodation.after, '2 nights of accommodation included');
+  assert.equal(e.set.summary.after, 'The price is PHP 19,900 per person with a minimum of 2 people; the safari runs 3 days / 2 nights. Guests choose.');
+  assert.deepEqual(e.set.optional_services.after, ['Kite surfing and winging in the lagoon', 'Kayaking']);
+  assert.deepEqual(planPackageFix({ id: 'q', title: 'Q', hero_video_url: 'https://x.example/hero.mp4', accommodation: null, summary: 'Fine.', optional_services: [] }).set, {});
+});
+
+test('revertPlan: swaps before and after', () => {
+  const plan = [{ table: 'cruise_offers' as const, id: 'x', label: 'x', why: [], set: { price_pp_cabin: { before: 250, after: 1350 } } }];
+  assert.deepEqual(revertPlan(plan)[0].set, { price_pp_cabin: { before: 1350, after: 250 } });
+});

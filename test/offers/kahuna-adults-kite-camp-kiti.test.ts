@@ -38,6 +38,7 @@ test('kahuna: content', async () => {
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot], ['camp', 3, 'Cyprus', 'Kiti, Larnaca', 'Kiti']);
   assert.deepEqual(c.spotCoords, { lat: 34.8171, lng: 33.5469 });
+  assert.equal(c.accommodation, '2 nights of accommodation included'); // was a research note (audit 2026-10-27)
   assert.match(c.summary, /next dates are not published yet \(2026: 11 June - 13 June, 8 July - 10 July\)/);
   assert.ok(c.imageUrls.length >= 1 && c.imageUrls.every(u => !/redbull|logo/i.test(u)));
   const live = await kahunaAdultsKiteCampKiti.fetchContent({ note: () => {}, incomplete: () => {} });
