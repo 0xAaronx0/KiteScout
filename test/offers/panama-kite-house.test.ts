@@ -73,7 +73,7 @@ test('pkh: content', async () => {
   assert.match(c.summary, /December to April with a minimum stay of 5 nights/);
   assert.equal(c.rooms.length, 11);
   assert.ok(c.rooms.find(r => r.name === 'Villa Double')!.features.includes('2 guests: extra day +$135'));
-  assert.equal(c.heroVideoUrl, 'https://www.youtube.com/watch?v=nexERs_Z8bM');
+  assert.equal(c.heroVideoUrl, null); // YouTube trailer only (audit 2026-10-27)
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://') && /squarespace/.test(u) && !/screenshot|untitled|logo/i.test(u)));
 });

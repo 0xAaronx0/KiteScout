@@ -39,6 +39,7 @@ test('exotikite: content, region-level location without a spot', async () => {
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot], ['camp', 8, 'Mexico', 'Baja California Sur Pacific coast', 'Pacific coast near San Juanico']);
   assert.match(c.summary, /The 2027 weeks are not published yet/);
+  assert.doesNotMatch(c.summary, /map pin|does not name/); // research note stays in the code (audit 2026-10-27)
   const live = await exotikiteBajaWaveCamps.fetchContent(ctx);
   assert.equal(contentProblem(live), null);
   // the 4 coach portraits of the camp page + 4 ExotiKite kiting photos from the page sitemap (Los Barriles; the site

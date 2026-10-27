@@ -165,8 +165,6 @@ export function parsePanamaContent(p: PkhPages): OfferContent {
       seen.add(k); imgs.push(u.replace(/^http:/, 'https:'));
     }
   }
-  const trailer = p.rider.match(/href="(https:\/\/www\.youtube\.com\/watch\?v=[A-Za-z0-9_-]+)"[^>]*>[^<]*(?:<[^>]+>[^<]*)*?Trailer/i)?.[1]
-    ?? p.rider.match(/https:\/\/www\.youtube\.com\/watch\?v=[A-Za-z0-9_-]+/)?.[0] ?? null;
   const cheapest = houseRooms.flatMap(r => r.prices.map(x => ({ r, x }))).filter(({ r }) => !/^dorm/i.test(r.name)).sort((a, b) => a.x.amount - b.x.amount)[0];
 
   const summary = [
@@ -197,7 +195,7 @@ export function parsePanamaContent(p: PkhPages): OfferContent {
     languages: ['en'],
     rooms,
     imageUrls: imgs.slice(0, 30),
-    heroVideoUrl: trailer,
+    heroVideoUrl: null, // the only video is a YouTube trailer: a watch page, not a file the app can play
     sourceUrl: PKH_PAGE_URL,
     bookingUrl: BOOKING_URL,
     sourceText: [`rider experience: ${rider}`, `kite house: ${kh}`, `villa: ${villa}`].join('\n'),

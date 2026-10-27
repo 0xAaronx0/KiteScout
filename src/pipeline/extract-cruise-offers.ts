@@ -6,7 +6,8 @@ import { extract as tavilyExtract, extractImages as tavilyExtractImages } from '
 import { fetchPageConditional } from '../lib/fetchPage.js';
 import { htmlToText, collapse, contentHash, sanitizeForPg, sanitizeDeep } from '../lib/content.js';
 import { withRetry } from '../lib/retry.js';
-import { countryToContinent } from '../lib/continents.js';
+import { continentForOffer } from '../lib/continents.js';
+import { upcomingDepartures } from './cruise-state.js';
 import { discoverImageUrls, curateAndStoreImages, slugify, type StoredImage } from '../lib/images.js';
 import { discoverSiteUrls, PAGE_VALUE_RE } from '../lib/crawl.js';
 import { renderPage, closeRenderer } from '../lib/render.js';
@@ -970,7 +971,7 @@ async function processProvider(cp: {
     }
     usedSlugs.add(slug);
 
-    const continent = countryToContinent(offer.country);
+    const continent = continentForOffer(offer.country, Array.isArray(offer.countries) ? offer.countries.filter(c => typeof c === 'string') : []);
 
     // Itinerary spots (best-effort geocode).
     const spots: ItinerarySpot[] = [];
@@ -1085,7 +1086,7 @@ async function processProvider(cp: {
       season_start_month: bestSeason ? bestSeason.start : cleanMonth(offer.season_start_month),
       season_end_month: bestSeason ? bestSeason.end : cleanMonth(offer.season_end_month),
       duration_days: cleanInt(offer.duration_days),
-      dates: offer.dates ?? null,
+      dates: upcomingDepartures(offer.dates, new Date().toISOString().slice(0, 10)),
       pricing: offer.pricing ?? null,
       price_from_eur: cleanInt(offer.price_from_eur),
       currency: offer.currency ?? null,

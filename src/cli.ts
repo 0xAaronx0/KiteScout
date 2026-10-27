@@ -447,6 +447,19 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'data-fixes': {
+      // Audit 2026-10-27 data fixes (src/pipeline/cruise-fixes.ts): plan = read-only diff, apply = the reviewed plan.
+      const { planDataFixes, applyDataFixes } = await import('./pipeline/cruise-fixes.js');
+      if (args[0] === 'apply') {
+        const from = flagStr('--from');
+        if (!from) { console.error('Usage: pnpm cli data-fixes apply --from <plan.json>'); process.exit(1); }
+        await applyDataFixes(from, { revert: args.includes('--revert') });
+      } else {
+        await planDataFixes({ out: flagStr('--out') });
+      }
+      break;
+    }
+
     case 'bstoked-packages': {
       // bstoked.net camps/tours/accommodation → package_offers (see src/pipeline/bstoked-packages.ts).
       const sub = args[0];
@@ -600,7 +613,8 @@ async function main(): Promise<void> {
       console.log('  cruise-diff               Review: show what a fresh extraction WOULD change vs the DB (no writes); --domain to scope');
       console.log('  cruise-reviews            Match bstoked/TripAdvisor review links (domain-corroborated; --all to re-check)');
       console.log('  region-conditions         Build per-country water/wind conditions consensus from extracted offers');
-      console.log('  spot-conditions           Per-spot water/wind/level for stays+camps (clusters offer locations; --dry-run --out f.json, then --from f.json)');
+      console.log('  data-fixes plan|apply      Audit 2026-10-27 data fixes: plan [--out f.json] prints the diff (no writes), apply --from f.json writes it');
+  console.log('  spot-conditions           Per-spot water/wind/level for stays+camps (clusters offer locations; --dry-run --out f.json, then --from f.json)');
       console.log('  monitor [n]               Detect changes on cruise provider sites (flags: --loop --all --baseline-only --interval-days <d>)');
       console.log('  changes [n]               Show recent detected provider changes (default 20; --unseen for new only)');
   console.log('  restore <domain> [...]    Restore wrongly-rejected providers back to status=new');

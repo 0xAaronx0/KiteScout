@@ -131,7 +131,7 @@ export function parseExoContent(html: string, today = todayIso(), sitePhotos: st
     title: 'ExotiKite Baja Wave Camps',
     summary: [
       `Spring wave camps on the Pacific coast of Baja California Sur, Mexico, run by the Los Barriles kite school ExotiKite: ${nights} nights with single accommodation and three meals a day at a gentle right-hand point break off a sandbar (no reef), surfing and tow-in foiling in the calm mornings and kiting in the 20-25 knot afternoon wind.`,
-      'Daily clinics with video feedback (wave riding, jibes, tacks, jumps), yoga, all ExotiKite kites, boards, foils and SUPs, a rescue boat and transfers from Loreto airport are included. The page does not name the beach; the map pin near San Juanico is approximate.',
+      'Daily clinics with video feedback (wave riding, jibes, tacks, jumps), yoga, all ExotiKite kites, boards, foils and SUPs, a rescue boat and transfers from Loreto airport are included.', // the page does not name the beach: the map pin near San Juanico is approximate
       `${datesLine}${c.price ? ` Price: $${c.price.toLocaleString('en-US')} per person.` : ''}`,
     ].join(' '),
     continent: 'North America',

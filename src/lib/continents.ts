@@ -17,7 +17,7 @@ register('Africa', [
   'cape verde', 'cabo verde', 'egypt', 'tanzania', 'zanzibar', 'kenya',
   'mozambique', 'madagascar', 'morocco', 'tunisia', 'south africa',
   'mauritius', 'seychelles', 'namibia', 'djibouti', 'sudan', 'somalia',
-  'comoros', 'mayotte', 'reunion', 'réunion',
+  'comoros', 'mayotte', 'reunion', 'réunion', 'senegal',
 ]);
 
 register('Europe', [
@@ -25,14 +25,14 @@ register('Europe', [
   'portugal', 'france', 'montenegro', 'malta', 'cyprus', 'sardinia',
   'sicily', 'canary islands', 'balearic islands', 'germany', 'netherlands',
   'denmark', 'sweden', 'norway', 'united kingdom', 'uk', 'ireland', 'albania',
-  'slovenia', 'bulgaria',
+  'slovenia', 'bulgaria', 'poland', 'switzerland', 'belgium', 'iceland', 'finland',
 ]);
 
 register('Asia', [
   'thailand', 'philippines', 'indonesia', 'sri lanka', 'vietnam', 'malaysia',
   'maldives', 'india', 'oman', 'united arab emirates', 'uae', 'qatar',
   'saudi arabia', 'jordan', 'israel', 'china', 'japan', 'south korea',
-  'cambodia', 'myanmar', 'bahrain', 'kuwait', 'lebanon',
+  'cambodia', 'myanmar', 'bahrain', 'kuwait', 'lebanon', 'taiwan',
 ]);
 
 register('North America', [
@@ -45,6 +45,7 @@ register('North America', [
   'st lucia', 'saint lucia', 'st vincent and the grenadines',
   'saint vincent and the grenadines', 'grenadines', 'grenada', 'barbados',
   'trinidad and tobago', 'anguilla', 'saint martin', 'st martin', 'sint maarten',
+  'turks and caicos islands', 'saint barthélemy', 'saint barthelemy', 'st barts', 'caribbean', 'greenland',
 ]);
 
 register('South America', [
@@ -57,6 +58,8 @@ register('Oceania', [
   'new caledonia', 'vanuatu', 'tonga', 'samoa', 'cook islands',
   'papua new guinea', 'solomon islands', 'micronesia', 'palau', 'kiribati',
 ]);
+
+register('Antarctica', ['antarctica']);
 
 /** Normalize a country name for lookup. */
 function normalize(country: string): string {
@@ -72,4 +75,16 @@ function normalize(country: string): string {
 export function countryToContinent(country: string | null | undefined): string | null {
   if (!country) return null;
   return CONTINENT_BY_COUNTRY[normalize(country)] ?? null;
+}
+
+/**
+ * Continent of an offer: its main country, else the one continent all its `countries` share
+ * (a multi-continent trip, e.g. Greece + Caribbean, stays null).
+ */
+export function continentForOffer(country: string | null | undefined, countries: readonly string[] | null | undefined): string | null {
+  const own = countryToContinent(country);
+  if (own) return own;
+  const all = new Set((countries ?? []).map(c => countryToContinent(c)));
+  if (all.size !== 1) return null;
+  return [...all][0];
 }

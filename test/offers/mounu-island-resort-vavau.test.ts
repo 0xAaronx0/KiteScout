@@ -72,6 +72,7 @@ test('mounu: content', async () => {
   assert.equal(c.mealPlan, 'full_board');
   assert.equal(c.kiteLessons, null);
   assert.match(c.summary, /four traditional thatched Tongan fales/);
+  assert.ok(c.optionalServices.includes('Kite surfing and winging in the lagoon')); // no research note (audit 2026-10-27)
   assert.match(c.summary, /SE to E trade winds from April to November/);
   assert.match(c.summary, /USD 1,700 to 2,000 per fale per night for two/);
   assert.equal(c.rooms.length, 1);

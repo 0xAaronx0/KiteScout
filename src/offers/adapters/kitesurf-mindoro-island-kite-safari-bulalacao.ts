@@ -164,7 +164,7 @@ export function parseMdsContent(p: MdsPages): OfferContent {
   const summary = [
     'Kitesurf Mindoro, the kite station of the Makani Resort on Bislig Beach near Bulalacao in Oriental Mindoro, runs private island-hopping kite and wing safaris with its local islander crew: a support boat, a different spot every day, and nights in tents or bamboo huts on remote beaches.',
     `The islands on the safari are ${stops.map(x => x.name.replace(/ Island$/, '')).join(', ')}; guide, boat, accommodation, food and drinks and snorkelling are included, and riders bring their own gear and must ride upwind, downwind and rescue themselves in deep water.`,
-    `${s.price && s.currency ? `The price is ${s.currency} ${fmt(s.price)} per person with a minimum of ${s.minPeople ?? 2} people` : 'The price is on request'}; the safari page does not state the length, ${dur ? `the home page lists it as ${dur.days} days${dur.nights ? ` / ${dur.nights} nights` : ''}` : 'and no length is printed elsewhere'}. Guests choose their dates in the kite season (November to end of April) and book by inquiry.`,
+    `${s.price && s.currency ? `The price is ${s.currency} ${fmt(s.price)} per person with a minimum of ${s.minPeople ?? 2} people` : 'The price is on request'}${dur ? `; the safari runs ${dur.days} days${dur.nights ? ` / ${dur.nights} nights` : ''}` : ''}. Guests choose their dates in the kite season (November to end of April) and book by inquiry.`,
   ].join(' ');
 
   return {
