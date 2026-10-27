@@ -487,7 +487,7 @@ async function runAdapterInner(
   let offerId: string | null = null;
   const hashes: { content?: string; slots?: string } = {};
   try {
-    const content = opts.mode === 'full' ? await withTimeout(a.fetchContent(ctx), ADAPTER_TIMEOUT_MS, `${a.key} content`) : null;
+    const content = opts.mode === 'full' ? await withTimeout(a.fetchContent(ctx), a.timeoutMs ?? ADAPTER_TIMEOUT_MS, `${a.key} content`) : null;
     if (content) {
       const p = contentProblem(content);
       if (p) throw new Error(`content rejected: ${p}`);
@@ -495,7 +495,7 @@ async function runAdapterInner(
     }
     let rawSlots: Slot[];
     try {
-      rawSlots = await withTimeout(a.fetchSlots(ctx), ADAPTER_TIMEOUT_MS, `${a.key} slots`);
+      rawSlots = await withTimeout(a.fetchSlots(ctx), a.timeoutMs ?? ADAPTER_TIMEOUT_MS, `${a.key} slots`);
     } catch (e) {
       // slots-only runs fail hard; a full run still lists the offer (price on request) and keeps old slots
       if (!content) throw e;

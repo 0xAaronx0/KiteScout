@@ -148,3 +148,11 @@ test('wulfener-hals: engine units link to their content rooms, ambiguous ones an
     'Holiday apartment at the golf course', 'Holiday apartment on the campsite', 'Holiday home Dünenpark',
   ]);
 });
+
+test('wulfener-hals: own fetch timeout for the 12 sequential sample weeks (cron hit 240 s daily from 2026-10-17)', async () => {
+  assert.equal(campingparkWulfenerHalsFehmarn.timeoutMs, 8 * 60_000);
+  // ingest honours the override on both calls
+  const { readFileSync: rf } = await import('node:fs');
+  const src = rf(new URL('../../src/offers/ingest.ts', import.meta.url), 'utf8');
+  assert.equal((src.match(/a\.timeoutMs \?\? ADAPTER_TIMEOUT_MS/g) ?? []).length, 2);
+});

@@ -10,34 +10,30 @@
 // both detail pages). Street addresses from search snippets of the portals (hint only, not used as data):
 // Sol y Mar Bajo Blanco 7, Surfer's Retreat Calle el Hierro 55 - roughly 1.5 km apart.
 //
-// Data path (checked 2026-10-12), WordPress block theme:
-//   content  GET /wp-json/wp/v2/pages/623?_fields=id,link,modified,title,content  (the site's public WP REST
-//            API; page 623 "Sol y Mar surf camp", status publish, modified 2026-04-17): description, minimum
-//            stay, facilities list, slider photos (Jetpack i0.wp.com CDN, unwrapped to the originals).
-//            The front-end URL /accommodation/sol-y-mar/ now redirects to /accommodation/ (also for browsers),
-//            and the site menu no longer lists Sol y Mar - see "Known limits".
-//          + /accommodation/ (the Sol y Mar card: "4km to Flag Beach" + blurb; also the liveness guard)
+// Data path (checked 2026-10-27, after Flag Beach's Oct 2026 redesign; was a WP page 623 + Cloudbeds until then):
+//   content  GET /wp-json/wp/v2/stay/82?_fields=id,link,modified,title,content  (custom post type "stay", linked
+//            from the detail page's <link rel="alternate">): description, minimum stay, rooms, breakfast.
+//          + /accommodation/sol-y-mar/ (detail page, 200 again): hero photo, "Per night: On request", booking by
+//            the "Send us your dates" form (confirmed by e-mail with a small deposit) -> instantBooking false.
+//          + /accommodation/ (tile "Sol y Mar surf camp", "4 km"; also the liveness guard)
 //          + /kite-surfing/kite-surfing-packages/ (the operator's kite school and packages).
-//   slots    none: no prices on the own site (Surfer's Retreat has a price table, Sol y Mar has none).
-// Booking engine: Cloudbeds (hotels.cloudbeds.com/reservation/RGVfxl). Not used: Cloudbeds answers its
-//   /booking/* data calls with HTTP 403 to non-browser clients -> "price on request".
-// robots.txt (2026-10-12): only /wp-admin/ disallowed.
-// Requests per run: content 3, slots 1 (the /accommodation/ guard; memoised with content).
-// Known limits / liveness: the overview card is live (page modified 2026-05-08 per the WP sitemap) and the
-//   detail page is published (modified 2026-04-17) with a working Cloudbeds link, but the detail URL
-//   redirects and the menu dropped the house - Flag Beach may be phasing it out. fetchSlots throws when
-//   the card disappears from /accommodation/. Which hostel the kite packages' "surf hostel stay" means is
-//   not stated (Sol y Mar is called "the Flag Beach surf hostel", Surfer's Retreat "Flag Beach's new hostel").
+//   slots    none: "Prices for this are being finalised" on the detail page -> price on request.
+//   The facilities list and the photo slider of the old page are gone; stored images stay (ingest keeps them).
+// robots.txt (2026-10-27): /wp-admin/ and the form result params (fb_sent / fb_error) disallowed.
+// Requests per run: content 4, slots 1 (the /accommodation/ guard; memoised with content).
+// Known limits: which hostel the kite packages' "surf hostel stay" means is not stated (Sol y Mar is called
+//   "the Flag Beach surf hostel", Surfer's Retreat "Flag Beach's new hostel"). fetchSlots throws when the tile
+//   disappears from /accommodation/.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { collapse, parse, parseAmount, type HTMLElement } from '../parse.js';
 import type { ContentRoom, OfferAdapter, OfferContent } from '../types.js';
 
 const SITE = 'https://www.flagbeach.com';
-export const SYM_API_URL = `${SITE}/wp-json/wp/v2/pages/623?_fields=id,link,modified,title,content`;
+export const SYM_API_URL = `${SITE}/wp-json/wp/v2/stay/82?_fields=id,link,modified,title,content`;
+export const SYM_DETAIL_URL = `${SITE}/accommodation/sol-y-mar/`;
 export const SYM_OVERVIEW_URL = `${SITE}/accommodation/`;
 export const SYM_KITE_PACKAGES_URL = `${SITE}/kite-surfing/kite-surfing-packages/`;
-const FALLBACK_BOOKING_URL = 'https://hotels.cloudbeds.com/reservation/RGVfxl';
 
 // --- local helpers ----------------------------------------------------------------------------
 const memo = new Map<string, { at: number; p: Promise<string> }>();
@@ -68,13 +64,23 @@ export interface SymPage { id: number; modified: string; title: string; html: st
 /** WP REST page JSON -> rendered content. */
 export function parseSymApi(json: string): SymPage {
   const o = JSON.parse(json) as { id?: number; modified?: string; title?: { rendered?: string }; content?: { rendered?: string } };
-  if (!o.content?.rendered) throw new Error('sol-y-mar: WP page 623 has no rendered content');
+  if (!o.content?.rendered) throw new Error('sol-y-mar: WP stay 82 has no rendered content');
   return { id: o.id ?? 0, modified: o.modified ?? '', title: collapse(parse(`<p>${o.title?.rendered ?? ''}</p>`).text), html: o.content.rendered };
 }
 
 /** The Sol y Mar card on /accommodation/: distance line + blurb; null when the card is gone. */
 export function parseSymCard(overviewHtml: string): { distance: string | null; blurb: string } | null {
-  const h = parse(overviewHtml).querySelectorAll('h2, h3').find(x => /^sol y mar$/i.test(txt(x)));
+  const root = parse(overviewHtml);
+  // tile layout since Oct 2026: <a class="fb-stay"> <span class="fb-stay__name">Sol y Mar surf camp</span>
+  // <span class="fb-stay__km">4 km</span> <span class="fb-stay__meta">Hostel</span>
+  const name = root.querySelectorAll('.fb-stay__name').find(x => /^sol y mar\b/i.test(txt(x)));
+  if (name) {
+    const tile = name.closest('.fb-stay') ?? name.parentNode;
+    const km = tile?.querySelector('.fb-stay__km') ? txt(tile.querySelector('.fb-stay__km')!) : '';
+    return { distance: km ? `${km} to Flag Beach` : null, blurb: tile?.querySelector('.fb-stay__meta') ? txt(tile.querySelector('.fb-stay__meta')!) : '' };
+  }
+  // older layout: <h3>Sol y Mar</h3><p>4km to Flag Beach</p><p>blurb</p>
+  const h = root.querySelectorAll('h2, h3').find(x => /^sol y mar$/i.test(txt(x)));
   if (!h) return null;
   const ps: string[] = [];
   for (let el = h.nextElementSibling; el && el.tagName === 'P' && ps.length < 3; el = el.nextElementSibling) ps.push(txt(el));
@@ -132,7 +138,17 @@ export function parseSymFacts(contentHtml: string): SymFacts {
 /** The operator's kite packages (rows "name <sup>contents</sup> | €680") - for the optional services. */
 export function parseSymKitePackages(html: string): Array<{ name: string; details: string; amount: number }> {
   const out: Array<{ name: string; details: string; amount: number }> = [];
-  for (const tr of parse(html).querySelectorAll('table tr')) {
+  const root = parse(html);
+  // card layout since Oct 2026: <a class="fb-card" data-filter="kitesurf"> title / facts ("7 nights · Beginner") / "From €735"
+  for (const card of root.querySelectorAll('a.fb-card')) {
+    const name = txt(card.querySelector('.fb-card__title'));
+    const kite = /kite/i.test(card.getAttribute('data-filter') ?? '') || /kite/i.test(name);
+    const amount = parseAmount(txt(card.querySelector('.fb-price')).replace(/^from\s*/i, ''));
+    if (kite && name && amount) out.push({ name, details: txt(card.querySelector('.fb-card__facts')).replace(/\s*·\s*/g, ', '), amount });
+  }
+  if (out.length) return out;
+  // older table layout
+  for (const tr of root.querySelectorAll('table tr')) {
     const [cell, priceCell] = tr.querySelectorAll('td');
     if (!cell || !priceCell) continue;
     const details = txt(cell.querySelector('sup'));
@@ -143,7 +159,21 @@ export function parseSymKitePackages(html: string): Array<{ name: string; detail
   return out;
 }
 
-export interface SymPages { api: string; overview: string; kitePackages: string }
+export interface SymPages { api: string; overview: string; kitePackages: string; detail?: string }
+
+/** Detail page (since Oct 2026): hero photo, "Per night On request", booking by "Send us your dates" form. */
+export function parseSymDetail(html: string): { heroImage: string | null; priceOnRequest: boolean; formBooking: boolean } {
+  const root = parse(html);
+  const hero = root.querySelector('.fb-hero img')?.getAttribute('src') ?? null;
+  // the price + booking box is an <aside class="fb-panel"> (mainText drops asides, and node-html-parser closes <main>
+  // early on these WP pages), so test the tag-stripped page text
+  const text = collapse(html.replace(/<(script|style)[^>]*>[\s\S]*?<\/\1>/gi, ' ').replace(/<[^>]+>/g, ' '));
+  return {
+    heroImage: hero ? hero.replace(/-\d{2,4}x\d{2,4}(?=\.(?:jpe?g|png|webp)$)/i, '') : null,
+    priceOnRequest: /per night\s*on request/i.test(text),
+    formBooking: /send us your dates/i.test(text),
+  };
+}
 
 export function parseSolYMarContent(p: SymPages): OfferContent {
   const page = parseSymApi(p.api);
@@ -153,6 +183,7 @@ export function parseSolYMarContent(p: SymPages): OfferContent {
   const kite = mainText(p.kitePackages);
   const packages = parseSymKitePackages(p.kitePackages);
   const km = card.distance?.match(/(\d+(?:[.,]\d+)?)\s*km/i)?.[1] ?? null;
+  const detail = p.detail ? parseSymDetail(p.detail) : null;
 
   const rooms: ContentRoom[] = f.roomTypes.map(t => ({
     name: `${t.charAt(0).toUpperCase()}${t.slice(1)} room`,
@@ -163,7 +194,7 @@ export function parseSolYMarContent(p: SymPages): OfferContent {
   const summary = [
     `Sol y Mar is the original surf hostel of the Flag Beach Watersports Centre, in the old town of Corralejo, Fuerteventura${km ? `, ${km} km from Flag Beach` : ''}.`,
     `It has ${f.bedrooms ?? 10} bedrooms (${f.roomTypes.length ? f.roomTypes.join(', ') : 'single to quad'}${f.noBunkBeds ? ', no bunk beds' : ''}), ${f.kitchens ?? 2} kitchens, ${f.bathrooms ?? 4} bathrooms, a living room and a rooftop terrace with BBQ${f.breakfast ? '; continental breakfast is included' : ''}${f.minNights ? ` and the minimum stay is ${f.minNights} nights` : ''}.`,
-    `Flag Beach teaches kitesurfing, windsurfing, surfing, wing foiling and SUP at Flag Beach and rents equipment; arrival days are flexible and rooms are booked through Flag Beach's online booking page.`,
+    `Flag Beach teaches kitesurfing, windsurfing, surfing, wing foiling and SUP at Flag Beach and rents equipment; arrival days are flexible and ${detail?.formBooking ? 'rooms are requested by sending your dates through Flag Beach\'s form (confirmed by e-mail with a small deposit)' : 'rooms are booked through Flag Beach\'s booking page'}.`,
   ].join(' ');
 
   return {
@@ -177,8 +208,9 @@ export function parseSolYMarContent(p: SymPages): OfferContent {
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'],
-    kiteLessons: /kitesurfing course/i.test(kite),
-    equipmentRental: /equipment rentals?/i.test(kite),
+    kiteLessons: /kitesurfing course|beginner course|kite(?:surfing)? lessons?/i.test(kite),
+    // since Oct 2026 rental is its own page in the kite menu ("Courses / Packages / Rental"), not text on this page
+    equipmentRental: /equipment rentals?/i.test(kite) || /href="[^"]*\/rental[^"]*"/i.test(p.kitePackages),
     beginnerFriendly: /beginner/i.test(kite),
     includedServices: f.facilities,
     optionalServices: [
@@ -191,12 +223,13 @@ export function parseSolYMarContent(p: SymPages): OfferContent {
     mealPlan: f.breakfast ? 'breakfast' : null,
     languages: [],
     rooms,
-    imageUrls: f.imageUrls.slice(0, 30),
+    imageUrls: (f.imageUrls.length ? f.imageUrls : detail?.heroImage ? [detail.heroImage] : []).slice(0, 30),
     heroVideoUrl: null,
-    sourceUrl: SYM_OVERVIEW_URL,
-    bookingUrl: f.bookingUrl ?? FALLBACK_BOOKING_URL,
+    sourceUrl: p.detail ? SYM_DETAIL_URL : SYM_OVERVIEW_URL,
+    bookingUrl: f.bookingUrl ?? SYM_DETAIL_URL,
     sourceText: [
-      `wp page ${page.id} "${page.title}" modified ${page.modified}`,
+      `wp stay ${page.id} "${page.title}" modified ${page.modified}`,
+      `detail page: ${detail ? `price per night ${detail.priceOnRequest ? 'on request' : 'shown'}, booking ${detail.formBooking ? 'by form' : 'other'}` : 'not read'}`,
       `overview card: ${card.distance ?? '?'} | ${card.blurb}`,
       `description: ${f.paragraphs.join(' ')}`,
       `facilities: ${f.facilities.join(' | ')}`,
@@ -218,19 +251,20 @@ export const solYMarSurfCampCorralejo: OfferAdapter = {
   },
   url: SYM_OVERVIEW_URL,
   slotMethod: 'price_table',
-  instantBooking: true,
-  fetchBudget: 4,
+  instantBooking: false, // since Oct 2026: "Send us your dates" form, confirmed by e-mail with a deposit (Cloudbeds gone)
+  fetchBudget: 5,
   confidence: 'low',
   async fetchContent() {
-    const [api, overview, kitePackages] = [
+    const [api, overview, kitePackages, detail] = [
       await get(SYM_API_URL, 'application/json'), await get(SYM_OVERVIEW_URL, 'text/html'), await get(SYM_KITE_PACKAGES_URL, 'text/html'),
+      await get(SYM_DETAIL_URL, 'text/html'),
     ];
-    return parseSolYMarContent({ api, overview, kitePackages });
+    return parseSolYMarContent({ api, overview, kitePackages, detail });
   },
   async fetchSlots(ctx) {
     // liveness guard: the house must still be on the operator's accommodation overview
     if (!parseSymCard(await get(SYM_OVERVIEW_URL, 'text/html'))) throw new Error('sol-y-mar: card no longer on /accommodation/ (house retired?)');
-    ctx.note('no room prices on the own site and Cloudbeds /booking/* answers 403: offer stays "price on request"');
+    ctx.note('no room prices on the own site ("Per night: On request"): offer stays "price on request"');
     return [];
   },
 };
