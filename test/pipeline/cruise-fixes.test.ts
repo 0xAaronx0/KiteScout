@@ -6,7 +6,7 @@ import { derivePerPerson, planCruiseFix, planPackageFix, revertPlan, type Cruise
 const TODAY = '2026-10-28';
 const row = (over: Partial<CruiseRow>): CruiseRow => ({
   id: '00000000-0000-0000-0000-000000000000', slug: 's', title: 'T', country: 'Egypt', countries: ['Egypt'], region: 'Red Sea',
-  continent: 'Africa', dates: null, pricing: null, price_from_eur: null, currency: 'EUR', price_pp_cabin: null,
+  continent: 'Africa', itinerary_spots: null, dates: null, pricing: null, price_from_eur: null, currency: 'EUR', price_pp_cabin: null,
   price_pp_cabin_currency: null, price_basis_note: null, season_text: null, ...over,
 });
 
@@ -103,4 +103,23 @@ test('planPackageFix: YouTube hero and research notes', () => {
 test('revertPlan: swaps before and after', () => {
   const plan = [{ table: 'cruise_offers' as const, id: 'x', label: 'x', why: [], set: { price_pp_cabin: { before: 250, after: 1350 } } }];
   assert.deepEqual(revertPlan(plan)[0].set, { price_pp_cabin: { before: 1350, after: 250 } });
+});
+
+test('planCruiseFix: region parts repeating the first spot; Kite and Islands date-style season', () => {
+  const e = planCruiseFix(row({ country: 'Fiji', region: 'Lau Group / Taveuni', itinerary_spots: [{ name: 'Taveuni' }, { name: 'Vanua Balavu' }] }), TODAY);
+  assert.deepEqual(e.set.region, { before: 'Lau Group / Taveuni', after: 'Lau Group' });
+  assert.equal(planCruiseFix(row({ country: 'Saint Vincent and the Grenadines', region: 'Caribbean / Grenadines', itinerary_spots: [{ name: 'Tobago Cays / Grenadines' }] }), TODAY).set.region.after, 'Caribbean');
+  // a region that only repeats the spot stays (nothing left to show)
+  assert.deepEqual(planCruiseFix(row({ country: 'Fiji', region: 'Taveuni', itinerary_spots: [{ name: 'Taveuni' }] }), TODAY).set, {});
+  const k = planCruiseFix(row({ id: 'f02c2e45-0000-0000-0000-000000000000', season_text: 'Sa., 24. Okt. ab El Gouna' }), TODAY);
+  assert.equal(k.set.season_text.after, 'Sat 24 Oct, from El Gouna');
+});
+
+test('planPackageFix: Spanish Kitesurfexperience promo lines -> English', () => {
+  const e = planPackageFix({ id: 'k', title: 'K', hero_video_url: null, accommodation: null, summary: null, optional_services: [
+    'Kite and wing rental (North)',
+    'promo pre temporada enero-abril 2027: 10h lessons + 5 dias Hotel - COP 2,850,000 (10 h de clase kitesurf Instructor. Privado ...)',
+  ] });
+  assert.deepEqual(e.set.optional_services.after, ['Kite and wing rental (North)',
+    'Pre-season promo January to April 2027: 10 h private IKO kite lessons with insurance + 4 nights / 5 days in a private bungalow (book by 30 October) - COP 2,850,000']);
 });

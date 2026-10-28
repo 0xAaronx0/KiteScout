@@ -33,7 +33,10 @@ test('kokohau: bungalow rates per night', () => {
 test('kokohau: lesson + stay packages (incl. the 2027 pre-season promo) go to the content', () => {
   const p = kseStayPackages(home);
   assert.equal(p.length, 5);
-  assert.match(p[0], /promo pre temporada enero-abril 2027: 10h lessons \+ 5 dias Hotel - COP 2,850,000/);
+  // Spanish cards rebuilt in English (audit 2026-10-27)
+  assert.equal(p[0], 'Pre-season promo January to April 2027: 10 h private IKO kite lessons with insurance + 4 nights / 5 days in a private bungalow (book by 30 October) - COP 2,850,000');
+  assert.equal(p[1], 'Promo: 12 h private IKO kite lessons with insurance + 5 nights / 6 days in a private bungalow, breakfast included - COP 3,250,000 per person');
+  assert.ok(p.every(x => !/\b(?:clases?|noches|dias|persona|privado)\b/i.test(x)), p.join(' | '));
 });
 
 test('kokohau: slots = bungalow x guests, COP per night, no dates', async () => {

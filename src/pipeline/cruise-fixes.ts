@@ -11,7 +11,8 @@
 //              add-ons and upgrade surcharges included (gear rental, "upgrade, per couple" / 2, meal package),
 //              and read per-night prices as trip prices -> re-derive without them
 //   continent  from the country, else the one continent all countries share
-//   region     "Bahamas / Exumas" under country Bahamas -> "Exumas" (the app prints country and region)
+//   region     drop parts repeating the country or the first spot ("Bahamas / Exumas" under Bahamas -> "Exumas";
+//              the app prints country / region / first spot, deduped only as whole strings)
 //   text       English season/title for rows the extraction left in German/French (hand-checked list)
 // Package rows: the research notes and the YouTube hero the fixed adapters no longer produce.
 // ---------------------------------------------------------------------------
@@ -62,7 +63,7 @@ export function derivePerPerson(pricing: Pricing): PerPerson | null {
 
 export interface CruiseRow {
   id: string; slug: string; title: string; country: string | null; countries: string[] | null; region: string | null;
-  continent: string | null; dates: unknown; pricing: Pricing; price_from_eur: number | null; currency: string | null;
+  continent: string | null; itinerary_spots: Array<{ name?: string | null }> | null; dates: unknown; pricing: Pricing; price_from_eur: number | null; currency: string | null;
   price_pp_cabin: number | null; price_pp_cabin_currency: string | null; price_basis_note: string | null; season_text: string | null;
 }
 export type FieldDiff = Record<string, { before: unknown; after: unknown }>;
@@ -87,6 +88,8 @@ export const TEXT_FIXES: Record<string, Partial<Record<'title' | 'season_text', 
     title: { from: 'Privatgruppe Kitesafari Red Sea (Custom Group)', to: 'Private Group Kite Safari, Red Sea' },
     season_text: { from: 'Letzter verfügbarer Termin', to: 'Last date offered' },
   },
+  '5b82cbee-': { season_text: { from: 'Sa., 12. Sept. ab Hurghada', to: 'Sat 12 Sep, from Hurghada' } },
+  'f02c2e45-': { season_text: { from: 'Sa., 24. Okt. ab El Gouna', to: 'Sat 24 Oct, from El Gouna' } },
   '180f877d-': {
     season_text: {
       from: 'Safaritermine 2026/27 – Die meisten Windtage gibt es zwischen Juni und Oktober. Auch Frühling und Herbst sind für starken Wind bekannt.',
@@ -144,10 +147,13 @@ export function planCruiseFix(o: CruiseRow, today: string): FixEntry {
     if (c) put('continent', c, 'continent from country');
   }
 
-  // region repeating the country ("Bahamas / Exumas")
-  if (o.country && o.region) {
-    const prefix = `${o.country} / `;
-    if (o.region.toLowerCase().startsWith(prefix.toLowerCase())) put('region', o.region.slice(prefix.length), 'region repeats the country');
+  // region parts repeating the country or the first spot ("Bahamas / Bahamas / Exumas / George Town" in the app)
+  if (o.region) {
+    const parts = o.region.split(/\s*\/\s*/).filter(Boolean);
+    const spot = (o.itinerary_spots?.[0]?.name ?? '').split(/\s*\/\s*/);
+    const taken = new Set([o.country, ...spot].filter((x): x is string => !!x).map(x => x.trim().toLowerCase()));
+    const kept = parts.filter(x => !taken.has(x.toLowerCase()));
+    if (kept.length && kept.length < parts.length) put('region', kept.join(' / '), 'region repeats the country or first spot');
   }
 
   // German/French text
@@ -161,6 +167,14 @@ export function planCruiseFix(o: CruiseRow, today: string): FixEntry {
 }
 
 export interface PackageRow { id: string; title: string; summary: string | null; accommodation: string | null; optional_services: string[] | null; hero_video_url: string | null }
+
+/** Spanish package lines (Kitesurfexperience, Santa Veronica) -> what the fixed adapter writes now. */
+const SERVICE_FIXES: Array<[string, string]> = [
+  ['promo pre temporada enero-abril 2027: 10h lessons + 5 dias Hotel - COP 2,850,000',
+    'Pre-season promo January to April 2027: 10 h private IKO kite lessons with insurance + 4 nights / 5 days in a private bungalow (book by 30 October) - COP 2,850,000'],
+  ['PROMO: 12 Horas clases + 6 Dias Hôtel - COP 3,250,000 per person',
+    'Promo: 12 h private IKO kite lessons with insurance + 5 nights / 6 days in a private bungalow, breakfast included - COP 3,250,000 per person'],
+];
 
 /** Package text the fixed adapters now write (same edits, applied to the stored text). */
 export function planPackageFix(p: PackageRow): FixEntry {
@@ -184,15 +198,19 @@ export function planPackageFix(p: PackageRow): FixEntry {
       .replace(/; no kite school or rental is named on the site\./, '.');
     put('summary', s, 'research note in summary');
   }
-  if (p.optional_services?.includes('Kite surfing and winging in the lagoon (no kite school or rental named on the site)')) {
-    put('optional_services', p.optional_services.map(x => x.replace(' (no kite school or rental named on the site)', '')), 'research note in optional services');
+  if (p.optional_services?.length) {
+    const next = p.optional_services.map(x => {
+      const en = SERVICE_FIXES.find(([prefix]) => x.startsWith(prefix));
+      return en ? en[1] : x.replace(' (no kite school or rental named on the site)', '');
+    });
+    put('optional_services', next, 'research note or Spanish text in optional services');
   }
   return { table: 'package_offers', id: p.id, label: `${p.title} (${p.id.slice(0, 8)})`, set, why };
 }
 
 // --- runner ---------------------------------------------------------------------------------
 
-const CRUISE_COLS = 'id, slug, title, country, countries, region, continent, dates, pricing, price_from_eur, currency, price_pp_cabin, price_pp_cabin_currency, price_basis_note, season_text';
+const CRUISE_COLS = 'id, slug, title, country, countries, region, continent, itinerary_spots, dates, pricing, price_from_eur, currency, price_pp_cabin, price_pp_cabin_currency, price_basis_note, season_text';
 const PACKAGE_COLS = 'id, title, summary, accommodation, optional_services, hero_video_url';
 
 const show = (v: unknown): string => {

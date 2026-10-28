@@ -97,8 +97,33 @@ export function kseStayPackages(html: string): string[] {
     .map(p => {
       const head = [p.preTitle, p.name].filter(Boolean).join(': ');
       const per = /persona|person|each/i.test(p.unitText) ? ' per person' : '';
-      return `${head} - ${p.currency} ${p.price.toLocaleString('en-US')}${per} (${p.text})`;
+      const price = `${p.currency} ${p.price.toLocaleString('en-US')}${per}`;
+      return KSE_SPANISH.test(`${head} ${p.text}`) ? `${kseEnglish(p)} - ${price}` : `${head} - ${price} (${p.text})`;
     });
+}
+
+// The site mixes languages; the app is English. Spanish cards are rebuilt from their numbers (audit 2026-10-27).
+const KSE_SPANISH = /\b(?:clases?|noches|d[ií]as|horas|persona|privado|temporada|valida|hasta)\b/i;
+const ES_MONTHS: Record<string, string> = {
+  enero: 'January', febrero: 'February', marzo: 'March', abril: 'April', mayo: 'May', junio: 'June', julio: 'July',
+  agosto: 'August', septiembre: 'September', octubre: 'October', noviembre: 'November', diciembre: 'December',
+};
+export function kseEnglish(p: KsePackage): string {
+  const all = `${p.preTitle} ${p.name} ${p.text}`;
+  const season = p.preTitle.match(/pre\s*temporada\s+(\p{L}+)\s*-\s*(\p{L}+)\s+(\d{4})/iu);
+  const head = season && ES_MONTHS[season[1].toLowerCase()] && ES_MONTHS[season[2].toLowerCase()]
+    ? `Pre-season promo ${ES_MONTHS[season[1].toLowerCase()]} to ${ES_MONTHS[season[2].toLowerCase()]} ${season[3]}`
+    : /promo/i.test(p.preTitle) ? 'Promo' : null;
+  const hours = all.match(/(\d+)\s*h(?:oras)?\b/i)?.[1];
+  const nights = p.text.match(/(\d+)\s*noches/i)?.[1];
+  const days = p.text.match(/(\d+)\s*d[ií]as/i)?.[1];
+  const until = p.text.match(/valida hasta (\d{1,2}) de (\p{L}+)/iu);
+  const parts = [
+    hours ? `${hours} h private IKO kite lessons${/seguro/i.test(p.text) ? ' with insurance' : ''}` : null,
+    nights ? `${nights} nights${days ? ` / ${days} days` : ''} in a private bungalow${/breakfast|desayuno/i.test(p.text) ? ', breakfast included' : ''}` : null,
+  ].filter(Boolean).join(' + ');
+  const by = until && ES_MONTHS[until[2].toLowerCase()] ? ` (book by ${until[1]} ${ES_MONTHS[until[2].toLowerCase()]})` : '';
+  return `${head ? `${head}: ` : ''}${parts || p.name}${by}`;
 }
 
 function pageText(html: string): string {
