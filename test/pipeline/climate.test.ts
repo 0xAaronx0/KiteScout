@@ -146,6 +146,7 @@ test('regionBstoked: REGION_BSTOKED rows win and never use the 10 placeholder', 
   const sc = regionBstoked({ lat10: -281, lng10: -486 }, { lat10: -36, lng10: -387 }, b, 'BR-SC');
   assert.deepEqual(sc, REGION_BSTOKED['BR-SC']);
   assert.equal(regionBstoked({ lat10: -228, lng10: -419 }, { lat10: -36, lng10: -387 }, b, 'BR-SE'), null);
+  assert.deepEqual(Object.keys(REGION_BSTOKED).sort(), ['BR-RN', 'BR-RS', 'BR-SC']);
   for (const [key, months] of Object.entries(REGION_BSTOKED)) {
     assert.equal(months.length, 12, key);
     assert.ok(months.every(v => Number.isInteger(v) && v >= 0 && v <= 100 && v !== 10), key);

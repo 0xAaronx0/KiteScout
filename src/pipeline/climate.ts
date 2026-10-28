@@ -69,9 +69,13 @@ export const windPolicy = (country: string): WindPolicy => WIND_POLICY[country] 
  * never exactly 10 (that is the "< 40 %" placeholder). BR-SC: ERA5 at Ibiraquera read 5-30 %
  * against Sep-Mar seasons in every spot guide; values from Open-Meteo kiteable-day shares 2022-2025
  * (Floripa, Ibiraquera; best_match matched Bstoked at the Cumbuco peak) + Windfinder + guides.
+ * BR-RN keeps the trades longer than the north coast (Gostoso/Galinhos in all 3 models), BR-RS
+ * from Tramandaí/Cassino; regions from migration 20261028150000.
  */
 export const REGION_BSTOKED: Record<string, number[]> = {
   'BR-SC': [35, 30, 30, 30, 25, 25, 25, 40, 50, 50, 50, 40],
+  'BR-RN': [50, 50, 20, 15, 30, 45, 75, 85, 95, 95, 85, 80],
+  'BR-RS': [45, 40, 35, 35, 30, 30, 30, 45, 50, 55, 55, 50],
 };
 
 /**
