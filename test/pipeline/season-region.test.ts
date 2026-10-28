@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { climateSeason, pickWind, proposeRegionSeason, distanceKm, AIR_MIN_C, WIND_MIN_PCT } from '../../src/pipeline/season-region.js';
+import { climateSeason, pickWind, proposeRegionSeason, distanceKm, regionOverride, AIR_MIN_C, WIND_MIN_PCT } from '../../src/pipeline/season-region.js';
 
 // Live climate rows (2026-10-28) for the examples Aaron named.
 const baltic = { air: [4, 6, 8, 12, 17, 21, 22, 23, 19, 14, 8, 5], wind: [null, null, null, 55, 55, 55, 50, 50, 70, 70, null, null] };
@@ -54,4 +54,12 @@ test('proposal: unknown -> page wind window (not for cruises) or climate; writte
   assert.equal(proposeRegionSeason({ ...yearRound, type: 'tour' }), null, 'tours keep their own season');
   assert.equal(proposeRegionSeason({ ...yearRound, type: 'accommodation', evidenceBasis: null }), null, 'only seasons season-extract wrote');
   assert.equal(proposeRegionSeason({ ...yearRound, type: 'accommodation', climate: [1] , current: [6, 7] }), null, 'never cut to nothing');
+});
+
+test('North and Baltic Sea: fixed April-October (Aaron 2026-10-28), cutting a year-round page season', () => {
+  for (const c of ['Germany', 'Denmark', 'Poland', 'Netherlands', 'Belgium', 'Sweden']) assert.deepEqual(regionOverride(c)?.months, [4, 5, 6, 7, 8, 9, 10], c);
+  assert.equal(regionOverride('Spain'), null);
+  const fixed = regionOverride('Germany')!.months;
+  assert.deepEqual(proposeRegionSeason({ type: 'accommodation', snow: false, known: true, current: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], evidenceBasis: 'year_round', climate: fixed, pageWind: null }), { months: fixed, basis: 'page_region' });
+  assert.deepEqual(proposeRegionSeason({ type: 'accommodation', snow: false, known: true, current: [3, 4, 5, 6, 7, 8, 9, 10], evidenceBasis: 'range', climate: fixed, pageWind: null }), { months: fixed, basis: 'page_region' });
 });

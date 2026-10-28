@@ -28,6 +28,19 @@ export const WIND_MIN_PCT = 40;
 export const REGION_MAX_KM = 800;
 
 /**
+ * Fixed seasons Aaron set per region; they replace the climate rule (and a page's wind window) there.
+ * 2026-10-28: "bitte April - Oktober für nord- und ostsee" (all our offers in these countries are on the coasts).
+ */
+export const REGION_OVERRIDES: Array<{ label: string; countries: string[]; months: number[] }> = [
+  { label: 'Vorgabe Nord- und Ostsee', countries: ['germany', 'denmark', 'poland', 'netherlands', 'belgium', 'sweden'], months: [4, 5, 6, 7, 8, 9, 10] },
+];
+
+export function regionOverride(country: string | null): { label: string; months: number[] } | null {
+  const c = (country ?? '').toLowerCase();
+  return REGION_OVERRIDES.find(o => o.countries.includes(c)) ?? null;
+}
+
+/**
  * Months in season by the climate rule; null when the spot has no temperature or no wind data at all (Aaron
  * 2026-10-28: such spots are exempt from the rule and flagged for him). A single month without a wind value
  * (e.g. winter months where the wind is not recorded because the water is too cold) does not veto.
@@ -149,12 +162,13 @@ export async function runRegionSeasons(opts: { outDir: string; pagePlan?: string
   for (const { r, source, type } of all) {
     const snow = (r.disciplines ?? []).includes('snowkite');
     const cs = climate.get(r.offer_id);
-    const wind = cs ? pickWind(r.country, cs.lat, cs.lng, regions, countries) : null;
-    const clim = cs ? climateSeason(cs.air_temp_max_months, wind?.wind) : null;
+    const fixed = regionOverride(r.country);
+    const wind = fixed ? { key: fixed.label, wind: null } as WindSource : cs ? pickWind(r.country, cs.lat, cs.lng, regions, countries) : null;
+    const clim = fixed ? fixed.months : cs ? climateSeason(cs.air_temp_max_months, wind?.wind) : null;
     const s = seasons.get(r.offer_id);
     const current = known.get(r.offer_id) ?? [];
     const pw = pageWind.get(r.offer_id);
-    const prop = proposeRegionSeason({ type, snow, known: known.has(r.offer_id), current, evidenceBasis: s?.season_evidence?.basis ?? null, climate: clim, pageWind: pw?.decision.months ?? null });
+    const prop = proposeRegionSeason({ type, snow, known: known.has(r.offer_id), current, evidenceBasis: s?.season_evidence?.basis ?? null, climate: clim, pageWind: fixed ? null : pw?.decision.months ?? null });
     if (!prop) {
       const noAir = !cs?.air_temp_max_months || cs.air_temp_max_months.every(v => v == null);
       const noWind = !wind?.wind || wind.wind.every(v => v == null);
@@ -166,11 +180,11 @@ export async function runRegionSeasons(opts: { outDir: string; pagePlan?: string
     }
     rows.push({
       catalog_source: source, offer_id: r.offer_id, type, title: r.title, provider: r.provider_name ?? r.provider_root_domain ?? '?', source_url: r.source_url,
-      text_source: 'stored', extraction: pw?.extraction ?? null,
+      text_source: 'stored', extraction: fixed ? null : pw?.extraction ?? null,
       decision: { write: true, months: prop.months, kind: prop.basis },
       ...(prop.basis === 'page_region' ? { previous: s?.season_evidence?.months ?? current } : {}),
       region_basis: prop.basis, country: r.country, region: r.region, wind_source: wind?.key ?? null, climate: clim, current,
-      ...(wind?.alt && cs ? { region_alt: { key: wind.alt.key, months: climateSeason(cs.air_temp_max_months, wind.alt.wind) } } : {}),
+      ...(!fixed && wind?.alt && cs ? { region_alt: { key: wind.alt.key, months: climateSeason(cs.air_temp_max_months, wind.alt.wind) } } : {}),
     });
   }
   rows.sort((a, b) => (a.country ?? '').localeCompare(b.country ?? '') || (a.region ?? '').localeCompare(b.region ?? '') || a.title.localeCompare(b.title));
@@ -203,6 +217,7 @@ function regionReview(rows: ProposalRow[], skipped: Array<{ offer_id: string; ti
     `# Saisons aus Region und Klima - Vorschlag ${new Date().toISOString().slice(0, 10)}`, '',
     'Auftrag Aaron (2026-10-28, über den Deployer): Der Karten-Schalter "Hide out-of-season listings" ist per Default aus, deshalb auch für Camps und Unterkünfte konsequent Saisons setzen; lieber ein Angebot zu viel ausblenden als eins zu wenig (z. B. im Januar keine Nord-/Ostseeküste, im Juli/August kein Südafrika). **Nichts ist live geschrieben.**', '',
     `**Regel pro Monat:** Saison, wenn die mittlere Tageshöchsttemperatur am Angebotspunkt mindestens ${AIR_MIN_C} °C ist **und** der Anteil windiger Tage mindestens ${WIND_MIN_PCT} % (ein einzelner Monat ohne Windwert blockiert nicht; Spots ganz ohne Wind- oder Temperaturdaten und Snowkite sind ausgenommen und unten markiert). Wind = Landeswert, den die App zeigt (Bstoked windProbability). Monate, die dort nur mit ERA5 gefüllt sind, sind Bstoked-Platzhalter (unter 40 % windige Tage) und zählen nicht. Die reinen ERA5-Werte einer nahen Klimaregion (bis ${REGION_MAX_KM} km) nutze ich nur, wo das Land keine Bstoked-Daten hat; wo sie anders entscheiden würden, steht es unten zum Prüfen. Temperatur = Klimapunkt des Angebots.`, '',
+    `**Feste Vorgabe:** ${REGION_OVERRIDES.map(o => `${o.label} (${o.countries.join(', ')}): Apr-Okt`).join('; ')} - ersetzt dort die Klimaregel und eine Windsaison der Seite (Aaron 2026-10-28).`, '',
     '**Wer was bekommt:** Unbekannte Angebote bekommen die Klimasaison ("aus der Region erschlossen"), Camps/Unterkünfte/Kurse mit einer Windsaison auf der eigenen Seite stattdessen diese ("Seite (Windsaison)"). Unterkünfte und Camps mit einer schon geschriebenen Seiten-Saison (z. B. "ganzjährig geöffnet") behalten nur die Monate, die auch in der Klimasaison liegen ("Seite ∩ Region"). Kreuzfahrten und Touren mit eigener Saison oder Terminen und Snowkite bleiben unverändert.', '',
     '## Saisons pro Region (aus der Region erschlossen)', '',
     '| Land | Windquelle | Saison | Angebote | Typen |', '|---|---|---|---|---|',
