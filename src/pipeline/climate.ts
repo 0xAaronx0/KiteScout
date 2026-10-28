@@ -64,15 +64,27 @@ export const WIND_POLICY: Record<string, WindPolicy> = {
 export const windPolicy = (country: string): WindPolicy => WIND_POLICY[country] ?? 'default';
 
 /**
- * Bstoked row for a region's wind: only when the region sits on the same climate cell as its
- * country's point (it IS the country's kite spot, e.g. BR-NE = Cumbuco); other regions get
- * ERA5 only. Without this, BR-NE showed ERA5 0-10 % Jan-May where Bstoked has 79/61/39/30
- * (ERA5 misses the thermal) - found 2026-10-23.
+ * Region wind rows kept as source 'bstoked' although wind_stats (per country) has no row for them
+ * (Aaron 2026-10-28: "werte anpassen, quelle bstoked lassen"). Same scale as wind_stats.months,
+ * never exactly 10 (that is the "< 40 %" placeholder). BR-SC: ERA5 at Ibiraquera read 5-30 %
+ * against Sep-Mar seasons in every spot guide; values from Open-Meteo kiteable-day shares 2022-2025
+ * (Floripa, Ibiraquera; best_match matched Bstoked at the Cumbuco peak) + Windfinder + guides.
+ */
+export const REGION_BSTOKED: Record<string, number[]> = {
+  'BR-SC': [35, 30, 30, 30, 25, 25, 25, 40, 50, 50, 50, 40],
+};
+
+/**
+ * Bstoked row for a region's wind: REGION_BSTOKED first; else only when the region sits on the
+ * same climate cell as its country's point (it IS the country's kite spot, e.g. BR-NE = Cumbuco);
+ * other regions get ERA5 only. Without this, BR-NE showed ERA5 0-10 % Jan-May where Bstoked has
+ * 79/61/39/30 (ERA5 misses the thermal) - found 2026-10-23.
  */
 export function regionBstoked(
   regionCell: { lat10: number; lng10: number }, countryCell: { lat10: number; lng10: number } | null | undefined,
-  bstoked: number[] | null | undefined,
+  bstoked: number[] | null | undefined, regionKey?: string,
 ): number[] | null {
+  if (regionKey && REGION_BSTOKED[regionKey]) return REGION_BSTOKED[regionKey];
   return countryCell && bstoked && countryCell.lat10 === regionCell.lat10 && countryCell.lng10 === regionCell.lng10 ? bstoked : null;
 }
 

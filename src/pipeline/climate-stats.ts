@@ -249,7 +249,7 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
       water_temp_months: cell.water_temp_months,
       uv_months: cell.uv_months, uv_clear_sky_months: cell.uv_clear_sky_months,
       sources: cell.sources, updated_at: new Date().toISOString(),
-      ...combineWind(regionBstoked(cell, countryCell.get(rp.country), bstoked.get(rp.country)), cell.wind_kiteable_months, cell.water_temp_months, windPolicy(rp.country)),
+      ...combineWind(regionBstoked(cell, countryCell.get(rp.country), bstoked.get(rp.country), rp.region_key), cell.wind_kiteable_months, cell.water_temp_months, windPolicy(rp.country)),
       uv_cloudy_months: capCloudyUv(cell), uv_cloudy_source: cell.uv_cloudy_source ?? null,
     });
   }

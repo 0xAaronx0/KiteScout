@@ -28,7 +28,7 @@ INSERT INTO wind_stats (country, months, is_alias) VALUES
   ('Austria', '{10,10,55,55,55,30,30,30,50,50,10,10}', false),
   ('Belize', '{50,65,65,65,50,61,61,50,50,30,35,50}', false),
   ('Bonaire', '{78,82,90,90,90,90,90,70,50,50,58,70}', false),
-  ('Brazil', '{79,61,39,30,39,59,70,90,95,95,95,95}', false),
+  ('Brazil', '{40,25,5,5,15,35,65,90,95,95,90,80}', false), -- curated 2026-10-28 (Aaron), keep on re-sync
   ('British Virgin Islands', '{70,81,81,70,65,65,81,61,30,45,61,85}', false),
   ('Bulgaria', '{10,10,30,60,90,90,90,90,90,60,30,10}', false),
   ('Canada', '{10,10,30,60,90,90,90,90,60,30,10,10}', false),
