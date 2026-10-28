@@ -81,7 +81,7 @@ export function withTableSeason<T extends OfferDates>(row: T, season?: { season_
 
 type TableSeason = { id: string; season_start_month: number | null; season_end_month: number | null };
 
-/** package_offers.season_* (migration 20261028120000); empty, with a warning, while that migration is not applied. */
+/** package_offers.season_* (migration 20261028130000); empty, with a warning, while that migration is not applied. */
 async function packageSeasons(): Promise<Map<string, TableSeason>> {
   try {
     const rows = await selectAll<TableSeason>('package_offers', 'id,season_start_month,season_end_month');
@@ -89,7 +89,7 @@ async function packageSeasons(): Promise<Map<string, TableSeason>> {
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
     if (!/season_start_month/.test(msg)) throw err;
-    console.warn(`package_offers has no season columns yet (migration 20261028120000): ${msg}`);
+    console.warn(`package_offers has no season columns yet (migration 20261028130000): ${msg}`);
     return new Map();
   }
 }

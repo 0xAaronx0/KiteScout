@@ -360,7 +360,7 @@ export async function applySeasonPlan(opts: { from: string; only?: string[]; exc
   const supabase = await db();
   if (picks.some(p => p.row.catalog_source === 'package_offers')) {
     const { error } = await supabase.from('package_offers').select('season_start_month').limit(1);
-    if (error) throw new Error(`package_offers season columns missing, run migration 20261028120000_package_offer_season.sql first (${error.message})`);
+    if (error) throw new Error(`package_offers season columns missing, run migration 20261028130000_package_offer_season.sql first (${error.message})`);
   }
   let written = 0, skipped = 0;
   for (const { row, start, end } of picks) {
