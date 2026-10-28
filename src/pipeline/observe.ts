@@ -83,7 +83,7 @@ const PROMPT = `You read one web page of a kite-cruise provider and report the C
     "duration_days": <number> | null,
     "season_start_month": 1-12 | null,
     "season_end_month": 1-12 | null,
-    "season_text": "<the season in English, e.g. 'April–October'>" | null
+    "season_text": "<the season in English, e.g. 'April-October'>" | null
   }],
   "other_products": [{"name": "…", "dates": "…" | null, "price": "…" | null}]
 }

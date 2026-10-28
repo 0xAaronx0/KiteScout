@@ -177,7 +177,7 @@ For each offer, extract this exact JSON shape (use null when the site does not s
   "capacity_guests": integer max guests, or null,
   "cabin_count": integer number of cabins, or null,
   "price_confidence": one of ["high","medium","low"] — high = explicit per-tier prices on the page, low = vague/"from"/derived; or null,
-  "season_text": "the kite / best-season window in English (translate month names and words like 'Hauptsaison', 'individuell'), e.g. 'April–October', or null",
+  "season_text": "the kite / best-season window in English (translate month names and words like 'Hauptsaison', 'individuell'), e.g. 'April-October', or null",
   "season_start_month": 1-12 or null,
   "season_end_month": 1-12 or null,
   "duration_days": integer or null,

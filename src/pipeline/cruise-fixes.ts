@@ -129,7 +129,8 @@ export function planCruiseFix(o: CruiseRow, today: string): FixEntry {
     put('price_pp_cabin', d?.price ?? null, reason);
     put('price_pp_cabin_currency', d?.currency ?? null, reason);
     const rest = o.price_basis_note!.split(' | ').slice(1);
-    put('price_basis_note', [d ? `pp: ${d.source}` : `pp: none (was "${chosen}")`, ...rest].join(' | '), reason);
+    // our note quotes provider labels; plain hyphens only in text we write (Aaron 2026-08-06)
+    put('price_basis_note', [d ? `pp: ${d.source}` : `pp: none (was "${chosen}")`, ...rest].join(' | ').replace(/[–—]/g, '-'), reason);
   }
   // price_from_eur (the map's price): a per-night amount, or a per-night price next to an EUR trip price
   if (perNightRaw && o.price_from_eur !== null) {
@@ -169,7 +170,7 @@ export function planCruiseFix(o: CruiseRow, today: string): FixEntry {
 export interface PackageRow { id: string; title: string; summary: string | null; accommodation: string | null; optional_services: string[] | null; hero_video_url: string | null }
 
 /** Spanish package lines (Kitesurfexperience, Santa Veronica) -> what the fixed adapter writes now. */
-const SERVICE_FIXES: Array<[string, string]> = [
+export const SERVICE_FIXES: Array<[string, string]> = [
   ['promo pre temporada enero-abril 2027: 10h lessons + 5 dias Hotel - COP 2,850,000',
     'Pre-season promo January to April 2027: 10 h private IKO kite lessons with insurance + 4 nights / 5 days in a private bungalow (book by 30 October) - COP 2,850,000'],
   ['PROMO: 12 Horas clases + 6 Dias Hôtel - COP 3,250,000 per person',

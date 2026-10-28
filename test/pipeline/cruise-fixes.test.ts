@@ -1,7 +1,7 @@
 // Audit 2026-10-27 data fixes: the rules behind `pnpm cli data-fixes plan` (rows trimmed from the live audit dump).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { derivePerPerson, planCruiseFix, planPackageFix, revertPlan, type CruiseRow } from '../../src/pipeline/cruise-fixes.js';
+import { derivePerPerson, planCruiseFix, planPackageFix, revertPlan, SERVICE_FIXES, TEXT_FIXES, type CruiseRow } from '../../src/pipeline/cruise-fixes.js';
 
 const TODAY = '2026-10-28';
 const row = (over: Partial<CruiseRow>): CruiseRow => ({
@@ -41,7 +41,7 @@ test('planCruiseFix: Egypsy upgrade surcharge -> the cruise price', () => {
   }), TODAY);
   assert.deepEqual(e.set.price_pp_cabin, { before: 250, after: 1350 });
   assert.equal(e.set.price_pp_cabin_currency, undefined); // unchanged
-  assert.deepEqual(e.set.price_basis_note.after, 'pp: option "Cruise Only – Standard Shared Twin Cabin"');
+  assert.deepEqual(e.set.price_basis_note.after, 'pp: option "Cruise Only - Standard Shared Twin Cabin"'); // plain hyphen in what we write
   assert.equal(e.set.price_from_eur, undefined);
 });
 
@@ -122,4 +122,12 @@ test('planPackageFix: Spanish Kitesurfexperience promo lines -> English', () => 
   ] });
   assert.deepEqual(e.set.optional_services.after, ['Kite and wing rental (North)',
     'Pre-season promo January to April 2027: 10 h private IKO kite lessons with insurance + 4 nights / 5 days in a private bungalow (book by 30 October) - COP 2,850,000']);
+});
+
+test('no en or em dash in any text the plan writes (Aaron 2026-08-06)', () => {
+  const written = [
+    ...Object.values(TEXT_FIXES).flatMap(f => Object.values(f).map(x => x!.to)),
+    ...SERVICE_FIXES.map(([, to]) => to),
+  ];
+  for (const t of written) assert.doesNotMatch(t, /[–—]/, t);
 });
