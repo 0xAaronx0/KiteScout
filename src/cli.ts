@@ -544,13 +544,13 @@ async function main(): Promise<void> {
       if (args[0] === 'apply') {
         const from = flagStr('--from');
         if (!from) throw new Error('season-extract apply needs --from <plan.json>');
-        const r = await applySeasonPlan({ from, only: list('--only'), exclude: list('--exclude'), includeWind: args.includes('--include-wind'), dryRun: args.includes('--dry-run'), revert: args.includes('--revert') });
+        const r = await applySeasonPlan({ from, only: list('--only'), exclude: list('--exclude'), approve: list('--approve'), includeWind: args.includes('--include-wind'), dryRun: args.includes('--dry-run'), revert: args.includes('--revert'), update: args.includes('--update') });
         console.log(`${r.selected} selected -> ${r.written} ${args.includes('--dry-run') ? 'would be ' : ''}${args.includes('--revert') ? 'reverted' : 'written'}, ${r.skipped} skipped (months no longer empty / changed)`);
         break;
       }
       const types = (list('--types') ?? ['cruise', 'camp', 'tour', 'course', 'accommodation']) as Array<'cruise' | 'camp' | 'tour' | 'course' | 'accommodation'>;
       const limit = flagStr('--limit');
-      const r = await runSeasonExtract({ types, limit: limit ? Number(limit) : undefined, fetch: args.includes('--fetch'), outDir: flagStr('--out') ?? 'docs/season-review' });
+      const r = await runSeasonExtract({ types, limit: limit ? Number(limit) : undefined, fetch: args.includes('--fetch'), recheck: args.includes('--recheck'), outDir: flagStr('--out') ?? 'docs/season-review' });
       console.log(JSON.stringify(r.summary, null, 1));
       console.log(`plan: ${r.planPath}\nreview: ${r.reviewPath}${r.errors ? `\n${r.errors} offers failed (see "error" in the plan)` : ''}`);
       break;

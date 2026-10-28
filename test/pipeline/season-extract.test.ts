@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { contiguousRange, decideSeason, parseExtraction, quoteInText, seasonUpsertColumns, seasonWindows, selectForApply, monthsLabel, isOwnSite, type PlanRow, type SeasonExtraction } from '../../src/pipeline/season-extract.js';
+import { contiguousRange, decideSeason, parseExtraction, quoteInText, seasonPatch, seasonUpsertColumns, storedMonths, seasonWindows, selectForApply, monthsLabel, isOwnSite, type PlanRow, type SeasonExtraction } from '../../src/pipeline/season-extract.js';
 
 const x = (over: Partial<SeasonExtraction>): SeasonExtraction => ({ basis: 'operating_period', open_months: [], closed_months: [], evidence_quote: null, confidence: 'high', note: null, ...over });
 const page = 'Welcome! Our kite season runs from November to April. We are open all year for guests. Closed in January and February for maintenance.';
@@ -25,7 +25,7 @@ test('quote check survives formatting but needs the real words', () => {
 
 test('cruise: stated season (also wind-only) is written; low confidence or missing quote is not', () => {
   const d = decideSeason('cruise', x({ open_months: [11, 12, 1, 2, 3, 4], evidence_quote: 'Our kite season runs from November to April' }), page);
-  assert.deepEqual(d, { write: true, start: 11, end: 4, months: [1, 2, 3, 4, 11, 12], kind: 'range' });
+  assert.deepEqual(d, { write: true, months: [1, 2, 3, 4, 11, 12], kind: 'range' });
   const w = decideSeason('cruise', x({ basis: 'wind_season', open_months: [11, 12, 1, 2, 3, 4], evidence_quote: 'kite season runs from November to April' }), page);
   assert.equal(w.write && w.kind, 'wind_season');
   assert.equal(decideSeason('cruise', x({ open_months: [5, 6], confidence: 'low', evidence_quote: 'kite season runs from November to April' }), page).write, false);
@@ -33,21 +33,21 @@ test('cruise: stated season (also wind-only) is written; low confidence or missi
   assert.deepEqual(decideSeason('cruise', x({ basis: 'none' }), page), { write: false, reason: 'unknown', months: [] });
 });
 
-test('camp/tour: a wind-only window, price seasons, dated trips and other facilities are reported, not written; two seasons stay unknown', () => {
+test('camp/tour: a wind-only window, price seasons, dated trips and other facilities are reported, not written; two stated seasons are written as a set', () => {
   const quote = 'kite season runs from November to April';
   assert.deepEqual(decideSeason('camp', x({ basis: 'price_seasons', open_months: [5, 6, 7], evidence_quote: quote }), page), { write: false, reason: 'price_only', months: [5, 6, 7] });
   assert.deepEqual(decideSeason('tour', x({ basis: 'dated_departures', open_months: [3], evidence_quote: quote }), page), { write: false, reason: 'dates_only', months: [3] });
   assert.deepEqual(decideSeason('accommodation', x({ basis: 'other_facility', closed_months: [5, 6, 7, 8, 9, 10], evidence_quote: quote }), page).write, false);
   assert.deepEqual(decideSeason('cruise', x({ basis: 'price_seasons', open_months: [1, 2], evidence_quote: quote }), page).write, false);
   assert.deepEqual(decideSeason('camp', x({ basis: 'wind_season', open_months: [11, 12, 1, 2, 3, 4], evidence_quote: quote }), page), { write: false, reason: 'wind_only', months: [1, 2, 3, 4, 11, 12] });
-  assert.deepEqual(decideSeason('tour', x({ open_months: [4, 5, 6, 9, 10], evidence_quote: quote }), page), { write: false, reason: 'non_contiguous', months: [4, 5, 6, 9, 10] });
+  assert.deepEqual(decideSeason('tour', x({ open_months: [4, 5, 6, 9, 10], evidence_quote: quote }), page), { write: true, months: [4, 5, 6, 9, 10], kind: 'split_season' });
 });
 
 test('accommodation: explicit year-round -> 1..12, explicit closing months -> the rest; wind-only never', () => {
   const all = decideSeason('accommodation', x({ basis: 'year_round', evidence_quote: 'We are open all year for guests.' }), page);
-  assert.deepEqual(all, { write: true, start: 1, end: 12, months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], kind: 'year_round' });
+  assert.deepEqual(all, { write: true, months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], kind: 'year_round' });
   const closed = decideSeason('accommodation', x({ closed_months: [1, 2], evidence_quote: 'Closed in January and February for maintenance.' }), page);
-  assert.deepEqual(closed, { write: true, start: 3, end: 12, months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12], kind: 'closed_months' });
+  assert.deepEqual(closed, { write: true, months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12], kind: 'closed_months' });
   assert.equal(decideSeason('accommodation', x({ basis: 'wind_season', open_months: [11, 12, 1], evidence_quote: 'kite season runs from November to April' }), page).write, false);
   assert.deepEqual(decideSeason('accommodation', x({ open_months: [1, 2, 3], closed_months: [3], evidence_quote: 'Closed in January and February' }), page), { write: false, reason: 'conflict', months: [1, 2, 3] });
 });
@@ -71,17 +71,36 @@ test('re-extraction leaves a stored season alone when it finds none', () => {
   assert.deepEqual(seasonUpsertColumns('all year', null, null), { season_text: 'all year' });
 });
 
-test('apply picks approved rows; wind-only only on request; --only/--exclude by id prefix', () => {
-  const row = (id: string, decision: PlanRow['decision']): PlanRow => ({ catalog_source: 'package_offers', offer_id: id, type: 'camp', title: id, provider: 'p', source_url: null, text_source: 'stored', extraction: null, decision });
+test('apply picks approved rows; per-offer approval, wind-only on request, --only/--exclude by id prefix', () => {
+  const row = (id: string, decision: PlanRow['decision']): PlanRow => ({ catalog_source: 'package_offers', offer_id: id, type: 'tour', title: id, provider: 'p', source_url: null, text_source: 'stored', extraction: null, decision });
   const rows = [
-    row('aaaa1111', { write: true, start: 4, end: 10, months: [4, 5, 6, 7, 8, 9, 10], kind: 'range' }),
+    row('aaaa1111', { write: true, months: [4, 5, 6, 7, 8, 9, 10], kind: 'range' }),
     row('bbbb2222', { write: false, reason: 'wind_only', months: [12, 1, 2] }),
-    row('cccc3333', { write: false, reason: 'non_contiguous', months: [4, 9] }),
+    row('cccc3333', { write: false, reason: 'dates_only', months: [10, 11] }),
+    row('dddd4444', { write: false, reason: 'non_contiguous' as never, months: [1, 2, 7, 8] }),
+    row('eeee5555', { write: false, reason: 'unknown', months: [] }),
   ];
-  assert.deepEqual(selectForApply(rows, {}).map(p => p.row.offer_id), ['aaaa1111']);
-  assert.deepEqual(selectForApply(rows, { includeWind: true }).map(p => [p.row.offer_id, p.start, p.end]), [['aaaa1111', 4, 10], ['bbbb2222', 12, 2]]);
-  assert.deepEqual(selectForApply(rows, { exclude: ['aaaa'] }).length, 0);
-  assert.deepEqual(selectForApply(rows, { only: ['bbbb'], includeWind: true }).map(p => p.row.offer_id), ['bbbb2222']);
+  const ids = (opts: Parameters<typeof selectForApply>[1]) => selectForApply(rows, opts).map(p => p.row.offer_id);
+  assert.deepEqual(ids({}), ['aaaa1111']);
+  assert.deepEqual(ids({ approve: ['cccc', 'dddd', 'eeee'] }), ['aaaa1111', 'cccc3333', 'dddd4444'], 'approval needs months');
+  assert.deepEqual(ids({ includeWind: true }), ['aaaa1111', 'bbbb2222']);
+  assert.deepEqual(ids({ exclude: ['aaaa', 'dddd'] }), []);
+  assert.deepEqual(ids({ only: ['bbbb'], includeWind: true }), ['bbbb2222']);
+});
+
+test('one cruise window stays in start/end; split cruise seasons and all package seasons go to season_months', () => {
+  assert.deepEqual(seasonPatch('cruise_offers', [11, 12, 1, 2]), { season_start_month: 11, season_end_month: 2, season_months: null });
+  assert.deepEqual(seasonPatch('cruise_offers', [1, 2, 7, 8]), { season_start_month: null, season_end_month: null, season_months: [1, 2, 7, 8] });
+  assert.deepEqual(seasonPatch('cruise_offers', []), { season_start_month: null, season_end_month: null, season_months: null });
+  assert.deepEqual(seasonPatch('package_offers', [12, 1]), { season_months: [1, 12] });
+  assert.deepEqual(seasonPatch('package_offers', []), { season_months: null });
+});
+
+test('stored months: season_months wins, else the start/end window (wrapping), else none', () => {
+  assert.deepEqual(storedMonths({ season_months: [8, 7, 1], season_start_month: 4, season_end_month: 5 }), [1, 7, 8]);
+  assert.deepEqual(storedMonths({ season_start_month: 11, season_end_month: 2 }), [1, 2, 11, 12]);
+  assert.deepEqual(storedMonths({ season_start_month: 4 }), []);
+  assert.deepEqual(storedMonths({}), []);
 });
 
 test('aggregator pages are never a season source', () => {

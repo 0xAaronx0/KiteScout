@@ -1,16 +1,16 @@
-// `pnpm cli season-extract [--types cruise,camp,tour,course,accommodation] [--limit n] [--fetch] [--out <dir>]`
-// `pnpm cli season-extract apply --from <plan.json> [--only id,..] [--exclude id,..] [--include-wind] [--dry-run] [--revert]`
+// `pnpm cli season-extract [--types cruise,camp,tour,course,accommodation] [--limit n] [--fetch] [--recheck] [--out <dir>]`
+// `pnpm cli season-extract apply --from <plan.json> [--only|--exclude|--approve id,..] [--include-wind] [--update] [--dry-run] [--revert]`
 //
 // Season months for offers the KCS map month filter does not know yet (no offer_bookable_months row), read
 // from the provider's OWN page text (stored source_text, optionally a fresh fetch of source_url; never
 // aggregators). Plan approved by Aaron 2026-10-28 ("1+2 starten"):
 //   - cruises, camps, tours, courses: the stated season -> season_start_month..season_end_month
 //   - accommodation: only an explicit "open all year" (1..12) or explicit opening/closing months
-//   - never inferred from slot samples, never partial: a season that is not one contiguous block
-//     (spring + autumn) is reported and stays unknown
+//   - never inferred from slot samples; several season windows (two wind seasons) are allowed
+//     (Aaron 2026-10-28) and stored as a month set
 // Every proposal carries an evidence quote that must appear verbatim in the page text; low confidence or
 // a quote we cannot find = no write. The run only writes a plan + review table; `apply` writes live, and
-// only into months that are still empty (cruise_offers / package_offers.season_*).
+// only into a season that is still empty (cruise start/end or season_months, package season_months).
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -30,7 +30,7 @@ export interface SeasonExtraction {
 }
 
 export type Decision =
-  | { write: true; start: number; end: number; months: number[]; kind: 'year_round' | 'range' | 'closed_months' | 'wind_season' }
+  | { write: true; months: number[]; kind: 'year_round' | 'range' | 'closed_months' | 'wind_season' | 'split_season' }
   | { write: false; reason: 'unknown' | 'low_confidence' | 'quote_not_found' | 'non_contiguous' | 'wind_only' | 'price_only' | 'dates_only' | 'other_facility' | 'conflict'; months: number[] };
 
 const ALL = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -98,10 +98,9 @@ export function decideSeason(type: OfferType, x: SeasonExtraction, text: string)
   if (x.basis === 'wind_season' && type !== 'cruise') return { write: false, reason: 'wind_only', months };
   if (x.confidence === 'low') return { write: false, reason: 'low_confidence', months };
   if (!quoteInText(x.evidence_quote, text)) return { write: false, reason: 'quote_not_found', months };
-  const range = contiguousRange(months);
-  if (!range) return { write: false, reason: 'non_contiguous', months };
-  const kind = months.length === 12 ? 'year_round' : x.basis === 'wind_season' ? 'wind_season' : !open.length ? 'closed_months' : 'range';
-  return { write: true, ...range, months, kind };
+  // Several windows are fine (two wind seasons, Aaron 2026-10-28): stored as a month set (season_months).
+  const kind = months.length === 12 ? 'year_round' : !contiguousRange(months) ? 'split_season' : x.basis === 'wind_season' ? 'wind_season' : !open.length ? 'closed_months' : 'range';
+  return { write: true, months, kind };
 }
 
 /**
@@ -196,8 +195,13 @@ export interface PlanRow {
   text_source: 'stored' | 'fetched';
   extraction: SeasonExtraction | null;
   decision: Decision;
+  /** --recheck: the months season-extract wrote last time (season_evidence.months), to diff against. */
+  previous?: number[] | null;
   error?: string;
 }
+
+/** What `apply` stores next to the months, so a later --recheck knows what it wrote and from where. */
+export interface SeasonEvidence { source: 'season-extract'; months: number[]; quote: string | null; url: string | null; basis: string; checked_at: string }
 
 const db = async () => (await import('../lib/supabase.js')).supabase;
 
@@ -240,25 +244,43 @@ async function pool<T>(items: T[], size: number, fn: (item: T) => Promise<void>)
 
 const NOTHING: Decision = { write: false, reason: 'unknown', months: [] };
 
-export async function runSeasonExtract(opts: { types: OfferType[]; limit?: number; fetch?: boolean; outDir: string }) {
+/**
+ * Default: offers without known months. --recheck (planned twice a year, Aaron 2026-10-28: opening periods and
+ * event dates change, a new place may open earlier in later years): every offer whose season season-extract
+ * wrote (season_evidence), read again from a FRESH page; the plan carries the previous months to diff against.
+ */
+export async function runSeasonExtract(opts: { types: OfferType[]; limit?: number; fetch?: boolean; recheck?: boolean; outDir: string }) {
   type ViewRow = { offer_id: string; title: string; provider_name: string | null; provider_root_domain: string | null; source_url: string | null; provider_trip_types?: string[] | null };
   const known = new Set((await selectAll<{ offer_id: string }>('offer_bookable_months', 'offer_id')).map(r => r.offer_id));
   const cruiseView = await selectAll<ViewRow>('app_cruise_offer_cards', 'offer_id,title,provider_name,provider_root_domain,source_url');
   const packageView = await selectAll<ViewRow>('app_package_cards', 'offer_id,title,provider_name,provider_root_domain,source_url,provider_trip_types');
-  const cruiseText = new Map((await selectAll<{ id: string; source_text: string | null }>('cruise_offers', 'id,source_text')).map(r => [r.id, r.source_text ?? '']));
-  const packageText = new Map((await selectAll<{ id: string; source_text: string | null }>('package_offers', 'id,source_text')).map(r => [r.id, r.source_text ?? '']));
+  type TextRow = { id: string; source_text: string | null; season_evidence?: SeasonEvidence | null };
+  const cols = opts.recheck ? 'id,source_text,season_evidence' : 'id,source_text';
+  const cruiseRows = await selectAll<TextRow>('cruise_offers', cols);
+  const packageRows = await selectAll<TextRow>('package_offers', cols);
+  const cruiseText = new Map(cruiseRows.map(r => [r.id, r.source_text ?? '']));
+  const packageText = new Map(packageRows.map(r => [r.id, r.source_text ?? '']));
+  const previous = new Map([...cruiseRows, ...packageRows].filter(r => r.season_evidence?.months?.length).map(r => [r.id, r.season_evidence!.months]));
 
   const todo = [
     ...cruiseView.map(r => ({ r, source: 'cruise_offers' as const, type: 'cruise' as OfferType, text: cruiseText.get(r.offer_id) ?? '' })),
     ...packageView.map(r => ({ r, source: 'package_offers' as const, type: (r.provider_trip_types?.[0] ?? 'accommodation') as OfferType, text: packageText.get(r.offer_id) ?? '' })),
-  ].filter(x => !known.has(x.r.offer_id) && opts.types.includes(x.type)).slice(0, opts.limit ?? Infinity);
-  console.log(`${todo.length} offers without known months (${opts.types.join(', ')})`);
+  ].filter(x => (opts.recheck ? previous.has(x.r.offer_id) : !known.has(x.r.offer_id)) && opts.types.includes(x.type)).slice(0, opts.limit ?? Infinity);
+  console.log(`${todo.length} offers ${opts.recheck ? 'with a season from season-extract (recheck)' : 'without known months'} (${opts.types.join(', ')})`);
 
-  const fetchReadable = opts.fetch ? (await import('./observe.js')).fetchReadable : null;
+  const fetchReadable = opts.fetch || opts.recheck ? (await import('./observe.js')).fetchReadable : null;
   const rows: PlanRow[] = [];
   await pool(todo, 6, async ({ r, source, type, text }) => {
     const base = { catalog_source: source, offer_id: r.offer_id, type, title: r.title, provider: r.provider_name ?? r.provider_root_domain ?? '?', source_url: r.source_url };
     try {
+      // A recheck reads the live page first: the stored text is what we read last time.
+      if (opts.recheck && fetchReadable && isOwnSite(r.source_url)) {
+        const page = await fetchReadable(r.source_url!);
+        if (page.text && page.text.length >= 200) {
+          const fx = await extractOne(r.title, base.provider, type, page.text);
+          if (fx) { rows.push({ ...base, text_source: 'fetched', extraction: fx, decision: decideSeason(type, fx, page.text), previous: previous.get(r.offer_id) ?? null }); return; }
+        }
+      }
       let x = text.length >= 100 && isOwnSite(r.source_url) ? await extractOne(r.title, base.provider, type, text) : null;
       let decision = x ? decideSeason(type, x, text) : NOTHING;
       let textSource: PlanRow['text_source'] = 'stored';
@@ -271,7 +293,7 @@ export async function runSeasonExtract(opts: { types: OfferType[]; limit?: numbe
           if (fx && fd && (fd.write || fx.basis !== 'none')) { x = fx; decision = fd; textSource = 'fetched'; }
         }
       }
-      rows.push({ ...base, text_source: textSource, extraction: x, decision });
+      rows.push({ ...base, text_source: textSource, extraction: x, decision, ...(opts.recheck ? { previous: previous.get(r.offer_id) ?? null } : {}) });
     } catch (err) {
       rows.push({ ...base, text_source: 'stored', extraction: null, decision: NOTHING, error: err instanceof Error ? err.message.slice(0, 200) : String(err) });
     }
@@ -310,7 +332,18 @@ function reviewMarkdown(rows: PlanRow[]): string {
     '|---|---|---|---|---|---|---|---|---|',
     ...list.map((r, i) => `| ${i + 1} | ${r.type} | ${cell(r.provider)} | ${cell(r.title)} | ${r.decision.months.length ? monthsLabel(r.decision.months) : '-'} | ${status(r)} | ${cell(r.extraction?.evidence_quote)}${r.extraction?.note ? ` _(${cell(r.extraction.note)})_` : ''} | ${r.source_url ? `[${r.text_source}](${r.source_url})` : r.text_source} | \`${r.offer_id.slice(0, 8)}\` |`),
   ].join('\n');
-  const write = rows.filter(r => r.decision.write);
+  const sameMonths = (a?: number[] | null, b?: number[] | null) => JSON.stringify([...(a ?? [])].sort((x, y) => x - y)) === JSON.stringify([...(b ?? [])].sort((x, y) => x - y));
+  const rechecked = rows.filter(r => r.previous);
+  const changed = rechecked.filter(r => r.decision.write && !sameMonths(r.decision.months, r.previous));
+  const lost = rechecked.filter(r => !r.decision.write);
+  const recheckPart = rechecked.length ? [
+    `## Recheck: changed season (${changed.length}) - \`apply --update\` after review`, '',
+    table(changed, r => `was ${monthsLabel(r.previous ?? [])}`), '',
+    `## Recheck: season no longer supported by the page (${lost.length}) - not changed automatically`, '',
+    table(lost, r => (r.decision.write ? '' : `${r.decision.reason}, was ${monthsLabel(r.previous ?? [])}`)), '',
+    `Confirmed unchanged: ${rechecked.length - changed.length - lost.length}.`, '',
+  ] : [];
+  const write = rows.filter(r => r.decision.write && !r.previous);
   const review = rows.filter(r => !r.decision.write && r.decision.reason !== 'unknown');
   return [
     `# Season extraction review (${new Date().toISOString().slice(0, 10)})`,
@@ -318,6 +351,7 @@ function reviewMarkdown(rows: PlanRow[]): string {
     'Offers without a known month on the KCS map (no offer_bookable_months row). Source: the provider\'s own page text.',
     'Nothing is written live yet. "Proposed to write" goes live only after Aaron\'s OK; the others stay unknown unless Aaron decides otherwise.',
     '',
+    ...recheckPart,
     '## Summary',
     '',
     ...Object.entries(summarize(rows)).map(([t, c]) => `- **${t}**: ${Object.entries(c).map(([k, v]) => `${k} ${v}`).join(', ')}`),
@@ -328,7 +362,7 @@ function reviewMarkdown(rows: PlanRow[]): string {
     '',
     `## Not written, for Aaron's eye (${review.length})`,
     '',
-    'wind_only = only the best-wind window is stated (not a cruise); price_only = only price/rate periods; dates_only = only dated departures/events (often past); other_facility = months of a school, restaurant, pool, another product; non_contiguous = two separate seasons; quote_not_found / low_confidence / conflict = the evidence did not hold.',
+    'wind_only = only the best-wind window is stated (not a cruise); price_only = only price/rate periods; dates_only = only dated departures/events (often past); other_facility = months of a school, restaurant, pool, another product; quote_not_found / low_confidence / conflict = the evidence did not hold.',
     '',
     table(review, r => (r.decision.write ? '' : r.decision.reason)),
     '',
@@ -339,43 +373,84 @@ function reviewMarkdown(rows: PlanRow[]): string {
 // Apply: writes only approved rows, only into still-empty months. --revert clears exactly what we set.
 // ---------------------------------------------------------------------------------------------------------
 
-export function selectForApply(rows: PlanRow[], opts: { only?: string[]; exclude?: string[]; includeWind?: boolean }) {
+export interface ApplyOpts { only?: string[]; exclude?: string[]; includeWind?: boolean; approve?: string[] }
+
+/**
+ * Rows to write: every decision.write row, plus rows Aaron approved one by one (--approve id,..: e.g. tours whose
+ * season comes from their dated trips, 2026-10-28) and, on request, wind-only windows.
+ */
+export function selectForApply(rows: PlanRow[], opts: ApplyOpts) {
   const match = (id: string, list?: string[]) => !!list?.some(p => p && id.startsWith(p));
   return rows.flatMap(r => {
     if (match(r.offer_id, opts.exclude)) return [];
     if (opts.only?.length && !match(r.offer_id, opts.only)) return [];
-    if (r.decision.write) return [{ row: r, start: r.decision.start, end: r.decision.end }];
-    // A camp/tour whose page states only the wind window: written only on Aaron's explicit choice.
-    if (opts.includeWind && r.decision.reason === 'wind_only') {
-      const range = contiguousRange(r.decision.months);
-      if (range) return [{ row: r, ...range }];
-    }
+    const months = r.decision.months;
+    if (!months.length) return [];
+    if (r.decision.write) return [{ row: r, months }];
+    const reason = r.decision.reason as string;
+    if (match(r.offer_id, opts.approve) || (opts.includeWind && reason === 'wind_only')) return [{ row: r, months }];
     return [];
   });
 }
 
-export async function applySeasonPlan(opts: { from: string; only?: string[]; exclude?: string[]; includeWind?: boolean; dryRun?: boolean; revert?: boolean }) {
-  const plan = JSON.parse(readFileSync(opts.from, 'utf8')) as { rows: PlanRow[] };
-  const picks = selectForApply(plan.rows, opts);
+const sorted = (m: number[]) => [...new Set(m)].sort((a, b) => a - b);
+const sameSet = (a: number[], b: number[]) => JSON.stringify(sorted(a)) === JSON.stringify(sorted(b));
+
+/** The months currently stored on an offer row: season_months wins, else the start/end window, else none. */
+export function storedMonths(row: { season_start_month?: number | null; season_end_month?: number | null; season_months?: number[] | null }): number[] {
+  if (row.season_months?.length) return sorted(row.season_months);
+  if (row.season_start_month && row.season_end_month) return contiguousMonths(row.season_start_month, row.season_end_month);
+  return [];
+}
+
+/**
+ * The full season representation one pick writes (other representation cleared). A cruise with one window keeps
+ * season_start/end_month (the app's existing season fields); a split cruise season and every package season go
+ * to season_months. An empty month list clears the season (used by --revert).
+ */
+export function seasonPatch(source: PlanRow['catalog_source'], months: number[]): Record<string, number | number[] | null> {
+  if (source === 'package_offers') return { season_months: months.length ? sorted(months) : null };
+  const range = months.length ? contiguousRange(months) : null;
+  if (!months.length) return { season_start_month: null, season_end_month: null, season_months: null };
+  return range ? { season_start_month: range.start, season_end_month: range.end, season_months: null } : { season_start_month: null, season_end_month: null, season_months: sorted(months) };
+}
+
+/**
+ * Writes the picks. Default: only into an empty season. --update (after a --recheck): only where the stored
+ * months still equal what season-extract wrote last time, so a hand correction is never overwritten.
+ * --revert: clears the season where it still equals the plan's months. Every write is guarded against a change
+ * between read and write (filters on the values just read) and stores season_evidence.
+ */
+export async function applySeasonPlan(opts: ApplyOpts & { from: string; dryRun?: boolean; revert?: boolean; update?: boolean }) {
+  const plan = JSON.parse(readFileSync(opts.from, 'utf8')) as { created_at?: string; rows: PlanRow[] };
+  const picks = selectForApply(plan.rows, opts).filter(p => (opts.update ? !!p.row.previous && !sameSet(p.months, p.row.previous) : true));
   const supabase = await db();
-  if (picks.some(p => p.row.catalog_source === 'package_offers')) {
-    const { error } = await supabase.from('package_offers').select('season_start_month').limit(1);
-    if (error) throw new Error(`package_offers season columns missing, run migration 20261028130000_package_offer_season.sql first (${error.message})`);
+  for (const table of ['cruise_offers', 'package_offers'] as const) {
+    if (!picks.some(p => p.row.catalog_source === table)) continue;
+    const { error } = await supabase.from(table).select('season_months,season_evidence').limit(1);
+    if (error) throw new Error(`${table}.season_months/season_evidence missing, run migration 20261028130000_offer_season_months.sql first (${error.message})`);
   }
+  const today = new Date().toISOString().slice(0, 10);
   let written = 0, skipped = 0;
-  for (const { row, start, end } of picks) {
-    if (opts.dryRun) {
-      const { data, error } = await supabase.from(row.catalog_source).select('season_start_month,season_end_month').eq('id', row.offer_id).maybeSingle();
-      if (error) throw new Error(`${row.catalog_source} ${row.offer_id}: ${error.message}`);
-      const hit = opts.revert
-        ? data?.season_start_month === start && data?.season_end_month === end
-        : data?.season_start_month === null && data?.season_end_month === null;
-      if (hit) written++; else skipped++;
-      continue;
+  for (const { row, months } of picks) {
+    const cols = row.catalog_source === 'cruise_offers' ? ['season_start_month', 'season_end_month', 'season_months'] : ['season_months'];
+    const { data: cur, error: readErr } = await supabase.from(row.catalog_source).select(cols.join(',')).eq('id', row.offer_id).maybeSingle();
+    if (readErr) throw new Error(`${row.catalog_source} ${row.offer_id}: ${readErr.message}`);
+    if (!cur) { skipped++; continue; }
+    const now = cur as unknown as Record<string, number | number[] | null>;
+    const have = storedMonths(now);
+    const hit = opts.revert ? sameSet(have, months) : opts.update ? sameSet(have, row.previous ?? []) : have.length === 0;
+    if (!hit) { skipped++; continue; }
+    if (opts.dryRun) { written++; continue; }
+    const evidence: SeasonEvidence | null = opts.revert ? null : {
+      source: 'season-extract', months: sorted(months), quote: row.extraction?.evidence_quote ?? null, url: row.source_url,
+      basis: row.decision.write ? row.decision.kind : `approved:${row.decision.reason}`, checked_at: today,
+    };
+    let q = supabase.from(row.catalog_source).update({ ...seasonPatch(row.catalog_source, opts.revert ? [] : months), season_evidence: evidence }).eq('id', row.offer_id);
+    for (const k of cols) {
+      const v = now[k];
+      q = v == null ? q.is(k, null) : Array.isArray(v) ? q.filter(k, 'eq', `{${v.join(',')}}`) : q.eq(k, v);
     }
-    const q = opts.revert
-      ? supabase.from(row.catalog_source).update({ season_start_month: null, season_end_month: null }).eq('id', row.offer_id).eq('season_start_month', start).eq('season_end_month', end)
-      : supabase.from(row.catalog_source).update({ season_start_month: start, season_end_month: end }).eq('id', row.offer_id).is('season_start_month', null).is('season_end_month', null);
     const { data, error } = await q.select('id');
     if (error) throw new Error(`${row.catalog_source} ${row.offer_id}: ${error.message}`);
     if (data?.length) written++; else skipped++;
