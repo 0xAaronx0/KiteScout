@@ -1,7 +1,7 @@
 // Audit 2026-10-27 data fixes: the rules behind `pnpm cli data-fixes plan` (rows trimmed from the live audit dump).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { daysFromLabel, deriveCharterWeek, derivePerPerson, planCruiseFix, planPackageFix, revertPlan, SERVICE_FIXES, TEXT_FIXES, type CruiseRow } from '../../src/pipeline/cruise-fixes.js';
+import { isPerNightAmount, daysFromLabel, deriveCharterWeek, derivePerPerson, planCruiseFix, planPackageFix, revertPlan, SERVICE_FIXES, TEXT_FIXES, type CruiseRow } from '../../src/pipeline/cruise-fixes.js';
 
 const TODAY = '2026-10-28';
 const row = (over: Partial<CruiseRow>): CruiseRow => ({
@@ -167,4 +167,13 @@ test('charter: a x7/7 row is left alone (its value may be a newer monitor read);
   assert.deepEqual([cbcm.set.price_pp_cabin.after, cbcm.set.price_charter_week.after], [2200, 17520]);
   // the guard: once the stored values moved, the override stays out
   assert.equal(planCruiseFix(row({ id: 'f030d504-0000-0000-0000-000000000000', price_pp_cabin: 2200, price_charter_week: 17520 }), TODAY).set.price_pp_cabin, undefined);
+});
+
+test('isPerNightAmount: the extraction guard behind "on request" (Aaron 2026-10-28)', () => {
+  assert.equal(isPerNightAmount({ raw: 'ab 249.- € pro Person pro Nacht' }, 249), true);
+  assert.equal(isPerNightAmount({ raw: 'ab 129€ pPpN' }, 129), true);
+  assert.equal(isPerNightAmount({ raw: 'x', options: [{ basis: 'per_person', label: 'Per person per night', price: 179 }] }, 179), true);
+  assert.equal(isPerNightAmount({ raw: '179 € pro Person / Nacht ab, Preis für eine 14-tägige Reise' }, 2506), false); // the trip price stays
+  assert.equal(isPerNightAmount({ raw: 'From €1750 /pers – 8 days / 7 nights' }, 1750), false);
+  assert.equal(isPerNightAmount({ raw: 'ab 249.- € pro Person pro Nacht' }, null), false);
 });
