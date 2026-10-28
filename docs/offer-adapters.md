@@ -384,3 +384,19 @@ list, so its package sentence comes back empty.
 TLS (2026-10-28): some provider sites chain to Let's Encrypt "ISRG Root YR", which Node does not bundle yet
 (kitesuites.com.br failed daily with "fetch failed"). `pnpm cli` and the CI workflows pass `certs/isrg-root-yr.pem`
 via `NODE_EXTRA_CA_CERTS`; direct `npx tsx` runs need the variable set by hand. Details: `certs/README.md`.
+
+## Snowkite stays (2026-10-28)
+
+The first two snowkite accommodations (Aaron 2026-10-28: "bau Haukeliseter und Haugastøl als Unterkunft"); until
+now every snowkite row was a camp or tour.
+
+| Key | Slots | Booking |
+|---|---|---|
+| `haukeliseter-fjellstue-haukelifjell` | DNT price list "Priser på Haukeliseter 2026": 4 season bands (non-member NOK; mountain room 1/2 guests, self-catering bed, Stabbur bed) | DNT hut booking (not read) |
+| `haugastol-turistsenter-hardangervidda` | none (no prices on the site; Mews robots-blocked), confidence low | Mews (not read) |
+
+Haukeliseter's kite courses run with Kiteskolen, Haugastøl's with Kitekurs.no and Vindskolen.no; course dates and
+prices live with those schools (not read). haugastol.no disallows `/_next/`, so photos come from the direct
+`/images/` files behind the image proxy. Haukeliseter's provider row uses the lodge's own domain `haukeliseter.no`
+(it redirects to dnt.no), so a later DNT hut does not share it. Search notes and other leads: `.research/`
+(local) and the session report.
