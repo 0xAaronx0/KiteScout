@@ -139,3 +139,18 @@ test('regionBstoked: a region on the country point keeps Bstoked, other regions 
   assert.equal(regionBstoked({ lat10: -228, lng10: -419 }, { lat10: -36, lng10: -387 }, b), null);
   assert.equal(regionBstoked({ lat10: -36, lng10: -387 }, null, b), null);
 });
+
+test('regionBstoked: REGION_BSTOKED rows win and never use the 10 placeholder', async () => {
+  const { regionBstoked, REGION_BSTOKED, combineWind } = await import('../../src/pipeline/climate.js');
+  const b = [79, 61, 39, 30, 39, 59, 70, 90, 95, 95, 95, 95];
+  const sc = regionBstoked({ lat10: -281, lng10: -486 }, { lat10: -36, lng10: -387 }, b, 'BR-SC');
+  assert.deepEqual(sc, REGION_BSTOKED['BR-SC']);
+  assert.equal(regionBstoked({ lat10: -228, lng10: -419 }, { lat10: -36, lng10: -387 }, b, 'BR-SE'), null);
+  for (const [key, months] of Object.entries(REGION_BSTOKED)) {
+    assert.equal(months.length, 12, key);
+    assert.ok(months.every(v => Number.isInteger(v) && v >= 0 && v <= 100 && v !== 10), key);
+  }
+  const w = combineWind(sc, Array(12).fill(5), Array(12).fill(20));
+  assert.deepEqual(w.wind_months, REGION_BSTOKED['BR-SC']);
+  assert.ok(w.wind_source_months.every(s => s === 'bstoked'));
+});

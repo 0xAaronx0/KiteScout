@@ -6,7 +6,9 @@
 // that their country pages call "% windy days"); months without one sit
 // below the map's 40% threshold and get 10. Do NOT use `flyableDays`: it is
 // coarse and partly 0-placeholders (Kenya Mar-Nov). Countries bstoked has no
-// data for keep older estimates. Re-synced 2026-10-19; the live Supabase
+// data for keep older estimates. Re-synced 2026-10-19; Brazil curated 2026-10-28 (northeast
+// season Jul-Dec, Jan-Jun lower than bstoked; Aaron: values adjusted, source stays bstoked) -
+// keep it on a re-sync. The live Supabase
 // `wind_stats` table is what the product reads - keep both in step.
 
 // Keyed by bstoked's country name (see ALIASES for provider-name variants).
@@ -18,7 +20,7 @@ export const WIND_BY_COUNTRY: Record<string, number[]> = {
   'Austria': [10, 10, 55, 55, 55, 30, 30, 30, 50, 50, 10, 10],
   'Belize': [50, 65, 65, 65, 50, 61, 61, 50, 50, 30, 35, 50],
   'Bonaire': [78, 82, 90, 90, 90, 90, 90, 70, 50, 50, 58, 70],
-  'Brazil': [79, 61, 39, 30, 39, 59, 70, 90, 95, 95, 95, 95],
+  'Brazil': [40, 25, 5, 5, 15, 35, 65, 90, 95, 95, 90, 80], // curated 2026-10-28 (Aaron), keep on re-sync
   'British Virgin Islands': [70, 81, 81, 70, 65, 65, 81, 61, 30, 45, 61, 85],
   'Bulgaria': [10, 10, 30, 60, 90, 90, 90, 90, 90, 60, 30, 10],
   'Canada': [10, 10, 30, 60, 90, 90, 90, 90, 60, 30, 10, 10],
