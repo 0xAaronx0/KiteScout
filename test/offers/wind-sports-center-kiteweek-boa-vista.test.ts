@@ -42,4 +42,8 @@ test('wsc: content', async () => {
   assert.match(c.summary, /from EUR 1,195 for one person in a single room \(June to September\) or EUR 3,795 for 4 sharing a room \(June to September\)/);
   assert.ok(c.imageUrls.length >= 15);
   assert.ok(c.imageUrls.every(u => !/logo|favicon/i.test(u)));
+  // beach and centre photos before the meal photos (2026-10-28: the vision pick had kept 8 meal photos of 10)
+  assert.match(c.imageUrls[0], /\/2023\/05\/bahia/);
+  const firstMeal = c.imageUrls.findIndex(u => /IMG_01\d\d/.test(u));
+  assert.ok(firstMeal === -1 || firstMeal > c.imageUrls.findLastIndex(u => /\/bahia/.test(u)));
 });

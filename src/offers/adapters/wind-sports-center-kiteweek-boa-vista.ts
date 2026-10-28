@@ -144,6 +144,18 @@ export function wscModified(html: string): string | null {
 }
 
 // --- content ------------------------------------------------------------------------------------
+/** Photo candidates for the camps page (also used by the surf + kite listing): beach and centre photos (2023/05
+ *  "bahia*": the centre on Praia de Estoril, the bay with kites) first, then the apartments (IMG_10xx), then the
+ *  rest (meal photos IMG_01xx). The page lists them in the opposite order, and with a cut at 30 the vision pick saw
+ *  only meals and buildings (2026-10-28: 8 of 10 stored photos were food). */
+export function wscImages(html: string, max = 40): string[] {
+  const rank = (u: string) => (/\/bahia/i.test(u) ? 0 : /IMG_10\d\d/i.test(u) ? 1 : 2);
+  return imageCandidates(html, WSC_URL, null, 80)
+    .filter(u => !/logo|favicon|banner|livro|h4-img|boavista_Capoverde|csm_Matze/i.test(u))
+    .map((u, i) => ({ u, i })).sort((a, b) => rank(a.u) - rank(b.u) || a.i - b.i).map(x => x.u)
+    .slice(0, max);
+}
+
 export function parseWscContent(html: string, _today: string): OfferContent {
   const root = parse(html);
   for (const el of root.querySelectorAll('script, style, noscript')) el.remove();
@@ -165,8 +177,7 @@ export function parseWscContent(html: string, _today: string): OfferContent {
     cheapest ? `Prices depend on season (June-September, October/November/April/May, December-March) and room: from EUR ${cheapest.total.toLocaleString('en-US')} for one person in a single room (${cheapest.season})${minAll && minAll.pp < cheapest.total && minAll.pax > 1 ? ` or EUR ${minAll.total.toLocaleString('en-US')} for ${minAll.pax} sharing a room (${minAll.season})` : ''}; the price table carries no year, booking by request.` : 'Prices on request.',
   ].join(' ');
 
-  const imgs = imageCandidates(html, WSC_URL, null, 40)
-    .filter(u => !/logo|favicon|banner|livro|h4-img|boavista_Capoverde|csm_Matze/i.test(u));
+  const imgs = wscImages(html);
 
   return {
     kind: 'camp',
@@ -188,7 +199,7 @@ export function parseWscContent(html: string, _today: string): OfferContent {
     mealPlan: /Six breakfasts and six dinners/i.test(text) ? 'half_board' : 'breakfast',
     languages: ['en', 'pt', 'de'],
     rooms: [],
-    imageUrls: imgs.slice(0, 30),
+    imageUrls: imgs,
     heroVideoUrl: null,
     sourceUrl: WSC_URL,
     bookingUrl: 'https://windsportscenter.com/book-now/',
