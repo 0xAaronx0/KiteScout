@@ -48,5 +48,6 @@ test('wsck: content', async () => {
   assert.match(c.summary, /from EUR 1,105 for one person in a single room \(June to September\)/);
   assert.ok(!/[–—]/.test(c.summary));
   assert.ok(c.imageUrls.length >= 15);
+  assert.match(c.imageUrls[0], /\/2023\/05\/bahia/);
   assert.ok(c.imageUrls.every(u => !/logo|favicon/i.test(u)));
 });

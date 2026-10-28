@@ -142,8 +142,12 @@ export function parseWsckContent(html: string): OfferContent {
     cheapest ? `Prices depend on season (June-September, October/November/April/May, December-March) and room: from EUR ${cheapest.total.toLocaleString('en-US')} for one person in a single room (${cheapest.season})${minAll && minAll.pax > 1 && minAll.pp < cheapest.total ? ` or EUR ${minAll.total.toLocaleString('en-US')} for ${minAll.pax} sharing a room (${minAll.season})` : ''}; the price table carries no year, booking by request.` : 'Prices on request.',
   ].join(' ');
 
-  const imgs = imageCandidates(html, WSC_URL, null, 40)
-    .filter(u => !/logo|favicon|banner|livro|h4-img|boavista_Capoverde|csm_Matze/i.test(u));
+  // beach and centre photos (2023/05 "bahia*": the centre on Praia de Estoril, the bay with kites) first, then the
+  // apartments (IMG_10xx), then the rest (meal photos IMG_01xx); the page lists them in the opposite order
+  const rank = (u: string) => (/\/bahia/i.test(u) ? 0 : /IMG_10\d\d/i.test(u) ? 1 : 2);
+  const imgs = imageCandidates(html, WSC_URL, null, 80)
+    .filter(u => !/logo|favicon|banner|livro|h4-img|boavista_Capoverde|csm_Matze/i.test(u))
+    .map((u, i) => ({ u, i })).sort((a, b) => rank(a.u) - rank(b.u) || a.i - b.i).map(x => x.u);
 
   return {
     kind: 'camp',
@@ -165,7 +169,7 @@ export function parseWsckContent(html: string): OfferContent {
     mealPlan: /breakfasts/i.test(included.join(' ')) && /dinners/i.test(included.join(' ')) ? 'half_board' : 'breakfast',
     languages: ['en', 'pt', 'de'],
     rooms: [],
-    imageUrls: imgs.slice(0, 30),
+    imageUrls: imgs.slice(0, 40),
     heroVideoUrl: null,
     sourceUrl: WSC_URL,
     bookingUrl: 'https://windsportscenter.com/book-now/',
