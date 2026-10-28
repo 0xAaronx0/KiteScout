@@ -9,7 +9,9 @@
 //                                2450€ SINGLE UPGRADE"; the date sits on the site-wide card
 //                                "Roadtrip / Downwinder xl 31 - 9 FEBRUARI 2027" (10 days)
 //   /downwinder-namibia          10-day downwinder expedition, Walvis Bay - Sandwich Harbour; the page
-//                                prints "Price: ........ Euro per person" → price on request
+//                                prints "Price: ........ Euro per person" → price on request; the site-wide
+//                                card "Namibia Kiteboarding October, November, December 2026" → one season slot
+//                                (the hub /namibia4e50299d says the downwinder dates are "To be confirmed")
 // The site keeps older parallel pages of the same products (/project-page: road trip at €1600,
 // /Remoteislands: older Lamu trip); the newest pages above are the source. The "ARCHIPELAGO 31 - 7
 // FEBRUARY" card links to /Remoteislands, so it is NOT used as a Primal Explorer date.
@@ -17,7 +19,7 @@
 // Requests per run: 1 per adapter (content and slots each fetch the page once).
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
-import { collapse, imageCandidates, iso, monthOf, parse } from '../parse.js';
+import { collapse, imageCandidates, iso, monthOf, parse, todayIso } from '../parse.js';
 import type { OfferAdapter, OfferContent, OperatorRef, Slot } from '../types.js';
 
 const BASE = 'https://surfariafrika.dudaone.com';
@@ -210,22 +212,45 @@ export function parseSaXlContent(html: string): OfferContent {
 }
 
 // --- Namibia downwinder ------------------------------------------------------------------------
-export function parseSaNamibiaSlots(html: string): Slot[] {
+/** Site-wide card "Namibia Kiteboarding October, November, December 2026" → the Namibia season. The card links to
+ *  the Namibia hub (/namibia4e50299d), which lists the downwinder as "To be confirmed, MIN 8 PEOPLE" (checked
+ *  2026-10-28): the months are the season, not departures. */
+export function parseSaNamibiaSeason(html: string): { start: string; end: string; label: string } | null {
+  const m = pageText(html).match(/Namibia Kiteboarding\s+((?:[A-Za-z]+,?\s*(?:and\s+)?)+)\s+(\d{4})/i);
+  if (!m) return null;
+  const months = m[1].split(/[,\s]+|and/i).map(w => monthOf(w.toLowerCase())).filter((n): n is number => !!n);
+  if (!months.length) return null;
+  const y = +m[2], first = Math.min(...months), last = Math.max(...months);
+  const end = iso(y, last, new Date(Date.UTC(y, last, 0)).getUTCDate());
+  const name = (n: number) => new Date(Date.UTC(y, n - 1, 1)).toLocaleDateString('en-GB', { month: 'long', timeZone: 'UTC' });
+  return { start: iso(y, first, 1), end, label: `${name(first)} to ${name(last)} ${y}` };
+}
+
+export function parseSaNamibiaSlots(html: string, today = todayIso()): Slot[] {
   const t = pageText(html);
   if (!/10-Day Itinerary/i.test(t)) return [];
   const m = t.match(/Price:\s*([\d.,]+)\s*Euro per person/i);
   const price = m && /\d/.test(m[1]) ? amount(m[1]) : null; // the page prints "Price: ........ Euro"
-  return [undated('expedition', null, price && price > 100 ? price : null, price ? null : 'price on request')];
+  const real = price && price > 100 ? price : null;
+  const season = parseSaNamibiaSeason(html);
+  if (season && season.end >= today) {
+    return [{
+      ...undated(`season|${season.start.slice(0, 7)}`, null, real, `Namibia season ${season.label}; exact dates${real ? '' : ' and price'} on request`),
+      startDate: season.start, endDate: season.end, datePrecision: 'season',
+    }];
+  }
+  return [undated('expedition', null, real, real ? null : 'price on request')];
 }
 
-export function parseSaNamibiaContent(html: string): OfferContent {
+export function parseSaNamibiaContent(html: string, today = todayIso()): OfferContent {
+  const season = parseSaNamibiaSeason(html);
   return {
     kind: 'tour',
     title: 'Namibia Downwinder Kite Safari',
     summary: [
       'A ten-day kite expedition on the Namib desert coast with Surfari Afrika, for experienced riders: a five-day downwinder of about 280 km from St. Francis Bay over Meob Bay, Conception Bay and Sandwich Harbour back to Walvis Bay, plus a wave session at Donkey Bay.',
       'Support vehicles follow along the shore, the group crosses the dunes by 4x4 and sleeps in a lodge and in dome tents between the dunes and the Atlantic; transport, guide, park fees and meals as per itinerary are included.',
-      'Price and dates on request.',
+      season && season.end >= today ? `Price on request; the Namibia season runs ${season.label}, exact dates on request.` : 'Price and dates on request.',
     ].join(' '),
     continent: 'Africa',
     country: 'Namibia',
@@ -295,7 +320,7 @@ export const surfariafrikaNamibiaDownwinder: OfferAdapter = {
   name: 'Surfari Afrika Namibia downwinder expedition',
   kind: 'tour', operator: OPERATOR, url: SA_NAMIBIA_URL,
   slotMethod: 'price_table', fetchBudget: 2,
-  confidence: 'low', // no price, no dates on the page
+  confidence: 'low', // no price on the page, only the Namibia season (site-wide card)
   async fetchContent() { return parseSaNamibiaContent(await fetchText(SA_NAMIBIA_URL)); },
   async fetchSlots() { return parseSaNamibiaSlots(await fetchText(SA_NAMIBIA_URL)); },
 };
