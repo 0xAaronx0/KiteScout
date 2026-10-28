@@ -161,11 +161,14 @@ export function charterWeek(amount: number, days: number | null | undefined): nu
 }
 
 /**
- * Departures worth storing on a fresh write: cleaned (no all-null or year-less rows) and not yet over.
- * null when none are left (the app shows "dates on request" either way).
+ * Departures worth storing: rows without a valid start date dropped (all-null rows), everything else verbatim:
+ * past ones stay (Aaron 2026-10-28: season history; the app hides started departures itself), and so do two
+ * prices on one date (cabin types). null when none are left.
  */
-export function upcomingDepartures(raw: unknown, today: string): Departure[] | null {
-  const deps = cleanDepartures(raw, today).filter(d => isFuture(d, today));
+export function storedDepartures(raw: unknown): Record<string, unknown>[] | null {
+  if (!Array.isArray(raw)) return null;
+  const deps = raw.filter((r): r is Record<string, unknown> =>
+    !!r && typeof r === 'object' && typeof (r as Record<string, unknown>).start_date === 'string' && ISO.test((r as Record<string, unknown>).start_date as string));
   return deps.length ? deps : null;
 }
 /** Canonical key of the UPCOMING departures (past ones never count as a change). */

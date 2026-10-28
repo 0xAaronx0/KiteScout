@@ -15,6 +15,7 @@ import { curateAndStoreImages, slugify, type StoredImage, type VisionBrief } fro
 import { geocodeSpot } from '../lib/geocode.js';
 import { mergeItinerarySpots, type StoredSpot } from '../lib/itinerary-spots.js';
 import { checkSlots, contentProblem } from './validate.js';
+import { plainDashes } from '../lib/offer-text.js';
 import { BlockedByHost, countRequests } from './http.js';
 import { DEFAULT_DISCIPLINES, isBookable, type OfferAdapter, type OfferContent, type OfferKind, type Slot } from './types.js';
 
@@ -310,13 +311,13 @@ function contentRow(a: OfferAdapter, c: OfferContent, operatorId: string, spots:
   return {
     package_type: c.kind,
     disciplines: a.disciplines ?? DEFAULT_DISCIPLINES,
-    title: c.title,
+    title: plainDashes(c.title), // no en/em dashes in shown text (Aaron 2026-08-06)
     slug: slugify(c.title),
     source_listing_id: SOURCE_PREFIX + a.key,
     source_url: c.sourceUrl,
     continent: c.continent,
     country: c.country,
-    region: c.region,
+    region: plainDashes(c.region),
     itinerary_spots: spots,
     skill_levels: c.skillLevels,
     kite_lessons: c.kiteLessons,
@@ -324,10 +325,10 @@ function contentRow(a: OfferAdapter, c: OfferContent, operatorId: string, spots:
     beginner_friendly: c.beginnerFriendly,
     meal_plan: c.mealPlan,
     languages: c.languages,
-    included_services: c.includedServices,
-    optional_services: c.optionalServices,
-    accommodation: c.accommodation,
-    summary: c.summary,
+    included_services: c.includedServices.map(plainDashes),
+    optional_services: c.optionalServices.map(plainDashes),
+    accommodation: plainDashes(c.accommodation),
+    summary: plainDashes(c.summary),
     hero_video_url: c.heroVideoUrl,
     source_text: c.sourceText,
     duration_days: c.durationDays,

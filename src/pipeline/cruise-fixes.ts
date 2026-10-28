@@ -6,7 +6,7 @@
 //   pnpm cli data-fixes apply --from f.json --revert   rollback: writes every `before` back (same guard)
 //
 // Cruise rules (pure, tested in test/pipeline/cruise-fixes.test.ts):
-//   dates      drop all-null rows and finished departures (the app already hides them; null when none left)
+//   dates      drop all-null/invalid rows; past departures stay (season history, Aaron 2026-10-28)
 //   price      the 2026-07-10 backfill (src/_price-derive.ts, untracked) took the cheapest per-person option,
 //              add-ons and upgrade surcharges included (gear rental, "upgrade, per couple" / 2, meal package),
 //              and read per-night prices as trip prices -> re-derive without them
@@ -14,11 +14,13 @@
 //   continent  from the country, else the one continent all countries share
 //   region     drop parts repeating the country or the first spot ("Bahamas / Exumas" under Bahamas -> "Exumas";
 //              the app prints country / region / first spot, deduped only as whole strings)
-//   text       English season/title for rows the extraction left in German/French (hand-checked list)
+//   text       English season/title for rows the extraction left in German/French (hand-checked list);
+//              en/em dashes -> plain hyphens in every shown text field (Aaron 2026-08-06 / 2026-10-28)
 // Package rows: the research notes and the YouTube hero the fixed adapters no longer produce.
 // ---------------------------------------------------------------------------
 import { readFileSync, writeFileSync } from 'node:fs';
-import { charterWeek, upcomingDepartures } from './cruise-state.js';
+import { charterWeek, storedDepartures } from './cruise-state.js';
+import { plainDashes } from '../lib/offer-text.js';
 import { continentForOffer } from '../lib/continents.js';
 
 // FX only to compare options (prices stay in their own currency, Aaron 2026-07-10); same table as cruise-state.
@@ -109,6 +111,7 @@ export function derivePerPerson(pricing: Pricing): PerPerson | null {
 
 export interface CruiseRow {
   id: string; slug: string; title: string; country: string | null; countries: string[] | null; region: string | null;
+  summary: string | null; accommodation: string | null; included_services: string[] | null; optional_services: string[] | null;
   continent: string | null; itinerary_spots: Array<{ name?: string | null }> | null; dates: unknown; pricing: Pricing; price_from_eur: number | null; currency: string | null;
   price_pp_cabin: number | null; price_pp_cabin_currency: string | null; price_basis_note: string | null; season_text: string | null;
   price_charter_week: number | null; price_charter_week_currency: string | null; duration_days: number | null;
@@ -158,10 +161,9 @@ export function planCruiseFix(o: CruiseRow, today: string): FixEntry {
   // dates
   const raw = Array.isArray(o.dates) ? o.dates : [];
   if (raw.length) {
-    const next = upcomingDepartures(raw, today);
+    const next = storedDepartures(raw);
     if ((next?.length ?? 0) !== raw.length) {
-      const past = raw.length - (next?.length ?? 0);
-      put('dates', next, next ? `${past} finished/empty departure(s) dropped` : `only finished/empty departures (${raw.length}) -> none`);
+      put('dates', next, `${raw.length - (next?.length ?? 0)} empty/invalid departure row(s) dropped`);
     }
   }
 
@@ -230,6 +232,17 @@ export function planCruiseFix(o: CruiseRow, today: string): FixEntry {
     if (t && o[f] === t.from) put(f, t.to, 'English text');
   }
 
+  // plain hyphens in every shown text field (after the translations above)
+  for (const f of ['title', 'region', 'season_text', 'summary', 'accommodation'] as const) {
+    const now = (set[f]?.after as string | null | undefined) ?? o[f];
+    const next = plainDashes(now);
+    if (next !== now) put(f, next, 'plain hyphens');
+  }
+  for (const f of ['included_services', 'optional_services'] as const) {
+    const now = o[f];
+    if (now?.some(x => /[–—]/.test(x))) put(f, now.map(plainDashes), 'plain hyphens');
+  }
+
   return { table: 'cruise_offers', id: o.id, label: `${o.slug} (${o.id.slice(0, 8)})`, set, why };
 }
 
@@ -246,7 +259,10 @@ export const HIDE_PROVIDERS: Record<string, string> = {
   'stankakristl-yachtcharter.at': 'price valid till 31/12/2020 on its own page, no newer dates',
 };
 
-export interface PackageRow { id: string; title: string; summary: string | null; accommodation: string | null; optional_services: string[] | null; hero_video_url: string | null }
+export interface PackageRow {
+  id: string; title: string; summary: string | null; accommodation: string | null; optional_services: string[] | null; hero_video_url: string | null;
+  region?: string | null; included_services?: string[] | null;
+}
 
 /** Spanish package lines (Kitesurfexperience, Santa Veronica) -> what the fixed adapter writes now. */
 export const SERVICE_FIXES: Array<[string, string]> = [
@@ -285,13 +301,23 @@ export function planPackageFix(p: PackageRow): FixEntry {
     });
     put('optional_services', next, 'research note or Spanish text in optional services');
   }
+  // plain hyphens in every shown text field (after the edits above)
+  for (const f of ['title', 'region', 'summary', 'accommodation'] as const) {
+    const now = (set[f]?.after as string | null | undefined) ?? p[f];
+    const next = plainDashes(now);
+    if (next !== now) put(f, next, 'plain hyphens');
+  }
+  for (const f of ['included_services', 'optional_services'] as const) {
+    const now = (set[f]?.after as string[] | undefined) ?? p[f];
+    if (now?.some(x => /[–—]/.test(x))) put(f, now.map(plainDashes), 'plain hyphens');
+  }
   return { table: 'package_offers', id: p.id, label: `${p.title} (${p.id.slice(0, 8)})`, set, why };
 }
 
 // --- runner ---------------------------------------------------------------------------------
 
-const CRUISE_COLS = 'id, slug, title, country, countries, region, continent, itinerary_spots, dates, pricing, price_from_eur, currency, price_pp_cabin, price_pp_cabin_currency, price_basis_note, season_text, price_charter_week, price_charter_week_currency, duration_days';
-const PACKAGE_COLS = 'id, title, summary, accommodation, optional_services, hero_video_url';
+const CRUISE_COLS = 'id, slug, title, country, countries, region, continent, itinerary_spots, dates, pricing, price_from_eur, currency, price_pp_cabin, price_pp_cabin_currency, price_basis_note, season_text, price_charter_week, price_charter_week_currency, duration_days, summary, accommodation, included_services, optional_services';
+const PACKAGE_COLS = 'id, title, summary, accommodation, optional_services, hero_video_url, region, included_services';
 
 const show = (v: unknown): string => {
   const s = typeof v === 'string' ? JSON.stringify(v) : JSON.stringify(v ?? null);

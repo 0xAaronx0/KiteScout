@@ -7,7 +7,8 @@ import { fetchPageConditional } from '../lib/fetchPage.js';
 import { htmlToText, collapse, contentHash, sanitizeForPg, sanitizeDeep } from '../lib/content.js';
 import { withRetry } from '../lib/retry.js';
 import { continentForOffer } from '../lib/continents.js';
-import { upcomingDepartures } from './cruise-state.js';
+import { storedDepartures } from './cruise-state.js';
+import { plainDashes } from '../lib/offer-text.js';
 import { isPerNightAmount, type Pricing } from './cruise-fixes.js';
 import { discoverImageUrls, curateAndStoreImages, slugify, type StoredImage } from '../lib/images.js';
 import { discoverSiteUrls, PAGE_VALUE_RE } from '../lib/crawl.js';
@@ -900,13 +901,13 @@ async function processProvider(cp: {
 
     const row = {
       cruise_provider_id: cp.id,
-      title: offer.title,
+      title: plainDashes(offer.title),
       slug,
       source_url: srcUrl,
       source_text: srcPage?.text ? sanitizeForPg(srcPage.text) : null,
       continent,
       country: offer.country ?? null,
-      region: offer.region ?? null,
+      region: plainDashes(offer.region ?? null),
       countries: Array.isArray(offer.countries) ? offer.countries.filter(c => typeof c === 'string') : [],
       departure_port: offer.departure_port ?? null,
       itinerary_spots: keptSpots,
@@ -917,22 +918,22 @@ async function processProvider(cp: {
       kite_lessons: cleanBool(offer.kite_lessons),
       equipment_rental: cleanBool(offer.equipment_rental),
       ...seasonUpsertColumns(
-        bestSeason ? bestSeason.text : (offer.season_text ?? null),
+        plainDashes(bestSeason ? bestSeason.text : (offer.season_text ?? null)),
         bestSeason ? bestSeason.start : cleanMonth(offer.season_start_month),
         bestSeason ? bestSeason.end : cleanMonth(offer.season_end_month),
       ),
       duration_days: cleanInt(offer.duration_days),
-      dates: upcomingDepartures(offer.dates, new Date().toISOString().slice(0, 10)),
+      dates: storedDepartures(offer.dates),
       pricing: offer.pricing ?? null,
       // a per-night amount is no trip price ("on request", Aaron 2026-10-28)
       price_from_eur: isPerNightAmount(offer.pricing as Pricing, cleanInt(offer.price_from_eur)) ? null : cleanInt(offer.price_from_eur),
       currency: offer.currency ?? null,
-      summary: offer.summary ?? null,
+      summary: plainDashes(offer.summary ?? null),
       skill_levels: cleanStrArray(offer.skill_levels, SKILL_LEVELS),
       water_conditions: cleanStrArray(offer.water_conditions, WATER_CONDITIONS),
       wind_strength: cleanStrArray(offer.wind_strength, WIND_STRENGTHS),
-      included_services: cleanStrArray(offer.included_services),
-      optional_services: cleanStrArray(offer.optional_services),
+      included_services: cleanStrArray(offer.included_services).map(plainDashes),
+      optional_services: cleanStrArray(offer.optional_services).map(plainDashes),
       disciplines: cruiseDisciplines({
         title: offer.title, summary: offer.summary ?? null,
         included_services: cleanStrArray(offer.included_services), optional_services: cleanStrArray(offer.optional_services),
@@ -940,7 +941,7 @@ async function processProvider(cp: {
       comfort_level: cleanEnum(offer.comfort_level, COMFORT_LEVELS),
       suitable_for_non_kiters: cleanBool(offer.suitable_for_non_kiters),
       family_friendly: cleanBool(offer.family_friendly),
-      accommodation: cleanStr(offer.accommodation),
+      accommodation: plainDashes(cleanStr(offer.accommodation)),
       meal_plan: cleanEnum(offer.meal_plan, MEAL_PLANS),
       capacity_guests: cleanInt(offer.capacity_guests),
       cabin_count: cleanInt(offer.cabin_count),
@@ -1096,17 +1097,17 @@ function reviewShape(o: ExtractedOffer, slug: string, sourceUrl: string) {
   return {
     slug,
     sourceUrl,
-    title: o.title,
+    title: plainDashes(o.title),
     country: o.country ?? null,
-    region: o.region ?? null,
+    region: plainDashes(o.region ?? null),
     price_from_eur: cleanInt(o.price_from_eur),
     currency: o.currency ?? null,
     duration_days: cleanInt(o.duration_days),
-    season_text: o.season_text ?? null,
+    season_text: plainDashes(o.season_text ?? null),
     vessel_name: cleanStr(o.vessel_name),
     vessel_type: cleanVesselType(o.vessel_type),
     booking_modes: cleanBookingModes(o.booking_modes).slice().sort(),
-    summary: o.summary ?? null,
+    summary: plainDashes(o.summary ?? null),
     spots: (o.itinerary_spots ?? []).map(s => (s.name ?? '').trim()).filter(Boolean),
     dates: normalizeDates(o.dates),
     datesRaw: (o.dates ?? null) as unknown,

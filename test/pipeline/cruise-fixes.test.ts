@@ -8,7 +8,8 @@ const row = (over: Partial<CruiseRow>): CruiseRow => ({
   id: '00000000-0000-0000-0000-000000000000', slug: 's', title: 'T', country: 'Egypt', countries: ['Egypt'], region: 'Red Sea',
   continent: 'Africa', itinerary_spots: null, dates: null, pricing: null, price_from_eur: null, currency: 'EUR', price_pp_cabin: null,
   price_pp_cabin_currency: null, price_basis_note: null, season_text: null,
-  price_charter_week: null, price_charter_week_currency: null, duration_days: null, ...over,
+  price_charter_week: null, price_charter_week_currency: null, duration_days: null,
+  summary: null, accommodation: null, included_services: null, optional_services: null, ...over,
 });
 
 test('derivePerPerson: skips upgrades, courses, rental, meals and per-night options', () => {
@@ -56,7 +57,7 @@ test('planCruiseFix: Kiteme gear rental -> trip price; null and 2025 dates dropp
     dates: [{ price: 1750, status: null, currency: 'EUR', end_date: null, start_date: null }, { price: 1600, status: 'available', currency: 'EUR', end_date: null, start_date: '2025-05-01' }],
   }), TODAY);
   assert.deepEqual(e.set.price_pp_cabin, { before: 450, after: 1600 });
-  assert.equal(e.set.dates.after, null);
+  assert.deepEqual(e.set.dates.after, [{ price: 1600, status: 'available', currency: 'EUR', end_date: null, start_date: '2025-05-01' }]); // past kept, empty row gone
   assert.match(e.why.join(' '), /add-on\/upgrade/);
 });
 
@@ -176,4 +177,18 @@ test('isPerNightAmount: the extraction guard behind "on request" (Aaron 2026-10-
   assert.equal(isPerNightAmount({ raw: '179 € pro Person / Nacht ab, Preis für eine 14-tägige Reise' }, 2506), false); // the trip price stays
   assert.equal(isPerNightAmount({ raw: 'From €1750 /pers – 8 days / 7 nights' }, 1750), false);
   assert.equal(isPerNightAmount({ raw: 'ab 249.- € pro Person pro Nacht' }, null), false);
+});
+
+test('plain hyphens in shown text; plainDashes', async () => {
+  const { plainDashes } = await import('../../src/lib/offer-text.js');
+  assert.equal(plainDashes('Kite & Sail Caribbean – High Season'), 'Kite & Sail Caribbean - High Season');
+  assert.equal(plainDashes('April–October'), 'April-October');
+  assert.equal(plainDashes(null), null);
+  const e = planCruiseFix(row({ title: 'Red Sea Kite Safari – 8 Days', season_text: 'April–October', optional_services: ['Gear – on request', 'SUP'] }), TODAY);
+  assert.deepEqual([e.set.title.after, e.set.season_text.after, e.set.optional_services.after], ['Red Sea Kite Safari - 8 Days', 'April-October', ['Gear - on request', 'SUP']]);
+  // a translation and the dash pass compose: the source title had a dash, the result has none
+  const k = planCruiseFix(row({ id: '7bf8639b-0000-0000-0000-000000000000', title: 'Kitesafari nach Wunsch – Custom Red Sea Safari' }), TODAY);
+  assert.deepEqual(k.set.title, { before: 'Kitesafari nach Wunsch – Custom Red Sea Safari', after: 'Custom Red Sea Kite Safari' });
+  const p = planPackageFix({ id: 'p', title: 'Camp – Week', hero_video_url: null, accommodation: null, summary: null, optional_services: ['A – B'] });
+  assert.deepEqual([p.set.title.after, p.set.optional_services.after], ['Camp - Week', ['A - B']]);
 });

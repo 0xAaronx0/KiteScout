@@ -35,3 +35,9 @@ export function isPlayableVideoUrl(url: string | null | undefined): boolean {
   if (VIDEO_PAGE_HOSTS.test(u.hostname)) return false;
   return VIDEO_FILE.test(u.pathname);
 }
+
+/** En/em dashes -> plain hyphens in text we write (Aaron 2026-08-06: no dashes in anything user-visible). */
+export function plainDashes<T extends string | null | undefined>(text: T): T {
+  if (!text) return text;
+  return text.replace(/\s+[–—]\s+/g, ' - ').replace(/[–—]/g, '-') as T;
+}
