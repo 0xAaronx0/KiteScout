@@ -4,23 +4,21 @@
 // beach club and restaurant, with its own kite
 // school (IKO certified instructors, lessons in English, Spanish, German and French; CORE equipment).
 //
-// Data path (checked 2026-10-14): WordPress site chilochill.com, English pages.
-//   content  /en/ (intro, glamping types, address), /en/experiences/ (kitesurf school text, packages),
-//            /glamping (tent types "Single King" / "Double Queen" with text), /kitesurf (school prices, packages).
-//   slots    /kitesurf "Packages Kitesschool": blocks "<N> DAY PACKAGE" / "KITE & BED" / "Lodging for 2 people
-//            glamping king size bed, <n> nights <d> days." / lesson hours / "PRICE: $25,150°° MXN". A package
-//            becomes a slot only when the page states its length consistently (heading days = body days =
-//            nights + 1). On 2026-10-14 the "4 DAY PACKAGE" says "6 nights 7 days" in its body -> left out
-//            (noted), only the 3-day package (2 nights) is a slot. Glamping nightly rates are not printed on the
-//            site; the booking engine is eZee (live.ipms247.com), which answers HTTP 403 to our UA even for
-//            robots.txt (2026-10-14) and loads rates client-side -> not used.
-// Liveness: the kitesurf page carries photos uploaded 2026/01 and 2026/02 (2026 site edit); no year on the prices.
-// robots.txt (2026-10-14): chilochill.com disallows /wp-admin/ only. The home page's Google Maps embed is by name
-//   only (no coordinates) -> no spotCoords.
-// Requests per run: content 4, slots 1 (the /kitesurf page, memoised within a run).
-// Parsed: slot = package without dates, MXN per package for 2 people sharing a king glamping tent
-//   (priceUnit 'package', priceBasis 'room', occupancy 2, packageNights = nights), availability 'unknown'
-//   (the page says nothing; "Book now" goes to the eZee engine). Kite lesson prices (MXN) go to optionalServices.
+// Data path (checked 2026-10-28, after the site moved from WordPress to a Next.js build; the old /kitesurf and
+// /glamping pages answer 404, which turned the daily slots job red):
+//   content  /en/ (intro, reservation box), /en/kitesurf/ (school: IKO, languages, 3 / 6 / 9 / 12 h lesson formats,
+//            wing and tow foil), /en/packages/kite-and-stay/ ("Kite & Stay": glamping + lessons, quote on request),
+//            /en/king/ and /en/double-queen/ (tent pages: beds, private bathroom with hot shower, Wi-Fi, photos).
+//   slots    none since the relaunch: lessons ("Our team will confirm current lesson options ... and rates") and the
+//            Kite & Stay package ("Request a package quote ... rates are confirmed for your dates") are on request;
+//            the glamping rates live in the eZee engine (live.ipms247.com), which answers HTTP 403 to our UA
+//            (2026-10-14) -> price on request. The old "<N> DAY PACKAGE ... PRICE: $25,150 MXN" parser stays, so priced
+//            package blocks are picked up again if the site prints them.
+// Liveness guard: fetchSlots throws when the Kite & Stay page no longer names the package.
+// robots.txt (2026-10-28): Allow /, Disallow /admin/, /api/, /agent/. Photos: the site's own Vercel Blob store
+//   (originals; the 400x280 thumbnails, the /assets/optimized AVIF copies and the wordmark are dropped).
+//   No coordinates on the site -> no spotCoords.
+// Requests per run: content 5, slots 1 (the package page, memoised within a run).
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { collapse, imageCandidates, parse, parseAmount } from '../parse.js';
@@ -28,9 +26,10 @@ import type { ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from
 
 const SITE = 'https://chilochill.com';
 export const CC_HOME_URL = `${SITE}/en/`;
-export const CC_EXPERIENCES_URL = `${SITE}/en/experiences/`;
-export const CC_GLAMPING_URL = `${SITE}/glamping`;
-export const CC_KITE_URL = `${SITE}/kitesurf`;
+export const CC_KITE_URL = `${SITE}/en/kitesurf/`;
+export const CC_PACKAGE_URL = `${SITE}/en/packages/kite-and-stay/`;
+export const CC_KING_URL = `${SITE}/en/king/`;
+export const CC_QUEEN_URL = `${SITE}/en/double-queen/`;
 const BOOKING_URL = 'https://live.ipms247.com/booking/book-rooms-chilochillglampingresort';
 
 // --- local helpers ---------------------------------------------------------------------------
@@ -122,64 +121,62 @@ export function buildCcSlots(pkgs: CcPackage[], ctx?: FetchContext): Slot[] {
   return out;
 }
 
-/** "Full course 12Hrs." + "$19,200 MXN" pairs of the kite school price list. */
-export function parseCcLessons(html: string): string[] {
-  const lines = ccLines(html);
-  const i = lines.findIndex(l => /^PROFESSIONAL KITESCHOOL$/i.test(l));
-  const end = lines.findIndex(l => /^Packages Kite/i.test(l));
-  if (i < 0 || end < i) return [];
-  const out: string[] = [];
-  for (let j = i + 1; j < end - 1; j++) {
-    if (/Hrs?\.?$/i.test(lines[j]) && /MXN/i.test(lines[j + 1])) {
-      out.push(`${lines[j].replace(/\.$/, '').replace(/(\d+)Hrs/i, '$1 h').replace(/^For Hr$/i, 'Per hour')}: ${lines[j + 1].replace(/\$\s?([\d,]+)\s*MXN/g, 'MXN $1')}`);
-      j++;
-    }
+/** Lesson formats on /en/kitesurf/ since the relaunch: "3 h" / "6 h" ... each "Build your session plan" (no prices). */
+export function parseCcLessonFormats(html: string): number[] {
+  const out: number[] = [];
+  for (const l of ccLines(html)) {
+    const m = l.match(/^(\d{1,2})\s*h$/i);
+    if (m && !out.includes(Number(m[1]))) out.push(Number(m[1]));
   }
-  return out;
+  return out.sort((a, b) => a - b);
+}
+
+/** One tent page (/en/king/, /en/double-queen/): name, bed / bathroom tags, description. */
+export function parseCcTent(html: string): ContentRoom | null {
+  const lines = ccLines(html);
+  const name = lines.find(l => /^(King|Double Queen) Glamping$/i.test(l));
+  if (!name) return null;
+  const tags = lines.filter(l => /^(\d+\s+(KING|QUEEN)\s+BEDS?|PRIVATE BATHROOM|WIFI)$/i.test(l));
+  const desc = lines.find(l => /^A (private escape|comfortable base)/i.test(l)) ?? null;
+  const features = [...new Set(tags.map(t => t.toLowerCase().replace(/^\w/, c => c.toUpperCase()).replace(/wifi/i, 'Wi-Fi')))];
+  if (desc && /two queen beds/i.test(desc) && !features.some(f => /queen bed/i.test(f))) features.unshift('2 queen beds');
+  if (lines.some(l => /own bathroom, a hot shower/i.test(l)) && !features.includes('Hot shower')) features.push('Hot shower');
+  return { name: `${name.replace(/ Glamping$/i, '')} glamping tent`, description: desc, features };
 }
 
 // --- content -------------------------------------------------------------------------------------
-export interface CcPages { home: string; experiences: string; glamping: string; kite: string }
+export interface CcPages { home: string; kite: string; packagePage: string; king: string; queen: string }
 
-export function parseCcTents(html: string): ContentRoom[] {
-  const lines = ccLines(html);
-  const out: ContentRoom[] = [];
-  lines.forEach((l, i) => {
-    if (/^(Single King|Double Queen)$/i.test(l) && lines[i + 1] && !/^Book/i.test(lines[i + 1])) {
-      out.push({ name: `Glamping tent ${l}`, description: lines[i + 1], features: ['Private bathroom with outdoor hot shower', 'Wi-Fi'] });
+/** Photos from the own Vercel Blob store: originals only, no thumbnails / AVIF copies / logo. */
+export function ccImages(p: CcPages): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  const pages: Array<[string, string]> = [[p.packagePage, CC_PACKAGE_URL], [p.kite, CC_KITE_URL], [p.home, CC_HOME_URL], [p.king, CC_KING_URL], [p.queen, CC_QUEEN_URL]];
+  for (const [html, base] of pages) {
+    for (const raw of imageCandidates(html, base, null, 40)) {
+      if (!/blob\.vercel-storage\.com\/chilochill\//.test(raw)) continue;
+      if (/logo|wordmark|favicon|icon/i.test(raw)) continue;
+      const u = raw.replace(/-\d{2,4}x\d{2,4}(?=\.(?:webp|jpe?g|png|avif)$)/i, '');
+      if (seen.has(u)) continue;
+      seen.add(u); out.push(u);
     }
-  });
+  }
   return out;
 }
 
-export function parseChilochillContent(p: CcPages, ctx?: FetchContext): OfferContent {
+export function parseChilochillContent(p: CcPages): OfferContent {
   const home = ccLines(p.home);
-  const exp = ccLines(p.experiences);
   const kite = ccLines(p.kite);
-  const pkgs = parseCcPackages(p.kite);
-  const lessons = parseCcLessons(p.kite);
-  const rooms = parseCcTents(p.glamping);
-  const ok = pkgs.filter(x => x.consistent && x.price);
-  const years = exp.join(' ').match(/With (\d+) years of experience in teaching kitesurfing/i)?.[1] ?? null;
-  const langs = kite.find(l => /IKO certified instructors classes in/i.test(l)) ?? '';
-
-  if (rooms[0]) {
-    for (const x of ok) rooms[0].features.push(`Kite & Bed ${x.headingDays}-day package: ${x.nights} nights for ${x.guests ?? 2} people with ${x.lessonHours} h of kite lessons for 1 person, MXN ${x.price!.toLocaleString('en-US')}`);
-  }
-
-  const seen = new Set<string>();
-  const imageUrls: string[] = [];
-  for (const raw of [...imageCandidates(p.home, CC_HOME_URL, null, 30), ...imageCandidates(p.kite, CC_KITE_URL, null, 20), ...imageCandidates(p.glamping, CC_GLAMPING_URL, null, 20), ...imageCandidates(p.experiences, CC_EXPERIENCES_URL, null, 30)]) {
-    const u = raw.replace(/^http:\/\//, 'https://');
-    if (/\.svg|logo|icon|Artboard|favicon|play_|tiktok_/i.test(u)) continue;
-    if (seen.has(u)) continue;
-    seen.add(u); imageUrls.push(u);
-  }
+  const pack = ccLines(p.packagePage);
+  const formats = parseCcLessonFormats(p.kite);
+  const rooms = [parseCcTent(p.king), parseCcTent(p.queen)].filter((r): r is ContentRoom => r !== null);
+  const langs = kite.find(l => /instruction in English, Spanish, German or French/i.test(l)) ?? '';
+  const iko = kite.some(l => /IKO-certified/i.test(l));
 
   const summary = [
-    'Chilochill is a beach glamping resort in La Ventana, Baja California Sur, on the Sea of Cortez facing Cerralvo Island, with private glamping tents (Single King or Double Queen, each with its own bathroom and an outdoor hot shower), a beach club and a Mexican restaurant.',
-    `Its own kite school${years ? ` (${years} years of teaching)` : ''} has IKO certified instructors teaching in English, Spanish, German and French on CORE equipment; lessons are open to guests and non-guests.`,
-    ok.length ? `Kite & Bed packages combine the glamping stay with lessons, from MXN ${Math.min(...ok.map(x => x.price!)).toLocaleString('en-US')} for ${ok[0].nights} nights for two people.` : 'Glamping and kite packages are priced on request.',
+    'Chilochill is a beach glamping resort in La Ventana, Baja California Sur, on the Sea of Cortez, with glamping tents (King or Double Queen, each with its own bathroom, hot shower and Wi-Fi), a beach club and a restaurant.',
+    `Its own kite school${iko ? ' has IKO-certified instructors' : ''}${/German/i.test(langs) ? ', teaching in English, Spanish, German or French,' : ''} and offers lessons for beginners to advanced riders${formats.length ? ` (${formats.map(h => `${h} h`).join(', ')} formats)` : ''}, plus wing foil and tow foil sessions; non-guests can join too.`,
+    'Kite & Stay packages combine the glamping stay with lessons; nights, lesson hours, meals and equipment are quoted on request, and glamping rates are shown in the resort\'s reservation system.',
   ].join(' ');
 
   return {
@@ -196,28 +193,34 @@ export function parseChilochillContent(p: CcPages, ctx?: FetchContext): OfferCon
     kiteLessons: true,
     equipmentRental: true,
     beginnerFriendly: true,
-    includedServices: ['Wi-Fi', 'Breakfast in the Kite & Bed packages', 'Use of paddleboard, kayak and snorkel equipment (Kite & Bed packages)'],
+    includedServices: ['Wi-Fi', 'Private bathroom with hot shower'],
     optionalServices: [
-      ...lessons.map(l => `Kite lessons, ${l}`),
-      'E-bike tours (Santa Cruz e-bikes)',
-      'Seafari and fishing tours',
+      ...(formats.length ? [`Kite lessons, ${formats.map(h => `${h} h`).join(' / ')} (price on request)`] : ['Kite lessons (price on request)']),
+      'Kite & Stay package: glamping + lessons, quote on request',
+      'Wing foil and tow foil sessions',
+      'Desert ride, sea safari, fishing, paddle and kayak tours',
       'Restaurant and beach club',
     ],
     accommodation: 'beach glamping tents with private bathroom',
     mealPlan: null,
     languages: /German/i.test(langs) ? ['en', 'es', 'de', 'fr'] : ['en', 'es'],
     rooms,
-    imageUrls: imageUrls.slice(0, 30),
+    imageUrls: ccImages(p).slice(0, 30),
     heroVideoUrl: null,
-    sourceUrl: CC_KITE_URL,
+    sourceUrl: CC_PACKAGE_URL,
     bookingUrl: BOOKING_URL,
     sourceText: [
       `home: ${home.join(' ')}`,
       `kitesurf: ${kite.join(' ')}`,
-      `experiences: ${exp.filter(l => /kite|CORE|IKO|glamping/i.test(l)).join(' ')}`,
-      `packages: ${pkgs.map(x => `${x.headingDays} DAY: ${x.nights}n/${x.days}d ${x.price} ${x.currency} ${x.consistent ? 'ok' : 'INCONSISTENT'}`).join('; ')}`,
+      `kite & stay: ${pack.join(' ')}`,
+      `tents: ${rooms.map(r => `${r.name} (${r.features.join(', ')})`).join('; ')}`,
     ].join('\n'),
   };
+}
+
+/** Liveness guard: the package page still names "Kite & Stay". */
+export function ccHasKiteAndStay(html: string): boolean {
+  return ccLines(html).some(l => /^Kite & Stay$/i.test(l));
 }
 
 export const chilochillLaVentana: OfferAdapter = {
@@ -232,21 +235,22 @@ export const chilochillLaVentana: OfferAdapter = {
     whatsapp: '+52 612 200 3779',
     phone: '+52 612 200 3779',
   },
-  url: CC_KITE_URL,
+  url: CC_PACKAGE_URL,
   slotMethod: 'price_table',
-  instantBooking: true,
-  fetchBudget: 5,
-  confidence: 'medium',
-  async fetchContent(ctx) {
-    const home = await page(CC_HOME_URL);
-    const experiences = await page(CC_EXPERIENCES_URL);
-    const glamping = await page(CC_GLAMPING_URL);
-    const kite = await page(CC_KITE_URL);
-    return parseChilochillContent({ home, experiences, glamping, kite }, ctx);
+  instantBooking: true, // the glamping tents book online in the eZee engine ("Open reservations")
+  fetchBudget: 6,
+  confidence: 'low',
+  async fetchContent() {
+    const [home, kite, packagePage, king, queen] = [
+      await page(CC_HOME_URL), await page(CC_KITE_URL), await page(CC_PACKAGE_URL), await page(CC_KING_URL), await page(CC_QUEEN_URL),
+    ];
+    return parseChilochillContent({ home, kite, packagePage, king, queen });
   },
   async fetchSlots(ctx) {
-    const pkgs = parseCcPackages(await page(CC_KITE_URL));
-    if (pkgs.length === 0) throw new Error('chilochill: no "DAY PACKAGE" block on /kitesurf (layout changed?)');
-    return buildCcSlots(pkgs, ctx);
+    const html = await page(CC_PACKAGE_URL);
+    if (!ccHasKiteAndStay(html)) throw new Error('chilochill: "Kite & Stay" no longer on /en/packages/kite-and-stay/ (layout changed or package gone?)');
+    const slots = buildCcSlots(parseCcPackages(html), ctx);
+    if (slots.length === 0) ctx.note('chilochill: no prices on the own site since the 2026-10 relaunch (lessons and Kite & Stay quoted on request, glamping rates only in the eZee engine): price on request');
+    return slots;
   },
 };
