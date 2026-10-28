@@ -199,11 +199,15 @@ export interface PlanRow {
   previous?: number[] | null;
   /** season-region: where the wind came from (stored in season_evidence). */
   wind_source?: string | null;
+  /** season-region: the page's own months behind a page_region cut (kept in season_evidence across re-runs). */
+  page_months?: number[] | null;
+  /** season-region: storm-season cut (zone, removed months, months kept because an explicit offer runs then). */
+  storm?: { zone: string; removed: number[]; kept: number[] } | null;
   error?: string;
 }
 
 /** What `apply` stores next to the months, so a later --recheck knows what it wrote and from where. */
-export interface SeasonEvidence { source: 'season-extract'; months: number[]; quote: string | null; url: string | null; basis: string; checked_at: string; page_months?: number[]; wind_source?: string }
+export interface SeasonEvidence { source: 'season-extract'; months: number[]; quote: string | null; url: string | null; basis: string; checked_at: string; page_months?: number[]; wind_source?: string; storm?: { zone: string; removed: number[]; kept: number[] } }
 
 const db = async () => (await import('../lib/supabase.js')).supabase;
 
@@ -451,7 +455,8 @@ export async function applySeasonPlan(opts: ApplyOpts & { from: string; dryRun?:
     const evidence: SeasonEvidence | null = opts.revert ? null : {
       source: 'season-extract', months: sorted(months), quote: row.extraction?.evidence_quote ?? null, url: row.source_url,
       basis: row.decision.write ? row.decision.kind : `approved:${row.decision.reason}`, checked_at: today,
-      ...(row.decision.write && row.decision.kind === 'page_region' && row.previous ? { page_months: sorted(row.previous) } : {}),
+      ...(row.decision.write && row.decision.kind === 'page_region' && (row.page_months ?? row.previous) ? { page_months: sorted((row.page_months ?? row.previous)!) } : {}),
+      ...(row.storm?.removed.length ? { storm: row.storm } : {}),
       ...(row.wind_source ? { wind_source: row.wind_source } : {}),
     };
     let q = supabase.from(row.catalog_source).update({ ...seasonPatch(row.catalog_source, opts.revert ? [] : months), season_evidence: evidence }).eq('id', row.offer_id);

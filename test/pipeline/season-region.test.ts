@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { climateSeason, pickWind, proposeRegionSeason, distanceKm, regionOverride, AIR_MIN_C, WIND_MIN_PCT } from '../../src/pipeline/season-region.js';
+import { climateSeason, pickWind, proposeRegionSeason, distanceKm, regionOverride, stormZone, stormCut, tripMonths, explicitCruiseSeason, AIR_MIN_C, WIND_MIN_PCT } from '../../src/pipeline/season-region.js';
 
 // Live climate rows (2026-10-28) for the examples Aaron named.
 const baltic = { air: [4, 6, 8, 12, 17, 21, 22, 23, 19, 14, 8, 5], wind: [null, null, null, 55, 55, 55, 50, 50, 70, 70, null, null] };
@@ -62,4 +62,41 @@ test('North and Baltic Sea: fixed April-October (Aaron 2026-10-28), cutting a ye
   const fixed = regionOverride('Germany')!.months;
   assert.deepEqual(proposeRegionSeason({ type: 'accommodation', snow: false, known: true, current: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], evidenceBasis: 'year_round', climate: fixed, pageWind: null }), { months: fixed, basis: 'page_region' });
   assert.deepEqual(proposeRegionSeason({ type: 'accommodation', snow: false, known: true, current: [3, 4, 5, 6, 7, 8, 9, 10], evidenceBasis: 'range', climate: fixed, pageWind: null }), { months: fixed, basis: 'page_region' });
+});
+
+test('storm zones: Caribbean/Gulf/US east coast and Baja without Aug-Oct, West Pacific typhoons, southern cyclones Jan-Mar', () => {
+  assert.equal(stormZone('Antigua and Barbuda', 17, -61.8)?.label, 'Atlantik-Hurrikan');
+  assert.equal(stormZone('United States', 35.3, -75.5)?.label, 'Atlantik-Hurrikan', 'Hatteras');
+  assert.equal(stormZone('United States', 42.9, -124.5), null, 'Oregon');
+  assert.equal(stormZone('United States', 20.9, -156.4), null, 'Maui');
+  assert.equal(stormZone('Mexico', 24.0, -109.9)?.label, 'Ostpazifik-Hurrikan', 'La Ventana');
+  assert.equal(stormZone('Mexico', 21.4, -86.8)?.label, 'Atlantik-Hurrikan', 'Quintana Roo');
+  assert.equal(stormZone('Japan', 24.8, 125.3)?.label, 'Taifun');
+  assert.equal(stormZone('Australia', -23.9, 113.5)?.label, 'Zyklon Süd', 'Gnaraloo');
+  assert.equal(stormZone('Australia', -35.1, 137.8), null, 'South Australia');
+  assert.equal(stormZone('Bonaire', 12.2, -68.3), null, 'outside the hurricane belt');
+});
+
+test('storm cut keeps months an explicit offer contradicts and never empties a season', () => {
+  const all = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  assert.deepEqual(stormCut(all, [8, 9, 10], new Set()), [1, 2, 3, 4, 5, 6, 7, 11, 12]);
+  assert.deepEqual(stormCut(all, [8, 9, 10], new Set([8])), [1, 2, 3, 4, 5, 6, 7, 8, 11, 12]);
+  assert.deepEqual(stormCut([9, 10], [8, 9, 10], new Set()), [9, 10]);
+});
+
+test('re-run: a written climate season is recomputed, a page_region cut starts again from the page months', () => {
+  const base = { type: 'accommodation' as const, snow: false, known: true, pageWind: null };
+  assert.deepEqual(proposeRegionSeason({ ...base, current: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], evidenceBasis: 'region_inferred', climate: [1, 2, 3, 4, 5, 6, 7, 11, 12] }), { months: [1, 2, 3, 4, 5, 6, 7, 11, 12], basis: 'region_inferred' });
+  assert.equal(proposeRegionSeason({ ...base, current: [5, 6], evidenceBasis: 'region_inferred', climate: [6, 5] }), null, 'unchanged');
+  assert.deepEqual(proposeRegionSeason({ ...base, current: [1, 2, 6, 7, 8, 9, 10, 11, 12], evidenceBasis: 'page_region', climate: [1, 2, 3, 4, 5, 6, 7, 11, 12], pageMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] }), { months: [1, 2, 3, 4, 5, 6, 7, 11, 12], basis: 'page_region' });
+  assert.equal(proposeRegionSeason({ ...base, current: [4, 5], evidenceBasis: 'page_wind', climate: [5] }), null, 'a page wind window is never recomputed');
+});
+
+test('contradiction evidence: trips up to 45 days count, long availability windows and booking periods do not', () => {
+  assert.deepEqual(tripMonths([{ start_date: '2026-08-28', end_date: '2026-09-04' }, { start_date: '2027-02-07', end_date: '2027-02-14' }]), [2, 8, 9]);
+  assert.deepEqual(tripMonths([{ start_date: '2027-05-01', end_date: '2028-12-31' }]), [], 'availability window');
+  assert.deepEqual(tripMonths([{ start_date: '2026-09-01', end_date: '2026-09-08', status: 'cancelled' }]), []);
+  assert.deepEqual(explicitCruiseSeason('December to August (strongest winds March to July)', 12, 8), [1, 2, 3, 4, 5, 6, 7, 8, 12]);
+  assert.deepEqual(explicitCruiseSeason(null, 4, 1), [], 'an extracted season without text');
+  assert.deepEqual(explicitCruiseSeason('May 1 2027 – Dec 31 2028', 5, 12), [], 'a booking period over several years');
 });

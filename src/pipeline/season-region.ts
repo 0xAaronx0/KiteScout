@@ -99,22 +99,104 @@ export function pickWind(country: string | null, lat: number, lng: number, regio
 const sortNum = (m: number[]) => [...new Set(m)].sort((a, b) => a - b);
 
 /**
+ * Storm seasons (Aaron 2026-10-28: Caribbean kite cruises don't run in the hurricane season; "wo immer wir nicht
+ * irgendwelche Angebote finden, die explizit dieser Regel widersprechen, bitte diese Regeln umsetzen"). Peak months
+ * only. They cut climate-derived seasons (region_inferred, page_region), never a page season or dated trips; a
+ * storm month that an explicit offer in the same zone and country runs in stays (see stormContradictions).
+ */
+export const STORM_ZONES: Array<{ label: string; months: number[]; inZone: (country: string, lat: number | null, lng: number | null) => boolean }> = [
+  {
+    label: 'Atlantik-Hurrikan', months: [8, 9, 10],
+    inZone: (c, lat, lng) => ['antigua and barbuda', 'bahamas', 'british virgin islands', 'us virgin islands', 'grenada', 'saint vincent and the grenadines',
+      'saint martin', 'sint maarten', 'turks and caicos islands', 'dominican republic', 'puerto rico', 'barbados', 'cuba', 'jamaica', 'martinique',
+      'guadeloupe', 'saint lucia', 'dominica', 'cayman islands', 'belize', 'honduras', 'haiti', 'anguilla', 'saint kitts and nevis', 'bermuda'].includes(c)
+      || (c === 'mexico' && lng != null && lng > -92)
+      || (c === 'united states' && lat != null && lng != null && lng > -100 && lat < 37),
+  },
+  { label: 'Ostpazifik-Hurrikan', months: [8, 9, 10], inZone: (c, _lat, lng) => c === 'mexico' && lng != null && lng <= -100 },
+  {
+    label: 'Taifun', months: [8, 9, 10],
+    inZone: (c, lat) => ['philippines', 'taiwan', 'hong kong', 'south korea'].includes(c) || (c === 'japan' && lat != null && lat < 36) || (c === 'china' && lat != null && lat < 30),
+  },
+  {
+    label: 'Zyklon Süd', months: [1, 2, 3],
+    inZone: (c, lat) => ['fiji', 'tonga', 'vanuatu', 'new caledonia', 'french polynesia', 'cook islands', 'samoa', 'madagascar', 'mauritius', 'reunion', 'mozambique'].includes(c)
+      || (c === 'australia' && lat != null && lat > -26),
+  },
+];
+
+export function stormZone(country: string | null, lat: number | null, lng: number | null) {
+  const c = (country ?? '').toLowerCase();
+  return STORM_ZONES.find(z => z.inZone(c, lat, lng)) ?? null;
+}
+
+/** Remove the zone's storm months unless an explicit offer contradicts them; never cut a season to nothing. */
+export function stormCut(months: number[], storm: number[], contradicted: Set<number>): number[] {
+  const cut = months.filter(m => !(storm.includes(m) && !contradicted.has(m)));
+  return cut.length ? cut : months;
+}
+
+export const CONTRA_MAX_KM = 300;
+export const TRIP_MAX_DAYS = 45;
+
+/**
+ * Months touched by trip-like dated slots (at most TRIP_MAX_DAYS long, past or future, not unavailable). A long
+ * availability window ("May 2027 - Dec 2028") says nothing about the storm months (Aaron 2026-10-28).
+ */
+export function tripMonths(dates: unknown): number[] {
+  if (!Array.isArray(dates)) return [];
+  const out = new Set<number>();
+  for (const slot of dates) {
+    const { start_date: a, end_date: b, status } = (slot ?? {}) as Record<string, unknown>;
+    if (typeof status === 'string' && /cancel|closed|unavailable/i.test(status)) continue;
+    const start = typeof a === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(a) ? new Date(`${a}T00:00:00Z`) : null;
+    if (!start) continue;
+    const end = typeof b === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(b) ? new Date(`${b}T00:00:00Z`) : start;
+    if (end < start || (end.getTime() - start.getTime()) / 86400000 > TRIP_MAX_DAYS) continue;
+    for (const d = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), 1)); d <= end; d.setUTCMonth(d.getUTCMonth() + 1)) out.add(d.getUTCMonth() + 1);
+  }
+  return [...out].sort((x, y) => x - y);
+}
+
+/** An older cruise season counts only with a season text that is not just a booking period over several years. */
+export function explicitCruiseSeason(seasonText: string | null, start: number | null, end: number | null): number[] {
+  if (!seasonText?.trim() || !start || !end) return [];
+  const years = new Set(seasonText.match(/\b20\d\d\b/g) ?? []);
+  if (years.size > 1) return [];
+  const out: number[] = [];
+  for (let m = start, guard = 0; guard < 12; guard += 1) { out.push(m); if (m === end) break; m = m === 12 ? 1 : m + 1; }
+  return out.sort((x, y) => x - y);
+}
+
+/** Bases whose months are an explicit offer statement (page season, page wind window, dated trips approved by Aaron). */
+export const EXPLICIT_BASES = new Set(['range', 'year_round', 'closed_months', 'wind_season', 'split_season', 'page_wind', 'approved:dates_only']);
+
+/**
  * What to propose for one offer. Unknown: the page's wind window for a stay/camp/course when the page names one,
  * else the climate season. Known through a page season written by season-extract: a stay or camp keeps only the
  * months that are also in the climate season (never empty: then it stays as it is).
  */
 export function proposeRegionSeason(input: {
   type: OfferType; snow: boolean; known: boolean; current: number[]; evidenceBasis: string | null;
-  climate: number[] | null; pageWind: number[] | null;
+  climate: number[] | null; pageWind: number[] | null; pageMonths?: number[] | null;
 }): { months: number[]; basis: 'region_inferred' | 'page_wind' | 'page_region' } | null {
-  const { type, snow, known, current, evidenceBasis, climate, pageWind } = input;
+  const { type, snow, known, current, evidenceBasis, climate, pageWind, pageMonths } = input;
   if (snow) return null;
   if (!known) {
     if (pageWind?.length && type !== 'cruise') return { months: sortNum(pageWind), basis: 'page_wind' };
     return climate?.length ? { months: sortNum(climate), basis: 'region_inferred' } : null;
   }
+  const same = (a: number[], b: number[]) => JSON.stringify(sortNum(a)) === JSON.stringify(sortNum(b));
+  // Re-runs: a season this command wrote is recomputed (climate data, overrides or storm rules may have changed).
+  if (evidenceBasis === 'region_inferred') return climate?.length && !same(climate, current) ? { months: sortNum(climate), basis: 'region_inferred' } : null;
+  if (evidenceBasis === 'page_region') {
+    const cut = (pageMonths?.length ? pageMonths : current).filter(m => climate?.includes(m));
+    return cut.length && !same(cut, current) ? { months: sortNum(cut), basis: 'page_region' } : null;
+  }
   // Only seasons season-extract wrote from a page, and only for places that stay open while the wind is gone.
-  if (!evidenceBasis || evidenceBasis.startsWith('region') || !['accommodation', 'camp'].includes(type) || !climate?.length) return null;
+  // A page wind window and rows Aaron approved one by one stay as they are.
+  if (!evidenceBasis || evidenceBasis.startsWith('region') || evidenceBasis === 'page_wind' || evidenceBasis.startsWith('approved:')
+    || !['accommodation', 'camp'].includes(type) || !climate?.length) return null;
   const cut = current.filter(m => climate.includes(m));
   if (!cut.length || cut.length === current.length) return null;
   return { months: sortNum(cut), basis: 'page_region' };
@@ -136,7 +218,7 @@ async function selectAll<T>(table: string, columns: string): Promise<T[]> {
   }
 }
 
-type ProposalRow = PlanRow & { region_basis: string; country: string | null; region: string | null; wind_source: string | null; climate: number[] | null; current: number[]; region_alt?: { key: string; months: number[] | null } };
+type ProposalRow = PlanRow & { storm?: { zone: string; removed: number[]; kept: number[] }; region_basis: string; country: string | null; region: string | null; wind_source: string | null; climate: number[] | null; current: number[]; region_alt?: { key: string; months: number[] | null } };
 
 export async function runRegionSeasons(opts: { outDir: string; pagePlan?: string }) {
   type View = { offer_id: string; title: string; provider_name: string | null; provider_root_domain: string | null; source_url: string | null; country: string | null; region: string | null; disciplines: string[] | null; provider_trip_types?: string[] | null };
@@ -153,6 +235,39 @@ export async function runRegionSeasons(opts: { outDir: string; pagePlan?: string
   const pageRows = opts.pagePlan ? (JSON.parse(readFileSync(opts.pagePlan, 'utf8')).rows as PlanRow[]) : [];
   const pageWind = new Map(pageRows.filter(r => !r.decision.write && r.decision.reason === 'wind_only' && r.decision.months.length).map(r => [r.offer_id, r]));
 
+  const all0 = [
+    ...cruiseView.map(r => ({ r, type: 'cruise' as OfferType })),
+    ...packageView.map(r => ({ r, type: (r.provider_trip_types?.[0] ?? 'accommodation') as OfferType })),
+  ];
+  // Storm months an explicit offer near by (same zone, <= CONTRA_MAX_KM) runs in: trip-like dated slots, an older
+  // cruise season with a real season text, a page season of a cruise/tour/camp/course, a page wind window. An
+  // accommodation's opening statement and long availability windows are not one.
+  const datesById = new Map([...await selectAll<{ offer_id: string; dates: unknown }>('app_cruise_offer_cards', 'offer_id,dates'),
+    ...await selectAll<{ offer_id: string; dates: unknown }>('app_package_cards', 'offer_id,dates')].map(r => [r.offer_id, r.dates]));
+  const cruiseText = new Map((await selectAll<{ id: string; season_text: string | null }>('cruise_offers', 'id,season_text')).map(r => [r.id, r.season_text]));
+  const evidenceOffers: Array<{ zone: string; lat: number; lng: number; months: number[]; title: string }> = [];
+  for (const { r, type } of all0) {
+    const cs = climate.get(r.offer_id);
+    const zone = cs ? stormZone(r.country, cs.lat, cs.lng) : null;
+    if (!zone || !cs) continue;
+    const se = seasons.get(r.offer_id);
+    const ev = se?.season_evidence?.basis ?? null;
+    const months = new Set<number>(tripMonths(datesById.get(r.offer_id)));
+    if (!ev && type === 'cruise') explicitCruiseSeason(cruiseText.get(r.offer_id) ?? null, se?.season_start_month ?? null, se?.season_end_month ?? null).forEach(m => months.add(m));
+    if (ev && EXPLICIT_BASES.has(ev) && (type !== 'accommodation' || ev === 'page_wind')) (se?.season_evidence?.months ?? []).forEach(m => months.add(m));
+    const hit = [...months].filter(m => zone.months.includes(m)).sort((a, b) => a - b);
+    if (hit.length) evidenceOffers.push({ zone: zone.label, lat: cs.lat, lng: cs.lng, months: hit, title: r.title });
+  }
+  const contradictionsNear = (zone: string, lat: number, lng: number) => {
+    const near = evidenceOffers.filter(e => e.zone === zone && distanceKm(lat, lng, e.lat, e.lng) <= CONTRA_MAX_KM);
+    return { months: new Set(near.flatMap(e => e.months)), offers: near.map(e => `${e.title.slice(0, 50)} (${e.months.join(',')})`) };
+  };
+  const contradictions = new Map<string, { months: Set<number>; offers: string[] }>();
+  for (const e of evidenceOffers) {
+    const c = contradictions.get(e.zone + '|' + e.title) ?? { months: new Set<number>(e.months), offers: [`${e.title.slice(0, 50)} (${e.months.join(',')})`] };
+    contradictions.set(e.zone + '|' + e.title, c);
+  }
+
   const rows: ProposalRow[] = [];
   const skipped: Array<{ offer_id: string; title: string; type: string; reason: string }> = [];
   const all = [
@@ -164,11 +279,17 @@ export async function runRegionSeasons(opts: { outDir: string; pagePlan?: string
     const cs = climate.get(r.offer_id);
     const fixed = regionOverride(r.country);
     const wind = fixed ? { key: fixed.label, wind: null } as WindSource : cs ? pickWind(r.country, cs.lat, cs.lng, regions, countries) : null;
-    const clim = fixed ? fixed.months : cs ? climateSeason(cs.air_temp_max_months, wind?.wind) : null;
+    const clim0 = fixed ? fixed.months : cs ? climateSeason(cs.air_temp_max_months, wind?.wind) : null;
+    const zone = fixed ? null : stormZone(r.country, cs?.lat ?? null, cs?.lng ?? null);
+    const contra = zone && cs ? contradictionsNear(zone.label, cs.lat, cs.lng).months : new Set<number>();
+    const clim = clim0 && zone ? stormCut(clim0, zone.months, contra) : clim0;
     const s = seasons.get(r.offer_id);
-    const current = known.get(r.offer_id) ?? [];
+    const ev = s?.season_evidence ?? null;
+    // For seasons season-extract wrote, compare against the stored season, not the bookable months (dates add to those).
+    const stored = ev?.months ?? null;
+    const current = stored ?? known.get(r.offer_id) ?? [];
     const pw = pageWind.get(r.offer_id);
-    const prop = proposeRegionSeason({ type, snow, known: known.has(r.offer_id), current, evidenceBasis: s?.season_evidence?.basis ?? null, climate: clim, pageWind: fixed ? null : pw?.decision.months ?? null });
+    const prop = proposeRegionSeason({ type, snow, known: known.has(r.offer_id) || !!stored, current, evidenceBasis: ev?.basis ?? null, climate: clim, pageWind: fixed ? null : pw?.decision.months ?? null, pageMonths: (ev as { page_months?: number[] } | null)?.page_months ?? null });
     if (!prop) {
       const noAir = !cs?.air_temp_max_months || cs.air_temp_max_months.every(v => v == null);
       const noWind = !wind?.wind || wind.wind.every(v => v == null);
@@ -182,8 +303,10 @@ export async function runRegionSeasons(opts: { outDir: string; pagePlan?: string
       catalog_source: source, offer_id: r.offer_id, type, title: r.title, provider: r.provider_name ?? r.provider_root_domain ?? '?', source_url: r.source_url,
       text_source: 'stored', extraction: fixed ? null : pw?.extraction ?? null,
       decision: { write: true, months: prop.months, kind: prop.basis },
-      ...(prop.basis === 'page_region' ? { previous: s?.season_evidence?.months ?? current } : {}),
+      ...(stored ? { previous: stored } : {}),
+      ...(prop.basis === 'page_region' && (ev as { page_months?: number[] } | null)?.page_months ? { page_months: (ev as { page_months?: number[] }).page_months } : {}),
       region_basis: prop.basis, country: r.country, region: r.region, wind_source: wind?.key ?? null, climate: clim, current,
+      ...(zone ? { storm: { zone: zone.label, removed: (clim0 ?? []).filter(m => !(clim ?? []).includes(m)), kept: [...contra].sort((a, b) => a - b) } } : {}),
       ...(!fixed && wind?.alt && cs ? { region_alt: { key: wind.alt.key, months: climateSeason(cs.air_temp_max_months, wind.alt.wind) } } : {}),
     });
   }
@@ -192,12 +315,12 @@ export async function runRegionSeasons(opts: { outDir: string; pagePlan?: string
   const planPath = join(opts.outDir, 'season-region-plan.json');
   writeFileSync(planPath, JSON.stringify({ created_at: new Date().toISOString(), rule: { AIR_MIN_C, WIND_MIN_PCT, REGION_MAX_KM }, rows, skipped }, null, 1));
   const reviewPath = join(opts.outDir, 'season-region-review.md');
-  writeFileSync(reviewPath, regionReview(rows, skipped));
+  writeFileSync(reviewPath, regionReview(rows, skipped, contradictions));
   const count = (b: string) => rows.filter(r => r.region_basis === b).length;
   return { planPath, reviewPath, region_inferred: count('region_inferred'), page_wind: count('page_wind'), page_region: count('page_region'), skipped: skipped.length };
 }
 
-function regionReview(rows: ProposalRow[], skipped: Array<{ offer_id: string; title: string; type: string; reason: string }>): string {
+function regionReview(rows: ProposalRow[], skipped: Array<{ offer_id: string; title: string; type: string; reason: string }>, contradictions = new Map<string, { months: Set<number>; offers: string[] }>()): string {
   const cell = (s: string | null | undefined) => (s ?? '').replace(/\|/g, '/').replace(/\s+/g, ' ').trim();
   const de = (l: string) => l.replace('all year', 'ganzjährig').replace(/Mar/g, 'Mär').replace(/May/g, 'Mai').replace(/Oct/g, 'Okt').replace(/Dec/g, 'Dez');
   const lab = (m: number[]) => (m.length ? de(contiguousRange(m) || m.length === 12 ? monthsLabel(m) : splitLabel(m)) : '-');
@@ -219,6 +342,8 @@ function regionReview(rows: ProposalRow[], skipped: Array<{ offer_id: string; ti
     `**Regel pro Monat:** Saison, wenn die mittlere Tageshöchsttemperatur am Angebotspunkt mindestens ${AIR_MIN_C} °C ist **und** der Anteil windiger Tage mindestens ${WIND_MIN_PCT} % (ein einzelner Monat ohne Windwert blockiert nicht; Spots ganz ohne Wind- oder Temperaturdaten und Snowkite sind ausgenommen und unten markiert). Wind = Landeswert, den die App zeigt (Bstoked windProbability). Monate, die dort nur mit ERA5 gefüllt sind, sind Bstoked-Platzhalter (unter 40 % windige Tage) und zählen nicht. Die reinen ERA5-Werte einer nahen Klimaregion (bis ${REGION_MAX_KM} km) nutze ich nur, wo das Land keine Bstoked-Daten hat; wo sie anders entscheiden würden, steht es unten zum Prüfen. Temperatur = Klimapunkt des Angebots.`, '',
     `**Feste Vorgabe:** ${REGION_OVERRIDES.map(o => `${o.label} (${o.countries.join(', ')}): Apr-Okt`).join('; ')} - ersetzt dort die Klimaregel und eine Windsaison der Seite (Aaron 2026-10-28).`, '',
     '**Wer was bekommt:** Unbekannte Angebote bekommen die Klimasaison ("aus der Region erschlossen"), Camps/Unterkünfte/Kurse mit einer Windsaison auf der eigenen Seite stattdessen diese ("Seite (Windsaison)"). Unterkünfte und Camps mit einer schon geschriebenen Seiten-Saison (z. B. "ganzjährig geöffnet") behalten nur die Monate, die auch in der Klimasaison liegen ("Seite ∩ Region"). Kreuzfahrten und Touren mit eigener Saison oder Terminen und Snowkite bleiben unverändert.', '',
+    `**Sturmregel:** ${STORM_ZONES.map(z => `${z.label} ohne ${z.months.map(m => ['', 'Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'][m]).join('/')}`).join('; ')}. Gilt nur für erschlossene Saisons; ein Sturmmonat, in dem ein ausdrücklich belegtes Angebot derselben Zone im Umkreis von ${CONTRA_MAX_KM} km läuft, bleibt dort erlaubt. Gegenbelege (Zone | Angebot):`, '',
+    ...(contradictions.size ? [...contradictions.entries()].map(([k, c]) => `- ${k.replace('|', ', ')}: erlaubt bleiben ${[...c.months].sort((a, b) => a - b).join(',')} wegen ${c.offers.slice(0, 4).join('; ')}${c.offers.length > 4 ? ` (+${c.offers.length - 4})` : ''}`) : ['- keine Gegenbelege']), '',
     '## Saisons pro Region (aus der Region erschlossen)', '',
     '| Land | Windquelle | Saison | Angebote | Typen |', '|---|---|---|---|---|',
     ...[...groups.entries()].sort().map(([k, g]) => { const [c, w] = k.split(' | '); return `| ${c} | ${w} | ${g.months} | ${g.n} | ${[...g.types].join(', ')} |`; }), '',
