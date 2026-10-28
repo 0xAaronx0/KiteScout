@@ -405,11 +405,12 @@ Courses (Aaron 2026-10-28: "falls möglich gerne auch die reinen Kurse"), kind `
 
 | Key | Slots | Notes |
 |---|---|---|
-| `kitekurs-snowkite-weekend-haugastol` | WooCommerce variations: one per course weekend, NOK 4,400, stock = spots left (live); weekends named in the attribute list without a variation = sold out | no e-mail on kitekurs.no (phone + form) -> no KCS inquiry; ingest held for Aaron's call |
+| `kitekurs-snowkite-weekend-haugastol` | WooCommerce variations: one per course weekend, NOK 4,400, stock = spots left (live); weekends named in the attribute list without a variation = sold out | no e-mail on kitekurs.no (phone + form) -> no KCS inquiry; live anyway with the direct online booking (Aaron 2026-10-28, unlike UCPA: live course inventory) |
 | `kiteskolen-snowkite-course-haukeliseter` | 3 undated price cards (2-day 4,099 / 1-day 2,599 / 3-hour intro 1,499 NOK), on request | 2027 calendar announced for Oct 2026; notes when it appears |
 
 Not built: Powerkite.no (Rauland; its own site sends prices and dates to VisitRauland), Vindskolen.no (no answer
 2026-10-28), Expeditions Unlimited Finse course (EXU02078: its 2027 departures 05.02. and 12.02. put the group in
 Finse 06.-13.02. and 13.-20.02., the same weeks and apartment base as `latitudes-nord-finse-snowkite-weeks`;
-inferred resale of the same product, held for Aaron).
+inferred resale of the same product; Aaron 2026-10-28: leave it out). EU's 6-day beginner course on the
+Hardangervidda and its "Initiation" Finse course list no dates yet.
 
