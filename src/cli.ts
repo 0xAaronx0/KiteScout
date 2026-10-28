@@ -536,6 +536,26 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'season-extract': {
+      // Season months from the provider's own page for offers the map does not know yet. Plan + review table
+      // only; `apply --from <plan.json>` writes the approved rows (still-empty months only), --revert undoes.
+      const { runSeasonExtract, applySeasonPlan } = await import('./pipeline/season-extract.js');
+      const list = (name: string) => flagStr(name)?.split(',').map(s => s.trim()).filter(Boolean);
+      if (args[0] === 'apply') {
+        const from = flagStr('--from');
+        if (!from) throw new Error('season-extract apply needs --from <plan.json>');
+        const r = await applySeasonPlan({ from, only: list('--only'), exclude: list('--exclude'), includeWind: args.includes('--include-wind'), dryRun: args.includes('--dry-run'), revert: args.includes('--revert') });
+        console.log(`${r.selected} selected -> ${r.written} ${args.includes('--dry-run') ? 'would be ' : ''}${args.includes('--revert') ? 'reverted' : 'written'}, ${r.skipped} skipped (months no longer empty / changed)`);
+        break;
+      }
+      const types = (list('--types') ?? ['cruise', 'camp', 'tour', 'course', 'accommodation']) as Array<'cruise' | 'camp' | 'tour' | 'course' | 'accommodation'>;
+      const limit = flagStr('--limit');
+      const r = await runSeasonExtract({ types, limit: limit ? Number(limit) : undefined, fetch: args.includes('--fetch'), outDir: flagStr('--out') ?? 'docs/season-review' });
+      console.log(JSON.stringify(r.summary, null, 1));
+      console.log(`plan: ${r.planPath}\nreview: ${r.reviewPath}${r.errors ? `\n${r.errors} offers failed (see "error" in the plan)` : ''}`);
+      break;
+    }
+
     case 'climate-wind-check': {
       // READ-ONLY: ERA5 kiteable-day shares per country/region point for the Bstoked comparison.
       const { runWindCheck } = await import('./pipeline/wind-check.js');

@@ -4,6 +4,7 @@
 //   - season: season_start_month..season_end_month, wrapping over the year end
 //   - dates:  every month touched by a future dated slot that is still open (KCS buildAvailableDates rules)
 //   - a package whose calendar lists dates but none is open gets no season months either (KCS loader rule)
+//   - packages: the season comes from package_offers.season_* (season-extract), the views carry none
 // No row = unknown; the map keeps such offers visible. Rows of offers that left the views are deleted.
 const UNAVAILABLE = new Set(['cancelled', 'canceled', 'closed', 'sold out', 'sold_out', 'unavailable', 'waitlist']);
 
@@ -72,8 +73,30 @@ async function selectAll<T>(table: string, columns: string): Promise<T[]> {
   }
 }
 
+/** A package's season lives in package_offers (the app views pass NULL for packages); the view value wins when set. */
+export function withTableSeason<T extends OfferDates>(row: T, season?: { season_start_month: number | null; season_end_month: number | null }): T {
+  if (!season || row.season_start_month != null || row.season_end_month != null) return row;
+  return { ...row, season_start_month: season.season_start_month, season_end_month: season.season_end_month };
+}
+
+type TableSeason = { id: string; season_start_month: number | null; season_end_month: number | null };
+
+/** package_offers.season_* (migration 20261028120000); empty, with a warning, while that migration is not applied. */
+async function packageSeasons(): Promise<Map<string, TableSeason>> {
+  try {
+    const rows = await selectAll<TableSeason>('package_offers', 'id,season_start_month,season_end_month');
+    return new Map(rows.filter(r => r.season_start_month != null).map(r => [r.id, r]));
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
+    if (!/season_start_month/.test(msg)) throw err;
+    console.warn(`package_offers has no season columns yet (migration 20261028120000): ${msg}`);
+    return new Map();
+  }
+}
+
 export async function runBookableMonths({ dryRun = false } = {}) {
   type Row = OfferDates & { offer_id: string };
+  const seasons = await packageSeasons();
   const sources = [['cruise_offers', 'app_cruise_offer_cards'], ['package_offers', 'app_package_cards']] as const;
   const rows: Array<{ catalog_source: string; offer_id: string; months: number[]; basis: string; computed_at: string }> = [];
   let offers = 0;
@@ -82,7 +105,8 @@ export async function runBookableMonths({ dryRun = false } = {}) {
     const viewRows = await selectAll<Row>(view, 'offer_id,season_start_month,season_end_month,dates');
     offers += viewRows.length;
     for (const row of viewRows) {
-      const result = bookableMonths(row, source === 'package_offers');
+      const isPackage = source === 'package_offers';
+      const result = bookableMonths(isPackage ? withTableSeason(row, seasons.get(row.offer_id)) : row, isPackage);
       if (result) rows.push({ catalog_source: source, offer_id: row.offer_id, ...result, computed_at: computedAt });
     }
   }
