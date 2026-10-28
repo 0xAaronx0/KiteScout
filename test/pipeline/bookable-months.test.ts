@@ -21,10 +21,11 @@ test('future open slots add every month they touch; closed, full and past slots 
   assert.deepEqual(bookableMonths({ season_start_month: 5, season_end_month: 5, dates }, false, today), { months: [1, 4, 5, 12], basis: 'season+dates' });
 });
 
-test('a package calendar without open slots drops its season (KCS loader rule); nothing known = null', () => {
+test('the season counts even when a package calendar has no open slot (Aaron 2026-10-28); nothing known = null', () => {
   const closed = [{ start_date: '2026-11-01', status: 'closed' }];
-  assert.equal(bookableMonths({ season_start_month: 1, season_end_month: 3, dates: closed }, true, today), null);
+  assert.deepEqual(bookableMonths({ season_start_month: 1, season_end_month: 3, dates: closed }, true, today), { months: [1, 2, 3], basis: 'season' });
   assert.deepEqual(bookableMonths({ season_start_month: 1, season_end_month: 3, dates: closed }, false, today), { months: [1, 2, 3], basis: 'season' });
+  assert.equal(bookableMonths({ dates: closed }, true, today), null);
   assert.equal(bookableMonths({}, true, today), null);
   assert.equal(bookableMonths({ season_start_month: 13 }, false, today), null);
 });
@@ -45,7 +46,7 @@ test('a month/season window counts until its last month has passed, from the cur
   const longSeason = [{ start_date: '2026-06-01', end_date: '2027-01-31', date_precision: 'season' }];
   assert.deepEqual(bookableMonths({ dates: longSeason }, true, now), { months: [1, 10, 11, 12], basis: 'dates' }, 'months already behind us are not claimed');
   const ended = [{ start_date: '2026-09-01', end_date: '2026-09-30', date_precision: 'month' }];
-  assert.equal(bookableMonths({ season_months: [4, 5], dates: ended }, true, now), null, 'an ended window is a calendar without open slots');
+  assert.deepEqual(bookableMonths({ season_months: [4, 5], dates: ended }, true, now), { months: [4, 5], basis: 'season' }, 'an ended window adds nothing, the season stays');
   const month = [{ start_date: '2026-10-01', end_date: '2026-10-31', date_precision: 'month' }, { start_date: '2026-11-01', end_date: '2026-12-31', date_precision: 'month' }];
   assert.deepEqual(bookableMonths({ dates: month }, true, now), { months: [10], basis: 'dates' }, 'a "month" slot spanning two months is malformed and skipped');
   const startedDay = [{ start_date: '2026-10-20', end_date: '2026-11-03', status: 'available' }];

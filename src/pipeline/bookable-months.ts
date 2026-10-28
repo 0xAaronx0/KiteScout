@@ -4,7 +4,8 @@
 //   - season: season_start_month..season_end_month, wrapping over the year end
 //   - dates:  every month touched by a future dated slot that is still open (KCS buildAvailableDates rules), plus
 //             the remaining months of a month/season window that has not ended (KCS buildDateWindowLabels)
-//   - a package whose calendar lists dates but none is open gets no season months either (KCS loader rule)
+//   - the season counts even when a package calendar has no open slot right now (Aaron 2026-10-28: otherwise such
+//     offers are "unknown" and shown in every month; the KCS card still says "no selectable departures")
 //   - season_months (package_offers / cruise_offers, set by season-extract) wins over start/end: several windows
 // No row = unknown; the map keeps such offers visible. Rows of offers that left the views are deleted.
 const UNAVAILABLE = new Set(['cancelled', 'canceled', 'closed', 'sold out', 'sold_out', 'unavailable', 'waitlist']);
@@ -66,8 +67,7 @@ function seasonMonths(start?: number | null, end?: number | null, list?: number[
 
 export function bookableMonths(row: OfferDates, isPackage: boolean, today = Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate())): BookableMonths {
   const fromDates = openSlotMonths(row.dates, today);
-  const calendarWithoutOpenSlots = isPackage && Array.isArray(row.dates) && row.dates.length > 0 && fromDates.size === 0;
-  const fromSeason = calendarWithoutOpenSlots ? new Set<number>() : seasonMonths(row.season_start_month, row.season_end_month, row.season_months);
+  const fromSeason = seasonMonths(row.season_start_month, row.season_end_month, row.season_months);
   const months = [...new Set([...fromSeason, ...fromDates])].sort((a, b) => a - b);
   if (!months.length) return null;
   return { months, basis: fromSeason.size && fromDates.size ? 'season+dates' : fromDates.size ? 'dates' : 'season' };
