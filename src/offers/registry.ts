@@ -89,6 +89,8 @@ import { guesthouseMiyakojimaMAirKite } from './adapters/guesthouse-miyakojima-m
 import { habagatAissatouBoracay } from './adapters/habagat-aissatou-boracay.js';
 import { haggerstoneIslandResort } from './adapters/haggerstone-island-resort.js';
 import { hatterasIslandVacationRentalsAvon } from './adapters/hatteras-island-vacation-rentals-avon.js';
+import { haugastolTuristsenterHardangervidda } from './adapters/haugastol-turistsenter-hardangervidda.js';
+import { haukeliseterFjellstueHaukelifjell } from './adapters/haukeliseter-fjellstue-haukelifjell.js';
 import { highFlyersKiteHouseTarifa } from './adapters/high-flyers-kite-house-tarifa.js';
 import { hotel100FunValdevaqueros } from './adapters/hotel-100-fun-valdevaqueros.js';
 import { hotelArteVidaLosLances } from './adapters/hotel-arte-vida-los-lances.js';
@@ -130,6 +132,8 @@ import { kiteMeUpHostelKiteCampLoStagnone } from './adapters/kite-me-up-hostel-k
 import { kiteNomadeArraialDoCabo } from './adapters/kite-nomade-arraial-do-cabo.js';
 import { kitePassionGlampingPuttgarden } from './adapters/kite-passion-glamping-puttgarden.js';
 import { kitePlCaravansChalupy } from './adapters/kite-pl-caravans-chalupy.js';
+import { kitekursSnowkiteWeekendHaugastol } from './adapters/kitekurs-snowkite-weekend-haugastol.js';
+import { kiteskolenSnowkiteCourseHaukeliseter } from './adapters/kiteskolen-snowkite-course-haukeliseter.js';
 import { kiteRepublicAitutakiWinterEscape } from './adapters/kite-republic-aitutaki-winter-escape.js';
 import { kiteRepublicBrazilKiteSafari } from './adapters/kite-republic-brazil-kite-safari.js';
 import { kiteRepublicMauritiusWavesDreamWinterEscape } from './adapters/kite-republic-mauritius-waves-dream-winter-escape.js';
@@ -428,6 +432,8 @@ export const adapters: OfferAdapter[] = [
   habagatAissatouBoracay,
   haggerstoneIslandResort,
   hatterasIslandVacationRentalsAvon,
+  haugastolTuristsenterHardangervidda,
+  haukeliseterFjellstueHaukelifjell,
   highFlyersKiteHouseTarifa,
   hotel100FunValdevaqueros,
   hotelArteVidaLosLances,
@@ -485,6 +491,8 @@ export const adapters: OfferAdapter[] = [
   kitePlCaravansChalupy,
   kitereizenKiteCampMyHoaPhanRang,
   kitereizenMauritiusResidencyBelOmbre,
+  kitekursSnowkiteWeekendHaugastol,
+  kiteskolenSnowkiteCourseHaukeliseter,
   kiteRepublicAitutakiWinterEscape,
   kiteRepublicBrazilKiteSafari,
   kiteRepublicMauritiusWavesDreamWinterEscape,

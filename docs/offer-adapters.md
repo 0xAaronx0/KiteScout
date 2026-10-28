@@ -385,6 +385,35 @@ TLS (2026-10-28): some provider sites chain to Let's Encrypt "ISRG Root YR", whi
 (kitesuites.com.br failed daily with "fetch failed"). `pnpm cli` and the CI workflows pass `certs/isrg-root-yr.pem`
 via `NODE_EXTRA_CA_CERTS`; direct `npx tsx` runs need the variable set by hand. Details: `certs/README.md`.
 
+## Snowkite stays (2026-10-28)
+
+The first two snowkite accommodations (Aaron 2026-10-28: "bau Haukeliseter und Haugastøl als Unterkunft"); until
+now every snowkite row was a camp or tour.
+
+| Key | Slots | Booking |
+|---|---|---|
+| `haukeliseter-fjellstue-haukelifjell` | DNT price list "Priser på Haukeliseter 2026": 4 season bands (non-member NOK; mountain room 1/2 guests, self-catering bed, Stabbur bed) | DNT hut booking (not read) |
+| `haugastol-turistsenter-hardangervidda` | none (no prices on the site; Mews robots-blocked), confidence low | Mews (not read) |
+
+Haukeliseter's kite courses run with Kiteskolen, Haugastøl's with Kitekurs.no and Vindskolen.no; course dates and
+prices live with those schools (not read). haugastol.no disallows `/_next/`, so photos come from the direct
+`/images/` files behind the image proxy. Haukeliseter's provider row uses the lodge's own domain `haukeliseter.no`
+(it redirects to dnt.no), so a later DNT hut does not share it. Search notes and other leads: `.research/`
+(local) and the session report.
+
+Courses (Aaron 2026-10-28: "falls möglich gerne auch die reinen Kurse"), kind `course`:
+
+| Key | Slots | Notes |
+|---|---|---|
+| `kitekurs-snowkite-weekend-haugastol` | WooCommerce variations: one per course weekend, NOK 4,400, stock = spots left (live); weekends named in the attribute list without a variation = sold out | no e-mail on kitekurs.no (phone + form) -> no KCS inquiry; live anyway with the direct online booking (Aaron 2026-10-28, unlike UCPA: live course inventory) |
+| `kiteskolen-snowkite-course-haukeliseter` | 3 undated price cards (2-day 4,099 / 1-day 2,599 / 3-hour intro 1,499 NOK), on request | 2027 calendar announced for Oct 2026; notes when it appears |
+
+Not built: Powerkite.no (Rauland; its own site sends prices and dates to VisitRauland), Vindskolen.no (no answer
+2026-10-28), Expeditions Unlimited Finse course (EXU02078: its 2027 departures 05.02. and 12.02. put the group in
+Finse 06.-13.02. and 13.-20.02., the same weeks and apartment base as `latitudes-nord-finse-snowkite-weeks`;
+inferred resale of the same product; Aaron 2026-10-28: leave it out). EU's 6-day beginner course on the
+Hardangervidda and its "Initiation" Finse course list no dates yet.
+
 ## Cape Verde deep dive (2026-10-28)
 
 Research across all islands (EN/PT/DE/FR/IT/NL/PL/CZ), own sites only. Aaron 2026-10-28: build only the camps.
