@@ -554,6 +554,13 @@ async function main(): Promise<void> {
       // only; `apply --from <plan.json>` writes the approved rows (still-empty months only), --revert undoes.
       const { runSeasonExtract, applySeasonPlan } = await import('./pipeline/season-extract.js');
       const list = (name: string) => flagStr(name)?.split(',').map(s => s.trim()).filter(Boolean);
+      if (args[0] === 'region') {
+        // Kite season from the spot's climate for offers whose page states none (plan + German review only).
+        const { runRegionSeasons } = await import('./pipeline/season-region.js');
+        const r = await runRegionSeasons({ outDir: flagStr('--out') ?? 'docs/season-region', pagePlan: flagStr('--plan') });
+        console.log(JSON.stringify(r, null, 1));
+        break;
+      }
       if (args[0] === 'apply') {
         const from = flagStr('--from');
         if (!from) throw new Error('season-extract apply needs --from <plan.json>');
