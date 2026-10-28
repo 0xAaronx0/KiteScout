@@ -279,6 +279,7 @@ import { strandcampingWallnauFehmarn } from './adapters/strandcamping-wallnau-fe
 import { studiosVrettosPlaka } from './adapters/studios-vrettos-plaka.js';
 import { sunsetWaveResortStagnone } from './adapters/sunset-wave-resort-stagnone.js';
 import { surfHouseKiteZoneChalupy } from './adapters/surf-house-kite-zone-chalupy.js';
+import { surfHubKitesurfingCampSal } from './adapters/surf-hub-kitesurfing-camp-sal.js';
 import { surfariafrikaDownwinderXl, surfariafrikaNamibiaDownwinder, surfariafrikaPrimalExplorer } from './adapters/surfariafrika.js';
 import { surfersResidenceTarifa } from './adapters/surfers-residence-tarifa.js';
 import { surfescapeLajares } from './adapters/surfescape-lajares.js';
@@ -331,6 +332,7 @@ import { wildHouseTarifa } from './adapters/wild-house-tarifa.js';
 import { wildKitePeruLaMaisonMancora } from './adapters/wild-kite-peru-la-maison-mancora.js';
 import { windAdventuresStudioOrientBay } from './adapters/wind-adventures-studio-orient-bay.js';
 import { windSportsCenterKiteweekBoaVista } from './adapters/wind-sports-center-kiteweek-boa-vista.js';
+import { windSportsCenterSurfKiteweekBoaVista } from './adapters/wind-sports-center-surf-kiteweek-boa-vista.js';
 import { windSportsFijiNananuIRa } from './adapters/wind-sports-fiji-nananu-i-ra.js';
 import { windchaserVillasLongBay } from './adapters/windchaser-villas-long-bay.js';
 import { windhoekBoutiqueResortBonaire } from './adapters/windhoek-boutique-resort-bonaire.js';
@@ -621,6 +623,7 @@ export const adapters: OfferAdapter[] = [
   surfersResidenceTarifa,
   surfescapeLajares,
   surfHouseKiteZoneChalupy,
+  surfHubKitesurfingCampSal,
   swissKitesurfCampLoStagnone,
   swissKitesurfCampSomaBay,
   swissSnowkitingSchoolPackagesSimplon,
@@ -674,6 +677,7 @@ export const adapters: OfferAdapter[] = [
   windhoekBoutiqueResortBonaire,
   windloopGlampingNeuharlingersiel,
   windSportsCenterKiteweekBoaVista,
+  windSportsCenterSurfKiteweekBoaVista,
   windSportsFijiNananuIRa,
   windsurfVillagePortoPollo,
   windtownLagoonHotelLangebaan,

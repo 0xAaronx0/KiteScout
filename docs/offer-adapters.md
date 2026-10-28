@@ -384,3 +384,16 @@ list, so its package sentence comes back empty.
 TLS (2026-10-28): some provider sites chain to Let's Encrypt "ISRG Root YR", which Node does not bundle yet
 (kitesuites.com.br failed daily with "fetch failed"). `pnpm cli` and the CI workflows pass `certs/isrg-root-yr.pem`
 via `NODE_EXTRA_CA_CERTS`; direct `npx tsx` runs need the variable set by hand. Details: `certs/README.md`.
+
+## Cape Verde deep dive (2026-10-28)
+
+Research across all islands (EN/PT/DE/FR/IT/NL/PL/CZ), own sites only. Aaron 2026-10-28: build only the camps.
+Built: `surf-hub-kitesurfing-camp-sal` (Santa Maria, 7 nights B&B + 8 h private lessons, undated price behind a
+15-month freshness gate) and `wind-sports-center-surf-kiteweek-boa-vista` (the Surf + Kite week on the same page as
+the Kiteweek camp; typo row labels mapped by position, see its header). Not built (stays, Aaron's call): BobbyWasHere
+apartments Sal Rei (Kitekriol partner), ION CLUB partner hotels on Sal and at DPC Boa Vista. Dead ends, do not
+re-research: São Vicente (kitesurfcaboverde.com redirects to a parked domain, Kitesurf NOW closed, São Pedro is a
+kite-free windsurf bay), Maio/Santiago/Santo Antão/São Nicolau/Fogo/Brava (no kite operator), Sick Dog Sal camp
+(dates TBA, dropped from its menu), Boavista Kite / Casa da Lua (untouched since 2017-2020), Kite & Tonic (school at
+RIU Sal, recommends hotels only), Mitu & Djo (parked domain), 100 Feet (403, IKO "temporary closed"), KBC Sal event
+(reseller of Surf Hub). No island-hopping kite tour exists.
