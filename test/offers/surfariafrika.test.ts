@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  parseSaPrimalTiers, parseSaXlDates, parseSaXlPrices,
+  parseSaNamibiaSeason, parseSaNamibiaSlots, parseSaPrimalTiers, parseSaXlDates, parseSaXlPrices,
   surfariafrikaDownwinderXl, surfariafrikaNamibiaDownwinder, surfariafrikaPrimalExplorer,
 } from '../../src/offers/adapters/surfariafrika.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
@@ -56,12 +56,19 @@ test('downwinder xl: date from the site-wide card, sharing + single price', asyn
   clean(content.summary + content.title);
 });
 
-test('namibia downwinder: no price on the page → one on-request slot, low confidence', async () => {
-  const { content, slots } = await run(surfariafrikaNamibiaDownwinder);
+test('namibia downwinder: no price on the page, the Namibia season card → one on-request season slot', async () => {
+  const page = html('surfariafrika-namibia-downwinder');
+  assert.deepEqual(parseSaNamibiaSeason(page), { start: '2026-10-01', end: '2026-12-31', label: 'October to December 2026' });
+  const slots = parseSaNamibiaSlots(page, '2026-10-28');
   const { ok, problems } = checkSlots(slots);
   assert.deepEqual(problems, []);
-  assert.deepEqual(ok.map(s => [s.key, s.price, s.availability]), [['expedition', null, 'on_request']]);
+  assert.deepEqual(ok.map(s => [s.key, s.startDate, s.endDate, s.datePrecision, s.price, s.availability, s.availabilityText]), [
+    ['season|2026-10', '2026-10-01', '2026-12-31', 'season', null, 'on_request', 'Namibia season October to December 2026; exact dates and price on request'],
+  ]);
+  // once the season is over: back to one undated slot (price on request)
+  assert.deepEqual(parseSaNamibiaSlots(page, '2027-01-05').map(s => [s.key, s.startDate, s.price]), [['expedition', null, null]]);
   assert.equal(surfariafrikaNamibiaDownwinder.confidence, 'low');
+  const { content } = await run(surfariafrikaNamibiaDownwinder);
   assert.equal(contentProblem(content), null);
   assert.deepEqual(content.skillLevels, ['advanced']);
   assert.ok(content.imageUrls.length >= 3);
