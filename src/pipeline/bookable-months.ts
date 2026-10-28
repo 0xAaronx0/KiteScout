@@ -2,7 +2,8 @@
 // Daily: the months (1-12) each app-visible offer is known to be bookable -> offer_bookable_months, the compact
 // input for the month filter on the KCS travel map (MartinMarzi/KiteCruiseScout#316).
 //   - season: season_start_month..season_end_month, wrapping over the year end
-//   - dates:  every month touched by a future dated slot that is still open (KCS buildAvailableDates rules)
+//   - dates:  every month touched by a future dated slot that is still open (KCS buildAvailableDates rules), plus
+//             the remaining months of a month/season window that has not ended (KCS buildDateWindowLabels)
 //   - a package whose calendar lists dates but none is open gets no season months either (KCS loader rule)
 //   - season_months (package_offers / cruise_offers, set by season-extract) wins over start/end: several windows
 // No row = unknown; the map keeps such offers visible. Rows of offers that left the views are deleted.
@@ -22,14 +23,25 @@ function openSlotMonths(dates: unknown, today: number): Set<number> {
   if (!Array.isArray(dates)) return months;
   for (const slot of dates) {
     if (!slot || typeof slot !== 'object') continue;
-    const { status, spots_left: spots, start_date, end_date } = slot as Record<string, unknown>;
+    const { status, spots_left: spots, start_date, end_date, date_precision: precision } = slot as Record<string, unknown>;
     if (typeof status === 'string' && UNAVAILABLE.has(status.trim().toLowerCase())) continue;
     const left = typeof spots === 'number' ? spots : typeof spots === 'string' && /^-?\d+$/.test(spots.trim()) ? Number(spots) : undefined;
     if (left !== undefined && left <= 0) continue;
     const start = parseDay(start_date);
-    if (!start || start.getTime() < today) continue;
-    const end = parseDay(end_date) ?? start;
-    const cursor = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), 1));
+    if (!start) continue;
+    let end = parseDay(end_date) ?? start;
+    let from = start;
+    if (precision === 'month' || precision === 'season') {
+      // A coarse window is an operating window, not a departure (KCS buildDateWindowLabels): it stays listed until
+      // its last month has passed, even after its first day. Months already behind us are not claimed for next year.
+      end = parseDay(end_date) as Date;
+      if (!end || end < start) continue;
+      if (precision === 'month' && (start.getUTCFullYear() !== end.getUTCFullYear() || start.getUTCMonth() !== end.getUTCMonth())) continue;
+      if (Date.UTC(end.getUTCFullYear(), end.getUTCMonth() + 1, 1) <= today) continue;
+      const thisMonth = new Date(Date.UTC(new Date(today).getUTCFullYear(), new Date(today).getUTCMonth(), 1));
+      if (from < thisMonth) from = thisMonth;
+    } else if (start.getTime() < today) continue; // a started departure is gone (KCS buildAvailableDates)
+    const cursor = new Date(Date.UTC(from.getUTCFullYear(), from.getUTCMonth(), 1));
     for (let guard = 0; cursor <= end && guard < 24; guard += 1) {
       months.add(cursor.getUTCMonth() + 1);
       cursor.setUTCMonth(cursor.getUTCMonth() + 1);
