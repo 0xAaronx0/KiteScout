@@ -93,7 +93,7 @@ Rules:
 - "offers": one entry per listed slug the page covers. Offers marked OWN PAGE: if this page no longer presents that offer at all (discontinued, replaced by something else, empty), return {"slug": "…", "listed": false} for it.
 - "departures": the FULL set of concrete dated departures the page shows for that offer, including sold-out ones (with status). null when the page shows no concrete dates for it. A date without a year only when the year is unambiguous.
 - "price_pp": the cheapest price per PERSON for the WHOLE trip in a shared/double cabin. A price for a cabin of 2 → divide by 2. Per-night/per-day prices → multiply only when the trip length is explicit, else null. Never deposits, add-ons, single supplements, or a sum of separately listed components (base boat €1450 + lessons €700 → 1450).
-- "price_charter": the cheapest WHOLE-BOAT/private-charter price and the number of days it covers.
+- "price_charter": the cheapest WHOLE-BOAT/private-charter price for ONE WEEK (7 nights) when the page has one, else the cheapest whole-boat price, and the number of days it covers (a price per day: days = 1).
 - "duration_days": days of the trip (7 nights = 8 days) when stated.
 - "other_products": multi-day kite/wing trips where the guests LIVE ON BOARD (kite cruise, liveaboard, kite safari on a yacht or catamaran) presented on this page that are NONE of the listed offers (a new trip, destination or boat). NOT land-based camps, kite schools, lessons, accommodation, road trips or downwinders without living aboard; not dive/yoga/fishing-only trips; not extra departures of a listed offer; not products whose dates are all in the past. The same product in two languages counts once. [] if none.
 Respond ONLY with the JSON object.`;

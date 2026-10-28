@@ -10,6 +10,7 @@
 //   price      the 2026-07-10 backfill (src/_price-derive.ts, untracked) took the cheapest per-person option,
 //              add-ons and upgrade surcharges included (gear rental, "upgrade, per couple" / 2, meal package),
 //              and read per-night prices as trip prices -> re-derive without them
+//   charter    the quoted week price (cruise-state charterWeek, Aaron 2026-10-28), not a x7/days re-scale
 //   continent  from the country, else the one continent all countries share
 //   region     drop parts repeating the country or the first spot ("Bahamas / Exumas" under Bahamas -> "Exumas";
 //              the app prints country / region / first spot, deduped only as whole strings)
@@ -17,7 +18,7 @@
 // Package rows: the research notes and the YouTube hero the fixed adapters no longer produce.
 // ---------------------------------------------------------------------------
 import { readFileSync, writeFileSync } from 'node:fs';
-import { upcomingDepartures } from './cruise-state.js';
+import { charterWeek, upcomingDepartures } from './cruise-state.js';
 import { continentForOffer } from '../lib/continents.js';
 
 // FX only to compare options (prices stay in their own currency, Aaron 2026-07-10); same table as cruise-state.
@@ -30,7 +31,7 @@ export const ADDON_RE = /\b(?:rental|rent|course|lessons?|coaching|clinic|upgrad
 export const PER_NIGHT_RE = /(?:per|\/|pro|par|a)\s*(?:night|nacht|nuit)\b|\bnightly\b|\bpppn\b|\bpro\s+person\s*\/\s*nacht\b/i;
 
 type Opt = { basis?: string; label?: string; price?: number | null; currency?: string | null };
-export type Pricing = { raw?: string | null; currency?: string | null; options?: Opt[]; per_person?: number | null } | null;
+export type Pricing = { raw?: string | null; currency?: string | null; options?: Opt[]; per_person?: number | null; whole_boat?: number | null } | null;
 export interface PerPerson { price: number; currency: string; source: string }
 
 const cur = (c: string | null | undefined, fallback: string | null | undefined): string | null => {
@@ -39,6 +40,39 @@ const cur = (c: string | null | undefined, fallback: string | null | undefined):
 };
 const eur = (p: { price: number; currency: string }): number => p.price * FX_GATE[p.currency];
 const plausible = (p: { price: number; currency: string }): boolean => eur(p) >= PP_RANGE[0] && eur(p) <= PP_RANGE[1];
+const CHARTER_RANGE: [number, number] = [2000, 120000];
+
+/** Trip length printed in an option label: "8 days / 7 nights" -> 8, "1 week" -> 7, "per day" -> 1. */
+export function daysFromLabel(label: string | null | undefined): number | null {
+  if (!label) return null;
+  const w = label.match(/(\d+)\s*weeks?\b/i);
+  if (w) return Number(w[1]) * 7;
+  const d = label.match(/(\d{1,2})\s*(?:days?|nights?|tage|nächte|jours?|nuits?)\b/i);
+  if (d) return Number(d[1]);
+  return /\b(?:per|a|\/)\s*day\b|\bpro tag\b|\bpar jour\b/i.test(label) ? 1 : null;
+}
+
+/** Cheapest quoted week charter among the whole-boat options (charterWeek rules), else pricing.whole_boat. */
+export function deriveCharterWeek(pricing: Pricing, durationDays: number | null): PerPerson | null {
+  let best: PerPerson | null = null;
+  const consider = (p: PerPerson) => {
+    const e = eur(p);
+    if (e >= CHARTER_RANGE[0] && e <= CHARTER_RANGE[1] && (!best || e < eur(best))) best = p;
+  };
+  for (const o of pricing?.options ?? []) {
+    if (o.basis !== 'whole_boat' || o.price == null) continue;
+    const c = cur(o.currency, pricing?.currency);
+    const days = daysFromLabel(o.label) ?? durationDays;
+    const w = charterWeek(o.price, days);
+    if (c && w !== null) consider({ price: w, currency: c, source: `whole-boat option "${o.label}"${days === 1 ? ' x7 (per day)' : ''}` });
+  }
+  if (!best && pricing?.whole_boat != null) {
+    const c = cur(pricing.currency, null);
+    const w = charterWeek(pricing.whole_boat, durationDays);
+    if (c && w !== null) consider({ price: w, currency: c, source: 'pricing.whole_boat' });
+  }
+  return best;
+}
 
 /**
  * Cheapest per-person price for the whole trip from the extracted options: per_person as is, a cabin for two / 2,
@@ -65,9 +99,10 @@ export interface CruiseRow {
   id: string; slug: string; title: string; country: string | null; countries: string[] | null; region: string | null;
   continent: string | null; itinerary_spots: Array<{ name?: string | null }> | null; dates: unknown; pricing: Pricing; price_from_eur: number | null; currency: string | null;
   price_pp_cabin: number | null; price_pp_cabin_currency: string | null; price_basis_note: string | null; season_text: string | null;
+  price_charter_week: number | null; price_charter_week_currency: string | null; duration_days: number | null;
 }
 export type FieldDiff = Record<string, { before: unknown; after: unknown }>;
-export interface FixEntry { table: 'cruise_offers' | 'package_offers'; id: string; label: string; set: FieldDiff; why: string[] }
+export interface FixEntry { table: 'cruise_offers' | 'package_offers' | 'cruise_providers'; id: string; label: string; set: FieldDiff; why: string[] }
 
 /** English season/title text for the rows the extraction left in German or French (checked by hand 2026-10-28). */
 export const TEXT_FIXES: Record<string, Partial<Record<'title' | 'season_text', { from: string; to: string }>>> = {
@@ -142,6 +177,29 @@ export function planCruiseFix(o: CruiseRow, today: string): FixEntry {
     }
   }
 
+  // charter: the quoted week price instead of a x7/days re-scale. Only rows whose note shows a re-scale: a x7/7 row
+  // may carry a newer monitor read than its stored options (Kite Charters: options 15,200, live 16,000).
+  const chNote = o.price_basis_note?.match(/charter\/wk: [^|]*/)?.[0] ?? '';
+  const rescaled = /×7\/(?!7d)\d+d|no duration/.test(chNote);
+  const override = Object.entries(PRICE_OVERRIDES).find(([k]) => o.id.startsWith(k))?.[1];
+  if (override && o.price_pp_cabin === override.pp.from && o.price_charter_week === override.charter.from) {
+    const reason = `cheapest option is ${override.evidence}`;
+    put('price_pp_cabin', override.pp.to, reason);
+    put('price_charter_week', override.charter.to, reason);
+    put('price_basis_note', `pp: ${override.evidence} (quoted) | charter/wk: ${override.evidence} (quoted)`, reason);
+  } else if (o.price_charter_week !== null && rescaled) {
+    const d = deriveCharterWeek(o.pricing, o.duration_days);
+    const ppEur = pp && FX_GATE[pp.currency ?? ''] ? pp.price * FX_GATE[pp.currency!] : null;
+    if (d && (d.price !== o.price_charter_week || d.currency !== o.price_charter_week_currency) && !(ppEur && eur(d) < 1.5 * ppEur)) {
+      const reason = `charter ${o.price_charter_week} ${o.price_charter_week_currency} was re-scaled; quoted week price ${d.price} ${d.currency}`;
+      put('price_charter_week', d.price, reason);
+      put('price_charter_week_currency', d.currency, reason);
+      const note = (set.price_basis_note?.after as string | undefined) ?? o.price_basis_note ?? '';
+      const parts = note.split(' | ').filter(x => x && !x.startsWith('charter/wk:'));
+      put('price_basis_note', [...parts, `charter/wk: ${d.source} (quoted)`].join(' | ').replace(/[–—]/g, '-'), reason);
+    }
+  }
+
   // continent
   if (!o.continent) {
     const c = continentForOffer(o.country, o.countries);
@@ -166,6 +224,19 @@ export function planCruiseFix(o: CruiseRow, today: string): FixEntry {
 
   return { table: 'cruise_offers', id: o.id, label: `${o.slug} (${o.id.slice(0, 8)})`, set, why };
 }
+
+/** Hand-checked prices where the stored options miss the cheapest variant (stored raw + live read 2026-10-28). */
+export const PRICE_OVERRIDES: Record<string, { pp: { from: number; to: number }; charter: { from: number; to: number }; evidence: string }> = {
+  // CBCM: "PRO 2640€ / BASIC 2200€ per person (shared); whole boat PRO 21 650€ / BASIC 17 520€ - 7 nuits/8 jours"
+  'f030d504-': { pp: { from: 2640, to: 2200 }, charter: { from: 18944, to: 17520 }, evidence: 'BASIC boat (EUR 2,200 p.p., EUR 17,520 whole boat per week)' },
+  '058fb61c-': { pp: { from: 2640, to: 2200 }, charter: { from: 18944, to: 17520 }, evidence: 'BASIC boat (EUR 2,200 p.p., EUR 17,520 whole boat per week)' },
+};
+
+/** Providers Aaron decided to hide (status dead = filtered by the app view; /changes can restore). */
+export const HIDE_PROVIDERS: Record<string, string> = {
+  // Red Blues Kite-Surf Cruise: page still says "Price is valid till 31/12/2020", no newer dates (read 2026-10-28)
+  'stankakristl-yachtcharter.at': 'price valid till 31/12/2020 on its own page, no newer dates',
+};
 
 export interface PackageRow { id: string; title: string; summary: string | null; accommodation: string | null; optional_services: string[] | null; hero_video_url: string | null }
 
@@ -211,13 +282,26 @@ export function planPackageFix(p: PackageRow): FixEntry {
 
 // --- runner ---------------------------------------------------------------------------------
 
-const CRUISE_COLS = 'id, slug, title, country, countries, region, continent, itinerary_spots, dates, pricing, price_from_eur, currency, price_pp_cabin, price_pp_cabin_currency, price_basis_note, season_text';
+const CRUISE_COLS = 'id, slug, title, country, countries, region, continent, itinerary_spots, dates, pricing, price_from_eur, currency, price_pp_cabin, price_pp_cabin_currency, price_basis_note, season_text, price_charter_week, price_charter_week_currency, duration_days';
 const PACKAGE_COLS = 'id, title, summary, accommodation, optional_services, hero_video_url';
 
 const show = (v: unknown): string => {
   const s = typeof v === 'string' ? JSON.stringify(v) : JSON.stringify(v ?? null);
   return s.length > 220 ? `${s.slice(0, 217)}...` : s;
 };
+
+async function planProviderHides(supabase: typeof import('../lib/supabase.js').supabase, today: string): Promise<FixEntry[]> {
+  const domains = Object.keys(HIDE_PROVIDERS);
+  const { data, error } = await supabase.from('cruise_providers').select('id, name, root_domain, status, notes').in('root_domain', domains);
+  if (error) throw new Error(`cruise_providers read failed: ${error.message}`);
+  return (data ?? []).filter(p => p.status !== 'dead').map(p => {
+    const stamp = `${today}: hidden on Aaron's word (${HIDE_PROVIDERS[p.root_domain as string]}). Restore: status back to "${p.status ?? 'new'}".`;
+    return {
+      table: 'cruise_providers' as const, id: p.id as string, label: `${p.name} (${p.root_domain})`, why: ['hidden on Aaron\'s word'],
+      set: { status: { before: p.status ?? null, after: 'dead' }, notes: { before: p.notes ?? null, after: [p.notes, stamp].filter(Boolean).join('\n') } },
+    };
+  });
+}
 
 export async function planDataFixes(opts: { out?: string; today?: string }): Promise<FixEntry[]> {
   const { supabase } = await import('../lib/supabase.js');
@@ -234,6 +318,7 @@ export async function planDataFixes(opts: { out?: string; today?: string }): Pro
   const plan = [
     ...(cruises as unknown as CruiseRow[]).filter(o => ids.has(o.id)).map(o => planCruiseFix(o, today)),
     ...(pkgs as unknown as PackageRow[]).map(planPackageFix),
+    ...await planProviderHides(supabase, today),
   ].filter(e => Object.keys(e.set).length > 0);
 
   const byWhy = new Map<string, number>();

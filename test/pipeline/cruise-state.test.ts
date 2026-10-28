@@ -103,10 +103,15 @@ test('implausible price is dropped (no write, no review); unknown currency → r
   assert.ok(xyz.violations.some(v => /unbekannt/.test(v)));
 });
 
-test('charter normalized to 7 days and cross-gated against p.p.', () => {
-  const p = proposeUpdate(offer(), obs({ priceCharter: { amount: 14000, currency: 'EUR', days: 14 } }), AUTH)!;
-  assert.equal(p.set.price_charter_week, 7000);
+test('charter: the quoted week price, a day rate x 7, cross-gated against p.p. (Aaron 2026-10-28)', () => {
+  // 8 days / 7 nights is the week: the quote as is (was x7/8 -> Quest Sailing USD 29,000 showed as 25,375)
+  const p = proposeUpdate(offer(), obs({ priceCharter: { amount: 14000, currency: 'EUR', days: 8 } }), AUTH)!;
+  assert.equal(p.set.price_charter_week, 14000);
   assert.deepEqual(p.violations, []);
+  assert.equal(proposeUpdate(offer(), obs({ priceCharter: { amount: 12500, currency: 'USD', days: 6 } }), AUTH)!.set.price_charter_week, 12500);
+  assert.equal(proposeUpdate(offer(), obs({ priceCharter: { amount: 1564, currency: 'EUR', days: 1 } }), AUTH)!.set.price_charter_week, 10948);
+  // a 14-day quote is no week price: nothing proposed, nothing blanked
+  assert.equal(proposeUpdate(offer(), obs({ priceCharter: { amount: 14000, currency: 'EUR', days: 14 } }), AUTH), null);
   // a freshly read charter that contradicts p.p. is dropped, like the price backfill does
   const cheap = proposeUpdate(offer(), obs({ priceCharter: { amount: 2800, currency: 'EUR', days: 7 } }), AUTH);
   assert.equal(cheap, null);

@@ -1,13 +1,14 @@
 // Audit 2026-10-27 data fixes: the rules behind `pnpm cli data-fixes plan` (rows trimmed from the live audit dump).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { derivePerPerson, planCruiseFix, planPackageFix, revertPlan, SERVICE_FIXES, TEXT_FIXES, type CruiseRow } from '../../src/pipeline/cruise-fixes.js';
+import { daysFromLabel, deriveCharterWeek, derivePerPerson, planCruiseFix, planPackageFix, revertPlan, SERVICE_FIXES, TEXT_FIXES, type CruiseRow } from '../../src/pipeline/cruise-fixes.js';
 
 const TODAY = '2026-10-28';
 const row = (over: Partial<CruiseRow>): CruiseRow => ({
   id: '00000000-0000-0000-0000-000000000000', slug: 's', title: 'T', country: 'Egypt', countries: ['Egypt'], region: 'Red Sea',
   continent: 'Africa', itinerary_spots: null, dates: null, pricing: null, price_from_eur: null, currency: 'EUR', price_pp_cabin: null,
-  price_pp_cabin_currency: null, price_basis_note: null, season_text: null, ...over,
+  price_pp_cabin_currency: null, price_basis_note: null, season_text: null,
+  price_charter_week: null, price_charter_week_currency: null, duration_days: null, ...over,
 });
 
 test('derivePerPerson: skips upgrades, courses, rental, meals and per-night options', () => {
@@ -130,4 +131,40 @@ test('no en or em dash in any text the plan writes (Aaron 2026-08-06)', () => {
     ...SERVICE_FIXES.map(([, to]) => to),
   ];
   for (const t of written) assert.doesNotMatch(t, /[–—]/, t);
+});
+
+test('charter: quoted week price instead of the x7/days re-scale (Aaron 2026-10-28)', () => {
+  assert.deepEqual([daysFromLabel('8 days / 7 nights (November – April)'), daysFromLabel('1 week'), daysFromLabel('Per day (up to 8 pax)'), daysFromLabel('Whole Boat (from)')], [8, 7, 1, null]);
+  // Quest Sailing: "8 days / 7 nights: November-April $29,000" was stored as 25,375
+  const quest = planCruiseFix(row({ duration_days: 8, price_charter_week: 25375, price_charter_week_currency: 'USD',
+    price_basis_note: 'charter/wk: whole-boat option "8 days / 7 nights (November – April)" ×7/8d',
+    pricing: { currency: 'USD', options: [
+      { basis: 'whole_boat', label: '8 days / 7 nights (November – April)', price: 29000, currency: 'USD' },
+      { basis: 'whole_boat', label: '8 days / 7 nights (July – August)', price: 39000, currency: 'USD' },
+    ] } }), TODAY);
+  assert.deepEqual(quest.set.price_charter_week, { before: 25375, after: 29000 });
+  assert.equal(quest.set.price_basis_note.after, 'charter/wk: whole-boat option "8 days / 7 nights (November - April)" (quoted)');
+  // Paradise Kite Cruise Bahamas: "from 12,500 $", 6 days, shown as 14,583
+  assert.equal(planCruiseFix(row({ duration_days: 6, price_charter_week: 14583, price_charter_week_currency: 'USD',
+    price_basis_note: 'charter/wk: whole-boat option "Whole Boat (from)" (no duration → taken as weekly)',
+    pricing: { currency: 'USD', options: [{ basis: 'whole_boat', label: 'Whole Boat (from)', price: 12500, currency: 'USD' }] } }), TODAY).set.price_charter_week.after, 12500);
+  // Caribbean Kite Cruise: the 7-day quote wins over the 10-day one re-scaled
+  assert.deepEqual(deriveCharterWeek({ currency: 'USD', options: [
+    { basis: 'whole_boat', label: 'Private Cruise DR – 6 guests (7 days)', price: 12500, currency: 'USD' },
+    { basis: 'whole_boat', label: 'Private Cruise DR – 6 guests (10 days)', price: 15900, currency: 'USD' },
+  ] }, 7), { price: 12500, currency: 'USD', source: 'whole-boat option "Private Cruise DR – 6 guests (7 days)"' });
+  // a day rate x 7 stays; a correct quote is no change
+  assert.deepEqual(planCruiseFix(row({ price_charter_week: 10948, price_charter_week_currency: 'EUR',
+    pricing: { currency: 'EUR', options: [{ basis: 'whole_boat', label: 'Per day (up to 8 pax)', price: 1564, currency: 'EUR' }] } }), TODAY).set, {});
+});
+
+test('charter: a x7/7 row is left alone (its value may be a newer monitor read); CBCM override is guarded', () => {
+  assert.deepEqual(planCruiseFix(row({ duration_days: 7, price_charter_week: 16000, price_charter_week_currency: 'EUR',
+    price_basis_note: 'charter/wk: whole-boat option "Full Boat Charter (up to 8 guests)" ×7/7d',
+    pricing: { currency: 'EUR', options: [{ basis: 'whole_boat', label: 'Full Boat Charter (up to 8 guests)', price: 15200, currency: 'EUR' }] } }), TODAY).set, {});
+  const cbcm = planCruiseFix(row({ id: 'f030d504-0000-0000-0000-000000000000', price_pp_cabin: 2640, price_pp_cabin_currency: 'EUR',
+    price_charter_week: 18944, price_charter_week_currency: 'EUR', price_basis_note: 'pp: pricing.per_person | charter/wk: pricing.whole_boat ×7/8d' }), TODAY);
+  assert.deepEqual([cbcm.set.price_pp_cabin.after, cbcm.set.price_charter_week.after], [2200, 17520]);
+  // the guard: once the stored values moved, the override stays out
+  assert.equal(planCruiseFix(row({ id: 'f030d504-0000-0000-0000-000000000000', price_pp_cabin: 2200, price_charter_week: 17520 }), TODAY).set.price_pp_cabin, undefined);
 });
