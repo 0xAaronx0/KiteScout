@@ -37,3 +37,17 @@ test('season_months from the tables: several windows, and a stored set wins over
   assert.deepEqual(withTableSeason({ dates: null }, []), { dates: null });
   assert.deepEqual(bookableMonths({ season_months: [13, 0] }, false, today), null, 'junk months are ignored');
 });
+
+test('a month/season window counts until its last month has passed, from the current month on (KCS buildDateWindowLabels)', () => {
+  const now = Date.UTC(2026, 9, 28); // 2026-10-28
+  const season = [{ start_date: '2026-10-01', end_date: '2026-12-31', status: 'on_request', date_precision: 'season' }];
+  assert.deepEqual(bookableMonths({ dates: season }, true, now), { months: [10, 11, 12], basis: 'dates' });
+  const longSeason = [{ start_date: '2026-06-01', end_date: '2027-01-31', date_precision: 'season' }];
+  assert.deepEqual(bookableMonths({ dates: longSeason }, true, now), { months: [1, 10, 11, 12], basis: 'dates' }, 'months already behind us are not claimed');
+  const ended = [{ start_date: '2026-09-01', end_date: '2026-09-30', date_precision: 'month' }];
+  assert.equal(bookableMonths({ season_months: [4, 5], dates: ended }, true, now), null, 'an ended window is a calendar without open slots');
+  const month = [{ start_date: '2026-10-01', end_date: '2026-10-31', date_precision: 'month' }, { start_date: '2026-11-01', end_date: '2026-12-31', date_precision: 'month' }];
+  assert.deepEqual(bookableMonths({ dates: month }, true, now), { months: [10], basis: 'dates' }, 'a "month" slot spanning two months is malformed and skipped');
+  const startedDay = [{ start_date: '2026-10-20', end_date: '2026-11-03', status: 'available' }];
+  assert.equal(bookableMonths({ dates: startedDay }, false, now), null, 'a started day-precision departure is still gone');
+});
