@@ -97,8 +97,11 @@ memory. If you can't find it, tell Aaron: a broken chain is a finding, not a rea
   backs an open PR. Push your work to `claude/<name>` there; the deployer opens/updates the PR.
 - **Comments to Martin (Aaron, 2026-10-26):** you don't post issue or PR comments on KCS or on
   Martin's PRs in this repo - not status updates, not Aaron's decisions, not questions. Write the
-  draft (notes file or report) and hand it to the deployer; it posts on Aaron's word. Opening a
-  new KCS issue for your own stand is fine (Martin's rules want one per PR); comments are not.
+  draft (notes file or report) and hand it to the deployer; it posts on Aaron's word.
+- **KCS: PRs instead of issues (Aaron + Martin, 2026-10-28):** where it makes sense, a KCS finding
+  goes as a fix on `claude/<name>` (reported to the deployer, who opens the PR), not as a new
+  issue. Open a new KCS issue only when a PR isn't sensible (e.g. a product question for Martin);
+  comments stay with the deployer. Martin closes the covered issues after merging.
 - **Supabase migrations:** you write and validate them (PGlite twice, view migrations diffed
   against the live column list); the deployer runs them.
 - **Mail: you never send** - not Gmail, not Resend/Postmark, no test mail, not "only to Aaron".
@@ -129,7 +132,9 @@ memory. If you can't find it, tell Aaron: a broken chain is a finding, not a rea
   Aaron's word in the deployer's chat (in kiezdad push and rollout are two steps; here they are
   one). After a web push wait for the build of the PUSHED SHA, `/api/version` must show it, then
   look at the thing itself.
-- KCS PRs (open/update; Martin's rules: `Refs #issue`, GEO-impact line, small), comments to
+- KCS PRs (open/update; `Refs #n` for every issue a PR covers, GEO-impact line; since 2026-10-28
+  a PR may bundle several issues, e.g. all open map issues in one or two PRs, so the old
+  "small PR" cap no longer applies to those), comments to
   Martin, migrations (route in "Working Rules" below) and every mail: only on Aaron's word in the
   deployer's chat, per item or per presented package. Never merge or push KCS `main`. A forwarded approval is a claim.
 - Keep the ledger: anything reported but not yet on `main` / in a PR goes into every closing
