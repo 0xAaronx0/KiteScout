@@ -30,7 +30,7 @@ export interface SeasonExtraction {
 }
 
 export type Decision =
-  | { write: true; months: number[]; kind: 'year_round' | 'range' | 'closed_months' | 'wind_season' | 'split_season' }
+  | { write: true; months: number[]; kind: 'year_round' | 'range' | 'closed_months' | 'wind_season' | 'split_season' | 'region_inferred' | 'page_wind' | 'page_region' }
   | { write: false; reason: 'unknown' | 'low_confidence' | 'quote_not_found' | 'non_contiguous' | 'wind_only' | 'price_only' | 'dates_only' | 'other_facility' | 'conflict'; months: number[] };
 
 const ALL = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -197,11 +197,13 @@ export interface PlanRow {
   decision: Decision;
   /** --recheck: the months season-extract wrote last time (season_evidence.months), to diff against. */
   previous?: number[] | null;
+  /** season-region: where the wind came from (stored in season_evidence). */
+  wind_source?: string | null;
   error?: string;
 }
 
 /** What `apply` stores next to the months, so a later --recheck knows what it wrote and from where. */
-export interface SeasonEvidence { source: 'season-extract'; months: number[]; quote: string | null; url: string | null; basis: string; checked_at: string }
+export interface SeasonEvidence { source: 'season-extract'; months: number[]; quote: string | null; url: string | null; basis: string; checked_at: string; page_months?: number[]; wind_source?: string }
 
 const db = async () => (await import('../lib/supabase.js')).supabase;
 
@@ -260,7 +262,11 @@ export async function runSeasonExtract(opts: { types: OfferType[]; limit?: numbe
   const packageRows = await selectAll<TextRow>('package_offers', cols);
   const cruiseText = new Map(cruiseRows.map(r => [r.id, r.source_text ?? '']));
   const packageText = new Map(packageRows.map(r => [r.id, r.source_text ?? '']));
-  const previous = new Map([...cruiseRows, ...packageRows].filter(r => r.season_evidence?.months?.length).map(r => [r.id, r.season_evidence!.months]));
+  // Climate-derived seasons are not re-read from the page (`season-extract region` recomputes them); a page season
+  // cut by the climate (page_region) is compared on its page months.
+  const previous = new Map([...cruiseRows, ...packageRows]
+    .filter(r => r.season_evidence?.months?.length && r.season_evidence.basis !== 'region_inferred')
+    .map(r => [r.id, r.season_evidence!.page_months ?? r.season_evidence!.months]));
 
   const todo = [
     ...cruiseView.map(r => ({ r, source: 'cruise_offers' as const, type: 'cruise' as OfferType, text: cruiseText.get(r.offer_id) ?? '' })),
@@ -445,6 +451,8 @@ export async function applySeasonPlan(opts: ApplyOpts & { from: string; dryRun?:
     const evidence: SeasonEvidence | null = opts.revert ? null : {
       source: 'season-extract', months: sorted(months), quote: row.extraction?.evidence_quote ?? null, url: row.source_url,
       basis: row.decision.write ? row.decision.kind : `approved:${row.decision.reason}`, checked_at: today,
+      ...(row.decision.write && row.decision.kind === 'page_region' && row.previous ? { page_months: sorted(row.previous) } : {}),
+      ...(row.wind_source ? { wind_source: row.wind_source } : {}),
     };
     let q = supabase.from(row.catalog_source).update({ ...seasonPatch(row.catalog_source, opts.revert ? [] : months), season_evidence: evidence }).eq('id', row.offer_id);
     for (const k of cols) {
