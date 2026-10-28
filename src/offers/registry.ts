@@ -89,6 +89,8 @@ import { guesthouseMiyakojimaMAirKite } from './adapters/guesthouse-miyakojima-m
 import { habagatAissatouBoracay } from './adapters/habagat-aissatou-boracay.js';
 import { haggerstoneIslandResort } from './adapters/haggerstone-island-resort.js';
 import { hatterasIslandVacationRentalsAvon } from './adapters/hatteras-island-vacation-rentals-avon.js';
+import { haugastolTuristsenterHardangervidda } from './adapters/haugastol-turistsenter-hardangervidda.js';
+import { haukeliseterFjellstueHaukelifjell } from './adapters/haukeliseter-fjellstue-haukelifjell.js';
 import { highFlyersKiteHouseTarifa } from './adapters/high-flyers-kite-house-tarifa.js';
 import { hotel100FunValdevaqueros } from './adapters/hotel-100-fun-valdevaqueros.js';
 import { hotelArteVidaLosLances } from './adapters/hotel-arte-vida-los-lances.js';
@@ -426,6 +428,8 @@ export const adapters: OfferAdapter[] = [
   habagatAissatouBoracay,
   haggerstoneIslandResort,
   hatterasIslandVacationRentalsAvon,
+  haugastolTuristsenterHardangervidda,
+  haukeliseterFjellstueHaukelifjell,
   highFlyersKiteHouseTarifa,
   hotel100FunValdevaqueros,
   hotelArteVidaLosLances,

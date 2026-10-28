@@ -1,0 +1,916 @@
+
+<!DOCTYPE html>
+<html lang=nb-NO>
+<head>
+    <script>
+        window.isProduction = true;
+    </script>
+    <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" data-culture="NB" cs-id="5572" type="text/javascript">
+    </script>
+    <script src="https://cdn.adnuntius.com/adn.js"></script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=10"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+
+
+<meta property="og:url" content="https://www.dnt.no/hytter/betjente/haukeliseter/english/" />
+
+    <title>Welcome to Haukeliseter Mountain Lodge - DNT</title>
+    <meta property="og:title" content="Welcome to Haukeliseter Mountain Lodge - DNT" />
+    <meta name="twitter:title" content="Welcome to Haukeliseter Mountain Lodge - DNT" />
+
+        <meta name="description" content="In the mountains. By the roadside. Always open!" />
+        <meta property="og:description" content="In the mountains. By the roadside. Always open!" />
+        <meta name="twitter:description" content="In the mountains. By the roadside. Always open!">
+
+    <meta property="og:image" content="https://www.dnt.no/globalassets/fotoware/2023/10/haukeliseter-53162.jpg?width=1280&amp;height=630&amp;format=webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="H&#xF8;st p&#xE5; Haukeliseter fjellstue, september 2022. Kano." />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.dnt.no/globalassets/fotoware/2023/10/haukeliseter-53162.jpg?width=1920&amp;format=webp">
+    <meta name="twitter:image:alt" content="H&#xF8;st p&#xE5; Haukeliseter fjellstue, september 2022. Kano.">
+
+<meta name="twitter:site" content="@turistforening">
+<meta name="twitter:creator" content="@turistforening">
+
+
+    <script>
+!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{src: "https://js.monitor.azure.com/scripts/b/ai.2.gbl.min.js", crossOrigin: "anonymous", cfg: { instrumentationKey:'0ccd60b7-1f4d-4399-b16f-c7d287cf8da5', disableCookiesUsage: false }});
+</script>
+
+    <link href="/assets/js/main.DOCL_3td.js" rel="preload" as="script" crossOrigin="anonymous" />
+
+    <link href="/assets/css/main.cdaNi2eo.css" rel="preload" as="style" crossOrigin="anonymous" />
+
+    <link href="/assets/css/main.cdaNi2eo.css" rel="stylesheet" crossOrigin="anonymous" />
+
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://sst.dnt.no/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-KX5LJQ7');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+</head>
+<body>
+    <script type="module" src="/assets/js/main.DOCL_3td.js" crossOrigin="anonymous" ></script>
+
+    
+    
+    <div class="fixed w-full top-0 z-[2000] flex justify-center skip-to-main-content">
+        <a id="go-to-top" href="#main-content">Hopp til hovedinnhold</a>
+    </div>
+    
+    <header class="w-full bg-red sticky top-0 z-[1000]">
+        
+
+<div class="container flex flex-row justify-between text-white items-center h-16 space-x-3 overflow-hidden">
+    <a href='/' class="focus-outline relative block ml-[-16px] sm:ml-[-13px]">
+        <img class="inline sm:hidden" src="/images/logo-header.svg" alt="Logo">
+        <img class="hidden sm:inline" src="/images/logo-large.svg" alt="Logo">
+        <div class="sr-only">Til DNT.no forside</div>
+    </a>
+    <div id="headerbuttonrow" class="hidden lg:flex flex-row text-center space-x-5 transition-transform">
+        <a class="text-lg rounded-underline focus-outline px-1" href="/hytter/">Hytter</a>
+        <a class="text-lg rounded-underline focus-outline px-1" href="/turtips/">Turtips</a>
+        <a class="text-lg rounded-underline focus-outline px-1" href="/aktiviteter/">Aktiviteter</a>
+    </div>
+    <div class="flex flex-row space-x-5 !mr-[-6px]">
+        <a href="/medlem/" class="button-rounded-white hidden sm:flex">DNT-medlem</a>
+            <a href="/en/Cabins/staffed-cabins/haukeliseter/english/" title='EN' class="flex flex-col items-center px-3 focus-outline">
+                <div id="react_0HNPKE1AF53AJ"></div>
+                <span>EN</span>
+            </a>
+        <a href="/sok/" title='S&#xF8;k' class="flex flex-col items-center px-3 hidden sm:flex focus-outline">
+            <div id="react_0HNPKE1AF53AK"></div>
+            <span>S&#xF8;k</span>
+        </a>
+        <button type="button" class="menubutton--state__open focus-outline" id="toggleMainMenu" aria-expanded="false" aria-controls="mainmenu">
+            <div class="menubutton--icon__open">
+                <div id="react_0HNPKE1AF53AL"></div>
+                <span>Meny</span>
+            </div>
+            <div class="menubutton--icon__close flex flex-col items-center w-12">
+                <div id="react_0HNPKE1AF53AM"></div>
+                <span>Lukk</span>
+            </div>
+        </button>
+    </div>
+</div>
+
+<script>
+    if (typeof window === 'object') {
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const button = document.getElementById('toggleMainMenu');
+
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Mega menu
+                const menu = document.getElementById('megaMenu');
+                menu.classList.toggle('hidden');
+
+                // Check if menu.classList contains hidden and "hide" the main button row
+                const headerButtonRow = document.getElementById('headerbuttonrow');
+                if (menu.classList.contains('hidden')) {
+                    headerButtonRow.classList.remove('translate-y-[50px]');
+                    // Set tabindex to default state
+                    headerButtonRow.querySelectorAll('a').forEach((link) => {
+                        link.setAttribute('tabindex', 0);
+                    });
+                } else {
+                    headerButtonRow.classList.add('translate-y-[50px]');
+                    // Set tabindex to -1
+                    headerButtonRow.querySelectorAll('a').forEach((link) => {
+                        link.setAttribute('tabindex', -1);
+                    });
+                    
+                }
+
+                // Toggle icon and text
+                button.classList.toggle('menubutton--state__open');
+                button.classList.toggle('menubutton--state__close');
+
+                // Change aria-state
+                const ariaExpandedValue = button.getAttribute('aria-expanded');
+                button.setAttribute('aria-expanded', ariaExpandedValue === 'false' ? true : false);
+            })
+
+            document.addEventListener('click', (event) => {
+                const menu = document.getElementById('megaMenu');
+                const localMenu = document.getElementById('localMenu');
+                const openButton = document.getElementById('toggleMainMenu');
+                if (!menu.contains(event.target) && !localMenu?.contains(event.target) && !openButton.contains(event.target)) {
+                    closeMenu();
+                }
+            });
+
+            // Add event listener to check if <main> has tab focus
+            const main = document.querySelector('#main');
+            main.addEventListener('focusin', () => {
+                closeMenu();
+            });
+
+            function closeMenu() {
+
+                const menu = document.getElementById('megaMenu');
+                if (!menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
+
+                // Check if menu.classList contains hidden and "hide" the main button row
+                const headerButtonRow = document.getElementById('headerbuttonrow');
+                if (menu.classList.contains('hidden')) {
+                    headerButtonRow.classList.remove('translate-y-[50px]');
+                }
+
+                // Change icon and text
+                if (button.classList.contains('menubutton--state__close')) { 
+                    button.classList.remove('menubutton--state__close');
+                    button.classList.add('menubutton--state__open');
+                }
+                
+                // Change aria-state
+                const ariaExpandedValue = button.getAttribute('aria-expanded');
+                if (ariaExpandedValue === 'true') {
+                    button.setAttribute('aria-expanded', false);
+                }
+            }
+        });
+    }
+</script>
+
+        
+<section class="relative">
+    <div class='w-full absolute top-0 left-0 z-[1000] overflow-hidden overflow-y-auto max-h-[80vh] '>
+        <nav class='bg-white w-full relative hidden'
+             id="megaMenu"
+             aria-label="Hovedmeny">
+            <div class="container flex flex-col md:flex-row divide-y divide-gray-50 lg:divide-y-0">
+                <div class="w-full sm:hidden flex justify-between py-4 items-center">
+                    <a href="/medlem/" class="button-rounded-darkred">DNT-medlem</a>
+                    <a href="/sok/" title='S&#xF8;k' class="flex flex-col items-center px-3 focus-outline group">
+                        <div id="react_0HNPKE1AF53AN"></div>
+                        <span>S&#xF8;k</span>
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-3/4 flex flex-col lg:flex-row divide-y divide-gray-50 lg:divide-y-0">
+                    <!-- Hytte -->
+                    <section class="w-full lg:w-1/3 md:px-3 py-4 menu--mobile__closed">
+                        <div class="flex flex-row justify-between items-center">
+                            <h2 class="flex flex-row items-center group text-red text-lg font-medium hover:underline underline-offset-1">
+                                <div id="react_0HNPKE1AF53AO"></div>
+                                <a href="/hytter/" class="focus-outline">Hytter</a>
+                            </h2>
+                            <button class="text-black hover:text-red lg:hidden focus-outline before:!rounded-full !rounded-full menuToggleChildren px-1">
+                                <span class="sr-only">Vis eller skjul menypunkter</span>
+                                <div id="react_0HNPKE1AF53AP"></div>
+                            </button>
+                        </div>
+                        <ul class="lg:flex flex-col space-y-3 mt-4">
+                            <!-- First element have some extra markup -->
+                                <li>
+                                    <a href="/sok/?tab=cabins" title='Finn hytte'
+                                    class="text-base font-medium text-gray-900 group inline-flex items-center focus-outline">
+                                        <span class="group-hover:underline">
+                                            Finn hytte
+                                        </span>
+                                        <div id="react_0HNPKE1AF53AQ"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/hytter/om-dnt-hyttene/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Om DNT-hyttene
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/hytter/anbefalte-hytter/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Anbefalte hytter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/hytter/betjente/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Betjente hytter
+                                    </a>
+                                </li>
+                        </ul>
+                    </section>
+
+                    <!-- Turtips -->
+                    <section class="w-full lg:w-1/3 md:px-3 py-4 menu--mobile__closed">
+                        <div class="flex flex-row justify-between items-center">
+                            <h2 class="flex flex-row items-center group text-red text-lg font-medium hover:underline underline-offset-1">
+                                <div id="react_0HNPKE1AF53AR"></div>
+                                <a href="/turtips/" class="focus-outline">Turtips</a>
+                            </h2>
+                            <button class="text-black hover:text-red lg:hidden focus-outline before:!rounded-full !rounded-full menuToggleChildren px-1">
+                                <div id="react_0HNPKE1AF53AS"></div>
+                            </button>
+                        </div>
+                        <ul class="lg:flex flex-col space-y-3 mt-4">
+                            <!-- First element have some extra markup -->
+                                <li>
+                                    <a href="/sok/?tab=trips" title='Finn tur' 
+                                    class="text-base font-medium text-gray-900 group inline-flex items-center focus-outline">
+                                        <span class="group-hover:underline">
+                                            Finn tur
+                                        </span>
+                                        <div id="react_0HNPKE1AF53AT"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/turtips/turvett/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Tips til turen
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/turtips/anbefalte-turer/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Anbefalte turer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/turtips/turmat/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Turmat
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/turtips/turomrader/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Turomr&#xE5;der
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/turtips/turfolk/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Turfolk
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/turtips/sesong/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Sesong
+                                    </a>
+                                </li>
+                        </ul>
+                    </section>
+
+                    <!-- Aktiviteter -->
+                    <section class="w-full lg:w-1/3 md:px-3 py-4 menu--mobile__closed">
+                        <div class="flex flex-row justify-between items-center">
+                            <h2 class="flex flex-row items-center group text-red text-lg font-medium hover:underline underline-offset-1">
+                                <div id="react_0HNPKE1AF53AU"></div>
+                                <a href="/aktiviteter/" class="focus-outline">Aktiviteter</a>
+                            </h2>
+                            <button class="text-black hover:text-red lg:hidden focus-outline before:!rounded-full !rounded-full menuToggleChildren px-1">
+                                <span class="sr-only">Vis eller skjul menypunkter</span>
+                                <div id="react_0HNPKE1AF53AV"></div>
+                            </button>
+                        </div>
+                        <ul class="lg:flex flex-col space-y-3 mt-4">
+                            <!-- First element have some extra markup -->
+                                <li>
+                                    <a href="/aktivitetskalender/" title='S&#xF8;k i aktivitetskalender' 
+                                    class="text-base font-medium text-gray-900 group inline-flex items-center focus-outline">
+                                        <span class="group-hover:underline">
+                                            S&#xF8;k i aktivitetskalender
+                                        </span>
+                                        <div id="react_0HNPKE1AF53B0"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/organiserte-turer/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Organiserte turer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/kurs-og-utdanning/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Kurs og utdanning
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/arrangementer/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Arrangementer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/DNT-for-barn/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Barn
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/ungdom/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Ungdom
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/senior/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Senior
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/fjellsport/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Fjellsport
+                                    </a>
+                                </li>
+                        </ul>
+                    </section>
+                </div>
+                <section class="w-full md:w-1/2 lg:w-1/4 md:border-l md:border-gray-50 md:pl-6 md:pt-3 pb-4 about-dnt__closed">
+                    <ul class="flex flex-col divide-gray-50 divide-y">
+                        <li data-menu-favorite class="py-4 hidden">
+                            <a data-menu-url href="" title="" class="flex items-center font-medium text-base text-gray-900 py-1 hover:underline focus-outline">
+                                <div id="react_0HNPKE1AF53B1"></div>
+                                <span data-menu-name></span>
+                            </a>
+                        </li>
+                            <li class="py-4">
+                                <a href="/dnt-der-du-er/" title='DNT der du er' class="font-medium text-base text-gray-900 py-1 inline-block hover:underline focus-outline">
+                                    DNT der du er
+                                </a>
+                            </li>
+                        <li class="py-4">
+                            <a href="/om-dnt/dnts-arbeid/frivillig/" title='Bli frivillig' class="font-medium text-base text-gray-900 py-1 inline-block hover:underline focus-outline">
+                                Bli frivillig
+                            </a>
+                        </li>
+                            <li class="py-4 flex flex-row justify-between items-center gap-x-3">
+                                <a href="/om-dnt/" title='Om DNT' class="font-medium text-base text-gray-900 py-1 inline-block hover:underline focus-outline">
+                                    Om DNT
+                                </a>
+                                <button class="text-black hover:text-red focus-outline before:!rounded-full !rounded-full px-1" id="toggleAboutDnt">
+                                    <span class="sr-only">Vis eller skjul menypunkter</span>
+                                    <div id="react_0HNPKE1AF53B2"></div>
+                                </button>
+                            </li>
+                                <li class='about-dnt--item border-none pt-0 pb-1.5 '>
+                                    <a href="/om-dnt/kontakt-oss/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Kontakt DNT
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="/om-dnt/dnts-arbeid/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Dette jobber DNT med
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="/om-dnt/organisasjon/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Organisasjonen
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="/om-dnt/english/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        The Norwegian Trekking Association 
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="https://app.cvideo.no/dnt" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Ledige stillinger
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="https://fjellogvidde.dnt.no/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Fjell &amp; Vidde
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="/om-dnt/tursentre/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        DNTs tursentre
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="/om-dnt/personvern/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Personvernerkl&#xE6;ring
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 pb-4'>
+                                    <a href="/om-dnt/samarbeidspartnere/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Strategiske samarbeidspartnere
+                                    </a>
+                                </li>
+                            <li class="py-4">
+                                <a href="https://www.dntbutikken.no/" title='DNT Nettbutikk' class="inline-flex items-center font-medium text-base text-gray-900 hover:underline focus-outline">
+                                    <span>
+                                        DNT Nettbutikk
+                                    </span>
+                                    <div id="react_0HNPKE1AF53B6"></div>
+                                </a>
+                            </li>
+                        <li class="py-4">
+                            <a href="https://fjellogvidde.dnt.no/" title='Fjell og vidde' class="inline-flex items-center font-medium text-base text-gray-900 hover:underline focus-outline">
+                                    <span>
+                                        Fjell og vidde
+                                    </span>
+                                <div id="react_0HNPKE1AF53B7"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </nav>
+            <nav class="w-full relative bg-white shadow-lg border-t border-gray-50" id="localMenu" aria-label="Lokale sider">
+                
+                <div class="container py-2 relative">
+                    <div id="localMenuLeftWrapper" class="absolute left-0 h-full w-16 z-40 bg-gradient-to-r from-white from-20% via-white via-50% to-transparent top-0 pointer-events-none">
+                        <button id="localMenuLeft" type="button" class="active:text-red-600 text-gray-700 !absolute left-0 h-[70%] my-[15%] mx-1 px-1 pointer-events-auto focus-outline">
+                            <span class="sr-only">
+                                Scroll menyen mot venstre
+                            </span>
+                            <div id="react_0HNPKE1AF53B8"></div>
+                        </button>
+                    </div>
+                    <ul class="flex flex-row space-x-5 overflow-x-scroll scrollbar-hide touch-pan-x py-3 px-6 -mx-6 lg:mx-0 lg:px-0 focus-outline" id="localMenuList">
+                        <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/" class="block text-gray-900 text-lg font-medium hover:underline focus-outline ">
+                                    Haukeliseter
+                                </a>
+                        </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/bestilling2/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Bestilling
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/apningstider/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    &#xC5;pningstider
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/mat-med-utsikt2/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Mat med utsikt
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/adkomst/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Adkomst
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/kurs-og-aktiviteter/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Kurs og aktiviteter
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/turtips/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Turtips
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/grupper-og-bedrifer/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Grupper og bedrifer
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/om-fjellstua/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Om fjellstua
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/english/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline font-bold underline active-menu-item">
+                                    English
+                                </a>
+                            </li>
+                    </ul>
+                    <div id="localMenuRightWrapper" class="absolute right-0 h-full w-16 z-40 bg-gradient-to-l from-white from-20% via-white via-50% to-transparent top-0 pointer-events-none">
+                        <button id="localMenuRight" type="button" class="active:text-red-600 text-gray-700 !absolute right-0 h-[70%] my-[15%] mx-1 px-1 pointer-events-auto focus-outline">
+                            <span class="sr-only">
+                                Scroll menyen mot h&#xF8;yre
+                            </span>
+                            <div id="react_0HNPKE1AF53B9"></div>
+                        </button>
+                    </div>
+                </div>
+                
+            </nav>
+    </div>
+</section>
+    </header>
+    <div id="main" class='overflow-hidden top-[67px]' data-page-id="58194">
+        
+<!-- Topic page -->
+
+
+
+<div id="breadcrumb" class='container mt-5 h-7 invisible' aria-hidden="true">
+    <a href="javascript:history.go(-1)" title="Tilbake" class='link-beige print:hidden'>
+        <div id="react_0HNPKE1AF53AC"></div>
+        <span class="pr-1">Tilbake</span>
+    </a>
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const referrer = document.referrer;
+        const isInternal = referrer && referrer.startsWith(window.location.origin);
+        
+        // Button is hidden when referrer is not internal
+        if (isInternal) {
+            const breadcrumbElement = document.getElementById('breadcrumb');
+            breadcrumbElement.setAttribute('aria-hidden', 'false');
+            breadcrumbElement.classList.remove('invisible');
+        }
+    });
+ 
+</script>
+<main>
+    <div class="container grid grid-cols-1 md:grid-cols-12 gap-x-7">
+        <div class="order-1 mt-4 lg:mt-0 lg:order-2 col-span-full lg:col-span-6 xl:col-span-5 max-h-64 md:max-h-80 lg:max-h-[500px] transition-all">
+                <picture>
+                    <source media="(min-width: 1280px)" srcset="https://www.dnt.no/cdn-cgi/image/width=750,fit=contain,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/haukeliseter-53162.jpg?format=auto">
+                    <source media="(min-width: 1024px)" srcset="https://www.dnt.no/cdn-cgi/image/width=720,fit=contain,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/haukeliseter-53162.jpg?format=auto">
+                    <source media="(min-width: 768px)" srcset="https://www.dnt.no/cdn-cgi/image/width=1080,fit=contain,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/haukeliseter-53162.jpg?format=auto">
+                    <source media="(min-width: 640px)" srcset="https://www.dnt.no/cdn-cgi/image/width=900,fit=contain,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/haukeliseter-53162.jpg?format=auto">
+                    <img class="w-full h-full object-cover object-center" alt="H&#xF8;st p&#xE5; Haukeliseter fjellstue, september 2022. Kano." src="https://www.dnt.no/cdn-cgi/image/width=900,fit=contain,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/haukeliseter-53162.jpg?format=auto" >
+                </picture>
+        </div>
+        <div class="order-2 col-span-full lg:order-1 lg:col-span-6 xl:col-span-7 -mt-10 mb-5 lg:my-10">
+            <img src="/images/icon-kart_80x80.svg" alt="Kart" class="mb-5 md:mb-7 bg-beige-10" />
+            <h1 class="header mb-5 lg:mb-7" >Welcome to Haukeliseter Mountain Lodge</h1>
+            <p class="text-xl mb-5 lg:mb-7">In the mountains. By the roadside. Always open!</p>
+
+        </div>
+    </div>
+
+    <!-- Top block area -->
+    
+
+
+    
+
+
+    <!-- Main body -->
+    <div class="container mb-10 grid grid-cols-1 md:grid-cols-12 gap-x-7">
+            <div class="col-span-narrow mt-5 md:mt-10 body-area">
+                
+
+
+<p>Haukeliseter Mountain Lodge is centrally located along the E134 at Haukelifjell, 1000 meters above sea level. The Mountain Lodge is the gateway to Hardangervidda National Park in the north, and Ryfylkeheiene and Setesdalsheiene in the south.&nbsp;</p>
+<p>The opportunities for activities at Haukeliseter are many; hiking, alpine, -randonn&eacute;e and -cross-country skiing, snow kiting, dog sledding, kayaking and canoeing, hunting and fishing, and relaxing in the lavvo or the outdoor spa.</p>
+<p>Besides the spectacular view and nature, the food in the resturant is a good reason to visit us. We serve traditional, Norwegian food with a focus on local ingredients. We also have our very own bakery. Daily you can buy buns, bread, and other delicious baked goods.</p>
+<p><a title="Haukeliseter live - go to webcam" href="http://94.139.67.154:50000/axis-cgi/jpg/image.cgi?resolution=800x500">Haukeliseter live - go to webcam</a></p>
+<h2><img class="fotoware-img" src="/globalassets/fotoware/2023/11/dji_0049_4.jpg#1738146684027&amp;width=810" alt="Haukeliseter fjellstue i flyfoto i overgangen h&oslash;st til vinter, det ligger et lite lag med sn&oslash; p&aring; fjellene og fjellstuen" width="640" height="480" /></h2>
+<h2>Opening hours</h2>
+<p>Haukeliseter Mountain Lodge is always open - every day, all year round.</p>
+<p>The reception is open from 8 am until 9.30 pm every day.&nbsp;</p>
+<p>We serve food in the restaurant from 12 am until 8 pm on Sunday to Thursday, and until 9 pm on Friday and Saturday (until 9 pm every day during the high season).</p>
+<h2>Accommodation</h2>
+<p>Haukeliseter offers rooms in a variety of price ranges, with different facilities and standards.&nbsp;<a title="Please go to online booking" href="https://hyttebestilling.dnt.no/hytte/10660?_ga=2.223342555.1760736135.1684742880-540962070.1666610876">Please go to online booking</a>, and read more under the descriptions of each room standard.&nbsp;</p>
+<p><a title="Overview of prices" href="/contentassets/f270832a2a35456daa19864ad6e699bc/priser-2026---engelsk.pdf">Overview of prices</a><br /><a href="/hytter/betjente/haukeliseter/english/cancellation-terms-haukeliseter/">Go to cancellation terms</a></p>
+<h2>Restaurant</h2>
+<h4>Breakfast</h4>
+<p>At Haukeliseter we offer a breakfast buffet consisting of freshly baked bread, local ingredients, and other favourites such as eggs, cereal and oatmeal.</p>
+<h4>Mountain menu</h4>
+<p>The mountain menu is our &agrave; la carte menu and consists of several different dishes, including vegetarian options. Our guests especially appreciate our homemade meatballs, sour cream porridge and soup of the day which are served as a buffet; eat as much as you like.</p>
+<p>Our Moutain Menu with prices:</p>
+<p><img src="/contentassets/f270832a2a35456daa19864ad6e699bc/fjellmeny-vinter-2026_2027-engelsk.jpg?width=810" alt="" width="1820" height="2561" /></p>
+<h4>Three course dinner</h4>
+<p>The three course dinner is served every Friday and Saturday evening throughout the year. During high season, three course dinner is served several times a week. Must be pre-ordered due to limited capacity.&nbsp;</p>
+<h2>Contact us</h2>
+<p>Visiting address: Haukelivegen 2917, 3895 Edland<br />Phone: +47 3506 2777<br />E-mail: haukeliseter@dnt.no&nbsp;<br />Facebook: Haukeliseter fjellstue</p>
+            </div>
+    </div>
+
+    <!-- Bottom block area -->
+    <div class="content-area">
+        <div class="container">
+            
+
+        </div>
+    </div>
+</main>
+
+
+        <section class="container my-10">
+            <div class="border-beige-200 border-t mb-10"></div>
+            <h2 class="text-2xl font-light mb-5">Se ogs&#xE5;</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+                    
+    <!-- ImageLinkBlock -->
+    <div class="relative group rounded-lg border border-beige-200 shadow hover:shadow-md body-area--override">
+        <a  href="/om-dnt/dnts-arbeid/frivillig/"
+            title="Bli frivillig"
+            class="!absolute inset-0 z-20 focus-outline">
+            <span class="sr-only">
+                Bli frivillig
+            </span>
+        </a>
+        <div class="bg-topography overflow-hidden rounded-lg"> 
+                <picture>
+                    <source media="(min-width: 1280px)" srcset="https://www.dnt.no/cdn-cgi/image/width=465,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/170706saga_foto_mariusdalsegsaetrednt_225.jpg?format=auto">
+                    <source media="(min-width: 1024px)" srcset="https://www.dnt.no/cdn-cgi/image/width=375,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/170706saga_foto_mariusdalsegsaetrednt_225.jpg?format=auto">
+                    <source media="(min-width: 768px)" srcset="https://www.dnt.no/cdn-cgi/image/width=525,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/170706saga_foto_mariusdalsegsaetrednt_225.jpg?format=auto">
+                    <source media="(min-width: 640px)" srcset="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/170706saga_foto_mariusdalsegsaetrednt_225.jpg?format=auto">
+                    <img src="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/170706saga_foto_mariusdalsegsaetrednt_225.jpg?format=auto" class="h-38 w-full object-cover object-center">
+                </picture>
+            <div class="h-10 z-10 left-0 bottom-0 bg-beige-10 group-active:bg-beige-50 w-full p-2 font-medium flex justify-between items-center">
+                <span class="group-hover:underline truncate">
+                    Bli frivillig
+                </span>
+                <div id="react_0HNPKE1AF53AD"></div>
+            </div>
+        </div>
+        
+    </div>
+
+                    
+    <!-- ImageLinkBlock -->
+    <div class="relative group rounded-lg border border-beige-200 shadow hover:shadow-md body-area--override">
+        <a  href="/medlem/"
+            title="Bli medlem"
+            class="!absolute inset-0 z-20 focus-outline">
+            <span class="sr-only">
+                Bli medlem
+            </span>
+        </a>
+        <div class="bg-topography overflow-hidden rounded-lg"> 
+                <picture>
+                    <source media="(min-width: 1280px)" srcset="https://www.dnt.no/cdn-cgi/image/width=465,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/20190607trollfjordhytta_fotomariusdalseg_15.jpg?format=auto">
+                    <source media="(min-width: 1024px)" srcset="https://www.dnt.no/cdn-cgi/image/width=375,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/20190607trollfjordhytta_fotomariusdalseg_15.jpg?format=auto">
+                    <source media="(min-width: 768px)" srcset="https://www.dnt.no/cdn-cgi/image/width=525,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/20190607trollfjordhytta_fotomariusdalseg_15.jpg?format=auto">
+                    <source media="(min-width: 640px)" srcset="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/20190607trollfjordhytta_fotomariusdalseg_15.jpg?format=auto">
+                    <img src="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/20190607trollfjordhytta_fotomariusdalseg_15.jpg?format=auto" alt="Nydelige Trollfjordhytta ligger p&#xE5; grensen mellom Vester&#xE5;len og Lofoten. Turen opp til hytta g&#xE5;r fra Austpollen innerst i Trollfjorden." class="h-38 w-full object-cover object-center">
+                </picture>
+            <div class="h-10 z-10 left-0 bottom-0 bg-beige-10 group-active:bg-beige-50 w-full p-2 font-medium flex justify-between items-center">
+                <span class="group-hover:underline truncate">
+                    Bli medlem
+                </span>
+                <div id="react_0HNPKE1AF53AI"></div>
+            </div>
+        </div>
+        
+    </div>
+
+            </div>
+        </section>
+
+
+
+    </div>
+
+    <footer class="mt-5 md:mt-16">
+            <div id="scroll-container" class="relative pt-4 md:pt-0 z-[1000]">
+                <a href="#" tabindex="0"
+                    class="flex scroll-top opacity-0 transition-opacity duration-300 cursor-pointer w-[42px] h-[42px] justify-center items-center absolute right-4 focus-outline mb-20">
+                    <div id="react_0HNPKE1AF53BH"></div>
+                    <span class="sr-only"></span>
+                </a>
+            </div>
+        
+    <section class="bg-beige-100">
+        <div class="container py-10">
+                <h2 class=" text-xl font-medium">
+                    Velkommen til Haukeliseter fjellstue
+                </h2>
+
+
+            <div class="grid gap-7 grid-cols-1 sm:grid-cols-12 grid-flow-row-dense mt-7">
+                <ul class="sm:col-span-6 lg:col-span-4">
+                        <li class="mb-2 flex">
+                            <a href="tel:&#x2B;4735062777" class="link-beige !font-normal" title="Ring oss på vårt telefonnummer &#x2B;47 35 06 27 77">
+                                <div id="react_0HNPKE1AF53BI"></div>
+                                &#x2B;47 35 06 27 77
+                            </a>
+                        </li>
+
+                        <li class="mb-2 flex">
+                            <a href="https://www.dnt.no/haukeliseter" class="link-beige !font-normal">
+                                <div id="react_0HNPKE1AF53BJ"></div>
+                                www.dnt.no/haukeliseter
+                            </a>
+                        </li>
+
+                        <li class="mb-2 flex">
+                            <a href="mailto:haukeliseter@dnt.no" class="link-beige !font-normal">
+                                <div id="react_0HNPKE1AF53BK"></div>
+                                haukeliseter@dnt.no
+                            </a>
+                        </li>
+                </ul>
+                <div class="sm:col-span-12 lg:col-span-4">
+                    <address class="not-italic footer--address">
+                        <p>Haukelivegen 2917<br />3895 Edland</p>
+                    </address>
+                </div>
+
+                <div class="sm:col-span-6 lg:col-span-4">
+                        <ul>
+                                <li class="last-of-type:mb-0 mb-2 flex sm:justify-end">
+                                    <a href="https://www.facebook.com/Haukeliseter.fjellstue/" class="link-beige">
+                                        <span class="pl-1">Facebook</span>
+                                        <div id="react_0HNPKE1AF53BS"></div>
+                                    </a>
+                                </li>
+                                <li class="last-of-type:mb-0 mb-2 flex sm:justify-end">
+                                    <a href="https://www.instagram.com/haukeliseter/" class="link-beige">
+                                        <span class="pl-1">Instagram</span>
+                                        <div id="react_0HNPKE1AF53C0"></div>
+                                    </a>
+                                </li>
+                        </ul>
+                </div>
+            </div>
+
+                <p class="mt-7 text-sm">
+                    Organisasjonsnummer: 946 846 856
+                </p>
+        </div>
+    </section>
+
+        
+<div class="bg-red text-white">
+    <div class="container py-10">
+        <div class="grid gap-7 grid-cols-1 sm:grid-cols-12 grid-flow-row-dense">
+            <div class="sm:col-span-6 lg:col-span-4 justify-center sm:justify-start text-center sm:text-left">
+                <div class="text-xl font-medium flex items-center">
+                    <img src="/images/turen-starter-med.svg" alt='Turen starter med T' />
+                </div>
+
+                    <div class="mt-7">
+                        <a href="/om-dnt/dnts-arbeid/frivillig/" title='Bli frivillig' class="button-rounded-white">
+                            Bli frivillig
+                        </a>
+                    </div>
+                    <div class="mt-7">
+                        <a href="/medlem/" title='Bli DNT-medlem' class="button-rounded-white">
+                            Bli DNT-medlem
+                        </a>
+                    </div>
+                    <ul class="mt-7">
+                            <li class="mb-2">
+                                <a href="https://www.dnt.no/minside/logg-inn/" title='Min side' class="link-white-on-red">
+                                    <span class="pl-1">Min side</span>
+                                    <div id="react_0HNPKE1AF53C1"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/medlem/om-medlemskapet/medlemsbetingelser/" title='Medlemsbetingelser' class="link-white-on-red">
+                                    <span class="pl-1">Medlemsbetingelser</span>
+                                    <div id="react_0HNPKE1AF53C2"></div>
+                                </a>
+                            </li>
+                    </ul>
+            </div>
+            <div class="sm:col-span-6 lg:col-span-4 flex flex-col justify-center sm:justify-start text-center sm:text-left mt-10 lg:mt-0">
+                    <div class="text-xl font-medium flex items-center justify-center sm:justify-start h-[35px] my-2.5">
+                        <a href="/om-dnt/" title='Om DNT' class="hover:underline link-white-on-red">
+                            Om DNT
+                        </a>
+                    </div>
+                    <ul class="mt-4">
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/kontakt-oss/">Kontakt oss</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/dnts-arbeid/">DNTs arbeid</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/organisasjon/">Organisasjon</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/english/">English</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="https://app.cvideo.no/dnt">Ledige stillinger</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="https://fjellogvidde.dnt.no/">Fjell og Vidde</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/tursentre/">Tursentrene</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/personvern/">Personvern</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/samarbeidspartnere/">Samarbeidspartnere</a>
+                            </li>
+                    </ul>
+            </div>
+            <ul class="sm:col-span-12 lg:col-span-4 grid grid-flow-col gap-7 justify-center lg:justify-end mt-10 lg:mt-0">
+                <li>
+                    <a href="https://ut.no/" title='Til UT.no' class="inline-flex focus-outline focus-outline-padding transition-all hover:scale-[1.2] active:scale-[1.1]">
+                        <img src="/images/some-ut.svg" alt="ut.no logo" />
+                        <span class="sr-only">Til UT.no</span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="https://www.facebook.com/turistforeningen" title='Til DNT p&#xE5; Facebook' class="inline-flex focus-outline focus-outline-padding transition-all hover:scale-[1.2] active:scale-[1.1]">
+                            <img src="/images/some-facebook.svg" alt="facebook logo" />
+                            <span class="sr-only">Til DNT p&#xE5; Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/turistforeningen/" title='Til DNT p&#xE5; Instagram' class="inline-flex focus-outline focus-outline-padding transition-all hover:scale-[1.2] active:scale-[1.1]">
+                            <img src="/images/some-instagram.svg" alt="instagram logo" />
+                            <span class="sr-only">Til DNT p&#xE5; Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@turistforeningen" title='Til DNT p&#xE5; YouTube' class="inline-flex focus-outline focus-outline-padding transition-all hover:scale-[1.2] active:scale-[1.1]">
+                            <img src="/images/some-youtube.svg" alt="youtube logo" />
+                            <span class="sr-only">Til DNT p&#xE5; YouTube</span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+        <div class="bg-red-700 text-center py-2.5 text-sm grid grid-flow-row sm:grid-flow-col justify-center gap-6 gap-y-2">
+                <a href="/dnt-der-du-er/" class="hover:underline focus-outline px-1">DNT der du er</a>
+                <a href="/turtips/" class="hover:underline focus-outline px-1">Turtips</a>
+                <a href="/hytter/" class="hover:underline focus-outline px-1">Hytter</a>
+                <a href="/aktiviteter/" class="hover:underline focus-outline px-1">Aktiviteter</a>
+        </div>
+</div>
+    </footer>
+    
+    <script defer="defer" src="/Util/Find/epi-util/find.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){if(typeof FindApi === 'function'){var api = new FindApi();api.setApplicationUrl('/');api.setServiceApiBaseUrl('/find_v2/');api.processEventFromCurrentUri();api.bindWindowEvents();api.bindAClickEvent();api.sendBufferedEvents();}})
+</script>
+
+    <script type="module">ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AC")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowSmLeftIcon","class":"h-6 w-6 mr-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AD")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowRightIcon","class":"ml-2 h-4 w-4"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AI")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowRightIcon","class":"ml-2 h-4 w-4"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AJ")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"GlobeIcon","class":"h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AK")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"SearchIcon","class":"h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AL")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"MenuIcon","class":"h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AM")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"XIcon","class":"h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AN")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"SearchIcon","class":"h-6 w-6 group-hover:text-red"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AO")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"HomeIcon","class":"h-6 w-6 mr-3"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AP")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ChevronDownIcon","class":"icon--button h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AQ")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowSmRightIcon","class":"h-6 w-6 ml-3"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AR")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"LocationMarkerIcon","class":"h-6 w-6 mr-3"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AS")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ChevronDownIcon","class":"icon--button h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AT")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowSmRightIcon","class":"h-6 w-6 ml-3"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AU")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"CalendarIcon","class":"h-6 w-6 mr-3"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53AV")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ChevronDownIcon","class":"icon--button h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53B0")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowSmRightIcon","class":"h-6 w-6 ml-3"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53B1")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"StarIcon","class":"h-6 w-6 mr-2 text-blue-600","solid":true}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53B2")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ChevronDownIcon","class":"icon--button h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53B6")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ExternalLinkIcon","class":"h-6 w-6 ml-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53B7")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ExternalLinkIcon","class":"h-6 w-6 ml-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53B8")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ChevronLeftIcon","class":"w-7 h-full"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53B9")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ChevronRightIcon","class":"w-7 h-full"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53BH")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowCircleUpIcon","class":"h-10 w-10 text-red-600 bg-beige-10 rounded-3xl"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53BI")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"PhoneIcon","class":"h-6 w-6 mr-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53BJ")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"DesktopComputerIcon","class":"h-6 w-6 mr-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53BK")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"MailIcon","class":"h-6 w-6 mr-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53BS")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ExternalLinkIcon","class":"h-6 w-6 ml-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53C0")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ExternalLinkIcon","class":"h-6 w-6 ml-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53C1")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowSmRightIcon","class":"h-6 w-6 ml-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNPKE1AF53C2")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowSmRightIcon","class":"h-6 w-6 ml-2"}));
+</script>
+</body>
+</html>

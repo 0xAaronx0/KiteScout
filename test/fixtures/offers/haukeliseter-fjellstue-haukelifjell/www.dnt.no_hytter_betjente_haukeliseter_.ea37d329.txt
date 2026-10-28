@@ -1,0 +1,1413 @@
+
+<!DOCTYPE html>
+<html lang=nb-NO>
+<head>
+    <script>
+        window.isProduction = true;
+    </script>
+    <script id="CookieConsent" src="https://policy.app.cookieinformation.com/uc.js" data-culture="NB" cs-id="5572" type="text/javascript">
+    </script>
+    <script src="https://cdn.adnuntius.com/adn.js"></script>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=10"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+
+
+<meta property="og:url" content="https://www.dnt.no/haukeliseter" />
+
+    <title>Velkommen til Haukeliseter fjellstue - DNT</title>
+    <meta property="og:title" content="Velkommen til Haukeliseter fjellstue - DNT" />
+    <meta name="twitter:title" content="Velkommen til Haukeliseter fjellstue - DNT" />
+
+
+    <meta property="og:image" content="https://www.dnt.no/contentassets/298e69211b98491887fb5be08d05b09f/img_9899-crop.jpg?width=1280&amp;height=630&amp;format=webp" />
+    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://www.dnt.no/contentassets/298e69211b98491887fb5be08d05b09f/img_9899-crop.jpg?width=1920&amp;format=webp">
+    <meta name="twitter:image:alt">
+
+<meta name="twitter:site" content="@turistforening">
+<meta name="twitter:creator" content="@turistforening">
+
+
+    <script>
+!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{src: "https://js.monitor.azure.com/scripts/b/ai.2.gbl.min.js", crossOrigin: "anonymous", cfg: { instrumentationKey:'0ccd60b7-1f4d-4399-b16f-c7d287cf8da5', disableCookiesUsage: false }});
+</script>
+
+    <link href="/assets/js/main.DOCL_3td.js" rel="preload" as="script" crossOrigin="anonymous" />
+
+    <link href="/assets/css/main.cdaNi2eo.css" rel="preload" as="style" crossOrigin="anonymous" />
+
+    <link href="/assets/css/main.cdaNi2eo.css" rel="stylesheet" crossOrigin="anonymous" />
+
+
+        <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://sst.dnt.no/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-KX5LJQ7');
+        </script>
+        <!-- End Google Tag Manager -->
+    
+</head>
+<body>
+    <script type="module" src="/assets/js/main.DOCL_3td.js" crossOrigin="anonymous" ></script>
+
+    
+    
+    <div class="fixed w-full top-0 z-[2000] flex justify-center skip-to-main-content">
+        <a id="go-to-top" href="#main-content">Hopp til hovedinnhold</a>
+    </div>
+    
+    <header class="w-full bg-red sticky top-0 z-[1000]">
+        
+
+<div class="container flex flex-row justify-between text-white items-center h-16 space-x-3 overflow-hidden">
+    <a href='/' class="focus-outline relative block ml-[-16px] sm:ml-[-13px]">
+        <img class="inline sm:hidden" src="/images/logo-header.svg" alt="Logo">
+        <img class="hidden sm:inline" src="/images/logo-large.svg" alt="Logo">
+        <div class="sr-only">Til DNT.no forside</div>
+    </a>
+    <div id="headerbuttonrow" class="hidden lg:flex flex-row text-center space-x-5 transition-transform">
+        <a class="text-lg rounded-underline focus-outline px-1" href="/hytter/">Hytter</a>
+        <a class="text-lg rounded-underline focus-outline px-1" href="/turtips/">Turtips</a>
+        <a class="text-lg rounded-underline focus-outline px-1" href="/aktiviteter/">Aktiviteter</a>
+    </div>
+    <div class="flex flex-row space-x-5 !mr-[-6px]">
+        <a href="/medlem/" class="button-rounded-white hidden sm:flex">DNT-medlem</a>
+            <a href="/en/Cabins/staffed-cabins/haukeliseter/" title='EN' class="flex flex-col items-center px-3 focus-outline">
+                <div id="react_0HNP6EQ40RVKN"></div>
+                <span>EN</span>
+            </a>
+        <a href="/sok/" title='S&#xF8;k' class="flex flex-col items-center px-3 hidden sm:flex focus-outline">
+            <div id="react_0HNP6EQ40RVKO"></div>
+            <span>S&#xF8;k</span>
+        </a>
+        <button type="button" class="menubutton--state__open focus-outline" id="toggleMainMenu" aria-expanded="false" aria-controls="mainmenu">
+            <div class="menubutton--icon__open">
+                <div id="react_0HNP6EQ40RVKP"></div>
+                <span>Meny</span>
+            </div>
+            <div class="menubutton--icon__close flex flex-col items-center w-12">
+                <div id="react_0HNP6EQ40RVKQ"></div>
+                <span>Lukk</span>
+            </div>
+        </button>
+    </div>
+</div>
+
+<script>
+    if (typeof window === 'object') {
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const button = document.getElementById('toggleMainMenu');
+
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                // Mega menu
+                const menu = document.getElementById('megaMenu');
+                menu.classList.toggle('hidden');
+
+                // Check if menu.classList contains hidden and "hide" the main button row
+                const headerButtonRow = document.getElementById('headerbuttonrow');
+                if (menu.classList.contains('hidden')) {
+                    headerButtonRow.classList.remove('translate-y-[50px]');
+                    // Set tabindex to default state
+                    headerButtonRow.querySelectorAll('a').forEach((link) => {
+                        link.setAttribute('tabindex', 0);
+                    });
+                } else {
+                    headerButtonRow.classList.add('translate-y-[50px]');
+                    // Set tabindex to -1
+                    headerButtonRow.querySelectorAll('a').forEach((link) => {
+                        link.setAttribute('tabindex', -1);
+                    });
+                    
+                }
+
+                // Toggle icon and text
+                button.classList.toggle('menubutton--state__open');
+                button.classList.toggle('menubutton--state__close');
+
+                // Change aria-state
+                const ariaExpandedValue = button.getAttribute('aria-expanded');
+                button.setAttribute('aria-expanded', ariaExpandedValue === 'false' ? true : false);
+            })
+
+            document.addEventListener('click', (event) => {
+                const menu = document.getElementById('megaMenu');
+                const localMenu = document.getElementById('localMenu');
+                const openButton = document.getElementById('toggleMainMenu');
+                if (!menu.contains(event.target) && !localMenu?.contains(event.target) && !openButton.contains(event.target)) {
+                    closeMenu();
+                }
+            });
+
+            // Add event listener to check if <main> has tab focus
+            const main = document.querySelector('#main');
+            main.addEventListener('focusin', () => {
+                closeMenu();
+            });
+
+            function closeMenu() {
+
+                const menu = document.getElementById('megaMenu');
+                if (!menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                }
+
+                // Check if menu.classList contains hidden and "hide" the main button row
+                const headerButtonRow = document.getElementById('headerbuttonrow');
+                if (menu.classList.contains('hidden')) {
+                    headerButtonRow.classList.remove('translate-y-[50px]');
+                }
+
+                // Change icon and text
+                if (button.classList.contains('menubutton--state__close')) { 
+                    button.classList.remove('menubutton--state__close');
+                    button.classList.add('menubutton--state__open');
+                }
+                
+                // Change aria-state
+                const ariaExpandedValue = button.getAttribute('aria-expanded');
+                if (ariaExpandedValue === 'true') {
+                    button.setAttribute('aria-expanded', false);
+                }
+            }
+        });
+    }
+</script>
+
+        
+<section class="relative">
+    <div class='w-full absolute top-0 left-0 z-[1000] overflow-hidden overflow-y-auto max-h-[80vh] '>
+        <nav class='bg-white w-full relative hidden'
+             id="megaMenu"
+             aria-label="Hovedmeny">
+            <div class="container flex flex-col md:flex-row divide-y divide-gray-50 lg:divide-y-0">
+                <div class="w-full sm:hidden flex justify-between py-4 items-center">
+                    <a href="/medlem/" class="button-rounded-darkred">DNT-medlem</a>
+                    <a href="/sok/" title='S&#xF8;k' class="flex flex-col items-center px-3 focus-outline group">
+                        <div id="react_0HNP6EQ40RVKR"></div>
+                        <span>S&#xF8;k</span>
+                    </a>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-3/4 flex flex-col lg:flex-row divide-y divide-gray-50 lg:divide-y-0">
+                    <!-- Hytte -->
+                    <section class="w-full lg:w-1/3 md:px-3 py-4 menu--mobile__closed">
+                        <div class="flex flex-row justify-between items-center">
+                            <h2 class="flex flex-row items-center group text-red text-lg font-medium hover:underline underline-offset-1">
+                                <div id="react_0HNP6EQ40RVKS"></div>
+                                <a href="/hytter/" class="focus-outline">Hytter</a>
+                            </h2>
+                            <button class="text-black hover:text-red lg:hidden focus-outline before:!rounded-full !rounded-full menuToggleChildren px-1">
+                                <span class="sr-only">Vis eller skjul menypunkter</span>
+                                <div id="react_0HNP6EQ40RVKT"></div>
+                            </button>
+                        </div>
+                        <ul class="lg:flex flex-col space-y-3 mt-4">
+                            <!-- First element have some extra markup -->
+                                <li>
+                                    <a href="/sok/?tab=cabins" title='Finn hytte'
+                                    class="text-base font-medium text-gray-900 group inline-flex items-center focus-outline">
+                                        <span class="group-hover:underline">
+                                            Finn hytte
+                                        </span>
+                                        <div id="react_0HNP6EQ40RVKU"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/hytter/om-dnt-hyttene/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Om DNT-hyttene
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/hytter/anbefalte-hytter/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Anbefalte hytter
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/hytter/betjente/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Betjente hytter
+                                    </a>
+                                </li>
+                        </ul>
+                    </section>
+
+                    <!-- Turtips -->
+                    <section class="w-full lg:w-1/3 md:px-3 py-4 menu--mobile__closed">
+                        <div class="flex flex-row justify-between items-center">
+                            <h2 class="flex flex-row items-center group text-red text-lg font-medium hover:underline underline-offset-1">
+                                <div id="react_0HNP6EQ40RVKV"></div>
+                                <a href="/turtips/" class="focus-outline">Turtips</a>
+                            </h2>
+                            <button class="text-black hover:text-red lg:hidden focus-outline before:!rounded-full !rounded-full menuToggleChildren px-1">
+                                <div id="react_0HNP6EQ40RVL0"></div>
+                            </button>
+                        </div>
+                        <ul class="lg:flex flex-col space-y-3 mt-4">
+                            <!-- First element have some extra markup -->
+                                <li>
+                                    <a href="/sok/?tab=trips" title='Finn tur' 
+                                    class="text-base font-medium text-gray-900 group inline-flex items-center focus-outline">
+                                        <span class="group-hover:underline">
+                                            Finn tur
+                                        </span>
+                                        <div id="react_0HNP6EQ40RVL1"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/turtips/turvett/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Tips til turen
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/turtips/anbefalte-turer/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Anbefalte turer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/turtips/turmat/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Turmat
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/turtips/turomrader/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Turomr&#xE5;der
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/turtips/turfolk/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Turfolk
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/turtips/sesong/" class="text-base font-light text-gray-900 hover:underline focus-outline">
+                                        Sesong
+                                    </a>
+                                </li>
+                        </ul>
+                    </section>
+
+                    <!-- Aktiviteter -->
+                    <section class="w-full lg:w-1/3 md:px-3 py-4 menu--mobile__closed">
+                        <div class="flex flex-row justify-between items-center">
+                            <h2 class="flex flex-row items-center group text-red text-lg font-medium hover:underline underline-offset-1">
+                                <div id="react_0HNP6EQ40RVL2"></div>
+                                <a href="/aktiviteter/" class="focus-outline">Aktiviteter</a>
+                            </h2>
+                            <button class="text-black hover:text-red lg:hidden focus-outline before:!rounded-full !rounded-full menuToggleChildren px-1">
+                                <span class="sr-only">Vis eller skjul menypunkter</span>
+                                <div id="react_0HNP6EQ40RVL3"></div>
+                            </button>
+                        </div>
+                        <ul class="lg:flex flex-col space-y-3 mt-4">
+                            <!-- First element have some extra markup -->
+                                <li>
+                                    <a href="/aktivitetskalender/" title='S&#xF8;k i aktivitetskalender' 
+                                    class="text-base font-medium text-gray-900 group inline-flex items-center focus-outline">
+                                        <span class="group-hover:underline">
+                                            S&#xF8;k i aktivitetskalender
+                                        </span>
+                                        <div id="react_0HNP6EQ40RVL4"></div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/organiserte-turer/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Organiserte turer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/kurs-og-utdanning/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Kurs og utdanning
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/arrangementer/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Arrangementer
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/DNT-for-barn/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Barn
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/ungdom/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Ungdom
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/senior/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Senior
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/aktiviteter/fjellsport/" class="text-base font-light text-gray-900 hover:underline  focus-outline">
+                                        Fjellsport
+                                    </a>
+                                </li>
+                        </ul>
+                    </section>
+                </div>
+                <section class="w-full md:w-1/2 lg:w-1/4 md:border-l md:border-gray-50 md:pl-6 md:pt-3 pb-4 about-dnt__closed">
+                    <ul class="flex flex-col divide-gray-50 divide-y">
+                        <li data-menu-favorite class="py-4 hidden">
+                            <a data-menu-url href="" title="" class="flex items-center font-medium text-base text-gray-900 py-1 hover:underline focus-outline">
+                                <div id="react_0HNP6EQ40RVL5"></div>
+                                <span data-menu-name></span>
+                            </a>
+                        </li>
+                            <li class="py-4">
+                                <a href="/dnt-der-du-er/" title='DNT der du er' class="font-medium text-base text-gray-900 py-1 inline-block hover:underline focus-outline">
+                                    DNT der du er
+                                </a>
+                            </li>
+                        <li class="py-4">
+                            <a href="/om-dnt/dnts-arbeid/frivillig/" title='Bli frivillig' class="font-medium text-base text-gray-900 py-1 inline-block hover:underline focus-outline">
+                                Bli frivillig
+                            </a>
+                        </li>
+                            <li class="py-4 flex flex-row justify-between items-center gap-x-3">
+                                <a href="/om-dnt/" title='Om DNT' class="font-medium text-base text-gray-900 py-1 inline-block hover:underline focus-outline">
+                                    Om DNT
+                                </a>
+                                <button class="text-black hover:text-red focus-outline before:!rounded-full !rounded-full px-1" id="toggleAboutDnt">
+                                    <span class="sr-only">Vis eller skjul menypunkter</span>
+                                    <div id="react_0HNP6EQ40RVL6"></div>
+                                </button>
+                            </li>
+                                <li class='about-dnt--item border-none pt-0 pb-1.5 '>
+                                    <a href="/om-dnt/kontakt-oss/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Kontakt DNT
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="/om-dnt/dnts-arbeid/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Dette jobber DNT med
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="/om-dnt/organisasjon/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Organisasjonen
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="/om-dnt/english/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        The Norwegian Trekking Association 
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="https://app.cvideo.no/dnt" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Ledige stillinger
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="https://fjellogvidde.dnt.no/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Fjell &amp; Vidde
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="/om-dnt/tursentre/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        DNTs tursentre
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 '>
+                                    <a href="/om-dnt/personvern/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Personvernerkl&#xE6;ring
+                                    </a>
+                                </li>
+                                <li class='about-dnt--item border-none py-1.5 pb-4'>
+                                    <a href="/om-dnt/samarbeidspartnere/" class="text-base font-light text-gray-900 hover:underline focus-outline inline-block">
+                                        Strategiske samarbeidspartnere
+                                    </a>
+                                </li>
+                            <li class="py-4">
+                                <a href="https://www.dntbutikken.no/" title='DNT Nettbutikk' class="inline-flex items-center font-medium text-base text-gray-900 hover:underline focus-outline">
+                                    <span>
+                                        DNT Nettbutikk
+                                    </span>
+                                    <div id="react_0HNP6EQ40RVL7"></div>
+                                </a>
+                            </li>
+                        <li class="py-4">
+                            <a href="https://fjellogvidde.dnt.no/" title='Fjell og vidde' class="inline-flex items-center font-medium text-base text-gray-900 hover:underline focus-outline">
+                                    <span>
+                                        Fjell og vidde
+                                    </span>
+                                <div id="react_0HNP6EQ40RVL8"></div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </nav>
+            <nav class="w-full relative bg-white shadow-lg border-t border-gray-50" id="localMenu" aria-label="Lokale sider">
+                
+                <div class="container py-2 relative">
+                    <div id="localMenuLeftWrapper" class="absolute left-0 h-full w-16 z-40 bg-gradient-to-r from-white from-20% via-white via-50% to-transparent top-0 pointer-events-none">
+                        <button id="localMenuLeft" type="button" class="active:text-red-600 text-gray-700 !absolute left-0 h-[70%] my-[15%] mx-1 px-1 pointer-events-auto focus-outline">
+                            <span class="sr-only">
+                                Scroll menyen mot venstre
+                            </span>
+                            <div id="react_0HNP6EQ40RVL9"></div>
+                        </button>
+                    </div>
+                    <ul class="flex flex-row space-x-5 overflow-x-scroll scrollbar-hide touch-pan-x py-3 px-6 -mx-6 lg:mx-0 lg:px-0 focus-outline" id="localMenuList">
+                        <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/" class="block text-gray-900 text-lg font-medium hover:underline focus-outline font-bold underline active-menu-item">
+                                    Haukeliseter
+                                </a>
+                        </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/bestilling2/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Bestilling
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/apningstider/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    &#xC5;pningstider
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/mat-med-utsikt2/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Mat med utsikt
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/adkomst/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Adkomst
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/kurs-og-aktiviteter/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Kurs og aktiviteter
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/turtips/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Turtips
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/grupper-og-bedrifer/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Grupper og bedrifer
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/om-fjellstua/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    Om fjellstua
+                                </a>
+                            </li>
+                            <li class="shrink-0">
+                                <a href="/hytter/betjente/haukeliseter/english/" class="block text-gray-900 text-lg font-normal hover:underline focus-outline ">
+                                    English
+                                </a>
+                            </li>
+                    </ul>
+                    <div id="localMenuRightWrapper" class="absolute right-0 h-full w-16 z-40 bg-gradient-to-l from-white from-20% via-white via-50% to-transparent top-0 pointer-events-none">
+                        <button id="localMenuRight" type="button" class="active:text-red-600 text-gray-700 !absolute right-0 h-[70%] my-[15%] mx-1 px-1 pointer-events-auto focus-outline">
+                            <span class="sr-only">
+                                Scroll menyen mot h&#xF8;yre
+                            </span>
+                            <div id="react_0HNP6EQ40RVLA"></div>
+                        </button>
+                    </div>
+                </div>
+                
+            </nav>
+    </div>
+</section>
+    </header>
+    <div id="main" class='overflow-hidden top-[67px]' data-page-id="45142">
+        
+
+
+<script type="text/javascript">
+    const showPhotoCredit = () => {
+        document.getElementById('photocredit').classList.add('inline');
+        document.getElementById('photocredit').classList.remove('hidden');
+    };
+    const hidePhotoCredit = () => {
+        document.getElementById('photocredit').classList.add('hidden');
+        document.getElementById('photocredit').classList.remove('inline');
+    };
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        // Show photocredit on focus and mouseover
+        document.getElementById('photocredit-icon')?.addEventListener('mouseover', showPhotoCredit);
+        document.getElementById('photocredit-icon')?.addEventListener('focus', showPhotoCredit);
+
+        // Hide photocredit on blur and mouseout
+        document.getElementById('photocredit-icon')?.addEventListener('mouseout', hidePhotoCredit);
+        document.getElementById('photocredit-icon')?.addEventListener('blur', hidePhotoCredit);
+    });
+
+</script>
+
+
+<div class='h-[440px] md:h-[600px] mb-24 '>
+    <div class='absolute w-full bg-beige-10 h-[440px] md:h-[600px] bg-topography shadow-[inset_0_-8px_12px_0px_rgba(0,0,0,0.08)]'
+    >
+            <div class="relative w-auto h-full max-w-[2000px] bg-cover mx-auto mb-24">
+                <picture>
+                    <source media="(min-width: 1280px)" srcset="https://www.dnt.no/cdn-cgi/image/width=3000,height=900,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/img_9899-crop.jpg?format=auto">
+                    <source media="(min-width: 1024px)" srcset="https://www.dnt.no/cdn-cgi/image/width=1920,height=900,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/img_9899-crop.jpg?format=auto">
+                    <source media="(min-width: 768px)" srcset="https://www.dnt.no/cdn-cgi/image/width=1536,height=900,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/img_9899-crop.jpg?format=auto">
+                    <source media="(min-width: 640px)" srcset="https://www.dnt.no/cdn-cgi/image/width=960,height=660,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/img_9899-crop.jpg?format=auto">
+                    <img src="https://www.dnt.no/cdn-cgi/image/width=960,height=660,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/img_9899-crop.jpg?format=auto"
+                         class="h-full w-full object-cover object-center">
+                </picture>
+            </div>
+
+        <div class="absolute z-1 top-0 w-full h-full flex flex-col justify-between">
+                <div class="container flex flex-row justify-between">
+                    
+
+<div id="breadcrumb" class=' mt-5 h-7 invisible' aria-hidden="true">
+    <a href="javascript:history.go(-1)" title="Tilbake" class='button-rounded-transparent !px-1 print:hidden'>
+        <div id="react_0HNP6EQ40RVK1"></div>
+        <span class="pr-1">Tilbake</span>
+    </a>
+</div>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const referrer = document.referrer;
+        const isInternal = referrer && referrer.startsWith(window.location.origin);
+        
+        // Button is hidden when referrer is not internal
+        if (isInternal) {
+            const breadcrumbElement = document.getElementById('breadcrumb');
+            breadcrumbElement.setAttribute('aria-hidden', 'false');
+            breadcrumbElement.classList.remove('invisible');
+        }
+    });
+ 
+</script>
+                    <div class="flex flex-col pl-1 gap-y-1 mt-5 items-end">
+                            <div class="flex justify-start sm:justify-end">
+                                <button type="button" id="photocredit-icon" class="button-rounded-transparent leading-4 !px-1 z-40">
+                                    <div id="photocredit" class="hidden pl-1 pr-3 order-2 sm:order-1">
+                                        Foto: Anna Dypvik S&#xF8;dahl
+                                    </div>
+                                    <div class="order-1 sm:order-2">
+                                        <div id="react_0HNP6EQ40RVK2"></div>
+                                    </div>
+                                </button>
+                            </div>
+                    </div>
+                </div>
+                    <div class=" bg-red text-white flex items-center absolute left-1/2 -translate-x-1/2 -bottom-[32px] h-[62px]">
+                        <div class="font-headers text-[17px] px-4 font-normal">
+                            Haukeliseter
+                        </div>
+                        <div class="w-[2px] bg-white h-full"></div>
+                        <div class="w-[62px] flex justify-center">
+                            <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M43.3181 21.9996C43.3181 33.7748 33.7753 43.3176 22.0001 43.3176C10.225 43.3176 0.682129 33.7748 0.682129 21.9996C0.682129 10.2245 10.225 0.681641 22.0001 0.681641C33.7753 0.681641 43.3181 10.2245 43.3181 21.9996Z" fill="white"/>
+                                <path d="M10.8067 14.7839C10.8067 14.7839 10.7749 11.6417 13.3881 11.6417C16.3081 11.6417 30.1886 11.6417 30.707 11.6417C31.2994 11.6312 33.3307 12.2342 33.3307 14.7416C33.3307 17.1008 31.8708 17.9578 30.8022 17.9578C29.7337 17.9578 25.3325 17.9578 25.3325 17.9578V33.1713C25.3325 34.0177 24.9093 35.8903 21.9682 35.8903C19.027 35.8903 18.6779 34.0389 18.6779 33.1819V17.979C15.7897 17.979 14.499 18.0001 13.3987 17.979C12.1714 17.9472 10.7749 16.9739 10.8172 14.8051" fill="#D82D20"/>
+                            </svg>
+                        </div>
+                    </div>
+        </div>
+    </div>
+</div>
+
+
+<main id="main-content" class="container mb-16">
+
+    
+<div class="grid grid-cols-1 md:grid-cols-12 mb-5 md:mb-10">
+    <div class="col-span-base text-center">
+        <h1 class="header"
+            >
+            Velkommen til Haukeliseter fjellstue
+        </h1>
+
+        <p class="mt-5 md:mt-10 text-xl font-light">
+            
+
+
+Velkommen til Norges st&#xF8;rste og mest bes&#xF8;kte DNT-hytte. Vi har &#xE5;pent alle dager, hele &#xE5;ret!&#x200B;&#x200B;&#x200B;&#x200B;&#x200B;&#x200B;&#x200B; Haukeliseter fjellstue ligger sentralt rett ved E134 p&#xE5; Haukelifjell, 1000 meter over havet. Nord for fjellstuen finner du mektige Hardangervidda Nasjonalpark, og s&#xF8;rover ligger frodige Ryfylke- og Setesdalsheiene. Med Haukeliseter som utgangspunkt er turmulighetene uendelige!
+        </p>
+    </div>
+</div>
+
+<div id="react_0HNP6EQ40RVK3"></div>        <section class="bleeding-edges bg-beige-50 py-10 mb-10">
+            <div class="container grid lg:grid-cols-4 gap-7">
+                    
+    <!-- ImageLinkBlock -->
+    <div class="relative group rounded-lg border border-beige-200 shadow hover:shadow-md body-area--override">
+        <a  href="/om-dnt/dnts-arbeid/frivillig/"
+            title="Bli frivillig"
+            class="!absolute inset-0 z-20 focus-outline">
+            <span class="sr-only">
+                Bli frivillig
+            </span>
+        </a>
+        <div class="bg-topography overflow-hidden rounded-lg"> 
+                <picture>
+                    <source media="(min-width: 1280px)" srcset="https://www.dnt.no/cdn-cgi/image/width=465,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/170706saga_foto_mariusdalsegsaetrednt_225.jpg?format=auto">
+                    <source media="(min-width: 1024px)" srcset="https://www.dnt.no/cdn-cgi/image/width=375,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/170706saga_foto_mariusdalsegsaetrednt_225.jpg?format=auto">
+                    <source media="(min-width: 768px)" srcset="https://www.dnt.no/cdn-cgi/image/width=525,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/170706saga_foto_mariusdalsegsaetrednt_225.jpg?format=auto">
+                    <source media="(min-width: 640px)" srcset="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/170706saga_foto_mariusdalsegsaetrednt_225.jpg?format=auto">
+                    <img src="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/170706saga_foto_mariusdalsegsaetrednt_225.jpg?format=auto" class="h-38 w-full object-cover object-center">
+                </picture>
+            <div class="h-10 z-10 left-0 bottom-0 bg-beige-10 group-active:bg-beige-50 w-full p-2 font-medium flex justify-between items-center">
+                <span class="group-hover:underline truncate">
+                    Bli frivillig
+                </span>
+                <div id="react_0HNP6EQ40RVK4"></div>
+            </div>
+        </div>
+        
+    </div>
+
+                    
+    <!-- ImageLinkBlock -->
+    <div class="relative group rounded-lg border border-beige-200 shadow hover:shadow-md body-area--override">
+        <a  href="/medlem/"
+            title="Bli medlem"
+            class="!absolute inset-0 z-20 focus-outline">
+            <span class="sr-only">
+                Bli medlem
+            </span>
+        </a>
+        <div class="bg-topography overflow-hidden rounded-lg"> 
+                <picture>
+                    <source media="(min-width: 1280px)" srcset="https://www.dnt.no/cdn-cgi/image/width=465,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/20190607trollfjordhytta_fotomariusdalseg_15.jpg?format=auto">
+                    <source media="(min-width: 1024px)" srcset="https://www.dnt.no/cdn-cgi/image/width=375,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/20190607trollfjordhytta_fotomariusdalseg_15.jpg?format=auto">
+                    <source media="(min-width: 768px)" srcset="https://www.dnt.no/cdn-cgi/image/width=525,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/20190607trollfjordhytta_fotomariusdalseg_15.jpg?format=auto">
+                    <source media="(min-width: 640px)" srcset="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/20190607trollfjordhytta_fotomariusdalseg_15.jpg?format=auto">
+                    <img src="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/20190607trollfjordhytta_fotomariusdalseg_15.jpg?format=auto" alt="Nydelige Trollfjordhytta ligger p&#xE5; grensen mellom Vester&#xE5;len og Lofoten. Turen opp til hytta g&#xE5;r fra Austpollen innerst i Trollfjorden." class="h-38 w-full object-cover object-center">
+                </picture>
+            <div class="h-10 z-10 left-0 bottom-0 bg-beige-10 group-active:bg-beige-50 w-full p-2 font-medium flex justify-between items-center">
+                <span class="group-hover:underline truncate">
+                    Bli medlem
+                </span>
+                <div id="react_0HNP6EQ40RVK5"></div>
+            </div>
+        </div>
+        
+    </div>
+
+                    
+    <!-- ImageLinkBlock -->
+    <div class="relative group rounded-lg border border-beige-200 shadow hover:shadow-md body-area--override">
+        <a  href="/hytter/betjente/haukeliseter/bestilling2/"
+            title="Bestill overnatting"
+            class="!absolute inset-0 z-20 focus-outline">
+            <span class="sr-only">
+                Bestill overnatting
+            </span>
+        </a>
+        <div class="bg-topography overflow-hidden rounded-lg"> 
+                <picture>
+                    <source media="(min-width: 1280px)" srcset="https://www.dnt.no/cdn-cgi/image/width=465,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/img_2197_1-1.jpg?format=auto">
+                    <source media="(min-width: 1024px)" srcset="https://www.dnt.no/cdn-cgi/image/width=375,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/img_2197_1-1.jpg?format=auto">
+                    <source media="(min-width: 768px)" srcset="https://www.dnt.no/cdn-cgi/image/width=525,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/img_2197_1-1.jpg?format=auto">
+                    <source media="(min-width: 640px)" srcset="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/img_2197_1-1.jpg?format=auto">
+                    <img src="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/img_2197_1-1.jpg?format=auto" alt="Foto. Nansenbygget p&#xE5; Haukeliseter i h&#xF8;stfarget fjellterreng." class="h-38 w-full object-cover object-center">
+                </picture>
+            <div class="h-10 z-10 left-0 bottom-0 bg-beige-10 group-active:bg-beige-50 w-full p-2 font-medium flex justify-between items-center">
+                <span class="group-hover:underline truncate">
+                    Bestill overnatting
+                </span>
+                <div id="react_0HNP6EQ40RVK6"></div>
+            </div>
+        </div>
+        
+    </div>
+
+                    
+    <!-- ImageLinkBlock -->
+    <div class="relative group rounded-lg border border-beige-200 shadow hover:shadow-md body-area--override">
+        <a  href="/hytter/betjente/haukeliseter/apningstider/"
+            title="&#xC5;pningstider"
+            class="!absolute inset-0 z-20 focus-outline">
+            <span class="sr-only">
+                &#xC5;pningstider
+            </span>
+        </a>
+        <div class="bg-topography overflow-hidden rounded-lg"> 
+                <picture>
+                    <source media="(min-width: 1280px)" srcset="https://www.dnt.no/cdn-cgi/image/width=465,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/4t2a8410-1.jpg?format=auto">
+                    <source media="(min-width: 1024px)" srcset="https://www.dnt.no/cdn-cgi/image/width=375,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/4t2a8410-1.jpg?format=auto">
+                    <source media="(min-width: 768px)" srcset="https://www.dnt.no/cdn-cgi/image/width=525,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/4t2a8410-1.jpg?format=auto">
+                    <source media="(min-width: 640px)" srcset="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/4t2a8410-1.jpg?format=auto">
+                    <img src="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//contentassets/298e69211b98491887fb5be08d05b09f/4t2a8410-1.jpg?format=auto" class="h-38 w-full object-cover object-center">
+                </picture>
+            <div class="h-10 z-10 left-0 bottom-0 bg-beige-10 group-active:bg-beige-50 w-full p-2 font-medium flex justify-between items-center">
+                <span class="group-hover:underline truncate">
+                    &#xC5;pningstider
+                </span>
+                <div id="react_0HNP6EQ40RVK7"></div>
+            </div>
+        </div>
+        
+    </div>
+
+            </div>
+        </section>
+    
+
+
+
+    
+<div><div>
+
+<script type="text/javascript">
+    // React SSR loaded?
+    if (typeof window === 'object') {
+        // Run when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            const activityPages = [];
+
+                    activityPages.push({
+                        item_id: "616001",
+                        item_name: "Strikkehelg på fjellet",
+                        item_category: "Aktivitet",
+                        item_category2: "Arrangement",
+                        item_category3: "",
+                        item_list_name: "Se kommende kurs og arrangementer",
+                        item_activity_date: "06.11.2026 19:00:58",
+                        item_duration: "2",
+                        quantity: 0,
+                    });
+                
+                    activityPages.push({
+                        item_id: "623985",
+                        item_name: "Skiteknikkurs offpist - Få mer ut av vinteren!",
+                        item_category: "Aktivitet",
+                        item_category2: "Kurs",
+                        item_category3: "Skikurs",
+                        item_list_name: "Se kommende kurs og arrangementer",
+                        item_activity_date: "11.12.2026 20:00:00",
+                        item_duration: "2",
+                        quantity: 0,
+                    });
+                
+                    activityPages.push({
+                        item_id: "626998",
+                        item_name: "Toppturkurs",
+                        item_category: "Aktivitet",
+                        item_category2: "Kurs",
+                        item_category3: "Toppturkurs",
+                        item_list_name: "Se kommende kurs og arrangementer",
+                        item_activity_date: "08.01.2027 21:00:00",
+                        item_duration: "2",
+                        quantity: 0,
+                    });
+                
+                    activityPages.push({
+                        item_id: "626121",
+                        item_name: "Kitekurs med Johannes Tobiassen",
+                        item_category: "Aktivitet",
+                        item_category2: "Kurs",
+                        item_category3: "Kitekurs",
+                        item_list_name: "Se kommende kurs og arrangementer",
+                        item_activity_date: "08.01.2027 21:00:00",
+                        item_duration: "2",
+                        quantity: 0,
+                    });
+                
+                    activityPages.push({
+                        item_id: "625669",
+                        item_name: "Kitekurs med Kiteskolen",
+                        item_category: "Aktivitet",
+                        item_category2: "Kurs",
+                        item_category3: "Kitekurs",
+                        item_list_name: "Se kommende kurs og arrangementer",
+                        item_activity_date: "09.01.2027 10:00:00",
+                        item_duration: "2",
+                        quantity: 0,
+                    });
+                
+                    activityPages.push({
+                        item_id: "627644",
+                        item_name: "Kitekurs med Johannes Tobiassen",
+                        item_category: "Aktivitet",
+                        item_category2: "Kurs",
+                        item_category3: "Kitekurs",
+                        item_list_name: "Se kommende kurs og arrangementer",
+                        item_activity_date: "15.01.2027 21:00:00",
+                        item_duration: "2",
+                        quantity: 0,
+                    });
+                
+                    activityPages.push({
+                        item_id: "626806",
+                        item_name: "Kitekurs med Kiteskolen",
+                        item_category: "Aktivitet",
+                        item_category2: "Kurs",
+                        item_category3: "Kitekurs",
+                        item_list_name: "Se kommende kurs og arrangementer",
+                        item_activity_date: "16.01.2027 10:00:00",
+                        item_duration: "2",
+                        quantity: 0,
+                    });
+                
+                    activityPages.push({
+                        item_id: "622255",
+                        item_name: "NF grunnkurs skred 2027",
+                        item_category: "Aktivitet",
+                        item_category2: "Kurs",
+                        item_category3: "Turlederkurs, Skredkurs",
+                        item_list_name: "Se kommende kurs og arrangementer",
+                        item_activity_date: "21.01.2027 21:00:00",
+                        item_duration: "3",
+                        quantity: 0,
+                    });
+                            postDataLayerEvent("view_item_list", activityPages);
+        });
+    }
+</script>
+
+<!-- Slider - Activities -->
+    <section class="bleeding-edges body-area--override my-10 col-span-full">
+        <div class="container">
+            <div class="flex justify-between items-center mb-5">
+                <h2 class="text-2xl font-light">
+                    Se kommende kurs og arrangementer
+                </h2>
+
+                <a href="/aktivitetskalender/?page=1&amp;q=Haukeliseter fjellstue&amp;associations=25419,24873" title='Vis alle i DNTs aktivitetskalender' class="link-beige hidden md:inline-flex">
+                    <span>
+                        Vis alle i DNTs aktivitetskalender
+                    </span>
+                    <div id="react_0HNP6EQ40RVK8"></div>
+                </a>
+            </div>
+
+            <div class="w-full relative">
+                <div class="absolute right-0 bottom-[18px] h-[calc(100%-18px)] w-6 z-40 bg-gradient-to-r from-transparent to-beige-10 top-0 pointer-events-none"></div>
+                    <ul class="items-stretch flex flex-row space-x-6 w-full overflow-x-auto overflow-y-hidden pl-1 pr-6 pt-1 pb-5 mb-5 md:mb-10 scrollbar-custom focus-outline">
+
+
+
+    <li>
+        <div id="react_0HNP6EQ40RVK9"></div>    
+    </li>
+
+
+
+    <li>
+        <div id="react_0HNP6EQ40RVKA"></div>    
+    </li>
+
+
+
+    <li>
+        <div id="react_0HNP6EQ40RVKB"></div>    
+    </li>
+
+
+
+    <li>
+        <div id="react_0HNP6EQ40RVKC"></div>    
+    </li>
+
+
+
+    <li>
+        <div id="react_0HNP6EQ40RVKD"></div>    
+    </li>
+
+
+
+    <li>
+        <div id="react_0HNP6EQ40RVKE"></div>    
+    </li>
+
+
+
+    <li>
+        <div id="react_0HNP6EQ40RVKF"></div>    
+    </li>
+
+
+
+    <li>
+        <div id="react_0HNP6EQ40RVKG"></div>    
+    </li>
+                            <li>
+                                <div class="shrink-0 w-64 md:w-80 h-full transition-all body-area--override">
+                                    <div class="flex flex-col modal-button-wrapper group h-full bg-white text-black rounded-lg relative">
+                                        <a href="/aktivitetskalender/?page=1&amp;q=Haukeliseter fjellstue&amp;associations=25419,24873" class="cursor-pointer inset-0 !absolute w-full h-full focus-outline z-10">
+                                            <span class="sr-only">
+                                                &#xC5;pne aktivitetskalender
+                                            </span>
+                                        </a>
+                                        <div class="p-3 text-left flex flex-col justify-between w-full order-2 h-full">
+                                            <div class="flex justify-center items-center h-full w-full">
+                                                <h3 class="text-xl font-medium leading-7 line-clamp-2 h-auto text-center">
+                                                    Se flere aktiviteter i DNTs aktivitetskalender
+                                                </h3>
+                                            </div>
+                                            <div class="relative flex gap-x-2">
+                                                <span class="group-hover:underline flex items-center">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-6 w-6 rounded-full p-1 mr-2 min-w-[1.5rem]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                    </svg>
+                                                    Vis alle
+                                                    <div id="react_0HNP6EQ40RVKH"></div>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                    </ul>
+
+                <a href="/aktivitetskalender/?page=1&amp;q=Haukeliseter fjellstue&amp;associations=25419,24873"
+                   title='Vis alle i DNTs aktivitetskalender'
+                   class="text-base font-medium leading-6 text-gray-900 group md:hidden inline-flex items-center -mt-4 mb-4 focus-outline relative">
+                    <span class="group-hover:underline">
+                        Vis alle i DNTs aktivitetskalender
+                    </span>
+                    <div id="react_0HNP6EQ40RVKI"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+</div><div>
+
+<section class="bleeding-edges bg-beige-50 body-area--override py-10 ">
+    <div class="container grid grid-cols-12 gap-y-6">
+        <div class="!col-start-2 col-span-10 md:col-span-6 body-area">
+            <h2 class="font-light text-2xl leading-8 text-gray-900 mb-5">
+                Velkommen til villreinens rike &#x2013; vis hensyn
+            </h2>
+
+            <p class="font-light text-lg leading-7 text-gray-900">
+                N&#xE5;r du bes&#xF8;ker Haukeliseter, bes&#xF8;ker du et villreinsomr&#xE5;de. Villreinen i Norge er truet, blant annet fordi hytter, veier og kraftanlegg har stykket opp og beslaglagt stadig mer av leveomr&#xE5;dene deres. Ogs&#xE5; du som bare er p&#xE5; bes&#xF8;k i villreinfjellet, kan p&#xE5;virke dyra negativt. Les mer om hvordan du kan ta hensyn til villreinen her.
+            </p>
+        </div>
+        <div class="col-start-2 col-span-10 md:col-start-9 md:col-span-3">
+            
+    <!-- ImageLinkBlock -->
+    <div class="relative group rounded-lg border border-beige-200 shadow hover:shadow-md body-area--override">
+        <a  href="/turtips/turvett/artikler/ta-hensyn-til-villreinen-pa-tur/"
+            title="Les mer"
+            class="!absolute inset-0 z-20 focus-outline">
+            <span class="sr-only">
+                Les mer
+            </span>
+        </a>
+        <div class="bg-topography overflow-hidden rounded-lg"> 
+                <picture>
+                    <source media="(min-width: 1280px)" srcset="https://www.dnt.no/cdn-cgi/image/width=465,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2024/5/olav-strand-nina3.jpeg2.jpg?format=auto">
+                    <source media="(min-width: 1024px)" srcset="https://www.dnt.no/cdn-cgi/image/width=375,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2024/5/olav-strand-nina3.jpeg2.jpg?format=auto">
+                    <source media="(min-width: 768px)" srcset="https://www.dnt.no/cdn-cgi/image/width=525,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2024/5/olav-strand-nina3.jpeg2.jpg?format=auto">
+                    <source media="(min-width: 640px)" srcset="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2024/5/olav-strand-nina3.jpeg2.jpg?format=auto">
+                    <img src="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2024/5/olav-strand-nina3.jpeg2.jpg?format=auto" class="h-38 w-full object-cover object-center">
+                </picture>
+            <div class="h-10 z-10 left-0 bottom-0 bg-beige-10 group-active:bg-beige-50 w-full p-2 font-medium flex justify-between items-center">
+                <span class="group-hover:underline truncate">
+                    Les mer
+                </span>
+                <div id="react_0HNP6EQ40RVKJ"></div>
+            </div>
+        </div>
+        
+    </div>
+</partial>
+        </div>
+    </div>
+</section></div><div>
+
+<section class="bleeding-edges  body-area--override py-10 ">
+    <div class="container grid grid-cols-12 gap-y-6">
+        <div class="!col-start-2 col-span-10 md:col-span-6 body-area">
+            <h2 class="font-light text-2xl leading-8 text-gray-900 mb-5">
+                Se webkamera fra Haukeliseter fjellstue
+            </h2>
+
+            <p class="font-light text-lg leading-7 text-gray-900">
+                Webkameraet gir deg oppdaterte bilder av forholdene ved fjellstua og er perfekt for deg som planlegger tur, eller bare vil nyte utsikten hjemmefra.
+            </p>
+        </div>
+        <div class="col-start-2 col-span-10 md:col-start-9 md:col-span-3">
+            
+    <!-- ImageLinkBlock -->
+    <div class="relative group rounded-lg border border-beige-200 shadow hover:shadow-md body-area--override">
+        <a  href="http://94.139.67.154:50000/axis-cgi/jpg/image.cgi?resolution=800x500"
+            title="Se webkamera fra Haukeliseter fjellstue"
+            class="!absolute inset-0 z-20 focus-outline">
+            <span class="sr-only">
+                Se webkamera fra Haukeliseter fjellstue
+            </span>
+        </a>
+        <div class="bg-topography overflow-hidden rounded-lg"> 
+                <picture>
+                    <source media="(min-width: 1280px)" srcset="https://www.dnt.no/cdn-cgi/image/width=465,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/haukeliseter_sommer_kevinmolstad_jonasolsvik-2399.jpg?format=auto">
+                    <source media="(min-width: 1024px)" srcset="https://www.dnt.no/cdn-cgi/image/width=375,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/haukeliseter_sommer_kevinmolstad_jonasolsvik-2399.jpg?format=auto">
+                    <source media="(min-width: 768px)" srcset="https://www.dnt.no/cdn-cgi/image/width=525,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/haukeliseter_sommer_kevinmolstad_jonasolsvik-2399.jpg?format=auto">
+                    <source media="(min-width: 640px)" srcset="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/haukeliseter_sommer_kevinmolstad_jonasolsvik-2399.jpg?format=auto">
+                    <img src="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/10/haukeliseter_sommer_kevinmolstad_jonasolsvik-2399.jpg?format=auto" class="h-38 w-full object-cover object-center">
+                </picture>
+            <div class="h-10 z-10 left-0 bottom-0 bg-beige-10 group-active:bg-beige-50 w-full p-2 font-medium flex justify-between items-center">
+                <span class="group-hover:underline truncate">
+                    Se webkamera fra Haukeliseter fjellstue
+                </span>
+                <div id="react_0HNP6EQ40RVKK"></div>
+            </div>
+        </div>
+        
+    </div>
+</partial>
+        </div>
+    </div>
+</section></div><div>
+
+<section class="bleeding-edges bg-beige-50 body-area--override py-10 ">
+    <div class="container grid grid-cols-12 gap-y-6">
+        <div class="!col-start-2 col-span-10 md:col-span-6 body-area">
+            <h2 class="font-light text-2xl leading-8 text-gray-900 mb-5">
+                Ta bussen til Haukeliseter og f&#xE5; Gr&#xF8;nt kort
+            </h2>
+
+            <p class="font-light text-lg leading-7 text-gray-900">
+                Alle som ankommer Haukeliseter med buss f&#xE5;r et Gr&#xF8;nt kort ved innsjekk p&#xE5; fjellstua. Verdikortet er v&#xE5;r takk til deg som velger &#xE5; reise milj&#xF8;vennlig! Gr&#xF8;nt kort-gavekortet p&#xE5; 150 kroner kan brukes p&#xE5; mat eller alkoholfri drikke p&#xE5; hytta.
+            </p>
+        </div>
+        <div class="col-start-2 col-span-10 md:col-start-9 md:col-span-3">
+            
+    <!-- ImageLinkBlock -->
+    <div class="relative group rounded-lg border border-beige-200 shadow hover:shadow-md body-area--override">
+        <a  href="/om-dnt/dnts-arbeid/barekraft-i-dnt/gront-kort/"
+            title="Gr&#xF8;nt kort"
+            class="!absolute inset-0 z-20 focus-outline">
+            <span class="sr-only">
+                Gr&#xF8;nt kort
+            </span>
+        </a>
+        <div class="bg-topography overflow-hidden rounded-lg"> 
+                <picture>
+                    <source media="(min-width: 1280px)" srcset="https://www.dnt.no/cdn-cgi/image/width=465,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2025/5/dscf0633.jpg?format=auto">
+                    <source media="(min-width: 1024px)" srcset="https://www.dnt.no/cdn-cgi/image/width=375,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2025/5/dscf0633.jpg?format=auto">
+                    <source media="(min-width: 768px)" srcset="https://www.dnt.no/cdn-cgi/image/width=525,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2025/5/dscf0633.jpg?format=auto">
+                    <source media="(min-width: 640px)" srcset="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2025/5/dscf0633.jpg?format=auto">
+                    <img src="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2025/5/dscf0633.jpg?format=auto" class="h-38 w-full object-cover object-center">
+                </picture>
+            <div class="h-10 z-10 left-0 bottom-0 bg-beige-10 group-active:bg-beige-50 w-full p-2 font-medium flex justify-between items-center">
+                <span class="group-hover:underline truncate">
+                    Gr&#xF8;nt kort
+                </span>
+                <div id="react_0HNP6EQ40RVKL"></div>
+            </div>
+        </div>
+        
+    </div>
+</partial>
+        </div>
+    </div>
+</section></div><div>
+
+<section class="bleeding-edges  body-area--override py-10 ">
+    <div class="container grid grid-cols-12 gap-y-6">
+        <div class="!col-start-2 col-span-10 md:col-span-6 body-area">
+            <h2 class="font-light text-2xl leading-8 text-gray-900 mb-5">
+                Anbefalte turer rundt Haukeliseter
+            </h2>
+
+            <p class="font-light text-lg leading-7 text-gray-900">
+                Med Haukeliseter som utgangspunkt er turmulighetene uendelige b&#xE5;de sommer og vinter. Haukeliseter er et naturlig stoppested for deg som liker &#xE5; vandre fra hytte til hytte, men ogs&#xE5; perfekt hvis du &#xF8;nsker &#xE5; bo fast og g&#xE5; dagsturer i n&#xE6;romr&#xE5;det. Her er noen av v&#xE5;re anbefalte turer.
+            </p>
+        </div>
+        <div class="col-start-2 col-span-10 md:col-start-9 md:col-span-3">
+            
+    <!-- ImageLinkBlock -->
+    <div class="relative group rounded-lg border border-beige-200 shadow hover:shadow-md body-area--override">
+        <a  href="/hytter/betjente/haukeliseter/turtips/"
+            title="Turtips fra Haukeliseter"
+            class="!absolute inset-0 z-20 focus-outline">
+            <span class="sr-only">
+                Turtips fra Haukeliseter
+            </span>
+        </a>
+        <div class="bg-topography overflow-hidden rounded-lg"> 
+                <picture>
+                    <source media="(min-width: 1280px)" srcset="https://www.dnt.no/cdn-cgi/image/width=465,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2025/5/holmavatn_kevinmolstad-9643.jpg?format=auto">
+                    <source media="(min-width: 1024px)" srcset="https://www.dnt.no/cdn-cgi/image/width=375,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2025/5/holmavatn_kevinmolstad-9643.jpg?format=auto">
+                    <source media="(min-width: 768px)" srcset="https://www.dnt.no/cdn-cgi/image/width=525,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2025/5/holmavatn_kevinmolstad-9643.jpg?format=auto">
+                    <source media="(min-width: 640px)" srcset="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2025/5/holmavatn_kevinmolstad-9643.jpg?format=auto">
+                    <img src="https://www.dnt.no/cdn-cgi/image/width=870,height=240,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2025/5/holmavatn_kevinmolstad-9643.jpg?format=auto" class="h-38 w-full object-cover object-center">
+                </picture>
+            <div class="h-10 z-10 left-0 bottom-0 bg-beige-10 group-active:bg-beige-50 w-full p-2 font-medium flex justify-between items-center">
+                <span class="group-hover:underline truncate">
+                    Turtips fra Haukeliseter
+                </span>
+                <div id="react_0HNP6EQ40RVKM"></div>
+            </div>
+        </div>
+        
+    </div>
+</partial>
+        </div>
+    </div>
+</section></div></div>
+
+        
+<section class="py-10 border-t border-beige-300">
+
+
+    <ul class="flex flex-row flex-wrap justify-center items-start gap-7 my-5" >
+    </ul>
+
+</section>
+
+</main>
+
+    </div>
+
+    <footer class="mt-5 md:mt-16">
+            <div id="scroll-container" class="relative pt-4 md:pt-0 z-[1000]">
+                <a href="#" tabindex="0"
+                    class="flex scroll-top opacity-0 transition-opacity duration-300 cursor-pointer w-[42px] h-[42px] justify-center items-center absolute right-4 focus-outline mb-20">
+                    <div id="react_0HNP6EQ40RVLB"></div>
+                    <span class="sr-only"></span>
+                </a>
+            </div>
+        
+    <section class="bg-beige-100">
+        <div class="container py-10">
+                <h2 class=" text-xl font-medium">
+                    Velkommen til Haukeliseter fjellstue
+                </h2>
+
+
+            <div class="grid gap-7 grid-cols-1 sm:grid-cols-12 grid-flow-row-dense mt-7">
+                <ul class="sm:col-span-6 lg:col-span-4">
+                        <li class="mb-2 flex">
+                            <a href="tel:&#x2B;4735062777" class="link-beige !font-normal" title="Ring oss på vårt telefonnummer &#x2B;47 35 06 27 77">
+                                <div id="react_0HNP6EQ40RVLC"></div>
+                                &#x2B;47 35 06 27 77
+                            </a>
+                        </li>
+
+                        <li class="mb-2 flex">
+                            <a href="https://www.dnt.no/haukeliseter" class="link-beige !font-normal">
+                                <div id="react_0HNP6EQ40RVLD"></div>
+                                www.dnt.no/haukeliseter
+                            </a>
+                        </li>
+
+                        <li class="mb-2 flex">
+                            <a href="mailto:haukeliseter@dnt.no" class="link-beige !font-normal">
+                                <div id="react_0HNP6EQ40RVLE"></div>
+                                haukeliseter@dnt.no
+                            </a>
+                        </li>
+                </ul>
+                <div class="sm:col-span-12 lg:col-span-4">
+                    <address class="not-italic footer--address">
+                        <p>Haukelivegen 2917<br />3895 Edland</p>
+                    </address>
+                </div>
+
+                <div class="sm:col-span-6 lg:col-span-4">
+                        <ul>
+                                <li class="last-of-type:mb-0 mb-2 flex sm:justify-end">
+                                    <a href="https://www.facebook.com/Haukeliseter.fjellstue/" class="link-beige">
+                                        <span class="pl-1">Facebook</span>
+                                        <div id="react_0HNP6EQ40RVLF"></div>
+                                    </a>
+                                </li>
+                                <li class="last-of-type:mb-0 mb-2 flex sm:justify-end">
+                                    <a href="https://www.instagram.com/haukeliseter/" class="link-beige">
+                                        <span class="pl-1">Instagram</span>
+                                        <div id="react_0HNP6EQ40RVLG"></div>
+                                    </a>
+                                </li>
+                        </ul>
+                </div>
+            </div>
+
+                <p class="mt-7 text-sm">
+                    Organisasjonsnummer: 946 846 856
+                </p>
+        </div>
+    </section>
+
+        
+<div class="bg-red text-white">
+    <div class="container py-10">
+        <div class="grid gap-7 grid-cols-1 sm:grid-cols-12 grid-flow-row-dense">
+            <div class="sm:col-span-6 lg:col-span-4 justify-center sm:justify-start text-center sm:text-left">
+                <div class="text-xl font-medium flex items-center">
+                    <img src="/images/turen-starter-med.svg" alt='Turen starter med T' />
+                </div>
+
+                    <div class="mt-7">
+                        <a href="/om-dnt/dnts-arbeid/frivillig/" title='Bli frivillig' class="button-rounded-white">
+                            Bli frivillig
+                        </a>
+                    </div>
+                    <div class="mt-7">
+                        <a href="/medlem/" title='Bli DNT-medlem' class="button-rounded-white">
+                            Bli DNT-medlem
+                        </a>
+                    </div>
+                    <ul class="mt-7">
+                            <li class="mb-2">
+                                <a href="https://www.dnt.no/minside/logg-inn/" title='Min side' class="link-white-on-red">
+                                    <span class="pl-1">Min side</span>
+                                    <div id="react_0HNP6EQ40RVLH"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/medlem/om-medlemskapet/medlemsbetingelser/" title='Medlemsbetingelser' class="link-white-on-red">
+                                    <span class="pl-1">Medlemsbetingelser</span>
+                                    <div id="react_0HNP6EQ40RVLI"></div>
+                                </a>
+                            </li>
+                    </ul>
+            </div>
+            <div class="sm:col-span-6 lg:col-span-4 flex flex-col justify-center sm:justify-start text-center sm:text-left mt-10 lg:mt-0">
+                    <div class="text-xl font-medium flex items-center justify-center sm:justify-start h-[35px] my-2.5">
+                        <a href="/om-dnt/" title='Om DNT' class="hover:underline link-white-on-red">
+                            Om DNT
+                        </a>
+                    </div>
+                    <ul class="mt-4">
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/kontakt-oss/">Kontakt oss</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/dnts-arbeid/">DNTs arbeid</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/organisasjon/">Organisasjon</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/english/">English</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="https://app.cvideo.no/dnt">Ledige stillinger</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="https://fjellogvidde.dnt.no/">Fjell og Vidde</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/tursentre/">Tursentrene</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/personvern/">Personvern</a>
+                            </li>
+                            <li class="last-of-type:mb-0 mb-2">
+                                <a class="link-white-on-red !font-normal" href="/om-dnt/samarbeidspartnere/">Samarbeidspartnere</a>
+                            </li>
+                    </ul>
+            </div>
+            <ul class="sm:col-span-12 lg:col-span-4 grid grid-flow-col gap-7 justify-center lg:justify-end mt-10 lg:mt-0">
+                <li>
+                    <a href="https://ut.no/" title='Til UT.no' class="inline-flex focus-outline focus-outline-padding transition-all hover:scale-[1.2] active:scale-[1.1]">
+                        <img src="/images/some-ut.svg" alt="ut.no logo" />
+                        <span class="sr-only">Til UT.no</span>
+                    </a>
+                </li>
+                    <li>
+                        <a href="https://www.facebook.com/turistforeningen" title='Til DNT p&#xE5; Facebook' class="inline-flex focus-outline focus-outline-padding transition-all hover:scale-[1.2] active:scale-[1.1]">
+                            <img src="/images/some-facebook.svg" alt="facebook logo" />
+                            <span class="sr-only">Til DNT p&#xE5; Facebook</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/turistforeningen/" title='Til DNT p&#xE5; Instagram' class="inline-flex focus-outline focus-outline-padding transition-all hover:scale-[1.2] active:scale-[1.1]">
+                            <img src="/images/some-instagram.svg" alt="instagram logo" />
+                            <span class="sr-only">Til DNT p&#xE5; Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@turistforeningen" title='Til DNT p&#xE5; YouTube' class="inline-flex focus-outline focus-outline-padding transition-all hover:scale-[1.2] active:scale-[1.1]">
+                            <img src="/images/some-youtube.svg" alt="youtube logo" />
+                            <span class="sr-only">Til DNT p&#xE5; YouTube</span>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+        <div class="bg-red-700 text-center py-2.5 text-sm grid grid-flow-row sm:grid-flow-col justify-center gap-6 gap-y-2">
+                <a href="/dnt-der-du-er/" class="hover:underline focus-outline px-1">DNT der du er</a>
+                <a href="/turtips/" class="hover:underline focus-outline px-1">Turtips</a>
+                <a href="/hytter/" class="hover:underline focus-outline px-1">Hytter</a>
+                <a href="/aktiviteter/" class="hover:underline focus-outline px-1">Aktiviteter</a>
+        </div>
+</div>
+    </footer>
+    
+    <script defer="defer" src="/Util/Find/epi-util/find.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){if(typeof FindApi === 'function'){var api = new FindApi();api.setApplicationUrl('/');api.setServiceApiBaseUrl('/find_v2/');api.processEventFromCurrentUri();api.bindWindowEvents();api.bindAClickEvent();api.sendBufferedEvents();}})
+</script>
+
+    <script type="module">ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVK1")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowSmLeftIcon","class":"h-6 w-6 mr-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVK2")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"CameraIcon","class":"h-6 w-5"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVK3")).render(React.createElement(ReactComponents.ImageLinkContainer, {"model":{"headerTitle":"Anbefalt innhold","showHeader":true,"listItems":[{"title":"Jul og nyttår på Haukeliseter","hasImage":true,"responsiveImageUrls":{"xl":"https://www.dnt.no/cdn-cgi/image/width=915,height=450,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2024/10/4t2a8214.jpg?format=auto","lg":"https://www.dnt.no/cdn-cgi/image/width=750,height=450,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2024/10/4t2a8214.jpg?format=auto","md":"https://www.dnt.no/cdn-cgi/image/width=540,height=450,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2024/10/4t2a8214.jpg?format=auto","sm":"https://www.dnt.no/cdn-cgi/image/width=915,height=315,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2024/10/4t2a8214.jpg?format=auto"},"imageUrl":"/globalassets/fotoware/2024/10/4t2a8214.jpg","imageAltText":"Bilder fra romjulen på Haukeliseter fjellstue.","url":"/hytter/betjente/haukeliseter/aktuelt/jul-og-nyttar-pa-haukeliseter/","hasTag":true,"tagName":"Nyheter","tagColor":"Blue","isNewsPage":true,"isFvArticle":false,"publishText":"Publisert","publishDate":"14. oktober 2026","isWide":true},{"title":"Tilbud til grupper og bedrifter","hasImage":true,"responsiveImageUrls":{"xl":"https://www.dnt.no/cdn-cgi/image/width=450,height=315,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/9/haukeliseter_sommer_kevinmolstad_jonasolsvik-57542.jpg?format=auto","lg":"https://www.dnt.no/cdn-cgi/image/width=345,height=315,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/9/haukeliseter_sommer_kevinmolstad_jonasolsvik-57542.jpg?format=auto","md":"https://www.dnt.no/cdn-cgi/image/width=255,height=315,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/9/haukeliseter_sommer_kevinmolstad_jonasolsvik-57542.jpg?format=auto","sm":"https://www.dnt.no/cdn-cgi/image/width=360,height=192,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2023/9/haukeliseter_sommer_kevinmolstad_jonasolsvik-57542.jpg?format=auto"},"imageUrl":"/globalassets/fotoware/2023/9/haukeliseter_sommer_kevinmolstad_jonasolsvik-57542.jpg","imageAltText":"Haukeliseter sommer 2022.","url":"/hytter/betjente/haukeliseter/grupper-og-bedrifer/grupper-og-bedrifter2/tilbud-til-grupper-og-bedrifter/","hasTag":true,"tagName":"Inspirasjon","tagColor":"Green","isNewsPage":false,"isFvArticle":false,"publishText":"Publisert","publishDate":"06. september 2023","isWide":false},{"title":"Turtips i høst: Trekanttur fra Haukeliseter","hasImage":true,"responsiveImageUrls":{"xl":"https://www.dnt.no/cdn-cgi/image/width=450,height=315,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2026/9/img_8935-22.jpg?format=auto","lg":"https://www.dnt.no/cdn-cgi/image/width=345,height=315,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2026/9/img_8935-22.jpg?format=auto","md":"https://www.dnt.no/cdn-cgi/image/width=255,height=315,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2026/9/img_8935-22.jpg?format=auto","sm":"https://www.dnt.no/cdn-cgi/image/width=360,height=192,fit=crop,gravity=face,format=auto/https://www.dnt.no//globalassets/fotoware/2026/9/img_8935-22.jpg?format=auto"},"imageUrl":"/globalassets/fotoware/2026/9/img_8935-22.jpg","imageAltText":"Tur til Kvanndalen og Holmavatn 2.-4. september 2026","url":"/hytter/betjente/haukeliseter/turtips/turtips-i-host-trekanttur-fra-haukeliseter/","hasTag":true,"tagName":"Inspirasjon","tagColor":"Green","isNewsPage":false,"isFvArticle":false,"publishText":"Publisert","publishDate":"18. september 2026","isWide":false}]}}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVK4")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowRightIcon","class":"ml-2 h-4 w-4"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVK5")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowRightIcon","class":"ml-2 h-4 w-4"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVK6")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowRightIcon","class":"ml-2 h-4 w-4"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVK7")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowRightIcon","class":"ml-2 h-4 w-4"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVK8")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowRightIcon","class":"ml-3 h-4 w-4"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVK9")).render(React.createElement(ReactComponents.ActivityPage, {"translations":{"closeModal":"Lukk","arrangement":"Arrangert tur/aktivitet","openActivity":"Åpne aktivitet","activityMoreInfo":"Mer informasjon","activityMoreInfoSignup":"Mer informasjon og påmelding","activityWaitingListSignup":"Mer informasjon og venteliste","dntPattern":"DNT-mønster","eventFull":"Ingen ledige plasser","eventOverdue":"Starttidspunkt har passert","eventWarning":"Aktiviteten har ingen ledige plasser og / eller starttidspunktet er passert","eventWaitingList":"Ingen ledige plasser - venteliste er tilgjengelig","coOrganizer":"Medarrangør","coOrganizers":"Medarrangører","registrationOpens":"Påmelding åpner","registrationCloses":"Påmeldingsfrist","timeFormat":"24-hour","langFormat":"nb-NO","cancelled":"Avlyst","easy":"Enkel","moderate":"Middels krevende","tough":"Krevende","veryTough":"Ekstra krevende"},"isNarrow":true,"isSearchResult":false,"page":{"id":616001,"pageTitle":"Strikkehelg på fjellet","published":"0001-01-01T00:00:00","publishDateString":{"text":"Publisert","date":"31. juli 2026"},"url":"/aktiviteter-fra-deltager/haukeliseter-fjellstue/strikkehelg-pa-fjellet/","ingress":"","tag":{"tagName":null,"color":null},"pageType":"ActivityPage","media":{"description":null,"url":"","photographer":null},"serviceLevels":null,"serviceLevel":null,"grading":"","level":"Enkel","distance":0.0,"areas":null,"activityType":"","activityViewModel":{"eventLocation":"Haukeliseter fjellstue / Haukelivegen 2917 / Edland","imageUrl":"https://deltagerfiles.blob.core.windows.net/apistorage/event_title_image_616001","subTypes":"","mainType":"Arrangement","targetGroups":"Voksne, Seniorer, Ungdom","organizerGroups":"471","duration":"2-3 dager","start":"2026-11-06T19:00:58.22+01:00","end":"2026-11-08T13:00:58.22+01:00","startDate":"06. nov.","endDate":"08. nov.","startTime":"19:00","endTime":"13:00","displayEndTime":true,"registeredParticipants":11,"maxAllowedRegistrations":30,"showMaxAllowed":false,"isFull":false,"hasWaitinglist":true,"isCancelled":false,"isOverdue":false,"isSignup":true,"registrationStart":"2026-08-05T00:00:00.123+02:00","registrationEnd":"2026-11-01T23:59:00.123+01:00"},"organizorName":"","coOrganizorNames":[]},"dataLayerListName":"Se kommende kurs og arrangementer"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKA")).render(React.createElement(ReactComponents.ActivityPage, {"translations":{"closeModal":"Lukk","arrangement":"Arrangert tur/aktivitet","openActivity":"Åpne aktivitet","activityMoreInfo":"Mer informasjon","activityMoreInfoSignup":"Mer informasjon og påmelding","activityWaitingListSignup":"Mer informasjon og venteliste","dntPattern":"DNT-mønster","eventFull":"Ingen ledige plasser","eventOverdue":"Starttidspunkt har passert","eventWarning":"Aktiviteten har ingen ledige plasser og / eller starttidspunktet er passert","eventWaitingList":"Ingen ledige plasser - venteliste er tilgjengelig","coOrganizer":"Medarrangør","coOrganizers":"Medarrangører","registrationOpens":"Påmelding åpner","registrationCloses":"Påmeldingsfrist","timeFormat":"24-hour","langFormat":"nb-NO","cancelled":"Avlyst","easy":"Enkel","moderate":"Middels krevende","tough":"Krevende","veryTough":"Ekstra krevende"},"isNarrow":true,"isSearchResult":false,"page":{"id":623985,"pageTitle":"Skiteknikkurs offpist - Få mer ut av vinteren!","published":"0001-01-01T00:00:00","publishDateString":{"text":"Publisert","date":"28. september 2026"},"url":"/aktiviteter-fra-deltager/haukeliseter-fjellstue/skiteknikk-kurs---fa-mer-ut-av-vinteren3/","ingress":"","tag":{"tagName":null,"color":null},"pageType":"ActivityPage","media":{"description":null,"url":"","photographer":null},"serviceLevels":null,"serviceLevel":null,"grading":"","level":"Middels","distance":0.0,"areas":null,"activityType":"","activityViewModel":{"eventLocation":"Haukeliseter fjellstue / Haukelivegen 2917 / Edland","imageUrl":"https://deltagerfiles.blob.core.windows.net/apistorage/event_title_image_623985","subTypes":", Skikurs","mainType":"Kurs","targetGroups":"Voksne, Fjellsportsinteresserte","organizerGroups":"471","duration":"2-3 dager","start":"2026-12-11T20:00:00.937+01:00","end":"2026-12-13T15:00:00.937+01:00","startDate":"11. des.","endDate":"13. des.","startTime":"20:00","endTime":"15:00","displayEndTime":true,"registeredParticipants":0,"maxAllowedRegistrations":16,"showMaxAllowed":false,"isFull":false,"hasWaitinglist":true,"isCancelled":false,"isOverdue":false,"isSignup":true,"registrationStart":"2026-10-01T00:00:00.767+02:00","registrationEnd":"2026-12-06T23:59:00.767+01:00"},"organizorName":"","coOrganizorNames":[]},"dataLayerListName":"Se kommende kurs og arrangementer"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKB")).render(React.createElement(ReactComponents.ActivityPage, {"translations":{"closeModal":"Lukk","arrangement":"Arrangert tur/aktivitet","openActivity":"Åpne aktivitet","activityMoreInfo":"Mer informasjon","activityMoreInfoSignup":"Mer informasjon og påmelding","activityWaitingListSignup":"Mer informasjon og venteliste","dntPattern":"DNT-mønster","eventFull":"Ingen ledige plasser","eventOverdue":"Starttidspunkt har passert","eventWarning":"Aktiviteten har ingen ledige plasser og / eller starttidspunktet er passert","eventWaitingList":"Ingen ledige plasser - venteliste er tilgjengelig","coOrganizer":"Medarrangør","coOrganizers":"Medarrangører","registrationOpens":"Påmelding åpner","registrationCloses":"Påmeldingsfrist","timeFormat":"24-hour","langFormat":"nb-NO","cancelled":"Avlyst","easy":"Enkel","moderate":"Middels krevende","tough":"Krevende","veryTough":"Ekstra krevende"},"isNarrow":true,"isSearchResult":false,"page":{"id":626998,"pageTitle":"Toppturkurs","published":"0001-01-01T00:00:00","publishDateString":{"text":"Publisert","date":"22. oktober 2026"},"url":"/aktiviteter-fra-deltager/haukeliseter-fjellstue/toppturkurs2/","ingress":"","tag":{"tagName":null,"color":null},"pageType":"ActivityPage","media":{"description":null,"url":"","photographer":null},"serviceLevels":null,"serviceLevel":null,"grading":"","level":"Middels","distance":0.0,"areas":null,"activityType":"","activityViewModel":{"eventLocation":"Haukeliseter fjellstue / Haukelivegen 2917 / Edland","imageUrl":"https://deltagerfiles.blob.core.windows.net/apistorage/event_title_image_626998","subTypes":", Toppturkurs","mainType":"Kurs","targetGroups":"Voksne, Fjellsportsinteresserte","organizerGroups":"471","duration":"2-3 dager","start":"2027-01-08T21:00:00.13+01:00","end":"2027-01-10T15:00:00.13+01:00","startDate":"08. jan.","endDate":"10. jan.","startTime":"21:00","endTime":"15:00","displayEndTime":true,"registeredParticipants":0,"maxAllowedRegistrations":8,"showMaxAllowed":false,"isFull":false,"hasWaitinglist":true,"isCancelled":false,"isOverdue":false,"isSignup":true,"registrationStart":"2026-10-22T23:59:00.707+02:00","registrationEnd":"2027-01-03T23:59:00.253+01:00"},"organizorName":"","coOrganizorNames":[]},"dataLayerListName":"Se kommende kurs og arrangementer"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKC")).render(React.createElement(ReactComponents.ActivityPage, {"translations":{"closeModal":"Lukk","arrangement":"Arrangert tur/aktivitet","openActivity":"Åpne aktivitet","activityMoreInfo":"Mer informasjon","activityMoreInfoSignup":"Mer informasjon og påmelding","activityWaitingListSignup":"Mer informasjon og venteliste","dntPattern":"DNT-mønster","eventFull":"Ingen ledige plasser","eventOverdue":"Starttidspunkt har passert","eventWarning":"Aktiviteten har ingen ledige plasser og / eller starttidspunktet er passert","eventWaitingList":"Ingen ledige plasser - venteliste er tilgjengelig","coOrganizer":"Medarrangør","coOrganizers":"Medarrangører","registrationOpens":"Påmelding åpner","registrationCloses":"Påmeldingsfrist","timeFormat":"24-hour","langFormat":"nb-NO","cancelled":"Avlyst","easy":"Enkel","moderate":"Middels krevende","tough":"Krevende","veryTough":"Ekstra krevende"},"isNarrow":true,"isSearchResult":false,"page":{"id":626121,"pageTitle":"Kitekurs med Johannes Tobiassen","published":"0001-01-01T00:00:00","publishDateString":{"text":"Publisert","date":"15. oktober 2026"},"url":"/aktiviteter-fra-deltager/haukeliseter-fjellstue/kitekurs-med-johannes-tobiassen15/","ingress":"","tag":{"tagName":null,"color":null},"pageType":"ActivityPage","media":{"description":null,"url":"","photographer":null},"serviceLevels":null,"serviceLevel":null,"grading":"","level":"Middels","distance":0.0,"areas":null,"activityType":"","activityViewModel":{"eventLocation":"Haukeliseter fjellstue / Haukelivegen 2917 Edland","imageUrl":"https://deltagerfiles.blob.core.windows.net/apistorage/event_title_image_626121","subTypes":", Kitekurs","mainType":"Kurs","targetGroups":"Voksne, Ungdom, Fjellsportsinteresserte","organizerGroups":"471","duration":"2-3 dager","start":"2027-01-08T21:00:00.233+01:00","end":"2027-01-10T21:00:00.233+01:00","startDate":"08. jan.","endDate":"10. jan.","startTime":"21:00","endTime":"21:00","displayEndTime":true,"registeredParticipants":0,"maxAllowedRegistrations":4,"showMaxAllowed":false,"isFull":false,"hasWaitinglist":true,"isCancelled":false,"isOverdue":false,"isSignup":true,"registrationStart":"2026-10-15T00:00:00.257+02:00","registrationEnd":"2027-01-03T23:59:00.233+01:00"},"organizorName":"","coOrganizorNames":[]},"dataLayerListName":"Se kommende kurs og arrangementer"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKD")).render(React.createElement(ReactComponents.ActivityPage, {"translations":{"closeModal":"Lukk","arrangement":"Arrangert tur/aktivitet","openActivity":"Åpne aktivitet","activityMoreInfo":"Mer informasjon","activityMoreInfoSignup":"Mer informasjon og påmelding","activityWaitingListSignup":"Mer informasjon og venteliste","dntPattern":"DNT-mønster","eventFull":"Ingen ledige plasser","eventOverdue":"Starttidspunkt har passert","eventWarning":"Aktiviteten har ingen ledige plasser og / eller starttidspunktet er passert","eventWaitingList":"Ingen ledige plasser - venteliste er tilgjengelig","coOrganizer":"Medarrangør","coOrganizers":"Medarrangører","registrationOpens":"Påmelding åpner","registrationCloses":"Påmeldingsfrist","timeFormat":"24-hour","langFormat":"nb-NO","cancelled":"Avlyst","easy":"Enkel","moderate":"Middels krevende","tough":"Krevende","veryTough":"Ekstra krevende"},"isNarrow":true,"isSearchResult":false,"page":{"id":625669,"pageTitle":"Kitekurs med Kiteskolen","published":"0001-01-01T00:00:00","publishDateString":{"text":"Publisert","date":"12. oktober 2026"},"url":"/aktiviteter-fra-deltager/haukeliseter-fjellstue/kitekurs-med-kiteskolen19/","ingress":"","tag":{"tagName":null,"color":null},"pageType":"ActivityPage","media":{"description":null,"url":"","photographer":null},"serviceLevels":null,"serviceLevel":null,"grading":"","level":"Middels","distance":0.0,"areas":null,"activityType":"","activityViewModel":{"eventLocation":"Haukeliseter fjellstue / Haukelivegen 2917 / Edland","imageUrl":"https://deltagerfiles.blob.core.windows.net/apistorage/event_title_image_625669","subTypes":", Kitekurs","mainType":"Kurs","targetGroups":"Voksne, Ungdom, Fjellsportsinteresserte","organizerGroups":"471","duration":"2-3 dager","start":"2027-01-09T10:00:00.44+01:00","end":"2027-01-10T16:00:00.44+01:00","startDate":"09. jan.","endDate":"10. jan.","startTime":"10:00","endTime":"16:00","displayEndTime":true,"registeredParticipants":0,"maxAllowedRegistrations":6,"showMaxAllowed":false,"isFull":false,"hasWaitinglist":true,"isCancelled":false,"isOverdue":false,"isSignup":true,"registrationStart":"2026-10-12T00:00:00.05+02:00","registrationEnd":"2027-01-03T23:59:00.05+01:00"},"organizorName":"","coOrganizorNames":[]},"dataLayerListName":"Se kommende kurs og arrangementer"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKE")).render(React.createElement(ReactComponents.ActivityPage, {"translations":{"closeModal":"Lukk","arrangement":"Arrangert tur/aktivitet","openActivity":"Åpne aktivitet","activityMoreInfo":"Mer informasjon","activityMoreInfoSignup":"Mer informasjon og påmelding","activityWaitingListSignup":"Mer informasjon og venteliste","dntPattern":"DNT-mønster","eventFull":"Ingen ledige plasser","eventOverdue":"Starttidspunkt har passert","eventWarning":"Aktiviteten har ingen ledige plasser og / eller starttidspunktet er passert","eventWaitingList":"Ingen ledige plasser - venteliste er tilgjengelig","coOrganizer":"Medarrangør","coOrganizers":"Medarrangører","registrationOpens":"Påmelding åpner","registrationCloses":"Påmeldingsfrist","timeFormat":"24-hour","langFormat":"nb-NO","cancelled":"Avlyst","easy":"Enkel","moderate":"Middels krevende","tough":"Krevende","veryTough":"Ekstra krevende"},"isNarrow":true,"isSearchResult":false,"page":{"id":627644,"pageTitle":"Kitekurs med Johannes Tobiassen","published":"0001-01-01T00:00:00","publishDateString":{"text":"Publisert","date":"26. oktober 2026"},"url":"/aktiviteter-fra-deltager/haukeliseter-fjellstue/kitekurs-med-johannes-tobiassen/","ingress":"","tag":{"tagName":null,"color":null},"pageType":"ActivityPage","media":{"description":null,"url":"","photographer":null},"serviceLevels":null,"serviceLevel":null,"grading":"","level":"Middels","distance":0.0,"areas":null,"activityType":"","activityViewModel":{"eventLocation":"Haukeliseter fjellstue / Haukelivegen 2917 Edland","imageUrl":"https://deltagerfiles.blob.core.windows.net/apistorage/event_title_image_627644","subTypes":", Kitekurs","mainType":"Kurs","targetGroups":"Voksne, Ungdom, Fjellsportsinteresserte","organizerGroups":"471","duration":"2-3 dager","start":"2027-01-15T21:00:00.65+01:00","end":"2027-01-17T15:00:00.65+01:00","startDate":"15. jan.","endDate":"17. jan.","startTime":"21:00","endTime":"15:00","displayEndTime":true,"registeredParticipants":0,"maxAllowedRegistrations":4,"showMaxAllowed":false,"isFull":false,"hasWaitinglist":true,"isCancelled":false,"isOverdue":false,"isSignup":true,"registrationStart":"2026-10-26T00:00:00.9+01:00","registrationEnd":"2027-01-10T23:59:00.9+01:00"},"organizorName":"","coOrganizorNames":[]},"dataLayerListName":"Se kommende kurs og arrangementer"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKF")).render(React.createElement(ReactComponents.ActivityPage, {"translations":{"closeModal":"Lukk","arrangement":"Arrangert tur/aktivitet","openActivity":"Åpne aktivitet","activityMoreInfo":"Mer informasjon","activityMoreInfoSignup":"Mer informasjon og påmelding","activityWaitingListSignup":"Mer informasjon og venteliste","dntPattern":"DNT-mønster","eventFull":"Ingen ledige plasser","eventOverdue":"Starttidspunkt har passert","eventWarning":"Aktiviteten har ingen ledige plasser og / eller starttidspunktet er passert","eventWaitingList":"Ingen ledige plasser - venteliste er tilgjengelig","coOrganizer":"Medarrangør","coOrganizers":"Medarrangører","registrationOpens":"Påmelding åpner","registrationCloses":"Påmeldingsfrist","timeFormat":"24-hour","langFormat":"nb-NO","cancelled":"Avlyst","easy":"Enkel","moderate":"Middels krevende","tough":"Krevende","veryTough":"Ekstra krevende"},"isNarrow":true,"isSearchResult":false,"page":{"id":626806,"pageTitle":"Kitekurs med Kiteskolen","published":"0001-01-01T00:00:00","publishDateString":{"text":"Publisert","date":"21. oktober 2026"},"url":"/aktiviteter-fra-deltager/haukeliseter-fjellstue/kitekurs-med-kiteskolen/","ingress":"","tag":{"tagName":null,"color":null},"pageType":"ActivityPage","media":{"description":null,"url":"","photographer":null},"serviceLevels":null,"serviceLevel":null,"grading":"","level":"Middels","distance":0.0,"areas":null,"activityType":"","activityViewModel":{"eventLocation":"Haukeliseter fjellstue / Haukelivegen 2917 / Edland","imageUrl":"https://deltagerfiles.blob.core.windows.net/apistorage/event_title_image_626806","subTypes":", Kitekurs","mainType":"Kurs","targetGroups":"Voksne, Ungdom, Fjellsportsinteresserte","organizerGroups":"471","duration":"2-3 dager","start":"2027-01-16T10:00:00.42+01:00","end":"2027-01-17T16:00:00.42+01:00","startDate":"16. jan.","endDate":"17. jan.","startTime":"10:00","endTime":"16:00","displayEndTime":true,"registeredParticipants":0,"maxAllowedRegistrations":6,"showMaxAllowed":false,"isFull":false,"hasWaitinglist":true,"isCancelled":false,"isOverdue":false,"isSignup":true,"registrationStart":"2026-10-21T00:00:00.71+02:00","registrationEnd":"2027-01-10T23:59:00.71+01:00"},"organizorName":"","coOrganizorNames":[]},"dataLayerListName":"Se kommende kurs og arrangementer"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKG")).render(React.createElement(ReactComponents.ActivityPage, {"translations":{"closeModal":"Lukk","arrangement":"Arrangert tur/aktivitet","openActivity":"Åpne aktivitet","activityMoreInfo":"Mer informasjon","activityMoreInfoSignup":"Mer informasjon og påmelding","activityWaitingListSignup":"Mer informasjon og venteliste","dntPattern":"DNT-mønster","eventFull":"Ingen ledige plasser","eventOverdue":"Starttidspunkt har passert","eventWarning":"Aktiviteten har ingen ledige plasser og / eller starttidspunktet er passert","eventWaitingList":"Ingen ledige plasser - venteliste er tilgjengelig","coOrganizer":"Medarrangør","coOrganizers":"Medarrangører","registrationOpens":"Påmelding åpner","registrationCloses":"Påmeldingsfrist","timeFormat":"24-hour","langFormat":"nb-NO","cancelled":"Avlyst","easy":"Enkel","moderate":"Middels krevende","tough":"Krevende","veryTough":"Ekstra krevende"},"isNarrow":true,"isSearchResult":false,"page":{"id":622255,"pageTitle":"NF grunnkurs skred 2027","published":"0001-01-01T00:00:00","publishDateString":{"text":"Publisert","date":"15. september 2026"},"url":"/aktiviteter-fra-deltager/dnt-stavanger-og-omegn/nf-grunnkurs-skred-2027/","ingress":"","tag":{"tagName":null,"color":null},"pageType":"ActivityPage","media":{"description":null,"url":"","photographer":null},"serviceLevels":null,"serviceLevel":null,"grading":"","level":"Middels","distance":0.0,"areas":null,"activityType":"","activityViewModel":{"eventLocation":"Haukeliseter fjellstue / Haukelivegen 2917 Edland","imageUrl":"https://deltagerfiles.blob.core.windows.net/apistorage/event_title_image_622255","subTypes":", Turlederkurs, Skredkurs","mainType":"Kurs","targetGroups":"Fjellsportsinteresserte","organizerGroups":"456","duration":"2-3 dager","start":"2027-01-21T21:00:00.273+01:00","end":"2027-01-24T16:00:00.273+01:00","startDate":"21. jan.","endDate":"24. jan.","startTime":"21:00","endTime":"16:00","displayEndTime":true,"registeredParticipants":0,"maxAllowedRegistrations":1,"showMaxAllowed":false,"isFull":false,"hasWaitinglist":true,"isCancelled":false,"isOverdue":false,"isSignup":true,"registrationStart":"2026-12-01T00:00:00.287+01:00","registrationEnd":"2027-01-18T00:00:00.287+01:00"},"organizorName":"DNT Stavanger og omegn","coOrganizorNames":[]},"dataLayerListName":"Se kommende kurs og arrangementer"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKH")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowRightIcon","class":"ml-3 h-4 w-4"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKI")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowRightIcon","class":"ml-3 h-4 w-4"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKJ")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowRightIcon","class":"ml-2 h-4 w-4"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKK")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowRightIcon","class":"ml-2 h-4 w-4"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKL")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowRightIcon","class":"ml-2 h-4 w-4"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKM")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowRightIcon","class":"ml-2 h-4 w-4"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKN")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"GlobeIcon","class":"h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKO")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"SearchIcon","class":"h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKP")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"MenuIcon","class":"h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKQ")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"XIcon","class":"h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKR")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"SearchIcon","class":"h-6 w-6 group-hover:text-red"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKS")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"HomeIcon","class":"h-6 w-6 mr-3"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKT")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ChevronDownIcon","class":"icon--button h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKU")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowSmRightIcon","class":"h-6 w-6 ml-3"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVKV")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"LocationMarkerIcon","class":"h-6 w-6 mr-3"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVL0")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ChevronDownIcon","class":"icon--button h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVL1")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowSmRightIcon","class":"h-6 w-6 ml-3"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVL2")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"CalendarIcon","class":"h-6 w-6 mr-3"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVL3")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ChevronDownIcon","class":"icon--button h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVL4")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowSmRightIcon","class":"h-6 w-6 ml-3"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVL5")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"StarIcon","class":"h-6 w-6 mr-2 text-blue-600","solid":true}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVL6")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ChevronDownIcon","class":"icon--button h-6 w-6"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVL7")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ExternalLinkIcon","class":"h-6 w-6 ml-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVL8")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ExternalLinkIcon","class":"h-6 w-6 ml-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVL9")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ChevronLeftIcon","class":"w-7 h-full"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVLA")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ChevronRightIcon","class":"w-7 h-full"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVLB")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowCircleUpIcon","class":"h-10 w-10 text-red-600 bg-beige-10 rounded-3xl"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVLC")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"PhoneIcon","class":"h-6 w-6 mr-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVLD")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"DesktopComputerIcon","class":"h-6 w-6 mr-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVLE")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"MailIcon","class":"h-6 w-6 mr-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVLF")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ExternalLinkIcon","class":"h-6 w-6 ml-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVLG")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ExternalLinkIcon","class":"h-6 w-6 ml-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVLH")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowSmRightIcon","class":"h-6 w-6 ml-2"}));
+ReactDOMClient.createRoot(document.getElementById("react_0HNP6EQ40RVLI")).render(React.createElement(ReactComponents.HeroIcon, {"icon":"ArrowSmRightIcon","class":"h-6 w-6 ml-2"}));
+</script>
+</body>
+</html>
