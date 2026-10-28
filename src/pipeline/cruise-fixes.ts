@@ -31,6 +31,18 @@ export const ADDON_RE = /\b(?:rental|rent|course|lessons?|coaching|clinic|upgrad
 export const PER_NIGHT_RE = /(?:per|\/|pro|par|a)\s*(?:night|nacht|nuit)\b|\bnightly\b|\bpppn\b|\bpro\s+person\s*\/\s*nacht\b/i;
 
 type Opt = { basis?: string; label?: string; price?: number | null; currency?: string | null };
+/**
+ * True when `amount` is a per-night price of this pricing (a per-night option, or a number in a per-night raw text).
+ * Such an amount is no trip price: Aaron 2026-10-28, per-night cruises show "price on request".
+ */
+export function isPerNightAmount(pricing: Pricing, amount: number | null | undefined): boolean {
+  if (amount == null || !PER_NIGHT_RE.test(pricing?.raw ?? '') && !(pricing?.options ?? []).some(x => PER_NIGHT_RE.test(x.label ?? ''))) return false;
+  if ((pricing?.options ?? []).some(x => x.price === amount && PER_NIGHT_RE.test(x.label ?? ''))) return true;
+  if (!PER_NIGHT_RE.test(pricing?.raw ?? '')) return false;
+  const nums = (pricing?.raw ?? '').match(/\d[\d.,]*/g)?.map(n => Number(n.replace(/[.,](?=\d{3}\b)/g, '').replace(',', '.'))) ?? [];
+  return nums.includes(amount);
+}
+
 export type Pricing = { raw?: string | null; currency?: string | null; options?: Opt[]; per_person?: number | null; whole_boat?: number | null } | null;
 export interface PerPerson { price: number; currency: string; source: string }
 
@@ -168,13 +180,9 @@ export function planCruiseFix(o: CruiseRow, today: string): FixEntry {
     put('price_basis_note', [d ? `pp: ${d.source}` : `pp: none (was "${chosen}")`, ...rest].join(' | ').replace(/[–—]/g, '-'), reason);
   }
   // price_from_eur (the map's price): a per-night amount, or a per-night price next to an EUR trip price
-  if (perNightRaw && o.price_from_eur !== null) {
-    const nums = (o.pricing?.raw ?? '').match(/\d[\d.,]*/g)?.map(n => Number(n.replace(/[.,](?=\d{3}\b)/g, '').replace(',', '.'))) ?? [];
-    const optNight = (o.pricing?.options ?? []).some(x => x.price === o.price_from_eur && PER_NIGHT_RE.test(x.label ?? ''));
-    if (optNight || nums.includes(o.price_from_eur)) {
-      const after = pp && pp.currency === 'EUR' ? pp.price : null;
-      put('price_from_eur', after, `price_from_eur ${o.price_from_eur} is a per-night price`);
-    }
+  if (perNightRaw && isPerNightAmount(o.pricing, o.price_from_eur)) {
+    const after = pp && pp.currency === 'EUR' ? pp.price : null;
+    put('price_from_eur', after, `price_from_eur ${o.price_from_eur} is a per-night price`);
   }
 
   // charter: the quoted week price instead of a x7/days re-scale. Only rows whose note shows a re-scale: a x7/7 row

@@ -8,6 +8,7 @@ import { htmlToText, collapse, contentHash, sanitizeForPg, sanitizeDeep } from '
 import { withRetry } from '../lib/retry.js';
 import { continentForOffer } from '../lib/continents.js';
 import { upcomingDepartures } from './cruise-state.js';
+import { isPerNightAmount, type Pricing } from './cruise-fixes.js';
 import { discoverImageUrls, curateAndStoreImages, slugify, type StoredImage } from '../lib/images.js';
 import { discoverSiteUrls, PAGE_VALUE_RE } from '../lib/crawl.js';
 import { renderPage, closeRenderer } from '../lib/render.js';
@@ -923,7 +924,8 @@ async function processProvider(cp: {
       duration_days: cleanInt(offer.duration_days),
       dates: upcomingDepartures(offer.dates, new Date().toISOString().slice(0, 10)),
       pricing: offer.pricing ?? null,
-      price_from_eur: cleanInt(offer.price_from_eur),
+      // a per-night amount is no trip price ("on request", Aaron 2026-10-28)
+      price_from_eur: isPerNightAmount(offer.pricing as Pricing, cleanInt(offer.price_from_eur)) ? null : cleanInt(offer.price_from_eur),
       currency: offer.currency ?? null,
       summary: offer.summary ?? null,
       skill_levels: cleanStrArray(offer.skill_levels, SKILL_LEVELS),
