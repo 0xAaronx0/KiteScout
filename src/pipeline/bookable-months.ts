@@ -4,10 +4,11 @@
 //   - season: season_start_month..season_end_month, wrapping over the year end
 //   - dates:  every month touched by a future dated slot that is still open (KCS buildAvailableDates rules)
 //   - a package whose calendar lists dates but none is open gets no season months either (KCS loader rule)
+//   - season_months (package_offers / cruise_offers, set by season-extract) wins over start/end: several windows
 // No row = unknown; the map keeps such offers visible. Rows of offers that left the views are deleted.
 const UNAVAILABLE = new Set(['cancelled', 'canceled', 'closed', 'sold out', 'sold_out', 'unavailable', 'waitlist']);
 
-export type OfferDates = { season_start_month?: number | null; season_end_month?: number | null; dates?: unknown };
+export type OfferDates = { season_start_month?: number | null; season_end_month?: number | null; season_months?: number[] | null; dates?: unknown };
 export type BookableMonths = { months: number[]; basis: 'season' | 'dates' | 'season+dates' } | null;
 
 function parseDay(value: unknown): Date | undefined {
@@ -37,8 +38,10 @@ function openSlotMonths(dates: unknown, today: number): Set<number> {
   return months;
 }
 
-function seasonMonths(start?: number | null, end?: number | null): Set<number> {
+function seasonMonths(start?: number | null, end?: number | null, list?: number[] | null): Set<number> {
   const months = new Set<number>();
+  const valid = (list ?? []).filter(m => Number.isInteger(m) && m >= 1 && m <= 12);
+  if (valid.length) return new Set(valid);
   const first = start ?? null, last = end ?? start ?? null;
   if (!first || !last || first < 1 || first > 12 || last < 1 || last > 12) return months;
   for (let month = first, guard = 0; guard < 12; guard += 1) {
@@ -52,7 +55,7 @@ function seasonMonths(start?: number | null, end?: number | null): Set<number> {
 export function bookableMonths(row: OfferDates, isPackage: boolean, today = Date.UTC(new Date().getUTCFullYear(), new Date().getUTCMonth(), new Date().getUTCDate())): BookableMonths {
   const fromDates = openSlotMonths(row.dates, today);
   const calendarWithoutOpenSlots = isPackage && Array.isArray(row.dates) && row.dates.length > 0 && fromDates.size === 0;
-  const fromSeason = calendarWithoutOpenSlots ? new Set<number>() : seasonMonths(row.season_start_month, row.season_end_month);
+  const fromSeason = calendarWithoutOpenSlots ? new Set<number>() : seasonMonths(row.season_start_month, row.season_end_month, row.season_months);
   const months = [...new Set([...fromSeason, ...fromDates])].sort((a, b) => a - b);
   if (!months.length) return null;
   return { months, basis: fromSeason.size && fromDates.size ? 'season+dates' : fromDates.size ? 'dates' : 'season' };
@@ -72,8 +75,30 @@ async function selectAll<T>(table: string, columns: string): Promise<T[]> {
   }
 }
 
+/** season_months from the table (season-extract); the views carry none, and a stored set wins over start/end. */
+export function withTableSeason<T extends OfferDates>(row: T, months?: number[] | null): T {
+  return months?.length ? { ...row, season_months: months } : row;
+}
+
+/** season_months of both offer tables (migration 20261028130000); empty, with a warning, while it is not applied. */
+async function tableSeasons(): Promise<Map<string, number[]>> {
+  const out = new Map<string, number[]>();
+  for (const table of ['cruise_offers', 'package_offers']) {
+    try {
+      const rows = await selectAll<{ id: string; season_months: number[] | null }>(table, 'id,season_months');
+      for (const r of rows) if (r.season_months?.length) out.set(`${table}:${r.id}`, r.season_months);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      if (!/season_months/.test(msg)) throw err;
+      console.warn(`${table} has no season_months yet (migration 20261028130000): ${msg}`);
+    }
+  }
+  return out;
+}
+
 export async function runBookableMonths({ dryRun = false } = {}) {
   type Row = OfferDates & { offer_id: string };
+  const seasons = await tableSeasons();
   const sources = [['cruise_offers', 'app_cruise_offer_cards'], ['package_offers', 'app_package_cards']] as const;
   const rows: Array<{ catalog_source: string; offer_id: string; months: number[]; basis: string; computed_at: string }> = [];
   let offers = 0;
@@ -82,7 +107,7 @@ export async function runBookableMonths({ dryRun = false } = {}) {
     const viewRows = await selectAll<Row>(view, 'offer_id,season_start_month,season_end_month,dates');
     offers += viewRows.length;
     for (const row of viewRows) {
-      const result = bookableMonths(row, source === 'package_offers');
+      const result = bookableMonths(withTableSeason(row, seasons.get(`${source}:${row.offer_id}`)), source === 'package_offers');
       if (result) rows.push({ catalog_source: source, offer_id: row.offer_id, ...result, computed_at: computedAt });
     }
   }

@@ -14,6 +14,7 @@ import { renderPage, closeRenderer } from '../lib/render.js';
 import { mergeItinerarySpots } from '../lib/itinerary-spots.js';
 import { cruiseDisciplines } from '../lib/disciplines.js';
 import { geocodeSpot } from '../lib/geocode.js';
+import { seasonUpsertColumns } from './season-extract.js';
 
 const CONCURRENCY = 3;                  // providers in parallel
 const PAGE_CONCURRENCY = 8;             // global page fetches in flight (across providers)
@@ -914,9 +915,11 @@ async function processProvider(cp: {
       beginner_friendly: cleanBool(offer.beginner_friendly),
       kite_lessons: cleanBool(offer.kite_lessons),
       equipment_rental: cleanBool(offer.equipment_rental),
-      season_text: bestSeason ? bestSeason.text : (offer.season_text ?? null),
-      season_start_month: bestSeason ? bestSeason.start : cleanMonth(offer.season_start_month),
-      season_end_month: bestSeason ? bestSeason.end : cleanMonth(offer.season_end_month),
+      ...seasonUpsertColumns(
+        bestSeason ? bestSeason.text : (offer.season_text ?? null),
+        bestSeason ? bestSeason.start : cleanMonth(offer.season_start_month),
+        bestSeason ? bestSeason.end : cleanMonth(offer.season_end_month),
+      ),
       duration_days: cleanInt(offer.duration_days),
       dates: upcomingDepartures(offer.dates, new Date().toISOString().slice(0, 10)),
       pricing: offer.pricing ?? null,

@@ -28,3 +28,12 @@ test('a package calendar without open slots drops its season (KCS loader rule); 
   assert.equal(bookableMonths({}, true, today), null);
   assert.equal(bookableMonths({ season_start_month: 13 }, false, today), null);
 });
+
+test('season_months from the tables: several windows, and a stored set wins over start/end', async () => {
+  const { withTableSeason } = await import('../../src/pipeline/bookable-months.js');
+  assert.deepEqual(bookableMonths(withTableSeason({ dates: [] }, [12, 1, 2, 6, 7, 8]), true, today), { months: [1, 2, 6, 7, 8, 12], basis: 'season' });
+  assert.deepEqual(bookableMonths(withTableSeason({ season_start_month: 4, season_end_month: 5 }, [7, 8]), false, today), { months: [7, 8], basis: 'season' });
+  assert.deepEqual(withTableSeason({ dates: null }, undefined), { dates: null });
+  assert.deepEqual(withTableSeason({ dates: null }, []), { dates: null });
+  assert.deepEqual(bookableMonths({ season_months: [13, 0] }, false, today), null, 'junk months are ignored');
+});
