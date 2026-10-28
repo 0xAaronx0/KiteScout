@@ -136,6 +136,38 @@ export function stormCut(months: number[], storm: number[], contradicted: Set<nu
   return cut.length ? cut : months;
 }
 
+export const CONTRA_MAX_KM = 300;
+export const TRIP_MAX_DAYS = 45;
+
+/**
+ * Months touched by trip-like dated slots (at most TRIP_MAX_DAYS long, past or future, not unavailable). A long
+ * availability window ("May 2027 - Dec 2028") says nothing about the storm months (Aaron 2026-10-28).
+ */
+export function tripMonths(dates: unknown): number[] {
+  if (!Array.isArray(dates)) return [];
+  const out = new Set<number>();
+  for (const slot of dates) {
+    const { start_date: a, end_date: b, status } = (slot ?? {}) as Record<string, unknown>;
+    if (typeof status === 'string' && /cancel|closed|unavailable/i.test(status)) continue;
+    const start = typeof a === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(a) ? new Date(`${a}T00:00:00Z`) : null;
+    if (!start) continue;
+    const end = typeof b === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(b) ? new Date(`${b}T00:00:00Z`) : start;
+    if (end < start || (end.getTime() - start.getTime()) / 86400000 > TRIP_MAX_DAYS) continue;
+    for (const d = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth(), 1)); d <= end; d.setUTCMonth(d.getUTCMonth() + 1)) out.add(d.getUTCMonth() + 1);
+  }
+  return [...out].sort((x, y) => x - y);
+}
+
+/** An older cruise season counts only with a season text that is not just a booking period over several years. */
+export function explicitCruiseSeason(seasonText: string | null, start: number | null, end: number | null): number[] {
+  if (!seasonText?.trim() || !start || !end) return [];
+  const years = new Set(seasonText.match(/\b20\d\d\b/g) ?? []);
+  if (years.size > 1) return [];
+  const out: number[] = [];
+  for (let m = start, guard = 0; guard < 12; guard += 1) { out.push(m); if (m === end) break; m = m === 12 ? 1 : m + 1; }
+  return out.sort((x, y) => x - y);
+}
+
 /** Bases whose months are an explicit offer statement (page season, page wind window, dated trips approved by Aaron). */
 export const EXPLICIT_BASES = new Set(['range', 'year_round', 'closed_months', 'wind_season', 'split_season', 'page_wind', 'approved:dates_only']);
 
@@ -203,27 +235,37 @@ export async function runRegionSeasons(opts: { outDir: string; pagePlan?: string
   const pageRows = opts.pagePlan ? (JSON.parse(readFileSync(opts.pagePlan, 'utf8')).rows as PlanRow[]) : [];
   const pageWind = new Map(pageRows.filter(r => !r.decision.write && r.decision.reason === 'wind_only' && r.decision.months.length).map(r => [r.offer_id, r]));
 
-  const bmBasis = new Map((await selectAll<{ offer_id: string; basis: string }>('offer_bookable_months', 'offer_id,basis')).map(r => [r.offer_id, r.basis]));
   const all0 = [
     ...cruiseView.map(r => ({ r, type: 'cruise' as OfferType })),
     ...packageView.map(r => ({ r, type: (r.provider_trip_types?.[0] ?? 'accommodation') as OfferType })),
   ];
-  // Storm months that an explicit offer in the same zone and country runs in (dated slots, an older cruise season,
-  // a page season of a cruise/tour/camp/course, a page wind window); an accommodation's opening statement is not one.
-  const contradictions = new Map<string, { months: Set<number>; offers: string[] }>();
+  // Storm months an explicit offer near by (same zone, <= CONTRA_MAX_KM) runs in: trip-like dated slots, an older
+  // cruise season with a real season text, a page season of a cruise/tour/camp/course, a page wind window. An
+  // accommodation's opening statement and long availability windows are not one.
+  const datesById = new Map([...await selectAll<{ offer_id: string; dates: unknown }>('app_cruise_offer_cards', 'offer_id,dates'),
+    ...await selectAll<{ offer_id: string; dates: unknown }>('app_package_cards', 'offer_id,dates')].map(r => [r.offer_id, r.dates]));
+  const cruiseText = new Map((await selectAll<{ id: string; season_text: string | null }>('cruise_offers', 'id,season_text')).map(r => [r.id, r.season_text]));
+  const evidenceOffers: Array<{ zone: string; lat: number; lng: number; months: number[]; title: string }> = [];
   for (const { r, type } of all0) {
     const cs = climate.get(r.offer_id);
-    const zone = stormZone(r.country, cs?.lat ?? null, cs?.lng ?? null);
-    const months = known.get(r.offer_id);
-    if (!zone || !months) continue;
-    const ev = seasons.get(r.offer_id)?.season_evidence?.basis ?? null;
-    const b = bmBasis.get(r.offer_id) ?? '';
-    const explicit = b.includes('dates') || (!ev && type === 'cruise') || (ev != null && EXPLICIT_BASES.has(ev) && (type !== 'accommodation' || ev === 'page_wind'));
-    const hit = months.filter(m => zone.months.includes(m));
-    if (!explicit || !hit.length) continue;
-    const key = `${zone.label}|${(r.country ?? '').toLowerCase()}`;
-    const c = contradictions.get(key) ?? { months: new Set<number>(), offers: [] };
-    hit.forEach(m => c.months.add(m)); c.offers.push(`${r.title.slice(0, 50)} (${hit.join(',')})`); contradictions.set(key, c);
+    const zone = cs ? stormZone(r.country, cs.lat, cs.lng) : null;
+    if (!zone || !cs) continue;
+    const se = seasons.get(r.offer_id);
+    const ev = se?.season_evidence?.basis ?? null;
+    const months = new Set<number>(tripMonths(datesById.get(r.offer_id)));
+    if (!ev && type === 'cruise') explicitCruiseSeason(cruiseText.get(r.offer_id) ?? null, se?.season_start_month ?? null, se?.season_end_month ?? null).forEach(m => months.add(m));
+    if (ev && EXPLICIT_BASES.has(ev) && (type !== 'accommodation' || ev === 'page_wind')) (se?.season_evidence?.months ?? []).forEach(m => months.add(m));
+    const hit = [...months].filter(m => zone.months.includes(m)).sort((a, b) => a - b);
+    if (hit.length) evidenceOffers.push({ zone: zone.label, lat: cs.lat, lng: cs.lng, months: hit, title: r.title });
+  }
+  const contradictionsNear = (zone: string, lat: number, lng: number) => {
+    const near = evidenceOffers.filter(e => e.zone === zone && distanceKm(lat, lng, e.lat, e.lng) <= CONTRA_MAX_KM);
+    return { months: new Set(near.flatMap(e => e.months)), offers: near.map(e => `${e.title.slice(0, 50)} (${e.months.join(',')})`) };
+  };
+  const contradictions = new Map<string, { months: Set<number>; offers: string[] }>();
+  for (const e of evidenceOffers) {
+    const c = contradictions.get(e.zone + '|' + e.title) ?? { months: new Set<number>(e.months), offers: [`${e.title.slice(0, 50)} (${e.months.join(',')})`] };
+    contradictions.set(e.zone + '|' + e.title, c);
   }
 
   const rows: ProposalRow[] = [];
@@ -239,7 +281,7 @@ export async function runRegionSeasons(opts: { outDir: string; pagePlan?: string
     const wind = fixed ? { key: fixed.label, wind: null } as WindSource : cs ? pickWind(r.country, cs.lat, cs.lng, regions, countries) : null;
     const clim0 = fixed ? fixed.months : cs ? climateSeason(cs.air_temp_max_months, wind?.wind) : null;
     const zone = fixed ? null : stormZone(r.country, cs?.lat ?? null, cs?.lng ?? null);
-    const contra = zone ? contradictions.get(`${zone.label}|${(r.country ?? '').toLowerCase()}`)?.months ?? new Set<number>() : new Set<number>();
+    const contra = zone && cs ? contradictionsNear(zone.label, cs.lat, cs.lng).months : new Set<number>();
     const clim = clim0 && zone ? stormCut(clim0, zone.months, contra) : clim0;
     const s = seasons.get(r.offer_id);
     const ev = s?.season_evidence ?? null;
@@ -300,7 +342,7 @@ function regionReview(rows: ProposalRow[], skipped: Array<{ offer_id: string; ti
     `**Regel pro Monat:** Saison, wenn die mittlere Tageshöchsttemperatur am Angebotspunkt mindestens ${AIR_MIN_C} °C ist **und** der Anteil windiger Tage mindestens ${WIND_MIN_PCT} % (ein einzelner Monat ohne Windwert blockiert nicht; Spots ganz ohne Wind- oder Temperaturdaten und Snowkite sind ausgenommen und unten markiert). Wind = Landeswert, den die App zeigt (Bstoked windProbability). Monate, die dort nur mit ERA5 gefüllt sind, sind Bstoked-Platzhalter (unter 40 % windige Tage) und zählen nicht. Die reinen ERA5-Werte einer nahen Klimaregion (bis ${REGION_MAX_KM} km) nutze ich nur, wo das Land keine Bstoked-Daten hat; wo sie anders entscheiden würden, steht es unten zum Prüfen. Temperatur = Klimapunkt des Angebots.`, '',
     `**Feste Vorgabe:** ${REGION_OVERRIDES.map(o => `${o.label} (${o.countries.join(', ')}): Apr-Okt`).join('; ')} - ersetzt dort die Klimaregel und eine Windsaison der Seite (Aaron 2026-10-28).`, '',
     '**Wer was bekommt:** Unbekannte Angebote bekommen die Klimasaison ("aus der Region erschlossen"), Camps/Unterkünfte/Kurse mit einer Windsaison auf der eigenen Seite stattdessen diese ("Seite (Windsaison)"). Unterkünfte und Camps mit einer schon geschriebenen Seiten-Saison (z. B. "ganzjährig geöffnet") behalten nur die Monate, die auch in der Klimasaison liegen ("Seite ∩ Region"). Kreuzfahrten und Touren mit eigener Saison oder Terminen und Snowkite bleiben unverändert.', '',
-    `**Sturmregel:** ${STORM_ZONES.map(z => `${z.label} ohne ${z.months.map(m => ['', 'Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'][m]).join('/')}`).join('; ')}. Gilt nur für erschlossene Saisons; ein Sturmmonat, in dem ein ausdrücklich belegtes Angebot derselben Zone und desselben Landes läuft, bleibt erlaubt:`, '',
+    `**Sturmregel:** ${STORM_ZONES.map(z => `${z.label} ohne ${z.months.map(m => ['', 'Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'][m]).join('/')}`).join('; ')}. Gilt nur für erschlossene Saisons; ein Sturmmonat, in dem ein ausdrücklich belegtes Angebot derselben Zone im Umkreis von ${CONTRA_MAX_KM} km läuft, bleibt dort erlaubt. Gegenbelege (Zone | Angebot):`, '',
     ...(contradictions.size ? [...contradictions.entries()].map(([k, c]) => `- ${k.replace('|', ', ')}: erlaubt bleiben ${[...c.months].sort((a, b) => a - b).join(',')} wegen ${c.offers.slice(0, 4).join('; ')}${c.offers.length > 4 ? ` (+${c.offers.length - 4})` : ''}`) : ['- keine Gegenbelege']), '',
     '## Saisons pro Region (aus der Region erschlossen)', '',
     '| Land | Windquelle | Saison | Angebote | Typen |', '|---|---|---|---|---|',
