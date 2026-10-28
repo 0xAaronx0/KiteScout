@@ -149,6 +149,18 @@ export function cleanDepartures(raw: unknown, today: string): Departure[] {
 
 const isFuture = (d: Departure, today: string): boolean => (d.end_date ?? d.start_date) >= today;
 /**
+ * The week charter price to show: the provider's quote, never a re-scaled one (Aaron 2026-10-28; until then
+ * 8-day / 7-night trips were scaled x7/8 and a USD 12,500 6-day quote showed as 14,583).
+ * A trip of 6 to 8 days (or no length) IS the week; a day rate x 7; any other length gives no week price.
+ */
+export function charterWeek(amount: number, days: number | null | undefined): number | null {
+  if (!(amount > 0)) return null;
+  if (!days || (days >= 6 && days <= 8)) return Math.round(amount);
+  if (days === 1) return Math.round(amount * 7);
+  return null;
+}
+
+/**
  * Departures worth storing on a fresh write: cleaned (no all-null or year-less rows) and not yet over.
  * null when none are left (the app shows "dates on request" either way).
  */
@@ -256,12 +268,11 @@ export function proposeUpdate(
       }
     }
 
-    // ── whole-boat charter, normalized to 7 days like the price backfill ──
+    // ── whole-boat charter: the quoted week price (charterWeek) ──
     const ch = obs.priceCharter;
-    if (ch && ch.amount > 0) {
+    const weekly = ch && ch.amount > 0 ? charterWeek(ch.amount, ch.days ?? obs.durationDays ?? offer.duration_days) : null;
+    if (ch && weekly !== null) {
       const cur = normCurrency(ch.currency);
-      const days = ch.days ?? obs.durationDays ?? offer.duration_days;
-      const weekly = Math.round(days && days > 0 ? (ch.amount * 7) / days : ch.amount);
       const eq = cur ? eurEq({ amount: weekly, currency: cur }) : null;
       const implausible = eq !== null && (eq < CHARTER_RANGE[0] || eq > CHARTER_RANGE[1]);
       if (implausible) ignored.push(`Charter/Woche ${weekly} ${cur} unplausibel`);
