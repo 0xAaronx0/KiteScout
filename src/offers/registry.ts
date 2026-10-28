@@ -132,6 +132,8 @@ import { kiteMeUpHostelKiteCampLoStagnone } from './adapters/kite-me-up-hostel-k
 import { kiteNomadeArraialDoCabo } from './adapters/kite-nomade-arraial-do-cabo.js';
 import { kitePassionGlampingPuttgarden } from './adapters/kite-passion-glamping-puttgarden.js';
 import { kitePlCaravansChalupy } from './adapters/kite-pl-caravans-chalupy.js';
+import { kitekursSnowkiteWeekendHaugastol } from './adapters/kitekurs-snowkite-weekend-haugastol.js';
+import { kiteskolenSnowkiteCourseHaukeliseter } from './adapters/kiteskolen-snowkite-course-haukeliseter.js';
 import { kiteRepublicAitutakiWinterEscape } from './adapters/kite-republic-aitutaki-winter-escape.js';
 import { kiteRepublicBrazilKiteSafari } from './adapters/kite-republic-brazil-kite-safari.js';
 import { kiteRepublicMauritiusWavesDreamWinterEscape } from './adapters/kite-republic-mauritius-waves-dream-winter-escape.js';
@@ -487,6 +489,8 @@ export const adapters: OfferAdapter[] = [
   kitePlCaravansChalupy,
   kitereizenKiteCampMyHoaPhanRang,
   kitereizenMauritiusResidencyBelOmbre,
+  kitekursSnowkiteWeekendHaugastol,
+  kiteskolenSnowkiteCourseHaukeliseter,
   kiteRepublicAitutakiWinterEscape,
   kiteRepublicBrazilKiteSafari,
   kiteRepublicMauritiusWavesDreamWinterEscape,
