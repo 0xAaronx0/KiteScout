@@ -1,5 +1,7 @@
 // audience_note migration (Aaron 2026-10-29): replays the view chain in PGlite and checks that both product views
 // keep the live column contract and only gain `audience_note`, then `season_months`, as the last two columns.
+// Depends on 20261028120000_views_require_image (image filter), which runs FIRST: on the pre-filter state the
+// guard must abort.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -11,6 +13,7 @@ const fixture = readFileSync(new URL('../fixtures/offer-cards-schema.sql', impor
 const disciplines = file('_offer_disciplines.sql');
 const windows = file('_retain_coarse_package_slot_windows.sql');
 const seasonMonths = file('_offer_season_months.sql');
+const imageFilter = file('_views_require_image.sql');
 const migration = file('_offer_audience_note.sql');
 
 // live column contract (name:type, PostgREST OpenAPI 2026-10-29); the first 72 columns are shared by both views
@@ -52,8 +55,8 @@ const columns = async (db: PGlite, view: string) => (await db.query<{ c: string 
 const meta = async (db: PGlite, view: string) => (await db.query(
   `select relowner, relacl, reloptions from pg_class where oid = $1::regclass`, [view])).rows;
 
-/** fixture + the live chain: disciplines (both views), the coarse-window package view, season_months columns */
-async function liveState(): Promise<PGlite> {
+/** fixture + the live chain today: disciplines (both views), the coarse-window package view, season_months columns */
+async function preFilterState(): Promise<PGlite> {
   const db = new PGlite();
   await db.exec(fixture);
   await db.exec(disciplines);
@@ -61,12 +64,39 @@ async function liveState(): Promise<PGlite> {
   await db.exec(seasonMonths);
   return db;
 }
+/** the state this migration expects: the image filter (20261028120000) applied on top */
+async function liveState(): Promise<PGlite> {
+  const db = await preFilterState();
+  await db.exec(imageFilter);
+  return db;
+}
+const IMG = `'[{"path": "a/0.webp"}]'`;
 
-test('replayed chain matches the live column lists (baseline)', async () => {
-  const db = await liveState();
+test('replayed chain matches the live column lists, before and after the image filter (baseline)', async () => {
+  for (const state of [preFilterState, liveState]) {
+    const db = await state();
+    try {
+      assert.deepEqual(await columns(db, 'app_cruise_offer_cards'), LIVE_CRUISE, state.name);
+      assert.deepEqual(await columns(db, 'app_package_cards'), LIVE_PACKAGE, state.name);
+    } finally { await db.close(); }
+  }
+});
+
+test('run before the image filter (out of order): guard aborts and changes nothing', async () => {
+  const db = await preFilterState();
   try {
-    assert.deepEqual(await columns(db, 'app_cruise_offer_cards'), LIVE_CRUISE);
-    assert.deepEqual(await columns(db, 'app_package_cards'), LIVE_PACKAGE);
+    const defs = async () => (await db.query(`select pg_get_viewdef('app_cruise_offer_cards'::regclass, true) c,
+      pg_get_viewdef('app_package_cards'::regclass, true) p`)).rows;
+    const before = await defs();
+    await assert.rejects(db.exec(migration), /drift: live definition is neither the expected base nor the new one/);
+    await db.exec('rollback');
+    assert.deepEqual(await defs(), before);
+    const col = await db.query("select 1 from pg_attribute where attname = 'audience_note' and attrelid in ('cruise_offers'::regclass, 'package_offers'::regclass)");
+    assert.equal(col.rows.length, 0, 'ALTER TABLE rolled back too');
+    // the image filter still applies cleanly afterwards, then this migration does
+    await db.exec(imageFilter);
+    await db.exec(migration);
+    assert.deepEqual(await columns(db, 'app_package_cards'), [...LIVE_PACKAGE, ...APPENDED]);
   } finally { await db.close(); }
 });
 
@@ -96,13 +126,15 @@ test('migration appends audience_note + season_months last, keeps everything els
     // temp helper views are gone
     assert.equal((await db.query("select count(*)::int n from pg_class where relname like 'audience_%_cards'")).rows[0].n, 0);
 
-    // the note flows through both views; NULL stays NULL
+    // the note and season flow through both views; NULL stays NULL; the image filter still hides imageless rows
     await db.exec(`insert into cruise_providers (id, status) values ('00000000-0000-4000-8000-0000000000a1', 'new');
-      insert into cruise_offers (id, cruise_provider_id, title, audience_note, season_months) values
-        ('7f1a5f7c-798e-4e92-b564-dff1110b2fa2', '00000000-0000-4000-8000-0000000000a1', 'Red Sea (RU)', 'Russian-language trip', '{3,4,10,11}'),
-        ('00000000-0000-4000-8000-0000000000c2', '00000000-0000-4000-8000-0000000000a1', 'Red Sea', null, null);
-      insert into package_offers (id, is_active, package_type, title, audience_note, season_months)
-        values ('00000000-0000-4000-8000-0000000000b1', true, 'camp', 'Camp', 'German-language camp', '{4,5,6,7,8,9,10}');`);
+      insert into cruise_offers (id, cruise_provider_id, title, audience_note, season_months, images) values
+        ('7f1a5f7c-798e-4e92-b564-dff1110b2fa2', '00000000-0000-4000-8000-0000000000a1', 'Red Sea (RU)', 'Russian-language trip', '{3,4,10,11}', ${IMG}),
+        ('00000000-0000-4000-8000-0000000000c2', '00000000-0000-4000-8000-0000000000a1', 'Red Sea', null, null, ${IMG}),
+        ('00000000-0000-4000-8000-0000000000c3', '00000000-0000-4000-8000-0000000000a1', 'No photo', 'x', '{1}', '[]');
+      insert into package_offers (id, is_active, package_type, title, audience_note, season_months, images) values
+        ('00000000-0000-4000-8000-0000000000b1', true, 'camp', 'Camp', 'German-language camp', '{4,5,6,7,8,9,10}', ${IMG}),
+        ('00000000-0000-4000-8000-0000000000b2', true, 'camp', 'No photo camp', null, '{1}', null);`);
     assert.deepEqual((await db.query('select title, audience_note, season_months from app_cruise_offer_cards order by title')).rows,
       [{ title: 'Red Sea', audience_note: null, season_months: null },
        { title: 'Red Sea (RU)', audience_note: 'Russian-language trip', season_months: [3, 4, 10, 11] }]);
