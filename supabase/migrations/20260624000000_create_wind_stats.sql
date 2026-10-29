@@ -26,6 +26,7 @@ INSERT INTO wind_stats (country, months, is_alias) VALUES
   ('Armenia', '{30,30,30,60,60,90,90,90,90,60,30,30}', false),
   ('Australia', '{90,90,70,50,50,50,50,50,55,65,85,85}', false),
   ('Austria', '{10,10,55,55,55,30,30,30,50,50,10,10}', false),
+  ('Belgium', '{10,10,10,10,48,42,45,45,45,59,55,10}', false), -- ERA5 estimate 2026-10-29 (Aaron), no bstoked data
   ('Belize', '{50,65,65,65,50,61,61,50,50,30,35,50}', false),
   ('Bonaire', '{78,82,90,90,90,90,90,70,50,50,58,70}', false),
   ('Brazil', '{40,25,5,5,15,35,65,90,95,95,90,80}', false), -- curated 2026-10-28 (Aaron), keep on re-sync
