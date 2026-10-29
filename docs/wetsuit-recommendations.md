@@ -100,6 +100,12 @@ Where they disagree and what we chose:
 - **Air**: no source gives a number for kiters. Our margin (3 °C) is calibrated on spots with well-known local
   advice (examples below); it is the main tuning knob.
 
+## Snowkite
+
+No wetsuit recommendation for listings whose source lists snowkiting (Aaron 2026-10-29), even when their
+climate point has a sea temperature (live: Iceland Snæfellsnes and Nordkinn tours). Callers check the offer's
+`disciplines`; the function itself only sees temperatures.
+
 ## Wingfoil
 
 No source gives separate numbers. Evolve says wingfoilers keep the upper body in the wind the whole session
@@ -124,6 +130,10 @@ in text, note "wingfoil learners: one step warmer in borderline months". Not cod
   `climate_points` (migration) and a climate-stats run.
 - Country and region rows (`country_climate_stats`, `region_climate_stats`) carry water + air max as well, so
   the map's country/region view can use the same function.
+- KCS only uses `offer_climate_stats` rows whose `sources` is the Copernicus ERA5 text (`loadOfferClimate`).
+  Live 2026-10-29: 200 of 487 rows pass; 287 rows (171 package, 116 cruise, e.g. Madagascar/Toliara) still
+  carry the older Open-Meteo source text, so the product shows no wetsuit row for them until their climate
+  cells are refreshed via Copernicus (a live climate run, Aaron's OK first).
 
 ## Run over the live months (read-only, 2026-10-29)
 
