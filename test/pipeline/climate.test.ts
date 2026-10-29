@@ -120,7 +120,7 @@ test('combineWind policies: era5 replaces Bstoked (India), no-era5 blocks the mo
     [7, 6.4, 7.2, 9.8, 13.1, 16.8, 19.2, 20, 18.4, 15, 11.6, 8.3], windPolicy('Belgium'));
   assert.deepEqual(belgium.wind_months, [null, null, null, null, 26, 26, 26, 27, 30, 39, 42, null]);
   assert.ok(belgium.wind_source_months.every(s => s === null || s === 'era5'));
-  for (const country of ['Antigua and Barbuda', 'Bahamas', 'Barbados', 'Saint Martin', 'Turks and Caicos Islands']) {
+  for (const country of ['Antigua and Barbuda', 'Bahamas', 'Barbados', 'Saint Martin', 'Turks and Caicos Islands', 'Portugal', 'Cyprus']) {
     assert.equal(windPolicy(country), 'era5', country);
   }
 });

@@ -63,9 +63,9 @@ export const WIND_POLICY: Record<string, WindPolicy> = {
   // 2026-10-29 (Aaron): Belgium's wind_stats row is an ERA5 estimate (no bstoked data), so the
   // map must not label it 'bstoked'
   Belgium: 'era5',
-  // 2026-10-29 (Aaron): Caribbean wind_stats rows are ERA5 estimates (no bstoked data) as well
+  // 2026-10-29 (Aaron): Caribbean, Portugal and Cyprus wind_stats rows are ERA5 estimates too
   'Antigua and Barbuda': 'era5', Bahamas: 'era5', Barbados: 'era5', 'Saint Martin': 'era5',
-  'Turks and Caicos Islands': 'era5',
+  'Turks and Caicos Islands': 'era5', Portugal: 'era5', Cyprus: 'era5',
 };
 export const windPolicy = (country: string): WindPolicy => WIND_POLICY[country] ?? 'default';
 
