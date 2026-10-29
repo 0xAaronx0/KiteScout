@@ -188,9 +188,20 @@ interface PriceSummary {
   raw: string | null;
 }
 
-export function summarizePrice(kind: OfferKind, slots: Slot[], today: string): PriceSummary {
-  const future = slots.filter(s => s.price !== null && isBookable(s.availability) && isAhead(kind, s, today));
-  // compare like with like: the most common currency + unit among future priced slots
+export function summarizePrice(kind: OfferKind, slots: Slot[], today: string, lastPublished: Slot[] = []): PriceSummary {
+  const priced = (list: Slot[]) => list.filter(s => s.price !== null);
+  const ahead = priced(slots).filter(s => isAhead(kind, s, today));
+  // Aaron 2026-10-29: a price the provider states is never "on request". Tiers: the cheapest bookable upcoming slot;
+  // else an upcoming one that is full (waitlist / sold out), named as such; else the last published price of dates that
+  // are over (returned slots that are past, plus the adapter's lastPublished), from its latest year only.
+  const bookable = ahead.filter(s => isBookable(s.availability));
+  const over = [...priced(slots).filter(s => !isAhead(kind, s, today)), ...priced(lastPublished)];
+  const yearOf = (s: Slot) => (s.startDate ?? s.endDate ?? '').slice(0, 4);
+  const latestYear = over.map(yearOf).sort().at(-1) ?? '';
+  const tiers: Array<[Slot[], 'bookable' | 'full' | 'past']> = [[bookable, 'bookable'], [ahead, 'full'],
+    [over.filter(s => yearOf(s) === latestYear), 'past']];
+  const [future, tier] = tiers.find(([list]) => list.length > 0) ?? [[], 'bookable'];
+  // compare like with like: the most common currency + unit among the chosen slots
   const tally = new Map<string, number>();
   for (const s of future) tally.set(`${s.currency}|${s.priceUnit}|${s.priceBasis}`, (tally.get(`${s.currency}|${s.priceUnit}|${s.priceBasis}`) ?? 0) + 1);
   const top = [...tally.entries()].sort((x, y) => y[1] - x[1])[0]?.[0];
@@ -207,7 +218,10 @@ export function summarizePrice(kind: OfferKind, slots: Slot[], today: string): P
   const amount = min.price!.toLocaleString('en-US', { maximumFractionDigits: 2 });
   const raw = `From ${min.currency} ${amount}${period}${per}`;
   const what = min.unit ? `${min.unit}${min.startDate ? `, ${min.startDate}` : ''}` : (min.startDate ?? 'season');
-  return { min, priceUnit, raw, note: `${raw} (cheapest bookable: ${what}; as of ${today})` };
+  const label = tier === 'bookable' ? 'cheapest bookable'
+    : tier === 'full' ? 'next dates full or waitlist only'
+    : `last published price, ${latestYear || 'earlier'} dates are over, new dates not published yet`;
+  return { min, priceUnit, raw, note: `${raw} (${label}: ${what}; as of ${today})` };
 }
 
 function slotJson(s: Slot) {
@@ -483,7 +497,9 @@ async function runAdapterInner(
     images: null, contentChanged: null, slotsChanged: null, slotStore: 'none', retracted: 0, problems: [], notes: [], requests: 0, ms: 0,
   };
   let incomplete: string | null = null;
-  const ctx = { note: (t: string) => rep.notes.push(t), incomplete: (r: string) => { incomplete = r; rep.notes.push(`incomplete: ${r}`); } };
+  const lastPublished: Slot[] = [];
+  const ctx = { note: (t: string) => rep.notes.push(t), incomplete: (r: string) => { incomplete = r; rep.notes.push(`incomplete: ${r}`); },
+    lastPublished: (past: Slot[]) => { lastPublished.push(...past); } };
   const today = new Date().toISOString().slice(0, 10);
   let offerId: string | null = null;
   const hashes: { content?: string; slots?: string } = {};
@@ -508,7 +524,7 @@ async function runAdapterInner(
     rep.problems.push(...problems);
     rep.slots = slots.length;
     rep.bookable = slots.filter(s => isBookable(s.availability) && isAhead(a.kind, s, today)).length;
-    const price = summarizePrice(a.kind, slots, today);
+    const price = summarizePrice(a.kind, slots, today, lastPublished);
     rep.minPrice = price.raw;
     if (content) hashes.content = sha({ ...content, imageUrls: content.imageUrls.slice(0, 12) });
     hashes.slots = sha(slots.map(slotJson));

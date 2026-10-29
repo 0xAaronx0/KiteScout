@@ -25,7 +25,8 @@
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, collapse, iso, monthOf, parseAmount, todayIso } from '../parse.js';
-import type { OfferAdapter, OfferContent, Slot } from '../types.js';
+import type { FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { ALL_DATES } from '../types.js';
 
 const SITE = 'https://www.windloop.de';
 export const WLP_CAMP_URL = `${SITE}/kurse/kite-week-und-sleep-ein-plus-aufsteiger-camp`;
@@ -222,11 +223,12 @@ export function parseWindloopContent(p: WlpPages, today: string): OfferContent {
   };
 }
 
-export async function fetchWlpSlots(ctx: { note(t: string): void }, today: string): Promise<Slot[]> {
+export async function fetchWlpSlots(ctx: Pick<FetchContext, 'note' | 'lastPublished'>, today: string): Promise<Slot[]> {
   const camp = parseWlpCamp(await page(WLP_CAMP_URL), today);
   if (!camp.campPrice) throw new Error('windloop-glamping-neuharlingersiel: "Preis: ... € pro Person" not found on the camp page');
   if (camp.weeks.length === 0) ctx.note('windloop-glamping-neuharlingersiel: no camp weeks parsed ("Zeiträume" list missing or year not inferable)');
   const slots = buildWlpSlots(camp, today);
+  ctx.lastPublished?.(buildWlpSlots(camp, ALL_DATES));
   if (camp.weeks.length > 0 && slots.length === 0) ctx.note('windloop-glamping-neuharlingersiel: all listed camp weeks are past - price on request until new dates');
   return slots;
 }

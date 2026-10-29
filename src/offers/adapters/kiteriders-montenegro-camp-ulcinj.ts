@@ -25,6 +25,7 @@ import { fetchText } from '../http.js';
 import { collapse, imageCandidates, iso, monthOf, parse, todayIso, type HTMLElement } from '../parse.js';
 import { upscaleCdnUrl } from '../../lib/images.js';
 import type { FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { ALL_DATES } from '../types.js';
 
 export const KRM_URL = 'https://www.kitesurfing-montenegro.com/';
 const ENQUIRY_URL = 'https://www.kitesurfing-montenegro.com/enquiry/';
@@ -122,6 +123,7 @@ export async function fetchKrmSlots(ctx: FetchContext, today = todayIso()): Prom
     throw new Error(`kiteriders-montenegro: room rates not found (year ${r.year}, ${r.rates.length} rates, ${r.seasons.length} seasons; layout changed?)`);
   }
   const slots = buildKrmSlots(r, today);
+  ctx.lastPublished?.(buildKrmSlots(r, ALL_DATES));
   if (slots.length === 0) ctx.note(`all ${r.year} season bands are past (${r.seasons.map(s => `${s.start}..${s.end}`).join(', ')}); next rates not printed yet`);
   return slots;
 }

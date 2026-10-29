@@ -26,7 +26,8 @@
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, iso, parseAmount, todayIso } from '../parse.js';
-import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
+import type { ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { ALL_DATES } from '../types.js';
 
 const REISEN = 'https://reisen.nordwind-wassersport.de';
 export const NWS_WEEKEND_URL = `${REISEN}/kompaktwochenenden/kitesurfen.html`;
@@ -223,10 +224,11 @@ export function parseNordwindContent(p: NwsPages): OfferContent {
   };
 }
 
-export async function fetchNwsSlots(today: string): Promise<Slot[]> {
+export async function fetchNwsSlots(today: string, ctx?: Pick<FetchContext, 'note' | 'lastPublished'>): Promise<Slot[]> {
   const parsed = parseNwsPage(await page(NWS_WEEKEND_URL));
   if (!parsed.year || parsed.weekends.length === 0) throw new Error('nordwind-wassersport: "Termine YYYY Kitesurf-Kompaktwochenende" dates not found');
   if (parsed.variants.length < 2) throw new Error(`nordwind-wassersport: price blocks changed (${parsed.variants.length} variants parsed)`);
+  ctx?.lastPublished?.(buildNwsSlots(parsed, ALL_DATES));
   return buildNwsSlots(parsed, today);
 }
 
@@ -251,7 +253,7 @@ export const nordwindWassersportSurendorf: OfferAdapter = {
     if (!/Kitesurf/.test(weekend) || !/Surendorf/.test(course)) throw new Error('nordwind-wassersport: kite weekend / Surendorf station text missing (layout changed?)');
     return parseNordwindContent({ weekend, guesthouse, course });
   },
-  async fetchSlots() {
-    return fetchNwsSlots(todayIso());
+  async fetchSlots(ctx) {
+    return fetchNwsSlots(todayIso(), ctx);
   },
 };

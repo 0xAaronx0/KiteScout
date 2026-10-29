@@ -22,7 +22,8 @@
 //   the page lists new weeks.
 // ---------------------------------------------------------------------------
 import { iso, monthOf, parseAmount, todayIso } from '../parse.js';
-import type { OfferAdapter, OfferContent, Slot } from '../types.js';
+import type { FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { ALL_DATES } from '../types.js';
 import { KCH_OPERATOR, KCH_PRODUCTS_URL, KCH_SITE, kchFetch, kchText, parseKchProducts } from './kite-club-hatteras-avon.js';
 
 export const KCC_CAMPS_URL = `${KCH_SITE}/kitesurfing-camps/`;
@@ -135,10 +136,11 @@ export function parseKiteClubCampContent(p: KccPages): OfferContent {
   };
 }
 
-export async function fetchKccSlots(today: string, ctx?: { note(t: string): void }): Promise<Slot[]> {
+export async function fetchKccSlots(today: string, ctx?: Pick<FetchContext, 'note' | 'lastPublished'>): Promise<Slot[]> {
   const c = parseKccCamp(await kchFetch(KCC_CAMPS_URL));
   if (!c.year || c.weeks.length === 0) throw new Error('kite-club-hatteras-camp: "<year> Kite Camp Dates" list not found (layout changed?)');
   const slots = buildKccSlots(c, today);
+  ctx?.lastPublished?.(buildKccSlots(c, ALL_DATES));
   if (slots.length === 0) ctx?.note(`all ${c.year} camp weeks are past (${c.weeks.map(w => w.start).join(', ')}); no new dates printed yet`);
   return slots;
 }

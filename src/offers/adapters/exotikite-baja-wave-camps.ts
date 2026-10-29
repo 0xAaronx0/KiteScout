@@ -32,7 +32,8 @@
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { imageCandidates, iso, monthOf, parseAmount, todayIso } from '../parse.js';
-import type { OfferAdapter, OfferContent, Slot } from '../types.js';
+import type { FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { ALL_DATES } from '../types.js';
 import { wixLines } from './kite-buen-hombre-eco-lodge.js';
 
 const SITE = 'https://exotikite.com';
@@ -171,11 +172,12 @@ export function parseExoContent(html: string, today = todayIso(), sitePhotos: st
   };
 }
 
-export async function fetchExoSlots(today: string, ctx?: { note(t: string): void }): Promise<Slot[]> {
+export async function fetchExoSlots(today: string, ctx?: Pick<FetchContext, 'note' | 'lastPublished'>): Promise<Slot[]> {
   const c = parseExoCamps(await page(EXO_URL));
   if (!c.year || c.weeks.length === 0) throw new Error('exotikite: "Baja Wave Camps <year>" week list not found (layout changed?)');
   if (c.price === null) ctx?.note('"Wave Camp Pricing" amount not found; slots without price');
   const slots = buildExoSlots(c, today);
+  ctx?.lastPublished?.(buildExoSlots(c, ALL_DATES));
   if (slots.length === 0) ctx?.note(`all ${c.year} weeks are past (${c.weeks.map(w => w.start).join(', ')}); next weeks not published yet`);
   return slots;
 }

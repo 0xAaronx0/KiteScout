@@ -151,7 +151,15 @@ export interface FetchContext {
   note(text: string): void;
   /** partial delivery (a detail page failed): the ingest keeps old slots instead of retracting them */
   incomplete(reason: string): void;
+  /**
+   * Prices the page still prints for dates that are over (last season's camps, an expired rate table). Never stored as
+   * slots; the ingest only uses them for the headline price when no upcoming slot has a price (Aaron 2026-10-29).
+   */
+  lastPublished?(slots: Slot[]): void;
 }
+
+/** Pass as "today" to a slot builder to keep dates that are over (for FetchContext.lastPublished). */
+export const ALL_DATES = '0000-01-01';
 
 /**
  * How the product app can ask the booking engine live for exact dates (stored in

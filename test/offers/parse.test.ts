@@ -81,6 +81,26 @@ test('summarizePrice: cheapest bookable future slot, like with like', () => {
   assert.equal(summarizePrice('camp', [], '2026-10-09').raw, 'Price on request');
 });
 
+test('summarizePrice: a stated price is never on request - full dates, then the last published price (Aaron 2026-10-29)', () => {
+  const p = (o: Partial<Slot>) => slot({ currency: 'EUR', priceUnit: 'package', priceBasis: 'person', ...o });
+  // only full upcoming dates (Kite Camp Brazil): the price shows, named as full
+  const full = summarizePrice('tour', [
+    p({ key: 'past', startDate: '2026-10-21', endDate: '2026-10-31', price: 1725, availability: 'available' }),
+    p({ key: 'wait', startDate: '2026-11-06', endDate: '2026-11-16', price: 1950, availability: 'waitlist' }),
+  ], '2026-10-29');
+  assert.equal(full.min?.key, 'wait');
+  assert.match(full.note!, /^From EUR 1,950 p\.p\. \(next dates full or waitlist only: .*2026-11-06; as of 2026-10-29\)$/);
+  // all dates over: the latest year's cheapest price, from returned past slots and the adapter's lastPublished
+  const past = summarizePrice('camp', [p({ key: 'r', startDate: '2026-05-01', endDate: '2026-05-31', price: 1200, datePrecision: 'month' })], '2026-10-29',
+    [p({ key: 'old', startDate: '2025-06-11', price: 300 }), p({ key: 'jun', startDate: '2026-06-11', price: 540 }), p({ key: 'jul', startDate: '2026-07-08', price: 560 })]);
+  assert.equal(past.min?.key, 'jun');
+  assert.equal(past.raw, 'From EUR 540 p.p.');
+  assert.match(past.note!, /last published price, 2026 dates are over, new dates not published yet/);
+  // a bookable upcoming slot still wins, past prices never undercut it
+  assert.equal(summarizePrice('camp', [p({ key: 'next', startDate: '2027-06-01', price: 900 })], '2026-10-29', [p({ key: 'cheap', startDate: '2026-06-01', price: 100 })]).min?.key, 'next');
+  assert.equal(summarizePrice('camp', [], '2026-10-29', [p({ key: 'x', startDate: '2026-06-01', price: null })]).raw, 'Price on request');
+});
+
 test('isAhead: started departures are gone, bands last until their end', () => {
   const dep = slot({ startDate: '2026-10-03', endDate: '2026-10-10' });
   assert.equal(isAhead('tour', dep, '2026-10-09'), false);
