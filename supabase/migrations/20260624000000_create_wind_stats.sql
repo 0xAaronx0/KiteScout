@@ -43,6 +43,7 @@ INSERT INTO wind_stats (country, months, is_alias) VALUES
   ('Costa Rica', '{90,90,81,81,61,50,50,50,30,30,81,81}', false),
   ('Croatia', '{10,10,10,30,50,70,79,61,50,39,10,10}', false),
   ('Cuba', '{70,61,61,61,49,49,49,30,30,30,61,61}', false),
+  ('Cyprus', '{10,10,45,33,42,42,49,60,37,18,10,10}', false), -- ERA5 estimate 2026-10-29 (Aaron), no bstoked data
   ('Denmark', '{10,10,10,59,61,70,61,61,70,70,10,10}', false),
   ('Dominican Republic', '{56,62,62,50,50,61,81,81,41,19,21,41}', false),
   ('Ecuador', '{49,49,49,49,49,70,70,70,70,70,70,70}', false),
@@ -89,6 +90,7 @@ INSERT INTO wind_stats (country, months, is_alias) VALUES
   ('Peru', '{49,49,49,49,49,70,90,90,90,90,82,70}', false),
   ('Philippines', '{90,84,81,59,19,19,19,19,19,19,61,84}', false),
   ('Poland', '{10,10,10,49,49,49,49,49,49,49,10,10}', false),
+  ('Portugal', '{51,52,57,58,58,65,74,67,45,41,43,46}', false), -- ERA5 estimate 2026-10-29 (Aaron), no bstoked data
   ('Puerto Rico', '{61,61,50,30,30,61,61,50,30,30,30,50}', false),
   ('Romania', '{30,30,10,30,90,90,90,90,90,60,10,10}', false),
   ('Russia', '{10,10,10,10,30,30,60,60,60,30,10,10}', false),
