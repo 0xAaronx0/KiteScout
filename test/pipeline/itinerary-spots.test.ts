@@ -41,3 +41,18 @@ test('mergeItinerarySpots: nothing located anywhere keeps the fresh names', () =
   assert.equal(r.note, null);
   assert.deepEqual(mergeItinerarySpots([], null).spots, []);
 });
+
+test('mergeItinerarySpots: a pinned stored spot survives a fresh geocode of the same name', () => {
+  // Antigua (2026-10-29): the geocoder returns the island centroid, the stored pin is Falmouth Harbour.
+  const stored = [{ ...spot('Antigua', 17.0131, -61.7756), pinned: true as const }, spot('Barbuda', 17.6149, -61.8544, 1)];
+  const r = mergeItinerarySpots([spot('antigua', 17.1037, -61.7905), spot('Barbuda', 17.62, -61.85, 1), spot('Jabberwock', 17.16, -61.8, 2)], stored);
+  assert.deepEqual(r.spots.map(s => [s.name, s.lat, s.lng, s.pinned ?? false]),
+    [['antigua', 17.0131, -61.7756, true], ['Barbuda', 17.62, -61.85, false], ['Jabberwock', 17.16, -61.8, false]]);
+  assert.match(r.note!, /kept stored coords for 1 spot/);
+});
+
+test('mergeItinerarySpots: a pin without coordinates protects nothing', () => {
+  const r = mergeItinerarySpots([spot('Antigua', 17.1037, -61.7905)], [{ ...spot('Antigua'), pinned: true as const }]);
+  assert.deepEqual(r.spots.map(s => [s.lat, s.lng, s.pinned ?? false]), [[17.1037, -61.7905, false]]);
+});
+
