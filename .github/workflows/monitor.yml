@@ -67,6 +67,17 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: pnpm cli cruise-media apply
 
+      - name: Preview loops for new hero videos
+        # 5 s muted 208x160 loops + stills for the map's offer list (Aaron 2026-10-29). Idempotent:
+        # existing loops are skipped. A nice-to-have, so a slow provider video never fails the monitor.
+        continue-on-error: true
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: pnpm cli video-loops
+
       - name: Run monitor
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}

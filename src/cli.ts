@@ -315,6 +315,18 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'video-loops': {
+      // Muted 5 s preview loops (208x160) + stills for every hero video, in the public bucket under loops/.
+      const { runVideoLoops } = await import('./pipeline/video-loops.js');
+      const dry = args.includes('--dry-run');
+      const lim = flagValue('--limit', 0);
+      const s = await runVideoLoops({ dryRun: dry, limit: lim > 0 ? lim : undefined });
+      console.log(`video-loops: ${s.videos} hero videos, ${s.alreadyLooped} already looped, ${s.missing} missing` +
+        (dry ? ' (dry run, nothing written)' : `; ${s.written} written, ${s.failed} failed`));
+      for (const f of s.failures) console.log(`  failed: ${f}`);
+      if (s.failed) process.exitCode = 1;
+      break;
+    }
     case 'images-thumbs': {
       // Backfill 160x140 gallery thumbnails (thumb_path) for stored offer images; --dry-run only counts.
       const { runImageThumbs, isThumbTable } = await import('./pipeline/image-thumbs.js');
