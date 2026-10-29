@@ -1,6 +1,7 @@
 -- Synthetic PGlite fixture, not a production schema or migration: just the columns the two product views
 -- (app_cruise_offer_cards, app_package_cards) read, with the types the live views expose (PostgREST OpenAPI,
--- 2026-10-29). `disciplines` is added by 20261021120000_offer_disciplines, which the test replays.
+-- 2026-10-29). `disciplines` (20261021120000) and `season_months` (20261028130000) are added by those migrations,
+-- which the test replays.
 CREATE ROLE anon; CREATE ROLE authenticated; CREATE ROLE service_role BYPASSRLS;
 
 CREATE TABLE public.cruise_providers (

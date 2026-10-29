@@ -1,16 +1,20 @@
 -- ---------------------------------------------------------------------------
--- audience_note: listings aimed at one market or language group (Aaron 2026-10-29).
+-- audience_note + season_months in the product views (Aaron 2026-10-29).
 --
 -- cruise_offers.audience_note / package_offers.audience_note  TEXT NULL, e.g. 'Russian-language trip'
 --   (first case: cruise offer 7f1a5f7c-798e-4e92-b564-dff1110b2fa2, the Russian-language version of a Red Sea
 --   liveaboard). NULL = a general listing. The product keeps a non-NULL note out of "Featured", shows the note
 --   and lists that language first. No backfill here: the values are set separately.
 --
+-- season_months: the existing SMALLINT[] column (20261028130000_offer_season_months, applied 2026-10-28) is
+--   exposed in both views. 277 active package rows have it while the package view's season_start_month /
+--   season_end_month are always NULL, so the product could not show "open (Apr-Oct)" for packages.
+--
 -- VIEW SAFETY: both views are owned by BOTH repos (this one and MartinMarzi/KiteCruiseScout). Each new definition
--- is the current live definition with `audience_note` appended as the LAST column; no existing column changes
--- name, type, order or expression:
---   app_package_cards       = 20261021191245_retain_coarse_package_slot_windows (79 columns) + audience_note
---   app_cruise_offer_cards  = 20261021120000_offer_disciplines                   (73 columns) + audience_note
+-- is the current live definition with `audience_note`, then `season_months` appended as the LAST two columns; no
+-- existing column changes name, type, order or expression:
+--   app_package_cards       = 20261021191245_retain_coarse_package_slot_windows (79 columns) + 2 = 81
+--   app_cruise_offer_cards  = 20261021120000_offer_disciplines                   (73 columns) + 2 = 75
 -- (live column lists diff-checked 2026-10-29: 79 / 73, last column `disciplines` in both; KCS origin/main has no
 -- view migration newer than 20260710090000.) KCS's zod schemas ignore unknown columns.
 --
@@ -21,6 +25,7 @@
 -- first), re-run the app_package_cards block of 20261021191245 and the app_cruise_offer_cards block of
 -- 20261021120000 (both WITH (security_invoker = true), then REVOKE ALL ... FROM anon, authenticated), then
 -- ALTER TABLE package_offers DROP COLUMN audience_note; ALTER TABLE cruise_offers DROP COLUMN audience_note;
+-- (season_months stays: it belongs to 20261028130000.)
 -- ---------------------------------------------------------------------------
 BEGIN;
 SET LOCAL lock_timeout = '5s';
@@ -157,7 +162,7 @@ LEFT JOIN public.providers o
 WHERE p.is_active
 ;
 
--- new definition (= base + audience_note)
+-- new definition (= base + audience_note + season_months)
 CREATE TEMP VIEW audience_new_package_cards AS
 SELECT
     p.id AS offer_id,
@@ -273,7 +278,9 @@ END) AS dates,   -- exact dates stay future-only; coarse windows retain their en
     -- appended 2026-10-21 (sports, MartinMarzi/KiteCruiseScout#239)
     p.disciplines,
     -- appended 2026-10-29 (market / language group of the listing)
-    p.audience_note
+    p.audience_note,
+    -- appended 2026-10-29 (season as a month set, column from 20261028130000_offer_season_months)
+    p.season_months
 FROM public.package_offers p
 LEFT JOIN public.providers o
   ON o.id = p.operator_id AND o.status NOT IN ('dead', 'duplicate')
@@ -366,7 +373,7 @@ where c.duplicate_of is null
   and coalesce(c.is_reseller, false) = false
 ;
 
--- new definition (= base + audience_note)
+-- new definition (= base + audience_note + season_months)
 CREATE TEMP VIEW audience_new_cruise_cards AS
 select
   c.id as offer_id,
@@ -445,7 +452,9 @@ select
   -- appended 2026-10-21 (sports, MartinMarzi/KiteCruiseScout#239)
   c.disciplines,
   -- appended 2026-10-29 (market / language group of the listing)
-  c.audience_note
+  c.audience_note,
+  -- appended 2026-10-29 (season as a month set, column from 20261028130000_offer_season_months)
+  c.season_months
 from public.cruise_offers c
 left join public.cruise_providers p on p.id = c.cruise_provider_id
 where c.duplicate_of is null

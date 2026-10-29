@@ -1,5 +1,5 @@
 // audience_note migration (Aaron 2026-10-29): replays the view chain in PGlite and checks that both product views
-// keep the live column contract and only gain `audience_note` as the last column.
+// keep the live column contract and only gain `audience_note`, then `season_months`, as the last two columns.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
@@ -10,6 +10,7 @@ const file = (suffix: string) => readFileSync(new URL(readdirSync(dir).find(f =>
 const fixture = readFileSync(new URL('../fixtures/offer-cards-schema.sql', import.meta.url), 'utf8');
 const disciplines = file('_offer_disciplines.sql');
 const windows = file('_retain_coarse_package_slot_windows.sql');
+const seasonMonths = file('_offer_season_months.sql');
 const migration = file('_offer_audience_note.sql');
 
 // live column contract (name:type, PostgREST OpenAPI 2026-10-29); the first 72 columns are shared by both views
@@ -42,18 +43,22 @@ const LIVE_PACKAGE = [
   'availability_checked_at:timestamp with time zone', 'instant_booking:boolean', 'disciplines:text[]',
 ];
 
+// appended by the migration, in this order (season_months is SMALLINT[] on both tables, live 2026-10-29)
+const APPENDED = ['audience_note:text', 'season_months:smallint[]'];
+
 const columns = async (db: PGlite, view: string) => (await db.query<{ c: string }>(
   `select a.attname || ':' || format_type(a.atttypid, a.atttypmod) c from pg_attribute a
     where a.attrelid = $1::regclass and a.attnum > 0 and not a.attisdropped order by a.attnum`, [view])).rows.map(r => r.c);
 const meta = async (db: PGlite, view: string) => (await db.query(
   `select relowner, relacl, reloptions from pg_class where oid = $1::regclass`, [view])).rows;
 
-/** fixture + the live chain: disciplines (both views), then the coarse-window package view */
+/** fixture + the live chain: disciplines (both views), the coarse-window package view, season_months columns */
 async function liveState(): Promise<PGlite> {
   const db = new PGlite();
   await db.exec(fixture);
   await db.exec(disciplines);
   await db.exec(windows);
+  await db.exec(seasonMonths);
   return db;
 }
 
@@ -65,7 +70,7 @@ test('replayed chain matches the live column lists (baseline)', async () => {
   } finally { await db.close(); }
 });
 
-test('migration appends audience_note last, keeps everything else, and is idempotent', async () => {
+test('migration appends audience_note + season_months last, keeps everything else, and is idempotent', async () => {
   const db = await liveState();
   try {
     await db.exec('alter view app_package_cards set (security_barrier=true)'); // extra options survive
@@ -79,7 +84,7 @@ test('migration appends audience_note last, keeps everything else, and is idempo
       ['app_cruise_offer_cards', LIVE_CRUISE, cruiseBefore, cruiseDef],
       ['app_package_cards', LIVE_PACKAGE, packageBefore, packageDef],
     ] as const) {
-      assert.deepEqual(await columns(db, view), [...live, 'audience_note:text'], view);
+      assert.deepEqual(await columns(db, view), [...live, ...APPENDED], view);
       assert.deepEqual(await meta(db, view), before, `${view} owner/acl/options`);
       assert.equal((await db.query<{ d: string }>(`select pg_get_viewdef('${view}'::regclass, true) d`)).rows[0].d, def);
     }
@@ -93,14 +98,16 @@ test('migration appends audience_note last, keeps everything else, and is idempo
 
     // the note flows through both views; NULL stays NULL
     await db.exec(`insert into cruise_providers (id, status) values ('00000000-0000-4000-8000-0000000000a1', 'new');
-      insert into cruise_offers (id, cruise_provider_id, title, audience_note) values
-        ('7f1a5f7c-798e-4e92-b564-dff1110b2fa2', '00000000-0000-4000-8000-0000000000a1', 'Red Sea (RU)', 'Russian-language trip'),
-        ('00000000-0000-4000-8000-0000000000c2', '00000000-0000-4000-8000-0000000000a1', 'Red Sea', null);
-      insert into package_offers (id, is_active, package_type, title, audience_note)
-        values ('00000000-0000-4000-8000-0000000000b1', true, 'camp', 'Camp', 'German-language camp');`);
-    assert.deepEqual((await db.query('select title, audience_note from app_cruise_offer_cards order by title')).rows,
-      [{ title: 'Red Sea', audience_note: null }, { title: 'Red Sea (RU)', audience_note: 'Russian-language trip' }]);
-    assert.deepEqual((await db.query('select audience_note from app_package_cards')).rows, [{ audience_note: 'German-language camp' }]);
+      insert into cruise_offers (id, cruise_provider_id, title, audience_note, season_months) values
+        ('7f1a5f7c-798e-4e92-b564-dff1110b2fa2', '00000000-0000-4000-8000-0000000000a1', 'Red Sea (RU)', 'Russian-language trip', '{3,4,10,11}'),
+        ('00000000-0000-4000-8000-0000000000c2', '00000000-0000-4000-8000-0000000000a1', 'Red Sea', null, null);
+      insert into package_offers (id, is_active, package_type, title, audience_note, season_months)
+        values ('00000000-0000-4000-8000-0000000000b1', true, 'camp', 'Camp', 'German-language camp', '{4,5,6,7,8,9,10}');`);
+    assert.deepEqual((await db.query('select title, audience_note, season_months from app_cruise_offer_cards order by title')).rows,
+      [{ title: 'Red Sea', audience_note: null, season_months: null },
+       { title: 'Red Sea (RU)', audience_note: 'Russian-language trip', season_months: [3, 4, 10, 11] }]);
+    assert.deepEqual((await db.query('select audience_note, season_months from app_package_cards')).rows,
+      [{ audience_note: 'German-language camp', season_months: [4, 5, 6, 7, 8, 9, 10] }]);
     await db.exec('set role anon');
     await assert.rejects(db.query('select * from app_cruise_offer_cards'), /permission denied/);
     await db.exec('reset role');
@@ -128,5 +135,6 @@ for (const [name, drift] of [
     assert.deepEqual([await columns(db, 'app_cruise_offer_cards'), await columns(db, 'app_package_cards')], before);
     const col = await db.query("select 1 from pg_attribute where attname = 'audience_note' and attrelid in ('cruise_offers'::regclass, 'package_offers'::regclass)");
     assert.equal(col.rows.length, 0, 'ALTER TABLE rolled back too');
+    assert.equal((await columns(db, 'app_package_cards')).includes('season_months:smallint[]'), false);
   } finally { await db.close(); }
 });
