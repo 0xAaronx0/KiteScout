@@ -22,10 +22,13 @@ CREATE INDEX IF NOT EXISTS idx_wind_stats_country_lower ON wind_stats (lower(cou
 
 INSERT INTO wind_stats (country, months, is_alias) VALUES
   ('Albania', '{30,30,60,60,90,90,90,90,90,60,30,30}', false),
+  ('Antigua and Barbuda', '{74,77,70,69,75,87,90,75,53,53,61,73}', false), -- ERA5 estimate 2026-10-29 (Aaron), no bstoked data
   ('Argentina', '{49,49,49,49,49,49,10,10,49,49,49,49}', false),
   ('Armenia', '{30,30,30,60,60,90,90,90,90,60,30,30}', false),
   ('Australia', '{90,90,70,50,50,50,50,50,55,65,85,85}', false),
   ('Austria', '{10,10,55,55,55,30,30,30,50,50,10,10}', false),
+  ('Bahamas', '{58,63,58,57,45,39,47,42,34,56,59,61}', false), -- ERA5 estimate 2026-10-29 (Aaron), no bstoked data
+  ('Barbados', '{85,88,82,82,88,95,83,57,37,52,73,82}', false), -- ERA5 estimate 2026-10-29 (Aaron), no bstoked data
   ('Belgium', '{10,10,10,10,48,42,45,45,45,59,55,10}', false), -- ERA5 estimate 2026-10-29 (Aaron), no bstoked data
   ('Belize', '{50,65,65,65,50,61,61,50,50,30,35,50}', false),
   ('Bonaire', '{78,82,90,90,90,90,90,70,50,50,58,70}', false),
@@ -90,6 +93,7 @@ INSERT INTO wind_stats (country, months, is_alias) VALUES
   ('Romania', '{30,30,10,30,90,90,90,90,90,60,10,10}', false),
   ('Russia', '{10,10,10,10,30,30,60,60,60,30,10,10}', false),
   ('Saint Lucia', '{70,70,70,70,70,70,70,30,30,30,30,61}', false),
+  ('Saint Martin', '{74,78,69,69,75,86,90,75,51,48,61,73}', false), -- ERA5 estimate 2026-10-29 (Aaron), no bstoked data
   ('Saint Vincent and the Grenadines', '{90,90,90,70,90,90,79,75,45,45,79,81}', false),
   ('Senegal', '{49,70,70,70,49,49,49,49,49,49,49,49}', false),
   ('Slovenia', '{10,10,30,60,90,90,60,60,90,30,10,10}', false),
@@ -104,6 +108,7 @@ INSERT INTO wind_stats (country, months, is_alias) VALUES
   ('Thailand', '{49,65,65,49,49,49,49,49,49,49,49,61}', false),
   ('Tunisia', '{10,10,49,49,65,65,49,49,49,49,49,10}', false),
   ('Turkey', '{10,10,49,49,70,70,90,90,78,49,10,10}', false),
+  ('Turks and Caicos Islands', '{68,82,69,72,72,75,92,81,50,49,66,75}', false), -- ERA5 estimate 2026-10-29 (Aaron), no bstoked data
   ('Ukraine', '{10,10,10,30,60,90,90,90,60,30,10,10}', false),
   ('United Kingdom', '{10,10,10,60,60,60,60,60,30,10,10,10}', false),
   ('United States', '{50,65,70,79,75,79,79,70,70,70,70,50}', false),

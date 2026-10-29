@@ -14,10 +14,13 @@
 // Keyed by bstoked's country name (see ALIASES for provider-name variants).
 export const WIND_BY_COUNTRY: Record<string, number[]> = {
   'Albania': [30, 30, 60, 60, 90, 90, 90, 90, 90, 60, 30, 30],
+  'Antigua and Barbuda': [74, 77, 70, 69, 75, 87, 90, 75, 53, 53, 61, 73], // ERA5 estimate 2026-10-29 (Aaron), no bstoked data: >=12 kn 3h
   'Argentina': [49, 49, 49, 49, 49, 49, 10, 10, 49, 49, 49, 49],
   'Armenia': [30, 30, 30, 60, 60, 90, 90, 90, 90, 60, 30, 30],
   'Australia': [90, 90, 70, 50, 50, 50, 50, 50, 55, 65, 85, 85],
   'Austria': [10, 10, 55, 55, 55, 30, 30, 30, 50, 50, 10, 10],
+  'Bahamas': [58, 63, 58, 57, 45, 39, 47, 42, 34, 56, 59, 61], // ERA5 estimate 2026-10-29 (Aaron), no bstoked data: >=12 kn 3h
+  'Barbados': [85, 88, 82, 82, 88, 95, 83, 57, 37, 52, 73, 82], // ERA5 estimate 2026-10-29 (Aaron), no bstoked data: >=12 kn 3h
   'Belgium': [10, 10, 10, 10, 48, 42, 45, 45, 45, 59, 55, 10], // ERA5 estimate 2026-10-29 (Aaron), no bstoked data: >=10 kn 3h, Knokke-Heist, water >=10 C months
   'Belize': [50, 65, 65, 65, 50, 61, 61, 50, 50, 30, 35, 50],
   'Bonaire': [78, 82, 90, 90, 90, 90, 90, 70, 50, 50, 58, 70],
@@ -82,6 +85,7 @@ export const WIND_BY_COUNTRY: Record<string, number[]> = {
   'Romania': [30, 30, 10, 30, 90, 90, 90, 90, 90, 60, 10, 10],
   'Russia': [10, 10, 10, 10, 30, 30, 60, 60, 60, 30, 10, 10],
   'Saint Lucia': [70, 70, 70, 70, 70, 70, 70, 30, 30, 30, 30, 61],
+  'Saint Martin': [74, 78, 69, 69, 75, 86, 90, 75, 51, 48, 61, 73], // ERA5 estimate 2026-10-29 (Aaron), no bstoked data: >=12 kn 3h
   'Saint Vincent and the Grenadines': [90, 90, 90, 70, 90, 90, 79, 75, 45, 45, 79, 81],
   'Senegal': [49, 70, 70, 70, 49, 49, 49, 49, 49, 49, 49, 49],
   'Slovenia': [10, 10, 30, 60, 90, 90, 60, 60, 90, 30, 10, 10],
@@ -96,6 +100,7 @@ export const WIND_BY_COUNTRY: Record<string, number[]> = {
   'Thailand': [49, 65, 65, 49, 49, 49, 49, 49, 49, 49, 49, 61],
   'Tunisia': [10, 10, 49, 49, 65, 65, 49, 49, 49, 49, 49, 10],
   'Turkey': [10, 10, 49, 49, 70, 70, 90, 90, 78, 49, 10, 10],
+  'Turks and Caicos Islands': [68, 82, 69, 72, 72, 75, 92, 81, 50, 49, 66, 75], // ERA5 estimate 2026-10-29 (Aaron), no bstoked data: >=12 kn 3h
   'Ukraine': [10, 10, 10, 30, 60, 90, 90, 90, 60, 30, 10, 10],
   'United Kingdom': [10, 10, 10, 60, 60, 60, 60, 60, 30, 10, 10, 10],
   'United States': [50, 65, 70, 79, 75, 79, 79, 70, 70, 70, 70, 50],
