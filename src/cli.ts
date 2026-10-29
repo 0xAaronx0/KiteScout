@@ -315,6 +315,26 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'images-thumbs': {
+      // Backfill 160x140 gallery thumbnails (thumb_path) for stored offer images; --dry-run only counts.
+      const { runImageThumbs, isThumbTable } = await import('./pipeline/image-thumbs.js');
+      const table = flagStr('--table');
+      if (table !== undefined && !isThumbTable(table)) {
+        console.error('Usage: images-thumbs [--dry-run] [--limit n] [--table cruise|package]');
+        process.exit(1);
+      }
+      const dry = args.includes('--dry-run');
+      const lim = flagValue('--limit', 0);
+      const stats = await runImageThumbs({ dryRun: dry, limit: lim > 0 ? lim : undefined, table });
+      for (const s of stats) {
+        console.log(`${s.table}: ${s.rows} rows, ${s.rowsWithImages} with images, ${s.images} images; ` +
+          `${s.alreadyThumbed} already thumbed, ${s.missing} missing in ${s.rowsNeedingThumbs} rows, ${s.noPath} without path` +
+          (dry ? ' (dry run, nothing written)'
+            : `; processed ${s.processedRows} rows: ${s.thumbsWritten} thumbs written, ${s.thumbsFailed} failed, ${s.rowsUpdated} rows updated`));
+      }
+      break;
+    }
+
     case 'cruise-reviews': {
       if (args.includes('--recompute-avg')) {
         // Backfill/refresh the combined avg_rating column only (no fetching).
@@ -686,6 +706,7 @@ async function main(): Promise<void> {
       console.log('  cruise-locations          Extract validated cruise-only locations for all cruise providers');
       console.log('  cruise-offers             Extract structured cruise offers (+ curated images) for all cruise providers');
       console.log('  cruise-diff               Review: show what a fresh extraction WOULD change vs the DB (no writes); --domain to scope');
+      console.log('  images-thumbs             Backfill gallery thumbnails (thumb_path) for stored images (--dry-run --limit n --table cruise|package)');
       console.log('  cruise-reviews            Match bstoked/TripAdvisor review links (domain-corroborated; --all to re-check)');
       console.log('  region-conditions         Build per-country water/wind conditions consensus from extracted offers');
       console.log('  data-fixes plan|apply      Audit 2026-10-27 data fixes: plan [--out f.json] prints the diff (no writes), apply --from f.json writes it');
