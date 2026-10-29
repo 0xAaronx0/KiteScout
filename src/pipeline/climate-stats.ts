@@ -27,6 +27,17 @@ const SOURCES = 'UV: CAMS global via Open-Meteo Air Quality API 2023-2025; air t
 type Cell = ClimateCell & { sources: string };
 const isCopernicus = (c: Cell) => c.sources.startsWith('Copernicus');
 
+// Offer points (Aaron 2026-10-29, "klima 1"): with a Copernicus token an offer point whose only cell came from the
+// free Open-Meteo API (non-commercial terms) gets a Copernicus cell; the KCS app only trusts Copernicus rows.
+/** true when the point still needs a fetch: no cell at all, or (copernicusOnly) no Copernicus cell */
+export function needsCellFetch(cells: Cell[], lat: number, lng: number, copernicus: boolean): boolean {
+  return !findCell(copernicus ? cells.filter(isCopernicus) : cells, lat, lng);
+}
+/** the cell an offer row uses: Copernicus first when a token is set, else (or when that fetch failed) any cell */
+export function offerCell(cells: Cell[], lat: number, lng: number, copernicus: boolean): Cell | null {
+  return (copernicus ? findCell(cells.filter(isCopernicus), lat, lng) : null) ?? findCell(cells, lat, lng);
+}
+
 async function selectAll<T>(table: string, columns: string): Promise<T[]> {
   const out: T[] = [];
   for (let from = 0; ; from += 1000) {
@@ -127,13 +138,13 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
     findCell(copernicusOnly ? cells.filter(isCopernicus) : cells, lat, lng);
   const needs: Need[] = [];
   const add = (n: Need) => {
-    if (usable(n.lat, n.lng, n.copernicusOnly)) return;
+    if (!needsCellFetch(cells, n.lat, n.lng, n.copernicusOnly)) return;
     if (needs.some(m => findCell([{ lat10: round10(m.lat), lng10: round10(m.lng) }], n.lat, n.lng))) return;
     needs.push(n);
   };
   for (const cp of countryPoints) add({ lat: cp.lat, lng: cp.lng, label: cp.country, elevation: cp.elevation_m, copernicusOnly: !!cdsToken });
   for (const rp of regionPoints) add({ lat: rp.lat, lng: rp.lng, label: `${rp.country} / ${rp.region_name}`, elevation: rp.elevation_m, copernicusOnly: !!cdsToken });
-  offers.forEach((o, i) => { const p = offerPoints[i]; if (p) add({ lat: p.lat, lng: p.lng, label: o.title ?? o.offer_id, copernicusOnly: false }); });
+  offers.forEach((o, i) => { const p = offerPoints[i]; if (p) add({ lat: p.lat, lng: p.lng, label: o.title ?? o.offer_id, copernicusOnly: !!cdsToken }); });
   if (needs.length) console.log(`${needs.length} climate cells to fetch via ${report.fetcher}`);
 
   // ---- 2. fetch them (Copernicus: ERA5 per point, 6 in parallel, UV computed; Open-Meteo one by one)
@@ -205,7 +216,7 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
   offers.forEach((o, i) => {
     const p = offerPoints[i];
     if (!p) return;
-    const cell = usable(p.lat, p.lng, false);
+    const cell = offerCell(cells, p.lat, p.lng, !!cdsToken);
     if (!cell) { report.deferred.push(`${o.offer_type}: ${o.title ?? o.offer_id}`); return; }
     rows.push({
       offer_id: o.offer_id, offer_table: o.offer_table, offer_type: o.offer_type,
