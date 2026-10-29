@@ -23,6 +23,7 @@ import { supabase } from './supabase.js';
 import { anthropic, ANALYSIS_MODEL } from './anthropic.js';
 import { withRetry } from './retry.js';
 import { dropNearDuplicates } from './image-dedup.js';
+import { createThumb, withThumbPath, type ThumbUploader } from './thumbs.js';
 
 export const CRUISE_IMAGE_BUCKET = 'cruise-images';
 
@@ -74,6 +75,8 @@ export interface StoredImage {
   rights: ImageRights;
   /** true when this is the operator's homepage hero, used because the offer's own page had no usable image */
   fallback?: boolean;
+  /** 160x140 WebP gallery thumbnail next to `path` (`<name>.thumb.webp`); absent when it could not be made */
+  thumb_path?: string;
 }
 
 // ---------------------------------------------------------------------------
@@ -310,6 +313,14 @@ export async function ensureCruiseImageBucket(): Promise<void> {
   bucketEnsured = true;
 }
 
+/** Uploads a gallery thumbnail into the private bucket (same cache policy as the originals). */
+export const uploadThumbToBucket: ThumbUploader = async (path, buf) => {
+  const { error } = await supabase.storage
+    .from(CRUISE_IMAGE_BUCKET)
+    .upload(path, buf, { contentType: 'image/webp', upsert: true, cacheControl: '31536000' });
+  return { error: error ? { message: error.message } : null };
+};
+
 // ---------------------------------------------------------------------------
 // Download + measure
 // ---------------------------------------------------------------------------
@@ -532,7 +543,7 @@ export async function processAndStoreImage(
     console.error(`  image upload failed (${path}): ${error.message}`);
     return null;
   }
-  return {
+  const stored: StoredImage = {
     path,
     source_url: sourceUrl,
     width: outW,
@@ -542,6 +553,8 @@ export async function processAndStoreImage(
     sort,
     rights: await extractImageRights(buf, sourceUrl),
   };
+  // a thumbnail failure only omits thumb_path, the image itself is kept
+  return withThumbPath(stored, await createThumb(out, path, uploadThumbToBucket));
 }
 
 export async function curateAndStoreImages(opts: {
@@ -650,7 +663,7 @@ export async function curateAndStoreImages(opts: {
       console.error(`  image upload failed (${path}): ${error.message}`);
       continue;
     }
-    stored.push({
+    const entry: StoredImage = {
       path,
       source_url: img.sourceUrl,
       width: outW,
@@ -659,7 +672,9 @@ export async function curateAndStoreImages(opts: {
       caption,
       sort,
       rights: await extractImageRights(img.buf, img.sourceUrl),
-    });
+    };
+    // a thumbnail failure only omits thumb_path, the image itself is kept
+    stored.push(withThumbPath(entry, await createThumb(out, path, uploadThumbToBucket)));
     sort++;
   }
   return stored;
