@@ -60,6 +60,9 @@ export const WIND_POLICY: Record<string, WindPolicy> = {
   // 2026-10-23: ERA5 at Nitinat Lake (CA-BC) reads 0-3 % in summer; the sea grid point misses
   // the valley thermal of one of the windiest summer spots - no data beats a false 'calm'
   Canada: 'no-era5',
+  // 2026-10-29 (Aaron): Belgium's wind_stats row is an ERA5 estimate (no bstoked data), so the
+  // map must not label it 'bstoked'
+  Belgium: 'era5',
 };
 export const windPolicy = (country: string): WindPolicy => WIND_POLICY[country] ?? 'default';
 
