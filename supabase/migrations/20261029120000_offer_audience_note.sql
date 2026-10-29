@@ -10,20 +10,22 @@
 --   exposed in both views. 277 active package rows have it while the package view's season_start_month /
 --   season_end_month are always NULL, so the product could not show "open (Apr-Oct)" for packages.
 --
+-- DEPENDS ON 20261028120000_views_require_image, which must run FIRST (order set by the deployer 2026-10-29).
 -- VIEW SAFETY: both views are owned by BOTH repos (this one and MartinMarzi/KiteCruiseScout). Each new definition
--- is the current live definition with `audience_note`, then `season_months` appended as the LAST two columns; no
--- existing column changes name, type, order or expression:
---   app_package_cards       = 20261021191245_retain_coarse_package_slot_windows (79 columns) + 2 = 81
---   app_cruise_offer_cards  = 20261021120000_offer_disciplines                   (73 columns) + 2 = 75
--- (live column lists diff-checked 2026-10-29: 79 / 73, last column `disciplines` in both; KCS origin/main has no
--- view migration newer than 20260710090000.) KCS's zod schemas ignore unknown columns.
+-- is the view state after 20261028120000 with `audience_note`, then `season_months` appended as the LAST two
+-- columns; no existing column changes name, type, order or expression:
+--   app_package_cards       = target of 20261028120000 (= 20261021191245 + image filter, 79 columns) + 2 = 81
+--   app_cruise_offer_cards  = target of 20261028120000 (= 20261021120000 + image filter, 73 columns) + 2 = 75
+-- The image filter changes only the WHERE clause, so the column lists equal the live ones (diff-checked
+-- 2026-10-29: 79 / 73, last column `disciplines` in both; KCS origin/main has no view migration newer than
+-- 20260710090000). KCS's zod schemas ignore unknown columns. Run before 20261028120000, the guard aborts.
 --
 -- Drift guard: aborts (nothing changed) unless each live view is either exactly the expected base definition
 -- or already the new one, and has security_invoker=true. Existing view options, owner and grants are kept.
 --
 -- Safe to re-run. Rollback: CREATE OR REPLACE cannot drop a column - DROP VIEW both views (check dependents
--- first), re-run the app_package_cards block of 20261021191245 and the app_cruise_offer_cards block of
--- 20261021120000 (both WITH (security_invoker = true), then REVOKE ALL ... FROM anon, authenticated), then
+-- first), recreate them WITH (security_invoker = true) from the target bodies of 20261028120000 (then REVOKE ALL
+-- ... FROM anon, authenticated), then
 -- ALTER TABLE package_offers DROP COLUMN audience_note; ALTER TABLE cruise_offers DROP COLUMN audience_note;
 -- (season_months stays: it belongs to 20261028130000.)
 -- ---------------------------------------------------------------------------
@@ -41,7 +43,7 @@ COMMENT ON COLUMN public.package_offers.audience_note IS
 DROP VIEW IF EXISTS pg_temp.audience_base_package_cards, pg_temp.audience_new_package_cards,
                     pg_temp.audience_base_cruise_cards, pg_temp.audience_new_cruise_cards;
 
--- expected live definition (= 20261021191245)
+-- expected live definition (= target of 20261028120000_views_require_image, package view)
 CREATE TEMP VIEW audience_base_package_cards AS
 SELECT
     p.id AS offer_id,
@@ -160,6 +162,8 @@ FROM public.package_offers p
 LEFT JOIN public.providers o
   ON o.id = p.operator_id AND o.status NOT IN ('dead', 'duplicate')
 WHERE p.is_active
+  -- Aaron 2026-10-26: never show a listing without at least one image
+  AND CASE WHEN jsonb_typeof(p.images) = 'array' THEN jsonb_array_length(p.images) > 0 ELSE false END
 ;
 
 -- new definition (= base + audience_note + season_months)
@@ -285,9 +289,11 @@ FROM public.package_offers p
 LEFT JOIN public.providers o
   ON o.id = p.operator_id AND o.status NOT IN ('dead', 'duplicate')
 WHERE p.is_active
+  -- Aaron 2026-10-26: never show a listing without at least one image
+  AND CASE WHEN jsonb_typeof(p.images) = 'array' THEN jsonb_array_length(p.images) > 0 ELSE false END
 ;
 
--- expected live definition (= 20261021120000)
+-- expected live definition (= target of 20261028120000_views_require_image, cruise view)
 CREATE TEMP VIEW audience_base_cruise_cards AS
 select
   c.id as offer_id,
@@ -371,6 +377,8 @@ where c.duplicate_of is null
   and coalesce(p.status, 'new') not in ('dead', 'duplicate')
   -- Reseller-Angebote hart inaktiv (Aaron 2026-07-10): nie im Produkt zeigen
   and coalesce(c.is_reseller, false) = false
+  -- Aaron 2026-10-26: never show a listing without at least one image
+  and case when jsonb_typeof(c.images) = 'array' then jsonb_array_length(c.images) > 0 else false end
 ;
 
 -- new definition (= base + audience_note + season_months)
@@ -461,6 +469,8 @@ where c.duplicate_of is null
   and coalesce(p.status, 'new') not in ('dead', 'duplicate')
   -- Reseller-Angebote hart inaktiv (Aaron 2026-07-10): nie im Produkt zeigen
   and coalesce(c.is_reseller, false) = false
+  -- Aaron 2026-10-26: never show a listing without at least one image
+  and case when jsonb_typeof(c.images) = 'array' then jsonb_array_length(c.images) > 0 else false end
 ;
 
 DO $guard$
