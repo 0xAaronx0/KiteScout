@@ -10,11 +10,11 @@ run so he stays informed and can spot-check, without being the blocker.**
 
 ## Run
 
-A scheduled Claude Code task (local, Claude desktop app, daily after the 06:00 UTC cron) works the inbox:
+A scheduled Claude Code task (local, Claude desktop app, Mondays 09:00; weekly is enough, Aaron 2026-10-30) works the inbox:
 
 ```bash
 pnpm cli qs inbox                 # open cases (change rows, dead pages, adapters, expired dates)
-pnpm cli qs log --days 1          # what the inbox and the monitor did (for the report)
+pnpm cli qs log --days 7          # what the inbox and the monitor did (for the report)
 ```
 
 Actions (each needs `--reason`, each is journaled with its before-state in
