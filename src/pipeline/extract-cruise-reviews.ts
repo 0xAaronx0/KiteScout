@@ -436,16 +436,15 @@ export async function recomputeAllAvgRatings(): Promise<void> {
 // ---------------------------------------------------------------------------
 // Process one provider
 // ---------------------------------------------------------------------------
-async function processProvider(
-  cp: {
-    id: string;
-    name: string | null;
-    root_domain: string;
-    website_url: string | null;
-    primary_country: string | null;
-  },
+type ReviewTarget = { id: string; name: string | null; root_domain: string; website_url: string | null; primary_country: string | null };
+
+// Finds review links and ratings for one operator without writing anything; extraUrls are stored own pages
+// (contact/about/review) worth checking for self-links. Shared by the cruise writer and the operator dry run.
+async function collectReviews(
+  cp: ReviewTarget,
   opts: { google: boolean; sources: ReviewSource[] },
-): Promise<number> {
+  storedPageUrls: string[],
+): Promise<{ patch: Record<string, unknown>; notes: string[]; found: number }> {
   const homeUrl = cp.website_url ?? `https://${cp.root_domain}`;
   const provider = {
     name: cp.name ?? cp.root_domain,
@@ -459,9 +458,7 @@ async function processProvider(
   const ownPages: Array<{ url: string; html: string | null }> = [];
   const home = await fetchPageConditional(homeUrl);
   ownPages.push({ url: homeUrl, html: home.status === 'ok' ? home.html ?? null : null });
-  const { data: pgs } = await supabase.from('provider_pages').select('url').eq('cruise_provider_id', cp.id);
-  const extraUrls = (pgs ?? [])
-    .map(r => r.url as string)
+  const extraUrls = storedPageUrls
     .filter(u => /contact|kontakt|about|uber|ueber|review|bewertung|testimonial|impressum|imprint/i.test(u))
     .slice(0, 4);
   for (const u of extraUrls) {
@@ -505,6 +502,12 @@ async function processProvider(
     }
   }
 
+  return { patch, notes, found };
+}
+
+async function processProvider(cp: ReviewTarget, opts: { google: boolean; sources: ReviewSource[] }): Promise<number> {
+  const { data: pgs } = await supabase.from('provider_pages').select('url').eq('cruise_provider_id', cp.id);
+  const { patch, notes, found } = await collectReviews(cp, opts, (pgs ?? []).map(r => r.url as string));
   if (notes.length > 0) {
     // Merge with notes from other sources' earlier runs: keep segments of
     // sources this run did NOT cover, replace the ones it did.
@@ -584,4 +587,59 @@ export async function runExtractCruiseReviews(
   console.log();
   await closeRenderer();
   return { providers: providers.length, matched: totalMatched };
+}
+
+// ---------------------------------------------------------------------------
+// Package operators (stays, camps, tours): dry run only
+// ---------------------------------------------------------------------------
+// Aaron 2026-10-30: the review search ran for cruise providers only; the 292 operators behind the package
+// listings were never checked. This collects the same matches for them WITHOUT writing: the package view
+// still has no review columns for operators (a migration comes first), and Aaron reviews the list first.
+export type OperatorReviewResult = {
+  operatorId: string; name: string | null; domain: string; country: string | null; listings: string[];
+  found: number; links: Record<string, unknown>; notes: string[]; error?: string;
+};
+export async function runOperatorReviewsDryRun(
+  opts: { domain?: string; limit?: number; only?: string } = {},
+): Promise<OperatorReviewResult[]> {
+  const { data: offers, error: offerError } = await supabase.from('package_offers')
+    .select('operator_id,title').eq('is_active', true).not('operator_id', 'is', null);
+  if (offerError) throw offerError;
+  const listings = new Map<string, string[]>();
+  for (const o of offers ?? []) listings.set(o.operator_id as string, [...(listings.get(o.operator_id as string) ?? []), o.title as string]);
+  const ids = [...listings.keys()];
+  const operators: ReviewTarget[] = [];
+  for (let i = 0; i < ids.length; i += 100) {
+    let query = supabase.from('providers').select('id, name, root_domain, website_url, primary_country, status')
+      .in('id', ids.slice(i, i + 100)).not('status', 'in', '(dead,duplicate)');
+    if (opts.domain) query = query.eq('root_domain', opts.domain);
+    const { data, error } = await query;
+    if (error) throw error;
+    operators.push(...(data ?? []));
+  }
+  operators.sort((a, b) => a.root_domain.localeCompare(b.root_domain));
+  const picked = opts.limit ? operators.slice(0, opts.limit) : operators;
+  const only = (opts.only ?? '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
+  const wants = (k: string) => only.length === 0 || only.includes(k);
+  const sources = SOURCES.filter(s => wants(s.key)), google = wants('google');
+  console.log(`Dry run: review links for ${picked.length} package operators (sources: ${[...sources.map(s => s.key), ...(google ? ['google'] : [])].join(', ')}); nothing is written.`);
+
+  const limit = pLimit(CONCURRENCY);
+  const results: OperatorReviewResult[] = [];
+  let done = 0;
+  await Promise.all(picked.map(op => limit(async () => {
+    const base = { operatorId: op.id, name: op.name, domain: op.root_domain, country: op.primary_country, listings: listings.get(op.id) ?? [] };
+    try {
+      const { patch, notes, found } = await collectReviews(op, { google, sources }, []);
+      const { reviews_checked_at: _checked, ...links } = patch;
+      results.push({ ...base, found, links, notes });
+    } catch (err) {
+      results.push({ ...base, found: 0, links: {}, notes: [], error: err instanceof Error ? err.message : String(err) });
+    }
+    done++;
+    process.stdout.write(`\r  ${done}/${picked.length} operators`);
+  })));
+  console.log();
+  await closeRenderer();
+  return results.sort((a, b) => a.domain.localeCompare(b.domain));
 }
