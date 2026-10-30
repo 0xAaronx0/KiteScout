@@ -123,6 +123,12 @@ test('combineWind policies: era5 replaces Bstoked (India), no-era5 blocks the mo
   for (const country of ['Antigua and Barbuda', 'Bahamas', 'Barbados', 'Saint Martin', 'Turks and Caicos Islands', 'Portugal', 'Cyprus']) {
     assert.equal(windPolicy(country), 'era5', country);
   }
+  assert.equal(windPolicy('Qatar'), 'era5');
+  // UAE: the wind_stats row (ERA5 11 kn) wins over the cell's 12 kn model and is labelled era5
+  const uae = combineWind([24, 28, 36, 48, 56, 38, 39, 31, 23, 17, 17, 12], Array(12).fill(5), water, windPolicy('United Arab Emirates'));
+  assert.deepEqual(uae.wind_months, [24, 28, 36, 48, 56, 38, 39, 31, 23, 17, 17, 12]);
+  assert.ok(uae.wind_source_months.every(s => s === 'era5'));
+  assert.deepEqual(combineWind(null, Array(12).fill(5), water, 'era5-row').wind_months, Array(12).fill(null));
 });
 
 test('mapDisplay: regions only for USA/Brazil (incl. aliases), Canada hidden until it has offers', async () => {

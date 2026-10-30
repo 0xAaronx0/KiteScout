@@ -52,9 +52,11 @@ export interface ClimateCell {
  *   matches the known seasons (Rameswaram monsoons, Jeju winter monsoon, Lake Nicaragua trades),
  *   so ERA5 replaces Bstoked (still only in months with water >= 10 C).
  * - 'no-era5': no ERA5 fill until the snowkite question is settled (Norway Oct/Nov would read 82/81).
+ * - 'era5-row': the wind_stats row is itself an ERA5 estimate with its own rule (not the cell's
+ *   12 kn / 3 h), so its values are used as they are and labelled 'era5'.
  * Everywhere else ('default'): Bstoked where real, ERA5 only for its gaps.
  */
-export type WindPolicy = 'default' | 'era5' | 'no-era5';
+export type WindPolicy = 'default' | 'era5' | 'no-era5' | 'era5-row';
 export const WIND_POLICY: Record<string, WindPolicy> = {
   India: 'era5', 'South Korea': 'era5', Nicaragua: 'era5', Norway: 'no-era5',
   // 2026-10-23: ERA5 at Nitinat Lake (CA-BC) reads 0-3 % in summer; the sea grid point misses
@@ -66,6 +68,10 @@ export const WIND_POLICY: Record<string, WindPolicy> = {
   // 2026-10-29 (Aaron): Caribbean, Portugal and Cyprus wind_stats rows are ERA5 estimates too
   'Antigua and Barbuda': 'era5', Bahamas: 'era5', Barbados: 'era5', 'Saint Martin': 'era5',
   'Turks and Caicos Islands': 'era5', Portugal: 'era5', Cyprus: 'era5',
+  // 2026-10-30 (Aaron): Qatar = ERA5 12 kn / 3 h at Fuwairit; UAE = ERA5 11 kn / 3 h at Khor Al
+  // Yeefrah (Umm Al Quwain) to allow for the Gulf sea breeze that ERA5 likely under-resolves
+  // ("Empfehlung: 11 kn nur für die VAE" - "ok, so machen")
+  Qatar: 'era5', 'United Arab Emirates': 'era5-row',
 };
 export const windPolicy = (country: string): WindPolicy => WIND_POLICY[country] ?? 'default';
 
@@ -133,7 +139,10 @@ export function combineWind(
   const months: (number | null)[] = [], sources: ('bstoked' | 'era5' | null)[] = [];
   const useBstoked = policy !== 'era5', useEra5 = policy !== 'no-era5';
   for (let i = 0; i < 12; i++) {
-    if (useBstoked && bstoked && bstoked[i] != null && bstoked[i] !== 10) { months.push(bstoked[i]); sources.push('bstoked'); }
+    if (policy === 'era5-row') {
+      const v = bstoked?.[i] ?? null;
+      months.push(v); sources.push(v == null ? null : 'era5');
+    } else if (useBstoked && bstoked && bstoked[i] != null && bstoked[i] !== 10) { months.push(bstoked[i]); sources.push('bstoked'); }
     else if (useEra5 && era5 && era5[i] != null && water && water[i] != null && water[i] >= 10) { months.push(era5[i]); sources.push('era5'); }
     else { months.push(null); sources.push(null); }
   }
