@@ -67,7 +67,26 @@ export function recentlyExpired(dates: unknown, today: string): string | null {
   return age <= EXPIRED_WINDOW_DAYS ? last : null;
 }
 
-export const normUrl = (u: string | null | undefined): string =>
+const SOCIAL = /(^|\.)(instagram\.com|facebook\.com|fb\.com|wa\.me|whatsapp\.com|linktr\.ee|tiktok\.com|youtube\.com)$/;
+const hostOf = (u: string | null | undefined): string | null => {
+  try { return u ? new URL(u).hostname.toLowerCase().replace(/^www\./, '') : null; } catch { return null; }
+};
+
+/**
+ * Does the listing have a website of its own? Not when its source page sits on another domain
+ * (a bstoked listing, a marketplace) or the provider only has a social profile (Aaron 2026-10-30,
+ * e.g. the Philippines catamaran: Instagram + bstoked). Such listings are never hidden without
+ * Aaron's explicit OK, even when no site can be found.
+ */
+export function hasOwnSite(sourceUrl: string | null | undefined, rootDomain: string | null | undefined, websiteUrl?: string | null): boolean {
+  const src = hostOf(sourceUrl);
+  const root = (rootDomain ?? '').toLowerCase().replace(/^www\./, '');
+  if (!src || !root || SOCIAL.test(src) || !(src === root || src.endsWith(`.${root}`))) return false;
+  const web = hostOf(websiteUrl);
+  return !(web && SOCIAL.test(web));
+}
+
+export const normUrl =(u: string | null | undefined): string =>
   (u ?? '').trim().toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '');
 
 export const liveLink = (table: 'cruise_offers' | 'package_offers', id: string): string =>

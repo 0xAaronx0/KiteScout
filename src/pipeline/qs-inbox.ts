@@ -7,7 +7,7 @@
  *   pnpm cli qs hide cruise|package <id> --reason ".." [--change <id>]
  *   pnpm cli qs unhide cruise|package <id> --reason ".."
  *   pnpm cli qs resolve <change-id> approve|dismiss|apply-rerun|revert --reason ".."
- *   pnpm cli qs source <cruise-offer-id> <url> --reason ".." [--change <id>]
+ *   pnpm cli qs move <cruise-offer-id> <url> --reason ".." [--change <id>]
  *   pnpm cli qs ack <case-id> --days N --reason ".."  known case, keep quiet for N days
  *   pnpm cli qs log [--days N]                       what the inbox and the monitor did
  *
@@ -20,7 +20,7 @@ import { homedir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { supabase } from '../lib/supabase.js';
 import {
-  OPEN_CHANGE_STATUSES, WATCH_FAIL_CHECKS, liveLink, normUrl, recentlyExpired, sourceProblem,
+  OPEN_CHANGE_STATUSES, WATCH_FAIL_CHECKS, hasOwnSite, liveLink, normUrl, recentlyExpired, sourceProblem,
   type SlotHistoryEntry,
 } from './qs-rules.js';
 
@@ -80,8 +80,8 @@ export async function collectCases(now = new Date()): Promise<QsCase[]> {
   const today = now.toISOString().slice(0, 10);
   const cases: QsCase[] = [];
 
-  const providers = must(await supabase.from('cruise_providers').select('id, name, root_domain, status'), 'cruise_providers') as
-    Array<{ id: string; name: string | null; root_domain: string; status: string | null }>;
+  const providers = must(await supabase.from('cruise_providers').select('id, name, root_domain, status, website_url'), 'cruise_providers') as
+    Array<{ id: string; name: string | null; root_domain: string; status: string | null; website_url: string | null }>;
   const prov = new Map(providers.map(p => [p.id, p]));
   const offers = must(await supabase.from('cruise_offers')
     .select('id, cruise_provider_id, slug, title, source_url, dates, is_active, is_reseller, duplicate_of'), 'cruise_offers') as
@@ -178,6 +178,10 @@ export async function collectCases(now = new Date()): Promise<QsCase[]> {
     const own = offers.filter(o => o.cruise_provider_id === w.cruise_provider_id && shown(o));
     if (own.length === 0) continue;   // nothing of this provider is shown, nothing can go wrong in the app
     const onPage = own.filter(o => normUrl(o.source_url) === normUrl(w.url));
+    // Only the provider's homepage or the source page of a SHOWN offer matters; the old URL of a
+    // moved or hidden offer keeps failing in cruise_watch forever and is no case.
+    const isHome = [p.website_url, `https://${p.root_domain}`].some(u => normUrl(u) === normUrl(w.url));
+    if (onPage.length === 0 && !isHome) continue;
     cases.push({
       id: `watch:${w.id}`,
       kind: 'watch',
@@ -224,10 +228,32 @@ async function markChange(changeId: string, patch: Record<string, unknown>): Pro
 
 const TABLE = { cruise: 'cruise_offers', package: 'package_offers' } as const;
 
-export async function setActive(type: 'cruise' | 'package', id: string, active: boolean, reason: string, changeId?: string): Promise<void> {
+/** Is this listing one without a website of its own (bstoked/marketplace source, social-only provider)? */
+async function withoutOwnSite(type: 'cruise' | 'package', id: string): Promise<boolean> {
+  if (type === 'cruise') {
+    const { data, error } = await supabase.from('cruise_offers')
+      .select('source_url, cruise_providers(root_domain, website_url)').eq('id', id).single();
+    if (error || !data) throw new Error(`cruise offer ${id} not found: ${error?.message ?? ''}`);
+    const p = data.cruise_providers as unknown as { root_domain: string; website_url: string | null } | null;
+    return !hasOwnSite(data.source_url as string | null, p?.root_domain, p?.website_url);
+  }
+  const { data, error } = await supabase.from('package_offers').select('source_url').eq('id', id).single();
+  if (error || !data) throw new Error(`package offer ${id} not found: ${error?.message ?? ''}`);
+  const src = data.source_url as string | null;
+  let host = '';
+  try { host = src ? new URL(src).hostname.replace(/^www\./, '') : ''; } catch { /* no host */ }
+  return !host || /(^|\.)(bstoked\.net|booksurfcamps\.com)$/.test(host) || !hasOwnSite(src, host);
+}
+
+export async function setActive(
+  type: 'cruise' | 'package', id: string, active: boolean, reason: string, changeId?: string, aaronOk = false,
+): Promise<void> {
   const table = TABLE[type];
   const { data, error } = await supabase.from(table).select('id, title, is_active').eq('id', id).single();
   if (error || !data) throw new Error(`${table} ${id} not found: ${error?.message ?? ''}`);
+  if (!active && data.is_active && !aaronOk && await withoutOwnSite(type, id)) {
+    throw new Error(`${data.title} has no website of its own (bstoked/marketplace source or social-only provider): hide only with Aaron's explicit OK (--aaron-ok)`);
+  }
   if (data.is_active === active) {
     console.log(`= ${data.title} is already ${active ? 'shown' : 'hidden'}`);
   } else {
@@ -249,7 +275,8 @@ const APPLY_FIELDS = new Set([
 
 export type ResolveAction = 'approve' | 'dismiss' | 'apply-rerun' | 'revert';
 
-export async function resolveChange(changeId: string, action: ResolveAction, reason: string): Promise<void> {
+/** `onlyFields` (apply-rerun): write just these fields of the preview, e.g. the dates when the price is not on the page. */
+export async function resolveChange(changeId: string, action: ResolveAction, reason: string, onlyFields?: string[]): Promise<void> {
   const { data: row, error } = await supabase.from('cruise_changes').select('id, cruise_provider_id, details').eq('id', changeId).single();
   if (error || !row) throw new Error(`change ${changeId} not found: ${error?.message ?? ''}`);
   const d = row.details as Details;
@@ -269,7 +296,7 @@ export async function resolveChange(changeId: string, action: ResolveAction, rea
     for (const u of rerun.updates) {
       const patch: Record<string, unknown> = {};
       for (const [field, value] of Object.entries(u.set ?? {})) {
-        if (!APPLY_FIELDS.has(field)) continue;
+        if (!APPLY_FIELDS.has(field) || (onlyFields && !onlyFields.includes(field))) continue;
         if (value === null || value === '' || (Array.isArray(value) && value.length === 0)) continue;
         patch[field] = value;
       }
@@ -283,7 +310,10 @@ export async function resolveChange(changeId: string, action: ResolveAction, rea
       journal({ action: 'apply-rerun', target: `cruise_offers:${(before as unknown as { id: string }).id}`, reason, before, after: patch, change_id: changeId });
       applied.push(u.slug);
     }
-    await markChange(changeId, { status: 'applied', applied_via: 'qs-inbox (surgical re-run apply)', applied_slugs: applied, qs_reason: reason });
+    await markChange(changeId, {
+      status: 'applied', applied_via: 'qs-inbox (surgical re-run apply)', applied_slugs: applied, qs_reason: reason,
+      ...(onlyFields ? { applied_fields: onlyFields } : {}),
+    });
     console.log(`✓ applied re-run on ${applied.join(', ') || 'nothing'}`);
     return;
   }
@@ -315,7 +345,7 @@ export async function switchSource(offerId: string, url: string, reason: string,
   if (!host.endsWith(String(p.root_domain).replace(/^www\./, ''))) throw new Error(`${url} is not on ${p.root_domain} (original sites only)`);
   const { error: upErr } = await supabase.from('cruise_offers').update({ source_url: url }).eq('id', offerId);
   if (upErr) throw new Error(`source_url update failed: ${upErr.message}`);
-  journal({ action: 'source', target: `cruise_offers:${offerId}`, reason, before: { source_url: o.source_url }, after: { source_url: url }, change_id: changeId });
+  journal({ action: 'move', target: `cruise_offers:${offerId}`, reason, before: { source_url: o.source_url }, after: { source_url: url }, change_id: changeId });
   const { error: wErr } = await supabase.from('cruise_watch')
     .upsert({ cruise_provider_id: o.cruise_provider_id, url: url.replace(/\/$/, '') }, { onConflict: 'cruise_provider_id,url', ignoreDuplicates: true });
   if (wErr) throw new Error(`watch insert failed: ${wErr.message}`);
@@ -336,6 +366,9 @@ export function ack(caseId: string, days: number, reason: string): void {
 /** Journal entries plus what the monitor auto-applied, for the run report. */
 export async function showLog(days: number): Promise<void> {
   const since = new Date(Date.now() - days * 86_400_000).toISOString();
+  const { monthlySpendUsd } = await import('../lib/anthropic.js');
+  const usd = await monthlySpendUsd();
+  console.log(`OpenRouter diesen Monat: ${usd === null ? 'unbekannt' : `USD ${usd.toFixed(2)}`} (Ziel <= 5, Maximum 10)`);
   const entries = readJournal().filter(e => e.at >= since);
   console.log(`QS-Journal seit ${since.slice(0, 10)} (${JOURNAL}): ${entries.length} Einträge`);
   for (const e of entries) {

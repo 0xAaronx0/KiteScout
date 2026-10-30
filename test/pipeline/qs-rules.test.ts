@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { daysSince, normUrl, recentlyExpired, sourceProblem } from '../../src/pipeline/qs-rules.js';
+import { daysSince, hasOwnSite, normUrl, recentlyExpired, sourceProblem } from '../../src/pipeline/qs-rules.js';
 
 const NOW = new Date('2026-10-30T09:00:00Z');
 const TODAY = '2026-10-30';
@@ -49,6 +49,16 @@ test('recentlyExpired: an upcoming departure, no dates, or a long-past season is
   assert.equal(recentlyExpired([], TODAY), null);
   assert.equal(recentlyExpired([{ start_date: '2025-05-01', end_date: '2025-05-08' }], TODAY), null);  // > 120 days
   assert.equal(recentlyExpired([{ start_date: 'TBA' }], TODAY), null);
+});
+
+test('hasOwnSite: source on the provider domain = own site; marketplace or social = special case', () => {
+  assert.equal(hasOwnSite('https://www.kite2sail.com/griechenland', 'kite2sail.com', 'https://www.kite2sail.com'), true);
+  assert.equal(hasOwnSite('https://shop.kite2sail.com/x', 'kite2sail.com'), true);
+  // Philippines catamaran (live 2026-10-30): bstoked listing + Instagram provider
+  assert.equal(hasOwnSite('https://bstoked.net/listings/kite-cruise-philippines/', 'freedom.kitesurfing', 'https://www.instagram.com/freedom.kitesurfing'), false);
+  assert.equal(hasOwnSite('https://kite2sail.com/a', 'kite2sail.com', 'https://instagram.com/kite2sail'), false);
+  assert.equal(hasOwnSite('https://notkite2sail.com/a', 'kite2sail.com'), false);
+  assert.equal(hasOwnSite(null, 'kite2sail.com'), false);
 });
 
 test('normUrl: scheme, www and trailing slash do not matter', () => {

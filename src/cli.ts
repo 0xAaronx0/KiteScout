@@ -689,10 +689,11 @@ async function main(): Promise<void> {
         const cases = await qs.collectCases();
         console.log(args.includes('--json') ? JSON.stringify(cases, null, 2) : qs.renderCases(cases));
       } else if ((args[0] === 'hide' || args[0] === 'unhide') && type && args[2]) {
-        await qs.setActive(type, args[2], args[0] === 'unhide', needReason(), change);
+        await qs.setActive(type, args[2], args[0] === 'unhide', needReason(), change, args.includes('--aaron-ok'));
       } else if (args[0] === 'resolve' && args[1] && ['approve', 'dismiss', 'apply-rerun', 'revert'].includes(args[2])) {
-        await qs.resolveChange(args[1], args[2] as 'approve' | 'dismiss' | 'apply-rerun' | 'revert', needReason());
-      } else if (args[0] === 'source' && args[1] && args[2]?.startsWith('http')) {
+        await qs.resolveChange(args[1], args[2] as 'approve' | 'dismiss' | 'apply-rerun' | 'revert', needReason(),
+          flagStr('--fields')?.split(',').map(f => f.trim()).filter(Boolean));
+      } else if (args[0] === 'move' && args[1] && args[2]?.startsWith('http')) {
         await qs.switchSource(args[1], args[2], needReason(), change);
       } else if (args[0] === 'ack' && args[1]) {
         qs.ack(args[1], flagValue('--days', 30), needReason());
@@ -701,9 +702,9 @@ async function main(): Promise<void> {
       } else {
         console.error([
           'Usage: pnpm cli qs inbox [--json]',
-          '       pnpm cli qs hide|unhide cruise|package <id> --reason ".." [--change <change-id>]',
-          '       pnpm cli qs resolve <change-id> approve|dismiss|apply-rerun|revert --reason ".."',
-          '       pnpm cli qs source <cruise-offer-id> <url> --reason ".." [--change <change-id>]',
+          '       pnpm cli qs hide|unhide cruise|package <id> --reason ".." [--change <change-id>] [--aaron-ok]',
+          '       pnpm cli qs resolve <change-id> approve|dismiss|apply-rerun|revert --reason ".." [--fields dates,price_pp_cabin]',
+          '       pnpm cli qs move <cruise-offer-id> <url> --reason ".." [--change <change-id>]',
           '       pnpm cli qs ack <case-id> --days N --reason ".."',
           '       pnpm cli qs log [--days N]',
         ].join('\n'));
