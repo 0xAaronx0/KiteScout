@@ -30,6 +30,7 @@ import { borkHavnCamping } from './adapters/bork-havn-camping.js';
 import { bretterbudeHeiligenhafen } from './adapters/bretterbude-heiligenhafen.js';
 import { bscAtlanticzinEssaouira } from './adapters/bsc-atlanticzin-essaouira.js';
 import { cabareteBoutiqueKiteHotel } from './adapters/cabarete-boutique-kite-hotel.js';
+import { casaMikokoUmmAlQuwain } from './adapters/casa-mikoko-umm-al-quwain.js';
 import { cabareteKitePoint7DayAllInclusive } from './adapters/cabarete-kite-point-7-day-all-inclusive.js';
 import { campBayLodgeRoatan } from './adapters/camp-bay-lodge-roatan.js';
 import { campingFlueggerStrandFehmarn } from './adapters/camping-fluegger-strand-fehmarn.js';
@@ -337,6 +338,7 @@ import { wildKitePeruLaMaisonMancora } from './adapters/wild-kite-peru-la-maison
 import { windAdventuresStudioOrientBay } from './adapters/wind-adventures-studio-orient-bay.js';
 import { windSportsCenterKiteweekBoaVista } from './adapters/wind-sports-center-kiteweek-boa-vista.js';
 import { windSportsCenterSurfKiteweekBoaVista } from './adapters/wind-sports-center-surf-kiteweek-boa-vista.js';
+import { fkbZeroToHeroFuwairit } from './adapters/fkb-zero-to-hero-fuwairit.js';
 import { windSportsFijiNananuIRa } from './adapters/wind-sports-fiji-nananu-i-ra.js';
 import { windchaserVillasLongBay } from './adapters/windchaser-villas-long-bay.js';
 import { windhoekBoutiqueResortBonaire } from './adapters/windhoek-boutique-resort-bonaire.js';
@@ -691,6 +693,8 @@ export const adapters: OfferAdapter[] = [
   windtownLagoonHotelLangebaan,
   xFlyKiteboardingCampMiyako,
   zephyrWaOffroadAdventureExmouth,
+  casaMikokoUmmAlQuwain,
+  fkbZeroToHeroFuwairit,
 ];
 
 export function adapterByKey(key: string): OfferAdapter | undefined {
