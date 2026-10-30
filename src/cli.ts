@@ -692,6 +692,44 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'qs': {
+      // QS inbox (src/pipeline/qs-inbox.ts, policy docs/qs-inbox.md): open cases + reversible actions.
+      const qs = await import('./pipeline/qs-inbox.js');
+      const reason = flagStr('--reason');
+      const change = flagStr('--change');
+      const needReason = (): string => {
+        if (!reason) { console.error('--reason "<why>" is required for every QS action'); process.exit(1); }
+        return reason;
+      };
+      const type = args[1] === 'cruise' || args[1] === 'package' ? args[1] : null;
+      if (args[0] === 'inbox') {
+        const cases = await qs.collectCases();
+        console.log(args.includes('--json') ? JSON.stringify(cases, null, 2) : qs.renderCases(cases));
+      } else if ((args[0] === 'hide' || args[0] === 'unhide') && type && args[2]) {
+        await qs.setActive(type, args[2], args[0] === 'unhide', needReason(), change, args.includes('--aaron-ok'));
+      } else if (args[0] === 'resolve' && args[1] && ['approve', 'dismiss', 'apply-rerun', 'revert'].includes(args[2])) {
+        await qs.resolveChange(args[1], args[2] as 'approve' | 'dismiss' | 'apply-rerun' | 'revert', needReason(),
+          flagStr('--fields')?.split(',').map(f => f.trim()).filter(Boolean));
+      } else if (args[0] === 'move' && args[1] && args[2]?.startsWith('http')) {
+        await qs.switchSource(args[1], args[2], needReason(), change);
+      } else if (args[0] === 'ack' && args[1]) {
+        qs.ack(args[1], flagValue('--days', 30), needReason());
+      } else if (args[0] === 'log') {
+        await qs.showLog(flagValue('--days', 1));
+      } else {
+        console.error([
+          'Usage: pnpm cli qs inbox [--json]',
+          '       pnpm cli qs hide|unhide cruise|package <id> --reason ".." [--change <change-id>] [--aaron-ok]',
+          '       pnpm cli qs resolve <change-id> approve|dismiss|apply-rerun|revert --reason ".." [--fields dates,price_pp_cabin]',
+          '       pnpm cli qs move <cruise-offer-id> <url> --reason ".." [--change <change-id>]',
+          '       pnpm cli qs ack <case-id> --days N --reason ".."',
+          '       pnpm cli qs log [--days N]',
+        ].join('\n'));
+        process.exit(1);
+      }
+      break;
+    }
+
     case 'restore': {
       const domains = args.filter(a => !a.startsWith('-'));
       if (domains.length === 0) {

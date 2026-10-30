@@ -1,5 +1,5 @@
 import { supabase } from '../lib/supabase.js';
-import { anthropic, ANALYSIS_MODEL } from '../lib/anthropic.js';
+import { anthropic, COMPLEX_MODEL } from '../lib/anthropic.js';
 
 // Domain-level dedup is enforced by the UNIQUE constraint on providers.root_domain.
 // This module handles the harder case: same business, different domains
@@ -40,7 +40,7 @@ export async function runDedupe(): Promise<void> {
     let text: string;
     try {
       const msg = await anthropic.messages.create({
-        model: ANALYSIS_MODEL,
+        model: COMPLEX_MODEL,
         max_tokens: 512,
         messages: [
           {
