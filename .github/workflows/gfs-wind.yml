@@ -13,9 +13,11 @@ name: GFS wind (map layer)
 on:
   schedule:
     # GFS runs 00/06/12/18 UTC; the 1.0 deg files are on NOMADS ~3.5-4 h later.
-    # First slot picks up the fresh run, the second catches a late one (no-op otherwise).
-    - cron: '15 4,10,16,22 * * *'
-    - cron: '15 5,11,17,23 * * *'
+    # Hourly, not timed to the cycles: GitHub starts scheduled runs 2.5-5 h late and drops
+    # some (Oct 2026: no run between ~02:30 and ~08:50 UTC for 8 days, so the 00z run was
+    # skipped and the file expired at ~09:45 on 10-29 and 10-30). Runs with nothing new
+    # are a ~20 s no-op.
+    - cron: '15 * * * *'
   workflow_dispatch:
     inputs:
       force:
