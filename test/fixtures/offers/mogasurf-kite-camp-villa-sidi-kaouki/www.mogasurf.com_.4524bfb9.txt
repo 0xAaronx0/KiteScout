@@ -7,6 +7,7 @@
 	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 <link rel="alternate" href="https://www.mogasurf.com/" hreflang="fr" />
 <link rel="alternate" href="https://www.mogasurf.com/en/mogasurf-school/" hreflang="en" />
+
 	<!-- This site is optimized with the Yoast SEO plugin v28.7 - https://yoast.com/product/yoast-seo-wordpress/ -->
 	<title>Accueil - MOGASURF</title>
 	<meta name="description" content="Mogasurf, école de surf et kitesurf à Essaouira depuis 2012. Cours, camps et coaching pour tous niveaux. Réservez en ligne." />
@@ -18,43 +19,588 @@
 	<meta property="og:description" content="Mogasurf, école de surf et kitesurf à Essaouira depuis 2012. Cours, camps et coaching pour tous niveaux. Réservez en ligne." />
 	<meta property="og:url" content="https://www.mogasurf.com/" />
 	<meta property="og:site_name" content="MOGASURF" />
-	<meta property="article:modified_time" content="2026-10-16T19:32:50+00:00" />
+	<meta property="article:modified_time" content="2026-10-29T12:46:32+00:00" />
 	<meta property="og:image" content="https://www.mogasurf.com/wp-content/uploads/2026/05/12-1.png" />
 	<meta property="og:image:width" content="1080" />
 	<meta property="og:image:height" content="1350" />
 	<meta property="og:image:type" content="image/png" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.mogasurf.com\/","url":"https:\/\/www.mogasurf.com\/","name":"Accueil - MOGASURF","isPartOf":{"@id":"https:\/\/www.mogasurf.com\/#website"},"about":{"@id":"https:\/\/www.mogasurf.com\/#organization"},"primaryImageOfPage":{"@id":"https:\/\/www.mogasurf.com\/#primaryimage"},"image":{"@id":"https:\/\/www.mogasurf.com\/#primaryimage"},"thumbnailUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1-819x1024.png","datePublished":"2026-06-05T12:55:37+00:00","dateModified":"2026-10-16T19:32:50+00:00","description":"Mogasurf, école de surf et kitesurf à Essaouira depuis 2012. Cours, camps et coaching pour tous niveaux. Réservez en ligne.","breadcrumb":{"@id":"https:\/\/www.mogasurf.com\/#breadcrumb"},"inLanguage":"fr-FR","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.mogasurf.com\/"]}]},{"@type":"ImageObject","inLanguage":"fr-FR","@id":"https:\/\/www.mogasurf.com\/#primaryimage","url":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1.png","contentUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1.png","width":1080,"height":1350},{"@type":"BreadcrumbList","@id":"https:\/\/www.mogasurf.com\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https:\/\/www.mogasurf.com\/#website","url":"https:\/\/www.mogasurf.com\/","name":"MOGASURF","description":"Surf Kite School &amp; Camp Essaouira","publisher":{"@id":"https:\/\/www.mogasurf.com\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.mogasurf.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"fr-FR"},{"@type":"Organization","@id":"https:\/\/www.mogasurf.com\/#organization","name":"MOGASURF","url":"https:\/\/www.mogasurf.com\/","logo":{"@type":"ImageObject","inLanguage":"fr-FR","@id":"https:\/\/www.mogasurf.com\/#\/schema\/logo\/image\/","url":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/06\/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png","contentUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/06\/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png","width":2553,"height":729,"caption":"MOGASURF"},"image":{"@id":"https:\/\/www.mogasurf.com\/#\/schema\/logo\/image\/"}}]}</script>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.mogasurf.com\/","url":"https:\/\/www.mogasurf.com\/","name":"Accueil - MOGASURF","isPartOf":{"@id":"https:\/\/www.mogasurf.com\/#website"},"about":{"@id":"https:\/\/www.mogasurf.com\/#organization"},"primaryImageOfPage":{"@id":"https:\/\/www.mogasurf.com\/#primaryimage"},"image":{"@id":"https:\/\/www.mogasurf.com\/#primaryimage"},"thumbnailUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1-819x1024.png","datePublished":"2026-06-05T12:55:37+00:00","dateModified":"2026-10-29T12:46:32+00:00","description":"Mogasurf, école de surf et kitesurf à Essaouira depuis 2012. Cours, camps et coaching pour tous niveaux. Réservez en ligne.","breadcrumb":{"@id":"https:\/\/www.mogasurf.com\/#breadcrumb"},"inLanguage":"fr-FR","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.mogasurf.com\/"]}]},{"@type":"ImageObject","inLanguage":"fr-FR","@id":"https:\/\/www.mogasurf.com\/#primaryimage","url":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1.png","contentUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1.png","width":1080,"height":1350},{"@type":"BreadcrumbList","@id":"https:\/\/www.mogasurf.com\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https:\/\/www.mogasurf.com\/#website","url":"https:\/\/www.mogasurf.com\/","name":"MOGASURF","description":"Surf Kite School &amp; Camp Essaouira","publisher":{"@id":"https:\/\/www.mogasurf.com\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.mogasurf.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"fr-FR"},{"@type":"Organization","@id":"https:\/\/www.mogasurf.com\/#organization","name":"MOGASURF","url":"https:\/\/www.mogasurf.com\/","logo":{"@type":"ImageObject","inLanguage":"fr-FR","@id":"https:\/\/www.mogasurf.com\/#\/schema\/logo\/image\/","url":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/06\/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png","contentUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/06\/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png","width":2553,"height":729,"caption":"MOGASURF"},"image":{"@id":"https:\/\/www.mogasurf.com\/#\/schema\/logo\/image\/"}}]}</script>
 	<!-- / Yoast SEO plugin. -->
+
+
 <link rel="alternate" type="application/rss+xml" title="MOGASURF &raquo; Flux" href="https://www.mogasurf.com/feed/" />
 <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.mogasurf.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mogasurf.com%2F&#038;lang=fr" />
 <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.mogasurf.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.mogasurf.com%2F&#038;format=xml&#038;lang=fr" />
+		<style>
+			.lazyload,
+			.lazyloading {
+				max-width: 100%;
+			}
+		</style>
+		<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel="stylesheet" href="https://www.mogasurf.com/wp-content/cache/minify/6330a.css" media="all" />
+
+
+
+
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel="stylesheet" href="https://www.mogasurf.com/wp-content/cache/minify/2a3bf.css" media="all" />
+
+
+
+
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:root { --wp--style--global--content-size: 800px;--wp--style--global--wide-size: 1200px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: 24px; margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: 24px; }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: 24px;margin-block-end: 0;}:root :where(.is-layout-flex){gap: 24px;}:root :where(.is-layout-grid){gap: 24px;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:root :where(.wp-block-icon svg){width: 24px;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel="stylesheet" href="https://www.mogasurf.com/wp-content/cache/minify/75ebb.css" media="all" />
+
+
+
+
+
+
+<style id="elementor-frontend-inline-css">
+.e-heading-base a, .e-paragraph-base a { all: unset; cursor: pointer; }form[data-element_type="e-form"].form-state-success [data-element_type="e-form-success-message"],form[data-element_type="e-form"].form-state-error [data-element_type="e-form-error-message"]{ display: block; }.elementor-edit-mode [data-element_type="e-form-success-message"]:is(.elementor-element-editable, :has(.elementor-element-editable), :has(> .elementor-empty-view)),.elementor-edit-mode [data-element_type="e-form-error-message"]:is(.elementor-element-editable, :has(.elementor-element-editable), :has(> .elementor-empty-view)){ display: block; }.e-background-video { position: relative; overflow: hidden; }.e-background-video__media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; pointer-events: none; z-index: 0; }.e-background-video__content { position: relative; z-index: 1; flex: 1 1 auto; }.elementor-edit-mode .e-background-video__content.e-atomic-element:has(> .elementor-empty-view) { display: flex; flex-direction: column; flex: 1 1 auto; min-height: 0; }.elementor-edit-mode .e-background-video__content.e-atomic-element:has(> .elementor-empty-view) > .elementor-empty-view.elementor-empty-view { position: relative; flex: 1 1 auto; min-height: 120px; height: auto; width: 100%; }.elementor-edit-mode .e-background-video__content.e-atomic-element:has(> .elementor-empty-view) > .elementor-empty-view > .elementor-first-add { position: absolute; inset: 0; width: 100%; height: 100%; }.e-background-video__controls { z-index: 2; }.e-background-video__play, .e-background-video__pause { appearance: none; -webkit-appearance: none; }.e-background-video.e-background-video--playing .e-background-video__play { display: none; }.e-background-video.e-background-video--paused .e-background-video__pause { display: none; }.e-background-video:not(.e-background-video--playing):not(.e-background-video--paused) .e-background-video__controls,.e-background-video:not(.e-background-video--playing):not(.e-background-video--paused) .e-background-video__play,.e-background-video:not(.e-background-video--playing):not(.e-background-video--paused) .e-background-video__pause { display: none; }.e-accordion-item-header-base { list-style: none; }.e-accordion-item-header-base::-webkit-details-marker { display: none; }.e-accordion-item-base { interpolate-size: allow-keywords; }.e-accordion-item-base::details-content {block-size: 0; overflow: hidden;transition: block-size .3s ease, content-visibility .3s ease allow-discrete;}.e-accordion-item-base[open]::details-content { block-size: auto; }.e-accordion-item-icon-base.e-accordion-item-icon-base .e-svg-base { width: auto; height: 100%; max-width: 100%; }.e-accordion-item-icon-base.e-accordion-item-icon-base .e-svg-base svg { width: auto !important; }.e-accordion-item-icon-base svg { transition: transform .3s ease; }.e-accordion-item-base[open] > summary .e-accordion-item-icon-base svg { transform: rotate(180deg); }
+/*# sourceURL=elementor-frontend-inline-css */
+</style>
+<link rel="stylesheet" href="https://www.mogasurf.com/wp-content/cache/minify/b4e3d.css" media="all" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel='stylesheet' id='elementor-gf-montserrat-css' href='https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-gf-roboto-css' href='https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-gf-playfairdisplay-css' href='https://fonts.googleapis.com/css?family=Playfair+Display:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<script src="https://www.mogasurf.com/wp-content/cache/minify/818c0.js"></script>
+
+
+<script id="cookie-notice-front-js-before">
+var cnArgs = {"ajaxUrl":"https:\/\/www.mogasurf.com\/wp-admin\/admin-ajax.php","nonce":"62c72dfd78","hideEffect":"fade","position":"bottom","onScroll":false,"onScrollOffset":100,"onClick":false,"cookieName":"cookie_notice_accepted","cookieTime":2592000,"cookieTimeRejected":2592000,"globalCookie":false,"redirection":false,"cache":true,"revokeCookies":false,"revokeCookiesOpt":"automatic"};
+
+//# sourceURL=cookie-notice-front-js-before
+</script>
+<script src="https://www.mogasurf.com/wp-content/cache/minify/545b0.js"></script>
+
+<script id="facebook-signal-js-extra">
+var facebookSignalConfig = {"cookieName":"wc_facebook_signals_state","ajaxUrl":"https://www.mogasurf.com/wp-admin/admin-ajax.php","signalsAction":"fbpix_set_pixel_signals","signalsNonce":"f6ff00a6e6"};
+//# sourceURL=facebook-signal-js-extra
+</script>
+<script src="https://www.mogasurf.com/wp-content/cache/minify/51df7.js"></script>
+
 <link rel="https://api.w.org/" href="https://www.mogasurf.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.mogasurf.com/wp-json/wp/v2/pages/2039" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.mogasurf.com/xmlrpc.php?rsd" />
-<meta name="generator" content="WordPress 7.1.3" />
+<meta name="generator" content="WordPress 7.1.4" />
 <link rel='shortlink' href='https://www.mogasurf.com/' />
 <!-- Facebook Domain Verification -->
 <meta name="facebook-domain-verification" content="nmmvwi5mill0fnbt7kxhgb86h93noc" />
+
 <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id=GTM-PX962LBM'+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PX962LBM');</script>
 <!-- End Google Tag Manager -->
+
 <!-- Meta Pixel -->
-<!-- End Meta Pixel --><meta name="ti-site-data" content="eyJyIjoiMTowITc6MCEzMDowIiwibyI6Imh0dHBzOlwvXC93d3cubW9nYXN1cmYuY29tP3RpLW9ubGluZS11c2Vycy1nb29nbGU9MSZhbXA7cD0lMkYmYW1wO193cG5vbmNlPTlkNmI3MmUzNTkifQ==" />		
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '697418646505666');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel --><meta name="ti-site-data" content="eyJyIjoiMTowITc6MCEzMDowIiwibyI6Imh0dHBzOlwvXC93d3cubW9nYXN1cmYuY29tP3RpLW9ubGluZS11c2Vycy1nb29nbGU9MSZhbXA7cD0lMkYmYW1wO193cG5vbmNlPWYyYWJhNGY5NTQifQ==" />		<script>
+			document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+		</script>
+				<style>
+			.no-js img.lazyload {
+				display: none;
+			}
+
+			figure.wp-block-image img.lazyloading {
+				min-width: 150px;
+			}
+
+			.lazyload,
+			.lazyloading {
+				--smush-placeholder-width: 100px;
+				--smush-placeholder-bg-max-width: 120px;
+				--smush-placeholder-aspect-ratio: 1/1;
+				width: var(--smush-image-width, var(--smush-placeholder-width)) !important;
+				aspect-ratio: var(--smush-image-aspect-ratio, var(--smush-placeholder-aspect-ratio)) !important;
+			}
+
+						.lazyload, .lazyloading {
+				opacity: 0;
+			}
+
+			.lazyloaded {
+				opacity: 1;
+				transition: opacity 400ms;
+				transition-delay: 0ms;
+			}
+
+					</style>
 		<meta name="generator" content="Elementor 4.3.5; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+
 <!-- Meta Pixel Code -->
+<script type='text/javascript'>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+</script>
 <!-- End Meta Pixel Code -->
+<script type='text/javascript'>FacebookSignal.init({"held":false,"ajaxUrl":"https:\/\/www.mogasurf.com\/wp-admin\/admin-ajax.php","releaseAction":"fbpix_release_signals","pixelId":"697418646505666","attribution":{},"capig":"1"});FacebookSignal.initPixel("697418646505666",{},{"agent":"wordpress_0_fbl4b-7.1.4-5.2.2","includeCapiIntegration":true});</script><script type='text/javascript'>
+    fbq('track', 'PageView', []);
+  </script>			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
 			<!-- 
   COLLE CE CODE dans WPCode → Nouveau Snippet → HTML/JS
   Ou dans Elementor → HTML widget sur chaque page
+  
   Ce script gère l'affichage/masquage des formulaires au clic des boutons.
   Les boutons Elementor doivent avoir comme lien : #ms-resa-surf (ou autre ID)
 -->
-<link rel="icon" href="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-1-1-1-32x32.png" sizes="32x32" />
+<script>
+(function(){
+  function showForm(id){
+    var el=document.getElementById(id);
+    if(!el)return;
+    el.style.display='block';
+    setTimeout(function(){el.scrollIntoView({behavior:'smooth',block:'start'});},80);
+  }
+  function hideForm(id){
+    var el=document.getElementById(id);
+    if(el)el.style.display='none';
+  }
+  document.addEventListener('click',function(e){
+    // Clic sur lien ancre #ms-resa-xxx
+    var a=e.target.closest('a[href^="#ms-resa-"]');
+    if(a){
+      e.preventDefault();
+      showForm(a.getAttribute('href').substring(1));
+      return;
+    }
+    // Clic sur bouton fermer
+    var cls=e.target.closest('.msw-close-btn');
+    if(cls){
+      e.preventDefault();
+      hideForm(cls.getAttribute('data-close'));
+      return;
+    }
+  });
+})();
+</script><style class="wpcode-css-snippet">.pum-overlay {
+  background: rgba(28, 53, 34, 0.85) !important;
+  backdrop-filter: blur(4px);
+}
+
+.pum-container {
+  background: #faf6f0 !important;
+  border-radius: 20px !important;
+  border: none !important;
+  box-shadow: 0 24px 80px rgba(28, 53, 34, 0.3) !important;
+  padding: 0 !important;
+  max-width: 1020px !important;
+  width: 95vw !important;
+  overflow: hidden !important;
+}
+
+.pum-close {
+  background: rgba(255,255,255,0.12) !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+  font-size: 20px !important;
+  line-height: 36px !important;
+  text-align: center !important;
+  top: 16px !important;
+  right: 16px !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: background .2s !important;
+  z-index: 10 !important;
+}
+.pum-close:hover {
+  background: rgba(228, 160, 175, 0.5) !important;
+}
+
+.pum-content {
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  padding: 0 !important;
+}
+
+.pum-content::-webkit-scrollbar { width: 6px; }
+.pum-content::-webkit-scrollbar-track { background: transparent; }
+.pum-content::-webkit-scrollbar-thumb { background: #ddd5c8; border-radius: 3px; }
+
+#popmake-1818 .pum-container {
+  max-width: 1020px !important;
+}
+
+#popmake-1818 .pum-close {
+  background: rgba(28, 53, 34, 0.4) !important;
+  color: #fff !important;
+  top: 12px !important;
+  right: 12px !important;
+}
+
+#popmake-1820 .pum-container {
+  max-width: 920px !important;
+}
+
+.pum-container {
+  animation: pumSlideIn .35s cubic-bezier(.16,1,.3,1) both;
+}
+
+@keyframes pumSlideIn {
+  from { opacity: 0; transform: translateY(24px) scale(.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 768px) {
+  .pum-container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    border-radius: 20px 20px 0 0 !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    margin: 0 !important;
+  }
+  .pum-content {
+    max-height: 88vh !important;
+    padding-bottom: 20px !important;
+  }
+}
+.pum-close {
+  background: #e4a0af !important;
+  color: #1c3522 !important;
+  border-radius: 50% !important;
+  width: 36px !important;
+  height: 36px !important;
+  font-size: 0 !important;
+  top: 16px !important;
+  right: 16px !important;
+  border: none !important;
+  cursor: pointer !important;
+  z-index: 10 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.pum-close::after {
+  content: '×' !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 22px !important;
+  color: #1c3522 !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+@media (max-width: 768px) {
+
+  /* Popup plein écran mobile */
+  .pum-container {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    border-radius: 16px 16px 0 0 !important;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    margin: 0 !important;
+    max-height: 92vh !important;
+    overflow-y: auto !important;
+  }
+
+  /* Layout formulaire en colonne */
+  .ms > div > div[style*="flex-direction:row"] {
+    flex-direction: column !important;
+  }
+
+  /* Carte récap en premier sur mobile */
+  .ms-sum {
+    width: 100% !important;
+    order: -1 !important;
+  }
+
+  /* Cards cours en colonne */
+  #msCardsSurf,
+  #msCardsKite {
+    flex-direction: column !important;
+  }
+
+  /* Heures sur 3 colonnes */
+  #msHrsSurf .ms-hbtn,
+  #msHrsKite .ms-hbtn {
+    flex: 0 0 calc(33.33% - 6px) !important;
+    min-width: calc(33.33% - 6px) !important;
+  }
+
+  /* Inputs en colonne */
+  .ms div[style*="display:flex"][style*="gap:12px"] {
+    flex-direction: column !important;
+  }
+
+  /* Téléphone reste en ligne */
+  .ms div[style*="gap:6px"] {
+    flex-direction: row !important;
+  }
+
+  /* Padding réduit */
+  .ms {
+    padding: 20px 16px !important;
+  }
+
+  /* Calendriers pleine largeur */
+  .ms div[id*="msCal"] {
+    width: 100% !important;
+    left: 0 !important;
+  }
+
+}</style><style class="wpcode-css-snippet">.section-disciplines .elementor-button {
+  border: none !important;
+  box-shadow: none !important;
+}</style><link rel="icon" href="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-1-1-1-32x32.png" sizes="32x32" />
 <link rel="icon" href="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-1-1-1-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-1-1-1-180x180.png" />
 <meta name="msapplication-TileImage" content="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-1-1-1-270x270.png" />
+<style id="wp-custom-css">
+#masthead, .site-header, header.site-header, .hfeed header, body > header { display:none !important; height:0 !important; visibility:hidden !important; }
+.site-footer, #colophon, footer.site-footer, .hfeed footer { display:none !important; height:0 !important; }
+.site-content, #content, #page, .site, .entry-content { max-width:100% !important; padding:0 !important; margin:0 !important; }
+.page-title, .entry-title { display:none !important; }
+/* Forcer la vidéo sur mobile */
+@media(max-width:768px){
+  .elementor-background-video-container {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  .elementor-background-video-container iframe {
+    display: block !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    transform: none !important;
+    pointer-events: none !important;
+  }
+}
+/* Fix décalage formulaire mobile */
+@media(max-width:768px){
+  .elementor-widget-html,
+  .elementor-widget-html .elementor-widget-container,
+  .elementor-column,
+  .elementor-column-wrap,
+  .elementor-widget-wrap {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  .mgf {
+    padding: 16px 0 40px !important;
+    overflow-x: hidden !important;
+  }
+  
+  .mgf-inner {
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+    max-width: 100% !important;
+  }
+  
+  .mgf-card {
+    margin: 0 !important;
+    border-radius: 12px !important;
+  }
+}
+@media(max-width:768px){
+  .mgf-cd{
+    color:#1c3522!important;
+    border:1px solid rgba(28,53,34,.2)!important;
+    background:#fff!important;
+  }
+  .mgf-cd.on{
+    background:#1c3522!important;
+    color:#faf6f0!important;
+    border-color:#1c3522!important;
+  }
+  .mgf-cd.today{
+    border:2px solid #1c3522!important;
+  }
+}
+@media(max-width:768px){
+  .mgf-cd{
+    color:#1c3522!important;
+    border:1px solid rgba(28,53,34,.25)!important;
+    background:#fff!important;
+  }
+  .mgf-cd.on{
+    background:#1c3522!important;
+    color:#faf6f0!important;
+    border-color:#1c3522!important;
+  }
+  .mgf-cd.today{
+    border:2px solid #1c3522!important;
+    font-weight:700!important;
+  }
+}
+@media(max-width:480px){
+  .mgf-grid, #mf-agrid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    gap: 6px !important;
+  }
+  .mgf-acard {
+    min-width: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .mgf-adesc {
+    white-space: normal !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+  }
+}
+/* Fix texte formulaire réservation */
+.rf-inp,
+.rf-ta,
+.rf .rf-inp,
+.rf .rf-ta,
+input.rf-inp,
+textarea.rf-ta {
+  background: #ffffff !important;
+  color: #1c1c1c !important;
+  -webkit-text-fill-color: #1c1c1c !important;
+  opacity: 1 !important;
+}
+
+.rf-inp::placeholder,
+.rf-ta::placeholder {
+  color: #b0a898 !important;
+  -webkit-text-fill-color: #b0a898 !important;
+  opacity: 1 !important;
+}
+
+input.rf-inp:focus,
+textarea.rf-ta:focus {
+  border-color: #1c3522 !important;
+  background: #ffffff !important;
+  color: #1c1c1c !important;
+  -webkit-text-fill-color: #1c1c1c !important;
+}
+</style>
 </head>
 <body class="home wp-singular page-template-default page page-id-2039 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor cookies-not-set hello-elementor-default elementor-default elementor-kit-1606 elementor-page elementor-page-2039 modula-best-grid-gallery">
+
 <!-- Google Tag Manager (noscript) -->
+<noscript><iframe data-src="https://www.googletagmanager.com/ns.html?id=GTM-PX962LBM"
+height="0" width="0" style="display:none;visibility:hidden" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" class="lazyload" data-load-mode="0"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=697418646505666&ev=PageView&noscript=1"
+/></noscript>
+<style>
+#moga-hdr{position:fixed;top:0;left:0;right:0;z-index:99999;display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:70px;background:#faf6f0!important;box-shadow:0 2px 20px rgba(0,0,0,.08);border-bottom:1px solid #e0d8ce;font-family:Montserrat,sans-serif}
+#moga-hdr .logo img{height:44px;width:auto;display:block}
+#moga-hdr nav{display:flex;align-items:center}
+#moga-hdr nav a{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#1c3522;text-decoration:none;padding:0 14px;height:70px;display:inline-flex;align-items:center;transition:color .2s;white-space:nowrap}
+#moga-hdr nav a:hover{color:#e4a0af}
+#moga-hdr .right{display:flex;align-items:center;gap:10px}
+#moga-hdr .lang{font-size:10px;font-weight:600;letter-spacing:2px;color:#1c3522;text-decoration:none;opacity:.4;transition:all .2s;border:1.5px solid transparent;border-radius:20px;padding:4px 10px}
+#moga-hdr .lang.active{opacity:1;font-weight:700;border-color:#1c3522}
+#moga-hdr .lang:hover{color:#e4a0af;opacity:1}
+#moga-hdr .sep{color:#e0d8ce;font-size:12px}
+#moga-hdr .btn-resa{background:#e4a0af;color:#fff!important;border-radius:40px;padding:10px 20px;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;white-space:nowrap;transition:background .2s}
+#moga-hdr .btn-resa:hover{background:#d4849a!important}
+#moga-hdr .burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
+#moga-hdr .burger span{display:block;width:24px;height:2px;background:#1c3522}
+#moga-mob{display:none;position:fixed;inset:0;background:#1c3522;z-index:999999;flex-direction:column;padding:28px 28px 36px;overflow-y:auto}
+#moga-mob .mob-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+#moga-mob .mob-top img{height:52px;filter:brightness(0) invert(1)}
+#moga-mob .close-btn{background:none;border:none;color:#fff;font-size:28px;cursor:pointer;line-height:1;padding:0}
+#moga-mob a.mob-link{font-family:"Playfair Display",serif;font-style:italic;font-size:22px;color:#fff;text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);display:block;transition:color .2s}
+#moga-mob a.mob-link:hover{color:#e4a0af}
+#moga-mob .mob-bottom{margin-top:auto;padding-top:28px;display:flex;flex-direction:column;gap:12px}
+#moga-mob .mob-resa{background:#e4a0af;color:#fff;text-decoration:none;border-radius:40px;padding:14px;text-align:center;font-family:Montserrat,sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+#moga-mob .mob-info{display:flex;gap:14px;font-family:Montserrat,sans-serif;font-size:11px;color:rgba(255,255,255,.5);flex-wrap:wrap;align-items:center}
+#moga-mob .mob-info a{color:rgba(255,255,255,.5);text-decoration:none}
+#moga-mob .mob-info a:hover{color:#e4a0af}
+#moga-hdr-sp{height:70px}
+@media(max-width:900px){
+  #moga-hdr{padding:0 12px 0 16px}
+  #moga-hdr nav{display:none}
+  #moga-hdr .right{gap:6px}
+  #moga-hdr .right .sep{display:none}
+  #moga-hdr .lang{display:inline-flex;font-size:9px;padding:4px 8px;border:1.5px solid #1c3522;border-radius:20px;opacity:1}
+  #moga-hdr .lang.active{background:#1c3522;color:#faf6f0!important}
+  #moga-hdr .btn-resa{display:inline-flex;padding:8px 12px;font-size:9px;letter-spacing:1px}
+  #moga-hdr .burger{display:flex;margin-left:4px}
+}
+</style>
+
+
 <div id="moga-hdr">
   <a href="https://www.mogasurf.com/" class="logo">
     <img data-src="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-LOGO-MOGASURF-2-scaled-1.png" alt="Mogasurf" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" class="lazyload" style="--smush-placeholder-width: 2557px; --smush-placeholder-aspect-ratio: 2557/731;">
@@ -78,6 +624,7 @@
   </div>
 </div>
 <div id="moga-hdr-sp"></div>
+
 <div id="moga-mob">
   <div class="mob-top">
     <img data-src="https://www.mogasurf.com/wp-content/uploads/2026/06/cropped-LOGO-MOGASURF-2-scaled-1.png" alt="Mogasurf" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjwvc3ZnPg==" class="lazyload" style="--smush-placeholder-width: 2557px; --smush-placeholder-aspect-ratio: 2557/731;">
@@ -102,9 +649,26 @@
     </div>
   </div>
 </div>
+
+<script>
+window.addEventListener("load", function(){
+  var openBtn = document.getElementById("moga-open-btn");
+  var closeBtn = document.getElementById("moga-close-btn");
+  var mob = document.getElementById("moga-mob");
+  if(openBtn && mob) openBtn.addEventListener("click", function(){ mob.style.display = "flex"; });
+  if(closeBtn && mob) closeBtn.addEventListener("click", function(){ mob.style.display = "none"; });
+});
+</script>
+
 <!-- Meta Pixel Code -->
+<noscript>
+<img height="1" width="1" style="display:none" alt="fbpx"
+src="https://www.facebook.com/tr?id=697418646505666&ev=PageView&noscript=1" />
+</noscript>
 <!-- End Meta Pixel Code -->
+
 <a class="skip-link screen-reader-text" href="#content">Aller au contenu</a>
+
 <header id="site-header" class="site-header dynamic-header menu-dropdown-tablet">
 	<div class="header-inner">
 		<div class="site-branding show-logo">
@@ -113,6 +677,7 @@
 							<p class="site-description show">
 					Surf Kite School &amp; Camp Essaouira				</p>
 					</div>
+
 					<nav class="site-navigation show" aria-label="Menu principal">
 				<ul id="menu-menu-fr-elementor" class="menu"><li id="menu-item-2485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2039 current_page_item menu-item-2485"><a href="https://www.mogasurf.com/" aria-current="page" data-ps2id-api="true">Accueil</a></li>
 <li id="menu-item-2489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2489"><a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/" data-ps2id-api="true">Surf</a></li>
@@ -134,9 +699,12 @@
 </ul>			</nav>
 			</div>
 </header>
+
 <main id="content" class="site-main post-2039 page type-page status-publish hentry">
+
 			<div class="page-header">
 			<h1 class="entry-title">Accueil</h1>		</div>
+	
 	<div class="page-content">
 				<div data-elementor-type="wp-page" data-elementor-id="2039" class="elementor elementor-2039">
 				<div class="elementor-element elementor-element-ad52de8 e-flex e-con-boxed e-con e-parent" data-id="ad52de8" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;video&quot;}">
@@ -166,6 +734,21 @@
 				</div>
 		<div class="elementor-element elementor-element-3a86783 e-con-full e-flex e-con e-parent" data-id="3a86783" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-882e413 elementor-widget__width-inherit elementor-widget elementor-widget-html" data-id="882e413" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+					<style>
+.moga-ticker{background:#1c3522;padding:12px 0;overflow:hidden;position:relative;width:100%;margin:0;}
+.moga-label{position:absolute;left:0;top:0;bottom:0;background:#1a3329;color:#f6ece0;padding:0 20px;display:flex;align-items:center;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;z-index:2;white-space:nowrap;gap:8px;}
+.moga-dot{width:6px;height:6px;background:#e4a0af;border-radius:50%;animation:pulse 1.5s infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.moga-track{margin-left:180px;overflow:hidden;}
+.moga-content{display:flex;animation:scroll 25s linear infinite;white-space:nowrap;}
+.moga-content:hover{animation-play-state:paused;}
+@keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.moga-item{color:#f6ece0;font-size:11px;padding:0 28px;display:inline-flex;align-items:center;gap:8px;border-right:1px solid rgba(246,236,224,.15);}
+.moga-item .lbl{color:#9db8b0;font-size:10px;text-transform:uppercase;letter-spacing:1px;}
+.moga-item .val{color:#f6ece0;font-weight:600;}
+.moga-item .dot-rose{width:6px;height:6px;background:#e4a0af;border-radius:50%;display:inline-block;}
+</style>
+
 <div class="moga-ticker">
   <div class="moga-label">
     <div class="moga-dot"></div>
@@ -188,7 +771,44 @@
     </div>
   </div>
 </div>
-				</div>
+
+<script>
+function setAll(wind,wave,temp,surf,kite){
+  ['','2'].forEach(s=>{
+    document.getElementById('mg-wind'+s).textContent=wind;
+    document.getElementById('mg-wave'+s).textContent=wave;
+    document.getElementById('mg-temp'+s).textContent=temp;
+    document.getElementById('mg-surf'+s).textContent=surf;
+    document.getElementById('mg-kite'+s).textContent=kite;
+  });
+}
+function windDir(d){return['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSO','SO','OSO','O','ONO','NO','NNO'][Math.round(d/22.5)%16]}
+function conditions(w,h){
+  return{
+    surf:h<0.5?'Calme':h<1.2?'Bonnes':h<2?'Idéales':'Puissantes',
+    kite:w<15?'Léger':w<25?'Bonnes':w<35?'Idéales':'Fort'
+  }
+}
+async function load(){
+  try{
+    const [w,m]=await Promise.all([
+      fetch('https://api.open-meteo.com/v1/forecast?latitude=31.5085&longitude=-9.7595&current=temperature_2m,wind_speed_10m,wind_direction_10m&wind_speed_unit=kmh&timezone=Africa%2FCasablanca').then(r=>r.json()),
+      fetch('https://marine-api.open-meteo.com/v1/marine?latitude=31.5085&longitude=-9.7595&current=wave_height,wave_period&timezone=Africa%2FCasablanca').then(r=>r.json())
+    ]);
+    const wind=Math.round(w.current.wind_speed_10m);
+    const dir=windDir(w.current.wind_direction_10m);
+    const temp=Math.round(w.current.temperature_2m);
+    const wave=m.current.wave_height.toFixed(1);
+    const period=Math.round(m.current.wave_period);
+    const c=conditions(wind,parseFloat(wave));
+    setAll(`${wind} km/h ${dir}`,`${wave}m — Période ${period}s`,`${temp}°C`,c.surf,c.kite);
+  }catch(e){
+    setAll('Alizé du Nord','1.2m','22°C','Bonnes','Idéales');
+  }
+}
+load();
+setInterval(load,1800000);
+</script>				</div>
 				</div>
 		<div class="elementor-element elementor-element-265310f e-flex e-con-boxed e-con e-parent" data-id="265310f" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 					<div class="e-con-inner">
@@ -318,239 +938,376 @@
 		<div class="elementor-element elementor-element-ec3a4b9 e-flex e-con-boxed e-con e-parent" data-id="ec3a4b9" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 					<div class="e-con-inner">
 				<div class="elementor-element elementor-element-308969e elementor-widget elementor-widget-html" data-id="308969e" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
+					<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+.bk{--g:#1c3522;--gs:#30543d;--b:#faf6f0;--bd:#e0d8ce;--pk:#e4a0af;--mt:#5c5c52;font-family:'Montserrat',sans-serif;max-width:980px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 6px 32px rgba(28,53,34,.12);display:block;width:100%;background:var(--b)}
+.bk-main{display:table;width:100%;table-layout:fixed}
+#reservation{scroll-margin-top:90px}
+.bk *{box-sizing:border-box}
+.bk-left{display:table-cell;vertical-align:middle;width:46%;background:var(--b);padding:24px 20px;border-right:1px solid var(--bd)}
+.bk-mini-card{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:20px 18px 18px;position:relative;margin-bottom:14px}
+.bk-mini-badge{position:absolute;top:-11px;left:16px;background:var(--pk);color:#fff;font-size:9px;font-weight:700;letter-spacing:.5px;padding:4px 11px;border-radius:20px;white-space:nowrap}
+.bk-mini-title{font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--g);margin:0 0 10px}
+.bk-mini-divider{border:none;border-top:1px solid var(--bd);margin:0 0 10px}
+.bk-mini-text{font-size:11px;line-height:1.65;color:var(--mt);margin:0}
+.bk-mini-list{list-style:none;margin:0;padding:0}
+.bk-mini-list li{position:relative;padding-left:16px;font-size:11px;line-height:1.5;color:var(--mt);margin-bottom:5px}
+.bk-mini-list li::before{content:"\2713";position:absolute;left:0;top:0;font-size:9px;font-weight:700;color:var(--pk)}
+.bk-l-note{padding:9px 12px;background:rgba(28,53,34,.04);border:1px solid var(--bd);border-radius:8px;font-size:9.5px;color:var(--mt);line-height:1.5;font-style:italic;margin:0}
+.bk-l-note a{color:var(--g);font-weight:700;text-decoration:underline}
+.bk-right{display:table-cell;vertical-align:middle;width:54%;background:var(--b);padding:24px 22px}
+.bk-r-eyebrow{font-size:8px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--pk);display:block;margin-bottom:5px}
+.bk-r-title{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:18px;color:var(--g);margin:0 0 16px}
+.bk-r-title em{color:var(--pk)}
+.bk-step{display:none}
+.bk-step.on{display:block}
+.bk-prog-wrap{display:flex;gap:5px;margin-bottom:14px;align-items:center}
+.bk-prog-dot{width:20px;height:3px;border-radius:2px;background:var(--bd);display:inline-block}
+.bk-prog-dot.on{background:var(--g)}
+.bk-prog-lbl{font-size:9px;color:var(--mt);margin-left:6px}
+.bk-sec{margin-bottom:14px}
+.bk-lbl{font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--mt);display:block;margin-bottom:7px}
+.bk-acts,.bk-months,.bk-dates{display:flex;flex-wrap:wrap;gap:6px}
+.bk-act,.bk-mbtn,.bk-date{padding:9px 12px;border-radius:10px;border:1.5px solid var(--g);background:var(--g);font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--b);cursor:pointer;text-align:center;line-height:1.3;transition:all .2s}
+.bk-act{flex:1}
+.bk-act s{opacity:.55;font-weight:500;margin-left:3px}
+.bk-act:hover,.bk-mbtn:hover,.bk-date:hover{background:var(--gs);border-color:var(--gs)}
+.bk-act.on,.bk-mbtn.on,.bk-date.on{background:var(--b);color:var(--g)}
+.bk-mbtn.other{border-style:dashed}
+.bk-date small{display:block;font-size:8.5px;font-weight:500;margin-top:2px}
+.bk-date.off,.bk-date.off:hover{background:var(--bd);border-color:var(--bd);color:#8a8478;cursor:not-allowed;opacity:.7}
+.bk-dates-wrap{display:none;margin-top:12px}
+.bk-dates-wrap.show{display:block}
+.bk-custom-block{display:none;margin-top:12px}
+.bk-custom-block.show{display:block}
+.bk-counter{display:flex;align-items:center;gap:10px}
+.bk-cnt-btn{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--bd);background:#fff;font-size:15px;font-weight:700;color:var(--g);cursor:pointer;text-align:center;line-height:26px;padding:0}
+.bk .bk-cnt-btn,.bk .bk-cnt-btn:hover,.bk .bk-cnt-btn:focus{width:28px!important;height:28px!important;min-width:28px!important;border-radius:50%!important;border:1.5px solid var(--g)!important;background:#fff!important;color:var(--g)!important;font-size:16px!important;line-height:24px!important;padding:0!important;opacity:1!important;box-shadow:none!important;text-transform:none!important}
+.bk-cnt-val{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--g);min-width:26px;text-align:center;display:inline-block}
+.bk-price-box{background:var(--g);border-radius:11px;padding:12px 16px;margin:12px 0 0;width:100%}
+.bk-price-box.hidden{display:none}
+.bk-price-top{display:flex;justify-content:space-between;align-items:center}
+.bk-price-lbl{font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(250,246,240,.5)}
+.bk-price-sub{font-size:9px;color:rgba(250,246,240,.45);margin-top:2px}
+.bk-price-amt{white-space:nowrap;margin-left:12px;font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#fff}
+.bk-btn{width:100%;padding:12px;border-radius:50px;border:none;background:var(--pk);color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;margin-top:12px;display:block}
+.bk-btn:hover{background:var(--g)}
+.bk-btn:disabled{opacity:.5}
+.bk-micro{text-align:center;font-size:10px;color:#9a9488;margin:8px 0 6px}
+.bk-badge-item{font-size:10px;color:var(--mt);display:block;margin-bottom:4px}
+.bk-badge-item strong{color:var(--g)}
+.bk-wa{display:block;text-align:center;margin-top:12px;padding:11px;border-radius:50px;border:1.5px solid #25D366;background:#fff;color:#128C7E!important;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:.4px;text-decoration:none!important}
+.bk-wa:hover{background:#25D366;color:#fff!important}
+.bk-back{background:none;border:none;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;color:var(--mt);cursor:pointer;padding:0;margin-bottom:14px;display:block}
+.bk-row{display:flex;gap:8px;margin-bottom:10px}
+.bk-field{flex:1;display:flex;flex-direction:column;gap:4px;min-width:0}
+.bk-field.full{flex:none;width:100%}
+.bk-inp,.bk-ta{border:1.5px solid var(--bd)!important;border-radius:8px;padding:8px 10px;font-size:12px!important;background:#fff!important;color:#1c1c1c!important;font-family:'Montserrat',sans-serif!important;outline:none;width:100%;-webkit-appearance:none}
+.bk-inp:focus,.bk-ta:focus{border-color:var(--g)!important}
+.bk-inp.err{border-color:#c0392b!important}
+.bk-ta{resize:vertical;min-height:64px;line-height:1.5}
+.bk-phone-row{display:flex;gap:5px}
+.bk-cc{flex:0 0 80px;padding:8px 4px;font-size:11px!important;border:1.5px solid var(--bd)!important;border-radius:8px;background:#fff!important;color:#1c1c1c!important;outline:none;-webkit-appearance:none;cursor:pointer}
+.bk-phone-inp{flex:1}
+.bk-summary{background:rgba(28,53,34,.06);border:1px solid var(--bd);border-radius:8px;padding:8px 12px;font-size:10.5px;color:var(--g);margin-bottom:12px;line-height:1.6}
+.bk-ok{display:none;text-align:center;padding:24px 0}
+.bk-ok.show{display:block}
+.bk-okico{width:44px;height:44px;border-radius:50%;background:var(--g);color:#fff;font-size:18px;line-height:44px;margin:0 auto 10px}
+.bk-ok-title{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;color:var(--g);margin-bottom:8px}
+.bk-ok-sub{font-size:11px;color:var(--mt);line-height:1.6;max-width:260px;margin:0 auto}
+@media(max-width:680px){.bk-main{display:block}.bk-left,.bk-right{display:block;width:100%;border-right:none}}
+.bk-act.wide{flex:1 1 100%}
+.bk-act small{display:block;font-size:9px;font-weight:500;margin-top:2px;opacity:.85}
+.bk-sel-wrap{position:relative}
+.bk-sel-wrap::after{content:"\25BE";position:absolute;right:13px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--g);font-size:13px}
+.bk-sel{border:1.5px solid var(--bd)!important;border-radius:8px;padding:10px 32px 10px 10px;font-size:12px!important;font-weight:600;background:#fff!important;color:#1c1c1c!important;font-family:'Montserrat',sans-serif!important;outline:none;width:100%;-webkit-appearance:none;appearance:none;cursor:pointer}
+.bk-sel:focus{border-color:var(--g)!important}
+.bk-date{flex:1 1 calc(50% - 6px);min-width:120px}
+.bk-date .tag{display:block;margin-top:3px;font-size:8px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--pk)}
+.bk-date.on .tag{color:var(--g)}
+.bk-price-sub s{opacity:.8}
+.bk-note{margin-top:8px;font-size:10.5px;color:var(--mt);line-height:1.5}
+.bk-opt-lbl{font-weight:500;text-transform:none;letter-spacing:0;color:var(--mt)}
+</style>
+
 <div class="bk" id="reservation">
 <div class="bk-main">
+
   <div class="bk-left">
     <div class="bk-mini-card">
-      <span class="bk-mini-badge">🏡 ACCOMMODATION</span>
-      <h3 class="bk-mini-title">Two villas, two pools</h3>
+      <span class="bk-mini-badge">🏡 HÉBERGEMENT</span>
+      <h3 class="bk-mini-title">Deux villas, deux piscines</h3>
       <hr class="bk-mini-divider">
-      <p class="bk-mini-text">Two adjoining villas, each with its own pool and garden. Homemade Moroccan meals around one table, BBQ nights and people from around the world. Groups organised by level, so everyone progresses at their own pace. Come for the surf, stay for the atmosphere!</p>
+      <p class="bk-mini-text">Deux villas voisines, chacune avec sa piscine et son jardin. Repas marocains faits maison autour d’une même table, soirées barbecue et rencontres du monde entier. Groupes organisés selon le niveau de chacun. Venez pour le surf, restez pour l’ambiance !</p>
     </div>
     <div class="bk-mini-card">
-      <span class="bk-mini-badge" id="bk-act-badge">🌊 INCLUDED IN YOUR WEEK</span>
-      <h3 class="bk-mini-title">Your week in Essaouira</h3>
+      <span class="bk-mini-badge" id="bk-act-badge">🌊 INCLUS DANS VOTRE SEMAINE</span>
+      <h3 class="bk-mini-title">Votre semaine à Essaouira</h3>
       <hr class="bk-mini-divider">
-      <ul class="bk-mini-list" id="bk-act-list"><li>Choose an activity to see the details</li></ul>
+      <ul class="bk-mini-list" id="bk-act-list"><li>Choisissez une activité pour voir le détail</li></ul>
     </div>
   </div>
+
   <div class="bk-right">
-    <span class="bk-r-eyebrow">Booking</span>
-    <h2 class="bk-r-title">Book <em>your week</em></h2>
+    <span class="bk-r-eyebrow">Réservation</span>
+    <h2 class="bk-r-title">Réservez <em>votre semaine</em></h2>
+
     <div id="bk-fields">
       <div class="bk-step on" id="bk-s1">
-        <div class="bk-prog-wrap"><span class="bk-prog-dot on"></span><span class="bk-prog-dot"></span><span class="bk-prog-lbl">Step 1/2 · Your stay</span></div>
+        <div class="bk-prog-wrap"><span class="bk-prog-dot on"></span><span class="bk-prog-dot"></span><span class="bk-prog-lbl">Étape 1/2 · Votre séjour</span></div>
+
         <div class="bk-sec">
-          <span class="bk-lbl">1. Activity</span>
+          <span class="bk-lbl">1. Activité</span>
           <div class="bk-acts">
-            <button class="bk-act" onclick="bkAct('surf',this)">🏄 Surf · €550 <s>€790</s></button>
-            <button class="bk-act" onclick="bkAct('kite',this)">🪁 Kitesurf · €750 <s>€890</s></button>
+            <button class="bk-act" type="button" onclick="bkAct('surf',this)">🏄 Surf<small>dès 550 € par personne</small></button>
+            <button class="bk-act" type="button" onclick="bkAct('kite',this)">🪁 Kitesurf<small>dès 750 € par personne</small></button>
+            <button class="bk-act wide" type="button" onclick="bkAct('yoga',this)">🧘 Kitesurf + Yoga<small>20 → 27 mars 2027 · prix sur demande</small></button>
           </div>
-          <div style="margin-top:8px;font-size:10.5px;color:var(--mt);line-height:1.5">Special rate valid for stays until the end of February 2027. Regular rate from March. Arrivals on Saturdays.</div>
+          <div class="bk-note">Tarifs dernière minute pour les départs de novembre à janvier, tarif spécial en février, tarif normal à partir de mars. Arrivées le samedi.</div>
         </div>
+
         <div class="bk-sec">
-          <span class="bk-lbl">2. Month</span>
-          <div class="bk-months" id="bk-months">
-            <button class="bk-mbtn" onclick="bkMonth('nov',this)">🔥 November</button>
-            <button class="bk-mbtn" onclick="bkMonth('dec',this)">December</button>
-            <button class="bk-mbtn" onclick="bkMonth('jan',this)">January</button>
-            <button class="bk-mbtn other" onclick="bkMonth('custom',this)">✏️ Choose my own dates</button>
-          </div>
+          <span class="bk-lbl">2. Mois</span>
+          <div class="bk-sel-wrap"><select class="bk-sel" id="bk-month" onchange="bkMonth(this.value)"></select></div>
+
           <div class="bk-dates-wrap" id="bk-dates-wrap">
             <span class="bk-lbl" style="margin-top:4px">3. Dates</span>
             <div class="bk-dates" id="bk-dates"></div>
           </div>
+
           <div class="bk-custom-block" id="bk-custom-block">
-            <span class="bk-lbl">3. Your dates</span>
+            <span class="bk-lbl">3. Dates</span>
             <div class="bk-row" style="margin-bottom:0">
-              <div class="bk-field"><input class="bk-inp" id="bk-date-from" type="date" onchange="bkUpd()"></div>
-              <div class="bk-field"><input class="bk-inp" id="bk-date-to" type="date"></div>
+              <div class="bk-field"><label class="bk-lbl bk-opt-lbl">Arrivée</label><input class="bk-inp" id="bk-date-from" type="date" onchange="bkUpd()"></div>
+              <div class="bk-field"><label class="bk-lbl bk-opt-lbl">Départ</label><input class="bk-inp" id="bk-date-to" type="date" onchange="bkUpd()"></div>
             </div>
           </div>
           <div id="bk-urgency" style="margin-top:8px;font-size:10.5px;color:var(--mt);line-height:1.5;min-height:16px"></div>
         </div>
+
         <div class="bk-sec">
-          <span class="bk-lbl">Number of people</span>
+          <span class="bk-lbl">Nombre de personnes</span>
           <div class="bk-counter">
-            <button class="bk-cnt-btn" onclick="bkCnt(-1)">−</button>
+            <button class="bk-cnt-btn" type="button" onclick="bkCnt(-1)">−</button>
             <span class="bk-cnt-val" id="bk-cnt">1</span>
-            <button class="bk-cnt-btn" onclick="bkCnt(1)">+</button>
+            <button class="bk-cnt-btn" type="button" onclick="bkCnt(1)">+</button>
           </div>
         </div>
+
         <div class="bk-price-box hidden" id="bk-price">
           <div class="bk-price-top">
-            <div><div class="bk-price-lbl">Estimated total</div><div class="bk-price-sub" id="bk-psub"></div></div>
+            <div><div class="bk-price-lbl">Total estimé</div><div class="bk-price-sub" id="bk-psub"></div></div>
             <span class="bk-price-amt" id="bk-pamt">-</span>
           </div>
         </div>
-        <button class="bk-btn" onclick="bkNext()">Book my week →</button>
-        <p class="bk-micro">No payment required at this stage · We confirm availability together</p>
-        <span class="bk-badge-item">✓ <strong>No commitment at this stage</strong></span>
-        <span class="bk-badge-item">✓ <strong>Availability confirmed before any payment</strong></span>
-        <span class="bk-badge-item">✓ <strong>Private or shared room</strong>, tell us in the message</span>
-        <a class="bk-wa" href="https://wa.me/212618910431?text=Hi%20MogaSurf%2C%20I%27d%20like%20to%20know%20more%20about%20your%20surf%20and%20kitesurf%20weeks." target="_blank" rel="noopener">💬 Questions? Chat with us on WhatsApp</a>
+
+        <button class="bk-btn" type="button" id="bk-btn1" onclick="bkNext()">Réserver ma semaine →</button>
+        <p class="bk-micro" id="bk-micro">Aucun paiement requis à ce stade · Nous confirmons les disponibilités ensemble</p>
+        <span class="bk-badge-item">✓ <strong>Sans engagement à ce stade</strong></span>
+        <span class="bk-badge-item">✓ <strong>Disponibilités confirmées avant tout paiement</strong></span>
+        <span class="bk-badge-item">✓ <strong>Chambre privée ou partagée</strong>, précisez-le dans le message</span>
+        <a class="bk-wa" href="https://wa.me/212618910431?text=Bonjour%20MogaSurf%2C%20j%27aimerais%20en%20savoir%20plus%20sur%20vos%20semaines%20surf%20et%20kitesurf." target="_blank" rel="noopener">💬 Une question ? Écrivez-nous sur WhatsApp</a>
       </div>
+
       <div class="bk-step" id="bk-s2">
-        <button class="bk-back" onclick="bkBack()">← Edit my stay</button>
-        <div class="bk-prog-wrap"><span class="bk-prog-dot on"></span><span class="bk-prog-dot on"></span><span class="bk-prog-lbl">Step 2/2 · Your details</span></div>
+        <button class="bk-back" type="button" onclick="bkBack()">← Modifier mon séjour</button>
+        <div class="bk-prog-wrap"><span class="bk-prog-dot on"></span><span class="bk-prog-dot on"></span><span class="bk-prog-lbl">Étape 2/2 · Vos coordonnées</span></div>
         <div class="bk-summary" id="bk-sum"></div>
         <div class="bk-row">
-          <div class="bk-field"><label class="bk-lbl">First name</label><input class="bk-inp" id="bk-fn" type="text" placeholder="Sophie"></div>
-          <div class="bk-field"><label class="bk-lbl">Last name</label><input class="bk-inp" id="bk-ln" type="text" placeholder="Smith"></div>
+          <div class="bk-field"><label class="bk-lbl">Prénom</label><input class="bk-inp" id="bk-fn" type="text" autocomplete="given-name" placeholder="Sophie"></div>
+          <div class="bk-field"><label class="bk-lbl">Nom <span class="bk-opt-lbl">(facultatif)</span></label><input class="bk-inp" id="bk-ln" type="text" autocomplete="family-name" placeholder="Martin"></div>
         </div>
-        <div class="bk-row"><div class="bk-field full"><label class="bk-lbl">Email</label><input class="bk-inp" id="bk-email" type="email" placeholder="sophie@email.com"></div></div>
+        <div class="bk-row"><div class="bk-field full"><label class="bk-lbl">E-mail</label><input class="bk-inp" id="bk-email" type="email" autocomplete="email" inputmode="email" placeholder="sophie@email.com"></div></div>
         <div class="bk-row">
           <div class="bk-field full">
-            <label class="bk-lbl">Phone</label>
+            <label class="bk-lbl">Téléphone <span class="bk-opt-lbl">(facultatif, réponse plus rapide sur WhatsApp)</span></label>
             <div class="bk-phone-row">
-              <select class="bk-cc" id="bk-cc">
-                <option value="+44">🇬🇧 +44</option><option value="+33">🇫🇷 +33</option>
-                <option value="+1">🇺🇸 +1</option><option value="+32">🇧🇪 +32</option>
-                <option value="+41">🇨🇭 +41</option><option value="+49">🇩🇪 +49</option>
-                <option value="+212">🇲🇦 +212</option><option value="+34">🇪🇸 +34</option>
-                <option value="+39">🇮🇹 +39</option><option value="+31">🇳🇱 +31</option>
-              </select>
-              <input class="bk-inp bk-phone-inp" id="bk-phone" type="tel" placeholder="7 12 34 56 78">
+              <select class="bk-cc" id="bk-cc"><option value="+33">🇫🇷 +33</option><option value="+32">🇧🇪 +32</option><option value="+41">🇨🇭 +41</option><option value="+212">🇲🇦 +212</option><option value="+44">🇬🇧 +44</option><option value="+49">🇩🇪 +49</option><option value="+34">🇪🇸 +34</option><option value="+39">🇮🇹 +39</option><option value="+31">🇳🇱 +31</option><option value="+1">🇺🇸 +1</option></select>
+              <input class="bk-inp bk-phone-inp" id="bk-phone" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="7 12 34 56 78">
             </div>
           </div>
         </div>
-        <div class="bk-row"><div class="bk-field full"><label class="bk-lbl">Message (optional)</label><textarea class="bk-ta" id="bk-msg" placeholder="Private or shared room, level, dietary requirements, questions..."></textarea></div></div>
-        <button class="bk-btn" id="bk-btn2" onclick="bkSubmit()">Confirm my booking →</button>
+        <div class="bk-row"><div class="bk-field full"><label class="bk-lbl">Message (facultatif)</label><textarea class="bk-ta" id="bk-msg" placeholder="Chambre privée ou partagée, niveau, régime alimentaire, questions..."></textarea></div></div>
+        <div id="bk-warn2" style="font-size:10.5px;color:#c0392b;min-height:14px"></div>
+        <button class="bk-btn" type="button" id="bk-btn2" onclick="bkSubmit()">Confirmer ma réservation →</button>
+        <p class="bk-micro">Aucun paiement requis · Réponse sous 24h</p>
       </div>
     </div>
+
     <div class="bk-ok" id="bk-ok">
       <div class="bk-okico">✓</div>
-      <div class="bk-ok-title">Request sent!</div>
-      <p class="bk-ok-sub">Our team will get back to you within 24h. See you soon in Essaouira! 🌊</p>
-      <a class="bk-wa" href="https://wa.me/212618910431" target="_blank" rel="noopener" style="max-width:260px;margin:14px auto 0">💬 Faster? Message us on WhatsApp</a>
+      <div class="bk-ok-title">Demande envoyée !</div>
+      <p class="bk-ok-sub">Notre équipe vous répond sous 24h. À très bientôt à Essaouira ! 🌊</p>
+      <a class="bk-wa" href="https://wa.me/212618910431" target="_blank" rel="noopener" style="max-width:260px;margin:14px auto 0">💬 Plus rapide ? Écrivez-nous sur WhatsApp</a>
     </div>
   </div>
 </div>
+
 </div>
+
 <script>
 (function(){
-var ACT={
-  surf:{badge:"🏄 SURF WEEK INCLUDES",items:["7 nights at Villa Sunset or Villa Zephyr (shared room, max 3 people)","Full board: fresh, homemade meals","12h of surf lessons, groups formed by level","Equipment included: boards adapted to your level and wetsuit","BBQ night and an evening out in town","Visit to a local argan cooperative of 100 women","Transfers to the spots and Essaouira airport, return"]},
-  kite:{badge:"🪁 KITESURF WEEK INCLUDES",items:["7 nights at Villa Sunset or Villa Zephyr (shared room, max 3 people)","Full board: fresh, homemade meals","12h of kitesurf lessons, maximum 4 people per instructor, groups formed by level","Equipment included: helmet, wetsuit, harness, kites...","BBQ night and an evening out in town","Visit to a local argan cooperative of 100 women","Transfers to the spots and Essaouira airport, return"]}
-};
-var MONTHS={
-  nov:{name:'Nov',dates:[{t:'7 → 14'},{t:'14 → 21'},{t:'21 → 28'},{t:'28 → Dec 5'}]},
-  dec:{name:'Dec',dates:[{t:'5 → 12'},{t:'12 → 19'},{t:'19 → 26',off:1},{t:'26 → Jan 2',off:1}]},
-  jan:{name:'Jan',dates:[{t:'2 → 9'},{t:'9 → 16'},{t:'16 → 23'},{t:'23 → 30'},{t:'30 → Feb 6'}]},
-  feb:{name:'Feb',dates:[{t:'6 → 13'},{t:'13 → 20'},{t:'20 → 27'},{t:'27 → Mar 6'}]},
-  mar:{name:'Mar',full:1,dates:[{t:'6 → 13'},{t:'13 → 20'},{t:'20 → 27'},{t:'27 → Apr 3'}]}
-};
-var PRICE={surf:550,kite:750};
-var FULL={surf:790,kite:890};
-var PROMO_END='2027-03-01';
-function isFull(){
-  if(s.date==='custom'){var f=g('bk-date-from').value;return !!f&&f>=PROMO_END;}
-  return !!(s.month&&MONTHS[s.month]&&MONTHS[s.month].full);
-}
-function price(){return isFull()?FULL[s.act]:PRICE[s.act];}
+var T={"badge_surf": "🏄 LA SEMAINE SURF COMPREND", "badge_kite": "🪁 LA SEMAINE KITESURF COMPREND", "badge_yoga": "🧘 LA SEMAINE KITESURF + YOGA COMPREND", "surf": ["7 nuits à la Villa Sunset ou à la Villa Zephyr (chambre partagée, 3 personnes maximum)", "Pension complète : repas frais et faits maison", "12h de cours de surf, groupes formés selon le niveau", "Matériel inclus : planches adaptées à votre niveau et combinaison", "Soirée BBQ à la villa et sortie en ville", "Sorties pour découvrir la médina et le port, prendre un café et flâner en ville", "Visite d’une coopérative d’argan locale de 100 femmes", "Transferts vers les spots et l’aéroport d’Essaouira, aller-retour"], "kite": ["7 nuits à la Villa Sunset ou à la Villa Zephyr (chambre partagée, 3 personnes maximum)", "Pension complète : repas frais et faits maison", "12h de cours de kitesurf, 4 personnes maximum par moniteur, groupes formés selon le niveau", "Matériel inclus : casque, combinaison, harnais, voiles...", "Soirée BBQ à la villa et sortie en ville", "Sorties pour découvrir la médina et le port, prendre un café et flâner en ville", "Visite d’une coopérative d’argan locale de 100 femmes", "Transferts vers les spots et l’aéroport d’Essaouira, aller-retour"], "yoga": ["2 séances de yoga par jour avec Marion Milhau du studio Mudita Yoga, qui vient spécialement de France pour cette semaine, pour se ressourcer entre les sessions de kitesurf", "7 nuits à la Villa Sunset ou à la Villa Zephyr (chambre partagée, 3 personnes maximum)", "Pension complète : repas frais et faits maison", "12h de cours de kitesurf, 4 personnes maximum par moniteur, groupes formés selon le niveau", "Matériel inclus : casque, combinaison, harnais, voiles...", "Soirée BBQ à la villa et sortie en ville", "Sorties pour découvrir la médina et le port, prendre un café et flâner en ville", "Visite d’une coopérative d’argan locale de 100 femmes", "Transferts vers les spots et l’aéroport d’Essaouira, aller-retour"], "na": "Indisponible", "lm": "Dernière minute", "people1": "personne", "peopleN": "personnes", "from_": "Du", "to": "au", "lbl_last_minute": "tarif dernière minute", "lbl_special": "tarif spécial", "lbl_regular": "tarif normal", "instead": "au lieu de", "disc": " · réduction appliquée à la confirmation", "w_act": "⚠️ Veuillez choisir une activité", "w_date": "⚠️ Veuillez choisir vos dates", "w_custom": "⚠️ Veuillez saisir vos dates d’arrivée et de départ", "w_order": "⚠️ La date de départ doit être après la date d’arrivée", "w_fn": "⚠️ Veuillez saisir votre prénom", "w_mail": "⚠️ Veuillez saisir un e-mail valide", "err": "Erreur. Merci de nous contacter sur WhatsApp.", "net": "Erreur réseau. WhatsApp : +212 618 910 431", "sending": "Envoi...", "confirm": "Confirmer ma réservation →", "confirm_yoga": "Envoyer ma demande →", "cta": "Réserver ma semaine →", "cta_yoga": "Demander des infos →", "micro": "Aucun paiement requis à ce stade · Nous confirmons les disponibilités ensemble", "micro_yoga": "Aucun paiement requis · Prix et détails envoyés sous 24h", "yoga_lbl": "Kitesurf + Yoga (demande d’infos)", "price_req": "Prix sur demande", "nights": "nuits", "night": "nuit", "ratef": {"lm": "Tarif dernière minute", "sp": "Tarif spécial", "reg": "Tarif normal"}, "kite_lbl": "Kitesurf", "surf_lbl": "Surf", "locale": "fr-FR", "cur_pre": "", "cur_post": " €", "subj": "🏄 Réservation FR · ", "subj_yoga": "🧘 Semaine Yoga DEMANDE D’INFOS · Kitesurf + Yoga · Mogasurf", "lang": "FR", "yoga_month_lbl": "Mars 2027 · Semaine Yoga"};
+var DATA=[{"k": "2026-11", "label": "Novembre 2026", "dates": [{"s": "2026-11-07", "e": "2026-11-14", "t": "7 → 14 nov."}, {"s": "2026-11-14", "e": "2026-11-21", "t": "14 → 21 nov."}, {"s": "2026-11-21", "e": "2026-11-28", "t": "21 → 28 nov."}, {"s": "2026-11-28", "e": "2026-12-05", "t": "28 nov. → 5 déc."}]}, {"k": "2026-12", "label": "Décembre 2026", "dates": [{"s": "2026-12-05", "e": "2026-12-12", "t": "5 → 12 déc."}, {"s": "2026-12-12", "e": "2026-12-19", "t": "12 → 19 déc."}, {"s": "2026-12-19", "e": "2026-12-26", "t": "19 → 26 déc.", "off": 1}, {"s": "2026-12-26", "e": "2027-01-02", "t": "26 déc. → 2 janv.", "off": 1}]}, {"k": "2027-01", "label": "Janvier 2027", "dates": [{"s": "2027-01-02", "e": "2027-01-09", "t": "2 → 9 janv."}, {"s": "2027-01-09", "e": "2027-01-16", "t": "9 → 16 janv."}, {"s": "2027-01-16", "e": "2027-01-23", "t": "16 → 23 janv."}, {"s": "2027-01-23", "e": "2027-01-30", "t": "23 → 30 janv."}, {"s": "2027-01-30", "e": "2027-02-06", "t": "30 janv. → 6 févr."}]}, {"k": "2027-02", "label": "Février 2027", "dates": [{"s": "2027-02-06", "e": "2027-02-13", "t": "6 → 13 févr."}, {"s": "2027-02-13", "e": "2027-02-20", "t": "13 → 20 févr."}, {"s": "2027-02-20", "e": "2027-02-27", "t": "20 → 27 févr."}, {"s": "2027-02-27", "e": "2027-03-06", "t": "27 févr. → 6 mars"}]}, {"k": "2027-03", "label": "Mars 2027", "dates": [{"s": "2027-03-06", "e": "2027-03-13", "t": "6 → 13 mars"}, {"s": "2027-03-13", "e": "2027-03-20", "t": "13 → 20 mars"}, {"s": "2027-03-20", "e": "2027-03-27", "t": "20 → 27 mars", "yoga": 1}, {"s": "2027-03-27", "e": "2027-04-03", "t": "27 mars → 3 avr."}]}, {"k": "2027-04", "label": "Avril 2027", "dates": [{"s": "2027-04-03", "e": "2027-04-10", "t": "3 → 10 avr."}, {"s": "2027-04-10", "e": "2027-04-17", "t": "10 → 17 avr."}, {"s": "2027-04-17", "e": "2027-04-24", "t": "17 → 24 avr."}, {"s": "2027-04-24", "e": "2027-05-01", "t": "24 avr. → 1 mai"}]}, {"k": "2027-05", "label": "Mai 2027", "dates": [{"s": "2027-05-01", "e": "2027-05-08", "t": "1 → 8 mai"}, {"s": "2027-05-08", "e": "2027-05-15", "t": "8 → 15 mai"}, {"s": "2027-05-15", "e": "2027-05-22", "t": "15 → 22 mai"}, {"s": "2027-05-22", "e": "2027-05-29", "t": "22 → 29 mai"}, {"s": "2027-05-29", "e": "2027-06-05", "t": "29 mai → 5 juin"}]}, {"k": "2027-06", "label": "Juin 2027", "dates": [{"s": "2027-06-05", "e": "2027-06-12", "t": "5 → 12 juin"}, {"s": "2027-06-12", "e": "2027-06-19", "t": "12 → 19 juin"}, {"s": "2027-06-19", "e": "2027-06-26", "t": "19 → 26 juin"}, {"s": "2027-06-26", "e": "2027-07-03", "t": "26 juin → 3 juil."}]}];
+var YOGA_START='2027-03-20';
+var SPECIAL={surf:550,kite:750};
+var REF={surf:790,kite:890};   /* prix barre (ancien tarif) */
+var REG={surf:650,kite:890};   /* tarif normal a partir de mars */
+function rateFor(iso){return iso<'2027-02-01'?'lm':(iso<'2027-03-01'?'sp':'reg')}
 var s={act:null,month:null,date:null,n:1};
 function g(id){return document.getElementById(id)}
-function warn(t){var u=g('bk-urgency');u.textContent=t;u.style.color='#c0392b';}
-function clr(){g('bk-urgency').textContent='';}
-function fmt(m,d){return MONTHS[m].name+' '+d.t;}
-window.bkAct=function(a,btn){
-  s.act=a;
-  document.querySelectorAll('.bk-act').forEach(function(b){b.classList.remove('on')});
-  btn.classList.add('on');clr();
-  g('bk-act-badge').textContent=ACT[a].badge;
-  g('bk-act-list').innerHTML=ACT[a].items.map(function(t){return '<li>'+t+'</li>'}).join('');
-  upd();
-};
-window.bkMonth=function(m,btn){
-  s.month=m;s.date=null;clr();
-  document.querySelectorAll('#bk-months .bk-mbtn').forEach(function(b){b.classList.remove('on')});
-  btn.classList.add('on');
-  if(m==='custom'){
-    s.date='custom';
-    g('bk-dates-wrap').classList.remove('show');
-    g('bk-custom-block').classList.add('show');
+function warn(t){var u=g('bk-urgency');u.textContent=t;u.style.color='#c0392b'}
+function clr(){g('bk-urgency').textContent=''}
+function money(v){return T.cur_pre+v.toLocaleString(T.locale)+T.cur_post}
+function fmtd(iso){var p=iso.split('-');return p[2]+'/'+p[1]+'/'+p[0]}
+function nightsBetween(a,b){return Math.round((new Date(b)-new Date(a))/86400000)}
+function monthObj(k){for(var i=0;i<DATA.length;i++)if(DATA[i].k===k)return DATA[i];return null}
+function visibleDates(m){
+  return m.dates.filter(function(d){return s.act==='yoga'?!!d.yoga:!d.yoga});
+}
+function buildMonths(){
+  var sel=g('bk-month'),html='';
+  if(s.act==='yoga'){
+    html='<option value="2027-03">'+T.yoga_month_lbl+'</option>';
   }else{
-    g('bk-custom-block').classList.remove('show');
-    var box=g('bk-dates');box.innerHTML='';
-    MONTHS[m].dates.forEach(function(d,i){
-      var b=document.createElement('button');
-      if(d.off){
-        b.className='bk-date off';
-        b.disabled=true;
-        b.innerHTML=fmt(m,d)+'<small>Not available</small>';
-      }else{
-        b.className='bk-date';
-        b.textContent=fmt(m,d);
-        b.onclick=function(){
-          s.date=m+i;
-          box.querySelectorAll('.bk-date').forEach(function(x){x.classList.remove('on')});
-          b.classList.add('on');clr();upd();
-        };
-      }
-      box.appendChild(b);
-    });
-    g('bk-dates-wrap').classList.add('show');
+    DATA.forEach(function(m){if(visibleDates(m).length)html+='<option value="'+m.k+'">'+m.label+'</option>'});
+    html+='<option value="custom">'+"✏️ Choisir mes propres dates"+'</option>';
   }
+  sel.innerHTML=html;
+  var valid=false;for(var i=0;i<sel.options.length;i++)if(sel.options[i].value===s.month)valid=true;
+  if(!valid)s.month=sel.options[0].value;
+  sel.value=s.month;
+}
+function buildDates(){
+  var box=g('bk-dates'),wrap=g('bk-dates-wrap'),cb=g('bk-custom-block');
+  box.innerHTML='';
+  if(s.month==='custom'){wrap.classList.remove('show');cb.classList.add('show');return}
+  cb.classList.remove('show');
+  var m=monthObj(s.month);
+  visibleDates(m).forEach(function(d){
+    var b=document.createElement('button');b.type='button';
+    var tag=(!d.off&&rateFor(d.s)==='lm'&&s.act!=='yoga')?'<span class="tag">'+T.lm+'</span>':'';
+    if(d.off){b.className='bk-date off';b.disabled=true;b.innerHTML=d.t+'<small>'+T.na+'</small>'}
+    else{
+      b.className='bk-date'+(s.date===d.s?' on':'');
+      b.innerHTML=d.t+tag;
+      b.onclick=function(){
+        s.date=d.s;
+        var all=box.querySelectorAll('.bk-date');for(var i=0;i<all.length;i++)all[i].classList.remove('on');
+        b.classList.add('on');clr();upd();
+      };
+    }
+    box.appendChild(b);
+  });
+  wrap.classList.add('show');
+}
+window.bkAct=function(a,btn){
+  var wasYoga=(s.act==='yoga');
+  s.act=a;clr();
+  var all=document.querySelectorAll('.bk-act');for(var i=0;i<all.length;i++)all[i].classList.remove('on');
+  btn.classList.add('on');
+  g('bk-act-badge').textContent=T['badge_'+a];
+  g('bk-act-list').innerHTML=T[a].map(function(t){return '<li>'+t+'</li>'}).join('');
+  if(a==='yoga'){s.month='2027-03';s.date=YOGA_START}
+  else if(wasYoga){s.month=null;s.date=null}
+  else if(s.date&&s.date!=='custom'&&s.date===YOGA_START){s.date=null}
+  buildMonths();buildDates();
+  g('bk-btn1').textContent=(a==='yoga')?T.cta_yoga:T.cta;
+  g('bk-btn2').textContent=(a==='yoga')?T.confirm_yoga:T.confirm;
+  g('bk-micro').textContent=(a==='yoga')?T.micro_yoga:T.micro;
   upd();
 };
-window.bkUpd=function(){upd();};
-window.bkCnt=function(d){s.n=Math.max(1,Math.min(13,s.n+d));g('bk-cnt').textContent=s.n;upd();};
-function upd(){
-  if(!s.act||!s.date){g('bk-price').classList.add('hidden');return;}
-  var p=price();
-  g('bk-price').classList.remove('hidden');
-  g('bk-pamt').textContent='€'+(p*s.n).toLocaleString('en-GB');
-  g('bk-psub').textContent='€'+p+' × '+s.n+(s.n>1?' people':' person')+(isFull()?' · regular rate':' · special rate (instead of €'+FULL[s.act]+')')+(s.n>=2?' · discount applied on confirmation':'');
-}
-function dlabel(){
-  if(s.date==='custom')return 'From '+g('bk-date-from').value+' to '+g('bk-date-to').value;
-  var m=s.month,i=parseInt(s.date.slice(3),10);
-  return fmt(m,MONTHS[m].dates[i]);
-}
-window.bkNext=function(){
-  if(!s.act){warn('⚠️ Please choose an activity');return;}
-  if(!s.month){warn('⚠️ Please choose a month');return;}
-  if(!s.date){warn('⚠️ Please choose your dates');return;}
-  if(s.date==='custom'&&(!g('bk-date-from').value||!g('bk-date-to').value)){warn('⚠️ Please enter your dates');return;}
-  var a=s.act==='surf'?'🏄 Surf':'🪁 Kitesurf';
-  g('bk-sum').innerHTML='<strong>'+a+'</strong><br>'+dlabel()+' · '+s.n+(s.n>1?' people':' person')+' · €'+(price()*s.n).toLocaleString('en-GB');
-  g('bk-s1').classList.remove('on');g('bk-s2').classList.add('on');
+window.bkMonth=function(v){
+  s.month=v;clr();
+  if(v==='custom'){s.date='custom'}else{s.date=null}
+  buildDates();upd();
 };
-window.bkBack=function(){g('bk-s2').classList.remove('on');g('bk-s1').classList.add('on');};
+window.bkUpd=function(){clr();upd()};
+window.bkCnt=function(d){s.n=Math.max(1,Math.min(13,s.n+d));g('bk-cnt').textContent=s.n;upd()};
+function startIso(){
+  if(s.date==='custom')return g('bk-date-from').value||null;
+  return s.date||null;
+}
+function upd(){
+  var st=startIso();
+  if(!s.act||s.act==='yoga'||!s.date||!st){g('bk-price').classList.add('hidden');return}
+  var r=rateFor(st),p=(r==='reg')?REG[s.act]:SPECIAL[s.act];
+  g('bk-price').classList.remove('hidden');
+  g('bk-pamt').textContent=money(p*s.n);
+  var who=s.n+' '+(s.n>1?T.peopleN:T.people1);
+  var sub=money(p)+' × '+who+' · ';
+  if(r==='reg'){sub+=T.lbl_regular}
+  else{sub+=(r==='lm'?T.lbl_last_minute:T.lbl_special)+' ('+T.instead+' <s>'+money(REF[s.act])+'</s>)'}
+  if(s.n>=2)sub+=T.disc;
+  g('bk-psub').innerHTML=sub;
+}
+function actLabel(){return s.act==='surf'?T.surf_lbl:(s.act==='kite'?T.kite_lbl:T.yoga_lbl)}
+function range(){
+  if(s.date==='custom')return {a:g('bk-date-from').value,b:g('bk-date-to').value};
+  var m=monthObj(s.month),d=null;
+  m.dates.forEach(function(x){if(x.s===s.date)d=x});
+  return {a:d.s,b:d.e};
+}
+function dlabel(){var r=range();return T.from_+' '+fmtd(r.a)+' '+T.to+' '+fmtd(r.b)}
+function total(){var r=rateFor(startIso()),p=(r==='reg')?REG[s.act]:SPECIAL[s.act];return p*s.n}
+window.bkNext=function(){
+  if(!s.act){warn(T.w_act);return}
+  if(!s.date){warn(T.w_date);return}
+  if(s.date==='custom'){
+    var f=g('bk-date-from').value,t=g('bk-date-to').value;
+    if(!f||!t){warn(T.w_custom);return}
+    if(nightsBetween(f,t)<1){warn(T.w_order);return}
+  }
+  var r=range(),n=nightsBetween(r.a,r.b);
+  var line='<strong>'+(s.act==='surf'?'🏄 ':'🪁 ')+actLabel()+'</strong><br>'+dlabel()+' ('+n+' '+(n>1?T.nights:T.night)+') · '+s.n+' '+(s.n>1?T.peopleN:T.people1);
+  line+=(s.act==='yoga')?' · '+T.price_req:' · '+money(total());
+  g('bk-sum').innerHTML=line;
+  g('bk-s1').classList.remove('on');g('bk-s2').classList.add('on');
+  window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'booking_step1_complete','activity':s.act});
+  var el=g('reservation');if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'start'});
+};
+window.bkBack=function(){g('bk-s2').classList.remove('on');g('bk-s1').classList.add('on')};
 window.bkSubmit=function(){
-  var ok=true;
-  ['bk-fn','bk-ln','bk-email'].forEach(function(id){var e=g(id);if(!e.value.trim()){e.classList.add('err');ok=false;}else{e.classList.remove('err');}});
+  var w=g('bk-warn2');w.textContent='';
+  var fn=g('bk-fn'),em=g('bk-email'),ok=true;
+  fn.classList.remove('err');em.classList.remove('err');
+  if(!fn.value.trim()){fn.classList.add('err');w.textContent=T.w_fn;ok=false}
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim())){em.classList.add('err');if(ok)w.textContent=T.w_mail;ok=false}
   if(!ok)return;
-  var btn=g('bk-btn2');btn.disabled=true;btn.textContent='Sending...';
-  var a=s.act==='surf'?'Surf':'Kitesurf';
-  var fd=new FormData();
-  fd.append('access_key','REDACTED');
-  fd.append('subject','🏄 Landing Booking · '+a+' · Mogasurf');
+  var yoga=(s.act==='yoga');
+  var btn=g('bk-btn2');btn.disabled=true;btn.textContent=T.sending;
+  var r=range(),fd=new FormData();
+  fd.append('access_key','96153601-0afd-4374-b2a3-5ed98edde355');
+  fd.append('subject',yoga?T.subj_yoga:(T.subj+actLabel()+' · Mogasurf'));
   fd.append('from_name','Mogasurf Website');
-  fd.append('cc','info@mogasurf.com,redacted@example.com,redacted@example.com');
+  fd.append('cc','info@mogasurf.com,bentalhameriiem@gmail.com,ismail.adarzane@gmail.com');
   fd.append('botcheck','');
-  fd.append('Activity',a);
+  fd.append('Language',T.lang);
+  fd.append('Activity',yoga?'Kitesurf + Yoga (info request)':actLabel());
+  fd.append('Arrival',r.a);
+  fd.append('Departure',r.b);
   fd.append('Stay dates',dlabel());
   fd.append('People',s.n);
-  fd.append('Estimated total',(price()*s.n)+'€');
-  fd.append('Rate',isFull()?'Normal rate':'Special rate (until end of Feb 2027)');
-  fd.append('First name',g('bk-fn').value.trim());
+  if(yoga){fd.append('Price','On request (no price shown)')}
+  else{fd.append('Estimated total',total()+'€');fd.append('Rate',T.ratef[rateFor(startIso())])}
+  fd.append('First name',fn.value.trim());
   fd.append('Last name',g('bk-ln').value.trim());
-  fd.append('Email',g('bk-email').value.trim());
-  fd.append('Phone',g('bk-cc').value+' '+g('bk-phone').value.trim());
+  fd.append('Email',em.value.trim());
+  if(g('bk-phone').value.trim())fd.append('Phone',g('bk-cc').value+' '+g('bk-phone').value.trim());
   if(g('bk-msg').value.trim())fd.append('Message',g('bk-msg').value.trim());
   fetch('https://api.web3forms.com/submit',{method:'POST',body:fd})
-  .then(function(r){return r.json()})
+  .then(function(x){return x.json()})
   .then(function(d){
     if(d.success){
       g('bk-fields').style.display='none';g('bk-ok').classList.add('show');
       if(typeof fbq==='function')fbq('track','Lead');
-      window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'camp_booking_success'});
-    }else{alert('Error. Please contact us on WhatsApp.');}
-    btn.disabled=false;btn.textContent='Confirm my booking →';
+      window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'camp_booking_success','form_type':yoga?'yoga_info':'site_booking'});
+    }else{alert(T.err)}
+    btn.disabled=false;btn.textContent=yoga?T.confirm_yoga:T.confirm;
   })
-  .catch(function(){alert('Network error. WhatsApp: +212 618 910 431');btn.disabled=false;btn.textContent='Confirm my booking →';});
+  .catch(function(){alert(T.net);btn.disabled=false;btn.textContent=yoga?T.confirm_yoga:T.confirm});
 };
+buildMonths();buildDates();
 })();
 </script>				</div>
 					</div>
@@ -587,8 +1344,10 @@ window.bkSubmit=function(){
 					<div class="e-con-inner">
 		<div class="elementor-element elementor-element-313aa5d e-con-full e-flex e-con e-child" data-id="313aa5d" data-element_type="container" data-e-type="container">
 				<div class="elementor-element elementor-element-ff0a7b6 elementor-widget__width-initial elementor-widget elementor-widget-shortcode" data-id="ff0a7b6" data-element_type="widget" data-e-type="widget" data-widget_type="shortcode.default">
-							<div class="elementor-shortcode">
-<pre class="ti-widget"><div style="opacity: 0;height: 0 !important;overflow: hidden !important" data-css-url="https://www.mogasurf.com/wp-content/uploads/trustindex-google-widget.css?1791935604" class=" ti-widget  ti-goog ti-disable-font ti-review-text-mode-readmore ti-text-align-left" data-no-translation="true" data-time-locale="%d %s ago|today|day|days|week|weeks|month|months|year|years" data-plugin-version="14.2" data-layout-id="4" data-layout-category="slider" data-set-id="drop-shadow" data-pid="wp-widget" data-language="en" data-close-locale="Close" data-review-target-width="300" data-css-version="2" data-reply-by-locale="Owner&apos;s reply" data-only-rating-locale="This user only left a rating." data-pager-autoplay-timeout="6"> <div class="ti-widget-container ti-col-3"> <div class="ti-reviews-container"> <div class="ti-controls"> <div class="ti-next" aria-label="Next review" role="button" tabindex="0"></div> <div class="ti-prev" aria-label="Previous review" role="button" tabindex="0"></div> </div> <div class="ti-reviews-container-wrapper">  <div data-empty="0" data-time="1789430400" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjUIb-CPtVwqV7Cd8hcMbzY9b00uZ94GgwR7DWlO2IHz-MUcYNID=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjUIb-CPtVwqV7Cd8hcMbzY9b00uZ94GgwR7DWlO2IHz-MUcYNID=w80-h80-c-rp-mo-br100 2x" alt="Lucas Arminjon profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Lucas Arminjon </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Super séjour avec MOGASURF !&#010;&#010;La villa est extraordinaire, un petit coin de paradis avec un très beau jardin et une piscine, très appréciée après les activités.&#010;&#010;Ismaël et Mimi ont été aux petits soins, avec une très grande gentillesse et beaucoup de bienveillance. Ils ont également partagé avec nous de très bons moments festifs.&#010;Nous avons mangé de délicieux plats typiques du Maroc. 🇲🇦&#010;&#010;Le planning a été adapté en fonction des conditions météorologiques, ce qui m’a permis de faire du kite et du surf dans les meilleures conditions.&#010;&#010;Pour résumer, une superbe semaine de vacances grâce à toute l’équipe de MOGASURF !&#010;Je recommande vivement ! 🏄‍♂️🤙<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1789344000" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocJdFDwNfgRnVQgAz3bW4iIrO-ZWa4uXWiq5ThEApJOA6oE4jQ=w40-h40-c-rp-mo-ba12-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocJdFDwNfgRnVQgAz3bW4iIrO-ZWa4uXWiq5ThEApJOA6oE4jQ=w80-h80-c-rp-mo-ba12-br100 2x" alt="A W profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> A W </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Wir waren zu zweit für eine Woche da. Ich denke ich übertreibe nicht, wenn ich sage, dass es eine der besten Wochen in meinem Leben war. Mimi und Ismail sind super liebe Menschen, die wir jetzt schon vermissen. Auch die anderen Gäste waren super. Es gab jeden Tag drei Mahlzeiten, die jedes mal super lecker waren und frisch vor Ort zubereitet wurden. Die Villa ist schön groß und war noch besser als erwartet. Wir haben alle den Kitesurf Kurs belegt und hatten auch dort einen super Instructor (Mohammed und Ismail). Der Mix zwischen Sport, Chillen, Party und Städtetrip. Definitiv eine 10/10 und wir wissen jetzt schon, dass wir jedes Jahr wiederkommen wollen. Wer das nicht macht hat was verpasst!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1789344000" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjV0tTDsQAbq3Weo4DdHZdLVV_-rMypPdMMTwGBT7VIMrjmTub0=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjV0tTDsQAbq3Weo4DdHZdLVV_-rMypPdMMTwGBT7VIMrjmTub0=w80-h80-c-rp-mo-br100 2x" alt="Thomas DOLLER profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Thomas DOLLER </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->J’ai passé un excellent séjour : la villa est top, les cours permettent de bon progrès et sont assurés par une super équipe. Tout est pensé pour nous mettre dans les meilleures conditions, et les repas sont exceptionnels. Je recommande vivement cette adresse !<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1789257600" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocIJ7n1WaodOb8xthO14xWTc3yrpJmTCJ6BMKBmV-YhVRw9bsw=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocIJ7n1WaodOb8xthO14xWTc3yrpJmTCJ6BMKBmV-YhVRw9bsw=w80-h80-c-rp-mo-br100 2x" alt="Astrid Courbet profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Astrid Courbet </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Très bonne école de kitesurf ! Ismail est là pour partager sa passion et transmettre son expérience. Il est très pédagogue et ses conseils nous permettent de progresser rapidement. Il nous emmène sur des spots où il n’y a pas trop de monde, ce qui permet d’évoluer sereinement sur l’eau🪁&#010;&#010;La formule Kite Camp est idéale : une magnifique villa avec piscine, des repas locaux délicieux, du kite et surtout de très belles rencontres🌞&#010;&#010;Merci Mogasurf pour les souvenirs💙<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1789171200" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocLoANyc1ymPuMGuau2yUoJD4nrcGdMo79y8gEKAdC4L21O5Og=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocLoANyc1ymPuMGuau2yUoJD4nrcGdMo79y8gEKAdC4L21O5Og=w80-h80-c-rp-mo-br100 2x" alt="Samuel Gebhard profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Samuel Gebhard </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Une petite équipe incroyable qui vous fais vous sentir comme à la maison.<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1788652800" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjWKOKh9jPHOkb1wRMHDEG0eHk2R94-Cjc0XbhMFeuR01UmOqHew=w40-h40-c-rp-mo-ba12-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjWKOKh9jPHOkb1wRMHDEG0eHk2R94-Cjc0XbhMFeuR01UmOqHew=w80-h80-c-rp-mo-ba12-br100 2x" alt="Ainhoa Humanes profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Ainhoa Humanes </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Muy buenos profesores, hicieron lo posible por entenderse con nosotros!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  </div> <div class="ti-controls-line"> <div class="dot"></div> </div> </div>    </div> </div> </pre><pre class="ti-hidden-markup" hidden style="display: none">
+							<div class="elementor-shortcode"><link rel="stylesheet" href="https://www.mogasurf.com/wp-content/cache/minify/40ae5.css" media="all" />
+<pre class="ti-widget"><div style="opacity: 0;height: 0 !important;overflow: hidden !important" data-css-url="https://www.mogasurf.com/wp-content/uploads/trustindex-google-widget.css?1791935604" class=" ti-widget  ti-goog ti-disable-font ti-review-text-mode-readmore ti-text-align-left" data-no-translation="true" data-time-locale="%d %s ago|today|day|days|week|weeks|month|months|year|years" data-plugin-version="14.2" data-layout-id="4" data-layout-category="slider" data-set-id="drop-shadow" data-pid="wp-widget" data-language="en" data-close-locale="Close" data-review-target-width="300" data-css-version="2" data-reply-by-locale="Owner&apos;s reply" data-only-rating-locale="This user only left a rating." data-pager-autoplay-timeout="6"> <div class="ti-widget-container ti-col-3"> <div class="ti-reviews-container"> <div class="ti-controls"> <div class="ti-next" aria-label="Next review" role="button" tabindex="0"></div> <div class="ti-prev" aria-label="Previous review" role="button" tabindex="0"></div> </div> <div class="ti-reviews-container-wrapper">  <div data-empty="0" data-time="1789430400" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjUIb-CPtVwqV7Cd8hcMbzY9b00uZ94GgwR7DWlO2IHz-MUcYNID=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjUIb-CPtVwqV7Cd8hcMbzY9b00uZ94GgwR7DWlO2IHz-MUcYNID=w80-h80-c-rp-mo-br100 2x" alt="Lucas Arminjon profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Lucas Arminjon </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Super séjour avec MOGASURF !&#010;&#010;La villa est extraordinaire, un petit coin de paradis avec un très beau jardin et une piscine, très appréciée après les activités.&#010;&#010;Ismaël et Mimi ont été aux petits soins, avec une très grande gentillesse et beaucoup de bienveillance. Ils ont également partagé avec nous de très bons moments festifs.&#010;Nous avons mangé de délicieux plats typiques du Maroc. 🇲🇦&#010;&#010;Le planning a été adapté en fonction des conditions météorologiques, ce qui m’a permis de faire du kite et du surf dans les meilleures conditions.&#010;&#010;Pour résumer, une superbe semaine de vacances grâce à toute l’équipe de MOGASURF !&#010;Je recommande vivement ! 🏄‍♂️🤙<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1789344000" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocJdFDwNfgRnVQgAz3bW4iIrO-ZWa4uXWiq5ThEApJOA6oE4jQ=w40-h40-c-rp-mo-ba12-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocJdFDwNfgRnVQgAz3bW4iIrO-ZWa4uXWiq5ThEApJOA6oE4jQ=w80-h80-c-rp-mo-ba12-br100 2x" alt="A W profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> A W </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Wir waren zu zweit für eine Woche da. Ich denke ich übertreibe nicht, wenn ich sage, dass es eine der besten Wochen in meinem Leben war. Mimi und Ismail sind super liebe Menschen, die wir jetzt schon vermissen. Auch die anderen Gäste waren super. Es gab jeden Tag drei Mahlzeiten, die jedes mal super lecker waren und frisch vor Ort zubereitet wurden. Die Villa ist schön groß und war noch besser als erwartet. Wir haben alle den Kitesurf Kurs belegt und hatten auch dort einen super Instructor (Mohammed und Ismail). Der Mix zwischen Sport, Chillen, Party und Städtetrip. Definitiv eine 10/10 und wir wissen jetzt schon, dass wir jedes Jahr wiederkommen wollen. Wer das nicht macht hat was verpasst!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1789344000" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjV0tTDsQAbq3Weo4DdHZdLVV_-rMypPdMMTwGBT7VIMrjmTub0=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjV0tTDsQAbq3Weo4DdHZdLVV_-rMypPdMMTwGBT7VIMrjmTub0=w80-h80-c-rp-mo-br100 2x" alt="Thomas DOLLER profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Thomas DOLLER </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->J’ai passé un excellent séjour : la villa est top, les cours permettent de bon progrès et sont assurés par une super équipe. Tout est pensé pour nous mettre dans les meilleures conditions, et les repas sont exceptionnels. Je recommande vivement cette adresse !<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1789257600" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocIJ7n1WaodOb8xthO14xWTc3yrpJmTCJ6BMKBmV-YhVRw9bsw=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocIJ7n1WaodOb8xthO14xWTc3yrpJmTCJ6BMKBmV-YhVRw9bsw=w80-h80-c-rp-mo-br100 2x" alt="Astrid Courbet profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Astrid Courbet </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Très bonne école de kitesurf ! Ismail est là pour partager sa passion et transmettre son expérience. Il est très pédagogue et ses conseils nous permettent de progresser rapidement. Il nous emmène sur des spots où il n’y a pas trop de monde, ce qui permet d’évoluer sereinement sur l’eau🪁&#010;&#010;La formule Kite Camp est idéale : une magnifique villa avec piscine, des repas locaux délicieux, du kite et surtout de très belles rencontres🌞&#010;&#010;Merci Mogasurf pour les souvenirs💙<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1789171200" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a/ACg8ocLoANyc1ymPuMGuau2yUoJD4nrcGdMo79y8gEKAdC4L21O5Og=w40-h40-c-rp-mo-br100" srcset="https://lh3.googleusercontent.com/a/ACg8ocLoANyc1ymPuMGuau2yUoJD4nrcGdMo79y8gEKAdC4L21O5Og=w80-h80-c-rp-mo-br100 2x" alt="Samuel Gebhard profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Samuel Gebhard </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Une petite équipe incroyable qui vous fais vous sentir comme à la maison.<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  <div data-empty="0" data-time="1788652800" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" data-language=""> <div class="ti-inner"> <div class="ti-review-header"> <div class="ti-platform-icon ti-with-tooltip"> <span class="ti-tooltip">Posted on Google</span> <img loading="lazy" decoding="async" class="skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" /> </div> <div class="ti-profile-img"> <img decoding="async" class="skip-lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjWKOKh9jPHOkb1wRMHDEG0eHk2R94-Cjc0XbhMFeuR01UmOqHew=w40-h40-c-rp-mo-ba12-br100" srcset="https://lh3.googleusercontent.com/a-/ALV-UjWKOKh9jPHOkb1wRMHDEG0eHk2R94-Cjc0XbhMFeuR01UmOqHew=w80-h80-c-rp-mo-ba12-br100 2x" alt="Ainhoa Humanes profile picture" loading="lazy" /> </div> <div class="ti-profile-details"> <div class="ti-name"> Ainhoa Humanes </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 1" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 2" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 3" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 4" width="17" height="17" loading="lazy" /><img loading="lazy" decoding="async" class="ti-star skip-lazy" src="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google star 5" width="17" height="17" loading="lazy" /><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Muy buenos profesores, hicieron lo posible por entenderse con nosotros!<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more"></span> </div> </div>  </div> <div class="ti-controls-line"> <div class="dot"></div> </div> </div>    </div> </div> </pre><pre class="ti-hidden-markup" hidden style="display: none"><script>
+(function () { if (window.tiLoaderFallback) { return; } window.tiLoaderFallback = true; function tiLoadLoader() { if (window.TrustindexWidget || document.querySelector('script[src*="https://cdn.trustindex.io/loader.js"]')) { return; } let script = document.createElement("script"); script.async = true; script.src = "https://cdn.trustindex.io/loader.js"; script.setAttribute("data-ccm-injected", "1"); document.head.appendChild(script); } if ("loading" === document.readyState) { document.addEventListener("DOMContentLoaded", tiLoadLoader); } else { tiLoadLoader(); } })();
+</script>
 </pre></div>
 						</div>
 				</div>
@@ -620,8 +1379,13 @@ window.bkSubmit=function(){
 					</div>
 				</div>
 				</div>
+		
+		
 			</div>
+
+	
 </main>
+
 	<footer id="site-footer" class="site-footer dynamic-footer footer-has-copyright">
 	<div class="footer-inner">
 		<div class="site-branding show-logo">
@@ -630,6 +1394,7 @@ window.bkSubmit=function(){
 							<p class="site-description show">
 					Surf Kite School &amp; Camp Essaouira				</p>
 					</div>
+
 					<nav class="site-navigation show" aria-label="Menu du pied de page">
 				<ul id="menu-menu-fr-elementor-2" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2039 current_page_item menu-item-2485"><a href="https://www.mogasurf.com/" aria-current="page" data-ps2id-api="true">Accueil</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2489"><a href="https://www.mogasurf.com/packs-surf-essaouira-maroc-fr/" data-ps2id-api="true">Surf</a></li>
@@ -637,28 +1402,333 @@ window.bkSubmit=function(){
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2484"><a href="https://www.mogasurf.com/contact-fr/" data-ps2id-api="true">Contact</a></li>
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2486"><a href="https://www.mogasurf.com/ismail-adarzane-fr/" data-ps2id-api="true">À Propos</a></li>
 </ul>			</nav>
+		
 					<div class="copyright show">
 				<p>All rights reserved</p>
 			</div>
 			</div>
 </footer>
+
         <!-- Meta Pixel Event Code -->
+        <script type='text/javascript'>
+        (function () {
+            function runPixelCode( response ) {
+                if ( ! response || ! response.data || ! response.data.fb_pxl_code ) {
+                    return;
+                }
+
+                try {
+                    new Function( response.data.fb_pxl_code )();
+                } catch ( e ) {
+                    console && console.warn
+                        && console.warn( 'Meta Pixel response parsing failed. Please check if your pixel is connected.', e );
+                }
+            }
+
+            var radio = window.nfRadio
+                || ( window.Backbone && window.Backbone.Radio );
+            if ( radio && radio.channel ) {
+                radio.channel( 'forms' ).on( 'submit:response', runPixelCode );
+            }
+
+            if ( window.jQuery ) {
+                window.jQuery( document ).on(
+                    'nfFormSubmitResponse',
+                    function ( event, data ) {
+                        if ( data && data.response ) {
+                            runPixelCode( data.response );
+                        }
+                    }
+                );
+            }
+        })();
+        </script>
         <!-- End Meta Pixel Event Code -->
                 <!-- Meta Pixel Event Code -->
+        <script type='text/javascript'>
+        (function ( $ ) {
+            if ( ! $ || typeof document === 'undefined' ) {
+                return;
+            }
+            // WPForms triggers this jQuery event and passes the AJAX response object.
+            $( document ).on( 'wpformsAjaxSubmitSuccess', function ( event, data ) {
+                if ( data && data.data && data.data.fb_pxl_code ) {
+                    try {
+                        new Function( data.data.fb_pxl_code )();
+                    } catch ( e ) {
+                        console && console.warn && console.warn( 'Meta Pixel eval failed', e );
+                    }
+                }
+            } );
+        })( window.jQuery );
+        </script>
         <!-- End Meta Pixel Event Code -->
+        <script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
 		<!-- Click to Chat - https://holithemes.com/plugins/click-to-chat/  v4.45 -->
-									<div class="ht-ctc ht-ctc-chat ctc-analytics ctc_wp_desktop style-2  ht_ctc_entry_animation ht_ctc_an_entry_corner " id="ht-ctc-chat"  
+			<style id="ht-ctc-entry-animations">.ht_ctc_entry_animation{animation-duration:0.4s;animation-fill-mode:both;animation-delay:0s;animation-iteration-count:1;}			@keyframes ht_ctc_anim_corner {0% {opacity: 0;transform: scale(0);}100% {opacity: 1;transform: scale(1);}}.ht_ctc_an_entry_corner {animation-name: ht_ctc_anim_corner;animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);transform-origin: bottom var(--side, right);}
+			</style>						<div class="ht-ctc ht-ctc-chat ctc-analytics ctc_wp_desktop style-2  ht_ctc_entry_animation ht_ctc_an_entry_corner " id="ht-ctc-chat"  
 				style="display: none;  position: fixed; bottom: 15px; right: 15px;"   >
 												<div class="ht_ctc_style ht_ctc_chat_style">
 								<div  style="display: flex; justify-content: center; align-items: center;  " class="ctc-analytics ctc_s_2">
 	<p class="ctc-analytics ctc_cta ctc_cta_stick ht-ctc-cta  ht-ctc-cta-hover " style="padding: 0px 16px; line-height: 1.6; font-size: 15px; background-color: #25D366; color: #ffffff; border-radius:10px; margin:0 10px;  display: none; order: 0; ">WhatsApp us</p>
-	</div>
+	<svg style="pointer-events:none; display:block; height:50px; width:50px;" width="50px" height="50px" viewBox="0 0 1024 1024">
+        <defs>
+        <path id="htwasqicona-chat" d="M1023.941 765.153c0 5.606-.171 17.766-.508 27.159-.824 22.982-2.646 52.639-5.401 66.151-4.141 20.306-10.392 39.472-18.542 55.425-9.643 18.871-21.943 35.775-36.559 50.364-14.584 14.56-31.472 26.812-50.315 36.416-16.036 8.172-35.322 14.426-55.744 18.549-13.378 2.701-42.812 4.488-65.648 5.3-9.402.336-21.564.505-27.15.505l-504.226-.081c-5.607 0-17.765-.172-27.158-.509-22.983-.824-52.639-2.646-66.152-5.4-20.306-4.142-39.473-10.392-55.425-18.542-18.872-9.644-35.775-21.944-50.364-36.56-14.56-14.584-26.812-31.471-36.415-50.314-8.174-16.037-14.428-35.323-18.551-55.744-2.7-13.378-4.487-42.812-5.3-65.649-.334-9.401-.503-21.563-.503-27.148l.08-504.228c0-5.607.171-17.766.508-27.159.825-22.983 2.646-52.639 5.401-66.151 4.141-20.306 10.391-39.473 18.542-55.426C34.154 93.24 46.455 76.336 61.07 61.747c14.584-14.559 31.472-26.812 50.315-36.416 16.037-8.172 35.324-14.426 55.745-18.549 13.377-2.701 42.812-4.488 65.648-5.3 9.402-.335 21.565-.504 27.149-.504l504.227.081c5.608 0 17.766.171 27.159.508 22.983.825 52.638 2.646 66.152 5.401 20.305 4.141 39.472 10.391 55.425 18.542 18.871 9.643 35.774 21.944 50.363 36.559 14.559 14.584 26.812 31.471 36.415 50.315 8.174 16.037 14.428 35.323 18.551 55.744 2.7 13.378 4.486 42.812 5.3 65.649.335 9.402.504 21.564.504 27.15l-.082 504.226z"/>
+        </defs>
+        <linearGradient id="htwasqiconb-chat" gradientUnits="userSpaceOnUse" x1="512.001" y1=".978" x2="512.001" y2="1025.023">
+            <stop offset="0" stop-color="#61fd7d"/>
+            <stop offset="1" stop-color="#2bb826"/>
+        </linearGradient>
+        <use xlink:href="#htwasqicona-chat" overflow="visible" style="fill: url(#htwasqiconb-chat)" fill="url(#htwasqiconb-chat)"/>
+        <g>
+            <path style="fill: #FFFFFF;" fill="#FFF" d="M783.302 243.246c-69.329-69.387-161.529-107.619-259.763-107.658-202.402 0-367.133 164.668-367.214 367.072-.026 64.699 16.883 127.854 49.017 183.522l-52.096 190.229 194.665-51.047c53.636 29.244 114.022 44.656 175.482 44.682h.151c202.382 0 367.128-164.688 367.21-367.094.039-98.087-38.121-190.319-107.452-259.706zM523.544 808.047h-.125c-54.767-.021-108.483-14.729-155.344-42.529l-11.146-6.612-115.517 30.293 30.834-112.592-7.259-11.544c-30.552-48.579-46.688-104.729-46.664-162.379.066-168.229 136.985-305.096 305.339-305.096 81.521.031 158.154 31.811 215.779 89.482s89.342 134.332 89.312 215.859c-.066 168.243-136.984 305.118-305.209 305.118zm167.415-228.515c-9.177-4.591-54.286-26.782-62.697-29.843-8.41-3.062-14.526-4.592-20.645 4.592-6.115 9.182-23.699 29.843-29.053 35.964-5.352 6.122-10.704 6.888-19.879 2.296-9.176-4.591-38.74-14.277-73.786-45.526-27.275-24.319-45.691-54.359-51.043-63.543-5.352-9.183-.569-14.146 4.024-18.72 4.127-4.109 9.175-10.713 13.763-16.069 4.587-5.355 6.117-9.183 9.175-15.304 3.059-6.122 1.529-11.479-.765-16.07-2.293-4.591-20.644-49.739-28.29-68.104-7.447-17.886-15.013-15.466-20.645-15.747-5.346-.266-11.469-.322-17.585-.322s-16.057 2.295-24.467 11.478-32.113 31.374-32.113 76.521c0 45.147 32.877 88.764 37.465 94.885 4.588 6.122 64.699 98.771 156.741 138.502 21.892 9.45 38.982 15.094 52.308 19.322 21.98 6.979 41.982 5.995 57.793 3.634 17.628-2.633 54.284-22.189 61.932-43.615 7.646-21.427 7.646-39.791 5.352-43.617-2.294-3.826-8.41-6.122-17.585-10.714z"/>
+        </g>
+        </svg></div>
 								</div>
 							</div>
-							<span class="ht_ctc_chat_data" data-settings="{&quot;number&quot;:&quot;212618910431&quot;,&quot;pre_filled&quot;:&quot;Hello! \ud83d\udc4b I visited your website and I&#039;d love to get more information. \r\nThank you!\r\n\r\n-- \r\n\r\nBonjour ! \ud83d\udc4b J&#039;ai visit\u00e9 votre site et j&#039;aimerais avoir plus d&#039;informations. \r\nMerci !&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;side_d&quot;:&quot;right&quot;,&quot;side_m&quot;:&quot;right&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:150,&quot;ani&quot;:&quot;no-animation&quot;,&quot;page_id&quot;:2039,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;ga&quot;:&quot;yes&quot;,&quot;gtm&quot;:&quot;1&quot;,&quot;fb&quot;:&quot;yes&quot;,&quot;webhook_format&quot;:&quot;json&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;gtm_event_name&quot;:&quot;Click to Chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}" data-rest="3db77cc637"></span>
+							<span class="ht_ctc_chat_data" data-settings="{&quot;number&quot;:&quot;212618910431&quot;,&quot;pre_filled&quot;:&quot;Hello! \ud83d\udc4b I visited your website and I&#039;d love to get more information. \r\nThank you!\r\n\r\n-- \r\n\r\nBonjour ! \ud83d\udc4b J&#039;ai visit\u00e9 votre site et j&#039;aimerais avoir plus d&#039;informations. \r\nMerci !&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;side_d&quot;:&quot;right&quot;,&quot;side_m&quot;:&quot;right&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:150,&quot;ani&quot;:&quot;no-animation&quot;,&quot;page_id&quot;:2039,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;ga&quot;:&quot;yes&quot;,&quot;gtm&quot;:&quot;1&quot;,&quot;fb&quot;:&quot;yes&quot;,&quot;webhook_format&quot;:&quot;json&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;gtm_event_name&quot;:&quot;Click to Chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}" data-rest="480df08e99"></span>
 				    <!-- Meta Pixel Event Code -->
+    <script type='text/javascript'>
+        document.addEventListener( 'wpcf7mailsent', function( event ) {
+        if( "fb_pxl_code" in event.detail.apiResponse){
+            eval(event.detail.apiResponse.fb_pxl_code);
+        }
+        }, false );
+    </script>
     <!-- End Meta Pixel Event Code -->
         <div id="fb-pxl-ajax-code"></div><!-- Instagram Feed JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://www.mogasurf.com/wp-admin/admin-ajax.php";
+</script>
+			<script>
+				( () => {
+					const lazyloadRunObserver = () => {
+						const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+						const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+							entries.forEach( ( entry ) => {
+								if ( entry.isIntersecting ) {
+									let lazyloadBackground = entry.target;
+									if( lazyloadBackground ) {
+										lazyloadBackground.classList.add( 'e-lazyloaded' );
+									}
+									lazyloadBackgroundObserver.unobserve( entry.target );
+								}
+							});
+						}, { rootMargin: '200px 0px 200px 0px' } );
+						lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+							lazyloadBackgroundObserver.observe( lazyloadBackground );
+						} );
+					};
+					const events = [
+						'DOMContentLoaded',
+						'elementor/lazyload/observe',
+					];
+					events.forEach( ( event ) => {
+						document.addEventListener( event, lazyloadRunObserver );
+					} );
+				} )();
+			</script>
+			<script>document.addEventListener('DOMContentLoaded', function(){
+  ['surf','kite','daytrip'].forEach(function(act){
+    var btn = document.getElementById('btn-resa-'+act);
+    var section = document.getElementById('ms-resa-'+act);
+    if(btn && section){
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        section.style.display = 'block';
+        setTimeout(function(){
+          section.scrollIntoView({behavior:'smooth', block:'start'});
+        }, 100);
+      });
+    }
+  });
+});</script><style class="wpcode-css-snippet">.page-id-1900 .wpcf7-form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.page-id-1900 .wpcf7-form label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: #30543d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.page-id-1900 .wpcf7-form input,
+.page-id-1900 .wpcf7-form select,
+.page-id-1900 .wpcf7-form textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #e4a0af !important;
+  border-radius: 8px !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  background: #fff !important;
+  color: #000 !important;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.page-id-1900 .wpcf7-form input:focus,
+.page-id-1900 .wpcf7-form textarea:focus {
+  border-color: #30543d !important;
+}
+
+.page-id-1900 .wpcf7-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.page-id-1900 .wpcf7-form input[type="submit"] {
+  background: #f6ece0 !important;
+  color: #30543d !important;
+  border: 2px solid #30543d !important;
+  border-radius: 8px !important;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  cursor: pointer !important;
+  padding: 12px !important;
+  width: 100% !important;
+  margin-top: 15px !important;
+  transition: all 0.3s !important;
+}
+
+.page-id-1900 .wpcf7-form input[type="submit"]:hover {
+  background: #30543d !important;
+  color: #f6ece0 !important;
+}</style><link rel="stylesheet" href="https://www.mogasurf.com/wp-content/cache/minify/40ae5.css" media="all" />
+
+<script id="ht_ctc_app_js-js-extra">
+var ht_ctc_chat_var = {"number":"212618910431","pre_filled":"Hello! \ud83d\udc4b I visited your website and I'd love to get more information. \r\nThank you!\r\n\r\n-- \r\n\r\nBonjour ! \ud83d\udc4b J'ai visit\u00e9 votre site et j'aimerais avoir plus d'informations. \r\nMerci !","dis_m":"show","dis_d":"show","css":"cursor: pointer; z-index: 99999999;","pos_d":"position: fixed; bottom: 15px; right: 15px;","pos_m":"position: fixed; bottom: 15px; right: 15px;","side_d":"right","side_m":"right","schedule":"no","se":"150","ani":"no-animation","page_id":"2039","url_target_d":"_blank","ga":"yes","gtm":"1","fb":"yes","webhook_format":"json","g_init":"default","g_an_event_name":"click to chat","gtm_event_name":"Click to Chat","pixel_event_name":"Click to Chat by HoliThemes"};
+var ht_ctc_variables = {"g_an_event_name":"click to chat","gtm_event_name":"Click to Chat","pixel_event_type":"trackCustom","pixel_event_name":"Click to Chat by HoliThemes","g_an_params_v4":[{"key":"number","value":"{number}"},{"key":"title","value":"{title}"},{"key":"url","value":"{url}"}],"g_an_params":["g_an_param_1","g_an_param_2","g_an_param_3"],"g_an_param_1":{"key":"number","value":"{number}"},"g_an_param_2":{"key":"title","value":"{title}"},"g_an_param_3":{"key":"url","value":"{url}"},"pixel_params_v4":[{"key":"Category","value":"Click to Chat for WhatsApp"},{"key":"ID","value":"{number}"},{"key":"Title","value":"{title}"},{"key":"URL","value":"{url}"}],"pixel_params":["pixel_param_1","pixel_param_2","pixel_param_3","pixel_param_4"],"pixel_param_1":{"key":"Category","value":"Click to Chat for WhatsApp"},"pixel_param_2":{"key":"ID","value":"{number}"},"pixel_param_3":{"key":"Title","value":"{title}"},"pixel_param_4":{"key":"URL","value":"{url}"},"gtm_params_v4":[{"key":"type","value":"chat"},{"key":"number","value":"{number}"},{"key":"title","value":"{title}"},{"key":"url","value":"{url}"},{"key":"ref","value":"dataLayer push"}],"gtm_params":["gtm_param_1","gtm_param_2","gtm_param_3","gtm_param_4","gtm_param_5"],"gtm_param_1":{"key":"type","value":"chat"},"gtm_param_2":{"key":"number","value":"{number}"},"gtm_param_3":{"key":"title","value":"{title}"},"gtm_param_4":{"key":"url","value":"{url}"},"gtm_param_5":{"key":"ref","value":"dataLayer push"}};
+//# sourceURL=ht_ctc_app_js-js-extra
+</script>
+<script src="https://www.mogasurf.com/wp-content/cache/minify/584b9.js" defer></script>
+
+
+<script src="https://www.mogasurf.com/wp-content/cache/minify/501dc.js"></script>
+
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script src="https://www.mogasurf.com/wp-content/cache/minify/1f540.js"></script>
+
+<script id="contact-form-7-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2026-09-29 08:22:41+0000","generator":"GlotPress\/4.1.0","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n > 1;","lang":"fr"},"This contact form is placed in the wrong place.":["Ce formulaire de contact est plac\u00e9 dans un mauvais endroit."],"Error:":["Erreur\u00a0:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+</script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/www.mogasurf.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script src="https://www.mogasurf.com/wp-content/cache/minify/b68ea.js"></script>
+
+<script id="page-scroll-to-id-plugin-script-js-extra">
+var mPS2id_params = {"instances":{"mPS2id_instance_0":{"selector":"a[href*='#']:not([href='#'])","autoSelectorMenuLinks":"true","excludeSelector":"a[href^='#tab-'], a[href^='#tabs-'], a[data-toggle]:not([data-toggle='tooltip']), a[data-slide], a[data-vc-tabs], a[data-vc-accordion], a.screen-reader-text.skip-link","scrollSpeed":1200,"autoScrollSpeed":"true","scrollEasing":"easeInOutQuint","scrollingEasing":"easeOutQuint","forceScrollEasing":"false","pageEndSmoothScroll":"true","stopScrollOnUserAction":"false","autoCorrectScroll":"false","autoCorrectScrollExtend":"false","layout":"vertical","offset":"100","dummyOffset":"false","highlightSelector":"","clickedClass":"mPS2id-clicked","targetClass":"mPS2id-target","highlightClass":"mPS2id-highlight","forceSingleHighlight":"false","keepHighlightUntilNext":"false","highlightByNextTarget":"false","appendHash":"false","scrollToHash":"true","scrollToHashForAll":"true","scrollToHashDelay":0,"scrollToHashUseElementData":"true","scrollToHashRemoveUrlHash":"false","disablePluginBelow":0,"adminDisplayWidgetsId":"true","adminTinyMCEbuttons":"true","unbindUnrelatedClickEvents":"false","unbindUnrelatedClickEventsSelector":"","normalizeAnchorPointTargets":"false","encodeLinks":"false"}},"total_instances":"1","shortcode_class":"_ps2id"};
+//# sourceURL=page-scroll-to-id-plugin-script-js-extra
+</script>
+<script src="https://www.mogasurf.com/wp-content/cache/minify/1763e.js"></script>
+
+<script id="pll_cookie_script-js-after">
+(function() {
+				var expirationDate = new Date();
+				expirationDate.setTime( expirationDate.getTime() + 31536000 * 1000 );
+				document.cookie = "pll_language=fr; expires=" + expirationDate.toUTCString() + "; path=/; secure; SameSite=Lax";
+			}());
+
+//# sourceURL=pll_cookie_script-js-after
+</script>
+
+
+<script src="https://www.mogasurf.com/wp-content/cache/minify/62147.js"></script>
+
+<script id="jquery-ui-core-js-before">
+jQuery.uiBackCompat = true;
+//# sourceURL=jquery-ui-core-js-before
+</script>
+<script src="https://www.mogasurf.com/wp-content/cache/minify/65a29.js"></script>
+
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Partager sur Facebook","shareOnX":"Partager sur X","pinIt":"L\u2019\u00e9pingler","download":"T\u00e9l\u00e9charger","downloadImage":"T\u00e9l\u00e9charger une image","fullscreen":"Plein \u00e9cran","zoom":"Zoom","share":"Partager","playVideo":"Lire la vid\u00e9o","previous":"Pr\u00e9c\u00e9dent","next":"Suivant","close":"Fermer","a11yCarouselPrevSlideMessage":"Diapositive pr\u00e9c\u00e9dente","a11yCarouselNextSlideMessage":"Diapositive suivante","a11yCarouselFirstSlideMessage":"Ceci est la premi\u00e8re diapositive","a11yCarouselLastSlideMessage":"Ceci est la derni\u00e8re diapositive","a11yCarouselPaginationBulletMessage":"Aller \u00e0 la diapositive"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Portrait mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Paysage","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablette en mode portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablette en mode paysage","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Portable","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"\u00c9cran large","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.3.5","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_optimized_markup":true,"hello-theme-header-footer":true,"nested-elements":true,"e_atomic_elements":true,"e_opt_in_v4":true,"import-export-customization":true},"urls":{"assets":"https:\/\/www.mogasurf.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/www.mogasurf.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"400a30904d","atomicFormsSendForm":"2d0bbd8aa3"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":2039,"title":"Accueil%20-%20MOGASURF","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+
+<script src="https://www.mogasurf.com/wp-content/cache/minify/7c5f7.js"></script>
+
+<script id="smush-lazy-load-js-before">
+var smushLazyLoadOptions = {"autoResizingEnabled":false,"autoResizeOptions":{"precision":5,"skipAutoWidth":true,"cdnBaseURL":""}};
+//# sourceURL=smush-lazy-load-js-before
+</script>
+<script src="https://www.mogasurf.com/wp-content/cache/minify/dfacc.js"></script>
+
+<script data-ccm-injected="1" async data-wp-strategy="async" id="trustindex-loader-js-js" src="https://cdn.trustindex.io/loader.js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://www.mogasurf.com/wp-includes/js/wp-emoji-release.min.js?ver=7.1.4"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://www.mogasurf.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<style>
+#moga-nl{background:#e4a0af;padding:60px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;font-family:Montserrat,sans-serif}
+#moga-nl h2{font-family:"Playfair Display",serif;font-size:36px;font-weight:400;color:#1c1c1c;margin:0;line-height:1.2}
+#moga-nl h2 em{font-style:italic}
+#moga-nl .nl-form{display:flex;gap:10px;flex:1;max-width:500px}
+#moga-nl input{flex:1;border:none;border-radius:40px;padding:14px 20px;font-family:Montserrat,sans-serif;font-size:13px;outline:none;background:#fff}
+#moga-nl button{background:#1c3522;color:#fff;border:none;border-radius:40px;padding:14px 24px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+#moga-nl-ok{display:none;color:#1c3522;font-size:14px;font-weight:600;font-family:Montserrat,sans-serif}
+#moga-ftr{font-family:Montserrat,sans-serif;background:#1a1a1a;color:#fff;padding:60px 60px 30px}
+#moga-ftr .fg{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:50px}
+#moga-ftr .fi img{height:48px;margin-bottom:16px;filter:brightness(0) invert(1);display:block}
+#moga-ftr .fd{font-size:13px;color:rgba(255,255,255,.55);line-height:1.7;margin-bottom:20px}
+#moga-ftr .fs{display:flex;gap:10px}
+#moga-ftr .fs a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.6);text-decoration:none;font-size:11px;font-weight:700;transition:all .2s}
+#moga-ftr .fs a:hover{border-color:#e4a0af;color:#e4a0af}
+#moga-ftr .fc h4{font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.4);margin:0 0 16px 0}
+#moga-ftr .fc a{display:block;font-size:13px;color:rgba(255,255,255,.7);text-decoration:none;margin-bottom:10px;transition:color .2s}
+#moga-ftr .fc a:hover{color:#e4a0af}
+#moga-ftr .fc p{font-size:13px;color:rgba(255,255,255,.7);margin:0 0 8px 0;line-height:1.6}
+#moga-ftr .fc strong{color:#fff}
+#moga-ftr .fb{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+#moga-ftr .fb p{font-size:11px;color:rgba(255,255,255,.35);margin:0}
+#moga-ftr .fbg{display:flex;gap:10px}
+#moga-ftr .badge{border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:6px 14px;font-size:10px;color:rgba(255,255,255,.5);letter-spacing:1px}
+@media(max-width:768px){
+  #moga-nl{padding:40px 20px;flex-direction:column}
+  #moga-nl .nl-form{flex-direction:column;width:100%}
+  #moga-ftr{padding:40px 20px 24px}
+  #moga-ftr .fg{grid-template-columns:1fr;gap:0}
+  #moga-ftr .fi{margin-bottom:32px}
+  #moga-ftr .fcols{display:flex;flex-direction:row;gap:0;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:8px;scrollbar-width:none}
+  #moga-ftr .fcols::-webkit-scrollbar{display:none}
+  #moga-ftr .fcols .fc{min-width:120px;flex:1;padding-right:12px}
+  #moga-ftr .fb{flex-direction:column;align-items:flex-start;gap:8px}
+  #moga-ftr .fbg{flex-wrap:wrap}
+}
+</style>
+
+
 <!-- NEWSLETTER -->
 <div id="moga-nl">
   <div>
@@ -670,6 +1740,7 @@ window.bkSubmit=function(){
   </div>
   <div id="moga-nl-ok">Merci ! On vous ecrit tres vite.</div>
 </div>
+
 <!-- FOOTER -->
 <footer id="moga-ftr">
   <div class="fg">
@@ -715,15 +1786,42 @@ window.bkSubmit=function(){
     </div>
   </div>
 </footer>
+
+
+<script>
+function mogaNlSend(){
+  var em = document.getElementById("moga-nl-email").value.trim();
+  if(!em || em.indexOf("@") < 0){ document.getElementById("moga-nl-email").style.border="2px solid #1c3522"; return; }
+  var fd = new FormData();
+  fd.append("access_key","96153601-0afd-4374-b2a3-5ed98edde355");
+  fd.append("subject","Newsletter Mogasurf - Nouvelle inscription");
+  fd.append("from_name","Mogasurf Newsletter");
+  fd.append("Email",em);
+  fd.append("botcheck","");
+  fetch("https://api.web3forms.com/submit",{method:"POST",body:fd})
+  .then(function(r){return r.json();})
+  .then(function(){
+    document.getElementById("moga-nl-form").style.display="none";
+    document.getElementById("moga-nl-ok").style.display="block";
+  });
+}
+</script>
+
+
+
 		<!-- Cookie Compliance for WordPress (formerly Compliance by Hu-manity.co) plugin v3.1.16 https://cookie-compliance.co/ -->
 		<div id="cookie-notice" role="dialog" class="cookie-notice-hidden cookie-revoke-hidden cn-position-bottom" aria-label="Cookie Compliance" style="background-color: rgba(50,50,58,1);"><div class="cookie-notice-container" style="color: #fff"><span id="cn-notice-text" class="cn-text-container">Nous utilisons des cookies pour vous garantir la meilleure expérience sur notre site web. Si vous continuez à utiliser ce site, nous supposerons que vous en êtes satisfait.</span><span id="cn-notice-buttons" class="cn-buttons-container"><button id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie cn-button" aria-label="OK" style="background-color: #00a99d">OK</button></span><button type="button" id="cn-close-notice" data-cookie-set="accept" class="cn-close-icon" aria-label="Non" tabindex="0"></button></div>
+			
 		</div>
 		<!-- / Cookie Compliance for WordPress plugin -->
 </body>
 </html>
+
 <!--
 Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/?utm_source=w3tc&utm_medium=footer_comment&utm_campaign=free_plugin
+
 Mise en cache de page à l’aide de Disk: Enhanced 
 Minified using Disk
-Served from: www.mogasurf.com @ 2026-10-19 20:12:25 by W3 Total Cache
+
+Served from: www.mogasurf.com @ 2026-10-30 09:30:41 by W3 Total Cache
 -->
