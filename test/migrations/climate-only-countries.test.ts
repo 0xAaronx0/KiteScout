@@ -29,3 +29,18 @@ test('inserts exactly the CLIMATE_ONLY countries, idempotent, existing points un
     for (const gone of ['Russia', 'Belarus', 'China']) assert.equal(rows.some(r => r.country === gone), false, gone);
   } finally { await db.close(); }
 });
+
+test('Socotra: one point with the normal wind policy (Aaron 2026-10-30), idempotent', async () => {
+  const { windPolicy, showsWater } = await import('../../src/pipeline/climate.js');
+  const db = new PGlite();
+  try {
+    await db.exec(`CREATE TABLE climate_country_points (country TEXT PRIMARY KEY, is_alias BOOLEAN NOT NULL DEFAULT FALSE,
+      spot_name TEXT NOT NULL, lat DOUBLE PRECISION NOT NULL, lng DOUBLE PRECISION NOT NULL, elevation_m INTEGER,
+      created_at TIMESTAMPTZ NOT NULL DEFAULT NOW());`);
+    const socotra = file('_climate_socotra.sql');
+    await db.exec(socotra); await db.exec(socotra);
+    assert.deepEqual((await db.query('select country, lat, lng, elevation_m from climate_country_points')).rows,
+      [{ country: 'Socotra', lat: 12.69, lng: 53.49, elevation_m: 0 }]);
+    assert.equal(windPolicy('Socotra'), 'default'); assert.equal(showsWater('Socotra'), true);
+  } finally { await db.close(); }
+});
