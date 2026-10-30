@@ -103,11 +103,16 @@ export const showsWater = (country: string): boolean => CLIMATE_ONLY[country]?.w
  * (Floripa, Ibiraquera; best_match matched Bstoked at the Cumbuco peak) + Windfinder + guides.
  * BR-RN keeps the trades longer than the north coast (Gostoso/Galinhos in all 3 models), BR-RS
  * from Tramandaí/Cassino; regions from migration 20261028150000.
+ * ES-CT (Aaron 2026-10-30, "deine Werte, Juni und August auf 58"): ERA5 at Sant Pere Pescador read 7-24 %,
+ * Meteocat stations in town (U2 0-7 %, Roses D4 5-21 %, 2021-2025, same 12 kn / 3 h rule) miss the beach
+ * thermal; Kite Jungle 11-15 days >= 12 kn a month without thermals, the local school a daily summer
+ * thermal (12-20 kn, Jun-Sep) plus Tramuntana spells Sep-May. Estimate between them, only July above 60.
  */
 export const REGION_BSTOKED: Record<string, number[]> = {
   'BR-SC': [35, 30, 30, 30, 25, 25, 25, 40, 50, 50, 50, 40],
   'BR-RN': [50, 50, 20, 15, 30, 45, 75, 85, 95, 95, 85, 80],
   'BR-RS': [45, 40, 35, 35, 30, 30, 30, 45, 50, 55, 55, 50],
+  'ES-CT': [35, 40, 40, 45, 50, 58, 65, 58, 50, 35, 40, 35],
 };
 
 /**

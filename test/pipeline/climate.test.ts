@@ -159,7 +159,11 @@ test('regionBstoked: REGION_BSTOKED rows win and never use the 10 placeholder', 
   const sc = regionBstoked({ lat10: -281, lng10: -486 }, { lat10: -36, lng10: -387 }, b, 'BR-SC');
   assert.deepEqual(sc, REGION_BSTOKED['BR-SC']);
   assert.equal(regionBstoked({ lat10: -228, lng10: -419 }, { lat10: -36, lng10: -387 }, b, 'BR-SE'), null);
-  assert.deepEqual(Object.keys(REGION_BSTOKED).sort(), ['BR-RN', 'BR-RS', 'BR-SC']);
+  assert.deepEqual(Object.keys(REGION_BSTOKED).sort(), ['BR-RN', 'BR-RS', 'BR-SC', 'ES-CT']);
+  // Aaron 2026-10-30: Catalonia (Sant Pere Pescador) replaces ERA5; only July above the 60 % band.
+  const ct = regionBstoked({ lat10: 421, lng10: 31 }, { lat10: 360, lng10: -56 }, b, 'ES-CT');
+  assert.deepEqual(ct, [35, 40, 40, 45, 50, 58, 65, 58, 50, 35, 40, 35]);
+  assert.deepEqual(ct!.map((v, i) => v >= 60 ? i : -1).filter(i => i >= 0), [6]);
   for (const [key, months] of Object.entries(REGION_BSTOKED)) {
     assert.equal(months.length, 12, key);
     assert.ok(months.every(v => Number.isInteger(v) && v >= 0 && v <= 100 && v !== 10), key);
