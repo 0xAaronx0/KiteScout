@@ -39,8 +39,9 @@ ledger + live schema/counts) → project memory. In the KCS repo trust `README.m
   (see "Roles" below).
 - `web/` on **https://kitescout.tech** — serves our **admin surfaces we use daily**
   (`/admin/media` media curation, `/changes` change-approval queue, both `?key=CHANGES_ADMIN_KEY`)
-  plus the **legacy** swipe-based cruise finder at `/`. **kitescout.tech is no longer the product
-  surface — do not build end-user features here**; keep it alive for admin + as fallback.
+  (`/` and `/cruise` redirect to the product; the legacy finder code and `/api/cruise-map` +
+  map.kitescout.tech were removed 2026-10-30). **kitescout.tech is no longer the product
+  surface - do not build end-user features here**; keep it alive for admin.
 - **Supabase is the shared source of truth.** The KCS app reads `app_cruise_offer_cards`
   (view over `cruise_offers` + provider rating fields), orders `images` by `sort` ascending,
   signs each `image.path` from the private `cruise-images` bucket server-side, and plays
@@ -178,16 +179,14 @@ tracked code) — gitignored; don't mistake them for pipeline modules.
 
 ## Admin & Legacy Web App (`web/`)
 
-Next.js 15 (App Router, ESM), live at **https://kitescout.tech** — admin surfaces + legacy finder.
+Next.js 15 (App Router, ESM), live at **https://kitescout.tech** - admin surfaces only.
 
 ```
 web/app/
 ├── admin/media/           # media curation index + per-offer selector (?key=CHANGES_ADMIN_KEY)
 ├── changes/               # change-approval queue (Approve/Dismiss, ?key=CHANGES_ADMIN_KEY)
-├── status/[token]/        # booking-request status page (booking flow, gated)
-├── page.tsx               # legacy swipe finder (/, /cruise alias)
-└── api/                   # cruise-search · cruise-destinations · offer · availability ·
-                           # admin/media select · changes · booking · webhooks · version
+├── data/wind/             # wind data routes (GFS layer JSON, climate)
+└── api/                   # admin/media select · changes (resolve, rerun) · version
 ```
 
 **Deploy (push-to-deploy):** push to `main` touching `web/**` → GitHub Actions builds
@@ -264,9 +263,6 @@ silently drops the other repo's columns. Diff against the live column list first
 (`docs/supabase-live-state.md`). Our `20260710160000_add_standardized_prices` is committed,
 pending apply, verified safe.
 
-Matching rule the legacy web app relies on: a country chip = distinct valid providers with a
-matching `cruise_locations.country`; `match-cruise.ts` and `cruise-destinations.ts` must stay in sync.
-
 ## Environment Variables
 
 ```
@@ -301,5 +297,3 @@ CHANGES_ADMIN_KEY           # gates /admin/media and /changes (set on VPS + web/
   migration).
 - Marketing engine MVP (post queue + approval UI) once Aaron gives the Go.
 - Spot characteristics data (flat/wave, skill level) and provider-record verification UI — not built.
-- The old general chat interface is retired from the UI — cruise is the product
-  (`web/app/api/chat/` still exists as dead legacy code).
