@@ -2,6 +2,7 @@
 // and the station's /kitesurf and /gallery pages recorded 2026-10-21 (trimmed; photos only).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import type { Slot } from '../../src/offers/types.js';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
@@ -31,6 +32,10 @@ test('kahuna: slots by pinned today', async () => {
     ['2026-07-08', '2026-07-10', 540, 'EUR', 'package', 'person', 'on_request'],
   ]);
   assert.deepEqual(await fetchKahunaSlots({ note: () => {}, incomplete: () => {} }, '2026-10-19'), []);
+  // the past camps still report their price for the headline (Aaron 2026-10-29: never "on request" with a printed price)
+  const last: Slot[] = [];
+  await fetchKahunaSlots({ note: () => {}, incomplete: () => {}, lastPublished: s => last.push(...s) }, '2026-10-19');
+  assert.ok(last.length > 0 && last.every(s => s.price === 540 && s.currency === 'EUR' && s.startDate! < '2026-10-19'));
 });
 
 test('kahuna: content', async () => {

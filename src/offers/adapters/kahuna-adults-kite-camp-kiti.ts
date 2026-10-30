@@ -26,6 +26,7 @@
 import { fetchText } from '../http.js';
 import { collapse, iso, parse, parseAmount, todayIso, type HTMLElement } from '../parse.js';
 import type { FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { ALL_DATES } from '../types.js';
 
 export const KAHUNA_URL = 'https://kahunasurfhouse.eu/camps/the-kahuna-summer-surf-camp';
 const KAHUNA_SITE = 'https://kahunasurfhouse.eu';
@@ -110,6 +111,7 @@ export async function fetchKahunaSlots(ctx: FetchContext, today = todayIso()): P
   const past = camps.filter(c => c.start < today);
   if (past.length) ctx.note(`past camp date(s) dropped: ${past.map(c => c.raw).join('; ')}`);
   const slots = buildKahunaSlots(camps, parseKahunaPrice(html), d.INFO ?? [], today);
+  ctx.lastPublished?.(buildKahunaSlots(camps, parseKahunaPrice(html), d.INFO ?? [], ALL_DATES));
   if (slots.length === 0) ctx.note('no future camp date printed yet');
   return slots;
 }

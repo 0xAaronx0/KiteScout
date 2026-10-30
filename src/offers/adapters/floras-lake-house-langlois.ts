@@ -31,6 +31,7 @@
 import { fetchText } from '../http.js';
 import { collapse, iso, monthOf, parse, todayIso } from '../parse.js';
 import type { ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { ALL_DATES } from '../types.js';
 
 const SITE = 'https://floraslake.com';
 export const FL_HOME_URL = `${SITE}/`;
@@ -285,6 +286,7 @@ export const florasLakeHouseLanglois: OfferAdapter = {
     const rooms = parseFlRooms(html);
     if (rooms.length === 0) throw new Error('floras-lake: no room price bands on /rooms-rates (layout or "<year> Rooms & Rates" heading changed?)');
     const slots = buildFlSlots(rooms, sqsCurrency(html) ?? 'USD');
+    ctx.lastPublished?.(buildFlSlots(rooms, sqsCurrency(html) ?? 'USD', ALL_DATES));
     if (slots.length === 0) ctx.note(`all ${parseFlYear(html)} season bands are past; price on request until the next table is published`);
     return slots;
   },

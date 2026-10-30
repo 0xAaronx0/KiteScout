@@ -23,7 +23,8 @@
 // durationDays = 9 (the Perth to Exmouth one-way trip the listing is named after; the return trip is 14 days).
 // ---------------------------------------------------------------------------
 import { clean, daysInclusive, parseAmount, parseRange, todayIso } from '../parse.js';
-import type { Availability, ItinerarySpot, OfferAdapter, OfferContent, OperatorRef, Slot } from '../types.js';
+import type { Availability, FetchContext, ItinerarySpot, OfferAdapter, OfferContent, OperatorRef, Slot } from '../types.js';
+import { ALL_DATES } from '../types.js';
 import { memoPage, parseWooVariations, wooOptionLabels, wpImages, wpLines, type WooVariation } from './kite-republic-aitutaki-winter-escape.js';
 
 export const R2A_SITE = 'https://www.road2adventure.com.au';
@@ -153,13 +154,14 @@ export function parseR2aContent(html: string, today = todayIso()): OfferContent 
   };
 }
 
-export async function fetchR2aSlots(today: string, ctx?: { note(t: string): void }): Promise<Slot[]> {
+export async function fetchR2aSlots(today: string, ctx?: Pick<FetchContext, 'note' | 'lastPublished'>): Promise<Slot[]> {
   const html = await memoPage(R2A_KITE_SAFARI_URL);
   const deps = parseR2aDepartures(html);
   if (!parseWooVariations(html).length) throw new Error('road2adventure: no variation data on the page (layout changed?)');
   const currency = r2aCurrency(html);
   if (!currency) ctx?.note('no shop currency found on the page');
   const slots = buildR2aSlots(deps, currency, today);
+  ctx?.lastPublished?.(buildR2aSlots(deps, currency, ALL_DATES));
   const past = deps.filter(d => d.start < today);
   if (past.length) ctx?.note(`${past.length} past departure(s) dropped (${[...new Set(past.map(d => d.start))].join(', ')})`);
   return slots;

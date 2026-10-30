@@ -22,7 +22,8 @@
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { imageCandidates, iso, monthOf, parseAmount, todayIso } from '../parse.js';
-import type { OfferAdapter, OfferContent, OperatorRef, Slot } from '../types.js';
+import type { FetchContext, OfferAdapter, OfferContent, OperatorRef, Slot } from '../types.js';
+import { ALL_DATES } from '../types.js';
 import { wixLines } from './kite-buen-hombre-eco-lodge.js';
 
 export const KSA_SITE = 'https://www.kitesurfadventure.com.br';
@@ -151,11 +152,12 @@ export function ksaPriceLine(trip: KsaTrip): string {
   return ` Last published prices: BRL ${fmt(min)} to ${fmt(max)} per person depending on package and room (first price lot).`;
 }
 
-export async function fetchKsaSlots(url: string, titleRe: RegExp, today: string, ctx?: { note(t: string): void }): Promise<Slot[]> {
+export async function fetchKsaSlots(url: string, titleRe: RegExp, today: string, ctx?: Pick<FetchContext, 'note' | 'lastPublished'>): Promise<Slot[]> {
   const trip = parseKsaTrip(await ksaPage(url), titleRe);
   if (!trip.year || trip.turmas.length === 0) throw new Error(`kitesurf-adventure: no "<year>" title or "Turma" dates found on ${url} (layout changed?)`);
   if (trip.prices.length === 0) throw new Error(`kitesurf-adventure: no "Quarto ...: R$" prices found on ${url} (layout changed?)`);
   const slots = buildKsaSlots(trip, today);
+  ctx?.lastPublished?.(buildKsaSlots(trip, ALL_DATES));
   if (slots.length === 0) ctx?.note(`all ${trip.year} turmas are past (${trip.turmas.map(x => x.start).join(', ')}); next dates not published yet`);
   return slots;
 }

@@ -80,6 +80,8 @@ export function buildKmSlots(p: KmPackage, today: string): Slot[] {
     key: r.key,
     startDate: p.validFrom,
     endDate: p.validTo,
+    // A validity window, not a departure: it stays bookable until it ends (as a 'day' slot it dropped out on validFrom).
+    datePrecision: 'season' as const,
     unit: r.unit,
     price: p.price,
     currency: p.price !== null ? p.currency ?? 'EUR' : null,

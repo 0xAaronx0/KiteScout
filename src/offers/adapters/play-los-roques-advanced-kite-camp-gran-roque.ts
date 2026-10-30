@@ -20,7 +20,8 @@
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { imageCandidates, iso, monthOf, parseAmount, todayIso } from '../parse.js';
-import type { OfferAdapter, OfferContent, OperatorRef, Slot } from '../types.js';
+import type { FetchContext, OfferAdapter, OfferContent, OperatorRef, Slot } from '../types.js';
+import { ALL_DATES } from '../types.js';
 import { wixLines } from './kite-buen-hombre-eco-lodge.js';
 
 export const PLR_SITE = 'https://www.playlosroques.com';
@@ -179,11 +180,12 @@ export function parsePlrAdvancedContent(html: string, today = todayIso()): Offer
   };
 }
 
-export async function fetchPlrAdvancedSlots(today: string, ctx?: { note(t: string): void }): Promise<Slot[]> {
+export async function fetchPlrAdvancedSlots(today: string, ctx?: Pick<FetchContext, 'note' | 'lastPublished'>): Promise<Slot[]> {
   const html = await plrPage(PLR_ADVANCED_URL);
   const camps = parsePlrCamps(html);
   if (camps.length === 0) throw new Error('play-los-roques advanced: no "KITE CAMP n - <dates>, <year>" block found (layout changed?)');
   const slots = buildPlrCampSlots(camps, plrCurrency(html), today);
+  ctx?.lastPublished?.(buildPlrCampSlots(camps, plrCurrency(html), ALL_DATES));
   if (slots.length === 0) ctx?.note(`all printed camps are past (${camps.map(c => c.start).join(', ')}); next dates not published yet`);
   return slots;
 }
