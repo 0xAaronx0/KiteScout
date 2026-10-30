@@ -358,6 +358,18 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'operator-reviews': {
+      // Package operators' review links (bstoked, TripAdvisor, Google): dry run only, results to --out.
+      if (!args.includes('--dry-run')) { console.error('operator-reviews writes nothing yet: pass --dry-run (and --out f.json).'); process.exitCode = 1; break; }
+      const { runOperatorReviewsDryRun } = await import('./pipeline/extract-cruise-reviews.js');
+      const results = await runOperatorReviewsDryRun({ domain: flagStr('--domain'), limit: positionalLimit(), only: flagStr('--only') });
+      const out = flagStr('--out');
+      if (out) writeFileSync(out, JSON.stringify(results, null, 2));
+      const by = (k: string) => results.filter(r => r.links[k]).length;
+      console.log(`${results.length} operators: ${results.filter(r => r.found).length} with a review link (bstoked ${by('bstoked_url')}, TripAdvisor ${by('tripadvisor_url')}, Google ${by('google_url')}), ${results.filter(r => r.error).length} errors${out ? ` -> ${out}` : ''}`);
+      break;
+    }
+
     case 'region-conditions': {
       const { regions } = await runRegionConditions();
       console.log(`Done: conditions built for ${regions} countries.`);
