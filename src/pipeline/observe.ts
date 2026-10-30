@@ -18,7 +18,7 @@
 // Free text is never written; only STATE_FIELDS (cruise-state.ts).
 // ---------------------------------------------------------------------------
 import { supabase } from '../lib/supabase.js';
-import { anthropic, ANALYSIS_MODEL, EXTRACTION_MODEL } from '../lib/anthropic.js';
+import { anthropic, EXTRACTION_MODEL } from '../lib/anthropic.js';
 import { withRetry } from '../lib/retry.js';
 import { sanitizeDeep, htmlToText, collapse } from '../lib/content.js';
 import { fetchPageConditional } from '../lib/fetchPage.js';
@@ -141,10 +141,13 @@ export function parseLlmRead(text: string, slugs: Set<string>): PageRead | null 
 async function llmRead(url: string, text: string, offers: OfferRow[], ownSlugs: Set<string>): Promise<PageRead | null> {
   const list = offers.map(o => `- slug: "${o.slug}", title: "${o.title}"${ownSlugs.has(o.slug) ? ' (OWN PAGE)' : ''}`).join('\n');
   const msg = await withRetry(() => anthropic.messages.create({
-    // a page that is no offer's own page is only read for NEW products → cheaper model
-    model: ownSlugs.size > 0 ? ANALYSIS_MODEL : EXTRACTION_MODEL,
+    // facts only (prices, dates, availability), guarded by 2 sightings + review rules: cheap model
+    model: EXTRACTION_MODEL,
     max_tokens: 4000,
     temperature: 0,
+    // DeepSeek reasons by default and its thinking tokens count against max_tokens: long schedules
+    // came back as truncated JSON (4 of 11 reads on 2026-10-30). A fact read needs no reasoning.
+    thinking: { type: 'disabled' },
     system: [{ type: 'text', text: PROMPT }],
     messages: [{ role: 'user', content: `Page: ${url}\nToday: ${new Date().toISOString().slice(0, 10)}\n\nOffers:\n${list || '(none yet)'}\n\nPage text:\n${text.slice(0, 60000)}` }],
   }));

@@ -1,7 +1,7 @@
 import pLimit from 'p-limit';
 import { parse } from 'node-html-parser';
 import { supabase } from '../lib/supabase.js';
-import { anthropic, ANALYSIS_MODEL } from '../lib/anthropic.js';
+import { anthropic, COMPLEX_MODEL } from '../lib/anthropic.js';
 import { extract as tavilyExtract, extractImages as tavilyExtractImages } from '../lib/tavily.js';
 import { fetchPageConditional } from '../lib/fetchPage.js';
 import { htmlToText, collapse, contentHash, sanitizeForPg, sanitizeDeep } from '../lib/content.js';
@@ -449,7 +449,7 @@ export async function extractOffers(
   try {
     const msg = await withRetry(() =>
       anthropic.messages.create({
-        model: ANALYSIS_MODEL,
+        model: COMPLEX_MODEL,
         max_tokens: 16000,  // multi-offer providers with rich fields exceed 8192 → truncated JSON
         system: [{ type: 'text', text: EXTRACTION_PROMPT, cache_control: { type: 'ephemeral' } }],
         messages: [
