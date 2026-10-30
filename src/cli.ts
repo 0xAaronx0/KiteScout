@@ -5,7 +5,6 @@ import { runSearch } from './pipeline/search.js';
 import { runExtract } from './pipeline/extract.js';
 import { runReextract } from './pipeline/reextract.js';
 import { runDedupe } from './pipeline/dedupe.js';
-import { generateMap } from './pipeline/map.js';
 import { runVerify } from './pipeline/verify.js';
 import { runExtractCruiseLocations } from './pipeline/extract-cruise-locations.js';
 import { runExtractCruiseOffers, runReviewCruiseOffers } from './pipeline/extract-cruise-offers.js';
@@ -255,10 +254,6 @@ async function main(): Promise<void> {
 
     case 'blocklist-candidates':
       await blocklistCandidates(parseInt(args[0] ?? '50', 10));
-      break;
-
-    case 'map':
-      await generateMap(args[0] ?? 'map.html');
       break;
 
     case 'verify': {
@@ -713,7 +708,6 @@ async function main(): Promise<void> {
       console.log('  geo-verify [--offer ids]  Verify pilot camps against operator pages, write publishing/manifest');
       console.log('  reextract [n]             Re-extract providers missing location data (batch n, default 20)');
       console.log('  blocklist-candidates [n]  Show top n most-rejected domains (default 50)');
-      console.log('  map [file]                Generate provider map HTML (default: map.html)');
       console.log('  verify [n]                Re-verify all providers + fill contact gaps (batch n, default 20)');
       console.log('  cruise-locations          Extract validated cruise-only locations for all cruise providers');
       console.log('  cruise-offers             Extract structured cruise offers (+ curated images) for all cruise providers');

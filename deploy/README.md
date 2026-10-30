@@ -8,7 +8,7 @@ behind Traefik, which terminates TLS with Let's Encrypt.
 | URL | Service |
 |---|---|
 | https://kitescout.tech, https://www.kitescout.tech | KiteScout web app |
-| https://map.kitescout.tech | cruise-map (static nginx) |
+| ~~https://map.kitescout.tech~~ | cruise-map (static nginx): **retired 2026-10-30**, VPS project stopped (not deleted), answers 404 |
 
 ## Push-to-deploy
 

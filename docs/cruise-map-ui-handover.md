@@ -1,5 +1,10 @@
 # Cruise World Map — UI Handover
 
+> **RETIRED 2026-10-30.** `map.kitescout.tech` is shut down (VPS project `cruise-map` stopped,
+> answers 404) and `kitescout.tech/api/cruise-map`, `web/lib/cruise-map*.ts` and the `pnpm cli map`
+> generator (`src/pipeline/map.ts`) are removed. The product map lives in KCS (`/map`). Kept as
+> history only.
+
 > **📜 PARTIALLY STALE (written 2026-06-26).** Still the reference for the
 > `map.kitescout.tech` implementation, but: the §5 digest-pin deploy caveat describes a bug
 > **fixed 2026-06-26** (compose uses `:latest` + `/api/version` SHA-verify — see memory

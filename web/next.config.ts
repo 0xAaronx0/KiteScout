@@ -4,8 +4,9 @@ const config: NextConfig = {
   output: 'standalone',
 
   // The legacy end-user finder is decommissioned (2026-07-12) — kitescout.tech
-  // is admin-only (/admin/media, /changes) + the /api/cruise-map endpoint for
-  // the standalone map shell. Stray visitors go to the real product.
+  // is admin-only (/admin/media, /changes). /api/cruise-map and the standalone
+  // map (map.kitescout.tech) were retired 2026-10-30. Stray visitors go to the
+  // real product.
   async redirects() {
     return [
       { source: '/', destination: 'https://kitescout.bstoked.net', permanent: false },
