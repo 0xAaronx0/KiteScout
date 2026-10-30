@@ -136,3 +136,33 @@ jobs:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: pnpm cli bookable-months
+
+  operator-reviews:
+    # Review links (bstoked, TripAdvisor, Google) for package operators never checked yet, i.e. new
+    # listings (Aaron 2026-10-30). Same search and guards as `operator-reviews --apply`; at most 30 per
+    # run. Own job: the search renders operator homepages (Chromium) and calls Tavily + the verifier.
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install
+
+      - run: pnpm exec playwright install chromium --with-deps
+
+      - name: Review links for new package operators
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: pnpm cli operator-reviews --new 30

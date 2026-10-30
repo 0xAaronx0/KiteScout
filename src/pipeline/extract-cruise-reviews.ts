@@ -598,7 +598,7 @@ export async function runExtractCruiseReviews(
 // listings were never checked. This collects the same matches for them WITHOUT writing: the package view
 // still has no review columns for operators (a migration comes first), and Aaron reviews the list first.
 export async function runOperatorReviewsDryRun(
-  opts: { domain?: string; limit?: number; only?: string } = {},
+  opts: { domain?: string; limit?: number; only?: string; unchecked?: boolean } = {},
 ): Promise<OperatorReviewResult[]> {
   const { data: offers, error: offerError } = await supabase.from('package_offers')
     .select('operator_id,title').eq('is_active', true).not('operator_id', 'is', null);
@@ -611,6 +611,8 @@ export async function runOperatorReviewsDryRun(
     let query = supabase.from('providers').select('id, name, root_domain, website_url, primary_country, status')
       .in('id', ids.slice(i, i + 100)).not('status', 'in', '(dead,duplicate)');
     if (opts.domain) query = query.eq('root_domain', opts.domain);
+    // --new: only operators never checked (new listings); checked ones keep their reviewed values.
+    if (opts.unchecked) query = query.is('reviews_checked_at', null);
     const { data, error } = await query;
     if (error) throw error;
     operators.push(...(data ?? []));

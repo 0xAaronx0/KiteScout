@@ -362,6 +362,16 @@ async function main(): Promise<void> {
       // Package operators' review links (bstoked, TripAdvisor, Google). Two steps (Aaron 2026-10-30):
       //   --dry-run --out f.json   search, write only the file (for review)
       //   --apply f.json [--skip domain:source,...]   write exactly that reviewed file to public.providers
+      // --new [n]: the daily job for operators never checked (new listings): search and write right away, with the
+      // same guards; at most n (default 30) per run. Aaron 2026-10-30: new operators get reviews without a manual step.
+      if (args.includes('--new')) {
+        const { runOperatorReviewsDryRun, applyOperatorReviews } = await import('./pipeline/extract-cruise-reviews.js');
+        const results = await runOperatorReviewsDryRun({ unchecked: true, limit: positionalLimit() ?? 30 });
+        const r = await applyOperatorReviews(results);
+        console.log(`operator-reviews --new: ${results.length} unchecked operators searched, ${r.written} written, ${r.withLinks} with a review link, ${results.filter(x => x.error).length} errors; dropped: ${r.dropped.join(', ') || 'none'}`);
+        for (const x of results.filter(x => x.found)) console.log(`  ${x.domain}: ${Object.entries(x.links).filter(([k, v]) => k.endsWith('_url') && v).map(([k]) => k.replace('_url', '')).join(', ')}`);
+        break;
+      }
       const apply = flagStr('--apply');
       if (apply) {
         const { applyOperatorReviews } = await import('./pipeline/extract-cruise-reviews.js');
