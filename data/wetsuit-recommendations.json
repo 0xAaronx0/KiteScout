@@ -1,0 +1,36 @@
+{
+  "version": "2026-10-29",
+  "sport": "kitesurf",
+  "doc": "docs/wetsuit-recommendations.md",
+  "code": "src/lib/wetsuit.ts",
+  "inputs": {
+    "waterC": "mean sea surface temperature of the month (offer_climate_stats.water_temp_months)",
+    "airMaxC": "mean daily max air temperature of the month (offer_climate_stats.air_temp_max_months)",
+    "windKn": "mean 10 m wind on kiteable days, knots - not in our data yet, pass null"
+  },
+  "rule": [
+    "base level = first level (warm to cold) whose waterMinC <= waterC; the last level has no lower bound",
+    "airStep = 1 when airMaxC < base.waterMinC + airMarginC (never for the coldest level)",
+    "windStep = 1 when windKn >= strongWindKn",
+    "level = base + airStep + windStep, capped at the coldest level",
+    "boots / gloves / hood from waterC: below recommendedBelowC = recommended, below optionalBelowC = optional, else no",
+    "airMaxC < coldAirC makes gloves and hood recommended"
+  ],
+  "levels": [
+    { "level": "lycra", "label": "Boardshorts or bikini + Lycra", "waterMinC": 25 },
+    { "level": "shorty", "label": "Shorty or springsuit (1-2 mm)", "waterMinC": 22 },
+    { "level": "three_quarter", "label": "3/4 suit: short-arm full or long john (2 mm)", "waterMinC": 19 },
+    { "level": "full_3_2", "label": "Full suit 3/2", "waterMinC": 16 },
+    { "level": "full_4_3", "label": "Full suit 4/3", "waterMinC": 12 },
+    { "level": "full_5_4", "label": "Full suit 5/4", "waterMinC": 8 },
+    { "level": "full_6_5", "label": "Full suit 6/5, hooded", "waterMinC": null }
+  ],
+  "airMarginC": 3,
+  "strongWindKn": 20,
+  "coldAirC": 10,
+  "accessories": {
+    "boots": { "recommendedBelowC": 12, "optionalBelowC": 15 },
+    "gloves": { "recommendedBelowC": 9, "optionalBelowC": 12 },
+    "hood": { "recommendedBelowC": 10, "optionalBelowC": 13 }
+  }
+}
