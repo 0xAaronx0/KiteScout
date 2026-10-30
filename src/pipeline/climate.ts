@@ -54,7 +54,7 @@ export interface ClimateCell {
  * - 'no-era5': no ERA5 fill until the snowkite question is settled (Norway Oct/Nov would read 82/81).
  * Everywhere else ('default'): Bstoked where real, ERA5 only for its gaps.
  */
-export type WindPolicy = 'default' | 'era5' | 'no-era5';
+export type WindPolicy = 'default' | 'era5' | 'no-era5' | 'none';
 export const WIND_POLICY: Record<string, WindPolicy> = {
   India: 'era5', 'South Korea': 'era5', Nicaragua: 'era5', Norway: 'no-era5',
   // 2026-10-23: ERA5 at Nitinat Lake (CA-BC) reads 0-3 % in summer; the sea grid point misses
@@ -67,7 +67,25 @@ export const WIND_POLICY: Record<string, WindPolicy> = {
   'Antigua and Barbuda': 'era5', Bahamas: 'era5', Barbados: 'era5', 'Saint Martin': 'era5',
   'Turks and Caicos Islands': 'era5', Portugal: 'era5', Cyprus: 'era5',
 };
-export const windPolicy = (country: string): WindPolicy => WIND_POLICY[country] ?? 'default';
+/**
+ * Countries coloured for temperature and UV only (Aaron 2026-10-30): grey areas next to our kite regions, no kite
+ * offers. Never wind (no Bstoked row, and an ERA5 grid point says little without a kite spot); water only where it
+ * is the sea people would ride (Caribbean, South-East Asia / Pacific), not for Europe's inland or micro states.
+ * Points from migration 20261030160000_climate_only_countries.
+ */
+export const CLIMATE_ONLY: Record<string, { water: boolean }> = Object.fromEntries([
+  ...['Haiti', 'Jamaica', 'Dominica', 'Trinidad and Tobago', 'Aruba', 'Curaçao', 'Sint Maarten', 'Anguilla', 'Montserrat',
+    'Saint Kitts and Nevis', 'Cayman Islands', 'United States Virgin Islands', 'Saint Barthélemy',
+    'Myanmar', 'Laos', 'Cambodia', 'Malaysia', 'Brunei', 'East Timor', 'Singapore', 'Solomon Islands', 'Vanuatu', 'New Caledonia']
+    .map(country => [country, { water: true }]),
+  // Aaron 2026-10-30: Russia and Belarus stay grey.
+  ...['Andorra', 'Bosnia and Herzegovina', 'Czech Republic', 'Hungary', 'Kosovo', 'Liechtenstein', 'Luxembourg',
+    'Malta', 'Moldova', 'Monaco', 'San Marino', 'Serbia', 'Slovakia', 'Vatican City']
+    .map(country => [country, { water: false }]),
+]);
+export const windPolicy = (country: string): WindPolicy => CLIMATE_ONLY[country] ? 'none' : WIND_POLICY[country] ?? 'default';
+/** false for climate-only countries without water (Europe): their rows carry no water temperature */
+export const showsWater = (country: string): boolean => CLIMATE_ONLY[country]?.water ?? true;
 
 /**
  * Region wind rows kept as source 'bstoked' although wind_stats (per country) has no row for them
@@ -131,7 +149,7 @@ export function combineWind(
   policy: WindPolicy = 'default',
 ) {
   const months: (number | null)[] = [], sources: ('bstoked' | 'era5' | null)[] = [];
-  const useBstoked = policy !== 'era5', useEra5 = policy !== 'no-era5';
+  const useBstoked = policy !== 'era5' && policy !== 'none', useEra5 = policy !== 'no-era5' && policy !== 'none';
   for (let i = 0; i < 12; i++) {
     if (useBstoked && bstoked && bstoked[i] != null && bstoked[i] !== 10) { months.push(bstoked[i]); sources.push('bstoked'); }
     else if (useEra5 && era5 && era5[i] != null && water && water[i] != null && water[i] >= 10) { months.push(era5[i]); sources.push('era5'); }

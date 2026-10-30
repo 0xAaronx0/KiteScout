@@ -18,7 +18,7 @@
 import { supabase } from '../lib/supabase.js';
 import {
   type ClimateCell, type OfferRef, type PortPoint, RateLimitError,
-  capCloudyUv, combineWind, fetchCellClimate, mapDisplay, regionBstoked, windPolicy, findCell, medianOfferSpot, portKey, resolvePoint, round10,
+  capCloudyUv, combineWind, fetchCellClimate, mapDisplay, regionBstoked, showsWater, windPolicy, findCell, medianOfferSpot, portKey, resolvePoint, round10,
 } from './climate.js';
 import { COPERNICUS_SOURCES, era5WindSeries, fetchCellsCopernicus, kiteableShare, normalizeToken } from './copernicus.js';
 
@@ -238,7 +238,7 @@ export async function runClimateStats(opts: { dryRun?: boolean; maxFetch?: numbe
       country: cp.country, is_alias: cp.is_alias, point_basis: 'kite_spot', point_name: cp.spot_name,
       lat: cp.lat, lng: cp.lng, lat10: cell.lat10, lng10: cell.lng10,
       air_temp_min_months: cell.air_temp_min_months, air_temp_max_months: cell.air_temp_max_months,
-      water_temp_months: cell.water_temp_months,
+      water_temp_months: showsWater(cp.country) ? cell.water_temp_months : null,
       uv_months: cell.uv_months, uv_clear_sky_months: cell.uv_clear_sky_months,
       sources: cell.sources, updated_at: new Date().toISOString(),
       ...combineWind(bstoked.get(cp.country) ?? null, cell.wind_kiteable_months, cell.water_temp_months, windPolicy(cp.country)),

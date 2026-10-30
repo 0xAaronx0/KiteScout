@@ -162,3 +162,15 @@ test('regionBstoked: REGION_BSTOKED rows win and never use the 10 placeholder', 
   assert.deepEqual(w.wind_months, REGION_BSTOKED['BR-SC']);
   assert.ok(w.wind_source_months.every(s => s === 'bstoked'));
 });
+
+test('climate-only countries (Aaron 2026-10-30): never wind, water only outside Europe, Russia and Belarus excluded', async () => {
+  const { CLIMATE_ONLY, combineWind, showsWater, windPolicy } = await import('../../src/pipeline/climate.js');
+  assert.equal(windPolicy('Jamaica'), 'none'); assert.equal(windPolicy('Czech Republic'), 'none'); assert.equal(windPolicy('Laos'), 'none');
+  assert.equal(windPolicy('Portugal'), 'era5'); assert.equal(windPolicy('Greece'), 'default');
+  assert.deepEqual(combineWind([55, ...Array(11).fill(60)], Array(12).fill(40), Array(12).fill(26), 'none'),
+    { wind_months: Array(12).fill(null), wind_source_months: Array(12).fill(null) });
+  assert.equal(showsWater('Jamaica'), true); assert.equal(showsWater('Malaysia'), true);
+  assert.equal(showsWater('Malta'), false); assert.equal(showsWater('Hungary'), false); assert.equal(showsWater('Greece'), true);
+  for (const country of ['Russia', 'Belarus', 'China']) assert.equal(country in CLIMATE_ONLY, false, country);
+  assert.equal(Object.keys(CLIMATE_ONLY).length, 37);
+});
