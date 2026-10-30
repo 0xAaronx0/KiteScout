@@ -10,6 +10,11 @@ const VARIANTS: [number, number][] = [10, 11, 12, 13, 14, 15, 16].flatMap(kn => 
 /** candidate points not in the DB yet (proposals) */
 const CANDIDATES = [
   { key: 'cand:IT-SICILY', country: 'Italy', region: 'Sicily', name: 'Lo Stagnone, Marsala', lat: 37.87, lng: 12.47 },
+  // 2026-10-30 (Aaron): UAE and Qatar listings need wind_stats rows (no bstoked data)
+  { key: 'cand:AE-UAQ', country: 'United Arab Emirates', region: null, name: 'Khor Al Yeefrah, Umm Al Quwain', lat: 25.54, lng: 55.63 },
+  { key: 'cand:AE-DXB', country: 'United Arab Emirates', region: null, name: 'Kite Beach, Dubai', lat: 25.16, lng: 55.20 },
+  { key: 'cand:AE-AUH', country: 'United Arab Emirates', region: null, name: 'Yas Island north, Abu Dhabi', lat: 24.52, lng: 54.60 },
+  { key: 'cand:QA-FKB', country: 'Qatar', region: null, name: 'Fuwairit Kite Beach', lat: 26.02, lng: 51.38 },
 ];
 
 export async function runWindCheck(): Promise<void> {
