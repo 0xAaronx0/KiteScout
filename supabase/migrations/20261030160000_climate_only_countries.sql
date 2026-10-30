@@ -3,7 +3,8 @@
 -- ============================================================
 -- Aaron 2026-10-30: grey countries/territories get the map's climate layers, never wind:
 --   Caribbean (air, water, UV), Europe except Russia and Belarus (air and UV, no water),
---   South-East Asia / Pacific except China (air, water, UV).
+--   South-East Asia / Pacific except China (air, water, UV), and Northern Cyprus like the rest of Cyprus
+--   (air, water, UV on Cyprus's own point).
 -- One point per country in climate_country_points; `pnpm cli climate-stats` fetches the cells
 -- (Copernicus) and writes country_climate_stats. Wind and (for Europe) water are left out by
 -- CLIMATE_ONLY in src/pipeline/climate.ts (wind policy 'none', showsWater=false); the list there
@@ -15,8 +16,8 @@
 -- `pnpm cli climate-uv-cloudy` afterwards (CAMS); until then the cloud switch shows clear sky.
 --
 -- Additive only. Safe to re-run (ON CONFLICT DO NOTHING). Rollback:
---   DELETE FROM country_climate_stats  WHERE country IN (<the 37 names below>);
---   DELETE FROM climate_country_points WHERE country IN (<the 37 names below>);
+--   DELETE FROM country_climate_stats  WHERE country IN (<the 38 names below>);
+--   DELETE FROM climate_country_points WHERE country IN (<the 38 names below>);
 -- ============================================================
 
 INSERT INTO climate_country_points (country, is_alias, spot_name, lat, lng, elevation_m) VALUES
@@ -59,5 +60,8 @@ INSERT INTO climate_country_points (country, is_alias, spot_name, lat, lng, elev
   ('Singapore',                    FALSE, 'East Coast Park',               1.30,  103.91,    0),
   ('Solomon Islands',              FALSE, 'Honiara',                      -9.43,  159.95,    0),
   ('Vanuatu',                      FALSE, 'Port Vila',                   -17.74,  168.31,    0),
-  ('New Caledonia',                FALSE, 'Anse Vata, Nouméa',           -22.30,  166.45,    0)
+  ('New Caledonia',                FALSE, 'Anse Vata, Nouméa',           -22.30,  166.45,    0),
+  -- Northern Cyprus: the same colours as the rest of Cyprus (Cyprus's own point, Kiti), only without wind;
+  -- KCS maps the atlas unit 'Turkish Republic of Northern Cyprus' onto this row
+  ('Northern Cyprus',              FALSE, 'Kiti, Larnaca',                34.82,   33.55,    0)
 ON CONFLICT (country) DO NOTHING;

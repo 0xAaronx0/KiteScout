@@ -76,7 +76,9 @@ export const WIND_POLICY: Record<string, WindPolicy> = {
 export const CLIMATE_ONLY: Record<string, { water: boolean }> = Object.fromEntries([
   ...['Haiti', 'Jamaica', 'Dominica', 'Trinidad and Tobago', 'Aruba', 'Curaçao', 'Sint Maarten', 'Anguilla', 'Montserrat',
     'Saint Kitts and Nevis', 'Cayman Islands', 'United States Virgin Islands', 'Saint Barthélemy',
-    'Myanmar', 'Laos', 'Cambodia', 'Malaysia', 'Brunei', 'East Timor', 'Singapore', 'Solomon Islands', 'Vanuatu', 'New Caledonia']
+    'Myanmar', 'Laos', 'Cambodia', 'Malaysia', 'Brunei', 'East Timor', 'Singapore', 'Solomon Islands', 'Vanuatu', 'New Caledonia',
+    // Aaron 2026-10-30: the same colours as the rest of Cyprus (its point, Kiti), only without wind
+    'Northern Cyprus']
     .map(country => [country, { water: true }]),
   // Aaron 2026-10-30: Russia and Belarus stay grey.
   ...['Andorra', 'Bosnia and Herzegovina', 'Czech Republic', 'Hungary', 'Kosovo', 'Liechtenstein', 'Luxembourg',

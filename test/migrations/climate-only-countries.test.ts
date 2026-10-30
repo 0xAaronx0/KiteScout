@@ -20,7 +20,7 @@ test('inserts exactly the CLIMATE_ONLY countries, idempotent, existing points un
     await db.exec(migration);
     await db.exec(migration);
     const rows = (await db.query<{ country: string; lat: number; lng: number; elevation_m: number }>('select country, lat, lng, elevation_m from climate_country_points')).rows;
-    assert.equal(rows.length, 38);
+    assert.equal(rows.length, 39);
     assert.deepEqual(rows.filter(r => r.country !== 'Greece').map(r => r.country).sort(), Object.keys(CLIMATE_ONLY).sort());
     for (const r of rows) {
       assert.ok(Math.abs(r.lat) <= 60 && Math.abs(r.lng) <= 180, r.country);

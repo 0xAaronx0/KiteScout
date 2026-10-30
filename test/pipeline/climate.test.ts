@@ -172,5 +172,5 @@ test('climate-only countries (Aaron 2026-10-30): never wind, water only outside 
   assert.equal(showsWater('Jamaica'), true); assert.equal(showsWater('Malaysia'), true);
   assert.equal(showsWater('Malta'), false); assert.equal(showsWater('Hungary'), false); assert.equal(showsWater('Greece'), true);
   for (const country of ['Russia', 'Belarus', 'China']) assert.equal(country in CLIMATE_ONLY, false, country);
-  assert.equal(Object.keys(CLIMATE_ONLY).length, 37);
+  assert.equal(Object.keys(CLIMATE_ONLY).length, 38); assert.equal(windPolicy('Northern Cyprus'), 'none'); assert.equal(showsWater('Northern Cyprus'), true);
 });
