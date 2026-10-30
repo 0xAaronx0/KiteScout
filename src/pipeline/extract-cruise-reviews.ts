@@ -7,6 +7,8 @@ import { fetchPageConditional } from '../lib/fetchPage.js';
 import { htmlToText, collapse } from '../lib/content.js';
 import { withRetry } from '../lib/retry.js';
 import { renderPageEx, closeRenderer, type RenderCookie } from '../lib/render.js';
+import { operatorReviewPatch, SOURCE_COLUMNS, type OperatorReviewResult } from './operator-review-patch.js';
+export type { OperatorReviewResult } from './operator-review-patch.js';
 
 const CONCURRENCY = 3;
 
@@ -595,10 +597,6 @@ export async function runExtractCruiseReviews(
 // Aaron 2026-10-30: the review search ran for cruise providers only; the 292 operators behind the package
 // listings were never checked. This collects the same matches for them WITHOUT writing: the package view
 // still has no review columns for operators (a migration comes first), and Aaron reviews the list first.
-export type OperatorReviewResult = {
-  operatorId: string; name: string | null; domain: string; country: string | null; listings: string[];
-  found: number; links: Record<string, unknown>; notes: string[]; error?: string;
-};
 export async function runOperatorReviewsDryRun(
   opts: { domain?: string; limit?: number; only?: string } = {},
 ): Promise<OperatorReviewResult[]> {
@@ -642,4 +640,23 @@ export async function runOperatorReviewsDryRun(
   console.log();
   await closeRenderer();
   return results.sort((a, b) => a.domain.localeCompare(b.domain));
+}
+
+/** Writes reviewed dry-run results to public.providers (needs migration 20261030140000_operator_reviews). */
+export async function applyOperatorReviews(results: OperatorReviewResult[], opts: { skip?: string[] } = {}): Promise<{ written: number; withLinks: number; dropped: string[] }> {
+  const probe = await supabase.from('providers').select('google_url').limit(1);
+  if (probe.error) throw new Error(`providers has no review columns (run migration 20261030140000_operator_reviews first): ${probe.error.message}`);
+  const skip = new Set(opts.skip ?? []);
+  const checkedAt = new Date().toISOString();
+  let written = 0, withLinks = 0; const dropped: string[] = [];
+  for (const result of results) {
+    if (result.error) continue;
+    const patch = operatorReviewPatch(result, skip, checkedAt);
+    for (const src of Object.keys(SOURCE_COLUMNS)) if (result.links[`${src}_url`] && !patch[`${src}_url`]) dropped.push(`${result.domain}:${src}`);
+    const { error } = await supabase.from('providers').update(patch).eq('id', result.operatorId);
+    if (error) throw new Error(`providers update failed for ${result.domain}: ${error.message}`);
+    written++;
+    if (Object.keys(SOURCE_COLUMNS).some(src => patch[`${src}_url`])) withLinks++;
+  }
+  return { written, withLinks, dropped };
 }

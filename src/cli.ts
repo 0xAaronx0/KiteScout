@@ -359,8 +359,18 @@ async function main(): Promise<void> {
     }
 
     case 'operator-reviews': {
-      // Package operators' review links (bstoked, TripAdvisor, Google): dry run only, results to --out.
-      if (!args.includes('--dry-run')) { console.error('operator-reviews writes nothing yet: pass --dry-run (and --out f.json).'); process.exitCode = 1; break; }
+      // Package operators' review links (bstoked, TripAdvisor, Google). Two steps (Aaron 2026-10-30):
+      //   --dry-run --out f.json   search, write only the file (for review)
+      //   --apply f.json [--skip domain:source,...]   write exactly that reviewed file to public.providers
+      const apply = flagStr('--apply');
+      if (apply) {
+        const { applyOperatorReviews } = await import('./pipeline/extract-cruise-reviews.js');
+        const skip = (flagStr('--skip') ?? '').split(',').map(s => s.trim()).filter(Boolean);
+        const r = await applyOperatorReviews(JSON.parse(readFileSync(apply, 'utf8')), { skip });
+        console.log(`operator-reviews: ${r.written} providers written, ${r.withLinks} with a review link; dropped: ${r.dropped.join(', ') || 'none'}`);
+        break;
+      }
+      if (!args.includes('--dry-run')) { console.error('operator-reviews: pass --dry-run --out f.json (search) or --apply f.json (write a reviewed file).'); process.exitCode = 1; break; }
       const { runOperatorReviewsDryRun } = await import('./pipeline/extract-cruise-reviews.js');
       const results = await runOperatorReviewsDryRun({ domain: flagStr('--domain'), limit: positionalLimit(), only: flagStr('--only') });
       const out = flagStr('--out');
