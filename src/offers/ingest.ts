@@ -389,17 +389,30 @@ export function roomAvailability(slots: Slot[]) {
   return out.slice(0, 120);
 }
 
-export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string) {
+export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string, lastPublished: Slot[] = []) {
   const names = c.rooms.map(r => r.name);
-  const byRoom = new Map<string, Slot[]>();
-  for (const s of slots) {
-    const room = slotRoom(names, s);
-    if (room) byRoom.set(room, [...(byRoom.get(room) ?? []), s]);
-  }
+  const group = (list: Slot[]) => {
+    const byRoom = new Map<string, Slot[]>();
+    for (const s of list) {
+      const room = slotRoom(names, s);
+      if (room) byRoom.set(room, [...(byRoom.get(room) ?? []), s]);
+    }
+    return byRoom;
+  };
+  const byRoom = group(slots), pastByRoom = group(lastPublished);
   return c.rooms.map(r => {
-    const own = (byRoom.get(r.name) ?? []).filter(s => isAhead(c.kind, s, today));
+    const all = byRoom.get(r.name) ?? [];
+    const own = all.filter(s => isAhead(c.kind, s, today));
     const priced = own.filter(s => s.price !== null && isBookable(s.availability));
-    const min = priced.sort((x, y) => x.price! - y.price!)[0];
+    // Aaron 2026-10-30: a room whose price the provider states is never "on request" either. Same tiers as
+    // summarizePrice: bookable upcoming; else upcoming but full / waitlist only; else the last published price of
+    // dates that are over, from the latest year only.
+    const ahead = own.filter(s => s.price !== null);
+    const over = [...all.filter(s => s.price !== null && !isAhead(c.kind, s, today)), ...(pastByRoom.get(r.name) ?? []).filter(s => s.price !== null)];
+    const yearOf = (s: Slot) => (s.startDate ?? s.endDate ?? '').slice(0, 4);
+    const latestYear = over.map(yearOf).sort().at(-1) ?? '';
+    const tier = [priced, ahead, over.filter(s => yearOf(s) === latestYear)].find(list => list.length > 0) ?? [];
+    const min = [...tier].sort((x, y) => x.price! - y.price!)[0];
     const months = [...new Set(priced.filter(s => s.startDate).map(s => Number(s.startDate!.slice(5, 7))))].sort((x, y) => x - y);
     return {
       name: r.name, description: r.description, features: r.features,
@@ -587,7 +600,7 @@ async function runAdapterInner(
       if (!spots.some(s => s.lat !== null)) rep.notes.push('no map pin: spot could not be geocoded');
       const before = (existing?.images as StoredImage[] | undefined) ?? [];
       // never visible without a photo: a new row stays hidden until its images are stored (set again below)
-      const row = { ...contentRow(a, content, operatorId, spots), ...priceCols, ...liveCols, rooms: roomsWithPrices(content, slots, today), is_active: isShowable(before.length) };
+      const row = { ...contentRow(a, content, operatorId, spots), ...priceCols, ...liveCols, rooms: roomsWithPrices(content, slots, today, lastPublished), is_active: isShowable(before.length) };
       const { data: up, error: upErr } = await supabase
         .from('package_offers').upsert(noNul(row), { onConflict: 'source_listing_id' }).select('id').single();
       if (upErr) throw new Error(`package_offers upsert failed: ${upErr.message}`);
