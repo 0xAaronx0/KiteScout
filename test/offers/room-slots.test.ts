@@ -75,3 +75,22 @@ test('roomsWithPrices: a waitlist-only or past room price is still the room pric
   assert.deepEqual(rows[0].priced_months, []);
   assert.deepEqual(rows[1].priced_months, [12]);
 });
+
+test('roomsWithPrices: priced_months counts every month a priced slot covers (Aaron 2026-10-31)', () => {
+  const content = { kind: 'accommodation', rooms: [
+    { name: 'Cult', description: null, features: [] },
+    { name: 'Open', description: null, features: [] },
+    { name: 'Long', description: null, features: [] },
+  ] } as unknown as OfferContent;
+  const rows = roomsWithPrices(content, [
+    // Kenyaways "Cult" season ranges: Jan 18 - Feb 28 prices February too, Mar 1 - May 31 prices April and May
+    ...[['2026-10-01', '2026-10-31'], ['2026-11-01', '2026-11-30'], ['2026-12-01', '2026-12-17'], ['2026-12-18', '2027-01-17'],
+      ['2027-01-18', '2027-02-28'], ['2027-03-01', '2027-05-31']].map(([startDate, endDate]) => slot({ unit: 'Cult', startDate, endDate, price: 45 })),
+    // no end date: only its start month; a full sold-out month adds nothing
+    slot({ unit: 'Open', startDate: '2026-11-05', price: 60 }),
+    slot({ unit: 'Open', startDate: '2027-02-01', endDate: '2027-02-28', price: 60, availability: 'sold_out' }),
+    // longer than a year: each month once
+    slot({ unit: 'Long', startDate: '2026-11-01', endDate: '2028-01-31', price: 70 }),
+  ], '2026-10-31');
+  assert.deepEqual(rows.map(r => r.priced_months), [[1, 2, 3, 4, 5, 10, 11, 12], [11], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]]);
+});
