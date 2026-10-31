@@ -94,3 +94,26 @@ test('roomsWithPrices: priced_months counts every month a priced slot covers (Aa
   ], '2026-10-31');
   assert.deepEqual(rows.map(r => r.priced_months), [[1, 2, 3, 4, 5, 10, 11, 12], [11], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]]);
 });
+
+test('roomsWithPrices: price_from_is_minimum only when the price is a floor (Aaron 2026-10-31)', () => {
+  const content = { kind: 'accommodation', rooms: [
+    { name: 'Fixed', description: null, features: [] },
+    { name: 'Seasons', description: null, features: [] },
+    { name: 'Range', description: null, features: [] },
+    { name: 'Same price twice', description: null, features: [] },
+  ] } as unknown as OfferContent;
+  const rows = roomsWithPrices(content, [
+    // one price for the whole stated period: a real price, shown as it is
+    slot({ unit: 'Fixed', startDate: null, endDate: null, price: 55 }),
+    // several season prices: price_from is the cheapest season
+    slot({ unit: 'Seasons', startDate: '2026-11-01', endDate: '2026-12-17', price: 189 }),
+    slot({ unit: 'Seasons', startDate: '2026-12-18', endDate: '2026-12-26', price: 239 }),
+    // "od 100 zł do 750 zł": the floor of a range the provider gives without dates
+    slot({ unit: 'Range', startDate: null, endDate: null, price: 100, priceIsMinimum: true }),
+    // two dated slots at one price are still one price
+    slot({ unit: 'Same price twice', startDate: '2026-11-01', endDate: '2026-11-30', price: 70 }),
+    slot({ unit: 'Same price twice', startDate: '2026-12-01', endDate: '2026-12-31', price: 70 }),
+  ], '2026-10-31');
+  assert.deepEqual(rows.map(r => [r.name, r.price_from, r.price_from_is_minimum]),
+    [['Fixed', 55, false], ['Seasons', 189, true], ['Range', 100, true], ['Same price twice', 70, false]]);
+});

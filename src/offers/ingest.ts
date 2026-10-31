@@ -231,7 +231,11 @@ export function summarizePrice(kind: OfferKind, slots: Slot[], today: string, la
     : { package: '', per_night: ' / night', per_day: ' / day', per_week: ' / week' }[min.priceUnit ?? 'package'] ?? '';
   const amount = min.price!.toLocaleString('en-US', { maximumFractionDigits: 2 });
   const raw = `From ${min.currency} ${amount}${period}${per}`;
-  const what = min.unit ? `${min.unit}${min.startDate ? `, ${min.startDate}` : ''}` : (min.startDate ?? 'season');
+  // Aaron 2026-10-31: a band that is already running names its end ("until 2026-11-30"), never a start that is over
+  // ("Surf caravan, 2026-01-01" for an April-October campsite). Dates that are over keep their start: that tier says so.
+  const running = tier !== 'past' && min.startDate !== null && min.startDate < today && min.endDate !== null && min.endDate >= today;
+  const date = running ? `until ${min.endDate}` : min.startDate;
+  const what = min.unit ? `${min.unit}${date ? `, ${date}` : ''}` : (date ?? 'season');
   const label = tier === 'bookable' ? 'cheapest bookable'
     : tier === 'full' ? 'next dates full or waitlist only'
     : `last published price, ${latestYear || 'earlier'} dates are over, new dates not published yet`;
@@ -437,9 +441,13 @@ export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string, l
     const tier = [priced, ahead, over.filter(s => yearOf(s) === latestYear)].find(list => list.length > 0) ?? [];
     const min = [...tier].sort((x, y) => x.price! - y.price!)[0];
     const months = [...new Set(priced.filter(s => s.startDate).flatMap(s => coveredMonths(s.startDate!, s.endDate)))].sort((x, y) => x - y);
+    // Aaron 2026-10-31: price_from is only a floor when the provider gives a range without dates or the room has
+    // several prices (seasons, occupancy); the app then shows "from" unless a dated price covers the chosen month.
+    const minimum = Boolean(min) && (tier.some(s => s.priceIsMinimum)
+      || new Set(tier.map(s => `${s.price} ${s.currency} ${s.priceUnit} ${s.priceBasis}`)).size > 1);
     return {
       name: r.name, description: r.description, features: r.features,
-      price_from: min?.price ?? null, price_currency: min?.currency ?? null,
+      price_from: min?.price ?? null, price_currency: min?.currency ?? null, price_from_is_minimum: minimum,
       price_unit: min ? (min.priceUnit === 'per_week' ? 'other' : min.priceUnit) : null,
       // basis of price_from (room / person / group); KCS shows it as "per room" etc.
       price_source: 'provider_site', price_basis: min?.priceBasis ?? null, priced_months: months, image_sort: null,
