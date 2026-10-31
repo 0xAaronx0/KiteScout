@@ -190,6 +190,7 @@ export function parseDjerbakiteVillaContent(p: DjkPages): OfferContent {
     spot: 'Sedouikech, Djerba',
     // villa page "Plan de Situation" Google Maps embed 33°44'47.5"N 10°56'08.0"E (2026-10-14)
     spotCoords: coords,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // location page: "adaptée à la pratique du kitesurf ... pour tous les niveaux"; courses from discovery to perfection

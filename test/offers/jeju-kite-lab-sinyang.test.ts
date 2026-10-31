@@ -9,6 +9,7 @@ import {
   buildJklSlots, jejuKiteLabSinyang, parseJklKite, parseJklPrices, parseJklRoom, parseJklRoomUrls,
 } from '../../src/offers/adapters/jeju-kite-lab-sinyang.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { roomsWithPrices } from '../../src/offers/ingest.js';
 import { collapse, parse } from '../../src/offers/parse.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/jeju-kite-lab-sinyang');
@@ -32,6 +33,18 @@ test('jeju: slots = room per night + whole floor for 6 / 8, undated, KRW, on req
     ['whole-floor-8p|night', 340000, 'KRW', 'per_night', 'room', 8, null, 'on_request'],
   ]);
   assert.deepEqual(buildJklSlots([{ title: 'whole floor 10 people', amount: 400000, description: '' }]).map(s => s.key), ['whole-floor-10p|night']);
+});
+
+test('jeju: the room price holds for every private room, the floor prices for the whole-floor room (Aaron 2026-10-31)', async () => {
+  const content = await jejuKiteLabSinyang.fetchContent(ctx);
+  const rows = roomsWithPrices(content, await jejuKiteLabSinyang.fetchSlots(ctx), '2026-10-31');
+  assert.deepEqual(rows.map(r => [r.name, r.price_from, r.price_currency, r.price_from_is_minimum]), [
+    ['Coastal breeze room', 70000, 'KRW', false],
+    ['Nomad room', 70000, 'KRW', false],
+    ['Friends room', 70000, 'KRW', false],
+    ['Coastal wave room', 70000, 'KRW', false],
+    ['Whole Guesthouse, Family Stay', 300000, 'KRW', true],
+  ]);
 });
 
 test('jeju: room sitemap and MPHB room pages', () => {

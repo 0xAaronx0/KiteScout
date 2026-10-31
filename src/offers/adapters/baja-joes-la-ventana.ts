@@ -181,6 +181,7 @@ export function parseBajaJoesContent(p: BjPages): OfferContent {
     spot: 'La Ventana',
     // property coordinates from the hotel's own SabeeApp booking engine settings
     ...(ibe?.lat !== null && ibe?.lat !== undefined && ibe.lng !== null ? { spotCoords: { lat: ibe.lat, lng: ibe.lng } } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // home: "take some lessons, rent some gear, have a refresher or learn a new trick"; the-resort: "Not kiting yet? That's okay" (2026-10-12)

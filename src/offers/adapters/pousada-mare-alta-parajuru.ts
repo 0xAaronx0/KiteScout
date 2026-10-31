@@ -313,6 +313,7 @@ export function parseMareAltaContent(html: string): OfferContent {
     spot: 'Parajuru',
     // Google Maps embed on the page, pin "Kiteboarding Club Parajuru" (2026-10-12)
     spotCoords: map ? { lat: Number(map[2]), lng: Number(map[1]) } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // spot text: "flat water behind the sandbar for beginners ... open waves for advanced riders" (2026-10-12)

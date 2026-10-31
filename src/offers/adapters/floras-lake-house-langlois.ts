@@ -232,6 +232,7 @@ export function parseFlContent(p: FlPages): OfferContent {
     region: 'Oregon Coast, Oregon',
     spot: 'Floras Lake, Langlois',
     spotCoords: pin,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // windsports site: "lessons are available at all ability levels" (2026-10-14)

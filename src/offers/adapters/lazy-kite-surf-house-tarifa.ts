@@ -21,18 +21,21 @@
 //   October (low), July and September (mid) and August (high); November-May are not in it.
 // Year: the table has none and the page carries no date (WordPress REST says the page was last modified 2025-05-20,
 //   checked once 2026-10-12, not fetched per run). The page is still the live price list and the house is operating in
-//   2026 (Google review of 07/09/2026 on the page: "La casa estaba muy limpiada y muy bien ubicada"), so the slots
-//   carry the season label but NO dates (like bkc-houses-bilene) instead of an invented or expired year.
+//   2026 (Google review of 07/09/2026 on the page: "La casa estaba muy limpiada y muy bien ubicada"). Since 2026-10-31
+//   (so the app can price the month a guest picks) each printed month is dated as its next occurrence that has not
+//   ended yet, like punta-trettu / seven-beaufort (inferred year; the table prints months only): on 2026-10-31 that is
+//   October 2026 and June-September 2027. Before, the slots carried the season label but no dates.
 // No booking engine: contact form / e-mail / phone -> 'on_request'.
 // robots.txt (2026-10-12): only /wp-admin/ disallowed (admin-ajax allowed).
 // Requests per run: content 2 (accommodation page + course page for photos), slots 1 (memoised, shared with content).
-// Parsed: 12 slots = room type x season ("double-room|low"), EUR per person per night, occupancy = beds in the room
-//   type (private 1, double 2, triple 3, quadruple 4), datePrecision 'season', availability 'on_request'.
+// Parsed: 20 slots = room type x printed month ("double-room|low|2027-06", whole calendar month), EUR per person per
+//   night, occupancy = beds in the room type (private 1, double 2, triple 3, quadruple 4), datePrecision 'month',
+//   availability 'on_request'.
 // Known limits: only one photo of the house itself on the whole site (WordPress media library checked 2026-10-21);
 //   no address or map of the house (no spotCoords).
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
-import { clean, collapse, detectCurrency, imageCandidates, parse, parseAmount } from '../parse.js';
+import { clean, collapse, detectCurrency, imageCandidates, iso, monthOf, parse, parseAmount, todayIso } from '../parse.js';
 import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
 
 const SITE = 'https://lazykiteschooltarifa.com';
@@ -96,23 +99,40 @@ export function parseLazyPriceNote(html: string): string | null {
   return lazyLines(html).find(l => /^Price per person per night/i.test(l)) ?? null;
 }
 
-export function buildLazySlots(rates: LazyRate[], note: string | null): Slot[] {
+/** Calendar months a season header names ("October / June" -> [10, 6]). */
+export function lazySeasonMonths(months: string): number[] {
+  return (months.match(/[A-Za-z]+/g) ?? []).map(monthOf).filter((m): m is number => m !== null);
+}
+
+const lastDay = (y: number, m: number): number => new Date(Date.UTC(y, m, 0)).getUTCDate();
+
+/** Next occurrence of a calendar month that has not ended on `today` (the table has no year). */
+export function lazyMonthBand(month: number, today: string): { start: string; end: string } {
+  let y = Number(today.slice(0, 4));
+  if (iso(y, month, lastDay(y, month)) < today) y++;
+  return { start: iso(y, month, 1), end: iso(y, month, lastDay(y, month)) };
+}
+
+export function buildLazySlots(rates: LazyRate[], note: string | null, today = todayIso()): Slot[] {
   const perPerson = !note || /per person/i.test(note);
-  return rates.map(r => ({
-    key: `${keyPart(r.room)}|${r.season.key}`,
-    startDate: null,
-    endDate: null,
-    unit: r.room,
-    price: r.amount,
-    currency: r.currency,
-    priceUnit: 'per_night' as const,
-    priceBasis: perPerson ? 'person' as const : 'room' as const,
-    occupancy: lazyOccupancy(r.room),
-    availability: 'on_request' as const,
-    availabilityText: `${r.season.label} season (${r.season.months}); rooms subject to availability, confirmed by email or phone`,
-    spotsLeft: null,
-    datePrecision: 'season' as const,
-  }));
+  return rates.flatMap(r => lazySeasonMonths(r.season.months).map(month => {
+    const band = lazyMonthBand(month, today);
+    return {
+      key: `${keyPart(r.room)}|${r.season.key}|${band.start.slice(0, 7)}`,
+      startDate: band.start,
+      endDate: band.end,
+      unit: r.room,
+      price: r.amount,
+      currency: r.currency,
+      priceUnit: 'per_night' as const,
+      priceBasis: perPerson ? 'person' as const : 'room' as const,
+      occupancy: lazyOccupancy(r.room),
+      availability: 'on_request' as const,
+      availabilityText: `${r.season.label} season (${r.season.months}); price table without year, applied to the next occurrence; rooms subject to availability, confirmed by email or phone`,
+      spotsLeft: null,
+      datePrecision: 'month' as const,
+    };
+  })).sort((x, y) => x.startDate.localeCompare(y.startDate) || x.key.localeCompare(y.key));
 }
 
 /** FAQ question -> answer pairs (Elementor accordion: question line followed by the answer line). */
@@ -247,6 +267,8 @@ export const lazyKiteSurfHouseTarifa: OfferAdapter = {
     const html = await page(LAZY_URL);
     const rates = parseLazyRates(html);
     if (rates.length === 0) throw new Error('lazy-kite-surf-house: TablePress room price table not found (layout changed?)');
+    const undated = [...new Set(rates.filter(r => lazySeasonMonths(r.season.months).length === 0).map(r => r.season.label))];
+    if (undated.length) throw new Error(`lazy-kite-surf-house: season header without a month name (${undated.join(', ')}; layout changed?)`);
     return buildLazySlots(rates, parseLazyPriceNote(html));
   },
 };

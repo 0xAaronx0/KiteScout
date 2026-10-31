@@ -23,6 +23,7 @@ import { withRetry } from '../lib/retry.js';
 import { sanitizeDeep, htmlToText, collapse } from '../lib/content.js';
 import { fetchPageConditional } from '../lib/fetchPage.js';
 import { extract as tavilyExtract } from '../lib/tavily.js';
+import { cleanNights } from './trip-duration.js';
 import {
   OFFER_ROW_COLUMNS, STATE_FIELDS, normUrl, proposeUpdate, siteLossSignal, titleMatches,
   type ObservedState, type OfferRow, type Proposal, type Departure,
@@ -81,6 +82,7 @@ const PROMPT = `You read one web page of a kite-cruise provider and report the C
     "price_pp": {"amount": <number>, "currency": "…"} | null,
     "price_charter": {"amount": <number>, "currency": "…", "days": <number> | null} | null,
     "duration_days": <number> | null,
+    "duration_nights": <number> | null,
     "season_start_month": 1-12 | null,
     "season_end_month": 1-12 | null,
     "season_text": "<the season in English, e.g. 'April-October'>" | null
@@ -95,12 +97,13 @@ Rules:
 - "price_pp": the cheapest price per PERSON for the WHOLE trip in a shared/double cabin. A price for a cabin of 2 → divide by 2. Per-night/per-day prices → multiply only when the trip length is explicit, else null. Never deposits, add-ons, single supplements, or a sum of separately listed components (base boat €1450 + lessons €700 → 1450).
 - "price_charter": the cheapest WHOLE-BOAT/private-charter price for ONE WEEK (7 nights) when the page has one, else the cheapest whole-boat price, and the number of days it covers (a price per day: days = 1).
 - "duration_days": days of the trip (7 nights = 8 days) when stated.
+- "duration_nights": nights of the trip when stated (a Saturday-to-Saturday week = 7).
 - "other_products": multi-day kite/wing trips where the guests LIVE ON BOARD (kite cruise, liveaboard, kite safari on a yacht or catamaran) presented on this page that are NONE of the listed offers (a new trip, destination or boat). NOT land-based camps, kite schools, lessons, accommodation, road trips or downwinders without living aboard; not dive/yoga/fishing-only trips; not extra departures of a listed offer; not products whose dates are all in the past. The same product in two languages counts once. [] if none.
 Respond ONLY with the JSON object.`;
 
 interface LlmOffer {
   slug?: unknown; listed?: unknown; departures?: unknown; price_pp?: unknown; price_charter?: unknown;
-  duration_days?: unknown; season_start_month?: unknown; season_end_month?: unknown; season_text?: unknown;
+  duration_days?: unknown; duration_nights?: unknown; season_start_month?: unknown; season_end_month?: unknown; season_text?: unknown;
 }
 export interface PageRead { states: Map<string, ObservedState>; others: Array<{ name: string; dates: string | null; price: string | null }> }
 
@@ -125,6 +128,7 @@ export function parseLlmRead(text: string, slugs: Set<string>): PageRead | null 
       pricePP: pp && num(pp.amount) && str(pp.currency) ? { amount: num(pp.amount)!, currency: str(pp.currency)! } : null,
       priceCharter: ch && num(ch.amount) && str(ch.currency) ? { amount: num(ch.amount)!, currency: str(ch.currency)!, days: num(ch.days) } : null,
       durationDays: num(o.duration_days),
+      durationNights: cleanNights(o.duration_nights),
       seasonStartMonth: num(o.season_start_month),
       seasonEndMonth: num(o.season_end_month),
       seasonText: str(o.season_text),

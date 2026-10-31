@@ -635,6 +635,15 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'duration-audit': {
+      // READ-ONLY: cruises whose duration_days the stored data contradicts (days = nights + 1). Prints a table.
+      const { runDurationAudit } = await import('./pipeline/duration-audit.js');
+      const days = flagStr('--days');
+      const r = await runDurationAudit({ days: days ? Number(days) : undefined, out: flagStr('--out') });
+      console.error(JSON.stringify(r));
+      break;
+    }
+
     case 'climate-wind-check': {
       // READ-ONLY: ERA5 kiteable-day shares per country/region point for the Bstoked comparison.
       const { runWindCheck } = await import('./pipeline/wind-check.js');

@@ -121,14 +121,27 @@ export function operatorPatch(found: StoredOperator, a: Pick<OfferAdapter, 'oper
   return patch;
 }
 
+/** Addresses we may not treat as the operator's own until the platform says yes (KiteWorldWide, Aaron 2026-10-21). */
+const HELD_EMAIL_DOMAINS = /@kiteworldwide\.com$/i;
+
+/** Standing rule (Aaron 2026-10-28, made automatic 2026-10-31): an operator e-mail taken from the provider's own site
+ *  counts as verified, so KCS shows the inquiry button on its packages. Stamps only an unstamped row (a human stamp or
+ *  a deliberate null with a held address stays); rollback = last_verified_at back to null. */
+export function emailVerifiedStamp(email: string | null | undefined, lastVerifiedAt: string | null | undefined,
+  now = new Date().toISOString()): { last_verified_at?: string } {
+  if (!email || lastVerifiedAt || HELD_EMAIL_DOMAINS.test(email.trim())) return {};
+  return { last_verified_at: now };
+}
+
 async function upsertOperator(a: OfferAdapter): Promise<string> {
   const op = a.operator;
   const { data: found, error } = await supabase
-    .from('providers').select('id,name,website_url,contact_email,whatsapp,phone,trip_types')
+    .from('providers').select('id,name,website_url,contact_email,whatsapp,phone,trip_types,last_verified_at')
     .eq('root_domain', op.rootDomain).maybeSingle();
   if (error) throw new Error(`providers read failed: ${error.message}`);
   if (found) {
     const patch = operatorPatch(found as StoredOperator, a);
+    Object.assign(patch, emailVerifiedStamp((patch.contact_email as string | undefined) ?? found.contact_email, found.last_verified_at));
     if (Object.keys(patch).length) {
       const { error: upErr } = await supabase.from('providers').update(patch).eq('id', found.id);
       if (upErr) throw new Error(`providers update failed: ${upErr.message}`);
@@ -140,6 +153,7 @@ async function upsertOperator(a: OfferAdapter): Promise<string> {
     root_domain: op.rootDomain,
     website_url: op.websiteUrl,
     contact_email: op.contactEmail ?? null,
+    ...emailVerifiedStamp(op.contactEmail, null),
     whatsapp: op.whatsapp ?? null,
     phone: op.phone ?? null,
     trip_types: [a.kind],
@@ -218,7 +232,11 @@ export function summarizePrice(kind: OfferKind, slots: Slot[], today: string, la
     : { package: '', per_night: ' / night', per_day: ' / day', per_week: ' / week' }[min.priceUnit ?? 'package'] ?? '';
   const amount = min.price!.toLocaleString('en-US', { maximumFractionDigits: 2 });
   const raw = `From ${min.currency} ${amount}${period}${per}`;
-  const what = min.unit ? `${min.unit}${min.startDate ? `, ${min.startDate}` : ''}` : (min.startDate ?? 'season');
+  // Aaron 2026-10-31: a band that is already running names its end ("until 2026-11-30"), never a start that is over
+  // ("Surf caravan, 2026-01-01" for an April-October campsite). Dates that are over keep their start: that tier says so.
+  const running = tier !== 'past' && min.startDate !== null && min.startDate < today && min.endDate !== null && min.endDate >= today;
+  const date = running ? `until ${min.endDate}` : min.startDate;
+  const what = min.unit ? `${min.unit}${date ? `, ${date}` : ''}` : (date ?? 'season');
   const label = tier === 'bookable' ? 'cheapest bookable'
     : tier === 'full' ? 'next dates full or waitlist only'
     : `last published price, ${latestYear || 'earlier'} dates are over, new dates not published yet`;
@@ -308,10 +326,12 @@ export async function locateSpots(c: OfferContent, stored: unknown): Promise<Sto
     .map(s => [s.name.trim().toLowerCase(), s] as const));
   const out: StoredSpot[] = [];
   for (const s of named) {
-    const pinned = (!c.itinerarySpots.length && c.spotCoords ? c.spotCoords : null) ?? KNOWN_PINS[s.name.trim().toLowerCase()] ?? null;
+    const own = !c.itinerarySpots.length && c.spotCoords ? c.spotCoords : null;
+    const pinned = own ?? KNOWN_PINS[s.name.trim().toLowerCase()] ?? null;
     const prev = known.get(s.name.trim().toLowerCase());
     const g = pinned ?? (prev ? { lat: prev.lat!, lng: prev.lng! } : await geocodeSpot(s.name, s.region, s.country));
-    out.push({ name: s.name, country: s.country, region: s.region, lat: g?.lat ?? null, lng: g?.lng ?? null, order: s.order });
+    out.push({ name: s.name, country: s.country, region: s.region, lat: g?.lat ?? null, lng: g?.lng ?? null, order: s.order,
+      ...(own && c.spotCoordsPrecise ? { precise: true as const } : {}) });
   }
   return mergeItinerarySpots(out, stored).spots;
 }
@@ -356,21 +376,41 @@ function contentRow(a: OfferAdapter, c: OfferContent, operatorId: string, spots:
 }
 
 /**
+ * A room name as slots and rooms are compared: case, quote marks ("Lark´s", "Lark’s"), dash variants and runs of
+ * spaces do not count (Aaron 2026-10-31: engine and page spell the same room differently).
+ */
+export const roomKey = (name: string) => name.normalize('NFC').toLowerCase()
+  .replace(/[´`‘’ʼ]/g, "'").replace(/[‐‑‒–—]/g, '-').replace(/\s+/g, ' ').trim();
+
+/**
  * The content room a slot belongs to: the adapter's explicit `room`, else the room named like the unit
- * (case-insensitive), else the longest room name the unit starts with before a qualifier
+ * (roomKey), else the longest room name the unit starts with before a qualifier
  * ("Mixed dorm (bed)", "Tiny House, Mon-Fri nights"). Packages named "Rider package, double room" stay unmatched.
  */
 export function slotRoom(roomNames: string[], s: Pick<Slot, 'unit' | 'room'>): string | null {
-  if (s.room) return roomNames.includes(s.room) ? s.room : null;
+  if (s.room) return roomNames.find(n => roomKey(n) === roomKey(s.room!)) ?? null;
   if (!s.unit) return null;
-  const unit = s.unit.trim().toLowerCase();
-  const exact = roomNames.find(n => n.trim().toLowerCase() === unit);
+  const unit = roomKey(s.unit);
+  const exact = roomNames.find(n => roomKey(n) === unit);
   if (exact) return exact;
-  const prefixed = roomNames.filter(n => {
-    const name = n.trim().toLowerCase();
-    return [' (', ', ', ' - ', ' · '].some(sep => unit.startsWith(name + sep));
-  });
+  const prefixed = roomNames.filter(n => [' (', ', ', ' - ', ' · '].some(sep => unit.startsWith(roomKey(n) + sep)));
   return prefixed.sort((x, y) => y.length - x.length)[0] ?? null;
+}
+
+export interface PrintedRoomPrice { room: string; price: number; currency: string; priceUnit: Slot['priceUnit']; priceBasis: Slot['priceBasis'] }
+
+/**
+ * A room's printed "from" price ("From EUR 133 per night") as the fallback for rooms the engine prices nowhere
+ * (Aaron 2026-10-31, "1+2+3 ja"): one undated slot per such room, a floor the app shows as "from".
+ */
+export function printedFromSlots(engine: Slot[], printed: PrintedRoomPrice[]): Slot[] {
+  const names = printed.map(p => p.room);
+  const covered = new Set(engine.filter(s => s.price !== null).flatMap(s => s.rooms?.length ? s.rooms : [slotRoom(names, s)]));
+  return printed.filter(p => !covered.has(p.room)).map(p => ({
+    key: `printed|${roomKey(p.room).normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`, startDate: null, endDate: null, unit: p.room, room: p.room,
+    price: p.price, currency: p.currency, priceUnit: p.priceUnit, priceBasis: p.priceBasis, occupancy: null,
+    availability: 'unknown', availabilityText: null, spotsLeft: null, priceIsMinimum: true,
+  }));
 }
 
 const nextDay = (d: string) => new Date(Date.parse(`${d}T00:00:00Z`) + 86_400_000).toISOString().slice(0, 10);
@@ -402,8 +442,8 @@ export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string, l
   const group = (list: Slot[]) => {
     const byRoom = new Map<string, Slot[]>();
     for (const s of list) {
-      const room = slotRoom(names, s);
-      if (room) byRoom.set(room, [...(byRoom.get(room) ?? []), s]);
+      const rooms = s.rooms?.length ? s.rooms.map(r => slotRoom(names, { unit: null, room: r })) : [slotRoom(names, s)];
+      for (const room of new Set(rooms)) if (room) byRoom.set(room, [...(byRoom.get(room) ?? []), s]);
     }
     return byRoom;
   };
@@ -421,15 +461,21 @@ export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string, l
     const latestYear = over.map(yearOf).sort().at(-1) ?? '';
     const tier = [priced, ahead, over.filter(s => yearOf(s) === latestYear)].find(list => list.length > 0) ?? [];
     const min = [...tier].sort((x, y) => x.price! - y.price!)[0];
-    const months = [...new Set(priced.filter(s => s.startDate).flatMap(s => coveredMonths(s.startDate!, s.endDate)))].sort((x, y) => x - y);
+    // a floor (range, one engine price for several rooms) is no dated price of this room: no priced month, no range
+    const months = [...new Set(priced.filter(s => s.startDate && !s.priceIsMinimum).flatMap(s => coveredMonths(s.startDate!, s.endDate)))].sort((x, y) => x - y);
+    // Aaron 2026-10-31: price_from is only a floor when the provider gives a range or one price for several different
+    // rooms (priceIsMinimum) or the room has several prices (seasons, occupancy); the app then shows "from" unless a
+    // dated price covers the chosen month.
+    const minimum = Boolean(min) && (tier.some(s => s.priceIsMinimum)
+      || new Set(tier.map(s => `${s.price} ${s.currency} ${s.priceUnit} ${s.priceBasis}`)).size > 1);
     return {
       name: r.name, description: r.description, features: r.features,
-      price_from: min?.price ?? null, price_currency: min?.currency ?? null,
+      price_from: min?.price ?? null, price_currency: min?.currency ?? null, price_from_is_minimum: minimum,
       price_unit: min ? (min.priceUnit === 'per_week' ? 'other' : min.priceUnit) : null,
       // basis of price_from (room / person / group); KCS shows it as "per room" etc.
       price_source: 'provider_site', price_basis: min?.priceBasis ?? null, priced_months: months, image_sort: null as number | null,
       // dated ranges from the provider's calendar/price list; [] = no dated data for this room
-      availability: roomAvailability(own),
+      availability: roomAvailability(own.filter(s => !s.priceIsMinimum)),
     };
   });
 }

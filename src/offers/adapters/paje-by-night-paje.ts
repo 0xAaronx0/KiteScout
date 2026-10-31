@@ -280,6 +280,7 @@ export function parsePajeContent(p: PbnPages): OfferContent {
     region: 'Zanzibar',
     spot: 'Paje, Zanzibar',
     spotCoords: est.lat !== null && est.lng !== null ? { lat: est.lat, lng: est.lng } : null, // Nightsbridge establishment record
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kite page: "courses and lessons for beginners to advanced levels"

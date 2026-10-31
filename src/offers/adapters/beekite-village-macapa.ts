@@ -158,6 +158,7 @@ export function parseBeekiteContent(p: BkvPages): OfferContent {
     spot: 'Praia do Macapá',
     // Google Maps embed on /en/map-beekite-village/ (checked 2026-10-12)
     spotCoords: coords,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // spot page: "a perfect area for beginners", river mouth "a paradise for freestylers"; courses up to jumping

@@ -120,6 +120,7 @@ export function parseTkhContent(p: TkhPages): OfferContent {
     region: 'Andalusia',
     spot: 'Tarifa',
     spotCoords: parseTkhCoords(p.home),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'], // private / semi-private / group / advanced courses

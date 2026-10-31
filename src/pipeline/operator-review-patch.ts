@@ -1,4 +1,5 @@
 // Pure helpers for the package-operator review write (no network, no database): see extract-cruise-reviews.ts.
+import { tripadvisorFields, tripadvisorListingUrl } from './tripadvisor-listing.js';
 export type OperatorReviewResult = {
   operatorId: string; name: string | null; domain: string; country: string | null; listings: string[];
   found: number; links: Record<string, unknown>; notes: string[]; error?: string;
@@ -10,6 +11,8 @@ export function rejectedReviewSources(links: Record<string, unknown>): string[] 
   const out: string[] = [];
   if (typeof links.google_url === 'string' && /\/maps\/place\/\/@/.test(links.google_url)) out.push('google');
   if (typeof links.bstoked_url === 'string' && /bstoked\.net\/listings\/type\//.test(links.bstoked_url)) out.push('bstoked');
+  // Aaron 2026-10-31: a single review, an FAQ page or the home page is no Tripadvisor listing.
+  if (typeof links.tripadvisor_url === 'string' && !tripadvisorListingUrl(links.tripadvisor_url)) out.push('tripadvisor');
   return out;
 }
 // Google is neither collected nor written (Aaron 2026-10-31, KCS#607 "607 b"): its columns stay out of every patch,
@@ -30,6 +33,7 @@ export function operatorReviewPatch(result: OperatorReviewResult, skip: Set<stri
   const drop = new Set([...rejectedReviewSources(result.links), 'google', ...['tripadvisor', 'bstoked'].filter(src => skip.has(`${result.domain}:${src}`))]);
   const patch: Record<string, unknown> = { reviews_checked_at: checkedAt };
   for (const [src, cols] of Object.entries(SOURCE_COLUMNS)) for (const col of cols) patch[col] = drop.has(src) ? null : (result.links[col] ?? null);
+  if (!drop.has('tripadvisor')) Object.assign(patch, tripadvisorFields(patch.tripadvisor_url, patch.tripadvisor_rating, patch.tripadvisor_review_count));
   patch.avg_rating = averageRating(patch);
   const labels: Record<string, string> = { google: 'google', tripadvisor: 'tripadvisor', bstoked: 'bstoked' };
   const notes = result.notes.filter(note => ![...drop].some(src => note.toLowerCase().startsWith(labels[src])));

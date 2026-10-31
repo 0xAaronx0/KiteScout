@@ -55,6 +55,9 @@ export interface Slot {
   unit: string | null;
   /** the content room (ContentRoom.name) this slot prices, when `unit` names it differently */
   room?: string | null;
+  /** several content rooms this price holds for (one price-list line for every private room, one engine profile for
+   *  two house models); with priceIsMinimum each of them shows it as "from" (Aaron 2026-10-31) */
+  rooms?: string[];
   price: number | null;         // null = price on request
   currency: string | null;      // ISO 4217, original currency (never converted)
   priceUnit: SlotPriceUnit | null;
@@ -75,6 +78,10 @@ export interface Slot {
   packageNights?: number | null;
   /** minimum stay when arriving in this slot (booking-engine restriction) */
   minNights?: number | null;
+  /** `price` is only a lower end: the provider gives a range ("from 100 to 750 zł depending on the dates", no dates)
+   *  or one engine price covers several different rooms (`rooms`). The room shows it as "from" and never as the dated
+   *  price of a month (no availability range, no priced month) */
+  priceIsMinimum?: boolean;
 }
 
 /** The business behind an offer (stored in public.providers, linked as package_offers.operator_id). */
@@ -122,6 +129,9 @@ export interface OfferContent {
   spot: string | null;
   /** map pin for `spot` when the geocoder cannot place it (the KCS map only pins located spots) */
   spotCoords?: { lat: number; lng: number } | null;
+  /** `spotCoords` is the property itself (the provider's own map pin / geo of the stay), not a beach, school or
+   *  village: the KCS mini map shows an exact pin at street zoom only for such spots (Aaron 2026-10-31) */
+  spotCoordsPrecise?: true;
   itinerarySpots: ItinerarySpot[];
   durationDays: number | null;  // tours/camps: nights + 1; accommodation: null
   skillLevels: string[];        // 'beginner' | 'intermediate' | 'advanced'

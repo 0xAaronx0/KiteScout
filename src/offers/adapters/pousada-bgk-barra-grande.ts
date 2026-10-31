@@ -114,6 +114,7 @@ export function parseBgkContent(p: BgkPages): OfferContent {
     spot: 'Barra Grande',
     // Omnibees hotel page map pin (#map-wrap data-lat / data-long, 2026-10-12)
     spotCoords: Number.isFinite(lat) && Number.isFinite(lng) && lat !== 0 ? { lat, lng } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // /bgkite-school: the spot "atrai velejadores do mundo inteiro ... além de ter as condições perfeitas para quem quer aprender" (2026-10-12)

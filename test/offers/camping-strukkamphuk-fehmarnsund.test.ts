@@ -10,6 +10,8 @@ import {
 } from '../../src/offers/adapters/camping-strukkamphuk-fehmarnsund.js';
 import { csobSaturdaySamples, parseCsobList } from '../../src/offers/adapters/hvide-sande-camping.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { roomsWithPrices } from '../../src/offers/ingest.js';
+import type { Slot } from '../../src/offers/types.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/camping-strukkamphuk-fehmarnsund');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -77,4 +79,26 @@ test('strukkamphuk: content', async () => {
   assert.equal(c.rooms.length, 8);
   assert.equal(c.rooms[0].description, 'Caravans no. 1-4 with a fixed awning (kitchen unit and seating) and terrace; sleeps 5 (2 adults and 3 children).');
   assert.ok(c.imageUrls.length >= 12 && c.imageUrls.every(u => /^https:\/\/strukkamphuk\.de\/wp-content\/uploads\//.test(u) && !/-\d+x\d+\./.test(u)));
+});
+
+test('strukkamphuk: after the season the printed per-night table prices every caravan (Aaron 2026-10-31)', async () => {
+  const past: Slot[] = [];
+  const after = '2026-10-31';
+  const slots = await fetchCskSlots(after, { ...ctx, lastPublished: p => { past.push(...p); } });
+  assert.deepEqual(slots, []); // no sample week left, every 2026 band is over
+  assert.deepEqual(checkSlots(past).problems, []);
+  const knaus = past.filter(s => s.room === 'Rental caravan Knaus Sport 580 QS');
+  assert.ok(knaus.length >= 2 && knaus.every(s => s.priceUnit === 'per_night' && s.priceBasis === 'room' && s.currency === 'EUR'));
+  assert.deepEqual([...new Set(knaus.map(s => s.price))].sort(), [133, 95]);
+  const rows = roomsWithPrices(await campingStrukkamphukFehmarnsund.fetchContent(ctx), slots, after, past);
+  assert.deepEqual(rows.map(r => [r.name, r.price_from, r.price_from_is_minimum]), [
+    ['Rental caravan Knaus Sport 580 QS', 95, true],
+    ['Rental caravan Knaus Sport 550 FSK', 85, true],
+    ['Rental caravan Knaus Südwind 550 UF', 85, true],
+    ['Rental caravan Knaus Südwind 500 EU', 85, true],
+    ['Rental caravan Dethleffs c’trend 515 ER', 90, true],
+    ['Rental caravan Dethleffs c’trend 515 FR', 90, true],
+    ['Rental caravan Deluxe for 4', 115, true],
+    ['Rental caravan Deluxe for 5', 115, true],
+  ]);
 });

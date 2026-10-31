@@ -189,6 +189,7 @@ export function parsePapContent(kiteHtml: string, hotelHtml: string): OfferConte
     region: 'Cap Skirring, Casamance',
     spot: 'Cap Skirring',
     spotCoords: h.geo,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['advanced'],

@@ -237,6 +237,7 @@ export function parseStrandgutContent(p: SgPages): OfferContent {
     region: 'Cuxhaven, North Sea Coast',
     spot: 'Cuxhaven-Sahlenburg',
     ...(coords ? { spotCoords: coords } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: [],

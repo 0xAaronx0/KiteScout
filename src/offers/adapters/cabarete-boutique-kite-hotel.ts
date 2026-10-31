@@ -162,6 +162,7 @@ export function parseCabareteBoutiqueContent(html: string): OfferContent {
     spot: 'Cabarete',
     // JSON-LD LodgingBusiness.geo on the page
     ...(Number.isFinite(lat) && Number.isFinite(lng) && lat !== 0 ? { spotCoords: { lat, lng } } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'], // school: beginner lessons to advanced coaching (site menu)

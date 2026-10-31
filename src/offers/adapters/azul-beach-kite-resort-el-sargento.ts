@@ -165,6 +165,7 @@ export function parseAzulContent(p: AzulPages): OfferContent {
     region: 'El Sargento, Baja California Sur',
     spot: 'El Sargento',
     ...(coords ? { spotCoords: coords } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: /beginners and experienced kiters/i.test(faqText) ? ['beginner', 'intermediate', 'advanced'] : [],

@@ -165,6 +165,7 @@ export function parseSeahorseContent(p: ShPages): OfferContent {
     region: 'Lam Dong (Binh Thuan)',
     spot: 'Mui Ne',
     spotCoords: coords, // the resort's own /vi-tri page
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // Surfpoint: lessons for beginners to advanced riders, rental for independent kiters

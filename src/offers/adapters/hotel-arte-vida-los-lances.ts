@@ -93,6 +93,7 @@ export function parseArteVidaContent(p: AvPages): OfferContent {
     region: 'Los Lances, Tarifa',
     spot: 'Los Lances',
     spotCoords: avCoords(p.home) ?? avCoords(p.rooms),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // school page: "Spot fácil para todos los niveles", "Clases para todos, todos los días!"

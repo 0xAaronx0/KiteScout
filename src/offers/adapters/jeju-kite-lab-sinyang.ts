@@ -26,7 +26,8 @@
 //   MPHB settings on the page: no payment gateways, "isDirectBooking": false; the guesthouse page asks guests to call,
 //   mail or DM -> instantBooking false. Each room page prints data-first_available_check_in_date (kept in sourceText).
 // robots.txt (2026-10-21): only /wp-admin/ disallowed (admin-ajax.php allowed, but nonce-gated, not used).
-// Requests per run: content 2 + 1 (room sitemap) + 1 per room type (5 on 2026-10-21) = 8; slots 1.
+// Requests per run: content 2 + 1 (room sitemap) + 1 per room type (5 on 2026-10-21) = 8; slots reuse them (memoised,
+//   2026-10-31: the room names link the price list to the rooms), a slots-only run makes the same 8.
 // Known limits: no spotCoords on the site (address + a Google Maps embed by address only) -> spot left to the
 //   geocoder. Card payments carry a 10% surcharge (FAQ). Languages: site in English; Korean inferred (Korean host).
 // ---------------------------------------------------------------------------
@@ -61,8 +62,15 @@ export function parseJklPrices(html: string): JklPrice[] {
   return out;
 }
 
-export function buildJklSlots(prices: JklPrice[]): Slot[] {
+/**
+ * Price list -> slots. With the room pages (Aaron 2026-10-31): "room per night" holds for every private room, the
+ * whole-floor lines for the whole-floor room type (their names differ from the price list's).
+ */
+export function buildJklSlots(prices: JklPrice[], rooms: JklRoom[] = []): Slot[] {
   const out: Slot[] = [];
+  const isWhole = (r: JklRoom) => r.guests !== null || /whole/i.test(r.name);
+  const privates = rooms.filter(r => r.name && !isWhole(r)).map(r => r.name);
+  const wholes = rooms.filter(r => r.name && isWhole(r)).map(r => r.name);
   for (const p of prices) {
     const whole = p.title.match(/whole (?:apartment|floor|house)\D*(\d+)\s*people/i);
     if (whole) {
@@ -70,13 +78,13 @@ export function buildJklSlots(prices: JklPrice[]): Slot[] {
       out.push({
         key: `whole-floor-${n}p|night`, startDate: null, endDate: null, unit: `Whole 2nd floor, ${n} guests`,
         price: p.amount, currency: 'KRW', priceUnit: 'per_night', priceBasis: 'room', occupancy: n, // the floor is one rented unit; 'room' keeps the "from" price on the room rate
-        availability: 'on_request', availabilityText: null, spotsLeft: null,
+        availability: 'on_request', availabilityText: null, spotsLeft: null, ...(wholes.length === 1 ? { room: wholes[0] } : {}),
       });
     } else if (/^room per night$/i.test(p.title)) {
       out.push({
         key: 'room|night', startDate: null, endDate: null, unit: 'Private room (own bathroom)',
         price: p.amount, currency: 'KRW', priceUnit: 'per_night', priceBasis: 'room', occupancy: 2,
-        availability: 'on_request', availabilityText: null, spotsLeft: null,
+        availability: 'on_request', availabilityText: null, spotsLeft: null, ...(privates.length ? { rooms: privates } : {}),
       });
     }
   }
@@ -235,6 +243,26 @@ export function parseJklContent(p: JklPages): OfferContent {
   };
 }
 
+const memo = new Map<string, { at: number; p: Promise<string> }>();
+/** one fetch per page per 10 minutes: fetchContent + fetchSlots in the same run share the pages */
+function page(url: string, accept = 'text/html'): Promise<string> {
+  const hit = memo.get(url);
+  if (hit && Date.now() - hit.at < 10 * 60_000) return hit.p;
+  const p = fetchText(url, { accept });
+  memo.set(url, { at: Date.now(), p });
+  p.catch(() => memo.delete(url));
+  return p;
+}
+
+async function jklPages(): Promise<JklPages> {
+  const stay = await page(JKL_STAY_URL);
+  const kite = await page(JKL_KITE_URL);
+  const urls = parseJklRoomUrls(await page(JKL_ROOMS_SITEMAP_URL, 'application/xml,text/xml'));
+  const rooms: Array<{ url: string; html: string }> = [];
+  for (const url of urls.slice(0, 7)) rooms.push({ url, html: await page(url) });
+  return { stay, kite, rooms };
+}
+
 export const jejuKiteLabSinyang: OfferAdapter = {
   key: 'jeju-kite-lab-sinyang',
   name: 'Jeju Kite Lab Beach Guesthouse, Sinyang Beach',
@@ -253,15 +281,11 @@ export const jejuKiteLabSinyang: OfferAdapter = {
   fetchBudget: 10,
   confidence: 'medium', // undated price list, per-night basis of the whole-floor prices inferred
   async fetchContent() {
-    const stay = await fetchText(JKL_STAY_URL, { accept: 'text/html' });
-    const kite = await fetchText(JKL_KITE_URL, { accept: 'text/html' });
-    const urls = parseJklRoomUrls(await fetchText(JKL_ROOMS_SITEMAP_URL, { accept: 'application/xml,text/xml' }));
-    const rooms: Array<{ url: string; html: string }> = [];
-    for (const url of urls.slice(0, 7)) rooms.push({ url, html: await fetchText(url, { accept: 'text/html' }) });
-    return parseJklContent({ stay, kite, rooms });
+    return parseJklContent(await jklPages());
   },
   async fetchSlots() {
-    const slots = buildJklSlots(parseJklPrices(await fetchText(JKL_STAY_URL, { accept: 'text/html' })));
+    const p = await jklPages();
+    const slots = buildJklSlots(parseJklPrices(p.stay), p.rooms.map(r => parseJklRoom(r.html, r.url)));
     if (!slots.some(s => s.key === 'room|night')) throw new Error('jeju-kite-lab: no "room per night" price on the guesthouse page (layout changed?)');
     return slots;
   },

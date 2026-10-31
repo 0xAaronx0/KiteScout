@@ -130,6 +130,7 @@ export function parseNewSpiritContent(p: NsPages): OfferContent {
     region: 'Dakhla-Oued Ed-Dahab',
     spot: 'Dakhla Lagoon',
     spotCoords: coords ? { lat: Number(coords[1]), lng: Number(coords[2]) } : null, // Wix business location of the site
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kite page: "ideal conditions for riders of all levels"

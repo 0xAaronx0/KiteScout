@@ -195,6 +195,7 @@ export function parsePodCyprysamiContent(p: PcPages): OfferContent {
     region: 'Jastarnia, Hel Peninsula',
     spot: 'Jastarnia',
     spotCoords: coords, // the "home" marker of the site's own resort map
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // home: "Windsurfing and kitesurfing training for kids and adults of all skill levels"

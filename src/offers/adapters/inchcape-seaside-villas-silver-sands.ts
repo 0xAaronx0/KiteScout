@@ -278,6 +278,7 @@ export function parseInchcapeContent(p: IcPages, today = todayIso()): OfferConte
     region: 'Christ Church',
     spot: 'Silver Sands',
     spotCoords: prop.lat !== null && prop.lng !== null ? { lat: prop.lat, lng: prop.lng } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kite page: Long Beach "ideal spot to teach and learn"; waves on the outside reef "for the more experienced"

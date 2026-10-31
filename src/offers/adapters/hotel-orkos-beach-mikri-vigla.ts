@@ -193,6 +193,7 @@ export function parseOrkosContent(p: OrkosPages): OfferContent {
     region: 'Cyclades',
     spot: 'Mikri Vigla, Naxos',
     spotCoords: orkosCoords(p.accommodation) ?? orkosCoords(p.kite),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kite centre page: "Beginner, Intermediate, Advanced rider? We've got the best training spot" (2026-10-12)

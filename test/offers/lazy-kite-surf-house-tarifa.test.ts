@@ -5,8 +5,11 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  lazyKiteSurfHouseTarifa, buildLazySlots, lazyCoursePhotos, lazyImages, lazyPhotoCandidates, parseLazyFaq, parseLazyPriceNote, parseLazyRates,
+  lazyKiteSurfHouseTarifa, buildLazySlots, lazyCoursePhotos, lazyImages, lazyMonthBand, lazyPhotoCandidates, lazySeasonMonths, parseLazyFaq,
+  parseLazyPriceNote, parseLazyRates,
 } from '../../src/offers/adapters/lazy-kite-surf-house-tarifa.js';
+import { roomsWithPrices } from '../../src/offers/ingest.js';
+import { todayIso } from '../../src/offers/parse.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/lazy-kite-surf-house-tarifa');
@@ -27,18 +30,49 @@ test('lazy: TablePress price table = room type x season, per person per night', 
   assert.match(parseLazyPriceNote(html)!, /^Price per person per night/);
 });
 
-test('lazy: slots carry the season but no dates (year-less table)', async () => {
-  const slots = await lazyKiteSurfHouseTarifa.fetchSlots(ctx);
-  assert.deepEqual(slots, buildLazySlots(parseLazyRates(html), parseLazyPriceNote(html)));
+test('lazy: each printed month = its next occurrence that has not ended (the table has no year)', () => {
+  assert.deepEqual(lazySeasonMonths('October / June'), [10, 6]);
+  assert.deepEqual(lazySeasonMonths('August'), [8]);
+  assert.deepEqual(lazyMonthBand(10, '2026-10-31'), { start: '2026-10-01', end: '2026-10-31' }); // last day still counts
+  assert.deepEqual(lazyMonthBand(10, '2026-11-01'), { start: '2027-10-01', end: '2027-10-31' });
+  assert.deepEqual(lazyMonthBand(6, '2026-10-31'), { start: '2027-06-01', end: '2027-06-30' });
+  assert.deepEqual(lazyMonthBand(2, '2028-01-15'), { start: '2028-02-01', end: '2028-02-29' });
+});
+
+test('lazy: slots = room type x printed month, dated, per person per night', async () => {
+  const today = '2026-10-31';
+  const slots = buildLazySlots(parseLazyRates(html), parseLazyPriceNote(html), today);
+  assert.deepEqual(await lazyKiteSurfHouseTarifa.fetchSlots(ctx), buildLazySlots(parseLazyRates(html), parseLazyPriceNote(html), todayIso()));
   const { ok, problems } = checkSlots(slots);
   assert.deepEqual(problems, []);
-  assert.equal(ok.length, 12);
+  assert.equal(ok.length, 20); // 4 rooms x 5 months (low: October + June, mid: July + September, high: August)
   const s = (k: string) => slots.find(x => x.key === k)!;
-  assert.deepEqual([s('quadruple-room|low').price, s('quadruple-room|low').occupancy], [18, 4]);
-  assert.deepEqual([s('private-room|high').price, s('private-room|high').occupancy], [80, 1]);
-  assert.match(s('triple-room|mid').availabilityText!, /^Mid season \(July \/ September\)/);
-  assert.ok(slots.every(x => x.startDate === null && x.endDate === null && x.datePrecision === 'season'
+  assert.deepEqual([s('quadruple-room|low|2026-10').price, s('quadruple-room|low|2026-10').occupancy], [18, 4]);
+  assert.deepEqual([s('quadruple-room|low|2027-06').startDate, s('quadruple-room|low|2027-06').endDate], ['2027-06-01', '2027-06-30']);
+  assert.deepEqual([s('private-room|high|2027-08').price, s('private-room|high|2027-08').occupancy], [80, 1]);
+  assert.match(s('triple-room|mid|2027-09').availabilityText!, /^Mid season \(July \/ September\); price table without year/);
+  assert.deepEqual(slots.filter(x => x.unit === 'Double Room').map(x => [x.startDate!.slice(0, 7), x.price]),
+    [['2026-10', 25], ['2027-06', 25], ['2027-07', 35], ['2027-08', 45], ['2027-09', 35]]);
+  assert.ok(slots.every(x => x.datePrecision === 'month' && x.startDate!.endsWith('-01') && x.currency === 'EUR'
     && x.priceBasis === 'person' && x.priceUnit === 'per_night' && x.availability === 'on_request'));
+});
+
+test('lazy: the app gets month prices per room (roomsWithPrices)', async () => {
+  const c = await lazyKiteSurfHouseTarifa.fetchContent(ctx);
+  const today = '2026-10-31';
+  const rooms = roomsWithPrices(c, buildLazySlots(parseLazyRates(html), parseLazyPriceNote(html), today), today);
+  const double = rooms.find(r => r.name === 'Double Room')!;
+  assert.deepEqual(double.priced_months, [6, 7, 8, 9, 10]);
+  assert.equal(double.price_from, 25);
+  assert.deepEqual(double.availability.map(a => [a.start_date, a.end_date, a.price]), [
+    ['2026-10-01', '2026-10-31', 25], ['2027-06-01', '2027-06-30', 25], ['2027-07-01', '2027-07-31', 35],
+    ['2027-08-01', '2027-08-31', 45], ['2027-09-01', '2027-09-30', 35],
+  ]);
+  // a month later October 2026 is over: the low season shows June and October 2027
+  const later = roomsWithPrices(c, buildLazySlots(parseLazyRates(html), parseLazyPriceNote(html), '2026-11-01'), '2026-11-01');
+  assert.deepEqual(later.find(r => r.name === 'Double Room')!.availability.map(a => a.start_date),
+    ['2027-06-01', '2027-07-01', '2027-08-01', '2027-09-01', '2027-10-01']);
+  assert.ok(rooms.every(r => r.priced_months.length === 5 && r.availability.length === 5));
 });
 
 test('lazy: FAQ and photo', () => {

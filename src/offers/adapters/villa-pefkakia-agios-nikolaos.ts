@@ -149,6 +149,7 @@ export function parseVillaPefkakiaContent(p: VpPages): OfferContent {
     region: 'Aetolia-Acarnania',
     spot: 'Agios Nikolaos, Lefkada',
     spotCoords: parseVpCoords(p.rooms) ?? parseVpCoords(p.house),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // /rooms: "We welcome kitesurfers who already have some experience" (2026-10-12)

@@ -8,6 +8,7 @@ import {
   maszoperiaSun4helJastarnia, buildS4hSlots, parseS4hPrices, s4hPriceListUrl,
 } from '../../src/offers/adapters/maszoperia-sun4hel-jastarnia.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { roomsWithPrices } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/maszoperia-sun4hel-jastarnia');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -23,18 +24,30 @@ test('s4h: price list link and unit ranges (pitches and camper plots left out)',
   assert.equal(prices[0].raw, 'Przyczepy od 100 zł do 750 zł – w zależności od terminu');
 });
 
-test('s4h: slots = unit for the price-list year, the from-price, availability unknown', async () => {
+test('s4h: slots = unit for the price-list year, the from-price without dates, availability unknown', async () => {
   const slots = await maszoperiaSun4helJastarnia.fetchSlots(ctx);
   assert.deepEqual(slots, buildS4hSlots(parseS4hPrices(read('sun4hel.pl_cennik-2026.')), 2026));
   const { ok, problems } = checkSlots(slots);
   assert.deepEqual(problems, []);
-  assert.deepEqual(ok.map(s => [s.key, s.unit, s.startDate, s.endDate, s.datePrecision, s.price]), [
-    ['caravan|2026', 'Surf caravan', '2026-01-01', '2026-12-31', 'season', 100],
-    ['wiatr|2026', 'Wiatr family room', '2026-01-01', '2026-12-31', 'season', 100],
-    ['sky|2026', 'Sky room', '2026-01-01', '2026-12-31', 'season', 100],
-    ['woda|2026', 'Woda room', '2026-01-01', '2026-12-31', 'season', 100],
+  // Aaron 2026-10-31: "od 100 zł do 750 zł" is a range, not the price of every 2026 date -> no dates, a floor price.
+  assert.deepEqual(ok.map(s => [s.key, s.unit, s.startDate, s.endDate, s.price, s.priceIsMinimum]), [
+    ['caravan|2026', 'Surf caravan', null, null, 100, true],
+    ['wiatr|2026', 'Wiatr family room', null, null, 100, true],
+    ['sky|2026', 'Sky room', null, null, 100, true],
+    ['woda|2026', 'Woda room', null, null, 100, true],
   ]);
   assert.ok(slots.every(s => s.currency === 'PLN' && s.priceUnit === 'per_night' && s.priceBasis === 'room' && s.availability === 'unknown'));
+});
+
+test('s4h: rooms show the range floor as a from-price and no priced month (Aaron 2026-10-31)', async () => {
+  const content = await maszoperiaSun4helJastarnia.fetchContent(ctx);
+  const rows = roomsWithPrices(content, await maszoperiaSun4helJastarnia.fetchSlots(ctx), '2026-10-31');
+  assert.deepEqual(rows.map(r => [r.name, r.price_from, r.price_currency, r.price_from_is_minimum, r.priced_months, r.availability]), [
+    ['Surf caravan', 100, 'PLN', true, [], []],
+    ['Wiatr family room', 100, 'PLN', true, [], []],
+    ['Sky room', 100, 'PLN', true, [], []],
+    ['Woda room', 100, 'PLN', true, [], []],
+  ]);
 });
 
 test('s4h: content', async () => {

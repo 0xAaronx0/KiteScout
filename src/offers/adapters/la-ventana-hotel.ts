@@ -112,6 +112,7 @@ export function parseLvhContent(p: LvhPages): OfferContent {
     region: 'La Ventana, Baja California Sur',
     spot: 'La Ventana',
     ...(hotel.geo ? { spotCoords: hotel.geo } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'],

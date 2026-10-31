@@ -28,7 +28,7 @@ const APPLY_FIELDS = new Set([
   'title', 'country', 'region', 'price_from_eur', 'currency', 'duration_days',
   'season_text', 'vessel_name', 'vessel_type', 'summary', 'booking_modes', 'dates',
   'price_pp_cabin', 'price_pp_cabin_currency', 'price_charter_week', 'price_charter_week_currency',
-  'season_start_month', 'season_end_month',
+  'season_start_month', 'season_end_month', 'duration_nights',
 ]);
 
 interface RerunData {

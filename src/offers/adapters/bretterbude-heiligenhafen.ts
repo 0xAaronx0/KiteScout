@@ -199,6 +199,7 @@ export function parseBretterbudeContent(p: BbhPages): OfferContent {
     region: 'Heiligenhafen, Baltic Coast',
     spot: 'Heiligenhafen',
     spotCoords: BBH_COORDS,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // plankenverleih: "Einstiegskurse sowie Privatstunden", "ein relativ großer Stehbereich hilft Aufsteiger:innen"

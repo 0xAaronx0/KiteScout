@@ -118,6 +118,7 @@ export function parseTheKitesurfLodgeContent(p: TklPages): OfferContent {
     spot: 'Lagoa de Óbidos',
     // JSON-LD SportsActivityLocation.geo on the site (checked 2026-10-12)
     spotCoords: Number.isFinite(lat) && Number.isFinite(lng) && lat !== 0 ? { lat, lng } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // home: "beginners find confidence, intermediates level up, experienced riders refine the details"

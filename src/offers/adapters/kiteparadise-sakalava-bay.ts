@@ -193,6 +193,7 @@ export function parseKiteParadiseContent(p: KpPages): OfferContent {
     region: 'Diana (Diego Suarez)',
     spot: 'Sakalava Bay',
     spotCoords: parseKpCoords(p.home),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // "this is the perfect spot for beginners" (/kitespot); private lessons "BEGINNER OR ADVANCED"; freestyle / wave / foil coaching

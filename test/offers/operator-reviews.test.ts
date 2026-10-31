@@ -14,7 +14,7 @@ test('rejects a Google link without place name and a bstoked category page (dry 
 });
 
 test('patch keeps sources, averages kept ratings and drops guarded or skipped ones with their notes', () => {
-  const links = { tripadvisor_url: 'https://www.tripadvisor.com/x', tripadvisor_rating: 4.2, tripadvisor_review_count: 72,
+  const links = { tripadvisor_url: 'https://www.tripadvisor.com/Hotel_Review-g1-d2-Reviews-Op-X.html', tripadvisor_rating: 4.2, tripadvisor_review_count: 72,
     bstoked_url: 'https://bstoked.net/listings/op/', bstoked_rating: 4.8, bstoked_review_count: 9 };
   const notes = ['TripAdvisor: search snippet (high)', 'bSTOKED: listing (high)'];
   const full = operatorReviewPatch(result(links, notes), new Set(), '2026-10-30T10:00:00Z');
@@ -31,7 +31,7 @@ test('patch keeps sources, averages kept ratings and drops guarded or skipped on
 // Aaron 2026-10-31 (#607, "607 b"): no Google Maps pages are fetched and no Google numbers are written or averaged.
 test('Google is neither written nor averaged; a stored google_url stays untouched', () => {
   const patch = operatorReviewPatch(result({ google_url: 'https://www.google.com/maps/place/Op/@1,2,17z', google_rating: 4.9, google_review_count: 500,
-    tripadvisor_url: 'https://www.tripadvisor.com/x', tripadvisor_rating: 4.0 }, ['Google: Maps search match (high)', 'TripAdvisor: x']), new Set(), 'now');
+    tripadvisor_url: 'https://www.tripadvisor.com/Hotel_Review-g1-d2-Reviews-Op-X.html', tripadvisor_rating: 4.0, tripadvisor_review_count: 12 }, ['Google: Maps search match (high)', 'TripAdvisor: x']), new Set(), 'now');
   for (const col of ['google_url', 'google_rating', 'google_review_count']) assert.equal(col in patch, false, col);
   assert.equal(patch.avg_rating, 4.0);
   assert.equal(patch.review_match_notes, 'TripAdvisor: x');

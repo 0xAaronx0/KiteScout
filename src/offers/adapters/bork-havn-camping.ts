@@ -202,6 +202,7 @@ export function parseBorkHavnContent(p: BhcPages): OfferContent {
     region: 'Bork Havn, West Jutland',
     spot: 'Bork Havn',
     ...(parseBhcPin(p.home) ? { spotCoords: parseBhcPin(p.home)! } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: [],

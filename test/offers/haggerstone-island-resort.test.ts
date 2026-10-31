@@ -24,7 +24,7 @@ test('haggerstone: CSS background photos, no screenshot', () => {
   assert.ok(!haggImages(read('_stay')).some(u => /Screen-Shot|Lighthouse/i.test(u)));
 });
 
-test('haggerstone: valid content, no slots (rates only in a PDF)', async () => {
+test('haggerstone: valid content, hand-copied 2027 rates without fetching the PDF', async () => {
   const c = await haggerstoneIslandResort.fetchContent(ctx);
   assert.equal(contentProblem(c), null);
   assert.equal(c.kind, 'accommodation');
@@ -32,6 +32,13 @@ test('haggerstone: valid content, no slots (rates only in a PDF)', async () => {
   assert.match(c.summary, /5 individually designed beachfront villas \(one still in development\)/);
   assert.doesNotMatch(c.summary, /[–—]/);
   const before = requestsSoFar();
-  assert.deepEqual(await haggerstoneIslandResort.fetchSlots(ctx), []);
-  assert.equal(requestsSoFar(), before);
+  const slots = await haggerstoneIslandResort.fetchSlots(ctx);
+  assert.equal(requestsSoFar(), before); // the robots-disallowed PDF is never fetched
+  // Every priced unit is a villa from /stay, in AUD per night, from the rate sheet (Aaron 2026-10-31).
+  const villas = parseHaggVillas(read('_stay')).map(v => v.name);
+  assert.ok(slots.every(s => villas.includes(s.unit!) && s.currency === 'AUD' && s.priceUnit === 'per_night'));
+  assert.deepEqual(slots.filter(s => s.unit === 'Lagoon Hut').map(s => [s.price, s.startDate]),
+    [[1500, null], [1700, '2027-03-28'], [1700, '2027-06-25'], [1700, '2027-09-18']]);
+  assert.deepEqual(slots.filter(s => s.unit === 'Haus Mawu').map(s => [s.price, s.priceBasis, s.occupancy]), [[6500, 'room', 4], [8000, 'room', 6]]);
+  assert.ok(slots.every(s => !/[–—]/.test(s.availabilityText ?? '')));
 });

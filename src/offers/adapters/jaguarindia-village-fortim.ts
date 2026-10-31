@@ -136,6 +136,7 @@ export function parseJaguarindiaContent(p: JvPages): OfferContent {
     spot: 'Fortim',
     // Omnibees hotel page map pin (#map-wrap data-lat / data-long, 2026-10-12); the own site has no map coordinates
     spotCoords: ob.pin,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kitesurf page: "From beginners to advanced riders, everyone will find ..."

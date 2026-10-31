@@ -157,6 +157,7 @@ export function parseHhContent(p: HhPages): OfferContent {
     region: 'Los Barriles, Baja California Sur',
     spot: 'Los Barriles',
     spotCoords: cb.pin,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // wahoowind: "Kite camps are designed for all levels: from total beginners to pros" (2026-10-14)

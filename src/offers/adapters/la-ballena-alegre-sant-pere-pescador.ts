@@ -32,12 +32,14 @@
 //   free units, 'sold_out' for change-over weeks inside the season without a bookable 7-night stay.
 // Rooms: engine products are linked to the site's bungalow rooms via BA_ROOMS (slot.room); "Cortal" and "Empúries"
 //   price both their Garden and Pool bungalows, so those slots are repeated per room (shared availability).
+//   A bungalow the engine prices in no sample week gets its printed "From 133€/night" as an undated floor (2026-10-31).
 // Photos: each bungalow room gets its own gallery (galeria_alojamiento, site order; floor plans and the site-map crops
 //   left out); spotImageUrls = the ION Club gallery on /experiences/nautical/.
 // Known limits: prices are sampled once per month and group (the engine prices by exact stay); short stays at
 //   season start/end and weekend offers are ignored; tourist tax (0.50 EUR pp/night) is extra.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
+import { printedFromSlots } from '../ingest.js';
 import { clean, iso, runsOf, todayIso } from '../parse.js';
 import type { Availability, ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
 
@@ -378,7 +380,10 @@ export async function fetchBaSlots(ctx: FetchContext, today: string): Promise<Sl
   if (failed > 0) ctx.incomplete(`${failed} of ${samples.length} sample prices failed`);
   const slots = withBaRooms(buildBaSlots(products, avail, priced, today));
   if (samples.length > 0 && slots.length === 0) throw new Error('la-ballena-alegre: sample stays found but no bands built');
-  return slots;
+  // bungalows the engine prices in no sample week keep the "From 133€/night" of their page (memoised overview)
+  const printed = parseBaBungalows(await get(BA_BUNGALOWS_URL, 'text/html')).flatMap(b => b.fromPerNight === null ? []
+    : [{ room: `Bungalow ${b.title}`, price: b.fromPerNight, currency: 'EUR', priceUnit: 'per_night' as const, priceBasis: 'room' as const }]);
+  return [...slots, ...printedFromSlots(slots, printed)];
 }
 
 // --- content ----------------------------------------------------------------------------------
@@ -431,6 +436,7 @@ export function parseBallenaContent(p: BaPages): OfferContent {
     region: 'Catalonia',
     spot: 'Sant Pere Pescador, Bay of Roses',
     spotCoords: geo, // geoPosition of the property in its own booking engine (MasterCamping)
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // nautical page: "school for all levels"

@@ -336,6 +336,7 @@ export function parseRegenbogenUmmanzContent(html: string): OfferContent {
     region: 'Suhrendorf, Rügen',
     spot: 'Suhrendorf, Ummanz',
     ...(pin ? { spotCoords: pin } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'],

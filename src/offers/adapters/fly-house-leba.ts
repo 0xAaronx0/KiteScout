@@ -122,6 +122,7 @@ export function parseFlyHouseContent(p: FhPages): OfferContent {
     region: 'Łeba, Pomerania',
     spot: 'Łeba',
     spotCoords: fhCoords(p.house),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kite page: "od totalnych podstaw po bardziej zaawansowane manewry" (2026-10-12)

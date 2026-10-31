@@ -16,14 +16,18 @@
 // robots.txt (2026-10-12): Joomla default (/administrator/, /api/, /components/, /modules/, ... disallowed) - the
 //   pages we read are allowed.
 // Requests per run: content 7, slots 2 (home + price list, memoised).
-// Parsed: slot = unit for the price-list year ("caravan|2026", 2026-01-01..2026-12-31, datePrecision 'season'),
-//   price = the "od" (from) amount, PLN per unit and night (per night inferred: the list prints only "od X zł do Y
-//   zł", the same list prices pets per "doba"), availability 'unknown'. The upper bound goes into the room features.
+// Parsed: slot = unit for the price-list year ("caravan|2026"), price = the "od" (from) amount, PLN per unit and night
+//   (per night inferred: the list prints only "od X zł do Y zł", the same list prices pets per "doba"), availability
+//   'unknown'. The upper bound goes into the room features.
+// Aaron 2026-10-31: the range is not a year-round price. The slot carries no dates (a whole-year slot made the app
+//   show PLN 100 as the price of every month) and is marked priceIsMinimum, so the room shows "from PLN 100".
+//   Rechecked 2026-10-31: /cennik-2026 and the four unit pages print only these ranges; the dated prices live in the
+//   RoomAdmin widget, which robots.txt disallows.
 // Known limits: no dates per price (the range spans low to high season); when a new "Cennik" year appears the slot
 //   keys move with it; no map pin on the site (the Windy embed is a wind map, not the campsite).
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
-import { clean, imageCandidates, iso } from '../parse.js';
+import { clean, imageCandidates } from '../parse.js';
 import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
 
 const SITE = 'https://sun4hel.pl';
@@ -98,9 +102,9 @@ export function parseS4hPrices(html: string): S4hPrice[] {
 export function buildS4hSlots(prices: S4hPrice[], year: number): Slot[] {
   return prices.map(p => ({
     key: `${p.key}|${year}`,
-    startDate: iso(year, 1, 1),
-    endDate: iso(year, 12, 31),
-    datePrecision: 'season' as const,
+    startDate: null,
+    endDate: null,
+    priceIsMinimum: true,
     unit: p.name,
     price: p.from,
     currency: 'PLN',

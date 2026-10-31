@@ -296,4 +296,7 @@ CHANGES_ADMIN_KEY           # gates /admin/media and /changes (set on VPS + web/
   system; if Phase 1, gate the API routes by the flag, commit, then Phase 0 (Postmark/DNS/env +
   migration).
 - Marketing engine MVP (post queue + approval UI) once Aaron gives the Go.
-- Spot characteristics data (flat/wave, skill level) and provider-record verification UI — not built.
+- Spot characteristics EXIST as table `spot_conditions` (water_conditions flat/choppy/waves,
+  skill_levels, wind, best_months; 126 rows, all `source = llm_knowledge`, 0 `reviewed`,
+  live-verified 2026-10-31) and KCS reads them (`src/features/catalog/supabase.ts`) - unreviewed
+  LLM estimates: review before showing them as a map filter. Provider-record verification UI: not built.

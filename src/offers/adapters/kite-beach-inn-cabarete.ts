@@ -257,6 +257,7 @@ export function parseKiteBeachInnContent(p: KbiPages): OfferContent {
     region: 'Puerto Plata',
     spot: 'Kite Beach, Cabarete',
     ...(coords ? { spotCoords: coords } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // specials page: "The kiteboarding school provides beginner, advanced and custom-designed classes" (2026-10-12)

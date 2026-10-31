@@ -179,6 +179,7 @@ export function parseWindchaserContent(p: WcPages): OfferContent {
     region: 'Providenciales',
     spot: 'Long Bay Beach',
     spotCoords: pin ? { lat: pin.lat!, lng: pin.lng! } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // TKCA on bstoked: "a favorite for all levels"

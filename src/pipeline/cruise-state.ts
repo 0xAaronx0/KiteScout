@@ -37,6 +37,8 @@ export interface ObservedState {
   /** cheapest whole-boat price and the number of days it covers */
   priceCharter: (Money & { days: number | null }) | null;
   durationDays: number | null;
+  /** nights as stated (Aaron 2026-10-31: the stored fact); optional for older adapters */
+  durationNights?: number | null;
   seasonStartMonth: number | null;
   seasonEndMonth: number | null;
   seasonText: string | null;
@@ -56,18 +58,19 @@ export interface OfferRow {
   price_from_eur: number | null;
   currency: string | null;
   duration_days: number | null;
+  duration_nights: number | null;
   season_start_month: number | null;
   season_end_month: number | null;
   season_text: string | null;
 }
 export const OFFER_ROW_COLUMNS =
   'id, slug, title, source_url, dates, price_pp_cabin, price_pp_cabin_currency, price_charter_week, ' +
-  'price_charter_week_currency, price_from_eur, currency, duration_days, season_start_month, season_end_month, season_text';
+  'price_charter_week_currency, price_from_eur, currency, duration_days, duration_nights, season_start_month, season_end_month, season_text';
 
 /** Every column a proposal may set (hard whitelist, mirrored in web/app/api/changes/resolve). */
 export const STATE_FIELDS = [
   'dates', 'price_pp_cabin', 'price_pp_cabin_currency', 'price_charter_week', 'price_charter_week_currency',
-  'price_from_eur', 'duration_days', 'season_start_month', 'season_end_month', 'season_text',
+  'price_from_eur', 'duration_days', 'duration_nights', 'season_start_month', 'season_end_month', 'season_text',
 ] as const;
 
 export interface FieldChange { field: string; before: unknown; after: unknown }
@@ -305,8 +308,15 @@ export function proposeUpdate(
       }
     }
 
+    // ── nights (Aaron 2026-10-31): the unambiguous stored fact; a jump of more than 2 nights goes to review ──
+    const nights = obs.durationNights ?? null;
+    if (nights !== null && Number.isInteger(nights) && nights >= 0 && nights <= 60 && nights !== offer.duration_nights) {
+      if (offer.duration_nights !== null && Math.abs(nights - offer.duration_nights) > 2) violations.push(`Nächte ${offer.duration_nights} → ${nights}`);
+      put('duration_nights', offer.duration_nights, nights);
+    }
+
     // ── duration: ±1 day is the nights-vs-days ambiguity ("7 nights" = 7 or 8 days), never a change ──
-    const dur = obs.durationDays;
+    const dur = obs.durationDays ?? (nights !== null ? nights + 1 : null);
     const durBefore = offer.duration_days;
     if (dur && Number.isInteger(dur) && dur >= 1 && dur <= 60 && (durBefore === null || Math.abs(dur - durBefore) >= 2)) {
       if (durBefore && Math.abs(dur - durBefore) > Math.max(2, durBefore * 0.5)) violations.push(`Dauer ${durBefore} → ${dur} Tage`);
@@ -363,6 +373,7 @@ function summarize(changes: FieldChange[], today: string): string {
     } else if (c.field === 'price_pp_cabin') parts.push(`p.P. ${c.before ?? '-'} → ${c.after}`);
     else if (c.field === 'price_charter_week') parts.push(`Charter/Woche ${c.before ?? '-'} → ${c.after}`);
     else if (c.field === 'duration_days') parts.push(`Dauer ${c.before ?? '-'} → ${c.after} Tage`);
+    else if (c.field === 'duration_nights') parts.push(`Nächte ${c.before ?? '-'} → ${c.after}`);
     else if (c.field === 'season_start_month') parts.push('Saison');
   }
   return parts.join(' · ') || 'Listing-Daten aktualisiert';

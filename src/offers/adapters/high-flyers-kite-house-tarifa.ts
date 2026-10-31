@@ -247,6 +247,7 @@ export function parseHighFlyersContent(p: HfPages): OfferContent {
     region: 'Tarifa town',
     spot: 'Tarifa',
     spotCoords: geo,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // about: KBC lessons "whether you're taking your very first lesson or fine-tuning your technique"; camps are not for beginners

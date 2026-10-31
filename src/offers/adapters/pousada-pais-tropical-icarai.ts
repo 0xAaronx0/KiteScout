@@ -146,6 +146,7 @@ export function parsePaisTropicalContent(p: PtPages): OfferContent {
     spot: 'Icaraí de Amontada',
     // the site's LodgingBusiness JSON-LD geo (checked 2026-10-12)
     spotCoords: lodging.lat !== null && lodging.lng !== null ? { lat: lodging.lat, lng: lodging.lng } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kitesurfing page: "Kitesurf and wing lessons, from day one to advanced level" (Cabana do Kite)
