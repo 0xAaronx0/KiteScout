@@ -13,13 +13,13 @@ export type { OperatorReviewResult } from './operator-review-patch.js';
 
 const CONCURRENCY = 3;
 
-interface ReviewSource {
+export interface ReviewSource {
   key: 'tripadvisor' | 'bstoked';
   label: string;
   hostMatch: (host: string) => boolean;
 }
 
-const SOURCES: ReviewSource[] = [
+export const SOURCES: ReviewSource[] = [
   {
     key: 'tripadvisor',
     label: 'TripAdvisor',
@@ -311,11 +311,11 @@ export async function recomputeAllAvgRatings(): Promise<void> {
 // ---------------------------------------------------------------------------
 // Process one provider
 // ---------------------------------------------------------------------------
-type ReviewTarget = { id: string; name: string | null; root_domain: string; website_url: string | null; primary_country: string | null };
+export type ReviewTarget = { id: string; name: string | null; root_domain: string; website_url: string | null; primary_country: string | null };
 
 // Finds review links and ratings for one operator without writing anything; extraUrls are stored own pages
 // (contact/about/review) worth checking for self-links. Shared by the cruise writer and the operator dry run.
-async function collectReviews(
+export async function collectReviews(
   cp: ReviewTarget,
   opts: { sources: ReviewSource[] },
   storedPageUrls: string[],
