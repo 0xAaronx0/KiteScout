@@ -358,6 +358,25 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'google-place-ids': {
+      // Google place IDs for operators with a stored Maps place link (KCS#607 option 1, Aaron 2026-10-31). Only the
+      // place ID is stored; KCS fetches the rating live. Needs GOOGLE_PLACES_API_KEY. Two steps like operator-reviews.
+      const apply = flagStr('--apply');
+      if (apply) {
+        const { applyGooglePlaceIds } = await import('./pipeline/google-place-ids.js');
+        const r = await applyGooglePlaceIds(JSON.parse(readFileSync(apply, 'utf8')));
+        console.log(`google-place-ids: ${r.written} written, ${r.skipped} skipped (already had a place ID)`);
+        break;
+      }
+      if (!args.includes('--dry-run')) { console.error('google-place-ids: pass --dry-run --out f.json (search) or --apply f.json (write a reviewed file).'); process.exitCode = 1; break; }
+      const { runGooglePlaceIdsDryRun } = await import('./pipeline/google-place-ids.js');
+      const results = await runGooglePlaceIdsDryRun({ limit: positionalLimit() });
+      const out = flagStr('--out');
+      if (out) writeFileSync(out, JSON.stringify(results, null, 2));
+      console.log(`${results.length} operators: ${results.filter(r => r.placeId).length} matched, ${results.filter(r => r.note.startsWith('error')).length} errors${out ? ` -> ${out}` : ''}`);
+      break;
+    }
+
     case 'operator-reviews': {
       // Package operators' review links (bstoked, TripAdvisor, Google). Two steps (Aaron 2026-10-30):
       //   --dry-run --out f.json   search, write only the file (for review)
