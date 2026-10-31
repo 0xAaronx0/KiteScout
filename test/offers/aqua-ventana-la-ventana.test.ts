@@ -7,6 +7,7 @@ import {
   aquaVentanaLaVentana, aqSamples, aqSearchUrl, fetchAqSlots, parseAqUnits, unwrapNextImage,
 } from '../../src/offers/adapters/aqua-ventana-la-ventana.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { roomsWithPrices } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/aqua-ventana-la-ventana');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -66,11 +67,30 @@ test('aqua: slots = unit x month, USD per night, available / sold_out', async ()
   assert.equal(Math.min(...slots.filter(s => s.price !== null).map(s => s.price!)), 180);
 });
 
-test('aqua: units booked in every sample month keep the room list from-price (Aaron 2026-10-31)', async () => {
+test('aqua: every unit carries the room list from-price as an undated floor (Aaron 2026-10-31)', async () => {
   const slots = await fetchAqSlots(ctx, TODAY);
-  assert.deepEqual(slots.filter(s => s.key.startsWith('printed|')).map(s => [s.room, s.price, s.currency, s.startDate, s.priceIsMinimum]), [
-    ['Damiana', 180, 'USD', null, true], ['Carisa', 180, 'USD', null, true],
+  const printed = slots.filter(s => s.key.startsWith('printed|'));
+  assert.equal(printed.length, 17);
+  assert.ok(printed.every(s => s.currency === 'USD' && s.priceUnit === 'per_night' && s.startDate === null && s.priceIsMinimum));
+  assert.deepEqual(printed.filter(s => ['Damiana', 'Pitaya', 'Sabila'].includes(s.room!)).map(s => [s.room, s.price]), [
+    ['Pitaya', 250], ['Damiana', 180], ['Sabila', 120],
   ]);
+});
+
+test('aqua: room price = min(engine, printed from-price) as "from"; dated month prices stay (Aaron 2026-10-31, "aqua min ja")', async () => {
+  const content = await aquaVentanaLaVentana.fetchContent(ctx);
+  const rows = roomsWithPrices(content, await fetchAqSlots(ctx, TODAY), TODAY);
+  const row = (name: string) => rows.find(r => r.name === name)!;
+  // engine only for expensive months (625 in March), the room list prints "Starts at $250"
+  assert.deepEqual([row('Pitaya').price_from, row('Pitaya').price_from_is_minimum], [250, true]);
+  // the printed floor is below every engine month
+  assert.deepEqual([row('Sabila').price_from, row('Sabila').price_from_is_minimum], [120, true]);
+  // booked in every sample month: the printed floor alone
+  assert.deepEqual([row('Damiana').price_from, row('Damiana').price_from_is_minimum], [180, true]);
+  // a dated engine price is still the price of its month
+  assert.deepEqual(row('Pitaya').priced_months, [3, 12]);
+  assert.ok(row('Pitaya').availability.some(a => a.start_date === '2027-03-01' && a.price === 625));
+  assert.ok(row('Pitaya').availability.every(a => a.price !== 250));
 });
 
 test('aqua: content', async () => {

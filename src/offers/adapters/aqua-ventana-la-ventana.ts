@@ -19,8 +19,8 @@
 //            "Total" adds the 20% tax) or "Unavailable for selected dates. Next availability for 7 nights: Jan 19".
 // robots.txt (2026-10-14): disallows /reservations/, /gift-certificates/, /account/, /thinkweb-preview only; the
 //   .md pages are allowed. Currency: the site prints "$"; the policies page states USD.
-// Requests per run: content 5, slots 7 + the room list (memoised; a full run makes 12). A unit booked in every sample
-//   month keeps the room list's "Starts at $X / night" as an undated floor (2026-10-31).
+// Requests per run: content 5, slots 7 + the room list (memoised; a full run makes 12). Every unit also carries the
+//   room list's "Starts at $X / night" as an undated floor (2026-10-31): price_from = min(engine, printed), "from".
 // Parsed: slot = unit x month ("cardon|2027-01"), USD per unit per night before tax, occupancy 2,
 //   datePrecision 'month' (the band is the month, the price is the sample stay's), 'available' with the price or
 //   'sold_out' with the engine's own words. Taxes (20% VAT + hotel tax) are in the room features and the
@@ -189,10 +189,12 @@ export async function fetchAqSlots(ctx: FetchContext, today: string): Promise<Sl
   if (failed) ctx.incomplete(`${failed} of ${samples.length} sample months failed`);
   const slots = buildAqSlots(results);
   if (slots.length === 0 && failed < samples.length) throw new Error('aqua-ventana: no priced or unavailable unit in any sample month (layout changed?)');
-  // units booked in every sample month keep the room list's "Starts at $X / night" (memoised with the content)
+  // Aaron 2026-10-31 ("aqua min ja"): every unit carries the room list's "Starts at $X / night" as an undated floor
+  // (memoised with the content), so its price is min(engine, printed) shown as "from"; the engine samples often price
+  // only the expensive months, and a dated month keeps its engine price
   const printed = parseAqUnits(await page(AQ_ROOMS_MD, MD)).flatMap(u => u.price === null ? []
     : [{ room: u.name, price: u.price, currency: 'USD', priceUnit: 'per_night' as const, priceBasis: 'room' as const }]);
-  return [...slots, ...printedFromSlots(slots, printed)];
+  return [...slots, ...printedFromSlots([], printed)];
 }
 
 // --- content -------------------------------------------------------------------------------------
