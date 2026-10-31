@@ -19,6 +19,8 @@
 // Parsed: slot per room type x occupancy column, EUR per person per night incl. full board, occupancy = column
 //   (1-4); the "Double bedroom garden bungalow" row is marked "(Per room)" per bedroom (3 pax per room) and is
 //   still a per-person price. The villa's "85-100 EUR/pp" range on /stay/ is not in the table (table: 85).
+// Room photos: the card image of each /stay/ room card (one per type; the room subpages are not fetched). Spot photos:
+//   the home page's kite cards ("Kite & Wing", Kite / Wing School, Trips, Coaching) and kite testimonial backgrounds.
 // Known limits: one price for the whole year (the site says rates depend on room and season, but publishes one
 //   table); spotCoords omitted (no map embed or JSON-LD geo on the site; address Dutch Bay Road, Kandakuliya).
 // ---------------------------------------------------------------------------
@@ -132,6 +134,50 @@ export function parseKslRoomCards(html: string): KslRoomCard[] {
   return out;
 }
 
+/** the general list's junk filter (on top of imageCandidates' own): theme assets, logos, review widgets */
+const KSL_JUNK_RE = /logo|icon|flag|trustindex|tripadvisor|google|\.svg|avatar|gravatar|\/themes\/ksl\/assets\//i;
+
+/** image URLs of an HTML fragment, normalised exactly like the general list (absolute, WordPress size variants stripped) */
+function kslImages(fragment: string, base: string): string[] {
+  return imageCandidates(fragment, base, null, 40).filter(u => !KSL_JUNK_RE.test(u));
+}
+
+/** /stay/ room cards: card name -> the card's own photo (the carousel repeats every card for mobile; kept once). */
+export function parseKslRoomPhotos(html: string): Map<string, string[]> {
+  const out = new Map<string, string[]>();
+  for (const card of parse(html).querySelectorAll('.card.card__3')) {
+    const name = collapse(card.querySelector('.card-title')?.text ?? '');
+    if (!name) continue;
+    const list = out.get(name) ?? [];
+    for (const u of kslImages(card.outerHTML, KSL_STAY_URL)) if (!list.includes(u)) list.push(u);
+    out.set(name, list);
+  }
+  return out;
+}
+
+/**
+ * Home page kite photos: the cards titled for kiting ("Kite & Wing", Kite / Wing School, Trips & Everyday Spots, Kite
+ * Coaching; not the shop or rental) first, then the testimonial backgrounds whose file name says kiting (the brand name
+ * "kitesurfing lanka" alone does not count; gear, brand, resort and restaurant shots left out).
+ */
+export function parseKslSpotPhotos(html: string): string[] {
+  const root = parse(html);
+  const out: string[] = [];
+  const add = (urls: string[]) => { for (const u of urls) if (!out.includes(u)) out.push(u); };
+  for (const card of root.querySelectorAll('.card__1, .card__2')) {
+    const title = collapse(card.querySelector('.card-title')?.text ?? '');
+    if (!/kite|wing|trip|spot|coaching/i.test(title) || /shop|repair|rental/i.test(title)) continue;
+    add(kslImages(card.outerHTML, KSL_HOME_URL));
+  }
+  for (const slide of root.querySelectorAll('.swiper__testimonials .swiper-slide')) {
+    add(kslImages(slide.outerHTML, KSL_HOME_URL).filter(u => {
+      const file = (u.split('/').pop() ?? '').toLowerCase().replace(/kitesurfing-?lanka/g, '');
+      return /kite|kiting/.test(file) && !/duotone|equipment|rental|resort|restaurant|lifestyle/.test(file);
+    }));
+  }
+  return out;
+}
+
 export interface KslPages { home: string; stay: string; rates: string }
 
 export function parseKslContent(p: KslPages): OfferContent {
@@ -148,19 +194,25 @@ export function parseKslContent(p: KslPages): OfferContent {
   const modified = (ldOfType(p.home, 'WebPage')[0]?.dateModified as string | undefined) ?? null;
   const minPrice = table.length ? Math.min(...table.map(r => r.price)) : null;
 
-  const rooms: ContentRoom[] = cards.map(c => ({
-    name: c.name,
-    description: c.text,
-    features: [
-      ...c.prices.map(x => x.replace(/\s*Full board$/i, ' (full board)')),
-      ...table.filter(r => kslRoomName(r.room).toLowerCase() === c.name.toLowerCase().replace(/s$/, '')).map(r => `${r.occupancy} person${r.occupancy > 1 ? 's' : ''}: EUR ${r.price} per person per night, full board`),
-    ],
-  }));
+  const roomPhotos = parseKslRoomPhotos(p.stay);
+  const rooms: ContentRoom[] = cards.map(c => {
+    const photos = roomPhotos.get(c.name) ?? [];
+    return {
+      name: c.name,
+      description: c.text,
+      features: [
+        ...c.prices.map(x => x.replace(/\s*Full board$/i, ' (full board)')),
+        ...table.filter(r => kslRoomName(r.room).toLowerCase() === c.name.toLowerCase().replace(/s$/, '')).map(r => `${r.occupancy} person${r.occupancy > 1 ? 's' : ''}: EUR ${r.price} per person per night, full board`),
+      ],
+      ...(photos.length ? { imageUrls: photos } : {}),
+    };
+  });
+  const spotImageUrls = parseKslSpotPhotos(p.home);
 
   const seen = new Set<string>();
   const imageUrls: string[] = [];
   for (const u of [...imageCandidates(p.home, KSL_HOME_URL, null, 40), ...imageCandidates(p.stay, KSL_STAY_URL, null, 40)]) {
-    if (/logo|icon|flag|trustindex|tripadvisor|google|\.svg|avatar|gravatar|\/themes\/ksl\/assets\//i.test(u)) continue;
+    if (KSL_JUNK_RE.test(u)) continue;
     const k = u.replace(/-\d+x\d+(?=\.[a-z]+$)|-scaled(?=\.[a-z]+$)/i, '');
     if (seen.has(k)) continue;
     seen.add(k); imageUrls.push(u);
@@ -202,6 +254,7 @@ export function parseKslContent(p: KslPages): OfferContent {
     languages: [],
     rooms,
     imageUrls: imageUrls.slice(0, 40),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: KSL_STAY_URL,
     bookingUrl: INQUIRY_URL,

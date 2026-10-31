@@ -10,6 +10,7 @@ import {
   skvResultsUrl, skvSampleStays, skvWidgetBody,
 } from '../../src/offers/adapters/saltys-kitesurf-village-kilifi.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/saltys-kitesurf-village-kilifi');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -122,4 +123,35 @@ test('saltys: content', async () => {
   assert.ok(c.optionalServices.some(s => /^Classic Kite Getaway .*: 6 Days \/ 5 Nights, from USD 865 per person/.test(s)));
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://images.squarespace-cdn.com/content/') && !u.includes('?')));
+});
+
+test('saltys: every room type has the slideshow under its heading, /kitecenter gives the kite photos, all inside the first 24', async () => {
+  const c = await saltysKitesurfVillageKilifi.fetchContent(ctx);
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0]), [
+    ['Cottage Superior Suite Top Floor', 5], ['Cottage Superior Suite', 9], ['Cottage Double Ensuite', 7],
+    ['Cottage King Ensuite', 31], ['King Ensuite', 5], ['Superior Suite', 13], ['King Room', 5], ['Surfers Economy Room', 16],
+  ]);
+  // first slide of each slideshow (upload ids tell same-named files apart: "Copy of 1 1.jpg" is in two rooms)
+  assert.deepEqual(c.rooms.map(r => r.imageUrls![0].split('/').slice(-2).join('/')), [
+    '1742559957467-O1UKTKYK4P0SDTT2959M/1+48.jpg',
+    '1742560937791-MO75JL08M8BEMGZ2ZB9S/Copy+of+1+23.jpg',
+    '1742561554460-FXL0FW0CQLH09TH6LGPD/Copy+of+1+1.jpg',
+    '1742562280028-SR38AOY9IT8C5ZYILHT9/Copy+of+1+70.jpg',
+    '1759225224583-GRV1DC0A5CRJ7U2IG3BX/IMG_2567.JPG',
+    '1755073818560-SHI9QQQ6WXI9FCK9ZCPJ/IMG_2058.JPG',
+    '1742563499086-GL1BIL1E1WCRV8LFYVJJ/Copy+of+1+1.jpg',
+    '1742564822492-NP67XDORFOVC27Q9A89Y/Copy+of+1+74.jpg',
+  ]);
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.equal(new Set(all).size, all.length); // no photo in two rooms
+  assert.ok(all.every(u => u.startsWith('https://images.squarespace-cdn.com/content/v1/5cda706c7a1fbd52c62a5572/') && !u.includes('?')));
+
+  assert.equal(c.spotImageUrls?.length, 19);
+  assert.match(c.spotImageUrls![0], /\/social\+media-0041\.jpg$/);
+  assert.ok(c.spotImageUrls!.some(u => /\/G77A7460-2\.jpg$/.test(u))); // IKO course gallery
+  assert.ok(c.spotImageUrls!.every(u => u.startsWith('https://images.squarespace-cdn.com/content/') && !/\.png$|\?/.test(u)));
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

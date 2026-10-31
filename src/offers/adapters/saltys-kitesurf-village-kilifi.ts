@@ -32,6 +32,8 @@
 //   not for 2 guests). A refused sample (engine notice) only speaks for its own 7 nights: 'sold_out' for the
 //   not_enough_beds notice, 'closed' for any other notice; the rest of that month stays 'unknown' (not sampled) -
 //   on 2026-10-14 the 12-19 Dec week was refused while a 5-8 Dec stay listed all 8 room types.
+// Room photos: /saltys-accommodation, the Squarespace slideshow under each room's <h2> (3 to 31 photos per type).
+//   Spot photos: every own upload on /kitecenter (kite centre and IKO course galleries).
 // Known limits: one sample per month - other arrival dates or stay lengths can differ; the engine's room types
 //   (5 seen) are named differently from the page's 8 room cards (content keeps the page cards). The season start
 //   ("Friday, 10th July 2026 ... official start of the season", /new-events-2) is only in an event post.
@@ -125,6 +127,39 @@ export function parseSkvPin(html: string): { lat: number; lng: number } | null {
   return m ? { lat: Number(m[1]), lng: Number(m[2]) } : null;
 }
 
+/** The gallery rule: own Squarespace CDN uploads only (no logo, icon or PNG graphic), the size query stripped. */
+function skvImages(html: string, base: string): string[] {
+  const out: string[] = [];
+  for (const u of imageCandidates(html, base, null, 80)) {
+    if (!/images\.squarespace-cdn\.com\/content\//.test(u) || /logo|favicon|icon|\.png(\?|$)/i.test(u)) continue;
+    const k = u.replace(/\?.*$/, '');
+    if (!out.includes(k)) out.push(k);
+  }
+  return out;
+}
+
+/**
+ * /saltys-accommodation: room name (the <h2>, named as in parseSkvRooms) -> the photos of the slideshow below it, in
+ * slide order, until the next <h2> or <h1>.
+ */
+export function parseSkvRoomPhotos(html: string): Map<string, string[]> {
+  const s = html.replace(/<(script|style|svg|noscript)\b[\s\S]*?<\/\1>/gi, ' ');
+  const out = new Map<string, string[]>();
+  let cur: string[] | null = null;
+  for (const m of s.matchAll(/<(h[12])\b[^>]*>([\s\S]*?)<\/\1>|<img\b[^>]*>/gi)) {
+    if (m[1]?.toLowerCase() === 'h1') { cur = null; continue; }
+    if (m[1]) {
+      const name = titleCase(clean(m[2].replace(/<br\s*\/?>/gi, ' ').replace(/<[^>]+>/g, ' ')));
+      cur = out.get(name) ?? [];
+      out.set(name, cur);
+      continue;
+    }
+    if (!cur) continue;
+    for (const u of skvImages(m[0], SKV_ROOMS_URL)) if (!cur.includes(u)) cur.push(u);
+  }
+  return out;
+}
+
 export interface SkvPages { home: string; rooms: string; kite: string; packages: string; contact: string }
 
 export function parseSaltysContent(p: SkvPages): OfferContent {
@@ -150,24 +185,24 @@ export function parseSaltysContent(p: SkvPages): OfferContent {
   const courses = [...kiteText.matchAll(/(\d+h (?:taster )?course):\s*\$(\d+)/g)].slice(0, 5).map(m => `Private kite ${m[1]}: USD ${m[2]}`);
   const rental = kiteText.match(/1h rent:\s*\$(\d+)/)?.[1] ?? null;
 
-  const contentRooms: ContentRoom[] = rooms.map(r => ({
-    name: r.name,
-    description: r.description || null,
-    features: [
-      r.single !== null ? `Single: ${r.from ? 'from ' : ''}${r.currency} ${r.single} per night` : null,
-      r.double !== null ? `Double: ${r.from ? 'from ' : ''}${r.currency} ${r.double} per night` : null,
-    ].filter((x): x is string => !!x),
-  }));
+  const roomPhotos = parseSkvRoomPhotos(p.rooms);
+  const contentRooms: ContentRoom[] = rooms.map(r => {
+    const photos = roomPhotos.get(r.name) ?? [];
+    return {
+      name: r.name,
+      description: r.description || null,
+      features: [
+        r.single !== null ? `Single: ${r.from ? 'from ' : ''}${r.currency} ${r.single} per night` : null,
+        r.double !== null ? `Double: ${r.from ? 'from ' : ''}${r.currency} ${r.double} per night` : null,
+      ].filter((x): x is string => !!x),
+      ...(photos.length ? { imageUrls: photos } : {}),
+    };
+  });
+  const spotImageUrls = skvImages(p.kite, SKV_KITE_URL);
 
   const imgs: string[] = [];
-  const seen = new Set<string>();
   for (const [html, base] of [[p.rooms, SKV_ROOMS_URL], [p.home, SKV_HOME_URL], [p.kite, SKV_KITE_URL]] as const) {
-    for (const u of imageCandidates(html, base, null, 80)) {
-      if (!/images\.squarespace-cdn\.com\/content\//.test(u) || /logo|favicon|icon|\.png(\?|$)/i.test(u)) continue;
-      const k = u.replace(/\?.*$/, '');
-      if (seen.has(k)) continue;
-      seen.add(k); imgs.push(k);
-    }
+    for (const k of skvImages(html, base)) if (!imgs.includes(k)) imgs.push(k);
   }
 
   const summary = [
@@ -206,6 +241,7 @@ export function parseSaltysContent(p: SkvPages): OfferContent {
     languages: ['en'],
     rooms: contentRooms,
     imageUrls: imgs.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: SKV_HOME_URL,
     bookingUrl: BOOKING_URL,

@@ -30,6 +30,8 @@
 //   inside the 2026 spring range and keeps the range's 3-night minimum. The Loft "Waterfront" (ab EUR 219 per day on its
 //   page) is not in the PDFs and has no slots. Short stays of 2 nights in the low season cost 13.2 % extra; dogs EUR 12 per
 //   night; booking fee EUR 25 - in the features. Map pin = the Google-Maps link on /anreise-und-kontakt/.
+// Room photos: /uebernachten/, one <article> per unit type whose gallery sits before the type's <h2> (5 to 14 photos).
+//   Spot photos: the surf / wing / Naish photos of the water-sports page (content first, then its menu teaser).
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, iso, todayIso } from '../parse.js';
@@ -233,6 +235,28 @@ export function klpImages(html: string): string[] {
   return out;
 }
 
+/** /uebernachten/: unit-type heading (as parseKlpUnits names it, e.g. "Ferienhaus Typ A") -> the gallery of its <article>. */
+export function parseKlpUnitPhotos(html: string): Map<string, string[]> {
+  const out = new Map<string, string[]>();
+  // innermost articles only: the page's own <article> wraps the unit-type articles
+  for (const m of html.matchAll(/<article\b[^>]*>((?:(?!<article\b)[\s\S])*?)<\/article>/gi)) {
+    const h2 = m[1].match(/<h2\b[^>]*>([\s\S]*?)<\/h2>/i);
+    if (!h2) continue;
+    const site = clean(h2[1].replace(/<[^>]+>/g, ' '));
+    const photos = klpImages(m[1]);
+    if (site && photos.length && !out.has(site)) out.set(site, photos);
+  }
+  return out;
+}
+
+/** Water-sports page: its surf / kite / wing / Naish photos, the page content before the menu teaser. */
+export function klpSpotImages(html: string): string[] {
+  const main = html.match(/<main\b[\s\S]*?<\/main>/i)?.[0] ?? '';
+  const out: string[] = [];
+  for (const u of [...klpImages(main), ...klpImages(html)]) if (/surf|naish|kite|wing/i.test(u) && !out.includes(u)) out.push(u);
+  return out;
+}
+
 export interface KlpPages { home: string; units: string; watersport: string; contact: string }
 
 export function parseKailuaContent(pg: KlpPages): OfferContent {
@@ -248,8 +272,10 @@ export function parseKailuaContent(pg: KlpPages): OfferContent {
   const latest = sheets[sheets.length - 1] ?? null;
   const fromPrices = latest ? (Object.keys(KLP_TYPES) as KlpType[]).filter(t => !/^MC/.test(t)).flatMap(t => latest.types[t].map(g => g.prices.NS[1])) : [];
 
+  const unitPhotos = parseKlpUnitPhotos(pg.units);
   const rooms: ContentRoom[] = units.map(u => {
     const type = (Object.keys(KLP_TYPES) as KlpType[]).find(t => KLP_TYPES[t].site === u.site) ?? null;
+    const photos = unitPhotos.get(u.site) ?? [];
     const f = u.facts;
     const facts = [
       f['Größe'] ? `${f['Größe']}` : null,
@@ -270,8 +296,10 @@ export function parseKailuaContent(pg: KlpPages): OfferContent {
       name: type ? KLP_TYPES[type].name : u.site.replace(/^Kailua Loft\s*/, 'Loft ').replace(/[„“"]/g, ''),
       description: `${facts.join(', ')}${u.extras.length ? `; ${u.extras.map(x => ({ Parkplatz: 'parking', WLAN: 'Wi-Fi', Sauna: 'sauna', Kamin: 'fireplace' } as Record<string, string>)[x]).join(', ')}` : ''}.`,
       features: [...(type ? [`Units: ${KLP_SHEETS[KLP_SHEETS.length - 1].types[type].flatMap(g => g.units).join(', ')}`] : []), ...priceFeatures],
+      ...(photos.length ? { imageUrls: photos } : {}),
     };
   });
+  const spotImageUrls = klpSpotImages(pg.watersport);
 
   const imgs: string[] = [];
   const surfFirst = (l: string[]) => [...l.filter(u => /surf|naish|kite/i.test(u)), ...l.filter(u => !/surf|naish|kite/i.test(u))];
@@ -307,6 +335,7 @@ export function parseKailuaContent(pg: KlpPages): OfferContent {
     languages: ['de'],
     rooms,
     imageUrls: imgs.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: KLP_WATERSPORT_URL,
     bookingUrl: BOOKING_URL,

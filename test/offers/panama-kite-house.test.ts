@@ -8,6 +8,7 @@ import {
   panamaKiteHouse, buildPkhSlots, parsePkhRooms, parsePkhSeason,
 } from '../../src/offers/adapters/panama-kite-house.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { isNotOwnPhoto, planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/panama-kite-house');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -76,4 +77,36 @@ test('pkh: content', async () => {
   assert.equal(c.heroVideoUrl, null); // YouTube trailer only (audit 2026-10-27)
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://') && /squarespace/.test(u) && !/screenshot|untitled|logo/i.test(u)));
+});
+
+test('pkh: every room has the photos before its heading (no AI renderings), kite photos as spot, all inside the first 24', async () => {
+  const c = await panamaKiteHouse.fetchContent(ctx);
+  const file = (u: string) => decodeURIComponent(u.split('/').pop()!);
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0]), [
+    ['Premium seaview Cabin', 2], ['BIG Seaview Cabin', 1], ['Small Seaview Cabin', 1], ['Single Room', 1], ['Glamping Tent', 1],
+    ['Dorm Room', 1], ['Quadruple Room / OverFlow Dorm', 1],
+    ['Villa Premium Double', 5], ['Villa Double', 2], ['Villa Premium Tent', 1], ['Villa King + Single or Triple', 3],
+  ]);
+  const room = (n: string) => c.rooms.find(r => r.name === n)!.imageUrls!;
+  assert.match(room('Premium seaview Cabin')[0], /\/1672108272805-ULT4QL5CS21J3VQHV0O6\/_DSC7517\.jpg$/);
+  assert.match(room('Quadruple Room / OverFlow Dorm')[0], /\/_DSC6548\.jpg$/);
+  assert.match(room('Dorm Room')[0], /\/c685b5f1-d095-42de-a98a-ec95d1be2f57\/image-asset\.jpeg$/);
+  assert.equal(file(room('Villa Premium Double')[0]), 'WhatsApp+Image+2026-01-29+at+14.19.47+(4).jpeg');
+  // the tent slider opens with a ChatGPT rendering: only the real photo is kept
+  assert.deepEqual(room('Villa Premium Tent').map(file), ['PHOTO-2025-01-03-10-15-41.jpg']);
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.equal(new Set(all).size, all.length);
+  assert.ok(all.every(u => u.startsWith('https://images.squarespace-cdn.com/content/v1/5d051a5d91854d000127f554/') && !isNotOwnPhoto(u) && !/ChatGPT/i.test(u)));
+  // same URL as the general list where it holds the photo
+  for (const r of c.rooms.slice(0, 7)) assert.ok(c.imageUrls.includes(r.imageUrls![0]), r.name);
+
+  assert.deepEqual(c.spotImageUrls?.map(u => file(u).replace(/\?.*$/, '')), [
+    'Panama+Kitesurf+Sand+Bars.jpg', 'Kitesurfing+Panana+Punta+Chame', 'Kitesurf+Punta+Chame+Sand+Bar+Downwinder', 'Kitesurf+Panama+Punta+Chame',
+    'Kitesurf+Lessons+Panama+Punta+Chame', 'Kitesurf+Lessons+Panama+Punta+Chame', 'Kitesurfing+lessons+with+Brendan+(33).png',
+  ]);
+  assert.ok(c.spotImageUrls!.every(u => u.startsWith('https://images.squarespace-cdn.com/content/') && !/map|rental|static1/i.test(u)));
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

@@ -9,6 +9,7 @@ import {
   kailuaLodgePelzerhaken, buildKlpSlots, fetchKlpSlots, klpPdfLinks, klpReleasedSheets, KLP_SHEETS, parseKlpUnits,
 } from '../../src/offers/adapters/kailua-lodge-pelzerhaken.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/kailua-lodge-pelzerhaken');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -63,4 +64,35 @@ test('kailua: content', async () => {
   assert.ok(c.rooms[0].features.includes('2027: EUR 189-369 per following night (low season to high season B); first night incl. final cleaning EUR 179 more'));
   assert.ok(c.imageUrls[0].includes('naish_procenter'));
   assert.ok(c.imageUrls.every(u => /^https:\/\/www\.kailualodge\.de\/wp-content\/uploads\//.test(u) && !/-\d+x\d+\./.test(u)));
+});
+
+test('kailua: each unit type gets the gallery of its own article (gallery before the heading), surf photos as spot', async () => {
+  const c = await kailuaLodgePelzerhaken.fetchContent(ctx);
+  const file = (u: string) => u.split('/').pop();
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0, file(r.imageUrls![0])]), [
+    ['Holiday house type A', 6, 'architektur_kailualodge_9086_web-galerie.jpg'],
+    ['Holiday house type B1', 14, 'kailua_lodge_pelzerhaken_ferienhaus_b1.jpg'],
+    ['Holiday house type B2', 12, 'kailua_lodge_pelzerhaken_b2.jpg'],
+    ['Holiday flat type D1', 8, '01-kelii_wohnraum-01.jpg'],
+    ['Holiday flat type D2', 11, 'waikiki_north-shore_aussenansicht-haus_03.jpg'],
+    ['Loft Waterfront', 10, 'img_5978.jpg'],
+    ['Lodge type C1', 11, 'kailua-lodge_aussenanlage_10.jpg'],
+    ['Lodge type C2', 8, 'architektur_kailualodge_9072_web-galerie-1.jpg'],
+    ['Mini lodge type C1', 6, 'kailua_lodge_pelzerhaken_lodge_c1.jpg'],
+    ['Mini lodge type C2', 5, '02_kalama-2_wohnraum-01.jpg'],
+  ]);
+  // unit names in the file names land in their own type (the old heuristic gave C1 photos to the loft)
+  const room = (n: string) => c.rooms.find(r => r.name === n)!.imageUrls!;
+  assert.ok(room('Holiday house type B1').some(u => /molokai/.test(u)) && room('Holiday house type B2').some(u => /kihei/.test(u)));
+  assert.ok(room('Lodge type C1').some(u => /barking-sands/.test(u)) && room('Lodge type C2').some(u => /hookipa/.test(u)));
+  assert.ok(room('Mini lodge type C1').some(u => /mana-point/.test(u)) && !room('Loft Waterfront').some(u => /barking|hanapepe|kee-beach/.test(u)));
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.equal(new Set(all).size, all.length);
+  assert.ok(all.every(u => /^https:\/\/www\.kailualodge\.de\/wp-content\/uploads\/.+\.jpg$/.test(u) && !/-\d+x\d+\./.test(u) && !/lageplan|legende/.test(u)));
+
+  assert.deepEqual(c.spotImageUrls?.map(file), ['kailua_lodge_surfen_2.jpg', 'kailua_lodge_surf_opti.jpg', 'kailua_lodge_wing_sup.jpg', 'kailua_lodge_naish_procenter_1.jpg']);
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

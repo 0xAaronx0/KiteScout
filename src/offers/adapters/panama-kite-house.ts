@@ -19,12 +19,15 @@
 // Requests per run: content 3, slots 3.
 // Parsed: slot = room x persons for the 2026/27 season band ("premium-seaview-cabin-2p|2026-27"), USD
 //   per room (per bed for the dorm) for a 5-day stay (priceUnit 'package'), availability 'unknown'.
+// Room photos: the card image (kite house) or slider (villa) right before each room's <h3>; AI renderings
+//   ("ChatGPT Image ...") left out. Spot photos: the kite photos of the rider-experience page, then the villa page's.
 // Known limits: kite house prices are "from" prices (seasonal pricing, the exact price only in the
 //   booking system); villa meal upgrades (+$16 / +$32 pp per night) are in the room features only.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { collapse, detectCurrency, imageCandidates, parse, parseAmount } from '../parse.js';
 import type { ContentRoom, OfferAdapter, OfferContent, Slot, SlotPriceBasis } from '../types.js';
+import { isNotOwnPhoto } from '../gallery.js';
 
 export const PKH_PAGE_URL = 'https://www.theriderexperience.com/panama-kite-house';
 const PKH = 'https://www.panamakitehouse.com';
@@ -129,6 +132,55 @@ export function buildPkhSlots(rooms: PkhRoom[], season: PkhSeason): Slot[] {
   return out;
 }
 
+// --- photos -----------------------------------------------------------------------------------
+const PKH_JUNK_RE = /logo|screenshot|untitled|icon|\.svg/i;
+/** one key per photo: the path without host and size query */
+const pkhKey = (u: string): string => u.replace(/\?.*$/, '').replace(/^https?:\/\/[^/]+/, '');
+
+/** image URLs of an HTML fragment by the gallery rule (Squarespace only, no logos / screenshots / Canva files) */
+function pkhImages(html: string, base: string): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const u of imageCandidates(html, base, null, 80)) {
+    if (!/squarespace/.test(u) || PKH_JUNK_RE.test(u)) continue;
+    const k = pkhKey(u);
+    if (seen.has(k)) continue;
+    seen.add(k); out.push(u.replace(/^http:/, 'https:'));
+  }
+  return out;
+}
+
+/**
+ * Room name (as parsePkhRooms names it, with the same prefix) -> the photos between the previous heading and the
+ * room's <h3>: the card image on the kite house page, the slider on the villa page. AI renderings are left out.
+ */
+export function parsePkhRoomPhotos(html: string, base: string, prefix = ''): Map<string, string[]> {
+  const s = html.replace(/<(script|style)\b[\s\S]*?<\/\1>/gi, ' ');
+  const out = new Map<string, string[]>();
+  let pending: string[] = [];
+  for (const m of s.matchAll(/<(h[1-4])\b[^>]*>([\s\S]*?)<\/\1>|<img\b[^>]*>/gi)) {
+    if (!m[1]) {
+      for (const u of pkhImages(m[0], base)) if (!isNotOwnPhoto(u) && !pending.some(x => pkhKey(x) === pkhKey(u))) pending.push(u);
+      continue;
+    }
+    const name = `${prefix}${collapse(parse(m[2]).text)}`;
+    if (m[1].toLowerCase() === 'h3' && pending.length && !out.has(name)) out.set(name, pending);
+    pending = [];
+  }
+  return out;
+}
+
+/**
+ * Kite photos of the page body by file name (sand bars, main beach, lessons, downwinder); the social preview image,
+ * maps, rental gear and the accommodation left out.
+ */
+export function pkhSpotPhotos(html: string, base: string): string[] {
+  return pkhImages(html.replace(/<head\b[\s\S]*?<\/head>/i, ''), base).filter(u => {
+    const file = decodeURIComponent(u.replace(/\?.*$/, '').split('/').pop() ?? '').replace(/\+/g, ' ');
+    return /kite ?surf/i.test(file) && !/map|rental|equipment|accommodation/i.test(file) && !isNotOwnPhoto(u);
+  });
+}
+
 function pageText(html: string): string {
   const root = parse(html);
   for (const el of root.querySelectorAll('script, style, noscript, header, footer, nav')) el.remove();
@@ -145,26 +197,32 @@ export function parsePanamaContent(p: PkhPages): OfferContent {
   const villaRooms = parsePkhRooms(p.villa, 'Villa ');
   const usd = (n: number) => `$${n.toLocaleString('en-US')}`;
 
-  const rooms: ContentRoom[] = [...houseRooms, ...villaRooms].map(r => ({
-    name: r.name,
-    description: r.name.startsWith('Villa ') ? 'Room in the Kitesurfers Villa, 150 m from the kite house (bed & breakfast; half or full board on request).' : 'Room at the Panama Kite House, all meals included.',
-    features: [
-      ...r.features,
-      ...r.prices.map(x => `${x.persons} guest${x.persons > 1 ? 's' : ''}: ${PACKAGE_DAYS} days ${x.from ? 'from ' : ''}${usd(x.amount)}`),
-      ...r.extraDay.map(x => `${x.persons} guest${x.persons > 1 ? 's' : ''}: extra day +${usd(x.amount)}`),
-    ],
-  }));
-
   const imgs: string[] = [];
-  const seen = new Set<string>();
+  const byKey = new Map<string, string>();
   for (const [html, base] of [[p.kitehouse, PKH_KITEHOUSE_URL], [p.rider, PKH_PAGE_URL], [p.villa, PKH_VILLA_URL]] as const) {
-    for (const u of imageCandidates(html, base, null, 80)) {
-      if (!/squarespace/.test(u) || /logo|screenshot|untitled|icon|\.svg/i.test(u)) continue;
-      const k = u.replace(/\?.*$/, '').replace(/^https?:\/\/[^/]+/, '');
-      if (seen.has(k)) continue;
-      seen.add(k); imgs.push(u.replace(/^http:/, 'https:'));
+    for (const u of pkhImages(html, base)) {
+      if (byKey.has(pkhKey(u))) continue;
+      byKey.set(pkhKey(u), u); imgs.push(u);
     }
   }
+  /** the general list's URL for a photo when it holds one (so the curation matches the same variant) */
+  const same = (urls: string[]): string[] => urls.map(u => byKey.get(pkhKey(u)) ?? u);
+  const photos = new Map([...parsePkhRoomPhotos(p.kitehouse, PKH_KITEHOUSE_URL), ...parsePkhRoomPhotos(p.villa, PKH_VILLA_URL, 'Villa ')]);
+
+  const rooms: ContentRoom[] = [...houseRooms, ...villaRooms].map(r => {
+    const own = same(photos.get(r.name) ?? []);
+    return {
+      name: r.name,
+      description: r.name.startsWith('Villa ') ? 'Room in the Kitesurfers Villa, 150 m from the kite house (bed & breakfast; half or full board on request).' : 'Room at the Panama Kite House, all meals included.',
+      features: [
+        ...r.features,
+        ...r.prices.map(x => `${x.persons} guest${x.persons > 1 ? 's' : ''}: ${PACKAGE_DAYS} days ${x.from ? 'from ' : ''}${usd(x.amount)}`),
+        ...r.extraDay.map(x => `${x.persons} guest${x.persons > 1 ? 's' : ''}: extra day +${usd(x.amount)}`),
+      ],
+      ...(own.length ? { imageUrls: own } : {}),
+    };
+  });
+  const spotImageUrls = same([...new Set([...pkhSpotPhotos(p.rider, PKH_PAGE_URL), ...pkhSpotPhotos(p.villa, PKH_VILLA_URL)])]);
   const cheapest = houseRooms.flatMap(r => r.prices.map(x => ({ r, x }))).filter(({ r }) => !/^dorm/i.test(r.name)).sort((a, b) => a.x.amount - b.x.amount)[0];
 
   const summary = [
@@ -195,6 +253,7 @@ export function parsePanamaContent(p: PkhPages): OfferContent {
     languages: ['en'],
     rooms,
     imageUrls: imgs.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null, // the only video is a YouTube trailer: a watch page, not a file the app can play
     sourceUrl: PKH_PAGE_URL,
     bookingUrl: BOOKING_URL,

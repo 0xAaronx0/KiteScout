@@ -19,6 +19,9 @@
 //            2026-10-14, as at Keros Blue) -> not used. fetchSlots returns [] ("price on request").
 // robots.txt (2026-10-14): www.hoteltodobien.com has no Disallow ("User-agent: *" + Content-Signal only).
 // Requests per run: content 4, slots 0.
+// Room photos: the Duda gallery after each unit's <h2> on /rooms and /villas (6 to 26 per unit); a file naming another,
+//   different room type ("Room 3 Bathroom" in Room 1) is left out. Spot photos: only the hotel's own wind series and
+//   camera files of the /activities "Wind" gallery (not its TYPO3 thumbnail, brand action shot or edited picture).
 // Known limits: no prices, no availability (confidence low). The 2026 footer ("© 2026") and the 2026
 //   Instagram recaps are the liveness evidence.
 // ---------------------------------------------------------------------------
@@ -82,6 +85,100 @@ export function parseTbWind(html: string): string {
   return out.join(' ');
 }
 
+// --- photos ---------------------------------------------------------------------
+const TB_JUNK_RE = /logo|icon|\.svg|instagram|cdninstagram|fbcdn|\/Background[-.]/i;
+/** one key per photo: Duda serves size variants under /opt/ with a "-1920w" suffix */
+const tbKey = (u: string): string => u.replace(/\/opt\//, '/').replace(/-\d+w(?=\.[a-z]+$)/i, '');
+
+/** image URLs of an HTML fragment by the gallery rule (imageCandidates, junk dropped, one URL per photo) */
+function tbImages(html: string, url: string, max = 40): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const u of imageCandidates(html, url, null, max)) {
+    if (TB_JUNK_RE.test(u)) continue;
+    const k = tbKey(u);
+    if (seen.has(k)) continue;
+    seen.add(k); out.push(u);
+  }
+  return out;
+}
+
+type TbToken = { kind: 'h1' | 'h2' | 'p'; text: string } | { kind: 'img'; html: string };
+/** h1 / h2 / p / img in document order (scripts dropped), up to the footer ("LOCATION"), as blocks() reads them. */
+function tbTokens(html: string): TbToken[] {
+  const root = parse(html);
+  for (const el of root.querySelectorAll('script, style, noscript, svg')) el.remove();
+  const out: TbToken[] = [];
+  let done = false;
+  const walk = (n: HTMLElement): void => {
+    for (const ch of n.childNodes) {
+      if (done) return;
+      if (ch.nodeType !== 1) continue;
+      const el = ch as HTMLElement;
+      const tag = el.tagName?.toLowerCase();
+      if (tag === 'img') { out.push({ kind: 'img', html: el.outerHTML }); continue; }
+      if (tag === 'h1' || tag === 'h2' || tag === 'p') {
+        const t = txt(el);
+        if (tag === 'p' && t === 'LOCATION') { done = true; return; }
+        if (t && t !== 'Button') out.push({ kind: tag, text: t });
+      }
+      walk(el);
+    }
+  };
+  walk(root);
+  return out;
+}
+
+const roomNo = (name: string): number | null => { const m = name.match(/^Room (\d+)\b/); return m ? Number(m[1]) : null; };
+const roomKind = (name: string): string => name.replace(/^Room \d+\s*-\s*/, '').toLowerCase();
+
+/**
+ * Per unit heading (same order and test as parseTbUnits) the photos of its gallery, until the next heading. In a
+ * "Room N" gallery a file naming another room is kept only for a room of the same kind (Room 9 / Room 10 share one).
+ */
+export function parseTbUnitPhotos(html: string, url: string): string[][] {
+  const units = parseTbUnits(html);
+  const out: string[][] = [];
+  let cur: string[] | null = null;
+  let lastWasHeading = false;
+  for (const t of tbTokens(html)) {
+    if (t.kind === 'h2' && UNIT_RE.test(t.text)) { cur = []; out.push(cur); lastWasHeading = true; continue; }
+    if (t.kind === 'h2' && cur && lastWasHeading) continue; // "2 Queens" under "Room 9 - Pool Front & Oceanview"
+    if (t.kind !== 'img') {
+      lastWasHeading = false;
+      if (t.kind !== 'p') cur = null; // any other heading ends the unit's gallery
+      continue;
+    }
+    if (!cur) continue;
+    const own = units[out.length - 1];
+    const n = own ? roomNo(own.name) : null;
+    for (const u of tbImages(t.html, url)) {
+      const named = decodeURIComponent(u.split('/').pop() ?? '').match(/\bRoom[+\s_-]*(\d+)/i);
+      if (n !== null && named && Number(named[1]) !== n) {
+        const other = units.find(x => roomNo(x.name) === Number(named[1]));
+        if (!other || roomKind(other.name) !== roomKind(own!.name)) continue;
+      }
+      if (!cur.includes(u)) cur.push(u);
+    }
+  }
+  return out.length === units.length ? out : units.map(() => []);
+}
+
+/** /activities "Wind" gallery: the hotel's own "wind-N" series and camera files (IMG_NNNN, UUID-named phone exports). */
+export function parseTbWindPhotos(html: string): string[] {
+  const out: string[] = [];
+  let inWind = false;
+  for (const t of tbTokens(html)) {
+    if (t.kind === 'h1' || t.kind === 'h2') { inWind = t.kind === 'h2' && /^Wind$/i.test(t.text); continue; }
+    if (t.kind !== 'img' || !inWind) continue;
+    for (const u of tbImages(t.html, TB_ACTIVITIES_URL)) {
+      const file = decodeURIComponent(u.split('/').pop() ?? '');
+      if (/^(?:wind-\d+|IMG_\d+(?!\d|-scaled)|[0-9A-F]{8}-[0-9A-F]{4}-[0-9A-F]{4}-)/i.test(file) && !out.includes(u)) out.push(u);
+    }
+  }
+  return out;
+}
+
 export interface TbPages { home: string; rooms: string; villas: string; activities: string }
 
 export function parseTbContent(p: TbPages): OfferContent {
@@ -97,22 +194,31 @@ export function parseTbContent(p: TbPages): OfferContent {
   const nRooms = rooms.filter(r => /^Room \d+/.test(r.name)).length;
   const nSuites = rooms.filter(r => /Suite/.test(r.name)).length;
 
-  const contentRooms: ContentRoom[] = [...rooms, ...villas].map(u => ({
-    name: u.name,
-    description: u.text || null,
-    features: u.facts,
-  }));
-
   const seen = new Set<string>();
   const imageUrls: string[] = [];
+  const byKey = new Map<string, string>();
   for (const [html, url] of [[p.rooms, TB_ROOMS_URL], [p.home, TB_HOME_URL], [p.villas, TB_VILLAS_URL], [p.activities, TB_ACTIVITIES_URL]] as const) {
     for (const u of imageCandidates(html, url, null, 40)) {
-      if (/logo|icon|\.svg|instagram|cdninstagram|fbcdn|\/Background[-.]/i.test(u)) continue;
-      const k = u.replace(/\/opt\//, '/').replace(/-\d+w(?=\.[a-z]+$)/i, '');
+      if (TB_JUNK_RE.test(u)) continue;
+      const k = tbKey(u);
       if (seen.has(k)) continue;
-      seen.add(k); imageUrls.push(u);
+      seen.add(k); imageUrls.push(u); byKey.set(k, u);
     }
   }
+  /** the general list's URL for a photo when it holds one (so the curation matches the same variant) */
+  const same = (urls: string[]): string[] => urls.map(u => byKey.get(tbKey(u)) ?? u);
+
+  const unitPhotos = [...parseTbUnitPhotos(p.rooms, TB_ROOMS_URL), ...parseTbUnitPhotos(p.villas, TB_VILLAS_URL)];
+  const contentRooms: ContentRoom[] = [...rooms, ...villas].map((u, i) => {
+    const photos = same(unitPhotos[i] ?? []);
+    return {
+      name: u.name,
+      description: u.text || null,
+      features: u.facts,
+      ...(photos.length ? { imageUrls: photos } : {}),
+    };
+  });
+  const spotImageUrls = same(parseTbWindPhotos(p.activities));
 
   const summary = [
     `Hotel Todo Bien is an oceanfront boutique hotel on La Ventana bay near El Sargento, Baja California Sur, with ${nRooms || 10} rooms, ${nSuites || 2} suites and ${villas.length || 2} private villas, a restaurant and bar, a heated pool and hot tub, a fire pit and a yoga deck.`,
@@ -154,6 +260,7 @@ export function parseTbContent(p: TbPages): OfferContent {
     languages: ['en'],
     rooms: contentRooms,
     imageUrls: imageUrls.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: TB_HOME_URL,
     bookingUrl: BOOKING_URL,

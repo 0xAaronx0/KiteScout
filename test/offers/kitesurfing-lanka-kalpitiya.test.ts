@@ -8,6 +8,7 @@ import {
 } from '../../src/offers/adapters/kitesurfing-lanka-kalpitiya.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import { slotRoom } from '../../src/offers/ingest.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/kitesurfing-lanka-kalpitiya');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -80,4 +81,32 @@ test('ksl: every rate-table unit prices its /stay/ card room', async () => {
     'Glamping tent': 'Glamping',
     'KSL Villa': 'Four Bedroom Villa',
   });
+});
+
+test('ksl: each /stay/ card room has its own card photo, the home page gives the kite photos, all inside the first 24', async () => {
+  const c = await kitesurfingLankaKalpitiya.fetchContent(ctx);
+  const file = (u: string) => u.split('/').pop();
+  assert.deepEqual(Object.fromEntries(c.rooms.map(r => [r.name, (r.imageUrls ?? []).map(file)])), {
+    'Luxury Beach Bungalow': ['kitesurfing-lanka-ocean-view-bungalow-1.webp'],
+    'Beach Bungalow': ['kalpitiya-beachfront-stay-1.webp'],
+    'Premium Bungalows': ['solo-luxe-sanctuary-sri-lanka-1.webp'],
+    'Lagoon View Bungalows': ['kalpitiya-bungalow-with-lagoon-view-1.webp'],
+    'Garden View Bungalows': ['sri-lanka-art-inspired-bungalow-1.webp'],
+    'Double Bedroom Garden Bungalow': ['ALX_8069-1.webp'],
+    'Glamping': ['kitesurfinglanka-budget-travel-stay-1.webp'],
+    'Four Bedroom Villa': ['Kalpitiya_accommodation_Kalpitiya_villas_boutique_Kalpitiya_hotels_uppper_floor_private_room_shared_kitchen.webp'],
+    'Family and Group Options': ['190761588_4170026313092139_6506896364171036684_n-1.webp'],
+  });
+  // same URLs as the general list (same normalisation), so the curation matches them
+  for (const r of c.rooms) assert.ok(c.imageUrls.includes(r.imageUrls![0]), r.name);
+
+  assert.equal(c.spotImageUrls?.length, 12);
+  assert.match(c.spotImageUrls![0], /\/2025\/09\/home-2025-kitesurfing\.webp$/);
+  assert.ok(c.spotImageUrls!.some(u => /kitesurfing-action-kalpitiya-lagoon-riders-1\.webp$/.test(u)));
+  assert.ok(c.spotImageUrls!.every(u => u.startsWith('https://www.kitesurfinglanka.com/wp-content/uploads/')
+    && !/shop|rental|duotone|resort|restaurant|tripadvisor|trustindex/i.test(u)));
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });
