@@ -15,7 +15,7 @@ function offer(over: Partial<OfferRow> = {}): OfferRow {
       { start_date: '2026-11-07', end_date: '2026-11-14', price: 2000, currency: 'EUR', status: 'available' },
     ],
     price_pp_cabin: 2000, price_pp_cabin_currency: 'EUR', price_charter_week: null, price_charter_week_currency: null,
-    price_from_eur: 2000, currency: 'EUR', duration_days: 8, season_start_month: 6, season_end_month: 11, season_text: 'June-November',
+    price_from_eur: 2000, currency: 'EUR', duration_days: 8, duration_nights: null, season_start_month: 6, season_end_month: 11, season_text: 'June-November',
     ...over,
   };
 }
@@ -125,6 +125,18 @@ test('season months only fill a gap (re-reads of "Spring and Autumn" flip them)'
   const p = proposeUpdate(offer({ season_start_month: null, season_end_month: null }), obs({ seasonStartMonth: 4, seasonEndMonth: 11, seasonText: 'April-November' }), AUTH)!;
   assert.equal(p.set.season_start_month, 4);
   assert.equal(p.set.season_text, 'April-November');
+});
+
+test('nights (Aaron 2026-10-31): a stated value is stored exactly, days follow as nights + 1, a big jump needs review', () => {
+  const week = proposeUpdate(offer({ duration_days: 7 }), obs({ durationNights: 7 }), AUTH)!;
+  assert.equal(week.set.duration_nights, 7);
+  assert.equal('duration_days' in week.set, false, '7 days vs 8 is the ±1 ambiguity');
+  assert.deepEqual(week.violations, []);
+  assert.equal(proposeUpdate(offer({ duration_nights: 7 }), obs({ durationNights: 7 }), AUTH), null);
+  const gap = proposeUpdate(offer({ duration_days: null }), obs({ durationNights: 9 }), AUTH)!;
+  assert.deepEqual([gap.set.duration_nights, gap.set.duration_days], [9, 10]);
+  assert.ok(proposeUpdate(offer({ duration_nights: 7 }), obs({ durationNights: 3 }), AUTH)!.violations.some(v => v.startsWith('Nächte 7 → 3')));
+  assert.equal(proposeUpdate(offer(), obs({ durationNights: 61 }), AUTH), null, 'out of range is ignored');
 });
 
 test('duration: ±1 day is nights-vs-days noise; a gap is filled; a big jump needs review', () => {

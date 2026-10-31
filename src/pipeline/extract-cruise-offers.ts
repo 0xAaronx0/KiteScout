@@ -17,6 +17,7 @@ import { mergeItinerarySpots } from '../lib/itinerary-spots.js';
 import { cruiseDisciplines } from '../lib/disciplines.js';
 import { geocodeSpot } from '../lib/geocode.js';
 import { seasonUpsertColumns } from './season-extract.js';
+import { DURATION_RULE, NIGHTS_RULE, cleanNights, sameTripDuration } from './trip-duration.js';
 
 const CONCURRENCY = 3;                  // providers in parallel
 const PAGE_CONCURRENCY = 8;             // global page fetches in flight (across providers)
@@ -91,6 +92,7 @@ interface ExtractedOffer {
   season_start_month: number | null;
   season_end_month: number | null;
   duration_days: number | null;
+  duration_nights?: number | null;
   dates: unknown;
   pricing: unknown;
   price_from_eur: number | null;
@@ -183,7 +185,8 @@ For each offer, extract this exact JSON shape (use null when the site does not s
   "season_text": "the kite / best-season window in English (translate month names and words like 'Hauptsaison', 'individuell'), e.g. 'April-October', or null",
   "season_start_month": 1-12 or null,
   "season_end_month": 1-12 or null,
-  "duration_days": integer or null,
+  "duration_days": integer or null (${DURATION_RULE}),
+  "duration_nights": integer or null (${NIGHTS_RULE}),
   "dates": [ { "start_date": "YYYY-MM-DD or null", "end_date": "YYYY-MM-DD or null", "price": number or null, "currency": "ISO code or null", "status": "available|sold_out|null" } ] or null,
   "pricing": {
     "options": [ { "label": "tier name, e.g. 'Shared Cabin (Solo Traveler)', 'Private Cabin (2 guests)', 'Whole Boat (6 guests)'", "price": number, "currency": "ISO code", "basis": "per_person|per_cabin|whole_boat|other" } ],
@@ -922,7 +925,9 @@ async function processProvider(cp: {
         bestSeason ? bestSeason.start : cleanMonth(offer.season_start_month),
         bestSeason ? bestSeason.end : cleanMonth(offer.season_end_month),
       ),
-      duration_days: cleanInt(offer.duration_days),
+      // Aaron 2026-10-31: nights are the stored fact; days follow as nights + 1 when the page gives only nights.
+      duration_nights: cleanNights(offer.duration_nights),
+      duration_days: cleanInt(offer.duration_days) ?? (cleanNights(offer.duration_nights) !== null ? cleanNights(offer.duration_nights)! + 1 : null),
       dates: storedDepartures(offer.dates),
       pricing: offer.pricing ?? null,
       // a per-night amount is no trip price ("on request", Aaron 2026-10-28)
@@ -1126,6 +1131,8 @@ function diffOffer(before: ReviewRow, after: ReviewRow): ReviewField[] {
   const out: ReviewField[] = [];
   const scalars = ['title','country','region','price_from_eur','currency','duration_days','season_text','vessel_name','vessel_type','summary'] as const;
   for (const f of scalars) {
+    // duration_days: ±1 day is the nights-vs-days ambiguity, never a change (7 nights = 8 days is the stored rule).
+    if (f === 'duration_days' && sameTripDuration(before.duration_days, after.duration_days)) continue;
     if ((before[f] ?? null) !== (after[f] ?? null)) {
       // A fresh crawl returning NOTHING where the DB has a value is far more
       // often a weak/blocked fetch than a real removal — mark it, never apply.
