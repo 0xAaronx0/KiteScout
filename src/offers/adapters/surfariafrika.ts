@@ -299,6 +299,11 @@ const SITE_WIDE_CARDS = /324846706_531272312299333|82329993_10156984078613511|IM
  *  stock panoramas. Only camera file names (Leica L1030941 is the one on 2026-10-31) count as the operator's own;
  *  a new upload with another name is dropped until someone looks at it. */
 const OWN_CAMERA_PHOTO = /\/(L\d{5,}|IMG_\d{8}|DSC_?\d{4,}|P\d{7,})[^/]*$/;
+/** Aaron 2026-10-31 "b go": two more photos approved by exact file name, taken only while the Walvis page still
+ *  carries them: the accommodation (a CSS background, so the extractor never sees it) and the kites og:image (the
+ *  site-wide header photo, filtered on every other page). No pattern: a renamed upload needs a new look. */
+const WALVIS_APPROVED_EXTRAS = ['606361068-2880w.jpg', '196977156_10158294017393511_6984936948171509730_n-337210eb-1920w.jpg'];
+const DUDA_MEDIA = 'https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/';
 
 /** "WHEN 10 OCTOBER UP TO NOVEMBER": the year comes from the site-wide "Namibia Kiteboarding ... 2026" card. */
 export function parseSaWalvisSeason(html: string): { start: string; end: string; label: string } | null {
@@ -336,7 +341,10 @@ export function parseSaWalvisContent(html: string, today = todayIso()): OfferCon
   const season = parseSaWalvisSeason(html);
   const all = images(html, SA_WALVIS_URL).filter(u => !SITE_WIDE_CARDS.test(u) && OWN_CAMERA_PHOTO.test(u));
   // Duda prints each photo as -1920w and -640w; the ingest does not dedupe size variants
-  const own = all.filter(u => !/-640w\./.test(u) || !all.includes(u.replace('-640w.', '-1920w.')));
+  const own = [
+    ...all.filter(u => !/-640w\./.test(u) || !all.includes(u.replace('-640w.', '-1920w.'))),
+    ...WALVIS_APPROVED_EXTRAS.filter(name => html.includes(DUDA_MEDIA + name)).map(name => DUDA_MEDIA + name),
+  ];
   return {
     kind: 'camp',
     title: 'Walvis Bay Kite Camp: Bird Lagoon & Marine Surfari, Namibia',

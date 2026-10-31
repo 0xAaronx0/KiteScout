@@ -94,9 +94,10 @@ test('walvis bay camp: "starting at" weekly price + the camp season, own photos 
   assert.equal(contentProblem(content), null);
   assert.equal(content.kind, 'camp');
   assert.equal(content.country, 'Namibia');
-  // own photos only (Aaron 2026-10-31): pexels, tourism site, Bing OIP, press, stock and Booking-style ids stay out
-  assert.deepEqual(content.imageUrls.map(u => u.split('/').pop()), ['L1030941-1920w.JPG']);
+  // own photos only (Aaron 2026-10-31): pexels, tourism site, Bing OIP, press and stock stay out; "b go" adds two by name
+  assert.deepEqual(content.imageUrls.map(u => u.split('/').pop()),
+    ['L1030941-1920w.JPG', '606361068-2880w.jpg', '196977156_10158294017393511_6984936948171509730_n-337210eb-1920w.jpg']);
   assert.ok(content.imageUrls.every(u => !/-640w\./.test(u)), 'one size per photo');
-  assert.ok(content.imageUrls.every(u => !/324846706_|82329993_|IMG_20211029_154320|ChatGPT|lamu1-|196977156_/.test(u)), 'no site-wide card photos');
+  assert.ok(content.imageUrls.every(u => !/324846706_|82329993_|IMG_20211029_154320|ChatGPT|lamu1-/.test(u)), 'no site-wide card photos');
   clean(content.summary + content.title);
 });
