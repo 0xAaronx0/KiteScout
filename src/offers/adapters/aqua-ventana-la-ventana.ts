@@ -12,6 +12,8 @@
 //            "Price: Starts at $X / night", photos), /kiteboarding.md (water sports center, rental and lesson
 //            prices), /about.md (location, FAQ), /policies.md ("All rates are listed in USD, and VAT and hotel tax
 //            of 20% are not included", deposit and cancellation).
+//            Room photos: each unit's own Markdown images in /accommodations.md (resort map left out) -> rooms[].imageUrls;
+//            spot photos: the kiting photos of /kiteboarding.md (alt text names kite / wing / windsurf).
 //   slots    /accommodations.md?startDate=..&endDate=..&numberOfAdults=2&numberOfChildren=0&numberOfPets=0: one
 //            7-night sample stay per month (arrival on the first Saturday on or after the 12th; current month: after
 //            tomorrow), 7 months ahead (the wind season runs mid-October to mid-April). Per unit the answer prints
@@ -198,6 +200,19 @@ function kiteLine(kite: string, label: RegExp): string | null {
   return i >= 0 && lines[i + 1] ? `${lines[i]}: ${lines[i + 1]}` : null;
 }
 
+/** Junk filter of the gallery candidates (maps, logos, icons); the same for the general list, the rooms and the spot. */
+const AQ_JUNK = /\.svg|logo|icon|favicon|Resort_Map/i;
+
+/** Kiteboarding page photos of kiting at the resort (alt text names the sport; the shop interior is left out). */
+export function parseAqKitePhotos(md: string): string[] {
+  const out: string[] = [];
+  for (const m of md.matchAll(/!\[([^\]]*)\]\((https?:[^)\s]+)\)/g)) {
+    if (!/kite|wing|windsurf/i.test(m[1]) || AQ_JUNK.test(m[2]) || out.includes(m[2])) continue;
+    out.push(m[2]);
+  }
+  return out;
+}
+
 export function parseAquaContent(p: AqPages): OfferContent {
   const units = parseAqUnits(p.rooms);
   const kite = mdText(p.kite);
@@ -211,21 +226,26 @@ export function parseAquaContent(p: AqPages): OfferContent {
   const max = prices.length ? Math.max(...prices) : null;
   const iko = /two IKO instructors/i.test(kite);
 
-  const rooms: ContentRoom[] = units.map(u => ({
-    name: u.name,
-    description: u.description || null,
-    features: [
-      ...u.tagline.split('·').map(s => collapse(s)).filter(Boolean),
-      ...(u.maxGuests ? [`Up to ${u.maxGuests} guests`] : []),
-      ...(u.price !== null ? [`From USD ${u.price} per night${taxNote ? ' (VAT and hotel tax of 20% not included)' : ''}`] : []),
-    ],
-  }));
+  const rooms: ContentRoom[] = units.map(u => {
+    const own = [...new Set(u.images.filter(x => !AQ_JUNK.test(x)))];
+    return {
+      name: u.name,
+      description: u.description || null,
+      features: [
+        ...u.tagline.split('·').map(s => collapse(s)).filter(Boolean),
+        ...(u.maxGuests ? [`Up to ${u.maxGuests} guests`] : []),
+        ...(u.price !== null ? [`From USD ${u.price} per night${taxNote ? ' (VAT and hotel tax of 20% not included)' : ''}`] : []),
+      ],
+      ...(own.length ? { imageUrls: own } : {}),
+    };
+  });
+  const spotImageUrls = parseAqKitePhotos(p.kite);
 
   const seen = new Set<string>();
   const imageUrls: string[] = [];
   const homeImages = imageCandidates(p.home, AQ_HOME_URL, null, 30).map(unwrapNextImage);
   for (const u of [...homeImages, ...units.flatMap(x => x.images.slice(0, 3)), ...units.flatMap(x => x.images.slice(3))]) {
-    if (/\.svg|logo|icon|favicon|Resort_Map/i.test(u)) continue;
+    if (AQ_JUNK.test(u)) continue;
     if (seen.has(u)) continue;
     seen.add(u); imageUrls.push(u);
   }
@@ -273,6 +293,7 @@ export function parseAquaContent(p: AqPages): OfferContent {
     languages: ['en', 'es'],
     rooms,
     imageUrls: imageUrls.slice(0, 40),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: ROOMS_URL,
     bookingUrl: ROOMS_URL,

@@ -8,9 +8,10 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   taigaTarifaValdevaqueros, buildParatySlots, fetchTaigaValdevaquerosSlots, paratyBody, paratySamples, parseParatyResults,
-  parseTgHotelGeo, parseTgPoolSeason, parseTgServices, parseTgUnits, tgLines, tgUnitName, valRules, VAL_SITE_UNITS,
+  parseTgHotelGeo, parseTgKitePhotos, parseTgPoolSeason, parseTgServices, parseTgUnits, tgLines, tgUnitName, valRules, VAL_SITE_UNITS,
 } from '../../src/offers/adapters/taiga-tarifa-valdevaqueros.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/taiga-tarifa-valdevaqueros');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -109,4 +110,32 @@ test('taiga: content', async () => {
   assert.equal(c.imageUrls.length, 40);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://cdn2.paraty.es/taiga-valdevaqueros/images/')));
   assert.match(c.sourceText ?? '', /We have our own school at Taïga Valdevaqueros/);
+});
+
+test('taiga: per-room photos from the card pop-ups, kite photos from the school page', async () => {
+  const c = await taigaTarifaValdevaqueros.fetchContent(ctx);
+  const OWN = 'https://cdn2.paraty.es/taiga-valdevaqueros/images/';
+  // every one of the 19 rental units has its own pop-up gallery (5 to 12 photos)
+  assert.ok(c.rooms.every(r => (r.imageUrls?.length ?? 0) >= 5 && r.imageUrls!.every(u => u.startsWith(OWN))));
+  const room = (n: string) => c.rooms.find(r => r.name === n)!;
+  assert.equal(room('Bungalow 1-3').imageUrls!.length, 9);
+  assert.match(room('Bungalow 1-3').imageUrls![0], /3db043a518f822d$/);
+  assert.equal(room('Bungalow 4').imageUrls!.length, 12);
+  assert.match(room('Bungalow 4').imageUrls![0], /53731e0b444a556$/);
+  assert.equal(room('Glamping Kala').imageUrls!.length, 5);
+  assert.match(room('Glamping Kala').imageUrls![0], /c5af213fd65de75$/);
+  assert.match(room('Glamping Bruma').imageUrls![0], /079f953ae4e2eab$/);
+  assert.match(room('Tiny Home Duna').imageUrls![0], /b8847cedecd654b$/);
+  assert.match(room('Holiday House').imageUrls![0], /4900a07ef0ba8ce$/);
+  // no two room types share a photo
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.equal(new Set(all).size, all.length);
+  // spot: the kite school page's six kiting photos, no logos / biking / stargazing
+  assert.deepEqual(c.spotImageUrls, parseTgKitePhotos(read(files.find(f => f.startsWith('www.taigaresorts.com_en_kite-surf'))!)));
+  assert.equal(c.spotImageUrls!.length, 6);
+  assert.equal(c.spotImageUrls![0], 'https://cdn2.paraty.es/q10-corpo/images/1751f76b7cddc01=s1900');
+  assert.ok(!c.spotImageUrls!.some(u => /4b55165c834017c|e51de6099e4f524|4b5c01558ce11c8|54fd0e0a172ff16/.test(u)));
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(first24.includes(r.imageUrls![0]), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

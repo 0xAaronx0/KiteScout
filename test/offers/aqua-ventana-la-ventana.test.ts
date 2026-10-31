@@ -7,6 +7,7 @@ import {
   aquaVentanaLaVentana, aqSamples, aqSearchUrl, fetchAqSlots, parseAqUnits, unwrapNextImage,
 } from '../../src/offers/adapters/aqua-ventana-la-ventana.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/aqua-ventana-la-ventana');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -85,4 +86,32 @@ test('aqua: content', async () => {
 
 test('aqua: Next.js image proxy unwrap', () => {
   assert.equal(unwrapNextImage('https://www.aquaventana.com/_next/image?url=https%3A%2F%2Fmedia-bridge.thinkreservations.com%2Fa%2Fb.jpg&w=3840&q=75'), 'https://media-bridge.thinkreservations.com/a/b.jpg');
+});
+
+test('aqua: per-unit photos from accommodations.md, kiting photos from kiteboarding.md', async () => {
+  const c = await aquaVentanaLaVentana.fetchContent(ctx);
+  const OWN = 'https://media-bridge.thinkreservations.com/';
+  assert.ok(c.rooms.every(r => (r.imageUrls?.length ?? 0) >= 3 && r.imageUrls!.every(u => u.startsWith(OWN) && !/Resort_Map/i.test(u))));
+  const n = (name: string) => c.rooms.find(r => r.name === name)!.imageUrls!;
+  assert.deepEqual(c.rooms.map(r => r.imageUrls!.length), [9, 10, 9, 9, 10, 9, 6, 8, 7, 5, 7, 7, 12, 3, 3, 9, 14]);
+  assert.match(n('Pitaya')[0], /DSC01104\.jpg$/);
+  assert.match(n('Datilillo')[0], /BHmasterbed\.jpg$/);
+  assert.match(n('Mezquite')[0], /Wind-Scape-01-/);
+  assert.match(n('Cardon')[0], /DSC01161-Edit\.jpg$/);
+  assert.match(n('Palma')[0], /DSC09920\.jpg$/);
+  assert.match(n('Papache 1')[0], /DSC09747\.jpg$/);
+  assert.match(n('Papache 3')[0], /DSC09805\.jpg$/);
+  assert.match(n('Papache 4')[0], /DSC09703-Edit\.jpg$/);
+  assert.match(n('Papache 6')[0], /DSC01333\.jpg$/);
+  // no unit gets another unit's photo
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.equal(new Set(all).size, all.length);
+  // spot: the four kiting photos (K3 to K6), not the shop interior (K2)
+  assert.deepEqual(c.spotImageUrls!.map(u => u.split('/').pop()), ['aquav-K3.jpg', 'aquav-K4.jpg', 'aquav-K5.jpg', 'aquav-K6.jpg']);
+  const plan = planGallery(c);
+  const first24 = plan.candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(first24.includes(r.imageUrls![0]), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
+  // the two Unsplash stock photos of the home page are left out of the gallery
+  assert.deepEqual(plan.dropped.map(u => u.split('/').pop()), ['grant-durr-_VGhJRuWVcw-unsplash.jpg', 'amy-humphries-DirD8fvb_iY-unsplash.jpg']);
 });

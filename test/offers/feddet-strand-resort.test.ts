@@ -6,8 +6,9 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  feddetStrandResort, FSR_PORTAL, FSR_ROOMS, fetchFsrSlots, parseFsrGeo, parseFsrKite, parseFsrUnits,
+  feddetStrandResort, FSR_PORTAL, FSR_ROOMS, fetchFsrSlots, parseFsrGeo, parseFsrKite, parseFsrUnitPhotos, parseFsrUnits,
 } from '../../src/offers/adapters/feddet-strand-resort.js';
+import { planGallery } from '../../src/offers/gallery.js';
 import { parseCsobList } from '../../src/offers/adapters/hvide-sande-camping.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import { slotRoom } from '../../src/offers/ingest.js';
@@ -82,4 +83,43 @@ test('feddet: engine units link to their content rooms', async () => {
   assert.equal(linked.get('Spa villa'), 'Spa Villa'); // by name
   assert.equal(linked.get('Vacation Home Elvira'), null); // no unit card on the site
   assert.deepEqual([...linked].filter(([u, r]) => !r).map(([u]) => u), ['Vacation Home Elvira']);
+});
+
+test('feddet: per-unit photos from the card sliders, kite photos from the kite page', async () => {
+  const c = await feddetStrandResort.fetchContent(ctx);
+  const room = (n: string) => c.rooms.find(r => r.name === n)!;
+  const counts = Object.fromEntries(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0]));
+  assert.deepEqual(counts, {
+    'Spa Lodge': 10, 'Spa Mobilehome': 11, 'Comfort Lodge': 7, 'Pet-free Comfort Lodge': 5, Larchcabin: 8,
+    'Spa Glamping tent': 10, 'Glamping tent': 7, 'Spa Rental Caravan': 8, 'Camp-Let tent rental trailer': 3, 'Spa Villa': 9,
+    'The Beach House Paradiso': 0, // its slides are lazy (data-src) and the recording kept no URL; see the data-src case below
+    'The Beach House Caroline': 8, 'The Beach House Amalie': 9, 'Holiday house Thalia': 9, 'The Olivia Ocean Suite': 8,
+  });
+  assert.match(room('Spa Lodge').imageUrls![0], /premium-strandhytte-2023-3-/);
+  assert.match(room('Spa Mobilehome').imageUrls![0], /mobilehome-feddet-16-/);
+  assert.match(room('Comfort Lodge').imageUrls![0], /strandhytter2022-2-/);
+  assert.match(room('Pet-free Comfort Lodge').imageUrls![0], /strandhytte-2023-4-1-/);
+  assert.match(room('Larchcabin').imageUrls![0], /laerkehytte-feddet-25-/);
+  assert.match(room('Spa Glamping tent').imageUrls![0], /premium-glampingtelt-11-/);
+  assert.match(room('Glamping tent').imageUrls![0], /glampingtelt-feddet-6-/);
+  assert.match(room('Spa Rental Caravan').imageUrls![0], /spa-udlejningsvogn-13-/);
+  assert.match(room('Camp-Let tent rental trailer').imageUrls![0], /camplet1-/);
+  assert.match(room('Spa Villa').imageUrls![0], /premium-lejlighed-feddet-9-1-/);
+  assert.match(room('The Beach House Caroline').imageUrls![0], /strandhuset-caroline-feddet-15-/);
+  assert.match(room('The Beach House Amalie').imageUrls![0], /strandhuset-amalie-feddet-1-/);
+  assert.match(room('Holiday house Thalia').imageUrls![0], /feriehuset-thalia-1-/);
+  assert.match(room('The Olivia Ocean Suite').imageUrls![0], /olivia-1-/);
+  // the pet-free lodge is the same lodge without pets and shares some photos; the others only show their own unit
+  assert.ok(c.rooms.every(r => (r.imageUrls ?? []).every(u => u.startsWith('https://feddet.dk/wp-content/uploads/') && !/\.png$|flags|logo/i.test(u))));
+  // lazy slides: the data-src photo is taken, grouped by the slide's link to the unit page
+  const lazy = parseFsrUnitPhotos('<div class="swiper-slide"><a href="https://feddet.dk/en/accommodation/concept-holiday-houses/beach-house-paradiso/">'
+    + '<figure class="swiper-slide-inner"><img class="swiper-slide-image swiper-lazy" data-src="https://feddet.dk/wp-content/uploads/elementor/thumbs/strandhuset-paradiso-feddet-50-abc.jpg" alt="x" /></figure></a></div>');
+  assert.deepEqual([...lazy], [['https://feddet.dk/en/accommodation/concept-holiday-houses/beach-house-paradiso/',
+    ['https://feddet.dk/wp-content/uploads/elementor/thumbs/strandhuset-paradiso-feddet-50-abc.jpg']]]);
+  assert.equal(c.spotImageUrls!.length, 11);
+  assert.ok(c.spotImageUrls!.every(u => /\/2021\/12\/kite-surfing-feddet-\d+\.jpg$/.test(u)));
+  assert.match(c.spotImageUrls![0], /kite-surfing-feddet-5\.jpg$/);
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms.filter(x => x.imageUrls?.length)) assert.ok(first24.includes(r.imageUrls![0]), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

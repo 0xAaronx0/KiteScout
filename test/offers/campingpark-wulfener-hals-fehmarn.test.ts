@@ -8,8 +8,9 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   campingparkWulfenerHalsFehmarn, buildWhEngineSlots, buildWhSlots, fetchWhLiveSlots, fetchWhSlots, parseWhKitePrices, parseWhSpecials,
-  parseWhSpecialsNotes, parseWhUnits, whOpenGroupsOnly, whSampleCheckIns, whUnitName, WH_PORTAL, WH_ROOMS,
+  parseWhSpecialsNotes, parseWhUnits, whOpenGroupsOnly, whRoomPhotos, whSampleCheckIns, whUnitName, WH_PORTAL, WH_ROOMS,
 } from '../../src/offers/adapters/campingpark-wulfener-hals-fehmarn.js';
+import { planGallery } from '../../src/offers/gallery.js';
 import { parseCsobList, type CsobSample } from '../../src/offers/adapters/hvide-sande-camping.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import { slotRoom } from '../../src/offers/ingest.js';
@@ -155,4 +156,38 @@ test('wulfener-hals: own fetch timeout for the 12 sequential sample weeks (cron 
   const { readFileSync: rf } = await import('node:fs');
   const src = rf(new URL('../../src/offers/ingest.ts', import.meta.url), 'utf8');
   assert.equal((src.match(/a\.timeoutMs \?\? ADAPTER_TIMEOUT_MS/g) ?? []).length, 2);
+});
+
+test('wulfener-hals: per-unit photos from the unit folders, kite photos from the kitesurfing article', async () => {
+  const c = await campingparkWulfenerHalsFehmarn.fetchContent(ctx);
+  const files = (r: { imageUrls?: string[] }) => (r.imageUrls ?? []).map(u => decodeURIComponent(u).split('/').slice(-2).join('/'));
+  assert.deepEqual(c.rooms.map(r => [r.name, files(r)]), [
+    ['Rental trailer', ['Mietwohnwagen/C001 _C011 Bereich.3.JPG', 'Season Camper/Neue Saeasoncamper 3-1.jpg', 'Weitere Mietwohnwagen/Mietwohnwagen M11 Hobby Prestige 650KMFe 200905.jpg']],
+    ['Holiday home Baltic-Park: Seeschwalbe', ['Seeschwalbe/Seeschwalbe.JPG', 'Seeschwalbe/Fehmarn_Wulfener Hals_Ferienhaus_Seeschwalbe01.jpg', 'Seeschwalbe/Fehmarn_Wulfener Hals_Ferienhaus_Sewachwalbe20.jpg']],
+    ['Holiday home Dünenpark: Deluxe White-tailed Eagle Model', ['Seeadler/Fehmarn_Wulfener Hals_Ferienhaus_eröffnung dünenpark 4a.jpg']], // floor plan "gruindriss" out
+    ['Holiday home Dünenpark: Seagull Model', ['Seemöwe/Fehmarn_Wulfener Hals_Ferienhäuser.jpg', 'Seemöwe/Fehmarn_Wulfener Hals_Ferienhaus_seemöve 2016.jpg']],
+    ['Mobile home: Sumba Model', ['Sumba/Fehmarn_Wulfener Hals_Mobilmeim_Sumba aussen.jpg']],
+    ['Mobile home: Ocala Model', ['Ocala/Fehmarn_Wulfener Hals_Mobilheimmobilheim_fehmarn_ocala_aussen.jpg']],
+    ['Mobile home: Chatel Model', ['Chatel/Mobilheim Chatel.JPG']],
+    ['Mobile home: Romantiksuite Model', ['Romantik/Fehmarn_Wulfener Hals_Romantiksuiteneue mobilheime romantiksuite aussen.jpg']],
+    ['Beach Bungalow', ['Strandbungalow/Fehmarn_Wulfener Hals_Bungalow.jpg', 'Strandbungalow/Fehmarn_Wulfener Hals_Ferienwohnung_ferienwonnung 913_mit neuem dach.jpg', 'Strandbungalow/Fehmarn_Wulfener Hals_Ferienwohnung_913.jpg']],
+    ['Beach apartment: Apartment F991 in the thatched-roof house', ['Ferienwohnung 991/991_992.jpg']],
+    ['Beach apartment: Apartment F992 in the thatched-roof house', ['Ferienwohnung 992/992.jpg']],
+    ['Beach apartment: Apartment F993 in the thatched-roof house', []], // its folder holds only the 993/994 floor plan
+    ['Beach apartment: Apartment F994 in the thatched-roof house', ['Ferienwohnung 994/Fehmarn_Wulfener Hals Ferienwohnung 994_7.jpg']],
+    ['90 m² Apartment F995 am Pool', ['Ferienwohnung 995/Fehmarn_Wulfener Hals Ferienwohnung 995_02.jpg']],
+    ['50 m² Apartment F996 by the Pool', ['Ferienwohnung 996/Fehmarn_Wulfener Hals Ferienwohnung 996_02.jpg']],
+    ['60 m² Apartment F997 by the Pool', ['Ferienwohnung 997/Fehmarn_Wulfener Hals Ferienwohnung 997_02.jpg']],
+  ]);
+  // same URLs as the general list (originals under files/bilder/, absolute)
+  assert.ok(c.rooms.every(r => (r.imageUrls ?? []).every(u => u.startsWith('https://www.wulfenerhals.de/files/bilder/Unterk%C3%BCnfte/'))));
+  // group folders (Dünenpark overview, the beach-apartment house, the pool house) belong to no single unit
+  const pool = 'https://www.wulfenerhals.de/files/bilder/Unterk%C3%BCnfte/Ferienwohnungen/Apartments%20am%20Pool/Haus%20am%20Schwimmbad.jpg';
+  assert.deepEqual(whRoomPhotos('90 m² Apartment F995 am Pool', [pool]), []);
+  // spot: the two photos of the kitesurfing article, then the page's title image; the Adobe Firefly image is never used
+  assert.deepEqual(c.spotImageUrls!.map(u => decodeURIComponent(u).split('/').pop()), ['DSC09888.jpg', 'DSC07273.jpg', 'DSC03379-2.jpg']);
+  assert.ok(![...c.spotImageUrls!, ...c.rooms.flatMap(r => r.imageUrls ?? [])].some(u => /Firefly|riss/i.test(decodeURIComponent(u))));
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms.filter(x => x.imageUrls?.length)) assert.ok(first24.includes(r.imageUrls![0]), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

@@ -14,6 +14,8 @@
 //            JSON-LD (two blocks: a Hotel with a precise geo and a Campground @graph whose geo sits 3 km further west;
 //            spotCoords take the Hotel block, see TG_GEO_NOTE) + /en/kite-surf-and-wind-foil-at-taiga-valdevaqueros.html
 //            (the campsite's own kite school).
+//            Room photos: each card's pop-up gallery (TgUnit.images, best first) -> rooms[].imageUrls; spot photos: the
+//            kite page's kite / wind foil photos (chain namespace cdn2.paraty.es/q10-corpo/, picked by alt text).
 //   slots    Paraty Tech booking engine of the chain. The site's own booking form posts anonymously (no cookie, token
 //            or login) to POST www.taigaresorts.com/booking1 with namespace=taiga-valdevaqueros, startDate/endDate
 //            (DD/MM/YYYY), numRooms, adultsRoom1, childrenRoom1, babiesRoom1, language; the answer is the step-1 page,
@@ -294,6 +296,18 @@ export const valRules: ParatyUnitRules = {
 
 export interface TgValPages { page: string; kite: string }
 
+/** Kite page photos of kiting at the campsite's school (the chain's CMS namespace q10-corpo; logos and icons left out by alt text). */
+export function parseTgKitePhotos(html: string): string[] {
+  const out: string[] = [];
+  for (const i of parse(html).querySelectorAll('img')) {
+    const u = i.getAttribute('data-src') ?? i.getAttribute('src') ?? '';
+    if (!u.startsWith('https://cdn2.paraty.es/q10-corpo/images/')) continue;
+    if (!/kite|wind ?foil/i.test(i.getAttribute('alt') ?? '') || /logo|icon/i.test(i.getAttribute('alt') ?? '')) continue;
+    if (!out.includes(u)) out.push(u);
+  }
+  return out;
+}
+
 export function parseTaigaValdevaquerosContent(p: TgValPages): OfferContent {
   const lines = tgLines(p.page);
   const kiteLines = tgLines(p.kite);
@@ -312,6 +326,7 @@ export function parseTaigaValdevaquerosContent(p: TgValPages): OfferContent {
     ...imageCandidates(p.page, TG_PAGE_URL, null, 120).filter(x => x.startsWith(`https://cdn2.paraty.es/${TG_NAMESPACE}/images/`))]) {
     if (!imageUrls.includes(u)) imageUrls.push(u);
   }
+  const spotImageUrls = parseTgKitePhotos(p.kite);
 
   const summary = [
     `TAIGA Tarifa Valdevaqueros is a campsite of the Spanish TAIGA chain on the N-340 at Valdevaqueros, Tarifa, 400 m from the kitesurf beach in the Strait Natural Park.`,
@@ -348,8 +363,9 @@ export function parseTaigaValdevaquerosContent(p: TgValPages): OfferContent {
     accommodation: 'campsite bungalows, tiny homes, glamping tents and a holiday house',
     mealPlan: 'self_catering',
     languages: [],
-    rooms: units.map(tgRoom),
+    rooms: units.map(u => ({ ...tgRoom(u), ...(u.images.length ? { imageUrls: u.images } : {}) })),
     imageUrls: imageUrls.slice(0, 40),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: TG_PAGE_URL,
     bookingUrl: TG_PAGE_URL,

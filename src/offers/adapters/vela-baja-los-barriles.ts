@@ -18,6 +18,8 @@
 //            increase; the season year comes from the increase note ("January 1st 2027" -> 2026/27).
 //   content  /accommodation/ (hotels, services, room options), / (season, location), the kiteboarding
 //            page (conditions, lessons, Cabrinha/Slingshot rental), /sports-package/.
+//            Room photos: the "View Room Options" tiles of /accommodation/ (<h6> name + the next <img>), king and
+//            2/3/4-bed tiles go to their base room (vbTileRoom); spot photos: the kite page's kiting photos (alt / title).
 // Booking: "Book Here" links to /contact-us/ ("booking enquiries please email us"); a 20% deposit goes
 //   to Vela Baja (FAQ) -> availability 'on_request', no booking engine.
 // Currency: rates are printed with "$"; the same page states "$20 USD", the FAQ "Cash $USD" -> USD.
@@ -178,13 +180,71 @@ export function buildVbSlots(hotels: VbHotel[], bands: Array<{ start: string; en
   return out;
 }
 
+/** One <img> src -> the original WordPress upload (upscaleCdnUrl); null for logos / price sheets / social thumbs / other hosts. */
+function vbImageUrl(src: string): string | null {
+  if (!/^https:\/\/velabaja\.com\/wp-content\/uploads\/[^'"]+\.(?:jpe?g|png|webp)$/i.test(src)) return null;
+  if (/logo|favicon|socialThumbnail|\/thumbnail-|velatransfer|\.png$/i.test(src)) return null;
+  return upscaleCdnUrl(src);
+}
+
 /** WordPress uploads of a page (originals via upscaleCdnUrl), logos / price sheets / social thumbs dropped. */
 export function vbImages(html: string): string[] {
   const out: string[] = [];
   for (const m of html.matchAll(/<img[^>]+src=['"](https:\/\/velabaja\.com\/wp-content\/uploads\/[^'"]+\.(?:jpe?g|png|webp))['"]/gi)) {
-    if (/logo|favicon|socialThumbnail|\/thumbnail-|velatransfer|\.png$/i.test(m[1])) continue;
-    const u = upscaleCdnUrl(m[1]);
-    if (!out.includes(u)) out.push(u);
+    const u = vbImageUrl(m[1]);
+    if (u && !out.includes(u)) out.push(u);
+  }
+  return out;
+}
+
+/**
+ * The content room table a "View Room Options" tile shows: "Garden King" / "Ocean King" / "Poolside King" -> the
+ * Garden / Ocean View / Poolside table (king variant), "2 Bed Cabaña" -> Cabana Room, "Condo" / "Luxury Suites" ->
+ * Condo / Suite / Penthouse. null when no table fits by name ("Deluxe Poolside": not printed in any rate table).
+ */
+export function vbTileRoom(h: VbHotel, tile: string): VbTable | null {
+  const key = collapse(tile).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
+    .replace(/^\d+\s*bed\s+/, '').replace(/\s+king$/, '');
+  const first = key.split(' ')[0];
+  return h.tables.find(t => t.room.toLowerCase().split(/\s+/)[0] === first)
+    ?? (/\b(condos?|suites?|penthouse)\b/.test(key) ? h.tables.find(t => /condo|suite|penthouse/i.test(t.room)) ?? null : null);
+}
+
+/** "<hotel> - <table>" -> its tile photos in page order (base room tile before its king tile). */
+export function parseVbRoomPhotos(html: string, hotels: VbHotel[]): Map<string, string[]> {
+  const out = new Map<string, string[]>();
+  let hotel: VbHotel | null = null;
+  let tile: string | null = null;
+  for (const el of parse(html).querySelectorAll('h2, h6, img')) {
+    if (el.tagName === 'H2') {
+      const name = collapse(el.text).replace(/^Boutique Hotel\s+/i, '');
+      hotel = hotels.find(h => h.name === name) ?? null;
+      tile = null;
+    } else if (el.tagName === 'H6') {
+      tile = collapse(el.text);
+    } else if (hotel && tile) {
+      const u = vbImageUrl(el.getAttribute('src') ?? '');
+      if (!u) continue;
+      const t = vbTileRoom(hotel, tile);
+      tile = null;
+      if (!t) continue;
+      const key = `${hotel.name} - ${t.room}`;
+      const list = out.get(key) ?? [];
+      if (!list.includes(u)) list.push(u);
+      out.set(key, list);
+    }
+  }
+  return out;
+}
+
+/** Kite page photos of kiting (alt / title name it; the equipment shot and untitled catalogue thumbs left out). */
+export function vbKitePhotos(html: string): string[] {
+  const out: string[] = [];
+  for (const el of parse(html).querySelectorAll('img')) {
+    const label = `${el.getAttribute('alt') ?? ''} ${el.getAttribute('title') ?? ''}`;
+    if (!/kite/i.test(label) || /equipment/i.test(label)) continue;
+    const u = vbImageUrl(el.getAttribute('src') ?? '');
+    if (u && !out.includes(u)) out.push(u);
   }
   return out;
 }
@@ -204,9 +264,11 @@ export function parseVbContent(p: VbPages): OfferContent {
   const pkgPrice = pkgM ? `USD ${pkgM[1]}/day, min ${pkgM[2]} days${pkgM[3] ? `: ${pkgM[3].trim()}` : ''}` : null;
   const usd = (n: number) => `USD ${n.toLocaleString('en-US')}`;
 
+  const roomPhotos = parseVbRoomPhotos(p.accommodation, hotels);
   const rooms: ContentRoom[] = [];
   for (const h of hotels) {
     for (const t of h.tables) {
+      const photos = roomPhotos.get(`${h.name} - ${t.room}`) ?? [];
       rooms.push({
         name: `${h.name} - ${t.room}`,
         description: t.beds,
@@ -216,6 +278,7 @@ export function parseVbContent(p: VbPages): OfferContent {
           ...(notes.increaseFrom && notes.increase ? [`from ${notes.increaseFrom}: all rates + ${usd(notes.increase)} per night`] : []),
           ...(notes.taxes ? [notes.taxes] : []),
         ],
+        ...(photos.length ? { imageUrls: photos } : {}),
       });
     }
   }
@@ -231,6 +294,7 @@ export function parseVbContent(p: VbPages): OfferContent {
   ].filter(Boolean).join(' ');
 
   const imageUrls = [...new Set([...vbImages(p.accommodation), ...vbImages(p.kite), ...vbImages(p.home)])];
+  const spotImageUrls = vbKitePhotos(p.kite);
 
   return {
     kind: 'accommodation',
@@ -265,6 +329,7 @@ export function parseVbContent(p: VbPages): OfferContent {
     languages: ['en'],
     rooms,
     imageUrls,
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: VB_ACCOMMODATION_URL,
     bookingUrl: BOOKING_URL,

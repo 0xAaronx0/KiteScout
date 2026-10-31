@@ -10,6 +10,8 @@
 //            /mietwohnwagen, /ferienhaeuser-im-baltic-park, /ferienhaeuser-im-duenenpark, /mobilheimpark,
 //            /strandbungalow, /ferienwohnungen-am-strand, /ferienwohnungen-am-pool (unit headings <h2>, size /
 //            capacity line, equipment <ul>, original photos files/bilder/...).
+//            Room photos: the unit's own photo folder files/bilder/Unterkünfte/<group>/<unit>/ on its rental page
+//            (WH_PHOTO_FOLDERS); spot photos: the kitesurfing article and title image of /surfen-kiten-segeln.
 //   slots    Compusoft online booking: the site's search (/suchen-buchen -> /unterkuenfte-ergebnisliste) embeds csobV2 with
 //            portal key d8d8969d-… (checked 2026-10-14). Through the shared helpers of hvide-sande-camping.ts, per sample week
 //            the widget's anonymous profile list (getCSProfileListViewModel) + one price call for all free units
@@ -36,6 +38,7 @@
 import { fetchText } from '../http.js';
 import { clean, iso, parse, parseAmount, todayIso } from '../parse.js';
 import type { ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { isNotOwnPhoto } from '../gallery.js';
 import { csobAddDays, csobKeyPart, csobSaturdaySamples, csobSlots, fetchCsobSamples, type CsobPortal, type CsobProfile, type CsobSample } from './hvide-sande-camping.js';
 
 const SITE = 'https://www.wulfenerhals.de';
@@ -196,6 +199,47 @@ export function whImages(html: string): string[] {
   return out;
 }
 
+/**
+ * Unit photo folders under files/bilder/Unterkünfte/ -> the content room they show (by room name). Group folders
+ * (Mobilheime/Allgemein, the house of the beach apartments, the pool house, the Dünenpark overview) name no single unit
+ * and stay in the general list only; the numbered apartment folders ("Ferienwohnung 991") go to the room named F991.
+ */
+const WH_PHOTO_FOLDERS: Array<{ folder: RegExp; room: RegExp }> = [
+  { folder: /\/Unterkünfte\/Mietwohnwagen\//, room: /^Rental trailer$/ },
+  { folder: /\/Balticpark\/Seeschwalbe\//, room: /Seeschwalbe/ },
+  { folder: /\/Dünenpark\/Seeadler\//, room: /White-tailed Eagle|Seeadler/i },
+  { folder: /\/Dünenpark\/Seemöwe\//, room: /Seagull|Seemöwe/i },
+  { folder: /\/Mobilheime\/Sumba\//, room: /Sumba/ },
+  { folder: /\/Mobilheime\/Ocala\//, room: /Ocala/ },
+  { folder: /\/Mobilheime\/Chatel\//, room: /Chatel/ },
+  { folder: /\/Mobilheime\/Romantik\//, room: /Romantik/ },
+  { folder: /\/Unterkünfte\/Strandbungalow\//, room: /Bungalow/i },
+];
+
+/** The photos (whImages of the unit's rental page) that sit in the unit's own folder; floor plans and AI images out. */
+export function whRoomPhotos(roomName: string, photos: string[]): string[] {
+  return photos.filter(u => {
+    if (isNotOwnPhoto(u)) return false;
+    let path: string;
+    try { path = decodeURIComponent(new URL(u).pathname); } catch { return false; }
+    const apt = path.match(/\/Ferienwohnung (\d{3})\//)?.[1];
+    if (apt) return new RegExp(`\\bF${apt}\\b`).test(roomName);
+    return WH_PHOTO_FOLDERS.some(f => f.folder.test(path) && f.room.test(roomName));
+  });
+}
+
+/** Spot photos of the kite page: the articles about kitesurfing first, then the page's title image (AI images out). */
+export function whKitePhotos(html: string): string[] {
+  const kite: string[] = [];
+  const title: string[] = [];
+  for (const article of whMain(html).split(/(?=<(?:section|div)\b[^>]*class="mod_article\b)/)) {
+    const heads = [...article.matchAll(/<h[1-4][^>]*>([\s\S]*?)<\/h[1-4]>/g)].map(m => text(m[1])).join(' ');
+    const into = /kitesurf/i.test(heads) ? kite : /^<(?:section|div)\b[^>]*class="mod_article[^"]*\btitle-image\b/.test(article) ? title : null;
+    if (into) for (const u of whImages(article)) if (!isNotOwnPhoto(u) && !into.includes(u)) into.push(u);
+  }
+  return [...new Set([...kite, ...title])];
+}
+
 /** Kite course prices ("Basis-Block" + "4 hours / 4 students" + "125 EUR per person"). */
 export function parseWhKitePrices(html: string): Array<{ course: string; detail: string; price: number }> {
   const ls = whLines(html);
@@ -224,11 +268,17 @@ export function parseWulfenerHalsContent(p: WhPages): OfferContent {
     const cat = WH_RENTAL_PAGES.find(x => x.path === r.path)?.category ?? r.path;
     const us = parseWhUnits(r.html, cat);
     units.push(...us);
-    if (us.length === 0) rooms.push({ name: cat, description: whIntro(r.html), features: [] });
-    for (const u of us) rooms.push({ name: u.name.toLowerCase().includes(cat.split(' ')[0].toLowerCase()) ? u.name : `${cat}: ${u.name}`, description: u.info, features: u.features });
+    const pagePhotos = whImages(r.html);
+    const withPhotos = (room: ContentRoom): ContentRoom => {
+      const own = whRoomPhotos(room.name, pagePhotos);
+      return own.length ? { ...room, imageUrls: own } : room;
+    };
+    if (us.length === 0) rooms.push(withPhotos({ name: cat, description: whIntro(r.html), features: [] }));
+    for (const u of us) rooms.push(withPhotos({ name: u.name.toLowerCase().includes(cat.split(' ')[0].toLowerCase()) ? u.name : `${cat}: ${u.name}`, description: u.info, features: u.features }));
     for (const u of whImages(r.html).slice(0, 4)) if (!imgs.includes(u)) imgs.push(u);
   }
   for (const u of [...whImages(p.home).slice(0, 6), ...whImages(p.kite)]) if (!imgs.includes(u)) imgs.push(u);
+  const spotImageUrls = whKitePhotos(p.kite);
   const trailers = p.rentals.find(r => r.path === 'mietwohnwagen');
   const nTrailers = trailers ? whLines(trailers.html).join(' ').match(/approximately (\d+) rental trailers/i)?.[1] ?? null : null;
   const specials = parseWhSpecials(p.specials);
@@ -266,6 +316,7 @@ export function parseWulfenerHalsContent(p: WhPages): OfferContent {
     languages: ['de', 'en'],
     rooms,
     imageUrls: imgs.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: WH_KITE_URL,
     bookingUrl: BOOKING_URL,

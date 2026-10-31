@@ -4,8 +4,9 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  velaBajaLosBarriles, buildVbSlots, parseVbHotels, parseVbNotes, parseVbSeason, vbBands,
+  velaBajaLosBarriles, buildVbSlots, parseVbHotels, parseVbNotes, parseVbSeason, vbBands, vbTileRoom,
 } from '../../src/offers/adapters/vela-baja-los-barriles.js';
+import { planGallery } from '../../src/offers/gallery.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import { todayIso } from '../../src/offers/parse.js';
 import { slotRoom } from '../../src/offers/ingest.js';
@@ -94,4 +95,31 @@ test('vela: every rate links to its content room (king and condo / suite / penth
   ]);
   assert.equal(linked.get('Playa Del Sol - Garden Room, 1 king bed'), 'Playa Del Sol - Garden Room');
   assert.equal(linked.get('Palmas de Cortez - Cabana Room'), 'Palmas de Cortez - Cabana Room');
+});
+
+test('vela: per-room photos from the "View Room Options" tiles, kiting photos from the kite page', async () => {
+  const c = await velaBajaLosBarriles.fetchContent(ctx);
+  const up = 'https://velabaja.com/wp-content/uploads/';
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.map(u => u.slice(up.length))]), [
+    ['Playa Del Sol - Garden Room', ['2020/12/gardenroom13pds.jpg']],
+    ['Playa Del Sol - Poolside Ocean View Room', ['2020/12/poolsideroom1pds.jpg', '2020/12/PDS_poolside_king_bedroom_RM3.jpg']],
+    ['Playa Del Sol - Ocean View Room', ['2020/12/oceanview20pds.jpg', '2020/12/oceanview19pds-1.jpg']],
+    ['Palmas de Cortez - Cabana Room', ['2021/01/2bedcabana.jpg', '2021/01/3bedcabana.jpg', '2021/01/4bedcabana.jpg']],
+    ['Palmas de Cortez - Garden Room', ['2021/01/garden.jpg', '2021/01/gardenking.jpg']],
+    ['Palmas de Cortez - Poolside Room', ['2021/01/poolside.jpg', '2021/01/poolsideking.jpg']],
+    ['Palmas de Cortez - Ocean View Room', ['2021/01/coean.jpg', '2021/01/oceanking.jpg']],
+    ['Palmas de Cortez - Condo / Suite / Penthouse', ['2021/01/condo.jpg', '2021/01/luxury.jpg']],
+  ]);
+  // the tiles are 300x150 thumbnails; the room photos are the originals, exactly as in the general list
+  assert.ok(c.rooms.every(r => r.imageUrls!.every(u => c.imageUrls.includes(u) && !/-\d+x\d+\./.test(u))));
+  // "Deluxe Poolside" names no rate table: left out rather than guessed
+  const pdc = parseVbHotels(acc)[1];
+  assert.equal(vbTileRoom(pdc, 'Deluxe Poolside'), null);
+  assert.equal(vbTileRoom(pdc, '3 Bed Cabaña')!.room, 'Cabana Room');
+  assert.equal(vbTileRoom(pdc, 'Garden King ')!.room, 'Garden Room');
+  assert.ok(!c.rooms.some(r => r.imageUrls!.some(u => /delux\.jpg/.test(u))));
+  assert.deepEqual(c.spotImageUrls!.map(u => u.slice(up.length)), ['2018/01/kitelesson.jpg', '2016/03/IMG_7637.jpg', '2018/03/MG_2141.jpg']);
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(first24.includes(r.imageUrls![0]), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

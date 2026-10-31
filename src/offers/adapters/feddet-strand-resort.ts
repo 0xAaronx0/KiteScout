@@ -8,6 +8,8 @@
 // Data path (checked 2026-10-14), WordPress / Elementor site, English pages:
 //   content  /en/ (intro, JSON-LD Place geo), /en/activities/kitesurfing/ (spot, day / annual pass, Kitekollektivet course
 //            prices), /en/accomodation/ (overview cards: <h3> link to the unit page, icon-list facts, text-editor <p>).
+//            Room photos: each card's Elementor slider (every slide links to its unit page) -> rooms[].imageUrls; spot
+//            photos: the kite page's kite-surfing-feddet-N photos.
 //   slots    Compusoft online booking (/en/book/, csobPortalKey 6240e319-…) via the shared helpers of hvide-sande-camping.ts:
 //            per sample week the widget's anonymous profile list + one price call. "We use variable pricing … you will
 //            always find the current daily price in our online booking" (/en/prices/) - no printed price table. Open all
@@ -21,7 +23,7 @@
 //   profiles (weekend / last-minute / "Tilbud" / "Ferietilbud"), business rental rooms and add-on products are left out.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
-import { clean, imageCandidates, ldOfType, todayIso } from '../parse.js';
+import { clean, imageCandidates, ldOfType, parse, todayIso } from '../parse.js';
 import type { ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
 import { csobAddDays, csobRooms, csobSaturdaySamples, csobSlots, fetchCsobSamples, type CsobPortal } from './hvide-sande-camping.js';
 
@@ -80,6 +82,29 @@ export function parseFsrUnits(html: string): FsrUnit[] {
   return out;
 }
 
+/** The unit images the general list keeps (WordPress uploads; flags, logos, icons, PNG graphics out). */
+const fsrUnitImage = (u: string): boolean => /\/wp-content\/uploads\//.test(u) && !/flags|logo|icon|\.svg|\.png$/i.test(u);
+
+/**
+ * Card slider photos per unit page URL: every slide of an overview card links to its unit page, so the slides group by
+ * that link. URLs come out of imageCandidates like the general list (src or the lazy data-src, loop clones once).
+ */
+export function parseFsrUnitPhotos(html: string): Map<string, string[]> {
+  const slides = new Map<string, string[]>();
+  for (const slide of parse(html).querySelectorAll('.swiper-slide')) {
+    const href = slide.querySelector('a[href]')?.getAttribute('href');
+    if (!href || !slide.querySelector('img')) continue;
+    const url = new URL(href, FSR_UNITS_URL).toString();
+    slides.set(url, [...(slides.get(url) ?? []), slide.toString()]);
+  }
+  const out = new Map<string, string[]>();
+  for (const [url, list] of slides) {
+    const photos = imageCandidates(list.join(''), FSR_UNITS_URL, null, 120).filter(fsrUnitImage);
+    if (photos.length) out.set(url, photos);
+  }
+  return out;
+}
+
 export interface FsrKite { spot: string | null; ownGear: boolean; annualPass: string | null; school: string | null; courses: string[] }
 
 export function parseFsrKite(html: string): FsrKite {
@@ -107,11 +132,15 @@ export function parseFeddetContent(p: FsrPages): OfferContent {
   const geo = parseFsrGeo(p.home);
   const home = fsrParagraphs(p.home);
   const intro = home.find(x => /Denmark’s most cozy|close to Copenhagen/i.test(x)) ?? null;
-  const rooms: ContentRoom[] = units.map(u => ({ name: u.name, description: u.description, features: u.facts }));
+  const unitPhotos = parseFsrUnitPhotos(p.units);
+  const rooms: ContentRoom[] = units.map(u => {
+    const photos = unitPhotos.get(new URL(u.url, FSR_UNITS_URL).toString()) ?? [];
+    return { name: u.name, description: u.description, features: u.facts, ...(photos.length ? { imageUrls: photos } : {}) };
+  });
 
   const imgs: string[] = [];
   const kiteImgs = imageCandidates(p.kite, FSR_KITE_URL, null, 80).filter(u => /kite-surfing-feddet-\d+\.jpg$/.test(u) && /\/uploads\/20\d\d\//.test(u));
-  const unitImgs = imageCandidates(p.units, FSR_UNITS_URL, null, 120).filter(u => /\/wp-content\/uploads\//.test(u) && !/flags|logo|icon|\.svg|\.png$/i.test(u));
+  const unitImgs = imageCandidates(p.units, FSR_UNITS_URL, null, 120).filter(fsrUnitImage);
   // interleave: kite photos first, then up to two photos per unit type (Elementor thumbs are grouped per unit slider)
   const perUnit = new Map<string, number>();
   for (const u of kiteImgs.slice(0, 8)) if (!imgs.includes(u)) imgs.push(u);
@@ -157,6 +186,7 @@ export function parseFeddetContent(p: FsrPages): OfferContent {
     languages: ['da', 'en', 'de'],
     rooms,
     imageUrls: imgs.slice(0, 30),
+    ...(kiteImgs.length ? { spotImageUrls: kiteImgs } : {}),
     heroVideoUrl: null,
     sourceUrl: FSR_KITE_URL,
     bookingUrl: BOOKING_URL,
