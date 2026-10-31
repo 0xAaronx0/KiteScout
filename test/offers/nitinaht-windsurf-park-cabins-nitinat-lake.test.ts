@@ -54,6 +54,10 @@ test('nitinaht: slots (campsite only while its season has not ended)', () => {
   const s = now[0];
   assert.deepEqual([s.price, s.currency, s.priceUnit, s.priceBasis, s.availability, s.startDate, s.minNights], [220, 'CAD', 'per_night', 'room', 'unknown', null, 2]);
   assert.match(notes.join(' '), /campground season 2026-04-27\.\.2026-10-04 has ended/);
+  // Aaron 2026-10-31: the ended season's price is the campsite's last published price
+  const past: unknown[] = [];
+  buildNwSlots({ cabins, motel, campsite }, '2026-10-23', { note: () => {}, lastPublished: p => { past.push(...p); } });
+  assert.deepEqual(past.map(x => { const p = x as { key: string; price: number; unit: string }; return [p.key, p.price, p.unit]; }), [['campsite|2026-04-27', 35, 'Basic campsite (Windsurf Park campground)']]);
 
   const summer = buildNwSlots({ cabins, motel, campsite }, '2026-06-01');
   assert.deepEqual(checkSlots(summer).problems, []);

@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { slotRoom, roomAvailability, roomsWithPrices } from '../../src/offers/ingest.js';
+import { printedFromSlots, roomKey, slotRoom, roomAvailability, roomsWithPrices } from '../../src/offers/ingest.js';
 import type { OfferContent, Slot } from '../../src/offers/types.js';
 
 const slot = (o: Partial<Slot>): Slot => ({
@@ -20,6 +20,17 @@ test('slotRoom: exact, case-insensitive, qualifier prefix, explicit room', () =>
   assert.equal(slotRoom(rooms, { unit: 'Rider package, double room' }), null);
   assert.equal(slotRoom(rooms, { unit: 'Double room with extra bed (3 people)' }), null);
   assert.equal(slotRoom(rooms, { unit: null }), null);
+});
+
+test('slotRoom: quote marks, dashes, spaces and case do not count (Aaron 2026-10-31)', () => {
+  assert.equal(roomKey("  Dethleffs c´trend  515 ER "), roomKey('dethleffs c’trend 515 er'));
+  assert.equal(roomKey('Room 10 – Pool Front'), 'room 10 - pool front');
+  const rooms = ['Rental caravan Dethleffs c’trend 515 ER', "Lark's cabin", 'Room 10 - Pool Front'];
+  assert.equal(slotRoom(rooms, { unit: 'Rental caravan Dethleffs c´trend 515 ER' }), 'Rental caravan Dethleffs c’trend 515 ER');
+  assert.equal(slotRoom(rooms, { unit: 'Lark’s  Cabin (2 people)' }), "Lark's cabin");
+  assert.equal(slotRoom(rooms, { unit: 'x', room: 'Room 10 – Pool Front' }), 'Room 10 - Pool Front');
+  // still no fuzzy match: another model number is another room
+  assert.equal(slotRoom(rooms, { unit: 'Rental caravan Dethleffs c’trend 515 FR' }), null);
 });
 
 test('roomAvailability merges adjacent ranges with the same status and price', () => {
@@ -116,4 +127,39 @@ test('roomsWithPrices: price_from_is_minimum only when the price is a floor (Aar
   ], '2026-10-31');
   assert.deepEqual(rows.map(r => [r.name, r.price_from, r.price_from_is_minimum]),
     [['Fixed', 55, false], ['Seasons', 189, true], ['Range', 100, true], ['Same price twice', 70, false]]);
+});
+
+test('roomsWithPrices: one price for several rooms; a floor gets no dated range (Aaron 2026-10-31, "1+2+3 ja")', () => {
+  const content = { kind: 'accommodation', rooms: [
+    { name: 'House A', description: null, features: [] },
+    { name: 'House B', description: null, features: [] },
+    { name: 'Room 1', description: null, features: [] },
+    { name: 'Room 2', description: null, features: [] },
+  ] } as unknown as OfferContent;
+  const rows = roomsWithPrices(content, [
+    // one engine profile for two house models: the price is each house's floor, never its dated price
+    slot({ unit: 'Holiday home', rooms: ['House A', 'House B'], startDate: '2026-11-07', endDate: '2026-11-14', price: 661.5, priceIsMinimum: true }),
+    // one price-list line for every private room: the exact price of each
+    slot({ unit: 'Private room', rooms: ['Room 1', 'Room 2'], price: 70 }),
+  ], '2026-10-31');
+  assert.deepEqual(rows.map(r => [r.name, r.price_from, r.price_from_is_minimum, r.priced_months, r.availability]), [
+    ['House A', 661.5, true, [], []], ['House B', 661.5, true, [], []], ['Room 1', 70, false, [], []], ['Room 2', 70, false, [], []],
+  ]);
+});
+
+test('printedFromSlots: only rooms the engine prices nowhere get their printed from-price', () => {
+  const printed = [
+    { room: 'Cortal', price: 150, currency: 'EUR', priceUnit: 'per_night' as const, priceBasis: 'room' as const },
+    { room: 'Fluvia Especial', price: 133, currency: 'EUR', priceUnit: 'per_night' as const, priceBasis: 'room' as const },
+    { room: 'Garbí', price: 120, currency: 'EUR', priceUnit: 'per_night' as const, priceBasis: 'room' as const },
+  ];
+  const engine = [
+    slot({ unit: 'Cortal', startDate: '2027-07-04', endDate: '2027-07-31', price: 1500 }),
+    // sold out everywhere: no engine price
+    slot({ unit: 'Garbí', startDate: '2027-07-04', endDate: '2027-07-31', price: null, availability: 'sold_out' }),
+  ];
+  assert.deepEqual(printedFromSlots(engine, printed).map(s => [s.key, s.room, s.price, s.startDate, s.availability, s.priceIsMinimum]), [
+    ['printed|fluvia-especial', 'Fluvia Especial', 133, null, 'unknown', true],
+    ['printed|garbi', 'Garbí', 120, null, 'unknown', true],
+  ]);
 });

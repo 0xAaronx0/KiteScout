@@ -45,10 +45,11 @@ test('aqua: one 7-night Saturday sample per month, 7 months', () => {
 });
 
 test('aqua: slots = unit x month, USD per night, available / sold_out', async () => {
-  const slots = await fetchAqSlots(ctx, TODAY);
-  const { ok, problems } = checkSlots(slots);
+  const all = await fetchAqSlots(ctx, TODAY);
+  const { ok, problems } = checkSlots(all);
   assert.deepEqual(problems, []);
-  assert.equal(ok.length, 119);
+  const slots = ok.filter(s => !s.key.startsWith('printed|'));
+  assert.equal(slots.length, 119);
   const cardon = slots.find(s => s.key === 'cardon|2027-03')!;
   assert.equal(cardon.price, 320);
   assert.equal(cardon.currency, 'USD');
@@ -63,6 +64,13 @@ test('aqua: slots = unit x month, USD per night, available / sold_out', async ()
   assert.match(pitaya.availabilityText!, /Next availability for 7 nights: Oct 19/);
   assert.equal(slots.filter(s => s.key.endsWith('|2026-11') && s.availability === 'sold_out').length, 17);
   assert.equal(Math.min(...slots.filter(s => s.price !== null).map(s => s.price!)), 180);
+});
+
+test('aqua: units booked in every sample month keep the room list from-price (Aaron 2026-10-31)', async () => {
+  const slots = await fetchAqSlots(ctx, TODAY);
+  assert.deepEqual(slots.filter(s => s.key.startsWith('printed|')).map(s => [s.room, s.price, s.currency, s.startDate, s.priceIsMinimum]), [
+    ['Damiana', 180, 'USD', null, true], ['Carisa', 180, 'USD', null, true],
+  ]);
 });
 
 test('aqua: content', async () => {

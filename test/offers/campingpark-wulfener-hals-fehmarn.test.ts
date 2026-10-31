@@ -12,7 +12,7 @@ import {
 } from '../../src/offers/adapters/campingpark-wulfener-hals-fehmarn.js';
 import { parseCsobList, type CsobSample } from '../../src/offers/adapters/hvide-sande-camping.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
-import { slotRoom } from '../../src/offers/ingest.js';
+import { roomsWithPrices, slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/campingpark-wulfener-hals-fehmarn');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -147,6 +147,25 @@ test('wulfener-hals: engine units link to their content rooms, ambiguous ones an
     'Economy rental trailer special: Indian-Summer', 'Economy rental trailer special: Kennenlernangebot',
     'Holiday apartment at the golf course', 'Holiday apartment on the campsite', 'Holiday home Dünenpark',
   ]);
+});
+
+test('wulfener-hals: a profile for several rooms prices each of them as "from" (Aaron 2026-10-31, "1+2+3 ja")', async () => {
+  const content = await campingparkWulfenerHalsFehmarn.fetchContent(ctx);
+  const slots = await fetchWhLiveSlots('2026-10-14', ctx);
+  const rooms = (unit: string) => [...new Set(slots.filter(s => s.unit === unit).map(s => JSON.stringify([s.rooms, s.priceIsMinimum])))];
+  assert.deepEqual(rooms('Holiday home Dünenpark'), [JSON.stringify([
+    ['Holiday home Dünenpark: Deluxe White-tailed Eagle Model', 'Holiday home Dünenpark: Seagull Model'], true])]);
+  const apartments = JSON.parse(rooms('Holiday apartment on the campsite')[0]) as [string[], boolean];
+  assert.equal(apartments[0].length, 7);
+  assert.ok(apartments[0].every(n => /^Beach apartment: |Pool/.test(n)) && apartments[1]);
+  assert.deepEqual(rooms('Holiday apartment at the golf course'), [JSON.stringify([null, null])]);
+  const rows = roomsWithPrices(content, slots, '2026-10-14');
+  const shared = rows.filter(r => /Dünenpark|apartment|Apartment/.test(r.name));
+  assert.equal(shared.length, 9);
+  assert.ok(shared.every(r => r.price_from !== null && r.price_from_is_minimum && r.availability.length === 0 && r.priced_months.length === 0));
+  // rooms with their own profile keep their dated prices
+  const ocala = rows.find(r => r.name === 'Mobile home: Ocala Model')!;
+  assert.ok(ocala.availability.length > 0 && ocala.priced_months.length > 0);
 });
 
 test('wulfener-hals: own fetch timeout for the 12 sequential sample weeks (cron hit 240 s daily from 2026-10-17)', async () => {

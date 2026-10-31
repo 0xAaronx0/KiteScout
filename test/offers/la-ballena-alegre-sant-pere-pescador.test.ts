@@ -11,7 +11,7 @@ import {
   parseMcAvailability, parseMcBudgets, parseMcGeo, parseMcProducts,
 } from '../../src/offers/adapters/la-ballena-alegre-sant-pere-pescador.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
-import { slotRoom } from '../../src/offers/ingest.js';
+import { roomsWithPrices, slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/la-ballena-alegre-sant-pere-pescador');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -60,9 +60,10 @@ test('ballena: engine products and availability matrix', () => {
 });
 
 test('ballena: slots = bands per bungalow type (weekly stays, month samples)', async () => {
-  const slots = await fetchBaSlots(ctx, TODAY);
+  const all = await fetchBaSlots(ctx, TODAY);
   assert.deepEqual(incomplete, []);
-  assert.deepEqual(checkSlots(slots).problems, []);
+  assert.deepEqual(checkSlots(all).problems, []);
+  const slots = all.filter(s => !s.key.startsWith('printed|'));
   assert.equal(slots.length, 81); // 68 bands, the 13 of the shared Cortal / Empúries products once per Garden + Pool room
   const pick = (key: string) => slots.find(s => s.key === key)!;
   const jul = pick('bungalow-e-devesa|2027-07-04');
@@ -74,6 +75,16 @@ test('ballena: slots = bands per bungalow type (weekly stays, month samples)', a
   assert.deepEqual([limited.endDate, limited.price, limited.availability, limited.spotsLeft], ['2027-08-12', 2916.48, 'limited', 1]);
   assert.equal(Math.min(...slots.filter(s => s.price !== null).map(s => s.price!)), 766.1);
   assert.ok(slots.every(s => s.startDate! >= '2027-05-14' && s.endDate! <= '2027-10-14' && s.minNights === 7));
+});
+
+test('ballena: a bungalow the engine prices nowhere keeps its printed from-price (Aaron 2026-10-31)', async () => {
+  const content = await laBallenaAlegreSantPerePescador.fetchContent(ctx);
+  const slots = await fetchBaSlots(ctx, TODAY);
+  assert.deepEqual(slots.filter(s => s.key.startsWith('printed|')).map(s => [s.room, s.price, s.currency, s.priceUnit, s.startDate, s.priceIsMinimum]), [
+    ['Bungalow Fluvia Especial', 133, 'EUR', 'per_night', null, true],
+  ]);
+  const room = roomsWithPrices(content, slots, TODAY).find(r => r.name === 'Bungalow Fluvia Especial')!;
+  assert.deepEqual([room.price_from, room.price_unit, room.price_from_is_minimum, room.availability], [133, 'per_night', true, []]);
 });
 
 test('ballena: content', async () => {
@@ -104,6 +115,7 @@ test('ballena: engine products link to the site bungalow rooms (slot.room)', asy
     'Bungalow Cortal': ['Bungalow Cortal Garden', 'Bungalow Cortal Pool'],
     'Bungalow Empúries': ['Bungalow Empúries Garden', 'Bungalow Empúries Pool'],
     'Bungalow Empúries SUITES': ['Bungalow Empuries Suite'],
+    'Bungalow Fluvia Especial': ['Bungalow Fluvia Especial'], // printed from-price, no engine price
     'Bungalow Fluvià Friday': ['Bungalow Fluvià Friday'],
     'Bungalow Fluvià Saturday': ['Bungalow Fluvia Saturday'],
     'Bungalow Garbí': ['Bungalow Garbí'],
