@@ -120,14 +120,27 @@ export function operatorPatch(found: StoredOperator, a: Pick<OfferAdapter, 'oper
   return patch;
 }
 
+/** Addresses we may not treat as the operator's own until the platform says yes (KiteWorldWide, Aaron 2026-10-21). */
+const HELD_EMAIL_DOMAINS = /@kiteworldwide\.com$/i;
+
+/** Standing rule (Aaron 2026-10-28, made automatic 2026-10-31): an operator e-mail taken from the provider's own site
+ *  counts as verified, so KCS shows the inquiry button on its packages. Stamps only an unstamped row (a human stamp or
+ *  a deliberate null with a held address stays); rollback = last_verified_at back to null. */
+export function emailVerifiedStamp(email: string | null | undefined, lastVerifiedAt: string | null | undefined,
+  now = new Date().toISOString()): { last_verified_at?: string } {
+  if (!email || lastVerifiedAt || HELD_EMAIL_DOMAINS.test(email.trim())) return {};
+  return { last_verified_at: now };
+}
+
 async function upsertOperator(a: OfferAdapter): Promise<string> {
   const op = a.operator;
   const { data: found, error } = await supabase
-    .from('providers').select('id,name,website_url,contact_email,whatsapp,phone,trip_types')
+    .from('providers').select('id,name,website_url,contact_email,whatsapp,phone,trip_types,last_verified_at')
     .eq('root_domain', op.rootDomain).maybeSingle();
   if (error) throw new Error(`providers read failed: ${error.message}`);
   if (found) {
     const patch = operatorPatch(found as StoredOperator, a);
+    Object.assign(patch, emailVerifiedStamp((patch.contact_email as string | undefined) ?? found.contact_email, found.last_verified_at));
     if (Object.keys(patch).length) {
       const { error: upErr } = await supabase.from('providers').update(patch).eq('id', found.id);
       if (upErr) throw new Error(`providers update failed: ${upErr.message}`);
@@ -139,6 +152,7 @@ async function upsertOperator(a: OfferAdapter): Promise<string> {
     root_domain: op.rootDomain,
     website_url: op.websiteUrl,
     contact_email: op.contactEmail ?? null,
+    ...emailVerifiedStamp(op.contactEmail, null),
     whatsapp: op.whatsapp ?? null,
     phone: op.phone ?? null,
     trip_types: [a.kind],
