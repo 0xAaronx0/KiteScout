@@ -8,6 +8,7 @@ import { htmlToText, collapse } from '../lib/content.js';
 import { withRetry } from '../lib/retry.js';
 import { renderPageEx, closeRenderer } from '../lib/render.js';
 import { averageRating, operatorReviewPatch, SOURCE_COLUMNS, type OperatorReviewResult } from './operator-review-patch.js';
+import { tripadvisorFields, tripadvisorListingUrl } from './tripadvisor-listing.js';
 export type { OperatorReviewResult } from './operator-review-patch.js';
 
 const CONCURRENCY = 3;
@@ -154,7 +155,7 @@ ${source.label} listing content:
 ${listingText.slice(0, 6000)}
 """
 
-Be strict: only say is_same_operator=true if the business name AND location clearly match (review sites list many similarly-named sailing/charter businesses — a same-named business in a DIFFERENT region is NOT a match). Abbreviated or stylised forms of the same name (e.g. "GDolphin" for "Golden Dolphin") DO count when the location fits. Extract the star rating and number of reviews if shown.
+Be strict: only say is_same_operator=true if the business name AND location clearly match (review sites list many similarly-named sailing/charter businesses — a same-named business in a DIFFERENT region is NOT a match). Abbreviated or stylised forms of the same name (e.g. "GDolphin" for "Golden Dolphin") DO count when the location fits. Extract the listing's OVERALL star rating as shown next to its TOTAL number of reviews. Never use the rating of a single review, a question/answer or another business; if the overall rating or the total count is not shown, return null for both.
 
 Respond with ONLY this JSON:
 {"is_same_operator": true|false, "confidence": "high"|"medium"|"low", "rating": number|null, "review_count": number|null, "evidence": "one short sentence"}`;
@@ -204,9 +205,15 @@ async function matchSource(
   }
   // Signal 2: search hits on the review host — same-named businesses elsewhere
   // are common, so each candidate is verified and the first that passes wins.
-  const candidates: Array<{ url: string; snippet: string | null }> = selfLink
+  const found: Array<{ url: string; snippet: string | null }> = selfLink
     ? [{ url: selfLink, snippet: null }]
     : await searchCandidates(provider.name, provider.country, source);
+  // Aaron 2026-10-31: Tripadvisor only from a listing's main page ("-orNN" subpages fold back onto it; single
+  // reviews, FAQ answers and other pages are dropped). A search snippet then belongs to another page and is not used.
+  const candidates = source.key !== 'tripadvisor' ? found : found.flatMap(cand => {
+    const main = tripadvisorListingUrl(cand.url);
+    return main ? [{ url: main, snippet: main === cand.url.split('?')[0] ? cand.snippet : null }] : [];
+  }).filter((cand, index, all) => all.findIndex(other => other.url === cand.url) === index);
 
   for (const cand of candidates) {
     // Listing content: direct fetch → headless render (TripAdvisor blocks plain
@@ -349,9 +356,7 @@ async function collectReviews(
     found++;
     notes.push(match.evidence);
     if (source.key === 'tripadvisor') {
-      patch.tripadvisor_url = match.url;
-      patch.tripadvisor_rating = match.rating;
-      patch.tripadvisor_review_count = match.review_count;
+      Object.assign(patch, tripadvisorFields(match.url, match.rating, match.review_count));
     } else {
       patch.bstoked_url = match.url;
       patch.bstoked_rating = match.rating;
