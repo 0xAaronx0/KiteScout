@@ -1,11 +1,12 @@
-// Surfari Afrika land tours: replays the three pages recorded 2026-10-12.
+// Surfari Afrika land tours: replays the three pages recorded 2026-10-12 (+ the Walvis Bay camp, 2026-10-31).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  parseSaNamibiaSeason, parseSaNamibiaSlots, parseSaPrimalTiers, parseSaXlDates, parseSaXlPrices,
-  surfariafrikaDownwinderXl, surfariafrikaNamibiaDownwinder, surfariafrikaPrimalExplorer,
+  parseSaNamibiaSeason, parseSaNamibiaSlots, parseSaPrimalTiers, parseSaWalvisPrice, parseSaWalvisSeason, parseSaWalvisSlots,
+  parseSaXlDates, parseSaXlPrices, surfariafrikaDownwinderXl, surfariafrikaNamibiaDownwinder, surfariafrikaPrimalExplorer,
+  surfariafrikaWalvisBayCamp,
 } from '../../src/offers/adapters/surfariafrika.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import type { OfferAdapter } from '../../src/offers/types.js';
@@ -73,5 +74,28 @@ test('namibia downwinder: no price on the page, the Namibia season card → one 
   assert.deepEqual(content.skillLevels, ['advanced']);
   assert.ok(content.imageUrls.length >= 3);
   assert.ok(content.imageUrls.every(u => !/324846706_|82329993_|IMG_20211029_154320/.test(u)), 'no site-wide Kenya photos on Namibia');
+  clean(content.summary + content.title);
+});
+
+test('walvis bay camp: "starting at" weekly price + the camp season, no site-wide cards, no 640w copies', async () => {
+  const page = html('surfariafrika-walvis-bay-camp');
+  assert.equal(parseSaWalvisPrice(page), 800);
+  assert.deepEqual(parseSaWalvisSeason(page), { start: '2026-10-10', end: '2026-11-30', label: '10 October 2026 to 30 November 2026' });
+  const slots = parseSaWalvisSlots(page, '2026-10-31');
+  const { ok, problems } = checkSlots(slots);
+  assert.deepEqual(problems, []);
+  assert.deepEqual(ok.map(s => [s.key, s.startDate, s.endDate, s.datePrecision, s.price, s.currency, s.priceUnit, s.priceBasis, s.availability]), [
+    ['season|2026-10', '2026-10-31', '2026-11-30', 'season', 800, 'EUR', 'per_week', 'person', 'on_request'],
+  ]);
+  // before the season: the band starts on the printed day; after it: one undated weekly slot
+  assert.equal(parseSaWalvisSlots(page, '2026-09-01')[0].startDate, '2026-10-10');
+  assert.deepEqual(parseSaWalvisSlots(page, '2026-12-05').map(s => [s.key, s.startDate, s.price, s.priceUnit]), [['weekly', null, 800, 'per_week']]);
+  const { content } = await run(surfariafrikaWalvisBayCamp);
+  assert.equal(contentProblem(content), null);
+  assert.equal(content.kind, 'camp');
+  assert.equal(content.country, 'Namibia');
+  assert.equal(content.imageUrls.length, 8);
+  assert.ok(content.imageUrls.every(u => !/-640w\./.test(u)), 'one size per photo');
+  assert.ok(content.imageUrls.every(u => !/324846706_|82329993_|IMG_20211029_154320|ChatGPT|lamu1-|196977156_/.test(u)), 'no site-wide card photos');
   clean(content.summary + content.title);
 });

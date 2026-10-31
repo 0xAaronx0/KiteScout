@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// Surfari Afrika (surfariafrika.dudaone.com, Kenya) - three land-based kite tours
+// Surfari Afrika (surfariafrika.dudaone.com, Kenya + Namibia) - three land-based kite tours and a camp
 // (Aaron 2026-10-12: "als Tour-Package aufnehmen"; their catamaran cruises live in cruise_offers).
 //
 // Data path (checked 2026-10-12, Duda site; robots.txt allows all):
@@ -15,6 +15,9 @@
 // The site keeps older parallel pages of the same products (/project-page: road trip at €1600,
 // /Remoteislands: older Lamu trip); the newest pages above are the source. The "ARCHIPELAGO 31 - 7
 // FEBRUARY" card links to /Remoteislands, so it is NOT used as a Primal Explorer date.
+//   /walvis-bay                  (added 2026-10-31, Aaron) weekly budget camp at the Walvis Bay lagoon, the hub's
+//                                "Bird Lagoon & Marine SURfari"; "Starting at: 800€ per week", "WHEN 10 OCTOBER UP
+//                                TO NOVEMBER" (year from the site-wide Namibia card) → one season slot per week
 // Not ingested: /safari-2027---2-nights (a wildlife safari without kiting).
 // Requests per run: 1 per adapter (content and slots each fetch the page once).
 // ---------------------------------------------------------------------------
@@ -26,6 +29,7 @@ const BASE = 'https://surfariafrika.dudaone.com';
 export const SA_PRIMAL_EXPLORER_URL = `${BASE}/primal-explorer`;
 export const SA_DOWNWINDER_XL_URL = `${BASE}/primale-life-downwinder-xl`;
 export const SA_NAMIBIA_URL = `${BASE}/downwinder-namibia`;
+export const SA_WALVIS_URL = `${BASE}/walvis-bay`;
 
 const OPERATOR: OperatorRef = {
   name: 'Surfari Afrika',
@@ -288,6 +292,92 @@ export function parseSaNamibiaContent(html: string, today = todayIso()): OfferCo
   };
 }
 
+// --- Walvis Bay camp (Bird Lagoon & Marine Surfari) -------------------------------------------
+/** Footer cards every page carries (Kenya trips, catamaran, safari, contact; checked 2026-10-31): not Walvis Bay. */
+const SITE_WIDE_CARDS = /324846706_531272312299333|82329993_10156984078613511|IMG_20211029_154320|ChatGPT\+Image|lamu1-1920x678|967cd710_original|febf691aa9f7ba610a643f43e5108ad0|vintage-typewriters/;
+
+/** "WHEN 10 OCTOBER UP TO NOVEMBER": the year comes from the site-wide "Namibia Kiteboarding ... 2026" card. */
+export function parseSaWalvisSeason(html: string): { start: string; end: string; label: string } | null {
+  const t = pageText(html);
+  const m = t.match(/WHEN\s+(\d{1,2})\s+([A-Za-z]+)\s+UP TO\s+([A-Za-z]+)/i);
+  const year = parseSaNamibiaSeason(html)?.start.slice(0, 4);
+  const sm = m ? monthOf(m[2].toLowerCase()) : null, em = m ? monthOf(m[3].toLowerCase()) : null;
+  if (!m || !sm || !em || !year) return null;
+  const y = +year, ey = em < sm ? y + 1 : y;
+  const start = iso(y, sm, +m[1]), end = iso(ey, em, new Date(Date.UTC(ey, em, 0)).getUTCDate());
+  return { start, end, label: `${human(start)} to ${human(end)}` };
+}
+
+/** "Pricing Starting at: 800€ per week" */
+export function parseSaWalvisPrice(html: string): number | null {
+  const m = pageText(html).match(/Starting at:?\s*([\d .,]{2,7})\s*€\s*per week/i);
+  return m ? amount(m[1]) : null;
+}
+
+export function parseSaWalvisSlots(html: string, today = todayIso()): Slot[] {
+  const price = parseSaWalvisPrice(html);
+  const season = parseSaWalvisSeason(html);
+  const weekly = (s: Slot): Slot => ({ ...s, priceUnit: price ? 'per_week' : null });
+  if (season && season.end >= today) {
+    return [weekly({
+      ...undated(`season|${season.start.slice(0, 7)}`, 'Weekly camp, shared room', price, `"Starting at ${price ?? '?'}€ per week", season ${season.label}; exact dates and final price on request`),
+      startDate: season.start < today ? today : season.start, endDate: season.end, datePrecision: 'season',
+    })];
+  }
+  return [weekly(undated('weekly', 'Weekly camp, shared room', price, 'season and exact dates on request'))];
+}
+
+export function parseSaWalvisContent(html: string, today = todayIso()): OfferContent {
+  const price = parseSaWalvisPrice(html);
+  const season = parseSaWalvisSeason(html);
+  const all = images(html, SA_WALVIS_URL).filter(u => !SITE_WIDE_CARDS.test(u));
+  // Duda prints each photo as -1920w and -640w; the ingest does not dedupe size variants
+  const own = all.filter(u => !/-640w\./.test(u) || !all.includes(u.replace('-640w.', '-1920w.')));
+  return {
+    kind: 'camp',
+    title: 'Walvis Bay Kite Camp: Bird Lagoon & Marine Surfari, Namibia',
+    summary: [
+      'A budget weekly kite camp at the Walvis Bay lagoon on the Namib desert coast with Surfari Afrika: waist-deep flat water for freestyle, the 2.5 km offshore "Speed Strip" one tack away, and two to three guided downwinders such as the Pelican Point run past the seal colony and shipwrecks.',
+      'Guests stay in a new eco lodge a short walk from the lagoon, sharing or with a single upgrade, self-catering or with the small on-site restaurant; airport transfers from Windhoek, 4x4 support, guiding, kite bag storage and visits to different spots are included, and certified lessons and premium rental gear are available for beginners to advanced riders.',
+      `${price ? `Prices start at EUR ${price.toLocaleString('en-US')} per person per week` : 'Price on request'}${season && season.end >= today ? `; the camp season runs ${season.label}` : ''}, exact dates on request.`,
+    ].join(' '),
+    continent: 'Africa',
+    country: 'Namibia',
+    region: 'Erongo',
+    spot: 'Walvis Bay',
+    itinerarySpots: [
+      { name: 'Walvis Bay', country: 'Namibia', region: 'Erongo', order: 1 },
+      { name: 'Pelican Point', country: 'Namibia', region: 'Erongo', order: 2 },
+    ],
+    durationDays: 7,
+    skillLevels: ['beginner', 'intermediate', 'advanced'], // the Namibia hub: "Beginner to Advanced"
+    kiteLessons: true,
+    equipmentRental: true,
+    beginnerFriendly: true,
+    includedServices: [
+      'Airport transfers and transport between Windhoek and Walvis Bay',
+      'Accommodation on a sharing basis in an eco lodge at the lagoon',
+      'Guiding to different lagoons and spots by 4x4, secure kite bag storage',
+      '4x4 support and on-water and beach assistance on all downwinders',
+    ],
+    optionalServices: [
+      'Single room upgrade',
+      'Self-catering option or the restaurant on site',
+      'Certified kite lessons and premium rental gear',
+      'Extra accommodation and transfers in Windhoek',
+    ],
+    accommodation: 'eco lodge at the Walvis Bay lagoon, shared or single rooms',
+    mealPlan: null,
+    languages: ['en'],
+    rooms: [],
+    imageUrls: own,
+    heroVideoUrl: null,
+    sourceUrl: SA_WALVIS_URL,
+    bookingUrl: `${BASE}/contact`,
+    sourceText: pageText(html),
+  };
+}
+
 // --- adapters ------------------------------------------------------------------------------------
 export const surfariafrikaPrimalExplorer: OfferAdapter = {
   key: 'surfariafrika-primal-explorer',
@@ -323,4 +413,18 @@ export const surfariafrikaNamibiaDownwinder: OfferAdapter = {
   confidence: 'low', // no price on the page, only the Namibia season (site-wide card)
   async fetchContent() { return parseSaNamibiaContent(await fetchText(SA_NAMIBIA_URL)); },
   async fetchSlots() { return parseSaNamibiaSlots(await fetchText(SA_NAMIBIA_URL)); },
+};
+
+export const surfariafrikaWalvisBayCamp: OfferAdapter = {
+  key: 'surfariafrika-walvis-bay-camp',
+  name: 'Surfari Afrika Walvis Bay kite camp (Bird Lagoon & Marine Surfari)',
+  kind: 'camp', operator: OPERATOR, url: SA_WALVIS_URL,
+  slotMethod: 'price_table', fetchBudget: 2,
+  confidence: 'low', // a "starting at" weekly price and a season, no departures
+  async fetchContent() { return parseSaWalvisContent(await fetchText(SA_WALVIS_URL)); },
+  async fetchSlots(ctx) {
+    const html = await fetchText(SA_WALVIS_URL);
+    if (!parseSaWalvisSeason(html)) ctx.note('no "WHEN <day> <month> UP TO <month>" line or Namibia season card');
+    return parseSaWalvisSlots(html);
+  },
 };

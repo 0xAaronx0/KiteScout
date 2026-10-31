@@ -1,0 +1,1710 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      class="">
+<head>
+    <meta charset="utf-8">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        HomeUrl: 'https://surfariafrika.dudaone.com/',
+
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: '50bb3a28',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Sep 12, 2026',
+        ExternalUid: null,
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialPostPageUuid: '',
+        InitialDynamicItem: '',
+        DynamicPageInfo: {
+            isDynamicPage: false,
+            base64JsonRowData: 'null',
+        },
+        InitialPageAlias: 'walvis-bay',
+        InitialPageUuid: 'f7e1acc248344a58b56cbe68e4514a55',
+        InitialPageId: '1212972563',
+        InitialEncodedPageAlias: 'd2FsdmlzLWJheQ==',
+        InitialHeaderUuid: '03d8423246d9425e94b298b67d072b6d',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: false,
+        ThemeVersion: '500000',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        showCookieNotification: false,
+        cookiesNotificationMarkup: 'null',
+        translatedPageUrl: '',
+        sidebarPosition: 'NA',
+        currentLanguage: 'en',
+        currentLocale: 'en',
+        NavItems: '{}',
+        
+        mapConsent: {
+            message: 'This content is served by a third party, {0}. If enabled, {0} may collect information about your activity.',
+            enable: 'Enable'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: 1,
+            NavbarLiveHomePage: 'https://surfariafrika.dudaone.com/',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        planID: '5',
+        disableTracking: false,
+        pageType: 'FROM_SCRATCH',
+        isRuntimeServer: true,
+        isInEditor: false,
+        isInPreview: false,
+        hasNativeStore: false,
+        defaultLang: 'en',
+        hamburgerMigration: null,
+        isFlexSite: false
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Injecting site-wide to the head -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="d_track_campaign" data-entry-referrer data-utm-cookies></script>
+
+<script type="text/javascript" >
+    var _dm_gaq = {};
+    var _gaq = _gaq || [];
+    var _dm_insite = [];
+</script>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17801649493"></script>
+
+<script type="text/javascript" id="d_track_ga">
+    window.dataLayer = window.dataLayer || [];
+    _dm_gaq.siteAlias = '50bb3a28';
+    _dm_gaq.externalGaqID = 'non-empty';
+
+    function gtag() { dataLayer.push(arguments); }
+
+    function pushInsiteImpressions(id) {
+        _dm_insite.forEach((rule) => {
+            _dm_gaq.pushEvent(id, 'insite_impression', 'insite', rule.ruleType + '__' + rule.ruleId);
+        });
+    }
+
+    _dm_gaq.pushEvent = function(trackingId, event, category, label, value, additionalParams = {}) {
+        const eventProps = {
+            event_category: category,
+            event_label: label,
+            value,
+            ...additionalParams
+        };
+        gtag('event', event, eventProps);
+    }
+
+    gtag('js', new Date())
+
+    
+gtag('set', 'developer_id.dMDU5Nj', true);
+gtag('set', 'developer_id.dMWY5NG', true);
+gtag('config', 'AW-17801649493', {
+    'send_page_view': false,
+    'linker': {
+        'domains': ['surfariafrika.dudaone.com']
+    }
+});
+
+    _dm_gaq.pushEvent('', 'page_view');
+
+    pushInsiteImpressions(_dm_gaq.externalGaqID);
+</script>
+
+
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+
+
+
+
+<meta name="d-service-worker" content="unregister">
+
+
+
+<link rel="canonical" href="https://surfariafrika.dudaone.com/walvis-bay">
+
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="dm:lcp-preload" content="dm:lcp-frozen">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Walvis bay
+</title>
+
+
+
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/50bb3a28/site_favicon_16_1754056721250.ico"/>
+
+
+<link rel="preconnect" href="https://irp.cdn-website.com"/>
+<link rel="preconnect" href="https://irp.cdn-website.com" crossorigin/>
+<link rel="preconnect" href="https://static.cdn-website.com"/>
+
+
+
+
+<script id='d-js-dmapi'>
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+
+    if (!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function () {
+            },
+            getCurrentDeviceType: function () {
+                return window._currentDevice;
+            },
+            runOnReady: (ns, fn) => {
+                const safeFn = dmAPI.toSafeFn(fn);
+                ns = ns || 'global_' + Math.random().toString(36).slice(2, 11);
+                const eventName = 'afterAjax.' + ns;
+
+                if (document.readyState === 'complete') {
+                    $.DM.events.off(eventName).on(eventName, safeFn);
+                    setTimeout(function () {
+                        safeFn({
+                            isAjax: false,
+                        });
+                    }, 0);
+                } else {
+                    window?.waitForDeferred?.('dmAjax', () => {
+                        $.DM.events.off(eventName).on(eventName, safeFn);
+                        safeFn({
+                            isAjax: false,
+                        });
+                    });
+                }
+            },
+            toSafeFn: (fn) => {
+                if (fn?.safe) {
+                    return fn;
+                }
+                const safeFn = function (...args) {
+                    try {
+                        return fn?.apply(null, args);
+                    } catch (e) {
+                        console.log('function failed ' + e.message);
+                    }
+                };
+                safeFn.safe = true;
+                return safeFn;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+<script id="d-js-load-css">
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loadCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page.
+ * When each load we check to see if we can append them all in a batch. If threre
+ * is no page css (which may happen on inner pages) then we do not wait for it
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+  
+    function checkCss() {
+      const pageCssLink = document.querySelector("[id*='CssLink']");
+      const widgetCssLink = document.querySelector("[id*='widgetCSS']");
+
+        if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page) && (!widgetCssLink || cssLinks.widget)) {
+            const storedRuntimeCssLink = cssLinks.runtime;
+            const storedPageCssLink = cssLinks.page;
+            const storedGlobalCssLink = cssLinks.global;
+            const storedWidgetCssLink = cssLinks.widget;
+
+            storedGlobalCssLink.disabled = true;
+            loadCssLink(storedGlobalCssLink);
+
+            if (storedPageCssLink) {
+                storedPageCssLink.disabled = true;
+                loadCssLink(storedPageCssLink);
+            }
+
+            if(storedWidgetCssLink) {
+                storedWidgetCssLink.disabled = true;
+                loadCssLink(storedWidgetCssLink);
+            }
+
+            storedRuntimeCssLink.disabled = true;
+            loadCssLink(storedRuntimeCssLink);
+
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    storedRuntimeCssLink.disabled = false;
+                    storedGlobalCssLink.disabled = false;
+                    if (storedPageCssLink) {
+                      storedPageCssLink.disabled = false;
+                    }
+                    if (storedWidgetCssLink) {
+                      storedWidgetCssLink.disabled = false;
+                    }
+                    // (SUP-4179) Clear the accumulated cssLinks only when we're
+                    // sure that the document has finished loading and the document 
+                    // has been parsed.
+                    if(document.readyState === 'interactive') {
+                      cssLinks = null;
+                    }
+                }, 0);
+            });
+        }
+    }
+  
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href && link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } 
+      
+      else if (link.id && link.id.includes("CssLink")) {
+        cssLinks.page = link;
+        checkCss();
+      } else if (link.id && link.id.includes("widgetCSS")) {
+        cssLinks.widget = link;
+        checkCss();
+      }
+      
+      else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      throw e
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+
+
+<script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def() {
+        this.promise = new Promise((function (a, b) {
+            this.resolve = a, this.reject = b
+        }).bind(this))
+    }
+
+    const defs = {};
+    window.getDeferred = function (a) {
+        return null == defs[a] && (defs[a] = new Def), defs[a]
+    }
+    window.waitForDeferred = function (b, a, c) {
+        let d = window?.getDeferred?.(b);
+        d
+            ? d.promise.then(a)
+            : c && ["complete", "interactive"].includes(document.readyState)
+                ? setTimeout(a, 1)
+                : c
+                    ? document.addEventListener("DOMContentLoaded", a)
+                    : console.error(`Deferred  does not exist`);
+    };
+</script>
+<style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}#dmRoot div.stickyHeaderFix div.site_content{margin-top:0!important}#dmRoot div.stickyHeaderFix div.hamburger-header-container{position:relative}@media (min-width:768px) and (max-width:1024px){.responsiveTablet #dm .dmInner .hide-for-medium,[data-hidden-on-tablet]{display:none!important}}
+    
+
+</style>
+<style id="cssVariables" type="text/css">
+    
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Abel:ital,wght@0,400&family=Codystar:ital,wght@0,300;0,400&family=Courgette:ital,wght@0,400&family=Alef:ital,wght@0,400;0,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Permanent+Marker:ital,wght@0,400&family=Averia+Sans+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Allura:ital,wght@0,400&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue:ital,wght@0,400&family=Be+Vietnam:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900&family=Comfortaa:ital,wght@0,300..700;1,300..700&family=Dancing+Script:ital,wght@0,400..700;1,400..700&family=DM+Sans:ital,wght@0,100..1000;1,100..1000&family=DM+Serif+Display:ital,wght@0,400;1,400&family=Droid+Sans:ital,wght@0,400;0,700&family=Droid+Sans+Mono:ital,wght@0,400&family=Droid+Serif:ital,wght@0,400;0,700&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fjalla+One:ital,wght@0,400&family=Heebo:ital,wght@0,100..900;1,100..900&amp;subset=latin-ext&amp;display=swap"  />
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Muli:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,wght@0,200..1000;1,200..1000&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:ital,wght@0,200..700;1,200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Petit+Formal+Script:ital,wght@0,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prata:ital,wght@0,400&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quicksand:ital,wght@0,300..700;1,300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:ital,wght@0,100..900;1,100..900&amp;subset=latin-ext&amp;display=swap"  />
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Rock+Salt:ital,wght@0,400&family=Shadows+Into+Light:ital,wght@0,400&family=Slabo+27px:ital,wght@0,400&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&family=Spartan:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900&family=Sulphur+Point:ital,wght@0,300;0,400;0,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Vidaloka:ital,wght@0,400&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Yeseva+One:ital,wght@0,400&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Red+Rose:ital,wght@0,300..700;1,300..700&family=Abril+Fatface:ital,wght@0,400&family=Fraunces:ital,wght@0,100..900;1,100..900&family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:ital,wght@0,300..700;1,300..700&family=Outfit:ital,wght@0,100..900;1,100..900&family=Aboreto:ital,wght@0,400&family=Arapey:ital,wght@0,400;1,400&family=Questrial:ital,wght@0,400&family=Marcellus:ital,wght@0,400&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&amp;subset=latin-ext&amp;display=swap"  />
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Hedvig+Letters+Serif:ital,wght@0,400&amp;subset=latin-ext&amp;display=swap"  />
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/6884/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-structured-global.min.css" />
+
+
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/199069c11699d9ed87f3b9ce20d67187.css" id="widgetCSS" />
+
+
+<style>img[width][height] {
+  height: auto;
+}</style>
+
+
+<style>
+  body[data-page-alias="walvis-bay"] #dm [data-show-on-page-only="walvis-bay"] {
+    display: block !important;
+  }
+</style>
+
+
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/50bb3a28/files/50bb3a28_1.min.css?v=4729" id="siteGlobalCss" />
+
+
+
+<style id="customWidgetStyle" type="text/css">
+    
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+
+<style
+        id="additionalGlobalCss" type="text/css"
+>
+</style>
+
+<style id="pagestyle" type="text/css">
+    .u_1456959295
+{
+}
+.u_1856952287
+{
+}
+.u_1323425029
+{
+}
+.u_1677974770
+{
+}
+.u_1720313492
+{
+}
+.u_1854405617
+{
+}
+*#dm *.dmBody div.u_1856952287
+{
+	background-image:linear-gradient(90deg,rgba(255,255,255,1) 0%,rgba(222,188,128,1) 100%) !important;
+	background-origin:border-box !important;
+}
+*#dm *.dmBody *.u_1923393644
+{
+	width:100% !important;
+}
+*#dm *.dmBody div.u_1465882171
+{
+	background-image:linear-gradient(90deg,rgba(255,255,255,1) 0%,rgba(222,188,128,1) 100%) !important;
+	background-origin:border-box !important;
+}
+*#dm *.dmBody div.u_1720313492
+{
+	background-image:linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(222,188,128,1) 100%) !important;
+	background-origin:border-box !important;
+}
+*#dm *.dmBody div.u_1323425029
+{
+	background-repeat:no-repeat !important;
+	background-image:url(https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/msc23018547-2880w.jpg) !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1070211172
+{
+	background-repeat:no-repeat !important;
+	background-image:url(https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/606361068-2880w.jpg) !important;
+	background-size:cover !important;
+}
+
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    *#dm *.dmBody div.u_1820156328
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	max-width:100% !important;
+	margin-top:0 !important;
+	margin-bottom:8px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody *.u_1245862613 .photoGalleryThumbs .image-container a
+{
+	padding-top:533px !important;
+}
+*#dm *.dmBody div.u_1720313492
+{
+	margin-left:0 !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:0 !important;
+	width:auto !important;
+}
+*#dm *.dmBody *.u_1245862613 .photoGalleryThumbs
+{
+	padding:10px !important;
+}
+*#dm *.dmBody *.u_1245862613 .layout-container
+{
+	padding:10px !important;
+}
+*#dm *.dmBody *.u_1245862613 .photoGalleryViewAll
+{
+	padding:0 20px !important;
+}
+*#dm *.dmBody *.u_1038196005 .photoGalleryThumbs .image-container a
+{
+	padding-top:520px !important;
+}
+*#dm *.dmBody *.u_1038196005 .photoGalleryThumbs
+{
+	padding:10px !important;
+}
+*#dm *.dmBody *.u_1038196005 .layout-container
+{
+	padding:10px !important;
+}
+*#dm *.dmBody *.u_1038196005 .photoGalleryViewAll
+{
+	padding:0 20px !important;
+}
+*#dm *.dmBody div.u_1923393644
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 19px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:1162px !important;
+	margin-top:90px !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:start !important;
+	display:block !important;
+}
+*#dm *.dmBody div.u_1323425029
+{
+	margin-left:0 !important;
+	padding-top:200px !important;
+	padding-left:40px !important;
+	padding-bottom:200px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:40px !important;
+	margin-right:0 !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	max-width:none !important;
+	min-width:0 !important;
+	text-align:center !important;
+	background-position:50% 100% !important;
+}
+*#dm *.dmBody div.u_1038196005
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:100% !important;
+	margin-top:0 !important;
+	margin-bottom:10px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:start !important;
+}
+*#dm *.dmBody div.u_1856952287
+{
+	margin-left:0 !important;
+	padding-top:100px !important;
+	padding-left:40px !important;
+	padding-bottom:100px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:40px !important;
+	width:auto !important;
+}
+*#dm *.dmBody div.u_1245862613
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:100% !important;
+	margin-top:0 !important;
+	margin-bottom:10px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:start !important;
+}
+*#dm *.dmBody div.u_1236565033
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	max-width:100% !important;
+	margin-top:25px !important;
+	margin-bottom:8px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody div.u_1465882171
+{
+	margin-left:0px !important;
+	padding-top:100px !important;
+	padding-left:20px !important;
+	padding-bottom:0px !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	margin-right:0px !important;
+	padding-right:20px !important;
+	width:auto !important;
+}
+*#dm *.dmBody div.u_1940124690
+{
+	height:185.998px !important;
+	float:none !important;
+	top:0px !important;
+	left:0 !important;
+	width:calc(100% - 23px) !important;
+	position:relative !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:1153.99px !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	padding-right:0px !important;
+	min-width:25px !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_1070211172
+{
+	background-repeat:no-repeat !important;
+	background-size:contain !important;
+	background-position:50% 50% !important;
+}
+
+</style>
+
+
+
+
+
+
+
+
+
+<style id="globalFontSizeStyle" type="text/css">
+    .font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }.font-size-20, .size-20, .size-20 > font { font-size: 20px !important; }.font-size-24, .size-24, .size-24 > font { font-size: 24px !important; }.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }
+</style>
+<style id="pageFontSizeStyle" type="text/css">
+</style>
+
+
+
+
+<style id="hideAnimFix">
+  .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+    visibility: hidden;
+  }
+
+  .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+    visibility: hidden !important;
+  }
+
+  #dmRoot:not(.editGrid) .flex-element [data-anim-extended] {
+    visibility: hidden;
+  }
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://surfariafrika.dudaone.com/walvis-bay">
+
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:image" content="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/196977156_10158294017393511_6984936948171509730_n-337210eb-1920w.jpg"/>
+  <meta property="og:image" content="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/196977156_10158294017393511_6984936948171509730_n-337210eb-1920w.jpg"/>
+
+
+
+
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="walvis-bay"  class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmLargeBody responsiveTablet "
+      style="padding:0;margin:0;"
+      
+    >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="dm" class='dmwr'>
+    
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1901957768" class="dm-home-page" themewaschanged="true"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-sec hasAnimations dmPageBody d-page-1716942098 inputs-css-clean dmDHeader" id="dm-outer-wrapper" data-page-class="1716942098"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner" data-auto="page-inner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div id="desktopHeaderBox" class="dmRespRow dmRespRowStable dmRespRowNoPadding desktopHeaderBox dHeader d-header-wrapper"> <div id="sochcontainer" class="u_sochcontainer soc_hcontainer p_hfcontainer"> <div dm:templateorder="15" class="socialRow" id="1318547133"> <div class="innerSocialRow" id="1750849460"> <div class="socialRowBox" id="1546874050"> <div class="u_1329477190 dmSocialHome displayNone dmSocialHub gapSpacing" id="1329477190" dmle_extension="social_hub" data-element-type="social_hub" wr="false" icon="true" surround="false"> <div class="socialHubWrapper"> <div class="socialHubInnerDiv " data-auto="social-hub-inner"> <a href="https://youtube.com/UCFPLw3xAyr1TRNjVKLqGqNw" target="_blank" dm_dont_rewrite_url="true" aria-label="youtube" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Youtube&apos;)"> <span class="dmSocialYoutube dm-social-icons-youtube oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect="zoomout"></span> 
+</a> 
+ <a href="mailto:cynthiandonga@gmail.com" dm_dont_rewrite_url="true" aria-label="email" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Email&apos;)"> <span class="dmSocialEmail dm-social-icons-email oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect="zoomout"></span> 
+</a> 
+ <a href="https://www.instagram.com/surfari_afrika/" target="_blank" dm_dont_rewrite_url="true" aria-label="instagram" onclick="dm_gaq_push_event &amp;&amp; dm_gaq_push_event(&apos;socialLink&apos;, &apos;click&apos;, &apos;Instagram&apos;)"> <span class="dmSocialInstagram dm-social-icons-instagram oneIcon socialHubIcon style5" aria-hidden="true" data-hover-effect="zoomout"></span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1903566509 dmNewParagraph dmSocialParagraph displayNone" id="1903566509" style="direction: ltr; text-align: left;"><div style="text-align: justify;"><font style="color: rgb(255, 255, 255);"><span class="lh-1 " style="font-weight: 700; direction: ltr; text-align: left;"><font style="color: rgb(18, 17, 17);">&nbsp;</font></span><span class="lh-1 font-size-30" style="font-style: normal;"><font style="color: rgb(18, 17, 17);">W</font><font style="color: rgb(18, 17, 17);">hatsApp</font></span></font></div><font style="color: rgb(18, 17, 17);"><span class="font-size-20 lh-1" style="font-style: normal;"><b><span style="font-weight: 700;">+ 254 719 372 145</span></b></span></font><br/><span style=""></span> 
+</div> 
+ <div class="socialRowClear" id="1016342328"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespColsWrapper"> <div class="large-12 medium-12 small-12 dmRespCol"> <div class="dmHeader p_hfcontainer u_hcontainer desktopHeader fixedHeader fixedHeaderLimitSize dmOnlySkinny" data-auto="header"> <div class="logoTitleWrapper"> <div class="u_logo-div logo-div dm_header" id="logo-div" dm_changed="true" src="https://irp-cdn.multiscreensite.com/50bb3a28/dms3rep/multi/logo-615d6128.png"> <a id="dm-logo-anchor" class="dm-logo-anchor" href="/"><img id="dm-logo-image" class="u_dm-logo-image dm-logo-image" src="https://irp.cdn-website.com//50bb3a28/dms3rep/multi/opt/logo-615d6128-1920w.png" device-src-orig="" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div class="dm-title dm_header" id="dm-title" style="display:none;" device-text-orig="
+   Sushi
+  ">Sushi</div> 
+</div> 
+</div> 
+ <div id="upperFloatingNav" class="desktopNavWrapper dm-bg-check"> <ul id="upperFloatingNavigation" class=" dmShowInnerBar dmNavigationWithLink dmNavWrapper dmn dmLayoutNav" dmoffset="2"><li class="desktopTopNav navButtonLi   " id="dm_navGroup010101463504_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/surfari-afrika" animationtype="inner" class="dmUDNavigationItem_010101463504" data-target-page-alias=""> <span class="navItemText">Surfari Afrika</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> <li class="desktopTopNav navButtonLi desktopTopNavMoreBtn dmUDNavigationItem_dmMore  hasdmSub  " id=""> <span class="ButtonItemArrowUp"></span> 
+ <a animationtype="inner" class="" data-target-page-alias=""> <span class="navItemText">More</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+ <ul class="dmNavigationStyle_1 innerUl dmNavigation dmn dmShowInnerBar dmNavWrapper "> <li class="dmSub navButtonLi   " id="dm_navGroup010101623821_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/project-page" animationtype="inner" class="dmUDNavigationItem_010101623821" data-target-page-alias=""> <span class="navItemText">Kenya XL downwind</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi   " id="dm_navGroup010101673202_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/namibia4e50299d" animationtype="inner" class="dmUDNavigationItem_010101673202" data-target-page-alias=""> <span class="navItemText">Namibia</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi   " id="dm_navGroup010101449436_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/new-year-2023" animationtype="inner" class="dmUDNavigationItem_010101449436" data-target-page-alias=""> <span class="navItemText">New year 2025</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi   " id="dm_navGroup04_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/about" animationtype="inner" class="dmUDNavigationItem_04" data-target-page-alias=""> <span class="navItemText">About us</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi   " id="dm_navGroup010101435294_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/contact-us" animationtype="inner" class="dmUDNavigationItem_010101435294" data-target-page-alias=""> <span class="navItemText">Contact us</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi   " id="dm_navGroup010101830387_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/payment---refund-policy" animationtype="inner" class="dmUDNavigationItem_010101830387" data-target-page-alias=""> <span class="navItemText">Payment &amp; refund policy</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi   " id="dm_navGroup010101433467_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/do-and-dont-and-what-to-bring-when-traveling-to-kenya" animationtype="inner" class="dmUDNavigationItem_010101433467" data-target-page-alias=""> <span class="navItemText">Do and dont and what to bring when traveling to Kenya</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi   " id="dm_navGroup010101128293_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/kris---family" animationtype="inner" class="dmUDNavigationItem_010101128293" data-target-page-alias=""> <span class="navItemText">KRIS &amp; FAMILY</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi   " id="dm_navGroup010101492139_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/need-for-speed1b923691" animationtype="inner" class="dmUDNavigationItem_010101492139" data-target-page-alias=""> <span class="navItemText">NEED FOR SPEED</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi   " id="dm_navGroup010101423542_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/downwinder-namibia" animationtype="inner" class="dmUDNavigationItem_010101423542" data-target-page-alias=""> <span class="navItemText">DOWNWINDER NAMIBIA</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi    dmNavItemSelected " id="dm_navGroup010101722437_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/walvis-bay" animationtype="inner" class="dmUDNavigationItem_010101722437" data-target-page-alias="" aria-current="page"> <span class="navItemText">Walvis bay</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi   " id="dm_navGroup010101864677_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/primal-explorer" animationtype="inner" class="dmUDNavigationItem_010101864677" data-target-page-alias=""> <span class="navItemText">PRIMAL EXPLORER</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi   " id="dm_navGroup010101590851_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/safari-2027---2-nights" animationtype="inner" class="dmUDNavigationItem_010101590851" data-target-page-alias=""> <span class="navItemText">SAFARI 2027 - 2 NIGHTS</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi   " id="dm_navGroup010101942843_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/primale-life-downwinder-xl" animationtype="inner" class="dmUDNavigationItem_010101942843" data-target-page-alias=""> <span class="navItemText">PRIMAL LIFE DOWNWINDER XL</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+ <li class="dmSub navButtonLi   " id="dm_navGroup010101705122_item"> <span class="ButtonItemArrowUp"></span> 
+ <a href="/lily" animationtype="inner" class="dmUDNavigationItem_010101705122" data-target-page-alias=""> <span class="navItemText">LILY</span> 
+</a> 
+ <span class="ButtonItemArrowDown"></span> 
+</li> 
+</ul> 
+</li> 
+</ul> 
+</div> 
+ <div style="clear: both;"></div> 
+</div> 
+</div> 
+</div> 
+ <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow "> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None"> <div class="titleLine display_None"><hr/></div> 
+<!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts --> <div id="pageTitleText"> <div class="innerPageTitle">Walvis bay</div> 
+</div> 
+ <div class="titleLine display_None"><hr/></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_walvis-bay dm-home-page" themewaschanged="true"> <div id="allWrapper" class="allWrapper" data-auto="all-wrapper"><!-- navigation placeholders --> <div id="dm_content" class="dmContent" role="main"> <div dm:templateorder="170" class="dmHomeRespTmpl mainBorder dmRespRowsWrapper dmFullRowRespTmpl" id="1716942098"> <div class="u_1323425029 dmRespRow" style="text-align: center;" id="1323425029" data-anim-desktop="none"> <div class="dmRespColsWrapper" id="1542234389"> <div class="dmRespCol small-12 u_1854405617 medium-12 large-12" id="1854405617"> <div data-element-type="spacer" class="u_1940124690 dmSpacer" id="1940124690"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1856952287" id="1856952287" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJ2aWV3cG9ydCIsImFuaW1hdGlvbiI6Inpvb21JbiIsInJldmVyc2UiOmZhbHNlLCJpbnRlbnNpdHkiOjEsInZpZXdwb3J0VGhyZXNob2xkcyI6eyJ0b3AiOiI2NiUiLCJib3R0b20iOiIwJSJ9LCJkZWxheSI6MCwiZHVyYXRpb24iOjF9fQ=="> <div class="dmRespColsWrapper" id="1006506730"> <div class="dmRespCol small-12 u_1456959295 medium-12 large-12" id="1456959295"> <div class="u_1820156328 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1820156328" style="transition: none 0s ease 0s; text-align: left; display: block;"> <h4 class="size-24"><span style="display: initial; color: rgb(0, 0, 0);" class="font-size-24">Walvis bay &amp; surroundings</span></h4> 
+</div> 
+ <div class="u_1236565033 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1236565033" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="m-size-14 size-18"><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Where the towering dunes of the Namib Desert meet the Atlantic,</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Walvis Bay</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">stands as one of the most surreal kiteboarding destinations on the planet. This isn't just a kite spot; it&rsquo;s a vibrant coastal ecosystem where you&rsquo;ll share the water with an incredible cast of wild characters.</span></span></p><p><span style="display: initial;"><br/></span></p> <h3 class="m-size-19 size-24"><strong class="font-size-24 m-font-size-19" style="font-weight: bold; display: initial; color: rgb(0, 0, 0);">The Wild side of the Lagoon</strong></h3> 
+<p class="m-size-14 size-18"><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Walvis Bay is a sanctuary of raw nature. As you glide across the water, you&rsquo;ll be surrounded!</span></p><p><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">&nbsp;</span></p><p class="m-size-14 size-18"><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">by:</span></p> <ul class="defaultList bullet"><li class="m-size-14 size-18" style="color: rgb(0, 0, 0);"><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">The Birdlife:</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Thousands of</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Greater and Lesser Flamingos</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">paint the lagoon pink, while</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Great White Pelicans</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">often glide just feet above your kite lines.</span></span></li><li class="m-size-14 size-18" style="color: rgb(0, 0, 0);"><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">The Marine Giants:</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">DURING THE KITEBOARDING CAMP,</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Humpback and Southern Right Whales</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">migrate past the bay AND THE DOWNWINDER ROUTE.</span></span></li><li class="m-size-14 size-18" style="color: rgb(0, 0, 0);"><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">The Locals:</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">A colony of over</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">60,000 Cape Fur Seals</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">lives at Pelican Point. They are incredibly curious and will often &quot;porpoise&quot; alongside your board.</span></span></li><li class="m-size-14 size-18" style="color: rgb(0, 0, 0);"><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">The Desert Hunters:</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Keep an eye on the shoreline for</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Black-backed Jackals</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">prowling the water&rsquo;s edge in search of food&mdash;a sight found nowhere else in the world.</span></span></li></ul> 
+<p><span style="display: initial;"><br/></span></p> <h3 class="m-size-19 size-24"><strong class="m-font-size-19 font-size-24" style="display: initial; color: rgb(0, 0, 0); font-weight: bold;">The Ride: Freestyle &amp; Downwinders</strong></h3> 
+<p class="m-size-14 size-18"><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">The lagoon is a world-class playground, famous for hosting international speed record attempts.</span></p> <ul class="defaultList bullet"><li class="m-size-14 size-18" style="color: rgb(0, 0, 0);"><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">The Freestyle Flat:</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">The main lagoon offers waist-deep, butter-flat water perfect for unhooking or perfecting your carves. One tack away lies the famous</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">&quot;Speed Strip&quot;</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">, a 2.5km stretch of offshore wind and mirror-flat water.</span></li><li class="m-size-14 size-18" style="color: rgb(0, 0, 0);"><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">The Downwinders:</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">We offer 2&ndash;3 signature runs, including the legendary</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Pelican Point Downwinder</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">, where you ride from the lighthouse back to the lagoon, passing the seal colony and shipwrecks along the way. AS ALSO THE FAMOUS SKELETON WAVE BARREL.</span></li></ul> 
+<p><span style="display: initial;"><br/></span></p> <h3 class="m-size-19 size-24"><strong class="m-font-size-19 font-size-24" style="font-weight: bold; display: initial; color: rgb(0, 0, 0);">The Budget Camp: Accessible Excellence</strong></h3> 
+<p class="m-size-14 size-18"><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">We believe the world&rsquo;s best wind shouldn&rsquo;t be restricted to the elite. Our camp is designed to be high-quality yet</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">budget-friendly</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">, making this bucket-list destination accessible to everyone.</span></p> <ul class="defaultList bullet"><li class="m-size-14 size-18" style="color: rgb(0, 0, 0);"><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Beautiful Accommodation:</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Stay in our cozy, eco-friendly lodge right AT the</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Lagoon&rsquo;s edge</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">. Wake up to the sound of flamingos and JUST A WALK AWAY FROM THE LAGOON. TRANSFER TO LOCAL KITEBOARDING CLUB, STORAGE, AND DIFFERENT SPOTS WILL BE VISITED WITH 4WD.</span></li><li class="m-size-14 size-18" style="color: rgb(0, 0, 0);"><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Pro Guiding &amp; Transfers:</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Forget the stress of 4x4 rentals. We handle all</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">airport transfers</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">and provide</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">pro guiding</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">to ensure you&rsquo;re always at the best spot for the tide and wind.</span></span></li><li class="m-size-14 size-18" style="color: rgb(0, 0, 0);"><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Lessons &amp; Gear:</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">Whether you&rsquo;re a total beginner or an advanced rider looking to nail your first kiteloop, we offer</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">certified lessons</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">. Full premium</span> 
+</span><strong class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">rentals</strong><span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);"> <span class="m-font-size-14 font-size-18" style="display: initial; color: rgb(0, 0, 0);">are available for those traveling light.</span></span></li></ul> 
+ <h2 style="line-height: 1.5;"><span style="display: initial;"><br/></span></h2> 
+</div> 
+ <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient flexButton" file="false" href="/lesson---rental-namibia" data-element-type="dButtonLinkId" id="1346288613" link_type="popup" popup_target="lesson---rental-namibia"> <span class="iconBg" aria-hidden="true" id="1541765406"> <span class="icon hasFontIcon icon-star" id="1478302638"></span> 
+</span> 
+ <span class="text" id="1821546885">LESSONS &amp; RENTAL</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1720313492" id="1720313492"> <div class="dmRespColsWrapper" id="1501771572"> <div class="dmRespCol large-12 medium-12 small-12 u_1677974770" id="1677974770"> <div class="u_1245862613 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp photo-gallery-done text-layout-over captionAlignment-center_center photoGallery" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="square" data-desktop-columns="1" data-element-type="dPhotoGalleryId" data-desktop-text-layout="over" id="1245862613" data-placeholder="false" data-rows-to-show="100" data-image-hover-effect="zoomout"> <div class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1362986591"></div> 
+ <div class="layout-container square"> <div class="photogallery-row " data-index=""> <div class="photogallery-column column-1" data-index="0"> <div index="0" class="photoGalleryThumbs animated  " data-index="0"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1465689174" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/L1030941.JPG" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/L1030941-640w.JPG');"><img id="1971754302" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/L1030941-1920w.JPG" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1766285551" class="caption-container u_1766285551" style="display:none"> <span class="caption-inner"> <a id="1429585688" class="caption-button dmWidget  clearfix u_1429585688" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1775570644" style="transition: opacity 1s ease-in-out;"> <h2><strong style="display: initial; color: rgb(255, 255, 255);">Adventure Awaits: What&rsquo;s Included</strong></h2> 
+ <h2><span style="display: initial;"><br/></span></h2> 
+<p><span style="display: initial; color: rgb(255, 255, 255);">Get ready for an epic Namibian kiteboarding experience. We&rsquo;ve handled the logistics so you can focus on the wind. Your booking includes:</span></p> <ul class="defaultList bullet"><li style="color: rgb(255, 255, 255);"><strong style="display: initial; color: rgb(255, 255, 255);">Seamless Logistics:</strong><span style="display: initial; color: rgb(255, 255, 255);"> <span style="display: initial; color: rgb(255, 255, 255);">All airport transfers and transport between Windhoek and Walvis Bay (including secure kitebag storage).</span></span></li><li style="color: rgb(255, 255, 255);"><strong style="display: initial; color: rgb(255, 255, 255);">Premium Guiding &amp; Spots:</strong><span style="display: initial; color: rgb(255, 255, 255);"> <span style="display: initial; color: rgb(255, 255, 255);">Expert guiding to a variety of world-class lagoons and secret spots.</span></span></li><li style="color: rgb(255, 255, 255);"><strong style="display: initial; color: rgb(255, 255, 255);">Ultimate Downwinder Support:</strong><span style="display: initial; color: rgb(255, 255, 255);"> <span style="display: initial; color: rgb(255, 255, 255);">* Dedicated</span> 
+</span><strong style="display: initial; color: rgb(255, 255, 255);">4x4 vehicle support</strong><span style="display: initial; color: rgb(255, 255, 255);"> <span style="display: initial; color: rgb(255, 255, 255);">for all downwinders.</span></span></li><li class="ql-indent-1" style="color: rgb(255, 255, 255);"><span style="display: initial; color: rgb(255, 255, 255);"><span style="display: initial; color: rgb(255, 255, 255);">Professional</span> 
+</span><strong style="display: initial; color: rgb(255, 255, 255);">on-water and beach assistance</strong><span style="display: initial; color: rgb(255, 255, 255);"> <span style="display: initial; color: rgb(255, 255, 255);">to keep you safe and riding hard.</span></span></li><li style="color: rgb(255, 255, 255);"><strong style="display: initial; color: rgb(255, 255, 255);">Comfortable Stays:</strong><span style="display: initial; color: rgb(255, 255, 255);"> <span style="display: initial; color: rgb(255, 255, 255);">Accommodation on a sharing basis (with</span> 
+</span><strong style="display: initial; color: rgb(255, 255, 255);">single room upgrades</strong><span style="display: initial; color: rgb(255, 255, 255);"> <span style="display: initial; color: rgb(255, 255, 255);">available).</span></span></li><li style="color: rgb(255, 255, 255);"><strong style="display: initial; color: rgb(255, 255, 255);">Total Flexibility:</strong><span style="display: initial; color: rgb(255, 255, 255);"> <span style="display: initial; color: rgb(255, 255, 255);">Choose between our standard package or a</span> 
+</span><strong style="display: initial; color: rgb(255, 255, 255);">self-catering option</strong><span style="display: initial; color: rgb(255, 255, 255);"> <span style="display: initial; color: rgb(255, 255, 255);">to suit your style.</span></span></li><li style="color: rgb(255, 255, 255);"><strong style="display: initial; color: rgb(255, 255, 255);">Extended Support:</strong><span style="display: initial; color: rgb(255, 255, 255);"> <span style="display: initial; color: rgb(255, 255, 255);">Assistance with additional accommodation and transfers in Windhoek if your journey requires it.</span></span></li><li><span style="display: initial;"><br/></span></li></ul> 
+ <h3><strong style="display: initial; color: rgb(255, 255, 255);">Pricing</strong></h3> 
+ <ul class="defaultList bullet"><li style="color: rgb(255, 255, 255);"><strong style="display: initial; color: rgb(255, 255, 255);">Starting at:</strong><span style="display: initial; color: rgb(255, 255, 255);"> <span style="display: initial; color: rgb(255, 255, 255);">800&euro; per week</span></span></li><li><br/></li></ul> 
+ <blockquote><strong style="display: initial; color: rgb(255, 255, 255);">Ready for the best deal?</strong><span style="display: initial; color: rgb(255, 255, 255);"> <span style="display: initial; color: rgb(255, 255, 255);">&gt; [</span></span><strong style="display: initial; color: rgb(255, 255, 255);">Contact Us</strong><span style="display: initial; color: rgb(255, 255, 255);">] today for a personalized quote and the best available price!</span></blockquote> 
+ <blockquote><strong style="text-decoration: underline; font-weight: bold; display: initial;" class="font-size-18">WHEN</strong></blockquote> 
+ <blockquote><strong style="text-decoration: none; font-weight: bold; display: initial;" class="font-size-18">10 OCTOBER UP TO NOVEMBER</strong></blockquote> 
+<p><span style="display: initial;">t</span></p></div> 
+ <div class="dmNewParagraph" data-element-type="paragraph" data-version="5" id="1778927302" style="transition: opacity 1s ease-in-out;"><p><span style="display: initial; color: rgb(255, 255, 255);">tHE ACCOMODATION CAN BE SHARING IN SINGLE BEDS OR SINGLE UPGRADE</span></p><p><span style="display: initial; color: rgb(255, 255, 255);">THEY ARE BRAND NEW, YOU CAN COOK OR GO TO THE LITTLE RESTAURANT ON SITE</span></p></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow dmSectionNoParallax u_1070211172" id="1070211172" data-gallery-bg="eyJzbGlkZXMiOlsiaHR0cHM6Ly9pcnAuY2RuLXdlYnNpdGUuY29tLzUwYmIzYTI4L2RtczNyZXAvbXVsdGkvb3B0LzYwNjM2MTA2OC0xOTIwdy5qcGciLCJodHRwczovL2lycC5jZG4td2Vic2l0ZS5jb20vNTBiYjNhMjgvZG1zM3JlcC9tdWx0aS9vcHQvNjA2MzYxMDU2LTE5MjB3LmpwZyIsImh0dHBzOi8vaXJwLmNkbi13ZWJzaXRlLmNvbS81MGJiM2EyOC9kbXMzcmVwL211bHRpL29wdC82MDkyMTQ1NDItMTkyMHcuanBnIiwiaHR0cHM6Ly9pcnAuY2RuLXdlYnNpdGUuY29tLzUwYmIzYTI4L2RtczNyZXAvbXVsdGkvb3B0LzYwNjM2MTg1OS0xOTIwdy5qcGciLCJodHRwczovL2lycC5jZG4td2Vic2l0ZS5jb20vNTBiYjNhMjgvZG1zM3JlcC9tdWx0aS9vcHQvNjA5MTgzODUyLTE5MjB3LmpwZyIsImh0dHBzOi8vaXJwLmNkbi13ZWJzaXRlLmNvbS81MGJiM2EyOC9kbXMzcmVwL211bHRpL29wdC82MDYzNjE4NjYtMTkyMHcuanBnIiwiaHR0cHM6Ly9pcnAuY2RuLXdlYnNpdGUuY29tLzUwYmIzYTI4L2RtczNyZXAvbXVsdGkvb3B0LzYwNjM2MTA1Mi0xOTIwdy5qcGciLCJodHRwczovL2lycC5jZG4td2Vic2l0ZS5jb20vNTBiYjNhMjgvZG1zM3JlcC9tdWx0aS9vcHQvNjA2MzYxMDUzLTE5MjB3LmpwZyIsImh0dHBzOi8vaXJwLmNkbi13ZWJzaXRlLmNvbS81MGJiM2EyOC9kbXMzcmVwL211bHRpL29wdC82MDYzNjEwNjMtMTkyMHcuanBnIiwiaHR0cHM6Ly9pcnAuY2RuLXdlYnNpdGUuY29tLzUwYmIzYTI4L2RtczNyZXAvbXVsdGkvb3B0LzYwNjM2MTg2My0xOTIwdy5qcGciLCJodHRwczovL2lycC5jZG4td2Vic2l0ZS5jb20vNTBiYjNhMjgvZG1zM3JlcC9tdWx0aS9vcHQvNjA5MTg1MDU1LTE5MjB3LmpwZyJdfQ=="> <div class="dmRespColsWrapper" id="1458390586"> <div class="dmRespCol empty-column large-12 medium-12 small-12" id="1392221768"></div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1465882171" id="1465882171"> <div class="dmRespColsWrapper" id="1127265496"> <div class="dmRespCol large-12 medium-12 small-12 u_1475927552" id="1475927552"> <div class="u_1923393644 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1923393644"><img src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/pexels-photo-9479348-1920w.jpeg" alt="" id="1147604118" class="" data-dm-image-path="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/pexels-photo-9479348.jpeg" data-hover-effect="none" width="1920" height="1280" onerror="handleImageLoadError(this)"/></div> 
+ <div class="u_1038196005 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp photo-gallery-done text-layout-over captionAlignment-top_center photoGallery" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="square" data-desktop-columns="2" data-element-type="dPhotoGalleryId" data-desktop-text-layout="over" id="1038196005" data-placeholder="false" data-rows-to-show="100" data-image-hover-effect="zoomout" data-mobile-columns="2" data-desktop-caption-alignment="top_center"> <div class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1362986591"></div> 
+ <div class="layout-container square"> <div class="photogallery-row " data-index=""> <div class="photogallery-column column-2" data-index="0"> <div index="0" class="photoGalleryThumbs animated  " data-index="0"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1105329560" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/pelican-point-lodge-flamingoes-.jpg.webp" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/pelican-point-lodge-flamingoes-.jpg-640w.webp');"><img id="1939903344" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/pelican-point-lodge-flamingoes-.jpg-1920w.webp" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1535245733" class="caption-container u_1535245733" style="display:none"> <span class="caption-inner"> <a id="1728511842" class="caption-button dmWidget  clearfix u_1728511842" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-2" data-index="1"> <div index="1" class="photoGalleryThumbs animated  " data-index="1"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1581164164" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/Attractions-Walvis-Bay-Lagoon_1000-5876-5.jpg" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/Attractions-Walvis-Bay-Lagoon_1000-5876-5-640w.jpg');"><img id="1481843018" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/Attractions-Walvis-Bay-Lagoon_1000-5876-5-1920w.jpg" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1561723672" class="caption-container u_1561723672" style="display:none"> <span class="caption-inner"> <a id="1384035604" class="caption-button dmWidget  clearfix u_1384035604" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row " data-index=""> <div class="photogallery-column column-2" data-index="2"> <div index="2" class="photoGalleryThumbs animated  " data-index="2"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1827098792" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/Attractions-Walvis-Bay-Lagoon_1000-5876-3.jpg" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/Attractions-Walvis-Bay-Lagoon_1000-5876-3-640w.jpg');"><img id="1806049835" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/Attractions-Walvis-Bay-Lagoon_1000-5876-3-1920w.jpg" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1597755113" class="caption-container u_1597755113" style="display:none"> <span class="caption-inner"> <a id="1503402209" class="caption-button dmWidget  clearfix u_1503402209" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-2" data-index="3"> <div index="3" class="photoGalleryThumbs animated  " data-index="3"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1691578189" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/aanNaXLRuHj4NFygtMZnSR-1920-80.jpg.webp" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/aanNaXLRuHj4NFygtMZnSR-1920-80.jpg-640w.webp');"><img id="1625202558" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/aanNaXLRuHj4NFygtMZnSR-1920-80.jpg-1920w.webp" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1416101780" class="caption-container u_1416101780" style="display:none"> <span class="caption-inner"> <a id="1489197146" class="caption-button dmWidget  clearfix u_1489197146" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row " data-index=""> <div class="photogallery-column column-2" data-index="4"> <div index="4" class="photoGalleryThumbs animated  " data-index="4"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1520048155" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/OIP-b08485b5.webp" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/OIP-b08485b5-640w.webp');"><img id="1743560546" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/OIP-b08485b5-1920w.webp" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1898436057" class="caption-container u_1898436057" style="display:none"> <span class="caption-inner"> <a id="1882286475" class="caption-button dmWidget  clearfix u_1882286475" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-column column-2" data-index="5"> <div index="5" class="photoGalleryThumbs animated  " data-index="5"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" data-dm-force-device="mobile" class="u_1097838632" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/317610-kiteboarding-at-walvis-bay-namibia.jpg" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/317610-kiteboarding-at-walvis-bay-namibia-640w.jpg');"><img id="1624302024" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/317610-kiteboarding-at-walvis-bay-namibia-1920w.jpg" alt="" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1374038206" class="caption-container u_1374038206" style="display:none"> <span class="caption-inner"> <a id="1296891212" class="caption-button dmWidget  clearfix u_1296891212" data-auto="caption-button" href="" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="14" class="dmFooterResp dmFullFooterResp" id="1282971423"> <div class="dmRespRow dmDividerRow" id="1755426527"> <div class="dmRespColsWrapper" id="1249874297"> <div class="large-12 medium-12 small-12 dmRespCol" id="1228101018"> <div class="dmDividerWrapper clearfix" data-element-type="dDividerId" id="1041944713"><hr class="dmDivider defaultDivider" id="1538090345"/></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow fullBleedChanged fullBleedMode u_1754658234" style="text-align: center;" id="1754658234"> <div class="dmRespColsWrapper" id="1391526203"> <div class="dmRespCol small-12 medium-12 large-12 u_1597621185" id="1597621185"> <div class="u_1094019758 dmPhotoGallery newPhotoGallery dmPhotoGalleryResp hasShadow photo-gallery-done text-layout-bottom captionAlignment-center_center photoGallery" galleryoptionsparams="{thumbnailsPerRow: 3, rowsToShow: 3, imageScaleMethod: true}" data-desktop-layout="square" data-desktop-columns="1" data-element-type="dPhotoGalleryId" data-desktop-text-layout="bottom" id="1094019758" data-desktop-caption-alignment="center_center" data-placeholder="false" data-image-hover-effect="shine" data-rows-to-show="100" data-mobile-columns="1" data-image-animation="zoomIn" data-link-gallery="true"> <div class="dmPhotoGalleryHolder clearfix gallery shadowEffectToChildren gallery4inArow" id="1362986591"></div> 
+ <div class="layout-container square"> <div class="photogallery-row " data-index=""> <div class="photogallery-column column-1" data-index="0"> <div index="0" class="photoGalleryThumbs animated  " data-index="0"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-labelledby="1113172228" data-dm-force-device="mobile" class="u_1558247574 has-link" href="/namibia4e50299d" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/ChatGPT+Image+14+nov+2025-+18_05_12.png" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/ChatGPT+Image+14+nov+2025-+18_05_12-640w.png');"><img id="1091439437" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/ChatGPT+Image+14+nov+2025-+18_05_12-1920w.png" alt="" aria-labelledby="1113172228" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1636149290" class="caption-container u_1636149290" style="display:none"> <span class="caption-inner"> <h3 id="1113172228" class="caption-title u_1113172228">Namibia Kiteboarding</h3> 
+ <div id="1953147942" class="caption-text u_1953147942"><p class="rteBlock">October, November, December 2026</p></div> 
+ <a id="1257360107" class="caption-button dmWidget  clearfix u_1257360107" data-auto="caption-button" href="/namibia4e50299d" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row " data-index=""> <div class="photogallery-column column-1" data-index="1"> <div index="1" class="photoGalleryThumbs animated  " data-index="1"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-labelledby="1196347678" data-dm-force-device="mobile" class="u_1235817531 has-link" href="/Remoteislands" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/IMG_20211029_154320-9089-49346d92.jpg" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/IMG_20211029_154320-9089-49346d92-640w.jpg');"><img id="1082787972" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/IMG_20211029_154320-9089-49346d92-1920w.jpg" alt="" aria-labelledby="1196347678" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1902334140" class="caption-container u_1902334140" style="display:none"> <span class="caption-inner"> <h3 id="1196347678" class="caption-title u_1196347678">ARCHIPELAGO</h3> 
+ <div id="1328899077" class="caption-text u_1328899077"><p class="rteBlock">31 &nbsp;- 7 &nbsp;FERUARY</p></div> 
+ <a id="1035721418" class="caption-button dmWidget  clearfix u_1035721418" data-auto="caption-button" href="/Remoteislands" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row " data-index=""> <div class="photogallery-column column-1" data-index="2"> <div index="2" class="photoGalleryThumbs animated  " data-index="2"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-labelledby="1653145651" data-dm-force-device="mobile" class="u_1394368168 has-link" href="/project-page" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/324846706_531272312299333_4715406994646346078_n.jpg" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/324846706_531272312299333_4715406994646346078_n-640w.jpg');"><img id="1404136476" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/324846706_531272312299333_4715406994646346078_n-1920w.jpg" alt="" aria-labelledby="1653145651" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1891059780" class="caption-container u_1891059780" style="display:none"> <span class="caption-inner"> <h3 id="1653145651" class="caption-title u_1653145651">Roadtrip / Downwinder xl</h3> 
+ <div id="1906377550" class="caption-text u_1906377550"><p class="rteBlock">31 - 9 FEBRUARI 2027</p></div> 
+ <a id="1099393729" class="caption-button dmWidget  clearfix u_1099393729" data-auto="caption-button" href="/project-page" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row " data-index=""> <div class="photogallery-column column-1" data-index="3"> <div index="3" class="photoGalleryThumbs animated  " data-index="3"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-labelledby="1884866484" data-dm-force-device="mobile" class="u_1377430229 has-link" href="/catamaran" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/lamu1-1920x678.jpg" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/lamu1-1920x678-640w.jpg');"><img id="1011017828" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/lamu1-1920x678-1920w.jpg" alt="" aria-labelledby="1884866484" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1078515970" class="caption-container u_1078515970" style="display:none"> <span class="caption-inner"> <h3 id="1884866484" class="caption-title u_1884866484">5 Islands catamaran kite cruise</h3> 
+ <div id="1747383538" class="caption-text u_1747383538"><p class="rteBlock">Unique &amp; exclusive</p></div> 
+ <a id="1291793291" class="caption-button dmWidget  clearfix u_1291793291" data-auto="caption-button" href="/catamaran" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row " data-index=""> <div class="photogallery-column column-1" data-index="4"> <div index="4" class="photoGalleryThumbs animated  " data-index="4"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-labelledby="1240450891" data-dm-force-device="mobile" class="u_1304976019 has-link" href="/south-coast-diani-galu-beach" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/967cd710_original.jpg" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/967cd710_original-640w.jpg');"><img id="1781364659" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/967cd710_original-1920w.jpg" alt="" aria-labelledby="1240450891" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1278778107" class="caption-container u_1278778107" style="display:none"> <span class="caption-inner"> <h3 id="1240450891" class="caption-title u_1240450891">Accomodation</h3> 
+ <div id="1028098235" class="caption-text u_1028098235"><p class="rteBlock">Large selection on top kitespots</p></div> 
+ <a id="1582829099" class="caption-button dmWidget  clearfix u_1582829099" data-auto="caption-button" href="/south-coast-diani-galu-beach" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row " data-index=""> <div class="photogallery-column column-1" data-index="5"> <div index="5" class="photoGalleryThumbs animated  " data-index="5"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-labelledby="1867511749" data-dm-force-device="mobile" class="u_1628082103 has-link" href="/travel-agents-groups" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/82329993_10156984078613511_8929189776628645888_o.jpg" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/82329993_10156984078613511_8929189776628645888_o-640w.jpg');"><img id="1066101880" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/82329993_10156984078613511_8929189776628645888_o-1920w.jpg" alt="" aria-labelledby="1867511749" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1323379923" class="caption-container u_1323379923" style="display:none"> <span class="caption-inner"> <h3 id="1867511749" class="caption-title u_1867511749">Partnership &amp; Groups</h3> 
+ <div id="1502272460" class="caption-text u_1502272460"><p class="rteBlock">Tailer made kitecamps</p></div> 
+ <a id="1997629673" class="caption-button dmWidget  clearfix u_1997629673" data-auto="caption-button" href="/travel-agents-groups" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row " data-index=""> <div class="photogallery-column column-1" data-index="6"> <div index="6" class="photoGalleryThumbs animated  " data-index="6"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-labelledby="1794757041" data-dm-force-device="mobile" class="u_1012854450 has-link" href="/safari-2options" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/febf691aa9f7ba610a643f43e5108ad0.jpg" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/febf691aa9f7ba610a643f43e5108ad0-640w.jpg');"><img id="1382101836" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/febf691aa9f7ba610a643f43e5108ad0-1920w.jpg" alt="" aria-labelledby="1794757041" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1801509760" class="caption-container u_1801509760" style="display:none"> <span class="caption-inner"> <h3 id="1794757041" class="caption-title u_1794757041">Safari</h3> 
+ <div id="1139643462" class="caption-text u_1139643462"><p class="rteBlock">Ask for options</p></div> 
+ <a id="1586896472" class="caption-button dmWidget  clearfix u_1586896472" data-auto="caption-button" href="/safari-2options" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="photogallery-row " data-index=""> <div class="photogallery-column column-1" data-index="7"> <div index="7" class="photoGalleryThumbs animated  " data-index="7"> <div class="thumbnailInnerWrapper" style="opacity: 1;"> <div class="image-container revealed"> <a data-dm-multisize-attr="temp" aria-labelledby="1723888846" data-dm-force-device="mobile" class="u_1847439056 has-link" href="/contact" data-image-url="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/d9dea4a15fd2640c2a60b4e969717c35--vintage-typewriters-product-design.jpg" style="background-image: url('https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/d9dea4a15fd2640c2a60b4e969717c35--vintage-typewriters-product-design-640w.jpg');"><img id="1321714002" data-src="https://irp.cdn-website.com/50bb3a28/dms3rep/multi/opt/d9dea4a15fd2640c2a60b4e969717c35--vintage-typewriters-product-design-1920w.jpg" alt="" aria-labelledby="1723888846" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+ <div id="1897473587" class="caption-container u_1897473587" style="display:none"> <span class="caption-inner"> <h3 id="1723888846" class="caption-title u_1723888846">Contact</h3> 
+ <a id="1708605289" class="caption-button dmWidget  clearfix u_1708605289" data-auto="caption-button" href="/contact" style=""> <span class="iconBg" data-auto="button-icon-bg"> <span class="icon hasFontIcon " data-auto="button-icon"></span> 
+</span> 
+ <span class="text" data-auto="button-text">Button</span> 
+</a> 
+</span> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="poweredByWrapper long" id="1046053052" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"> <a href="https://www.duda.co/responsive-website-builder?source=DM_DIRECT" rel="nofollow" target="_blank" style="text-decoration:none"> <span id="poweredBy"> <span class="poweredLine1"> <span>Create a better business website with the</span> 
+<img src="//dd-cdn.multiscreensite.com/duda_logo.svg" alt="Powered by Duda" title="Powered by Duda" class="poweredLogo" onerror="handleImageLoadError(this)"/> <span class="poweredByTxt2">website builder.</span> 
+</span> 
+ <span class="poweredLine2">Support Desktop, Tablet and Mobile with responsive design.</span> 
+</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    var isWLR = false;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "ENGLISH"
+    window.isSitePreview = false;
+</script>
+
+
+
+
+<script type="text/javascript">
+
+    var d_version = "production_6884";
+    var build = "2026-10-26T13_48_42";
+    window['v' + 'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            } else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+</script>
+
+
+
+
+<script type="text/javascript" id='d-js-jquery'
+        src="https://static.cdn-website.com/libs/jquery/jquery-3.7.0.min.js"></script>
+
+
+
+
+<!-- Injecting site-wide before scripts -->
+
+<!-- End Injecting site-wide to the head -->
+
+
+
+<script>
+    var _jquery = window.$;
+
+    var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+    jqueryAliases.forEach((alias) => {
+        Object.defineProperty(window, alias, {
+            get() {
+                return _jquery;
+            },
+            set() {
+                console.warn("Trying to over-write the global jquery object!");
+            }
+        });
+    });
+    window.jQuery.migrateMute = true;
+</script>
+
+
+<script type="text/javascript">
+    window.popups =
+    [{"title":"LESSON & RENTAL NAMIBIA","url":"/lesson---rental-namibia","options":{"backgroundColor":"#FFFFFF","borderRadius":"5","width":"612","overlayColor":"rgba(0, 0, 0, 0.5)","height":"436","animation":"fadeIn"},"name":"lesson---rental-namibia"}]
+</script>
+
+
+
+<script>
+    window.cookiesNotificationMarkupPreview = 'null';
+</script>
+
+
+<script id='d-js-params'>
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+
+    window.rtCommonProps = {};
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["common.mapbox.token"] = 'pk.REDACTED';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["common.build.dist.folder"] = 'production/6884';
+    rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/6884';
+    rtCommonProps["common.fonts.api.v2.url"] = 'https://irp.cdn-website.com/fonts/css2?family=';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"] =true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"] =true;
+    rtCommonProps["isAutomation.test"] =false;
+    rtCommonProps["booking.cal.api.domain"] = 'api.cal.com';
+
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'mapbox';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://irp.cdn-website.com/';
+    rtCommonProps["feature.flag.performance.logs"] =false;
+    rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+    rtCommonProps["cookiebot.mapbox.consent.category"] = 'marketing';
+    rtCommonProps["termly.mapbox.consent.category"] = 'performance';
+    // feature flags that's used out of runtime module (in  legacy files)
+    rtCommonProps["platform.monolith.personalization.dateTimeCondition.popupMsgAction.moveToclient.enabled"] =true;
+
+    window.rtFlags = {};
+    rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] =true;
+    rtFlags["scripts.widgetCount.enabled"] =true;
+    rtFlags["fnb.animations.tracking.enabled"] =true;
+    rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
+    rtFlags["ecom.ecwid.accountPage.repeatOrderRedirect.enabled"] = false;
+    rtFlags["ecom.ecwid.storefrontV3.enabled"] = false;
+    rtFlags["ecom.monolith.legacy.js.api.disabled.for.new.sites"] = false;
+    rtFlags["geocode.search.localize"] =false;
+    rtFlags["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+    rtFlags["twitter.heightLimit.enabled"] = true;
+    rtFlags["streamline.monolith.personalization.supportMultipleConditions.enabled"] =false;
+    rtFlags["flex.animation.design.panel.layout"] =true;
+    rtFlags["runtime.cwv.report.cls.enabled"] =false;
+    rtFlags["runtime.cwv.report.lcp.enabled"] =false;
+    rtFlags["runtime.lcp.preload.selfheal.enabled"] =true;
+    rtFlags["runtime.lcp.preload.bootstrap.enabled"] =true;
+    rtFlags["runtime.lcp.preload.monitor.enabled"] =false;
+    rtFlags["runtime.customwidget.heightpin.enabled"] =true;
+    rtFlags["runtime.customwidget.config.compare.enabled"] =false;
+    rtFlags["contact.form.useActiveForm"] =true;
+</script>
+<script src="https://static.cdn-website.com/mnlt/production/6884/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js"  id="d-js-core"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://static.cdn-website.com/mnlt/production/6884/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js" ></script>
+
+
+
+
+
+<script>
+    
+    $(window).bind("orientationchange", function (e) {
+        $.layoutManager.initLayout();
+        
+    });
+    $(document).resize(function () {
+        
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="d_track_sp">
+    ;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+        p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+        };p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+        n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+    window.dmsnowplow  = window.snowplow;
+
+    dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+        appId: '50bb3a28'
+    });
+
+    // snowplow queries element styles so we wait until CSS calculations are done.
+    requestAnimationFrame(() => {
+        dmsnowplow('trackPageView');
+        _dm_insite.forEach((rule) => {
+            // Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+            // the tracking is in popup.js
+            if (rule.actionName !== "popup") {
+                dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+            }
+            window?.waitForDeferred?.('dmAjax', () => {
+                $.DM.events.trigger('event-ruleTriggered', {value: rule});
+            });
+        });
+    });
+</script>
+
+
+
+<div style="display:none;" id="P6iryBW0Wu"></div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" data-auto="pswp-close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" data-auto="pswp-share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root"
+        data-locale="en"></div>
+<!-- Alias: 50bb3a28 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup" data-auto="popup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" data-auto="popup-close" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+	window?.waitForDeferred?.('dmAjax', () => {
+		// Collects client data and updates cookies used by smart sites
+		window.expireDays = 365;
+		window.visitLength = 30 * 60000;
+		$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
+			setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+	});
+</script>
+<script type="text/javascript">
+    
+    Parameters.NavigationAreaParams.MoreButtonText = 'More';
+    
+    Parameters.NavigationAreaParams.LessButtonText = 'Less';
+    </script>
+<!--  Site Wide Html Markup -->
+<!--  Site Wide Html Markup -->
+</body>
+</html>

@@ -285,7 +285,7 @@ import { studiosVrettosPlaka } from './adapters/studios-vrettos-plaka.js';
 import { sunsetWaveResortStagnone } from './adapters/sunset-wave-resort-stagnone.js';
 import { surfHouseKiteZoneChalupy } from './adapters/surf-house-kite-zone-chalupy.js';
 import { surfHubKitesurfingCampSal } from './adapters/surf-hub-kitesurfing-camp-sal.js';
-import { surfariafrikaDownwinderXl, surfariafrikaNamibiaDownwinder, surfariafrikaPrimalExplorer } from './adapters/surfariafrika.js';
+import { surfariafrikaDownwinderXl, surfariafrikaNamibiaDownwinder, surfariafrikaPrimalExplorer, surfariafrikaWalvisBayCamp } from './adapters/surfariafrika.js';
 import { surfersResidenceTarifa } from './adapters/surfers-residence-tarifa.js';
 import { surfescapeLajares } from './adapters/surfescape-lajares.js';
 import { swissKitesurfCampLoStagnone } from './adapters/swiss-kitesurf-camp-lo-stagnone.js';
@@ -630,6 +630,7 @@ export const adapters: OfferAdapter[] = [
   surfariafrikaDownwinderXl,
   surfariafrikaNamibiaDownwinder,
   surfariafrikaPrimalExplorer,
+  surfariafrikaWalvisBayCamp,
   surfersResidenceTarifa,
   surfescapeLajares,
   surfHouseKiteZoneChalupy,
