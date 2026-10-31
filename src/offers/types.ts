@@ -75,6 +75,9 @@ export interface Slot {
   packageNights?: number | null;
   /** minimum stay when arriving in this slot (booking-engine restriction) */
   minNights?: number | null;
+  /** the provider gives only a range ("from 100 to 750 zł depending on the dates") and `price` is its lower end:
+   *  never a price for a particular date, so the slot carries no dates and the room shows it as "from" */
+  priceIsMinimum?: boolean;
 }
 
 /** The business behind an offer (stored in public.providers, linked as package_offers.operator_id). */
