@@ -105,14 +105,16 @@ async function bstokedCabins(offers: OfferRow[]): Promise<Map<string, CabinResul
     }
     const rooms = listing.rooms.filter(r => !CHARTER_RE.test(r.name));
     if (!rooms.length) continue;
-    // Price source rule (Aaron 2026-10-31, replaces 2026-09-30): prices come only from the provider's own
-    // site. bstoked listings are often outdated, so they contribute cabin names + photos, never a price.
+    // Price source rule (Aaron 2026-09-30): the provider's own site, monitored daily, sets the
+    // price. bstoked contributes cabin names + photos; its prices only where the site has none.
+    const siteHasPrice = best.o.price_pp_cabin !== null || best.o.price_charter_week !== null;
     out.set(best.o.id, {
       offer_id: best.o.id,
       title: best.o.title,
       source: 'bstoked',
-      rooms: rooms.map(({ photo_url: _p, ...r }) =>
-        ({ ...r, price_from: null, price_currency: null, price_unit: null, priced_months: [], price_source: null, image_sort: null })),
+      rooms: rooms.map(({ photo_url: _p, ...r }) => (siteHasPrice
+        ? { ...r, price_from: null, price_currency: null, price_unit: null, priced_months: [], price_source: null, image_sort: null }
+        : { ...r, price_source: r.price_from !== null ? 'bstoked' as const : null, image_sort: null })),
       photos: rooms.filter(r => r.photo_url).map(r => ({ url: r.photo_url!, cabin: r.name })),
       note: `bstoked ${path}`,
     });
