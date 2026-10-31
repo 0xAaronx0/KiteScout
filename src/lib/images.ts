@@ -46,6 +46,7 @@ const MIN_ASPECT = 0.4;    // narrower than this → sidebar/icon
 const TARGET_WIDTH = 1280;
 const WEBP_QUALITY = 75;
 const VISION_MAX_IMAGES = 10; // images sent to the vision QC call
+const VISION_HARD_MAX = 20;   // with reserve groups (one seat per room type / the spot) the batch may grow up to this
 const USE_VISION_QC = true;
 
 // Best-effort image rights/provenance. Most provider photos are web-optimized
@@ -430,37 +431,90 @@ const CRUISE_BRIEF: VisionBrief = {
   wanted: 'the BOAT/vessel, the kite SPOTS or destination scenery, or people kiting / sailing on this trip',
 };
 
+/**
+ * Photos the curation should try to keep one of (Aaron 2026-10-31: preferably a photo of every room type, and both the
+ * accommodation and the spot / people kiting; a preference, not a rule). The first downloaded URL of each group gets a
+ * labelled seat in the vision batch; the model may still reject it.
+ */
+export interface ReserveGroup {
+  /** shown to the vision model next to the photo, e.g. 'room type "Tiny House"' */
+  label: string;
+  /** the group's photos, best first */
+  urls: string[];
+}
+
+/** Dedup identity of an image URL as the curation sees it (stored `source_url` is the upscaled URL). */
+export function imageIdentity(url: string): string {
+  return canonicalKey(upscaleCdnUrl(url));
+}
+
+/**
+ * The images the vision model sees: without reserve groups the `max` largest (unchanged behaviour); with groups first one
+ * photo per group (its first in candidate order), then the largest of the rest, `max` at least and VISION_HARD_MAX at most.
+ */
+export function visionBatch<T extends { sourceUrl: string; width: number; height: number }>(
+  images: T[],
+  reserve: ReserveGroup[] = [],
+  max = VISION_MAX_IMAGES,
+): Array<{ img: T; label: string | null }> {
+  const byArea = [...images].sort((a, b) => b.width * b.height - a.width * a.height);
+  if (reserve.length === 0) return byArea.slice(0, max).map(img => ({ img, label: null }));
+  const ids = new Map(images.map(img => [img, imageIdentity(img.sourceUrl)]));
+  const out: Array<{ img: T; label: string | null }> = [];
+  const taken = new Set<T>();
+  for (const g of reserve) {
+    if (out.length >= VISION_HARD_MAX) break;
+    const keys = new Set(g.urls.map(imageIdentity));
+    const hit = images.find(img => !taken.has(img) && keys.has(ids.get(img)!));
+    if (!hit) continue;
+    taken.add(hit);
+    out.push({ img: hit, label: g.label });
+  }
+  const cap = Math.min(VISION_HARD_MAX, Math.max(max, out.length + 4));
+  for (const img of byArea) {
+    if (out.length >= cap) break;
+    if (taken.has(img)) continue;
+    taken.add(img);
+    out.push({ img, label: null });
+  }
+  return out;
+}
+
 async function visionSelect(
   images: DownloadedImage[],
   context: string,
   brief: VisionBrief = CRUISE_BRIEF,
+  reserve: ReserveGroup[] = [],
 ): Promise<Array<{ img: DownloadedImage; caption: string | null }> | null> {
-  const batch = [...images]
-    .sort((a, b) => b.width * b.height - a.width * a.height)
-    .slice(0, VISION_MAX_IMAGES);
+  const batch = visionBatch(images, reserve);
 
   const blocks: Anthropic.ContentBlockParam[] = [];
   const used: DownloadedImage[] = [];
-  for (const img of batch) {
+  let labelled = 0;
+  for (const { img, label } of batch) {
     let small: Buffer;
     try {
       small = await sharp(img.buf).rotate().resize({ width: 512, withoutEnlargement: true }).webp({ quality: 60 }).toBuffer();
     } catch {
       continue;
     }
-    blocks.push({ type: 'text', text: `Image ${used.length}:` });
+    blocks.push({ type: 'text', text: label ? `Image ${used.length} (the provider's photo of ${label}):` : `Image ${used.length}:` });
     blocks.push({
       type: 'image',
       source: { type: 'base64', media_type: 'image/webp', data: small.toString('base64') },
     });
     used.push(img);
+    if (label) labelled++;
   }
   if (used.length === 0) return null;
 
+  const keepEach = labelled > 0
+    ? `\nImages marked with a room type or the spot show the different things a guest chooses between: keep at least one photo of each marked room type and of the spot, unless it must be rejected.`
+    : '';
   const prompt = `You are curating photos for this ${brief.offerLabel}:
 ${context}
 
-From the numbered images above, pick up to ${MAX_STORED} real photos for this offer, best-first: prefer ${brief.wanted}. Genuine photos of the accommodation, the place and its scenery also count, even without anyone kiting.
+From the numbered images above, pick up to ${MAX_STORED} real photos for this offer, best-first: prefer ${brief.wanted}. Genuine photos of the accommodation, the place and its scenery also count, even without anyone kiting.${keepEach}
 REJECT only: logos, icons, UI screenshots, tables or text graphics, maps or charts, stock illustrations, headshots / portraits, payment or partner badges, and photos clearly from another place or activity.
 Respond with ONLY a JSON array: [{"index": <number>, "caption": "<max 8 word description>"}]. Respond with [] only if every image must be rejected.`;
   blocks.push({ type: 'text', text: prompt });
@@ -571,6 +625,8 @@ export async function curateAndStoreImages(opts: {
   brief?: VisionBrief;
   /** per-listing size floor when a provider only publishes small photos (default MIN_WIDTH x MIN_HEIGHT) */
   minSize?: { width: number; height: number };
+  /** one labelled seat in the vision batch per group (room types, the spot); omitted = largest-first as before */
+  reserve?: ReserveGroup[];
 }): Promise<StoredImage[]> {
   const { candidateUrls, providerId, slug, sourceUrl, context } = opts;
   const prefix = opts.pathPrefix ?? `cruise-offers/${providerId}/${slug}`;
@@ -614,18 +670,19 @@ export async function curateAndStoreImages(opts: {
 
   // 2. Select the keepers.
   let selected: Array<{ img: DownloadedImage; caption: string | null }>;
-  let visionPick = USE_VISION_QC ? await visionSelect(downloaded, context, opts.brief) : null;
+  const reserve = opts.reserve ?? [];
+  let visionPick = USE_VISION_QC ? await visionSelect(downloaded, context, opts.brief, reserve) : null;
   // An empty pick is a rejection of every candidate (e.g. only tide-table screenshots); ask once more since the
   // model is not deterministic, then store nothing rather than the rejected images.
-  if (visionPick?.length === 0) visionPick = await visionSelect(downloaded, context, opts.brief);
+  if (visionPick?.length === 0) visionPick = await visionSelect(downloaded, context, opts.brief, reserve);
   if (visionPick) {
     selected = visionPick.slice(0, cap);
   } else {
-    // Vision unavailable/failed → fall back to largest-by-area. Obvious junk
+    // Vision unavailable/failed → fall back to largest-by-area (one photo per reserve group first). Obvious junk
     // (logos, food, badges, etc.) is already filtered by JUNK_RE, so the
     // largest survivors are almost always the real boat/kite hero shots.
-    selected = [...downloaded]
-      .sort((a, b) => b.width * b.height - a.width * a.height)
+    const first = reserve.length ? visionBatch(downloaded, reserve, 0).filter(b => b.label).map(b => b.img) : [];
+    selected = [...first, ...[...downloaded].sort((a, b) => b.width * b.height - a.width * a.height).filter(img => !first.includes(img))]
       .slice(0, cap)
       .map(img => ({ img, caption: null }));
   }

@@ -17,6 +17,7 @@ import { mergeItinerarySpots, type StoredSpot } from '../lib/itinerary-spots.js'
 import { checkSlots, contentProblem } from './validate.js';
 import { plainDashes } from '../lib/offer-text.js';
 import { BlockedByHost, countRequests } from './http.js';
+import { linkRoomImages, planGallery } from './gallery.js';
 import { DEFAULT_DISCIPLINES, isBookable, type OfferAdapter, type OfferContent, type OfferKind, type Slot } from './types.js';
 
 export const SOURCE_PREFIX = 'site:';
@@ -426,7 +427,7 @@ export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string, l
       price_from: min?.price ?? null, price_currency: min?.currency ?? null,
       price_unit: min ? (min.priceUnit === 'per_week' ? 'other' : min.priceUnit) : null,
       // basis of price_from (room / person / group); KCS shows it as "per room" etc.
-      price_source: 'provider_site', price_basis: min?.priceBasis ?? null, priced_months: months, image_sort: null,
+      price_source: 'provider_site', price_basis: min?.priceBasis ?? null, priced_months: months, image_sort: null as number | null,
       // dated ranges from the provider's calendar/price list; [] = no dated data for this room
       availability: roomAvailability(own),
     };
@@ -606,8 +607,9 @@ async function runAdapterInner(
       const spots = await locateSpots(content, existing?.itinerary_spots);
       if (!spots.some(s => s.lat !== null)) rep.notes.push('no map pin: spot could not be geocoded');
       const before = (existing?.images as StoredImage[] | undefined) ?? [];
+      const roomRows = roomsWithPrices(content, slots, today, lastPublished);
       // never visible without a photo: a new row stays hidden until its images are stored (set again below)
-      const row = { ...contentRow(a, content, operatorId, spots), ...priceCols, ...liveCols, rooms: roomsWithPrices(content, slots, today, lastPublished), is_active: isShowable(before.length) };
+      const row = { ...contentRow(a, content, operatorId, spots), ...priceCols, ...liveCols, rooms: linkRoomImages(roomRows, content, before), is_active: isShowable(before.length) };
       const { data: up, error: upErr } = await supabase
         .from('package_offers').upsert(noNul(row), { onConflict: 'source_listing_id' }).select('id').single();
       if (upErr) throw new Error(`package_offers upsert failed: ${upErr.message}`);
@@ -615,8 +617,11 @@ async function runAdapterInner(
 
       if (before.length === 0 || opts.refreshImages) {
         const slug = slugify(content.title);
+        // every room type and the spot inside the download window, one vision seat each; stock / AI / plans left out
+        const plan = planGallery(content);
+        if (plan.dropped.length) rep.notes.push(`left out ${plan.dropped.length} stock / AI / floor-plan image(s)`);
         const images = await curateAndStoreImages({
-          candidateUrls: content.imageUrls,
+          candidateUrls: plan.candidates,
           providerId: operatorId,
           slug,
           sourceUrl: content.sourceUrl,
@@ -624,9 +629,13 @@ async function runAdapterInner(
           pathPrefix: `packages/${content.kind}/${slug}-site-${a.key}`,
           brief: BRIEFS[content.kind],
           minSize: a.imageMinSize,
+          reserve: plan.reserve,
         });
         if (images.length === 0) rep.notes.push('no usable images found: listing hidden (is_active false) until it has a photo');
-        const { error: iErr } = await supabase.from('package_offers').update({ images: noNul(images), is_active: isShowable(images.length) }).eq('id', offerId);
+        const rooms = linkRoomImages(roomRows, content, images);
+        const withPhotos = content.rooms.filter(r => r.imageUrls?.length).length;
+        if (withPhotos) rep.notes.push(`rooms linked to a gallery photo: ${rooms.filter(r => r.image_sort !== null).length} of ${withPhotos} with own photos`);
+        const { error: iErr } = await supabase.from('package_offers').update({ images: noNul(images), rooms: noNul(rooms), is_active: isShowable(images.length) }).eq('id', offerId);
         if (iErr) throw new Error(`images update failed: ${iErr.message}`);
         rep.images = images.length;
       } else {

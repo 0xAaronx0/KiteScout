@@ -103,6 +103,11 @@ export interface ContentRoom {
   name: string;
   description: string | null;
   features: string[];
+  /**
+   * the provider's own photos of exactly this room type, best first (its subpage, card, slider or a file name naming it);
+   * the ingest mixes them into the gallery and links the room to its first stored photo (rooms[].image_sort)
+   */
+  imageUrls?: string[];
 }
 
 export interface OfferContent {
@@ -131,6 +136,8 @@ export interface OfferContent {
   rooms: ContentRoom[];
   /** gallery candidates, best first; the ingest downloads, filters and curates them */
   imageUrls: string[];
+  /** the provider's own photos of the kite spot or of people kiting there, best first; mixed in next to the rooms */
+  spotImageUrls?: string[];
   heroVideoUrl: string | null;
   sourceUrl: string;
   bookingUrl: string | null;
