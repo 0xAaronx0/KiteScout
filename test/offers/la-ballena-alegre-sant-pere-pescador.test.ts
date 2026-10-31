@@ -12,6 +12,7 @@ import {
 } from '../../src/offers/adapters/la-ballena-alegre-sant-pere-pescador.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import { slotRoom } from '../../src/offers/ingest.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/la-ballena-alegre-sant-pere-pescador');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -120,4 +121,40 @@ test('ballena: engine products link to the site bungalow rooms (slot.room)', asy
     ['bungalow-cortal|2027-05-28|Bungalow Cortal Pool', 'Bungalow Cortal Pool', 'sold_out'],
   ]);
   assert.equal(new Set(slots.map(s => s.key)).size, slots.length);
+});
+
+test('ballena: own photos per bungalow from its gallery (plans and site-map crops left out), ION Club photos as spot', async () => {
+  const c = await laBallenaAlegreSantPerePescador.fetchContent(ctx);
+  const photos = (name: string) => c.rooms.find(r => r.name === name)!.imageUrls ?? [];
+  assert.deepEqual(c.rooms.map(r => [r.name, photos(r.name).length]), [
+    ['Bungalow E-Devesa', 4], ['Bungalow Mare Nostrum', 4], ['Bungalow Cortal Garden', 4], ['Bungalow Cortal Pool', 5],
+    ['Bungalow Tamariu Suite', 5], ['Bungalow Empuries Suite', 5], ['Bungalow Xaloc', 4], ['Bungalow Garbí', 5],
+    ['Bungalow Tamariu', 5], ['Bungalow Empúries Garden', 3], ['Bungalow Empúries Pool', 4], ['Bungalow Fluvià Friday', 5],
+    ['Bungalow Fluvia Saturday', 4], ['Bungalow Fluvia Especial', 5],
+  ]);
+  assert.match(photos('Bungalow E-Devesa')[0], /\/edevesazonagral\.jpg$/);
+  assert.match(photos('Bungalow Mare Nostrum')[0], /\/marenostrumterraza\.jpg$/);
+  assert.match(photos('Bungalow Cortal Garden')[0], /\/cortalsalon3\.jpg$/);
+  assert.match(photos('Bungalow Cortal Pool')[0], /\/cortalzonagral\.jpg$/);
+  assert.match(photos('Bungalow Tamariu Suite')[0], /\/tamariusuitezona\.jpg$/);
+  assert.match(photos('Bungalow Empuries Suite')[0], /\/enmpuriessuite1\.jpg$/);
+  assert.match(photos('Bungalow Xaloc')[0], /\/bungalow-xaloc-general\.jpg$/);
+  assert.match(photos('Bungalow Garbí')[0], /\/bggarbi1\.jpg$/);
+  assert.match(photos('Bungalow Tamariu')[0], /\/bungalowtamariu\.jpg$/);
+  assert.match(photos('Bungalow Empúries Garden')[0], /\/bungalow-empuries\.jpg$/);
+  assert.match(photos('Bungalow Empúries Pool')[0], /\/empuries-05\.jpg$/);
+  assert.match(photos('Bungalow Fluvià Friday')[0], /\/fluviaviernes\.jpg$/);
+  assert.match(photos('Bungalow Fluvia Saturday')[0], /\/fluviasabado\.jpg$/);
+  assert.match(photos('Bungalow Fluvia Especial')[0], /\/fluviaespecial3\.jpg$/);
+  // Garden and Pool are one type: they share the interior photos
+  assert.ok(photos('Bungalow Cortal Garden').every(u => photos('Bungalow Cortal Pool').includes(u)));
+  const all = c.rooms.flatMap(r => r.imageUrls ?? []);
+  assert.ok(all.every(u => u.startsWith('https://www.ballena-alegre.com/costabrava/wp-content/uploads/')));
+  assert.ok(all.every(u => !/plano|zona[a-z]*detalle|zona-cortal|ubicacion/i.test(u)));
+  assert.deepEqual(c.spotImageUrls, [1, 2, 3, 4, 5, 6].map(n => `https://www.ballena-alegre.com/costabrava/wp-content/uploads/actividades-nauticas-0${n}.jpg`));
+  const plan = planGallery(c);
+  assert.deepEqual(plan.dropped, []);
+  const first24 = plan.candidates.slice(0, 24);
+  for (const r of c.rooms) if (r.imageUrls?.length) assert.ok(r.imageUrls.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

@@ -25,6 +25,8 @@
 //   band starts on it), "ab 31.10.2026" = open-ended winter band (endDate null); '**' band = Saturday to Saturday only
 //   (minNights 7). Mobile homes and sleeping barrels: one undated slot each, EUR per unit per night as on the card
 //   ("ab" for the barrel; per unit is INFERRED - the page says only "pro Nacht"). Availability 'unknown'.
+// Photos: each unit gets the gallery of its own /properties/ page; the Boddentraum page holds only prompt-like mood
+//   pictures (possibly AI made, unchecked), so that room has none. No spot photos (no own kite photo on the pages read).
 // Known limits: extra persons (EUR 5 per night) and dogs (on request) are not modelled; the campsite's camping season
 //   is 01.04.-31.10.2026, the mobile-home and barrel prices carry no season.
 // ---------------------------------------------------------------------------
@@ -216,6 +218,20 @@ export function parseCplUnitPage(html: string): CplUnitPage {
   return { title, text, details, gallery };
 }
 
+/**
+ * File names that describe a whole scene in 10+ words ("Familie-verbringt-Urlaub-am-Bodden-in-Loissin-Kinder-spielen-am-
+ * Wasser-Mobilheim-und-Natur-im-Hintergrund.jpg", upload 2026-03, the whole Boddentraum gallery): mood pictures named like
+ * image prompts, possibly AI made. Not used as a room's own photo until someone has checked them (the general list is
+ * unchanged).
+ */
+const CPL_SCENE_NAME = /\/(?:[^/_-]+[_-]){9,}[^/_-]+\.(?:jpe?g|png|webp)$/i;
+/** A unit page's gallery as the room's own photos (site order, scene-named mood pictures left out). */
+export const cplRoomPhotos = (u: CplUnitPage | undefined): string[] => (u?.gallery ?? []).filter(g => !CPL_SCENE_NAME.test(g));
+const withPhotos = (u: CplUnitPage | undefined): Pick<ContentRoom, 'imageUrls'> => {
+  const photos = cplRoomPhotos(u);
+  return photos.length ? { imageUrls: photos } : {};
+};
+
 const DETAIL_EN: Array<[RegExp, string]> = [
   [/^(\d) Doppelbett$/i, '$1 double bed'], [/^(\d) Schlafcouch$/i, '$1 sofa bed'], [/^(\d) Kinderzimmer$/i, '$1 children\'s room'],
   [/^Kinderzimmer$/i, 'Children\'s room'], [/^Sat-TV$/i, 'Satellite TV'], [/^W-LAN$/i, 'Wi-Fi'], [/^Terrasse$/i, 'Terrace'],
@@ -256,11 +272,13 @@ export function parseLoissinContent(p: CplPages): OfferContent {
     name: 'Apartment',
     description: 'Apartment with terrace for up to 4 persons: double bed and bunk bed, bathroom, kitchenette, terrace with grill; restaurant and shop with bakery next door.',
     features: [...(apt?.details.map(d => `${en(d.label, DETAIL_EN)}${d.data ? ` ${en(d.data, DATA_EN)}` : ''}`) ?? []), ...tableFeatures(tables.find(t => t.unit === 'Apartment'))],
+    ...withPhotos(apt),
   });
   rooms.push({
     name: 'Double room',
     description: 'Double room with terrace: double bed plus a loft bed for 2 more persons, shower and toilet, TV, kitchenette and grill.',
     features: tableFeatures(tables.find(t => t.unit === 'Doppelzimmer')),
+    ...withPhotos(unitByName(/Doppelzimmer/i)),
   });
   for (const c of cards.filter(isCardUnit)) {
     const u = unitByName(new RegExp(c.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'));
@@ -274,6 +292,7 @@ export function parseLoissinContent(p: CplPages): OfferContent {
         ...(u?.details.map(d => `${en(d.label, DETAIL_EN)}${d.data ? ` ${en(d.data, DATA_EN)}` : ''}`) ?? []),
         `${/^ab\b/i.test(c.priceText) ? 'from ' : ''}EUR ${c.price} per night (as printed: "${c.priceText}")`,
       ],
+      ...withPhotos(u),
     });
   }
 

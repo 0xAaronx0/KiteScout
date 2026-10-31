@@ -16,6 +16,7 @@
 // Requests per run: content 2, slots 1.
 // Parsed: slot = accommodation type ("1-bedroom-cottage"), lowest nightly price of its units in USD per unit
 //   (priceBasis room), no dates, availability 'unknown'.
+// Photos: each type gets the card photos of its units on / (one per unit, the type's first card first); no spot photos.
 // Known limits: the cards do not state guests per unit (occupancy null); the map vars of the theme carry its
 //   demo default coordinates (New York), so no pin.
 // ---------------------------------------------------------------------------
@@ -115,6 +116,12 @@ export function wbcReviewDates(lines: string[]): string[] {
 // --- content ----------------------------------------------------------------------------------
 export interface WbcPages { home: string; contact: string }
 
+/** Own upload -> the original (WordPress "-WxH" dropped); null for logos, icons, PNG / SVG graphics and other hosts. */
+export function wbcImage(u: string): string | null {
+  const k = u.replace(/-\d+x\d+(?=\.[a-z]+$)/i, '');
+  return /watamubeachcottages\.com\/wp-content\/uploads\//.test(k) && !/logo|icon|favicon|\.png$|\.svg$/i.test(k) ? k : null;
+}
+
 export function parseWatamuContent(p: WbcPages): OfferContent {
   const home = wbcLines(p.home);
   const contact = wbcLines(p.contact);
@@ -126,20 +133,25 @@ export function parseWatamuContent(p: WbcPages): OfferContent {
   const cheapest = [...types].filter(t => t.from !== null).sort((a, b) => a.from! - b.from!)[0];
   const find = (re: RegExp) => home.find(l => re.test(l)) ?? null;
 
-  const rooms: ContentRoom[] = types.map(t => ({
-    name: t.name,
-    description: `${t.units.length} unit${t.units.length > 1 ? 's' : ''}: ${t.units.map(u => u.name).join(', ')}.`,
-    features: [
-      ...t.units.map(u => `${u.name}: ${u.price !== null ? `USD ${u.price} per night` : 'price on request'}`),
-      ...(t.units[0]?.kind ? [t.units[0].kind] : []),
-    ],
-  }));
+  const rooms: ContentRoom[] = types.map(t => {
+    // the card photo of every unit of this type (units of one type are the same kind of cottage / room / tent)
+    const photos = [...new Set(t.units.map(u => (u.image ? wbcImage(u.image) : null)).filter((x): x is string => !!x))];
+    return {
+      name: t.name,
+      description: `${t.units.length} unit${t.units.length > 1 ? 's' : ''}: ${t.units.map(u => u.name).join(', ')}.`,
+      features: [
+        ...t.units.map(u => `${u.name}: ${u.price !== null ? `USD ${u.price} per night` : 'price on request'}`),
+        ...(t.units[0]?.kind ? [t.units[0].kind] : []),
+      ],
+      ...(photos.length ? { imageUrls: photos } : {}),
+    };
+  });
 
   const imgs: string[] = [];
   const seen = new Set<string>();
   const push = (u: string) => {
-    const k = u.replace(/-\d+x\d+(?=\.[a-z]+$)/i, '');
-    if (seen.has(k) || !/watamubeachcottages\.com\/wp-content\/uploads\//.test(k) || /logo|icon|favicon|\.png$|\.svg$/i.test(k)) return;
+    const k = wbcImage(u);
+    if (!k || seen.has(k)) return;
     seen.add(k); imgs.push(k);
   };
   rental.forEach(u => u.image && push(u.image));

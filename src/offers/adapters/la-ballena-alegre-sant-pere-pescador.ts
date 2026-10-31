@@ -32,6 +32,8 @@
 //   free units, 'sold_out' for change-over weeks inside the season without a bookable 7-night stay.
 // Rooms: engine products are linked to the site's bungalow rooms via BA_ROOMS (slot.room); "Cortal" and "Empúries"
 //   price both their Garden and Pool bungalows, so those slots are repeated per room (shared availability).
+// Photos: each bungalow room gets its own gallery (galeria_alojamiento, site order; floor plans and the site-map crops
+//   left out); spotImageUrls = the ION Club gallery on /experiences/nautical/.
 // Known limits: prices are sampled once per month and group (the engine prices by exact stay); short stays at
 //   season start/end and weekend offers are ignored; tourist tax (0.50 EUR pp/night) is extra.
 // ---------------------------------------------------------------------------
@@ -137,6 +139,28 @@ export function parseBaSeason(html: string): { from: string; to: string; text: s
   const m = t?.match(/Open from ([A-Za-z]+) (\d{1,2})(?:st|nd|rd|th)? to ([A-Za-z]+) (\d{1,2})(?:st|nd|rd|th)?,? (\d{4})/i);
   if (!m || !MONTH_EN[m[1].toLowerCase()] || !MONTH_EN[m[3].toLowerCase()]) return null;
   return { from: iso(+m[5], MONTH_EN[m[1].toLowerCase()], +m[2]), to: iso(+m[5], MONTH_EN[m[3].toLowerCase()], +m[4]), text: t! };
+}
+
+/**
+ * Site-map crops at the end of each bungalow gallery ("zonagarbidetalle.png", "zona-cortal.png", "cortal-ubicacion.jpg"):
+ * where the bungalow sits on the campsite, not a photo of it. Floor plans ("plano-*") are dropped as in the general list.
+ */
+const BA_NOT_ROOM_PHOTO = /plano|plan-|logo|\/(?:zona[a-z]*detalle|zona-[a-z]+|[a-z-]*ubicacion)\.(?:jpe?g|png|webp)$/i;
+
+/** The bungalow's own photos (its gallery in site order, plans and site-map crops left out). */
+export const baRoomPhotos = (b: BaBungalow): string[] => [...new Set(b.gallery.filter(u => !BA_NOT_ROOM_PHOTO.test(u)))];
+
+/** Photos of the ION Club section ("Nautical activities") of the nautical page: the gallery between its text and the next heading. */
+export function parseBaIonPhotos(html: string): string[] {
+  const start = html.search(/ION Club Golf de Roses is/i);
+  if (start < 0) return [];
+  const next = html.slice(start).search(/<h[1-6]\b/i);
+  const section = next < 0 ? html.slice(start) : html.slice(start, start + next);
+  const out: string[] = [];
+  for (const m of section.matchAll(/\ssrc="(https:\/\/www\.ballena-alegre\.com\/costabrava\/wp-content\/uploads\/[^"]+\.(?:jpe?g|webp))"/gi)) {
+    if (!/plano|plan-|logo/i.test(m[1]) && !out.includes(m[1])) out.push(m[1]);
+  }
+  return out;
 }
 
 /** ION Club paragraph(s) of the nautical page. */
@@ -374,9 +398,11 @@ export function parseBallenaContent(p: BaPages): OfferContent {
   const edevesa = bungalows.find(b => /e-devesa/i.test(b.title));
   const fmtDate = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', timeZone: 'UTC' });
 
+  // Garden / Pool and Friday / Saturday variants of one type share some photos on the site; each keeps its own gallery
   const rooms: ContentRoom[] = bungalows.map(b => ({
     name: `Bungalow ${b.title}`,
     description: b.description,
+    ...(baRoomPhotos(b).length ? { imageUrls: baRoomPhotos(b) } : {}),
     features: [
       b.subtitle, b.area, b.capacity ? `Capacity ${b.capacity}` : null, b.layout,
       b.changeover ? `Rental ${b.changeover}` : null,
@@ -387,6 +413,8 @@ export function parseBallenaContent(p: BaPages): OfferContent {
 
   const imageUrls: string[] = [];
   for (const b of bungalows) for (const u of b.gallery.slice(0, 3)) if (!/plano|plan-|logo/i.test(u) && !imageUrls.includes(u)) imageUrls.push(u);
+  // the ION Club kite / windsurf / wingfoil center on the campsite beach (own uploads of the nautical page)
+  const spotImageUrls = parseBaIonPhotos(p.nautical);
 
   const summary = [
     `La Ballena Alegre is a camping and bungalow resort on the beach of Sant Pere Pescador in the Bay of Roses (Costa Brava, Catalonia, Spain)${season ? `, open from ${fmtDate(season.from)} to ${fmtDate(season.to)} ${season.from.slice(0, 4)}` : ''}.`,
@@ -417,6 +445,7 @@ export function parseBallenaContent(p: BaPages): OfferContent {
     languages: ['es', 'ca', 'en', 'fr', 'de', 'nl'],
     rooms,
     imageUrls: imageUrls.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: BA_BUNGALOWS_URL,
     bookingUrl: BOOKING_URL,

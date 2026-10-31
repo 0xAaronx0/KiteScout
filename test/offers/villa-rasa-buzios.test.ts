@@ -4,9 +4,10 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { villaRasaBuzios, parseVrRooms, vrCardNames, VR_HOTEL } from '../../src/offers/adapters/villa-rasa-buzios.js';
+import { villaRasaBuzios, parseVrRoomPhotos, parseVrRooms, vrCardNames, vrKitePhotos, VR_HOTEL } from '../../src/offers/adapters/villa-rasa-buzios.js';
 import { buildRoomMonthSlots, buildRunSlots, parseCalendar, parseResults, resultsUrl, sampleStay } from '../../src/offers/engines/omnibees.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/villa-rasa-buzios');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -77,4 +78,42 @@ test('villa rasa: content', async () => {
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => !/selos|popup|logo|-\d+x\d+\./i.test(u)));
   assert.deepEqual(villaRasaBuzios.quote, { engine: 'omnibees', hotelId: 21103, chainId: 11108, currencyId: 16, currency: 'BRL' });
+});
+
+test('villa rasa: own photos per room type from its /acomodacoes/ tab panel, kite photos from #kitesurf on /experiencias/', async () => {
+  const panels = parseVrRoomPhotos(read('villarasa.com.br_acomodacoes_.'));
+  assert.deepEqual([...panels].map(([name, urls]) => [name, urls.length]), [
+    ['Suíte da Villa', 12], ['Suíte Master', 7], ['Suíte Master com Banheira', 5], ['Suíte Luxo', 13],
+    ['Apartamento Superior', 15], ['Apartamento Superior com Varanda', 7], ['Suíte Jardim', 13], ['Apartamento Standard', 12],
+  ]);
+  const c = await villaRasaBuzios.fetchContent(ctx);
+  const photos = (name: string) => c.rooms.find(r => r.name === name)!.imageUrls ?? [];
+  assert.deepEqual(c.rooms.map(r => [r.name, photos(r.name).length]), [
+    ['Superior Apartment', 15], ['Superior Apartment with Balcony', 7], ['Villa Suite', 12],
+    ['Standard Apartment - (Need to Cross the Street)', 12], ['Luxury Suite with bathtub', 13], ['Master Suite', 7],
+    ['Master Suite with Bathtub', 5], ['Garden Suite - (Need to Cross the Street)', 13],
+  ]);
+  assert.match(photos('Villa Suite')[0], /\/2024\/06\/1-capa-suite-da-villa-4\.jpg$/);
+  assert.match(photos('Master Suite')[0], /\/2024\/06\/master-1\.jpg$/);
+  // the panel of the suite with bathtub: four master-1-* photos plus master-com-banheira-4 (none of the plain Master Suite)
+  assert.match(photos('Master Suite with Bathtub')[0], /\/2024\/06\/master-1-2\.jpg$/);
+  assert.ok(photos('Master Suite with Bathtub').some(u => /master-com-banheira-4\.jpg$/.test(u)));
+  assert.ok(photos('Master Suite with Bathtub').every(u => !photos('Master Suite').includes(u)));
+  assert.match(photos('Luxury Suite with bathtub')[0], /\/2024\/06\/1-capa-luxo-1-7\.jpg$/);
+  assert.match(photos('Superior Apartment')[0], /\/2024\/06\/1-capa-superior-1-9-sem-luz\.jpg$/);
+  assert.match(photos('Superior Apartment with Balcony')[0], /\/2024\/06\/1-capa-superior-com-varanda-1-3\.jpg$/);
+  assert.match(photos('Garden Suite - (Need to Cross the Street)')[0], /\/2025\/10\/1-1\.jpg$/);
+  assert.match(photos('Standard Apartment - (Need to Cross the Street)')[0], /\/2024\/06\/1-capa-standard-2\.jpg$/);
+  const all = c.rooms.flatMap(r => r.imageUrls ?? []);
+  assert.equal(new Set(all).size, all.length); // no photo is given to two room types
+  assert.ok(all.every(u => /^https:\/\/villarasa\.com\.br\/wp-content\/uploads\/.+\.jpe?g$/.test(u) && !/-\d+x\d+\./.test(u)));
+  // #kitesurf slider: the JPEG kite teaser first, then the 7 PNG slides in slider order
+  assert.deepEqual(c.spotImageUrls, vrKitePhotos(read('villarasa.com.br_experiencias_.')));
+  assert.equal(c.spotImageUrls!.length, 1); // the JPEG; the 7 PNG slides of the slider are left out
+  assert.equal(c.spotImageUrls![0], 'https://villarasa.com.br/wp-content/uploads/2022/07/c2ee2da1-f2d8-4c4b-88f3-631d4476b253-2-1.jpg');
+  const plan = planGallery(c);
+  assert.deepEqual(plan.dropped, []);
+  const first24 = plan.candidates.slice(0, 24);
+  for (const r of c.rooms) if (r.imageUrls?.length) assert.ok(r.imageUrls.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

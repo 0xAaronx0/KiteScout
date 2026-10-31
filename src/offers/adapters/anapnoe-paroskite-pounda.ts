@@ -13,6 +13,8 @@
 //   slots    none. "BOOK NOW" opens a WebHotelier engine (anapnoeresort.reserve-online.net) that answers
 //            HTTP 403 to our UA, even for /robots.txt (checked 2026-10-12) -> BLOCKED, not worked around.
 //            The own site prints no room prices -> fetchSlots returns [] ("price on request").
+// Photos: per unit its card image (home) plus the /gallery/ photos whose file name names it (cetus-gallery-image-4,
+//   dorida-hero-image-desktop ...); spotImageUrls = the "paroskite-surf-gallery-image-*" photos of /gallery/.
 // 2026 signal: pages modified 2026-04/07 (article:modified_time), room photos named 2026-03 / 2026-04-29,
 //   ParosKite footer "COPYRIGHT 2026-2028"; no dated season or price for the rooms.
 // robots.txt (2026-10-12): paroskiteanapnoe.com and paroskite.com Yoast default, nothing disallowed.
@@ -65,6 +67,20 @@ export function anapnoeGallery(html: string): string[] {
   return out;
 }
 
+/** File-name spellings of a unit where they differ from its name ("dorida" = Doris, "aethera" = Aethra). */
+const PHOTO_ALIASES: Record<string, string[]> = { doris: ['dorida'], aethra: ['aethera'], cassiopeia: ['casseiopia'] };
+const fileOf = (u: string): string => u.split('/').pop() ?? '';
+
+/** The unit's own photos: its card image first, then the gallery photos whose file name names the unit. */
+export function anapnoeUnitPhotos(unit: AnapnoeUnit, gallery: string[]): string[] {
+  const key = unit.name.toLowerCase();
+  const re = new RegExp(`(?<![a-z])(?:${[key, ...(PHOTO_ALIASES[key] ?? [])].join('|')})(?![a-z])`, 'i');
+  return [...new Set([...(unit.image ? [unit.image] : []), ...gallery.filter(u => re.test(fileOf(u)))])];
+}
+
+/** The ParosKite watersports photos of the resort's own gallery ("paroskite-surf-gallery-image-*"), in gallery order. */
+export const anapnoeSpotPhotos = (gallery: string[]): string[] => gallery.filter(u => /^paroskite-surf-/i.test(fileOf(u)));
+
 export function anapnoeCoords(html: string): { lat: number; lng: number } | null {
   const m = html.match(/google\.[a-z.]+\/maps\/place\/ParosKite[^'"\s]*?!3d(-?[\d.]+)!4d(-?[\d.]+)/i);
   return m ? { lat: Math.round(Number(m[1]) * 1e5) / 1e5, lng: Math.round(Number(m[2]) * 1e5) / 1e5 } : null;
@@ -92,14 +108,21 @@ export function parseAnapnoeContent(p: AnapnoePages): OfferContent {
   const levels = kiteText.match(/Beginner \(Level 1\), Intermediate \(Level 2\), Independent \(Level 3\), or Zero to Hero \(all levels\)/)?.[0] ?? null;
   const brands = kiteText.match(/leading brands like ([A-Z][\w-]+(?: & [A-Z][\w-]+)?)/)?.[1] ?? null;
 
+  const gallery = anapnoeGallery(p.gallery);
+  const photos = (u: AnapnoeUnit): Pick<ContentRoom, 'imageUrls'> => {
+    const urls = anapnoeUnitPhotos(u, gallery);
+    return urls.length ? { imageUrls: urls } : {};
+  };
+  // the four suites have identical facts but each its own card photo: every suite keeps only its own
   const contentRooms: ContentRoom[] = [
-    ...suites.map(u => ({ name: `${u.name} Suite`, description: 'Suite with private pool next to Pounda beach (house for 4+ guests).', features: u.amenities })),
-    ...rooms.map(u => ({ name: `${u.name} Room`, description: null, features: u.amenities })),
+    ...suites.map(u => ({ name: `${u.name} Suite`, description: 'Suite with private pool next to Pounda beach (house for 4+ guests).', features: u.amenities, ...photos(u) })),
+    ...rooms.map(u => ({ name: `${u.name} Room`, description: null, features: u.amenities, ...photos(u) })),
   ];
   const imageUrls = [...new Set([
     ...units.map(u => u.image).filter((u): u is string => !!u),
-    ...anapnoeGallery(p.gallery),
+    ...gallery,
   ])].slice(0, 30);
+  const spotImageUrls = anapnoeSpotPhotos(gallery);
 
   const summary = [
     `Anapnoe is the watersports resort of the ParosKite school, right on Pounda beach on Paros, Greece, the island's kite spot: ${rooms.length || 7} rooms${sizes.length ? ` (${Math.min(...sizes)}-${Math.max(...sizes)} m2, most with sea view)` : ''} and ${suites.length || 4} suites with private pools (70-75 m2, 4+ guests), and a breakfast buffet.`,
@@ -130,6 +153,7 @@ export function parseAnapnoeContent(p: AnapnoePages): OfferContent {
     languages: ['en'],
     rooms: contentRooms,
     imageUrls,
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: ANAPNOE_HOME_URL,
     bookingUrl: BOOKING_URL,

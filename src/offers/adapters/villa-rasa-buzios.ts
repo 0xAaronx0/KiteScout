@@ -18,6 +18,8 @@
 // Requests per run: content 4, slots 2 calendar + up to 6 results = 8.
 // Parsed: calendar bands ("lowest|2026-10-12", hotel-wide lowest price for 2 adults) + room type x month samples
 //   ("master-suite|2026-11"), BRL per room per night for 2 adults.
+// Photos: per room type the slider of its tab panel on /acomodacoes/ (panel order = tab order, linked through ROOM_MAP);
+//   spotImageUrls = the slider of the "KITESURF E WING FOIL" row (#kitesurf) on /experiencias/.
 // Known limits: the kite lessons are run by coaches the reception books (no school name, no prices on the site);
 //   the own-site room texts are Portuguese, so room descriptions are built from the parsed facts (size, units,
 //   guests, amenities).
@@ -91,6 +93,52 @@ export function parseVrRooms(roomsHtml: string): VrRoom[] {
   return out;
 }
 
+const VR_JUNK = /selos|popup|logo|BG2-01|05000002-m/i;
+const VR_UPLOAD = /^https?:\/\/villarasa\.com\.br\/wp-content\/uploads\/[^"' )&]+\.(?:jpe?g|webp)$/i;
+/** own upload -> the original (https, WordPress "-WxH" size suffix dropped); null for badges, popups and logos */
+function vrOwn(raw: string): string | null {
+  const u = raw.replace(/^http:/, 'https:').replace(/-\d+x\d+(?=\.[a-z]+$)/i, '');
+  return VR_JUNK.test(u) ? null : u;
+}
+
+/**
+ * /acomodacoes/: the own photos per site room type = the slider of its tab panel (div.wpb_tab, same order as the tab
+ * names in ul.wpb_tabs_nav), best (the cover "1-capa-*") first. JPEG / WebP only, like the general list.
+ */
+export function parseVrRoomPhotos(roomsHtml: string): Map<string, string[]> {
+  const root = parse(roomsHtml);
+  const names = root.querySelectorAll('.wpb_tabs_nav li').map(li => collapse(li.text));
+  const panels = root.querySelectorAll('.wpb_tab.ui-tabs-panel');
+  const out = new Map<string, string[]>();
+  if (names.length === 0 || names.length !== panels.length) return out; // no safe panel -> name mapping
+  panels.forEach((panel, i) => {
+    const urls: string[] = [];
+    for (const img of panel.querySelectorAll('img')) {
+      const src = img.getAttribute('src') ?? '';
+      const u = VR_UPLOAD.test(src) ? vrOwn(src) : null;
+      if (u && !urls.includes(u)) urls.push(u);
+    }
+    if (urls.length) out.set(names[i], urls);
+  });
+  return out;
+}
+
+/**
+ * /experiencias/ "KITESURF E WING FOIL" row (#kitesurf): the photos of its slider (lazy data-bg-image). Only JPEG / WebP, like
+ * the general list: the JPEG is the photo the home page shows as its "Kite Surf" teaser; the 7 PNG slides are left out
+ * (content unchecked, PNG slides on this site are mostly graphics).
+ */
+export function vrKitePhotos(experiencesHtml: string): string[] {
+  const row = parse(experiencesHtml).querySelector('#kitesurf');
+  if (!row) return [];
+  const out: string[] = [];
+  for (const m of row.outerHTML.matchAll(/(?:data-bg-image="url\(|\ssrc=")['"]?(https?:\/\/villarasa\.com\.br\/wp-content\/uploads\/[^"')\s]+\.(?:jpe?g|webp|png))/gi)) {
+    const u = vrOwn(m[1]);
+    if (u && !out.includes(u)) out.push(u);
+  }
+  return out.filter(u => !/\.png$/i.test(u));
+}
+
 const AMENITY_EN: Record<string, string> = {
   'Vista para a praia': 'Sea view', 'Hidro Ofurô': 'Hot tub', Varanda: 'Balcony', 'TV de tela plana': 'Flat-screen TV',
   Frigobar: 'Minibar', 'Cofre eletrônico': 'Safe', 'Vista interna': 'Inside view',
@@ -124,6 +172,8 @@ export function parseVillaRasaContent(p: VrPages): OfferContent {
   const home = pageText(p.home);
   const experiences = pageText(p.experiences);
   const siteRooms = parseVrRooms(p.rooms);
+  const roomPhotos = parseVrRoomPhotos(p.rooms);
+  const spotImageUrls = vrKitePhotos(p.experiences);
   const hotel = parse(p.hotel);
   const description = collapse(hotel.querySelector('.hotel-landing__description')?.text ?? '');
   const fromPrice = collapse(hotel.querySelector('.hotel-landing__price-value')?.text ?? '');
@@ -145,14 +195,20 @@ export function parseVillaRasaContent(p: VrPages): OfferContent {
     const siteName = ROOM_MAP.find(([re]) => re.test(c.name))?.[1];
     const site = siteName ? siteRooms.find(r => r.name === siteName) : undefined;
     const feats = site ? site.amenities.map(a => AMENITY_EN[a]).filter((x): x is string => !!x) : [];
-    return { name: c.name, description: site ? roomDescription(site) || null : null, features: [...new Set([...c.features, ...feats])] };
+    const photos = siteName ? roomPhotos.get(siteName) ?? [] : [];
+    return {
+      name: c.name,
+      description: site ? roomDescription(site) || null : null,
+      features: [...new Set([...c.features, ...feats])],
+      ...(photos.length ? { imageUrls: photos } : {}),
+    };
   });
 
   const own: string[] = [];
   for (const html of [p.rooms, p.home, p.experiences]) {
     for (const m of html.matchAll(/https?:\/\/villarasa\.com\.br\/wp-content\/uploads\/[^"' )&]+\.(?:jpe?g|webp)/gi)) {
-      const u = m[0].replace(/^http:/, 'https:').replace(/-\d+x\d+(?=\.[a-z]+$)/i, '');
-      if (/selos|popup|logo|BG2-01|05000002-m/i.test(u) || own.includes(u)) continue;
+      const u = vrOwn(m[0]);
+      if (!u || own.includes(u)) continue;
       own.push(u);
     }
   }
@@ -202,6 +258,7 @@ export function parseVillaRasaContent(p: VrPages): OfferContent {
     languages: ['pt', 'en', 'es'], // site language switch PT / EN / ES
     rooms,
     imageUrls: [...ownPicked, ...ob].slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: VR_PAGES.home,
     bookingUrl: VR_HOTEL_URL,

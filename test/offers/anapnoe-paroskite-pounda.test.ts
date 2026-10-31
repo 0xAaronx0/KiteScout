@@ -7,6 +7,7 @@ import {
   anapnoeParoskitePounda, anapnoeCoords, anapnoeGallery, parseAnapnoeUnits,
 } from '../../src/offers/adapters/anapnoe-paroskite-pounda.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/anapnoe-paroskite-pounda');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -54,4 +55,34 @@ test('anapnoe: content', async () => {
   assert.deepEqual(c.includedServices, ['Wi-Fi', 'Breakfast buffet', 'Fitness center', 'Lounge', 'Open kitchen area and vegetable garden']);
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://paroskiteanapnoe.com/media-assets/') && !/logo/i.test(u)));
+});
+
+test('anapnoe: own photos per unit (card image + gallery files that name the unit), ParosKite photos of /gallery/ as spot', async () => {
+  const c = await anapnoeParoskitePounda.fetchContent({ note: () => {}, incomplete: () => {} });
+  const photos = (name: string) => c.rooms.find(r => r.name === name)!.imageUrls ?? [];
+  assert.deepEqual(c.rooms.map(r => [r.name, photos(r.name).length]), [
+    ['Orion Suite', 1], ['Cassiopeia Suite', 1], ['Andromeda Suite', 1], ['Cetus Suite', 3],
+    ['Gaia Room', 2], ['Aeolus Room', 2], ['Aethra Room', 2], ['Amphitrite Room', 1], ['Aura Room', 3], ['Doris Room', 2], ['Nereus Room', 2],
+  ]);
+  const MA = 'https://paroskiteanapnoe.com/media-assets/';
+  assert.equal(photos('Orion Suite')[0], `${MA}2026-03-orion-featured-img-1200x900.jpg`);
+  assert.equal(photos('Cassiopeia Suite')[0], `${MA}2026-04-29-cassiopeia-featured.jpg`);
+  assert.equal(photos('Andromeda Suite')[0], `${MA}2026-04-29-andromeda-featured.jpg`);
+  assert.deepEqual(photos('Cetus Suite'), [`${MA}2026-04-29-cetus-featured.jpg`, `${MA}cetus-gallery-image-4.jpg`, `${MA}cetus-gallery-image-5.jpg`]);
+  assert.match(photos('Gaia Room')[1], /\/gaia-gallery-image-1\.jpg$/);
+  assert.match(photos('Aeolus Room')[1], /\/aeolus-gallery-image-0\.jpg$/);
+  assert.deepEqual(photos('Aethra Room'), [`${MA}2026-04-29-aethera-gallery-2.jpg`, `${MA}aethra-room-gallery-image-1.jpg`]);
+  assert.equal(photos('Amphitrite Room')[0], `${MA}2026-04-29-amphitrite-featured.jpg`);
+  assert.ok(photos('Aura Room').includes(`${MA}aura-room-hero-image-desktop.jpg`));
+  assert.deepEqual(photos('Doris Room'), [`${MA}2026-04-29-dorida-featured.jpg`, `${MA}dorida-hero-image-desktop.jpg`]);
+  assert.match(photos('Nereus Room')[1], /\/nereus-room-hero-desktop\.jpg$/);
+  const all = c.rooms.flatMap(r => r.imageUrls ?? []);
+  assert.equal(new Set(all).size, all.length); // the four identical suites each keep only their own card photo
+  assert.ok(all.every(u => u.startsWith(MA)));
+  assert.deepEqual(c.spotImageUrls, [3, 0, 1, 2, 4].map(n => `${MA}paroskite-surf-gallery-image-${n}.jpg`));
+  const plan = planGallery(c);
+  assert.deepEqual(plan.dropped, []);
+  const first24 = plan.candidates.slice(0, 24);
+  for (const r of c.rooms) if (r.imageUrls?.length) assert.ok(r.imageUrls.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

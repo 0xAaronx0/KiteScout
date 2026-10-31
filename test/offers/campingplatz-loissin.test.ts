@@ -4,9 +4,10 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  campingplatzLoissin, buildCplCardSlots, buildCplTableSlots, fetchCplSlots, parseCplCards, parseCplTables, parseCplUnitPage,
+  campingplatzLoissin, buildCplCardSlots, buildCplTableSlots, cplRoomPhotos, fetchCplSlots, parseCplCards, parseCplTables, parseCplUnitPage,
 } from '../../src/offers/adapters/campingplatz-loissin.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/campingplatz-loissin');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -58,4 +59,28 @@ test('cpl: unit page details and content', async () => {
   assert.ok(c.rooms[4].features.includes('Maximum occupancy 4 adults, 2 children'));
   assert.ok(c.optionalServices.includes('Day ticket for surfers without overnight stay EUR 7 (low season) / EUR 14 (high season)'));
   assert.ok(c.imageUrls.length >= 20 && c.imageUrls.every(u => /\/wp-content\/uploads\//.test(u) && !/-\d+x\d+\.|Osterfeuer|Logo/i.test(u)));
+});
+
+test('cpl: own photos per unit from its /properties/ gallery; the prompt-named Boddentraum pictures are not used', async () => {
+  const c = await campingplatzLoissin.fetchContent(ctx);
+  const photos = (name: string) => c.rooms.find(r => r.name === name)!.imageUrls ?? [];
+  assert.deepEqual(c.rooms.map(r => [r.name, photos(r.name).length]), [
+    ['Apartment', 16], ['Double room', 15], ['Mobile home Boddentraum', 0], ['Sleeping barrel (Schlaffass)', 7], ['Mobile home Boddenglück', 9],
+  ]);
+  const UP = 'https://campingplatz-loissin.de/wp-content/uploads/';
+  assert.equal(photos('Apartment')[0], `${UP}2022/04/IMG_0076-HDR-min.jpg`);
+  assert.equal(photos('Double room')[0], `${UP}2022/04/IMG_0136-HDR-min.jpg`);
+  assert.equal(photos('Sleeping barrel (Schlaffass)')[0], `${UP}2025/03/IMG_20250313_133205208.jpg`);
+  assert.equal(photos('Mobile home Boddenglück')[0], `${UP}2026/05/boddenmobilheim-haus2-.jpg`);
+  // Boddentraum: all four gallery files are scene descriptions in 15+ words (possibly AI made), left out until checked
+  const traum = parseCplUnitPage(read('campingplatz-loissin.de_properties_mobilheim-boddentraum_.'));
+  assert.equal(traum.gallery.length, 4);
+  assert.deepEqual(cplRoomPhotos(traum), []);
+  assert.equal(c.rooms.find(r => r.name === 'Mobile home Boddentraum')!.imageUrls, undefined);
+  const all = c.rooms.flatMap(r => r.imageUrls ?? []);
+  assert.equal(new Set(all).size, all.length);
+  assert.ok(all.every(u => u.startsWith(UP) && !/-\d+x\d+\./.test(u)));
+  assert.equal(c.spotImageUrls, undefined); // no own kite photo on the pages read
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) if (r.imageUrls?.length) assert.ok(r.imageUrls.some(u => first24.includes(u)), r.name);
 });

@@ -26,6 +26,7 @@ export const NOT_OWN_PHOTO_RE = new RegExp([
   'adobe[\\s_-]?stock', 'shutterstock', 'istock(?:photo)?[\\s_-]', 'gettyimages', 'depositphotos', 'dreamstime', '(?<![a-z])123rf',
   '[\\s_-]unsplash(?![a-z])', '(?<![a-z])unsplash[\\s_-]', '(?<![a-z])pexels[\\s_-]', '(?<![a-z])pixabay', '(?<![a-z])freepik',
   '^image by [a-z]+ [a-z]+', // Wix stock library file names ("Image by Jared Rice.jpg")
+  '-\\d{6,8}_(?:640|960|1280|1920)(?:-\\d+x\\d+)?\\.(?:jpe?g|png|webp)$', // Pixabay download names ("kitesurfing-4549432_1280.jpg")
   // AI renderings
   'chat\\s?gpt[\\s_-]*image', '(?<![a-z])dall[\\s_·-]e(?![a-z])', 'midjourney', '(?<![a-z])firefly(?![a-z])', 'stable[\\s_-]?diffusion', '(?<![a-z])ai[\\s_-]generated',
   // floor plans and site maps

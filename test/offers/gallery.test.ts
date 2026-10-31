@@ -26,6 +26,8 @@ test('isNotOwnPhoto: stock, AI renderings and floor plans by file name, real pho
     'https://kitemarina.pl/files/gallery/12/rzut_parter.jpg',
     'https://x.example/wp-content/uploads/plano-fluvia.jpg',
     'https://x.example/pexels-sergk1-15204578.jpg',
+    'https://www.campingplatz-loissin.de/wp-content/uploads/kitesurfing-4549432_1280.jpg',
+    'https://x.example/tho-ge-kite-surfing-7244337_1920-1024x683.jpg',
   ]) assert.ok(isNotOwnPhoto(u), u);
   for (const u of [
     'https://www.campingplatz-strandgut.de/images/Alternative%20Unterkunfte/Tiny%20Wave/k-IMG_0156.jpg',
@@ -33,6 +35,8 @@ test('isNotOwnPhoto: stock, AI renderings and floor plans by file name, real pho
     'https://x.example/logos-beach-village-studio.jpg',
     'https://x.example/kitesurf-stagnone-01.jpg',
     'https://x.example/planet-surf.jpg',
+    'https://x.example/IMG_20210616_112959.jpg',
+    'https://x.example/beach-2024_1280.jpg',
   ]) assert.ok(!isNotOwnPhoto(u), u);
 });
 
