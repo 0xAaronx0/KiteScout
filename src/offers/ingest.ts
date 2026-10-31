@@ -389,6 +389,13 @@ export function roomAvailability(slots: Slot[]) {
   return out.slice(0, 120);
 }
 
+// Aaron 2026-10-31: every calendar month a slot covers (Jan 18 - Feb 28 prices February too), not only its first.
+function coveredMonths(start: string, end: string | null): number[] {
+  const first = Number(start.slice(0, 4)) * 12 + Number(start.slice(5, 7)) - 1;
+  const last = end && end > start ? Number(end.slice(0, 4)) * 12 + Number(end.slice(5, 7)) - 1 : first;
+  return Array.from({ length: Math.min(last - first + 1, 12) }, (_, i) => (first + i) % 12 + 1);
+}
+
 export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string, lastPublished: Slot[] = []) {
   const names = c.rooms.map(r => r.name);
   const group = (list: Slot[]) => {
@@ -413,7 +420,7 @@ export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string, l
     const latestYear = over.map(yearOf).sort().at(-1) ?? '';
     const tier = [priced, ahead, over.filter(s => yearOf(s) === latestYear)].find(list => list.length > 0) ?? [];
     const min = [...tier].sort((x, y) => x.price! - y.price!)[0];
-    const months = [...new Set(priced.filter(s => s.startDate).map(s => Number(s.startDate!.slice(5, 7))))].sort((x, y) => x - y);
+    const months = [...new Set(priced.filter(s => s.startDate).flatMap(s => coveredMonths(s.startDate!, s.endDate)))].sort((x, y) => x - y);
     return {
       name: r.name, description: r.description, features: r.features,
       price_from: min?.price ?? null, price_currency: min?.currency ?? null,
