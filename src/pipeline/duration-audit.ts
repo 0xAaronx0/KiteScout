@@ -19,13 +19,13 @@ export async function runDurationAudit(opts: { days?: number; out?: string } = {
   if (error) throw new Error(`cruise_offers: ${error.message}`);
   const rows = ((data ?? []) as AuditRow[]).filter(r => visible.has(r.id)).sort((a, b) => a.title.localeCompare(b.title));
   const proposals: Record<string, number> = {};
-  const lines = ['| offer_id | Titel | duration_days | Vorschlag | Basis | Beleg |', '|---|---|---|---|---|---|'];
+  const lines = ['| offer_id | Titel | duration_days | Vorschlag Tage | Vorschlag Nächte | Basis | Beleg |', '|---|---|---|---|---|---|---|'];
   for (const r of rows) {
     const p = proposeTripDuration({ durationDays: r.duration_days, dates: r.dates,
       texts: [r.title, r.summary, r.price_basis_note, r.pricing?.raw ?? null, r.source_text] });
     const verdict = p.days === null ? 'unclear' : p.days === r.duration_days ? 'keep' : String(p.days);
     proposals[verdict] = (proposals[verdict] ?? 0) + 1;
-    lines.push(`| ${r.id} | ${r.title.replace(/\|/g, '/')} | ${r.duration_days ?? '-'} | ${verdict} | ${p.basis} | ${p.note} |`);
+    lines.push(`| ${r.id} | ${r.title.replace(/\|/g, '/')} | ${r.duration_days ?? '-'} | ${verdict} | ${p.nights ?? '-'} | ${p.basis} | ${p.note} |`);
   }
   const table = lines.join('\n') + '\n';
   if (opts.out) writeFileSync(opts.out, table); else process.stdout.write(table);

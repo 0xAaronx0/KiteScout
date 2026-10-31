@@ -31,6 +31,6 @@ export interface CruiseAdapter {
 export function emptyState(over: Partial<ObservedState> = {}): ObservedState {
   return {
     listed: true, departures: null, pricePP: null, priceCharter: null,
-    durationDays: null, seasonStartMonth: null, seasonEndMonth: null, seasonText: null, ...over,
+    durationDays: null, durationNights: null, seasonStartMonth: null, seasonEndMonth: null, seasonText: null, ...over,
   };
 }

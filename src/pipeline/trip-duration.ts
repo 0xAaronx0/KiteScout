@@ -6,6 +6,17 @@ export const DURATION_RULE =
   "trip length in days = nights + 1: '7 nights', 'Saturday to Saturday', 'one week' or a price per week = 8; " +
   "'7 days / 6 nights' = 7; a bare 'N-day' with no nights stated = N; null if the page states no length";
 
+// Aaron 2026-10-31: the data stores nights (duration_nights), the unambiguous number providers state.
+export const NIGHTS_RULE =
+  "nights of the trip as the page states them: a Saturday-to-Saturday week or 'one week' = 7; '8 days / 7 nights' = 7; " +
+  "null if the page states no nights";
+
+/** Nights as stored: an integer 0..60, else null. */
+export function cleanNights(value: unknown): number | null {
+  const n = typeof value === 'string' && /^\d+$/.test(value.trim()) ? Number(value) : value;
+  return typeof n === 'number' && Number.isInteger(n) && n >= 0 && n <= 60 ? n : null;
+}
+
 /** ±1 day is the nights-vs-days ambiguity ("7 days" vs "7 nights = 8 days"), never a change (as in cruise-state.ts). */
 export function sameTripDuration(before: number | null, after: number | null): boolean {
   if (before === after) return true;
@@ -19,8 +30,10 @@ export interface DurationEvidence {
   texts: Array<string | null | undefined>;
 }
 export interface DurationProposal {
-  /** Proposed duration_days, or null when the stored data names no nights. */
+  /** Proposed duration_days (= nights + 1), or null when the stored data names no nights. */
   days: number | null;
+  /** Proposed duration_nights, or null. */
+  nights: number | null;
   basis: 'departures' | 'nights' | 'days-and-nights' | 'week' | 'none';
   note: string;
 }
@@ -56,13 +69,13 @@ function mostCommon(values: number[]): number | null {
 export function proposeTripDuration(e: DurationEvidence): DurationProposal {
   const spans = departureNights(e.dates);
   const span = mostCommon(spans);
-  if (span !== null) return { days: span + 1, basis: 'departures', note: `${spans.length} departure(s), mostly ${span} nights` };
+  if (span !== null) return { days: span + 1, nights: span, basis: 'departures', note: `${spans.length} departure(s), mostly ${span} nights` };
   const text = e.texts.filter((t): t is string => typeof t === 'string' && t.length > 0).join(' \n ');
   const pairs = [...text.matchAll(DAYS_AND_NIGHTS)].map(m => num(m[2]));
   const pair = mostCommon(pairs);
-  if (pair !== null) return { days: pair + 1, basis: 'days-and-nights', note: `"N days / ${pair} nights" stated` };
+  if (pair !== null) return { days: pair + 1, nights: pair, basis: 'days-and-nights', note: `"N days / ${pair} nights" stated` };
   const nights = mostCommon([...text.matchAll(NIGHTS)].map(m => num(m[1])).filter(n => n >= 2 && n <= 21));
-  if (nights !== null) return { days: nights + 1, basis: 'nights', note: `${nights} nights stated` };
-  if (WEEK.test(text)) return { days: 8, basis: 'week', note: 'week wording, nights not stated (week rule: 7 nights)' };
-  return { days: null, basis: 'none', note: 'no nights in the stored data' };
+  if (nights !== null) return { days: nights + 1, nights, basis: 'nights', note: `${nights} nights stated` };
+  if (WEEK.test(text)) return { days: 8, nights: 7, basis: 'week', note: 'week wording, nights not stated (week rule: 7 nights)' };
+  return { days: null, nights: null, basis: 'none', note: 'no nights in the stored data' };
 }
