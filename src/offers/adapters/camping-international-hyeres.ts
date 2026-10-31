@@ -156,6 +156,7 @@ export function parseCampingInternationalContent(p: CiPages): OfferContent {
     region: "Provence-Alpes-Côte d'Azur",
     spot: "L'Almanarre, Giens (Hyères)",
     spotCoords: coords, // the campsite's own Google Maps place link
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // sport page: "courses for everyone, from beginners to advanced kiteboarders"

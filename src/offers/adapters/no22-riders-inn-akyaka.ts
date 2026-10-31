@@ -117,6 +117,7 @@ export function parseNo22Content(p: N22Pages): OfferContent {
     region: 'Muğla',
     spot: 'Akyaka',
     ...(coords ? { spotCoords: coords } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // /activities/: "9 hours beginner course, take advance lessons to improve your technique or rent kiteboard gears"

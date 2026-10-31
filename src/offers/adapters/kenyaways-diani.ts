@@ -253,6 +253,7 @@ export function parseKenyawaysContent(p: KwPages, today = todayIso()): OfferCont
     region: 'Kwale County (South Coast)',
     spot: 'Galu Beach, Diani',
     spotCoords: mapPin(p.rooms), // the site's own Google Maps place link (footer), 2026-10-12
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: [],

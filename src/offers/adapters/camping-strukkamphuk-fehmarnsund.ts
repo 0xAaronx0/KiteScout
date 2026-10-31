@@ -229,6 +229,7 @@ export function parseStrukkamphukContent(p: CskPages): OfferContent {
     spot: 'Strukkamphuk',
     // Google-Maps directions link on the home page (".../@54.411847,11.098098,15z/...!1d11.098098!2d54.411847")
     spotCoords: coords ? { lat: Number(coords[2]), lng: Number(coords[1]) } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // sport page: "perfekt für jedes Level wie Anfänger, Aufsteiger, aber auch erfahrene Surfer"

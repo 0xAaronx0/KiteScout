@@ -171,6 +171,7 @@ export function parseHaukeliseterContent(p: HkPages): OfferContent {
     region: 'Haukelifjell',
     spot: 'Haukeliseter, Haukelifjell',
     spotCoords: { lat: 59.8239, lng: 7.1941 }, // OSM "Haukeliseter fjellstue" (way 117122360)
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate'],

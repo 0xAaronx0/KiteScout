@@ -129,6 +129,7 @@ export function parseTbContent(p: TbPages): OfferContent {
     region: 'El Sargento, Baja California Sur',
     spot: 'El Sargento',
     ...(pin ? { spotCoords: pin } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // the activities page says the bay suits beginners as well as intermediate and expert riders

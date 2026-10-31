@@ -245,6 +245,7 @@ export function parseAquaContent(p: AqPages): OfferContent {
     region: 'La Ventana, Baja California Sur',
     spot: 'La Ventana',
     ...(geo ? { spotCoords: geo } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kiteboarding page: "consistent wind suited for beginners to experts"

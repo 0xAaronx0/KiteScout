@@ -145,6 +145,7 @@ export function parseHotel100FunContent(p: FunPages): OfferContent {
     region: 'Valdevaqueros, Tarifa',
     spot: 'Valdevaqueros',
     spotCoords: parseFunCoords(p.contact),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: [],

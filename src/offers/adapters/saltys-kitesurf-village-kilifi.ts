@@ -185,6 +185,7 @@ export function parseSaltysContent(p: SkvPages): OfferContent {
     region: 'Kilifi County',
     spot: 'Bofa Beach, Kilifi',
     spotCoords: pin, // map block on /contactus
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kite center: "We offer courses for any/all riding levels" + coaching for intermediate/advanced

@@ -190,6 +190,7 @@ export function parseAmagaliContent(p: AmgPages): OfferContent {
     spot: 'Galinhos',
     // Omnibees hotel page map pin (.google_map data-lat / data-lng, 2026-10-12)
     spotCoords: ob.coords,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // passeios.html: "kitesurfistas de todos os níveis encontrarão o que procuram" (2026-10-12)

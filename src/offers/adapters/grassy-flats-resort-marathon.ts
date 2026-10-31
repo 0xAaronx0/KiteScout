@@ -129,6 +129,7 @@ export function parseGrassyFlatsContent(p: GfPages): OfferContent {
     region: 'Florida Keys',
     spot: 'Grassy Key, Marathon',
     ...(geo ? { spotCoords: geo } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kite page: sections "Beginners, no board experience" / "Intermediate riders" / "Advanced & freestylers" (2026-10-12)

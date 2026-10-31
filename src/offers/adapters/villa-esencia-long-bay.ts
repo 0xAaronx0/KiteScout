@@ -231,6 +231,7 @@ export function parseVillaEsenciaContent(p: VePages): OfferContent {
     spot: 'Long Bay Beach',
     // most common unit pin of the site's Streamline data (the unit pages' map uses it)
     ...(coords ? { spotCoords: coords } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kite page: "both beginner and advanced kiters", "especially easy and safe environment to learn kiting"

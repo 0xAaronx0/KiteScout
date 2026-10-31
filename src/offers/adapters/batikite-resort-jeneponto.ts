@@ -230,6 +230,7 @@ export function parseBatikiteContent(p: BkPages): OfferContent {
     region: 'South Sulawesi',
     spot: 'Mallasoro, Jeneponto',
     spotCoords: Number.isFinite(lat) && Number.isFinite(lng) && (lat !== 0 || lng !== 0) ? { lat, lng } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // home quick facts: "Level Beginners to advanced, private and group lessons" (2026-10-12)

@@ -307,10 +307,12 @@ export async function locateSpots(c: OfferContent, stored: unknown): Promise<Sto
     .map(s => [s.name.trim().toLowerCase(), s] as const));
   const out: StoredSpot[] = [];
   for (const s of named) {
-    const pinned = (!c.itinerarySpots.length && c.spotCoords ? c.spotCoords : null) ?? KNOWN_PINS[s.name.trim().toLowerCase()] ?? null;
+    const own = !c.itinerarySpots.length && c.spotCoords ? c.spotCoords : null;
+    const pinned = own ?? KNOWN_PINS[s.name.trim().toLowerCase()] ?? null;
     const prev = known.get(s.name.trim().toLowerCase());
     const g = pinned ?? (prev ? { lat: prev.lat!, lng: prev.lng! } : await geocodeSpot(s.name, s.region, s.country));
-    out.push({ name: s.name, country: s.country, region: s.region, lat: g?.lat ?? null, lng: g?.lng ?? null, order: s.order });
+    out.push({ name: s.name, country: s.country, region: s.region, lat: g?.lat ?? null, lng: g?.lng ?? null, order: s.order,
+      ...(own && c.spotCoordsPrecise ? { precise: true as const } : {}) });
   }
   return mergeItinerarySpots(out, stored).spots;
 }

@@ -227,6 +227,7 @@ export function parseKiteBuenHombreContent(p: KbhPages): OfferContent {
     spot: 'Playa Buen Hombre',
     // JSON-LD LodgingBusiness.geo on the hotel page
     ...(Number.isFinite(lat) && Number.isFinite(lng) ? { spotCoords: { lat, lng } } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // packages page: 11-hour beginner course, 10-hour advanced course, second-level course (2026-10-12)

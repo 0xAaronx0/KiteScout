@@ -349,6 +349,7 @@ export function parseWallnauContent(p: ScwPages): OfferContent {
     spot: 'Wallnau',
     // JSON-LD Campground "geo" on the home page (54.488, 11.019 on 2026-10-14)
     spotCoords: geo && Number.isFinite(Number(geo.latitude)) && Number.isFinite(Number(geo.longitude)) ? { lat: Number(geo.latitude), lng: Number(geo.longitude) } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // water sports page: "Anfängerkurse … und Fortgeschrittenenkurse zum Weiterkommen"

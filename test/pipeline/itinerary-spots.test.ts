@@ -56,3 +56,14 @@ test('mergeItinerarySpots: a pin without coordinates protects nothing', () => {
   assert.deepEqual(r.spots.map(s => [s.lat, s.lng, s.pinned ?? false]), [[17.1037, -61.7905, false]]);
 });
 
+
+test('mergeItinerarySpots: a hand pin drops the precise flag of the fresh spot', () => {
+  const stored = [{ ...spot('Hamata', 24.27, 35.36), pinned: true as const }];
+  const r = mergeItinerarySpots([{ ...spot('Hamata', 24.3, 35.4), precise: true }], stored);
+  assert.deepEqual(r.spots, [{ ...spot('Hamata', 24.27, 35.36), pinned: true }]);
+});
+
+test('mergeItinerarySpots: carried stored coordinates keep their precise flag', () => {
+  const r = mergeItinerarySpots([spot('Hamata')], [{ ...spot('Hamata', 24.27, 35.36), precise: true }]);
+  assert.deepEqual(r.spots, [{ ...spot('Hamata', 24.27, 35.36), precise: true }]);
+});

@@ -84,6 +84,7 @@ export function parseRegenbogenBornContent(html: string): OfferContent {
     region: 'Born, Fischland-Darß',
     spot: 'Born a. Darß',
     ...(pin ? { spotCoords: pin } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'],

@@ -293,6 +293,7 @@ export function parseKailuaContent(pg: KlpPages): OfferContent {
     spot: 'Pelzerhaken',
     // Google-Maps link on /anreise-und-kontakt/ ("…!1d10.8728051!2d54.0881448", 2026-10-14)
     spotCoords: coords ? { lat: Number(coords[2]), lng: Number(coords[1]) } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // water-sports page: "Als Gruppenunterricht oder als Einzelstunde, für Anfänger und Fortgeschrittene"

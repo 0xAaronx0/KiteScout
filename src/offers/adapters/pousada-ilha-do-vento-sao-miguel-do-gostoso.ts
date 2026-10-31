@@ -167,6 +167,7 @@ export function parseIdvContent(p: IdvPages): OfferContent {
     spot: 'São Miguel do Gostoso',
     // Google Maps place link on the home page (!3d / !4d, 2026-10-12)
     spotCoords: idvCoords(p.home),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kite page: "As melhores condições do mundo para iniciantes e intermediarios"

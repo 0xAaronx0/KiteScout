@@ -172,6 +172,7 @@ export function parseSurfescapeContent(p: SePages): OfferContent {
     region: 'Canary Islands',
     spot: 'Lajares, Fuerteventura',
     spotCoords: typeof geo.latitude === 'number' && typeof geo.longitude === 'number' ? { lat: geo.latitude, lng: geo.longitude } : null, // JSON-LD geo of the page
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // home: "Surf, yoga, kite for beginners and intermediate"

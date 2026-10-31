@@ -352,6 +352,7 @@ export function parseGhmContent(p: GhmPages): OfferContent {
     region: 'Miyako Islands, Okinawa',
     spot: 'Shimoji Yonaha, Miyakojima',
     spotCoords: coords,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'],
