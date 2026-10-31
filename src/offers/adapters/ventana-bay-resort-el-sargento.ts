@@ -7,6 +7,8 @@
 //   content  / (intro, location, Google Maps link "ll=24.09845496,-109.99335770" -> spotCoords), /rooms.html
 //            (11 room cards: <h2> name + <p> text), /kite-school.html (school text, lesson and rental rates in
 //            USD), /gallery.html (photos; webbox.imgix.net originals without the crop parameters).
+//            Room photos: the carousel in each room card of /rooms.html (rooms[].imageUrls; a photo two room types
+//            share is left out of both); spot photos: the two photos of /kite-school.html (spotImageUrls).
 //   slots    none. The site prints no room rates; its "Book Now" form goes to app.thebookingbutton.com/
 //            properties/ventanabayresortdirect -> direct-book.com (SiteMinder), whose app files answer with an
 //            AWS WAF bot challenge to our UA (2026-10-12) -> not used. A public, robots-allowed SiteMinder
@@ -92,6 +94,26 @@ export function vbPhotos(htmls: Array<[string, string]>): string[] {
   return out;
 }
 
+/**
+ * Own photos per room type: each room card (div.room-type-summary) holds its carousel and its <h2> name. A photo that
+ * sits in the carousels of two room types (Beach Front Suite and Superior Beach Front share one) belongs to neither.
+ */
+export function parseVbRoomImages(html: string): Map<string, string[]> {
+  const cards = parse(html).querySelectorAll('.room-type-summary').map(card => ({
+    name: titleCase(collapse(card.querySelector('h2')?.text ?? '')),
+    urls: vbPhotos([[card.querySelectorAll('.carousel').map(c => c.outerHTML).join('\n'), VB_ROOMS_URL]]),
+  })).filter(c => c.name && c.urls.length);
+  const owners = new Map<string, Set<string>>();
+  for (const c of cards) for (const u of c.urls) owners.set(u, (owners.get(u) ?? new Set()).add(c.name));
+  const out = new Map<string, string[]>();
+  for (const c of cards) {
+    if (out.has(c.name)) continue;
+    const own = c.urls.filter(u => owners.get(u)!.size === 1);
+    if (own.length) out.set(c.name, own);
+  }
+  return out;
+}
+
 export interface VbPages { home: string; rooms: string; kite: string; gallery: string }
 
 export function parseVentanaBayContent(p: VbPages): OfferContent {
@@ -106,7 +128,13 @@ export function parseVentanaBayContent(p: VbPages): OfferContent {
   const hourly = rates.lessons.find(l => /per hour/i.test(l))?.match(/\$\s?([\d,]+)/)?.[1] ?? null;
   const setup = rates.rental.find(r => /^Kite setup/i.test(r))?.match(/\$\s?([\d,]+) per day/)?.[1] ?? null;
 
-  const contentRooms: ContentRoom[] = rooms.map(r => ({ name: r.name, description: r.text, features: r.notes }));
+  const roomImages = parseVbRoomImages(p.rooms);
+  const contentRooms: ContentRoom[] = rooms.map(r => ({
+    name: r.name, description: r.text, features: r.notes,
+    ...(roomImages.has(r.name) ? { imageUrls: roomImages.get(r.name) } : {}),
+  }));
+  // the kite school page (Strong Kiteboarding Baja, on the resort's own site): its two photos next to the school text
+  const spotImageUrls = vbPhotos([[p.kite, VB_KITE_URL]]);
 
   const summary = [
     'Ventana Bay Resort is a beach hotel in El Sargento, next to the La Ventana kite and outdoor hub in Baja California Sur, Mexico, about 45 minutes from La Paz, with a restaurant and a terrace facing Cerralvo Island.',
@@ -143,6 +171,7 @@ export function parseVentanaBayContent(p: VbPages): OfferContent {
     languages: ['en', 'es'],
     rooms: contentRooms,
     imageUrls: vbPhotos([[p.gallery, VB_GALLERY_URL], [p.rooms, VB_ROOMS_URL], [p.home, VB_HOME_URL], [p.kite, VB_KITE_URL]]).slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: VB_HOME_URL,
     bookingUrl: BOOKING_URL,

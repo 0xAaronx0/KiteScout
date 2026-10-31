@@ -6,6 +6,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { cheShaleMambrui, buildCsSlots, parseCsBandas } from '../../src/offers/adapters/che-shale-mambrui.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/che-shale-mambrui');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -52,4 +53,25 @@ test('che shale: content', async () => {
   assert.ok(c.optionalServices.includes('Stay a little longer: 4 nights for the price of 3 (B&B, minimum 4 nights, stays until 15th December 2026)'));
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => /^https:\/\/static\.wixstatic\.com\/media\/[^/]+$/.test(u)));
+});
+
+test('che shale: own photos per banda from its tab panel, kite photos of /kitesurfing as the spot', async () => {
+  const c = await cheShaleMambrui.fetchContent(ctx);
+  const id = (u: string) => u.match(/media\/7002cd_([0-9a-f]{8})/)![1];
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0, id(r.imageUrls![0])]), [
+    ['Deluxe Banda', 5, '1f9dd685'],            // "Beach banda bedroom" (the Deluxe heading is an h2)
+    ['Tewa Banda', 5, 'bc5fea1b'],
+    ['Suli Suli & Fulusi Banda', 5, '80c0b893'], // two identical bandas, one type
+    ['Songoro Banda', 5, 'a5ebe3d2'],
+    ['Kole Kole Banda', 5, 'b48ae958'],
+    ['Kajama Banda', 5, '2f59f39c'],
+  ]);
+  assert.ok(c.rooms[1].imageUrls!.some(u => id(u) === 'a485a715')); // alt "Tewa shower"
+  assert.ok(c.rooms.every(r => r.imageUrls!.every(u => /^https:\/\/static\.wixstatic\.com\/media\/[^/]+$/.test(u))));
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.equal(new Set(all).size, all.length); // no photo given to two bandas
+  assert.deepEqual(c.spotImageUrls!.map(id), ['48269f07', 'e42d70a5', '475d4b79', 'b96567d6']);
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) if (r.imageUrls?.length) assert.ok(r.imageUrls.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

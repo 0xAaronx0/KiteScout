@@ -8,6 +8,8 @@
 //   content  /bedandbreakfast-rooms-rates (9 named B&B rooms: <h3> name + type / description / "Sleeps
 //            maximum ..." paragraphs, room galleries), /facilities (breakfast, restaurant, kite storage,
 //            H2O Extreme), /rates-and-booking-terms (minimum nights, seasons, closing period).
+//            Room photos: the Squarespace gallery block right before each room's <h3> (rooms[].imageUrls);
+//            spot photo: the /facilities image block whose alt names kitesurfing (spotImageUrls).
 //   slots    the rates are NOT on the page: the rooms page links three rate sheets, a PDF / JPG each:
 //              /s/2026-Kusi-rates.jpg     "1 Jun 2026 to 30 Nov 2026"
 //              /s/2027-Kaskazi-rates.pdf  labelled "1 Dec 2025 to 31 May 2026" on the page, but the sheet
@@ -145,6 +147,48 @@ export function parseKwRooms(html: string): KwRoom[] {
   return out;
 }
 
+const KW_JUNK_RE = /logo|favicon|\.svg|website\)?\.png/i;
+/** Image URLs of one block, normalised exactly like the general gallery list (imageCandidates + junk filter). */
+function blockImages(el: HTMLElement, baseUrl: string): string[] {
+  return imageCandidates(el.outerHTML, baseUrl, null, 80).filter(u => !KW_JUNK_RE.test(u));
+}
+
+/**
+ * Own photos per room: each room's Squarespace gallery block stands right before its <h3> name. A photo whose file
+ * name names another room (Cult's gallery carries "04-Park_terrace.jpg") is left out.
+ */
+export function parseKwRoomImages(html: string, roomNames: string[]): Map<string, string[]> {
+  const out = new Map<string, string[]>();
+  let pending: string[] | null = null;
+  for (const el of visible(html).querySelectorAll('.gallery-block, h3')) {
+    if (el.tagName.toLowerCase() !== 'h3') { pending = blockImages(el, KW_ROOMS_URL); continue; }
+    const name = txt(el);
+    if (pending && roomNames.includes(name) && !out.has(name)) {
+      const others = roomNames.filter(n => n !== name);
+      const own = pending.filter(u => {
+        const raw = u.split('?')[0].split('/').pop() ?? '';
+        let file = raw;
+        try { file = decodeURIComponent(raw); } catch { /* keep the raw name */ }
+        file = file.replace(/\+/g, ' ');
+        return !others.some(n => new RegExp(`(?<![a-z])${n}(?![a-z])`, 'i').test(file));
+      });
+      if (own.length) out.set(name, own);
+    }
+    pending = null;
+  }
+  return out;
+}
+
+/** Own kite spot photos: the /facilities image blocks whose alt text names kitesurfing ("Best kitesurf spot in Diani"). */
+export function parseKwSpotImages(html: string): string[] {
+  const out: string[] = [];
+  for (const b of visible(html).querySelectorAll('.image-block')) {
+    if (!b.querySelectorAll('img').some(i => /kite/i.test(i.getAttribute('alt') ?? ''))) continue;
+    for (const u of blockImages(b, KW_FACILITIES_URL)) if (!out.includes(u)) out.push(u);
+  }
+  return out;
+}
+
 /** Rate-sheet links ("/s/...rates...") on the rooms page. */
 export function rateLinks(html: string): string[] {
   const out: string[] = [];
@@ -216,6 +260,8 @@ export function parseKenyawaysContent(p: KwPages, today = todayIso()): OfferCont
   const h2o = /H2o Extreme/i.test(fac);
   const closed = terms.match(/Usually we are closed after Easter until Early June[^.]*/i)?.[0] ?? null;
 
+  const roomImages = parseKwRoomImages(p.rooms, rooms.map(r => r.name));
+  const spotImageUrls = parseKwSpotImages(p.facilities);
   const contentRooms: ContentRoom[] = rooms.map(r => {
     const cat = KW_CATEGORIES.find(c => c.rooms.includes(r.name));
     const current = KW_SHEETS.filter(s => links.includes(s.href) && s.bands.some(b => b.end >= today));
@@ -231,11 +277,12 @@ export function parseKenyawaysContent(p: KwPages, today = todayIso()): OfferCont
         ...(cat && current.some(s => s.href.includes('Kusi')) ? ['Kusi low season (Jun, Sep, Nov): 2-night stays allowed at regular season rates'] : []),
         ...(cat ? [`Children 2-11 sharing with adults: ${current.map(s => `USD ${s.childRate} (${s.title.split(' ')[0]})`).join(', ')} per night`] : []),
       ],
+      ...(roomImages.has(r.name) ? { imageUrls: roomImages.get(r.name) } : {}),
     };
   });
 
   const imageUrls = imageCandidates(p.rooms, KW_ROOMS_URL, null, 80)
-    .filter(u => !/logo|favicon|\.svg|website\)?\.png/i.test(u));
+    .filter(u => !KW_JUNK_RE.test(u));
 
   const summary = [
     `Kenyaways is a rustic beachfront guest house on Galu Beach in Diani, on Kenya's south coast, set in a renovated 1960s family home; it was turned into a guest house for kitesurfers by Linzi Kennaway, who started teaching kitesurfing in 2004.`,
@@ -275,6 +322,7 @@ export function parseKenyawaysContent(p: KwPages, today = todayIso()): OfferCont
     languages: ['en'],
     rooms: contentRooms,
     imageUrls: imageUrls.slice(0, 40),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: KW_ROOMS_URL,
     bookingUrl: visible(p.rooms).querySelector('a[href*="freetobook.com/reservations"]')?.getAttribute('href') ?? `${SITE}/book-a-room`,

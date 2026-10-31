@@ -9,6 +9,8 @@
 //            From $135 | per banda, per night" / "Double Occupancy: From $185 | ..." or "Rates from $225 | (min 3
 //            pax)" + "Additional guests (above 3 pax) charged at $65 per person, per night". The page carries a
 //            desktop and a mobile copy of the tab box with the same values; the first copy wins.
+//   photos   rooms[].imageUrls: the gallery inside each banda's tab panel of the desktop tab box (/bandas);
+//            spotImageUrls: the /kitesurfing photos whose alt names kitesurfing.
 // Booking engine: SiteMinder (direct-book.com/properties/cheshaledirect). robots.txt allows us, but the page loads
 //   the AWS WAF challenge script (edge.sdk.awswaf.com .../challenge.js) whose token the booking API needs -> bot
 //   protection, not used; slots stay 'unknown'.
@@ -20,7 +22,7 @@
 //   "on a B&B basis"). The two copies differ in wording for Kole Kole and Kajama, not in prices.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
-import { clean, imageCandidates } from '../parse.js';
+import { clean, imageCandidates, parse } from '../parse.js';
 import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
 
 const SITE = 'https://www.cheshale.com';
@@ -85,6 +87,34 @@ export function buildCsSlots(bandas: CsBanda[]): Slot[] {
   return out;
 }
 
+// --- photos -----------------------------------------------------------------------------------
+/** a full-size Wix photo as the gallery list keeps it (imageCandidates upscales; icons and logos are png / svg) */
+const csPhoto = (u: string): boolean => /^https:\/\/static\.wixstatic\.com\/media\/[^/]+$/.test(u) && !/\.png$|\.svg$/i.test(u);
+const csPhotos = (html: string, base: string): string[] => imageCandidates(html, base, null, 80).filter(csPhoto);
+
+/**
+ * Own photos per banda type: the desktop tab box has one tab panel per banda with its gallery (two slides plus the
+ * thumbnail strip) and its heading ("Deluxe Bandas" h2, the others h3). The mobile copy has no per-banda container
+ * and is not used for the mapping.
+ */
+export function parseCsBandaImages(html: string, names: string[]): Map<string, string[]> {
+  const out = new Map<string, string[]>();
+  const panels = parse(html).querySelectorAll('div').filter(d => /__tabPanelWrapper(?:\s|$)/.test(d.getAttribute('class') ?? ''));
+  for (const panel of panels) {
+    const name = panel.querySelectorAll('h2, h3').map(h => bandaName(clean(h.text).replace(/\u200b/g, '').trim())).find(n => names.includes(n));
+    if (!name || out.has(name)) continue;
+    const urls = csPhotos(panel.outerHTML, CS_BANDAS_URL);
+    if (urls.length) out.set(name, urls);
+  }
+  return out;
+}
+
+/** /kitesurfing photos whose alt names kitesurfing ("Kitesurfing at Che Shale Kenya"), page order. */
+export function parseCsSpotImages(html: string): string[] {
+  const kiteSrcs = parse(html).querySelectorAll('img').filter(i => /kite/i.test(i.getAttribute('alt') ?? '')).map(i => i.getAttribute('src') ?? '');
+  return csPhotos(html, CS_KITE_URL).filter(u => kiteSrcs.some(s => s.includes(`/media/${u.split('/media/')[1]}`)));
+}
+
 // --- content ----------------------------------------------------------------------------------
 export interface CsPages { home: string; bandas: string; kite: string; packages: string }
 
@@ -110,8 +140,11 @@ export function parseCheShaleContent(p: CsPages): OfferContent {
   const valid = packages.match(/valid for stays until ([^|]+?\d{4})/)?.[1] ?? null;
   const cheapest = [...bandas].filter(b => b.double !== null).sort((a, b) => a.double! - b.double!)[0];
 
+  const bandaImages = parseCsBandaImages(p.bandas, bandas.map(b => b.name));
+  const spotImageUrls = parseCsSpotImages(p.kite);
   const rooms: ContentRoom[] = bandas.map(b => ({
     name: b.name,
+    ...(bandaImages.has(b.name) ? { imageUrls: bandaImages.get(b.name) } : {}),
     description: b.description || null,
     features: [
       b.sleeps ? `Sleeps ${b.sleeps}` : null,
@@ -124,10 +157,7 @@ export function parseCheShaleContent(p: CsPages): OfferContent {
 
   const imgs: string[] = [];
   for (const [html, base] of [[p.bandas, CS_BANDAS_URL], [p.home, CS_HOME_URL], [p.kite, CS_KITE_URL]] as const) {
-    for (const u of imageCandidates(html, base, null, 80)) {
-      if (!/^https:\/\/static\.wixstatic\.com\/media\/[^/]+$/.test(u) || /\.png$|\.svg$/i.test(u) || imgs.includes(u)) continue;
-      imgs.push(u);
-    }
+    for (const u of csPhotos(html, base)) if (!imgs.includes(u)) imgs.push(u);
   }
 
   const summary = [
@@ -169,6 +199,7 @@ export function parseCheShaleContent(p: CsPages): OfferContent {
     languages: ['en'],
     rooms,
     imageUrls: imgs.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: CS_HOME_URL,
     bookingUrl: BOOKING_URL,

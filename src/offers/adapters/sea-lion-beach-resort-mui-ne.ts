@@ -14,6 +14,9 @@
 //   content  / (welcome), /ve-chung-toi (about: 285 rooms, 6.5 ha, 2 restaurants, 3 bars, 2 pools), 8 room pages
 //            (p.title-pro-detail, .info .name/.desc pairs: area, view, balcony, beds, breakfast, ...; .slick_1 photos),
 //            + c2skykitecenter.com/about-c2sky/ (kite facts).
+//            Room photos: each room page's .slick_1 slider (rooms[].imageUrls), minus files named after another room
+//            type. No spotImageUrls: the resort shows no kite photos; C2SKY is a partner site (and its
+//            /media/generated/ images look AI-made).
 //   slots    the 8 room pages: "Giá: Từ 2.300.000 vnđ/đêm" = from-price per room and night in VND, breakfast for two
 //            included; no dates, no season, no inventory -> one undated slot per room type, availability on_request
 //            (booking by phone, e-mail or the site's request form; the /dat-phong page has no engine).
@@ -112,6 +115,16 @@ export function parseSlRoom(html: string, url: string): SlRoom {
   };
 }
 
+/**
+ * The room page's own slider photos, best (first) first. A file named after another room type's page slug is left out
+ * (the Deluxe Beach Front slider ends with "...-deluxe-ocean-view-6-8144.jpg").
+ */
+export function slRoomImages(r: SlRoom, all: SlRoom[]): string[] {
+  const slug = (u: string) => u.replace(/\/+$/, '').split('/').pop() ?? '';
+  const others = all.map(x => slug(x.url)).filter(s => s && s !== slug(r.url));
+  return r.images.filter(u => !others.some(s => slug(u.split('?')[0]).includes(s)));
+}
+
 export function slRoomFeatures(r: SlRoom): string[] {
   return [
     r.areaM2 ? `${r.areaM2} m²` : null,
@@ -164,8 +177,9 @@ export function parseSeaLionContent(p: SlPages): OfferContent {
   const min = priced.length ? Math.min(...priced.map(r => r.price!)) : null;
   const areas = rooms.map(r => r.areaM2).filter((x): x is number => !!x);
 
-  const contentRooms: ContentRoom[] = rooms.map(r => ({
+  const contentRooms: ContentRoom[] = rooms.map(r => ({ r, own: slRoomImages(r, rooms) })).map(({ r, own }) => ({
     name: r.name,
+    ...(own.length ? { imageUrls: own } : {}),
     description: [
       r.areaM2 ? `${r.areaM2} m²` : null,
       /family/i.test(r.name) ? 'two bedrooms' : /bungalow/i.test(r.name) ? 'garden bungalow' : 'room',

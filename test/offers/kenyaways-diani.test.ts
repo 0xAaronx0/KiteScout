@@ -8,6 +8,7 @@ import {
   kenyawaysDiani, buildKwSlots, mapPin, parseKenyawaysContent, parseKwRooms, rateLinks,
 } from '../../src/offers/adapters/kenyaways-diani.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/kenyaways-diani');
@@ -105,4 +106,30 @@ test('kenyaways: each category rate is released once per named room of the categ
   // each room carries its category's full rate set
   const rate = (room: string) => slots.filter(s => s.room === room).map(s => `${s.key.split('|')[0]}|${s.startDate}=${s.price}`);
   assert.deepEqual(rate('Rebel'), rate('Tribal'));
+});
+
+test('kenyaways: own photos per room from the gallery before each <h3>, the kite spot photo from /facilities', () => {
+  const c = parseKenyawaysContent({ rooms, facilities, terms }, TODAY);
+  const photos = (name: string) => c.rooms.find(r => r.name === name)!.imageUrls ?? [];
+  assert.deepEqual(c.rooms.map(r => [r.name, photos(r.name).length]), [
+    ['Crossbow', 7], ['Rebel', 13], ['Tribal', 10], ['Raven', 14], ['Fuel', 5], ['Bolt', 7], ['Park', 13], ['Bandit', 22], ['Cult', 11],
+  ]);
+  assert.match(photos('Crossbow')[0], /kenyaways\+rooms\+patio\+view\.jpg$/);
+  assert.match(photos('Rebel')[0], /_H6A9650\+Kenyaways/);
+  assert.ok(photos('Rebel').slice(1).every(u => /rebel\+kenyaways|_H6A9669/.test(u)));
+  assert.match(photos('Tribal')[0], /Tribal\+kenyaways\+rooms/);
+  assert.match(photos('Raven')[0], /kenyaways\+sea\+view\+balcony2\.jpg$/);
+  assert.match(photos('Fuel')[0], /02\+-\+fuel\+-\+kenyaways/);
+  assert.match(photos('Bolt')[0], /01-Bolt_terrace\.jpg$/);
+  assert.ok(photos('Park').some(u => /04-Park_garden\.jpg$/.test(u)));
+  assert.match(photos('Bandit')[0], /IMG_1916\+ph\+Rosalia/);
+  assert.ok(photos('Cult').some(u => /05-Cult_ensuite\.jpg$/.test(u)));
+  assert.ok(photos('Cult').every(u => !/Park/.test(u)), "Cult's gallery also shows 04-Park_terrace.jpg: another room's photo, left out");
+  assert.ok(c.rooms.every(r => photos(r.name).every(u => u.startsWith('https://images.squarespace-cdn.com/'))));
+  assert.deepEqual(c.spotImageUrls, [
+    'https://images.squarespace-cdn.com/content/v1/620b5b0c6185131a2b398636/6f3540b3-be0a-47c9-baef-2e3bf84a8853/Diani+Kitesurf+spot',
+  ]);
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) if (r.imageUrls?.length) assert.ok(r.imageUrls.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

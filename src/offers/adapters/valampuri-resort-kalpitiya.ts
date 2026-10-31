@@ -8,6 +8,8 @@
 // Data path (checked 2026-10-12): static Astro site, English pages.
 //   content  / (facts, JSON-LD Resort with geo + WebPage.dateModified), /stay/ (room cards: name, size, guests,
 //            tags, blurb, "From EUR x p/p"), /rates-offers/ (package table), /gallery/ (photos).
+//            Room photos: the /stay/ card photo, then the room page's own gallery (/images/rooms/<card folder>/);
+//            spot photos: the kitesurfing shots of / and /gallery/ (file names with "kitesurf" / "kite-trips").
 //   slots    the 8 room pages linked from /stay/ (/<room-slug>/): <div class="price-card"> with
 //            price-label / price-amount / price-note ("BB Double p/p" / "EUR 35" / "Per person sharing").
 //            No dates, no season prices, no engine: booking is by WhatsApp / e-mail ("No deposit required",
@@ -15,7 +17,8 @@
 // Liveness (rule 5b, Aaron 2026-10-12): home page JSON-LD dateModified 2026-07-17 and "Last updated: 17 July
 //   2026"; rates page prices current (packages from EUR 245 pp); IKO affiliation since 2017.
 // robots.txt (2026-10-12): "User-agent: * Allow: /" (sitemap /sitemap-index.xml).
-// Requests per run: content 4 (/stay/ memoised), slots 1 + 8 room pages.
+// Requests per run: content 4 + the 8 room pages (memoised; fetchSlots reuses them and /stay/, so a full run makes
+//   12 requests, as before), slots alone 1 + 8 room pages.
 // Parsed: slot per room page x price card (supplements like "Full Board +EUR 16" skipped and kept as room
 //   features), EUR per night, basis person for "p/p" / "pp" cards (occupancy 2 for double sharing, 1 for
 //   single), basis room for a group rate ("EUR 90 group rate for 6"); no dates.
@@ -49,6 +52,12 @@ function page(url: string): Promise<string> {
   return pageCache.get(url)!;
 }
 
+const VAL_JUNK_RE = /\/brand\/|logo|badge|icon|facebook\.com\/tr|\.svg/i;
+/** one photo in all its size variants ("-thumb-320w.webp", "-800w.webp", "-q40.webp" -> the plain file) */
+const variantKey = (u: string): string => u.replace(/-(?:thumb-)?\d+w(?=\.webp$)|-thumb(?=\.webp$)|-q\d+(?=\.webp$)/, '');
+/** /images/rooms/<folder>/ of a room photo (the folder of Garden Eco Chalet is "eco-wooden-cabana") */
+const roomFolder = (u: string): string | null => u.match(/\/images\/rooms\/([a-z0-9-]+)\//)?.[1] ?? null;
+
 /** Visible text of <main> without scripts, styles and inline icons. */
 function mainText(html: string): string {
   const root = parse(html);
@@ -73,6 +82,37 @@ export function parseValRooms(html: string): ValRoomCard[] {
       fromPrice: collapse(a.querySelector('.v2-room-card__price')?.text ?? '') || null,
       scarcity: collapse(a.querySelector('.v2-room-card__scarcity')?.text ?? '') || null,
     });
+  }
+  return out;
+}
+
+/** /stay/: the photo of each room card (path -> URLs, as imageCandidates gives them). */
+export function parseValCardImages(html: string): Map<string, string[]> {
+  const out = new Map<string, string[]>();
+  for (const a of parse(html).querySelectorAll('a.v2-room-card')) {
+    const path = a.getAttribute('href') ?? '';
+    if (out.has(path)) continue;
+    out.set(path, imageCandidates(a.outerHTML, VAL_STAY_URL, null, 10).filter(u => !VAL_JUNK_RE.test(u) && roomFolder(u)));
+  }
+  return out;
+}
+
+/**
+ * Own photos of one room type, best first: its /stay/ card photo, then its room page gallery (only files in the card's
+ * /images/rooms/<folder>/, so the "other rooms" teasers on the page stay out). Each photo once, in the URL the general
+ * list uses for it (`known`), else the room page's full-size file.
+ */
+export function valRoomImages(card: string[], roomHtml: string | null, roomUrl: string, known: Map<string, string>): string[] {
+  const folder = card.map(roomFolder).find(Boolean) ?? roomUrl.replace(/\/+$/, '').split('/').pop() ?? null;
+  const page = roomHtml ? imageCandidates(roomHtml, roomUrl, null, 60).filter(u => !VAL_JUNK_RE.test(u)) : [];
+  const out: string[] = [];
+  const seen = new Set<string>();
+  for (const u of [...card, ...page]) {
+    if (roomFolder(u) !== folder) continue;
+    const k = variantKey(u);
+    if (seen.has(k)) continue;
+    seen.add(k);
+    out.push(known.get(k) ?? page.find(x => variantKey(x) === k) ?? u);
   }
   return out;
 }
@@ -141,7 +181,11 @@ export function parseValPackages(html: string): ValPackage[] {
   return out;
 }
 
-export interface ValPages { home: string; stay: string; rates: string; gallery: string }
+export interface ValPages {
+  home: string; stay: string; rates: string; gallery: string;
+  /** room page HTML by /stay/ card path ("/open-air-cabana/"); a missing page only costs that room's gallery */
+  roomPages?: Record<string, string>;
+}
 
 export function parseValampuriContent(p: ValPages): OfferContent {
   const home = mainText(p.home);
@@ -157,12 +201,6 @@ export function parseValampuriContent(p: ValPages): OfferContent {
   const roomFrom = stay.match(/from (€\d+) per person per night/i)?.[1] ?? rates.match(/Room-only stays start at (€\d+ per person per night)/)?.[1] ?? null;
   const storage = stay.match(/gear storage \((€\d+\/day)\)/i)?.[1] ?? null;
 
-  const contentRooms: ContentRoom[] = rooms.map(r => ({
-    name: r.name,
-    description: [r.meta, r.desc].filter(Boolean).join('. ') || null,
-    features: [...r.tags, ...(r.fromPrice ? [r.fromPrice] : []), ...(r.scarcity ? [r.scarcity] : [])],
-  }));
-
   const seen = new Set<string>();
   const imageUrls: string[] = [];
   for (const u of [
@@ -171,11 +209,26 @@ export function parseValampuriContent(p: ValPages): OfferContent {
     ...imageCandidates(p.gallery, VAL_GALLERY_URL, null, 60),
     ...imageCandidates(p.stay, VAL_STAY_URL, null, 40),
   ]) {
-    if (/\/brand\/|logo|badge|icon|facebook\.com\/tr|\.svg/i.test(u)) continue;
-    const k = u.replace(/-(?:thumb-)?\d+w(?=\.webp$)|-thumb(?=\.webp$)|-q\d+(?=\.webp$)/, '');
+    if (VAL_JUNK_RE.test(u)) continue;
+    const k = variantKey(u);
     if (seen.has(k)) continue;
     seen.add(k); imageUrls.push(u);
   }
+  const cardImages = parseValCardImages(p.stay);
+  // kiting on the lagoon (home hero, lesson and downwinder cards, gallery riders); room photos ("kitesurf stay") stay out
+  const spotImageUrls = imageUrls.filter(u => !roomFolder(u) && /kitesurf|kite-trips/i.test(u.split('/').pop() ?? ''));
+
+  // a room photo that is also in the delivered general list keeps that list's URL (one identity in the curation)
+  const known = new Map(imageUrls.slice(0, 40).map(u => [variantKey(u), u] as const));
+  const contentRooms: ContentRoom[] = rooms.map(r => {
+    const own = valRoomImages(cardImages.get(r.path) ?? [], p.roomPages?.[r.path] ?? null, `${SITE}${r.path}`, known);
+    return {
+      name: r.name,
+      description: [r.meta, r.desc].filter(Boolean).join('. ') || null,
+      features: [...r.tags, ...(r.fromPrice ? [r.fromPrice] : []), ...(r.scarcity ? [r.scarcity] : [])],
+      ...(own.length ? { imageUrls: own } : {}),
+    };
+  });
 
   const summary = [
     `Valampuri is a family-run eco resort on Kalpitiya Lagoon in north-western Sri Lanka, open since 2016, with its own IKO-affiliated kite school (Duotone equipment, rescue boat, free boat transfers to the kite spot a few minutes away).`,
@@ -213,6 +266,7 @@ export function parseValampuriContent(p: ValPages): OfferContent {
     languages: [],
     rooms: contentRooms,
     imageUrls: imageUrls.slice(0, 40),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: VAL_HOME_URL,
     bookingUrl: `${SITE}/contact/`,
@@ -245,7 +299,12 @@ export const valampuriResortKalpitiya: OfferAdapter = {
     const stay = await page(VAL_STAY_URL);
     const rates = await page(VAL_RATES_URL);
     const gallery = await page(VAL_GALLERY_URL);
-    return parseValampuriContent({ home, stay, rates, gallery });
+    // the room pages fetchSlots reads anyway (memoised): their galleries are the per-room photos
+    const roomPages: Record<string, string> = {};
+    for (const r of parseValRooms(stay)) {
+      try { roomPages[r.path] = await page(`${SITE}${r.path}`); } catch { /* that room keeps its /stay/ card photo only */ }
+    }
+    return parseValampuriContent({ home, stay, rates, gallery, roomPages });
   },
   async fetchSlots(ctx) {
     const rooms = parseValRooms(await page(VAL_STAY_URL));

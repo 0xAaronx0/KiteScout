@@ -8,6 +8,7 @@ import {
   seaLionBeachResortMuiNe, buildSlSlots, parseSlRoom, SL_ROOM_URLS,
 } from '../../src/offers/adapters/sea-lion-beach-resort-mui-ne.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/sea-lion-beach-resort-mui-ne');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -66,4 +67,24 @@ test('sea-lion: content (kite link from the on-site C2SKY centre)', async () => 
   assert.ok(c.imageUrls.every(u => /^https:\/\/sealionresort\.com\/hamtien\/thumbs\/1550x1050x1\/upload\/product\//.test(u)));
   assert.match(c.sourceText ?? '', /Năm 2026/);
   assert.match(c.sourceText ?? '', /Sea Lion 12 Nguyen Dinh Chieu/);
+});
+
+test('sea-lion: own photos per room from its page slider, all room types inside the first 24 candidates', async () => {
+  const c = await seaLionBeachResortMuiNe.fetchContent(ctx);
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0]), [
+    ['Standard', 7], ['Superior', 4], ['Deluxe Garden View', 5], ['Deluxe Ocean View', 7],
+    ['Deluxe Beach Front', 8], ['Family Garden View', 4], ['Family Ocean View', 6], ['Bungalow Garden View', 12],
+  ]);
+  const first = c.rooms.map(r => r.imageUrls![0].split('/').pop());
+  assert.deepEqual(first, [
+    'sea-lion-beach-resort-standard-garden-view-6-8421.jpg', 'superior-garden-1-1677.jpg', 'deluxe-garden-view-1-3265.png',
+    'sea-lion-beach-resort-mui-ne-deluxe-ocean-view-3-5439.jpg', 'sea-lion-beach-resort-mui-ne-deluxe-beach-front-3-2978.jpg',
+    'family-garden-view-2-4900.jpg', 'family-ocean-view-1-8298.jpg', 'bungalows-sea-lion-beach-resort-mui-ne-12-4074.jpg',
+  ]);
+  // the Beach Front slider ends with a file named after the Ocean View room: not given to Beach Front
+  assert.ok(c.rooms[4].imageUrls!.every(u => !/deluxe-ocean-view/.test(u)));
+  assert.ok(c.rooms.every(r => r.imageUrls!.every(u => /^https:\/\/sealionresort\.com\/hamtien\/thumbs\/1550x1050x1\/upload\/product\//.test(u))));
+  assert.equal(c.spotImageUrls, undefined); // no own kite photos; C2SKY is a partner site
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) if (r.imageUrls?.length) assert.ok(r.imageUrls.some(u => first24.includes(u)), r.name);
 });
