@@ -186,6 +186,7 @@ export function parseVillaRasaContent(p: VrPages): OfferContent {
     spot: 'Praia Rasa',
     // Omnibees hotel page map pin (#map-wrap data-lat / data-long, 2026-10-12)
     spotCoords: Number.isFinite(lat) && Number.isFinite(lng) && lat !== 0 ? { lat, lng } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: [],

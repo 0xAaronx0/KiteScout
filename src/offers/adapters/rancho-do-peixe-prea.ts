@@ -127,6 +127,7 @@ export function parseRanchoContent(p: RpPages): OfferContent {
     spot: 'Preá',
     // Google Maps embed on the own site, pin "Rancho do Peixe" (2026-10-12)
     spotCoords: map ? { lat: Number(map[2]), lng: Number(map[1]) } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // /o-rancho-do-peixe/: "aulas de kitesurf e wingfoil para todos os níveis, desde iniciantes até avançados" (2026-10-12)

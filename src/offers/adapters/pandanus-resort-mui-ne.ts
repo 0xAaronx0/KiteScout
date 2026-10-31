@@ -119,6 +119,7 @@ export function parsePandanusContent(p: PrPages): OfferContent {
     region: 'Lam Dong (Binh Thuan)',
     spot: 'Mui Ne',
     spotCoords: coords, // Google Maps embed on the resort's /contact/ page
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'],

@@ -238,6 +238,7 @@ export function parseJaguaribeLodgeContent(p: JlPages): OfferContent {
     spot: 'Fortim',
     // own site's Google Maps place link (footer), same point as the Omnibees map pin (checked 2026-10-12)
     spotCoords: pin,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kitesurf page: "for those who want to learn kitesurfing or improve their skills"; school for adults, young people and children

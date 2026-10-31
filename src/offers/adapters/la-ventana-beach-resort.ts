@@ -165,6 +165,7 @@ export function parseLvbrContent(p: LvbrPages): OfferContent {
     region: 'La Ventana, Baja California Sur',
     spot: 'La Ventana',
     ...(pin ? { spotCoords: pin } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'],

@@ -301,6 +301,7 @@ export function parseKiteMarinaContent(p: KmPages): OfferContent {
     region: 'Sarbsk, Pomerania',
     spot: 'Lake Sarbsko, Sarbsk',
     spotCoords: kmCoords(p.contact),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: [],

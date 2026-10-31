@@ -5,6 +5,8 @@
 // A spot stored with `pinned: true` was placed by hand (e.g. an island-name stop moved from the
 // island centroid to its harbour, Aaron 2026-10-29); a re-run keeps its coordinates even when
 // the geocoder returns a point again.
+// A spot with `precise: true` sits on the property's exact address (KCS shows a map pin at street
+// zoom); a hand pin replaces the coordinates, so it drops the flag.
 
 export interface StoredSpot {
   name: string;
@@ -14,6 +16,7 @@ export interface StoredSpot {
   lng: number | null;
   order: number;
   pinned?: true;
+  precise?: true;
 }
 
 const located = (s: { lat?: unknown; lng?: unknown }) => typeof s.lat === 'number' && typeof s.lng === 'number';
@@ -38,12 +41,16 @@ export function mergeItinerarySpots(
   let carried = 0;
   const merged = fresh.map(s => {
     const pin = oldPins.get(key(s.name));
-    if (pin) { carried++; return { ...s, lat: pin.lat, lng: pin.lng, pinned: true as const }; }
+    if (pin) {
+      carried++;
+      const { precise: _, ...rest } = s;
+      return { ...rest, lat: pin.lat, lng: pin.lng, pinned: true as const };
+    }
     if (located(s)) return s;
     const prev = oldCoords.get(key(s.name));
     if (!prev) return s;
     carried++;
-    return { ...s, lat: prev.lat, lng: prev.lng };
+    return { ...s, lat: prev.lat, lng: prev.lng, ...(prev.precise === true ? { precise: true as const } : {}) };
   });
   if (merged.some(located)) {
     return { spots: merged, note: carried ? `kept stored coords for ${carried} spot(s)` : null };

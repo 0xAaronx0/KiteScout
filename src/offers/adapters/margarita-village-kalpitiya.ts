@@ -164,6 +164,7 @@ export function parseMargaritaVillageContent(p: MvPages): OfferContent {
     region: 'North Western Province',
     spot: 'Kalpitiya',
     spotCoords: coords,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // camp page: "Beginner, intermediate, advanced and wingfoil lessons available." (2026-10-12)

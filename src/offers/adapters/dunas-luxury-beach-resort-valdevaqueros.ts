@@ -185,6 +185,7 @@ export function parseDunasContent(p: DunPages): OfferContent {
     region: 'Valdevaqueros, Tarifa',
     spot: 'Valdevaqueros',
     spotCoords: parseDunGeo(p.home),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: [],

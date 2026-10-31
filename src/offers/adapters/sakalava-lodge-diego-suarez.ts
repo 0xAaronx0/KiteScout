@@ -194,6 +194,7 @@ export function parseSakalavaContent(p: SkPages): OfferContent {
     region: 'Diana (Diego Suarez)',
     spot: 'Sakalava Bay',
     spotCoords: coords ? { lat: Number(coords[1]), lng: Number(coords[2]) } : null, // map link on the home page
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kite page: "from complete beginners to experienced riders"

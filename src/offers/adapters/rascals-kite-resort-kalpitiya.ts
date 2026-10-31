@@ -166,6 +166,7 @@ export function parseRascalsContent(p: RkPages): OfferContent {
     region: 'North Western Province',
     spot: 'Kalpitiya',
     spotCoords: pin ? { lat: Number(pin[1]), lng: Number(pin[2]) } : null, // Google Maps place link in the site's Organization JSON-LD
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kite page: "offers kiteboarding lessons to suit every level of experience"

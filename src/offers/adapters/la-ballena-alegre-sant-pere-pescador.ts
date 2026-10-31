@@ -403,6 +403,7 @@ export function parseBallenaContent(p: BaPages): OfferContent {
     region: 'Catalonia',
     spot: 'Sant Pere Pescador, Bay of Roses',
     spotCoords: geo, // geoPosition of the property in its own booking engine (MasterCamping)
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // nautical page: "school for all levels"

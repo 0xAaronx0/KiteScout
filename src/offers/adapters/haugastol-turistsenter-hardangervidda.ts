@@ -142,6 +142,7 @@ export function parseHaugastolContent(p: HgPages): OfferContent {
     region: 'Hardangervidda',
     spot: 'Haugastøl, Hardangervidda',
     spotCoords: { lat: 60.5124, lng: 7.8531 }, // OSM tourism=hotel "Haugastøl Turistsenter" (way 434843122)
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'],

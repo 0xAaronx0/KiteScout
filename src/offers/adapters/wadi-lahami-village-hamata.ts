@@ -308,6 +308,7 @@ export function parseWadiLahamiContent(p: WlPages): OfferContent {
     region: 'Red Sea',
     spot: 'Wadi Lahami',
     spotCoords: Number.isFinite(lat) && Number.isFinite(lng) ? { lat, lng } : null, // village map script on the site
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // village page: "ideal playground for experienced kiters and a perfect learning space for beginners"

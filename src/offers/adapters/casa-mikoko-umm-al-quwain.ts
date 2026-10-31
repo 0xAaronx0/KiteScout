@@ -188,6 +188,7 @@ export function parseCasaMikokoContent(js: string): OfferContent {
     region: 'Umm Al Quwain',
     spot: 'Khor Al Yeefrah, Umm Al Quwain',
     spotCoords: CM_COORDS,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'],

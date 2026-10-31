@@ -156,6 +156,7 @@ export function parseBlueDreamContent(p: BdPages): OfferContent {
     region: 'Guanacaste',
     spot: 'Bahia Salinas',
     spotCoords: pin,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'],

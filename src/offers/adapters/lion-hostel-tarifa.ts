@@ -207,6 +207,7 @@ export function parseLionContent(p: LionPages): OfferContent {
     region: 'Tarifa town',
     spot: 'Tarifa',
     spotCoords: lionCoords(p.hostel),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'], // private, semi-private and group lessons; "Describe your level"

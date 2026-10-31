@@ -138,6 +138,7 @@ export function parseFeddetContent(p: FsrPages): OfferContent {
     region: 'Feddet, South Zealand',
     spot: 'Feddet',
     ...(geo ? { spotCoords: geo } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kite page: "The fjord around Feddet is very shallow – so the place is good for beginners."

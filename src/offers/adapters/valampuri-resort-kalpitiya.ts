@@ -192,6 +192,7 @@ export function parseValampuriContent(p: ValPages): OfferContent {
     region: 'North Western Province',
     spot: 'Kalpitiya Lagoon',
     spotCoords: geo && typeof geo.latitude === 'number' && typeof geo.longitude === 'number' ? { lat: geo.latitude, lng: geo.longitude } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'], // "Complete beginners through advanced riders"

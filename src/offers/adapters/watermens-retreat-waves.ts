@@ -292,6 +292,7 @@ export function parseWatermensContent(p: WrPages): OfferContent {
     spot: 'Waves',
     // median of the unit pins in the site's own Streamline data
     ...(coords ? { spotCoords: coords } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // REAL: "beginner instruction, jumping, foiling, or waveriding"

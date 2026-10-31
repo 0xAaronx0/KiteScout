@@ -117,6 +117,9 @@ export interface OfferContent {
   spot: string | null;
   /** map pin for `spot` when the geocoder cannot place it (the KCS map only pins located spots) */
   spotCoords?: { lat: number; lng: number } | null;
+  /** `spotCoords` is the property itself (the provider's own map pin / geo of the stay), not a beach, school or
+   *  village: the KCS mini map shows an exact pin at street zoom only for such spots (Aaron 2026-10-31) */
+  spotCoordsPrecise?: true;
   itinerarySpots: ItinerarySpot[];
   durationDays: number | null;  // tours/camps: nights + 1; accommodation: null
   skillLevels: string[];        // 'beginner' | 'intermediate' | 'advanced'

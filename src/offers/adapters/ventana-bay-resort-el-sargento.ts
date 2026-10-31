@@ -123,6 +123,7 @@ export function parseVentanaBayContent(p: VbPages): OfferContent {
     region: 'Baja California Sur',
     spot: 'La Ventana',
     ...(coords ? { spotCoords: coords } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: [],

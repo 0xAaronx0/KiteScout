@@ -383,6 +383,7 @@ export function parseUmmaiiContent(p: UmPages): OfferContent {
     region: 'Suhrendorf, Rügen',
     spot: 'Suhrendorf, Ummanz',
     ...(coords ? { spotCoords: coords } : {}),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'],

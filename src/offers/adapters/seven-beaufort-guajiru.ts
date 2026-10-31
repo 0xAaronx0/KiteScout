@@ -196,6 +196,7 @@ export function parseSevenBeaufortContent(p: SbPages): OfferContent {
     region: 'Ceará',
     spot: 'Ilha do Guajiru',
     spotCoords: coords,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // home: "the perfect kitespot for all skill levels" (2026-10-12)

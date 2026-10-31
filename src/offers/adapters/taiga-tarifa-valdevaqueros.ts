@@ -328,6 +328,7 @@ export function parseTaigaValdevaquerosContent(p: TgValPages): OfferContent {
     region: 'Valdevaqueros, Tarifa',
     spot: 'Valdevaqueros',
     spotCoords: parseTgHotelGeo(p.page),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // kite page: "If you are just starting out ... learn properly"; "if you already know how to ride, we also rent out equipment"

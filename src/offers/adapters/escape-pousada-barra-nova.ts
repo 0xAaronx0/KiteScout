@@ -200,6 +200,7 @@ export function parseEscapeContent(p: EpPages): OfferContent {
     region: 'Ceará',
     spot: 'Barra Nova',
     spotCoords: Number.isFinite(lat) && Number.isFinite(lng) && lat !== 0 ? { lat, lng } : null,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // spot guide "Para quem e o spot": iniciantes, intermediarios, avancados e freestyle

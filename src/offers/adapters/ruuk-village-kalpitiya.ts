@@ -179,6 +179,7 @@ export function parseRuukContent(p: RvPages): OfferContent {
     region: 'North Western Province',
     spot: 'Kalpitiya',
     spotCoords: typeof geo.latitude === 'number' && typeof geo.longitude === 'number' ? { lat: geo.latitude, lng: geo.longitude } : null, // site JSON-LD geo
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // JSON-LD kite school: "Beginner to advanced"

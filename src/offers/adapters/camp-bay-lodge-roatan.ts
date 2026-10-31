@@ -186,6 +186,7 @@ export function parseCampBayContent(p: CblPages): OfferContent {
     region: 'Bay Islands',
     spot: 'Camp Bay, Roatán',
     spotCoords: { lat: 16.42897224, lng: -86.29253387 }, // Google Maps link on every page of the site
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     skillLevels: [],

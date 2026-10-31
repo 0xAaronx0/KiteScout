@@ -109,6 +109,7 @@ export function parseOitiContent(homeHtml: string, hotelHtml: string): OfferCont
     spot: 'Praia de São José, Tutóia',
     // Omnibees hotel page map pin (.google_map data-lat / data-lng, 2026-10-12)
     spotCoords: ob.coords,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // "Somos especializados em aulas do nível iniciante ao avançado" (Kitesurf Life block, 2026-10-12)

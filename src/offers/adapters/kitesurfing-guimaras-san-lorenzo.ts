@@ -209,6 +209,7 @@ export function parseGuimarasContent(p: GmPages): OfferContent {
     region: 'Western Visayas (Guimaras)',
     spot: 'Playa de Paraiso, San Lorenzo, Guimaras',
     spotCoords: gmCoords(p.home) ?? gmCoords(p.resort),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // home: "Kitesurfing Courses / lessons for all kinds of levels. From Beginner to Advanced to Jumping and Looping"

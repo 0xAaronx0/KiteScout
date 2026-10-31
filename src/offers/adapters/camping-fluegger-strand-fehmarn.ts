@@ -275,6 +275,7 @@ export function parseFlueggerContent(p: CfsPages): OfferContent {
     region: 'Flügge, Fehmarn',
     spot: 'Flügge',
     spotCoords: CFS_COORDS,
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // surfen.html: the spot at the campsite is "nur für Fortgeschrittene"; beginners go to Orth / Lemkenhafen

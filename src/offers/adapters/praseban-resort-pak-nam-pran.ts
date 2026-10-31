@@ -157,6 +157,7 @@ export function parsePrasebanContent(p: PsbPages): OfferContent {
     region: 'Prachuap Khiri Khan',
     spot: 'Pak Nam Pran, Pranburi',
     spotCoords: parsePsbCoords(p.home),
+    spotCoordsPrecise: true,
     itinerarySpots: [],
     durationDays: null,
     // "Ideal for both beginners and experts"; Nov-Jan "suitable for more experienced riders"
