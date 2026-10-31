@@ -21,6 +21,27 @@ Frage nach dieser Messung mit Rangfolge nach Nutzen: "ja bitte".
 - **10 Fälle "Quelle klären"** (Zimmerfotos nur in einer Buchungsmaschine, bei einem Partner oder auf einer Plattform) sind aus der Top 20 herausgenommen und unten einzeln aufgeführt. Dazu Nebenbefunde: Stock- und KI-Bilder sowie Grundrisse auf eigenen Domains, die heute durch die Filter rutschen.
 - **Empfehlung:** ein gemeinsamer Helfer im Ingest (mischen, je Zimmer ein Platz in der KI-Auswahl, `image_sort` setzen, Stock/KI filtern) plus je Adapter eine kleine Änderung, die die Zimmerfotos dem Zimmer zuordnet. Details unten.
 
+## Umsetzung (Stand 2026-10-31, Branch `claude/room-photo-audit`, nicht live)
+
+Aaron (2026-10-31): "Helfer im Ingest bauen, dann die Top 20".
+
+- **Helfer:** `src/offers/gallery.ts` (`planGallery`, `linkRoomImages`, `isNotOwnPhoto`), optionale Felder `ContentRoom.imageUrls` und
+  `OfferContent.spotImageUrls` (`src/offers/types.ts`), Reserve-Gruppen in der Bild-KI (`visionBatch` in `src/lib/images.ts`: je Zimmertyp und
+  für den Spot ein beschrifteter Platz, Stapel bis 20 statt der 10 größten), Einbindung in `src/offers/ingest.ts`. Ohne Zimmer- und Spotfotos
+  bleibt die Reihenfolge des Adapters; die Kreuzfahrt-Strecke ist unverändert.
+- **Top 20:** alle 20 Adapter liefern jetzt eigene Fotos je Zimmertyp (213 von 216 Zimmereinträgen) und, wo die schon gelesenen Seiten welche
+  haben, Spotfotos (17 von 20). Keine neuen Abrufe; Valampuri liest seine Zimmerseiten jetzt auch im Content-Lauf über den vorhandenen Memo
+  (ein voller Lauf bleibt bei 12 Abrufen).
+- **Wirkung laut Fixtures:** Zimmertypen mit eigenem Foto in den ersten 24 Kandidaten vorher 114, jetzt 213; Spotfoto in den ersten 24 vorher bei
+  4 Listings, jetzt bei 17. Was die Bild-KI davon behält, zeigt erst ein Lauf.
+- **Live wird es erst mit `--refresh-images` je Listing** (das ersetzt die heutigen Galerien; auf Aarons Wort, über den Deployer). Ohne Neulauf
+  setzt der nächste Voll-Lauf `image_sort` nur für Zimmer, deren Foto zufällig schon in der gespeicherten Galerie liegt.
+- **Bewusst offen gelassen, zur Sichtung:** Loissin "Mobilheim Boddentraum" (nur prompt-artig benannte Stimmungsbilder, ohne Zimmerfoto gelassen);
+  Todo Bien "Villa Tres Niños" (die ersten zwei Fotos sind PNG, eventuell Renderings); Feddet "Camp-Let" (eventuell Herstellerfotos); Vela Baja
+  "Deluxe Poolside" (keiner Preistabelle zuzuordnen, keinem Zimmer gegeben); Feddet "Paradiso" (Fotos in der Fixture abgeschnitten, live über
+  `data-src`); Taiga Valdevaqueros Spotfotos liegen im Ketten-Ordner `q10-corpo` (auf der eigenen Kiteseite des Platzes).
+- **Nächste Kandidaten:** Strandgut (Rang 27, Aufwand S, Aarons Beispiel) und Thorsminde (Aufwand M, drei Hütten-Unterseiten).
+
 ## Datengrundlage und Methode
 
 1. **Offline-Lauf aller Adapter:** `fetchContent` jedes Adapters aus der Registry gegen seine Fixture (`test/fixtures/offers/<adapter>/`, wie in den Tests über `OFFERS_FIXTURE_DIR`), Netz im Skript hart gesperrt. Alle 347 liefen durch; zusätzlich `fetchSlots` für die Preise je Zimmer (über `roomsWithPrices` aus `src/offers/ingest.ts`; bei 14 Engine-Adaptern sind die Fixtures datumsgebunden, dort kommen die Preise aus den Zimmertexten).
