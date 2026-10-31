@@ -352,7 +352,7 @@ async function main(): Promise<void> {
         all: args.includes('--all'),
         domain: flagStr('--domain'),
         limit: positionalLimit(),
-        only: flagStr('--only'), // e.g. --only tripadvisor,google
+        only: flagStr('--only'), // e.g. --only tripadvisor,bstoked (Google is never collected, KCS#607)
       });
       console.log(`Done: ${matched} review links matched across ${providers} providers.`);
       break;
@@ -386,7 +386,7 @@ async function main(): Promise<void> {
       const out = flagStr('--out');
       if (out) writeFileSync(out, JSON.stringify(results, null, 2));
       const by = (k: string) => results.filter(r => r.links[k]).length;
-      console.log(`${results.length} operators: ${results.filter(r => r.found).length} with a review link (bstoked ${by('bstoked_url')}, TripAdvisor ${by('tripadvisor_url')}, Google ${by('google_url')}), ${results.filter(r => r.error).length} errors${out ? ` -> ${out}` : ''}`);
+      console.log(`${results.length} operators: ${results.filter(r => r.found).length} with a review link (bstoked ${by('bstoked_url')}, TripAdvisor ${by('tripadvisor_url')}), ${results.filter(r => r.error).length} errors${out ? ` -> ${out}` : ''}`);
       break;
     }
 

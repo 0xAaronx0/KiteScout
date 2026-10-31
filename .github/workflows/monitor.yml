@@ -138,7 +138,7 @@ jobs:
         run: pnpm cli bookable-months
 
   operator-reviews:
-    # Review links (bstoked, TripAdvisor, Google) for package operators never checked yet, i.e. new
+    # Review links (bstoked, TripAdvisor; no Google since KCS#607) for package operators never checked yet, i.e. new
     # listings (Aaron 2026-10-30). Same search and guards as `operator-reviews --apply`; at most 30 per
     # run. Own job: the search renders operator homepages (Chromium) and calls Tavily + the verifier.
     runs-on: ubuntu-latest

@@ -6,8 +6,8 @@ import { search as tavilySearch, extract as tavilyExtract } from '../lib/tavily.
 import { fetchPageConditional } from '../lib/fetchPage.js';
 import { htmlToText, collapse } from '../lib/content.js';
 import { withRetry } from '../lib/retry.js';
-import { renderPageEx, closeRenderer, type RenderCookie } from '../lib/render.js';
-import { operatorReviewPatch, SOURCE_COLUMNS, type OperatorReviewResult } from './operator-review-patch.js';
+import { renderPageEx, closeRenderer } from '../lib/render.js';
+import { averageRating, operatorReviewPatch, SOURCE_COLUMNS, type OperatorReviewResult } from './operator-review-patch.js';
 export type { OperatorReviewResult } from './operator-review-patch.js';
 
 const CONCURRENCY = 3;
@@ -29,21 +29,6 @@ const SOURCES: ReviewSource[] = [
     label: 'bstoked',
     hostMatch: h => /(^|\.)bstoked\.net$/i.test(h),
   },
-];
-
-// Google Maps links an operator puts on their own site (footer "Google Reviews",
-// share links). g.page / maps.app.goo.gl are the official short-link hosts.
-const GOOGLE_LINK_RE = /^(maps\.app\.goo\.gl|g\.page|goo\.gl|maps\.google\.[a-z.]+|google\.[a-z.]+)$/i;
-const isGoogleMapsLink = (abs: string): boolean => {
-  const h = hostOf(abs);
-  if (!h || !GOOGLE_LINK_RE.test(h)) return false;
-  return /maps\.app\.goo\.gl|g\.page/i.test(h) || /\/maps\//.test(abs);
-};
-
-// Pre-accepted consent cookies so google.com doesn't serve the consent wall.
-const GOOGLE_COOKIES: RenderCookie[] = [
-  { name: 'CONSENT', value: 'YES+cb.20230101-07-p0.en+FX+410', domain: '.google.com' },
-  { name: 'SOCS', value: 'CAESHAgBEhJnd3NfMjAyMzA4MTAtMF9SQzIaAmVuIAEaBgiA_LyaBg', domain: '.google.com' },
 ];
 
 interface VerifyResult {
@@ -146,124 +131,8 @@ async function searchCandidates(
   return hits.sort((a, b) => score(b) - score(a)).slice(0, 3);
 }
 
-// ---------------------------------------------------------------------------
-// Google reviews (no API key): self-linked place → render; else Maps search.
-// ---------------------------------------------------------------------------
-function parseGoogleRating(html: string): { rating: number | null; count: number | null } {
-  let rating: number | null = null;
-  let count: number | null = null;
-  const both = html.match(/([0-5][.,]\d)\s*stars?\s+([\d][\d,.]*)\s*Reviews?/i);
-  if (both) {
-    rating = parseFloat(both[1].replace(',', '.'));
-    count = parseInt(both[2].replace(/[,.]/g, ''), 10);
-  }
-  if (rating === null) {
-    const r = html.match(/aria-label="([0-5][.,]\d) stars?"/i)
-      ?? html.match(/<span[^>]*aria-hidden="true"[^>]*>([0-5][.,]\d)<\/span>/);
-    if (r) rating = parseFloat(r[1].replace(',', '.'));
-  }
-  if (count === null) {
-    const c = html.match(/([\d][\d,.]*)\s*(?:reviews|Rezension(?:en)?|Bewertungen)/i);
-    if (c) count = parseInt(c[1].replace(/[,.]/g, ''), 10);
-  }
-  if (rating !== null && (rating < 0 || rating > 5 || Number.isNaN(rating))) rating = null;
-  if (count !== null && (count < 1 || count > 1_000_000 || Number.isNaN(count))) count = null;
-  return { rating, count };
-}
-
-/** Resolve a share/short link (maps.app.goo.gl, g.page) to its full Maps URL. */
-async function resolveGoogleUrl(url: string): Promise<string | null> {
-  try {
-    const res = await fetch(url, {
-      redirect: 'follow',
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-        Cookie: 'CONSENT=YES+cb.20230101-07-p0.en+FX+410; SOCS=CAESHAgBEhJnd3NfMjAyMzA4MTAtMF9SQzIaAmVuIAEaBgiA_LyaBg',
-      },
-      signal: AbortSignal.timeout(15000),
-    });
-    return res.url || url;
-  } catch {
-    return null;
-  }
-}
-
-/** Canonical, shareable place URL (drop the giant /data= blob + params). */
-function cleanMapsUrl(url: string): string {
-  return url.split('/data=')[0].split('?')[0];
-}
-
-async function matchGoogle(
-  provider: { name: string; root_domain: string; country: string | null },
-  ownPages: Array<{ url: string; html: string | null }>,
-): Promise<SourceMatch | null> {
-  // Signal 1: the operator's own site links its Google place (strongest).
-  // Guard: such a link can also be a mere LOCATION pin (village/city map link),
-  // not the business profile — accept it only when the place name shares a
-  // token with the provider's name/domain; otherwise fall through to search.
-  let placeUrl: string | null = null;
-  let selfLinked = false;
-  const nameTokens = `${provider.name} ${provider.root_domain}`
-    .toLowerCase().split(/[^a-z0-9]+/).filter(t => t.length >= 4);
-  const placeNameOf = (u: string): string => {
-    const m = u.match(/\/maps\/place\/([^/@?]+)/);
-    try { return decodeURIComponent((m?.[1] ?? '').replace(/\+/g, ' ')).toLowerCase(); } catch { return ''; }
-  };
-  for (const p of ownPages) {
-    const l = p.html ? findSelfLinkBy(p.html, p.url, isGoogleMapsLink) : null;
-    if (!l) continue;
-    const resolved = await resolveGoogleUrl(l);
-    if (!resolved) continue;
-    const placeName = placeNameOf(resolved);
-    if (!placeName || !nameTokens.some(t => placeName.includes(t))) continue; // location pin, not the business
-    placeUrl = resolved;
-    selfLinked = true;
-    break;
-  }
-
-  // Signal 2: Google Maps search for the business name (rendered, consent pre-set).
-  let pageHtml: string | null = null;
-  if (!placeUrl) {
-    const q = encodeURIComponent(`${provider.name} ${provider.country ?? ''}`.trim());
-    const r = await renderPageEx(`https://www.google.com/maps/search/${q}?hl=en&gl=us`, { cookies: GOOGLE_COOKIES });
-    if (!r) return null;
-    if (/\/maps\/place\//.test(r.url)) {
-      // single unambiguous hit → Maps navigated straight to the place
-      placeUrl = r.url;
-      pageHtml = r.html;
-    } else {
-      const m = r.html.match(/href="(https:\/\/www\.google\.com\/maps\/place\/[^"]+)"/);
-      if (!m) return null;
-      placeUrl = m[1].replace(/&amp;/g, '&');
-    }
-  }
-  if (!placeUrl || !/\/maps\/place\//.test(placeUrl)) return null;
-
-  if (!pageHtml) {
-    const r = await renderPageEx(placeUrl, { cookies: GOOGLE_COOKIES });
-    if (!r) return null;
-    pageHtml = r.html;
-    placeUrl = r.url;
-  }
-
-  const { rating, count } = parseGoogleRating(pageHtml);
-
-  // A search-found place must pass the same-operator check; a self-linked one
-  // is the operator's own claim and needs no verification.
-  let evidence = 'operator site links to Google place';
-  if (!selfLinked) {
-    const verify = await verifyMatch({ label: 'Google Maps' }, provider, htmlToText(pageHtml));
-    if (!verify?.is_same_operator || verify.confidence === 'low') return null;
-    evidence = `Maps search match (${verify.confidence}); ${verify.evidence ?? ''}`.trim();
-  }
-
-  return {
-    url: cleanMapsUrl(placeUrl),
-    rating,
-    review_count: count,
-    evidence: `Google: ${evidence}`,
-  };
-}
+// Google: no collection (Aaron 2026-10-31, KCS#607 "607 b"). Google Maps pages are not fetched and no Google
+// rating, count or link is written; a stored google_url stays as it is.
 
 // ---------------------------------------------------------------------------
 // Claude verification — same operator? + rating/count from the listing text
@@ -411,10 +280,7 @@ export async function recomputeAvgRating(providerId: string): Promise<number | n
     .eq('id', providerId)
     .single();
   if (error || !row) return null;
-  const ratings = [row.google_rating, row.tripadvisor_rating, row.bstoked_rating]
-    .map(v => (typeof v === 'number' ? v : v !== null && v !== undefined ? parseFloat(String(v)) : NaN))
-    .filter(v => Number.isFinite(v) && v >= 0 && v <= 5);
-  const avg = ratings.length ? Math.round((ratings.reduce((s, v) => s + v, 0) / ratings.length) * 10) / 10 : null;
+  const avg = averageRating(row);
   await supabase.from('cruise_providers').update({ avg_rating: avg }).eq('id', providerId);
   return avg;
 }
@@ -444,7 +310,7 @@ type ReviewTarget = { id: string; name: string | null; root_domain: string; webs
 // (contact/about/review) worth checking for self-links. Shared by the cruise writer and the operator dry run.
 async function collectReviews(
   cp: ReviewTarget,
-  opts: { google: boolean; sources: ReviewSource[] },
+  opts: { sources: ReviewSource[] },
   storedPageUrls: string[],
 ): Promise<{ patch: Record<string, unknown>; notes: string[]; found: number }> {
   const homeUrl = cp.website_url ?? `https://${cp.root_domain}`;
@@ -468,7 +334,7 @@ async function collectReviews(
     if (r.status === 'ok' && r.html) ownPages.push({ url: u, html: r.html });
   }
   const staticJoined = ownPages.map(p => p.html ?? '').join(' ');
-  if (!/tripadvisor|maps\.app\.goo\.gl|g\.page|google\.[a-z.]+\/maps/i.test(staticJoined)) {
+  if (!/tripadvisor/i.test(staticJoined)) {
     const rendered = await renderPageEx(homeUrl);
     if (rendered) ownPages.unshift({ url: rendered.url, html: rendered.html });
   }
@@ -493,28 +359,17 @@ async function collectReviews(
     }
   }
 
-  if (opts.google) {
-    const gm = await matchGoogle(provider, ownPages);
-    if (gm) {
-      found++;
-      notes.push(gm.evidence);
-      patch.google_url = gm.url;
-      patch.google_rating = gm.rating;
-      patch.google_review_count = gm.review_count;
-    }
-  }
-
   return { patch, notes, found };
 }
 
-async function processProvider(cp: ReviewTarget, opts: { google: boolean; sources: ReviewSource[] }): Promise<number> {
+async function processProvider(cp: ReviewTarget, opts: { sources: ReviewSource[] }): Promise<number> {
   const { data: pgs } = await supabase.from('provider_pages').select('url').eq('cruise_provider_id', cp.id);
   const { patch, notes, found } = await collectReviews(cp, opts, (pgs ?? []).map(r => r.url as string));
   if (notes.length > 0) {
     // Merge with notes from other sources' earlier runs: keep segments of
     // sources this run did NOT cover, replace the ones it did.
     const { data: cur } = await supabase.from('cruise_providers').select('review_match_notes').eq('id', cp.id).single();
-    const covered = [...opts.sources.map(s => s.label), ...(opts.google ? ['Google'] : [])];
+    const covered = opts.sources.map(s => s.label);
     const kept = ((cur?.review_match_notes as string | null) ?? '')
       .split(' | ')
       .filter(seg => seg.trim() && !covered.some(label => seg.trim().toLowerCase().startsWith(label.toLowerCase() + ':')));
@@ -551,22 +406,12 @@ export async function runExtractCruiseReviews(
     return { providers: 0, matched: 0 };
   }
 
-  // Which sources this run covers (--only tripadvisor,google,bstoked).
+  // Which sources this run covers (--only tripadvisor,bstoked); Google is never collected (KCS#607).
   const only = (opts.only ?? '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
   const wants = (k: string) => only.length === 0 || only.includes(k);
   const sources = SOURCES.filter(s => wants(s.key));
-  let google = wants('google');
 
-  // Google needs the migration 20260708000000_add_google_reviews.sql.
-  if (google) {
-    const probe = await supabase.from('cruise_providers').select('google_url').limit(1);
-    if (probe.error) {
-      console.warn('⚠ google_url column missing — run supabase/migrations/20260708000000_add_google_reviews.sql, then re-run. Skipping Google this run.');
-      google = false;
-    }
-  }
-
-  console.log(`Checking review links for ${providers.length} cruise providers… (sources: ${[...sources.map(s => s.key), ...(google ? ['google'] : [])].join(', ')})`);
+  console.log(`Checking review links for ${providers.length} cruise providers… (sources: ${sources.map(s => s.key).join(', ')})`);
 
   const limit = pLimit(CONCURRENCY);
   let done = 0;
@@ -576,7 +421,7 @@ export async function runExtractCruiseReviews(
     providers.map(cp =>
       limit(async () => {
         try {
-          totalMatched += await processProvider(cp, { google, sources });
+          totalMatched += await processProvider(cp, { sources });
         } catch (err) {
           console.error(`\n  Failed ${cp.root_domain}:`, err instanceof Error ? err.message : err);
         }
@@ -621,8 +466,8 @@ export async function runOperatorReviewsDryRun(
   const picked = opts.limit ? operators.slice(0, opts.limit) : operators;
   const only = (opts.only ?? '').toLowerCase().split(',').map(s => s.trim()).filter(Boolean);
   const wants = (k: string) => only.length === 0 || only.includes(k);
-  const sources = SOURCES.filter(s => wants(s.key)), google = wants('google');
-  console.log(`Dry run: review links for ${picked.length} package operators (sources: ${[...sources.map(s => s.key), ...(google ? ['google'] : [])].join(', ')}); nothing is written.`);
+  const sources = SOURCES.filter(s => wants(s.key));
+  console.log(`Dry run: review links for ${picked.length} package operators (sources: ${sources.map(s => s.key).join(', ')}); nothing is written.`);
 
   const limit = pLimit(CONCURRENCY);
   const results: OperatorReviewResult[] = [];
@@ -630,7 +475,7 @@ export async function runOperatorReviewsDryRun(
   await Promise.all(picked.map(op => limit(async () => {
     const base = { operatorId: op.id, name: op.name, domain: op.root_domain, country: op.primary_country, listings: listings.get(op.id) ?? [] };
     try {
-      const { patch, notes, found } = await collectReviews(op, { google, sources }, []);
+      const { patch, notes, found } = await collectReviews(op, { sources }, []);
       const { reviews_checked_at: _checked, ...links } = patch;
       results.push({ ...base, found, links, notes });
     } catch (err) {

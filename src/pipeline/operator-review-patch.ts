@@ -12,19 +12,25 @@ export function rejectedReviewSources(links: Record<string, unknown>): string[] 
   if (typeof links.bstoked_url === 'string' && /bstoked\.net\/listings\/type\//.test(links.bstoked_url)) out.push('bstoked');
   return out;
 }
+// Google is neither collected nor written (Aaron 2026-10-31, KCS#607 "607 b"): its columns stay out of every patch,
+// so a stored google_url is kept and no Google number enters avg_rating.
 export const SOURCE_COLUMNS: Record<string, string[]> = {
-  google: ['google_url', 'google_rating', 'google_review_count'],
   tripadvisor: ['tripadvisor_url', 'tripadvisor_rating', 'tripadvisor_review_count'],
   bstoked: ['bstoked_url', 'bstoked_rating', 'bstoked_review_count'],
 };
+/** Mean of the Tripadvisor and bSTOKED ratings present (0-5), one decimal; Google never counts. */
+export function averageRating(row: Record<string, unknown>): number | null {
+  const ratings = [row.tripadvisor_rating, row.bstoked_rating]
+    .map(v => (typeof v === 'number' ? v : v !== null && v !== undefined ? parseFloat(String(v)) : NaN))
+    .filter(v => Number.isFinite(v) && v >= 0 && v <= 5);
+  return ratings.length ? Math.round((ratings.reduce((sum, v) => sum + v, 0) / ratings.length) * 10) / 10 : null;
+}
 /** The provider patch for one dry-run result: guarded and skipped sources left out, avg over the kept ratings. */
 export function operatorReviewPatch(result: OperatorReviewResult, skip: Set<string>, checkedAt: string): Record<string, unknown> {
-  const drop = new Set([...rejectedReviewSources(result.links), ...['google', 'tripadvisor', 'bstoked'].filter(src => skip.has(`${result.domain}:${src}`))]);
+  const drop = new Set([...rejectedReviewSources(result.links), 'google', ...['tripadvisor', 'bstoked'].filter(src => skip.has(`${result.domain}:${src}`))]);
   const patch: Record<string, unknown> = { reviews_checked_at: checkedAt };
   for (const [src, cols] of Object.entries(SOURCE_COLUMNS)) for (const col of cols) patch[col] = drop.has(src) ? null : (result.links[col] ?? null);
-  const ratings = ['google_rating', 'tripadvisor_rating', 'bstoked_rating'].map(col => patch[col])
-    .filter((v): v is number => typeof v === 'number' && v >= 0 && v <= 5);
-  patch.avg_rating = ratings.length ? Math.round((ratings.reduce((sum, v) => sum + v, 0) / ratings.length) * 10) / 10 : null;
+  patch.avg_rating = averageRating(patch);
   const labels: Record<string, string> = { google: 'google', tripadvisor: 'tripadvisor', bstoked: 'bstoked' };
   const notes = result.notes.filter(note => ![...drop].some(src => note.toLowerCase().startsWith(labels[src])));
   patch.review_match_notes = notes.length ? notes.join(' | ') : null;
