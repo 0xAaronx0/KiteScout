@@ -77,7 +77,7 @@ test('namibia downwinder: no price on the page, the Namibia season card → one 
   clean(content.summary + content.title);
 });
 
-test('walvis bay camp: "starting at" weekly price + the camp season, no site-wide cards, no 640w copies', async () => {
+test('walvis bay camp: "starting at" weekly price + the camp season, own photos only', async () => {
   const page = html('surfariafrika-walvis-bay-camp');
   assert.equal(parseSaWalvisPrice(page), 800);
   assert.deepEqual(parseSaWalvisSeason(page), { start: '2026-10-10', end: '2026-11-30', label: '10 October 2026 to 30 November 2026' });
@@ -94,7 +94,8 @@ test('walvis bay camp: "starting at" weekly price + the camp season, no site-wid
   assert.equal(contentProblem(content), null);
   assert.equal(content.kind, 'camp');
   assert.equal(content.country, 'Namibia');
-  assert.equal(content.imageUrls.length, 8);
+  // own photos only (Aaron 2026-10-31): pexels, tourism site, Bing OIP, press, stock and Booking-style ids stay out
+  assert.deepEqual(content.imageUrls.map(u => u.split('/').pop()), ['L1030941-1920w.JPG']);
   assert.ok(content.imageUrls.every(u => !/-640w\./.test(u)), 'one size per photo');
   assert.ok(content.imageUrls.every(u => !/324846706_|82329993_|IMG_20211029_154320|ChatGPT|lamu1-|196977156_/.test(u)), 'no site-wide card photos');
   clean(content.summary + content.title);

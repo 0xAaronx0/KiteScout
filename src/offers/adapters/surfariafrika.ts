@@ -295,6 +295,10 @@ export function parseSaNamibiaContent(html: string, today = todayIso()): OfferCo
 // --- Walvis Bay camp (Bird Lagoon & Marine Surfari) -------------------------------------------
 /** Footer cards every page carries (Kenya trips, catamaran, safari, contact; checked 2026-10-31): not Walvis Bay. */
 const SITE_WIDE_CARDS = /324846706_531272312299333|82329993_10156984078613511|IMG_20211029_154320|ChatGPT\+Image|lamu1-1920x678|967cd710_original|febf691aa9f7ba610a643f43e5108ad0|vintage-typewriters/;
+/** Own photos only (Aaron 2026-10-31): the page mixes in pexels, a tourism site, a Bing thumbnail, a press photo and
+ *  stock panoramas. Only camera file names (Leica L1030941 is the one on 2026-10-31) count as the operator's own;
+ *  a new upload with another name is dropped until someone looks at it. */
+const OWN_CAMERA_PHOTO = /\/(L\d{5,}|IMG_\d{8}|DSC_?\d{4,}|P\d{7,})[^/]*$/;
 
 /** "WHEN 10 OCTOBER UP TO NOVEMBER": the year comes from the site-wide "Namibia Kiteboarding ... 2026" card. */
 export function parseSaWalvisSeason(html: string): { start: string; end: string; label: string } | null {
@@ -330,7 +334,7 @@ export function parseSaWalvisSlots(html: string, today = todayIso()): Slot[] {
 export function parseSaWalvisContent(html: string, today = todayIso()): OfferContent {
   const price = parseSaWalvisPrice(html);
   const season = parseSaWalvisSeason(html);
-  const all = images(html, SA_WALVIS_URL).filter(u => !SITE_WIDE_CARDS.test(u));
+  const all = images(html, SA_WALVIS_URL).filter(u => !SITE_WIDE_CARDS.test(u) && OWN_CAMERA_PHOTO.test(u));
   // Duda prints each photo as -1920w and -640w; the ingest does not dedupe size variants
   const own = all.filter(u => !/-640w\./.test(u) || !all.includes(u.replace('-640w.', '-1920w.')));
   return {
