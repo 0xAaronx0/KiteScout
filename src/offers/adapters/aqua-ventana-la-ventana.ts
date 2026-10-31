@@ -19,7 +19,8 @@
 //            "Total" adds the 20% tax) or "Unavailable for selected dates. Next availability for 7 nights: Jan 19".
 // robots.txt (2026-10-14): disallows /reservations/, /gift-certificates/, /account/, /thinkweb-preview only; the
 //   .md pages are allowed. Currency: the site prints "$"; the policies page states USD.
-// Requests per run: content 5, slots 7.
+// Requests per run: content 5, slots 7 + the room list (memoised; a full run makes 12). A unit booked in every sample
+//   month keeps the room list's "Starts at $X / night" as an undated floor (2026-10-31).
 // Parsed: slot = unit x month ("cardon|2027-01"), USD per unit per night before tax, occupancy 2,
 //   datePrecision 'month' (the band is the month, the price is the sample stay's), 'available' with the price or
 //   'sold_out' with the engine's own words. Taxes (20% VAT + hotel tax) are in the room features and the
@@ -28,6 +29,7 @@
 //   nights in the same month. Off-season discount ("up to 50% Off", July 1 - October 31) is applied by the engine.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
+import { printedFromSlots } from '../ingest.js';
 import { collapse, imageCandidates, iso, ldOfType, todayIso } from '../parse.js';
 import type { ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
 
@@ -38,6 +40,18 @@ export const AQ_KITE_MD = `${SITE}/kiteboarding.md`;
 export const AQ_ABOUT_MD = `${SITE}/about.md`;
 export const AQ_POLICIES_MD = `${SITE}/policies.md`;
 const ROOMS_URL = `${SITE}/accommodations`;
+const MD = 'text/markdown,text/plain,*/*;q=0.8';
+
+const memo = new Map<string, { at: number; p: Promise<string> }>();
+/** one fetch per page per 10 minutes: fetchContent + fetchSlots in the same run share the room list */
+function page(url: string, accept: string): Promise<string> {
+  const hit = memo.get(url);
+  if (hit && Date.now() - hit.at < 10 * 60_000) return hit.p;
+  const p = fetchText(url, { accept });
+  memo.set(url, { at: Date.now(), p });
+  p.catch(() => memo.delete(url));
+  return p;
+}
 export const AQ_ADULTS = 2;
 export const AQ_NIGHTS = 7;
 export const AQ_HORIZON_MONTHS = 7;
@@ -175,7 +189,10 @@ export async function fetchAqSlots(ctx: FetchContext, today: string): Promise<Sl
   if (failed) ctx.incomplete(`${failed} of ${samples.length} sample months failed`);
   const slots = buildAqSlots(results);
   if (slots.length === 0 && failed < samples.length) throw new Error('aqua-ventana: no priced or unavailable unit in any sample month (layout changed?)');
-  return slots;
+  // units booked in every sample month keep the room list's "Starts at $X / night" (memoised with the content)
+  const printed = parseAqUnits(await page(AQ_ROOMS_MD, MD)).flatMap(u => u.price === null ? []
+    : [{ room: u.name, price: u.price, currency: 'USD', priceUnit: 'per_night' as const, priceBasis: 'room' as const }]);
+  return [...slots, ...printedFromSlots(slots, printed)];
 }
 
 // --- content -------------------------------------------------------------------------------------
@@ -306,12 +323,11 @@ export const aquaVentanaLaVentana: OfferAdapter = {
   liveAvailability: true,
   fetchBudget: 13,
   async fetchContent() {
-    const md = { accept: 'text/markdown,text/plain,*/*;q=0.8' };
-    const home = await fetchText(AQ_HOME_URL, { accept: 'text/html' });
-    const rooms = await fetchText(AQ_ROOMS_MD, md);
-    const kite = await fetchText(AQ_KITE_MD, md);
-    const about = await fetchText(AQ_ABOUT_MD, md);
-    const policies = await fetchText(AQ_POLICIES_MD, md);
+    const home = await page(AQ_HOME_URL, 'text/html');
+    const rooms = await page(AQ_ROOMS_MD, MD);
+    const kite = await page(AQ_KITE_MD, MD);
+    const about = await page(AQ_ABOUT_MD, MD);
+    const policies = await page(AQ_POLICIES_MD, MD);
     return parseAquaContent({ home, rooms, kite, about, policies });
   },
   async fetchSlots(ctx) {

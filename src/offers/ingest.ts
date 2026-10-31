@@ -375,21 +375,41 @@ function contentRow(a: OfferAdapter, c: OfferContent, operatorId: string, spots:
 }
 
 /**
+ * A room name as slots and rooms are compared: case, quote marks ("Lark´s", "Lark’s"), dash variants and runs of
+ * spaces do not count (Aaron 2026-10-31: engine and page spell the same room differently).
+ */
+export const roomKey = (name: string) => name.normalize('NFC').toLowerCase()
+  .replace(/[´`‘’ʼ]/g, "'").replace(/[‐‑‒–—]/g, '-').replace(/\s+/g, ' ').trim();
+
+/**
  * The content room a slot belongs to: the adapter's explicit `room`, else the room named like the unit
- * (case-insensitive), else the longest room name the unit starts with before a qualifier
+ * (roomKey), else the longest room name the unit starts with before a qualifier
  * ("Mixed dorm (bed)", "Tiny House, Mon-Fri nights"). Packages named "Rider package, double room" stay unmatched.
  */
 export function slotRoom(roomNames: string[], s: Pick<Slot, 'unit' | 'room'>): string | null {
-  if (s.room) return roomNames.includes(s.room) ? s.room : null;
+  if (s.room) return roomNames.find(n => roomKey(n) === roomKey(s.room!)) ?? null;
   if (!s.unit) return null;
-  const unit = s.unit.trim().toLowerCase();
-  const exact = roomNames.find(n => n.trim().toLowerCase() === unit);
+  const unit = roomKey(s.unit);
+  const exact = roomNames.find(n => roomKey(n) === unit);
   if (exact) return exact;
-  const prefixed = roomNames.filter(n => {
-    const name = n.trim().toLowerCase();
-    return [' (', ', ', ' - ', ' · '].some(sep => unit.startsWith(name + sep));
-  });
+  const prefixed = roomNames.filter(n => [' (', ', ', ' - ', ' · '].some(sep => unit.startsWith(roomKey(n) + sep)));
   return prefixed.sort((x, y) => y.length - x.length)[0] ?? null;
+}
+
+export interface PrintedRoomPrice { room: string; price: number; currency: string; priceUnit: Slot['priceUnit']; priceBasis: Slot['priceBasis'] }
+
+/**
+ * A room's printed "from" price ("From EUR 133 per night") as the fallback for rooms the engine prices nowhere
+ * (Aaron 2026-10-31, "1+2+3 ja"): one undated slot per such room, a floor the app shows as "from".
+ */
+export function printedFromSlots(engine: Slot[], printed: PrintedRoomPrice[]): Slot[] {
+  const names = printed.map(p => p.room);
+  const covered = new Set(engine.filter(s => s.price !== null).flatMap(s => s.rooms?.length ? s.rooms : [slotRoom(names, s)]));
+  return printed.filter(p => !covered.has(p.room)).map(p => ({
+    key: `printed|${roomKey(p.room).normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`, startDate: null, endDate: null, unit: p.room, room: p.room,
+    price: p.price, currency: p.currency, priceUnit: p.priceUnit, priceBasis: p.priceBasis, occupancy: null,
+    availability: 'unknown', availabilityText: null, spotsLeft: null, priceIsMinimum: true,
+  }));
 }
 
 const nextDay = (d: string) => new Date(Date.parse(`${d}T00:00:00Z`) + 86_400_000).toISOString().slice(0, 10);
@@ -421,8 +441,8 @@ export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string, l
   const group = (list: Slot[]) => {
     const byRoom = new Map<string, Slot[]>();
     for (const s of list) {
-      const room = slotRoom(names, s);
-      if (room) byRoom.set(room, [...(byRoom.get(room) ?? []), s]);
+      const rooms = s.rooms?.length ? s.rooms.map(r => slotRoom(names, { unit: null, room: r })) : [slotRoom(names, s)];
+      for (const room of new Set(rooms)) if (room) byRoom.set(room, [...(byRoom.get(room) ?? []), s]);
     }
     return byRoom;
   };
@@ -440,9 +460,11 @@ export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string, l
     const latestYear = over.map(yearOf).sort().at(-1) ?? '';
     const tier = [priced, ahead, over.filter(s => yearOf(s) === latestYear)].find(list => list.length > 0) ?? [];
     const min = [...tier].sort((x, y) => x.price! - y.price!)[0];
-    const months = [...new Set(priced.filter(s => s.startDate).flatMap(s => coveredMonths(s.startDate!, s.endDate)))].sort((x, y) => x - y);
-    // Aaron 2026-10-31: price_from is only a floor when the provider gives a range without dates or the room has
-    // several prices (seasons, occupancy); the app then shows "from" unless a dated price covers the chosen month.
+    // a floor (range, one engine price for several rooms) is no dated price of this room: no priced month, no range
+    const months = [...new Set(priced.filter(s => s.startDate && !s.priceIsMinimum).flatMap(s => coveredMonths(s.startDate!, s.endDate)))].sort((x, y) => x - y);
+    // Aaron 2026-10-31: price_from is only a floor when the provider gives a range or one price for several different
+    // rooms (priceIsMinimum) or the room has several prices (seasons, occupancy); the app then shows "from" unless a
+    // dated price covers the chosen month.
     const minimum = Boolean(min) && (tier.some(s => s.priceIsMinimum)
       || new Set(tier.map(s => `${s.price} ${s.currency} ${s.priceUnit} ${s.priceBasis}`)).size > 1);
     return {
@@ -452,7 +474,7 @@ export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string, l
       // basis of price_from (room / person / group); KCS shows it as "per room" etc.
       price_source: 'provider_site', price_basis: min?.priceBasis ?? null, priced_months: months, image_sort: null,
       // dated ranges from the provider's calendar/price list; [] = no dated data for this room
-      availability: roomAvailability(own),
+      availability: roomAvailability(own.filter(s => !s.priceIsMinimum)),
     };
   });
 }

@@ -25,14 +25,15 @@
 //   availabilityText), else 'on_request'. minNights 7 in the summer high season (cottages: every high-season range), else
 //   none (the spring high-season caravan range mixes "Himmelfahrt mind. 4" and "Pfingsten mind. 3" -> left empty).
 //   Runs that ended before today are dropped: on 2026-10-14 only the cottages' last range (to 18.10.2026) is left, after
-//   that the offer shows "price on request" until the 2027 list ("Anfragen für 2027 … erst ab Oktober 2026").
+//   that the ranges that are over are last published prices (2026-10-31): each unit keeps its from-price until the 2027
+//   list ("Anfragen für 2027 … erst ab Oktober 2026").
 // Known limits: short-stay surcharge (+EUR 10 per night under 7 nights in mid / low season), cottage energy flat rate
 //   (EUR 4-7 per night) and the final cleaning fee (EUR 40-65) are in the room features, not in the price. Map pin = the
 //   GPS line on lage-anfahrt.html (54° 27' 06" N, 11° 00' 25" E; constant below).
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, iso, monthOf, parseAmount, runsOf, todayIso } from '../parse.js';
-import type { Availability, ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { ALL_DATES, type Availability, type ContentRoom, type FetchContext, type OfferAdapter, type OfferContent, type Slot } from '../types.js';
 
 const SITE = 'https://www.fluegger-strand.de';
 export const CFS_HOME_URL = `${SITE}/`;
@@ -301,9 +302,11 @@ export function parseFlueggerContent(p: CfsPages): OfferContent {
   };
 }
 
-export async function fetchCfsSlots(today: string): Promise<Slot[]> {
+export async function fetchCfsSlots(today: string, ctx?: Pick<FetchContext, 'lastPublished'>): Promise<Slot[]> {
   const tables = [parseCfsPrices(await page(CFS_CARAVAN_PRICES_URL)), parseCfsPrices(await page(CFS_COTTAGE_PRICES_URL))];
   if (tables.some(t => !t)) throw new Error('camping-fluegger-strand: "Preise YYYY" table not found on a price page (layout changed?)');
+  // Aaron 2026-10-31 ("1+2+3 ja"): ranges that are over still price their unit until the next list is printed
+  ctx?.lastPublished?.(buildCfsSlots(tables as CfsTable[], ALL_DATES).filter(s => s.endDate! < today));
   return buildCfsSlots(tables as CfsTable[], today);
 }
 
@@ -331,7 +334,7 @@ export const campingFlueggerStrandFehmarn: OfferAdapter = {
     if (!/Kiter/.test(surf)) throw new Error('camping-fluegger-strand: kite sentence missing on surfen.html (kite link gone?)');
     return parseFlueggerContent({ home, surf, caravans, cottages, caravanPrices, cottagePrices });
   },
-  async fetchSlots() {
-    return fetchCfsSlots(todayIso());
+  async fetchSlots(ctx) {
+    return fetchCfsSlots(todayIso(), ctx);
   },
 };

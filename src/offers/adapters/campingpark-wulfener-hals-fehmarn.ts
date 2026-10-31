@@ -211,6 +211,20 @@ export function parseWhKitePrices(html: string): Array<{ course: string; detail:
 
 export interface WhPages { home: string; kite: string; specials: string; rentals: Array<{ path: string; html: string }> }
 
+/** Content room name of a unit card: the unit name when it already says the category, else "<category>: <unit>". */
+const whRoomName = (cat: string, u: WhUnit) => u.name.toLowerCase().includes(cat.split(' ')[0].toLowerCase()) ? u.name : `${cat}: ${u.name}`;
+
+/** Content room names per rental category (as parseWulfenerHalsContent builds them). */
+export function whRoomsByCategory(rentals: WhPages['rentals']): Map<string, string[]> {
+  const out = new Map<string, string[]>();
+  for (const r of rentals) {
+    const cat = WH_RENTAL_PAGES.find(x => x.path === r.path)?.category ?? r.path;
+    const us = parseWhUnits(r.html, cat);
+    out.set(cat, us.length ? us.map(u => whRoomName(cat, u)) : [cat]);
+  }
+  return out;
+}
+
 export function parseWulfenerHalsContent(p: WhPages): OfferContent {
   const kite = whLines(p.kite);
   const kitePrices = parseWhKitePrices(p.kite);
@@ -225,7 +239,7 @@ export function parseWulfenerHalsContent(p: WhPages): OfferContent {
     const us = parseWhUnits(r.html, cat);
     units.push(...us);
     if (us.length === 0) rooms.push({ name: cat, description: whIntro(r.html), features: [] });
-    for (const u of us) rooms.push({ name: u.name.toLowerCase().includes(cat.split(' ')[0].toLowerCase()) ? u.name : `${cat}: ${u.name}`, description: u.info, features: u.features });
+    for (const u of us) rooms.push({ name: whRoomName(cat, u), description: u.info, features: u.features });
     for (const u of whImages(r.html).slice(0, 4)) if (!imgs.includes(u)) imgs.push(u);
   }
   for (const u of [...whImages(p.home).slice(0, 6), ...whImages(p.kite)]) if (!imgs.includes(u)) imgs.push(u);
@@ -343,14 +357,25 @@ export const WH_ROOMS: Record<string, string> = {
   'Mobile home Chatel': 'Mobile home: Chatel Model',
 };
 
-/** Engine samples -> slots with English unit names, keys "<unit>|<check-in>" and the content room (WH_ROOMS). */
-export function buildWhEngineSlots(samples: CsobSample[], ctx?: Pick<FetchContext, 'note'>): Slot[] {
+/**
+ * Engine profiles that price several content rooms at once, by rental category (Aaron 2026-10-31: "1+2+3 ja", the one
+ * price shows as "from" on each): Dünenpark = both house models, "on the campsite" = the beach and pool apartments.
+ * The golf course apartments are not on our pages and stay unlinked.
+ */
+export const WH_SHARED: Record<string, string[]> = {
+  'Holiday home Dünenpark': ['Holiday home Dünenpark'],
+  'Holiday apartment on the campsite': ['Beach apartment', 'Pool apartment'],
+};
+
+/** Engine samples -> slots with English unit names, keys "<unit>|<check-in>" and the content room(s) (WH_ROOMS, WH_SHARED). */
+export function buildWhEngineSlots(samples: CsobSample[], ctx?: Pick<FetchContext, 'note'>, roomsByCategory = new Map<string, string[]>()): Slot[] {
   const names = new Map<string, string>();
   for (const s of samples) for (const p of s.profiles) names.set(p.title, whUnitName(p));
   return csobSlots(whOpenGroupsOnly(samples), ctx).map(s => {
     const unit = s.unit ? names.get(s.unit) ?? s.unit : s.unit;
     const room = unit ? WH_ROOMS[unit] : undefined;
-    return { ...s, unit, key: `${csobKeyPart(unit ?? '')}|${s.startDate}`, ...(room ? { room } : {}) };
+    const rooms = unit ? (WH_SHARED[unit] ?? []).flatMap(c => roomsByCategory.get(c) ?? []) : [];
+    return { ...s, unit, key: `${csobKeyPart(unit ?? '')}|${s.startDate}`, ...(room ? { room } : {}), ...(rooms.length ? { rooms, priceIsMinimum: true } : {}) };
   });
 }
 
@@ -361,7 +386,13 @@ export function whSampleCheckIns(today: string): string[] {
 
 /** Engine first; the specials table only when the engine has no priced unit. */
 export async function fetchWhLiveSlots(today: string, ctx: FetchContext): Promise<Slot[]> {
-  const engine = buildWhEngineSlots(await fetchCsobSamples(WH_PORTAL, whSampleCheckIns(today), ctx), ctx);
+  // the rental pages are memoized: fetchContent of the same run already loaded them
+  const rentals: WhPages['rentals'] = [];
+  for (const c of new Set(Object.values(WH_SHARED).flat())) {
+    const path = WH_RENTAL_PAGES.find(x => x.category === c)!.path;
+    rentals.push({ path, html: await page(`${SITE}/${path}`) });
+  }
+  const engine = buildWhEngineSlots(await fetchCsobSamples(WH_PORTAL, whSampleCheckIns(today), ctx), ctx, whRoomsByCategory(rentals));
   if (engine.some(s => s.price != null)) return engine;
   ctx.note('wulfener-hals: no rental unit priced by the compusoft engine in any sample week - specials table used');
   return fetchWhSlots(today);

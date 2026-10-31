@@ -8,6 +8,8 @@ import {
   campingFlueggerStrandFehmarn, buildCfsSlots, fetchCfsSlots, parseCfsPrices, type CfsTable,
 } from '../../src/offers/adapters/camping-fluegger-strand-fehmarn.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { roomsWithPrices } from '../../src/offers/ingest.js';
+import type { Slot } from '../../src/offers/types.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/camping-fluegger-strand-fehmarn');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -70,4 +72,22 @@ test('fluegger: content describes the kite link as printed', async () => {
   assert.equal(c.rooms.length, 6);
   assert.deepEqual(c.rooms[2].features.slice(0, 2), ['Units M6', '2026: EUR 82-105 per night (low to high season, up to 4 persons)']);
   assert.ok(c.imageUrls.length >= 12 && c.imageUrls.every(u => u.startsWith('https://www.fluegger-strand.de/')));
+});
+
+test('fluegger: ranges that are over stay the units\' from-prices until the next list (Aaron 2026-10-31)', async () => {
+  const past: Slot[] = [];
+  const after = '2026-10-31';
+  const slots = await fetchCfsSlots(after, { lastPublished: p => { past.push(...p); } });
+  assert.deepEqual(slots, []);
+  assert.ok(past.length > 0 && past.every(s => s.endDate! < after));
+  const rows = roomsWithPrices(await campingFlueggerStrandFehmarn.fetchContent(ctx), slots, after, past);
+  assert.deepEqual(rows.map(r => [r.name, r.price_from, r.price_from_is_minimum, r.availability]), [
+    ['Rental caravan category 1-A (Hobby Excellent 560 UL, first row)', 72, true, []],
+    ['Rental caravan category 1-B (Hobby Excellent 560 UL, second row)', 67, true, []],
+    ['Rental caravan category 2-A (Hobby 650 UMFe Prestige, first row)', 82, true, []],
+    ['Rental caravan category 2-B (Hobby 650 UMFe Prestige, second row)', 77, true, []],
+    ['Holiday cottage type B (25 m²)', rows[4].price_from, true, []],
+    ['Holiday cottage type E (40 m²)', rows[5].price_from, true, []],
+  ]);
+  assert.ok(rows.slice(4).every(r => r.price_from !== null));
 });

@@ -55,6 +55,9 @@ export interface Slot {
   unit: string | null;
   /** the content room (ContentRoom.name) this slot prices, when `unit` names it differently */
   room?: string | null;
+  /** several content rooms this price holds for (one price-list line for every private room, one engine profile for
+   *  two house models); with priceIsMinimum each of them shows it as "from" (Aaron 2026-10-31) */
+  rooms?: string[];
   price: number | null;         // null = price on request
   currency: string | null;      // ISO 4217, original currency (never converted)
   priceUnit: SlotPriceUnit | null;
@@ -75,8 +78,9 @@ export interface Slot {
   packageNights?: number | null;
   /** minimum stay when arriving in this slot (booking-engine restriction) */
   minNights?: number | null;
-  /** the provider gives only a range ("from 100 to 750 zł depending on the dates") and `price` is its lower end:
-   *  never a price for a particular date, so the slot carries no dates and the room shows it as "from" */
+  /** `price` is only a lower end: the provider gives a range ("from 100 to 750 zł depending on the dates", no dates)
+   *  or one engine price covers several different rooms (`rooms`). The room shows it as "from" and never as the dated
+   *  price of a month (no availability range, no priced month) */
   priceIsMinimum?: boolean;
 }
 

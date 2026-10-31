@@ -19,7 +19,8 @@
 //            'per_night', priceBasis 'room'), availability 'unknown'. Campsite: one dated band = the printed season,
 //            CAD 35 per site per night for 2 adults (the $5 online fee per booking and GST in the slot text), dropped
 //            once the season has ended: on 2026-10-23 the 2026 season (to Oct 4) is past and no 2027 dates are
-//            printed, so the campsite has no slot until the page names the next season.
+//            printed, so the campsite has no slot until the page names the next season; its past band is the last
+//            published price (2026-10-31), so the campsite keeps its from-price.
 //   content  the three booking pages + /things-to-do/ ("ride the legendary winds of Nitinaht Lake", "Windriders don't
 //            call this place Mecca for nothing", the kite-beach photo).
 // Currency: the pages print only "$"; CAD is inferred (Canadian operator, Canadian GST on the campsite page).
@@ -207,7 +208,7 @@ function unitSlot(u: NwUnit, availability: Availability, banner: string | null):
 export interface NwPages { cabins: string; motel: string; campsite: string }
 
 /** Cabins + motel rooms (undated, year-round) + the campsite season band while it has not ended. */
-export function buildNwSlots(p: NwPages, today: string, ctx?: Pick<FetchContext, 'note'>): Slot[] {
+export function buildNwSlots(p: NwPages, today: string, ctx?: Pick<FetchContext, 'note' | 'lastPublished'>): Slot[] {
   const out: Slot[] = [];
   const cabins = parseNwCabins(p.cabins);
   const motel = parseNwMotel(p.motel);
@@ -224,28 +225,29 @@ export function buildNwSlots(p: NwPages, today: string, ctx?: Pick<FetchContext,
 
   const campBanner = banner(p.campsite, 'campsite');
   if (camp.price !== null && camp.start && camp.end) {
+    const slot: Slot = {
+      key: `campsite|${camp.start}`,
+      startDate: camp.start,
+      endDate: camp.end,
+      unit: 'Basic campsite (Windsurf Park campground)',
+      price: camp.price,
+      currency: CURRENCY,
+      priceUnit: 'per_night',
+      priceBasis: 'room',
+      occupancy: camp.adults,
+      availability: campBanner ? 'closed' : 'unknown',
+      availabilityText: campBanner ?? [
+        `CAD ${camp.price} per site per night${camp.bookingFee ? ` plus CAD ${camp.bookingFee} online booking fee per booking` : ''}${camp.gst ? ' plus GST' : ''}`,
+        camp.adults ? `price for ${camp.adults} adults${camp.extraAdult ? `, extra adults CAD ${camp.extraAdult} per night` : ''}` : null,
+        ONLINE,
+      ].filter(Boolean).join('; '),
+      spotsLeft: null,
+    };
     if (camp.end < today) {
       ctx?.note(`campground season ${camp.start}..${camp.end} has ended; no next-season dates printed yet`);
-    } else {
-      out.push({
-        key: `campsite|${camp.start}`,
-        startDate: camp.start,
-        endDate: camp.end,
-        unit: 'Basic campsite (Windsurf Park campground)',
-        price: camp.price,
-        currency: CURRENCY,
-        priceUnit: 'per_night',
-        priceBasis: 'room',
-        occupancy: camp.adults,
-        availability: campBanner ? 'closed' : 'unknown',
-        availabilityText: campBanner ?? [
-          `CAD ${camp.price} per site per night${camp.bookingFee ? ` plus CAD ${camp.bookingFee} online booking fee per booking` : ''}${camp.gst ? ' plus GST' : ''}`,
-          camp.adults ? `price for ${camp.adults} adults${camp.extraAdult ? `, extra adults CAD ${camp.extraAdult} per night` : ''}` : null,
-          ONLINE,
-        ].filter(Boolean).join('; '),
-        spotsLeft: null,
-      });
-    }
+      // Aaron 2026-10-31 ("1+2+3 ja"): the printed season price stays the campsite's from-price until the next season
+      ctx?.lastPublished?.([slot]);
+    } else out.push(slot);
   } else {
     ctx?.note('campsite price or season not found on /book-your-site/');
   }

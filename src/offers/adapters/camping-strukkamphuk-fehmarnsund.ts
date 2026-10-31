@@ -23,12 +23,12 @@
 //   2026-10-14 the only free caravan in the last 2026 season week was such an offer (EUR 586 = printed 536 + 50
 //   cleaning). Caravan types free in none of the sampled weeks are left out (not "sold out").
 // Known limits: the 2026 season ends 25.10.2026 and the engine had no 2027 stays on 2026-10-14 (every profile 0 on
-//   05.06.2027), so after that week the offer shows "price on request" until the 2027 bands are printed. The printed
-//   2026 per-night table goes into the room features only.
+//   05.06.2027). Since 2026-10-31 the printed per-night table is the fallback when the engine prices no caravan: one
+//   slot per caravan room and season band (availability unknown), bands that are over as last published prices.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, iso, parseAmount, todayIso } from '../parse.js';
-import type { ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { ALL_DATES, type ContentRoom, type FetchContext, type OfferAdapter, type OfferContent, type Slot } from '../types.js';
 import { csobSaturdaySamples, csobSlots, fetchCsobSamples, type CsobPortal } from './hvide-sande-camping.js';
 
 const SITE = 'https://strukkamphuk.de';
@@ -180,6 +180,29 @@ export function cskUnitName(title: string): string {
   return title.replace(/^Mie?t?wohnwagen /, 'Rental caravan ').replace(/ für (\d)$/, ' for $1').replace(/´/g, "'");
 }
 
+const cskRoomName = (c: CskCaravan) => `Rental caravan ${c.name.replace(/^Deluxe-Wohnwagen für (\d)$/, 'Deluxe for $1')}`;
+
+/**
+ * The printed table as slots: per caravan room and season band its high / low season price per night (Aaron
+ * 2026-10-31, "1+2+3 ja": a price list is the fallback when the engine has no priced caravan, e.g. after the season end).
+ */
+export function buildCskListSlots(caravansHtml: string, pricesHtml: string, today: string): Slot[] {
+  const { rows } = parseCskPrices(pricesHtml);
+  const bands = parseCskBands(pricesHtml).filter(b => b.end >= today);
+  const out: Slot[] = [];
+  for (const c of parseCskCaravans(caravansHtml)) {
+    const pr = priceFor(c, rows);
+    if (!pr) continue;
+    const room = cskRoomName(c);
+    for (const b of bands) out.push({
+      key: `list|${room.toLowerCase().replace(/[^a-z0-9]+/g, '-')}|${b.start}`, startDate: b.start, endDate: b.end, unit: room, room,
+      price: b.season === 'high' ? pr.high : pr.low, currency: 'EUR', priceUnit: 'per_night', priceBasis: 'room', occupancy: null,
+      availability: 'unknown', availabilityText: null, spotsLeft: null,
+    });
+  }
+  return out;
+}
+
 export interface CskPages { home: string; caravans: string; prices: string; sport: string }
 
 export function parseStrukkamphukContent(p: CskPages): OfferContent {
@@ -199,7 +222,7 @@ export function parseStrukkamphukContent(p: CskPages): OfferContent {
   const rooms: ContentRoom[] = caravans.map(c => {
     const pr = priceFor(c, rows);
     return {
-      name: `Rental caravan ${c.name.replace(/^Deluxe-Wohnwagen für (\d)$/, 'Deluxe for $1')}`,
+      name: cskRoomName(c),
       description: `Caravans no. ${c.numbersText} with a fixed awning (kitchen unit and seating) and terrace${berths(c) ? `; sleeps ${berths(c)}` : ''}.`,
       features: [
         ...(pr ? [`${year ?? ''} per night: high season EUR ${pr.high}, low season EUR ${pr.low} (incl. camping fees, electricity and gas)`.trim()] : []),
@@ -258,11 +281,18 @@ export function parseStrukkamphukContent(p: CskPages): OfferContent {
 }
 
 export async function fetchCskSlots(today: string, ctx: FetchContext): Promise<Slot[]> {
-  const seasons = cskSeasons(parseCskBands(await page(CSK_PRICES_URL)));
+  const prices = await page(CSK_PRICES_URL);
+  const seasons = cskSeasons(parseCskBands(prices));
   if (seasons.length === 0) throw new Error('camping-strukkamphuk: no "Hauptsaison / Nebensaison" bands on /angebote-preise/ (layout changed?)');
   const checkIns = csobSaturdaySamples(today, seasons, { max: 9 });
-  if (checkIns.length === 0) { ctx.note('camping-strukkamphuk: no sample week inside a published season within 12 months'); return []; }
-  return csobSlots(await fetchCsobSamples(CSK_PORTAL, checkIns, ctx), ctx).map(s => ({ ...s, unit: s.unit ? cskUnitName(s.unit) : s.unit }));
+  if (checkIns.length === 0) ctx.note('camping-strukkamphuk: no sample week inside a published season within 12 months');
+  const engine = checkIns.length === 0 ? []
+    : csobSlots(await fetchCsobSamples(CSK_PORTAL, checkIns, ctx), ctx).map(s => ({ ...s, unit: s.unit ? cskUnitName(s.unit) : s.unit }));
+  if (engine.some(s => s.price !== null)) return engine;
+  ctx.note('camping-strukkamphuk: no caravan priced by the engine - printed per-night table used');
+  const caravans = await page(CSK_CARAVANS_URL);
+  ctx.lastPublished?.(buildCskListSlots(caravans, prices, ALL_DATES).filter(s => s.endDate! < today));
+  return [...engine, ...buildCskListSlots(caravans, prices, today)];
 }
 
 export const campingStrukkamphukFehmarnsund: OfferAdapter = {
