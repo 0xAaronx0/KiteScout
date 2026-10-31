@@ -101,6 +101,18 @@ test('summarizePrice: a stated price is never on request - full dates, then the 
   assert.equal(summarizePrice('camp', [], '2026-10-29', [p({ key: 'x', startDate: '2026-06-01', price: null })]).raw, 'Price on request');
 });
 
+test('summarizePrice: a running band names its end, not a start that is over (Aaron 2026-10-31)', () => {
+  const p = (o: Partial<Slot>) => slot({ currency: 'EUR', priceUnit: 'per_night', priceBasis: 'room', ...o });
+  const running = summarizePrice('accommodation', [p({ key: 'r', unit: 'Double Room', startDate: '2026-05-31', endDate: '2026-11-30', price: 39 })], '2026-10-30');
+  assert.equal(running.note, 'From EUR 39 / night per room (cheapest bookable: Double Room, until 2026-11-30; as of 2026-10-30)');
+  // a band that starts later keeps its start
+  const later = summarizePrice('accommodation', [p({ key: 'l', unit: 'Cabin', startDate: '2027-03-20', endDate: '2027-03-27', price: 450 })], '2026-10-30');
+  assert.match(later.note!, /cheapest bookable: Cabin, 2027-03-20; as of/);
+  // a range floor without dates (Sun4Hel) names only the unit
+  const range = summarizePrice('accommodation', [p({ key: 's', unit: 'Surf caravan', price: 100, currency: 'PLN', priceIsMinimum: true })], '2026-10-30');
+  assert.equal(range.note, 'From PLN 100 / night per room (cheapest bookable: Surf caravan; as of 2026-10-30)');
+});
+
 test('isAhead: started departures are gone, bands last until their end', () => {
   const dep = slot({ startDate: '2026-10-03', endDate: '2026-10-10' });
   assert.equal(isAhead('tour', dep, '2026-10-09'), false);
