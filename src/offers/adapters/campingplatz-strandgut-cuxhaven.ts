@@ -16,6 +16,9 @@
 //            one card per rental unit ("Tiny Haus (max. 4 Personen) / Ab 3 Nächten / Inkl. 2 Personen / Montag - Freitag
 //            HS: 120,00 €/ Nacht NS: 90,00 € / Samstag - Sonntag HS ... NS ..."). That the camping HS/NS periods also apply
 //            to the rental units is INFERRED (the unit cards only say HS / NS).
+// Photos: each unit gets the photos of its own unit page (folder /images/Alternative Unterkunfte/<unit>/, the AI rendering on
+//   the Kajüten page left out); the home page's AdobeStock pictures are left out of the general list. No own kite or spot
+//   photos on the pages read (Aaron 2026-10-31 wanted both kinds; the source does not have the spot).
 // Booking: online via the site (no third-party engine in the pages); not read.
 // robots.txt (2026-10-14): Joomla defaults (/administrator/, /api/, /components/, ... - nothing we read).
 // Requests per run: content 7, slots 1 (memoised with content).
@@ -26,6 +29,7 @@
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, collapse, iso, parse, parseAmount, todayIso } from '../parse.js';
+import { isNotOwnPhoto } from '../gallery.js';
 import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
 
 const SITE = 'https://www.campingplatz-strandgut.de';
@@ -165,6 +169,22 @@ export function parseSgCoords(html: string): { lat: number; lng: number } | null
   return m ? { lat: Number(m[1]), lng: Number(m[2]) } : null;
 }
 
+const SG_NOT_PHOTO = /logo|favicon|icon|platzplan|\.pdf|hund/i;
+
+/**
+ * A unit page's own photos: the files of its folder under /images/Alternative Unterkunfte/<unit>/ (Tiny House: the two
+ * houses "Tiny Wave" and "Tiny Joy"), site order; logos, plans and AI renderings ("ChatGPT Image ...") left out.
+ */
+export function sgUnitPhotos(html: string): string[] {
+  const out: string[] = [];
+  for (const m of html.matchAll(/(?:data-src|src)="(\/images\/Alternative%20Unterkunfte\/[^"]+?\.(?:jpe?g|png|webp))"/gi)) {
+    const u = new URL(m[1], SITE).toString();
+    if (SG_NOT_PHOTO.test(u) || isNotOwnPhoto(u) || out.includes(u)) continue;
+    out.push(u);
+  }
+  return out;
+}
+
 export interface SgPages { home: string; prices: string; facilities: string; contact: string; tiny: string; kajuete: string; koje: string; sandbank: string }
 
 /** "Tiny Wave in der Schnellübersicht Wohnfläche ca. 16 m² ..." -> the unit pages' own descriptions (first sentences). */
@@ -197,9 +217,11 @@ export function parseStrandgutContent(p: SgPages): OfferContent {
     'Strandgut-Koje': 'Covered outdoor bed of Douglas fir for up to two (1.20 x 2 m mattress, insect screen, lockable weatherproof boxes); no parking space.',
     Sandbank2Go: 'Caravan for up to three with kitchen block, bathroom with shower and WC, a seating area that converts into a bed, awning and garden furniture.',
   };
+  const UNIT_PAGE: Record<string, string> = { 'Tiny Haus': p.tiny, 'Strandgut-Kajüte': p.kajuete, 'Strandgut-Koje': p.koje, Sandbank2Go: p.sandbank };
   const rooms: ContentRoom[] = prices.units.map(u => ({
     name: UNIT_EN[u.name] ?? u.name,
     description: EN[u.name] ?? DESC[u.name] ?? null,
+    ...(sgUnitPhotos(UNIT_PAGE[u.name] ?? '').length ? { imageUrls: sgUnitPhotos(UNIT_PAGE[u.name] ?? '') } : {}),
     features: [
       ...(u.maxPersons ? [`Up to ${u.maxPersons} persons`] : []),
       ...(u.minNights ? [`Minimum stay ${u.minNights} night${u.minNights > 1 ? 's' : ''}`] : []),
@@ -217,7 +239,7 @@ export function parseStrandgutContent(p: SgPages): OfferContent {
     // originals sit in /images/... (data-src); /media/yootheme/cache/ holds resized copies of the same files
     for (const m of html.matchAll(/(?:data-src|src)="(\/images\/[^"]+?\.(?:jpe?g|png|webp))"/gi)) {
       const u = new URL(m[1], SITE).toString();
-      if (/logo|favicon|icon|platzplan|\.pdf|hund/i.test(u) || seen.has(u)) continue;
+      if (SG_NOT_PHOTO.test(u) || isNotOwnPhoto(u) || seen.has(u)) continue;
       seen.add(u); imgs.push(u);
     }
   }

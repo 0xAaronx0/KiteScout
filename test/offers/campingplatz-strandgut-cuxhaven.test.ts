@@ -5,9 +5,10 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  campingplatzStrandgutCuxhaven, buildSgSlots, fetchSgSlots, parseSgCoords, parseSgPrices,
+  campingplatzStrandgutCuxhaven, buildSgSlots, fetchSgSlots, parseSgCoords, parseSgPrices, sgUnitPhotos,
 } from '../../src/offers/adapters/campingplatz-strandgut-cuxhaven.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/campingplatz-strandgut-cuxhaven');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -64,4 +65,20 @@ test('strandgut: content', async () => {
   assert.ok(c.rooms[1].features.includes('2nd person +EUR 10 per night'));
   assert.match(c.sourceText ?? '', /Kite-Showroom und Kite-Storage/);
   assert.ok(c.imageUrls.length >= 10 && c.imageUrls.every(u => u.startsWith('https://www.campingplatz-strandgut.de/images/')));
+});
+
+test('strandgut: own photos per unit from its unit page; all four units inside the first 24 gallery candidates', async () => {
+  const c = await campingplatzStrandgutCuxhaven.fetchContent(ctx);
+  // Aaron 2026-10-31: the gallery showed one unit only; every unit has its own page with its own folder of photos
+  assert.deepEqual(c.rooms.map(r => r.imageUrls?.length ?? 0), [24, 3, 3, 19]);
+  assert.match(c.rooms[0].imageUrls![0], /\/Tiny%20Joy\//);
+  assert.ok(c.rooms[0].imageUrls!.some(u => /\/Tiny%20Wave\//.test(u)));
+  assert.ok(c.rooms[1].imageUrls!.every(u => /\/Strandgut-Kajueten\/k-image0000\d\.jpeg$/.test(u))); // the ChatGPT rendering is out
+  assert.ok(c.rooms[2].imageUrls!.every(u => /\/Strandgut-Kojen\//.test(u)));
+  assert.ok(c.rooms[3].imageUrls!.every(u => /\/Sandbank2Go\//.test(u)));
+  assert.deepEqual(sgUnitPhotos(read('www.campingplatz-strandgut.de_alternative-unterkuenfte_strandgut-kojen.')), c.rooms[2].imageUrls);
+  assert.equal(c.spotImageUrls, undefined); // no own kite / spot photo on the pages read
+  assert.ok(!c.imageUrls.some(u => /AdobeStock|ChatGPT/i.test(u)));
+  const first24 = new Set(planGallery(c).candidates.slice(0, 24));
+  for (const r of c.rooms) assert.ok(first24.has(r.imageUrls![0]), r.name);
 });
