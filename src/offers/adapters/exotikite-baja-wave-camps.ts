@@ -24,6 +24,11 @@
 //            the kiters on the wind page and the school's lesson photo (about page), read from the page sitemap's
 //            <image:loc> list (1 request; robots allows /wp-content/uploads/, only /assets/ is disallowed). Lifestyle,
 //            yoga, kids, rental-house, efoil and SUP photos are not used.
+// Layout 2026-11-01 (site rebuilt with Bricks): heading "2027 Baja Wave Camp Dates Are Here", then "Camp Weeks 2026:"
+//   and the weeks "April 3-10" .. "May 8-15"; sold-out weeks are <del> with "Sold Out" on the next line; the price is
+//   "Included in the $2,999 Price:". The list label's 2026 is a typo: the season heading, the "Ask About 2027 Dates"
+//   button and the weekdays (all Saturdays in 2027; April 3 2026 was a Friday, the 2026 weeks were April 4-11 ..)
+//   say 2027 -> the season heading's year wins, with a run note.
 // robots.txt (2026-10-19): only /assets/ disallowed.
 // State 2026-10-19: all five 2026 weeks are past -> 0 slots until the page shows the 2027 weeks; the parser reads
 //   whatever year and weeks the heading block lists.
@@ -71,12 +76,22 @@ function page(url: string): Promise<string> {
 const lines = (html: string): string[] => wixLines(html).map(s => s.replace(/[–—]/g, '-').trim()).filter(Boolean);
 
 export interface ExoWeek { start: string; end: string; label: string; full: boolean }
-export interface ExoCamps { year: number | null; weeks: ExoWeek[]; price: number | null }
+export interface ExoCamps { year: number | null; weeks: ExoWeek[]; price: number | null; yearNote: string | null }
+
+/** Week-list label: "Baja Wave Camps 2026" (2026 layout) or "Camp Weeks 2026:" (2027 layout). */
+const LIST_RE = /^(?:Baja Wave Camps|Camp Weeks) (20\d{2}):?$/i;
+/** Season heading right above the 2027 layout's list: "2027 Baja Wave Camp Dates Are Here". */
+const SEASON_RE = /^(20\d{2}) Baja Wave Camps? Dates\b/i;
 
 export function parseExoCamps(html: string): ExoCamps {
   const ls = lines(html);
-  const h = ls.findIndex(l => /^Baja Wave Camps (20\d{2})$/i.test(l));
-  const year = h >= 0 ? Number(ls[h].match(/(20\d{2})/)![1]) : null;
+  const h = ls.findIndex(l => LIST_RE.test(l));
+  const listYear = h >= 0 ? Number(ls[h].match(LIST_RE)![1]) : null;
+  // the season heading wins over the list label (2026-11-01: "Camp Weeks 2026:" under the 2027 heading is a typo)
+  const season = h >= 0 ? ls.slice(Math.max(0, h - 3), h).map(l => l.match(SEASON_RE)).find(m => m) : null;
+  const year = season ? Number(season[1]) : listYear;
+  const yearNote = season && listYear !== year
+    ? `week list labelled ${listYear} under the "${season[0]}" heading: read as ${year}` : null;
   const weeks: ExoWeek[] = [];
   if (year !== null) {
     for (let i = h + 1; i < ls.length && i < h + 40; i++) {
@@ -95,9 +110,10 @@ export function parseExoCamps(html: string): ExoCamps {
       weeks.push({ start, end, label: `${m[1]} ${m[2]}-${m[3] ? `${m[3]} ` : ''}${m[4]}`, full });
     }
   }
-  const p = ls.findIndex(l => /Wave Camp Pricing/i.test(l));
+  // "Wave Camp Pricing $ 2,999" (2026 layout) or "Included in the $2,999 Price:" (2027 layout)
+  const p = ls.findIndex(l => /Wave Camp Pricing|^Included in the \$\s?\d/i.test(l));
   const priceLine = p >= 0 ? ls.slice(p, p + 3).find(l => /\$\s?\d/.test(l)) : null;
-  return { year, weeks, price: priceLine ? parseAmount(priceLine.replace(/^[^$]*\$/, '')) : null };
+  return { year, weeks, price: priceLine ? parseAmount(priceLine.replace(/^[^$]*\$/, '')) : null, yearNote };
 }
 
 export function buildExoSlots(c: ExoCamps, today: string): Slot[] {
@@ -175,6 +191,7 @@ export function parseExoContent(html: string, today = todayIso(), sitePhotos: st
 export async function fetchExoSlots(today: string, ctx?: Pick<FetchContext, 'note' | 'lastPublished'>): Promise<Slot[]> {
   const c = parseExoCamps(await page(EXO_URL));
   if (!c.year || c.weeks.length === 0) throw new Error('exotikite: "Baja Wave Camps <year>" week list not found (layout changed?)');
+  if (c.yearNote) ctx?.note(c.yearNote);
   if (c.price === null) ctx?.note('"Wave Camp Pricing" amount not found; slots without price');
   const slots = buildExoSlots(c, today);
   ctx?.lastPublished?.(buildExoSlots(c, ALL_DATES));
