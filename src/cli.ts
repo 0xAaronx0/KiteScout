@@ -581,10 +581,16 @@ async function main(): Promise<void> {
         const out = flagStr('--out');
         if (out) writeFileSync(out, JSON.stringify(reports, null, 2));
         for (const r of reports.filter(r => r.slotError)) console.log(`  ${r.key}: listed without slots - ${r.slotError}`);
-        const bad = reports.filter(r => r.status === 'error').length;
-        const blocked = reports.filter(r => r.status === 'blocked').length;
-        console.log(`\n${reports.length - bad - blocked}/${reports.length} ok${blocked ? `, ${blocked} blocked by host` : ''}${bad ? `, ${bad} failed` : ''}`);
-        if (bad) process.exitCode = 1;
+        // red only for an adapter that failed on its previous run too (one-off failures rotate daily, src/offers/run-verdict.ts)
+        const { runVerdict, countLine, verdictLine, previousRun, runSummaryMarkdown } = await import('./offers/run-verdict.js');
+        const verdict = runVerdict(reports);
+        console.log(`\n${countLine(reports)}`);
+        for (const r of [...verdict.repeated, ...verdict.first]) console.log(`  ERR ${r.key} (previous run: ${previousRun(r)}): ${r.error}`);
+        console.log(verdictLine(verdict));
+        if (process.env.GITHUB_STEP_SUMMARY) {
+          try { appendFileSync(process.env.GITHUB_STEP_SUMMARY, runSummaryMarkdown(reports)); } catch { /* best effort */ }
+        }
+        if (verdict.exitCode) process.exitCode = verdict.exitCode;
       } else {
         console.log('Usage: offers list | probe [key…|all] [--slots] [--out f.json] | ingest [key…|all] [--slots] [--dry-run] [--refresh-images] [--out f.json]');
       }

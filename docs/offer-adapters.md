@@ -285,6 +285,9 @@ The registry test enforces valid values and that snowkite / "wing" names carry t
 
 - Booking-engine / Shopify / app JSON: daily `--slots` (in the 06:00 UTC monitor cron, job `offer-slots`,
   since 2026-10-12); twice daily in the last 30 days before a departure. Never show a cached nightly price as final: link out with "from X, checked DATE".
+  Exit code (since 2026-11-01, `src/offers/run-verdict.ts`): red only for an adapter whose previous recorded run
+  (`offer_sources.history[0]`) failed or was blocked too, or is unknown; a first failure after an ok run and every
+  block keep exit 0. All of them are listed at the end of the log and in the step summary.
 - Inquiry-only pages: weekly; the content hash of the extracted block (not the whole page) decides
   whether anything changed. Only 1 of 8 static pages sends `Last-Modified`, so conditional GET is not
   enough.
