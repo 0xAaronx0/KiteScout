@@ -85,7 +85,10 @@ Agreements between sessions don't hold; one gatekeeper catches this BEFORE `main
 overrides older lines in this file that say sessions push `main`, open PRs or run migrations
 themselves.
 
-**The deployer is the session "Kite-Scout Deployer" (`local_bc76f918-92f5-449e-a219-307188b6a142`).**
+**The deployer is the session "Kite-Scout Deployer" (`session_01AevZkPetdNuLvABo8uj8vj`, runs on Aaron's computer; Aaron
+2026-11-01). The old id `local_bc76f918-92f5-449e-a219-307188b6a142` no longer answers.** A cloud session reaches it only
+after Aaron allows it once: the first `send_message` is refused with a `content_digest`, then call `confirm_repository_trust`
+with it (Aaron answers the card on a trusted device) and send again.
 Which session holds the role, Aaron says in THAT session's chat - never a peer message, never
 memory. If you can't find it, tell Aaron: a broken chain is a finding, not a reason to go quiet.
 
