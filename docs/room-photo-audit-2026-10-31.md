@@ -41,9 +41,9 @@ Aaron (2026-10-31): "Helfer im Ingest bauen, dann die Top 20".
   Vela Baja "Deluxe Poolside" steht in der Palmas-de-Cortez-Reihe mit Condo und Luxury Suites ("das hier sind die palma de cortez räume") und
   hängt jetzt an "Palmas de Cortez, Condo / Suite / Penthouse" (die Tabelle führt eine "One Bedroom Deluxe Master Suite"). Feddet "Paradiso":
   nur nach dem Neulauf ansehen (Fotos in der Fixture abgeschnitten, live über `data-src`).
-- **Offen:** Die Palmas-de-Cortez-Kacheln bei Vela Baja sind 360-Grad-Panoramen mit "360°"-Symbol (Aarons Screenshot). Ob das Symbol in die
-  Datei eingebrannt ist (z. B. `https://velabaja.com/wp-content/uploads/2021/01/delux.jpg`), ist offline nicht prüfbar; wenn ja, sollten diese
-  Kacheln aus Zimmer- und allgemeiner Liste raus.
+- **Vela Baja, Palmas-de-Cortez-Kacheln:** 360-Grad-Panoramen, das "360°"-Symbol ist ins Bild eingebrannt (Aaron 2026-11-01). Sie bleiben:
+  "ich würde die bilder aber dennoch lassen - lieber mit symbol als gar keine bilder". Die Bild-KI kann sie trotzdem als Grafik verwerfen;
+  dann haben diese Zimmer nach dem Neulauf kein Foto.
 - **Strandgut** (Aarons Beispiel): Tiny House 24, Kajüte 3, Koje 3, Sandbank2Go 19 eigene Fotos, alle vier in den ersten 24 Kandidaten; die
   KI-Grafik der Kajüten-Seite und die AdobeStock-Bilder der Startseite sind raus. Eigene Spotfotos hat die Seite nicht.
 - **Thorsminde:** Spotfotos = die 13 Fotos von `/en/kitesurfing/`; je Hüttenart die Fotos ihrer eigenen Seite `/en/cabins/<slug>/` (Links aus
