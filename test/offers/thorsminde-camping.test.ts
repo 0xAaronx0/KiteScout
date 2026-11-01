@@ -8,11 +8,12 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   thorsmindeCamping, buildTmcEngineSlots, buildTmcSlots, fetchTmcLiveSlots, fetchTmcSample, fetchTmcSlots, parseTmcCabins, parseTmcPrices,
-  tmcSampleSeasons, TMC_PORTAL, TMC_ROOMS,
+  tmcSampleSeasons, TMC_PORTAL, TMC_ROOMS, parseThorsmindeContent, parseTmcCabinLinks, tmcImages,
 } from '../../src/offers/adapters/thorsminde-camping.js';
 import { csobSaturdaySamples } from '../../src/offers/adapters/hvide-sande-camping.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import { slotRoom } from '../../src/offers/ingest.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/thorsminde-camping');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -134,4 +135,45 @@ test('tmc: table and engine slots link to the cabin rooms', async () => {
   ]);
   const engine = buildTmcEngineSlots([await fetchTmcSample('2026-10-15', 3)], parseTmcPrices(prices));
   assert.deepEqual(engine.map(s => slotRoom(names, s)), ['Meadow cabin with toilet and shower', 'Family cabin with toilet and shower', 'Fishing cabin with shared toilet and shower']);
+});
+
+test('tmc photos: spot photos from /en/kitesurfing/, cabin pages linked from /en/cabins/', async () => {
+  const cabins = read('thorsmindecamping.dk_en_cabins_.');
+  assert.deepEqual(parseTmcCabinLinks(cabins), {
+    enghytte: 'https://thorsmindecamping.dk/en/cabins/meadow-cabin-with-toilet-and-shower/',
+    familiehytte: 'https://thorsmindecamping.dk/en/cabins/family-cabin-with-toilet-and-shower/',
+    fiskehytte: 'https://thorsmindecamping.dk/en/cabins/fishing-cabin/',
+  });
+  // the cabin pages are not recorded (no network on 2026-10-31): fetchContent notes them and the cabins keep no own photo
+  const notes: string[] = [];
+  const c = await thorsmindeCamping.fetchContent({ note: (t: string) => notes.push(t), incomplete: () => {} });
+  assert.equal(notes.filter(n => /cabin page .* not read/.test(n)).length, 3);
+  assert.ok(c.rooms.every(r => r.imageUrls === undefined));
+  assert.deepEqual(c.spotImageUrls, tmcImages(read('thorsmindecamping.dk_en_kitesurfing_.')));
+  assert.equal(c.spotImageUrls!.length, 13);
+  assert.ok(planGallery(c).candidates.slice(0, 24).includes(c.spotImageUrls![0]));
+});
+
+test('tmc photos: a cabin gets the photos only its own page shows (SYNTHETIC cabin pages, not recorded HTML)', () => {
+  const up = (f: string) => `https://thorsmindecamping.dk/wp-content/uploads/2026/04/${f}`;
+  const kiteImg = tmcImages(read('thorsmindecamping.dk_en_kitesurfing_.'))[0];
+  const cabinPage = (own: string[]) => `<main>${[...own, 'shared-cabin-teaser.jpg'].map(f => `<img src="${up(f)}">`).join('')}
+    <img src="${kiteImg}"><img src="${up('logo_4732.jpg')}"><img src="${up('enghytte-1-300x200.jpg')}"></main>`;
+  const c = parseThorsmindeContent({
+    home: read('thorsmindecamping.dk_en_.'), kite: read('thorsmindecamping.dk_en_kitesurfing_.'),
+    cabins: read('thorsmindecamping.dk_en_cabins_.'), prices,
+    cabinPages: {
+      enghytte: cabinPage(['enghytte-1.jpg', 'enghytte-2.jpg']),
+      familiehytte: cabinPage(['familiehytte-1.jpg']),
+      fiskehytte: cabinPage(['fiskehytte-1.jpg', 'fiskehytte-2.webp']),
+    },
+  });
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls]), [
+    ['Meadow cabin with toilet and shower', [up('enghytte-1.jpg'), up('enghytte-2.jpg')]],
+    ['Family cabin with toilet and shower', [up('familiehytte-1.jpg')]],
+    ['Fishing cabin with shared toilet and shower', [up('fiskehytte-1.jpg'), up('fiskehytte-2.webp')]],
+  ]);
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(first24.includes(r.imageUrls![0]), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

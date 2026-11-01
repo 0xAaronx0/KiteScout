@@ -25,7 +25,12 @@
 //   price table below. Engine prices matched the table on 2026-10-14 (15.-18.10.: meadow 2,370 = 3 x 790, family 2,220 =
 //   3 x 740, fishing 1,350 = 3 x 450).
 // robots.txt (2026-10-14): thorsmindecamping.dk WordPress defaults (nothing we read); v3.onlinebooking.dk "Allow: /".
-// Requests per run: content 4, slots 1 (price page, memoised with content) + up to 2 per sample week (max 9) = max 23.
+// Requests per run: content 4 + the 3 cabin pages, slots 1 (price page, memoised with content) + up to 2 per sample week
+//   (max 9) = max 26.
+// Photos (Aaron 2026-10-31: preferably the spot AND the accommodation): spotImageUrls = the photos of /en/kitesurfing/; each
+//   cabin type gets the photos of its own page /en/cabins/<slug>/ (linked from /en/cabins/, whose tiles carry their photos
+//   only as Elementor CSS backgrounds) that no other page read shows. The cabin pages are NOT in the recorded fixtures (the
+//   2026-10-31 session had no network): parsing is checked on synthetic pages only; record them before a --refresh-images.
 // Parsed (engine): slot = cabin type x sample week ("enghytte|2027-06-05"), DKK per cabin for 7 nights as quoted by the
 //   engine (priceUnit 'package', packageNights 7, priceBasis 'room'), available (>= 3 free) / limited (1-2 free, spotsLeft)
 //   / sold_out (0 free while other campsite profiles are bookable that week); weeks with nothing bookable are skipped.
@@ -36,6 +41,7 @@
 // ---------------------------------------------------------------------------
 import { BlockedByHost, fetchText } from '../http.js';
 import { clean, iso, parseAmount, todayIso } from '../parse.js';
+import { isNotOwnPhoto } from '../gallery.js';
 import type { ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
 import {
   csobListUrl, csobPriceUrl, csobSaturdaySamples, csobSlots, parseCsobList, parseCsobPrices, type CsobPortal, type CsobPrice, type CsobSample,
@@ -167,7 +173,30 @@ export function parseTmcCabins(html: string): Array<{ name: string; description:
   return out;
 }
 
-export interface TmcPages { home: string; kite: string; cabins: string; prices: string }
+export type TmcType = 'enghytte' | 'familiehytte' | 'fiskehytte';
+export interface TmcPages { home: string; kite: string; cabins: string; prices: string; cabinPages?: Partial<Record<TmcType, string>> }
+
+const TMC_IMG_RE = /(?:src|href|data-src)="(https:\/\/thorsmindecamping\.dk\/wp-content\/uploads\/[^"]+?\.(?:jpe?g|webp))"/gi;
+/** Own uploads of a page, as the general list takes them (originals only: "-WxH" copies, logos, badges and banners out). */
+export function tmcImages(html: string): string[] {
+  const out: string[] = [];
+  for (const m of html.matchAll(TMC_IMG_RE)) {
+    const u = m[1];
+    if (/-\d+x\d+\.|logo|icon|ACSI|DK-CAMP|banner/i.test(u) || isNotOwnPhoto(u) || out.includes(u)) continue;
+    out.push(u);
+  }
+  return out;
+}
+
+/** /en/cabins/: the links to the three cabin pages (by the cabin word in the slug, so a renamed slug still maps). */
+export function parseTmcCabinLinks(cabinsHtml: string): Partial<Record<TmcType, string>> {
+  const out: Partial<Record<TmcType, string>> = {};
+  for (const m of cabinsHtml.matchAll(/href="(https:\/\/thorsmindecamping\.dk\/en\/cabins\/([a-z0-9-]+)\/?)"/gi)) {
+    const t: TmcType | null = /meadow/i.test(m[2]) ? 'enghytte' : /family/i.test(m[2]) ? 'familiehytte' : /fish/i.test(m[2]) ? 'fiskehytte' : null;
+    if (t && !out[t]) out[t] = m[1];
+  }
+  return out;
+}
 
 export function parseThorsmindeContent(p: TmcPages): OfferContent {
   const kite = tmcLines(p.kite);
@@ -180,12 +209,21 @@ export function parseThorsmindeContent(p: TmcPages): OfferContent {
   const school = p.kite.match(/href="(https?:\/\/(?:www\.)?thorsminde-kiten\.[a-z]+\/?)"/)?.[1] ?? p.home.match(/href="(https?:\/\/(?:www\.)?thorsminde-kiten\.[a-z]+\/?)"/)?.[1] ?? null;
   const dk = (n: number | null | undefined) => (n ? `DKK ${n.toLocaleString('en-US')}` : '-');
   const fmt = (d: string) => new Date(`${d}T00:00:00Z`).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
-  const typeOf = (name: string) => (/meadow/i.test(name) ? 'enghytte' : /family/i.test(name) ? 'familiehytte' : 'fiskehytte');
+  const typeOf = (name: string): TmcType => (/meadow/i.test(name) ? 'enghytte' : /family/i.test(name) ? 'familiehytte' : 'fiskehytte');
+  // a cabin's own photos: on its own page and on no other page read (shared teasers, headers and footers drop out)
+  const pageImgs = Object.fromEntries(Object.entries(p.cabinPages ?? {}).map(([t, html]) => [t, tmcImages(html ?? '')])) as Partial<Record<TmcType, string[]>>;
+  const cabinPhotos = (t: TmcType): string[] => {
+    const elsewhere = new Set([p.home, p.kite, p.cabins].flatMap(tmcImages)
+      .concat(...Object.entries(pageImgs).filter(([k]) => k !== t).map(([, v]) => v ?? [])));
+    return (pageImgs[t] ?? []).filter(u => !elsewhere.has(u));
+  };
   const rooms: ContentRoom[] = cabins.map(c => {
     const t = typeOf(c.name);
+    const own = cabinPhotos(t);
     return {
       name: c.name.replace(/^Meadow cabins/i, 'Meadow cabin'),
       description: c.description,
+      ...(own.length ? { imageUrls: own } : {}),
       features: [
         ...prices.rates.filter(r => r.type === t).map(r => `${prices.year ?? ''} ${r.season} season: ${dk(r.night)} per night, ${dk(r.week)} per week`.trim()),
         ...(prices.cleaning[t] ? [`Final cleaning ${dk(prices.cleaning[t])} (optional)`] : []),
@@ -194,13 +232,8 @@ export function parseThorsmindeContent(p: TmcPages): OfferContent {
   });
   const nights = prices.rates.map(r => r.night).filter((x): x is number => !!x);
   const imgs: string[] = [];
-  for (const html of [p.cabins, p.kite, p.home]) {
-    for (const m of html.matchAll(/(?:src|href|data-src)="(https:\/\/thorsmindecamping\.dk\/wp-content\/uploads\/[^"]+?\.(?:jpe?g|webp))"/gi)) {
-      const u = m[1];
-      if (/-\d+x\d+\.|logo|icon|ACSI|DK-CAMP|banner/i.test(u) || imgs.includes(u)) continue;
-      imgs.push(u);
-    }
-  }
+  for (const html of [p.cabins, p.kite, p.home]) for (const u of tmcImages(html)) if (!imgs.includes(u)) imgs.push(u);
+  const spotImageUrls = tmcImages(p.kite);
 
   const summary = [
     `Thorsminde Camping is a family campsite between the North Sea and Nissum Fjord at Thorsminde in West Jutland, Denmark${prices.open && prices.close ? `, open ${fmt(prices.open)} to ${fmt(prices.close)}` : ''}.`,
@@ -233,6 +266,7 @@ export function parseThorsmindeContent(p: TmcPages): OfferContent {
     languages: ['da', 'en', 'de'],
     rooms,
     imageUrls: imgs.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: TMC_KITE_URL,
     bookingUrl: BOOKING_URL,
@@ -338,14 +372,22 @@ export const thorsmindeCamping: OfferAdapter = {
   slotMethod: 'booking_engine',
   instantBooking: true,
   liveAvailability: true,
-  fetchBudget: 23,
-  async fetchContent() {
+  fetchBudget: 26,
+  async fetchContent(ctx) {
     const home = await page(TMC_HOME_URL);
     const kite = await page(TMC_KITE_URL);
     const cabins = await page(TMC_CABINS_URL);
     const prices = await page(TMC_PRICES_URL);
     if (!/VDWS/.test(kite)) throw new Error('thorsminde-camping: VDWS course block missing on /en/kitesurfing/');
-    return parseThorsmindeContent({ home, kite, cabins, prices });
+    // the cabin pages only add photos: a failed one leaves that cabin without its own photo
+    const cabinPages: Partial<Record<TmcType, string>> = {};
+    for (const [t, url] of Object.entries(parseTmcCabinLinks(cabins)) as Array<[TmcType, string]>) {
+      try { cabinPages[t] = await page(url); } catch (e) {
+        if (e instanceof BlockedByHost) throw e;
+        ctx.note(`thorsminde-camping: cabin page ${url} not read (${(e as Error).message.slice(0, 80)}): no own photos for that cabin`);
+      }
+    }
+    return parseThorsmindeContent({ home, kite, cabins, prices, cabinPages });
   },
   async fetchSlots(ctx) {
     const slots = await fetchTmcLiveSlots(todayIso(), ctx);
