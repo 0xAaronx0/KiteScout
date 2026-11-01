@@ -61,22 +61,22 @@ test('cpl: unit page details and content', async () => {
   assert.ok(c.imageUrls.length >= 20 && c.imageUrls.every(u => /\/wp-content\/uploads\//.test(u) && !/-\d+x\d+\.|Osterfeuer|Logo/i.test(u)));
 });
 
-test('cpl: own photos per unit from its /properties/ gallery; the prompt-named Boddentraum pictures are not used', async () => {
+test('cpl: own photos per unit from its /properties/ gallery (Boddentraum too: Aaron 2026-11-01 "echt")', async () => {
   const c = await campingplatzLoissin.fetchContent(ctx);
   const photos = (name: string) => c.rooms.find(r => r.name === name)!.imageUrls ?? [];
   assert.deepEqual(c.rooms.map(r => [r.name, photos(r.name).length]), [
-    ['Apartment', 16], ['Double room', 15], ['Mobile home Boddentraum', 0], ['Sleeping barrel (Schlaffass)', 7], ['Mobile home Boddenglück', 9],
+    ['Apartment', 16], ['Double room', 15], ['Mobile home Boddentraum', 4], ['Sleeping barrel (Schlaffass)', 7], ['Mobile home Boddenglück', 9],
   ]);
   const UP = 'https://campingplatz-loissin.de/wp-content/uploads/';
   assert.equal(photos('Apartment')[0], `${UP}2022/04/IMG_0076-HDR-min.jpg`);
   assert.equal(photos('Double room')[0], `${UP}2022/04/IMG_0136-HDR-min.jpg`);
   assert.equal(photos('Sleeping barrel (Schlaffass)')[0], `${UP}2025/03/IMG_20250313_133205208.jpg`);
   assert.equal(photos('Mobile home Boddenglück')[0], `${UP}2026/05/boddenmobilheim-haus2-.jpg`);
-  // Boddentraum: all four gallery files are scene descriptions in 15+ words (possibly AI made), left out until checked
+  // Boddentraum: four files named like scene descriptions; checked by Aaron as real photos
   const traum = parseCplUnitPage(read('campingplatz-loissin.de_properties_mobilheim-boddentraum_.'));
   assert.equal(traum.gallery.length, 4);
-  assert.deepEqual(cplRoomPhotos(traum), []);
-  assert.equal(c.rooms.find(r => r.name === 'Mobile home Boddentraum')!.imageUrls, undefined);
+  assert.deepEqual(cplRoomPhotos(traum), traum.gallery);
+  assert.match(photos('Mobile home Boddentraum')[0], /Familie-verbringt-Urlaub-am-Bodden/);
   const all = c.rooms.flatMap(r => r.imageUrls ?? []);
   assert.equal(new Set(all).size, all.length);
   assert.ok(all.every(u => u.startsWith(UP) && !/-\d+x\d+\./.test(u)));

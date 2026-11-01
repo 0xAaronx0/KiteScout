@@ -108,16 +108,15 @@ test('vela: per-room photos from the "View Room Options" tiles, kiting photos fr
     ['Palmas de Cortez - Garden Room', ['2021/01/garden.jpg', '2021/01/gardenking.jpg']],
     ['Palmas de Cortez - Poolside Room', ['2021/01/poolside.jpg', '2021/01/poolsideking.jpg']],
     ['Palmas de Cortez - Ocean View Room', ['2021/01/coean.jpg', '2021/01/oceanking.jpg']],
-    ['Palmas de Cortez - Condo / Suite / Penthouse', ['2021/01/condo.jpg', '2021/01/luxury.jpg']],
+    ['Palmas de Cortez - Condo / Suite / Penthouse', ['2021/01/condo.jpg', '2021/01/delux.jpg', '2021/01/luxury.jpg']],
   ]);
   // the tiles are 300x150 thumbnails; the room photos are the originals, exactly as in the general list
   assert.ok(c.rooms.every(r => r.imageUrls!.every(u => c.imageUrls.includes(u) && !/-\d+x\d+\./.test(u))));
-  // "Deluxe Poolside" names no rate table: left out rather than guessed
+  // "Deluxe Poolside" names no rate table; it is in the Palmas de Cortez suite row (Aaron 2026-11-01) -> Condo / Suite / Penthouse
   const pdc = parseVbHotels(acc)[1];
-  assert.equal(vbTileRoom(pdc, 'Deluxe Poolside'), null);
+  assert.equal(vbTileRoom(pdc, 'Deluxe Poolside')!.room, 'Condo / Suite / Penthouse');
   assert.equal(vbTileRoom(pdc, '3 Bed Cabaña')!.room, 'Cabana Room');
   assert.equal(vbTileRoom(pdc, 'Garden King ')!.room, 'Garden Room');
-  assert.ok(!c.rooms.some(r => r.imageUrls!.some(u => /delux\.jpg/.test(u))));
   assert.deepEqual(c.spotImageUrls!.map(u => u.slice(up.length)), ['2018/01/kitelesson.jpg', '2016/03/IMG_7637.jpg', '2018/03/MG_2141.jpg']);
   const first24 = planGallery(c).candidates.slice(0, 24);
   for (const r of c.rooms) assert.ok(first24.includes(r.imageUrls![0]), r.name);

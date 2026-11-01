@@ -199,15 +199,17 @@ export function vbImages(html: string): string[] {
 
 /**
  * The content room table a "View Room Options" tile shows: "Garden King" / "Ocean King" / "Poolside King" -> the
- * Garden / Ocean View / Poolside table (king variant), "2 Bed Cabaña" -> Cabana Room, "Condo" / "Luxury Suites" ->
- * Condo / Suite / Penthouse. null when no table fits by name ("Deluxe Poolside": not printed in any rate table).
+ * Garden / Ocean View / Poolside table (king variant), "2 Bed Cabaña" -> Cabana Room, "Condo" / "Luxury Suites" /
+ * "Deluxe Poolside" -> Condo / Suite / Penthouse ("Deluxe Poolside" is printed in no rate table; it sits in the Palmas de
+ * Cortez tile row with Condo and Luxury Suites and the suite table lists a "One Bedroom Deluxe Master Suite", Aaron
+ * 2026-11-01: "das hier sind die palma de cortez räume"). null when no table fits by name.
  */
 export function vbTileRoom(h: VbHotel, tile: string): VbTable | null {
   const key = collapse(tile).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase()
     .replace(/^\d+\s*bed\s+/, '').replace(/\s+king$/, '');
   const first = key.split(' ')[0];
   return h.tables.find(t => t.room.toLowerCase().split(/\s+/)[0] === first)
-    ?? (/\b(condos?|suites?|penthouse)\b/.test(key) ? h.tables.find(t => /condo|suite|penthouse/i.test(t.room)) ?? null : null);
+    ?? (/\b(condos?|suites?|penthouse|deluxe)\b/.test(key) ? h.tables.find(t => /condo|suite|penthouse/i.test(t.room)) ?? null : null);
 }
 
 /** "<hotel> - <table>" -> its tile photos in page order (base room tile before its king tile). */

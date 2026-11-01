@@ -36,11 +36,20 @@ Aaron (2026-10-31): "Helfer im Ingest bauen, dann die Top 20".
   4 Listings, jetzt bei 17. Was die Bild-KI davon behält, zeigt erst ein Lauf.
 - **Live wird es erst mit `--refresh-images` je Listing** (das ersetzt die heutigen Galerien; auf Aarons Wort, über den Deployer). Ohne Neulauf
   setzt der nächste Voll-Lauf `image_sort` nur für Zimmer, deren Foto zufällig schon in der gespeicherten Galerie liegt.
-- **Bewusst offen gelassen, zur Sichtung:** Loissin "Mobilheim Boddentraum" (nur prompt-artig benannte Stimmungsbilder, ohne Zimmerfoto gelassen);
-  Todo Bien "Villa Tres Niños" (die ersten zwei Fotos sind PNG, eventuell Renderings); Feddet "Camp-Let" (eventuell Herstellerfotos); Vela Baja
-  "Deluxe Poolside" (keiner Preistabelle zuzuordnen, keinem Zimmer gegeben); Feddet "Paradiso" (Fotos in der Fixture abgeschnitten, live über
-  `data-src`); Taiga Valdevaqueros Spotfotos liegen im Ketten-Ordner `q10-corpo` (auf der eigenen Kiteseite des Platzes).
-- **Nächste Kandidaten:** Strandgut (Rang 27, Aufwand S, Aarons Beispiel) und Thorsminde (Aufwand M, drei Hütten-Unterseiten).
+- **Von Aaron gesichtet (2026-11-01):** Loissin "Mobilheim Boddentraum": "echt" (bekommt seine 4 Fotos); Todo Bien "Villa Tres Niños":
+  "foto" (bleibt); Feddet "Camp-Let": "vom platz" (bleibt); Taiga Valdevaqueros Spotfotos aus dem Ketten-Ordner `q10-corpo`: "ja" (bleibt);
+  Vela Baja "Deluxe Poolside" steht in der Palmas-de-Cortez-Reihe mit Condo und Luxury Suites ("das hier sind die palma de cortez räume") und
+  hängt jetzt an "Palmas de Cortez, Condo / Suite / Penthouse" (die Tabelle führt eine "One Bedroom Deluxe Master Suite"). Feddet "Paradiso":
+  nur nach dem Neulauf ansehen (Fotos in der Fixture abgeschnitten, live über `data-src`).
+- **Offen:** Die Palmas-de-Cortez-Kacheln bei Vela Baja sind 360-Grad-Panoramen mit "360°"-Symbol (Aarons Screenshot). Ob das Symbol in die
+  Datei eingebrannt ist (z. B. `https://velabaja.com/wp-content/uploads/2021/01/delux.jpg`), ist offline nicht prüfbar; wenn ja, sollten diese
+  Kacheln aus Zimmer- und allgemeiner Liste raus.
+- **Strandgut** (Aarons Beispiel): Tiny House 24, Kajüte 3, Koje 3, Sandbank2Go 19 eigene Fotos, alle vier in den ersten 24 Kandidaten; die
+  KI-Grafik der Kajüten-Seite und die AdobeStock-Bilder der Startseite sind raus. Eigene Spotfotos hat die Seite nicht.
+- **Thorsminde:** Spotfotos = die 13 Fotos von `/en/kitesurfing/`; je Hüttenart die Fotos ihrer eigenen Seite `/en/cabins/<slug>/` (Links aus
+  `/en/cabins/`, 3 Abrufe mehr, Budget 26), nur Fotos, die auf keiner anderen gelesenen Seite stehen. **Die drei Hüttenseiten sind nicht
+  aufgenommen** (kein Netz in dieser Session): die Zuordnung ist nur mit synthetischen Seiten getestet. Vor `--refresh-images` die Seiten einmal
+  mit `OFFERS_RECORD_DIR` aufnehmen und prüfen; scheitert ein Abruf, bleibt die Hütte ohne Foto (Hinweis im Lauf).
 
 ## Datengrundlage und Methode
 

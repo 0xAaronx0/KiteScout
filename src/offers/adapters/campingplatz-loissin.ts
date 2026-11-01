@@ -25,8 +25,8 @@
 //   band starts on it), "ab 31.10.2026" = open-ended winter band (endDate null); '**' band = Saturday to Saturday only
 //   (minNights 7). Mobile homes and sleeping barrels: one undated slot each, EUR per unit per night as on the card
 //   ("ab" for the barrel; per unit is INFERRED - the page says only "pro Nacht"). Availability 'unknown'.
-// Photos: each unit gets the gallery of its own /properties/ page; the Boddentraum page holds only prompt-like mood
-//   pictures (possibly AI made, unchecked), so that room has none. No spot photos (no own kite photo on the pages read).
+// Photos: each unit gets the gallery of its own /properties/ page (Boddentraum's prompt-like file names are real photos,
+//   Aaron 2026-11-01: "echt"). No spot photos (no own kite photo on the pages read).
 // Known limits: extra persons (EUR 5 per night) and dogs (on request) are not modelled; the campsite's camping season
 //   is 01.04.-31.10.2026, the mobile-home and barrel prices carry no season.
 // ---------------------------------------------------------------------------
@@ -219,14 +219,10 @@ export function parseCplUnitPage(html: string): CplUnitPage {
 }
 
 /**
- * File names that describe a whole scene in 10+ words ("Familie-verbringt-Urlaub-am-Bodden-in-Loissin-Kinder-spielen-am-
- * Wasser-Mobilheim-und-Natur-im-Hintergrund.jpg", upload 2026-03, the whole Boddentraum gallery): mood pictures named like
- * image prompts, possibly AI made. Not used as a room's own photo until someone has checked them (the general list is
- * unchanged).
+ * A unit page's gallery as the room's own photos, site order. The Boddentraum files are named like long scene descriptions
+ * ("Familie-verbringt-Urlaub-am-Bodden-in-Loissin-...jpg"); Aaron checked them on 2026-11-01: real photos ("echt").
  */
-const CPL_SCENE_NAME = /\/(?:[^/_-]+[_-]){9,}[^/_-]+\.(?:jpe?g|png|webp)$/i;
-/** A unit page's gallery as the room's own photos (site order, scene-named mood pictures left out). */
-export const cplRoomPhotos = (u: CplUnitPage | undefined): string[] => (u?.gallery ?? []).filter(g => !CPL_SCENE_NAME.test(g));
+export const cplRoomPhotos = (u: CplUnitPage | undefined): string[] => u?.gallery ?? [];
 const withPhotos = (u: CplUnitPage | undefined): Pick<ContentRoom, 'imageUrls'> => {
   const photos = cplRoomPhotos(u);
   return photos.length ? { imageUrls: photos } : {};
