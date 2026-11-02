@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { DURATION_RULE, NIGHTS_RULE, cleanNights, proposeTripDuration, sameTripDuration } from '../../src/pipeline/trip-duration.js';
+import { DURATION_RULE, NIGHTS_RULE, cleanNights, nightsFromDepartures, proposeTripDuration, sameTripDuration } from '../../src/pipeline/trip-duration.js';
 
 // extract-cruise-offers.ts needs API keys at import time, so its wiring is checked in the source text.
 const extractor = readFileSync(new URL('../../src/pipeline/extract-cruise-offers.ts', import.meta.url), 'utf8');
@@ -11,7 +11,7 @@ test('the extraction prompt states the nights + 1 rule for duration_days', () =>
   assert.ok(extractor.includes('"duration_days": integer or null (${DURATION_RULE}),'));
   // Aaron 2026-10-31: nights are the stored fact; the extraction asks for them and derives days only as a fallback.
   assert.ok(extractor.includes('"duration_nights": integer or null (${NIGHTS_RULE}),'));
-  assert.ok(extractor.includes('duration_nights: cleanNights(offer.duration_nights),'));
+  assert.ok(extractor.includes('duration_nights: nights,'));
   assert.match(NIGHTS_RULE, /Saturday-to-Saturday week or 'one week' = 7/);
   assert.match(DURATION_RULE, /^trip length in days = nights \+ 1: '7 nights', 'Saturday to Saturday', 'one week' or a price per week = 8; '7 days \/ 6 nights' = 7/);
 });
@@ -23,6 +23,22 @@ test('the full re-extraction diff treats ±1 day as the nights-vs-days ambiguity
   assert.equal(sameTripDuration(null, 8), false);
   assert.equal(sameTripDuration(null, null), true);
   assert.match(extractor, /if \(f === 'duration_days' && sameTripDuration\(before\.duration_days, after\.duration_days\)\) continue;/);
+});
+
+test('listed departures state the nights when all of them span the same nights (Aaron 2026-11-02)', () => {
+  const dep = (start: string, end: string) => ({ start_date: start, end_date: end });
+  assert.equal(nightsFromDepartures([dep('2026-06-06', '2026-06-13'), dep('2026-11-07', '2026-11-14')]), 7);
+  assert.equal(nightsFromDepartures([dep('2027-01-10', '2027-01-17')]), 7, 'one departure is a statement too');
+  assert.equal(nightsFromDepartures([dep('2026-06-06', '2026-06-13'), dep('2026-07-04', '2026-07-14')]), null, 'mixed spans');
+  assert.equal(nightsFromDepartures([dep('2026-06-06', '2026-06-13'), dep('2026-07-04', '2028-03-04')]), null, 'one junk span voids it');
+  assert.equal(nightsFromDepartures([dep('2026-06-06', '2026-06-06')]), null, 'same-day');
+  assert.equal(nightsFromDepartures([dep('2026-06-06', '2026-06-13'), { start_date: '2026-08-01' }]), 7, 'open-ended rows are skipped');
+  assert.equal(nightsFromDepartures([{ start_date: '2026-08-01' }]), null);
+  assert.equal(nightsFromDepartures([]), null);
+  assert.equal(nightsFromDepartures(null), null);
+  // The full re-extraction falls back to them, so a crawl without stated nights doesn't blank the stored value.
+  assert.ok(extractor.includes('const nights = cleanNights(offer.duration_nights) ?? nightsFromDepartures(storedDepartures(offer.dates));'));
+  assert.ok(extractor.includes('duration_days: cleanInt(offer.duration_days) ?? (nights !== null ? nights + 1 : null),'));
 });
 
 test('cleanNights keeps 0..60 integers (digit strings too) and drops everything else', () => {
