@@ -13,7 +13,7 @@ test('isShowable: only rows with at least one image are visible', () => {
 test('ingest writes is_active from the image count on both write paths', () => {
   const src = readFileSync(new URL('../../src/offers/ingest.ts', import.meta.url), 'utf8');
   // the content upsert: hidden until images exist
-  assert.match(src, /rooms: linkRoomImages\(roomRows, content, before\), is_active: isShowable\(before\.length\) \}/);
+  assert.match(src, /rooms: photographed\(linkRoomImages\(roomRows, content, before\)\), is_active: isShowable\(before\.length\) \}/);
   // the image update: visibility follows the stored images (rooms re-linked to the new gallery in the same write)
   assert.match(src, /update\(\{ images: noNul\(images\), rooms: noNul\(rooms\), is_active: isShowable\(images\.length\) \}\)/);
 });

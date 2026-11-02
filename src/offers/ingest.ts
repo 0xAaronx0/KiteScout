@@ -4,6 +4,7 @@
 //
 // Modes:
 //   full   content + images (only if none yet, or --refresh-images) + slots
+//          + rooms[].photos with --room-photos (else carried over from the stored row)
 //   slots  slots only (the daily price/availability refresh)
 //
 // Slots go to public.offer_slots when migration 20261009120000 is applied;
@@ -19,6 +20,7 @@ import { plainDashes } from '../lib/offer-text.js';
 import { BlockedByHost, countRequests } from './http.js';
 import { prevFailedFrom, previousRun } from './run-verdict.js';
 import { linkRoomImages, planGallery } from './gallery.js';
+import { keepRoomPhotos, measureRoomPhoto, storeRoomPhotos, withRoomPhotos, type RoomPhoto } from './room-photos.js';
 import { DEFAULT_DISCIPLINES, isBookable, type OfferAdapter, type OfferContent, type OfferKind, type Slot } from './types.js';
 
 export const SOURCE_PREFIX = 'site:';
@@ -55,6 +57,8 @@ export interface AdapterReport {
   /** the adapter's previous recorded run (offer_sources.history) ended in an error or a block;
    *  undefined = no previous run known (dry run, first run). Drives the exit code (run-verdict.ts). */
   prevFailed?: boolean;
+  /** --room-photos only: rooms[].photos as stored (or, in a dry run, as they would be) */
+  roomPhotos?: { rooms: number; withPhoto: number; photos: number; bytes: number };
 }
 
 const BRIEFS: Record<OfferKind, VisionBrief> = {
@@ -550,9 +554,17 @@ async function recordSource(a: OfferAdapter, offerId: string | null, rep: Adapte
 }
 
 // --- one adapter ------------------------------------------------------------------------
+/** storage folder of a site listing's images (rooms[].photos sit below it in rooms/) */
+const galleryPrefix = (a: OfferAdapter, c: OfferContent) => `packages/${c.kind}/${slugify(c.title)}-site-${a.key}`;
+
+export function roomPhotoStats(c: OfferContent, photos: Map<string, RoomPhoto[]>): NonNullable<AdapterReport['roomPhotos']> {
+  const all = [...photos.values()].flat();
+  return { rooms: c.rooms.length, withPhoto: photos.size, photos: all.length, bytes: all.reduce((n, p) => n + p.bytes, 0) };
+}
+
 export async function runAdapter(
   a: OfferAdapter,
-  opts: { mode: IngestMode; dryRun?: boolean; refreshImages?: boolean },
+  opts: { mode: IngestMode; dryRun?: boolean; refreshImages?: boolean; roomPhotos?: boolean },
 ): Promise<AdapterReport> {
   const { result, requests } = await countRequests(() => runAdapterInner(a, opts));
   result.requests = requests;
@@ -561,7 +573,7 @@ export async function runAdapter(
 
 async function runAdapterInner(
   a: OfferAdapter,
-  opts: { mode: IngestMode; dryRun?: boolean; refreshImages?: boolean },
+  opts: { mode: IngestMode; dryRun?: boolean; refreshImages?: boolean; roomPhotos?: boolean },
 ): Promise<AdapterReport> {
   const t0 = Date.now();
   const rep: AdapterReport = {
@@ -603,6 +615,7 @@ async function runAdapterInner(
 
     if (opts.dryRun) {
       rep.status = 'dry_run';
+      if (content && opts.roomPhotos) rep.roomPhotos = roomPhotoStats(content, await storeRoomPhotos(content, galleryPrefix(a, content), measureRoomPhoto));
       return rep;
     }
 
@@ -658,9 +671,17 @@ async function runAdapterInner(
       const spots = await locateSpots(content, existing?.itinerary_spots);
       if (!spots.some(s => s.lat !== null)) rep.notes.push('no map pin: spot could not be geocoded');
       const before = (existing?.images as StoredImage[] | undefined) ?? [];
+      // Aaron 2026-11-02: a room's own photos live on the room (rooms[].photos), fetched only with --room-photos and
+      // otherwise carried over from the stored row; the curated gallery is untouched either way
+      let roomPhotos: Map<string, RoomPhoto[]> | null = null;
+      if (opts.roomPhotos) {
+        roomPhotos = await storeRoomPhotos(content, galleryPrefix(a, content));
+        rep.roomPhotos = roomPhotoStats(content, roomPhotos);
+      }
+      const photographed = <R extends { name: string }>(rs: R[]) => roomPhotos ? withRoomPhotos(rs, roomPhotos) : keepRoomPhotos(rs, existing?.rooms);
       const roomRows = roomsWithPrices(content, slots, today, lastPublished);
       // never visible without a photo: a new row stays hidden until its images are stored (set again below)
-      const row = { ...contentRow(a, content, operatorId, spots), ...priceCols, ...liveCols, rooms: linkRoomImages(roomRows, content, before), is_active: isShowable(before.length) };
+      const row = { ...contentRow(a, content, operatorId, spots), ...priceCols, ...liveCols, rooms: photographed(linkRoomImages(roomRows, content, before)), is_active: isShowable(before.length) };
       const { data: up, error: upErr } = await supabase
         .from('package_offers').upsert(noNul(row), { onConflict: 'source_listing_id' }).select('id').single();
       if (upErr) throw new Error(`package_offers upsert failed: ${upErr.message}`);
@@ -677,13 +698,13 @@ async function runAdapterInner(
           slug,
           sourceUrl: content.sourceUrl,
           context: `${content.title} (${content.spot ?? content.region ?? ''}, ${content.country}). ${content.summary}`,
-          pathPrefix: `packages/${content.kind}/${slug}-site-${a.key}`,
+          pathPrefix: galleryPrefix(a, content),
           brief: BRIEFS[content.kind],
           minSize: a.imageMinSize,
           reserve: plan.reserve,
         });
         if (images.length === 0) rep.notes.push('no usable images found: listing hidden (is_active false) until it has a photo');
-        const rooms = linkRoomImages(roomRows, content, images);
+        const rooms = photographed(linkRoomImages(roomRows, content, images));
         const withPhotos = content.rooms.filter(r => r.imageUrls?.length).length;
         if (withPhotos) rep.notes.push(`rooms linked to a gallery photo: ${rooms.filter(r => r.image_sort !== null).length} of ${withPhotos} with own photos`);
         const { error: iErr } = await supabase.from('package_offers').update({ images: noNul(images), rooms: noNul(rooms), is_active: isShowable(images.length) }).eq('id', offerId);
@@ -718,7 +739,7 @@ async function runAdapterInner(
 // --- many adapters, a few in parallel (different hosts; per-host throttle lives in http.ts) --
 export async function runAdapters(
   adapters: OfferAdapter[],
-  opts: { mode: IngestMode; dryRun?: boolean; refreshImages?: boolean; parallel?: number },
+  opts: { mode: IngestMode; dryRun?: boolean; refreshImages?: boolean; roomPhotos?: boolean; parallel?: number },
 ): Promise<AdapterReport[]> {
   const queue = [...adapters];
   const out: AdapterReport[] = [];
@@ -729,6 +750,7 @@ export async function runAdapters(
       const flag = r.status === 'error' ? 'ERR ' : r.status === 'blocked' ? 'BLK ' : r.status === 'dry_run' ? 'DRY ' : 'ok  ';
       const prev = r.status === 'error' ? `  (previous run: ${previousRun(r)})` : '';
       console.log(`${flag}${r.key.padEnd(34)} slots ${String(r.slots).padStart(3)} (bookable ${r.bookable})  ${r.minPrice ?? '-'}  ${r.requests} req  ${(r.ms / 1000).toFixed(1)}s${r.error ? `  ${r.error}` : ''}${prev}`);
+      if (r.roomPhotos) console.log(`    room photos: ${r.roomPhotos.withPhoto}/${r.roomPhotos.rooms} rooms, ${r.roomPhotos.photos} photos, ${(r.roomPhotos.bytes / 1024).toFixed(0)} KB`);
     }
   };
   await Promise.all(Array.from({ length: Math.min(opts.parallel ?? 4, adapters.length) }, worker));

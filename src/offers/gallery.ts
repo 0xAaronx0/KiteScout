@@ -9,8 +9,11 @@
 // whole gallery (Strandgut: 24 of 24 downloads from the Tiny House page).
 //
 //   planGallery     candidates mixed round-robin (one photo per room type, the spot, the general list, then the
-//                   second photos ...), stock / AI / floor-plan files left out, one reserve group per room type and
-//                   one for the spot (a labelled seat in the vision batch, see src/lib/images.ts visionBatch)
+//                   second photos ...), stock / AI / floor-plan files left out, one reserve group for the spot (a
+//                   labelled seat in the vision batch, see src/lib/images.ts visionBatch). Since 2026-11-02 room types
+//                   get no reserved seat: their photos live on the room (src/offers/room-photos.ts, Aaron: "not
+//                   necessarily in the gallery too"). They still lead each round, so a room type that is the place
+//                   itself (the Nordsee glamping dome) stays inside the download window.
 //   linkRoomImages  rooms[].image_sort = sort of the room's first stored photo (null when none was kept)
 // ---------------------------------------------------------------------------
 import { imageIdentity, type ReserveGroup, type StoredImage } from '../lib/images.js';
@@ -51,7 +54,7 @@ export function isNotOwnPhoto(url: string): boolean {
 export interface GalleryPlan {
   /** candidate URLs for curateAndStoreImages, mixed so every room type and the spot sit inside the download window */
   candidates: string[];
-  /** one group per room type with photos, plus the spot */
+  /** the spot (room types get no reserved seat since 2026-11-02, see the header) */
   reserve: ReserveGroup[];
   /** URLs left out as stock / AI / floor plan */
   dropped: string[];
@@ -84,10 +87,7 @@ export function planGallery(c: OfferContent): GalleryPlan {
   const longest = Math.max(0, ...sources.map(l => l.length));
   for (let k = 0; k < longest; k++) for (const list of sources) if (k < list.length) add(list[k]);
 
-  const reserve: ReserveGroup[] = [
-    ...rooms.filter(r => r.urls.length > 0).map(r => ({ label: `room type "${r.name}"`, urls: r.urls })),
-    ...(spot.length > 0 ? [{ label: 'the kite spot or people kiting there', urls: spot }] : []),
-  ];
+  const reserve: ReserveGroup[] = spot.length > 0 ? [{ label: 'the kite spot or people kiting there', urls: spot }] : [];
   return { candidates, reserve, dropped };
 }
 

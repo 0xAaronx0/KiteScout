@@ -126,5 +126,6 @@ test('nordsee-surfschule: gallery pool = dome, kite spot, house; no apartment de
   assert.ok(c.imageUrls.some(u => /Hauptbild/.test(u)));
   // round-robin: dome, kite spot, house first
   assert.deepEqual(plan.candidates.slice(0, 3), [dome[0], spot[0], c.imageUrls[0]]);
-  assert.deepEqual(plan.reserve.map(r => r.label), ['room type "Glamping Dome (Hooksiel)"', 'the kite spot or people kiting there']);
+  // 2026-11-02: the dome's photos also live on the room (rooms[].photos); only the spot keeps a reserved vision seat
+  assert.deepEqual(plan.reserve.map(r => r.label), ['the kite spot or people kiting there']);
 });

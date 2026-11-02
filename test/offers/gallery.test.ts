@@ -57,7 +57,8 @@ test('planGallery: round-robin, rooms first in each round, then spot, then the g
     img('a3'), img('home2'), // round 2
     img('home3'),
   ]);
-  assert.deepEqual(p.reserve.map(g => g.label), ['room type "A"', 'room type "B"', 'the kite spot or people kiting there']);
+  // 2026-11-02: room photos live on the room (rooms[].photos), only the spot keeps a reserved vision seat
+  assert.deepEqual(p.reserve.map(g => g.label), ['the kite spot or people kiting there']);
   assert.deepEqual(p.dropped, []);
 });
 
