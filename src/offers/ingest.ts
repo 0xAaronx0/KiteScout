@@ -371,7 +371,7 @@ function contentRow(a: OfferAdapter, c: OfferContent, operatorId: string, spots:
     package_type: c.kind,
     disciplines: a.disciplines ?? DEFAULT_DISCIPLINES,
     title: plainDashes(c.title), // no en/em dashes in shown text (Aaron 2026-08-06)
-    slug: slugify(c.title),
+    slug: offerSlug(a, c),
     source_listing_id: SOURCE_PREFIX + a.key,
     source_url: c.sourceUrl,
     continent: c.continent,
@@ -622,7 +622,9 @@ async function recordSource(a: OfferAdapter, offerId: string | null, rep: Adapte
 
 // --- one adapter ------------------------------------------------------------------------
 /** storage folder of a site listing's images (rooms[].photos sit below it in rooms/) */
-const galleryPrefix = (a: OfferAdapter, c: OfferContent) => `packages/${c.kind}/${slugify(c.title)}-site-${a.key}`;
+/** pinned slug when the adapter sets one (title renamed after launch), else from the title */
+export const offerSlug = (a: Pick<OfferAdapter, 'slug'>, c: Pick<OfferContent, 'title'>): string => a.slug ?? slugify(c.title);
+const galleryPrefix = (a: OfferAdapter, c: OfferContent) => `packages/${c.kind}/${offerSlug(a, c)}-site-${a.key}`;
 
 export function roomPhotoStats(c: OfferContent, photos: Map<string, RoomPhoto[]>): NonNullable<AdapterReport['roomPhotos']> {
   const all = [...photos.values()].flat();
@@ -759,7 +761,7 @@ async function runAdapterInner(
       offerId = up.id as string;
 
       if (before.length === 0 || opts.refreshImages) {
-        const slug = slugify(content.title);
+        const slug = offerSlug(a, content);
         // every room type and the spot inside the download window, one vision seat each; stock / AI / plans left out
         const plan = planGallery(content);
         if (plan.dropped.length) rep.notes.push(`left out ${plan.dropped.length} stock / AI / floor-plan image(s)`);

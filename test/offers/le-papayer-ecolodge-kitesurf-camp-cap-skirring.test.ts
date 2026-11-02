@@ -8,6 +8,7 @@ import {
   fetchPapSlots, lePapayerEcolodgeKitesurfCampCapSkirring, papPrintedPrice, parsePapHotel, parsePapKite,
 } from '../../src/offers/adapters/le-papayer-ecolodge-kitesurf-camp-cap-skirring.js';
 import { contentProblem } from '../../src/offers/validate.js';
+import { offerSlug } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/le-papayer-ecolodge-kitesurf-camp-cap-skirring');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -43,9 +44,19 @@ test('papayer: content', async () => {
     ['accommodation', 'Senegal', 'Cap Skirring, Casamance', 'Cap Skirring', null, false, false, false]);
   assert.deepEqual(c.spotCoords, { lat: 12.435368, lng: -16.7803266 });
   assert.match(c.summary, /no lessons and no gear rental/);
+  // operator 2026-11-02: no camp, experienced kiters with own gear only; slug stays as launched (KCS links)
+  assert.equal(c.title, 'Le Papayer Ecolodge, Cap Skirring - for experienced kiters');
+  assert.doesNotMatch(c.title, /camp/i);
+  assert.match(c.summary, /hosts experienced kiters who travel with their own gear/);
+  assert.equal(offerSlug(lePapayerEcolodgeKitesurfCampCapSkirring, c), 'le-papayer-ecolodge-kitesurf-camp-cap-skirring');
   assert.match(c.summary, /best from January to April \(best months February and March\)/);
   assert.doesNotMatch(c.summary, /[–—]|€/);
   assert.equal(c.imageUrls.length, 9);
   assert.ok(!c.imageUrls.some(u => u.includes("lepapayer.com")), "no rights-reserved lepapayer.com photos");
   assert.ok(!c.imageUrls.some(u => /\.png$|-800x44\d|-top\./.test(u)));
+});
+
+test('offerSlug: title-derived unless the adapter pins one', () => {
+  assert.equal(offerSlug({}, { title: 'Some Kite Stay, Somewhere' }), 'some-kite-stay-somewhere');
+  assert.equal(offerSlug({ slug: 'old-slug' }, { title: 'New Title' }), 'old-slug');
 });
