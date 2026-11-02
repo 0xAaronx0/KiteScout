@@ -16,6 +16,8 @@
 //                   groups give the spot that many labelled seats in the vision batch (src/lib/images.ts visionBatch);
 //                   the model may still reject a weak one. Photos of a room that shows the spot itself
 //                   (ContentRoom.showsSpot, the Nordsee glamping dome at the kite zone) join the spot pool.
+//                   This order only decides what is downloaded and shown to the vision step; for stays the stored
+//                   gallery opens with the house from outside, else a room, the spot third (VisionBrief.heroOrder).
 //   linkRoomImages  rooms[].image_sort = sort of the room's first stored photo (null when none was kept)
 // ---------------------------------------------------------------------------
 import { imageIdentity, type ReserveGroup, type StoredImage } from '../lib/images.js';

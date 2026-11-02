@@ -81,6 +81,8 @@ export interface StoredImage {
   fallback?: boolean;
   /** 160x140 WebP gallery thumbnail next to `path` (`<name>.thumb.webp`); absent when it could not be made */
   thumb_path?: string;
+  /** what the photo shows, as the vision step saw it; only when the brief asks for a hero order */
+  role?: ImageRole;
 }
 
 // ---------------------------------------------------------------------------
@@ -428,6 +430,24 @@ export interface VisionBrief {
   offerLabel: string;
   /** the motifs to keep, e.g. "the HOUSE/rooms, the kite SPOT, people kiting" */
   wanted: string;
+  /** which kind of photo leads the gallery, first match wins; the vision step then names each photo's role */
+  heroOrder?: ImageRole[];
+}
+
+/** What a photo shows: the building or grounds from outside (aerial included), an indoor space, the kite spot. */
+export const IMAGE_ROLES = ['exterior', 'interior', 'spot', 'other'] as const;
+export type ImageRole = typeof IMAGE_ROLES[number];
+
+/**
+ * Moves the hero to the front: the first photo (in the model's best-first order) whose role comes first in `order`;
+ * the rest keep their order. Nothing moves when no photo has a role from the list.
+ */
+export function orderHero<T extends { role?: ImageRole | null }>(selected: T[], order: ImageRole[] = []): T[] {
+  for (const role of order) {
+    const i = selected.findIndex(s => s.role === role);
+    if (i >= 0) return [selected[i], ...selected.slice(0, i), ...selected.slice(i + 1)];
+  }
+  return selected;
 }
 const CRUISE_BRIEF: VisionBrief = {
   offerLabel: 'kite-cruise offer',
@@ -488,7 +508,7 @@ async function visionSelect(
   context: string,
   brief: VisionBrief = CRUISE_BRIEF,
   reserve: ReserveGroup[] = [],
-): Promise<Array<{ img: DownloadedImage; caption: string | null }> | null> {
+): Promise<Array<{ img: DownloadedImage; caption: string | null; role: ImageRole | null }> | null> {
   const batch = visionBatch(images, reserve);
 
   const blocks: Anthropic.ContentBlockParam[] = [];
@@ -519,7 +539,8 @@ ${context}
 
 From the numbered images above, pick up to ${MAX_STORED} real photos for this offer, best-first: prefer ${brief.wanted}. Genuine photos of the accommodation, the place and its scenery also count, even without anyone kiting.${keepEach}
 REJECT only: logos, icons, UI screenshots, tables or text graphics, maps or charts, stock illustrations, headshots / portraits, payment or partner badges, and photos clearly from another place or activity.
-Respond with ONLY a JSON array: [{"index": <number>, "caption": "<max 8 word description>"}]. Respond with [] only if every image must be rejected.`;
+Respond with ONLY a JSON array: [{"index": <number>, "caption": "<max 8 word description>"${brief.heroOrder ? `, "role": "<${IMAGE_ROLES.join('|')}>"` : ''}}]. Respond with [] only if every image must be rejected.${brief.heroOrder ? `
+role: "exterior" = the building or grounds seen from outside, an aerial view of the property included; "interior" = a room or other indoor space; "spot" = the kite spot, beach or water, or people kiting, without the building as the subject; "other" = anything else (pool close-up, food, people, gear).` : ''}`;
   blocks.push({ type: 'text', text: prompt });
 
   let text: string;
@@ -550,13 +571,14 @@ Respond with ONLY a JSON array: [{"index": <number>, "caption": "<max 8 word des
   try {
     const parsed = JSON.parse(json);
     if (!Array.isArray(parsed)) return null;
-    const out: Array<{ img: DownloadedImage; caption: string | null }> = [];
+    const out: Array<{ img: DownloadedImage; caption: string | null; role: ImageRole | null }> = [];
     const picked = new Set<number>();
     for (const item of parsed) {
       const idx = typeof item?.index === 'number' ? item.index : -1;
       if (idx >= 0 && idx < used.length && !picked.has(idx)) {
         picked.add(idx);
-        out.push({ img: used[idx], caption: typeof item?.caption === 'string' ? item.caption : null });
+        const role = IMAGE_ROLES.find(r => r === item?.role) ?? null;
+        out.push({ img: used[idx], caption: typeof item?.caption === 'string' ? item.caption : null, role });
       }
     }
     return out;
@@ -675,7 +697,7 @@ export async function curateAndStoreImages(opts: {
   if (downloaded.length === 0) return [];
 
   // 2. Select the keepers.
-  let selected: Array<{ img: DownloadedImage; caption: string | null }>;
+  let selected: Array<{ img: DownloadedImage; caption: string | null; role?: ImageRole | null }>;
   const reserve = opts.reserve ?? [];
   let visionPick = USE_VISION_QC ? await visionSelect(downloaded, context, opts.brief, reserve) : null;
   // An empty pick is a rejection of every candidate (e.g. only tide-table screenshots); ask once more since the
@@ -697,12 +719,14 @@ export async function curateAndStoreImages(opts: {
   const dedup = await dropNearDuplicates(selected, s => s.img.buf);
   if (dedup.dropped.length) console.warn(`  ↳ dropped ${dedup.dropped.length} near-duplicate image(s): ${dedup.dropped.map(d => d.img.sourceUrl).join(', ')}`);
   selected = dedup.kept;
+  // 2c. Aaron 2026-11-02 for stays: the house from outside leads, else a room, the spot only third (brief.heroOrder).
+  selected = orderHero(selected, opts.brief?.heroOrder);
 
   // 3. Compress + upload to the private bucket.
   await ensureCruiseImageBucket();
   const stored: StoredImage[] = [];
   let sort = 0;
-  for (const { img, caption } of selected) {
+  for (const { img, caption, role } of selected) {
     let out: Buffer;
     let outW = img.width;
     let outH = img.height;
@@ -735,6 +759,7 @@ export async function curateAndStoreImages(opts: {
       caption,
       sort,
       rights: await extractImageRights(img.buf, img.sourceUrl),
+      ...(opts.brief?.heroOrder && role ? { role } : {}),
     };
     // a thumbnail failure only omits thumb_path, the image itself is kept
     stored.push(withThumbPath(entry, await createThumb(out, path, uploadThumbToBucket)));
