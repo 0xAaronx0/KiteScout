@@ -124,8 +124,9 @@ test('nordsee-surfschule: gallery pool = dome, kite spot, house; no apartment de
   // house from outside in the general list, the apartments' main photos after it
   assert.ok(c.imageUrls.some(u => u.startsWith('https://storage.googleapis.com/production-sitelio-')), 'Haus Seeschwalbe from outside');
   assert.ok(c.imageUrls.some(u => /Hauptbild/.test(u)));
-  // round-robin: dome, kite spot, house first
-  assert.deepEqual(plan.candidates.slice(0, 3), [dome[0], spot[0], c.imageUrls[0]]);
-  // 2026-11-02: the dome's photos also live on the room (rooms[].photos); only the spot keeps a reserved vision seat
-  assert.deepEqual(plan.reserve.map(r => r.label), ['the kite spot or people kiting there']);
+  // the spot first (Aaron 2026-11-02: at least 3), the dome counts as spot too (showsSpot: it stands at the kite zone)
+  assert.equal(c.rooms[0].showsSpot, true);
+  assert.deepEqual(plan.candidates.slice(0, 4), [spot[0], c.imageUrls[0], dome[0], spot[1]]);
+  assert.ok(plan.candidates.slice(0, 24).filter(u => dome.includes(u)).length >= 3, 'several dome photos in the download window');
+  assert.deepEqual(plan.reserve.map(r => r.label), ['the kite spot or people kiting there', 'the kite spot or people kiting there', 'the kite spot or people kiting there']);
 });

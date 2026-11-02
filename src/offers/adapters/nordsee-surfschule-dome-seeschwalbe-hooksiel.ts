@@ -235,6 +235,7 @@ export function parseNordseeContent(p: NsPages): OfferContent {
     {
       name: 'Glamping Dome (Hooksiel)',
       imageUrls: domeImgs,
+      showsSpot: true, // the dome stands at the Hooksiel kite zone, its photos show the spot too (Aaron 2026-11-02)
       description: 'Dome tent with sea view at the school\'s mooi Strandhaus station in Hooksiel: 180 cm double bed, extra blankets and hot-water bottles, heating, armchairs, a small kitchen corner; WC and shower next door in the Strandhaus (own key).',
       features: ['Kettle, Senseo coffee machine, fridge, standard crockery', 'Bed linen and two large towels', 'Safe, clothes rail', 'Less than 200 m to the Hooksiel kite zone', 'Price on request (online booking)'],
     },

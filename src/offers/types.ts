@@ -115,6 +115,12 @@ export interface ContentRoom {
    * the ingest mixes them into the gallery and links the room to its first stored photo (rooms[].image_sort)
    */
   imageUrls?: string[];
+  /**
+   * the room is the place itself and its photos show the kite spot too (a glamping dome at the kite zone): they also
+   * count as spot photos in the gallery (Aaron 2026-11-02: "zimmer-fotos die auch den spot zeigen, gelten (auch) als
+   * spotfotos")
+   */
+  showsSpot?: boolean;
 }
 
 export interface OfferContent {

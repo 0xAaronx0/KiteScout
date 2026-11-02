@@ -2,7 +2,7 @@
 // stock / AI / floor-plan files left out, rooms linked to their first stored photo.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { isNotOwnPhoto, linkRoomImages, planGallery } from '../../src/offers/gallery.js';
+import { isNotOwnPhoto, linkRoomImages, MIN_SPOT_PHOTOS, planGallery, SPOT_LABEL } from '../../src/offers/gallery.js';
 import { visionBatch } from '../../src/lib/images.js';
 import type { OfferContent } from '../../src/offers/types.js';
 
@@ -40,7 +40,7 @@ test('isNotOwnPhoto: stock, AI renderings and floor plans by file name, real pho
   ]) assert.ok(!isNotOwnPhoto(u), u);
 });
 
-test('planGallery: round-robin, rooms first in each round, then spot, then the general list; duplicates once', () => {
+test('planGallery: spot 1, general 1, spot 2 and 3, one photo per room type, then general and spot alternating', () => {
   const c = content({
     imageUrls: [img('home1'), img('a1'), img('home2'), img('home3')],
     rooms: [
@@ -48,18 +48,44 @@ test('planGallery: round-robin, rooms first in each round, then spot, then the g
       { name: 'B', description: null, features: [], imageUrls: [img('b1')] },
       { name: 'C', description: null, features: [] },
     ],
-    spotImageUrls: [img('kite1'), img('kite2')],
+    spotImageUrls: [img('kite1'), img('kite2'), img('kite3'), img('kite4')],
   });
   const p = planGallery(c);
   assert.deepEqual(p.candidates, [
-    img('a1'), img('b1'), img('kite1'), img('home1'), // round 0 (home's a1 is the room's photo, kept once)
-    img('a2'), img('kite2'), // round 1: general[1] = a1 already in
-    img('a3'), img('home2'), // round 2
-    img('home3'),
+    img('kite1'), img('home1'), img('kite2'), img('kite3'), // the spot first (Aaron 2026-11-02: at least 3)
+    img('a1'), img('b1'), // one photo per room type; a2 / a3 live on the room only (rooms[].photos)
+    img('kite4'), // general[1] = a1 already in
+    img('home2'), img('home3'),
   ]);
-  // 2026-11-02: room photos live on the room (rooms[].photos), only the spot keeps a reserved vision seat
-  assert.deepEqual(p.reserve.map(g => g.label), ['the kite spot or people kiting there']);
+  assert.deepEqual(p.reserve.map(g => g.label), [SPOT_LABEL, SPOT_LABEL, SPOT_LABEL]);
   assert.deepEqual(p.dropped, []);
+  // fewer spot photos than seats: one seat per distinct photo
+  assert.equal(planGallery(content({ ...c, spotImageUrls: [img('kite1')] })).reserve.length, 1);
+});
+
+test('planGallery: at least 3 spot photos and every room type inside the first 24, even with 19 room types', () => {
+  const rooms = Array.from({ length: 19 }, (_, i) => ({ name: `R${i}`, description: null, features: [], imageUrls: [img(`r${i}-1`), img(`r${i}-2`)] }));
+  const spot = Array.from({ length: 8 }, (_, i) => img(`kite${i}`));
+  const c = content({ imageUrls: rooms.flatMap(r => r.imageUrls), rooms, spotImageUrls: spot });
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  assert.ok(first24.filter(u => spot.includes(u)).length >= MIN_SPOT_PHOTOS);
+  for (const r of rooms) assert.ok(first24.includes(r.imageUrls[0]), r.name);
+});
+
+test('planGallery: photos of a room that shows the spot (showsSpot) join the spot pool', () => {
+  const c = content({
+    imageUrls: [img('house1')],
+    rooms: [
+      { name: 'Dome', description: null, features: [], imageUrls: [img('dome1'), img('dome2'), img('dome3')], showsSpot: true },
+      { name: 'Flat', description: null, features: [], imageUrls: [img('flat1')] },
+    ],
+    spotImageUrls: [img('kite1'), img('kite2')],
+  });
+  const p = planGallery(c);
+  // spot pool = kite1, dome1, kite2, dome2, dome3
+  assert.deepEqual(p.candidates, [img('kite1'), img('house1'), img('dome1'), img('kite2'), img('flat1'), img('dome2'), img('dome3')]);
+  assert.equal(p.reserve.length, 3);
+  assert.deepEqual(p.reserve[0].urls, [img('kite1'), img('dome1'), img('kite2'), img('dome2'), img('dome3')]);
 });
 
 test('planGallery: without room or spot photos the adapter order stays, only the filter applies', () => {
@@ -69,7 +95,7 @@ test('planGallery: without room or spot photos the adapter order stays, only the
   assert.deepEqual(p.dropped, [img('AdobeStock_1')]);
 });
 
-test('planGallery: Strandgut shape (26 Tiny House photos first) now puts all four units inside the first 24', () => {
+test('planGallery: Strandgut shape (26 Tiny House photos first) puts all four units inside the first 24', () => {
   const tiny = Array.from({ length: 26 }, (_, i) => img(`tiny-${i}`));
   const c = content({
     imageUrls: [...tiny, img('kaj-1'), img('koje-1')],
@@ -97,6 +123,9 @@ test('visionBatch: unchanged without groups (largest first, 10); with groups one
   assert.equal(b.length, 10); // max(10, 2 + 4)
   assert.equal(b[2].img.sourceUrl, img('p13'));
   assert.equal(new Set(b.map(x => x.img)).size, b.length);
+
+  const spotSeats = visionBatch(imgs, [0, 1, 2].map(() => ({ label: 'spot', urls: [img('p3'), img('p4'), img('p5'), img('p6')] })));
+  assert.deepEqual(spotSeats.slice(0, 3).map(x => [x.img.sourceUrl, x.label]), [[img('p3'), 'spot'], [img('p4'), 'spot'], [img('p5'), 'spot']]);
 
   const many = Array.from({ length: 25 }, (_, i) => ({ label: `room type "${i}"`, urls: [img(`q${i}`)] }));
   const big = Array.from({ length: 30 }, (_, i) => ({ sourceUrl: img(`q${i}`), width: 800, height: 600 }));

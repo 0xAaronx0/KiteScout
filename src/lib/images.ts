@@ -512,7 +512,7 @@ async function visionSelect(
   if (used.length === 0) return null;
 
   const keepEach = labelled > 0
-    ? `\nImages marked with a room type or the spot show the different things a guest chooses between: keep at least one photo of each marked room type and of the spot, unless it must be rejected.`
+    ? `\nImages marked as the provider's photo of something are wanted in the gallery (for the spot at least three when they are good): keep every marked image unless it must be rejected.`
     : '';
   const prompt = `You are curating photos for this ${brief.offerLabel}:
 ${context}
@@ -631,7 +631,7 @@ export async function curateAndStoreImages(opts: {
   brief?: VisionBrief;
   /** per-listing size floor when a provider only publishes small photos (default MIN_WIDTH x MIN_HEIGHT) */
   minSize?: { width: number; height: number };
-  /** one labelled seat in the vision batch per group (room types, the spot); omitted = largest-first as before */
+  /** one labelled seat in the vision batch per group (e.g. three for the spot); omitted = largest-first as before */
   reserve?: ReserveGroup[];
 }): Promise<StoredImage[]> {
   const { candidateUrls, providerId, slug, sourceUrl, context } = opts;
