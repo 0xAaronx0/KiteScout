@@ -18,6 +18,8 @@
 //            "10 largest" are simply the first 10 in our order: og photo, then kite/beach photos interleaved with
 //            the first photo of each unit type. The kite photos are named in PC_KITE_PHOTOS (checked by eye
 //            2026-10-21); if the gallery renames them, the pool falls back to cottages + home photos.
+//            Room photos: each unit card's gallery (PcUnit.photos, files from another type's folder left out); spot
+//            photos: the PC_KITE_PHOTOS of /gallery.
 //   slots    none. The site prints no prices ("Check prices and availability"). Booking runs on Bookassist
 //            (hotel_id 4317, guide 823): the engine loads js.bookassist.com/scripts/BA/be.2-min.jsp and books
 //            through www.bookassist.com/conduit/bookassist.do - robots.txt of both hosts disallows /scripts/ and
@@ -73,10 +75,15 @@ export function parsePcGalleryAttractions(html: string): string[] {
   return out;
 }
 
+/** File ids of the gallery's kite / SurfPoint beach photos (PC_KITE_PHOTOS order). */
+export function pcKiteFiles(galleryHtml: string | null): string[] {
+  const gallery = galleryHtml ? parsePcGalleryAttractions(galleryHtml) : [];
+  return PC_KITE_PHOTOS.map(n => gallery.find(f => f.endsWith(`%2F${n}`))).filter((f): f is string => !!f);
+}
+
 /** Photo pool: og photo, kite/beach gallery photos interleaved with each unit's first photo, then the rest. */
 export function pcPhotoCandidates(ogUrl: string | null, units: PcUnit[], galleryHtml: string | null, homeFiles: string[]): string[] {
-  const gallery = galleryHtml ? parsePcGalleryAttractions(galleryHtml) : [];
-  const kite = PC_KITE_PHOTOS.map(n => gallery.find(f => f.endsWith(`%2F${n}`))).filter((f): f is string => !!f);
+  const kite = pcKiteFiles(galleryHtml);
   const firsts = units.map(u => (u.photos[0] ? pcFileOf(u.photos[0]) : null)).filter((f): f is string => !!f);
   const og = ogUrl ? pcFileOf(ogUrl) : null;
   const files: string[] = og ? [og] : [];
@@ -86,6 +93,25 @@ export function pcPhotoCandidates(ogUrl: string | null, units: PcUnit[], gallery
   }
   files.push(...units.flatMap(u => u.photos.slice(1, 3).map(pcFileOf).filter((f): f is string => !!f)), ...homeFiles);
   return [...new Set(files)].slice(0, PC_MAX_PHOTOS).map(pcPhoto);
+}
+
+const pcDir = (url: string): string => decodeURIComponent(pcFileOf(url) ?? '').replace(/\/[^/]*$/, '');
+/** the folder most of a unit's photos sit in ("domki-pod-cyprysami/user/Domki/5-1-Standard") */
+const pcHomeDir = (u: PcUnit): string | null => {
+  const n = new Map<string, number>();
+  for (const p of u.photos) n.set(pcDir(p), (n.get(pcDir(p)) ?? 0) + 1);
+  return [...n].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
+};
+
+/**
+ * A unit's own photos as gallery candidates (same URL form as the pool): its card gallery, minus files from the folder
+ * of another unit type (the 4+1 standard card also shows 5-1-Standard/DSC02490). The two 4+2 Active cards (with and
+ * without air conditioning) share their folder and some photos: same cottage type.
+ */
+export function pcRoomPhotos(u: PcUnit, units: PcUnit[]): string[] {
+  const own = pcHomeDir(u);
+  const others = new Set(units.filter(v => v !== u).map(pcHomeDir).filter(d => d && d !== own));
+  return u.photos.filter(p => !others.has(pcDir(p))).map(pcFileOf).filter((f): f is string => !!f).map(pcPhoto);
 }
 
 // --- pure parsers -----------------------------------------------------------------------------
@@ -173,12 +199,14 @@ export function parsePodCyprysamiContent(p: PcPages): OfferContent {
     name: u.name,
     description: [u.areaM2 ? `${u.areaM2} m²` : null, u.maxPersons ? `up to ${u.maxPersons} persons` : null].filter(Boolean).join(', ') || null,
     features: u.group === 'lodges' ? equipment : [],
+    ...(pcRoomPhotos(u, units).length ? { imageUrls: pcRoomPhotos(u, units) } : {}),
   }));
 
   const og = meta(p.home, 'og:image');
   const homeFiles = [...p.home.matchAll(/data-zuu-image-file="([^"]+)"/g)].map(m => m[1])
     .filter(f => /^domki-pod-cyprysami%2Fuser%2F(Atuty|Domki|Restauracja|Joga|Atrakcje|Galeria|temp)%2F/.test(f) && !/Ustronie|Ruciane|logo|\.svg/i.test(f));
   const imageUrls = pcPhotoCandidates(og ? og.replace(/&amp;/g, '&') : null, units, p.gallery ?? null, homeFiles);
+  const spotImageUrls = pcKiteFiles(p.gallery ?? null).map(pcPhoto);
 
   const summary = [
     `Umili Pod Cyprysami is a surf and family resort in Jastarnia on the Hel Peninsula in northern Poland, close to the Baltic beach and the Bay of Puck, with ${cottages.length || 9} types of heated, air-conditioned cottages${areas.length ? ` (${Math.min(...areas)}-${Math.max(...areas)} m², up to ${Math.max(...persons)} persons)` : ''} with terrace or garden, plus double rooms, a 6-bed apartment and a 6-bed hostel room.`,
@@ -218,6 +246,7 @@ export function parsePodCyprysamiContent(p: PcPages): OfferContent {
     languages: ['pl', 'en'],
     rooms,
     imageUrls,
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: PC_HOME_URL,
     bookingUrl: BOOKING_URL,

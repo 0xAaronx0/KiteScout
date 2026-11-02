@@ -9,8 +9,9 @@ import { join } from 'node:path';
 import {
   taigaTarifaPuntaPaloma, fetchTaigaPuntaPalomaSlots, tppRules,
 } from '../../src/offers/adapters/taiga-tarifa-punta-paloma.js';
-import { parseParatyResults, parseTgHotelGeo, parseTgUnits } from '../../src/offers/adapters/taiga-tarifa-valdevaqueros.js';
+import { parseParatyResults, parseTgHotelGeo, parseTgKitePhotos, parseTgUnits } from '../../src/offers/adapters/taiga-tarifa-valdevaqueros.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/taiga-tarifa-punta-paloma');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -77,4 +78,29 @@ test('tpp: content', async () => {
   ]);
   assert.ok(c.includedServices.includes('Outdoor pool (June to September)'));
   assert.equal(c.imageUrls.length, 40);
+});
+
+test('tpp: room photos from each tent card pop-up, spot photos from the kite page', async () => {
+  const c = await taigaTarifaPuntaPaloma.fetchContent(ctx);
+  const OWN = 'https://cdn2.paraty.es/q10-teacampa/images/';
+  const id = (u: string) => u.split('/').pop()!;
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0, id(r.imageUrls![0])]), [
+    ['Glamping Tent Premium Cala', 14, 'e85ae9a2f3d89e5'],
+    ['Glamping Tent Premium Sauceda', 10, 'de4c72f9c26bbca'],
+    ['Glamping Tent Algaida', 8, 'e6d9585a60cb191'],
+    ['Glamping Tent Breña', 7, '4c3c7257a7335a5'],
+    ['Glamping Tent Janda', 12, 'f50daae209c205a'],
+    ['Glamping Tent Tamaral', 11, '740e6b9b267564c'],
+  ]);
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.ok(all.every(u => u.startsWith(OWN)));
+  assert.equal(new Set(all).size, all.length); // no photo shared by two tents
+  for (const r of c.rooms) assert.ok(c.imageUrls.includes(r.imageUrls![0]), r.name); // same URL form as the general list
+  assert.deepEqual(c.spotImageUrls, parseTgKitePhotos(read(files.find(f => f.startsWith('www.taigaresorts.com_en_kite-surf'))!)));
+  assert.equal(c.spotImageUrls!.length, 6);
+  assert.equal(c.spotImageUrls![0], 'https://cdn2.paraty.es/q10-corpo/images/d9efa71c934059e=s1900');
+  assert.ok(!c.spotImageUrls!.some(u => /4b55165c834017c|e51de6099e4f524|4b5c01558ce11c8|54fd0e0a172ff16/.test(u))); // logo, biking, theatre, terrace
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(first24.includes(r.imageUrls![0]), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });
