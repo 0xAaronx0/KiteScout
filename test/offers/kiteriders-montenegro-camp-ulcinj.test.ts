@@ -43,7 +43,8 @@ test('krm: content, courses, coordinates from the site', async () => {
   assert.ok(parseKrmCourses(html).some(c => c.name === 'Basic-beginner´s course' && c.from === 259));
   const c = parseKrmContent(html, '2026-10-19');
   assert.equal(contentProblem(c), null);
-  assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot, c.mealPlan], ['camp', 8, 'Montenegro', 'Velika Plaza, Ulcinj', 'Velika Plaza', 'self_catering']);
+  // Aaron 2026-11-02: booked per night with optional extras, so a stay, not a camp package (no fixed length).
+  assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot, c.mealPlan], ['accommodation', null, 'Montenegro', 'Velika Plaza, Ulcinj', 'Velika Plaza', 'self_catering']);
   assert.match(c.summary, /EUR 39-79 per person per night .* beginner courses from EUR 259/);
   assert.match(c.summary, /2027 rates are not published yet \(2026 season: 16 May - 6 September\)/);
   assert.ok(c.imageUrls.length >= 10 && c.imageUrls.every(u => !/-\d+x\d+\.jpg$/.test(u)));
