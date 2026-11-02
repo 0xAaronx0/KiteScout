@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { printedFromSlots, roomKey, slotRoom, roomAvailability, roomsWithPrices } from '../../src/offers/ingest.js';
+import { printedFromSlots, repriceStoredRooms, roomKey, roomPriceChanges, slotRoom, staleRoomNames, roomAvailability, roomsWithPrices } from '../../src/offers/ingest.js';
 import type { OfferContent, Slot } from '../../src/offers/types.js';
 
 const slot = (o: Partial<Slot>): Slot => ({
@@ -162,4 +162,41 @@ test('printedFromSlots: only rooms the engine prices nowhere get their printed f
     ['printed|fluvia-especial', 'Fluvia Especial', 133, null, 'unknown', true],
     ['printed|garbi', 'Garbí', 120, null, 'unknown', true],
   ]);
+});
+
+test('repriceStoredRooms (--slots runs): price fields from the fresh slots, name / texts / image_sort as stored', () => {
+  const stored = [
+    { name: 'Double room', description: 'Sea view', features: ['Balcony'], image_sort: 3, price_from: 80, price_currency: 'EUR', price_unit: 'per_night', price_basis: 'room', price_source: 'provider_site', priced_months: [7], availability: [], extra: 'kept' },
+    { name: 'Dorm bed', description: null, features: [], image_sort: null, price_from: null, price_currency: null, price_unit: null, price_basis: null, price_source: 'provider_site', priced_months: [] },
+    // an old row whose name no slot carries any more (renamed since the last full run): keeps its stored price
+    { name: 'Old cabin', description: null, features: [], image_sort: 1, price_from: 50, price_currency: 'EUR', price_unit: 'per_night', price_basis: 'room', price_source: 'provider_site', priced_months: [] },
+    // a room the slots still name, but closed without a price: loses it, as in a full run
+    { name: 'Loft', description: null, features: [], image_sort: null, price_from: 120, price_currency: 'EUR', price_unit: 'per_night', price_basis: 'room', price_source: 'provider_site', priced_months: [] },
+  ];
+  const slots = [
+    slot({ unit: 'Double room', price: 95, priceBasis: 'room', startDate: '2027-07-01', endDate: '2027-07-31' }),
+    slot({ unit: 'Dorm bed', price: 30, startDate: '2027-07-01', endDate: '2027-07-31' }),
+    slot({ unit: 'Cabin Deluxe', price: 60, startDate: '2027-07-01', endDate: '2027-07-31' }),
+    slot({ unit: 'Loft', price: null, availability: 'closed', startDate: '2027-07-01', endDate: '2027-07-31' }),
+  ];
+  const out = repriceStoredRooms('accommodation', stored, slots, '2026-11-02')!;
+  assert.deepEqual(out.map(r => [r.name, r.description, r.image_sort, r.price_from, r.price_basis, r.priced_months]), [
+    ['Double room', 'Sea view', 3, 95, 'room', [7]], ['Dorm bed', null, null, 30, 'person', [7]], ['Old cabin', null, 1, 50, 'room', []],
+    ['Loft', null, null, null, null, []],
+  ]);
+  assert.deepEqual(out[0].features, ['Balcony']);
+  assert.equal(out[0].extra, 'kept');
+  assert.deepEqual(staleRoomNames(stored, slots), ['Old cabin']);
+  assert.deepEqual(roomPriceChanges(stored, out), { gained: 1, lost: 1, changed: 1 });
+  // the same slots again change nothing
+  assert.deepEqual(roomPriceChanges(out, repriceStoredRooms('accommodation', out, slots, '2026-11-02')!), { gained: 0, lost: 0, changed: 0 });
+});
+
+test('repriceStoredRooms: past prices via lastPublished; nothing to re-price -> null', () => {
+  const stored = [{ name: 'Cabin', description: null, features: [], image_sort: null, price_from: null }];
+  const past = [slot({ unit: 'Cabin', price: 400, priceBasis: 'room', startDate: '2026-08-17', endDate: '2026-10-23' })];
+  assert.equal(repriceStoredRooms('accommodation', stored, [], '2026-11-02', past)![0].price_from, 400);
+  assert.equal(repriceStoredRooms('accommodation', [], [], '2026-11-02'), null);
+  assert.equal(repriceStoredRooms('accommodation', null, [], '2026-11-02'), null);
+  assert.equal(repriceStoredRooms('accommodation', [{ description: 'no name' }], [], '2026-11-02'), null);
 });
