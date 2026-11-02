@@ -54,6 +54,17 @@ test('storeRoomPhotos: paths below the listing folder, small files and failed do
   assert.deepEqual({ ...stats, bytes: stats.bytes > 0 }, { rooms: 3, withPhoto: 2, photos: 2, bytes: true });
 });
 
+test('storeRoomPhotos: a provider room picture below the gallery floor still counts (600x290), a thumbnail does not', async () => {
+  const files: Record<string, Buffer> = { [img('wide')]: await jpeg(600, 290), [img('thumb')]: await jpeg(190, 149) };
+  const c = content({ rooms: [{ name: 'Garden room', description: null, features: [], imageUrls: [img('thumb'), img('wide')] }] });
+  const stored: string[] = [];
+  const photos = await storeRoomPhotos(c, 'p',
+    async (buf, sourceUrl, path) => { stored.push(sourceUrl); return { path, source_url: sourceUrl, width: 600, height: 290, bytes: buf.byteLength }; },
+    async url => files[url] ?? null);
+  assert.deepEqual(stored, [img('wide')]);
+  assert.equal(photos.get('Garden room')!.length, 1);
+});
+
 test('keepRoomPhotos: a run without --room-photos keeps the stored photos by room name; renamed rooms lose theirs', () => {
   const p: RoomPhoto = { path: 'x/rooms/a/0.webp', thumb_path: 'x/rooms/a/0.thumb.webp', source_url: img('a'), width: 1, height: 1, bytes: 1 };
   const previous = [{ name: 'A', photos: [p] }, { name: 'Old name', photos: [p] }, { name: 'C', photos: [] }];

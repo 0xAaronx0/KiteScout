@@ -13,9 +13,13 @@ import { isNotOwnPhoto } from './gallery.js';
 import type { OfferContent } from './types.js';
 
 export const ROOM_PHOTO_CAP = 3;
-/** same floor as the gallery (src/lib/images.ts MIN_WIDTH x MIN_HEIGHT): smaller files are icons or thumbnails */
-const MIN_WIDTH = 500;
-const MIN_HEIGHT = 330;
+/**
+ * below the gallery floor (src/lib/images.ts 500 x 330): a room photo only opens in the room's own dialog, so a
+ * provider's smaller room pictures still count (Aaron 2026-11-02: "für zimmerbilder ist das imho kein problem - nur
+ * nicht in die gallerie"); smaller files than this are icons or thumbnails
+ */
+export const ROOM_PHOTO_MIN_WIDTH = 400;
+export const ROOM_PHOTO_MIN_HEIGHT = 250;
 
 export interface RoomPhoto {
   path: string;
@@ -78,7 +82,7 @@ export async function storeRoomPhotos(
       if (!buf) continue;
       try {
         const m = await sharp(buf, { failOn: 'none' }).metadata();
-        if ((m.width ?? 0) < MIN_WIDTH || (m.height ?? 0) < MIN_HEIGHT) continue;
+        if ((m.width ?? 0) < ROOM_PHOTO_MIN_WIDTH || (m.height ?? 0) < ROOM_PHOTO_MIN_HEIGHT) continue;
       } catch { continue; }
       const p = await store(buf, url, `${pathPrefix}/rooms/${slug}/${photos.length}.webp`);
       if (p) photos.push(p);
