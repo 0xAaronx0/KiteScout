@@ -65,6 +65,9 @@ const BRIEFS: Record<OfferKind, VisionBrief> = {
   accommodation: {
     offerLabel: 'kite guesthouse / kite hotel',
     wanted: 'the HOUSE (exterior, rooms, pool, terrace), the kite SPOT or beach in front of it, or people kiting there',
+    // Aaron 2026-11-02: a stay's gallery opens with the house from outside (aerial too), else a room, the spot only
+    // third; at least three spot photos stay in the gallery, further back. Sets stays apart from camps and tours.
+    heroOrder: ['exterior', 'interior', 'spot'],
   },
   tour: {
     offerLabel: 'guided kite tour (downwinder / road trip)',
