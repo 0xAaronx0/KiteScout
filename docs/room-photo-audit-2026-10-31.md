@@ -50,6 +50,16 @@ Aaron (2026-10-31): "Helfer im Ingest bauen, dann die Top 20".
   `/en/cabins/`, 3 Abrufe mehr, Budget 26), nur Fotos, die auf keiner anderen gelesenen Seite stehen. **Die drei Hüttenseiten sind nicht
   aufgenommen** (kein Netz in dieser Session): die Zuordnung ist nur mit synthetischen Seiten getestet. Vor `--refresh-images` die Seiten einmal
   mit `OFFERS_RECORD_DIR` aufnehmen und prüfen; scheitert ein Abruf, bleibt die Hütte ohne Foto (Hinweis im Lauf).
+- **Zweites Paket (2026-11-02, Aaron: "ja, fang mit den nächsten 20 parallel an"):** die nächsten 20 nach Rang ohne Quellenfrage
+  (Nordsee Surfschule hatte eine andere Session schon mit dem Helfer versorgt): Praseban, Amanpulo, Watermen's Retreat, Dakhla Attitude,
+  Cabarete Boutique, Peahi, Bretterbude, Hvide Sande, Inchcape, Gnaraloo Homestead, Namotu, Ikarus, Dunas, 7 Beaufort, Ummaii, Kite PL
+  Caravans, Taiga Punta Paloma, Masira, Umili, Strukkamphuk. 172 von 174 Zimmereinträgen mit eigenen Fotos; in den ersten 24 Kandidaten
+  vorher 118, jetzt 172; Spotfoto in den ersten 24 vorher bei 11, jetzt bei allen 18 mit eigenen Spotfotos. Keine neuen Abrufe.
+  Zur Sichtung: Amanpulo "Grand Beach Pool Casita" (Kartenbild heißt "Premier Beach Pool Casita", vermutlich alter Name); Dakhla Attitude
+  "Windhunter Premium" (`DSC09640-1`, `DSC09697-1` aus derselben Kameraserie wie VIP A); Strukkamphuk Deluxe-Wohnwagen (`WW-Typ-3/4-Gaeste-*`,
+  748x546, eventuell Grafiken); Peahi "Deluxe side sea view" (nur 1 eigenes Foto, der Slider zeigt sonst "Deluxe with balcony"; Text
+  wortgleich, falls baugleich, könnten beide die Fotos teilen). Bei Listings mit sehr vielen Zimmertypen (Umili 12) liegt nur noch ein
+  Spotfoto in den ersten 24; der reservierte Spot-Platz bei der Bild-KI bleibt.
 
 ## Datengrundlage und Methode
 

@@ -18,6 +18,8 @@
 // robots.txt (2026-10-12): "Crawl-delay: 1", disallows only /core/ and /profiles/ (assets); pages allowed.
 // Requests per run: content 5, slots 0.
 // Known limits: no coordinates in the JSON-LD (address text only); villa sizes only where the intro states them.
+// Room photos: the first image of each card slider on /casitas and /villas (one named after another type is skipped);
+//   spot photos: the images of /kite-surf-centre.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { collapse, ldOfType, meta, parse } from '../parse.js';
@@ -78,20 +80,61 @@ export function parseAmpIncludes(html: string): string[] {
   return out;
 }
 
-/** Largest Amanpulo photo per file: Drupal image-style URLs grouped by the original path, the 2x / widest style wins. */
-export function ampImages(html: string): string[] {
+const AMP_STYLE_RE = /\/sites\/default\/files\/styles\/([a-z0-9_]+)\/public\/([^"'?\s]+)\?itok=[A-Za-z0-9_-]+/g;
+
+/** Original path (as in the HTML) -> its largest Amanpulo image-style URL, in page order. */
+function ampBest(html: string): Map<string, string> {
   const best = new Map<string, { url: string; score: number }>();
-  const og = meta(html, 'og:image');
-  const re = /\/sites\/default\/files\/styles\/([a-z0-9_]+)\/public\/([^"'?\s]+)\?itok=[A-Za-z0-9_-]+/g;
-  for (const m of html.matchAll(re)) {
+  for (const m of html.matchAll(AMP_STYLE_RE)) {
     const [, style, path] = m;
     if (!/amanpulo/i.test(decodeURIComponent(path))) continue;
     const score = (style.endsWith('_2x') ? 1000 : 0) + (/xwide|extra_large|masonry/.test(style) ? 100 : /tablet|plus/.test(style) ? 50 : 0);
     const prev = best.get(path);
     if (!prev || score > prev.score) best.set(path, { url: `${SITE}${m[0]}`, score });
   }
+  return new Map([...best].map(([path, b]) => [path, b.url]));
+}
+
+/** Largest Amanpulo photo per file: Drupal image-style URLs grouped by the original path, the 2x / widest style wins. */
+export function ampImages(html: string): string[] {
+  const og = meta(html, 'og:image');
   const out = og && /amanpulo/i.test(og) ? [og] : [];
-  for (const { url } of best.values()) if (!out.includes(url)) out.push(url);
+  for (const url of ampBest(html).values()) if (!out.includes(url)) out.push(url);
+  return out;
+}
+
+/** file name as words ("Amanpulo, Philippines - Accommodation, Four-Bedroom  (Villa 25)" -> "amanpulo philippines ... villa 25") */
+const ampWords = (s: string): string => ` ${decodeURIComponent(s).toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim()} `;
+
+/** The file name names this unit type: its name as words, not as the tail of a longer name ("Premier / Grand Beach Pool Casita"). */
+export function ampNames(path: string, unitName: string): boolean {
+  const f = ampWords(path.split('/').pop() ?? path);
+  const n = ampWords(unitName).trim();
+  return new RegExp(`(?<!premier|grand|deluxe) ${n} `).test(f);
+}
+
+/**
+ * Card photo of each unit type: the first image of its card slider (the sliders mix in photos of other types). A first
+ * image whose file name names another type or the other kind (a "Four-Bedroom (Villa 25)" interior in the Treetop Casita
+ * card) is skipped for the next one. Same URL as ampImages picks for that file on the page.
+ */
+export function ampCardPhotos(html: string, allNames: string[]): Map<string, string> {
+  const best = ampBest(html);
+  const cards = parse(html).querySelectorAll('article.node--accommodation');
+  const out = new Map<string, string>();
+  for (const card of cards) {
+    const name = collapse(card.querySelector('h3')?.text ?? '');
+    const kind = /villa/i.test(collapse(card.querySelector('.subtitle')?.text ?? '')) ? 'villa' : 'casita';
+    if (!name || out.has(name)) continue;
+    const paths = [...new Set([...card.toString().matchAll(AMP_STYLE_RE)].map(m => m[2]))].filter(p => best.has(p));
+    const foreign = (p: string) => {
+      const f = ampWords(p.split('/').pop() ?? p);
+      const other = kind === 'casita' ? / villa /.test(f) && !/ casita /.test(f) : / casita /.test(f) && !/ villa /.test(f);
+      return other || allNames.some(n => n !== name && ampNames(p, n));
+    };
+    const first = paths.find(p => !foreign(p));
+    if (first) out.set(name, best.get(first)!);
+  }
   return out;
 }
 
@@ -117,6 +160,8 @@ export function parseAmanpuloContent(p: AmpPages): OfferContent {
   const casitas = units.filter(u => /casita/i.test(u.type));
   const villas = units.filter(u => /villa/i.test(u.type));
 
+  const names = units.map(u => u.name);
+  const cardPhotos = new Map([...ampCardPhotos(p.casitas, names), ...ampCardPhotos(p.villas, names)]);
   const rooms: ContentRoom[] = units.map(u => ({
     name: u.name,
     description: u.intro,
@@ -125,7 +170,10 @@ export function parseAmanpuloContent(p: AmpPages): OfferContent {
       /villa/i.test(u.type) ? 'Private chef and butler, club car per bedroom (all villas)' : null,
       /pool/i.test(u.name) ? 'Private pool' : null,
     ].filter((x): x is string => !!x),
+    ...(cardPhotos.has(u.name) ? { imageUrls: [cardPhotos.get(u.name)!] } : {}),
   }));
+  // the Kite & Surf Centre page's own photos
+  const spotImageUrls = ampImages(p.kite);
 
   const imageUrls = [...new Set([...ampImages(p.kite), ...ampImages(p.overview), ...ampImages(p.casitas), ...ampImages(p.villas)])].slice(0, 30);
 
@@ -163,6 +211,7 @@ export function parseAmanpuloContent(p: AmpPages): OfferContent {
     languages: ['en'],
     rooms,
     imageUrls,
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: AMP_URLS.kite,
     bookingUrl: AMP_URLS.casitas,

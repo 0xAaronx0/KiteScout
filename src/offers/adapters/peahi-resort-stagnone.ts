@@ -19,6 +19,8 @@
 //            (prokitealby.beddy.io), which sits behind Cloudflare Turnstile: NOT used (never bypass).
 //            fetchSlots re-reads the accommodation page (memoised) and returns [] (offer = "price on
 //            request"); it notes when an amount shows up there so the adapter can be extended.
+//   photos   rooms[].imageUrls = each type's own slider (files named after another type left out); spotImageUrls =
+//            the kite center's /lessons/ grid and backgrounds plus its home page's kite images (peahiSpotImages).
 //   Not used: bstoked / booksurfcamps / portals (hints only).
 // robots.txt (2026-10-12): both hosts disallow only /wp-admin/ (admin-ajax allowed).
 // Requests per run: content 3, slots 1 (0 extra when content ran in the same process).
@@ -136,6 +138,44 @@ export function parsePkLessons(html: string): PkLessons {
   return { facts, prices };
 }
 
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+/**
+ * A type's own photos: its slider in order, minus files named after another type (the side-sea-view slider reuses
+ * "Deluxe-with-balcony-*" files, the sea-view slider three of them). Owner = the type whose name slug is the longest
+ * prefix of the file name; unnamed files (KM_*, IMG_*) stay with the slider they are in.
+ */
+export function peahiRoomPhotos(room: PeahiRoom, all: PeahiRoom[]): string[] {
+  const names = all.map(r => ({ r, s: slug(r.name) }));
+  return room.images.filter(u => {
+    const file = slug(u.split('/').pop()!.replace(/\.\w+$/, ''));
+    const owner = names.filter(n => file.startsWith(`${n.s}-`)).sort((a, b) => b.s.length - a.s.length)[0];
+    return !owner || owner.r === room;
+  });
+}
+
+/**
+ * Kite photos of the operator's own kite center site (ProKite Alby Rondina, read for the text anyway): the /lessons/
+ * photo grid, the home page's drone background and SCHOOL box, the /lessons/ backgrounds, the home hero slide and RENTAL box.
+ * Logos, the spot map, testimonial portraits and the hotel / villa boxes are not spot photos.
+ */
+export function peahiSpotImages(pkHome: string, pkLessons: string): string[] {
+  const ok = (u: string) => /^https:\/\/www\.prokitealbyrondina\.com\/wp-content\/uploads\/.+\.(jpe?g|png|webp)$/i.test(u);
+  const bg = (html: string) => [...html.matchAll(/class="zn-bgSource-image" style="background-image:url\(([^)]+)\)/g)].map(m => m[1]);
+  const les = parse(pkLessons);
+  const home = parse(pkHome);
+  const box = (path: string) => home.querySelectorAll(`a[href$="${path}"] img.imgbox_image`).map(i => i.getAttribute('data-src') ?? '');
+  const out = [
+    ...les.querySelectorAll('img.gridPhotoGallery__img').map(i => i.getAttribute('data-src') ?? ''),
+    ...bg(pkHome),
+    ...box('/lessons/'),
+    ...bg(pkLessons),
+    ...home.querySelectorAll('img.rev-slidebg').map(i => i.getAttribute('data-lazyload') ?? ''),
+    ...box('/rental/'),
+  ].filter(ok);
+  return [...new Set(out)];
+}
+
 /** round-robin over the room sliders so the gallery shows every type early */
 export function peahiImages(rooms: PeahiRoom[], max = 30): string[] {
   const out: string[] = [];
@@ -156,7 +196,11 @@ export function parsePeahiContent(p: PeahiPages): OfferContent {
   const quoteUrl = parse(p.peahi).querySelectorAll('a').map(a => a.getAttribute('href') ?? '').find(h => /beddy\.io/.test(h)) ?? null;
   const menu = parse(p.peahi).querySelectorAll('a').map(a => textOf(a).toLowerCase());
 
-  const rooms: ContentRoom[] = types.map(r => ({ name: r.name, description: r.text || null, features: peahiFeatures(r.text) }));
+  const rooms: ContentRoom[] = types.map(r => {
+    const photos = peahiRoomPhotos(r, types);
+    return { name: r.name, description: r.text || null, features: peahiFeatures(r.text), ...(photos.length ? { imageUrls: photos } : {}) };
+  });
+  const spotImageUrls = peahiSpotImages(p.pkHome, p.pkLessons);
   const villas = types.filter(r => /villa/i.test(r.name)).length;
   const sauna = types.some(r => /sauna/i.test(r.name));
 
@@ -198,6 +242,7 @@ export function parsePeahiContent(p: PeahiPages): OfferContent {
     languages: [],
     rooms,
     imageUrls: peahiImages(types),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: PEAHI_URL,
     bookingUrl: quoteUrl ? quoteUrl.replace(/&#0?38;|&amp;/g, '&') : PEAHI_URL,

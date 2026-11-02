@@ -16,6 +16,8 @@
 // No booking engine: bookings by phone / e-mail (Mateusz, "Szkolenia, przyczepy").
 // robots.txt (2026-10-12): disallows /wp-admin/, /?, /index.php, /wp-content/plugins/, /en/ - not our pages.
 // Requests per run: content 2, slots 1 (memoised, content and slots share the caravans page).
+// Room photos: each caravan card's own slider (files named after another caravan left out); spot photos from the
+//   images on /lokalizacja/ (campsite on the bay, kitesurfing), map, stickers and avatars left out.
 // Parsed: per caravan, every season day gets a price class (low / high / summer holidays) and a state (inside the
 //   "wolne terminy" ranges -> 'available', outside -> 'sold_out'; no free-date line -> 'on_request'); runs of equal
 //   days become bands ("przyczepa-1|2026-08-29"). PLN per caravan and night ("Cena za dobę"), occupancy = max guests.
@@ -180,6 +182,33 @@ export function parseKplPage(html: string): KplPage {
   };
 }
 
+/** caravan number a file is named after ("przyczepa4-6-min.jpg", "2-1.jpg"); null when the name does not say */
+function kplPhotoNo(url: string): number | null {
+  const f = url.split('/').pop() ?? '';
+  const m = f.match(/^przyczepa(\d+)-/i) ?? f.match(/^(\d+)-\d+\.(?:jpe?g|png|webp)$/i);
+  return m ? Number(m[1]) : null;
+}
+
+/** A caravan's own photos: its card slider minus files named after another caravan (card #1 also shows 2-1, 2-2 and
+ *  przyczepa4-6). */
+export function kplRoomPhotos(c: KplCaravan): string[] {
+  return c.images.filter((u, i, a) => a.indexOf(u) === i && (kplPhotoNo(u) ?? c.no) === c.no);
+}
+
+/** Spot photos on /lokalizacja/ (the campsite on the bay, kitesurfing): kite photos first; map, stickers, avatars out. */
+export function parseKplSpotImages(html: string): string[] {
+  const urls: string[] = [];
+  for (const img of parse(html).querySelectorAll('img[data-lazy-load]')) {
+    const u = img.getAttribute('data-lazy-load') ?? '';
+    if (!u.startsWith(`${SITE}/app/uploads/`) || /sticker|is-rounded/.test(img.getAttribute('class') ?? '')) continue;
+    if (/mapa|mapka|logo|stick-man|\.png/i.test(u) || /-150x150\./.test(u)) continue;
+    const o = wpOriginal(u);
+    if (!urls.includes(o)) urls.push(o);
+  }
+  const kite = (u: string) => /kite|windsurf/i.test(u.split('/').pop() ?? '');
+  return [...urls.filter(kite), ...urls.filter(u => !kite(u))];
+}
+
 const unitName = (c: KplCaravan): string =>
   `Caravan #${c.no} with awning${c.lengthM ? ` (${String(c.lengthM)} m${c.airCon ? ', air conditioning' : ''})` : c.airCon ? ' (air conditioning)' : ''}`;
 
@@ -267,7 +296,9 @@ export function parseKitePlContent(caravansHtml: string, locationHtml: string): 
       ...(c.highPrice ? [`PLN ${c.highPrice} per night: ${c.highText}`] : []),
       ...(c.freeText ? [`Free dates ${c.freeYear ?? ''}: ${c.freeText}`.replace('  ', ' ')] : []),
     ],
+    ...(kplRoomPhotos(c).length ? { imageUrls: kplRoomPhotos(c) } : {}),
   }));
+  const spotImageUrls = parseKplSpotImages(locationHtml);
 
   const images: string[] = [];
   for (const u of p.caravans.flatMap(c => c.images)) if (!images.includes(u)) images.push(u);
@@ -310,6 +341,7 @@ export function parseKitePlContent(caravansHtml: string, locationHtml: string): 
     languages: ['pl'],
     rooms,
     imageUrls: images.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: KPL_CARAVANS_URL,
     bookingUrl: CONTACT_URL,

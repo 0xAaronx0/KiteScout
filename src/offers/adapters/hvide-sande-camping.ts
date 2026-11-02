@@ -9,6 +9,8 @@
 //            <h2> name with the Danish name in brackets, description <p>, capacity / feature chips), /surfing/?lang=en
 //            (Westwind Surf School opposite), /priser/ (Danish only: season dates 2026 + 2027, "fra" price per night
 //            per cabin type for low / high season 2026 and 2027, final cleaning per type).
+//   photos   rooms[].imageUrls = each cabin card's photo (one per type; more only on the cabin subpages, not read);
+//            no spotImageUrls (the surfing page shows no labelled spot photo); the AdobeStock image is left out.
 //   slots    Compusoft online booking (the site's "Online booking" button, v3.onlinebooking.dk/v3hvidesan, portal key in
 //            that page). The widget's own anonymous GETs, no login, no session cookie needed (checked 2026-10-12):
 //              /profile/getCSProfileListViewModel?portalKey&fromDateStr=YYYYMMDD-000000&toDateStr=..  -> every profile
@@ -33,6 +35,7 @@
 import { BlockedByHost, fetchText } from '../http.js';
 import { clean, iso, parseAmount, todayIso } from '../parse.js';
 import type { Availability, ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { isNotOwnPhoto } from '../gallery.js';
 
 // =============================================================================================
 // Compusoft online booking (csob, v3.onlinebooking.dk) - shared engine helpers
@@ -378,10 +381,12 @@ export function parseHvideSandeCampingContent(p: HscPages): OfferContent {
       ...c.features,
       ...tableRowsFor(c, prices).map(r => `${r.year} (${r.name}, type ${r.type}): low season from ${dk(r.low)}, high season from ${dk(r.high)} per night${r.cleaning ? `, final cleaning ${dk(r.cleaning)}` : ''}`),
     ],
+    // the card photo is the only one per cabin on the pages read (more only on the cabin subpages, not fetched)
+    ...(c.image && !isNotOwnPhoto(c.image) ? { imageUrls: [c.image] } : {}),
   }));
 
   const imgs: string[] = [];
-  for (const u of [...cabins.map(c => c.image).filter((x): x is string => !!x), ...hscImages(p.home), ...hscImages(p.surf)]) if (!imgs.includes(u)) imgs.push(u);
+  for (const u of [...cabins.map(c => c.image).filter((x): x is string => !!x), ...hscImages(p.home), ...hscImages(p.surf)]) if (!imgs.includes(u) && !isNotOwnPhoto(u)) imgs.push(u);
 
   const cheapest = prices.filter(r => r.year === Math.max(...prices.map(x => x.year))).sort((a, b) => a.low - b.low)[0];
   const cheapestCard = cheapest ? cabins.find(c => tableRowsFor(c, [cheapest]).length > 0) : undefined;

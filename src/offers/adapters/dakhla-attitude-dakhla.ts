@@ -30,6 +30,8 @@
 //   Windhunter Premium grid is captioned "WINDHUNTER CAMP" on the site (copy-paste); its prices differ, so
 //   units come from the page, not from the caption.
 // Shared with westpoint-dakhla.ts (same group, same rate model): DhgBand / dhgBands / dhgSlots / dhgLines.
+// Room photos: the gallery of each category's "BUNGALOW" row on its price page (location sliders and photos two
+//   categories share left out); spot photos: the photos of /activities/kitesurf/.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, iso, meta, todayIso } from '../parse.js';
@@ -204,6 +206,10 @@ export function daTablesByUnit(pages: Array<{ path: string; html: string }>): Ma
 }
 
 const PHOTO_JUNK = /logo|wall[-.]|Plan-DA|Capture|forecast|line-wind|DA-[A-Z]+\.png|\/\d+\.png$|airport-transfer|baby-sitting|boats\.png|car-rental|download|full-restaurant|hospital|laundry|WIFI/i;
+const UPLOAD_RE = /https:\/\/dakhla-attitude\.ma\/wp-content\/uploads\/[^"'()\s]+?\.(?:jpe?g|webp)/gi;
+/** an upload URL as the gallery keeps it (size variant folded) and its dedupe key ("-scaled" folded too) */
+const daUrl = (u: string): string => u.replace(/-\d+x\d+(?=\.[a-z]+$)/i, '');
+const daKey = (u: string): string => daUrl(u).replace(/-scaled(?=\.[a-z]+$)/i, '');
 
 /** Photos per page in document order (og:image first, then every uploads JPEG the page references: the
  *  Salient theme puts slider and gallery photos into style="background-image" and lightbox links), size
@@ -213,10 +219,10 @@ export function daImages(pages: string[], max = 30): string[] {
   const perPage = pages.map(html => {
     const og = meta(html, 'og:image');
     const list: string[] = [];
-    for (const u of [og ?? '', ...[...html.matchAll(/https:\/\/dakhla-attitude\.ma\/wp-content\/uploads\/[^"'()\s]+?\.(?:jpe?g|webp)/gi)].map(m => m[0])]) {
-      const url = u.replace(/-\d+x\d+(?=\.[a-z]+$)/i, '');
+    for (const u of [og ?? '', ...[...html.matchAll(UPLOAD_RE)].map(m => m[0])]) {
+      const url = daUrl(u);
       if (!url || PHOTO_JUNK.test(url)) continue;
-      const k = url.replace(/-scaled(?=\.[a-z]+$)/i, '');
+      const k = daKey(url);
       if (seen.has(k)) continue;
       seen.add(k); list.push(url);
     }
@@ -224,6 +230,54 @@ export function daImages(pages: string[], max = 30): string[] {
   });
   const out: string[] = [];
   for (let i = 0; out.length < max && perPage.some(l => l.length > i); i++) for (const l of perPage) if (l[i] && out.length < max) out.push(l[i]);
+  return out;
+}
+
+/** Top-level WPBakery rows of a page (inner rows stay inside their row): headings (h1 / h2) and the gallery photos. */
+export function daRows(html: string): Array<{ headings: string[]; photos: string[] }> {
+  const starts = [...html.matchAll(/<div\b[^>]*\bclass="wpb_row\b(?![^"]*\binner_row\b)[^"]*"/g)].map(m => m.index!);
+  return starts.map((s, i) => {
+    const row = html.slice(s, starts[i + 1] ?? html.length);
+    const headings = [...row.matchAll(/<h[12]\b[^>]*>([\s\S]*?)<\/h[12]>/gi)].map(m => clean(m[1].replace(/<[^>]+>/g, ' '))).filter(Boolean);
+    const at = row.search(/class="wpb_gallery\b/);
+    const photos: string[] = [];
+    for (const m of at >= 0 ? row.slice(at).matchAll(UPLOAD_RE) : []) {
+      const u = daUrl(m[0]);
+      if (!PHOTO_JUNK.test(u) && !photos.some(p => daKey(p) === daKey(u))) photos.push(u);
+    }
+    return { headings, photos };
+  });
+}
+
+/**
+ * Per bungalow category the gallery of its "BUNGALOW" row (single-category pages) or of the row with its marker
+ * heading (VIP and Speed Spot pages; the gallery may stand before or after the heading inside the row). Left out:
+ * photos of an "EMPLACEMENT" (location) slider on any page and photos that two categories' galleries share.
+ * URLs in the form the general list (daImages, first page wins) keeps for that photo.
+ */
+export function daRoomPhotos(pages: Array<{ path: string; html: string }>, general: string[] = []): Map<string, string[]> {
+  const rooms = new Map<string, string[]>();
+  const location = new Set<string>();
+  for (const p of pages) {
+    const def = DA_PAGES.find(d => d.path === p.path);
+    if (!def) continue;
+    for (const r of daRows(p.html)) {
+      if (r.headings.some(h => /^EMPLACEMENT$/i.test(h))) for (const u of r.photos) location.add(daKey(u));
+      const unit = def.units.length === 1
+        ? (r.headings.some(h => /^BUNGALOW$/i.test(h)) ? def.units[0].unit : null)
+        : def.units.find(u => r.headings.some(h => u.marker.test(h)))?.unit ?? null;
+      if (unit && r.photos.length && !rooms.has(unit)) rooms.set(unit, r.photos);
+    }
+  }
+  const owners = new Map<string, number>();
+  for (const photos of rooms.values()) for (const u of photos) owners.set(daKey(u), (owners.get(daKey(u)) ?? 0) + 1);
+  const form = new Map<string, string>();
+  for (const u of general) if (!form.has(daKey(u))) form.set(daKey(u), u);
+  const out = new Map<string, string[]>();
+  for (const [unit, photos] of rooms) {
+    const own = photos.filter(u => owners.get(daKey(u)) === 1 && !location.has(daKey(u))).map(u => form.get(daKey(u)) ?? u);
+    if (own.length) out.set(unit, own);
+  }
   return out;
 }
 
@@ -247,6 +301,7 @@ export function parseDakhlaAttitudeContent(p: DaPages): OfferContent {
   const kite = dhgLines(p.kite);
   const byUnit = daTablesByUnit(p.prices);
   const kiteText = kite.join(' ');
+  const roomPhotos = daRoomPhotos(p.prices, daImages([p.home, ...p.prices.map(x => x.html), p.kite], 1000));
   const rooms: ContentRoom[] = [...byUnit.entries()].map(([unit, tables]) => ({
     name: unit,
     description: DA_ROOM_TEXT[unit] ?? null,
@@ -255,7 +310,10 @@ export function parseDakhlaAttitudeContent(p: DaPages): OfferContent {
       ...dhgPriceFeatures(tables),
       ...(tables.some(t => t.offer76) ? ['Offer 7=6: stay 7 nights, pay 6 in low and intermediate season'] : []),
     ],
+    ...(roomPhotos.has(unit) ? { imageUrls: roomPhotos.get(unit)! } : {}),
   }));
+  // /activities/kitesurf/: the Duotone Pro Center page's own photos
+  const spotImageUrls = daImages([p.kite], 40);
   // headline: the newest grid of each category (the 2027 rates on 2026-10-12), 2 guests
   const all2 = [...byUnit.values()].map(ts => ts[ts.length - 1]).flatMap(t => Object.values(t.prices).map(x => x?.[2]).filter((n): n is number => typeof n === 'number'));
   const nUnits = byUnit.size;
@@ -296,6 +354,7 @@ export function parseDakhlaAttitudeContent(p: DaPages): OfferContent {
     languages: ['en', 'fr', 'de', 'es', 'pl', 'ar'],
     rooms,
     imageUrls: daImages([p.home, ...p.prices.map(x => x.html), p.kite]),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: DA_HOME_URL,
     bookingUrl: BOOKING_URL,

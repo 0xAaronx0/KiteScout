@@ -16,6 +16,8 @@
 //            season bands of /angebote-preise/, merged per year), max 9 within 12 months.
 // robots.txt (2026-10-14): strukkamphuk.de "Disallow:" (empty, allows all); v3.onlinebooking.dk "Allow: /".
 // Requests per run: content 4, slots 1 (prices page, memoised) + up to 2 per sample week = max 22.
+// Room photos: each model pop-up's slider on /mietwohnwagen/ (photos shown for two models given to neither); spot
+//   photos: the water sports and Fehmarnsund bridge photos of /sport-spass/.
 // Parsed: slot = caravan profile x sample week ("mietwohnwagen-knaus-sport-580-qs|2027-06-05"), EUR per caravan for
 //   7 nights incl. final cleaning as quoted by the engine (priceUnit 'package', packageNights 7, priceBasis 'room');
 //   available / limited (1-2 free) / sold_out. The engine's package-offer caravan profiles ("Angebot Herbstliebe
@@ -27,7 +29,7 @@
 //   slot per caravan room and season band (availability unknown), bands that are over as last published prices.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
-import { clean, iso, parseAmount, todayIso } from '../parse.js';
+import { clean, collapse, iso, parse, parseAmount, todayIso } from '../parse.js';
 import { ALL_DATES, type ContentRoom, type FetchContext, type OfferAdapter, type OfferContent, type Slot } from '../types.js';
 import { csobSaturdaySamples, csobSlots, fetchCsobSamples, type CsobPortal } from './hvide-sande-camping.js';
 
@@ -160,15 +162,65 @@ function priceFor(c: CskCaravan, rows: CskPrice[]): CskPrice | null {
   return rows.find(r => r.numbers.length && r.numbers.some(n => c.numbers.includes(n))) ?? null;
 }
 
+const CSK_UPLOAD_RE = /https:\/\/strukkamphuk\.de\/wp-content\/uploads\/[^"'\s,)]+\.(?:jpe?g|webp)/gi;
+/** an upload URL as the gallery keeps it (without -WxH); null for icons, logos, plans, seals (and PNGs) */
+function cskImageUrl(src: string): string | null {
+  if (!/^https:\/\/strukkamphuk\.de\/wp-content\/uploads\/[^"'\s,)]+\.(?:jpe?g|webp)$/i.test(src)) return null;
+  const u = src.replace(/-\d{2,4}x\d{2,4}(?=\.[a-z]+$)/i, '');
+  return /icon|logo|lageplan|siegel|award|camping-info|pincamp|adac/i.test(u) ? null : u;
+}
+/** "-scaled" (WordPress 2560 px copy) and the plain upload are the same photo */
+const cskKey = (u: string): string => u.replace(/-scaled(?=\.[a-z]+$)/i, '');
+
 /** Original photos of a page (WordPress uploads without -WxH), icons / logos / floor-plan PNGs dropped. */
 export function cskImages(html: string): string[] {
   const out: string[] = [];
-  for (const m of html.matchAll(/https:\/\/strukkamphuk\.de\/wp-content\/uploads\/[^"'\s,)]+\.(?:jpe?g|webp)/gi)) {
-    const u = m[0].replace(/-\d{2,4}x\d{2,4}(?=\.[a-z]+$)/i, '');
-    if (/icon|logo|lageplan|siegel|award|camping-info|pincamp|adac/i.test(u)) continue;
-    // "-scaled" (WordPress 2560 px copy) and the plain upload are the same photo: keep the first one seen
-    const k = u.replace(/-scaled(?=\.[a-z]+$)/i, '');
-    if (!out.some(x => x.replace(/-scaled(?=\.[a-z]+$)/i, '') === k)) out.push(u);
+  for (const m of html.matchAll(CSK_UPLOAD_RE)) {
+    const u = cskImageUrl(m[0]);
+    // keep the first one seen of "-scaled" and the plain upload
+    if (u && !out.some(x => cskKey(x) === cskKey(u))) out.push(u);
+  }
+  return out;
+}
+
+/** caravan block name as parseCskCaravans builds it ("Knaus Sport 580 QS", "Deluxe-Wohnwagen für 4"), as a match key */
+const cskNameKey = (s: string): string => s.toLowerCase().replace(/[^a-z0-9]+/g, '');
+function cskModelName(heading: string): string | null {
+  const t = collapse(heading);
+  const head = t.match(/^(.+?) mit Standvorzelt \(Typ ([^)]+)\)$/) ?? t.match(/^(Deluxe-Wohnwagen für \d)$/);
+  return head ? (head[2] ? `${head[1]} ${head[2]}` : head[1]) : null;
+}
+
+/**
+ * Own photos per caravan model: the photo slider of each model pop-up on /mietwohnwagen/ (div.modal#modal-580-qs ...,
+ * h5 = model heading), best first, in the same URL form as cskImages. The floor-plan PNG is left out like everywhere,
+ * and a photo shown in two model pop-ups (mieten-3, -4, -6, -7; the Melina Waliczek photos of both Deluxe models) is
+ * given to neither. Keyed by the caravan block name.
+ */
+export function parseCskModelPhotos(html: string): Map<string, string[]> {
+  const general = cskImages(html);
+  const blocks: Array<{ key: string; urls: string[] }> = [];
+  for (const m of parse(html).querySelectorAll('div.modal[id^="modal-"]')) {
+    const name = cskModelName(clean(m.querySelector('h5')?.text ?? ''));
+    if (!name) continue;
+    const urls: string[] = [];
+    for (const img of m.querySelectorAll('img')) {
+      const u = cskImageUrl(img.getAttribute('src') ?? '');
+      if (!u || urls.some(x => cskKey(x) === cskKey(u))) continue;
+      urls.push(general.find(x => cskKey(x) === cskKey(u)) ?? u);
+    }
+    blocks.push({ key: cskNameKey(name), urls });
+  }
+  const shared = (u: string) => blocks.filter(b => b.urls.some(x => cskKey(x) === cskKey(u))).length > 1;
+  return new Map(blocks.map(b => [b.key, b.urls.filter(u => !shared(u))]));
+}
+
+/** /sport-spass/: the water sports photo ("Sportler-Spot ... Auf Wasser") and the Fehmarnsund bridge view of the spot. */
+export function cskSpotImages(sportHtml: string): string[] {
+  const out: string[] = [];
+  for (const m of sportHtml.matchAll(CSK_UPLOAD_RE)) {
+    const u = cskImageUrl(m[0]);
+    if (u && /wassersport|kite|fehmarnsundbruecke/i.test(u.split('/').pop() ?? '') && !out.some(x => cskKey(x) === cskKey(u))) out.push(u);
   }
   return out;
 }
@@ -219,8 +271,10 @@ export function parseStrukkamphukContent(p: CskPages): OfferContent {
   const lows = rows.map(r => r.low);
   const highs = rows.map(r => r.high);
 
+  const modelPhotos = parseCskModelPhotos(p.caravans);
   const rooms: ContentRoom[] = caravans.map(c => {
     const pr = priceFor(c, rows);
+    const photos = modelPhotos.get(cskNameKey(c.name)) ?? [];
     return {
       name: cskRoomName(c),
       description: `Caravans no. ${c.numbersText} with a fixed awning (kitchen unit and seating) and terrace${berths(c) ? `; sleeps ${berths(c)}` : ''}.`,
@@ -229,8 +283,10 @@ export function parseStrukkamphukContent(p: CskPages): OfferContent {
         ...(cleaning ? [`Final cleaning extra: EUR ${[...cleaning.matchAll(/(\d+(?:,\d+)?)\s*€/g)].map(m => parseAmount(m[1])).join(' or ')}`] : []),
         'Toilet, TV and radio, gas heating, parking at the caravan; non-smoking, no pets',
       ],
+      ...(photos.length ? { imageUrls: photos } : {}),
     };
   });
+  const spotImageUrls = cskSpotImages(p.sport);
 
   const imgs: string[] = [];
   for (const u of [...cskImages(p.caravans), ...cskImages(p.sport), ...cskImages(p.home)]) if (!imgs.includes(u)) imgs.push(u);
@@ -267,6 +323,7 @@ export function parseStrukkamphukContent(p: CskPages): OfferContent {
     languages: ['de', 'en'],
     rooms,
     imageUrls: imgs.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: CSK_CARAVANS_URL,
     bookingUrl: CSK_CARAVANS_URL,

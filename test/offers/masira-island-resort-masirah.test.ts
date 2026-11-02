@@ -5,9 +5,10 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  masiraIslandResortMasirah, mirImages, parseMirAmenities, parseMirHome, parseMirKite, parseMirRooms,
+  masiraIslandResortMasirah, mirImages, mirSpotImages, parseMirAmenities, parseMirHome, parseMirKite, parseMirRooms,
 } from '../../src/offers/adapters/masira-island-resort-masirah.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/masira-island-resort-masirah');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -67,4 +68,22 @@ test('mir: content', async () => {
   assert.ok(c.optionalServices[0].startsWith('Kiteboarding and stand-up paddling with Watersport Oman'));
   assert.equal(c.imageUrls.length, 30);
   assert.equal(c.bookingUrl, 'https://be.synxis.com/?chain=31982&hotel=64798&level=hotel&locale=en-US');
+});
+
+test('mir: one own photo per room type from its image box, the kite photo as spot photo', async () => {
+  const c = await masiraIslandResortMasirah.fetchContent(ctx);
+  const U = 'https://masiraislandresort.com/wp-content/uploads/';
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls]), [
+    ['Chalet', [`${U}2019/03/Chalet.jpg`]],
+    ['Executive Suite', [`${U}2019/03/Executive.jpg`]],
+    ['Premier Room', [`${U}2019/03/Premier.jpg`]],
+    ['Deluxe Room', [`${U}2019/03/Deluxe.jpg`]],
+  ]);
+  assert.deepEqual(parseMirRooms(roomsHtml).map(r => r.image), c.rooms.map(r => r.imageUrls![0]));
+  assert.deepEqual(c.spotImageUrls, [`${U}2019/02/KiteSurfing.jpg`]);
+  assert.deepEqual(mirSpotImages(read('masiraislandresort.com_.')), c.spotImageUrls);
+  assert.ok(c.imageUrls.includes(c.spotImageUrls![0])); // same URL as in the general list
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(first24.includes(r.imageUrls![0]), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

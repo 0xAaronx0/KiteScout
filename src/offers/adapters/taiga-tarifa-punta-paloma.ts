@@ -8,6 +8,8 @@
 // Data path (checked 2026-10-12):
 //   content  www.taigaresorts.com/en/taiga-tarifa-punta-paloma.html (Paraty CMS, English: tent cards, facilities,
 //            pool and restaurant hours) + /en/kite-surf-and-wind-foil-in-taiga-tarifa.html (the kite experience).
+//            Room photos: each tent card's pop-up gallery (TgUnit.images) -> rooms[].imageUrls; spot photos: the kite
+//            page's kite photos (chain CMS namespace cdn2.paraty.es/q10-corpo/, picked by alt text, as for Valdevaqueros).
 //            The page's JSON-LD carries two contradicting geos (Hotel 34.29,-17.41 in the Atlantic; Campground
 //            36.0741,-5.6825 east of Valdevaqueros, while the address is N-340 km 74, west of TAIGA Valdevaqueros at
 //            km 75.5) -> no spotCoords, the geocoder places "Punta Paloma".
@@ -25,7 +27,7 @@ import { fetchText } from '../http.js';
 import { imageCandidates, todayIso } from '../parse.js';
 import type { FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
 import {
-  fetchParatySlots, parseTgPoolSeason, parseTgServices, parseTgUnits, tgLines, tgRoom, type ParatyUnitRules,
+  fetchParatySlots, parseTgKitePhotos, parseTgPoolSeason, parseTgServices, parseTgUnits, tgLines, tgRoom, type ParatyUnitRules,
 } from './taiga-tarifa-valdevaqueros.js';
 
 const SITE = 'https://www.taigaresorts.com';
@@ -59,6 +61,7 @@ export function parseTaigaPuntaPalomaContent(p: TppPages): OfferContent {
     ...imageCandidates(p.page, TPP_PAGE_URL, null, 120).filter(x => x.startsWith(`https://cdn2.paraty.es/${TPP_NAMESPACE}/images/`))]) {
     if (!imageUrls.includes(u)) imageUrls.push(u);
   }
+  const spotImageUrls = parseTgKitePhotos(p.kite);
 
   const summary = [
     `TAIGA Tarifa Punta Paloma is a glamping campsite of the Spanish TAIGA chain on the N-340 at Punta Paloma, Tarifa, 400 m from Valdevaqueros beach.`,
@@ -89,8 +92,9 @@ export function parseTaigaPuntaPalomaContent(p: TppPages): OfferContent {
     accommodation: 'glamping tents',
     mealPlan: null,
     languages: [],
-    rooms: units.map(tgRoom),
+    rooms: units.map(u => ({ ...tgRoom(u), ...(u.images.length ? { imageUrls: u.images } : {}) })),
     imageUrls: imageUrls.slice(0, 40),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: TPP_PAGE_URL,
     bookingUrl: TPP_PAGE_URL,

@@ -6,8 +6,9 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  cabareteBoutiqueKiteHotel, buildCbkSlots, buildCbkUnitSlots, parseCbkBookPrices, parseCbkCards, parseCbkPrices,
+  cabareteBoutiqueKiteHotel, buildCbkSlots, buildCbkUnitSlots, cbkImgInfo, cbkNotOwn, parseCbkBookPrices, parseCbkCards, parseCbkPrices,
 } from '../../src/offers/adapters/cabarete-boutique-kite-hotel.js';
+import { planGallery } from '../../src/offers/gallery.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/cabarete-boutique-kite-hotel');
@@ -77,4 +78,37 @@ test('cabarete-boutique: content', async () => {
   assert.ok(c.includedServices.includes('Starlink internet'));
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => /^https:\/\/static\.wixstatic\.com\/media\/[^/]+$/.test(u)));
+});
+
+test('cabarete-boutique: each card gets its own photo, the Cabarete kiting photo as spot, Wix stock and press logos out', async () => {
+  const c = await cabareteBoutiqueKiteHotel.fetchContent(ctx);
+  const info = cbkImgInfo(html);
+  const fileOf = (u: string) => info.get(u.match(/\/media\/([^/~.]+)/)![1])!.file;
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0, fileOf(r.imageUrls![0])]), [
+    ['King Loft', 1, 'Cabarete Boutique Kite Hotel King Loft.jpg'],
+    ['Queen Kite Loft', 1, 'Cabarete Boutique Hotel Queen Loft bedroom_edited.jpg'],
+    ['Garden Green Loft', 1, 'Cabarete Bouique Kite Hotel Garden Loft.jpg'],
+    ['Terrace Loft', 1, '2M7A2622_edited.jpg'],
+    // "Upstairs area" file name, alt "Tropical House wooden balcony ..." (another upload than the common-area photo)
+    ['Tropical House', 1, 'Cabarete Boutique kite Hotel Upstairs area.jpg'],
+    ['Small Terrace Loft', 1, 'terrace loft 2_edited.jpg'],
+    ['The Luxury villa', 1, 'villa living room kitchen entrance_edited.jpg'],
+  ]);
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.equal(new Set(all).size, all.length);
+  assert.ok(all.every(u => c.imageUrls.includes(u)));
+  assert.match(info.get(c.rooms[4].imageUrls![0].match(/\/media\/([^/~.]+)/)![1])!.alt, /^Tropical House/);
+
+  // the page's other kite photos are Buen Hombre (Davisito, the flag at sunset) and El Morro (hydrofoil)
+  assert.deepEqual(c.spotImageUrls, ['https://static.wixstatic.com/media/d76113_af71d16781474c3ba341a2dcd8fb7866~mv2.jpg']);
+  assert.match(info.get('d76113_af71d16781474c3ba341a2dcd8fb7866')!.alt, /kitesurfing .* in Cabarete/);
+
+  // "Image by Jared Rice.jpg" / "Image by Preet Patel.jpg" (Wix stock) and the Lonely Planet logo: in no list
+  const notOwn = cbkNotOwn(html);
+  assert.ok(['d76113_8107e8f67b504cb9bcecb1ba64246c78', 'd76113_bbecbfb7a0304c679e6093eebd9dd716', 'dd80b9_6dba5531395a4a05bab2b33d2c8d6516'].every(id => notOwn.has(id)));
+  assert.ok(![...c.imageUrls, ...all, ...c.spotImageUrls!].some(u => notOwn.has(u.match(/\/media\/([^/~.]+)/)![1])));
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

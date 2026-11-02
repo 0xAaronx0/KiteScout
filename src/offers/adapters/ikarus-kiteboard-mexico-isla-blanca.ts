@@ -18,6 +18,9 @@
 // robots.txt (2026-10-12): kiteboardmexico.com disallows /wp-admin/ and sets "Crawl-delay: 10" -> this
 //   adapter waits 10 s between its own kiteboardmexico.com requests (local helper; skipped on replay).
 // Requests per run: 2 (home + /accommodations/, memoised across content and slots).
+// Photos: each room / tent type gets the image of its own Elementor price card on /accommodations/, the King Size
+//   Studio also the home page teaser "KING SIZE" (the "DOUBLE ROOM" teaser fits two types: given to neither); more sit
+//   on the BOOK HERE room pages, not fetched. No spot photos: the home page has no kite photos as img.
 // Known limits: no availability; extra person / child rates are in the room features only.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
@@ -98,6 +101,42 @@ export function parseIkarusRates(html: string): IkarusRate[] {
   return out;
 }
 
+/** Gallery URLs of a page as the curation sees them: own uploads only, no logos / icons / partner badges / PNGs. */
+function ikImages(html: string, base: string, max = 80): string[] {
+  return imageCandidates(html, base, null, max)
+    .filter(u => /kiteboardmexico\.com\/wp-content\/uploads\//.test(u) && !/logo|icon|cropped-|trustindex|partner|\.svg|\.png$/i.test(u));
+}
+const rateKey = (r: IkarusRate): string => `${r.name}|${r.persons}|${r.camping}`;
+
+/**
+ * Own photos per rate (rateKey), best first: every Elementor column of /accommodations/ that holds exactly one price
+ * card gives that card's image (the image widget sits above "X N PERSON" and the <h5> name / price in the same
+ * column); then the home page call-to-action teasers (background image + <h2> title) whose title starts exactly one
+ * room name ("KING SIZE" = King Size Studio; "DOUBLE ROOM" starts two names and is skipped).
+ */
+export function parseIkarusRoomPhotos(rooms: string, home = ''): Map<string, string[]> {
+  const out = new Map<string, string[]>();
+  const add = (key: string, urls: string[]) => {
+    const have = out.get(key) ?? [];
+    for (const u of urls) if (!have.includes(u)) have.push(u);
+    if (have.length) out.set(key, have);
+  };
+  const known = new Set(parseIkarusRates(rooms).map(rateKey)); // the day pass column parses alone, not on the page
+  const rates: IkarusRate[] = [];
+  for (const col of parse(rooms).querySelectorAll('.elementor-column')) {
+    const one = parseIkarusRates(col.outerHTML);
+    if (one.length !== 1 || !known.has(rateKey(one[0])) || out.has(rateKey(one[0]))) continue;
+    rates.push(one[0]);
+    add(rateKey(one[0]), ikImages(col.outerHTML, IKARUS_ROOMS_URL, 10));
+  }
+  for (const cta of parse(home).querySelectorAll('.elementor-cta')) {
+    const title = collapse(cta.querySelector('.elementor-cta__title')?.text ?? '').toLowerCase();
+    const hits = title ? rates.filter(r => !r.camping && r.name.toLowerCase().startsWith(title)) : [];
+    if (hits.length === 1) add(rateKey(hits[0]), ikImages(cta.outerHTML, IKARUS_HOME_URL, 5));
+  }
+  return out;
+}
+
 export function buildIkarusSlots(rates: IkarusRate[]): Slot[] {
   return rates.map(r => ({
     key: `${keyPart(r.name)}-${r.persons}p`,
@@ -135,7 +174,9 @@ export function parseIkarusContent(p: IkarusPages): OfferContent {
   const roomRates = rates.filter(r => !r.camping);
   const fmt = (n: number) => n.toLocaleString('en-US');
 
+  const roomPhotos = parseIkarusRoomPhotos(p.rooms, p.home);
   const contentRooms: ContentRoom[] = rates.map(r => ({
+    ...(roomPhotos.get(rateKey(r)) ? { imageUrls: roomPhotos.get(rateKey(r)) } : {}),
     name: r.camping ? `Camping tent (${r.persons} ${r.persons > 1 ? 'persons' : 'person'})` : r.name,
     description: r.camping
       ? 'Tent in the camping area with mattress, sheets, pillow and towel; shared hot shower and toilet.'
@@ -146,8 +187,7 @@ export function parseIkarusContent(p: IkarusPages): OfferContent {
   const seen = new Set<string>();
   const imageUrls: string[] = [];
   for (const [html, base] of [[p.rooms, IKARUS_ROOMS_URL], [p.home, IKARUS_HOME_URL]] as const) {
-    for (const u of imageCandidates(html, base, null, 80)) {
-      if (!/kiteboardmexico\.com\/wp-content\/uploads\//.test(u) || /logo|icon|cropped-|trustindex|partner|\.svg|\.png$/i.test(u)) continue;
+    for (const u of ikImages(html, base)) {
       const k = u.replace(/-(?:\d+x\d+|scaled)(?=\.[a-z]+$)/i, '').toLowerCase();
       if (seen.has(k)) continue;
       seen.add(k); imageUrls.push(u);

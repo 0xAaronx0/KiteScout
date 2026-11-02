@@ -9,6 +9,7 @@ import {
   parseInchcapeContent,
 } from '../../src/offers/adapters/inchcape-seaside-villas-silver-sands.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/inchcape-seaside-villas-silver-sands');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -105,4 +106,31 @@ test('ic: content', async () => {
   assert.equal(d.imageUrls.length, 40);
   assert.match(d.sourceText ?? '', /Super Summer 2026 Offers/);
   assert.ok(!/[–—]/.test(d.summary));
+});
+
+test('ic: each unit has its own Lodgify gallery, its beach shots are spot photos', async () => {
+  const c = await inchcapeSeasideVillasSilverSands.fetchContent(ctx);
+  // Sunset Upstairs, Sunrise Beach House and the Deluxe 1Bed Villa lose their 5 / 6 / 4 beach-captioned shots
+  assert.deepEqual(c.rooms.map(r => r.imageUrls?.length ?? 0), [25, 26, 18, 21, 21, 24, 21, 18, 24, 25, 26, 23, 23, 23, 26, 19, 25]);
+  const house = c.rooms.find(r => r.name === 'House Seaside')!;
+  assert.equal(house.imageUrls![0], 'https://l.icdbcdn.com/oh/0938366e-4b85-44af-81fe-1947893df45e.jpg'); // its mainImage
+  assert.match(c.rooms.find(r => r.name === 'Deluxe 1Bed Apartment D')!.imageUrls![0], /0176dd16-c9d1-4166-ad99-96f48fda46c0\.jpg$/);
+  const parsed = parseIcRooms(rates);
+  assert.deepEqual(c.rooms.map(r => r.imageUrls![0]), parsed.map(r => r.images[0]));
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.equal(new Set(all).size, all.length); // no photo shared between two units
+  assert.ok(all.every(u => /^https:\/\/l\.icdbcdn\.com\/oh\/[0-9a-f-]+\.(jpe?g|png)$/.test(u)));
+  assert.ok(c.rooms.every(r => c.imageUrls.includes(r.imageUrls![0]))); // same URLs as the general list
+  // spot: captions "Silver Sands Beach at our Villas", "Inchcape's Beach" (11), "Aerial view of SSB" (3), nothing else
+  assert.equal(c.spotImageUrls?.length, 15);
+  const sunset = parsed.find(r => r.name === 'Sunset Upstairs by the Sea')!;
+  assert.equal(sunset.imageText[c.spotImageUrls![0]], 'Silver Sands Beach at our Villas');
+  const caption = (u: string) => parsed.map(r => r.imageText[u]).find(Boolean);
+  assert.deepEqual([...new Set(c.spotImageUrls!.map(caption))], ['Silver Sands Beach at our Villas', "Inchcape's Beach", 'Aerial view of SSB']);
+  assert.ok(!c.spotImageUrls!.some(u => all.includes(u)));
+  const plan = planGallery(c);
+  assert.deepEqual(plan.dropped, []);
+  const first24 = plan.candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(first24.includes(r.imageUrls![0]), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

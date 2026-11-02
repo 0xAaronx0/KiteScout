@@ -5,6 +5,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { buildIkarusSlots, ikarusKiteboardMexicoIslaBlanca, parseIkarusRates } from '../../src/offers/adapters/ikarus-kiteboard-mexico-isla-blanca.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/ikarus-kiteboard-mexico-isla-blanca');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -58,4 +59,28 @@ test('ikarus: content', async () => {
   assert.ok(c.rooms[0].features.includes('Extra person $ 250 MXN, child $ 120 MXN; max. capacity 4 persons per room.'));
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://kiteboardmexico.com/wp-content/uploads/') && !/logo|\.png$/i.test(u)));
+});
+
+test('ikarus: each room / tent type gets its own price-card photo, King Size also the home teaser', async () => {
+  const c = await ikarusKiteboardMexicoIslaBlanca.fetchContent(ctx);
+  const file = (u: string) => u.split('/').pop();
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.map(file)]), [
+    ['King Size Studio', ['room126.jpg', 'kingsize.jpg']],
+    ['Triple Room', ['Portada-triple.jpg']],
+    ['Double Room Lagoon View', ['DOUBLEroom645x520.jpg']],
+    ['Double Room', ['room90.jpg']],
+    ['Camping tent (1 person)', ['big-tent.jpg']],
+    ['Camping tent (2 persons)', ['small-tent.jpg']],
+  ]);
+  // the home teaser "DOUBLE ROOM" (2bed.jpg) fits both double rooms: given to neither
+  assert.ok(!c.rooms.some(r => r.imageUrls!.some(u => /2bed/.test(u))));
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.equal(new Set(all).size, all.length);
+  assert.ok(all.every(u => u.startsWith('https://kiteboardmexico.com/wp-content/uploads/')));
+  // the card photos are the same URLs the general list carries
+  for (const r of c.rooms) assert.ok(c.imageUrls.includes(r.imageUrls![0]), r.name);
+  assert.equal(c.spotImageUrls, undefined);
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
 });

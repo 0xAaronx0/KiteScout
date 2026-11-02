@@ -10,6 +10,7 @@ import {
   parsePcUnits, pcPhotoCandidates, PC_KITE_PHOTOS,
 } from '../../src/offers/adapters/umili-pod-cyprysami-jastarnia.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/umili-pod-cyprysami-jastarnia');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -98,4 +99,37 @@ test('umili-pod-cyprysami: photo pool (gallery kite photos interleaved with the 
   // without the gallery the pool is cottages + home photos only
   const noGallery = pcPhotoCandidates(null, parsePcUnits(cottages), null, []);
   assert.ok(noGallery.length > 10 && noGallery.every(u => !/Galeria/.test(u)));
+});
+
+test('umili-pod-cyprysami: room photos from each unit card gallery, spot photos = the gallery kite photos', async () => {
+  const c = await umiliPodCyprysamiJastarnia.fetchContent(ctx);
+  // the file id as the site writes it ("+" = space kept), decoded slashes
+  const file = (u: string) => decodeURIComponent(u.match(/[?&]file=([^&]+)/)![1]).replace('domki-pod-cyprysami/user/', '');
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0, file(r.imageUrls![0])]), [
+    ['Cottages 2+1 Active', 9, 'Domki/2-osobowe-premium/domek+dwa+plus+jeden+premium+(9).jpg'],
+    ['Air-conditioned Active Cool 4+2 Cottages', 8, 'Domki/DSC04090.jpg'],
+    ['Cottages 4+2 Active', 10, 'Domki/4-2-Premium/DSC00196.jpg'],
+    ['Cottage 2 bedded standard', 7, 'Domki/2-os-standard/Domek+2+osobowy+standard+(1).jpg'],
+    ['Cottage 4+1 standard', 13, 'Domki/4-1-Standard/DSC08782.JPG'],
+    ['Cottage 5+1 standard', 18, 'Domki/5-1-Standard/DSC06921.JPG'],
+    ['Cottage 8+2 standard', 8, 'Domki/8-2-Standard/DSC07074-Pano.JPG'],
+    ['Surf 4 bedded cottage', 14, 'Surf-Domki/DSC09897.JPG'],
+    ['Surf 8 bedded cottage', 4, 'Surf-Domki/DSC09962.JPG'],
+    ['Double Room', 7, 'pokoj-2-osobowy-na-poddaszu/DSC07963-Pano.jpg'],
+    ['6 bedded apartment', 6, 'Domki/Apt-6os./domek+6+osobowy+(3).jpg'],
+    ['Hostel 6 bedded', 8, 'Hostel/DSC02606.jpg'],
+  ]);
+  // the 4+1 card also shows 5-1-Standard/DSC02490: left out there, kept for the 5+1
+  const room = (n: string) => c.rooms.find(r => r.name === n)!.imageUrls!.map(file);
+  assert.ok(!room('Cottage 4+1 standard').some(f => /5-1-Standard/.test(f)));
+  assert.ok(room('Cottage 5+1 standard').includes('Domki/5-1-Standard/DSC02490+(1).jpg'));
+  // the two 4+2 Active cards (with / without air conditioning) are one cottage type and share 4 photos
+  assert.equal(room('Cottages 4+2 Active').filter(f => room('Air-conditioned Active Cool 4+2 Cottages').includes(f)).length, 4);
+  // same URL form as the general pool (one crop size, dedup key per file)
+  assert.ok(c.rooms.flatMap(r => r.imageUrls!).every(u => u.startsWith('https://podcyprysami.pl/thumb?file=') && u.includes('&w=1440&h=960&url=%2Fdomki-pod-cyprysami%2Fuser%2F')));
+  for (const r of c.rooms) assert.ok(c.imageUrls.includes(r.imageUrls![0]), r.name);
+  assert.deepEqual(c.spotImageUrls?.map(u => file(u).split('/').pop()), PC_KITE_PHOTOS);
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(first24.includes(r.imageUrls![0]), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

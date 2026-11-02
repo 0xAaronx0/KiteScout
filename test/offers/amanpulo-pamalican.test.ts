@@ -4,7 +4,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { amanpuloPamalican, ampImages, parseAmpIncludes, parseAmpUnits } from '../../src/offers/adapters/amanpulo-pamalican.js';
+import { amanpuloPamalican, ampImages, ampNames, parseAmpIncludes, parseAmpUnits } from '../../src/offers/adapters/amanpulo-pamalican.js';
+import { planGallery } from '../../src/offers/gallery.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import { requestsSoFar } from '../../src/offers/http.js';
 
@@ -64,4 +65,39 @@ test('amanpulo: content', async () => {
   assert.ok(c.optionalServices.includes('Kite centre: High quality Naish equipment'));
   assert.equal(c.imageUrls.length, 30);
   assert.match(c.sourceText ?? '', /International Kite Surfing Organization/);
+});
+
+test('amanpulo: each unit type gets the first photo of its card (another type\'s photo skipped), the kite page as spot', async () => {
+  const c = await amanpuloPamalican.fetchContent(ctx);
+  // file name as read (its en dash written as "-" here)
+  const file = (u: string) => decodeURIComponent(u.replace(/\?.*$/, '').split('/').pop()!).replace(/\u2013/g, '-');
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0, file(r.imageUrls![0])]), [
+    ['Grand Beach Pool Casita', 1, 'Amanpulo - Accommodation, Premier Beach Pool Casita.webp'],
+    ['Beach Pool Casita', 1, 'Amanpulo, Beach Pool Casita.webp'],
+    ['Beach Casita', 1, 'Amanpulo,Philippines - Accommodation, Beach Casita, Bedroom and Deck.webp'],
+    ['Treetop Pool Casita', 1, 'Amanpulo-Treetop-Pool-Casita-square.webp'],
+    // the card's first image is a "Four-Bedroom (Villa 25)" interior: skipped
+    ['Treetop Casita', 1, 'amanpulo-treetop-casita-walkway-square.webp'],
+    ['Deluxe Hillside Casita', 1, 'Deluxe Hillside Casita, Amanpulo, Philippines_Square.webp'],
+    ['Hillside Casita', 1, 'Amanpulo, Philippines - Accommodation, Hillside Casita, Bedroom1.webp'],
+    ['Four-Bedroom Lagoon Villa', 1, 'amanpulo_philippines_-_villa_pool.webp'],
+    ['Four-Bedroom Palawan Villa', 1, 'amanpulo_philippines_-_villa.webp'],
+    ['Three-Bedroom Villa', 1, 'amanpulo-three-bed-villa-square.webp'],
+    ['Two-Bedroom Villa', 1, 'amanpulo-two-bedroom-villa-pool-view.webp'],
+    ['One-Bedroom Villa', 1, 'Amanpulo_B364-Villa32_Pool_Day_01 (1) (1).webp'],
+  ]);
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.equal(new Set(all).size, all.length);
+  // the same (largest) style URL ampImages picks for that file
+  const pageImgs = [...ampImages(read('www.aman.com_resorts_amanpulo_accommodation_casitas.')), ...ampImages(read('www.aman.com_resorts_amanpulo_accommodation_villas.'))];
+  assert.ok(all.every(u => pageImgs.includes(u) && /\/styles\/listing_teaser_extra_large_2x\/public\//.test(u)));
+  assert.ok(ampNames('2026-06/Amanpulo--Philippines---Accommodation--Grand-Beach-Pool-Casita--8-.webp', 'Grand Beach Pool Casita'));
+  assert.ok(!ampNames('2026-06/Amanpulo--Philippines---Accommodation--Grand-Beach-Pool-Casita--8-.webp', 'Beach Pool Casita'));
+  assert.ok(!ampNames('2021-02/Deluxe%20Hillside%20Casita%2C%20Amanpulo_Square.webp', 'Hillside Casita'));
+
+  assert.deepEqual(c.spotImageUrls?.map(file), ['Amanpulo_Experiences-Surf_4.jpg', 'Amanpulo_Experiences-Surf_2.webp', 'Amanpulo_Experiences-Surf_3.webp']);
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

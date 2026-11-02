@@ -4,8 +4,9 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  dakhlaAttitudeDakhla, DA_PAGES, daTablesByUnit, dhgBands, dhgDate, dhgLevel, dhgSlots, fetchDaSlots, parseDaTables,
+  dakhlaAttitudeDakhla, DA_PAGES, daRoomPhotos, daTablesByUnit, dhgBands, dhgDate, dhgLevel, dhgSlots, fetchDaSlots, parseDaTables,
 } from '../../src/offers/adapters/dakhla-attitude-dakhla.js';
+import { planGallery } from '../../src/offers/gallery.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/dakhla-attitude-dakhla');
@@ -81,4 +82,41 @@ test('dakhla-attitude: content', async () => {
   assert.ok(c.rooms.find(r => r.name === 'Windhunter Camp')!.features.some(f => /seasons from 2026-11-09: 1 pax 850 \/ 1,133 \/ 1,246; 2 pax 1,190/.test(f)));
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => /\.(jpe?g|webp)$/i.test(u) && !/logo|wall|Plan-DA/i.test(u)));
+});
+
+test('dakhla-attitude: each category gets the gallery of its BUNGALOW row, the kitesurf page as spot', async () => {
+  const c = await dakhlaAttitudeDakhla.fetchContent(ctx);
+  const file = (u: string) => u.split('/').pop();
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0, file(r.imageUrls![0])]), [
+    ['VIP A', 4, 'DSC09637.jpg'],
+    ['VIP B', 4, 'VIP-B-51605932-1.jpg'],
+    ['VIP C', 7, 'VIP-C-51006007-2.jpg'],
+    ['Dragon Camp', 9, 'DSCF1757-Recupere.jpg'],
+    // DSCF1741-copie opens the gallery but is also the Windhunter location slider's photo: left out
+    ['Dragon Camp Premium', 14, 'DSC01181dragon-premium-dakhla-attitude.jpg'],
+    ['Windhunter Camp', 4, 'DSC00710-1.jpg'],
+    ['Windhunter Premium', 7, 'DSC00772-2.jpg'],
+    // the Speed Spot gallery stands before its heading inside the row
+    ['Speed Spot', 8, 'DSC_6264-2.jpg'],
+    ['Speed Spot Premium', 4, 'IMGL1939-Enhanced-SR.jpeg'],
+  ]);
+  const room = (n: string) => c.rooms.find(r => r.name === n)!.imageUrls!;
+  assert.ok(room('VIP A').some(u => /DSC05738-1-1\.jpg$/.test(u)));
+  assert.ok(room('VIP C').every(u => /VIP-C-|DSC058/.test(u)) && room('VIP B').every(u => /VIP-B-/.test(u)));
+  // DSC05781-2 sits in both the VIP B and the VIP C gallery: given to neither
+  assert.ok(!c.rooms.some(r => r.imageUrls!.some(u => /DSC05781-2/.test(u))));
+  // location sliders (EMPLACEMENT: DC1-3, WH-location, DSCF2335, drone shots) are not room photos
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.ok(!all.some(u => /DC\d-dragon-camp|WH-location|DSCF2335|DSCF1741|Unknown-16|dragon-camp-vista/.test(u)));
+  assert.equal(new Set(all).size, all.length);
+  assert.ok(all.every(u => /^https:\/\/dakhla-attitude\.ma\/wp-content\/uploads\/.+\.(?:jpe?g|webp)$/.test(u) && !/-\d+x\d+\./.test(u)));
+  assert.deepEqual(daRoomPhotos(pages).get('Speed Spot Premium')!.map(file), ['IMGL1939-Enhanced-SR.jpeg', 'IMGL1947.jpeg', 'IMGL1935-Enhanced-SR.jpeg', 'IMGL1909.jpeg']);
+
+  assert.equal(c.spotImageUrls?.length, 9);
+  assert.deepEqual(c.spotImageUrls!.slice(0, 2).map(file), ['DSC00125.jpg', 'IMG_0778.jpg']);
+  assert.ok(c.spotImageUrls!.some(u => /kite-dakhla\.jpg$/.test(u)) && !c.spotImageUrls!.some(u => /wall-/.test(u)));
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

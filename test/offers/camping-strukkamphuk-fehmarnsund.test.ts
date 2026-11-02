@@ -7,10 +7,12 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   campingStrukkamphukFehmarnsund, CSK_PORTAL, cskNumbers, cskSeasons, cskUnitName, fetchCskSlots, parseCskBands, parseCskCaravans, parseCskPrices,
+  parseCskModelPhotos,
 } from '../../src/offers/adapters/camping-strukkamphuk-fehmarnsund.js';
 import { csobSaturdaySamples, parseCsobList } from '../../src/offers/adapters/hvide-sande-camping.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import { roomsWithPrices } from '../../src/offers/ingest.js';
+import { planGallery } from '../../src/offers/gallery.js';
 import type { Slot } from '../../src/offers/types.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/camping-strukkamphuk-fehmarnsund');
@@ -101,4 +103,28 @@ test('strukkamphuk: after the season the printed per-night table prices every ca
     ['Rental caravan Deluxe for 4', 115, true],
     ['Rental caravan Deluxe for 5', 115, true],
   ]);
+});
+
+test('strukkamphuk: room photos from each model pop-up, shared photos to neither, spot photos from /sport-spass/', async () => {
+  const c = await campingStrukkamphukFehmarnsund.fetchContent(ctx);
+  const file = (u: string) => u.split('/').pop()!;
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0, r.imageUrls ? file(r.imageUrls[0]) : null]), [
+    ['Rental caravan Knaus Sport 580 QS', 8, 'strukkamphuk-wohnwagen-mieten-16.jpg'],
+    ['Rental caravan Knaus Sport 550 FSK', 4, 'strukkamphuk-wohnwagen-mieten-9.jpg'],
+    ['Rental caravan Knaus Südwind 550 UF', 3, 'strukkamphuk-wohnwagen-mieten-14.jpg'],
+    ['Rental caravan Knaus Südwind 500 EU', 2, 'strukkamphuk-wohnwagen-mieten-2.jpg'],
+    ['Rental caravan Dethleffs c’trend 515 ER', 2, 'strukkamphuk-wohnwagen-mieten-8.jpg'],
+    ['Rental caravan Dethleffs c’trend 515 FR', 0, null], // its pop-up shows only mieten-6 and -7, which the 515 ER shows too
+    ['Rental caravan Deluxe for 4', 2, 'WW-Typ-3-Gaeste-2.jpg'],
+    ['Rental caravan Deluxe for 5', 4, 'WW-Typ-4-Gaeste-4.jpg'],
+  ]);
+  const all = c.rooms.flatMap(r => r.imageUrls ?? []);
+  assert.equal(new Set(all).size, all.length);
+  assert.ok(!all.some(u => /mieten-[3467]\.jpg$|Melina-Waliczek|\.png$/.test(u))); // shared by two models / floor plans
+  assert.ok(all.every(u => /^https:\/\/strukkamphuk\.de\/wp-content\/uploads\//.test(u) && !/-\d+x\d+\./.test(u)));
+  assert.equal(parseCskModelPhotos(read('strukkamphuk.de_mietwohnwagen_.')).size, 8);
+  assert.deepEqual(c.spotImageUrls?.map(file), ['wassersport-campingplatz-fehmarn-strukkamphuk-1-1.jpg', 'camping-fehmarn-strukkamphuk-fehmarnsundbruecke.jpg']);
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) if (r.imageUrls) assert.ok(first24.includes(r.imageUrls[0]), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

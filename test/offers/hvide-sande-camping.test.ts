@@ -11,6 +11,7 @@ import {
 } from '../../src/offers/adapters/hvide-sande-camping.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import { slotRoom } from '../../src/offers/ingest.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/hvide-sande-camping');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -90,6 +91,32 @@ test('hsc: content', async () => {
     .includes('2027 (Strandhytte, type 11): low season from DKK 900, high season from DKK 1,250 per night, final cleaning DKK 700'));
   assert.ok(c.imageUrls.length >= 12 && c.imageUrls.every(u => u.startsWith('https://hvidesandecamping.dk/wp-content/uploads/') && !/imgi_1_A|\.svg/.test(u)));
   assert.match(c.sourceText ?? '', /perfect conditions for windsurfing, kitesurfing and SUP/);
+});
+
+test('hsc: each cabin type has its card photo, the stock image is out', async () => {
+  const c = await hvideSandeCamping.fetchContent(ctx);
+  const file = (u: string) => u.split('/').pop();
+  assert.deepEqual(c.rooms.map(r => [r.imageUrls?.length ?? 0, file(r.imageUrls![0])]), [
+    [1, 'hytte-type-2_-Troldebjerghytte.webp'],
+    [1, 'surferhytter_ny.jpg'],
+    [1, 'fjordhytter_ny.jpg'],
+    [1, 'klithytter_ny.jpg'],
+    [1, 'hytte-type-7_-Fiskehytter.webp'],
+    [1, 'hytte-type-8_Hvide-Sande-Hytter.webp'],
+    [1, 'hytte-type-9_-Vesterhavshytter.webp'],
+    [1, 'strandhytten_ny.jpg'],
+    [1, 'hytte-4_ny-scaled.jpeg'],
+    [1, 'hytte-type-6_havnehytten_1000x666px_01-2.webp'],
+    [1, 'imgi_12_DX22827-1030x687-1.jpg'], // holiday flat: unnamed card photo
+  ]);
+  assert.deepEqual(c.rooms.map(r => r.imageUrls![0]), parseHscCabins(read('hvidesandecamping.dk_cabins-and-holiday-apartments_lang_en.')).map(x => x.image));
+  assert.ok(c.rooms.every(r => c.imageUrls.includes(r.imageUrls![0]))); // same URLs as the general list
+  assert.ok(!c.imageUrls.some(u => /AdobeStock/i.test(u)));
+  assert.equal(c.spotImageUrls, undefined); // the surfing page has no labelled spot / kite photo
+  const plan = planGallery(c);
+  assert.deepEqual(plan.dropped, []);
+  const first24 = plan.candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(first24.includes(r.imageUrls![0]), r.name);
 });
 
 test('hsc: every engine cabin type links to its cabin card', async () => {

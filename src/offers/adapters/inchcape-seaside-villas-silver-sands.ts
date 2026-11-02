@@ -13,6 +13,8 @@
 //   content  / (intro, "Direct Booking VIP" + "Super Summer 2026 Offers"), /en/1714087/kitesurfing, /en/1725230/rates
 //            (room types from the model JSON), /en/1725232/map (propertyData.location lat/lng = map pin),
 //            /en/1714085/how-to-book (booking conditions, fees, equipment storage).
+//   photos   rooms[].imageUrls = each room type's mainImage + images[] from the rates page model (imageData urls on the
+//            site's own Lodgify CDN l.icdbcdn.com); spotImageUrls = the gallery shots captioned as the beach (icSpotImages).
 //   slots    /en/1725230/rates: swr key ".../v3/websites/rates/website/236753/language/en/property/261766" ->
 //            roomTypes[id] = { name, defaultRate {dailyPrice, currency}, rates [{name, dailyPrice, currency,
 //            periods [{startDate, endDate}]}] }. We never call the Lodgify API ourselves: websiteserver.lodgify.com
@@ -52,6 +54,8 @@ export interface IcRoomRates { id: string; name: string; defaultPrice: number | 
 export interface IcRoom {
   id: string; name: string; maxGuests: number | null; areaM2: number | null; description: string | null;
   features: string[]; amenities: string[]; images: string[];
+  /** image url -> the gallery caption the site gives it (images[].text; most are empty) */
+  imageText: Record<string, string>;
 }
 
 const keyPart = (s: string): string => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -139,6 +143,12 @@ export function parseIcRooms(html: string): IcRoom[] {
       const feat = [...arr(rt.roomTypeFeatures), ...arr(rt.extraRoomTypeFeatures)].map(f => collapse(dec(obj(f).text))).filter(Boolean);
       const amenities = arr(rt.amenities).flatMap(a => arr(obj(a).items).map(i => collapse(dec(obj(i).text)))).filter(Boolean);
       const imgs = [rt.mainImage, ...arr(rt.images).map(i => obj(i).imageId)].map(imageUrl).filter((u): u is string => !!u);
+      const imageText: Record<string, string> = {};
+      for (const i of arr(rt.images).map(obj)) {
+        const u = imageUrl(i.imageId);
+        const t = collapse(dec(i.text));
+        if (u && t && !(u in imageText)) imageText[u] = t;
+      }
       out.push({
         id: String(rt.id ?? ''),
         name,
@@ -148,6 +158,7 @@ export function parseIcRooms(html: string): IcRoom[] {
         features: feat,
         amenities,
         images: [...new Set(imgs)],
+        imageText,
       });
     }
   }
@@ -221,6 +232,17 @@ export function parseIcNotes(bookHtml: string, ratesHtml: string): string[] {
   ].filter((x): x is string => !!x);
 }
 
+/** Captions of the beach shots inside some unit galleries ("Silver Sands Beach at our Villas", "Inchcape's Beach",
+ *  "Aerial view of SSB"): photos of the kite beach, not of the unit; best first. */
+const IC_SPOT_CAPTIONS = [/^Silver Sands Beach/i, /^Inchcape'?s Beach$/i, /^Aerial view of SSB$/i];
+const icSpotRank = (r: IcRoom, u: string): number => IC_SPOT_CAPTIONS.findIndex(re => re.test(r.imageText[u] ?? ''));
+
+/** Beach photos of all unit galleries (by caption), in caption order then unit order. */
+export function icSpotImages(rooms: IcRoom[]): string[] {
+  const hits = rooms.flatMap(r => r.images.map(u => ({ u, rank: icSpotRank(r, u) }))).filter(h => h.rank >= 0);
+  return [...new Set(hits.sort((a, b) => a.rank - b.rank).map(h => h.u))];
+}
+
 export interface IcPages { home: string; kite: string; rates: string; map: string; book: string }
 
 export function parseInchcapeContent(p: IcPages, today = todayIso()): OfferContent {
@@ -251,9 +273,12 @@ export function parseInchcapeContent(p: IcPages, today = todayIso()): OfferConte
         ...[...new Set(r.amenities.map(a => (/wireless|internet/i.test(a) ? 'Wi-Fi' : a)).filter(a => /^(Wi-Fi|Ceiling fans|Air conditioning|A\/C|Kitchen stove|Oven|Refrigerator|Washing machine|Dishwasher)$/i.test(a)))],
         ...[...new Map(own.map(x => [`${x.name}|${x.price}`, x])).values()].map(x => `${x.name}: ${x.currency ?? '?'} ${x.price} per night`),
       ],
+      // the unit's own Lodgify gallery (mainImage first, no photo shared between two units), minus its beach shots
+      ...(r.images.some(u => icSpotRank(r, u) < 0) ? { imageUrls: r.images.filter(u => icSpotRank(r, u) < 0) } : {}),
     };
   });
 
+  const spotImageUrls = icSpotImages(rooms);
   const imageUrls: string[] = [];
   const pool = rooms.map(r => r.images);
   for (const u of [prop.mainImage ?? propRates.mainImage, ...pool.map(l => l[0])]) if (u && !imageUrls.includes(u)) imageUrls.push(u);
@@ -298,6 +323,7 @@ export function parseInchcapeContent(p: IcPages, today = todayIso()): OfferConte
     languages: [],
     rooms: contentRooms,
     imageUrls,
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: IC_HOME_URL,
     bookingUrl: IC_BOOK_URL,

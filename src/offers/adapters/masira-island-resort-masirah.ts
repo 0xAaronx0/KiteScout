@@ -24,6 +24,7 @@
 //   partner's, not the hotel's, so they are not used as slots. Booking platforms list the hotel as operating
 //   (hint only, not read).
 // Requests per run: content 4, slots 0.
+// Room photos: the one photo in each room type's image box on /book-a-room/; spot photo: KiteSurfing.jpg on the home page.
 // Known limits: no spotCoords (no map or geo data on the site); the resort's own pages do not say whether
 //   breakfast is included.
 // ---------------------------------------------------------------------------
@@ -54,9 +55,20 @@ export function mirLines(html: string): string[] {
 }
 
 // --- pure parsers -----------------------------------------------------------------------------
-export interface MirRoom { name: string; description: string; size: string | null; beds: string | null; floor: string | null; view: string | null }
+export interface MirRoom {
+  name: string; description: string; size: string | null; beds: string | null; floor: string | null; view: string | null;
+  /** the box's own photo (Chalet.jpg, Executive.jpg, ...), absolute, original size; null when none */
+  image: string | null;
+}
 
-/** /book-a-room/: Elementor image boxes (h3 title + description with "Room Size / Bed Type / Location / View"). */
+/** An image URL as the general list keeps it (absolute, originals only; size variants, logos and banners out). */
+function mirImageUrl(src: string | null | undefined, base: string): string | null {
+  if (!src || !/\.jpe?g$/i.test(src)) return null;
+  const u = new URL(src, base).toString();
+  return /-\d+x\d+\.jpe?g$|\/2019\/04\/|logo|Banner\.jpg$/i.test(u) ? null : u;
+}
+
+/** /book-a-room/: Elementor image boxes (photo + h3 title + description with "Room Size / Bed Type / Location / View"). */
 export function parseMirRooms(html: string): MirRoom[] {
   const out: MirRoom[] = [];
   for (const box of parse(html).querySelectorAll('.elementor-image-box-content')) {
@@ -74,6 +86,7 @@ export function parseMirRooms(html: string): MirRoom[] {
       beds: all.match(/Bed Type:\s*(.+?)(?=\s+Location:|$)/i)?.[1]?.trim() ?? null,
       floor: all.match(/Location:\s*(.+?)(?=\s+View:|$)/i)?.[1]?.trim() ?? null,
       view: all.match(/View:\s*(.+?)(?=\s+Book Now|$)/i)?.[1]?.trim() ?? null,
+      image: mirImageUrl(box.parentNode?.querySelector('.elementor-image-box-img img')?.getAttribute('src'), MIR_ROOMS_URL),
     });
   }
   return out.filter(r => /room|suite|chalet/i.test(r.name));
@@ -132,9 +145,8 @@ export function mirImages(home: string, gallery: string, activities: string): st
   const out: string[] = [];
   const add = (html: string, base: string) => {
     for (const m of html.matchAll(/(?:src|href|data-src)="([^"]+\.jpe?g)"/gi)) {
-      const u = new URL(m[1], base).toString();
-      if (/-\d+x\d+\.jpe?g$|\/2019\/04\/|logo|Banner\.jpg$/i.test(u)) continue;
-      if (!out.includes(u)) out.push(u);
+      const u = mirImageUrl(m[1], base);
+      if (u && !out.includes(u)) out.push(u);
     }
   };
   add(home, MIR_HOME_URL);
@@ -143,6 +155,17 @@ export function mirImages(home: string, gallery: string, activities: string): st
   // rooms and the kite photo first, then the rest in page order
   const rank = (u: string) => (/room|Executive|Chalet|Premier|Deluxe/i.test(u) ? 0 : /KiteSurfing|water-sports/i.test(u) ? 1 : 2);
   return out.map((u, i) => ({ u, i })).sort((a, b) => rank(a.u) - rank(b.u) || a.i - b.i).map(x => x.u);
+}
+
+/** The kite photo of the home page's activities teaser (KiteSurfing.jpg); the gallery's "activities" photos mix
+ *  fishing, birds and turtles and carry no labels, so they stay in the general list only. */
+export function mirSpotImages(home: string): string[] {
+  const out: string[] = [];
+  for (const m of home.matchAll(/(?:src|href|data-src)="([^"]*kite[^"]*\.jpe?g)"/gi)) {
+    const u = mirImageUrl(m[1], MIR_HOME_URL);
+    if (u && !out.includes(u)) out.push(u);
+  }
+  return out;
 }
 
 export interface MirPages { home: string; rooms: string; activities: string; gallery: string }
@@ -165,7 +188,9 @@ export function parseMasiraIslandResortContent(p: MirPages): OfferContent {
       r.view ? `View: ${r.view}` : null,
       ...amenities,
     ].filter((x): x is string => !!x),
+    ...(r.image ? { imageUrls: [r.image] } : {}),
   }));
+  const spotImageUrls = mirSpotImages(p.home);
 
   const summary = [
     `Masira Island Resort is a boutique beach resort on Masirah Island off Oman's south-east coast with ${nRooms ?? '22'} rooms, suites and chalets facing the Arabian Sea, an outdoor pool with jacuzzi, a fitness centre, The Dhow beach restaurant and two bars.`,
@@ -199,6 +224,7 @@ export function parseMasiraIslandResortContent(p: MirPages): OfferContent {
     languages: [],
     rooms: contentRooms,
     imageUrls: mirImages(p.home, p.gallery, p.activities).slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: MIR_ACTIVITIES_URL,
     bookingUrl: BOOKING_URL,

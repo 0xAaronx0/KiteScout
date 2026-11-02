@@ -8,6 +8,7 @@ import {
   kitePlCaravansChalupy, buildKplSlots, parseKplCoords, parseKplPage, plRanges,
 } from '../../src/offers/adapters/kite-pl-caravans-chalupy.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/kite-pl-caravans-chalupy');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -103,4 +104,29 @@ test('kpl: content', async () => {
   assert.ok(c.optionalServices.includes('Car parking (PLN 30 per day)'));
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://kite.pl/app/uploads/') && !/logo|stick-man|mapka/.test(u)));
+});
+
+test('kpl: room photos per caravan card, spot photos from /lokalizacja/', async () => {
+  const c = await kitePlCaravansChalupy.fetchContent(ctx);
+  const file = (u: string) => u.split('/').pop()!;
+  assert.deepEqual(c.rooms.map(r => [r.name.match(/#\d/)![0], r.imageUrls?.length ?? 0, file(r.imageUrls![0])]), [
+    ['#1', 5, 'przyczepa-komfort-5-scaled-e1684254578386.jpeg'], // alt "Przyczepa komfort nr 1"
+    ['#2', 10, 'IMG_8743.jpeg'],
+    ['#3', 9, 'IMG_9048.jpg'],
+    ['#4', 9, 'IMG_3597.jpg'],
+    ['#5', 8, 'IMG_9034.jpg'],
+    ['#6', 10, 'IMG_9613.jpeg'],
+    ['#7', 7, 'IMG_2637.jpg'],
+  ]);
+  // card #1 also shows 2-1, 2-2 (caravan #2's files) and a przyczepa4-6 upload: left out of #1, 2-1 stays with #2
+  const r1 = c.rooms[0].imageUrls!.map(file);
+  assert.ok(!r1.some(f => /^2-\d|przyczepa4-/.test(f)));
+  assert.ok(c.rooms[1].imageUrls!.map(file).includes('2-1.jpg'));
+  assert.ok(c.rooms[3].imageUrls!.map(file).includes('przyczepa4-6-min.jpg'));
+  assert.ok(c.rooms.flatMap(r => r.imageUrls!).every(u => u.startsWith('https://kite.pl/app/uploads/') && !/-\d+x\d+\.|\.webp$|mapka/.test(u)));
+  assert.deepEqual(c.spotImageUrls?.map(file), ['hel-chalupy-kitesurfing-windsurfing.jpg', 'kemping-chalupy-6-hel-e1578915621793.jpg', 'kemping-chalupy-6-hel-3.jpg']);
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });
