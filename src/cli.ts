@@ -577,6 +577,7 @@ async function main(): Promise<void> {
           mode: args.includes('--slots') ? 'slots' : 'full',
           dryRun: sub === 'probe' || args.includes('--dry-run'),
           refreshImages: args.includes('--refresh-images'),
+          roomPhotos: args.includes('--room-photos'),
         });
         const out = flagStr('--out');
         if (out) writeFileSync(out, JSON.stringify(reports, null, 2));
@@ -592,7 +593,7 @@ async function main(): Promise<void> {
         }
         if (verdict.exitCode) process.exitCode = verdict.exitCode;
       } else {
-        console.log('Usage: offers list | probe [key…|all] [--slots] [--out f.json] | ingest [key…|all] [--slots] [--dry-run] [--refresh-images] [--out f.json]');
+        console.log('Usage: offers list | probe [key…|all] [--slots] [--out f.json] | ingest [key…|all] [--slots] [--dry-run] [--refresh-images] [--room-photos] [--out f.json]');
       }
       break;
     }
