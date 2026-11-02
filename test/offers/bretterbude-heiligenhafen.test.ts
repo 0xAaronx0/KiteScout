@@ -8,6 +8,7 @@ import {
   bretterbudeHeiligenhafen, bbhLarge, buildBbhSlots, fetchBbhSlots, parseBbhOffer, parseBbhRooms,
 } from '../../src/offers/adapters/bretterbude-heiligenhafen.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/bretterbude-heiligenhafen');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -55,4 +56,35 @@ test('bretterbude: content', async () => {
   assert.ok(c.optionalServices.includes('Breakfast for hotel guests: EUR 21.90 per person and day'));
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://www.bretterbude-hhf.de/media/w-1920/bb/xl/')));
+});
+
+test('bretterbude: own photos per room and kite photos of the kitesurfing page', async () => {
+  const c = await bretterbudeHeiligenhafen.fetchContent(ctx);
+  const file = (u: string) => u.split('/').pop()!;
+  const photos = (n: string) => c.rooms.find(r => r.name === n)!.imageUrls!;
+  assert.equal(c.rooms.length, 17);
+  assert.ok(c.rooms.every(r => r.imageUrls?.length && r.imageUrls.every(u => u.startsWith('https://www.bretterbude-hhf.de/media/w-1920/bb/xl/'))));
+  // every room starts with its card teaser
+  assert.deepEqual(c.rooms.map(r => r.imageUrls![0]), parseBbhRooms(read('www.bretterbude-hhf.de_butzen-zimmer.')).map(r => r.image));
+  assert.deepEqual(photos('Kleine Butze Meerblick').map(file), ['17-zimmer-kl-butze-meerblick-at-andrea-flak.jpg', '14-zimmer-kl-butze-meerblick-at-andrea-flak.jpg']);
+  assert.deepEqual(photos('Etagenbutze Meerblick').map(file), [
+    '08-bretterbude-at-andrea-flak.jpg', '32-bretterbude-etagenbutze-at-andrea-flak.jpg', '160823-moodd-etagenbutze-c5a2414-at-andrea-flak.jpg', '29-bretterbude-etagenbutze-meer-at-andrea-flak.jpg',
+  ]);
+  assert.ok(!photos('Etagenbutze Landblick').some(u => /etagenbutze-meer/.test(u)));
+  assert.match(photos('Etagenbutze Landblick')[0], /28-bretterbude-etagenbutze-land/);
+  assert.equal(photos('Jägermeister Butze').length, 3);
+  assert.match(photos('Jägermeister Butze')[1], /bb-hhf-jaegermeister-suite-0193/);
+  assert.deepEqual(photos('XXL Butze').map(file), ['bb-xxl-butze-levis-carolin-wehmer-9.jpg', 'bb-xxl-butze-levis-carolin-wehmer-15.jpg']);
+  assert.deepEqual(photos('XL Butze').map(file), ['161108-02-butze-83-bretterbde-at-andrea-flak.jpg']);
+  assert.match(photos('Bauwagen Renate')[0], /bauwagen-renate50/);
+  assert.match(photos('Große Butze Meerblick mit Balkon')[0], /10-zimmer-01/);
+  assert.equal(c.rooms.filter(r => r.imageUrls!.length === 1).length, 12); // teaser only
+  assert.deepEqual(c.spotImageUrls?.map(file), [
+    'img-0526-at-jens-hogenkamp.jpg', 'f5j3637-at-jens-hogenkamp.jpg', 'img-3206-at-jens-hogenkamp.jpg', 'img-8494-at-jens-hogenkamp.jpg', 'f5j3867-at-jens-hogenkamp.jpg',
+  ]);
+  const plan = planGallery(c);
+  assert.deepEqual(plan.dropped, []);
+  const first24 = plan.candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

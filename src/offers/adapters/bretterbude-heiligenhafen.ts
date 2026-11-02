@@ -9,6 +9,8 @@
 //            list, teaser photo), /heiligenhafen/sport/kitesurfen ("Der offizielle Kitestrand liegt direkt vor der
 //            Bretterbude"), /hotel-und-wir/plankenverleih (kite rental + "Einstiegskurse sowie Privatstunden"),
 //            /hotel-und-wir/preisliste (extras: breakfast, extra bed, parking, dog, room cleaning).
+//   photos   rooms[].imageUrls = the card teaser of /butzen-zimmer plus files on that page and the home page named after
+//            the room (bbhRoomPhotos); spotImageUrls = the kitesurfing page's own kite photos + the rental's kite shots.
 //   slots    /hotel-und-wir/knueller-angebote/winterschnapper - the only room price the site prints: "ausgewählte Butzen
 //            ab 55 € pro Nacht", "Reisezeitraum 01.11.2026 bis 18.03.2027", bookable up to 7 days before arrival, subject
 //            to availability, holidays excluded, minimum stay on single days possible.
@@ -104,6 +106,47 @@ export function parseBbhRooms(html: string): BbhRoom[] {
   return out;
 }
 
+/**
+ * More own photos of a room on the pages read: files of the rooms-page gallery and the home page whose name names it
+ * ("14-zimmer-kl-butze-meerblick", "29-bretterbude-etagenbutze-meer", "bb-hhf-jaegermeister-suite-0193" of the news
+ * "Jägermeister Spezial-Butze"). Plain "etagenbutze" files go to both Etagenbutzen (same room, sea or land side).
+ * No pattern for XL and the Große Butzen: "xl-butze" is also in the XXL / Flysurfer files, and the video still
+ * "grosse-butze-mit-meerblick" does not say which of the two Große Butzen it shows.
+ */
+const BBH_ROOM_FILES: Record<string, RegExp> = {
+  'Kleine Butze Meerblick': /kl-butze-meerblick/,
+  'Kleine Butze Landblick': /kl-butze-landblick/,
+  'Etagenbutze Meerblick': /etagenbutze(?!-land)/,
+  'Etagenbutze Landblick': /etagenbutze(?!-meer)/,
+  'skate-aid Butze': /skate-aid/,
+  'Trap Butze': /-trap-/,
+  'Viva con Agua Butze': /viva-con-agua/,
+  'Clepto Butze': /clepto/,
+  'Jägermeister Butze': /-jaegermeister-/,
+  'Oldesloer Korn Butze': /oldesloer/,
+  'Werkhaus Butze': /werkhaus/,
+  'Flysurfer XL Butze': /flysurfer/,
+  'XXL Butze': /xxl-butze/,
+  'Bauwagen Renate': /bauwagen-renate/,
+};
+
+/** A room's own photos: its card teaser first, then the files naming it (BBH_ROOM_FILES) in page order. */
+export function bbhRoomPhotos(room: BbhRoom, pagePhotos: string[]): string[] {
+  const re = BBH_ROOM_FILES[room.name];
+  const named = re ? pagePhotos.filter(u => re.test(u.split('/').pop()!)) : [];
+  return [...new Set([room.image, ...named].filter((u): u is string => !!u))];
+}
+
+/** Kite photos: the kitesurfing page above its link teasers (key visual + gallery), then the rental gallery's kite shots. */
+export function bbhSpotImages(kite: string, rental: string): string[] {
+  const kiteMain = kite.split('class="teaser__item--container')[0];
+  const rentalKite = rental.split('class="col-gallery-item"').slice(1)
+    .map(b => b.split('</a>')[0])
+    .filter(b => /alt="[^"]*kite/i.test(b))
+    .flatMap(b => bbhImages(b));
+  return [...new Set([...bbhImages(kiteMain), ...rentalKite])];
+}
+
 export interface BbhOffer { price: number; start: string; end: string; text: string; terms: string | null }
 
 /** Schnapper page: "ab 55 € pro Nacht" + "Reisezeitraum (läuft) vom DD.MM.YYYY bis (einschließlich) DD.MM.YYYY". */
@@ -177,7 +220,12 @@ export function parseBretterbudeContent(p: BbhPages): OfferContent {
   const intro = home.find(l => /nach dem Kiten/.test(l)) ?? null;
   const fmt = (d: string) => `${Number(d.slice(8, 10))}.${Number(d.slice(5, 7))}.${d.slice(0, 4)}`;
 
-  const contentRooms: ContentRoom[] = rooms.map(r => ({ name: r.name, description: r.group, features: r.facts }));
+  const pagePhotos = [...bbhImages(p.rooms), ...bbhImages(p.home)];
+  const contentRooms: ContentRoom[] = rooms.map(r => {
+    const photos = bbhRoomPhotos(r, pagePhotos);
+    return { name: r.name, description: r.group, features: r.facts, ...(photos.length ? { imageUrls: photos } : {}) };
+  });
+  const spotImageUrls = bbhSpotImages(p.kite, p.rental);
   const imgs: string[] = [];
   for (const u of [...bbhImages(p.kite), ...bbhImages(p.rental), ...rooms.map(r => r.image), ...bbhImages(p.home)]) {
     if (u && !imgs.includes(u)) imgs.push(u);
@@ -219,6 +267,7 @@ export function parseBretterbudeContent(p: BbhPages): OfferContent {
     languages: ['de', 'en', 'da'],
     rooms: contentRooms,
     imageUrls: imgs.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: BBH_KITE_URL,
     bookingUrl: BOOKING_URL,

@@ -10,6 +10,7 @@ import {
   peahiResortStagnone, parsePeahiRooms, parsePkCenter, parsePkCoords, parsePkLessons, peahiImages, peahiVisiblePrices,
 } from '../../src/offers/adapters/peahi-resort-stagnone.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/peahi-resort-stagnone');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -84,4 +85,31 @@ test('peahi: content', async () => {
   assert.ok(c.optionalServices.includes('Wing foil rental'));
   assert.equal(c.bookingUrl, 'https://prokitealby.beddy.io/availability-request-form?widget-code=ec0e32e1443fd&lang=en');
   assert.equal(peahiResortStagnone.confidence, 'low');
+});
+
+test('peahi: own photos per room type and kite photos of the kite center', async () => {
+  const c = await peahiResortStagnone.fetchContent(ctx);
+  const file = (u: string) => u.split('/').pop();
+  assert.deepEqual(c.rooms.map(r => [r.imageUrls?.length ?? 0, file(r.imageUrls![0])]), [
+    [18, 'standard_room_01.jpg'],
+    [9, 'Comfort-Triple-Double-on-the-ground-floor-01.jpg'],
+    [10, 'KM_05531-scaled.jpg'], // alt "Deluxe with balcony prokite alby rondina"
+    [1, 'Deluxe-side-sea-view-with-balcony-008.jpg'], // the other 7 slides of its slider are Deluxe-with-balcony files
+    [11, 'Deluxe-sea-view-with-balcony-001.jpg'], // its three Deluxe-with-balcony slides left out
+    [21, 'Comfort-Villa-Sea-View-01.jpg'],
+    [9, 'IMG_7744-scaled.jpg'],
+  ]);
+  const own = (i: number) => c.rooms[i].imageUrls!;
+  assert.ok(own(2).includes('https://www.peahiresort.com/wp-content/uploads/2024/01/Deluxe-with-balcony-004.jpg'));
+  assert.ok(![...own(3), ...own(4)].some(u => /Deluxe-with-balcony-/.test(u)));
+  assert.ok(c.rooms.flatMap(r => r.imageUrls!).every(u => /^https:\/\/www\.peahiresort\.com\/wp-content\/uploads\/.+\.jpe?g$/.test(u)));
+  assert.deepEqual(c.spotImageUrls?.map(file), [
+    'KOB09482-scaled.jpg', 'KOB01297-scaled.jpg', '2.jpg', 'DJI_0047.jpg', 'A-school.jpg', 'lessons-new2.jpg', 'beginner.jpg', 'cover169.jpg', 'B-rental.jpg',
+  ]);
+  assert.ok(c.spotImageUrls!.every(u => u.startsWith('https://www.prokitealbyrondina.com/wp-content/uploads/')));
+  const plan = planGallery(c);
+  assert.deepEqual(plan.dropped, []);
+  const first24 = plan.candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

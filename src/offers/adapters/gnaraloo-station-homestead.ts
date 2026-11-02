@@ -15,6 +15,8 @@
 //            school holidays) are kept as text, not as dated bands (school holiday dates are not on the page).
 //            "1-2 Night Surcharge $50.00 once off per cabin" is an additional service (sourceText / summary).
 //   content  /the-homestead/ (facilities, the six accommodation blocks with descriptions, photos) + /kitesurfing/.
+//   photos   rooms[].imageUrls = the gallery under each block's heading (ghsRoomPhotos); spotImageUrls = the kite shots
+//            of /kitesurfing/ plus the homestead page's Gnaraloo Bay photo (ghsSpotImages).
 // robots.txt (2026-10-19): only /wp-admin/ disallowed.
 // Requests per run: content 3 (homestead page, tariffs, kitesurfing page), slots 1 (tariffs, memoised in the same run).
 // spotCoords: none on the site.
@@ -36,12 +38,34 @@ export function ghsRoomOf(unit: string, roomNames: string[]): string | null {
   return roomNames.find(n => norm(n) === norm(unit)) ?? null;
 }
 
+/** A room block's own gallery on /the-homestead/: the images between its heading and its "Book Now" button (gnImages URLs). */
+export function ghsRoomPhotos(html: string, name: string): string[] {
+  const norm = (x: string): string => x.replace(/<[^>]+>/g, ' ').replace(/&nbsp;|\u00a0/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
+  for (const m of html.matchAll(/<h[1-6]\b[^>]*>([\s\S]*?)<\/h[1-6]>/g)) {
+    if (norm(m[1]) !== norm(name)) continue;
+    const from = m.index! + m[0].length;
+    const end = html.indexOf('>Book Now<', from);
+    return gnImages(html.slice(from, end > 0 ? end : undefined), GHS_URL);
+  }
+  return [];
+}
+
+/** Kite spot photos: the kitesurfing page's kite shots (Gnaraloo Bay, 3 Mile), then the homestead page's Gnaraloo Bay photo. */
+export function ghsSpotImages(homestead: string, kite: string | null): string[] {
+  const all = [...(kite ? gnImages(kite, GNARALOO_KITE_URL) : []), ...gnImages(homestead, GHS_URL)];
+  return [...new Set(all.filter(u => /kitesurf|gnaraloo-bay/i.test(u.split('/').pop() ?? '')))];
+}
+
 export interface GhsPages { homestead: string; tariffs: string; kite: string | null }
 
 export function parseGhsContent(p: GhsPages): OfferContent {
   const lines = wpLines(p.homestead);
   const t = parseGnTariffs(p.tariffs);
-  const rooms = parseGnRooms(p.homestead);
+  const rooms = parseGnRooms(p.homestead).map(r => {
+    const photos = ghsRoomPhotos(p.homestead, r.name);
+    return photos.length ? { ...r, imageUrls: photos } : r;
+  });
+  const spotImageUrls = ghsSpotImages(p.homestead, p.kite);
   if (!t.rates.length) throw new Error('gnaraloo-homestead: no tariff rows (layout changed?)');
   if (!rooms.length) throw new Error('gnaraloo-homestead: no accommodation blocks on the homestead page (layout changed?)');
   const cabins = t.rates.filter(r => /cabin/i.test(r.unit));
@@ -79,6 +103,7 @@ export function parseGhsContent(p: GhsPages): OfferContent {
     languages: ['en'],
     rooms,
     imageUrls: gnImages(p.homestead, GHS_URL).slice(0, 20),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: GHS_URL,
     bookingUrl: GNARALOO_ENQUIRY_URL,
