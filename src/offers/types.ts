@@ -72,6 +72,8 @@ export interface Slot {
   datePrecision?: 'day' | 'month' | 'season';
   /** the price only holds until this booking date (early bird), YYYY-MM-DD */
   priceValidUntil?: string | null;
+  /** the provider prints this price without a date or season; shown with that note, the provider confirms it (Aaron 2026-11-02) */
+  undated?: boolean;
   /** raw total as printed when `price` was normalized per person (suite for 2, package for 3) */
   priceTotal?: number | null;
   /** nights a 'package' price covers when it is not the whole tour/camp (e.g. a 5-night stay) */

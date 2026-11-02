@@ -14,9 +14,11 @@
 //            rental). Booking: contact form / e-mail -> no engine.
 //   slots    /resort/ prints per-person nightly rates (bungalow single 75 / double 50 EUR p.p., glamping pod 55 / 40,
 //            hammock or dorm 30, full board) WITHOUT a date or season; the page's newest photo is from 2023-09 and the
-//            kite page speaks of "latest 2024 North Gear". Per the recheck rule (prices only when they plausibly apply to
-//            the next season) fetchSlots returns [] (price on request) and notes why. The parser stays live: once the
-//            resort page names the current year or later (e.g. "2026/27 prices"), the same rates are returned as slots.
+//            kite page speaks of "latest 2024 North Gear". The recheck rule (prices only when they plausibly apply to
+//            the next season) held them back as price on request until Aaron decided 2026-11-02 to show them marked
+//            undated (Slot.undated -> the price note says "undated rates ..., to be confirmed"); the provider is on the
+//            inquiry list to confirm them. Once the resort page names the current year or later (e.g. "2026/27 prices"),
+//            the same rates are returned without the mark.
 //   coordinates  none on the site (the contact map embed only queries "Bulalacao"); spotCoords omitted.
 // robots.txt (2026-10-12): disallows /app/ and /j/ only; "Crawl-Delay: 5" -> this adapter waits 5 s between its own
 //   live requests (local helper `mdGet`; http.ts does not read Crawl-delay). The contact e-mail is published behind
@@ -182,7 +184,7 @@ export function parseMindoroContent(p: MdPages): OfferContent {
     'Kitesurf Mindoro (Makani Resort & Glamping) is a small eco resort with its own kite and wing station on Bislig Beach near Bulalacao in Oriental Mindoro, Philippines; the beginner spot, a shallow flat-water bay with side-onshore wind, lies right in front of the bungalows, about 50 km from Boracay.',
     `The resort has ${nBung ?? 'several'} bungalows with ocean view and outdoor private bathrooms, ${nPods ?? 'several'} glamping pods with a shared shower house, and dorm beds, hammocks and tree tents; every stay is full board and includes kite gear storage, beach rescue and yoga.`,
     `Lessons follow the VDWS standard one-on-one for kitesurfing and wing foiling, North equipment is rented to certified riders, and downwinders and 3-day kite safaris go to the nearby islands; the kite season runs from November to the end of April.`,
-    'Stays are booked through the contact form; the published room rates carry no date, so prices are on request.',
+    'Stays are booked through the contact form; the published room rates carry no date, so the resort confirms the current price on request.',
   ].join(' ');
 
   return {
@@ -244,7 +246,7 @@ export const kitesurfMindoroBulalacao: OfferAdapter = {
   url: MD_RESORT_URL,
   slotMethod: 'price_table',
   fetchBudget: 4,
-  confidence: 'low', // undated rates -> price on request
+  confidence: 'low', // undated rates, shown marked undated
   async fetchContent() {
     const home = await mdGet(MD_HOME_URL);
     const resort = await mdGet(MD_RESORT_URL);
@@ -257,8 +259,8 @@ export const kitesurfMindoroBulalacao: OfferAdapter = {
     if (units.length === 0) throw new Error('kitesurf-mindoro: unit blocks not found on /resort/ (layout changed?)');
     const year = mdNewestYear(html);
     if (year === null || year < Number(todayIso().slice(0, 4))) {
-      ctx.note(`/resort/ rates are undated (newest year on the page: ${year ?? 'none'}): price on request`);
-      return [];
+      ctx.note(`/resort/ rates are undated (newest year on the page: ${year ?? 'none'}): shown marked undated`);
+      return buildMdSlots(units).map(s => ({ ...s, undated: true }));
     }
     return buildMdSlots(units);
   },

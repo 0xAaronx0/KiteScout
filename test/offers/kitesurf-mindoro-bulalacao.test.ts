@@ -7,6 +7,7 @@ import {
   kitesurfMindoroBulalacao, buildMdSlots, mdImages, mdNewestYear, parseMdUnits,
 } from '../../src/offers/adapters/kitesurf-mindoro-bulalacao.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { summarizePrice } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/kitesurf-mindoro-bulalacao');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -26,12 +27,19 @@ test('mindoro: unit rates on /resort/ (EUR per person per night, full board)', (
   assert.match(units[1].description, /25 sqm hut with 360 degree view/);
 });
 
-test('mindoro: undated rates -> no slots (price on request), with a note', async () => {
+test('mindoro: undated rates are shown, marked undated (Aaron 2026-11-02)', async () => {
   assert.equal(mdNewestYear(resort), null);
   const notes: string[] = [];
   const slots = await kitesurfMindoroBulalacao.fetchSlots({ note: t => notes.push(t), incomplete: () => {} });
-  assert.deepEqual(slots, []);
+  assert.deepEqual(slots.map(s => [s.key, s.price, s.undated]), [
+    ['bungalows-double', 50, true], ['bungalows-single', 75, true],
+    ['glamping-pods-double', 40, true], ['glamping-pods-single', 55, true],
+    ['hammock-or-dorm', 30, true],
+  ]);
   assert.match(notes[0], /undated/);
+  const price = summarizePrice('accommodation', slots, '2026-11-02');
+  assert.equal(price.raw, 'From EUR 30 / night p.p.');
+  assert.equal(price.note, "From EUR 30 / night p.p. (cheapest bookable: Hammock or Dorm; undated rates on the provider's site, to be confirmed)");
 });
 
 test('mindoro: the same rates become slots once the page names the current season', () => {
@@ -45,7 +53,7 @@ test('mindoro: the same rates become slots once the page names the current seaso
     ['glamping-pods-double', 40, 2], ['glamping-pods-single', 55, 1],
     ['hammock-or-dorm', 30, 1],
   ]);
-  assert.ok(ok.every(s => s.currency === 'EUR' && s.priceUnit === 'per_night' && s.priceBasis === 'person' && s.availability === 'on_request'));
+  assert.ok(ok.every(s => s.currency === 'EUR' && s.priceUnit === 'per_night' && s.priceBasis === 'person' && s.availability === 'on_request' && !s.undated));
 });
 
 test('mindoro: photos skip the header logo and use 2048 px renditions', () => {
@@ -64,7 +72,7 @@ test('mindoro: content', async () => {
   assert.equal(c.spotCoords, undefined);
   assert.equal(c.mealPlan, 'full_board');
   assert.match(c.summary, /5 bungalows with ocean view .* 6 glamping pods/);
-  assert.match(c.summary, /prices are on request/);
+  assert.match(c.summary, /confirms the current price on request/);
   assert.deepEqual(c.rooms.map(r => r.name), ['Bungalows', 'Glamping Pods', 'Hammock or Dorm']);
   assert.ok(c.includedServices.includes('Kite gear storage'));
   assert.ok(c.includedServices.includes('Lunch buffet and dinner set meal (soup, main dish, dessert)'));
