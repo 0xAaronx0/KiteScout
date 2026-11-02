@@ -8,12 +8,14 @@
 // downloads only the first 24 and the vision step sees only the 10 largest, so the first room page used to fill the
 // whole gallery (Strandgut: 24 of 24 downloads from the Tiny House page).
 //
-//   planGallery     candidates mixed round-robin (one photo per room type, the spot, the general list, then the
-//                   second photos ...), stock / AI / floor-plan files left out, one reserve group for the spot (a
-//                   labelled seat in the vision batch, see src/lib/images.ts visionBatch). Since 2026-11-02 room types
-//                   get no reserved seat: their photos live on the room (src/offers/room-photos.ts, Aaron: "not
-//                   necessarily in the gallery too"). They still lead each round, so a room type that is the place
-//                   itself (the Nordsee glamping dome) stays inside the download window.
+//   planGallery     candidates for the curation, stock / AI / floor-plan files left out. Since 2026-11-02 a room's
+//                   photos live on the room (src/offers/room-photos.ts, Aaron: "not necessarily in the gallery too"),
+//                   so the gallery takes only each room type's FIRST photo, and the spot comes first (Aaron 2026-11-02:
+//                   "mind. 3 spotfotos ... auch bei unterkünften mit sehr vielen zimmern"): spot 1, general 1, spot 2
+//                   and 3, then one photo per room type, then general and spot alternating. MIN_SPOT_PHOTOS reserve
+//                   groups give the spot that many labelled seats in the vision batch (src/lib/images.ts visionBatch);
+//                   the model may still reject a weak one. Photos of a room that shows the spot itself
+//                   (ContentRoom.showsSpot, the Nordsee glamping dome at the kite zone) join the spot pool.
 //   linkRoomImages  rooms[].image_sort = sort of the room's first stored photo (null when none was kept)
 // ---------------------------------------------------------------------------
 import { imageIdentity, type ReserveGroup, type StoredImage } from '../lib/images.js';
@@ -52,17 +54,29 @@ export function isNotOwnPhoto(url: string): boolean {
 }
 
 export interface GalleryPlan {
-  /** candidate URLs for curateAndStoreImages, mixed so every room type and the spot sit inside the download window */
+  /** candidate URLs for curateAndStoreImages, ordered so the spot and every room type sit inside the download window */
   candidates: string[];
-  /** the spot (room types get no reserved seat since 2026-11-02, see the header) */
+  /** MIN_SPOT_PHOTOS seats for the spot (room types get no reserved seat since 2026-11-02, see the header) */
   reserve: ReserveGroup[];
   /** URLs left out as stock / AI / floor plan */
   dropped: string[];
 }
 
+/** Aaron 2026-11-02: at least this many spot photos in the gallery when the site has good ones, however many rooms. */
+export const MIN_SPOT_PHOTOS = 3;
+export const SPOT_LABEL = 'the kite spot or people kiting there';
+
+/** [a0, b0, c0, a1, b1, ...] */
+function interleave(lists: string[][]): string[] {
+  const out: string[] = [];
+  for (let k = 0; k < Math.max(0, ...lists.map(l => l.length)); k++) for (const l of lists) if (k < l.length) out.push(l[k]);
+  return out;
+}
+
 /**
- * Round-robin over the sources: round k takes the k-th photo of every room type (in rooms[] order), the k-th spot photo
- * and the k-th general candidate. Without room or spot photos the order is the adapter's own (only the filter applies).
+ * The spot first, then one photo per room type, then the rest: spot 1, general 1, spot 2..MIN_SPOT_PHOTOS, the first
+ * photo of every room type (rooms[] order), then general and spot alternating. Without room or spot photos the order
+ * is the adapter's own (only the filter applies).
  */
 export function planGallery(c: OfferContent): GalleryPlan {
   const dropped: string[] = [];
@@ -72,22 +86,30 @@ export function planGallery(c: OfferContent): GalleryPlan {
     return false;
   });
   const general = keep(c.imageUrls);
-  const rooms = c.rooms.map(r => ({ name: r.name, urls: keep(r.imageUrls) }));
-  const spot = keep(c.spotImageUrls);
-  const sources = [...rooms.map(r => r.urls), spot, general].filter(l => l.length > 0);
+  const rooms = c.rooms.map(r => ({ urls: keep(r.imageUrls), showsSpot: !!r.showsSpot }));
+  // own spot photos, interleaved with the photos of rooms that show the spot themselves
+  const spot = interleave([keep(c.spotImageUrls), ...rooms.filter(r => r.showsSpot).map(r => r.urls)]);
 
   const seen = new Set<string>();
   const candidates: string[] = [];
-  const add = (u: string) => {
+  const add = (u: string | undefined) => {
+    if (!u) return;
     const id = imageIdentity(u);
     if (seen.has(id)) return;
     seen.add(id);
     candidates.push(u);
   };
-  const longest = Math.max(0, ...sources.map(l => l.length));
-  for (let k = 0; k < longest; k++) for (const list of sources) if (k < list.length) add(list[k]);
+  add(spot[0]);
+  add(general[0]);
+  for (let i = 1; i < MIN_SPOT_PHOTOS; i++) add(spot[i]);
+  for (const r of rooms) add(r.urls[0]);
+  for (let g = 1, s = MIN_SPOT_PHOTOS; g < general.length || s < spot.length; g++, s++) {
+    add(general[g]);
+    add(spot[s]);
+  }
 
-  const reserve: ReserveGroup[] = spot.length > 0 ? [{ label: 'the kite spot or people kiting there', urls: spot }] : [];
+  const seats = Math.min(MIN_SPOT_PHOTOS, new Set(spot.map(imageIdentity)).size);
+  const reserve: ReserveGroup[] = Array.from({ length: seats }, () => ({ label: SPOT_LABEL, urls: spot }));
   return { candidates, reserve, dropped };
 }
 
