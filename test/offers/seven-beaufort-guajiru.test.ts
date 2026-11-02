@@ -7,6 +7,7 @@ import {
   sevenBeaufortGuajiru, buildSbSlots, parseSbCoords, parseSbCourses, parseSbRooms, sbBands,
 } from '../../src/offers/adapters/seven-beaufort-guajiru.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/seven-beaufort-guajiru');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -90,4 +91,27 @@ test('7 beaufort: content', async () => {
   assert.equal(c.imageUrls.length, 30);
   assert.equal(new Set(c.imageUrls.filter(u => /\/rooms\//.test(u)).map(u => u.split('/')[5])).size, 7); // every room category
   assert.ok(c.imageUrls.every(u => /^https:\/\/7beaufort\.com\/images\/(homepage|rooms\/\w+|kiteschool)\/[\w-]+\.jpg$/.test(u)), c.imageUrls.join(' '));
+});
+
+test('7 beaufort: each room category gets its own slider photos, the spot gallery and kite school photos as spot', async () => {
+  const c = await sevenBeaufortGuajiru.fetchContent(ctx);
+  const tail = (u: string) => u.split('/').slice(-2).join('/');
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0, tail(r.imageUrls![0])]), [
+    ['Deluxe', 12, 'deluxe/deluxe-01.jpg'], ['Deluxe Family', 13, 'family/family-01.jpg'], ['Superior', 23, 'superior/superior-01.jpg'],
+    ['Classic Plus', 7, 'classicplus/classicplus-01.jpg'], ['Classic', 12, 'classic/classic-01.jpg'],
+    ['Gardenhouse', 12, 'gardenhouse/gardenhouse-01.jpg'], ['Dorm', 6, 'dormbett/dormbett-01.jpg'],
+  ]);
+  // every photo of a room sits in that room's own folder, the same URLs as in the general list
+  const folder: Record<string, string> = { Deluxe: 'deluxe', 'Deluxe Family': 'family', Superior: 'superior', 'Classic Plus': 'classicplus', Classic: 'classic', Gardenhouse: 'gardenhouse', Dorm: 'dormbett' };
+  for (const r of c.rooms) assert.ok(r.imageUrls!.every(u => u.startsWith(`https://7beaufort.com/images/rooms/${folder[r.name]}/`)), r.name);
+  assert.ok(c.rooms.every(r => c.imageUrls.includes(r.imageUrls![0])));
+
+  assert.deepEqual(c.spotImageUrls?.map(tail), [
+    'homepage/gallery-02.jpg', 'homepage/gallery-03.jpg', 'homepage/gallery-04.jpg', 'homepage/gallery-05.jpg', 'homepage/gallery-01.jpg',
+    'kiteschool/highlight-01.jpg', 'kiteschool/highlight-02.jpg', 'kiteschool/highlight-03.jpg',
+  ]);
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

@@ -15,6 +15,8 @@
 // No booking engine: enquiry form -> price on request (confidence 'low').
 // robots.txt (2026-10-12): Yoast default, nothing disallowed.
 // Requests per run: content 5, slots 1.
+// Photos: each room gets the card image of its own card on /the-resort/accommodations/ (one photo per room; the
+//   Hideaway Room card shows the Shallows photo "shallows-bed", so it gets none); spot photos from /experience/kitesurfing/.
 // Known limits: rooms have names only on the overview (descriptions sit on per-room pages, not fetched); the phone
 //   numbers on the site (310 584 9900 worldwide, 888 669 SURF US) are the reservations line of the agent.
 // ---------------------------------------------------------------------------
@@ -46,6 +48,47 @@ export function parseNiRooms(html: string): string[] {
   for (const m of html.matchAll(/href="https:\/\/www\.namotuislandfiji\.com\/the-resort\/accommodation\/[^"]+"[^>]*>[\s\S]*?<h3>([\s\S]*?)<\/h3>/gi)) {
     const name = clean(m[1]);
     if (name && !out.includes(name)) out.push(name);
+  }
+  return out;
+}
+
+/** Gallery URL as the curation sees it: own uploads only, no logos / icons / maps / PNGs, WordPress size suffix dropped. */
+function niImage(u: string): string | null {
+  if (!/namotuislandfiji\.com\/wp-content\/uploads\//.test(u) || /logo|icon|favicon|cropped-|map|\.png$|\.svg$/i.test(u)) return null;
+  return u.replace(/-\d+x\d+(?=\.[a-z]+$)/i, '');
+}
+
+/** All gallery URLs of a page (imageCandidates order), normalised by niImage, deduped. */
+function niImages(html: string, base: string, max = 80): string[] {
+  const out: string[] = [];
+  for (const u of imageCandidates(html, base, null, max)) {
+    const k = niImage(u);
+    if (k && !out.includes(k)) out.push(k);
+  }
+  return out;
+}
+
+/**
+ * Card image per room from the accommodation overview (each card is <a href=".../accommodation/<slug>/"> with the
+ * <h3> name and the featured image). A photo on several cards goes only to the room whose name it carries
+ * (Hideaway Room and Shallows 7 & 8 both show "shallows-bed": Shallows keeps it), otherwise to none.
+ */
+export function parseNiRoomPhotos(html: string): Map<string, string[]> {
+  const cards: Array<{ name: string; urls: string[] }> = [];
+  for (const m of html.matchAll(/<a\s[^>]*href="https:\/\/www\.namotuislandfiji\.com\/the-resort\/accommodation\/[^"]+"[^>]*>([\s\S]*?)<\/a>/gi)) {
+    const name = clean(m[1].match(/<h3>([\s\S]*?)<\/h3>/i)?.[1] ?? '');
+    if (name) cards.push({ name, urls: niImages(m[1], NI_ROOMS_URL, 5) });
+  }
+  const count = new Map<string, number>();
+  for (const c of cards) for (const u of c.urls) count.set(u, (count.get(u) ?? 0) + 1);
+  const named = (name: string, u: string) => {
+    const file = (u.split('/').pop() ?? '').toLowerCase();
+    return name.toLowerCase().split(/[^a-z]+/).some(w => w.length >= 4 && !/^(room|suite|bures?)$/.test(w) && file.includes(w));
+  };
+  const out = new Map<string, string[]>();
+  for (const c of cards) {
+    const own = c.urls.filter(u => count.get(u) === 1 || named(c.name, u));
+    if (own.length && !out.has(c.name)) out.set(c.name, own);
   }
   return out;
 }
@@ -88,18 +131,19 @@ export function parseNamotuContent(p: NiPages): OfferContent {
   })();
   const deposit = weeksText.match(/Bookings are secured with a (USD\$[\d,]+ per person deposit)/)?.[1] ?? null;
 
+  const roomPhotos = parseNiRoomPhotos(p.rooms);
   const contentRooms: ContentRoom[] = roomNames.map(n => ({
     name: n,
     description: null,
     features: roomFacts ? [`All rooms: ${roomFacts}`] : [],
+    ...(roomPhotos.get(n)?.length ? { imageUrls: roomPhotos.get(n) } : {}),
   }));
+  const spotImageUrls = niImages(p.kite, NI_KITE_URL);
 
   const imgs: string[] = [];
   const seen = new Set<string>();
   for (const [html, base] of [[p.rooms, NI_ROOMS_URL], [p.kite, NI_KITE_URL], [p.weeks, NI_WEEKS_URL], [p.home, NI_HOME_URL]] as const) {
-    for (const u of imageCandidates(html, base, null, 80)) {
-      if (!/namotuislandfiji\.com\/wp-content\/uploads\//.test(u) || /logo|icon|favicon|cropped-|map|\.png$|\.svg$/i.test(u)) continue;
-      const k = u.replace(/-\d+x\d+(?=\.[a-z]+$)/i, '');
+    for (const k of niImages(html, base)) {
       if (seen.has(k)) continue;
       seen.add(k); imgs.push(k);
     }
@@ -139,6 +183,7 @@ export function parseNamotuContent(p: NiPages): OfferContent {
     languages: ['en'],
     rooms: contentRooms,
     imageUrls: imgs.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: NI_HOME_URL,
     bookingUrl: NI_RESERVATIONS_URL,

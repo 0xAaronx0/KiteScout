@@ -17,6 +17,9 @@
 //   robots-disallowed.
 // robots.txt (2026-10-12): disallows /admin, /api, /account, /booking/confirmed - the pages and /images/ are allowed.
 // Requests per run: content 4, slots 1 (the /stay page, memoised).
+// Photos: each unit gets its /stay card photo (/images/rooms/<slug>-01.jpg), then the /gallery photos whose file name
+//   names its type and bed count ("2-bed-glamping-tent" = the lodge for two, see dunGalleryUnit); spot photos are the
+//   kite / windsurf shots of /activities, /gallery and the home page.
 // Known limits: from-prices only, no season dates or live availability.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
@@ -118,6 +121,37 @@ export async function fetchDunSlots(_ctx: FetchContext): Promise<Slot[]> {
   return buildDunSlots(units);
 }
 
+/**
+ * Unit a /gallery photo shows, from its file name "<n>-bed-glamping-tent(s)" / "<n>-bed-bungalow" / "the-villa-<n>-bed":
+ * the type word picks the family (glamping tent = the Yala Comet safari lodges: the gallery calls the sun-deck photo
+ * "glamping-tents-meditation-platform", /activities calls the same file "sun deck among the lodges"; bungalow; villa)
+ * and n beds = the unit's "Sleeps n". Only a unique match counts; exteriors of several units ("2-bed-holiday-bungalows")
+ * name no single unit and stay out.
+ */
+export function dunGalleryUnit(url: string, units: Pick<DunUnit, 'name' | 'sleeps'>[]): string | null {
+  const f = url.split('/').pop() ?? '';
+  const typed = f.match(/-(\d)-bed-(glamping-tents?|bungalow)-/);
+  const villa = f.match(/-the-villa-(\d)-bed-/);
+  if (!typed && !villa) return null;
+  const beds = Number((typed ?? villa)![1]);
+  const family = villa ? /^La Villa$/ : /^glamping/.test(typed![2]) ? /^Yala Comet Lodge\b/ : /^Bungalow\b/;
+  const hits = units.filter(u => family.test(u.name) && u.sleeps === beds);
+  return hits.length === 1 ? hits[0].name : null;
+}
+
+/** Spot photos: the provider's kite / windsurf shots (file name or alt), pages in the order given. */
+export function dunSpotPhotos(pages: string[]): string[] {
+  const out: string[] = [];
+  for (const html of pages) {
+    for (const img of parse(html).querySelectorAll('img')) {
+      const u = dunOriginal(img.getAttribute('src') ?? '');
+      if (!u || out.includes(u)) continue;
+      if (/kite|windsurf/i.test(u.split('/').pop() ?? '') || /\bkites?(?:urf)?/i.test(img.getAttribute('alt') ?? '')) out.push(u);
+    }
+  }
+  return out;
+}
+
 /** Resort JSON-LD geo of the home page. */
 export function parseDunGeo(html: string): { lat: number; lng: number } | null {
   const r = jsonLd(html).find(o => o['@type'] === 'Resort' && o.geo);
@@ -154,8 +188,17 @@ export function parseDunasContent(p: DunPages): OfferContent {
   const min = priced.length ? Math.min(...priced.map(u => u.fromPrice!)) : null;
   const max = priced.length ? Math.max(...priced.map(u => u.fromPrice!)) : null;
 
+  const gallery = parse(p.gallery).querySelectorAll('img').map(i => dunOriginal(i.getAttribute('src') ?? ''))
+    .filter((u): u is string => !!u && !/\/brand\/|logo/i.test(u));
+  const unitPhotos = (u: DunUnit): string[] => [...new Set([
+    ...(u.image ? [u.image] : []),
+    ...gallery.filter(g => dunGalleryUnit(g, units) === u.name),
+  ])];
+  const spotImageUrls = dunSpotPhotos([p.activities, p.gallery, p.home]);
+
   const rooms: ContentRoom[] = units.map(u => ({
     name: u.name,
+    ...(unitPhotos(u).length ? { imageUrls: unitPhotos(u) } : {}),
     description: u.tagline,
     features: [
       u.sleeps ? `Sleeps ${u.sleeps}` : null,
@@ -166,8 +209,6 @@ export function parseDunasContent(p: DunPages): OfferContent {
     ].filter((x): x is string => !!x),
   }));
 
-  const gallery = parse(p.gallery).querySelectorAll('img').map(i => dunOriginal(i.getAttribute('src') ?? ''))
-    .filter((u): u is string => !!u && !/\/brand\/|logo/i.test(u));
   const imageUrls = [...new Set([...units.map(u => u.image).filter((u): u is string => !!u), ...gallery])].slice(0, 30);
 
   const summary = [
@@ -204,6 +245,7 @@ export function parseDunasContent(p: DunPages): OfferContent {
     languages: [],
     rooms,
     imageUrls,
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: DUN_STAY_URL,
     bookingUrl: BOOKING_URL,

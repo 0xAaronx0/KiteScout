@@ -20,6 +20,8 @@
 // Parsed: slot = room x occupancy x season band with real date limits for the next occurrence of each band
 //   (bands whose end is still ahead of today; the year is inferred because the table prints none),
 //   EUR per room per night (the dorm per bed), availability 'unknown' (no inventory on the page).
+// Photos: each room category gets its own slider (data-images, folder images/rooms/<type>/); spot photos are the home
+//   gallery under "Best kite spot in Brazil." and the kiteschool.html highlights.
 // Known limits: the year is inferred; the "Main season" has two ranges (two bands); cells "??? €" give no slot.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
@@ -133,6 +135,28 @@ export function parseSbCoords(contactHtml: string): { lat: number; lng: number }
   return m ? { lat: Math.round(+m[2] * 1e5) / 1e5, lng: Math.round(+m[1] * 1e5) / 1e5 } : null;
 }
 
+/** Gallery URL as the curation sees it: logos, flags, icons and badges dropped, "./images/..." made absolute. */
+function sbImage(u: string): string | null {
+  if (/logo|flags|icon|vdws\.png|lizenz|core\.png|\.svg/i.test(u)) return null;
+  return new URL(u.replace(/^https?:\/\/[^/]+/, '').replace(/^\/\.\//, '/'), `${SITE}/`).toString();
+}
+
+/**
+ * Spot photos: the home gallery between the "Best kite spot in Brazil." heading and the next <h1> (the kite school
+ * teaser), then the photos of kiteschool.html.
+ */
+export function sbSpotPhotos(home: string, school: string): string[] {
+  const at = home.search(/<h1[^>]*>\s*Best kite spot/i);
+  const end = at >= 0 ? home.slice(at + 4).search(/<h1\b/i) : -1;
+  const spot = at >= 0 ? home.slice(at, end >= 0 ? at + 4 + end : undefined) : '';
+  const out: string[] = [];
+  for (const u of [...imageCandidates(spot, HOME_URL, null, 20), ...imageCandidates(school, SCHOOL_URL, null, 20)]) {
+    const k = sbImage(u);
+    if (k && !out.includes(k)) out.push(k);
+  }
+  return out;
+}
+
 function pageText(html: string): string {
   const root = parse(html);
   for (const el of root.querySelectorAll('script, style, noscript, header, footer, nav, form')) el.remove();
@@ -150,9 +174,11 @@ export function parseSevenBeaufortContent(p: SbPages): OfferContent {
   const courses = parseSbCourses(p.school);
   const eur = (n: number) => `EUR ${n}`;
 
+  const roomPhotos = (r: SbRoom): string[] => [...new Set(r.images.map(sbImage).filter((u): u is string => !!u))];
   const contentRooms: ContentRoom[] = rooms.map(r => ({
     name: r.name,
     description: r.description || null,
+    ...(roomPhotos(r).length ? { imageUrls: roomPhotos(r) } : {}),
     features: r.seasons.flatMap((s, col) => r.rates.map(rt => {
       const v = rt.prices[col];
       return `${s.name} (${s.ranges.map(x => x.label).join(' | ')}), ${rt.label}: ${v !== null && v !== undefined ? `${eur(v)} per night` : 'price not published'}`;
@@ -173,16 +199,17 @@ export function parseSevenBeaufortContent(p: SbPages): OfferContent {
   const seen = new Set<string>();
   const imageUrls: string[] = [];
   const push = (u: string) => {
-    if (/logo|flags|icon|vdws\.png|lizenz|core\.png|\.svg/i.test(u)) return;
-    const k = u.replace(/^https?:\/\/[^/]+/, '').replace(/^\/\.\//, '/');
-    if (seen.has(k)) return;
-    seen.add(k); imageUrls.push(new URL(k, `${SITE}/`).toString());
+    const k = sbImage(u);
+    if (!k || seen.has(k)) return;
+    seen.add(k); imageUrls.push(k);
   };
   for (const u of imageCandidates(p.home, HOME_URL, null, 40)) push(u);
   // two photos per room category first, then the rest of the room galleries
   for (const r of rooms) r.images.slice(0, 2).forEach(push);
   for (let i = 2; i < 30; i++) for (const r of rooms) if (r.images[i]) push(r.images[i]);
   for (const u of imageCandidates(p.school, SCHOOL_URL, null, 20)) push(u);
+
+  const spotImageUrls = sbSpotPhotos(p.home, p.school);
 
   const email = p.contact.match(/[A-Za-z0-9._%+-]+@7beaufort\.com/)?.[0] ?? null;
   const coords = parseSbCoords(p.contact);
@@ -224,6 +251,7 @@ export function parseSevenBeaufortContent(p: SbPages): OfferContent {
     languages: ['de', 'en', 'pt', 'es'], // site language switch (2026-10-12)
     rooms: contentRooms,
     imageUrls: imageUrls.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: HOME_URL,
     bookingUrl: BOOKING_URL,

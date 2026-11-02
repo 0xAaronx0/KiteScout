@@ -6,9 +6,10 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   ummaiiSurfhostelUmmanz, buildUmSlots, fetchUmContent, fetchUmSample, fetchUmSlots, parseUmKiteCourses, parseUmPriceList,
-  parseUmResults, umCoords, umSampleStays, umUnitName, umWidgetBody,
+  parseUmResults, umCoords, umLightbox, umSampleStays, umUnitName, umWidgetBody,
 } from '../../src/offers/adapters/ummaii-surfhostel-ummanz.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/ummaii-surfhostel-ummanz');
@@ -109,4 +110,36 @@ test('ummaii: per-size main-house and bungalow units price their shared content 
     ['Tiny House 2', 'Tiny House 2'],
     ['Tiny House 1', 'Tiny House 1'],
   ]);
+});
+
+test('ummaii: room photos from the hostel lightbox titles, the tiny-house galleries and the tree-house teaser; course teasers as spot', async () => {
+  const c = await fetchUmContent(ctx, TODAY);
+  const file = (u: string) => u.split('/').pop()!;
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0, file(r.imageUrls![0])]), [
+    ['Main house room (1-4 beds)', 3, '6_Surfhostel-Haupthaus-Web_.jpg'], // "Zimmerbeispiel Haupthaus"
+    ['Bungalow room (6 or 8 beds)', 2, 'hostel_bungalow.jpg'], // "Bungalowzimmer 8 Bett"
+    ['Tree house', 1, 'teaser_baumhaus.jpg'],
+    ['Tiny House 1', 7, 'thback_800x533.jpg'],
+    ['Tiny House 2', 13, 'csm_th-aussen1_628ae7302d.jpg'],
+  ]);
+  const room = (n: string) => c.rooms.find(r => r.name === n)!.imageUrls!;
+  assert.ok(room('Main house room (1-4 beds)').some(u => /zimmer_hhaus_bad/.test(u)));
+  assert.ok(room('Bungalow room (6 or 8 beds)').some(u => /csm_bungalows_/.test(u)));
+  // the grounds aerial and the shared wash house belong to no single room
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.ok(!all.some(u => /hostel_air02|Waschraum/.test(u)));
+  assert.equal(new Set(all).size, all.length);
+  // each tiny house only its own gallery (the 360 banners name them: "360-tinyhouse" / "360-tinyhouse2")
+  assert.ok(room('Tiny House 1').some(u => /360-tinyhouse_/.test(u)) && !room('Tiny House 1').some(u => /th-aussen|th-gaestezimmer|360-tinyhouse2/.test(u)));
+  assert.ok(room('Tiny House 2').some(u => /th-gaestezimmer/.test(u)) && !room('Tiny House 2').some(u => /thback|thbed|360-tinyhouse_/.test(u)));
+  assert.ok(all.every(u => /^https:\/\/www\.ummaii\.de\/fileadmin\/(redaktion|_processed_)\//.test(u)));
+  // same URL variants as the general list (lightbox original first)
+  for (const r of c.rooms) assert.ok(c.imageUrls.includes(r.imageUrls![0]), r.name);
+  assert.equal(umLightbox(read('www.ummaii.de_unterkunft-tikibar_hostel_.'), 'https://www.ummaii.de/unterkunft-tikibar/hostel/').find(x => /hostel_bungalow/.test(x.url))?.title, 'Bungalowzimmer 8 Bett');
+
+  assert.deepEqual(c.spotImageUrls?.map(file), ['KitekurseTeaser.jpg', 'csm_wingsurfen2_90bd1a25b3.jpg', 'windsurfkurse.jpg']);
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

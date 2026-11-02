@@ -38,6 +38,10 @@
 //   differ (the 2027-06 and 2027-09 samples were refused while July and August were open). The printed price list has no
 //   year (it looks older than the engine rates: tiny houses 140 / 160 printed, 150 / 170 online for 2027) and goes into the
 //   room features only.
+// Photos: main house and bungalow rooms from the hostel page lightbox titles ("Zimmerbeispiel Haupthaus", "Bungalowzimmer
+//   8 Bett"; the shared wash house is left out), the tiny houses from the gallery under their own <h1> on the tiny-houses
+//   page, the tree house only from the home teaser teaser_baumhaus.jpg (its own page is not fetched); spot photos are the
+//   kite, wing and windsurf course teasers of the home page.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, collapse, iso, parse, parseAmount, runsOf, todayIso } from '../parse.js';
@@ -288,18 +292,72 @@ const eur = (s: string): string => {
 /** Same photo in its TYPO3 variants (original, lightbox csm_*_<hash>, thumbnail csm_*_<other hash>). */
 const photoKey = (u: string): string => (u.split('/').pop() ?? u).toLowerCase().replace(/^csm_/, '').replace(/_[0-9a-f]{10}(?=\.[a-z]+$)/, '');
 
+/** Absolute gallery URL, or null for logos, the map, small teasers, event banners and files outside fileadmin. */
+function umPhoto(u: string, base: string): string | null {
+  const abs = new URL(u, base).toString();
+  return !/\/fileadmin\/(?:redaktion|_processed_)\//.test(abs) || /logo|tricolore|Karte_|teaser-small|events\/|\.svg$/i.test(abs) ? null : abs;
+}
+
 /** Gallery: lightbox targets (<a href> to an image) first, then the content <img> of the page; logos, map, small teasers dropped. */
 export function umImages(html: string, base: string, seen = new Set<string>()): string[] {
   const out: string[] = [];
   const add = (u: string) => {
-    const abs = new URL(u, base).toString();
-    if (!/\/fileadmin\/(?:redaktion|_processed_)\//.test(abs) || /logo|tricolore|Karte_|teaser-small|events\/|\.svg$/i.test(abs) || seen.has(photoKey(abs))) return;
+    const abs = umPhoto(u, base);
+    if (!abs || seen.has(photoKey(abs))) return;
     seen.add(photoKey(abs));
     out.push(abs);
   };
   for (const m of html.matchAll(/<a\b[^>]*href="([^"]+\.(?:jpe?g|png|webp))"/gi)) add(m[1]);
   for (const m of html.matchAll(/<img\b[^>]*src="([^"]+\.(?:jpe?g|png|webp))"/gi)) add(m[1]);
   return out;
+}
+
+/** Lightbox targets with their title attribute (hostel page: "Bungalowzimmer 8 Bett", "Zimmerbeispiel Haupthaus", ...). */
+export function umLightbox(html: string, base: string): Array<{ url: string; title: string }> {
+  const out: Array<{ url: string; title: string }> = [];
+  for (const m of html.matchAll(/<a\b[^>]*href="([^"]+\.(?:jpe?g|png|webp))"[^>]*>/gi)) {
+    const url = umPhoto(m[1], base);
+    if (url && !out.some(x => photoKey(x.url) === photoKey(url))) out.push({ url, title: clean(m[0].match(/\btitle="([^"]*)"/)?.[1] ?? '') });
+  }
+  return out;
+}
+
+/**
+ * Own photos per content room, best first:
+ *   main house / bungalow: hostel lightbox photos whose title names "Haupthaus" / "Bungalow" and no other building (the
+ *     aerial "Gelände mit Scheune und Haupthaus" shows the grounds), the room photo ("Zimmer...") first; the wash house
+ *     ("Waschraum Sanitärgebäude") serves bungalows and tree house alike and goes to neither;
+ *   Tiny House n: the gallery under the <h1> "Ummaii Tiny House n"; the gallery under the plural "Ummaii Tiny Houses" goes
+ *     to the one house no other heading names (its 360 banner is "360-tinyhouse", the second one "360-tinyhouse2");
+ *   tree house: the home teaser whose file name names it (teaser_baumhaus.jpg).
+ */
+export function umRoomPhotos(p: Pick<UmPages, 'home' | 'hostel' | 'tiny'>): Map<string, string[]> {
+  const out = new Map<string, string[]>();
+  const set = (room: string, urls: string[]) => { if (urls.length) out.set(room, [...new Set(urls)]); };
+  const light = umLightbox(p.hostel, UM_HOSTEL_URL);
+  const BUILDINGS = [/Haupthaus/i, /Bungalow/i, /Scheune/i, /Baumhaus/i, /Tiny/i];
+  const byTitle = (re: RegExp) => {
+    const hits = light.filter(x => re.test(x.title) && BUILDINGS.filter(b => b.test(x.title)).length === 1);
+    return [...hits.filter(x => /zimmer/i.test(x.title)), ...hits.filter(x => !/zimmer/i.test(x.title))].map(x => x.url);
+  };
+  set(UM_ROOM_MAIN_HOUSE, byTitle(/Haupthaus/i));
+  set(UM_ROOM_BUNGALOW, byTitle(/Bungalow/i));
+  set('Tree house', umImages(p.home, UM_HOME_URL).filter(u => /baumhaus/i.test(u.split('/').pop() ?? '')));
+
+  const parts = p.tiny.split(/(?=<h1\b)/i).slice(1).map(h => ({ head: clean(h.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1] ?? ''), html: h }));
+  const named = new Map<number, string>();
+  for (const s of parts) { const n = s.head.match(/Tiny\s?House (\d)\b/i)?.[1]; if (n) named.set(Number(n), s.html); }
+  const plural = parts.filter(s => /Tiny\s?Houses$/i.test(s.head));
+  const rest = [1, 2].filter(n => !named.has(n));
+  if (plural.length === 1 && rest.length === 1) named.set(rest[0], plural[0].html);
+  for (const [n, html] of named) set(`Tiny House ${n}`, umImages(html.replace(/<h2\b[\s\S]*$/i, ''), UM_TINY_URL));
+  return out;
+}
+
+/** Spot photos: the kite, wing and windsurf course teasers of the home page. */
+export function umSpotPhotos(home: string): string[] {
+  const imgs = umImages(home, UM_HOME_URL);
+  return [/kite/i, /wing/i, /windsurf/i].flatMap(re => imgs.filter(u => re.test(u.split('/').pop() ?? '')));
 }
 
 export interface UmPages { home: string; hostel: string; tiny: string; prices: string; kitePrices: string; sample: UmSample | null }
@@ -364,6 +422,10 @@ export function parseUmmaiiContent(p: UmPages): OfferContent {
     })),
   ];
 
+  const roomPhotos = umRoomPhotos(p);
+  for (const r of rooms) if (roomPhotos.get(r.name)) r.imageUrls = roomPhotos.get(r.name);
+  const spotImageUrls = umSpotPhotos(p.home);
+
   const rates = (sample?.types ?? []).map(t => t.rates[ADULTS]).filter((x): x is number => !!x);
   const seen = new Set<string>();
   const imgs = [...umImages(p.hostel, UM_HOSTEL_URL, seen), ...umImages(p.home, UM_HOME_URL, seen), ...umImages(p.tiny, UM_TINY_URL, seen)];
@@ -405,6 +467,7 @@ export function parseUmmaiiContent(p: UmPages): OfferContent {
     languages: ['de'],
     rooms,
     imageUrls: imgs.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: UM_HOSTEL_URL,
     bookingUrl: BOOKING_URL,

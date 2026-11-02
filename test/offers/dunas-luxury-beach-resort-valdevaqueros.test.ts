@@ -6,9 +6,10 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  dunasLuxuryBeachResortValdevaqueros, buildDunSlots, dunOriginal, parseDunGeo, parseDunUnits,
+  dunasLuxuryBeachResortValdevaqueros, buildDunSlots, dunGalleryUnit, dunOriginal, parseDunGeo, parseDunUnits,
 } from '../../src/offers/adapters/dunas-luxury-beach-resort-valdevaqueros.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/dunas-luxury-beach-resort-valdevaqueros');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -67,4 +68,42 @@ test('dunas: content', async () => {
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => u.startsWith('https://dunastarifa.com/images/') && !/brand|logo/.test(u)));
   assert.equal(c.bookingUrl, 'https://direct-book.com/properties/DunasLuxuryBeachResortTarifaDIRECT');
+});
+
+test('dunas: each unit gets its /stay card photo first, then the gallery photos naming its type and beds; kite shots as spot', async () => {
+  const c = await dunasLuxuryBeachResortValdevaqueros.fetchContent(ctx);
+  const file = (u: string) => u.split('/').pop()!;
+  // rooms in /stay order: lodge for two, lodge for four (step-free), bungalow for two, bungalow for four, lodge house, villa, farmhouse
+  assert.deepEqual(c.rooms.map(r => [r.imageUrls?.length ?? 0, file(r.imageUrls![0])]), [
+    [4, 'yala-comet-lodge-01.jpg'],
+    [3, 'yala-comet-lodge-two-bedrooms-01.jpg'],
+    [2, 'bungalow-one-bedroom-01.jpg'],
+    [2, 'bungalow-two-bedrooms-01.jpg'],
+    [1, 'the-lodge-house-01.jpg'],
+    [2, 'la-villa-01.jpg'],
+    [1, 'three-bedroom-house-01.jpg'],
+  ]);
+  const second = (i: number) => file(c.rooms[i].imageUrls![1]);
+  assert.match(second(0), /-2-bed-glamping-tent-double-bed/);
+  assert.match(second(1), /-4-bed-glamping-tent-terrace/);
+  assert.ok(c.rooms[1].imageUrls!.some(u => /wheelchair-friendly/.test(u)));
+  assert.match(second(2), /-2-bed-bungalow-bedroom/);
+  assert.match(second(3), /-4-bed-bungalow-living-room/);
+  assert.match(second(5), /-the-villa-4-bed-holiday-home/);
+  // an exterior of several bungalows names no single unit
+  assert.equal(dunGalleryUnit('https://dunastarifa.com/images/site/dunas-tarifa-beach-resort-glamping-2-bed-holiday-bungalows-paths-with-flowers.webp', c.rooms.map((r, i) => ({ name: r.name, sleeps: [2, 4, 2, 4, 3, 4, 6][i] }))), null);
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.equal(new Set(all).size, all.length);
+  assert.ok(all.every(u => u.startsWith('https://dunastarifa.com/images/') && !/brand|logo/.test(u)));
+  assert.ok(c.rooms.every(r => c.imageUrls.includes(r.imageUrls![0])), 'card photos are the same URLs as in the general list');
+
+  assert.deepEqual(c.spotImageUrls?.map(file), [
+    'dunas-tarifa-beach-resort-valdevaqueros-beach-kite-surfing.webp',
+    'dunas-tarifa-beach-resort-valdevaqueros-beach-windsurfing.webp',
+    'playa-de-valdevaqueros.webp',
+  ]);
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });
