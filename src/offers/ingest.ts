@@ -484,6 +484,54 @@ export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string, l
   });
 }
 
+/** The price fields of a room row; everything else (name, texts, image_sort) is content and stays as stored. */
+const ROOM_PRICE_KEYS = ['price_from', 'price_currency', 'price_from_is_minimum', 'price_unit', 'price_source', 'price_basis', 'priced_months', 'availability'] as const;
+
+/**
+ * --slots runs (the daily cron) do not read content, so they used to leave the stored room prices as the last full run
+ * wrote them (Aaron 2026-11-02: room prices daily too). The stored rows are re-priced from the fresh slots by the same
+ * roomsWithPrices; null when there is nothing to re-price (no stored rows, or a row without a name). A row no slot
+ * belongs to at all (the provider renamed or dropped the room since the last full run) keeps its stored price: only a
+ * full run can refresh the names, see staleRoomNames.
+ */
+export function repriceStoredRooms(kind: OfferKind, stored: unknown, slots: Slot[], today: string, lastPublished: Slot[] = []): Array<Record<string, unknown>> | null {
+  if (!Array.isArray(stored) || stored.length === 0) return null;
+  const rows = stored as Array<Record<string, unknown>>;
+  if (rows.some(r => !r || typeof r.name !== 'string')) return null;
+  const content = {
+    kind,
+    rooms: rows.map(r => ({ name: r.name as string, description: (r.description as string | null | undefined) ?? null, features: Array.isArray(r.features) ? r.features as string[] : [] })),
+  } as unknown as OfferContent;
+  const fresh = roomsWithPrices(content, slots, today, lastPublished);
+  const stale = new Set(staleRoomNames(rows, [...slots, ...lastPublished]));
+  return rows.map((r, i) => {
+    const out: Record<string, unknown> = { ...r };
+    if (!stale.has(r.name as string)) for (const k of ROOM_PRICE_KEYS) out[k] = fresh[i][k];
+    return out;
+  });
+}
+
+/** Stored priced rows that no slot belongs to (same matching as roomsWithPrices): renamed or dropped rooms. */
+export function staleRoomNames(rows: Array<Record<string, unknown>>, slots: Slot[]): string[] {
+  const names = rows.map(r => r.name as string);
+  const matched = new Set(slots.flatMap(s => s.rooms?.length ? s.rooms.map(r => slotRoom(names, { unit: null, room: r })) : [slotRoom(names, s)]));
+  return rows.filter(r => r.price_from != null && !matched.has(r.name as string)).map(r => r.name as string);
+}
+
+/** How a re-pricing changes the stored rooms: price set, removed or changed (amount, currency, unit or "from"). */
+export function roomPriceChanges(before: Array<Record<string, unknown>>, after: Array<Record<string, unknown>>): { gained: number; lost: number; changed: number } {
+  let gained = 0, lost = 0, changed = 0;
+  before.forEach((b, i) => {
+    const a = after[i] ?? {};
+    const was = b.price_from ?? null, now = a.price_from ?? null;
+    if (was === null && now !== null) gained++;
+    else if (was !== null && now === null) lost++;
+    else if (was !== null && (Number(was) !== Number(now) || b.price_currency !== a.price_currency || b.price_unit !== a.price_unit
+      || Boolean(b.price_from_is_minimum) !== Boolean(a.price_from_is_minimum))) changed++;
+  });
+  return { gained, lost, changed };
+}
+
 // --- slots: table mode --------------------------------------------------------------
 async function writeSlotTable(offerId: string, slots: Slot[], allowRetract: boolean): Promise<{ changed: number; retracted: number }> {
   const { data: existing, error } = await supabase
@@ -694,7 +742,15 @@ async function runAdapterInner(
         rep.notes.push(`kept ${before.length} curated images (--refresh-images to replace)`);
       }
     } else {
-      const { error: pErr } = await supabase.from('package_offers').update({ ...priceCols, ...liveCols }).eq('id', offerId!);
+      // same rule as the listing price: a guard or a partial delivery keeps the stored room prices
+      const repriced = keepSlots ? null : repriceStoredRooms(a.kind, existing?.rooms, slots, today, lastPublished);
+      if (repriced) {
+        const d = roomPriceChanges(existing!.rooms as Array<Record<string, unknown>>, repriced);
+        if (d.gained || d.lost || d.changed) rep.notes.push(`room prices: +${d.gained} -${d.lost} ~${d.changed}`);
+        const stale = staleRoomNames(existing!.rooms as Array<Record<string, unknown>>, [...slots, ...lastPublished]);
+        if (stale.length) rep.notes.push(`room prices kept for ${stale.length} room(s) no slot names any more (full run refreshes): ${stale.join(', ')}`);
+      }
+      const { error: pErr } = await supabase.from('package_offers').update({ ...priceCols, ...liveCols, ...(repriced ? { rooms: noNul(repriced) } : {}) }).eq('id', offerId!);
       if (pErr) throw new Error(`price update failed: ${pErr.message}`);
     }
     rep.offerId = offerId;
