@@ -87,6 +87,16 @@ const BRIEFS: Record<OfferKind, VisionBrief> = {
   },
 };
 
+/** Error text for the run log and offer_sources.history. undici's bare "fetch failed" hides why (DNS, reset, TLS,
+ *  timeout); the cause code makes a burst of them on one runner tell itself apart from a host that blocks us. */
+export function errorText(e: unknown): string {
+  if (!(e instanceof Error)) return String(e);
+  const c = e.cause as { code?: unknown; message?: unknown } | undefined;
+  if (!c || c instanceof BlockedByHost) return e.message;
+  const why = typeof c.code === 'string' ? c.code : typeof c.message === 'string' ? c.message : null;
+  return why && !e.message.includes(why) ? `${e.message} (${why})` : e.message;
+}
+
 function sha(v: unknown): string {
   return createHash('sha256').update(JSON.stringify(v)).digest('hex').slice(0, 16);
 }
@@ -654,7 +664,7 @@ async function runAdapterInner(
     } catch (e) {
       // slots-only runs fail hard; a full run still lists the offer (price on request) and keeps old slots
       if (!content) throw e;
-      rep.slotError = e instanceof Error ? e.message : String(e);
+      rep.slotError = errorText(e);
       ctx.incomplete(`slots unavailable: ${rep.slotError}`);
       rawSlots = [];
     }
@@ -790,7 +800,7 @@ async function runAdapterInner(
     }
   } catch (e) {
     rep.status = e instanceof BlockedByHost || (e instanceof Error && e.cause instanceof BlockedByHost) ? 'blocked' : 'error';
-    rep.error = e instanceof Error ? e.message : String(e);
+    rep.error = errorText(e);
   } finally {
     rep.ms = Date.now() - t0;
   }
