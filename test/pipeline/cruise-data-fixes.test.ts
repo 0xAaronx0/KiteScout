@@ -17,6 +17,15 @@ test('storedDepartures: drops rows without a start date, keeps the rest verbatim
   assert.equal(storedDepartures(null), null);
 });
 
+test('storedDepartures: a season or booking window is no departure (ZEN QUEST, Aaron 2026-11-02)', () => {
+  const window = { price: null, status: 'available', currency: null, start_date: '2027-05-01', end_date: '2028-12-31' };
+  assert.equal(storedDepartures([window]), null);
+  const antarctica = { price: null, status: 'available', currency: null, start_date: '2027-01-01', end_date: '2027-01-22' };
+  const month = { ...antarctica, end_date: '2027-01-31' };
+  assert.deepEqual(storedDepartures([window, antarctica, month]), [antarctica, month], '21 and 30 nights stay');
+  assert.equal(storedDepartures([{ ...antarctica, end_date: '2027-02-01' }]), null, '31 nights is a window');
+});
+
 test('continentForOffer: own country first, else the one continent all countries share', () => {
   assert.equal(continentForOffer('Saint Vincent and the Grenadines', []), 'North America');
   assert.equal(continentForOffer('Antarctica', ['Argentina', 'Antarctica']), 'Antarctica');

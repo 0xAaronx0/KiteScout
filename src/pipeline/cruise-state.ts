@@ -13,6 +13,7 @@
 // Free text (title, summary, vessel, season wording) is never written here.
 // ---------------------------------------------------------------------------
 import { createHash } from 'node:crypto';
+import { MAX_DEPARTURE_NIGHTS } from './trip-duration.js';
 
 export type DepartureStatus = 'available' | 'few_spots' | 'sold_out' | 'waitlist' | 'closed' | 'on_request';
 const STATUSES: readonly DepartureStatus[] = ['available', 'few_spots', 'sold_out', 'waitlist', 'closed', 'on_request'];
@@ -127,8 +128,14 @@ export function normCurrency(c: unknown): string | null {
   return /^[A-Z]{3}$/.test(t) ? t : null;
 }
 
+/** A span over MAX_DEPARTURE_NIGHTS is a season or booking window, never a departure. */
+function isWindow(start: string, end: unknown): boolean {
+  if (typeof end !== 'string' || !ISO.test(end)) return false;
+  return (Date.parse(`${end}T00:00:00Z`) - Date.parse(`${start}T00:00:00Z`)) / 86_400_000 > MAX_DEPARTURE_NIGHTS;
+}
+
 /**
- * Clean departures: valid ISO dates, start ≤ end, within [today-2y, today+3y],
+ * Clean departures: valid ISO dates, start ≤ end, no season/booking window, within [today-2y, today+3y],
  * known status, deduped by start|end, sorted.
  */
 export function cleanDepartures(raw: unknown, today: string): Departure[] {
@@ -143,6 +150,7 @@ export function cleanDepartures(raw: unknown, today: string): Departure[] {
     if (!start || start < lo || start > hi) continue;
     let end = typeof o.end_date === 'string' && ISO.test(o.end_date) ? o.end_date : null;
     if (end && end < start) end = null;
+    if (end && isWindow(start, end)) continue;
     const price = typeof o.price === 'number' && o.price > 0 ? Math.round(o.price) : null;
     const dep: Departure = { start_date: start, end_date: end, price, currency: price ? normCurrency(o.currency) : null, status: normStatus(o.status) };
     out.set(`${start}|${end ?? ''}`, dep);
@@ -164,14 +172,17 @@ export function charterWeek(amount: number, days: number | null | undefined): nu
 }
 
 /**
- * Departures worth storing: rows without a valid start date dropped (all-null rows), everything else verbatim:
+ * Departures worth storing: rows without a valid start date dropped (all-null rows) and season/booking windows
+ * dropped (Aaron 2026-11-02), everything else verbatim:
  * past ones stay (Aaron 2026-10-28: season history; the app hides started departures itself), and so do two
  * prices on one date (cabin types). null when none are left.
  */
 export function storedDepartures(raw: unknown): Record<string, unknown>[] | null {
   if (!Array.isArray(raw)) return null;
-  const deps = raw.filter((r): r is Record<string, unknown> =>
-    !!r && typeof r === 'object' && typeof (r as Record<string, unknown>).start_date === 'string' && ISO.test((r as Record<string, unknown>).start_date as string));
+  const deps = raw.filter((r): r is Record<string, unknown> => {
+    const o = r as Record<string, unknown>;
+    return !!r && typeof r === 'object' && typeof o.start_date === 'string' && ISO.test(o.start_date) && !isWindow(o.start_date, o.end_date);
+  });
   return deps.length ? deps : null;
 }
 /** Canonical key of the UPCOMING departures (past ones never count as a change). */

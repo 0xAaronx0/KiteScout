@@ -48,6 +48,9 @@ const WEBP_QUALITY = 75;
 const VISION_MAX_IMAGES = 10; // images sent to the vision QC call
 const VISION_HARD_MAX = 20;   // with reserve groups (one seat per room type / the spot) the batch may grow up to this
 const USE_VISION_QC = true;
+// Decode downloaded photos like a browser does: some hosts serve JPEGs that only fail libvips' strict full decode
+// (Sitelio, 2026-11-02: "VipsJpeg: Invalid SOS parameters") and were silently dropped although they display fine.
+const DECODE = { failOn: 'none' } as const;
 
 // Best-effort image rights/provenance. Most provider photos are web-optimized
 // with EXIF/XMP stripped → `provider_site` with no copyright. The useful signals
@@ -344,7 +347,7 @@ export async function extractImageRights(buf: Buffer, sourceUrl: string): Promis
   let license: string | null = null;
   let licenseUrl: string | null = null;
   try {
-    const meta = await sharp(buf).metadata();
+    const meta = await sharp(buf, DECODE).metadata();
     if (meta.xmp) {
       const x = meta.xmp.toString('utf8');
       const m = (re: RegExp): string | null => x.match(re)?.[1]?.trim() || null;
@@ -494,7 +497,7 @@ async function visionSelect(
   for (const { img, label } of batch) {
     let small: Buffer;
     try {
-      small = await sharp(img.buf).rotate().resize({ width: 512, withoutEnlargement: true }).webp({ quality: 60 }).toBuffer();
+      small = await sharp(img.buf, DECODE).rotate().resize({ width: 512, withoutEnlargement: true }).webp({ quality: 60 }).toBuffer();
     } catch {
       continue;
     }
@@ -525,6 +528,9 @@ Respond with ONLY a JSON array: [{"index": <number>, "caption": "<max 8 word des
       anthropic.messages.create({
         model: ANALYSIS_MODEL,
         max_tokens: 1024, // room for the occasional analysis preamble before the JSON
+        // DeepSeek reasons by default and its thinking counts against max_tokens: it used all 1024, no JSON came
+        // back and every gallery fell back to largest-by-area without captions (found 2026-11-02).
+        thinking: { type: 'disabled' },
         messages: [{ role: 'user', content: blocks }],
       }),
       5,    // ride out transient 529s — vision is the only content filter for a broad pool
@@ -578,7 +584,7 @@ export async function processAndStoreImage(
   let outW = 0;
   let outH = 0;
   try {
-    out = await sharp(buf)
+    out = await sharp(buf, DECODE)
       .rotate()
       .resize({ width: TARGET_WIDTH, withoutEnlargement: true })
       .webp({ quality: WEBP_QUALITY })
@@ -655,7 +661,7 @@ export async function curateAndStoreImages(opts: {
     let width = 0;
     let height = 0;
     try {
-      const meta = await sharp(buf).metadata();
+      const meta = await sharp(buf, DECODE).metadata();
       width = meta.width ?? 0;
       height = meta.height ?? 0;
     } catch {
@@ -701,7 +707,7 @@ export async function curateAndStoreImages(opts: {
     let outW = img.width;
     let outH = img.height;
     try {
-      out = await sharp(img.buf)
+      out = await sharp(img.buf, DECODE)
         .rotate()
         .resize({ width: TARGET_WIDTH, withoutEnlargement: true })
         .webp({ quality: WEBP_QUALITY })

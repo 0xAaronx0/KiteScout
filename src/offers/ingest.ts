@@ -17,6 +17,7 @@ import { mergeItinerarySpots, type StoredSpot } from '../lib/itinerary-spots.js'
 import { checkSlots, contentProblem } from './validate.js';
 import { plainDashes } from '../lib/offer-text.js';
 import { BlockedByHost, countRequests } from './http.js';
+import { prevFailedFrom, previousRun } from './run-verdict.js';
 import { linkRoomImages, planGallery } from './gallery.js';
 import { DEFAULT_DISCIPLINES, isBookable, type OfferAdapter, type OfferContent, type OfferKind, type Slot } from './types.js';
 
@@ -51,6 +52,9 @@ export interface AdapterReport {
   error?: string;
   /** full mode only: slots could not be read (blocked host, ...); content was still written */
   slotError?: string;
+  /** the adapter's previous recorded run (offer_sources.history) ended in an error or a block;
+   *  undefined = no previous run known (dry run, first run). Drives the exit code (run-verdict.ts). */
+  prevFailed?: boolean;
 }
 
 const BRIEFS: Record<OfferKind, VisionBrief> = {
@@ -529,6 +533,7 @@ async function writeSlotTable(offerId: string, slots: Slot[], allowRetract: bool
 async function recordSource(a: OfferAdapter, offerId: string | null, rep: AdapterReport, hashes: { content?: string; slots?: string }): Promise<void> {
   if (!(await slotTablesExist())) return;
   const { data: prev } = await supabase.from('offer_sources').select('history,content_hash,slots_hash').eq('key', a.key).maybeSingle();
+  rep.prevFailed = prevFailedFrom(prev?.history);
   const now = new Date().toISOString();
   const history = [{ at: now, mode: rep.mode, slots: rep.slots, bookable: rep.bookable, ms: rep.ms, ...(rep.error ? { error: rep.error } : {}) },
     ...((prev?.history as unknown[]) ?? [])].slice(0, HISTORY_KEEP);
@@ -722,7 +727,8 @@ export async function runAdapters(
       const r = await runAdapter(a, opts);
       out.push(r);
       const flag = r.status === 'error' ? 'ERR ' : r.status === 'blocked' ? 'BLK ' : r.status === 'dry_run' ? 'DRY ' : 'ok  ';
-      console.log(`${flag}${r.key.padEnd(34)} slots ${String(r.slots).padStart(3)} (bookable ${r.bookable})  ${r.minPrice ?? '-'}  ${r.requests} req  ${(r.ms / 1000).toFixed(1)}s${r.error ? `  ${r.error}` : ''}`);
+      const prev = r.status === 'error' ? `  (previous run: ${previousRun(r)})` : '';
+      console.log(`${flag}${r.key.padEnd(34)} slots ${String(r.slots).padStart(3)} (bookable ${r.bookable})  ${r.minPrice ?? '-'}  ${r.requests} req  ${(r.ms / 1000).toFixed(1)}s${r.error ? `  ${r.error}` : ''}${prev}`);
     }
   };
   await Promise.all(Array.from({ length: Math.min(opts.parallel ?? 4, adapters.length) }, worker));

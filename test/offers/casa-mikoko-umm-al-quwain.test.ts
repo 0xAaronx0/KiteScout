@@ -7,6 +7,7 @@ import {
   buildCmSlots, casaMikokoUmmAlQuwain, cmBundleUrl, parseCmCards, parseCmChalets, parseCmKite,
 } from '../../src/offers/adapters/casa-mikoko-umm-al-quwain.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { slotRoom } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/casa-mikoko-umm-al-quwain');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -48,6 +49,13 @@ test('casa mikoko: one undated slot per room type', async () => {
     ['room|family', 4500, 'AED', 'per_night', 'room', 6, 'unknown'],
   ]);
   assert.deepEqual(buildCmSlots([]), []);
+});
+
+test('casa mikoko: every slot prices its content room (the unit is the room name)', async () => {
+  const c = await casaMikokoUmmAlQuwain.fetchContent(ctx);
+  const names = c.rooms.map(r => r.name);
+  const slots = await casaMikokoUmmAlQuwain.fetchSlots(ctx);
+  assert.deepEqual(slots.map(s => slotRoom(names, s)), names);
 });
 
 test('casa mikoko: content', async () => {

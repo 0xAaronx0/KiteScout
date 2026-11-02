@@ -14,7 +14,7 @@
 //   check we do not work around, so there is no live availability or per-room price.
 // robots.txt (2026-10-12): www.floripa.it only lists the sitemap (allow all); floripa.beddy.io answers
 //   /robots.txt with the SPA shell (no rules).
-// Requests per run: content 4, slots 1.
+// Requests per run: content 4 + one room page per multi-bed room that is not shared (2: Uluwatu, Shipwreck), slots 1.
 // Parsed: 1 slot "basic-package" = EUR per night for one guest, no dates (the page gives none),
 //   minNights 3, availability 'unknown' (bookable online, inventory unreadable).
 // Known limits: "From" price = cheapest unit (inferred: a bed in a shared room for one guest; the FAQ
@@ -36,7 +36,7 @@ const BOOKING_URL = 'https://floripa.beddy.io/#/(beddy:home)?lang=en';
 export const FLORIPA_UNIT = 'Basic Package (room, two yoga classes a day, breakfast)';
 
 export interface FloripaBasic { nightly: number; currency: string; minNights: number | null }
-export interface FloripaRoom { name: string; house: string; type: string; image: string | null; path: string }
+export interface FloripaRoom { name: string; house: string; type: string; tagline: string | null; image: string | null; path: string }
 
 /** Visible text blocks (p, li, h*) of a Webflow page, scripts and styles removed. */
 function blocks(html: string): string[] {
@@ -77,7 +77,7 @@ export function buildFloripaSlots(basic: FloripaBasic): Slot[] {
   }];
 }
 
-/** /rooms: Webflow tab panes (house) with room cards (link, image, name, type). */
+/** /rooms: Webflow tab panes (house) with room cards (link, image, name, type, tagline: "Mixed", "Perfect for families or friends"). */
 export function parseFloripaRooms(html: string): FloripaRoom[] {
   const out: FloripaRoom[] = [];
   const panes = [...html.matchAll(/<div data-w-tab="([^"]+)" class="w-tab-pane[^"]*">/g)];
@@ -86,9 +86,10 @@ export function parseFloripaRooms(html: string): FloripaRoom[] {
     const body = html.slice(p.index!, end);
     const house = collapse(p[1]) === 'Outside' ? 'Outside the centre' : collapse(p[1]);
     for (const c of body.matchAll(/<a href="(\/accomodations\/[^"]+)"[\s\S]*?<img[^>]*?src="([^"]+)"[\s\S]*?<h6[^>]*>([\s\S]*?)<\/h6>\s*<div class="div-block-19">([\s\S]*?)<\/div><\/div>/g)) {
-      const type = [...c[4].matchAll(/<div class="class-team-card-role[^"]*">([\s\S]*?)<\/div>/g)]
-        .map(r => collapse(parse(r[1]).text)).filter(Boolean).join(', ');
-      out.push({ name: collapse(parse(c[3]).text), house, type: type.replace(/\(\s+/g, '('), image: c[2] || null, path: c[1] });
+      // the card's last role div closes inside the outer match, so a role ends at its </div>, the next role or the end
+      const [type = '', ...tagline] = [...c[4].matchAll(/<div class="class-team-card-role[^"]*">([\s\S]*?)(?=<\/div>|<div|$)/g)]
+        .map(r => collapse(parse(r[1]).text)).filter(Boolean);
+      out.push({ name: collapse(parse(c[3]).text), house, type: type.replace(/\(\s+/g, '('), tagline: tagline.join(', ') || null, image: c[2] || null, path: c[1] });
     }
   });
   return out;
@@ -156,7 +157,21 @@ export function floripaImages(pages: string[], max = 30): string[] {
   return out.slice(0, max);
 }
 
-export interface FloripaPages { home: string; rooms: string; kite: string; packages: string }
+/** A room card with a bed count that is not a shared room ("4 beds", "4 Beds Room (shared or private use)"). */
+export function floripaBedCount(type: string): number | null {
+  if (/^shared\b/i.test(type)) return null;
+  const n = type.match(/^(\d+)\s+beds?\b/i)?.[1];
+  return n ? Number(n) : null;
+}
+
+/** Room page: "This spacious bedroom is furnished with a double bed and two single beds (or 4 singles), and it's ...". */
+export function parseFloripaBeds(html: string): string | null {
+  const t = blocks(html).find(x => /\bfurnished with\b/i.test(x));
+  const beds = t?.match(/\bfurnished with (.+?)(?:,\s*and\b|\.)/i)?.[1];
+  return beds ? collapse(beds) : null;
+}
+
+export interface FloripaPages { home: string; rooms: string; kite: string; packages: string; roomPages?: Record<string, string> }
 
 export function parseFloripaContent(p: FloripaPages): OfferContent {
   const basic = parseFloripaBasic(p.packages);
@@ -167,11 +182,22 @@ export function parseFloripaContent(p: FloripaPages): OfferContent {
   const houses = [...new Set(rooms.map(r => r.house).filter(h => !/outside/i.test(h)))];
 
   const minStay = compactMinStay(faq.minStay);
-  const contentRooms: ContentRoom[] = rooms.map(r => ({
-    name: r.name,
-    description: `${r.type || 'Room'}, ${/outside/i.test(r.house) ? 'outside the Floripa centre' : r.house}.`,
-    features: ['Air conditioning', 'Wi-Fi', 'Fresh linens', ...(minStay ? [minStay] : [])],
-  }));
+  const contentRooms: ContentRoom[] = rooms.map(r => {
+    const bedCount = floripaBedCount(r.type);
+    const beds = bedCount && p.roomPages?.[r.path] ? parseFloripaBeds(p.roomPages[r.path]) : null;
+    return {
+      name: r.name,
+      description: `${r.type || 'Room'}, ${/outside/i.test(r.house) ? 'outside the Floripa centre' : r.house}.`,
+      features: [
+        // the tagline stays its own line: "Perfect for ..." beside "4 beds" would read as an unsure capacity
+        ...(r.tagline ? [r.tagline] : []),
+        ...(beds ? [`Beds: ${beds}`] : []),
+        // Aaron 2026-11-02: a private multi-bed room (one bed per guest, double bed included) is for up to its bed count
+        ...(bedCount && beds ? [`Up to ${bedCount} guests`] : []),
+        'Air conditioning', 'Wi-Fi', 'Fresh linens', ...(minStay ? [minStay] : []),
+      ],
+    };
+  });
 
   const kiteBits = [
     kite.courseHours && kite.courseHourly ? `a ${kite.courseHours}-hour beginner course at EUR ${kite.courseHourly} per hour` : null,
@@ -216,7 +242,7 @@ export function parseFloripaContent(p: FloripaPages): OfferContent {
     bookingUrl: BOOKING_URL,
     sourceText: [
       `rooms intro: ${intro ?? ''}`,
-      `rooms: ${rooms.map(r => `${r.name} (${r.house}: ${r.type})`).join('; ')}`,
+      `rooms: ${rooms.map(r => `${r.name} (${r.house}: ${[r.type, r.tagline].filter(Boolean).join(', ')})`).join('; ')}`,
       `basic package: ${basic ? `from EUR ${basic.nightly}/night, minimum ${basic.minNights ?? '?'} nights` : 'not found'}; includes: ${faq.included ?? ''}`,
       `kite: course ${kite.courseHours ?? '?'} h at EUR ${kite.courseHourly ?? '?'}/hr; full-day rental EUR ${kite.rentalDay ?? '?'}; brands ${kite.brands.join(', ')}`,
       `season: ${faq.season ?? ''}`,
@@ -240,7 +266,7 @@ export const floripaIspica: OfferAdapter = {
   },
   url: FLORIPA_HOME_URL,
   slotMethod: 'price_table',
-  fetchBudget: 6,
+  fetchBudget: 8,
   confidence: 'medium',
   async fetchContent() {
     const [home, rooms, kite, packages] = [
@@ -249,7 +275,11 @@ export const floripaIspica: OfferAdapter = {
       await fetchText(FLORIPA_KITE_URL, { accept: 'text/html' }),
       await fetchText(FLORIPA_PACKAGES_URL, { accept: 'text/html' }),
     ];
-    return parseFloripaContent({ home, rooms, kite, packages });
+    const roomPages: Record<string, string> = {};
+    for (const r of parseFloripaRooms(rooms).filter(room => floripaBedCount(room.type))) {
+      roomPages[r.path] = await fetchText(`${SITE}${r.path}`, { accept: 'text/html' });
+    }
+    return parseFloripaContent({ home, rooms, kite, packages, roomPages });
   },
   async fetchSlots() {
     const basic = parseFloripaBasic(await fetchText(FLORIPA_PACKAGES_URL, { accept: 'text/html' }));

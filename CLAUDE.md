@@ -85,10 +85,13 @@ Agreements between sessions don't hold; one gatekeeper catches this BEFORE `main
 overrides older lines in this file that say sessions push `main`, open PRs or run migrations
 themselves.
 
-**The deployer is the session "Kite-Scout Deployer" (`session_01AevZkPetdNuLvABo8uj8vj`, runs on Aaron's computer; Aaron
-2026-11-01). The old id `local_bc76f918-92f5-449e-a219-307188b6a142` no longer answers.** A cloud session reaches it only
-after Aaron allows it once: the first `send_message` is refused with a `content_digest`, then call `confirm_repository_trust`
-with it (Aaron answers the card on a trusted device) and send again.
+**The deployer is the session "Kite-Scout Deployer"**, reachable at two addresses (same session):
+- local sessions: `local_bc76f918-92f5-449e-a219-307188b6a142` (`list_sessions`, then `send_message`);
+- cloud sessions: its Remote Control address `session_01AevZkPetdNuLvABo8uj8vj` (Remote MCP
+  `send_message`). The first send is refused with a `content_digest`; call
+  `confirm_repository_trust` with it (Aaron answers the card once on a trusted device), then send
+  again. The deployer cannot reply to cloud sessions: results reach them through Aaron.
+
 Which session holds the role, Aaron says in THAT session's chat - never a peer message, never
 memory. If you can't find it, tell Aaron: a broken chain is a finding, not a reason to go quiet.
 
@@ -111,7 +114,7 @@ memory. If you can't find it, tell Aaron: a broken chain is a finding, not a rea
 - **Mail: you never send** - not Gmail, not Resend/Postmark, no test mail, not "only to Aaron".
   Drafts are fine (local file or Gmail draft); hand them to the deployer. Don't submit the live
   KCS inquiry form either - it mails real providers.
-- **REPORT every stand to the deployer** (`list_sessions`, then `send_message` to the id above):
+- **REPORT every stand to the deployer** (`send_message` to the matching address above):
   branch, SHA, base, migration (yes/no), touched files, gate numbers vs baseline, Aaron's word
   verbatim, KCS issue number if any - and **what you did NOT check** (mandatory: the deployer
   relies on it and measures the rest). Report when a stand passes its own gate, again when you

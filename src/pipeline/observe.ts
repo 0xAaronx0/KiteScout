@@ -23,7 +23,7 @@ import { withRetry } from '../lib/retry.js';
 import { sanitizeDeep, htmlToText, collapse } from '../lib/content.js';
 import { fetchPageConditional } from '../lib/fetchPage.js';
 import { extract as tavilyExtract } from '../lib/tavily.js';
-import { cleanNights } from './trip-duration.js';
+import { DEPARTURE_RULE, cleanNights } from './trip-duration.js';
 import {
   OFFER_ROW_COLUMNS, STATE_FIELDS, normUrl, proposeUpdate, siteLossSignal, titleMatches,
   type ObservedState, type OfferRow, type Proposal, type Departure,
@@ -93,7 +93,7 @@ const PROMPT = `You read one web page of a kite-cruise provider and report the C
 Rules:
 - Report only what the page STATES. Never estimate, never convert currencies: keep the page's own currency.
 - "offers": one entry per listed slug the page covers. Offers marked OWN PAGE: if this page no longer presents that offer at all (discontinued, replaced by a DIFFERENT trip, empty), return {"slug": "…", "listed": false} for it. A new season or year of the SAME trip (same destination and boat or program, e.g. listed title "… 2026" while the page now says "… 2027") is still listed: report its current departures and prices.
-- "departures": the FULL set of concrete dated departures the page shows for that offer, including sold-out ones (with status). null when the page shows no concrete dates for it. A date without a year only when the year is unambiguous.
+- "departures": the FULL set of concrete dated departures the page shows for that offer, including sold-out ones (with status). null when the page shows no concrete dates for it. A date without a year only when the year is unambiguous. ${DEPARTURE_RULE}.
 - "price_pp": the cheapest price per PERSON for the WHOLE trip in a shared/double cabin. A price for a cabin of 2 → divide by 2. Per-night/per-day prices → multiply only when the trip length is explicit, else null. Never deposits, add-ons, single supplements, or a sum of separately listed components (base boat €1450 + lessons €700 → 1450).
 - "price_charter": the cheapest WHOLE-BOAT/private-charter price for ONE WEEK (7 nights) when the page has one, else the cheapest whole-boat price, and the number of days it covers (a price per day: days = 1).
 - "duration_days": days of the trip (7 nights = 8 days) when stated.

@@ -136,8 +136,9 @@ export function buildCmSlots(chalets: CmChalet[]): Slot[] {
       key: `room|${t}`,
       startDate: null,
       endDate: null,
+      // the unit is the content room's name; the chalet titles stay in availabilityText (a `room` of chalet titles
+      // matched no room, so no room showed a price - price-on-request round 2, 2026-11-02)
       unit: CM_TYPE_NAMES[t],
-      room: group.map(c => c.title).join(', '),
       price,
       currency: 'AED',
       priceUnit: 'per_night',
