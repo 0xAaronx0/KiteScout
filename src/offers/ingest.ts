@@ -21,6 +21,7 @@ import { BlockedByHost, countRequests } from './http.js';
 import { prevFailedFrom, previousRun } from './run-verdict.js';
 import { linkRoomImages, planGallery } from './gallery.js';
 import { keepRoomPhotos, measureRoomPhoto, storeRoomPhotos, withRoomPhotos, type RoomPhoto } from './room-photos.js';
+import { withNamedRoomPhotos } from './room-photo-names.js';
 import { DEFAULT_DISCIPLINES, isBookable, type OfferAdapter, type OfferContent, type OfferKind, type Slot } from './types.js';
 
 export const SOURCE_PREFIX = 'site:';
@@ -652,7 +653,7 @@ async function runAdapterInner(
   let offerId: string | null = null;
   const hashes: { content?: string; slots?: string } = {};
   try {
-    const content = opts.mode === 'full' ? await withTimeout(a.fetchContent(ctx), a.timeoutMs ?? ADAPTER_TIMEOUT_MS, `${a.key} content`) : null;
+    const content = opts.mode === 'full' ? withNamedRoomPhotos(a.key, await withTimeout(a.fetchContent(ctx), a.timeoutMs ?? ADAPTER_TIMEOUT_MS, `${a.key} content`)) : null;
     if (content) {
       const p = contentProblem(content);
       if (p) throw new Error(`content rejected: ${p}`);

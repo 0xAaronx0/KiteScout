@@ -41,7 +41,7 @@ export const NOT_OWN_PHOTO_RE = new RegExp([
 ].join('|'), 'i');
 
 /** file name of an image URL as a person reads it ("ChatGPT%2BImage%2BJan" -> "ChatGPT Image Jan") */
-function fileName(url: string): string {
+export function fileName(url: string): string {
   let path: string;
   try { path = new URL(url).pathname; } catch { path = url.split('?')[0]; }
   let name = path.split('/').filter(Boolean).pop() ?? '';
