@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { DURATION_RULE, NIGHTS_RULE, cleanNights, nightsFromDepartures, proposeTripDuration, sameTripDuration } from '../../src/pipeline/trip-duration.js';
+import { DEPARTURE_RULE, DURATION_RULE, MAX_DEPARTURE_NIGHTS, NIGHTS_RULE, cleanNights, nightsFromDepartures, proposeTripDuration, sameTripDuration } from '../../src/pipeline/trip-duration.js';
 
 // extract-cruise-offers.ts needs API keys at import time, so its wiring is checked in the source text.
 const extractor = readFileSync(new URL('../../src/pipeline/extract-cruise-offers.ts', import.meta.url), 'utf8');
@@ -39,6 +39,15 @@ test('listed departures state the nights when all of them span the same nights (
   // The full re-extraction falls back to them, so a crawl without stated nights doesn't blank the stored value.
   assert.ok(extractor.includes('const nights = cleanNights(offer.duration_nights) ?? nightsFromDepartures(storedDepartures(offer.dates));'));
   assert.ok(extractor.includes('duration_days: cleanInt(offer.duration_days) ?? (nights !== null ? nights + 1 : null),'));
+});
+
+test('both LLM reads are told a season or booking window is no departure (Aaron 2026-11-02)', () => {
+  const observe = readFileSync(new URL('../../src/pipeline/observe.ts', import.meta.url), 'utf8');
+  assert.match(DEPARTURE_RULE, /season or booking window/);
+  assert.ok(extractor.includes('"status": "available|sold_out|null" } ] or null (${DEPARTURE_RULE}),'));
+  assert.ok(observe.includes('A date without a year only when the year is unambiguous. ${DEPARTURE_RULE}.'));
+  assert.equal(MAX_DEPARTURE_NIGHTS, 30);
+  assert.equal(nightsFromDepartures([{ start_date: '2027-05-01', end_date: '2028-12-31' }]), null);
 });
 
 test('cleanNights keeps 0..60 integers (digit strings too) and drops everything else', () => {

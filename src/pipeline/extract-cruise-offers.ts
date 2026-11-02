@@ -17,7 +17,7 @@ import { mergeItinerarySpots } from '../lib/itinerary-spots.js';
 import { cruiseDisciplines } from '../lib/disciplines.js';
 import { geocodeSpot } from '../lib/geocode.js';
 import { seasonUpsertColumns } from './season-extract.js';
-import { DURATION_RULE, NIGHTS_RULE, cleanNights, nightsFromDepartures, sameTripDuration } from './trip-duration.js';
+import { DEPARTURE_RULE, DURATION_RULE, NIGHTS_RULE, cleanNights, nightsFromDepartures, sameTripDuration } from './trip-duration.js';
 
 const CONCURRENCY = 3;                  // providers in parallel
 const PAGE_CONCURRENCY = 8;             // global page fetches in flight (across providers)
@@ -187,7 +187,7 @@ For each offer, extract this exact JSON shape (use null when the site does not s
   "season_end_month": 1-12 or null,
   "duration_days": integer or null (${DURATION_RULE}),
   "duration_nights": integer or null (${NIGHTS_RULE}),
-  "dates": [ { "start_date": "YYYY-MM-DD or null", "end_date": "YYYY-MM-DD or null", "price": number or null, "currency": "ISO code or null", "status": "available|sold_out|null" } ] or null,
+  "dates": [ { "start_date": "YYYY-MM-DD or null", "end_date": "YYYY-MM-DD or null", "price": number or null, "currency": "ISO code or null", "status": "available|sold_out|null" } ] or null (${DEPARTURE_RULE}),
   "pricing": {
     "options": [ { "label": "tier name, e.g. 'Shared Cabin (Solo Traveler)', 'Private Cabin (2 guests)', 'Whole Boat (6 guests)'", "price": number, "currency": "ISO code", "basis": "per_person|per_cabin|whole_boat|other" } ],
     "per_person": number|null, "per_cabin": number|null, "whole_boat": number|null,

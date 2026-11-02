@@ -182,6 +182,16 @@ test('cleanDepartures drops invalid / far rows and dedupes', () => {
   assert.equal(normStatus('ausgebucht'), 'sold_out');
 });
 
+test('a season or booking window is never a departure, stored or read (ZEN QUEST, Aaron 2026-11-02)', () => {
+  const window = { start_date: '2027-05-01', end_date: '2028-12-31', price: null, currency: null, status: 'available' as const };
+  assert.deepEqual(cleanDepartures([window], TODAY), []);
+  assert.equal(cleanDepartures([{ ...window, end_date: '2027-05-31' }], TODAY).length, 1, '30 nights stay');
+  // The page still shows the window: nothing to do. A real departure replaces the stored window.
+  assert.equal(proposeUpdate(offer({ dates: [window] }), obs({ departures: [window] }), AUTH), null);
+  const real = { start_date: '2027-06-05', end_date: '2027-06-12', price: null, currency: null, status: 'available' as const };
+  assert.deepEqual(proposeUpdate(offer({ dates: [window] }), obs({ departures: [window, real] }), AUTH)!.set.dates, [real]);
+});
+
 test('factsKey ignores testimonials/CTAs/countdowns, catches prices and dates', () => {
   const base = 'Kite cruise Greece. From €2,500 per person. Dates: 04.07.2026, 11 July 2026. Book now!';
   const noise = 'Kite cruise Greece. From €2,500 per person. Dates: 04.07.2026, 11 July 2026. Request a quote! "Best trip ever" - Anna. Noch 48 Tage.';

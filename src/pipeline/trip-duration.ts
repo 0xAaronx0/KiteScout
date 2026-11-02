@@ -11,6 +11,14 @@ export const NIGHTS_RULE =
   "nights of the trip as the page states them: a Saturday-to-Saturday week or 'one week' = 7; '8 days / 7 nights' = 7; " +
   "null if the page states no nights";
 
+/**
+ * A "departure" longer than a month is a season or booking window, not a trip (Aaron 2026-11-02: ZEN QUEST stored
+ * "May 1 2027 - Dec 31 2028" = 610 nights as its only departure). Real cruise departures in the data span 5..21 nights
+ * (Antarctica 21); a month leaves room for longer expeditions. Never stored as a departure, never read as nights.
+ */
+export const MAX_DEPARTURE_NIGHTS = 30;
+export const DEPARTURE_RULE = 'fixed departures only; a season or booking window (e.g. "May 1 2027 - Dec 31 2028") is no departure';
+
 /** Nights as stored: an integer 0..60, else null. */
 export function cleanNights(value: unknown): number | null {
   const n = typeof value === 'string' && /^\d+$/.test(value.trim()) ? Number(value) : value;
@@ -27,7 +35,7 @@ export function nightsFromDepartures(dates: unknown): number | null {
   for (const d of dates as Array<{ start_date?: unknown; end_date?: unknown }>) {
     if (typeof d?.start_date !== 'string' || typeof d?.end_date !== 'string') continue;
     const n = (Date.parse(`${d.end_date}T00:00:00Z`) - Date.parse(`${d.start_date}T00:00:00Z`)) / 86_400_000;
-    if (!Number.isInteger(n) || n < 1 || n > 30) return null;
+    if (!Number.isInteger(n) || n < 1 || n > MAX_DEPARTURE_NIGHTS) return null;
     spans.add(n);
   }
   return spans.size === 1 ? [...spans][0] : null;
