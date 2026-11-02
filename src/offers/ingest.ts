@@ -262,7 +262,8 @@ export function summarizePrice(kind: OfferKind, slots: Slot[], today: string, la
   const label = tier === 'bookable' ? 'cheapest bookable'
     : tier === 'full' ? 'next dates full or waitlist only'
     : `last published price, ${latestYear || 'earlier'} dates are over, new dates not published yet`;
-  return { min, priceUnit, raw, note: `${raw} (${label}: ${what}; as of ${today})` };
+  // An undated rate gets no "as of" read date, which would look like a dated price.
+  return { min, priceUnit, raw, note: `${raw} (${label}: ${what}; ${min.undated ? 'undated rates on the provider\'s site, to be confirmed' : `as of ${today}`})` };
 }
 
 function slotJson(s: Slot) {
