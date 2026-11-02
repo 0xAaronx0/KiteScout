@@ -22,6 +22,10 @@
 // robots.txt (2026-10-14): nordsee-surfschule.de 404 (= allow all); seeschwalbe-schillig.com "Allow: /";
 //   storage.googleapis.com 404 (= allow all).
 // Requests per run: content 6, slots 0.
+// Gallery (Aaron 2026-11-02, "dieses listing hat keine schönen bilder": it was 10 detail shots of one apartment): the
+//   dome photos (/unterkuenfte/ above the apartment text) as the dome room type, the school's own kite photos from
+//   /kitekurse/ as the spot, then Haus Seeschwalbe from outside and the apartments' main photos ("Hauptbild"). The
+//   Sitelio apartment galleries (kitchen drawers, cutlery, shower ...) stay out of the pool.
 // Known limits: no coordinates for the dome; the Seeschwalbe map position (Schillig) is kept in the room text, not used
 //   as the pin (the listing's spot is Hooksiel). The school's e-mail address is obfuscated on its site -> none stored.
 // ---------------------------------------------------------------------------
@@ -104,6 +108,8 @@ export interface Seeschwalbe {
   minStay: string | null;
   map: { lat: number; lng: number } | null;
   images: string[];
+  /** Haus Seeschwalbe from outside: the untitled + "Parkplatz" photos of the garden gallery */
+  house: string[];
   intro: string | null;
 }
 
@@ -133,11 +139,14 @@ export function parseSeeschwalbe(js: string): Seeschwalbe {
   const map = els.find(e => e.mapPosition)?.mapPosition ?? null;
   const images: string[] = [];
   for (const e of els) for (const g of e.gallery) if (!images.includes(g.url)) images.push(g.url);
+  const garden = els.find(e => e.gallery.some(g => /^Parkplatz$/i.test(g.title?.trim() ?? '')))?.gallery ?? [];
+  const house = garden.filter(g => !/^(?:Garten|Title \d+)$/i.test(g.title?.trim() ?? '')).map(g => g.url);
   return {
     apartments, seasons, extras,
     minStay: stay.split(' | ').find(s => /Mindestaufenthalt/i.test(s)) ?? null,
     map: map ? { lat: Math.round(map[0] * 1e6) / 1e6, lng: Math.round(map[1] * 1e6) / 1e6 } : null,
     images,
+    house,
     intro: texts.find(e => /^Der ideale Ort für Erholung/i.test(e.text))?.text ?? null,
   };
 }
@@ -154,6 +163,24 @@ export function ssExtraEn(line: string): string | null {
 }
 
 // --- nordsee-surfschule.de ------------------------------------------------------------------------
+/** The provider's photos only (no logo / favicon / screenshot / graphic), one per file (WordPress size variants dropped). */
+export function nsPhotos(urls: string[]): string[] {
+  const out: string[] = [];
+  const seen = new Set<string>();
+  for (const u of urls) {
+    if (/logo|favicon|Bildschirmfoto|\.svg|\.png$/i.test(u)) continue;
+    if (/nordsee-surfschule\.de/.test(u) && !/\/wp-content\/uploads\//.test(u)) continue;
+    const k = u.replace(/-(?:\d+x\d+|scaled)(?=\.[a-z]+$)/i, '');
+    if (seen.has(k)) continue;
+    seen.add(k); out.push(u);
+  }
+  return out;
+}
+
+/** Riding shots first (checked 2026-11-02), the rest of the /kitekurse/ photos in page order. */
+const SPOT_FIRST = ['IMG_3647', 'IMG_2920'];
+const spotRank = (u: string) => { const i = SPOT_FIRST.findIndex(n => u.includes(n)); return i < 0 ? SPOT_FIRST.length : i; };
+
 export interface NsPages { lodging: string; home: string; kite: string; strandhaus: string; seeschwalbe: string }
 
 export function parseNordseeContent(p: NsPages): OfferContent {
@@ -173,9 +200,18 @@ export function parseNordseeContent(p: NsPages): OfferContent {
   const caps = ss.apartments.map(a => a.maxPersons).filter((n): n is number => !!n);
   const capRange = caps.length ? `${Math.min(...caps)}-${Math.max(...caps)}` : '1-4';
 
+  // Gallery pool (see header): dome / kite spot / house + apartment main photos; planGallery mixes them round-robin.
+  const flatsAt = p.lodging.indexOf('Wünscht du dir ein Ferienappartment');
+  const domeImgs = nsPhotos(imageCandidates(flatsAt > 0 ? p.lodging.slice(0, flatsAt) : '', NS_LODGING_URL, null, 30));
+  const flatImgs = nsPhotos(imageCandidates(p.lodging.slice(Math.max(flatsAt, 0)), NS_LODGING_URL, null, 30)).filter(u => /Hauptbild/i.test(u));
+  const spotImgs = nsPhotos(imageCandidates(p.kite, NS_KITE_URL, null, 60))
+    .filter(u => /\/(?:IMG|GH)_?\d+[^/]*$/i.test(u)) // own camera files: no brand photo (Cape Town), team portraits or graphics
+    .sort((a, b) => spotRank(a) - spotRank(b));
+
   const rooms: ContentRoom[] = [
     {
       name: 'Glamping Dome (Hooksiel)',
+      imageUrls: domeImgs,
       description: 'Dome tent with sea view at the school\'s mooi Strandhaus station in Hooksiel: 180 cm double bed, extra blankets and hot-water bottles, heating, armchairs, a small kitchen corner; WC and shower next door in the Strandhaus (own key).',
       features: ['Kettle, Senseo coffee machine, fridge, standard crockery', 'Bed linen and two large towels', 'Safe, clothes rail', 'Less than 200 m to the Hooksiel kite zone', 'Price on request (online booking)'],
     },
@@ -191,16 +227,6 @@ export function parseNordseeContent(p: NsPages): OfferContent {
       ],
     })),
   ];
-
-  const imgs: string[] = [];
-  const seen = new Set<string>();
-  for (const u of [...imageCandidates(p.lodging, NS_LODGING_URL, null, 60), ...ss.images]) {
-    if (/logo|favicon|Bildschirmfoto|\.svg|\.png$/i.test(u)) continue;
-    if (/nordsee-surfschule\.de/.test(u) && !/\/wp-content\/uploads\//.test(u)) continue;
-    const k = u.replace(/-(?:\d+x\d+|scaled)(?=\.[a-z]+$)/i, '');
-    if (seen.has(k)) continue;
-    seen.add(k); imgs.push(u);
-  }
 
   const summary = [
     'The Nordsee Academy (Nordsee Surfschule), a VDWS kite and windsurf school in Wangerland on the East Frisian North Sea coast, rents its own accommodation:',
@@ -236,7 +262,8 @@ export function parseNordseeContent(p: NsPages): OfferContent {
     mealPlan: 'self_catering',
     languages: ['de'],
     rooms,
-    imageUrls: imgs.slice(0, 30),
+    imageUrls: nsPhotos([...ss.house, ...flatImgs]),
+    spotImageUrls: spotImgs,
     heroVideoUrl: null,
     sourceUrl: NS_LODGING_URL,
     bookingUrl: NS_LODGING_URL,

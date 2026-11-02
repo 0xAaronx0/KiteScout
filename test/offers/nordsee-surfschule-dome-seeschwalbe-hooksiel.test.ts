@@ -10,6 +10,8 @@ import {
   nordseeSurfschuleDomeSeeschwalbeHooksiel, parseSeeschwalbe, sitelioPageFileUrl, ssExtraEn,
 } from '../../src/offers/adapters/nordsee-surfschule-dome-seeschwalbe-hooksiel.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { planGallery } from '../../src/offers/gallery.js';
+import { sitelioElements } from '../../src/offers/adapters/nordsee-surfschule-dome-seeschwalbe-hooksiel.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/nordsee-surfschule-dome-seeschwalbe-hooksiel');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -60,6 +62,37 @@ test('nordsee-surfschule: content', async () => {
   assert.equal(c.rooms[0].name, 'Glamping Dome (Hooksiel)');
   assert.match(c.sourceText ?? '', /zweite Hauptstandort unserer Kiteschule/);
   assert.match(c.sourceText ?? '', /Unsere Ferienunterkünfte in Schillig sind ganzjährig buchbar/);
-  assert.equal(c.imageUrls.length, 30);
-  assert.ok(c.imageUrls[0].startsWith('https://www.nordsee-surfschule.de/wp-content/uploads/'));
+  // gallery pool: see the next test
+  assert.equal(c.imageUrls.length, 4);
+  assert.equal(c.rooms[0].imageUrls?.length, 6);
+  assert.equal(c.spotImageUrls?.length, 8);
+});
+
+// Aaron 2026-11-02: "dieses listing hat keine schönen bilder" - the gallery was 10 detail shots of one apartment
+// (kitchen drawers, cutlery, shower). The pool now holds the dome, the kite spot and the house; no interior details.
+test('nordsee-surfschule: gallery pool = dome, kite spot, house; no apartment detail shots', async () => {
+  const c = await nordseeSurfschuleDomeSeeschwalbeHooksiel.fetchContent(ctx);
+  const dome = c.rooms[0].imageUrls ?? [];
+  assert.ok(dome.length >= 4, 'dome photos as the dome room type');
+  assert.ok(dome.every(u => /nordsee-surfschule\.de\/wp-content\/uploads\/.*IMG_/.test(u)));
+  assert.ok(dome[0].includes('IMG_0225'), 'the page title photo of the dome first');
+  assert.ok(c.rooms.slice(1).every(r => !r.imageUrls?.length), 'apartments without own seats (all interiors)');
+  const spot = c.spotImageUrls ?? [];
+  assert.ok(spot.length >= 4, 'kite photos from /kitekurse/');
+  assert.ok(spot.every(u => /\/wp-content\/uploads\/.*\/(?:IMG|GH)_?\d/.test(u)), 'own camera photos only');
+  assert.ok(!spot.some(u => /FLYSURFER|Teamfoto|JennyJung|Lukas/i.test(u)), 'no brand photo from Cape Town, no team portraits');
+  assert.ok(/IMG_3647/.test(spot[0]), 'a riding shot first');
+  // detail shots of the Sitelio apartment galleries never reach the pool
+  const details = new Set(sitelioElements(read('storage.googleapis.com_te-sitelio-sites')).flatMap(e => e.gallery)
+    .filter(g => /Küchenausstattung|Badezimmer|Dusche|Kleiderschrank|Schranksystem|Flur/i.test(g.title ?? '')).map(g => g.url));
+  assert.ok(details.size >= 25, `${details.size} detail photos in the fixture`);
+  const plan = planGallery(c);
+  assert.equal(plan.candidates.filter(u => details.has(u)).length, 0);
+  assert.ok(!plan.candidates.some(u => /Bildschirmfoto|Nordwind_3/.test(u)), 'no screenshot, no shower');
+  // house from outside in the general list, the apartments' main photos after it
+  assert.ok(c.imageUrls.some(u => u.startsWith('https://storage.googleapis.com/production-sitelio-')), 'Haus Seeschwalbe from outside');
+  assert.ok(c.imageUrls.some(u => /Hauptbild/.test(u)));
+  // round-robin: dome, kite spot, house first
+  assert.deepEqual(plan.candidates.slice(0, 3), [dome[0], spot[0], c.imageUrls[0]]);
+  assert.deepEqual(plan.reserve.map(r => r.label), ['room type "Glamping Dome (Hooksiel)"', 'the kite spot or people kiting there']);
 });
