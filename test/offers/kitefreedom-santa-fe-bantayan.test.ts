@@ -32,18 +32,18 @@ test('kitefreedom: package line variants', () => {
   assert.deepEqual(buildKfSlots(p), []);
 });
 
-test('kitefreedom: slot = whole package (cabana + course summed), PHP per cabana, on request', async () => {
+test('kitefreedom: slot = whole package (cabana + course summed) for 1 kiter in single occupancy, on request', async () => {
   const slots = await kitefreedomSantaFeBantayan.fetchSlots(ctx);
   const { ok, problems } = checkSlots(slots);
   assert.deepEqual(problems, []);
   assert.deepEqual(ok.map(s => [s.key, s.unit, s.price, s.currency, s.priceUnit, s.priceBasis, s.occupancy, s.packageNights, s.availability]), [
-    ['cabana-package-4n', 'Kitesurfing package: beachfront cabana + Zero to Hero course', 51400, 'PHP', 'package', 'room', 2, 4, 'on_request'],
+    ['cabana-package-4n', 'Kitesurfing package for 1 kiter: beachfront cabana in single occupancy + Zero to Hero course', 51400, 'PHP', 'package', 'person', 1, 4, 'on_request'],
   ]);
 });
 
 test('kitefreedom: without a readable course line the slot is the cabana stay alone', () => {
   const p = { ...parseKfPackage(pkgHtml), courseDays: null, coursePrice: null };
-  assert.deepEqual(buildKfSlots(p).map(s => [s.unit, s.price]), [['Beachfront cabana (kitesurfing package)', 24400]]);
+  assert.deepEqual(buildKfSlots(p).map(s => [s.unit, s.price, s.priceBasis, s.occupancy]), [['Beachfront cabana (kitesurfing package)', 24400, 'room', 2]]);
 });
 
 test('kitefreedom: accommodation units, coordinates, photos', () => {
@@ -66,9 +66,9 @@ test('kitefreedom: content', async () => {
   assert.match(c.summary, /4 nights in a beachfront bamboo cabana .* 3-day one-on-one Zero to Hero course taught to IKO and BKSA standards/);
   assert.match(c.summary, /end of October to April with 12-25 knots/);
   assert.deepEqual(c.rooms.map(r => r.name), ['Casita with private pool', 'Beachfront cabana with sea view']);
-  assert.ok(c.rooms[1].features.includes('Kitesurfing package: 4 nights + 3-day course PHP 51,400 (stay PHP 24,400 + course PHP 27,000; up to 2 guests + 1 child)'));
+  assert.ok(c.rooms[1].features.includes('Kitesurfing package for 1 kiter: 4 nights in single occupancy + 3-day course PHP 51,400 (stay PHP 24,400 + course PHP 27,000; the cabana fits up to 2 guests + 1 child)'));
   // the package contents are included, not extras
-  assert.deepEqual(c.includedServices.slice(0, 2), ['4 nights in a beachfront cabana (up to 2 guests + 1 child)', '3-day Zero to Hero kite course, one-on-one with a certified instructor']);
+  assert.deepEqual(c.includedServices.slice(0, 2), ['4 nights in a beachfront cabana, single occupancy (fits up to 2 guests + 1 child)', '3-day Zero to Hero kite course for 1 kiter, one-on-one with a certified instructor']);
   assert.ok(!c.optionalServices.some(s => /Zero to Hero/.test(s)));
   assert.ok(c.imageUrls.length >= 8 && c.imageUrls.every(u => !/\.png$/i.test(u)));
 });

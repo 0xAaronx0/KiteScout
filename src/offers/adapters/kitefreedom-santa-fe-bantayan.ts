@@ -22,11 +22,13 @@
 //            Maps pin of the school sits about 20 m away).
 // robots.txt (2026-10-12): Wix default (only "*?lightbox=" disallowed).
 // Requests per run: content 3, slots 1. Pages are 0.65-0.9 MB; fixtures are trimmed to markup + the coordinates.
-// Parsed: 1 slot = the whole kitesurfing package, PHP per cabana: 4-night cabana stay + 3-day course summed
-//   (24,400 + 27,000 = 51,400; Aaron 2026-11-02: the package price is the sum, both parts are "included"). Without a
-//   readable course line the slot falls back to the cabana stay alone.
-// Known limits: no dates, no inventory; the page prints no total (the sum is ours) and does not say whether the
-//   one-on-one course covers one or both cabana guests; no separate per-night rates for the cabanas or the casita.
+// Parsed: 1 slot = the whole kitesurfing package for 1 kiter: 4-night cabana stay + 3-day course summed
+//   (24,400 + 27,000 = 51,400; Aaron 2026-11-02: the package price is the sum, both parts are "included"; it is the
+//   standard price for one person, the one-on-one course for 1 kiter in the cabana in single occupancy - the cabana
+//   fits up to 2 guests + 1 child). Without a readable course line the slot falls back to the cabana stay alone,
+//   priced per cabana.
+// Known limits: no dates, no inventory; the page prints no total (the sum is ours) and no price for a second guest;
+//   no separate per-night rates for the cabanas or the casita.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, parseAmount } from '../parse.js';
@@ -37,7 +39,7 @@ export const KF_HOME_URL = SITE;
 export const KF_ACCOMMODATION_URL = `${SITE}/beach-accommodation`;
 export const KF_PACKAGE_URL = `${SITE}/learn-kitesurfing/kitesurfing-package`;
 export const KF_CABANA_UNIT = 'Beachfront cabana (kitesurfing package)';
-export const KF_PACKAGE_UNIT = 'Kitesurfing package: beachfront cabana + Zero to Hero course';
+export const KF_PACKAGE_UNIT = 'Kitesurfing package for 1 kiter: beachfront cabana in single occupancy + Zero to Hero course';
 
 // --- local helpers ----------------------------------------------------------------------------
 /** Visible text lines of a Wix page (scripts, styles and inline SVG dropped; zero-width spaces removed). */
@@ -110,7 +112,8 @@ export function kfPackagePrice(p: KfPackage): number | null {
   return p.coursePrice === null ? p.stayPrice : p.stayPrice + p.coursePrice;
 }
 
-/** One slot: the kitesurfing package (cabana for `nights` nights + course, per cabana, on request). */
+/** One slot: the kitesurfing package (cabana for `nights` nights + course, for 1 kiter in single occupancy, on
+ *  request); without the course line the cabana stay alone, per cabana. */
 export function buildKfSlots(p: KfPackage): Slot[] {
   const price = kfPackagePrice(p);
   if (price === null || p.nights === null) return [];
@@ -122,8 +125,8 @@ export function buildKfSlots(p: KfPackage): Slot[] {
     price,
     currency: 'PHP',
     priceUnit: 'package',
-    priceBasis: 'room',
-    occupancy: p.guests,
+    priceBasis: p.coursePrice === null ? 'room' : 'person',
+    occupancy: p.coursePrice === null ? p.guests : 1,
     availability: 'on_request',
     availabilityText: 'Check availability (e-mail)',
     spotsLeft: null,
@@ -177,7 +180,7 @@ export function parseKiteFreedomContent(p: KfPages): OfferContent {
     const cab = rooms.find(r => /cabana/i.test(r.name));
     cab?.features.push(pkg.coursePrice === null
       ? `Kitesurfing package: ${pkg.nights} nights ${php(pkg.stayPrice)} (${guests})`
-      : `Kitesurfing package: ${pkg.nights} nights + ${pkg.courseDays}-day course ${php(pkg.stayPrice + pkg.coursePrice)} (stay ${php(pkg.stayPrice)} + course ${php(pkg.coursePrice)}; ${guests})`);
+      : `Kitesurfing package for 1 kiter: ${pkg.nights} nights in single occupancy + ${pkg.courseDays}-day course ${php(pkg.stayPrice + pkg.coursePrice)} (stay ${php(pkg.stayPrice)} + course ${php(pkg.coursePrice)}; the cabana fits ${guests})`);
   }
 
   const imageUrls: string[] = [];
@@ -209,8 +212,10 @@ export function parseKiteFreedomContent(p: KfPages): OfferContent {
     beginnerFriendly: true,
     // "THE KITESURFING PACKAGE INCLUDES": the stay and the course are the package itself
     includedServices: [
-      ...(pkg.nights ? [`${pkg.nights} nights in a beachfront cabana (${guests})`] : []),
-      ...(pkg.coursePrice ? [`${pkg.courseDays}-day Zero to Hero kite course, one-on-one with a certified instructor`] : []),
+      ...(pkg.nights ? [pkg.coursePrice
+        ? `${pkg.nights} nights in a beachfront cabana, single occupancy (fits ${guests})`
+        : `${pkg.nights} nights in a beachfront cabana (${guests})`] : []),
+      ...(pkg.coursePrice ? [`${pkg.courseDays}-day Zero to Hero kite course for 1 kiter, one-on-one with a certified instructor`] : []),
       'Beach assistance to set up and launch the kite', 'Communal swimming pool', 'Beach bar and restaurant',
     ],
     optionalServices: [
