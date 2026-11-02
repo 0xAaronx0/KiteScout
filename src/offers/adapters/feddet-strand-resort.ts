@@ -239,6 +239,9 @@ export const feddetStrandResort: OfferAdapter = {
   instantBooking: true,
   liveAvailability: true,
   fetchBudget: 27,
+  // CSOB sample weeks, sequential: 30-150 s from the GitHub runner until 2026-10-30, then 212-240 s (timeout on
+  // 2026-10-31 and 11-01, 212 s on 11-02, ~200 s locally). Same headroom as Wulfener Hals.
+  timeoutMs: 8 * 60_000,
   async fetchContent() {
     const home = await fetchText(FSR_HOME_URL, { accept: 'text/html' });
     const kite = await fetchText(FSR_KITE_URL, { accept: 'text/html' });
