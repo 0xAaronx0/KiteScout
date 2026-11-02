@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  floripaIspica, buildFloripaSlots, compactMinStay, parseFloripaBasic, parseFloripaKite, parseFloripaRooms,
+  floripaIspica, buildFloripaSlots, compactMinStay, floripaBedCount, parseFloripaBasic, parseFloripaBeds, parseFloripaKite, parseFloripaRooms,
 } from '../../src/offers/adapters/floripa-ispica.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
@@ -35,7 +35,7 @@ test('floripa: room cards per house', () => {
   const rooms = parseFloripaRooms(read('www.floripa.it_rooms.'));
   assert.equal(rooms.length, 15);
   assert.deepEqual(rooms[0], {
-    name: 'Sunset Room', house: 'Surf House', type: 'Double Room', path: '/accomodations/sunset-room',
+    name: 'Sunset Room', house: 'Surf House', type: 'Double Room', tagline: null, path: '/accomodations/sunset-room',
     image: 'https://cdn.prod.website-files.com/68395504db2760ef20b335df/69f7860f68a4806da00ba678_Surf%20House%20Sunset1.jpg',
   });
   assert.deepEqual([...new Set(rooms.map(r => r.house))], ['Surf House', 'Kite House', 'Beach House', 'Outside the centre']);
@@ -64,4 +64,21 @@ test('floripa: content', async () => {
   assert.ok(c.optionalServices.includes('Kitesurf lessons (EUR 80 per hour)'));
   assert.equal(c.imageUrls.length, 30);
   assert.ok(c.imageUrls.every(u => !/flag|logo|icon|\.svg|\.png|food|team|crew/i.test(decodeURIComponent(u))));
+});
+
+// Aaron 2026-11-02: Uluwatu and Shipwreck (double bed + two singles) show four guests; the card tagline is kept.
+test('floripa: card taglines, bed layout and capacity of the private multi-bed rooms', async () => {
+  const rooms = parseFloripaRooms(read('www.floripa.it_rooms.'));
+  const card = (name: string) => rooms.find(r => r.name === name)!;
+  assert.deepEqual([card('Ubatuba Room').tagline, card('Tarifa Room').tagline, card('Uluwatu Room').tagline], ['Mixed', 'Female Only', 'Perfect for families or friends']);
+  assert.equal(card('Uluwatu Room').type, '4 beds');
+  assert.deepEqual(['4 beds', '4 Beds Room (shared or private use)', 'Shared (4 beds)', 'Double Room'].map(floripaBedCount), [4, 4, null, null]);
+  assert.equal(parseFloripaBeds(read('www.floripa.it_accomodations_uluwatu-room.')), 'a double bed and two single beds (or 4 singles)');
+  const c = await floripaIspica.fetchContent(ctx);
+  const room = (name: string) => c.rooms!.find(r => r.name === name)!;
+  assert.deepEqual(room('Uluwatu Room').features!.slice(0, 3), ['Perfect for families or friends', 'Beds: a double bed and two single beds (or 4 singles)', 'Up to 4 guests']);
+  assert.deepEqual(room('Shipwreck Suite').features!.slice(0, 2), ['Beds: a double bed and two single beds (or 4 singles)', 'Up to 4 guests']);
+  assert.equal(room('Uluwatu Room').description, '4 beds, Surf House.');
+  assert.ok(!room('Ubatuba Room').features!.some(f => /guests|^Beds:/.test(f)));
+  assert.deepEqual(room('Sunset Room').features, ['Air conditioning', 'Wi-Fi', 'Fresh linens', 'Minimum stay 3 nights (August: 7 nights in a private room, 4 in a shared room)']);
 });
