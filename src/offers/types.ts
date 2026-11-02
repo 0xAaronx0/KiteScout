@@ -200,6 +200,9 @@ export interface OfferAdapter {
   /** stable id, also package_offers.source_listing_id as `site:<key>` */
   key: string;
   name: string;
+  /** package_offers.slug and the storage prefix of its photos, pinned when the title changes after launch (KCS links
+   *  and stored photo paths stay put); default slugify(title) */
+  slug?: string;
   kind: OfferKind;
   /** sports this offer can be booked for (default ['kitesurf']); 'wingfoil' only when the package itself offers
    *  wing foil (included, a wing variant, or lessons/rental by the operator or its school), never for a spot that

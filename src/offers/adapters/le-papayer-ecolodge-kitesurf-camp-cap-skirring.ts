@@ -5,7 +5,8 @@
 // transfers (10 minutes) and 4x4 / pirogue excursions to other spots (Nikine, Boudédiète, Carabane, Pointe
 // Saint-Georges). Side-on wind 10-20 knots, gusts to 25, best January to April (February and March best).
 //
-// Kind 'accommodation' (a kite stay for experienced riders; the operator calls it a "camp").
+// Kind 'accommodation' (a kite stay for experienced riders). The operator wrote on 2026-11-02 that it is no camp (no
+// lessons, no rental, experienced kiters with own gear only): title without "Kitesurf Camp", slug pinned to the old one.
 // Data path (checked 2026-10-21):
 //   content  becapkite.com home (kite rules, season table, FAQ, photos; JSON-LD SportsActivityLocation + FAQPage) and
 //            lepapayer.com home (the hotel: rooms, board options, capacity, JSON-LD Hotel with geo and contactPoint).
@@ -182,7 +183,7 @@ export function parsePapContent(kiteHtml: string, hotelHtml: string): OfferConte
 
   return {
     kind: 'accommodation',
-    title: 'Le Papayer Ecolodge Kitesurf Camp, Cap Skirring',
+    title: 'Le Papayer Ecolodge, Cap Skirring - for experienced kiters',
     summary,
     continent: 'Africa',
     country: 'Senegal',
@@ -234,7 +235,9 @@ export async function fetchPapSlots(ctx?: Pick<FetchContext, 'note'>): Promise<S
 
 export const lePapayerEcolodgeKitesurfCampCapSkirring: OfferAdapter = {
   key: 'le-papayer-ecolodge-kitesurf-camp-cap-skirring',
-  name: 'Le Papayer Ecolodge Kitesurf Camp (Cap Skirring)',
+  name: 'Le Papayer Ecolodge (Cap Skirring)',
+  // renamed 2026-11-03 on the operator's word (not a camp); the slug stays as launched
+  slug: 'le-papayer-ecolodge-kitesurf-camp-cap-skirring',
   kind: 'accommodation',
   operator: {
     name: 'Le Papayer Ecolodge',
