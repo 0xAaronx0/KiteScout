@@ -22,6 +22,7 @@ import { prevFailedFrom, previousRun } from './run-verdict.js';
 import { linkRoomImages, planGallery } from './gallery.js';
 import { keepRoomPhotos, measureRoomPhoto, storeRoomPhotos, withRoomPhotos, type RoomPhoto } from './room-photos.js';
 import { withNamedRoomPhotos } from './room-photo-names.js';
+import { withCardRoomPhotos } from './room-cards.js';
 import { DEFAULT_DISCIPLINES, isBookable, type OfferAdapter, type OfferContent, type OfferKind, type Slot } from './types.js';
 
 export const SOURCE_PREFIX = 'site:';
@@ -681,7 +682,10 @@ async function runAdapterInner(
 
     if (opts.dryRun) {
       rep.status = 'dry_run';
-      if (content && opts.roomPhotos) rep.roomPhotos = roomPhotoStats(content, await storeRoomPhotos(content, galleryPrefix(a, content), measureRoomPhoto));
+      if (content && opts.roomPhotos) {
+        const photoContent = await withCardRoomPhotos(a.key, content);
+        rep.roomPhotos = roomPhotoStats(photoContent, await storeRoomPhotos(photoContent, galleryPrefix(a, content), measureRoomPhoto));
+      }
       return rep;
     }
 
@@ -741,8 +745,9 @@ async function runAdapterInner(
       // otherwise carried over from the stored row; the curated gallery is untouched either way
       let roomPhotos: Map<string, RoomPhoto[]> | null = null;
       if (opts.roomPhotos) {
-        roomPhotos = await storeRoomPhotos(content, galleryPrefix(a, content));
-        rep.roomPhotos = roomPhotoStats(content, roomPhotos);
+        const photoContent = await withCardRoomPhotos(a.key, content);
+        roomPhotos = await storeRoomPhotos(photoContent, galleryPrefix(a, content));
+        rep.roomPhotos = roomPhotoStats(photoContent, roomPhotos);
       }
       const photographed = <R extends { name: string }>(rs: R[]) => roomPhotos ? withRoomPhotos(rs, roomPhotos) : keepRoomPhotos(rs, existing?.rooms);
       const roomRows = roomsWithPrices(content, slots, today, lastPublished);
