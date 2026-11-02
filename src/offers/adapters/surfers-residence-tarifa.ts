@@ -96,7 +96,9 @@ export function parseFrLodge(html: string): FrLodge {
 }
 
 /** One "from" slot per lodge: the site's only price, no dates. */
-export function buildFrSlots(lodge: FrLodge, unit: string): Slot[] {
+/** `roomNames`: the house's room types when none is named like `unit` - the one "FROM" price is then the floor of each
+ *  ("from", Aaron 2026-10-31: one price line for every private room; price-on-request round 2, 2026-11-02). */
+export function buildFrSlots(lodge: FrLodge, unit: string, roomNames: string[] = []): Slot[] {
   if (!lodge.price) return [];
   return [{
     key: 'private-room-from',
@@ -111,6 +113,7 @@ export function buildFrSlots(lodge: FrLodge, unit: string): Slot[] {
     availability: 'on_request',
     availabilityText: lodge.price.raw,
     spotsLeft: null,
+    ...(roomNames.length ? { rooms: roomNames, priceIsMinimum: true } : {}),
   }];
 }
 
@@ -212,6 +215,7 @@ export const surfersResidenceTarifa: OfferAdapter = {
   async fetchSlots() {
     const l = parseFrLodge(await frPage(SR_URL));
     if (!l.heading) throw new Error('surfers-residence: lodge header not found on /tarifa-kite-house/ (layout changed?)');
-    return buildFrSlots(l, 'Private room');
+    // none of the three room types is called "Private room": the house-wide "FROM" price is each one's floor
+    return buildFrSlots(l, 'Private room', parseSrRooms(l).map(r => r.name));
   },
 };

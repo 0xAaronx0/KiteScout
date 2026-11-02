@@ -15,13 +15,15 @@
 //            "PagesStructures['<id>'] = {...}") - read with two plain GETs, no headless browser needed. It carries the
 //            apartment names + capacities, the 2026 season periods, extra costs, minimum stay, the Google map position
 //            and the gallery photos.
-//   slots    none: the dome has no printed price, the apartment price table on the Seeschwalbe page is not text (only the
-//            seasons and extras are; the price element between them is an image - inferred from the page structure, not
-//            read), and both book through Smoobu (login.smoobu.com booking-tool iframe 249133), which we do not use (bot
-//            challenge, see docs/offer-adapters.md). fetchSlots returns [] -> "price on request".
+//   slots    the apartment price table on the Seeschwalbe page is an image (PNG 1488x776, "Wohnung | Hauptsaison |
+//            Nebensaison | Wintersaison", EUR per apartment per night), read by eye 2026-11-02 into SS_PRICES and released
+//            only while the page still shows that same image (SS_PRICE_IMAGE); the season periods are text on the page
+//            ("Hauptsaison 2026: 11.10.25 - 25.10.25 ..."). Slot = apartment x season period, past periods dropped,
+//            minimum stay 3 nights. The dome has no printed price. Both book through Smoobu (login.smoobu.com booking-tool
+//            iframe 249133), which we do not use (bot challenge, see docs/offer-adapters.md) -> availability on request.
 // robots.txt (2026-10-14): nordsee-surfschule.de 404 (= allow all); seeschwalbe-schillig.com "Allow: /";
 //   storage.googleapis.com 404 (= allow all).
-// Requests per run: content 6, slots 0.
+// Requests per run: content 6, slots 2 (Seeschwalbe shell + data file, memoised from the content run within 10 minutes).
 // Gallery (Aaron 2026-11-02, "dieses listing hat keine schönen bilder": it was 10 detail shots of one apartment): the
 //   dome photos (/unterkuenfte/ above the apartment text) as the dome room type, the school's own kite photos from
 //   /kitekurse/ as the spot, then Haus Seeschwalbe from outside and the apartments' main photos ("Hauptbild"). The
@@ -31,7 +33,7 @@
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, collapse, imageCandidates, parse } from '../parse.js';
-import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
+import type { ContentRoom, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
 
 const SITE = 'https://www.nordsee-surfschule.de';
 export const NS_LODGING_URL = `${SITE}/unterkuenfte/`;
@@ -66,7 +68,7 @@ export function sitelioPageFileUrl(html: string): string | null {
   try { return (JSON.parse(map) as Record<string, string>)[`page-${id}`] ?? null; } catch { return null; }
 }
 
-interface SitelioEl { type: string; text: string | null; top: number | null; left: number | null; mapPosition: [number, number] | null; gallery: Array<{ url: string; title: string | null }> }
+interface SitelioEl { type: string; text: string | null; top: number | null; left: number | null; mapPosition: [number, number] | null; gallery: Array<{ url: string; title: string | null }>; image: string | null }
 
 /** Flatten the PagesStructures JSON into elements (document order) with their text, position, map and gallery data. */
 export function sitelioElements(js: string): SitelioEl[] {
@@ -88,10 +90,12 @@ export function sitelioElements(js: string): SitelioEl[] {
         .map(it => ({ url: String(((it.image as Record<string, unknown> | undefined)?.imageUrl as Record<string, unknown> | undefined)?.imagePath ?? ''), title: typeof it.title === 'string' ? it.title : null }))
         .filter(g => /^https:\/\//.test(g.url)) : [];
       const mp = ep.mapPosition;
+      const img = (ep.imageUrl as Record<string, unknown> | undefined)?.imagePath;
       out.push({
         type: o.type, text, top: typeof pos?.top === 'number' ? pos.top : null, left: typeof pos?.left === 'number' ? pos.left : null,
         mapPosition: Array.isArray(mp) && mp.length === 2 && mp.every(n => typeof n === 'number') ? [mp[0] as number, mp[1] as number] : null,
         gallery,
+        image: typeof img === 'string' && /^https:\/\//.test(img) ? img : null,
       });
     }
     for (const v of Object.values(o)) if (v && typeof v === 'object') walk(v);
@@ -101,6 +105,22 @@ export function sitelioElements(js: string): SitelioEl[] {
 }
 
 export interface SsApartment { name: string; maxPersons: number | null }
+
+/** The price table image of the Seeschwalbe page (see the header); a different image means new prices -> no slots. */
+export const SS_PRICE_IMAGE = 'https://storage.googleapis.com/production-sitelio-v1-0-2/532/1820532/0a9pUzFd/819c57b93bf24667835adde04fac94d6';
+/** EUR per apartment per night as printed in SS_PRICE_IMAGE (read 2026-11-02): main / shoulder / winter season. */
+export const SS_PRICES: Record<string, { haupt: number; neben: number; winter: number }> = {
+  Nordwind: { haupt: 115, neben: 98, winter: 69 },
+  Schwalbennest: { haupt: 110, neben: 94, winter: 66 },
+  Brandung: { haupt: 100, neben: 85, winter: 60 },
+  Strandkorb: { haupt: 100, neben: 85, winter: 60 },
+  Muschel: { haupt: 100, neben: 85, winter: 60 },
+  Seestern: { haupt: 100, neben: 85, winter: 60 },
+  Leuchtturm: { haupt: 100, neben: 85, winter: 60 },
+  Deichblick: { haupt: 100, neben: 85, winter: 60 },
+  Auszeit: { haupt: 85, neben: 73, winter: 51 },
+};
+export interface SsPeriod { season: 'haupt' | 'neben' | 'winter'; start: string; end: string }
 export interface Seeschwalbe {
   apartments: SsApartment[];
   seasons: string[];
@@ -110,6 +130,8 @@ export interface Seeschwalbe {
   images: string[];
   /** Haus Seeschwalbe from outside: the untitled + "Parkplatz" photos of the garden gallery */
   house: string[];
+  /** the image elements' sources (the price table is one of them) */
+  pictures: string[];
   intro: string | null;
 }
 
@@ -147,6 +169,7 @@ export function parseSeeschwalbe(js: string): Seeschwalbe {
     map: map ? { lat: Math.round(map[0] * 1e6) / 1e6, lng: Math.round(map[1] * 1e6) / 1e6 } : null,
     images,
     house,
+    pictures: els.map(e => e.image).filter((u): u is string => !!u),
     intro: texts.find(e => /^Der ideale Ort für Erholung/i.test(e.text))?.text ?? null,
   };
 }
@@ -232,7 +255,7 @@ export function parseNordseeContent(p: NsPages): OfferContent {
     'The Nordsee Academy (Nordsee Surfschule), a VDWS kite and windsurf school in Wangerland on the East Frisian North Sea coast, rents its own accommodation:',
     'a glamping dome with a 180 cm double bed, heating and a small kitchen corner at its mooi Strandhaus station in Hooksiel, less than 200 m from the Hooksiel kite zone,',
     `and ${ss.apartments.length || 'several'} holiday apartments for ${capRange} people in Haus Seeschwalbe in Schillig, behind the dike a few minutes from its Schillig kite station.`,
-    'The apartments are bookable all year (minimum stay 3 nights, final cleaning EUR 70); prices are on request.',
+    'The apartments are bookable all year (minimum stay 3 nights, final cleaning EUR 70); the dome is priced on request.',
     'The school teaches kitesurfing with Core and Flysurfer equipment at Hooksiel, Schillig and Harlesiel; its 2027 season starts at Easter.',
   ].join(' ');
 
@@ -281,6 +304,40 @@ export function parseNordseeContent(p: NsPages): OfferContent {
   };
 }
 
+/** "Hauptsaison 2026: | 11.10.25 - 25.10.25 | ..." -> periods (dd.mm.yy, the end is the last night; "04.01.26.-20.03.26" too). */
+export function parseSsPeriods(seasons: string[]): SsPeriod[] {
+  const out: SsPeriod[] = [];
+  const iso = (d: string, m: string, y: string) => `20${y}-${m}-${d}`;
+  for (const line of seasons) {
+    const season = /^Haupt/i.test(line) ? 'haupt' : /^Neben/i.test(line) ? 'neben' : /^Winter/i.test(line) ? 'winter' : null;
+    if (!season) continue;
+    for (const m of line.matchAll(/(\d{2})\.(\d{2})\.(\d{2})\.?\s*-\s*(\d{2})\.(\d{2})\.(\d{2})/g)) {
+      out.push({ season, start: iso(m[1], m[2], m[3]), end: iso(m[4], m[5], m[6]) });
+    }
+  }
+  return out.sort((a, b) => a.start.localeCompare(b.start));
+}
+
+/** Apartment x period slots from SS_PRICES; none when the page no longer shows SS_PRICE_IMAGE. */
+export function buildSsSlots(ss: Pick<Seeschwalbe, 'apartments' | 'seasons' | 'pictures'>, today: string, ctx?: Pick<FetchContext, 'note'>): Slot[] {
+  if (!ss.pictures.includes(SS_PRICE_IMAGE)) {
+    ctx?.note('nordsee-surfschule: the Seeschwalbe price image changed - no prices until SS_PRICES is read again');
+    return [];
+  }
+  const periods = parseSsPeriods(ss.seasons).filter(p => p.end >= today);
+  const out: Slot[] = [];
+  for (const a of ss.apartments) {
+    const row = SS_PRICES[a.name];
+    if (!row) { ctx?.note(`nordsee-surfschule: apartment ${a.name} is not in the price image`); continue; }
+    for (const p of periods) out.push({
+      key: `${a.name.toLowerCase()}|${p.start}`, startDate: p.start, endDate: p.end, unit: `Apartment ${a.name}`,
+      room: `Apartment ${a.name} (Haus Seeschwalbe, Schillig)`, price: row[p.season], currency: 'EUR', priceUnit: 'per_night',
+      priceBasis: 'room', occupancy: null, availability: 'on_request', availabilityText: null, spotsLeft: null, minNights: 3,
+    });
+  }
+  return out;
+}
+
 export const nordseeSurfschuleDomeSeeschwalbeHooksiel: OfferAdapter = {
   key: 'nordsee-surfschule-dome-seeschwalbe-hooksiel',
   name: 'Nordsee Surfschule Glamping Dome & Haus Seeschwalbe',
@@ -294,7 +351,7 @@ export const nordseeSurfschuleDomeSeeschwalbeHooksiel: OfferAdapter = {
   url: NS_LODGING_URL,
   slotMethod: 'price_table',
   fetchBudget: 7,
-  confidence: 'low', // no prices readable
+  confidence: 'low', // apartment prices hand-read from an image, no availability (Smoobu not used)
   async fetchContent() {
     const lodging = await page(NS_LODGING_URL);
     const home = await page(NS_HOME_URL);
@@ -308,7 +365,8 @@ export const nordseeSurfschuleDomeSeeschwalbeHooksiel: OfferAdapter = {
     return parseNordseeContent({ lodging, home, kite, strandhaus, seeschwalbe });
   },
   async fetchSlots(ctx) {
-    ctx.note('nordsee-surfschule: no readable prices (dome unpriced, Seeschwalbe table not text, Smoobu not used) - price on request');
-    return [] as Slot[];
+    const file = sitelioPageFileUrl(await page(SS_HOME_URL));
+    if (!file) throw new Error('nordsee-surfschule: Sitelio SiteFilesMap / defaultAjaxPageID not found on seeschwalbe-schillig.com');
+    return buildSsSlots(parseSeeschwalbe(await page(file, '*/*')), new Date().toISOString().slice(0, 10), ctx);
   },
 };
