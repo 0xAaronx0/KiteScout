@@ -170,7 +170,7 @@ test('repriceStoredRooms (--slots runs): price fields from the fresh slots, name
     { name: 'Dorm bed', description: null, features: [], image_sort: null, price_from: null, price_currency: null, price_unit: null, price_basis: null, price_source: 'provider_site', priced_months: [] },
     // an old row whose name no slot carries any more (renamed since the last full run): keeps its stored price
     { name: 'Old cabin', description: null, features: [], image_sort: 1, price_from: 50, price_currency: 'EUR', price_unit: 'per_night', price_basis: 'room', price_source: 'provider_site', priced_months: [] },
-    // a room the slots still name, but closed without a price: loses it, as in a full run
+    // a room the slots still name, but closed without a price: keeps its price, months and availability are fresh
     { name: 'Loft', description: null, features: [], image_sort: null, price_from: 120, price_currency: 'EUR', price_unit: 'per_night', price_basis: 'room', price_source: 'provider_site', priced_months: [] },
   ];
   const slots = [
@@ -182,12 +182,13 @@ test('repriceStoredRooms (--slots runs): price fields from the fresh slots, name
   const out = repriceStoredRooms('accommodation', stored, slots, '2026-11-02')!;
   assert.deepEqual(out.map(r => [r.name, r.description, r.image_sort, r.price_from, r.price_basis, r.priced_months]), [
     ['Double room', 'Sea view', 3, 95, 'room', [7]], ['Dorm bed', null, null, 30, 'person', [7]], ['Old cabin', null, 1, 50, 'room', []],
-    ['Loft', null, null, null, null, []],
+    ['Loft', null, null, 120, 'room', []],
   ]);
+  assert.deepEqual(out[3].availability, [{ start_date: '2027-07-01', end_date: '2027-07-31', status: 'closed', price: null, currency: 'EUR' }]);
   assert.deepEqual(out[0].features, ['Balcony']);
   assert.equal(out[0].extra, 'kept');
   assert.deepEqual(staleRoomNames(stored, slots), ['Old cabin']);
-  assert.deepEqual(roomPriceChanges(stored, out), { gained: 1, lost: 1, changed: 1 });
+  assert.deepEqual(roomPriceChanges(stored, out), { gained: 1, lost: 0, changed: 1 });
   // the same slots again change nothing
   assert.deepEqual(roomPriceChanges(out, repriceStoredRooms('accommodation', out, slots, '2026-11-02')!), { gained: 0, lost: 0, changed: 0 });
 });

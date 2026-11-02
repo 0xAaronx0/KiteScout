@@ -490,9 +490,10 @@ const ROOM_PRICE_KEYS = ['price_from', 'price_currency', 'price_from_is_minimum'
 /**
  * --slots runs (the daily cron) do not read content, so they used to leave the stored room prices as the last full run
  * wrote them (Aaron 2026-11-02: room prices daily too). The stored rows are re-priced from the fresh slots by the same
- * roomsWithPrices; null when there is nothing to re-price (no stored rows, or a row without a name). A row no slot
- * belongs to at all (the provider renamed or dropped the room since the last full run) keeps its stored price: only a
- * full run can refresh the names, see staleRoomNames.
+ * roomsWithPrices; null when there is nothing to re-price (no stored rows, or a row without a name). A priced row never
+ * loses its price here (Aaron 2026-10-30: a room whose price the provider states is never "on request"): a row no slot
+ * belongs to at all (renamed or dropped since the last full run, see staleRoomNames) keeps the whole stored row, a row
+ * whose slots now carry no price (calendar closed) keeps its price but takes the fresh priced_months and availability.
  */
 export function repriceStoredRooms(kind: OfferKind, stored: unknown, slots: Slot[], today: string, lastPublished: Slot[] = []): Array<Record<string, unknown>> | null {
   if (!Array.isArray(stored) || stored.length === 0) return null;
@@ -506,7 +507,9 @@ export function repriceStoredRooms(kind: OfferKind, stored: unknown, slots: Slot
   const stale = new Set(staleRoomNames(rows, [...slots, ...lastPublished]));
   return rows.map((r, i) => {
     const out: Record<string, unknown> = { ...r };
-    if (!stale.has(r.name as string)) for (const k of ROOM_PRICE_KEYS) out[k] = fresh[i][k];
+    if (stale.has(r.name as string)) return out;
+    const keepPrice = r.price_from != null && fresh[i].price_from === null;
+    for (const k of ROOM_PRICE_KEYS) if (!keepPrice || k === 'priced_months' || k === 'availability') out[k] = fresh[i][k];
     return out;
   });
 }
