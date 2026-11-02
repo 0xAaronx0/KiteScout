@@ -24,6 +24,8 @@
 // Requests per run: content 4 + 1 (unit list, memoised), slots 1 (list, memoised) + 12 -> 17 for a full run.
 // Known limits: one sample week per month (a unit booked for part of that week counts as taken for that month);
 //   minimum stays (3-4 nights by season) and shorter stays are not sampled; occupancy surcharges none seen.
+// Room photos: /accommodations/, the one photo after each unit type's <h3> (the Streamline unit images stay general
+//   candidates only); spot photos: the photos of /play/kiteboarding/.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, collapse, imageCandidates, iso, parse, todayIso } from '../parse.js';
@@ -227,6 +229,17 @@ export function wrTypeFacts(html: string): Map<string, string> {
   return out;
 }
 
+/** /accommodations/: per unit type (wrNorm of its <h3>) the photo right after the heading, up to the next heading. */
+export function wrTypePhotos(html: string): Map<string, string[]> {
+  const out = new Map<string, string[]>();
+  for (const m of html.matchAll(/<h3\b[^>]*>([\s\S]*?)<\/h3>([\s\S]*?)(?=<h[1-3]\b|$)/gi)) {
+    const name = wrNorm(collapse(m[1].replace(/<[^>]+>/g, ' ')));
+    const photos = wrImages(m[2], WR_ACCOM_URL);
+    if (name && photos.length && !out.has(name)) out.set(name, photos);
+  }
+  return out;
+}
+
 export interface WrPages { home: string; kite: string; about: string; accom: string; list: string }
 
 export function parseWatermensContent(p: WrPages): OfferContent {
@@ -250,10 +263,12 @@ export function parseWatermensContent(p: WrPages): OfferContent {
   const types = new Map<string, WrUnit[]>();
   for (const u of units) { const t = wrUnitType(u); types.set(t, [...(types.get(t) ?? []), u]); }
   const typeFacts = wrTypeFacts(p.accom);
+  const typePhotos = wrTypePhotos(p.accom);
   const rooms: ContentRoom[] = [...types.entries()].map(([type, us]) => {
     const from = us.map(u => u.fromDaily).filter((x): x is number => x !== null);
     const first = us[0];
     const floors = [...new Set(us.map(u => u.floor).filter((x): x is string => !!x))];
+    const photos = typePhotos.get(wrNorm(type)) ?? [];
     return {
       name: type,
       description: first.description ? first.description.slice(0, 500) : null,
@@ -267,8 +282,11 @@ export function parseWatermensContent(p: WrPages): OfferContent {
         typeFacts.get(wrNorm(type)) ?? null,
         from.length ? `From USD ${Math.min(...from)} per night${tax ? ` (plus ${tax}% tax)` : ''}` : null,
       ].filter((x): x is string => !!x),
+      ...(photos.length ? { imageUrls: photos } : {}),
     };
   });
+  // /play/kiteboarding/: header, section and gallery photos of the launch and the kiting
+  const spotImageUrls = wrImages(p.kite, WR_KITE_URL);
 
   const imageUrls: string[] = [];
   for (const u of [...wrImages(p.home, WR_HOME_URL), ...wrImages(p.kite, WR_KITE_URL), ...wrImages(p.accom, WR_ACCOM_URL),
@@ -318,6 +336,7 @@ export function parseWatermensContent(p: WrPages): OfferContent {
     languages: ['en'],
     rooms,
     imageUrls: imageUrls.slice(0, 40),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: WR_HOME_URL,
     bookingUrl: WR_ACCOM_URL,

@@ -4,8 +4,9 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  prasebanResortPakNamPran, parsePsbAddress, parsePsbCoords, parsePsbRoom, parsePsbRoomLinks, psbImages,
+  prasebanResortPakNamPran, parsePsbAddress, parsePsbCoords, parsePsbRoom, parsePsbRoomLinks, psbImageKey, psbImages,
 } from '../../src/offers/adapters/praseban-resort-pak-nam-pran.js';
+import { planGallery } from '../../src/offers/gallery.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/praseban-resort-pak-nam-pran');
@@ -59,4 +60,35 @@ test('praseban: content', async () => {
   assert.ok(c.optionalServices.includes('Monthly stay offer (minimum 30 nights, daily breakfast, housekeeping 3 times a week)'));
   assert.ok(c.imageUrls.length >= 20);
   assert.ok(c.imageUrls.every(u => !/pexels-|praseban\.png|FavLogo/i.test(u)));
+});
+
+test('praseban: each room type gets the lightbox gallery of its own page, the kite page photo as spot', async () => {
+  const c = await prasebanResortPakNamPran.fetchContent(ctx);
+  const file = (u: string) => u.split('/').pop()!.replace(/\?.*$/, '');
+  assert.deepEqual(c.rooms.map(r => [r.name, r.imageUrls?.length ?? 0, file(r.imageUrls![0])]), [
+    ['Maarataar Deluxe', 5, 'DSC05377-scaled.jpg'],
+    ['Sawanya', 5, 'FAV1.jpg'],
+    ['Seaview Suite', 5, 'img-ps-1.jpg'],
+    ['Praseban Ocean', 5, 'DSC05185-scaled-e1692324308993.jpg'],
+    ['Minntra Beach Front', 5, 'img-mt-1-scaled.jpg'],
+    ['Narin-tara Family', 5, 'DSC05437-1-scaled.jpg'],
+    ['Two Bedroom Villa', 10, 'img-tbv-1-1.jpg'],
+  ]);
+  const room = (n: string) => c.rooms.find(r => r.name === n)!.imageUrls!;
+  assert.ok(room('Maarataar Deluxe').some(u => /Maarataar-5\.jpg$/.test(u)));
+  assert.ok(room('Minntra Beach Front').some(u => /Minntra-5\.jpg$/.test(u)));
+  // Narin-tara's gallery also shows "Minntra-5.jpg": named after another room type, so it stays out
+  assert.ok(!room('Narin-tara Family').some(u => /Minntra/.test(u)));
+  assert.ok(room('Narin-tara Family').every(u => /img-nr-|DSC05437-1|DSC05348/.test(u)));
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.equal(new Set(all.map(psbImageKey)).size, all.length);
+  // same URL as in the general list (largest variant), no thumbnails / stock
+  assert.ok(all.every(u => /^https:\/\/prasebanresort\.com\/wp-content\/uploads\//.test(u) && !/-\d+x\d+\.|pexels-|thumb-/.test(u)));
+  for (const u of all.filter(u => c.imageUrls.some(g => psbImageKey(g) === psbImageKey(u)))) assert.ok(c.imageUrls.includes(u), u);
+
+  assert.deepEqual(c.spotImageUrls?.map(file), ['IMG_4215-01-2048x2048.jpeg.webp']);
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

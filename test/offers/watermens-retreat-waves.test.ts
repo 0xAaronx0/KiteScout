@@ -5,9 +5,10 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  watermensRetreatWaves, fetchWrSlots, parseWrSearch, parseWrUnits, wrSampleStays, wrSearchUrl, wrTypeFacts, wrUnitType,
+  watermensRetreatWaves, fetchWrSlots, parseWrSearch, parseWrUnits, wrSampleStays, wrSearchUrl, wrTypeFacts, wrTypePhotos, wrUnitType,
   WR_LIST_URL,
 } from '../../src/offers/adapters/watermens-retreat-waves.js';
+import { planGallery } from '../../src/offers/gallery.js';
 import { fetchText } from '../../src/offers/http.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
@@ -84,4 +85,30 @@ test('wr: content', async () => {
   assert.ok(c.imageUrls.length >= 30);
   assert.ok(c.imageUrls.every(u => !/logo|amelia-island|icon|\.png$/i.test(u)));
   assert.equal(c.mealPlan, 'self_catering');
+});
+
+test('wr: each unit type gets the photo after its heading on /accommodations/, the kiteboarding page as spot', async () => {
+  const c = await watermensRetreatWaves.fetchContent(ctx);
+  const file = (u: string) => u.split('/').pop();
+  const photos = new Map(c.rooms.map(r => [r.name, (r.imageUrls ?? []).map(file)]));
+  assert.deepEqual(Object.fromEntries(photos), {
+    'Two Bedroom Garden View Suite': ['2-Bedroom-Garden-View-1.jpeg'],
+    'Two Bedroom Waterfront Suite': ['Two-Bedroom-WaterfrontA.jpg'],
+    'Three Bedroom Waterfront Suite': ['3-Bedroom-Waterfront-Possible-.jpg'],
+    'Two Bedroom Water View Suite': ['Two-Bedroom-Water-View.jpg'],
+    'Three Bedroom Water View Suite': ['3-bedroom-waterview.jpeg'],
+    'Three Bedroom Waterfront Penthouse': ['Three-Bedroom-Waterfront.jpg'],
+    'Three Bedroom Cabana': ['Three-Bedroom-Cabana.jpg'],
+    'Two Bedroom Cabana': ['Two-Bedroom-Cabana.jpg'],
+    "Watermen's Hideout (cottage)": ['The-Cottage.webp'],
+  });
+  const all = c.rooms.flatMap(r => r.imageUrls!);
+  assert.ok(all.every(u => /^https:\/\/www\.watermensretreat\.com\/wp-content\/uploads\/20\d\d\/\d\d\/[^/]+\.(?:jpe?g|webp)$/.test(u) && c.imageUrls.includes(u)));
+  assert.equal(wrTypePhotos(read('www.watermensretreat.com_accommodations_')).size, 9);
+
+  assert.deepEqual(c.spotImageUrls?.map(file), ['Kiteboarding-Header.jpg', 'Homepage-2a.jpg', 'DJI_0306.jpg', 'DSC06863.jpg', 'Groups-Header-1.jpg', 'image-asset-13.jpeg', 'kevin-ski.jpeg']);
+
+  const first24 = planGallery(c).candidates.slice(0, 24);
+  for (const r of c.rooms) assert.ok(r.imageUrls!.some(u => first24.includes(u)), r.name);
+  assert.ok(first24.includes(c.spotImageUrls![0]));
 });

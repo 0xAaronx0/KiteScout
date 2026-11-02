@@ -23,6 +23,8 @@
 // Map pin: the site's own Google Maps embed for "Praseban Resort" (!3d12.3482028 !2d99.9973775).
 // Known limits: the /kitesurfing/ page itself was last edited 2024-05-23 (still in the sitemap, not in the menu); the
 //   2025-10-19 activities page carries the current kite statement. Stock photos (pexels-*) are not used.
+// Room photos: the Elementor lightbox gallery of each room page /rooms/<slug>/ (a file named after another room type
+//   stays out); spot photo: the own photo of /kitesurfing/.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, collapse, imageCandidates, parse } from '../parse.js';
@@ -94,6 +96,12 @@ export function parsePsbAddress(html: string): string | null {
   return t.match(/PRASEBAN RESORT\s+(\d+ Moo \d+[^.]*Thailand)/i)?.[1] ?? null;
 }
 
+/** One key per photo: the WordPress size suffix, the .webp copy, "-scaled" and the "-e<timestamp>" edit marker dropped. */
+export function psbImageKey(u: string): string {
+  return u.replace(/\?.*$/, '').replace(/(\.(?:jpe?g|png))\.webp$/i, '$1').replace(/-\d+x\d+(?=\.(?:jpe?g|png)$)/i, '')
+    .replace(/-e\d{10,}(?=\.)/, '').replace(/-scaled(?=\.)/, '');
+}
+
 /** Best photo per base name: original file over the .webp copy over the largest size variant. */
 export function psbImages(urls: string[]): string[] {
   const best = new Map<string, { url: string; score: number }>();
@@ -102,15 +110,25 @@ export function psbImages(urls: string[]): string[] {
     if (/praseban\.png|FavLogo|logo|pexels-|thumb-|\.svg/i.test(u)) continue;
     const bare = u.replace(/\?.*$/, '');
     const size = bare.match(/-(\d+)x\d+(?=\.(?:jpe?g|png)(?:\.webp)?$)/i);
-    // one key per photo: drop the WordPress size suffix, the .webp copy, "-scaled" and the "-e<timestamp>" edit marker
-    const key = bare.replace(/(\.(?:jpe?g|png))\.webp$/i, '$1').replace(/-\d+x\d+(?=\.(?:jpe?g|png)$)/i, '')
-      .replace(/-e\d{10,}(?=\.)/, '').replace(/-scaled(?=\.)/, '');
+    const key = psbImageKey(u);
     const score = size ? Number(size[1]) : /\.webp$/i.test(bare) ? 9000 : bare !== u ? 9500 : 10000;
     const had = best.get(key);
     if (!had) { best.set(key, { url: u, score }); order.push(key); }
     else if (score > had.score) best.set(key, { url: u, score });
   }
   return order.map(k => best.get(k)!.url);
+}
+
+/**
+ * Room page: the photos of its Elementor lightbox gallery (`<a href=original data-elementor-lightbox-slideshow>`), in page
+ * order. A file named after another room type (Narin-tara's gallery shows "Minntra-5.jpg") stays out.
+ */
+export function psbRoomPhotos(html: string, url: string, otherRooms: string[]): string[] {
+  const gallery = [...html.matchAll(/<a\b[^>]*\bdata-elementor-lightbox-slideshow="[^"]*"[^>]*>[\s\S]*?<\/a>/gi)].map(m => m[0]).join('\n');
+  if (!gallery) return [];
+  const words = otherRooms.map(n => n.toLowerCase().split(/[\s-]+/)[0]).filter(w => w.length >= 5 && w !== 'praseban');
+  const fileOf = (u: string) => (u.replace(/\?.*$/, '').split('/').pop() ?? '').toLowerCase();
+  return psbImages(imageCandidates(gallery, url, null, 40)).filter(u => !words.some(w => fileOf(u).includes(w)));
 }
 
 export interface PsbPages { home: string; kite: string; activities: string; info: string; rooms: string; monthly: string; roomPages: Record<string, string> }
@@ -132,14 +150,22 @@ export function parsePrasebanContent(p: PsbPages): OfferContent {
   const restaurant = monthly.match(/breakfast at ([A-Z][a-z]+ [A-Z][a-z]+) restaurant/)?.[1] ?? null;
   const minMonthly = monthly.match(/minimum stay of (\d+) nights/i)?.[1] ?? null;
 
-  const contentRooms: ContentRoom[] = rooms.map(r => ({ name: r.name, description: r.description, features: [...r.info, ...r.amenities] }));
-
   const imageUrls = psbImages([
     ...imageCandidates(p.home, PSB_HOME_URL, null, 30),
     ...imageCandidates(p.rooms, PSB_ROOMS_URL, null, 30),
     ...links.flatMap(l => (p.roomPages[l.slug] ? imageCandidates(p.roomPages[l.slug], l.url, null, 20) : [])),
     ...imageCandidates(p.kite, PSB_KITE_URL, null, 10),
   ]);
+  // room photos as the same URL the general list picked for that photo (largest variant across all pages)
+  const general = new Map(imageUrls.map(u => [psbImageKey(u), u]));
+  const asGeneral = (u: string) => general.get(psbImageKey(u)) ?? u;
+  const contentRooms: ContentRoom[] = rooms.map(r => {
+    const url = links.find(l => l.slug === r.slug)!.url;
+    const photos = psbRoomPhotos(p.roomPages[r.slug], url, rooms.filter(o => o !== r).map(o => o.name)).map(asGeneral);
+    return { name: r.name, description: r.description, features: [...r.info, ...r.amenities], ...(photos.length ? { imageUrls: photos } : {}) };
+  });
+  // /kitesurfing/: its own photo (the Pexels stock shot is filtered by psbImages)
+  const spotImageUrls = psbImages(imageCandidates(p.kite, PSB_KITE_URL, null, 10)).map(asGeneral);
 
   const summary = [
     `Praseban Resort is a small beachfront resort in Pak Nam Pran (Pranburi), south of Hua Hin in Thailand, with ${nRooms ?? '14'} Thai-Balinese style rooms and villas a few steps from the beach, a pool and ${restaurant ? `the ${restaurant} restaurant` : 'a restaurant'}.`,
@@ -180,6 +206,7 @@ export function parsePrasebanContent(p: PsbPages): OfferContent {
     languages: [],
     rooms: contentRooms,
     imageUrls: imageUrls.slice(0, 40),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: PSB_KITE_URL,
     bookingUrl: BOOKING_URL,

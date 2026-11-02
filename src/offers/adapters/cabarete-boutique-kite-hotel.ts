@@ -24,9 +24,12 @@
 //   one slot per unit from /book (its per-night price for the stated guests, mapped to the card names by CBK_BOOK_ROOMS).
 //   /book failing leaves the two page slots.
 // Known limits: no dates, no availability; the extra-guest charge stays out of the price.
+// Room photos: the one Wix photo of each card under "CHOOSE YOUR SPACE"; spot photo: the page's photo of kiting at
+//   Cabarete (by alt). Wix stock files ("Image by ...") and press logos are left out of every list.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, collapse, imageCandidates, ldOfType, parse, parseAmount, type HTMLElement } from '../parse.js';
+import { isNotOwnPhoto } from '../gallery.js';
 import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
 
 const SITE = 'https://www.kitebuenhombre.com';
@@ -141,6 +144,70 @@ export function buildCbkSlots(p: CbkPrices): Slot[] {
   return out;
 }
 
+// --- photos -----------------------------------------------------------------------------------
+const wixId = (u: string): string | null => u.match(/static\.wixstatic\.com\/media\/([^/~.]+)/)?.[1] ?? null;
+
+/** Per Wix media id what the page's <img> tags say: the uploaded file name (the last part of the src) and the alt. */
+export function cbkImgInfo(html: string): Map<string, { src: string; file: string; alt: string }> {
+  const out = new Map<string, { src: string; file: string; alt: string }>();
+  for (const img of parse(html).querySelectorAll('img')) {
+    const src = img.getAttribute('src') ?? '';
+    const id = wixId(src);
+    if (!id || out.has(id)) continue;
+    let file = src.split('?')[0].split('/').pop() ?? '';
+    try { file = decodeURIComponent(file); } catch { /* keep as is */ }
+    out.set(id, { src, file, alt: collapse(img.getAttribute('alt') ?? '') });
+  }
+  return out;
+}
+
+/** Media ids that are not the provider's own photo: the JSON-LD logo, logos by file name / alt ("Lonely-Planet-Logo"),
+ *  Wix stock files ("Image by Jared Rice.jpg"; the original URL loses the file name, so it is read from the <img>). */
+export function cbkNotOwn(html: string, info = cbkImgInfo(html)): Set<string> {
+  const out = new Set([...html.matchAll(/"logo":\{[^}]*"url":"[^"]*\/media\/([^"/~.]+)/g)].map(m => m[1]));
+  for (const [id, i] of info) if (/logo/i.test(`${i.file} ${i.alt}`) || isNotOwnPhoto(i.src)) out.add(id);
+  return out;
+}
+
+/** Wix originals (/media/<id>, no /v1/ transform) of a page or card, one per media id; logos, icons, SVG / PNG dropped. */
+function cbkPhotos(html: string, skip: Set<string>, max = 80): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const u of imageCandidates(html, CBK_URL, null, max)) {
+    const id = wixId(u);
+    if (!id || skip.has(id) || /logo|icon|\.svg|\.png/i.test(u) || seen.has(id)) continue;
+    seen.add(id);
+    out.push(u.replace(/(\/media\/[^/]+)\/v1\/.*$/, '$1'));
+  }
+  return out;
+}
+
+/** Room cards: card name -> the card's photo (the Wix image above "For ..." / name, inside the card's container). */
+export function parseCbkCardPhotos(html: string, skip = cbkNotOwn(html)): Map<string, string[]> {
+  const out = new Map<string, string[]>();
+  const h3s = parse(html).querySelectorAll('h3');
+  for (let i = 0; i + 1 < h3s.length; i++) {
+    if (!/^For \w/.test(collapse(h3s[i].text))) continue;
+    const name = collapse(h3s[i + 1].text);
+    let box: HTMLElement | null = h3s[i].parentNode as HTMLElement | null;
+    while (box && !box.querySelector('a[href*="book?room="]')) box = box.parentNode as HTMLElement | null;
+    while (box && !box.querySelector('img')) box = box.parentNode as HTMLElement | null;
+    // one card only (its "For ..." and name headings)
+    if (!box || box.querySelectorAll('h3').filter(h => /^For \w/.test(collapse(h.text))).length !== 1) continue;
+    const photos = cbkPhotos(box.toString(), skip, 10);
+    if (photos.length && !out.has(name)) out.set(name, photos);
+  }
+  return out;
+}
+
+/** Photos of people kiting at Cabarete, by their alt text (the page's other kite photos are Buen Hombre / El Morro). */
+export function cbkSpotPhotos(html: string, info = cbkImgInfo(html), skip = cbkNotOwn(html, info)): string[] {
+  return cbkPhotos(html, skip).filter(u => {
+    const alt = info.get(wixId(u) ?? '')?.alt ?? '';
+    return /kitesurf|kiteboard|kiting|wing ?foil/i.test(alt) && /Cabarete/i.test(alt) && !/Buen Hombre|El Morro/i.test(alt);
+  });
+}
+
 export function parseCabareteBoutiqueContent(html: string): OfferContent {
   const lines = cbkLines(html);
   const text = lines.join(' ');
@@ -162,21 +229,18 @@ export function parseCabareteBoutiqueContent(html: string): OfferContent {
   // the first card only
   const seenDesc = new Set<string>();
 
+  const imgInfo = cbkImgInfo(html);
+  const notOwn = cbkNotOwn(html, imgInfo);
+  const cardPhotos = parseCbkCardPhotos(html, notOwn);
   const rooms: ContentRoom[] = cards.map(c => ({
     name: c.name,
     description: c.description && !seenDesc.has(c.description) ? (seenDesc.add(c.description), c.description) : null,
     features: [`For ${c.audience.toLowerCase()}`, ...c.attributes],
+    ...(cardPhotos.has(c.name) ? { imageUrls: cardPhotos.get(c.name)! } : {}),
   }));
 
-  const logoIds = new Set([...html.matchAll(/"logo":\{[^}]*"url":"[^"]*\/media\/([^"/~.]+)/g)].map(m => m[1]));
-  const seen = new Set<string>();
-  const imageUrls: string[] = [];
-  for (const u of imageCandidates(html, CBK_URL, null, 80)) {
-    const id = u.match(/static\.wixstatic\.com\/media\/([^/~.]+)/)?.[1];
-    if (!id || logoIds.has(id) || /logo|icon|\.svg|\.png/i.test(u) || seen.has(id)) continue;
-    seen.add(id);
-    imageUrls.push(u.replace(/(\/media\/[^/]+)\/v1\/.*$/, '$1'));
-  }
+  const imageUrls = cbkPhotos(html, notOwn);
+  const spotImageUrls = cbkSpotPhotos(html, imgInfo, notOwn);
 
   const walk = ans(/How far is the hotel from Kite Beach/i) ?? '';
   const walkMin = walk.match(/(\d+)-minute walk/)?.[1] ?? null;
@@ -225,6 +289,7 @@ export function parseCabareteBoutiqueContent(html: string): OfferContent {
     languages: ['en', 'es'],
     rooms,
     imageUrls: imageUrls.slice(0, 30),
+    ...(spotImageUrls.length ? { spotImageUrls } : {}),
     heroVideoUrl: null,
     sourceUrl: CBK_URL,
     bookingUrl: BOOKING_URL,
