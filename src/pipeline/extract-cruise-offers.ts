@@ -17,7 +17,7 @@ import { mergeItinerarySpots } from '../lib/itinerary-spots.js';
 import { cruiseDisciplines } from '../lib/disciplines.js';
 import { geocodeSpot } from '../lib/geocode.js';
 import { seasonUpsertColumns } from './season-extract.js';
-import { DURATION_RULE, NIGHTS_RULE, cleanNights, sameTripDuration } from './trip-duration.js';
+import { DURATION_RULE, NIGHTS_RULE, cleanNights, nightsFromDepartures, sameTripDuration } from './trip-duration.js';
 
 const CONCURRENCY = 3;                  // providers in parallel
 const PAGE_CONCURRENCY = 8;             // global page fetches in flight (across providers)
@@ -902,6 +902,8 @@ async function processProvider(cp: {
       if (fb) images = [{ ...fb, sort: 0, fallback: true }];
     }
 
+    // Nights as the page states them, else as the listed departures state them (Aaron 2026-11-02).
+    const nights = cleanNights(offer.duration_nights) ?? nightsFromDepartures(storedDepartures(offer.dates));
     const row = {
       cruise_provider_id: cp.id,
       title: plainDashes(offer.title),
@@ -926,8 +928,8 @@ async function processProvider(cp: {
         bestSeason ? bestSeason.end : cleanMonth(offer.season_end_month),
       ),
       // Aaron 2026-10-31: nights are the stored fact; days follow as nights + 1 when the page gives only nights.
-      duration_nights: cleanNights(offer.duration_nights),
-      duration_days: cleanInt(offer.duration_days) ?? (cleanNights(offer.duration_nights) !== null ? cleanNights(offer.duration_nights)! + 1 : null),
+      duration_nights: nights,
+      duration_days: cleanInt(offer.duration_days) ?? (nights !== null ? nights + 1 : null),
       dates: storedDepartures(offer.dates),
       pricing: offer.pricing ?? null,
       // a per-night amount is no trip price ("on request", Aaron 2026-10-28)

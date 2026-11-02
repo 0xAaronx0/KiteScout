@@ -139,6 +139,13 @@ test('nights (Aaron 2026-10-31): a stated value is stored exactly, days follow a
   assert.equal(proposeUpdate(offer(), obs({ durationNights: 61 }), AUTH), null, 'out of range is ignored');
 });
 
+test('nights (Aaron 2026-11-02): a read without nights never blanks or rewrites nights taken from the departures', () => {
+  assert.equal(proposeUpdate(offer({ duration_nights: 7 }), obs(), AUTH), null);
+  assert.equal(proposeUpdate(offer({ duration_nights: 7 }), obs({ durationDays: 8 }), AUTH), null);
+  const o = obs({ departures: [{ start_date: '2026-11-07', end_date: '2026-11-14', price: 2000, currency: 'EUR', status: 'available' }] });
+  assert.equal(proposeUpdate(offer({ duration_nights: 7 }), o, AUTH), null);
+});
+
 test('duration: ±1 day is nights-vs-days noise; a gap is filled; a big jump needs review', () => {
   assert.equal(proposeUpdate(offer(), obs({ durationDays: 7 }), AUTH), null);
   assert.equal(proposeUpdate(offer({ duration_days: 7 }), obs({ durationDays: 8 }), AUTH), null);

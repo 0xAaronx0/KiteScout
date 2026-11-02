@@ -17,6 +17,22 @@ export function cleanNights(value: unknown): number | null {
   return typeof n === 'number' && Number.isInteger(n) && n >= 0 && n <= 60 ? n : null;
 }
 
+/**
+ * Listed departures are the provider's statement of nights (Aaron 2026-11-02): when EVERY departure with a start and
+ * an end spans the same number of nights, that number is the trip's nights. Any span outside 1..30 or a mix: null.
+ */
+export function nightsFromDepartures(dates: unknown): number | null {
+  if (!Array.isArray(dates)) return null;
+  const spans = new Set<number>();
+  for (const d of dates as Array<{ start_date?: unknown; end_date?: unknown }>) {
+    if (typeof d?.start_date !== 'string' || typeof d?.end_date !== 'string') continue;
+    const n = (Date.parse(`${d.end_date}T00:00:00Z`) - Date.parse(`${d.start_date}T00:00:00Z`)) / 86_400_000;
+    if (!Number.isInteger(n) || n < 1 || n > 30) return null;
+    spans.add(n);
+  }
+  return spans.size === 1 ? [...spans][0] : null;
+}
+
 /** ±1 day is the nights-vs-days ambiguity ("7 days" vs "7 nights = 8 days"), never a change (as in cruise-state.ts). */
 export function sameTripDuration(before: number | null, after: number | null): boolean {
   if (before === after) return true;
