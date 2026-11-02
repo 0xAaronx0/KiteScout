@@ -9,8 +9,10 @@
 //      (self-hosted mp4/webm/mov ONLY — og:video, <video>/<source>, file links;
 //      no YouTube/Vimeo/platform embeds) into `offer_media_candidates`.
 //      Idempotent; never touches rows the admin already worked on.
-//   2. /admin/media (web) — the admin picks up to 10 images (sort 0 = hero) and
-//      optionally one hero video → rows become status='selected'.
+//   2. `pnpm cli cruise-media auto` (media-auto.ts, daily cron since 2026-11-02) —
+//      a vision step fills each offer behind its live set → status='selected'.
+//      /admin/media (web) stays as the optional correction: the admin picks up to
+//      12 media (sort 0 = hero) and optionally one hero video → status='selected'.
 //   3. `pnpm cli cruise-media apply` — downloads the selected images,
 //      compresses to WebP, uploads to the private bucket, writes
 //      cruise_offers.images (+ hero_video_url), marks rows 'applied'.
@@ -27,10 +29,10 @@ import { fetchPage, type FetchedPage } from './extract-cruise-offers.js';
 import { closeRenderer, renderPageEx } from '../lib/render.js';
 import { processAndStoreVideo } from '../lib/videos.js';
 import { roomCaption, type Room } from '../lib/rooms.js';
+import { selectionImageRows } from './media-selection.js';
 
 const CONCURRENCY = 3;
 const MAX_IMAGE_CANDIDATES = 60; // per offer, keeps the admin UI usable
-const MAX_SELECTED = 12; // combined cap: images + hero video together
 
 // ---------------------------------------------------------------------------
 // Video candidate extraction
@@ -275,17 +277,15 @@ export async function runApplySelectedMedia(opts: { domain?: string } = {}): Pro
       ((offer.images as StoredImage[] | null) ?? []).filter(i => i?.source_url).map(i => [i.source_url as string, i]),
     );
 
-    // The admin's LAST full selection = every sorted image candidate that is
-    // 'selected' (pending) OR already 'applied'. Building from the pending rows
-    // alone made a RETRY of a few failed downloads REPLACE the whole images
-    // array with just those stragglers (sardinia went 10 images → 1).
-    const { data: fullSel } = await supabase
+    // The LAST full selection (admin or automatic), never just the pending rows: see selectionImageRows.
+    const { data: fullSel, error: selErr } = await supabase
       .from('offer_media_candidates')
       .select('id, kind, url, hero, sort, status, note')
       .eq('cruise_offer_id', offerId)
       .in('status', ['selected', 'applied'])
       .not('sort', 'is', null);
-    const imgRows = (fullSel ?? []).filter(r => r.kind === 'image').sort((a, b) => (a.sort ?? 99) - (b.sort ?? 99)).slice(0, MAX_SELECTED);
+    if (selErr) { console.error(`  ✗ ${offer.slug}: selection read failed (${selErr.message}), offer left unchanged`); continue; }
+    const imgRows = selectionImageRows(fullSel ?? []);
     const videoRow = rows.find(r => r.kind === 'video' && r.hero) ?? rows.find(r => r.kind === 'video');
 
     const newImages: (StoredImage & { room?: string })[] = [];

@@ -337,6 +337,50 @@ interface DownloadedImage {
   height: number;
 }
 
+/** File names that are almost never a real offer photo (logos, icons, food, badges ...). */
+export function isJunkImageUrl(url: string): boolean {
+  return JUNK_RE.test(url);
+}
+
+/** Pixel size of a downloaded image, decoded like a browser does; null when it cannot be read. */
+export async function imageSize(buf: Buffer): Promise<{ width: number; height: number } | null> {
+  try {
+    const meta = await sharp(buf, DECODE).metadata();
+    return { width: meta.width ?? 0, height: meta.height ?? 0 };
+  } catch {
+    return null;
+  }
+}
+
+/** Big enough and photo-shaped (no banner strip, no sidebar icon); `min` overrides the size floor. */
+export function usablePhotoSize(width: number, height: number, min?: { width: number; height: number }): boolean {
+  if (width < (min?.width ?? MIN_WIDTH) || height < (min?.height ?? MIN_HEIGHT)) return false;
+  const aspect = width / height;
+  return aspect <= MAX_ASPECT && aspect >= MIN_ASPECT;
+}
+
+/** The small WebP the vision model sees (512 px wide). */
+export async function visionThumb(buf: Buffer): Promise<Buffer> {
+  return sharp(buf, DECODE).rotate().resize({ width: 512, withoutEnlargement: true }).webp({ quality: 60 }).toBuffer();
+}
+
+/**
+ * The JSON array in a model answer. The model sometimes writes a short analysis before a ```json block: take the
+ * fenced block, else the first JSON array in the text. null when there is none.
+ */
+export function parseJsonArray(text: string): unknown[] | null {
+  const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/i)?.[1];
+  const body = (fenced ?? text).trim();
+  const start = body.search(/\[\s*[{\]]/);
+  const json = start >= 0 ? body.slice(start, body.lastIndexOf(']') + 1) : body;
+  try {
+    const parsed = JSON.parse(json);
+    return Array.isArray(parsed) ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
 function hostOf(u: string): string | null {
   try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return null; }
 }
@@ -517,7 +561,7 @@ async function visionSelect(
   for (const { img, label } of batch) {
     let small: Buffer;
     try {
-      small = await sharp(img.buf, DECODE).rotate().resize({ width: 512, withoutEnlargement: true }).webp({ quality: 60 }).toBuffer();
+      small = await visionThumb(img.buf);
     } catch {
       continue;
     }
@@ -562,29 +606,20 @@ role: "exterior" = the building or grounds seen from outside, an aerial view of 
     return null;
   }
 
-  // The model sometimes writes a short analysis before a ```json block: take the fenced block, else the first
-  // JSON array in the text. (A parse failure falls back to largest-by-area without captions.)
-  const fenced = text.match(/```(?:json)?\s*([\s\S]*?)```/i)?.[1];
-  const body = (fenced ?? text).trim();
-  const start = body.search(/\[\s*[{\]]/);
-  const json = start >= 0 ? body.slice(start, body.lastIndexOf(']') + 1) : body;
-  try {
-    const parsed = JSON.parse(json);
-    if (!Array.isArray(parsed)) return null;
-    const out: Array<{ img: DownloadedImage; caption: string | null; role: ImageRole | null }> = [];
-    const picked = new Set<number>();
-    for (const item of parsed) {
-      const idx = typeof item?.index === 'number' ? item.index : -1;
-      if (idx >= 0 && idx < used.length && !picked.has(idx)) {
-        picked.add(idx);
-        const role = IMAGE_ROLES.find(r => r === item?.role) ?? null;
-        out.push({ img: used[idx], caption: typeof item?.caption === 'string' ? item.caption : null, role });
-      }
+  // (A parse failure falls back to largest-by-area without captions.)
+  const parsed = parseJsonArray(text) as Array<{ index?: unknown; caption?: unknown; role?: unknown } | null> | null;
+  if (!parsed) return null;
+  const out: Array<{ img: DownloadedImage; caption: string | null; role: ImageRole | null }> = [];
+  const picked = new Set<number>();
+  for (const item of parsed) {
+    const idx = typeof item?.index === 'number' ? item.index : -1;
+    if (idx >= 0 && idx < used.length && !picked.has(idx)) {
+      picked.add(idx);
+      const role = IMAGE_ROLES.find(r => r === item?.role) ?? null;
+      out.push({ img: used[idx], caption: typeof item?.caption === 'string' ? item.caption : null, role });
     }
-    return out;
-  } catch {
-    return null;
   }
+  return out;
 }
 
 // ---------------------------------------------------------------------------
@@ -680,19 +715,9 @@ export async function curateAndStoreImages(opts: {
   for (const url of deduped.slice(0, dlCap)) {
     const buf = await downloadImage(url);
     if (!buf) continue;
-    let width = 0;
-    let height = 0;
-    try {
-      const meta = await sharp(buf, DECODE).metadata();
-      width = meta.width ?? 0;
-      height = meta.height ?? 0;
-    } catch {
-      continue;
-    }
-    if (width < (opts.minSize?.width ?? MIN_WIDTH) || height < (opts.minSize?.height ?? MIN_HEIGHT)) continue;
-    const aspect = width / height;
-    if (aspect > MAX_ASPECT || aspect < MIN_ASPECT) continue;
-    downloaded.push({ sourceUrl: url, buf, width, height });
+    const size = await imageSize(buf);
+    if (!size || !usablePhotoSize(size.width, size.height, opts.minSize)) continue;
+    downloaded.push({ sourceUrl: url, buf, ...size });
   }
   if (downloaded.length === 0) return [];
 

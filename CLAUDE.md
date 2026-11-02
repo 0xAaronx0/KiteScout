@@ -60,8 +60,9 @@ The app caches the catalog in memory ~5 min, so DB changes can lag in the UI.
   are exhausted research — see memory `provider-email-coverage`); review **links** Google 39 /
   TripAdvisor 26 / bstoked 13 (numeric **ratings**: 38/16/6); `avg_rating` set on 47 = mean of
   the available ratings.
-- **Media curation (active workstream)** — Aaron works through `/admin/media` listing by listing;
-  apply runs via CLI on request or the daily cron. Offers with <8 media are flagged "to be checked".
+- **Media curation** - since 2026-11-02 automatic: `cruise-media auto` (vision) fills listings with
+  fewer than 12 media behind their live set, apply stores it, both in the daily cron; `/admin/media`
+  stays as Aaron's optional correction. Offers with <8 media are flagged "to be checked".
 - **Monitoring (live)** — daily cron 06:00 UTC (`.github/workflows/monitor.yml`): applies approved
   changes → applies pending media selections → change-detection sweep. Volatile dates/price changes
   auto-apply; everything else waits in the `/changes` approval queue. Full re-extraction
@@ -174,6 +175,7 @@ src/
     ├── seed-queries.ts / search.ts / extract.ts / dedupe.ts   # provider discovery
     ├── extract-cruise-*.ts       # cruise locations / offers / reviews extraction
     ├── media-candidates.ts       # cruise-media collect/apply (curation pipeline)
+    ├── media-auto.ts             # cruise-media auto: vision fills behind the live set (rules: media-selection.ts)
     └── monitor / diff modules    # provider change detection + surgical apply
 supabase/
 └── migrations/           # run manually in the Supabase SQL editor — which are ACTUALLY applied
@@ -221,7 +223,8 @@ pnpm cli cruise-reviews             # bstoked/TripAdvisor/Google review links + 
 
 # Media curation (the active loop)
 pnpm cli cruise-media collect [--domain X]   # scrape image/video candidates → offer_media_candidates
-pnpm cli cruise-media apply   [--domain X]   # apply admin selection → buckets + cruise_offers.images
+pnpm cli cruise-media auto    [--domain X] [--offer id8,...] [--dry-run --sheet f.html]   # vision picks → 'selected'
+pnpm cli cruise-media apply   [--domain X]   # apply the selection → buckets + cruise_offers.images
 
 # Monitoring
 pnpm cli monitor                    # daily change detection (also runs in the GitHub cron)
@@ -238,12 +241,13 @@ pnpm cli gfs-wind [--res 1p00|0p50] [--newer-than <refTime>] [--out f.json]
 
 The discovery pipeline runs in four resumable stages (Seed → Search → Extract → Dedupe) — see
 `src/pipeline/`. Details unchanged since the bulk build; the day-to-day loops now are
-**media curation** (collect → human picks in `/admin/media` → apply) and **monitoring**
+**media curation** (collect → vision picks via `cruise-media auto`, `/admin/media` to correct → apply) and **monitoring**
 (monitor → surgical auto-apply for dates/price → `/changes` approval for the rest).
 
 Media-apply invariant (hard-won): an offer's images are rebuilt from **every** sorted
 `selected`/`applied` candidate — a retry of failed downloads must never replace the full set.
-The select API resets both statuses on a new save.
+The select API resets both statuses on a new save. The auto step writes the live set as applied rows
+first and only appends behind it (never replaces a curated set; tests in `test/pipeline/media-selection.test.ts`).
 
 ## Database Schema
 
