@@ -32,8 +32,9 @@
 //            to departure", a day not in the map = selectable (open); minstay[day] = "Minimum nights". Anonymous GET,
 //            no cookie or token. We skip form.xhtml (the aid is the constant above) and read the calendar only.
 //            Per room card: bands over the next 12 calendar months where the calendar state changes (runsOf):
-//            open / closed-to-arrival / closed-to-departure days -> 'available' with the card's "from" price,
-//            0 days -> 'closed' without a price. The calendar is property-level (no room or bed split, no prices).
+//            open / closed-to-arrival / closed-to-departure days -> 'available', 0 days -> 'closed', both with the
+//            card's "from" price (Aaron 2026-11-02 "stagnone: preise behalten": the price the hostel prints stays shown
+//            while the calendar is closed). The calendar is property-level (no room or bed split, no prices).
 //            Fallback: calendar unreadable or empty -> the undated card slots (availability 'unknown').
 //   Not used: the Octorate booking pages (book.octorate.com/octobook/site/reservation/index.xhtml?codice=390941) are a
 //   JSF app bound to a session id (prices per room only there).
@@ -280,11 +281,8 @@ export function buildKhsCalendarSlots(cards: Slot[], cal: KhsCalendar, today: st
         key: `${card.key}|${run.start}`,
         startDate: run.start,
         endDate: run.end,
-        price: a === 'closed' ? null : card.price,
-        currency: a === 'closed' ? null : card.currency,
-        priceUnit: a === 'closed' ? null : card.priceUnit,
         availability: a,
-        availabilityText: `Octorate calendar: ${word(flag) ?? 'open for booking'} (property level, no per-room data)${a === 'available' ? '; price = "per night from" on /rooms/' : ''}`,
+        availabilityText: `Octorate calendar: ${word(flag) ?? 'open for booking'} (property level, no per-room data); price = "per night from" on /rooms/`,
         ...(min ? { minNights: min } : {}),
       });
     }

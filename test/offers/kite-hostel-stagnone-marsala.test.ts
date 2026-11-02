@@ -11,6 +11,7 @@ import {
   parseKhsFaq, parseKhsPrices, parseKhsRoomPage,
 } from '../../src/offers/adapters/kite-hostel-stagnone-marsala.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { summarizePrice } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/kite-hostel-stagnone-marsala');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -57,16 +58,22 @@ test('khs: Octorate calendar script -> day flags, minimum stays, messages', () =
   assert.throws(() => parseKhsCalendar('var x = 1;'), /without "octorateAvailCalendar"/);
 });
 
-test('khs: slots = room cards banded by the calendar (open -> available with the card price, 0 -> closed)', async () => {
+test('khs: slots = room cards banded by the calendar (open -> available, 0 -> closed, both with the card price)', async () => {
   const slots = await fetchKhsSlots(ctx, TODAY);
   assert.deepEqual(checkSlots(slots).problems, []);
   assert.equal(slots.length, 16);
   assert.deepEqual(slots.filter(s => s.unit === 'Mixed dorm (bed)').map(s => [s.key, s.endDate, s.price, s.availability]), [
-    ['mixed-dorm-bed|2026-10-14', '2026-10-14', null, 'closed'],
+    ['mixed-dorm-bed|2026-10-14', '2026-10-14', 33, 'closed'],
     ['mixed-dorm-bed|2026-10-15', '2026-11-01', 33, 'available'],
     ['mixed-dorm-bed|2026-11-02', '2026-11-02', 33, 'available'],
-    ['mixed-dorm-bed|2026-11-03', '2027-09-30', null, 'closed'],
+    ['mixed-dorm-bed|2026-11-03', '2027-09-30', 33, 'closed'],
   ]);
+  // Aaron 2026-11-02 "stagnone: preise behalten": with the whole calendar closed (live since 2026-11-03) the listing
+  // still shows the printed price, as upcoming-but-full, instead of "price on request"
+  const allClosed = slots.filter(s => s.availability === 'closed' && s.startDate === '2026-11-03');
+  const sum = summarizePrice('accommodation', allClosed, '2026-11-03');
+  assert.deepEqual([sum.min?.price, sum.min?.currency, sum.priceUnit], [33, 'EUR', 'per_night']);
+  assert.match(sum.raw ?? '', /^From EUR 33 \/ night p\.p\.$/);
   const pixel = slots.find(s => s.key === 'private-double-room-pixel|2026-10-15')!;
   assert.deepEqual([pixel.price, pixel.currency, pixel.priceUnit, pixel.priceBasis, pixel.occupancy], [95, 'EUR', 'per_night', 'room', 2]);
   assert.match(slots.find(s => s.key === 'mixed-dorm-bed|2026-11-02')!.availabilityText!, /Closed to arrival/);
