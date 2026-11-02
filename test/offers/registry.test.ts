@@ -1,7 +1,7 @@
 // Every adapter exported from src/offers/adapters/*.ts must be in the registry (kiezdad registry-vollstaendig).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readdirSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { adapters } from '../../src/offers/registry.js';
@@ -29,6 +29,20 @@ test('registry is complete and keys are unique', async () => {
       }
     }
   }
+});
+
+// Aaron 2026-11-02: "Camps in unserem Sinne bedeutet Camp Package". A listing booked per night (accommodation
+// with optional courses) is a stay; a camp adapter never prices per night. Checked in the source, since prices are only
+// known after a live fetch: units computed from page text are not covered.
+test('a camp is a camp package: no camp adapter prices per night', async () => {
+  const dir = join(import.meta.dirname, '../../src/offers/adapters');
+  const nightly: string[] = [];
+  for (const f of readdirSync(dir).filter(f => f.endsWith('.ts'))) {
+    const mod = await import(pathToFileURL(join(dir, f)).href);
+    const camp = Object.values(mod).some(v => v && typeof v === 'object' && 'fetchSlots' in v && (v as { kind?: string }).kind === 'camp');
+    if (camp && /'per_night'/.test(readFileSync(join(dir, f), 'utf8'))) nightly.push(f);
+  }
+  assert.deepEqual(nightly, []);
 });
 
 test('liveAvailability is only set on booking-engine adapters', () => {

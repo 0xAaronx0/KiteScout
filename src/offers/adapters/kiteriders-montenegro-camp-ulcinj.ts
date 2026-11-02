@@ -13,8 +13,8 @@
 //   The map block's Google Maps link (query=41.8797...,19.3220...) gives the kite center's coordinates (spotCoords).
 // Modular package: nightly accommodation rate per person + a course of the guest's choice; no fixed length. Slots are
 //   the accommodation bands (season x apartment type), priceUnit 'per_night', priceBasis 'person'; the course is listed
-//   in optionalServices. durationDays 8 (= a one-week stay) is our default for the listing, not a printed package
-//   length (inferred; the camp kind needs a duration).
+//   in optionalServices. Listed as a stay, not a camp (Aaron 2026-11-02: booked per night without extra services;
+//   "camp" means a camp package), so no durationDays. Key, title and slug keep "camp" (the provider's own wording).
 // Booking: "BOOK NOW" -> /enquiry/ (inquiry form) -> 'on_request'; flags unset.
 // robots.txt (2026-10-19): "User-agent: * / Disallow:" (everything allowed).
 // Requests per run: 1 (content and slots share one memoised page fetch).
@@ -178,7 +178,7 @@ export function parseKrmContent(html: string, today = todayIso()): OfferContent 
     .slice(0, 40);
 
   return {
-    kind: 'camp',
+    kind: 'accommodation',
     title: 'Kiteriders Montenegro Kite Camp, Garden Villas Ulcinj',
     summary,
     continent: 'Europe',
@@ -187,7 +187,7 @@ export function parseKrmContent(html: string, today = todayIso()): OfferContent 
     spot: 'Velika Plaza',
     spotCoords: krmCoords(html),
     itinerarySpots: [],
-    durationDays: 8,
+    durationDays: null,
     skillLevels: ['beginner', 'intermediate', 'advanced'],
     kiteLessons: true,
     equipmentRental: true,
@@ -220,7 +220,7 @@ export function parseKrmContent(html: string, today = todayIso()): OfferContent 
 export const kiteridersMontenegroCampUlcinj: OfferAdapter = {
   key: 'kiteriders-montenegro-camp-ulcinj',
   name: 'Kiteriders Montenegro Kite Camp, Garden Villas Ulcinj',
-  kind: 'camp',
+  kind: 'accommodation',
   operator: {
     name: 'Kiteriders Montenegro',
     websiteUrl: KRM_URL,
