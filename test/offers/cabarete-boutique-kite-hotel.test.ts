@@ -1,11 +1,12 @@
 // Cabarete Boutique Kite Hotel (Kite Buen Hombre, Cabarete): replays the page recorded 2026-10-12 (3.2 MB Wix page
-// trimmed to markup + JSON-LD: script/style bodies, <link>s and class/style/data-* attributes dropped).
+// trimmed to markup + JSON-LD: script/style bodies, <link>s and class/style/data-* attributes dropped) and the Cabarete
+// block of /book recorded 2026-11-02 (7.0 MB page, trimmed the same way).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  cabareteBoutiqueKiteHotel, buildCbkSlots, parseCbkCards, parseCbkPrices,
+  cabareteBoutiqueKiteHotel, buildCbkSlots, buildCbkUnitSlots, parseCbkBookPrices, parseCbkCards, parseCbkPrices,
 } from '../../src/offers/adapters/cabarete-boutique-kite-hotel.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
@@ -26,15 +27,34 @@ test('cabarete-boutique: room cards with booking codes', () => {
   assert.equal(cards[2].audience, 'families');
 });
 
-test('cabarete-boutique: loft range and retreat price -> 2 on-request slots', async () => {
+test('cabarete-boutique: /book prices every unit, mapped to the card names', () => {
+  const units = parseCbkBookPrices(read('www.kitebuenhombre.com_book.'));
+  assert.deepEqual(units.map(u => [u.name, u.price, u.guests]), [
+    ['King Loft', 95, 1], ['Queen Loft', 90, 1], ['Lux Garden Loft', 95, 1], ['Terrace Loft', 85, 1],
+    ['Small Terrace Loft', 65, 1], ['Tropical House', 150, 1], ['Cabarete Villa', 250, 5],
+  ]);
+  // every unit lands on one of the hotel page's cards
+  const cards = new Set(parseCbkCards(html).map(c => c.name));
+  assert.ok(buildCbkUnitSlots(units).every(s => cards.has(s.room!)));
+  assert.deepEqual(parseCbkBookPrices('<p>no Cabarete block</p>'), []);
+});
+
+test('cabarete-boutique: loft range, retreat price and the /book unit prices -> 9 on-request slots', async () => {
   assert.deepEqual(parseCbkPrices(html), { loftFrom: 60, loftTo: 150, retreatPp: 85, currency: 'USD' });
   const slots = await cabareteBoutiqueKiteHotel.fetchSlots(ctx);
-  assert.deepEqual(slots, buildCbkSlots(parseCbkPrices(html)));
+  assert.deepEqual(slots, [...buildCbkSlots(parseCbkPrices(html)), ...buildCbkUnitSlots(parseCbkBookPrices(read('www.kitebuenhombre.com_book.')))]);
   const { ok, problems } = checkSlots(slots);
   assert.deepEqual(problems, []);
-  assert.deepEqual(ok.map(s => [s.key, s.unit, s.price, s.currency, s.priceUnit, s.priceBasis, s.availability]), [
-    ['loft', 'Boutique loft', 60, 'USD', 'per_night', 'room', 'on_request'],
-    ['whole-property', 'Whole property (retreat, up to 25 guests)', 85, 'USD', 'per_night', 'person', 'on_request'],
+  assert.deepEqual(ok.map(s => [s.key, s.unit, s.room ?? null, s.price, s.currency, s.priceUnit, s.priceBasis, s.occupancy, s.availability]), [
+    ['loft', 'Boutique loft', null, 60, 'USD', 'per_night', 'room', null, 'on_request'],
+    ['whole-property', 'Whole property (retreat, up to 25 guests)', null, 85, 'USD', 'per_night', 'person', null, 'on_request'],
+    ['unit-king-loft', 'King Loft', 'King Loft', 95, 'USD', 'per_night', 'room', 1, 'on_request'],
+    ['unit-queen-loft', 'Queen Loft', 'Queen Kite Loft', 90, 'USD', 'per_night', 'room', 1, 'on_request'],
+    ['unit-lux-garden-loft', 'Lux Garden Loft', 'Garden Green Loft', 95, 'USD', 'per_night', 'room', 1, 'on_request'],
+    ['unit-terrace-loft', 'Terrace Loft', 'Terrace Loft', 85, 'USD', 'per_night', 'room', 1, 'on_request'],
+    ['unit-small-terrace-loft', 'Small Terrace Loft', 'Small Terrace Loft', 65, 'USD', 'per_night', 'room', 1, 'on_request'],
+    ['unit-tropical-house', 'Tropical House', 'Tropical House', 150, 'USD', 'per_night', 'room', 1, 'on_request'],
+    ['unit-cabarete-villa', 'Cabarete Villa', 'The Luxury villa', 250, 'USD', 'per_night', 'room', 5, 'on_request'],
   ]);
   assert.ok(slots.every(s => s.startDate === null && s.endDate === null));
 });

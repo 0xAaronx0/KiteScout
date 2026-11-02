@@ -5,8 +5,9 @@ import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  skavenStrandCamping, buildSscSlots, fetchSscSlots, parseSscOpening, parseSscPrices, sscBands,
+  skavenStrandCamping, buildSscSlots, fetchSscSlots, parseSscOpening, parseSscPrices, sscBands, sscLastPublished,
 } from '../../src/offers/adapters/skaven-strand-camping.js';
+import { ALL_DATES } from '../../src/offers/types.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/skaven-strand-camping');
@@ -41,6 +42,31 @@ test('ssc: slots = future bands, DKK per cabin per night', async () => {
   ]);
   assert.equal(buildSscSlots(prices, open, '2026-03-01').length, 9);
   assert.deepEqual(buildSscSlots(prices, open, '2026-10-24'), []);
+});
+
+test('ssc: after the season the bands that are over go to lastPublished (headline price only), none as slots', async () => {
+  const last: Array<[string | null, number | null]> = [];
+  const slots = await fetchSscSlots('2026-11-02', { lastPublished: s => last.push(...s.map(x => [x.unit, x.price] as [string | null, number | null])) });
+  assert.deepEqual(slots, []);
+  assert.equal(last.length, 9);
+  assert.deepEqual([...new Set(last.map(([u, p]) => `${u} ${p}`))].sort(), [
+    'Camping cabin for 2 400', 'Camping cabin for 2 450', 'Luxury cabin (35 m², 6 people) 700',
+  ].sort());
+  // in season only the bands that are over are reported
+  const during: unknown[] = [];
+  await fetchSscSlots('2026-10-14', { lastPublished: s => during.push(...s) });
+  assert.equal(during.length, 7);
+});
+
+test('ssc: home page already names next year\'s opening (live 2026-11-02: 2027-03-20) while /priser/ is still 2026', () => {
+  // no slot with a start after its end
+  assert.deepEqual(buildSscSlots(prices, '2027-03-20', ALL_DATES), []);
+  const last = sscLastPublished(prices, '2027-03-20', '2026-11-02');
+  assert.ok(last.every(s => s.startDate! <= s.endDate! && s.endDate! < '2026-11-02'));
+  assert.deepEqual([...new Set(last.map(s => `${s.unit} ${s.price}`))].sort(), [
+    'Camping cabin for 2 400', 'Camping cabin for 2 450', 'Luxury cabin (35 m², 6 people) 700',
+  ]);
+  assert.equal(Math.min(...last.map(s => s.price!)), 400);
 });
 
 test('ssc: content', async () => {

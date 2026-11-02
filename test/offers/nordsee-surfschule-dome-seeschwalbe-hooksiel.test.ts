@@ -1,13 +1,14 @@
 // Nordsee Surfschule Glamping Dome + Haus Seeschwalbe (Hooksiel / Schillig): replays the pages recorded 2026-10-14.
 // WordPress pages: script / style / svg bodies dropped. Sitelio shell: only the SiteFilesMap / PageData scripts kept. Sitelio
 // page data (888 KB): reduced to the keys the adapter reads (types, positions, formattedText, mapPosition, gallery paths);
-// the adapter output was identical before and after the reduction.
+// the adapter output was identical before and after the reduction. 2026-11-02: the price table image element got its
+// imageUrl back (same path as live), so the SS_PRICE_IMAGE release check can be replayed.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  nordseeSurfschuleDomeSeeschwalbeHooksiel, parseSeeschwalbe, sitelioPageFileUrl, ssExtraEn,
+  SS_PRICE_IMAGE, buildSsSlots, nordseeSurfschuleDomeSeeschwalbeHooksiel, parseSeeschwalbe, parseSsPeriods, sitelioPageFileUrl, ssExtraEn,
 } from '../../src/offers/adapters/nordsee-surfschule-dome-seeschwalbe-hooksiel.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import { planGallery } from '../../src/offers/gallery.js';
@@ -41,10 +42,41 @@ test('seeschwalbe: apartments with capacities, seasons, extras, map, gallery', (
   ]);
 });
 
-test('nordsee-surfschule: no slots (price on request)', async () => {
-  const slots = await nordseeSurfschuleDomeSeeschwalbeHooksiel.fetchSlots(ctx);
-  assert.deepEqual(slots, []);
+test('seeschwalbe: season periods from the text, the malformed "04.01.26.-20.03.26" included', () => {
+  const ss = parseSeeschwalbe(read('storage.googleapis.com_te-sitelio-sites'));
+  assert.deepEqual(parseSsPeriods(ss.seasons).map(p => `${p.season} ${p.start}..${p.end}`), [
+    'haupt 2025-10-11..2025-10-25', 'winter 2025-10-26..2025-12-19', 'haupt 2025-12-20..2026-01-03', 'winter 2026-01-04..2026-03-20',
+    'neben 2026-03-21..2026-04-29', 'haupt 2026-04-30..2026-09-12', 'neben 2026-09-13..2026-11-01', 'winter 2026-11-02..2026-12-27',
+    'haupt 2026-12-28..2027-01-03',
+  ]);
+});
+
+test('nordsee-surfschule: apartment x season slots from the price image (dome unpriced)', async () => {
+  const ss = parseSeeschwalbe(read('storage.googleapis.com_te-sitelio-sites'));
+  assert.ok(ss.pictures.includes(SS_PRICE_IMAGE));
+  const slots = buildSsSlots(ss, '2026-11-02');
   assert.deepEqual(checkSlots(slots).problems, []);
+  assert.equal(slots.length, 18); // 9 apartments x the 2 periods not over on 2026-11-02
+  assert.deepEqual(slots.filter(s => s.unit === 'Apartment Nordwind').map(s => [s.startDate, s.endDate, s.price, s.minNights]), [
+    ['2026-11-02', '2026-12-27', 69, 3], ['2026-12-28', '2027-01-03', 115, 3],
+  ]);
+  assert.deepEqual(slots.filter(s => s.startDate === '2026-11-02').map(s => s.price), [69, 66, 60, 60, 60, 60, 60, 60, 51]);
+  assert.ok(slots.every(s => s.currency === 'EUR' && s.priceUnit === 'per_night' && s.priceBasis === 'room' && s.availability === 'on_request'));
+  // every slot prices one content room
+  const c = await nordseeSurfschuleDomeSeeschwalbeHooksiel.fetchContent(ctx);
+  const names = new Set(c.rooms.map(r => r.name));
+  assert.ok(slots.every(s => names.has(s.room!)));
+  assert.equal(slots.some(s => /Dome/.test(s.room!)), false);
+  // the adapter path (today's date) gives a subset of these periods, never a past one
+  const live = await nordseeSurfschuleDomeSeeschwalbeHooksiel.fetchSlots(ctx);
+  assert.ok(live.every(s => s.endDate! >= new Date().toISOString().slice(0, 10)));
+});
+
+test('nordsee-surfschule: a different price image releases no prices', () => {
+  const ss = parseSeeschwalbe(read('storage.googleapis.com_te-sitelio-sites'));
+  const notes: string[] = [];
+  assert.deepEqual(buildSsSlots({ ...ss, pictures: ss.pictures.filter(u => u !== SS_PRICE_IMAGE) }, '2026-11-02', { note: n => notes.push(n) }), []);
+  assert.match(notes[0], /price image changed/);
 });
 
 test('nordsee-surfschule: content', async () => {

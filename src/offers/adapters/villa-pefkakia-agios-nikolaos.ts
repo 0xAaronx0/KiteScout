@@ -54,7 +54,9 @@ export function parseVpRate(html: string): VpRate | null {
   return { amount, currency: detectCurrency(line) ?? 'EUR', guests, minNights: min ? Number(min) : null, text: line };
 }
 
-export function buildVpSlots(rate: VpRate): Slot[] {
+/** The one "from" rate holds for every room of the /rooms list, shown there as "from" (Aaron 2026-10-31: one price-list
+ *  line for every private room; 2026-11-02 price-on-request round 2). */
+export function buildVpSlots(rate: VpRate, roomNames: string[] = []): Slot[] {
   return [{
     key: `room-${rate.guests}p-from`,
     startDate: null,
@@ -69,6 +71,7 @@ export function buildVpSlots(rate: VpRate): Slot[] {
     availabilityText: rate.text,
     spotsLeft: null,
     minNights: rate.minNights,
+    ...(roomNames.length ? { rooms: roomNames, priceIsMinimum: true } : {}),
   }];
 }
 
@@ -206,8 +209,9 @@ export const villaPefkakiaAgiosNikolaos: OfferAdapter = {
     return parseVillaPefkakiaContent({ rooms, house, spot, booking });
   },
   async fetchSlots() {
-    const rate = parseVpRate(await fetchText(VP_ROOMS_URL, { accept: 'text/html' }));
+    const html = await fetchText(VP_ROOMS_URL, { accept: 'text/html' });
+    const rate = parseVpRate(html);
     if (!rate) throw new Error('villa-pefkakia: "Rates start from ... per night" not found on /rooms (layout or wording changed?)');
-    return buildVpSlots(rate);
+    return buildVpSlots(rate, parseVpRooms(html).map(r => r.name));
   },
 };

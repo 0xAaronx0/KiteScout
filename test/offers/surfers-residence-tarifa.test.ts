@@ -35,9 +35,13 @@ test('surfers-residence: three room types', () => {
   ]);
 });
 
-test('surfers-residence: one "from" slot, no dates, on request', async () => {
+test('surfers-residence: one "from" slot for each room type, no dates, on request', async () => {
   const slots = await surfersResidenceTarifa.fetchSlots(ctx);
-  assert.deepEqual(slots, buildFrSlots(parseFrLodge(html), 'Private room'));
+  assert.deepEqual(slots, buildFrSlots(parseFrLodge(html), 'Private room', parseSrRooms(parseFrLodge(html)).map(r => r.name)));
+  assert.deepEqual(slots[0].rooms, ['Apartment', 'Ensuite room', 'Double/twin room']);
+  assert.equal(slots[0].priceIsMinimum, true);
+  // Kite Hostel Africa passes no room names: its "Private room" room is matched by the unit, as before
+  assert.equal(buildFrSlots(parseFrLodge(html), 'Private room')[0].rooms, undefined);
   assert.deepEqual(checkSlots(slots).problems, []);
   assert.deepEqual(slots.map(s => [s.key, s.price, s.currency, s.priceUnit, s.priceBasis, s.availability, s.startDate]),
     [['private-room-from', 40, 'EUR', 'per_night', 'room', 'on_request', null]]);

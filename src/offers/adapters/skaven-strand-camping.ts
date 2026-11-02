@@ -24,7 +24,7 @@
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, iso, parseAmount, todayIso } from '../parse.js';
-import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { ALL_DATES, type ContentRoom, type FetchContext, type OfferAdapter, type OfferContent, type Slot } from '../types.js';
 
 const SITE = 'https://skaven.dk';
 export const SSC_HOME_URL = `${SITE}/`;
@@ -119,6 +119,8 @@ export function sscBands(open: string, lastNight: string, main: Array<{ start: s
 export function buildSscSlots(p: SscPrices, open: string | null, today: string): Slot[] {
   if (!open || !p.autumnEnd) return [];
   const lastNight = addDays(p.autumnEnd, -1);
+  // the home page names next year's opening before /priser/ prints next year's table (2026-11-02: 2027-03-20 vs 2026)
+  if (open > lastNight) return [];
   const base = { currency: 'DKK', priceUnit: 'per_night' as const, priceBasis: 'room' as const, occupancy: null, availability: 'unknown' as const, availabilityText: null, spotsLeft: null };
   const out: Slot[] = [];
   for (const b of sscBands(open, lastNight, p.mainPeriods)) {
@@ -204,10 +206,23 @@ export function parseSkavenContent(p: SscPages): OfferContent {
   };
 }
 
-export async function fetchSscSlots(today: string): Promise<Slot[]> {
+/**
+ * The printed table's bands that are over (Aaron 2026-10-29: the headline price until the next season's dates are
+ * printed). Once the home page names next year's opening, the printed season starts at its first main period at the
+ * latest - the spring band before it has no known start and stays out.
+ */
+export function sscLastPublished(p: SscPrices, open: string | null, today: string): Slot[] {
+  const lastNight = p.autumnEnd ? addDays(p.autumnEnd, -1) : null;
+  const seasonOpen = open && lastNight && open > lastNight ? (p.mainPeriods[0]?.start ?? null) : open;
+  return buildSscSlots(p, seasonOpen, ALL_DATES).filter(s => s.endDate! < today);
+}
+
+export async function fetchSscSlots(today: string, ctx?: Pick<FetchContext, 'lastPublished'>): Promise<Slot[]> {
   const prices = parseSscPrices(await page(SSC_PRICES_URL));
   if (!prices.cabin2.mainDay && !prices.cabin2.otherDay) throw new Error('skaven-strand-camping: cabin table ("Campinghytte" / "Hovedsæson") not found on /priser/');
-  return buildSscSlots(prices, parseSscOpening(await page(SSC_HOME_URL)), today);
+  const open = parseSscOpening(await page(SSC_HOME_URL));
+  ctx?.lastPublished?.(sscLastPublished(prices, open, today));
+  return buildSscSlots(prices, open, today);
 }
 
 export const skavenStrandCamping: OfferAdapter = {
@@ -235,7 +250,7 @@ export const skavenStrandCamping: OfferAdapter = {
     return parseSkavenContent({ home, kite, info, prices });
   },
   async fetchSlots(ctx) {
-    const slots = await fetchSscSlots(todayIso());
+    const slots = await fetchSscSlots(todayIso(), ctx);
     if (slots.length === 0) ctx.note('skaven-strand-camping: no future band (season over or dates missing) - price on request');
     return slots;
   },

@@ -172,6 +172,8 @@ export interface FetchOpts {
   accept?: string;
   headers?: Record<string, string>;
   timeoutMs?: number;
+  /** size cap for this one response instead of MAX_CHARS (a single known oversized page, e.g. a 7 MB Wix /book page) */
+  maxChars?: number;
 }
 
 /** Fetch text politely. Throws RobotsDisallowed / HttpStatusError; retries 429/5xx twice. */
@@ -211,7 +213,7 @@ export async function fetchText(url: string, opts: FetchOpts = {}): Promise<stri
     const text = await res.text();
     const challenge = challengeReason(res, text);
     if (challenge) throw new BlockedByHost(challenge, url);
-    if (text.length > MAX_CHARS) throw new Error(`response too large (${text.length} chars): ${url}`);
+    if (text.length > (opts.maxChars ?? MAX_CHARS)) throw new Error(`response too large (${text.length} chars): ${url}`);
     record(method, url, text, opts.body);
     return text;
   }

@@ -11,15 +11,19 @@
 //   "YOUR loft $60– 150 / night Per lofts" and "Retreat Pricing $85 per person / night" (whole property),
 //   JSON-LD LodgingBusiness (description, geo 19.74706/-70.40588, amenities, makesOffer 85 USD per night) and
 //   the FAQPage. 2026 operation: the page is maintained in 2026 (photo "Image Aug 10, 2026", videos uploaded
-//   2026-10-10/12, "©2026"), the operator's /book page offers stays 1 Nov - 15 Dec 2026 (Buen Hombre special)
-//   but is 6.7 MB, above the fetch size cap, so it is not read.
+//   2026-10-10/12, "©2026").
+//   /book (checked 2026-11-02, 7.0 MB, read with a raised size cap for this one page): the operator's booking page;
+//   its "CABARETE BOUTIQUE KITE HOTEL" block prices every unit ("The King Loft ... $95 per night, 1 guest", "The
+//   Cabarete Villa ... $250 per night, up to 5 guests"; "+$25 per extra guest"). Its other blocks are Buen Hombre.
 // Booking: /book#book-cabarete (enquiry by form / WhatsApp, no inventory) -> 'on_request'.
 // robots.txt (2026-10-12): Wix default (only "*?lightbox=" disallowed for all agents).
-// Requests per run: content 1, slots 1 (memoised for 10 minutes, so a full run makes 1). The page is ~3.2 MB;
-//   the fixture is trimmed to markup + JSON-LD.
+// Requests per run: content 1, slots 1 + /book 1 (the hotel page is memoised for 10 minutes, so a full run makes 2).
+//   The page is ~3.2 MB; the fixtures are trimmed to markup + JSON-LD (/book: the Cabarete block only).
 // Parsed: 2 slots - "loft" = USD 60 per loft per night (lowest of the printed $60-150 range, the cards carry no
-//   individual prices) and "whole-property" = USD 85 per person per night (retreat pricing, up to 25 guests).
-// Known limits: no dates, no availability; the loft range is not broken down by loft.
+//   individual prices) and "whole-property" = USD 85 per person per night (retreat pricing, up to 25 guests) - plus
+//   one slot per unit from /book (its per-night price for the stated guests, mapped to the card names by CBK_BOOK_ROOMS).
+//   /book failing leaves the two page slots.
+// Known limits: no dates, no availability; the extra-guest charge stays out of the price.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { clean, collapse, imageCandidates, ldOfType, parse, parseAmount, type HTMLElement } from '../parse.js';
@@ -27,19 +31,28 @@ import type { ContentRoom, OfferAdapter, OfferContent, Slot } from '../types.js'
 
 const SITE = 'https://www.kitebuenhombre.com';
 export const CBK_URL = `${SITE}/cabarete-boutique-kite-hotel`;
+export const CBK_BOOK_URL = `${SITE}/book`;
 const BOOKING_URL = `${SITE}/book#book-cabarete`;
 export const CBK_LOFT_UNIT = 'Boutique loft';
 export const CBK_HOUSE_UNIT = 'Whole property (retreat, up to 25 guests)';
 
 export interface CbkCard { audience: string; name: string; description: string | null; attributes: string[]; roomCode: string | null }
 export interface CbkPrices { loftFrom: number | null; loftTo: number | null; retreatPp: number | null; currency: string }
+export interface CbkUnitPrice { name: string; price: number; guests: number }
+
+/** /book unit names that differ from the hotel page's card names; the others match without "The ". */
+export const CBK_BOOK_ROOMS: Record<string, string> = {
+  'Queen Loft': 'Queen Kite Loft',
+  'Lux Garden Loft': 'Garden Green Loft',
+  'Cabarete Villa': 'The Luxury villa',
+};
 
 // --- local helpers ----------------------------------------------------------------------------
 const memo = new Map<string, { at: number; p: Promise<string> }>();
-function page(url: string): Promise<string> {
+function page(url: string, maxChars?: number): Promise<string> {
   const hit = memo.get(url);
   if (hit && Date.now() - hit.at < 10 * 60_000) return hit.p;
-  const p = fetchText(url, { accept: 'text/html' });
+  const p = fetchText(url, { accept: 'text/html', ...(maxChars ? { maxChars } : {}) });
   memo.set(url, { at: Date.now(), p });
   p.catch(() => memo.delete(url));
   return p;
@@ -92,6 +105,32 @@ export function parseCbkPrices(html: string): CbkPrices {
     retreatPp: retreat ? parseAmount(retreat[1]) : null,
     currency: 'USD',
   };
+}
+
+/** /book, Cabarete block: "The <unit>" line, then "$<n> per night, 1 guest" / "... up to <n> guests". */
+export function parseCbkBookPrices(html: string): CbkUnitPrice[] {
+  const lines = cbkLines(html);
+  const start = lines.findIndex(l => /^CABARETE BOUTIQUE KITE HOTEL$/i.test(l));
+  if (start < 0) return [];
+  const out: CbkUnitPrice[] = [];
+  for (let i = start + 1; i < lines.length; i++) {
+    const m = lines[i].match(/^\$\s?(\d[\d,]*) per night,\s*(?:(1) guest|up to (\d+) guests)$/i);
+    if (!m) continue;
+    let j = i - 1;
+    while (j > start && !/^The /.test(lines[j])) j--;
+    const name = lines[j].replace(/^The\s+/, '');
+    if (j === start || out.some(u => u.name === name)) break;
+    out.push({ name, price: parseAmount(m[1])!, guests: Number(m[2] ?? m[3]) });
+  }
+  return out;
+}
+
+export function buildCbkUnitSlots(units: CbkUnitPrice[], currency = 'USD'): Slot[] {
+  return units.map(u => ({
+    key: `unit-${u.name.toLowerCase().replace(/\W+/g, '-')}`, startDate: null, endDate: null, unit: u.name,
+    room: CBK_BOOK_ROOMS[u.name] ?? u.name, price: u.price, currency, priceUnit: 'per_night' as const, priceBasis: 'room' as const,
+    occupancy: u.guests, availability: 'on_request' as const, availabilityText: null, spotsLeft: null,
+  }));
 }
 
 export function buildCbkSlots(p: CbkPrices): Slot[] {
@@ -215,14 +254,21 @@ export const cabareteBoutiqueKiteHotel: OfferAdapter = {
   },
   url: CBK_URL,
   slotMethod: 'price_table',
-  fetchBudget: 2,
+  fetchBudget: 3,
   confidence: 'medium',
   async fetchContent() {
     return parseCabareteBoutiqueContent(await page(CBK_URL));
   },
-  async fetchSlots() {
+  async fetchSlots(ctx) {
     const prices = parseCbkPrices(await page(CBK_URL));
     if (!prices.loftFrom && !prices.retreatPp) throw new Error('cabarete-boutique-kite-hotel: loft / retreat prices not found on the page');
-    return buildCbkSlots(prices);
+    let units: CbkUnitPrice[] = [];
+    try {
+      units = parseCbkBookPrices(await page(CBK_BOOK_URL, 12_000_000));
+      if (!units.length) ctx.note('cabarete-boutique-kite-hotel: no unit prices in the /book Cabarete block');
+    } catch (e) {
+      ctx.note(`cabarete-boutique-kite-hotel: /book not read (${(e as Error).message})`);
+    }
+    return [...buildCbkSlots(prices), ...buildCbkUnitSlots(units, prices.currency)];
   },
 };

@@ -28,9 +28,12 @@ test('vp: wording variants', () => {
   assert.equal(parseVpRate('<p>Please contact us for rates.</p>'), null);
 });
 
-test('vp: slots = one undated "from" rate, on request', async () => {
+test('vp: slots = one undated "from" rate for every room, on request', async () => {
   const slots = await villaPefkakiaAgiosNikolaos.fetchSlots(ctx);
-  assert.deepEqual(slots, buildVpSlots(parseVpRate(rooms)!));
+  assert.deepEqual(slots, buildVpSlots(parseVpRate(rooms)!, parseVpRooms(rooms).map(r => r.name)));
+  assert.deepEqual(slots[0].rooms, ['Double room, 2 single beds', 'Double room, 1 double bed', 'Triple room', 'Family / Triple room']);
+  assert.equal(slots[0].priceIsMinimum, true);
+  assert.equal(buildVpSlots(parseVpRate(rooms)!)[0].rooms, undefined);
   const { ok, problems } = checkSlots(slots);
   assert.deepEqual(problems, []);
   assert.deepEqual(ok.map(s => [s.key, s.unit, s.price, s.currency, s.priceUnit, s.priceBasis, s.occupancy, s.availability, s.minNights]), [
