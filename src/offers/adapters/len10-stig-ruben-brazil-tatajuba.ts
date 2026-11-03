@@ -22,7 +22,8 @@ import { EVERGREEN_PILOT_SUMMARIES } from '../evergreen-pilot-summaries.js';
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { collapse, daysInclusive, htmlToText, iso, monthOf, parseAmount, todayIso } from '../parse.js';
-import type { Availability, OfferAdapter, OfferContent, Slot } from '../types.js';
+import { ALL_DATES } from '../types.js';
+import type { Availability, FetchContext, OfferAdapter, OfferContent, Slot } from '../types.js';
 
 const SITE = 'https://www.len10.com';
 export const LEN10_URL = `${SITE}/experience`;
@@ -154,11 +155,13 @@ export function parseLen10Content(html: string, today = todayIso()): OfferConten
   };
 }
 
-export async function fetchLen10Slots(today: string, ctx?: { note(t: string): void }): Promise<Slot[]> {
+export async function fetchLen10Slots(today: string, ctx?: Pick<FetchContext, 'note' | 'lastPublished'>): Promise<Slot[]> {
   const trips = parseLen10Trips(await page(LEN10_URL));
   const brazil = trips.filter(isBrazil);
   if (trips.length === 0) throw new Error('len10: no featured trip card ("From €… p.p." + dates) found (layout changed?)');
   const slots = buildLen10Slots(trips, today);
+  // a trip that is over keeps its price as the last published one (2026-11-03: it fell to "Price on request")
+  ctx?.lastPublished?.(buildLen10Slots(trips, ALL_DATES).filter(s => s.startDate! < today));
   if (brazil.length === 0) ctx?.note('no Brazil trip card on /experience; no dates published');
   else if (slots.length === 0) ctx?.note(`Brazil trip dates are past (${brazil.map(x => x.start).join(', ')}); next dates not published yet`);
   return slots;

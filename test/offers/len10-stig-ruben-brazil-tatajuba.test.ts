@@ -6,6 +6,8 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { len10StigRubenBrazilTatajuba, buildLen10Slots, fetchLen10Slots, parseLen10Content, parseLen10Trips } from '../../src/offers/adapters/len10-stig-ruben-brazil-tatajuba.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { summarizePrice } from '../../src/offers/ingest.js';
+import type { Slot } from '../../src/offers/types.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/len10-stig-ruben-brazil-tatajuba');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -26,9 +28,17 @@ test('len10: one limited slot while the trip is ahead, none after', async () => 
   assert.equal(s.length, 1);
   assert.deepEqual([s[0].key, s[0].price, s[0].currency, s[0].priceUnit, s[0].priceBasis, s[0].availability, s[0].spotsLeft],
     ['2026-11-02', 2999, 'EUR', 'package', 'person', 'limited', 4]);
-  const notes: string[] = [];
-  assert.deepEqual(await fetchLen10Slots('2026-11-03', { note: t => notes.push(t) }), []);
+  const notes: string[] = [], past: Slot[] = [];
+  assert.deepEqual(await fetchLen10Slots('2026-11-03', { note: t => notes.push(t), lastPublished: p => past.push(...p) }), []);
   assert.match(notes[0], /past/);
+  // the trip that is over stays the last published price, never "Price on request"
+  assert.deepEqual(past.map(x => [x.key, x.price, x.currency]), [['2026-11-02', 2999, 'EUR']]);
+  const price = summarizePrice('camp', [], '2026-11-03', past);
+  assert.match(price.note!, /^From EUR 2,999 p\.p\. \(last published price, 2026 dates are over, new dates not published yet: /);
+  // while the trip is ahead nothing is passed on
+  const none: Slot[] = [];
+  await fetchLen10Slots('2026-10-19', { note: () => {}, lastPublished: p => none.push(...p) });
+  assert.deepEqual(none, []);
 });
 
 test('len10: content', async () => {
