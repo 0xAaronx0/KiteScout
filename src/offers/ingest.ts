@@ -591,6 +591,34 @@ export function staleRoomNames(rows: Array<Record<string, unknown>>, slots: Slot
 }
 
 /**
+ * rooms[].hidden for adapters with hideRoomsWithoutSlots: a room no slot of this run names gets hidden: true, a room a
+ * slot names loses the flag (back in the engine, shown again). The row itself stays whole (photos, features, last price).
+ * keep (guard, partial or failed run): no evidence either way, the stored flags stand.
+ */
+export function flagRoomsWithoutSlots<R extends { name: string }>(rows: R[], slots: Slot[], stored: unknown, keep: boolean):
+  { rows: Array<R & { hidden?: true }>; hidden: string[]; shown: string[] } {
+  const names = rows.map(r => r.name);
+  const named = new Set(slots.flatMap(s => s.rooms?.length ? s.rooms.map(r => slotRoom(names, { unit: null, room: r })) : [slotRoom(names, s)]));
+  const wasHidden = new Set((Array.isArray(stored) ? stored as Array<Record<string, unknown>> : [])
+    .filter(r => r?.hidden === true && typeof r.name === 'string').map(r => roomKey(r.name as string)));
+  const hidden: string[] = [], shown: string[] = [];
+  const out = rows.map(r => {
+    const before = wasHidden.has(roomKey(r.name));
+    const hide = keep ? before : !named.has(r.name);
+    if (hide && !before) hidden.push(r.name);
+    if (!hide && before) shown.push(r.name);
+    const { hidden: _drop, ...rest } = r as R & { hidden?: unknown };
+    return (hide ? { ...rest, hidden: true as const } : rest) as R & { hidden?: true };
+  });
+  return { rows: out, hidden, shown };
+}
+
+const hiddenNotes = (f: { hidden: string[]; shown: string[] }) => [
+  ...(f.hidden.length ? [`rooms hidden, no engine slot: ${f.hidden.join(', ')}`] : []),
+  ...(f.shown.length ? [`rooms shown again, back in the engine: ${f.shown.join(', ')}`] : []),
+];
+
+/**
  * How a re-pricing changes the stored rooms, matched by name (a full run may reorder them; a room no longer listed is
  * no lost price): price set, removed or changed (amount, currency, unit, "from" or last season mark).
  */
@@ -812,7 +840,10 @@ async function runAdapterInner(
       const photographed = <R extends { name: string }>(rs: R[]) => roomPhotos ? withRoomPhotos(rs, roomPhotos) : keepRoomPhotos(rs, existing?.rooms);
       // same rule as the listing price and the --slots run: a guard or a partial delivery keeps the stored room prices,
       // and no stored price is dropped (2026-11-02: Cuxhaven lost 4 under the guard, Hvide Sande / Saltys 1 each)
-      const roomRows = keepStoredRoomPrices(roomsWithPrices(content, slots, today, lastPublished), existing?.rooms, [...slots, ...lastPublished], today, keepSlots);
+      const pricedRows = keepStoredRoomPrices(roomsWithPrices(content, slots, today, lastPublished), existing?.rooms, [...slots, ...lastPublished], today, keepSlots);
+      const flagged = a.hideRoomsWithoutSlots ? flagRoomsWithoutSlots(pricedRows, slots, existing?.rooms, !runOk) : null;
+      if (flagged) rep.notes.push(...hiddenNotes(flagged));
+      const roomRows = flagged?.rows ?? pricedRows;
       const d = roomPriceChanges((existing?.rooms as Array<Record<string, unknown>> | undefined) ?? [], roomRows);
       if (d.gained || d.lost || d.changed) rep.notes.push(`room prices: +${d.gained} -${d.lost} ~${d.changed}`);
       // never visible without a photo: a new row stays hidden until its images are stored (set again below)
@@ -851,7 +882,10 @@ async function runAdapterInner(
       }
     } else {
       // same rule as the listing price: a guard or a partial delivery keeps the stored room prices
-      const repriced = keepSlots ? null : repriceStoredRooms(a.kind, existing?.rooms, slots, today, lastPublished);
+      const reprices = keepSlots ? null : repriceStoredRooms(a.kind, existing?.rooms, slots, today, lastPublished);
+      const flagged = reprices && a.hideRoomsWithoutSlots ? flagRoomsWithoutSlots(reprices as Array<Record<string, unknown> & { name: string }>, slots, existing?.rooms, !runOk) : null;
+      if (flagged) rep.notes.push(...hiddenNotes(flagged));
+      const repriced = flagged?.rows ?? reprices;
       if (repriced) {
         const d = roomPriceChanges(existing!.rooms as Array<Record<string, unknown>>, repriced);
         if (d.gained || d.lost || d.changed) rep.notes.push(`room prices: +${d.gained} -${d.lost} ~${d.changed}`);
@@ -894,7 +928,7 @@ export async function runAdapters(
       const prev = r.status === 'error' ? `  (previous run: ${previousRun(r)})` : '';
       console.log(`${flag}${r.key.padEnd(34)} slots ${String(r.slots).padStart(3)} (bookable ${r.bookable})  ${r.minPrice ?? '-'}  ${r.requests} req  ${(r.ms / 1000).toFixed(1)}s${r.error ? `  ${r.error}` : ''}${prev}`);
       if (r.roomPhotos) console.log(`    room photos: ${r.roomPhotos.withPhoto}/${r.roomPhotos.rooms} rooms, ${r.roomPhotos.photos} photos, ${(r.roomPhotos.bytes / 1024).toFixed(0)} KB`);
-      for (const n of r.notes) if (n.startsWith('room prices') || n.startsWith('kept listing price') || n.includes('EMPTY_GUARD')) console.log(`    ${n}`);
+      for (const n of r.notes) if (n.startsWith('room prices') || n.startsWith('rooms hidden') || n.startsWith('rooms shown again') || n.startsWith('kept listing price') || n.includes('EMPTY_GUARD')) console.log(`    ${n}`);
     }
   };
   await Promise.all(Array.from({ length: Math.min(opts.parallel ?? 4, adapters.length) }, worker));

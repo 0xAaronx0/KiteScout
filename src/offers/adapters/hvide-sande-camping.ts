@@ -472,6 +472,8 @@ export const hvideSandeCamping: OfferAdapter = {
   slotMethod: 'booking_engine',
   instantBooking: true,
   liveAvailability: true,
+  // every cabin type is booked through the engine (2026-11-03: The Harbor Cabin left it, the card stayed on the site)
+  hideRoomsWithoutSlots: true,
   fetchBudget: 23,
   async fetchContent() {
     const home = await page(HSC_HOME_URL);
