@@ -227,6 +227,9 @@ export interface OfferAdapter {
   confidence?: 'high' | 'medium' | 'low';
   /** live quote recipe for exact dates (booking engines only) */
   quote?: QuoteRecipe;
+  /** rooms[].hidden = true for a room no slot of the run names, removed again once one does (Aaron 2026-11-03: a cabin
+   *  missing from the booking engine is hidden until it is back); only for engines that list every bookable room */
+  hideRoomsWithoutSlots?: boolean;
   /** lower photo size floor for a provider that only publishes small photos (Aaron's call per listing) */
   imageMinSize?: { width: number; height: number };
   fetchContent(ctx: FetchContext): Promise<OfferContent>;
