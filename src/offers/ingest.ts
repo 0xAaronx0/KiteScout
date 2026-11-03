@@ -483,7 +483,8 @@ export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string, l
     const over = [...all.filter(s => s.price !== null && !isAhead(c.kind, s, today)), ...(pastByRoom.get(r.name) ?? []).filter(s => s.price !== null)];
     const yearOf = (s: Slot) => (s.startDate ?? s.endDate ?? '').slice(0, 4);
     const latestYear = over.map(yearOf).sort().at(-1) ?? '';
-    const tier = [priced, ahead, over.filter(s => yearOf(s) === latestYear)].find(list => list.length > 0) ?? [];
+    const past = over.filter(s => yearOf(s) === latestYear);
+    const tier = [priced, ahead, past].find(list => list.length > 0) ?? [];
     const min = [...tier].sort((x, y) => x.price! - y.price!)[0];
     // a floor (range, one engine price for several rooms) is no dated price of this room: no priced month, no range
     const months = [...new Set(priced.filter(s => s.startDate && !s.priceIsMinimum).flatMap(s => coveredMonths(s.startDate!, s.endDate)))].sort((x, y) => x - y);
@@ -500,12 +501,45 @@ export function roomsWithPrices(c: OfferContent, slots: Slot[], today: string, l
       price_source: 'provider_site', price_basis: min?.priceBasis ?? null, priced_months: months, image_sort: null as number | null,
       // dated ranges from the provider's calendar/price list; [] = no dated data for this room
       availability: roomAvailability(own.filter(s => !s.priceIsMinimum)),
+      // Aaron 2026-11-03: a last published price is marked as such ("2026 dates are over"), never shown as current
+      price_past_year: min && tier === past && latestYear ? latestYear : null as string | null,
     };
   });
 }
 
 /** The price fields of a room row; everything else (name, texts, image_sort) is content and stays as stored. */
-const ROOM_PRICE_KEYS = ['price_from', 'price_currency', 'price_from_is_minimum', 'price_unit', 'price_source', 'price_basis', 'priced_months', 'availability'] as const;
+const ROOM_PRICE_KEYS = ['price_from', 'price_currency', 'price_from_is_minimum', 'price_unit', 'price_source', 'price_basis', 'priced_months', 'availability', 'price_past_year'] as const;
+
+/** A kept price whose dated ranges are all over is a last season price: price_past_year = the year of the last range. */
+function markPastYear(row: Record<string, unknown>, today: string): Record<string, unknown> {
+  if (row.price_from == null || row.price_past_year) return row;
+  const ends = (Array.isArray(row.availability) ? row.availability as Array<{ end_date?: unknown }> : [])
+    .map(r => r.end_date).filter((d): d is string => typeof d === 'string');
+  return ends.length && ends.every(d => d < today) ? { ...row, price_past_year: ends.sort().at(-1)!.slice(0, 4) } : row;
+}
+
+/**
+ * Aaron 2026-10-30: a room whose price the provider states is never "on request", so a fresh row never drops a stored
+ * price, in full and --slots runs alike. A row no slot belongs to (renamed or dropped in the engine, see staleRoomNames)
+ * and every row when keepAll (an empty-result guard or a partial delivery keeps the listing price too) takes the whole
+ * stored price; a row whose slots now carry no price (calendar closed) keeps the stored price with the fresh
+ * priced_months and availability. Kept prices whose dates are all over are marked with price_past_year.
+ */
+export function keepStoredRoomPrices<R extends { name: string; price_from: number | null }>(fresh: R[], stored: unknown, slots: Slot[], today: string, keepAll = false): R[] {
+  const priced = (Array.isArray(stored) ? stored as Array<Record<string, unknown>> : [])
+    .filter(r => r && typeof r.name === 'string' && r.price_from != null);
+  if (priced.length === 0) return fresh;
+  const old = new Map(priced.map(r => [r.name as string, r]));
+  const stale = new Set(staleRoomNames(priced, slots));
+  return fresh.map(r => {
+    const o = old.get(r.name);
+    const whole = keepAll || stale.has(r.name);
+    if (!o || (!whole && r.price_from !== null)) return r;
+    const out: Record<string, unknown> = { ...r };
+    for (const k of ROOM_PRICE_KEYS) if (whole || (k !== 'priced_months' && k !== 'availability')) out[k] = o[k] ?? null;
+    return markPastYear(out, today) as unknown as R;
+  });
+}
 
 /**
  * --slots runs (the daily cron) do not read content, so they used to leave the stored room prices as the last full run
@@ -523,13 +557,10 @@ export function repriceStoredRooms(kind: OfferKind, stored: unknown, slots: Slot
     kind,
     rooms: rows.map(r => ({ name: r.name as string, description: (r.description as string | null | undefined) ?? null, features: Array.isArray(r.features) ? r.features as string[] : [] })),
   } as unknown as OfferContent;
-  const fresh = roomsWithPrices(content, slots, today, lastPublished);
-  const stale = new Set(staleRoomNames(rows, [...slots, ...lastPublished]));
+  const fresh = keepStoredRoomPrices(roomsWithPrices(content, slots, today, lastPublished), rows, [...slots, ...lastPublished], today);
   return rows.map((r, i) => {
     const out: Record<string, unknown> = { ...r };
-    if (stale.has(r.name as string)) return out;
-    const keepPrice = r.price_from != null && fresh[i].price_from === null;
-    for (const k of ROOM_PRICE_KEYS) if (!keepPrice || k === 'priced_months' || k === 'availability') out[k] = fresh[i][k];
+    for (const k of ROOM_PRICE_KEYS) out[k] = (fresh[i] as Record<string, unknown>)[k];
     return out;
   });
 }
@@ -541,16 +572,21 @@ export function staleRoomNames(rows: Array<Record<string, unknown>>, slots: Slot
   return rows.filter(r => r.price_from != null && !matched.has(r.name as string)).map(r => r.name as string);
 }
 
-/** How a re-pricing changes the stored rooms: price set, removed or changed (amount, currency, unit or "from"). */
+/**
+ * How a re-pricing changes the stored rooms, matched by name (a full run may reorder them; a room no longer listed is
+ * no lost price): price set, removed or changed (amount, currency, unit, "from" or last season mark).
+ */
 export function roomPriceChanges(before: Array<Record<string, unknown>>, after: Array<Record<string, unknown>>): { gained: number; lost: number; changed: number } {
   let gained = 0, lost = 0, changed = 0;
-  before.forEach((b, i) => {
-    const a = after[i] ?? {};
+  const byName = new Map(after.map(a => [a.name, a]));
+  before.forEach(b => {
+    const a = byName.get(b.name);
+    if (!a) return;
     const was = b.price_from ?? null, now = a.price_from ?? null;
     if (was === null && now !== null) gained++;
     else if (was !== null && now === null) lost++;
     else if (was !== null && (Number(was) !== Number(now) || b.price_currency !== a.price_currency || b.price_unit !== a.price_unit
-      || Boolean(b.price_from_is_minimum) !== Boolean(a.price_from_is_minimum))) changed++;
+      || Boolean(b.price_from_is_minimum) !== Boolean(a.price_from_is_minimum) || (b.price_past_year ?? null) !== (a.price_past_year ?? null))) changed++;
   });
   return { gained, lost, changed };
 }
@@ -606,7 +642,9 @@ async function recordSource(a: OfferAdapter, offerId: string | null, rep: Adapte
   const { data: prev } = await supabase.from('offer_sources').select('history,content_hash,slots_hash').eq('key', a.key).maybeSingle();
   rep.prevFailed = prevFailedFrom(prev?.history);
   const now = new Date().toISOString();
-  const history = [{ at: now, mode: rep.mode, slots: rep.slots, bookable: rep.bookable, ms: rep.ms, ...(rep.error ? { error: rep.error } : {}) },
+  // notes too (2026-11-03: the room price notes of a cron run were readable nowhere)
+  const notes = rep.notes.slice(0, 12).map(n => n.slice(0, 300));
+  const history = [{ at: now, mode: rep.mode, slots: rep.slots, bookable: rep.bookable, ms: rep.ms, ...(rep.error ? { error: rep.error } : {}), ...(notes.length ? { notes } : {}) },
     ...((prev?.history as unknown[]) ?? [])].slice(0, HISTORY_KEEP);
   const row: Record<string, unknown> = {
     key: a.key, name: a.name, kind: a.kind, slot_method: a.slotMethod, url: a.url, quote: a.quote ?? null,
@@ -752,7 +790,11 @@ async function runAdapterInner(
         rep.roomPhotos = roomPhotoStats(photoContent, roomPhotos);
       }
       const photographed = <R extends { name: string }>(rs: R[]) => roomPhotos ? withRoomPhotos(rs, roomPhotos) : keepRoomPhotos(rs, existing?.rooms);
-      const roomRows = roomsWithPrices(content, slots, today, lastPublished);
+      // same rule as the listing price and the --slots run: a guard or a partial delivery keeps the stored room prices,
+      // and no stored price is dropped (2026-11-02: Cuxhaven lost 4 under the guard, Hvide Sande / Saltys 1 each)
+      const roomRows = keepStoredRoomPrices(roomsWithPrices(content, slots, today, lastPublished), existing?.rooms, [...slots, ...lastPublished], today, keepSlots);
+      const d = roomPriceChanges((existing?.rooms as Array<Record<string, unknown>> | undefined) ?? [], roomRows);
+      if (d.gained || d.lost || d.changed) rep.notes.push(`room prices: +${d.gained} -${d.lost} ~${d.changed}`);
       // never visible without a photo: a new row stays hidden until its images are stored (set again below)
       const row = { ...contentRow(a, content, operatorId, spots), ...priceCols, ...liveCols, rooms: photographed(linkRoomImages(roomRows, content, before)), is_active: isShowable(before.length) };
       const { data: up, error: upErr } = await supabase
@@ -832,6 +874,7 @@ export async function runAdapters(
       const prev = r.status === 'error' ? `  (previous run: ${previousRun(r)})` : '';
       console.log(`${flag}${r.key.padEnd(34)} slots ${String(r.slots).padStart(3)} (bookable ${r.bookable})  ${r.minPrice ?? '-'}  ${r.requests} req  ${(r.ms / 1000).toFixed(1)}s${r.error ? `  ${r.error}` : ''}${prev}`);
       if (r.roomPhotos) console.log(`    room photos: ${r.roomPhotos.withPhoto}/${r.roomPhotos.rooms} rooms, ${r.roomPhotos.photos} photos, ${(r.roomPhotos.bytes / 1024).toFixed(0)} KB`);
+      for (const n of r.notes) if (n.startsWith('room prices') || n.includes('EMPTY_GUARD')) console.log(`    ${n}`);
     }
   };
   await Promise.all(Array.from({ length: Math.min(opts.parallel ?? 4, adapters.length) }, worker));

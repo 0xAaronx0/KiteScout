@@ -324,6 +324,12 @@ const money = (n: number): string => (Number.isInteger(n) ? String(n) : n.toFixe
 /** nightly rate for 2 guests, rounded to cents (the engine averages a stay across rate changes: 99.37571) */
 const rateOf = (t: KbiRoomType): number => Math.round(t.rates[occOf(t)] * 100) / 100;
 
+/**
+ * Sirvoy type -> the site's room name where they differ (2026-11-03: "Economy Double Room" in the engine is the site's
+ * "Surfers Economy Room", the only economy type on either side; inferred, the engine shows no description).
+ */
+export const SKV_ENGINE_ROOMS: Record<string, string> = { 'Economy Double Room': 'Surfers Economy Room' };
+
 /** Month bands per Sirvoy room type (merged where price and availability repeat). */
 export function buildSkvEngineSlots(samples: SkvSample[], today: string): Slot[] {
   const names: string[] = [];
@@ -356,6 +362,7 @@ export function buildSkvEngineSlots(samples: SkvSample[], today: string): Slot[]
         startDate: run.start,
         endDate: run.end,
         unit: name,
+        ...(SKV_ENGINE_ROOMS[name] ? { room: SKV_ENGINE_ROOMS[name] } : {}),
         price: priced ? rateOf(t!) : null,
         currency: priced ? sample.currency : null,
         priceUnit: priced ? 'per_night' : null,

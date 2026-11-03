@@ -9,6 +9,7 @@ import {
   saltysKitesurfVillageKilifi, buildSkvEngineSlots, buildSkvSlots, fetchSkvSample, fetchSkvSlots, parseSkvPin, parseSkvRooms,
   skvResultsUrl, skvSampleStays, skvWidgetBody,
 } from '../../src/offers/adapters/saltys-kitesurf-village-kilifi.js';
+import { roomsWithPrices } from '../../src/offers/ingest.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import { planGallery } from '../../src/offers/gallery.js';
 
@@ -97,6 +98,10 @@ test('saltys: engine slots = month bands per room type; a refused sample only ma
   const eco = slots.find(s => s.key === 'economy-double-room|2027-04-01')!;
   assert.deepEqual([eco.price, eco.currency, eco.priceUnit, eco.priceBasis, eco.occupancy, eco.availability, eco.endDate],
     [42, 'USD', 'per_night', 'room', 2, 'available', '2027-09-30']);
+  // the engine's "Economy Double Room" is the site's "Surfers Economy Room" (2026-11-03: priced by no slot before)
+  assert.equal(eco.room, 'Surfers Economy Room');
+  const c = await saltysKitesurfVillageKilifi.fetchContent(ctx);
+  assert.equal(roomsWithPrices(c, slots, TODAY).find(r => r.name === 'Surfers Economy Room')!.price_from, 42);
   assert.equal(Math.min(...slots.filter(s => s.price !== null).map(s => s.price!)), 42);
   // a type missing from an open sample is 'unknown' without a price
   const top = slots.find(s => s.key === 'cottage-superior-suite-top-floor|2026-11-01')!;
