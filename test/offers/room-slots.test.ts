@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { printedFromSlots, repriceStoredRooms, roomKey, roomPriceChanges, slotRoom, staleRoomNames, roomAvailability, roomsWithPrices } from '../../src/offers/ingest.js';
+import { keepStoredRoomPrices, printedFromSlots, repriceStoredRooms, roomKey, roomPriceChanges, slotRoom, staleRoomNames, roomAvailability, roomsWithPrices } from '../../src/offers/ingest.js';
 import type { OfferContent, Slot } from '../../src/offers/types.js';
 
 const slot = (o: Partial<Slot>): Slot => ({
@@ -85,6 +85,8 @@ test('roomsWithPrices: a waitlist-only or past room price is still the room pric
   assert.equal(rows[0].availability.length, 2);
   assert.deepEqual(rows[0].priced_months, []);
   assert.deepEqual(rows[1].priced_months, [12]);
+  // Aaron 2026-11-03: only the last published price is marked with its year, a waitlist price is current
+  assert.deepEqual(rows.map(r => r.price_past_year), [null, null, '2026', null]);
 });
 
 test('roomsWithPrices: priced_months counts every month a priced slot covers (Aaron 2026-10-31)', () => {
@@ -200,4 +202,35 @@ test('repriceStoredRooms: past prices via lastPublished; nothing to re-price -> 
   assert.equal(repriceStoredRooms('accommodation', [], [], '2026-11-02'), null);
   assert.equal(repriceStoredRooms('accommodation', null, [], '2026-11-02'), null);
   assert.equal(repriceStoredRooms('accommodation', [{ description: 'no name' }], [], '2026-11-02'), null);
+});
+
+test('keepStoredRoomPrices: a full run never drops a stored room price (2026-11-02: Cuxhaven, Hvide Sande, Saltys)', () => {
+  const av = (start: string, end: string) => [{ start_date: start, end_date: end, status: 'available', price: 1, currency: 'EUR' }];
+  const fresh = (o: Record<string, unknown>) => ({ name: 'x', price_from: null as number | null, price_currency: null, price_from_is_minimum: false, price_unit: null,
+    price_source: 'provider_site', price_basis: null, priced_months: [] as number[], availability: [] as unknown[], price_past_year: null as string | null, image_sort: null, ...o });
+  const stored = [
+    { name: 'Tiny House', price_from: 90, price_currency: 'EUR', price_unit: 'per_night', price_basis: 'room', priced_months: [10], availability: av('2026-10-12', '2026-10-31') },
+    { name: 'Harbour Cottage', price_from: 5850, price_currency: 'DKK', price_unit: 'package', price_basis: 'room', priced_months: [3, 4], availability: av('2026-10-24', '2027-10-08') },
+    { name: 'Loft', price_from: 120, price_currency: 'EUR', price_unit: 'per_night', price_basis: 'room', priced_months: [7], availability: av('2027-07-01', '2027-07-31') },
+    { name: 'Suite', price_from: 200, price_currency: 'EUR', price_unit: 'per_night', price_basis: 'room', priced_months: [], availability: [] },
+  ];
+  // empty-result guard (keepAll): every stored price stays; dates all over -> last season mark (Cuxhaven)
+  const guard = keepStoredRoomPrices([fresh({ name: 'Tiny House' }), fresh({ name: 'New Room' })], stored, [], '2026-11-03', true);
+  assert.deepEqual(guard.map(r => [r.name, r.price_from, r.priced_months, r.price_past_year]), [['Tiny House', 90, [10], '2026'], ['New Room', null, [], null]]);
+  const slots = [
+    slot({ unit: 'Loft', price: null, availability: 'closed', startDate: '2027-07-01', endDate: '2027-07-31' }),
+    slot({ unit: 'Suite', price: 180, startDate: '2027-01-01', endDate: '2027-01-31' }),
+  ];
+  const out = keepStoredRoomPrices([
+    fresh({ name: 'Harbour Cottage' }),
+    fresh({ name: 'Loft', availability: [{ start_date: '2027-07-01', end_date: '2027-07-31', status: 'closed', price: null, currency: null }] }),
+    fresh({ name: 'Suite', price_from: 180, price_currency: 'EUR', priced_months: [1] }),
+  ], stored, slots, '2026-11-03');
+  // no slot names the room (dropped from the engine): whole stored price, its dates run into 2027 -> no mark (Hvide Sande)
+  assert.deepEqual([out[0].price_from, out[0].price_unit, out[0].priced_months, out[0].price_past_year], [5850, 'package', [3, 4], null]);
+  // slots name it but carry no price: stored price, fresh availability
+  assert.deepEqual([out[1].price_from, out[1].priced_months, (out[1].availability as Array<{ status: string }>)[0].status], [120, [], 'closed']);
+  // a fresh price wins without the guard
+  assert.deepEqual([out[2].price_from, out[2].priced_months], [180, [1]]);
+  assert.deepEqual(roomPriceChanges(stored, [...out].reverse()), { gained: 0, lost: 0, changed: 1 });
 });
