@@ -1,4 +1,5 @@
-// Mogasurf kite camp at the villa (Sidi Kaouki): replays the EN packs page (booking widget) + the home page, 2026-10-30.
+// Mogasurf kite camp at the villa (Sidi Kaouki): replays the EN camp page (booking widget) + the home page, 2026-11-03
+// (the widget moved there from /en/kitesurf-packages/ with identical values).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
@@ -9,7 +10,7 @@ import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 const DIR = join(import.meta.dirname, '../fixtures/offers/mogasurf-kite-camp-villa-sidi-kaouki');
 process.env.OFFERS_FIXTURE_DIR = DIR;
 const files = readdirSync(DIR);
-const packs = readFileSync(join(DIR, files.find(f => f.startsWith('www.mogasurf.com_en_kitesurf-packages_.'))!), 'utf8');
+const packs = readFileSync(join(DIR, files.find(f => f.startsWith('www.mogasurf.com_en_mogasurf-camp-en_.'))!), 'utf8');
 const ctx = { note: () => {}, incomplete: () => {} };
 
 test('moga: widget data (var DATA weeks, rates, rate boundaries, yoga week, includes)', () => {
@@ -52,6 +53,7 @@ test('moga: a page without the widget data parses to nothing', () => {
 
 test('moga: content', async () => {
   const c = await mogasurfKiteCampVillaSidiKaouki.fetchContent(ctx);
+  assert.equal(c.sourceUrl, 'https://www.mogasurf.com/en/mogasurf-camp-en/');
   assert.equal(contentProblem(c), null);
   assert.deepEqual([c.kind, c.durationDays, c.country, c.region, c.spot, c.mealPlan], ['camp', 8, 'Morocco', 'Marrakech-Safi', 'Sidi Kaouki', 'full_board']);
   assert.match(c.summary, /Price per person EUR 750 \(special rate for arrivals before 2027-03-01, regular EUR 890\); weeks published from 2026-11-07 to 2027-06-26/);
