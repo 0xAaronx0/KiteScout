@@ -194,7 +194,7 @@ async function upsertOperator(a: OfferAdapter): Promise<string> {
  * A dated departure (tour/camp) is gone once it has started; a band (room x month, season,
  * month-only departure) is gone once its last day has passed.
  */
-export function isAhead(kind: OfferKind, s: Slot, today: string): boolean {
+export function isAhead(kind: OfferKind, s: Pick<Slot, 'startDate' | 'endDate' | 'datePrecision'>, today: string): boolean {
   if (kind !== 'accommodation' && s.startDate && (s.datePrecision ?? 'day') === 'day') return s.startDate >= today;
   return s.endDate === null || s.endDate >= today;
 }
@@ -265,6 +265,24 @@ export function summarizePrice(kind: OfferKind, slots: Slot[], today: string, la
     : `last published price, ${latestYear || 'earlier'} dates are over, new dates not published yet`;
   // An undated rate gets no "as of" read date, which would look like a dated price.
   return { min, priceUnit, raw, note: `${raw} (${label}: ${what}; ${min.undated ? 'undated rates on the provider\'s site, to be confirmed' : `as of ${today}`})` };
+}
+
+/**
+ * The listing note for a price a guard or a partial run keeps (Aaron 2026-11-03: last season prices are marked). When
+ * every stored slot is over, the stored note is relabelled as last published, same wording as summarizePrice's past
+ * tier; amount and "as of" read date stay. Null: the stored note stands (a slot still ahead, or already marked).
+ */
+export function keptPriceNote(kind: OfferKind, note: string | null, storedSlots: unknown[], today: string): string | null {
+  if (!note) return null;
+  const slots = (storedSlots as Array<Record<string, unknown>>).filter(j => j.price != null).map(j => ({
+    startDate: (j.start_date as string | null) ?? null, endDate: (j.end_date as string | null) ?? null,
+    datePrecision: (j.date_precision as Slot['datePrecision']) ?? 'day',
+  }));
+  if (!slots.length || slots.some(s => isAhead(kind, s, today))) return null;
+  const year = slots.map(s => (s.startDate ?? s.endDate ?? '').slice(0, 4)).sort().at(-1) || 'earlier';
+  const marked = note.replace(/\((?:cheapest bookable|next dates full or waitlist only): /,
+    `(last published price, ${year} dates are over, new dates not published yet: `);
+  return marked === note ? null : marked;
 }
 
 function slotJson(s: Slot) {
@@ -733,7 +751,7 @@ async function runAdapterInner(
     rep.operatorId = operatorId;
     const listingId = SOURCE_PREFIX + a.key;
     const { data: existing, error: rErr } = await supabase
-      .from('package_offers').select('id,images,pricing,rooms,itinerary_spots').eq('source_listing_id', listingId).maybeSingle();
+      .from('package_offers').select('id,images,pricing,rooms,itinerary_spots,price_basis_note').eq('source_listing_id', listingId).maybeSingle();
     if (rErr) throw new Error(`package_offers read failed: ${rErr.message}`);
     if (!existing && !content) throw new Error('offer not ingested yet: run a full ingest first');
     offerId = (existing?.id as string | undefined) ?? null;
@@ -764,7 +782,9 @@ async function runAdapterInner(
         : slots.filter(s => isAhead(a.kind, s, today)).slice(0, PRICING_SLOT_CAP).map(slotJson),
       slots_total: keepSlots ? prevSlots.length : slots.length,
     };
-    const priceCols = keepSlots ? {} : {
+    const keptNote = keepSlots ? keptPriceNote(a.kind, (existing?.price_basis_note as string | null) ?? null, prevSlots, today) : null;
+    if (keptNote) rep.notes.push('kept listing price marked as last published (all its dates are over)');
+    const priceCols = keepSlots ? (keptNote ? { price_basis_note: keptNote } : {}) : {
       pricing,
       price_unit: price.priceUnit,
       price_basis_note: price.note,
@@ -874,7 +894,7 @@ export async function runAdapters(
       const prev = r.status === 'error' ? `  (previous run: ${previousRun(r)})` : '';
       console.log(`${flag}${r.key.padEnd(34)} slots ${String(r.slots).padStart(3)} (bookable ${r.bookable})  ${r.minPrice ?? '-'}  ${r.requests} req  ${(r.ms / 1000).toFixed(1)}s${r.error ? `  ${r.error}` : ''}${prev}`);
       if (r.roomPhotos) console.log(`    room photos: ${r.roomPhotos.withPhoto}/${r.roomPhotos.rooms} rooms, ${r.roomPhotos.photos} photos, ${(r.roomPhotos.bytes / 1024).toFixed(0)} KB`);
-      for (const n of r.notes) if (n.startsWith('room prices') || n.includes('EMPTY_GUARD')) console.log(`    ${n}`);
+      for (const n of r.notes) if (n.startsWith('room prices') || n.startsWith('kept listing price') || n.includes('EMPTY_GUARD')) console.log(`    ${n}`);
     }
   };
   await Promise.all(Array.from({ length: Math.min(opts.parallel ?? 4, adapters.length) }, worker));
