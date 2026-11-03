@@ -5,8 +5,10 @@
 // medina evening and an argan cooperative visit. Arrivals on Saturdays.
 //
 // Data path (checked 2026-10-30): WordPress/Elementor, server-rendered; two pages.
-//   slots    the EN packs page https://www.mogasurf.com/en/kitesurf-packages/ (dateModified 2026-10-29) carries the camp
-//            booking widget as an inline script (the FR home page has the same widget with identical dates):
+//   slots    the EN camp page https://www.mogasurf.com/en/mogasurf-camp-en/ carries the camp booking widget as an inline
+//            script (the FR home page has the same widget with identical dates). Until 2026-11-02 it sat on
+//            /en/kitesurf-packages/, which is now a lessons price list without the widget (cron red 2026-11-02/03); the
+//            widget values were identical on the move (34 weeks, 750 / 890, same rate boundaries and includes):
 //            var DATA=[{"k":"2026-11","label":"November 2026","dates":[{"s":"2026-11-07","e":"2026-11-14","t":"Nov 7 → 14"},
 //            ...,{"s":"2026-12-19",...,"off":1},...,{"s":"2027-03-20",...,"yoga":1},...]}] (JSON, ISO dates, Nov 2026 to
 //            Jun 2027 on 2026-10-30); var SPECIAL={surf:550,kite:750}; var REF={surf:790,kite:890} (struck-through
@@ -17,11 +19,11 @@
 //            kite activity hides them, so they get no slot.
 //            Until 2026-10-19 the home page had an older widget (var MONTHS with year-less weeks, var PRICE / FULL)
 //            and the packs page showed EUR 820 / week; both are gone, that format is no longer read.
-//   content  the EN packs page (camp description, "Rates based on shared room" list, the widget's kite inclusion
+//   content  the EN camp page (camp description, "Rates based on shared room" list, the widget's kite inclusion
 //            list) + photos from both pages.
 //   booking  request form ("No payment required at this stage · We confirm availability together") -> on_request.
 // robots.txt www.mogasurf.com (2026-10-19): "Allow: /", Crawl-delay 3 -> this adapter waits 3 s between its requests.
-// Requests per run: slots 1 (EN packs page), content 2 (+ home), memoised between content and slots.
+// Requests per run: slots 1 (EN camp page), content 2 (+ home), memoised between content and slots.
 // Slots: one per future kite week, key = arrival date, EUR per person (package, 7 nights), off weeks 'closed'.
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
@@ -30,7 +32,7 @@ import type { OfferAdapter, OfferContent, Slot } from '../types.js';
 
 const SITE = 'https://www.mogasurf.com';
 export const MOGA_HOME_URL = `${SITE}/`;
-export const MOGA_PACKS_URL = `${SITE}/en/kitesurf-packages/`;
+export const MOGA_CAMP_URL = `${SITE}/en/mogasurf-camp-en/`;
 const CRAWL_DELAY_MS = 3_000; // robots.txt "Crawl-delay:3"
 const NIGHTS = 7;
 
@@ -142,7 +144,7 @@ export function parseMogaContent(home: string, packs: string, today: string): Of
   const first = weeks.find(x => x.start >= today);
   const last = weeks[weeks.length - 1];
   const imgs: string[] = [];
-  for (const u of [...imageCandidates(packs, MOGA_PACKS_URL, null, 30), ...imageCandidates(home, MOGA_HOME_URL, null, 30)]) {
+  for (const u of [...imageCandidates(packs, MOGA_CAMP_URL, null, 30), ...imageCandidates(home, MOGA_HOME_URL, null, 30)]) {
     if (!/logo|cropped-|-\d+x\d+\.(?:jpe?g|png|webp)$/i.test(u) && !imgs.includes(u)) imgs.push(u);
   }
 
@@ -174,22 +176,22 @@ export function parseMogaContent(home: string, packs: string, today: string): Of
     rooms: [],
     imageUrls: imgs.slice(0, 30),
     heroVideoUrl: null,
-    sourceUrl: MOGA_PACKS_URL,
+    sourceUrl: MOGA_CAMP_URL,
     bookingUrl: MOGA_HOME_URL,
     sourceText: [
-      `packs page widget (dateModified ${w.modified}): kite EUR ${w.special} special (last-minute before ${w.lastMinuteBefore}, instead of EUR ${w.ref}) / EUR ${w.regular} regular from ${w.regularFrom}`,
+      `camp page widget (dateModified ${w.modified}): kite EUR ${w.special} special (last-minute before ${w.lastMinuteBefore}, instead of EUR ${w.ref}) / EUR ${w.regular} regular from ${w.regularFrom}`,
       `weeks: ${w.weeks.map(x => `${x.start} - ${x.end}${x.off ? ' (not available)' : ''}${x.yoga ? ' (kitesurf + yoga week, price on request, not bookable as kite week)' : ''}`).join(', ')}`,
       `includes: ${w.includes.join('; ')}`,
-      `packs page: ${packsText}`,
+      `camp page: ${packsText}`,
     ].join('\n'),
   };
 }
 
 export async function fetchMogaSlots(today: string, ctx?: { note(t: string): void }): Promise<Slot[]> {
-  const w = parseMogaWidget(await page(MOGA_PACKS_URL));
+  const w = parseMogaWidget(await page(MOGA_CAMP_URL));
   const weeks = kiteWeeks(w);
   if (weeks.length === 0 || w.special === null || w.regular === null || w.regularFrom === null) {
-    throw new Error('mogasurf: packs-page booking widget (DATA / SPECIAL / REG / rateFor) not found (layout changed?)');
+    throw new Error('mogasurf: camp-page booking widget (DATA / SPECIAL / REG / rateFor) not found (layout changed?)');
   }
   const slots = buildMogaSlots(w, today);
   if (slots.length === 0) ctx?.note(`all widget weeks are past (last ${weeks[weeks.length - 1].start}); no new weeks published yet`);
@@ -208,14 +210,14 @@ export const mogasurfKiteCampVillaSidiKaouki: OfferAdapter = {
     whatsapp: '+212618910431',
     phone: '+212618910431',
   },
-  url: MOGA_PACKS_URL,
+  url: MOGA_CAMP_URL,
   slotMethod: 'html_dates',
   liveAvailability: false,
   instantBooking: false,
   fetchBudget: 3,
   async fetchContent() {
     const home = await page(MOGA_HOME_URL);
-    const packs = await page(MOGA_PACKS_URL);
+    const packs = await page(MOGA_CAMP_URL);
     return parseMogaContent(home, packs, new Date().toISOString().slice(0, 10));
   },
   fetchSlots: ctx => fetchMogaSlots(new Date().toISOString().slice(0, 10), ctx),

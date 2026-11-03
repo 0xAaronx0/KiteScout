@@ -19,13 +19,13 @@
 	<meta property="og:description" content="Mogasurf, école de surf et kitesurf à Essaouira depuis 2012. Cours, camps et coaching pour tous niveaux. Réservez en ligne." />
 	<meta property="og:url" content="https://www.mogasurf.com/" />
 	<meta property="og:site_name" content="MOGASURF" />
-	<meta property="article:modified_time" content="2026-10-29T12:46:32+00:00" />
+	<meta property="article:modified_time" content="2026-11-02T11:20:47+00:00" />
 	<meta property="og:image" content="https://www.mogasurf.com/wp-content/uploads/2026/05/12-1.png" />
 	<meta property="og:image:width" content="1080" />
 	<meta property="og:image:height" content="1350" />
 	<meta property="og:image:type" content="image/png" />
 	<meta name="twitter:card" content="summary_large_image" />
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.mogasurf.com\/","url":"https:\/\/www.mogasurf.com\/","name":"Accueil - MOGASURF","isPartOf":{"@id":"https:\/\/www.mogasurf.com\/#website"},"about":{"@id":"https:\/\/www.mogasurf.com\/#organization"},"primaryImageOfPage":{"@id":"https:\/\/www.mogasurf.com\/#primaryimage"},"image":{"@id":"https:\/\/www.mogasurf.com\/#primaryimage"},"thumbnailUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1-819x1024.png","datePublished":"2026-06-05T12:55:37+00:00","dateModified":"2026-10-29T12:46:32+00:00","description":"Mogasurf, école de surf et kitesurf à Essaouira depuis 2012. Cours, camps et coaching pour tous niveaux. Réservez en ligne.","breadcrumb":{"@id":"https:\/\/www.mogasurf.com\/#breadcrumb"},"inLanguage":"fr-FR","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.mogasurf.com\/"]}]},{"@type":"ImageObject","inLanguage":"fr-FR","@id":"https:\/\/www.mogasurf.com\/#primaryimage","url":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1.png","contentUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1.png","width":1080,"height":1350},{"@type":"BreadcrumbList","@id":"https:\/\/www.mogasurf.com\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https:\/\/www.mogasurf.com\/#website","url":"https:\/\/www.mogasurf.com\/","name":"MOGASURF","description":"Surf Kite School &amp; Camp Essaouira","publisher":{"@id":"https:\/\/www.mogasurf.com\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.mogasurf.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"fr-FR"},{"@type":"Organization","@id":"https:\/\/www.mogasurf.com\/#organization","name":"MOGASURF","url":"https:\/\/www.mogasurf.com\/","logo":{"@type":"ImageObject","inLanguage":"fr-FR","@id":"https:\/\/www.mogasurf.com\/#\/schema\/logo\/image\/","url":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/06\/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png","contentUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/06\/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png","width":2553,"height":729,"caption":"MOGASURF"},"image":{"@id":"https:\/\/www.mogasurf.com\/#\/schema\/logo\/image\/"}}]}</script>
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https:\/\/schema.org","@graph":[{"@type":"WebPage","@id":"https:\/\/www.mogasurf.com\/","url":"https:\/\/www.mogasurf.com\/","name":"Accueil - MOGASURF","isPartOf":{"@id":"https:\/\/www.mogasurf.com\/#website"},"about":{"@id":"https:\/\/www.mogasurf.com\/#organization"},"primaryImageOfPage":{"@id":"https:\/\/www.mogasurf.com\/#primaryimage"},"image":{"@id":"https:\/\/www.mogasurf.com\/#primaryimage"},"thumbnailUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1-819x1024.png","datePublished":"2026-06-05T12:55:37+00:00","dateModified":"2026-11-02T11:20:47+00:00","description":"Mogasurf, école de surf et kitesurf à Essaouira depuis 2012. Cours, camps et coaching pour tous niveaux. Réservez en ligne.","breadcrumb":{"@id":"https:\/\/www.mogasurf.com\/#breadcrumb"},"inLanguage":"fr-FR","potentialAction":[{"@type":"ReadAction","target":["https:\/\/www.mogasurf.com\/"]}]},{"@type":"ImageObject","inLanguage":"fr-FR","@id":"https:\/\/www.mogasurf.com\/#primaryimage","url":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1.png","contentUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/12-1.png","width":1080,"height":1350},{"@type":"BreadcrumbList","@id":"https:\/\/www.mogasurf.com\/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https:\/\/www.mogasurf.com\/#website","url":"https:\/\/www.mogasurf.com\/","name":"MOGASURF","description":"Surf Kite School &amp; Camp Essaouira","publisher":{"@id":"https:\/\/www.mogasurf.com\/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https:\/\/www.mogasurf.com\/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"fr-FR"},{"@type":"Organization","@id":"https:\/\/www.mogasurf.com\/#organization","name":"MOGASURF","url":"https:\/\/www.mogasurf.com\/","logo":{"@type":"ImageObject","inLanguage":"fr-FR","@id":"https:\/\/www.mogasurf.com\/#\/schema\/logo\/image\/","url":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/06\/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png","contentUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/06\/cropped-cropped-LOGO-MOGASURF-2-scaled-1.png","width":2553,"height":729,"caption":"MOGASURF"},"image":{"@id":"https:\/\/www.mogasurf.com\/#\/schema\/logo\/image\/"}}]}</script>
 	<!-- / Yoast SEO plugin. -->
 
 
@@ -105,14 +105,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 
 <script id="cookie-notice-front-js-before">
-var cnArgs = {"ajaxUrl":"https:\/\/www.mogasurf.com\/wp-admin\/admin-ajax.php","nonce":"62c72dfd78","hideEffect":"fade","position":"bottom","onScroll":false,"onScrollOffset":100,"onClick":false,"cookieName":"cookie_notice_accepted","cookieTime":2592000,"cookieTimeRejected":2592000,"globalCookie":false,"redirection":false,"cache":true,"revokeCookies":false,"revokeCookiesOpt":"automatic"};
+var cnArgs = {"ajaxUrl":"https:\/\/www.mogasurf.com\/wp-admin\/admin-ajax.php","nonce":"56a25385fd","hideEffect":"fade","position":"bottom","onScroll":false,"onScrollOffset":100,"onClick":false,"cookieName":"cookie_notice_accepted","cookieTime":2592000,"cookieTimeRejected":2592000,"globalCookie":false,"redirection":false,"cache":true,"revokeCookies":false,"revokeCookiesOpt":"automatic"};
 
 //# sourceURL=cookie-notice-front-js-before
 </script>
 <script src="https://www.mogasurf.com/wp-content/cache/minify/545b0.js"></script>
 
 <script id="facebook-signal-js-extra">
-var facebookSignalConfig = {"cookieName":"wc_facebook_signals_state","ajaxUrl":"https://www.mogasurf.com/wp-admin/admin-ajax.php","signalsAction":"fbpix_set_pixel_signals","signalsNonce":"f6ff00a6e6"};
+var facebookSignalConfig = {"cookieName":"wc_facebook_signals_state","ajaxUrl":"https://www.mogasurf.com/wp-admin/admin-ajax.php","signalsAction":"fbpix_set_pixel_signals","signalsNonce":"8a6528c8b2"};
 //# sourceURL=facebook-signal-js-extra
 </script>
 <script src="https://www.mogasurf.com/wp-content/cache/minify/51df7.js"></script>
@@ -144,7 +144,7 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
 fbq('init', '697418646505666');
 fbq('track', 'PageView');
 </script>
-<!-- End Meta Pixel --><meta name="ti-site-data" content="eyJyIjoiMTowITc6MCEzMDowIiwibyI6Imh0dHBzOlwvXC93d3cubW9nYXN1cmYuY29tP3RpLW9ubGluZS11c2Vycy1nb29nbGU9MSZhbXA7cD0lMkYmYW1wO193cG5vbmNlPWYyYWJhNGY5NTQifQ==" />		<script>
+<!-- End Meta Pixel --><meta name="ti-site-data" content="eyJyIjoiMTowITc6MCEzMDowIiwibyI6Imh0dHBzOlwvXC93d3cubW9nYXN1cmYuY29tP3RpLW9ubGluZS11c2Vycy1nb29nbGU9MSZhbXA7cD0lMkYmYW1wO193cG5vbmNlPTM4NTM5MDRjN2MifQ==" />		<script>
 			document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 		</script>
 				<style>
@@ -926,392 +926,6 @@ setInterval(load,1800000);
 		<div class="elementor-element elementor-element-f566048 e-con-full e-flex e-con e-child" data-id="f566048" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;slideshow&quot;,&quot;background_slideshow_gallery&quot;:[{&quot;id&quot;:3447,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/17.jpeg&quot;},{&quot;id&quot;:3439,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/9.jpeg&quot;},{&quot;id&quot;:1876,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/DSC00181-HDR-Grande.jpeg&quot;},{&quot;id&quot;:3443,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/13.jpeg&quot;},{&quot;id&quot;:3434,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/4.jpeg&quot;},{&quot;id&quot;:3448,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/18.jpeg&quot;},{&quot;id&quot;:3442,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/12.jpeg&quot;},{&quot;id&quot;:3445,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/09\/15.jpeg&quot;},{&quot;id&quot;:1934,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/image00024.jpeg&quot;},{&quot;id&quot;:1935,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/image00009.jpeg&quot;},{&quot;id&quot;:1933,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/image00028.jpeg&quot;},{&quot;id&quot;:1883,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/DSC00337-HDR-Grande.jpeg&quot;},{&quot;id&quot;:1928,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/DSC00166-HDR-Grande.jpeg&quot;},{&quot;id&quot;:1880,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/DSC00283-HDR-Grande.jpeg&quot;},{&quot;id&quot;:1881,&quot;url&quot;:&quot;https:\/\/www.mogasurf.com\/wp-content\/uploads\/2026\/05\/DSC00405-HDR-Grande.jpeg&quot;}],&quot;background_slideshow_slide_duration&quot;:500,&quot;background_slideshow_transition_duration&quot;:2500,&quot;background_slideshow_loop&quot;:&quot;yes&quot;,&quot;background_slideshow_slide_transition&quot;:&quot;fade&quot;}">
 				</div>
 				</div>
-		<div class="elementor-element elementor-element-5a8d4a0 e-con-full e-flex e-con e-parent" data-id="5a8d4a0" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-		<div class="elementor-element elementor-element-39b0865 e-con-full e-flex e-con e-child" data-id="39b0865" data-element_type="container" data-e-type="container">
-		<div class="elementor-element elementor-element-ed969ea e-con-full e-flex e-con e-child" data-id="ed969ea" data-element_type="container" data-e-type="container">
-				<div class="elementor-element elementor-element-aeae50f elementor-widget-mobile__width-initial elementor-widget elementor-widget-heading" data-id="aeae50f" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
-					<h2 class="elementor-heading-title elementor-size-default">Nos prochains camps</h2>				</div>
-					<p class="e-828818a-c91445c e-paragraph-base e-default-p" data-interaction-id="828818a">Choisissez votre semaine. On s'occupe du reste.</p>
-				</div>
-				</div>
-				</div>
-		<div class="elementor-element elementor-element-ec3a4b9 e-flex e-con-boxed e-con e-parent" data-id="ec3a4b9" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-					<div class="e-con-inner">
-				<div class="elementor-element elementor-element-308969e elementor-widget elementor-widget-html" data-id="308969e" data-element_type="widget" data-e-type="widget" data-widget_type="html.default">
-					<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-.bk{--g:#1c3522;--gs:#30543d;--b:#faf6f0;--bd:#e0d8ce;--pk:#e4a0af;--mt:#5c5c52;font-family:'Montserrat',sans-serif;max-width:980px;margin:0 auto;border-radius:18px;overflow:hidden;box-shadow:0 6px 32px rgba(28,53,34,.12);display:block;width:100%;background:var(--b)}
-.bk-main{display:table;width:100%;table-layout:fixed}
-#reservation{scroll-margin-top:90px}
-.bk *{box-sizing:border-box}
-.bk-left{display:table-cell;vertical-align:middle;width:46%;background:var(--b);padding:24px 20px;border-right:1px solid var(--bd)}
-.bk-mini-card{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:20px 18px 18px;position:relative;margin-bottom:14px}
-.bk-mini-badge{position:absolute;top:-11px;left:16px;background:var(--pk);color:#fff;font-size:9px;font-weight:700;letter-spacing:.5px;padding:4px 11px;border-radius:20px;white-space:nowrap}
-.bk-mini-title{font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--g);margin:0 0 10px}
-.bk-mini-divider{border:none;border-top:1px solid var(--bd);margin:0 0 10px}
-.bk-mini-text{font-size:11px;line-height:1.65;color:var(--mt);margin:0}
-.bk-mini-list{list-style:none;margin:0;padding:0}
-.bk-mini-list li{position:relative;padding-left:16px;font-size:11px;line-height:1.5;color:var(--mt);margin-bottom:5px}
-.bk-mini-list li::before{content:"\2713";position:absolute;left:0;top:0;font-size:9px;font-weight:700;color:var(--pk)}
-.bk-l-note{padding:9px 12px;background:rgba(28,53,34,.04);border:1px solid var(--bd);border-radius:8px;font-size:9.5px;color:var(--mt);line-height:1.5;font-style:italic;margin:0}
-.bk-l-note a{color:var(--g);font-weight:700;text-decoration:underline}
-.bk-right{display:table-cell;vertical-align:middle;width:54%;background:var(--b);padding:24px 22px}
-.bk-r-eyebrow{font-size:8px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--pk);display:block;margin-bottom:5px}
-.bk-r-title{font-family:'Playfair Display',serif;font-weight:700;font-style:italic;font-size:18px;color:var(--g);margin:0 0 16px}
-.bk-r-title em{color:var(--pk)}
-.bk-step{display:none}
-.bk-step.on{display:block}
-.bk-prog-wrap{display:flex;gap:5px;margin-bottom:14px;align-items:center}
-.bk-prog-dot{width:20px;height:3px;border-radius:2px;background:var(--bd);display:inline-block}
-.bk-prog-dot.on{background:var(--g)}
-.bk-prog-lbl{font-size:9px;color:var(--mt);margin-left:6px}
-.bk-sec{margin-bottom:14px}
-.bk-lbl{font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--mt);display:block;margin-bottom:7px}
-.bk-acts,.bk-months,.bk-dates{display:flex;flex-wrap:wrap;gap:6px}
-.bk-act,.bk-mbtn,.bk-date{padding:9px 12px;border-radius:10px;border:1.5px solid var(--g);background:var(--g);font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;color:var(--b);cursor:pointer;text-align:center;line-height:1.3;transition:all .2s}
-.bk-act{flex:1}
-.bk-act s{opacity:.55;font-weight:500;margin-left:3px}
-.bk-act:hover,.bk-mbtn:hover,.bk-date:hover{background:var(--gs);border-color:var(--gs)}
-.bk-act.on,.bk-mbtn.on,.bk-date.on{background:var(--b);color:var(--g)}
-.bk-mbtn.other{border-style:dashed}
-.bk-date small{display:block;font-size:8.5px;font-weight:500;margin-top:2px}
-.bk-date.off,.bk-date.off:hover{background:var(--bd);border-color:var(--bd);color:#8a8478;cursor:not-allowed;opacity:.7}
-.bk-dates-wrap{display:none;margin-top:12px}
-.bk-dates-wrap.show{display:block}
-.bk-custom-block{display:none;margin-top:12px}
-.bk-custom-block.show{display:block}
-.bk-counter{display:flex;align-items:center;gap:10px}
-.bk-cnt-btn{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--bd);background:#fff;font-size:15px;font-weight:700;color:var(--g);cursor:pointer;text-align:center;line-height:26px;padding:0}
-.bk .bk-cnt-btn,.bk .bk-cnt-btn:hover,.bk .bk-cnt-btn:focus{width:28px!important;height:28px!important;min-width:28px!important;border-radius:50%!important;border:1.5px solid var(--g)!important;background:#fff!important;color:var(--g)!important;font-size:16px!important;line-height:24px!important;padding:0!important;opacity:1!important;box-shadow:none!important;text-transform:none!important}
-.bk-cnt-val{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--g);min-width:26px;text-align:center;display:inline-block}
-.bk-price-box{background:var(--g);border-radius:11px;padding:12px 16px;margin:12px 0 0;width:100%}
-.bk-price-box.hidden{display:none}
-.bk-price-top{display:flex;justify-content:space-between;align-items:center}
-.bk-price-lbl{font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(250,246,240,.5)}
-.bk-price-sub{font-size:9px;color:rgba(250,246,240,.45);margin-top:2px}
-.bk-price-amt{white-space:nowrap;margin-left:12px;font-family:'Playfair Display',serif;font-size:24px;font-weight:700;color:#fff}
-.bk-btn{width:100%;padding:12px;border-radius:50px;border:none;background:var(--pk);color:#fff;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;margin-top:12px;display:block}
-.bk-btn:hover{background:var(--g)}
-.bk-btn:disabled{opacity:.5}
-.bk-micro{text-align:center;font-size:10px;color:#9a9488;margin:8px 0 6px}
-.bk-badge-item{font-size:10px;color:var(--mt);display:block;margin-bottom:4px}
-.bk-badge-item strong{color:var(--g)}
-.bk-wa{display:block;text-align:center;margin-top:12px;padding:11px;border-radius:50px;border:1.5px solid #25D366;background:#fff;color:#128C7E!important;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:.4px;text-decoration:none!important}
-.bk-wa:hover{background:#25D366;color:#fff!important}
-.bk-back{background:none;border:none;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;color:var(--mt);cursor:pointer;padding:0;margin-bottom:14px;display:block}
-.bk-row{display:flex;gap:8px;margin-bottom:10px}
-.bk-field{flex:1;display:flex;flex-direction:column;gap:4px;min-width:0}
-.bk-field.full{flex:none;width:100%}
-.bk-inp,.bk-ta{border:1.5px solid var(--bd)!important;border-radius:8px;padding:8px 10px;font-size:12px!important;background:#fff!important;color:#1c1c1c!important;font-family:'Montserrat',sans-serif!important;outline:none;width:100%;-webkit-appearance:none}
-.bk-inp:focus,.bk-ta:focus{border-color:var(--g)!important}
-.bk-inp.err{border-color:#c0392b!important}
-.bk-ta{resize:vertical;min-height:64px;line-height:1.5}
-.bk-phone-row{display:flex;gap:5px}
-.bk-cc{flex:0 0 80px;padding:8px 4px;font-size:11px!important;border:1.5px solid var(--bd)!important;border-radius:8px;background:#fff!important;color:#1c1c1c!important;outline:none;-webkit-appearance:none;cursor:pointer}
-.bk-phone-inp{flex:1}
-.bk-summary{background:rgba(28,53,34,.06);border:1px solid var(--bd);border-radius:8px;padding:8px 12px;font-size:10.5px;color:var(--g);margin-bottom:12px;line-height:1.6}
-.bk-ok{display:none;text-align:center;padding:24px 0}
-.bk-ok.show{display:block}
-.bk-okico{width:44px;height:44px;border-radius:50%;background:var(--g);color:#fff;font-size:18px;line-height:44px;margin:0 auto 10px}
-.bk-ok-title{font-family:'Playfair Display',serif;font-style:italic;font-size:19px;color:var(--g);margin-bottom:8px}
-.bk-ok-sub{font-size:11px;color:var(--mt);line-height:1.6;max-width:260px;margin:0 auto}
-@media(max-width:680px){.bk-main{display:block}.bk-left,.bk-right{display:block;width:100%;border-right:none}}
-.bk-act.wide{flex:1 1 100%}
-.bk-act small{display:block;font-size:9px;font-weight:500;margin-top:2px;opacity:.85}
-.bk-sel-wrap{position:relative}
-.bk-sel-wrap::after{content:"\25BE";position:absolute;right:13px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--g);font-size:13px}
-.bk-sel{border:1.5px solid var(--bd)!important;border-radius:8px;padding:10px 32px 10px 10px;font-size:12px!important;font-weight:600;background:#fff!important;color:#1c1c1c!important;font-family:'Montserrat',sans-serif!important;outline:none;width:100%;-webkit-appearance:none;appearance:none;cursor:pointer}
-.bk-sel:focus{border-color:var(--g)!important}
-.bk-date{flex:1 1 calc(50% - 6px);min-width:120px}
-.bk-date .tag{display:block;margin-top:3px;font-size:8px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--pk)}
-.bk-date.on .tag{color:var(--g)}
-.bk-price-sub s{opacity:.8}
-.bk-note{margin-top:8px;font-size:10.5px;color:var(--mt);line-height:1.5}
-.bk-opt-lbl{font-weight:500;text-transform:none;letter-spacing:0;color:var(--mt)}
-</style>
-
-<div class="bk" id="reservation">
-<div class="bk-main">
-
-  <div class="bk-left">
-    <div class="bk-mini-card">
-      <span class="bk-mini-badge">🏡 HÉBERGEMENT</span>
-      <h3 class="bk-mini-title">Deux villas, deux piscines</h3>
-      <hr class="bk-mini-divider">
-      <p class="bk-mini-text">Deux villas voisines, chacune avec sa piscine et son jardin. Repas marocains faits maison autour d’une même table, soirées barbecue et rencontres du monde entier. Groupes organisés selon le niveau de chacun. Venez pour le surf, restez pour l’ambiance !</p>
-    </div>
-    <div class="bk-mini-card">
-      <span class="bk-mini-badge" id="bk-act-badge">🌊 INCLUS DANS VOTRE SEMAINE</span>
-      <h3 class="bk-mini-title">Votre semaine à Essaouira</h3>
-      <hr class="bk-mini-divider">
-      <ul class="bk-mini-list" id="bk-act-list"><li>Choisissez une activité pour voir le détail</li></ul>
-    </div>
-  </div>
-
-  <div class="bk-right">
-    <span class="bk-r-eyebrow">Réservation</span>
-    <h2 class="bk-r-title">Réservez <em>votre semaine</em></h2>
-
-    <div id="bk-fields">
-      <div class="bk-step on" id="bk-s1">
-        <div class="bk-prog-wrap"><span class="bk-prog-dot on"></span><span class="bk-prog-dot"></span><span class="bk-prog-lbl">Étape 1/2 · Votre séjour</span></div>
-
-        <div class="bk-sec">
-          <span class="bk-lbl">1. Activité</span>
-          <div class="bk-acts">
-            <button class="bk-act" type="button" onclick="bkAct('surf',this)">🏄 Surf<small>dès 550 € par personne</small></button>
-            <button class="bk-act" type="button" onclick="bkAct('kite',this)">🪁 Kitesurf<small>dès 750 € par personne</small></button>
-            <button class="bk-act wide" type="button" onclick="bkAct('yoga',this)">🧘 Kitesurf + Yoga<small>20 → 27 mars 2027 · prix sur demande</small></button>
-          </div>
-          <div class="bk-note">Tarifs dernière minute pour les départs de novembre à janvier, tarif spécial en février, tarif normal à partir de mars. Arrivées le samedi.</div>
-        </div>
-
-        <div class="bk-sec">
-          <span class="bk-lbl">2. Mois</span>
-          <div class="bk-sel-wrap"><select class="bk-sel" id="bk-month" onchange="bkMonth(this.value)"></select></div>
-
-          <div class="bk-dates-wrap" id="bk-dates-wrap">
-            <span class="bk-lbl" style="margin-top:4px">3. Dates</span>
-            <div class="bk-dates" id="bk-dates"></div>
-          </div>
-
-          <div class="bk-custom-block" id="bk-custom-block">
-            <span class="bk-lbl">3. Dates</span>
-            <div class="bk-row" style="margin-bottom:0">
-              <div class="bk-field"><label class="bk-lbl bk-opt-lbl">Arrivée</label><input class="bk-inp" id="bk-date-from" type="date" onchange="bkUpd()"></div>
-              <div class="bk-field"><label class="bk-lbl bk-opt-lbl">Départ</label><input class="bk-inp" id="bk-date-to" type="date" onchange="bkUpd()"></div>
-            </div>
-          </div>
-          <div id="bk-urgency" style="margin-top:8px;font-size:10.5px;color:var(--mt);line-height:1.5;min-height:16px"></div>
-        </div>
-
-        <div class="bk-sec">
-          <span class="bk-lbl">Nombre de personnes</span>
-          <div class="bk-counter">
-            <button class="bk-cnt-btn" type="button" onclick="bkCnt(-1)">−</button>
-            <span class="bk-cnt-val" id="bk-cnt">1</span>
-            <button class="bk-cnt-btn" type="button" onclick="bkCnt(1)">+</button>
-          </div>
-        </div>
-
-        <div class="bk-price-box hidden" id="bk-price">
-          <div class="bk-price-top">
-            <div><div class="bk-price-lbl">Total estimé</div><div class="bk-price-sub" id="bk-psub"></div></div>
-            <span class="bk-price-amt" id="bk-pamt">-</span>
-          </div>
-        </div>
-
-        <button class="bk-btn" type="button" id="bk-btn1" onclick="bkNext()">Réserver ma semaine →</button>
-        <p class="bk-micro" id="bk-micro">Aucun paiement requis à ce stade · Nous confirmons les disponibilités ensemble</p>
-        <span class="bk-badge-item">✓ <strong>Sans engagement à ce stade</strong></span>
-        <span class="bk-badge-item">✓ <strong>Disponibilités confirmées avant tout paiement</strong></span>
-        <span class="bk-badge-item">✓ <strong>Chambre privée ou partagée</strong>, précisez-le dans le message</span>
-        <a class="bk-wa" href="https://wa.me/212618910431?text=Bonjour%20MogaSurf%2C%20j%27aimerais%20en%20savoir%20plus%20sur%20vos%20semaines%20surf%20et%20kitesurf." target="_blank" rel="noopener">💬 Une question ? Écrivez-nous sur WhatsApp</a>
-      </div>
-
-      <div class="bk-step" id="bk-s2">
-        <button class="bk-back" type="button" onclick="bkBack()">← Modifier mon séjour</button>
-        <div class="bk-prog-wrap"><span class="bk-prog-dot on"></span><span class="bk-prog-dot on"></span><span class="bk-prog-lbl">Étape 2/2 · Vos coordonnées</span></div>
-        <div class="bk-summary" id="bk-sum"></div>
-        <div class="bk-row">
-          <div class="bk-field"><label class="bk-lbl">Prénom</label><input class="bk-inp" id="bk-fn" type="text" autocomplete="given-name" placeholder="Sophie"></div>
-          <div class="bk-field"><label class="bk-lbl">Nom <span class="bk-opt-lbl">(facultatif)</span></label><input class="bk-inp" id="bk-ln" type="text" autocomplete="family-name" placeholder="Martin"></div>
-        </div>
-        <div class="bk-row"><div class="bk-field full"><label class="bk-lbl">E-mail</label><input class="bk-inp" id="bk-email" type="email" autocomplete="email" inputmode="email" placeholder="sophie@email.com"></div></div>
-        <div class="bk-row">
-          <div class="bk-field full">
-            <label class="bk-lbl">Téléphone <span class="bk-opt-lbl">(facultatif, réponse plus rapide sur WhatsApp)</span></label>
-            <div class="bk-phone-row">
-              <select class="bk-cc" id="bk-cc"><option value="+33">🇫🇷 +33</option><option value="+32">🇧🇪 +32</option><option value="+41">🇨🇭 +41</option><option value="+212">🇲🇦 +212</option><option value="+44">🇬🇧 +44</option><option value="+49">🇩🇪 +49</option><option value="+34">🇪🇸 +34</option><option value="+39">🇮🇹 +39</option><option value="+31">🇳🇱 +31</option><option value="+1">🇺🇸 +1</option></select>
-              <input class="bk-inp bk-phone-inp" id="bk-phone" type="tel" autocomplete="tel-national" inputmode="tel" placeholder="7 12 34 56 78">
-            </div>
-          </div>
-        </div>
-        <div class="bk-row"><div class="bk-field full"><label class="bk-lbl">Message (facultatif)</label><textarea class="bk-ta" id="bk-msg" placeholder="Chambre privée ou partagée, niveau, régime alimentaire, questions..."></textarea></div></div>
-        <div id="bk-warn2" style="font-size:10.5px;color:#c0392b;min-height:14px"></div>
-        <button class="bk-btn" type="button" id="bk-btn2" onclick="bkSubmit()">Confirmer ma réservation →</button>
-        <p class="bk-micro">Aucun paiement requis · Réponse sous 24h</p>
-      </div>
-    </div>
-
-    <div class="bk-ok" id="bk-ok">
-      <div class="bk-okico">✓</div>
-      <div class="bk-ok-title">Demande envoyée !</div>
-      <p class="bk-ok-sub">Notre équipe vous répond sous 24h. À très bientôt à Essaouira ! 🌊</p>
-      <a class="bk-wa" href="https://wa.me/212618910431" target="_blank" rel="noopener" style="max-width:260px;margin:14px auto 0">💬 Plus rapide ? Écrivez-nous sur WhatsApp</a>
-    </div>
-  </div>
-</div>
-
-</div>
-
-<script>
-(function(){
-var T={"badge_surf": "🏄 LA SEMAINE SURF COMPREND", "badge_kite": "🪁 LA SEMAINE KITESURF COMPREND", "badge_yoga": "🧘 LA SEMAINE KITESURF + YOGA COMPREND", "surf": ["7 nuits à la Villa Sunset ou à la Villa Zephyr (chambre partagée, 3 personnes maximum)", "Pension complète : repas frais et faits maison", "12h de cours de surf, groupes formés selon le niveau", "Matériel inclus : planches adaptées à votre niveau et combinaison", "Soirée BBQ à la villa et sortie en ville", "Sorties pour découvrir la médina et le port, prendre un café et flâner en ville", "Visite d’une coopérative d’argan locale de 100 femmes", "Transferts vers les spots et l’aéroport d’Essaouira, aller-retour"], "kite": ["7 nuits à la Villa Sunset ou à la Villa Zephyr (chambre partagée, 3 personnes maximum)", "Pension complète : repas frais et faits maison", "12h de cours de kitesurf, 4 personnes maximum par moniteur, groupes formés selon le niveau", "Matériel inclus : casque, combinaison, harnais, voiles...", "Soirée BBQ à la villa et sortie en ville", "Sorties pour découvrir la médina et le port, prendre un café et flâner en ville", "Visite d’une coopérative d’argan locale de 100 femmes", "Transferts vers les spots et l’aéroport d’Essaouira, aller-retour"], "yoga": ["2 séances de yoga par jour avec Marion Milhau du studio Mudita Yoga, qui vient spécialement de France pour cette semaine, pour se ressourcer entre les sessions de kitesurf", "7 nuits à la Villa Sunset ou à la Villa Zephyr (chambre partagée, 3 personnes maximum)", "Pension complète : repas frais et faits maison", "12h de cours de kitesurf, 4 personnes maximum par moniteur, groupes formés selon le niveau", "Matériel inclus : casque, combinaison, harnais, voiles...", "Soirée BBQ à la villa et sortie en ville", "Sorties pour découvrir la médina et le port, prendre un café et flâner en ville", "Visite d’une coopérative d’argan locale de 100 femmes", "Transferts vers les spots et l’aéroport d’Essaouira, aller-retour"], "na": "Indisponible", "lm": "Dernière minute", "people1": "personne", "peopleN": "personnes", "from_": "Du", "to": "au", "lbl_last_minute": "tarif dernière minute", "lbl_special": "tarif spécial", "lbl_regular": "tarif normal", "instead": "au lieu de", "disc": " · réduction appliquée à la confirmation", "w_act": "⚠️ Veuillez choisir une activité", "w_date": "⚠️ Veuillez choisir vos dates", "w_custom": "⚠️ Veuillez saisir vos dates d’arrivée et de départ", "w_order": "⚠️ La date de départ doit être après la date d’arrivée", "w_fn": "⚠️ Veuillez saisir votre prénom", "w_mail": "⚠️ Veuillez saisir un e-mail valide", "err": "Erreur. Merci de nous contacter sur WhatsApp.", "net": "Erreur réseau. WhatsApp : +212 618 910 431", "sending": "Envoi...", "confirm": "Confirmer ma réservation →", "confirm_yoga": "Envoyer ma demande →", "cta": "Réserver ma semaine →", "cta_yoga": "Demander des infos →", "micro": "Aucun paiement requis à ce stade · Nous confirmons les disponibilités ensemble", "micro_yoga": "Aucun paiement requis · Prix et détails envoyés sous 24h", "yoga_lbl": "Kitesurf + Yoga (demande d’infos)", "price_req": "Prix sur demande", "nights": "nuits", "night": "nuit", "ratef": {"lm": "Tarif dernière minute", "sp": "Tarif spécial", "reg": "Tarif normal"}, "kite_lbl": "Kitesurf", "surf_lbl": "Surf", "locale": "fr-FR", "cur_pre": "", "cur_post": " €", "subj": "🏄 Réservation FR · ", "subj_yoga": "🧘 Semaine Yoga DEMANDE D’INFOS · Kitesurf + Yoga · Mogasurf", "lang": "FR", "yoga_month_lbl": "Mars 2027 · Semaine Yoga"};
-var DATA=[{"k": "2026-11", "label": "Novembre 2026", "dates": [{"s": "2026-11-07", "e": "2026-11-14", "t": "7 → 14 nov."}, {"s": "2026-11-14", "e": "2026-11-21", "t": "14 → 21 nov."}, {"s": "2026-11-21", "e": "2026-11-28", "t": "21 → 28 nov."}, {"s": "2026-11-28", "e": "2026-12-05", "t": "28 nov. → 5 déc."}]}, {"k": "2026-12", "label": "Décembre 2026", "dates": [{"s": "2026-12-05", "e": "2026-12-12", "t": "5 → 12 déc."}, {"s": "2026-12-12", "e": "2026-12-19", "t": "12 → 19 déc."}, {"s": "2026-12-19", "e": "2026-12-26", "t": "19 → 26 déc.", "off": 1}, {"s": "2026-12-26", "e": "2027-01-02", "t": "26 déc. → 2 janv.", "off": 1}]}, {"k": "2027-01", "label": "Janvier 2027", "dates": [{"s": "2027-01-02", "e": "2027-01-09", "t": "2 → 9 janv."}, {"s": "2027-01-09", "e": "2027-01-16", "t": "9 → 16 janv."}, {"s": "2027-01-16", "e": "2027-01-23", "t": "16 → 23 janv."}, {"s": "2027-01-23", "e": "2027-01-30", "t": "23 → 30 janv."}, {"s": "2027-01-30", "e": "2027-02-06", "t": "30 janv. → 6 févr."}]}, {"k": "2027-02", "label": "Février 2027", "dates": [{"s": "2027-02-06", "e": "2027-02-13", "t": "6 → 13 févr."}, {"s": "2027-02-13", "e": "2027-02-20", "t": "13 → 20 févr."}, {"s": "2027-02-20", "e": "2027-02-27", "t": "20 → 27 févr."}, {"s": "2027-02-27", "e": "2027-03-06", "t": "27 févr. → 6 mars"}]}, {"k": "2027-03", "label": "Mars 2027", "dates": [{"s": "2027-03-06", "e": "2027-03-13", "t": "6 → 13 mars"}, {"s": "2027-03-13", "e": "2027-03-20", "t": "13 → 20 mars"}, {"s": "2027-03-20", "e": "2027-03-27", "t": "20 → 27 mars", "yoga": 1}, {"s": "2027-03-27", "e": "2027-04-03", "t": "27 mars → 3 avr."}]}, {"k": "2027-04", "label": "Avril 2027", "dates": [{"s": "2027-04-03", "e": "2027-04-10", "t": "3 → 10 avr."}, {"s": "2027-04-10", "e": "2027-04-17", "t": "10 → 17 avr."}, {"s": "2027-04-17", "e": "2027-04-24", "t": "17 → 24 avr."}, {"s": "2027-04-24", "e": "2027-05-01", "t": "24 avr. → 1 mai"}]}, {"k": "2027-05", "label": "Mai 2027", "dates": [{"s": "2027-05-01", "e": "2027-05-08", "t": "1 → 8 mai"}, {"s": "2027-05-08", "e": "2027-05-15", "t": "8 → 15 mai"}, {"s": "2027-05-15", "e": "2027-05-22", "t": "15 → 22 mai"}, {"s": "2027-05-22", "e": "2027-05-29", "t": "22 → 29 mai"}, {"s": "2027-05-29", "e": "2027-06-05", "t": "29 mai → 5 juin"}]}, {"k": "2027-06", "label": "Juin 2027", "dates": [{"s": "2027-06-05", "e": "2027-06-12", "t": "5 → 12 juin"}, {"s": "2027-06-12", "e": "2027-06-19", "t": "12 → 19 juin"}, {"s": "2027-06-19", "e": "2027-06-26", "t": "19 → 26 juin"}, {"s": "2027-06-26", "e": "2027-07-03", "t": "26 juin → 3 juil."}]}];
-var YOGA_START='2027-03-20';
-var SPECIAL={surf:550,kite:750};
-var REF={surf:790,kite:890};   /* prix barre (ancien tarif) */
-var REG={surf:650,kite:890};   /* tarif normal a partir de mars */
-function rateFor(iso){return iso<'2027-02-01'?'lm':(iso<'2027-03-01'?'sp':'reg')}
-var s={act:null,month:null,date:null,n:1};
-function g(id){return document.getElementById(id)}
-function warn(t){var u=g('bk-urgency');u.textContent=t;u.style.color='#c0392b'}
-function clr(){g('bk-urgency').textContent=''}
-function money(v){return T.cur_pre+v.toLocaleString(T.locale)+T.cur_post}
-function fmtd(iso){var p=iso.split('-');return p[2]+'/'+p[1]+'/'+p[0]}
-function nightsBetween(a,b){return Math.round((new Date(b)-new Date(a))/86400000)}
-function monthObj(k){for(var i=0;i<DATA.length;i++)if(DATA[i].k===k)return DATA[i];return null}
-function visibleDates(m){
-  return m.dates.filter(function(d){return s.act==='yoga'?!!d.yoga:!d.yoga});
-}
-function buildMonths(){
-  var sel=g('bk-month'),html='';
-  if(s.act==='yoga'){
-    html='<option value="2027-03">'+T.yoga_month_lbl+'</option>';
-  }else{
-    DATA.forEach(function(m){if(visibleDates(m).length)html+='<option value="'+m.k+'">'+m.label+'</option>'});
-    html+='<option value="custom">'+"✏️ Choisir mes propres dates"+'</option>';
-  }
-  sel.innerHTML=html;
-  var valid=false;for(var i=0;i<sel.options.length;i++)if(sel.options[i].value===s.month)valid=true;
-  if(!valid)s.month=sel.options[0].value;
-  sel.value=s.month;
-}
-function buildDates(){
-  var box=g('bk-dates'),wrap=g('bk-dates-wrap'),cb=g('bk-custom-block');
-  box.innerHTML='';
-  if(s.month==='custom'){wrap.classList.remove('show');cb.classList.add('show');return}
-  cb.classList.remove('show');
-  var m=monthObj(s.month);
-  visibleDates(m).forEach(function(d){
-    var b=document.createElement('button');b.type='button';
-    var tag=(!d.off&&rateFor(d.s)==='lm'&&s.act!=='yoga')?'<span class="tag">'+T.lm+'</span>':'';
-    if(d.off){b.className='bk-date off';b.disabled=true;b.innerHTML=d.t+'<small>'+T.na+'</small>'}
-    else{
-      b.className='bk-date'+(s.date===d.s?' on':'');
-      b.innerHTML=d.t+tag;
-      b.onclick=function(){
-        s.date=d.s;
-        var all=box.querySelectorAll('.bk-date');for(var i=0;i<all.length;i++)all[i].classList.remove('on');
-        b.classList.add('on');clr();upd();
-      };
-    }
-    box.appendChild(b);
-  });
-  wrap.classList.add('show');
-}
-window.bkAct=function(a,btn){
-  var wasYoga=(s.act==='yoga');
-  s.act=a;clr();
-  var all=document.querySelectorAll('.bk-act');for(var i=0;i<all.length;i++)all[i].classList.remove('on');
-  btn.classList.add('on');
-  g('bk-act-badge').textContent=T['badge_'+a];
-  g('bk-act-list').innerHTML=T[a].map(function(t){return '<li>'+t+'</li>'}).join('');
-  if(a==='yoga'){s.month='2027-03';s.date=YOGA_START}
-  else if(wasYoga){s.month=null;s.date=null}
-  else if(s.date&&s.date!=='custom'&&s.date===YOGA_START){s.date=null}
-  buildMonths();buildDates();
-  g('bk-btn1').textContent=(a==='yoga')?T.cta_yoga:T.cta;
-  g('bk-btn2').textContent=(a==='yoga')?T.confirm_yoga:T.confirm;
-  g('bk-micro').textContent=(a==='yoga')?T.micro_yoga:T.micro;
-  upd();
-};
-window.bkMonth=function(v){
-  s.month=v;clr();
-  if(v==='custom'){s.date='custom'}else{s.date=null}
-  buildDates();upd();
-};
-window.bkUpd=function(){clr();upd()};
-window.bkCnt=function(d){s.n=Math.max(1,Math.min(13,s.n+d));g('bk-cnt').textContent=s.n;upd()};
-function startIso(){
-  if(s.date==='custom')return g('bk-date-from').value||null;
-  return s.date||null;
-}
-function upd(){
-  var st=startIso();
-  if(!s.act||s.act==='yoga'||!s.date||!st){g('bk-price').classList.add('hidden');return}
-  var r=rateFor(st),p=(r==='reg')?REG[s.act]:SPECIAL[s.act];
-  g('bk-price').classList.remove('hidden');
-  g('bk-pamt').textContent=money(p*s.n);
-  var who=s.n+' '+(s.n>1?T.peopleN:T.people1);
-  var sub=money(p)+' × '+who+' · ';
-  if(r==='reg'){sub+=T.lbl_regular}
-  else{sub+=(r==='lm'?T.lbl_last_minute:T.lbl_special)+' ('+T.instead+' <s>'+money(REF[s.act])+'</s>)'}
-  if(s.n>=2)sub+=T.disc;
-  g('bk-psub').innerHTML=sub;
-}
-function actLabel(){return s.act==='surf'?T.surf_lbl:(s.act==='kite'?T.kite_lbl:T.yoga_lbl)}
-function range(){
-  if(s.date==='custom')return {a:g('bk-date-from').value,b:g('bk-date-to').value};
-  var m=monthObj(s.month),d=null;
-  m.dates.forEach(function(x){if(x.s===s.date)d=x});
-  return {a:d.s,b:d.e};
-}
-function dlabel(){var r=range();return T.from_+' '+fmtd(r.a)+' '+T.to+' '+fmtd(r.b)}
-function total(){var r=rateFor(startIso()),p=(r==='reg')?REG[s.act]:SPECIAL[s.act];return p*s.n}
-window.bkNext=function(){
-  if(!s.act){warn(T.w_act);return}
-  if(!s.date){warn(T.w_date);return}
-  if(s.date==='custom'){
-    var f=g('bk-date-from').value,t=g('bk-date-to').value;
-    if(!f||!t){warn(T.w_custom);return}
-    if(nightsBetween(f,t)<1){warn(T.w_order);return}
-  }
-  var r=range(),n=nightsBetween(r.a,r.b);
-  var line='<strong>'+(s.act==='surf'?'🏄 ':'🪁 ')+actLabel()+'</strong><br>'+dlabel()+' ('+n+' '+(n>1?T.nights:T.night)+') · '+s.n+' '+(s.n>1?T.peopleN:T.people1);
-  line+=(s.act==='yoga')?' · '+T.price_req:' · '+money(total());
-  g('bk-sum').innerHTML=line;
-  g('bk-s1').classList.remove('on');g('bk-s2').classList.add('on');
-  window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'booking_step1_complete','activity':s.act});
-  var el=g('reservation');if(el&&el.scrollIntoView)el.scrollIntoView({behavior:'smooth',block:'start'});
-};
-window.bkBack=function(){g('bk-s2').classList.remove('on');g('bk-s1').classList.add('on')};
-window.bkSubmit=function(){
-  var w=g('bk-warn2');w.textContent='';
-  var fn=g('bk-fn'),em=g('bk-email'),ok=true;
-  fn.classList.remove('err');em.classList.remove('err');
-  if(!fn.value.trim()){fn.classList.add('err');w.textContent=T.w_fn;ok=false}
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim())){em.classList.add('err');if(ok)w.textContent=T.w_mail;ok=false}
-  if(!ok)return;
-  var yoga=(s.act==='yoga');
-  var btn=g('bk-btn2');btn.disabled=true;btn.textContent=T.sending;
-  var r=range(),fd=new FormData();
-  fd.append('access_key','96153601-0afd-4374-b2a3-5ed98edde355');
-  fd.append('subject',yoga?T.subj_yoga:(T.subj+actLabel()+' · Mogasurf'));
-  fd.append('from_name','Mogasurf Website');
-  fd.append('cc','info@mogasurf.com,bentalhameriiem@gmail.com,ismail.adarzane@gmail.com');
-  fd.append('botcheck','');
-  fd.append('Language',T.lang);
-  fd.append('Activity',yoga?'Kitesurf + Yoga (info request)':actLabel());
-  fd.append('Arrival',r.a);
-  fd.append('Departure',r.b);
-  fd.append('Stay dates',dlabel());
-  fd.append('People',s.n);
-  if(yoga){fd.append('Price','On request (no price shown)')}
-  else{fd.append('Estimated total',total()+'€');fd.append('Rate',T.ratef[rateFor(startIso())])}
-  fd.append('First name',fn.value.trim());
-  fd.append('Last name',g('bk-ln').value.trim());
-  fd.append('Email',em.value.trim());
-  if(g('bk-phone').value.trim())fd.append('Phone',g('bk-cc').value+' '+g('bk-phone').value.trim());
-  if(g('bk-msg').value.trim())fd.append('Message',g('bk-msg').value.trim());
-  fetch('https://api.web3forms.com/submit',{method:'POST',body:fd})
-  .then(function(x){return x.json()})
-  .then(function(d){
-    if(d.success){
-      g('bk-fields').style.display='none';g('bk-ok').classList.add('show');
-      if(typeof fbq==='function')fbq('track','Lead');
-      window.dataLayer=window.dataLayer||[];window.dataLayer.push({'event':'camp_booking_success','form_type':yoga?'yoga_info':'site_booking'});
-    }else{alert(T.err)}
-    btn.disabled=false;btn.textContent=yoga?T.confirm_yoga:T.confirm;
-  })
-  .catch(function(){alert(T.net);btn.disabled=false;btn.textContent=yoga?T.confirm_yoga:T.confirm});
-};
-buildMonths();buildDates();
-})();
-</script>				</div>
-					</div>
-				</div>
 		<div class="elementor-element elementor-element-a49864c elementor-hidden-mobile e-flex e-con-boxed e-con e-parent" data-id="a49864c" data-element_type="container" data-e-type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
 					<div class="e-con-inner">
 		<div class="elementor-element elementor-element-2d24ed0 e-con-full e-flex e-con e-child" data-id="2d24ed0" data-element_type="container" data-e-type="container">
@@ -1488,7 +1102,7 @@ buildMonths();buildDates();
         </svg></div>
 								</div>
 							</div>
-							<span class="ht_ctc_chat_data" data-settings="{&quot;number&quot;:&quot;212618910431&quot;,&quot;pre_filled&quot;:&quot;Hello! \ud83d\udc4b I visited your website and I&#039;d love to get more information. \r\nThank you!\r\n\r\n-- \r\n\r\nBonjour ! \ud83d\udc4b J&#039;ai visit\u00e9 votre site et j&#039;aimerais avoir plus d&#039;informations. \r\nMerci !&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;side_d&quot;:&quot;right&quot;,&quot;side_m&quot;:&quot;right&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:150,&quot;ani&quot;:&quot;no-animation&quot;,&quot;page_id&quot;:2039,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;ga&quot;:&quot;yes&quot;,&quot;gtm&quot;:&quot;1&quot;,&quot;fb&quot;:&quot;yes&quot;,&quot;webhook_format&quot;:&quot;json&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;gtm_event_name&quot;:&quot;Click to Chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}" data-rest="480df08e99"></span>
+							<span class="ht_ctc_chat_data" data-settings="{&quot;number&quot;:&quot;212618910431&quot;,&quot;pre_filled&quot;:&quot;Hello! \ud83d\udc4b I visited your website and I&#039;d love to get more information. \r\nThank you!\r\n\r\n-- \r\n\r\nBonjour ! \ud83d\udc4b J&#039;ai visit\u00e9 votre site et j&#039;aimerais avoir plus d&#039;informations. \r\nMerci !&quot;,&quot;dis_m&quot;:&quot;show&quot;,&quot;dis_d&quot;:&quot;show&quot;,&quot;css&quot;:&quot;cursor: pointer; z-index: 99999999;&quot;,&quot;pos_d&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;pos_m&quot;:&quot;position: fixed; bottom: 15px; right: 15px;&quot;,&quot;side_d&quot;:&quot;right&quot;,&quot;side_m&quot;:&quot;right&quot;,&quot;schedule&quot;:&quot;no&quot;,&quot;se&quot;:150,&quot;ani&quot;:&quot;no-animation&quot;,&quot;page_id&quot;:2039,&quot;url_target_d&quot;:&quot;_blank&quot;,&quot;ga&quot;:&quot;yes&quot;,&quot;gtm&quot;:&quot;1&quot;,&quot;fb&quot;:&quot;yes&quot;,&quot;webhook_format&quot;:&quot;json&quot;,&quot;g_init&quot;:&quot;default&quot;,&quot;g_an_event_name&quot;:&quot;click to chat&quot;,&quot;gtm_event_name&quot;:&quot;Click to Chat&quot;,&quot;pixel_event_name&quot;:&quot;Click to Chat by HoliThemes&quot;}" data-rest="7d672294e0"></span>
 				    <!-- Meta Pixel Event Code -->
     <script type='text/javascript'>
         document.addEventListener( 'wpcf7mailsent', function( event ) {
@@ -1669,7 +1283,7 @@ jQuery.uiBackCompat = true;
 <script src="https://www.mogasurf.com/wp-content/cache/minify/65a29.js"></script>
 
 <script id="elementor-frontend-js-before">
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Partager sur Facebook","shareOnX":"Partager sur X","pinIt":"L\u2019\u00e9pingler","download":"T\u00e9l\u00e9charger","downloadImage":"T\u00e9l\u00e9charger une image","fullscreen":"Plein \u00e9cran","zoom":"Zoom","share":"Partager","playVideo":"Lire la vid\u00e9o","previous":"Pr\u00e9c\u00e9dent","next":"Suivant","close":"Fermer","a11yCarouselPrevSlideMessage":"Diapositive pr\u00e9c\u00e9dente","a11yCarouselNextSlideMessage":"Diapositive suivante","a11yCarouselFirstSlideMessage":"Ceci est la premi\u00e8re diapositive","a11yCarouselLastSlideMessage":"Ceci est la derni\u00e8re diapositive","a11yCarouselPaginationBulletMessage":"Aller \u00e0 la diapositive"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Portrait mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Paysage","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablette en mode portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablette en mode paysage","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Portable","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"\u00c9cran large","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.3.5","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_optimized_markup":true,"hello-theme-header-footer":true,"nested-elements":true,"e_atomic_elements":true,"e_opt_in_v4":true,"import-export-customization":true},"urls":{"assets":"https:\/\/www.mogasurf.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/www.mogasurf.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"400a30904d","atomicFormsSendForm":"2d0bbd8aa3"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":2039,"title":"Accueil%20-%20MOGASURF","excerpt":"","featuredImage":false}};
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Partager sur Facebook","shareOnX":"Partager sur X","pinIt":"L\u2019\u00e9pingler","download":"T\u00e9l\u00e9charger","downloadImage":"T\u00e9l\u00e9charger une image","fullscreen":"Plein \u00e9cran","zoom":"Zoom","share":"Partager","playVideo":"Lire la vid\u00e9o","previous":"Pr\u00e9c\u00e9dent","next":"Suivant","close":"Fermer","a11yCarouselPrevSlideMessage":"Diapositive pr\u00e9c\u00e9dente","a11yCarouselNextSlideMessage":"Diapositive suivante","a11yCarouselFirstSlideMessage":"Ceci est la premi\u00e8re diapositive","a11yCarouselLastSlideMessage":"Ceci est la derni\u00e8re diapositive","a11yCarouselPaginationBulletMessage":"Aller \u00e0 la diapositive"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Portrait mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Paysage","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablette en mode portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablette en mode paysage","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Portable","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"\u00c9cran large","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.3.5","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_optimized_markup":true,"hello-theme-header-footer":true,"nested-elements":true,"e_atomic_elements":true,"e_opt_in_v4":true,"import-export-customization":true},"urls":{"assets":"https:\/\/www.mogasurf.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/www.mogasurf.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/www.mogasurf.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"05f5c91815","atomicFormsSendForm":"f9acfe3d78"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":2039,"title":"Accueil%20-%20MOGASURF","excerpt":"","featuredImage":false}};
 //# sourceURL=elementor-frontend-js-before
 </script>
 
@@ -1823,5 +1437,5 @@ Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3
 Mise en cache de page à l’aide de Disk: Enhanced 
 Minified using Disk
 
-Served from: www.mogasurf.com @ 2026-10-30 09:30:41 by W3 Total Cache
+Served from: www.mogasurf.com @ 2026-11-03 15:03:17 by W3 Total Cache
 -->
