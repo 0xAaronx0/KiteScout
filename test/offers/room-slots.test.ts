@@ -234,3 +234,31 @@ test('keepStoredRoomPrices: a full run never drops a stored room price (2026-11-
   assert.deepEqual([out[2].price_from, out[2].priced_months], [180, [1]]);
   assert.deepEqual(roomPriceChanges(stored, [...out].reverse()), { gained: 0, lost: 0, changed: 1 });
 });
+
+test('keepStoredRoomPrices: a key missing or null in the stored row never becomes null (KCS rejects the listing)', () => {
+  const base = { price_from: 38, price_currency: 'EUR', price_unit: 'per_night' };
+  const stored = [
+    { name: 'Old row', ...base },
+    { name: 'Corrupted row', ...base, price_from_is_minimum: null, priced_months: null, availability: null, price_source: null },
+    { name: 'From row', ...base, price_from_is_minimum: true, priced_months: [7], price_source: 'bstoked' },
+    { name: 'Live row', ...base, price_from_is_minimum: false, priced_months: [5] },
+  ];
+  const shape = (rows: Array<Record<string, unknown>>) => rows.map(r => [r.price_from, r.price_from_is_minimum, r.priced_months, r.availability, r.price_source]);
+  const slots = [slot({ unit: 'Live row', startDate: '2027-05-01', endDate: '2027-05-02', price: 41 })];
+  const live = { start_date: '2027-05-01', end_date: '2027-05-02', status: 'available', price: 41, currency: 'EUR' };
+  // --slots run: the rows no slot names keep their price, a whole stored row
+  assert.deepEqual(shape(repriceStoredRooms('accommodation', stored, slots, '2026-11-04')!), [
+    [38, false, [], [], 'provider_site'], [38, false, [], [], 'provider_site'], [38, true, [7], [], 'bstoked'], [41, false, [5], [live], 'provider_site'],
+  ]);
+  // guard or partial run: every row keeps the stored price
+  const content = { kind: 'accommodation', rooms: stored.map(r => ({ name: r.name, description: null, features: [] })) } as unknown as OfferContent;
+  const kept = keepStoredRoomPrices(roomsWithPrices(content, [], '2026-11-04'), stored, [], '2026-11-04', true);
+  assert.deepEqual(shape(kept), [
+    [38, false, [], [], 'provider_site'], [38, false, [], [], 'provider_site'], [38, true, [7], [], 'bstoked'], [38, false, [5], [], 'provider_site'],
+  ]);
+  // a matched row whose slots carry no price (calendar closed) keeps the stored price with fresh months and dates
+  const closed = [slot({ unit: 'Old row', startDate: '2027-05-01', endDate: '2027-05-02', price: null, availability: 'closed' })];
+  const row = keepStoredRoomPrices(roomsWithPrices(content, closed, '2026-11-04'), stored, closed, '2026-11-04')[0];
+  assert.deepEqual([row.price_from, row.price_from_is_minimum, row.priced_months], [38, false, []]);
+  for (const r of [...kept, row] as Array<Record<string, unknown>>) assert.equal(Object.keys(r).filter(k => ['price_from_is_minimum', 'priced_months', 'availability'].includes(k) && r[k] === null).length, 0);
+});

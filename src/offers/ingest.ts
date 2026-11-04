@@ -554,7 +554,9 @@ export function keepStoredRoomPrices<R extends { name: string; price_from: numbe
     const whole = keepAll || stale.has(r.name);
     if (!o || (!whole && r.price_from !== null)) return r;
     const out: Record<string, unknown> = { ...r };
-    for (const k of ROOM_PRICE_KEYS) if (whole || (k !== 'priced_months' && k !== 'availability')) out[k] = o[k] ?? null;
+    // a stored row may be older than a key: the fresh row's value stands, never a null (KCS rejects the whole listing on a
+    // null in price_from_is_minimum or priced_months, 2026-11-04: HTTP 500), and a stored null heals the same way
+    for (const k of ROOM_PRICE_KEYS) if (whole || (k !== 'priced_months' && k !== 'availability')) out[k] = o[k] ?? out[k];
     return markPastYear(out, today) as unknown as R;
   });
 }
