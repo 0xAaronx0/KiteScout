@@ -234,3 +234,18 @@ test('keepStoredRoomPrices: a full run never drops a stored room price (2026-11-
   assert.deepEqual([out[2].price_from, out[2].priced_months], [180, [1]]);
   assert.deepEqual(roomPriceChanges(stored, [...out].reverse()), { gained: 0, lost: 0, changed: 1 });
 });
+
+test('keepStoredRoomPrices: price_from_is_minimum stays a boolean for rows older than the field (KCS rejects null)', () => {
+  const stored = [
+    { name: 'Old row', price_from: 38, price_currency: 'EUR', price_unit: 'per_night' },
+    { name: 'Corrupted row', price_from: 54, price_currency: 'EUR', price_unit: 'per_night', price_from_is_minimum: null },
+    { name: 'From row', price_from: 48, price_currency: 'EUR', price_unit: 'per_night', price_from_is_minimum: true },
+    { name: 'Live row', price_from: 40, price_currency: 'EUR', price_unit: 'per_night', price_from_is_minimum: false },
+  ];
+  const slots = [slot({ unit: 'Live row', startDate: '2027-05-01', endDate: '2027-05-02', price: 41 })];
+  const rows = repriceStoredRooms('accommodation', stored, slots, '2026-11-04')!;
+  assert.deepEqual(rows.map(r => [r.price_from, r.price_from_is_minimum]), [[38, false], [54, false], [48, true], [41, false]]);
+  const content = { kind: 'accommodation', rooms: stored.map(r => ({ name: r.name, description: null, features: [] })) } as unknown as OfferContent;
+  const kept = keepStoredRoomPrices(roomsWithPrices(content, [], '2026-11-04'), stored, [], '2026-11-04', true);
+  assert.deepEqual(kept.map(r => r.price_from_is_minimum), [false, false, true, false]);
+});
