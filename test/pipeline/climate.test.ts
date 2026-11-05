@@ -154,16 +154,22 @@ test('regionBstoked: a region on the country point keeps Bstoked, other regions 
 });
 
 test('regionBstoked: REGION_BSTOKED rows win and never use the 10 placeholder', async () => {
-  const { regionBstoked, REGION_BSTOKED, combineWind } = await import('../../src/pipeline/climate.js');
+  const { regionBstoked, REGION_BSTOKED, combineWind, windPolicy } = await import('../../src/pipeline/climate.js');
   const b = [79, 61, 39, 30, 39, 59, 70, 90, 95, 95, 95, 95];
   const sc = regionBstoked({ lat10: -281, lng10: -486 }, { lat10: -36, lng10: -387 }, b, 'BR-SC');
   assert.deepEqual(sc, REGION_BSTOKED['BR-SC']);
   assert.equal(regionBstoked({ lat10: -228, lng10: -419 }, { lat10: -36, lng10: -387 }, b, 'BR-SE'), null);
-  assert.deepEqual(Object.keys(REGION_BSTOKED).sort(), ['BR-RN', 'BR-RS', 'BR-SC', 'ES-CT']);
+  assert.deepEqual(Object.keys(REGION_BSTOKED).sort(), ['BR-RN', 'BR-RS', 'BR-SC', 'ES-CT', 'IT-82']);
   // Aaron 2026-10-30: Catalonia (Sant Pere Pescador) replaces ERA5; only July above the 60 % band.
   const ct = regionBstoked({ lat10: 421, lng10: 31 }, { lat10: 360, lng10: -56 }, b, 'ES-CT');
   assert.deepEqual(ct, [35, 40, 40, 45, 50, 58, 65, 58, 50, 35, 40, 35]);
   assert.deepEqual(ct!.map((v, i) => v >= 60 ? i : -1).filter(i => i >= 0), [6]);
+  // Aaron 2026-11-05: Sicily (Lo Stagnone) takes METAR Trapani-Birgi; every month 'bstoked', ERA5 replaced.
+  const it = regionBstoked({ lat10: 379, lng10: 125 }, { lat10: 410, lng10: 90 }, [58, 49, 65, 65, 70, 70, 70, 70, 65, 70, 70, 53], 'IT-82');
+  assert.deepEqual(it, [45, 48, 55, 53, 53, 53, 61, 54, 43, 41, 42, 42]);
+  const sicily = combineWind(it, [50, 42, 49, 42, 31, 21, 28, 23, 26, 33, 40, 46], Array(12).fill(20), windPolicy('Italy'));
+  assert.deepEqual(sicily.wind_months, it);
+  assert.deepEqual(sicily.wind_source_months, Array(12).fill('bstoked'));
   for (const [key, months] of Object.entries(REGION_BSTOKED)) {
     assert.equal(months.length, 12, key);
     assert.ok(months.every(v => Number.isInteger(v) && v >= 0 && v <= 100 && v !== 10), key);

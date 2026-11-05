@@ -107,12 +107,17 @@ export const showsWater = (country: string): boolean => CLIMATE_ONLY[country]?.w
  * Meteocat stations in town (U2 0-7 %, Roses D4 5-21 %, 2021-2025, same 12 kn / 3 h rule) miss the beach
  * thermal; Kite Jungle 11-15 days >= 12 kn a month without thermals, the local school a daily summer
  * thermal (12-20 kn, Jun-Sep) plus Tramuntana spells Sep-May. Estimate between them, only July above 60.
+ * IT-82 (Aaron 2026-11-05, "ja" to Jun-Aug 53/61/54): METAR Trapani-Birgi (LICT, ~5 km from Lo Stagnone) 2016-2025
+ * via IEM ASOS, 87,206 hours, same 12 kn / 3 h rule as kiteableShare. ERA5 at Lo Stagnone read 50 42 49 42 31 21 28
+ * 23 26 33 40 46: Nov-Mar fit the station (-5 to +6 points), May-Sep miss 17-33 points, that is the thermal. METAR
+ * rounds to whole knots: from 13 kn the summer would read 36/45/39.
  */
 export const REGION_BSTOKED: Record<string, number[]> = {
   'BR-SC': [35, 30, 30, 30, 25, 25, 25, 40, 50, 50, 50, 40],
   'BR-RN': [50, 50, 20, 15, 30, 45, 75, 85, 95, 95, 85, 80],
   'BR-RS': [45, 40, 35, 35, 30, 30, 30, 45, 50, 55, 55, 50],
   'ES-CT': [35, 40, 40, 45, 50, 58, 65, 58, 50, 35, 40, 35],
+  'IT-82': [45, 48, 55, 53, 53, 53, 61, 54, 43, 41, 42, 42],
 };
 
 /**
