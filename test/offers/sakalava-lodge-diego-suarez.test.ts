@@ -1,5 +1,6 @@
-// Sakalava Lodge (Madagascar): replays the English pages of sakalava.com recorded 2026-10-12 (fixtures
+// Sakalava Lodge (Madagascar): replays the English pages of sakalava.com recorded 2026-11-05 (fixtures
 // trimmed: script/style bodies dropped except the budget simulator script that holds the season limits).
+// rates-base64-scripts-2026-11-04.html = the same rates page in LiteSpeed's other form (recorded 2026-11-04).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
@@ -15,6 +16,7 @@ const files = readdirSync(DIR);
 const read = (prefix: string) => readFileSync(join(DIR, files.find(f => f.startsWith(prefix))!), 'utf8');
 const ctx = { note: () => {}, incomplete: () => {} };
 const ratesHtml = read('sakalava.com_en_tarifs-sakalava_.');
+const base64Html = read('rates-base64-scripts-');
 
 test('sakalava: 2027 rate lists (3 nights / 1 week) incl. add-ons', () => {
   assert.deepEqual(parseSkRates(ratesHtml).map(r => [r.nights, r.label, r.amount]), [
@@ -27,6 +29,17 @@ test('sakalava: 2027 rate lists (3 nights / 1 week) incl. add-ons', () => {
 
 test('sakalava: season limits and minimum stay from the budget simulator', () => {
   assert.deepEqual(parseSkSeason(ratesHtml), { start: '2027-04-01', end: '2027-11-30', minNights: 3 });
+});
+
+test('sakalava: same season and rates when LiteSpeed delivers the inline scripts as base64 data: URIs', () => {
+  assert.ok(!base64Html.includes('seasonMin'), 'the season only exists inside a data: URI in this variant');
+  assert.deepEqual(parseSkSeason(base64Html), parseSkSeason(ratesHtml));
+  assert.deepEqual(parseSkRates(base64Html), parseSkRates(ratesHtml));
+});
+
+test('sakalava: without any simulator script the date input limits still give the season', () => {
+  assert.deepEqual(parseSkSeason(ratesHtml.replace(/<script\b[\s\S]*?<\/script>/gi, '')), { start: '2027-04-01', end: '2027-11-30', minNights: null });
+  assert.equal(parseSkSeason('<p>no simulator</p>'), null);
 });
 
 test('sakalava: slots = bungalow composition x package length, 2027 season, on request', async () => {

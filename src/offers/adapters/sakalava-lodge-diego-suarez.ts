@@ -3,7 +3,7 @@
 // lodge with 10 bungalows (max 15 guests) on the lagoon and its own IKO school (since 2005). Wind season
 // April to November.
 //
-// Data path (checked 2026-10-12), English pages of sakalava.com (WordPress/Elementor; the French pages
+// Data path (checked 2026-11-05), English pages of sakalava.com (WordPress/Elementor; the French pages
 // at / carry the same content):
 //   content  /en/ (spot, wind season, map link with the lodge's coordinates), /en/le-lodge/ (lodge facts),
 //            /en/tarifs-sakalava/ (rates for the summary and the add-ons),
@@ -14,9 +14,12 @@
 //            "2 PEOPLE KITESURFING" / "2 PEOPLE, 1 KITESURFING AND 1 WITHOUT KITESURFING" (price for the
 //            bungalow) plus add-ons (additional adult with / without kite, child under 12). The season
 //            limits come from the page's own budget simulator script (seasonMin / seasonMax =
-//            2027-04-01 / 2027-11-30; it also enforces a minimum stay of 3 nights).
+//            2027-04-01 / 2027-11-30; it also enforces a minimum stay of 3 nights). LiteSpeed serves that
+//            script in two forms: inline text, or a base64 data: URI (recorded 2026-11-04, then "seasonMin"
+//            is nowhere in the raw HTML; the same error on 2026-10-14 was probably this too). The min / max of
+//            the simulator's date input repeat the limits in plain markup in both forms.
 // No booking engine: "Book" opens WhatsApp / e-mail / a contact form -> availability 'on_request'.
-// robots.txt (2026-10-12): "User-agent: * / Crawl-delay: 10", nothing disallowed. http.ts does not read
+// robots.txt (2026-11-05): "User-agent: * / Crawl-delay: 10", nothing disallowed. http.ts does not read
 //   Crawl-delay, so this adapter waits 10 s between its own live requests (local helper `sakalavaGet`).
 // Requests per run: content 6 (incl. the rates page), slots 1.
 // Parsed: slot = composition x package length for the 2027 season ("bungalow-2p-kite|7n|2027"), EUR per
@@ -86,11 +89,20 @@ export function parseSkRates(html: string): SkRate[] {
   return out;
 }
 
-/** Season limits + minimum stay from the budget simulator script on the rates page. */
+/** Bodies of the scripts LiteSpeed delivered as base64 data: URIs instead of inline text. */
+function skDataScripts(html: string): string {
+  return [...html.matchAll(/<script\b[^>]*\bsrc="data:text\/javascript;base64,([A-Za-z0-9+/=]+)"/gi)]
+    .map(m => Buffer.from(m[1], 'base64').toString('utf8')).join('\n');
+}
+
+/** Season limits + minimum stay from the budget simulator on the rates page: its script, inline or as a data: URI;
+ *  else the min / max of its date input (plain markup in both cases, but no minimum stay there). */
 export function parseSkSeason(html: string): SkSeason | null {
-  const m = html.match(/seasonMin\s*=\s*new Date\('(\d{4}-\d{2}-\d{2})'\)\s*,\s*seasonMax\s*=\s*new Date\('(\d{4}-\d{2}-\d{2})'\)/);
+  const text = `${html}\n${skDataScripts(html)}`;
+  const m = text.match(/seasonMin\s*=\s*new Date\('(\d{4}-\d{2}-\d{2})'\)\s*,\s*seasonMax\s*=\s*new Date\('(\d{4}-\d{2}-\d{2})'\)/)
+    ?? html.match(/<input\b[^>]*\bid="simuDateStart"[^>]*\bmin="(\d{4}-\d{2}-\d{2})"[^>]*\bmax="(\d{4}-\d{2}-\d{2})"/);
   if (!m) return null;
-  const min = html.match(/if\s*\(\s*nights\s*<\s*(\d+)\s*\)/);
+  const min = text.match(/if\s*\(\s*nights\s*<\s*(\d+)\s*\)/);
   return { start: m[1], end: m[2], minNights: min ? Number(min[1]) : null };
 }
 
@@ -263,7 +275,7 @@ export const sakalavaLodgeDiegoSuarez: OfferAdapter = {
     const rates = parseSkRates(html);
     const season = parseSkSeason(html);
     if (rates.length < 6) throw new Error(`sakalava: rate lists not found or changed (${rates.length} rates parsed)`);
-    if (!season) throw new Error('sakalava: season limits (seasonMin / seasonMax in the budget simulator) not found');
+    if (!season) throw new Error('sakalava: season limits (budget simulator script or date input) not found');
     const title = html.match(/<title>([^<]*)<\/title>/)?.[1] ?? '';
     if (!title.includes(season.start.slice(0, 4))) ctx.note(`rates page title "${clean(title)}" does not name the simulator season ${season.start.slice(0, 4)}`);
     return buildSkSlots(rates, season);
