@@ -6,13 +6,15 @@
 // accommodation (sakalava-lodge-diego-suarez.ts: operator, skLines and parseSkSeason imported from there); this is
 // the separate camp listing for the package.
 //
-// Data path (checked 2026-10-21), English pages of sakalava.com (WordPress/Elementor):
+// Data path (checked 2026-11-05), English pages of sakalava.com (WordPress/Elementor):
 //   slots    /en/nos-offres-all-included/ block "All-inclusive rates 2027": three packages, each "LABEL" / "680 €" /
 //            "who": "3 DAYS / 3 NIGHTS 680 € 1 person kitesurfing, individual bungalow", "1 WEEK 1400 € 1 person
 //            kitesurfing, individual bungalow", "1 WEEK FOR TWO 2400 € Kitesurfing for 2 people, double bungalow".
 //            One slot per package for the season of that year; the season limits (2027-04-01 .. 2027-11-30) and the
-//            3-night minimum come from the budget simulator script on /en/tarifs-sakalava/ (parseSkSeason). If the
-//            simulator's year differs from the rates' year the slots stay undated (note).
+//            3-night minimum come from the budget simulator on /en/tarifs-sakalava/ (parseSkSeason). If the
+//            simulator's year differs from the rates' year the slots stay undated (note). No season at all is a
+//            failed read, not an undated offer: fetchSlots throws, so the dated slots already live stay as they are
+//            (ingest writes start_date / end_date on every run; on 2026-11-04 this wiped them to null).
 //            EUR, priceUnit 'package' (packageNights 3 or 7). priceBasis: one person in an individual bungalow ->
 //            'person'; "for two ... double bungalow" -> 'room' with occupancy 2 (price as printed, total for two).
 //   content  the same offers page (inclusions, bungalows, kitchen, kite centre facts) + its map link with the
@@ -21,7 +23,7 @@
 //   instantBooking false, liveAvailability unset (the form's "Real-time availability" line is sales copy).
 // Companion without kite, children and longer stays are priced only through the simulator on the rates page (not
 //   stored here; the stay adapter carries those add-ons).
-// robots.txt (2026-10-21): "User-agent: * / Crawl-delay: 10", nothing disallowed. http.ts does not read Crawl-delay,
+// robots.txt (2026-11-05): "User-agent: * / Crawl-delay: 10", nothing disallowed. http.ts does not read Crawl-delay,
 //   so this adapter waits 10 s between its own live requests.
 // Requests per run: 2 (offers page + rates page; memoised for content + slots).
 // Region / spot as the stay adapter: 'Diana (Diego Suarez)' / 'Sakalava Bay'.
@@ -195,7 +197,7 @@ async function load(ctx?: Pick<FetchContext, 'note'>): Promise<{ offers: string;
   const offers = await page(SKC_OFFERS_URL);
   let season: SkSeason | null = null;
   try { season = parseSkSeason(await page(SKC_RATES_URL)); } catch (e) { ctx?.note(`rates page: ${(e as Error).message}`); }
-  if (!season) ctx?.note('season limits (seasonMin / seasonMax of the rates simulator) not found: slots stay undated');
+  if (!season) ctx?.note('season limits (simulator on the rates page) not found');
   return { offers, season };
 }
 
@@ -203,7 +205,8 @@ export async function fetchSkcSlots(today: string, ctx?: Pick<FetchContext, 'not
   const { offers, season } = await load(ctx);
   const pkgs = parseSkcPackages(offers);
   if (pkgs.length < 2) throw new Error(`sakalava-camp: rate block changed (${pkgs.length} packages parsed)`);
-  if (season && String(pkgs[0].year) !== season.start.slice(0, 4)) ctx?.note(`rates are for ${pkgs[0].year}, simulator season ${season.start}: slots undated`);
+  if (!season) throw new Error('sakalava-camp: season limits not found on the rates page');
+  if (String(pkgs[0].year) !== season.start.slice(0, 4)) ctx?.note(`rates are for ${pkgs[0].year}, simulator season ${season.start}: slots undated`);
   const slots = buildSkcSlots(pkgs, season, today);
   if (!slots.length) ctx?.note(`the ${pkgs[0].year} season is over; no newer rates on the page`);
   return slots;

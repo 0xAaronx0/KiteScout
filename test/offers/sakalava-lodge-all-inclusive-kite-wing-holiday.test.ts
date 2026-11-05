@@ -1,10 +1,11 @@
-// Sakalava Lodge all-inclusive kite & wing holiday: replays the offers + rates pages recorded 2026-10-21.
+// Sakalava Lodge all-inclusive kite & wing holiday: replays the offers + rates pages recorded 2026-11-05.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readdirSync, readFileSync } from 'node:fs';
+import { mkdtempSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import {
-  buildSkcSlots, parseSkcPackages, sakalavaLodgeAllInclusiveKiteWingHoliday, skcImages,
+  buildSkcSlots, fetchSkcSlots, parseSkcPackages, sakalavaLodgeAllInclusiveKiteWingHoliday, skcImages,
 } from '../../src/offers/adapters/sakalava-lodge-all-inclusive-kite-wing-holiday.js';
 import { parseSkSeason } from '../../src/offers/adapters/sakalava-lodge-diego-suarez.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
@@ -25,7 +26,7 @@ test('sakalava camp: three 2027 packages from the offers page', () => {
 test('sakalava camp: slots dated to the 2027 season, on request', () => {
   const season = parseSkSeason(rates);
   assert.deepEqual(season, { start: '2027-04-01', end: '2027-11-30', minNights: 3 });
-  const { ok, problems } = checkSlots(buildSkcSlots(parseSkcPackages(offers), season, '2026-10-21'));
+  const { ok, problems } = checkSlots(buildSkcSlots(parseSkcPackages(offers), season, '2026-11-05'));
   assert.deepEqual(problems, []);
   assert.deepEqual(ok.map(s => [s.key, s.price, s.priceBasis, s.occupancy, s.packageNights, s.startDate, s.endDate, s.availability]), [
     ['1p-3n|2027', 680, 'person', 1, 3, '2027-04-01', '2027-11-30', 'on_request'],
@@ -36,7 +37,7 @@ test('sakalava camp: slots dated to the 2027 season, on request', () => {
 
 test('sakalava camp: no season -> undated slots; season over -> no slots', () => {
   const pk = parseSkcPackages(offers);
-  assert.ok(buildSkcSlots(pk, null, '2026-10-21').every(s => s.startDate === null && s.price !== null));
+  assert.ok(buildSkcSlots(pk, null, '2026-11-05').every(s => s.startDate === null && s.price !== null));
   assert.equal(buildSkcSlots(pk, parseSkSeason(rates), '2027-12-01').length, 0);
 });
 
@@ -49,8 +50,8 @@ test('sakalava camp: photos without -scaled twins or logos', () => {
 });
 
 test('sakalava camp: content is a valid camp with the lodge coordinates', async (t) => {
-  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-10-21
-  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-10-21T12:00:00Z') });
+  // pinned wall clock: the adapter reads the real date (todayIso / new Date) and the expectations are from 2026-11-05
+  t.mock.timers.enable({ apis: ['Date'], now: Date.parse('2026-11-05T12:00:00Z') });
   const c = await sakalavaLodgeAllInclusiveKiteWingHoliday.fetchContent(ctx);
   assert.equal(contentProblem(c), null);
   assert.equal(c.kind, 'camp');
@@ -60,4 +61,14 @@ test('sakalava camp: content is a valid camp with the lodge coordinates', async 
   assert.match(c.summary, /EUR 1,400 for one week for one person/);
   assert.ok(!/[–—]/.test(c.summary + c.title));
   assert.equal(checkSlots(await sakalavaLodgeAllInclusiveKiteWingHoliday.fetchSlots(ctx)).ok.length, 3);
+});
+
+// keep last: page() memoises each URL for 10 minutes, so this test moves the clock a year past any earlier entry
+test('sakalava camp: no season from the rates page -> the run fails instead of wiping the live dates', async (t) => {
+  const dir = mkdtempSync(join(tmpdir(), 'skc-'));
+  t.after(() => { rmSync(dir, { recursive: true }); process.env.OFFERS_FIXTURE_DIR = DIR; });
+  for (const f of readdirSync(DIR)) writeFileSync(join(dir, f), /tarifs-sakalava/.test(f) ? '<p>no simulator</p>' : readFileSync(join(DIR, f)));
+  process.env.OFFERS_FIXTURE_DIR = dir;
+  t.mock.timers.enable({ apis: ['Date'], now: Date.now() + 365 * 86_400_000 });
+  await assert.rejects(fetchSkcSlots('2026-11-05'), /season limits/);
 });
