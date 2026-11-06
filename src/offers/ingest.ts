@@ -930,7 +930,7 @@ export async function runAdapters(
       const prev = r.status === 'error' ? `  (previous run: ${previousRun(r)})` : '';
       console.log(`${flag}${r.key.padEnd(34)} slots ${String(r.slots).padStart(3)} (bookable ${r.bookable})  ${r.minPrice ?? '-'}  ${r.requests} req  ${(r.ms / 1000).toFixed(1)}s${r.error ? `  ${r.error}` : ''}${prev}`);
       if (r.roomPhotos) console.log(`    room photos: ${r.roomPhotos.withPhoto}/${r.roomPhotos.rooms} rooms, ${r.roomPhotos.photos} photos, ${(r.roomPhotos.bytes / 1024).toFixed(0)} KB`);
-      for (const n of r.notes) if (n.startsWith('room prices') || n.startsWith('rooms hidden') || n.startsWith('rooms shown again') || n.startsWith('kept listing price') || n.includes('EMPTY_GUARD')) console.log(`    ${n}`);
+      for (const n of r.notes) if (n.startsWith('room prices') || n.startsWith('rooms hidden') || n.startsWith('rooms shown again') || n.startsWith('kept listing price') || n.startsWith('offer_sources write failed') || n.includes('EMPTY_GUARD')) console.log(`    ${n}`);
     }
   };
   await Promise.all(Array.from({ length: Math.min(opts.parallel ?? 4, adapters.length) }, worker));
