@@ -84,7 +84,7 @@ export function parseSscPrices(html: string): SscPrices {
       if (/^Tillæg/i.test(r[0])) break;
     }
   }
-  const fee = rows.find(r => /^Pladsgebyr standart?pladser$/i.test(r[0] ?? ''))?.[1] ?? '';
+  const fee = rows.find(r => /^Pladsgebyr standar[dt]pladser$/i.test(r[0] ?? ''))?.[1] ?? '';
   const mainPeriods = [...fee.matchAll(/(\d{2})\.(\d{2})-(\d{2})\.(\d{2})\.(20\d{2})/g)]
     .map(m => ({ start: iso(+m[5], +m[2], +m[1]), end: iso(+m[5], +m[4], +m[3]) }));
   const autumn = rows.find(r => /^Efterårsplads$/i.test(r[0] ?? ''))?.[1]?.match(/-(\d{2})\.(\d{2})\.(20\d{2})/);

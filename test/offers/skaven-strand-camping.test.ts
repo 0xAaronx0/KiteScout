@@ -18,6 +18,26 @@ const ctx = { note: () => {}, incomplete: () => {} };
 const prices = parseSscPrices(read('skaven.dk_priser_.'));
 const open = parseSscOpening(read('skaven.dk_.'));
 
+// /priser/ as served 2026-11-05: the site corrected its typo to "standardpladser" and the main periods were lost, so the
+// headline fell to "Price on request" although the page names DKK 400 (Aaron 2026-10-29: a named price is never on request).
+const FEE_ROW_2026_11_05 = `<tr class="row-7">
+	<td class="column-1">Pladsgebyr standardpladser</td><td class="column-2">50.00 kr. (i hovedsæson: <br />
+28.03-06.04.2026<br />
+14.05-17.05.2026<br />
+23.05-26.05.2026<br />
+27.06-16.08.2026)</td>
+</tr>`;
+
+test('ssc: the pitch-fee row reads with both spellings, the headline survives the next season\'s opening', () => {
+  const page = read('skaven.dk_priser_.').replace(/<tr class="row-\d+">\s*<td class="column-1">Pladsgebyr standartpladser[\s\S]*?<\/tr>/, FEE_ROW_2026_11_05);
+  assert.ok(page.includes('standardpladser') && !page.includes('standartpladser'));
+  const p = parseSscPrices(page);
+  assert.deepEqual(p.mainPeriods, prices.mainPeriods);
+  const last = sscLastPublished(p, '2027-03-20', '2026-11-05');
+  assert.ok(last.length > 0);
+  assert.equal(Math.min(...last.map(s => s.price!)), 400);
+});
+
 test('ssc: cabin table, main-season periods, opening and autumn end', () => {
   assert.deepEqual(prices.cabin2, { mainDay: 450, mainWeek: 2600, otherDay: 400, otherWeek: 2400 });
   assert.equal(prices.luxury.day, 700);
