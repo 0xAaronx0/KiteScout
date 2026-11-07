@@ -155,16 +155,21 @@ export function parseSaXlPrices(html: string): { sharing: number; single: number
   return m ? { sharing: amount(m[1]), single: m[2] ? amount(m[2]) : null } : null;
 }
 
+/**
+ * One slot per room price. Without a date on the card (removed 2026-11-06, the price still printed) the prices stay as
+ * undated rates "to be confirmed" (Aaron 2026-10-29: a named price is never "on request"); not "last published", the
+ * last date (Feb 2027) was never over.
+ */
 export function parseSaXlSlots(html: string): Slot[] {
   const d = parseSaXlDates(html);
   const p = parseSaXlPrices(html);
-  if (!d || !p) return [];
+  if (!p) return [];
   const rooms: Array<[string, string, number | null, number]> = [['sharing', 'Shared room', p.sharing, 2], ['single', 'Single room', p.single, 1]];
-  return rooms.filter(([, , price]) => price).map(([key, unit, price, occ]) => ({
+  return rooms.filter(([, , price]) => price).map(([key, unit, price, occ]) => d ? {
     key: `${d.start}|${key}`, startDate: d.start, endDate: d.end, unit, price, currency: 'EUR',
     priceUnit: 'package', priceBasis: 'person', occupancy: occ,
     availability: 'on_request', availabilityText: null, spotsLeft: null,
-  }));
+  } : { ...undated(key, unit, price, 'dates to be confirmed'), occupancy: occ, undated: true });
 }
 
 export function parseSaXlContent(html: string): OfferContent {
@@ -412,7 +417,7 @@ export const surfariafrikaDownwinderXl: OfferAdapter = {
   async fetchContent() { return parseSaXlContent(await fetchText(SA_DOWNWINDER_XL_URL)); },
   async fetchSlots(ctx) {
     const html = await fetchText(SA_DOWNWINDER_XL_URL);
-    if (!parseSaXlDates(html)) ctx.note('no "Roadtrip / Downwinder xl <dates>" card on the page');
+    if (!parseSaXlDates(html)) ctx.note('no "Roadtrip / Downwinder xl <dates>" card on the page: undated rates');
     return parseSaXlSlots(html);
   },
 };

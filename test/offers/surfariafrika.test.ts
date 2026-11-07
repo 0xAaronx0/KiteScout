@@ -5,11 +5,12 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   parseSaNamibiaSeason, parseSaNamibiaSlots, parseSaPrimalTiers, parseSaWalvisPrice, parseSaWalvisSeason, parseSaWalvisSlots,
-  parseSaXlDates, parseSaXlPrices, surfariafrikaDownwinderXl, surfariafrikaNamibiaDownwinder, surfariafrikaPrimalExplorer,
+  parseSaXlDates, parseSaXlPrices, parseSaXlSlots, surfariafrikaDownwinderXl, surfariafrikaNamibiaDownwinder, surfariafrikaPrimalExplorer,
   surfariafrikaWalvisBayCamp,
 } from '../../src/offers/adapters/surfariafrika.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
 import type { OfferAdapter } from '../../src/offers/types.js';
+import { summarizePrice } from '../../src/offers/ingest.js';
 
 const FIX = join(import.meta.dirname, '../fixtures/offers');
 const html = (key: string) => readFileSync(join(FIX, key, readdirSync(join(FIX, key))[0]), 'utf8');
@@ -55,6 +56,23 @@ test('downwinder xl: date from the site-wide card, sharing + single price', asyn
   assert.equal(content.durationDays, 10);
   assert.equal(content.itinerarySpots.length, 6);
   clean(content.summary + content.title);
+});
+
+test('downwinder xl: the card lost its date (2026-11-06), the printed price stays as an undated rate', async () => {
+  // the provider removed "31 - 9 FEBRUARI 2027" from the card and still prints "cost 21 00€ sharing 2450€"
+  const page = html('surfariafrika-downwinder-xl').replace('<p class="rteBlock">31 - 9 FEBRUARI 2027</p>', '<p class="rteBlock"></p>');
+  assert.equal(parseSaXlDates(page), null);
+  const slots = parseSaXlSlots(page);
+  assert.deepEqual(checkSlots(slots).problems, []);
+  assert.deepEqual(slots.map(s => [s.unit, s.price, s.startDate, s.undated, s.availabilityText]), [
+    ['Shared room', 2100, null, true, 'dates to be confirmed'], ['Single room', 2450, null, true, 'dates to be confirmed'],
+  ]);
+  const p = summarizePrice('tour', slots, '2026-11-07');
+  assert.equal(p.raw, 'From EUR 2,100 p.p.');
+  assert.match(p.note!, /undated rates on the provider's site, to be confirmed/);
+  const noPrice = page.replace('>sharing</strong>', '></strong>');
+  assert.equal(parseSaXlPrices(noPrice), null);
+  assert.equal(parseSaXlSlots(noPrice).length, 0, 'no price on the page, no slot');
 });
 
 test('namibia downwinder: no price on the page, the Namibia season card → one on-request season slot', async () => {
