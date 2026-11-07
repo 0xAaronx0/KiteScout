@@ -9,6 +9,8 @@ import {
 } from '../../src/offers/adapters/freeride-kitesurf-downwind-rio-grande-do-norte.js';
 import { fetchFreerideSlots, parseFreerideRoute } from '../../src/offers/adapters/freeride-kitesurf-downwind-wild-north.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { summarizePrice } from '../../src/offers/ingest.js';
+import type { Slot } from '../../src/offers/types.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/freeride-kitesurf-downwind-rio-grande-do-norte');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -29,6 +31,14 @@ test('freeride rgn: one future departure (11-21 Nov 2026), none after it', async
   assert.deepEqual(slots.map(s => [s.key, s.endDate, s.price, s.currency, s.priceBasis, s.availability]),
     [['2026-11-11', '2026-11-21', 1815, 'EUR', 'person', 'on_request']]);
   assert.deepEqual(await fetchFreerideSlots(FREERIDE_RGN_URL, RGN_MATCH, '2026-11-12'), []);
+});
+
+test('freeride rgn: after its only departure (11 Nov 2026) the route price stays as last published', async () => {
+  const past: Slot[] = [];
+  const slots = await fetchFreerideSlots(FREERIDE_RGN_URL, RGN_MATCH, '2026-11-12', { note: () => {}, lastPublished: s => past.push(...s) });
+  assert.deepEqual(slots, []);
+  assert.deepEqual(past.map(s => [s.startDate, s.endDate, s.price]), [['2026-11-11', '2026-11-21', 1815]]);
+  assert.equal(summarizePrice('tour', slots, '2026-11-12', past).raw, 'From EUR 1,815 p.p.');
 });
 
 test('freeride rgn: content', async () => {
