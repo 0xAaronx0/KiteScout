@@ -25,7 +25,7 @@
 // ---------------------------------------------------------------------------
 import { fetchText } from '../http.js';
 import { collapse, imageCandidates, iso, monthOf, parse, parseAmount, todayIso } from '../parse.js';
-import type { FetchContext, ItinerarySpot, OfferAdapter, OfferContent, OperatorRef, Slot } from '../types.js';
+import { ALL_DATES, type FetchContext, type ItinerarySpot, type OfferAdapter, type OfferContent, type OperatorRef, type Slot } from '../types.js';
 
 export const FREERIDE_SITE = 'https://www.freeridekitesurf.com';
 export const FREERIDE_DATES_URL = `${FREERIDE_SITE}/en/kite-safari/downwind-brazil/`;
@@ -220,13 +220,16 @@ export function freerideDatesSentence(deps: FreerideDeparture[], today: string):
   return `Runs every year; ${last + 1} dates not yet published (${last}: ${months.join(', ')}).`;
 }
 
-export async function fetchFreerideSlots(routeUrl: string, match: RegExp, today: string, ctx?: Pick<FetchContext, 'note'>): Promise<Slot[]> {
+/** Departures that are over keep the route price as the last published one (Aaron 2026-10-29: a named price is never
+ *  "on request"); the headline uses it only until a future departure is printed. */
+export async function fetchFreerideSlots(routeUrl: string, match: RegExp, today: string, ctx?: Pick<FetchContext, 'note' | 'lastPublished'>): Promise<Slot[]> {
   const deps = parseFreerideDates(await freeridePage(FREERIDE_DATES_URL));
   if (deps.length === 0) throw new Error('freeride: no "DOWNWIND DATES BRAZIL <year>" list found (layout changed?)');
   const mine = deps.filter(d => match.test(d.route));
   const route = parseFreerideRoute(await freeridePage(routeUrl), routeUrl);
   if (route.price === null) ctx?.note('freeride: "<n> NIGHTS / <n> DAYS <price>€" not found on the route page; slots without price');
   const slots = buildFreerideSlots(mine, route, today);
+  ctx?.lastPublished?.(buildFreerideSlots(mine, route, ALL_DATES).filter(s => s.startDate! < today));
   const past = mine.length - slots.length;
   if (past > 0) ctx?.note(`${past} past departure(s) dropped (${mine.filter(d => d.start < today).map(d => d.start).join(', ')})`);
   if (slots.length === 0) ctx?.note('no future departure printed yet');

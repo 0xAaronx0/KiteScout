@@ -9,6 +9,8 @@ import {
   parseFreerideDates, parseFreerideRoute,
 } from '../../src/offers/adapters/freeride-kitesurf-downwind-wild-north.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { summarizePrice } from '../../src/offers/ingest.js';
+import type { Slot } from '../../src/offers/types.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/freeride-kitesurf-downwind-wild-north');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -47,6 +49,26 @@ test('freeride wild north: only future departures become slots', async () => {
   const r = parseFreerideRoute(routeHtml, FREERIDE_WILD_NORTH_URL);
   assert.deepEqual(buildFreerideSlots(deps, r, '2026-12-01'), []);
   assert.equal(freerideDatesSentence(deps, '2026-12-01'), 'Runs every year; 2027 dates not yet published (2026: August, September, October, November).');
+});
+
+test('freeride wild north: every 2026 departure over -> the route price stays as last published (Aaron 2026-10-29)', async () => {
+  // cron 2026-11-06: the last 2026 departure (5 Nov) was over, the listing fell to "Price on request"
+  const past: Slot[] = [];
+  const slots = await fetchFreerideSlots(FREERIDE_WILD_NORTH_URL, /wild north/i, '2026-11-07', { note: () => {}, lastPublished: s => past.push(...s) });
+  assert.deepEqual(slots, []);
+  assert.deepEqual(past.map(s => [s.startDate, s.price]), [['2026-08-01', 2295], ['2026-09-02', 2295], ['2026-10-01', 2295], ['2026-11-05', 2295]]);
+  assert.deepEqual(checkSlots(past).problems, []);
+  const p = summarizePrice('tour', slots, '2026-11-07', past);
+  assert.equal(p.raw, 'From EUR 2,295 p.p.');
+  assert.match(p.note!, /last published price, 2026 dates are over, new dates not published yet/);
+});
+
+test('freeride wild north: a future departure still wins over the past ones', async () => {
+  const past: Slot[] = [];
+  const slots = await fetchFreerideSlots(FREERIDE_WILD_NORTH_URL, /wild north/i, '2026-10-19', { note: () => {}, lastPublished: s => past.push(...s) });
+  assert.deepEqual(slots.map(s => s.startDate), ['2026-11-05']);
+  assert.deepEqual(past.map(s => s.startDate), ['2026-08-01', '2026-09-02', '2026-10-01']);
+  assert.match(summarizePrice('tour', slots, '2026-10-19', past).note!, /^From EUR 2,295 p\.p\. \(cheapest bookable: Double room \(shared\), 2026-11-05;/);
 });
 
 test('freeride wild north: content', async () => {
