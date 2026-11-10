@@ -614,6 +614,31 @@ export function repriceStoredRooms(kind: OfferKind, stored: unknown, slots: Slot
   });
 }
 
+/**
+ * Under EMPTY_GUARD (slots run): rooms that show no price take the last published price of dates that are over
+ * (roomsWithPrices tier 3, price_past_year set). A stored room price is never replaced, a room no past slot names stays
+ * as it is, priced_months / availability stay as stored (never null). Null: nothing to fill.
+ */
+export function fillUnpricedRooms(kind: OfferKind, stored: unknown, past: Slot[], today: string): Array<Record<string, unknown>> | null {
+  if (!past.length || !Array.isArray(stored) || stored.length === 0) return null;
+  const rows = stored as Array<Record<string, unknown>>;
+  if (rows.some(r => !r || typeof r.name !== 'string')) return null;
+  const content = {
+    kind,
+    rooms: rows.map(r => ({ name: r.name as string, description: (r.description as string | null | undefined) ?? null, features: Array.isArray(r.features) ? r.features as string[] : [] })),
+  } as unknown as OfferContent;
+  const fresh = roomsWithPrices(content, [], today, past) as unknown as Array<Record<string, unknown>>;
+  let filled = 0;
+  const out = rows.map((r, i) => {
+    if (r.price_from != null || fresh[i].price_from == null) return r;
+    filled++;
+    const row: Record<string, unknown> = { ...r };
+    for (const k of ROOM_PRICE_KEYS) row[k] = k === 'priced_months' || k === 'availability' ? (r[k] ?? fresh[i][k]) : fresh[i][k];
+    return row;
+  });
+  return filled ? out : null;
+}
+
 /** Stored priced rows that no slot belongs to (same matching as roomsWithPrices): renamed or dropped rooms. */
 export function staleRoomNames(rows: Array<Record<string, unknown>>, slots: Slot[]): string[] {
   const names = rows.map(r => r.name as string);
@@ -810,7 +835,7 @@ async function runAdapterInner(
     rep.operatorId = operatorId;
     const listingId = SOURCE_PREFIX + a.key;
     const { data: existing, error: rErr } = await supabase
-      .from('package_offers').select('id,images,pricing,rooms,itinerary_spots,price_basis_note').eq('source_listing_id', listingId).maybeSingle();
+      .from('package_offers').select('id,images,pricing,rooms,itinerary_spots,price_basis_note,price_pp_cabin').eq('source_listing_id', listingId).maybeSingle();
     if (rErr) throw new Error(`package_offers read failed: ${rErr.message}`);
     if (!existing && !content) throw new Error('offer not ingested yet: run a full ingest first');
     offerId = (existing?.id as string | undefined) ?? null;
@@ -829,8 +854,12 @@ async function runAdapterInner(
     const guardTripped = slots.length === 0 && known >= EMPTY_GUARD;
     if (guardTripped) rep.notes.push(`empty result with ${known} known slots: kept the stock (EMPTY_GUARD)`);
     // a clean run with no price and no date ahead: the stored slots that are over give the last published price
-    // (storedPastSlots). pricing.slots holds future slots only, so the table is read where it exists.
-    if (!price.min && !rep.slotError && incomplete === null && !guardTripped && !slots.some(s => isAhead(a.kind, s, today))) {
+    // (storedPastSlots). pricing.slots holds future slots only, so the table is read where it exists. Under the guard
+    // only for a listing that shows no price: the stock it reads is the one the guard keeps, and every date in it is
+    // over, so it can only fill "Price on request", never replace a kept price.
+    const storedHasNoPrice = existing?.price_pp_cabin === null || existing?.price_pp_cabin === undefined;
+    let fallbackPast: Slot[] = [];
+    if (!price.min && !rep.slotError && incomplete === null && (!guardTripped || storedHasNoPrice) && !slots.some(s => isAhead(a.kind, s, today))) {
       let stored: unknown[] = prevSlots;
       if (useTable && offerId) {
         const { data, error: sErr } = await supabase.from('offer_slots').select(STORED_SLOT_COLS).eq('package_offer_id', offerId).eq('active', true);
@@ -838,6 +867,7 @@ async function runAdapterInner(
         stored = data ?? [];
       }
       const past = storedPastSlots(a.kind, stored, today);
+      fallbackPast = past;
       if (past.length) {
         price = summarizePrice(a.kind, slots, today, past);
         rep.minPrice = price.raw;
@@ -848,6 +878,15 @@ async function runAdapterInner(
     // the jsonb summary is all-or-nothing: keep the old one on a partial or empty delivery, and a partial run that
     // finds no price never overwrites the stored one (pricing.slots is empty once every date is over)
     const keepSlots = guardTripped || (incomplete !== null && (slots.length < prevSlots.length || !price.min));
+    // the guard keeps the slot stock (pricing.slots, offer_slots, rooms), not a price: with no slot delivered, a price
+    // here comes from dates that are over (lastPublished or the stored slots) and is marked as last published
+    // (Nordwind 2026-10-18..11-10: the log said "From EUR 319 p.p.", the listing stayed "Price on request")
+    // (only for a listing that shows no price: a guard can mean the adapter misread new dates, and a kept current price
+    // must not turn into "last published")
+    const guardPrice = guardTripped && price.min !== null && storedHasNoPrice;
+    if (guardPrice) rep.notes.push(`wrote the last published price under the guard: ${price.raw}`);
+    // the rooms under the guard: the same past slots fill rooms that show no price (fillUnpricedRooms)
+    const roomPast = guardTripped ? [...lastPublished, ...fallbackPast] : lastPublished;
     const pricing = {
       raw: price.raw,
       currency: price.min?.currency ?? null,
@@ -856,11 +895,11 @@ async function runAdapterInner(
       observed_at: new Date().toISOString(),
       slots: keepSlots ? prevSlots
         : slots.filter(s => isAhead(a.kind, s, today)).slice(0, PRICING_SLOT_CAP).map(slotJson),
-      slots_total: keepSlots ? prevSlots.length : slots.length,
+      slots_total: keepSlots ? ((existing?.pricing as { slots_total?: number } | null)?.slots_total ?? prevSlots.length) : slots.length,
     };
-    const keptNote = keepSlots ? keptPriceNote(a.kind, (existing?.price_basis_note as string | null) ?? null, prevSlots, today) : null;
+    const keptNote = keepSlots && !guardPrice ? keptPriceNote(a.kind, (existing?.price_basis_note as string | null) ?? null, prevSlots, today) : null;
     if (keptNote) rep.notes.push('kept listing price marked as last published (all its dates are over)');
-    const priceCols = keepSlots ? (keptNote ? { price_basis_note: keptNote } : {}) : {
+    const priceCols = keepSlots && !guardPrice ? (keptNote ? { price_basis_note: keptNote } : {}) : {
       pricing,
       price_unit: price.priceUnit,
       price_basis_note: price.note,
@@ -888,7 +927,7 @@ async function runAdapterInner(
       const photographed = <R extends { name: string }>(rs: R[]) => roomPhotos ? withRoomPhotos(rs, roomPhotos) : keepRoomPhotos(rs, existing?.rooms);
       // same rule as the listing price and the --slots run: a guard or a partial delivery keeps the stored room prices,
       // and no stored price is dropped (2026-11-02: Cuxhaven lost 4 under the guard, Hvide Sande / Saltys 1 each)
-      const pricedRows = keepStoredRoomPrices(roomsWithPrices(content, slots, today, lastPublished), existing?.rooms, [...slots, ...lastPublished], today, keepSlots);
+      const pricedRows = keepStoredRoomPrices(roomsWithPrices(content, slots, today, roomPast), existing?.rooms, [...slots, ...lastPublished], today, keepSlots);
       const flagged = a.hideRoomsWithoutSlots ? flagRoomsWithoutSlots(pricedRows, slots, existing?.rooms, !runOk) : null;
       if (flagged) rep.notes.push(...hiddenNotes(flagged));
       const roomRows = flagged?.rows ?? pricedRows;
@@ -930,7 +969,8 @@ async function runAdapterInner(
       }
     } else {
       // same rule as the listing price: a guard or a partial delivery keeps the stored room prices
-      const reprices = keepSlots ? null : repriceStoredRooms(a.kind, existing?.rooms, slots, today, lastPublished);
+      const reprices = keepSlots ? (guardTripped ? fillUnpricedRooms(a.kind, existing?.rooms, roomPast, today) : null)
+        : repriceStoredRooms(a.kind, existing?.rooms, slots, today, lastPublished);
       const flagged = reprices && a.hideRoomsWithoutSlots ? flagRoomsWithoutSlots(reprices as Array<Record<string, unknown> & { name: string }>, slots, existing?.rooms, !runOk) : null;
       if (flagged) rep.notes.push(...hiddenNotes(flagged));
       const repriced = flagged?.rows ?? reprices;

@@ -99,6 +99,8 @@ export function buildNwsSlots(p: NwsPage, today: string): Slot[] {
         startDate: w.start,
         endDate: w.end,
         unit: `Kite weekend, ${v.label}`,
+        // the unit starts with "Kite weekend", so slotRoom could not name the room: no room was ever priced
+        room: v.id.startsWith('cat-a') ? 'Category A apartment' : 'Category B holiday flat',
         price: v.price,
         currency: 'EUR',
         priceUnit: 'package',
