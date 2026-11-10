@@ -1,8 +1,10 @@
 // ---------------------------------------------------------------------------
-// Kitesurf Mindoro (Makani Resort & Glamping), Bislig Beach (Bulalacao, Oriental Mindoro, Philippines) - small eco
-// resort with its own kite and wing station: 5 bungalows, 6 glamping pods, dorm beds / hammocks / tree tents, all
-// full board; VDWS-standard one-on-one lessons, North rental gear, downwinders and kite safaris to nearby islands.
-// The accommodation page still calls the resort "Amansinaya Resort"; the site header says "Makani Resort & Glamping".
+// Kitesurf Mindoro (Amansinaya Resort), Bislig Beach (Bulalacao, Oriental Mindoro, Philippines) - small eco resort
+// with its own kite and wing station: 5 bungalows, 6 glamping pods, dorm beds / hammocks / tree tents, all full board;
+// VDWS-standard one-on-one lessons, North rental gear, downwinders and kite safaris to nearby islands.
+// Name: the resort page says "Amansinaya Resort"; the Jimdo site title on every page still says "Kitesurf Mindoro,
+//   Makani Resort & Glamping" (checked 2026-11-10), which this adapter used until the resort corrected the name by
+//   e-mail on 2026-11-10: the resort is Amansinaya Resort, not Makani (MD_CONFIRMED). The site title is not read.
 //
 // Found 2026-10-12 as Google Maps pin "Kitesurf Mindoro" (hotel, 4.9/51) on the south coast of Mindoro.
 // Liveness (2026-10-12): Google Maps reviews dated about 7 and 9 months back (March / January 2026) with owner replies
@@ -17,8 +19,11 @@
 //            kite page speaks of "latest 2024 North Gear". The recheck rule (prices only when they plausibly apply to
 //            the next season) held them back as price on request until Aaron decided 2026-11-02 to show them marked
 //            undated (Slot.undated -> the price note says "undated rates ..., to be confirmed"); the provider is on the
-//            inquiry list to confirm them. Once the resort page names the current year or later (e.g. "2026/27 prices"),
-//            the same rates are returned without the mark.
+//            inquiry list to confirm them. The resort confirmed them by e-mail on 2026-11-10 for the 2026/27 season
+//            (MD_CONFIRMED): while the page prints exactly those rates they are season slots 2026-11-01..2027-04-15
+//            (datePrecision 'season': KCS shows a season window, not departures); a changed rate falls back to the undated
+//            mark. Once the resort page names the current year or later (e.g. "2026/27 prices"), the page's rates are
+//            returned without the mark.
 //   coordinates  none on the site (the contact map embed only queries "Bulalacao"); spotCoords omitted.
 // robots.txt (2026-10-12): disallows /app/ and /j/ only; "Crawl-Delay: 5" -> this adapter waits 5 s between its own
 //   live requests (local helper `mdGet`; http.ts does not read Crawl-delay). The contact e-mail is published behind
@@ -146,6 +151,33 @@ export function mdNewestYear(html: string): number | null {
   return ys.length ? Math.max(...ys) : null;
 }
 
+/**
+ * The resort's answer to our price question of 2026-11-06, by e-mail on 2026-11-10 (the mail is on file in the
+ * info@kitescout.tech inbox): the name is Amansinaya Resort, the published prices are right, the season runs from
+ * November until mid April. It confirms exactly the rates below (slot key -> EUR p.p./night, as /resort/ printed them
+ * that day); "mid April" is read as 2027-04-15 (our reading, not the resort's).
+ */
+export const MD_CONFIRMED = {
+  at: '2026-11-10',
+  seasonStart: '2026-11-01',
+  seasonEnd: '2027-04-15',
+  rates: { 'bungalows-double': 50, 'bungalows-single': 75, 'glamping-pods-double': 40, 'glamping-pods-single': 55, 'hammock-or-dorm': 30 } as Record<string, number>,
+};
+
+/** true while the confirmed season runs and the page prints exactly the confirmed rates (same slots, same amounts) */
+export function mdConfirmed(slots: Slot[], today = todayIso()): boolean {
+  const want = Object.entries(MD_CONFIRMED.rates);
+  return today <= MD_CONFIRMED.seasonEnd && slots.length === want.length && want.every(([k, price]) => slots.some(s => s.key === k && s.price === price));
+}
+
+/** the confirmed rates as season slots, marked as confirmed by the resort */
+export function confirmedMdSlots(slots: Slot[]): Slot[] {
+  return slots.map(s => ({
+    ...s, startDate: MD_CONFIRMED.seasonStart, endDate: MD_CONFIRMED.seasonEnd, datePrecision: 'season' as const,
+    availabilityText: `rates confirmed by the resort by e-mail on ${MD_CONFIRMED.at} for the 2026/27 season (November to mid-April)`,
+  }));
+}
+
 export interface MdPages { home: string; resort: string; kite: string }
 
 export function parseMindoroContent(p: MdPages): OfferContent {
@@ -161,6 +193,7 @@ export function parseMindoroContent(p: MdPages): OfferContent {
   const islands = home.join(' ').match(/(\d+) different islands to kite on/i)?.[1] ?? null;
   const daytrip = home.find(l => /^Join us for a trip to the nearby islands/i.test(l)) ?? null;
   const included = units.find(u => u.included.length)?.included ?? [];
+  const confirmed = mdConfirmed(buildMdSlots(units));
 
   const rooms: ContentRoom[] = units.map(u => ({
     name: u.name,
@@ -181,15 +214,17 @@ export function parseMindoroContent(p: MdPages): OfferContent {
   for (const u of [...mdImages(p.resort), ...mdImages(p.home), ...mdImages(p.kite)]) if (!imageUrls.includes(u)) imageUrls.push(u);
 
   const summary = [
-    'Kitesurf Mindoro (Makani Resort & Glamping) is a small eco resort with its own kite and wing station on Bislig Beach near Bulalacao in Oriental Mindoro, Philippines; the beginner spot, a shallow flat-water bay with side-onshore wind, lies right in front of the bungalows, about 50 km from Boracay.',
+    'Kitesurf Mindoro (Amansinaya Resort) is a small eco resort with its own kite and wing station on Bislig Beach near Bulalacao in Oriental Mindoro, Philippines; the beginner spot, a shallow flat-water bay with side-onshore wind, lies right in front of the bungalows, about 50 km from Boracay.',
     `The resort has ${nBung ?? 'several'} bungalows with ocean view and outdoor private bathrooms, ${nPods ?? 'several'} glamping pods with a shared shower house, and dorm beds, hammocks and tree tents; every stay is full board and includes kite gear storage, beach rescue and yoga.`,
-    `Lessons follow the VDWS standard one-on-one for kitesurfing and wing foiling, North equipment is rented to certified riders, and downwinders and 3-day kite safaris go to the nearby islands; the kite season runs from November to the end of April.`,
-    'Stays are booked through the contact form; the published room rates carry no date, so the resort confirms the current price on request.',
+    `Lessons follow the VDWS standard one-on-one for kitesurfing and wing foiling, North equipment is rented to certified riders, and downwinders and 3-day kite safaris go to the nearby islands; the kite season runs from November to ${confirmed ? 'mid-April' : 'the end of April'}.`,
+    confirmed
+      ? 'Stays are booked through the contact form; the resort confirmed the room rates for the 2026/27 season.'
+      : 'Stays are booked through the contact form; the published room rates carry no date, so the resort confirms the current price on request.',
   ].join(' ');
 
   return {
     kind: 'accommodation',
-    title: 'Kitesurf Mindoro - Makani Resort & Glamping',
+    title: 'Kitesurf Mindoro - Amansinaya Resort',
     summary,
     continent: 'Asia',
     country: 'Philippines',
@@ -224,9 +259,9 @@ export function parseMindoroContent(p: MdPages): OfferContent {
     sourceText: [
       `home: ${home.filter(l => l.length > 60 && !/cookie/i.test(l)).join(' ')}`,
       `resort: ${intro} ${resort.find(l => /^All meals are included/i.test(l)) ?? ''}`,
-      `units (undated rates, EUR p.p./night full board): ${units.map(u => `${u.name}: single ${u.single ?? '-'} double ${u.double ?? '-'} flat ${u.flat ?? '-'}`).join('; ')}`,
+      `units (${confirmed ? `rates confirmed by the resort ${MD_CONFIRMED.at} for 2026/27` : 'undated rates'}, EUR p.p./night full board): ${units.map(u => `${u.name}: single ${u.single ?? '-'} double ${u.double ?? '-'} flat ${u.flat ?? '-'}`).join('; ')}`,
       `kite: ${kite.filter(l => l.length > 80).join(' ')}`,
-      `season: ${season ?? ''}${islands ? ` | ${islands} islands to kite on` : ''}`,
+      `season: ${season ?? ''}${confirmed ? ` | resort by e-mail ${MD_CONFIRMED.at}: November until mid April` : ''}${islands ? ` | ${islands} islands to kite on` : ''}`,
     ].join('\n'),
   };
 }
@@ -234,7 +269,7 @@ export function parseMindoroContent(p: MdPages): OfferContent {
 // --- adapter ----------------------------------------------------------------------------------
 export const kitesurfMindoroBulalacao: OfferAdapter = {
   key: 'kitesurf-mindoro-bulalacao',
-  name: 'Kitesurf Mindoro - Makani Resort & Glamping (Bulalacao)',
+  name: 'Kitesurf Mindoro - Amansinaya Resort (Bulalacao)',
   kind: 'accommodation',
   disciplines: ['kitesurf', 'wingfoil'],
   operator: {
@@ -246,7 +281,7 @@ export const kitesurfMindoroBulalacao: OfferAdapter = {
   url: MD_RESORT_URL,
   slotMethod: 'price_table',
   fetchBudget: 4,
-  confidence: 'low', // undated rates, shown marked undated
+  confidence: 'low', // rates confirmed by the resort by e-mail (2026-11-10), not by a dated page
   async fetchContent() {
     const home = await mdGet(MD_HOME_URL);
     const resort = await mdGet(MD_RESORT_URL);
@@ -258,6 +293,8 @@ export const kitesurfMindoroBulalacao: OfferAdapter = {
     const units = parseMdUnits(html);
     if (units.length === 0) throw new Error('kitesurf-mindoro: unit blocks not found on /resort/ (layout changed?)');
     const year = mdNewestYear(html);
+    const page = buildMdSlots(units);
+    if (mdConfirmed(page)) return confirmedMdSlots(page);
     if (year === null || year < Number(todayIso().slice(0, 4))) {
       ctx.note(`/resort/ rates are undated (newest year on the page: ${year ?? 'none'}): shown marked undated`);
       return buildMdSlots(units).map(s => ({ ...s, undated: true }));
