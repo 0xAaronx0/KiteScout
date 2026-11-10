@@ -1,6 +1,6 @@
 // ---------------------------------------------------------------------------
 // Kitesurf Mindoro "Island kite safari" ("Imagine Robinson Crusoe would have had a Kite"), Bulalacao (Oriental Mindoro,
-// Philippines): a private island-hopping kite or wing safari from the Makani Resort on Bislig Beach with the resort's
+// Philippines): a private island-hopping kite or wing safari from the Amansinaya Resort on Bislig Beach with the resort's
 // local islander crew - boat support, nights in tents or bamboo huts on the beaches, food and drinks, snorkelling. For
 // experienced riders with their own gear (upwind, downwind and deep-water self-rescue required); beginners are sent on
 // the day trips instead. A separate product from the resort stay (kitesurf-mindoro-bulalacao.ts, whose Jimdo helpers
@@ -162,7 +162,7 @@ export function parseMdsContent(p: MdsPages): OfferContent {
   const fmt = (n: number) => n.toLocaleString('en-US');
 
   const summary = [
-    'Kitesurf Mindoro, the kite station of the Makani Resort on Bislig Beach near Bulalacao in Oriental Mindoro, runs private island-hopping kite and wing safaris with its local islander crew: a support boat, a different spot every day, and nights in tents or bamboo huts on remote beaches.',
+    'Kitesurf Mindoro, the kite station of the Amansinaya Resort on Bislig Beach near Bulalacao in Oriental Mindoro, runs private island-hopping kite and wing safaris with its local islander crew: a support boat, a different spot every day, and nights in tents or bamboo huts on remote beaches.',
     `The islands on the safari are ${stops.map(x => x.name.replace(/ Island$/, '')).join(', ')}; guide, boat, accommodation, food and drinks and snorkelling are included, and riders bring their own gear and must ride upwind, downwind and rescue themselves in deep water.`,
     `${s.price && s.currency ? `The price is ${s.currency} ${fmt(s.price)} per person with a minimum of ${s.minPeople ?? 2} people` : 'The price is on request'}${dur ? `; the safari runs ${dur.days} days${dur.nights ? ` / ${dur.nights} nights` : ''}` : ''}. Guests choose their dates in the kite season (November to end of April) and book by inquiry.`,
   ].join(' ');
