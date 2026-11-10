@@ -8,6 +8,7 @@ import {
   nordwindWassersportSurendorf, buildNwsSlots, fetchNwsSlots, parseNwsPage,
 } from '../../src/offers/adapters/nordwind-wassersport-surendorf.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { roomsWithPrices } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/nordwind-wassersport-surendorf');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -52,4 +53,14 @@ test('nordwind: content (camp, 2 nights)', async () => {
   assert.ok(c.rooms[0].features.includes('Single-occupancy surcharge (whole weekend): EUR 69'));
   assert.equal(c.imageUrls[0], 'https://reisen.nordwind-wassersport.de/files/CONTENT/2026/Wocheneden.jpg');
   assert.equal(new Set(c.imageUrls.map(u => new URL(u).pathname)).size, c.imageUrls.length);
+});
+
+test('nordwind: every slot names its room, so both rooms carry the weekend price (live they had none until 2026-11-10)', async () => {
+  const c = await nordwindWassersportSurendorf.fetchContent(ctx);
+  const slots = await fetchNwsSlots('2026-10-14');
+  assert.deepEqual(slots.map(s => [s.key, s.room]), [
+    ['cat-a-2p|2026-10-16', 'Category A apartment'], ['cat-b-3p|2026-10-16', 'Category B holiday flat'], ['cat-b-5p|2026-10-16', 'Category B holiday flat'],
+  ]);
+  assert.deepEqual(roomsWithPrices(c, slots, '2026-10-14').map(r => [r.name, r.price_from, r.price_from_is_minimum]),
+    [['Category A apartment', 369, false], ['Category B holiday flat', 319, true]]);
 });

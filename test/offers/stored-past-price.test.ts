@@ -131,12 +131,22 @@ const NW = [
   row('cat-a-2p|2026-10-16', 'Kite weekend, category A apartment for 2 (couples and single bookers)', 369, '2026-10-16', '2026-10-18'),
 ].map(r => ({ ...r, currency: 'EUR' }));
 const NW_OFFER = { price_pp_cabin: null, price_basis_note: 'Price on request', pricing: { raw: 'Price on request', slots: [], slots_total: 3 },
-  rooms: [{ name: 'Category A apartment', price_from: null, features: ['Kite weekend EUR 369 per person'] }] };
+  // live rooms: no price (the slots never named a room); a third room no slot names, for the "stays as it is" case
+  rooms: [
+    { name: 'Category A apartment', price_from: null, price_from_is_minimum: false, priced_months: [], availability: [], features: ['Kite weekend EUR 369 per person'] },
+    { name: 'Category B holiday flat', price_from: null, price_from_is_minimum: false, priced_months: [], availability: [], features: [] },
+    { name: 'Boat house', price_from: null, price_from_is_minimum: false, priced_months: [], availability: [], features: [] },
+  ] };
+/** the adapter's lastPublished: its own slots for the weekends that are over, with the room they price */
+const nwPast = () => storedPastSlots('camp', NW, TODAY).map(s => ({ ...s, room: s.key.startsWith('cat-a') ? 'Category A apartment' : 'Category B holiday flat' }));
+const nwRun = (t: import('node:test').TestContext, offer: Record<string, unknown> = {}) =>
+  run(t, NW, async ctx => { ctx.lastPublished?.(nwPast()); return []; }, { offer: { ...NW_OFFER, ...offer }, kind: 'camp' });
+type Room = Record<string, unknown>;
 const NW_NOTE = 'From EUR 319 p.p. (last published price, 2026 dates are over, new dates not published yet: Kite weekend, category B holiday flat, small group from 5 persons, 2026-10-16; as of 2026-11-10)';
 const priceKeys = ['price_pp_cabin', 'price_basis_note', 'pricing', 'currency', 'price_unit', 'price_from_eur'];
 
-test('runAdapter: under EMPTY_GUARD a lastPublished price is written marked, slots and rooms stay as they are', async t => {
-  const { rep, writes, update } = await run(t, NW, async ctx => { ctx.lastPublished?.(storedPastSlots('camp', NW, TODAY)); return []; }, { offer: NW_OFFER, kind: 'camp' });
+test('runAdapter: under EMPTY_GUARD a lastPublished price is written marked on a listing without price, the slot stock stays', async t => {
+  const { rep, writes, update } = await nwRun(t);
   assert.equal(rep.status, 'ok', rep.error);
   assert.ok(rep.notes.some(n => n.includes('EMPTY_GUARD')), rep.notes.join('\n'));
   assert.equal(update.price_pp_cabin, 319);
@@ -144,7 +154,6 @@ test('runAdapter: under EMPTY_GUARD a lastPublished price is written marked, slo
   assert.equal(update.price_basis_note, NW_NOTE);
   assert.deepEqual((update.pricing as { slots: unknown[]; slots_total: number }).slots, [], 'the kept pricing.slots');
   assert.equal((update.pricing as { slots_total: number }).slots_total, 3, 'the stored slots_total');
-  assert.ok(!('rooms' in update), 'rooms untouched');
   assert.ok(!('live_availability' in update), 'badges untouched (run not ok)');
   assert.ok(!writes.some(w => w.table === 'offer_slots'), 'no slot row is written or retracted');
 });
@@ -161,4 +170,30 @@ test('runAdapter: under EMPTY_GUARD the stored slots fill a listing without pric
   // a stored slot still ahead: the guard keeps everything, the listing stays as it was
   const ahead = await run(t, [...NW, row('w|2026-11-20', 'Kite weekend', 349, '2026-11-20', '2026-11-22')], async () => [], { offer: NW_OFFER, kind: 'camp' });
   for (const k of priceKeys) assert.ok(!(k in ahead.update), `${k} written`);
+});
+
+test('runAdapter: under EMPTY_GUARD a kept listing price is never replaced by lastPublished', async t => {
+  // a current 2027 price the guard keeps (the adapter may have misread the new dates): no price column written
+  const kept = await nwRun(t, { price_pp_cabin: 349, price_basis_note: 'From EUR 349 p.p. (cheapest bookable: Kite weekend, 2027-05-28; as of 2026-11-09)' });
+  for (const k of priceKeys) assert.ok(!(k in kept.update), `${k} written`);
+  assert.ok(!kept.rep.notes.some(n => n.startsWith('wrote the last published price')));
+});
+
+test('runAdapter: under EMPTY_GUARD rooms without price take the last published one, a kept room price and an unnamed room stay', async t => {
+  const { rep, update } = await nwRun(t);
+  const rooms = update.rooms as Room[];
+  assert.deepEqual(rooms.map(r => [r.name, r.price_from, r.price_currency, r.price_unit, r.price_basis, r.price_past_year, r.price_from_is_minimum]), [
+    ['Category A apartment', 369, 'EUR', 'package', 'person', '2026', false],
+    ['Category B holiday flat', 319, 'EUR', 'package', 'person', '2026', true], // 339 / 319 by group size
+    ['Boat house', null, undefined, undefined, undefined, undefined, false],
+  ]);
+  assert.ok(rooms.every(r => Array.isArray(r.priced_months) && Array.isArray(r.availability) && typeof r.price_from_is_minimum === 'boolean'), 'no null in the keys KCS rejects');
+  assert.ok(rep.notes.includes('room prices: +2 -0 ~0'), rep.notes.join('\n'));
+  t.mock.restoreAll(); t.mock.timers.reset();
+  // a kept room price stays exactly as stored, the room without price is still filled
+  const heldA = { ...(NW_OFFER.rooms[0]), price_from: 399, price_currency: 'EUR', price_unit: 'package', price_basis: 'person', price_past_year: null };
+  const held = await nwRun(t, { rooms: [heldA, NW_OFFER.rooms[1], NW_OFFER.rooms[2]] });
+  const r2 = held.update.rooms as Room[];
+  assert.deepEqual(r2[0], heldA);
+  assert.equal(r2[1].price_from, 319);
 });
