@@ -13,6 +13,14 @@ const W2 = 128;                // second, finer check for pairs that pass at W (
 export const NCC_MIN = 0.985;
 export const NCC2_MIN = 0.95;
 export const HIST_MIN = 0.6;
+export interface DupMin { ncc: number; fine: number }
+export const SAME_PHOTO: DupMin = { ncc: NCC_MIN, fine: NCC2_MIN };
+/**
+ * Burst shots as the same photo, for the automatic media selection (media-auto.ts), where dropping a photo too many
+ * only leaves a place free: Kite & Wing's two wing aerials (the wing moved) scored 0.982 coarse / 0.859 fine, the next
+ * most alike pair of 14 photos of that provider and a Red Sea one 0.669 coarse (2026-11-10).
+ */
+export const BURST: DupMin = { ncc: 0.97, fine: 0.8 };
 
 interface Gray { w: number; h: number; px: Float32Array }
 export interface DupFeat extends Gray { hist: Float32Array; fine: Gray }
@@ -73,30 +81,30 @@ export function containment(big: Gray, small: Gray, from = 0.35, to = 1, step = 
 }
 
 /** Score of `small` inside `big`: coarse search at W, then the same scale (+-2.5 %) re-checked at W2. */
-export function dupScore(big: DupFeat, small: DupFeat): { coarse: number; fine: number } {
+export function dupScore(big: DupFeat, small: DupFeat, nccMin = NCC_MIN): { coarse: number; fine: number } {
   const c = containment(big, small);
-  if (c.ncc < NCC_MIN) return { coarse: c.ncc, fine: -1 };
+  if (c.ncc < nccMin) return { coarse: c.ncc, fine: -1 };
   const f = containment(big.fine, small.fine, Math.max(0.35, c.scale - 0.025), Math.min(1, c.scale + 0.025), 0.0125);
   return { coarse: c.ncc, fine: f.ncc };
 }
 
-/** True when a and b are the same photo (one may be a crop / zoom / resize of the other). */
-export function sameDupPhoto(a: DupFeat, b: DupFeat): boolean {
+/** True when a and b are the same photo (one may be a crop / zoom / resize of the other; with BURST a burst shot). */
+export function sameDupPhoto(a: DupFeat, b: DupFeat, min: DupMin = SAME_PHOTO): boolean {
   if (histIntersection(a.hist, b.hist) < HIST_MIN) return false;
-  return [dupScore(a, b), dupScore(b, a)].some(s => s.coarse >= NCC_MIN && s.fine >= NCC2_MIN);
+  return [dupScore(a, b, min.ncc), dupScore(b, a, min.ncc)].some(s => s.coarse >= min.ncc && s.fine >= min.fine);
 }
 
 /**
  * Drops later items that repeat an earlier photo; when the later one shows MORE (the earlier is a crop of it), the
  * wider one takes the earlier one's place, so the order (best-first) is kept and the zoomed copy goes.
  */
-export async function dropNearDuplicates<T>(items: T[], buf: (t: T) => Buffer): Promise<{ kept: T[]; dropped: T[] }> {
+export async function dropNearDuplicates<T>(items: T[], buf: (t: T) => Buffer, min: DupMin = SAME_PHOTO): Promise<{ kept: T[]; dropped: T[] }> {
   const feats: DupFeat[] = [];
   const kept: T[] = [], dropped: T[] = [];
   for (const it of items) {
     let f: DupFeat;
     try { f = await dupFeatures(buf(it)); } catch { kept.push(it); feats.push(null as unknown as DupFeat); continue; }
-    const j = feats.findIndex(k => k && sameDupPhoto(k, f));
+    const j = feats.findIndex(k => k && sameDupPhoto(k, f, min));
     if (j < 0) { kept.push(it); feats.push(f); continue; }
     // the wider view wins: if the kept one fits inside the new one better than the other way round, swap
     if (containment(f, feats[j]).ncc > containment(feats[j], f).ncc) { dropped.push(kept[j]); kept[j] = it; feats[j] = f; }

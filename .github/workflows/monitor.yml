@@ -56,8 +56,20 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: pnpm cli monitor --apply-approved
 
+      - name: Auto-select media
+        # A vision step fills listings with fewer than 12 media from their new candidates, always behind the
+        # live set (src/pipeline/media-auto.ts, Aaron 2026-11-02). Capped per run; the emptiest listings go first.
+        # A failure here must never block the apply below (it also carries the admin's own saves).
+        continue-on-error: true
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: pnpm cli cruise-media auto --limit 20 --max-minutes 10
+
       - name: Apply admin media selection
-        # Images/hero-videos the admin picked on /admin/media since the last run.
+        # Images/hero-videos picked since the last run: by the auto step above or by the admin on /admin/media.
         # TAVILY_API_KEY is not used by `apply` at runtime, but the command's import
         # graph pulls in src/lib/tavily.ts, which throws at module load if it's absent.
         env:

@@ -55,16 +55,16 @@ export default function Selector({
   const images = useMemo(() => candidates.filter(c => c.kind === 'image'), [candidates]);
   const videos = useMemo(() => candidates.filter(c => c.kind === 'video'), [candidates]);
 
-  // Initial selection: pending selection first, then the APPLIED one (after the
-  // cron/CLI ran, the admin's picks live on as status='applied' — without this
-  // branch the UI regressed to stale pre-curation "currently live" rows), and
-  // only for never-curated offers the currently-live fallback.
+  // Initial selection = the set apply builds: EVERY sorted 'selected' (pending)
+  // or 'applied' row (src/pipeline/media-selection.ts selectionImageRows). The
+  // pending rows alone are not the set: the auto step (cruise-media auto) adds
+  // 'selected' picks behind the applied live set, and failed downloads stay
+  // 'selected' next to applied rows; saving from those alone would replace the
+  // live set. Only never-curated offers fall back to the currently-live rows.
   const initial = useMemo(() => {
     const bySort = (a: CandidateView, b: CandidateView) => (a.sort ?? 9) - (b.sort ?? 9);
-    const selected = images.filter(c => c.status === 'selected').sort(bySort);
-    if (selected.length) return selected.map(c => c.id);
-    const applied = images.filter(c => c.status === 'applied' && c.sort !== null).sort(bySort);
-    if (applied.length) return applied.map(c => c.id);
+    const set = images.filter(c => (c.status === 'selected' || c.status === 'applied') && c.sort !== null).sort(bySort);
+    if (set.length) return set.slice(0, 12).map(c => c.id);
     return images.filter(c => (c.note ?? '').startsWith('currently live')).slice(0, 12).map(c => c.id);
   }, [images]);
 

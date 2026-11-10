@@ -5,8 +5,9 @@ import { isAdminKey } from '../../../../../lib/admin-key';
 // Persist the admin's media selection for one offer:
 //   images: up to 5 candidate ids in display order (index 0 = hero image)
 //   heroVideoId: optional video candidate id (becomes hero_video_url on apply)
-// Rows become status='selected'; `pnpm cli cruise-media apply` (daily cron)
-// downloads/compresses them into the bucket and updates the offer.
+// Rows become status='selected', the offer's other image candidates 'rejected';
+// `pnpm cli cruise-media apply` (daily cron) downloads/compresses them into the
+// bucket and updates the offer.
 
 export const dynamic = 'force-dynamic';
 
@@ -76,6 +77,17 @@ export async function POST(req: NextRequest) {
       .eq('id', heroVideoId);
     if (error) return NextResponse.json({ error: error.message }, { status: 500 });
   }
+
+  // Every image of this offer that was shown and not taken is 'rejected' (still pickable here): the automatic
+  // selection (`pnpm cli cruise-media auto`) only picks 'candidate' rows, so it never adds back what the admin left
+  // out, only photos collected after this save (Aaron 2026-11-10, variant B).
+  const { error: seenErr } = await supabase
+    .from('offer_media_candidates')
+    .update({ status: 'rejected' })
+    .eq('cruise_offer_id', offerId)
+    .eq('kind', 'image')
+    .eq('status', 'candidate');
+  if (seenErr) return NextResponse.json({ error: seenErr.message }, { status: 500 });
 
   return NextResponse.json({
     ok: true,
