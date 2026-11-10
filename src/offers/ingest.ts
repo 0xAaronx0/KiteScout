@@ -810,7 +810,7 @@ async function runAdapterInner(
     rep.operatorId = operatorId;
     const listingId = SOURCE_PREFIX + a.key;
     const { data: existing, error: rErr } = await supabase
-      .from('package_offers').select('id,images,pricing,rooms,itinerary_spots,price_basis_note').eq('source_listing_id', listingId).maybeSingle();
+      .from('package_offers').select('id,images,pricing,rooms,itinerary_spots,price_basis_note,price_pp_cabin').eq('source_listing_id', listingId).maybeSingle();
     if (rErr) throw new Error(`package_offers read failed: ${rErr.message}`);
     if (!existing && !content) throw new Error('offer not ingested yet: run a full ingest first');
     offerId = (existing?.id as string | undefined) ?? null;
@@ -829,8 +829,11 @@ async function runAdapterInner(
     const guardTripped = slots.length === 0 && known >= EMPTY_GUARD;
     if (guardTripped) rep.notes.push(`empty result with ${known} known slots: kept the stock (EMPTY_GUARD)`);
     // a clean run with no price and no date ahead: the stored slots that are over give the last published price
-    // (storedPastSlots). pricing.slots holds future slots only, so the table is read where it exists.
-    if (!price.min && !rep.slotError && incomplete === null && !guardTripped && !slots.some(s => isAhead(a.kind, s, today))) {
+    // (storedPastSlots). pricing.slots holds future slots only, so the table is read where it exists. Under the guard
+    // only for a listing that shows no price: the stock it reads is the one the guard keeps, and every date in it is
+    // over, so it can only fill "Price on request", never replace a kept price.
+    const storedHasNoPrice = existing?.price_pp_cabin === null || existing?.price_pp_cabin === undefined;
+    if (!price.min && !rep.slotError && incomplete === null && (!guardTripped || storedHasNoPrice) && !slots.some(s => isAhead(a.kind, s, today))) {
       let stored: unknown[] = prevSlots;
       if (useTable && offerId) {
         const { data, error: sErr } = await supabase.from('offer_slots').select(STORED_SLOT_COLS).eq('package_offer_id', offerId).eq('active', true);
@@ -848,6 +851,11 @@ async function runAdapterInner(
     // the jsonb summary is all-or-nothing: keep the old one on a partial or empty delivery, and a partial run that
     // finds no price never overwrites the stored one (pricing.slots is empty once every date is over)
     const keepSlots = guardTripped || (incomplete !== null && (slots.length < prevSlots.length || !price.min));
+    // the guard keeps the slot stock (pricing.slots, offer_slots, rooms), not a price: with no slot delivered, a price
+    // here comes from dates that are over (lastPublished or the stored slots) and is marked as last published
+    // (Nordwind 2026-10-18..11-10: the log said "From EUR 319 p.p.", the listing stayed "Price on request")
+    const guardPrice = guardTripped && price.min !== null;
+    if (guardPrice) rep.notes.push(`wrote the last published price under the guard: ${price.raw}`);
     const pricing = {
       raw: price.raw,
       currency: price.min?.currency ?? null,
@@ -856,11 +864,11 @@ async function runAdapterInner(
       observed_at: new Date().toISOString(),
       slots: keepSlots ? prevSlots
         : slots.filter(s => isAhead(a.kind, s, today)).slice(0, PRICING_SLOT_CAP).map(slotJson),
-      slots_total: keepSlots ? prevSlots.length : slots.length,
+      slots_total: keepSlots ? ((existing?.pricing as { slots_total?: number } | null)?.slots_total ?? prevSlots.length) : slots.length,
     };
-    const keptNote = keepSlots ? keptPriceNote(a.kind, (existing?.price_basis_note as string | null) ?? null, prevSlots, today) : null;
+    const keptNote = keepSlots && !guardPrice ? keptPriceNote(a.kind, (existing?.price_basis_note as string | null) ?? null, prevSlots, today) : null;
     if (keptNote) rep.notes.push('kept listing price marked as last published (all its dates are over)');
-    const priceCols = keepSlots ? (keptNote ? { price_basis_note: keptNote } : {}) : {
+    const priceCols = keepSlots && !guardPrice ? (keptNote ? { price_basis_note: keptNote } : {}) : {
       pricing,
       price_unit: price.priceUnit,
       price_basis_note: price.note,
