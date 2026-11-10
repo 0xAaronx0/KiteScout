@@ -1,8 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  acceptShared, acceptVerdict, isOwnSiteImage, MAX_MEDIA, namedPlaces, photoStem, placeTerms, planAutoFill,
-  selectionImageRows, type FillPlan, type MediaRow,
+  acceptShared, acceptVerdict, boatMismatch, cornerCutout, CUTOUT_SIZE, fileNameFlag, fileNamePlaces, foreignCountries, isOwnSiteImage, listingBoat, MAX_MEDIA,
+  namedPlaces, photoStem, placeTerms, planAutoFill, selectionImageRows, type FillPlan, type MediaRow,
 } from '../../src/pipeline/media-selection.js';
 
 const U = 'https://caribbeankitecruise.com/wp-content/uploads';
@@ -161,7 +161,7 @@ test('rule 4: namedPlaces reads file names, plural and one-letter-off spellings'
   const g = placeTerms(grenadines);
   assert.deepEqual(namedPlaces(`${V2}/Paddleboarding-in-Mayrau-lagoon-with-kite-cruise.jpg`, g), ['mayreau']);
   assert.deepEqual(namedPlaces(`${V2}/Kite_Wing_Frigate.jpg`, g), ['fregate']);
-  assert.deepEqual(namedPlaces(`${V2}/KitespotTobagoCays.jpg`, g), ['tobago']);
+  assert.deepEqual(namedPlaces(`${V2}/KitespotTobagoCays.jpg`, g), ['tobago', 'tobagocays']);
   assert.deepEqual(namedPlaces(`${V2}/Kite-Cruise-on-Luxury-Catamaran.jpg`, g), []);
 });
 
@@ -175,12 +175,123 @@ test('rule 4: acceptVerdict for photos judged per listing', () => {
   assert.match(acceptVerdict(null, { tied: true }) ?? '', /not judged/);
 });
 
-test('rule 4: a site-wide photo of a multi-destination provider needs every pass to call it placeless', () => {
+test('rule 4: a site-wide photo needs every pass to call it placeless', () => {
   const ok = { keep: true, land: 'background' as const, place: null };
-  assert.equal(acceptShared([ok, { ...ok, land: 'none' }]), null);
-  assert.match(acceptShared([ok, { ...ok, land: 'prominent' }]) ?? '', /subject/);
-  assert.match(acceptShared([ok, { ...ok, place: 'Anegada' }]) ?? '', /Anegada/);
-  assert.match(acceptShared([ok, null]) ?? '', /every pass/);
-  assert.match(acceptShared([]) ?? '', /every pass/);
-  assert.match(acceptShared([ok, { ...ok, keep: false }]) ?? '', /not a fitting/);
+  const one = { destinations: 1 };
+  assert.equal(acceptShared([ok, { ...ok, land: 'none' }], one), null);
+  assert.match(acceptShared([ok, { ...ok, land: 'prominent' }], one) ?? '', /subject/);
+  assert.match(acceptShared([ok, { ...ok, place: 'Anegada' }], one) ?? '', /Anegada/);
+  assert.match(acceptShared([ok, null], one) ?? '', /every pass/);
+  assert.match(acceptShared([], one) ?? '', /every pass/);
+  assert.match(acceptShared([ok, { ...ok, keep: false }], one) ?? '', /not a fitting/);
+});
+
+test('rule 4: a provider with more than one destination: no coast at all in a site-wide photo (dry run 2026-11-10)', () => {
+  // Kite & Sail sails the Grenadines and the Cyclades: bare hills behind a wingfoiler went onto the Grenadines listing
+  const bg = { keep: true, land: 'background' as const, place: null };
+  const open = { ...bg, land: 'none' as const };
+  assert.match(acceptShared([open, bg, open], { destinations: 2 }) ?? '', /more than one place/);
+  assert.equal(acceptShared([open, open, open], { destinations: 2 }), null);
+  assert.equal(acceptShared([open, bg, open], { destinations: 1 }), null);
+});
+
+test('rule 3: four flat white corners are a cut-out, not a photo (dry run 2026-11-10: merch, a round portrait)', () => {
+  const n = CUTOUT_SIZE;
+  const img = (f: (x: number, y: number) => [number, number, number]) => {
+    const a = new Uint8Array(n * n * 3);
+    for (let y = 0; y < n; y++) for (let x = 0; x < n; x++) a.set(f(x, y), (y * n + x) * 3);
+    return a;
+  };
+  const disc = (x: number, y: number) => (x - n / 2) ** 2 + (y - n / 2) ** 2 < (n / 2) ** 2;
+  assert.equal(cornerCutout(img(() => [255, 255, 255])), true);
+  assert.equal(cornerCutout(img((x, y) => (disc(x, y) ? [90, 70, 60] : [255, 255, 255]))), true);
+  // a bright sky over the sea, a photo with one off-white corner
+  assert.equal(cornerCutout(img((_, y) => (y < n / 2 ? [250, 250, 252] : [20, 90, 140]))), false);
+  assert.equal(cornerCutout(img((x, y) => (x < 6 && y < 6 ? [244, 250, 250] : [255, 255, 255]))), false);
+});
+
+test('rule 3: screenshots and Flickr downloads are not the provider\'s own photos (dry run 2026-11-02)', () => {
+  const S = 'https://images.squarespace-cdn.com/content/v1/abc';
+  assert.match(fileNameFlag(`${S}/Screenshot+2023-02-27+at+21.27.53.png`) ?? '', /screenshot/);
+  assert.match(fileNameFlag(`${U}/Bildschirmfoto-2024-05-01.png`) ?? '', /screenshot/);
+  assert.match(fileNameFlag(`${U}/6200147916_4f88059655_b-1920w.jpg`) ?? '', /Flickr/);
+  assert.match(fileNameFlag(`${U}/80f7e-2947426265_41863dc803.jpg`) ?? '', /Flickr/);
+  // the provider's own uploads: Facebook exports, Wix ids, camera names
+  assert.equal(fileNameFlag(`${U}/323780955_2250486811797500_8726789337292_n.jpg`), null);
+  assert.equal(fileNameFlag('https://static.wixstatic.com/media/a066cb_3cc63a54d51e4ac1bd4d80e4d57243fc~mv2.jpg'), null);
+  assert.equal(fileNameFlag(`${U}/IMG_20240725_183226.jpg`), null);
+});
+
+test('rule 4: a file name that names another country is not for this listing', () => {
+  const egypt = { country: 'Egypt', region: 'Red Sea', title: 'Red Sea Kite Safari on a Yacht' };
+  assert.deepEqual(foreignCountries(`${U}/jean-kitevoodoo-kitesurf-school-portugal.jpeg`, egypt), ['Portugal']);
+  assert.deepEqual(foreignCountries(`${U}/How-to-Master-Wing-Foiling-in-Portugals-Winds.jpg`, egypt), ['Portugal']);
+  assert.deepEqual(foreignCountries(`${U}/costa-rica-trip.jpg`, egypt), ['Costa Rica']);
+  assert.deepEqual(foreignCountries(`${U}/turkey-gokceada.jpg`, egypt), ['Türkiye']);
+  // its own country, and words that only look like one
+  assert.deepEqual(foreignCountries(`${U}/kite-safari-egypt.jpg`, egypt), []);
+  assert.deepEqual(foreignCountries(`${U}/scuba-diving.jpg`, egypt), []);
+  assert.deepEqual(foreignCountries(`${U}/jordan-kiting.jpg`, egypt), []);
+  // "St." countries need the saint: "martin" or "lucia" alone is more often a photographer
+  assert.deepEqual(foreignCountries(`${U}/photo-by-martin.jpg`, egypt), []);
+  assert.deepEqual(foreignCountries(`${U}/st-lucia-kite.jpg`, egypt), ['St. Lucia']);
+  // ICU spells it "St. Vincent & Grenadines", the listing "Saint Vincent and the Grenadines": still its own
+  assert.deepEqual(foreignCountries(`${U}/saint-vincent-grenadines-kite.jpg`, grenadines), []);
+  const bvi = { country: 'British Virgin Islands', region: 'BVI', title: 'Virgin Islands Kitesurf & Wingfoil Cruise' };
+  assert.deepEqual(foreignCountries(`${U}/virgin-islands-anegada.jpg`, bvi), []);
+  assert.deepEqual(foreignCountries(`${U}/virgin-islands-anegada.jpg`, egypt), ['U.S. Virgin Islands']);
+});
+
+test('rule 4: a photo of another kind of boat than the listing sails on is left out', () => {
+  assert.equal(listingBoat('catamaran'), 'catamaran');
+  assert.equal(listingBoat('liveaboard'), 'motor');
+  assert.equal(listingBoat('gulet'), 'traditional');
+  assert.equal(listingBoat('speedboat'), null);
+  assert.equal(listingBoat(null), null);
+  // Sardinia catamaran listing, motor yacht from the provider's Red Sea page
+  assert.match(boatMismatch(['motor'], 'catamaran') ?? '', /motor yacht, the trip is on a catamaran/);
+  assert.equal(boatMismatch(['catamaran'], 'catamaran'), null);
+  // no boat, a support dinghy, or a listing whose boat is not known: no boat rule
+  assert.equal(boatMismatch(['none', 'other', null], 'catamaran'), null);
+  assert.equal(boatMismatch(['motor'], null), null);
+  // one of three passes saw a motor yacht: in doubt leave it out
+  assert.match(boatMismatch(['catamaran', 'motor', 'catamaran'], 'catamaran') ?? '', /another boat/);
+});
+
+test('rule 3: text graphics by their file name (schedule, wind statistics, maps)', () => {
+  assert.match(fileNameFlag('https://images.squarespace-cdn.com/content/v1/abc/2026+schedule+kitesurf+web.jpg') ?? '', /text graphic/);
+  assert.match(fileNameFlag(`${U}/Grenadines-windguru-statistic.jpg`) ?? '', /text graphic/);
+  assert.match(fileNameFlag(`${U}/route-map-cyclades.png`) ?? '', /text graphic/);
+  // whole words only: a charter catamaran is a photo
+  assert.equal(fileNameFlag(`${U}/catamaran_charter_lagoon_500.jpg`), null);
+});
+
+test('rule 4: a place of several words is found in the file name, joined or not', () => {
+  const g = placeTerms(grenadines);
+  assert.ok(g.includes('unionisland') && g.includes('tobagocays') && g.includes('palmisland'));
+  assert.deepEqual(namedPlaces(`${V2}/UnionIsland_Kitecruise_Jan23_072.webp`, g), ['unionisland']);
+  assert.deepEqual(namedPlaces(`${V2}/union-island-kite.jpg`, g), ['unionisland']);
+  // the single generic words still name nothing
+  assert.deepEqual(namedPlaces(`${V2}/palm-trees-on-the-beach.jpg`, g), []);
+});
+
+test('rule 4: a file name names this listing only with a term no other destination of the provider shares', () => {
+  const petali = placeTerms({ country: 'Greece', region: 'Petali Islands / South Evia', title: 'Petali Islands & South Evia Kitesurfing Cruise' });
+  const cyclades = placeTerms({ country: 'Greece', region: 'Cyclades', title: 'Kite Cruise Cyclades', spots: ['Naxos', 'Paros'] });
+  // Kitegreece: "greece" is in every listing of the provider, the file names the Cyclades
+  assert.deepEqual(fileNamePlaces(`${U}/Cruises-Cyclades-KitegreeceLagoon-40-1-scaled.jpg`, petali, cyclades), { own: [], other: ['cyclades'] });
+  assert.deepEqual(fileNamePlaces(`${U}/Lagoon-40-kitegreece-cruising-scaled.jpg`, petali, cyclades), { own: [], other: [] });
+  assert.deepEqual(fileNamePlaces(`${U}/petali-anchorage.jpg`, petali, cyclades), { own: ['petali'], other: [] });
+  // a provider with one destination: every own term counts
+  assert.deepEqual(fileNamePlaces(`${U}/kite-greece.jpg`, petali, []).own, ['greece']);
+});
+
+test('rule 4: a site-wide photo: the place needs every pass, a fitting photo the majority', () => {
+  const ok = { keep: true, land: 'none' as const, place: null };
+  const no = { ...ok, keep: false };
+  const five = { destinations: 5 };
+  assert.equal(acceptShared([ok, ok, no], five), null);
+  assert.match(acceptShared([ok, no, no], five) ?? '', /not a fitting/);
+  assert.match(acceptShared([ok, ok, { ...ok, place: 'Union Island' }], five) ?? '', /Union Island/);
+  assert.match(acceptShared([ok, ok, { ...ok, land: 'prominent' }], five) ?? '', /subject/);
 });

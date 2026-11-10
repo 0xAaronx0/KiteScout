@@ -9,16 +9,17 @@
 // Per offer with room (fewer than 12 media) and unjudged candidates:
 //   1. The live images are the base and stay as they are (rules 1 + 2, media-selection.ts planAutoFill); offers with a
 //      pending 'selected' row are left to apply first.
-//   2. Free checks: provider's own site only (its domain or site-builder CDN), no stock / AI / floor-plan or junk file
-//      names, no second copy of a live photo (same file stem, e.g. a /v2/ or -scaled copy), no file name that names
-//      another destination of the provider. Then download, size filter, same pixels as a live photo or another one.
+//   2. Free checks: provider's own site only (its domain or site-builder CDN), no stock / AI / floor-plan / screenshot /
+//      Flickr or junk file names, no second copy of a live photo (same file stem, e.g. a /v2/ or -scaled copy), no file
+//      name that names another destination of the provider or another country. Then download, size filter, same pixels
+//      as a live photo or another one.
 //   3. Vision on ANALYSIS_MODEL via OpenRouter (the cheap model; OpenRouter's usage.cost is summed):
 //      - photos tied to the listing (its own page or its destination page, or the file name names the destination):
 //        one call per listing, keep or not and WHERE (generic / this / other / unsure), acceptVerdict decides;
-//      - site-wide photos of a provider with several destinations: judged once per provider in SHARED_PASSES passes
-//        (how much land they show, whether they show a particular place); acceptShared lets through only the photos
-//        every pass calls placeless, so no island lands on another island's listing.
-//      A provider with one destination: every photo goes through the per-listing call.
+//      - site-wide photos (homepage, general pages): judged once per provider in SHARED_PASSES passes (how much land
+//        they show, whether they show a particular place); acceptShared lets through only the photos every pass calls
+//        placeless, so no island lands on another island's listing and no home spot of a school on its safari.
+//      Both calls also name the boat; a photo of another kind of boat than the listing's vessel_type is left out.
 //   4. Write: live base as applied rows, the picks as 'selected' behind it (own-page photos first, then shared ones in
 //      the model's order), the rejected rows 'rejected' (still visible and pickable in /admin/media). Photos the model
 //      did not see stay 'candidate' for the next run.
@@ -38,12 +39,15 @@ import { withRetry } from '../lib/retry.js';
 import { supabase } from '../lib/supabase.js';
 import { isNotOwnPhoto } from '../offers/gallery.js';
 import {
-  acceptShared, acceptVerdict, isOwnSiteImage, LANDS, namedPlaces, photoStem, placeTerms, planAutoFill, PLACES,
-  selectionImageRows, type FillPlan, type Land, type Place, type SharedVerdict,
+  acceptShared, acceptVerdict, boatMismatch, BOATS, cornerCutout, CUTOUT_SIZE, fileNameFlag, fileNamePlaces, foreignCountries,
+  isOwnSiteImage, LANDS, listingBoat, photoStem, placeTerms, planAutoFill, PLACES, selectionImageRows, type Boat, type FillPlan, type Land,
+  type Place, type SharedVerdict,
 } from './media-selection.js';
 
 const VISION_MAX = 16;         // photos per vision call (own-page photos get extra seats, see visionBatch)
-const SHARED_PASSES = 2;       // a site-wide photo needs this many agreeing judgements
+// a site-wide photo needs this many agreeing judgements: with 2 the cheap model let a green island through on one run
+// and not on the next (Caribbean live run 2026-11-02)
+const SHARED_PASSES = 3;
 const MAX_DOWNLOADS = 32;      // candidates fetched per offer and run
 const DOWNLOAD_CONCURRENCY = 4;
 
@@ -57,6 +61,7 @@ interface OfferRow {
   images: StoredImage[] | null;
   hero_video_url: string | null;
   itinerary_spots: Array<{ name?: string | null }> | null;
+  vessel_type: string | null;
   is_active: boolean | null;
   is_reseller: boolean | null;
   cruise_provider_id: string;
@@ -88,8 +93,9 @@ interface Photo {
   keep?: boolean;
   place?: Place | null;
   land?: Land | null;
+  boat?: Boat | null;
   caption?: string | null;
-  /** judged as a site-wide photo of a multi-destination provider */
+  /** judged as a site-wide photo, once per provider */
   shared?: boolean;
   /** null = accepted */
   reason?: string | null;
@@ -114,16 +120,25 @@ interface Prepared {
   rows: CandRow[];
   /** judged per listing */
   tied: Photo[];
-  /** site-wide photos of a multi-destination provider, judged once per provider */
+  /** site-wide photos, judged once per provider */
   shared: Photo[];
   others: OfferRow[];
 }
 
 const liveImagesOf = (images: StoredImage[] | null) => [...(images ?? [])].sort((a, b) => (a.sort ?? 0) - (b.sort ?? 0));
+async function isCutout(buf: Buffer): Promise<boolean> {
+  try {
+    const rgb = await sharp(buf).rotate().resize(CUTOUT_SIZE, CUTOUT_SIZE, { fit: 'fill' }).flatten({ background: '#ffffff' })
+      .removeAlpha().raw().toBuffer();
+    return cornerCutout(rgb);
+  } catch { return false; }
+}
+
 const destKey = (o: OfferRow) => `${(o.country ?? '').toLowerCase()}|${(o.region ?? '').toLowerCase()}`;
 const destLabel = (o: OfferRow) => (o.region && o.region !== o.country ? `${o.region} (${o.country})` : o.country ?? o.title);
 const spotNames = (o: OfferRow) => (o.itinerary_spots ?? []).map(s => s?.name).filter((n): n is string => !!n);
-const termsOf = (o: OfferRow) => placeTerms({ country: o.country, region: o.region, title: o.title, spots: spotNames(o) });
+const placeOf = (o: OfferRow) => ({ country: o.country, region: o.region, title: o.title, spots: spotNames(o) });
+const termsOf = (o: OfferRow) => placeTerms(placeOf(o));
 const hostOf = (u: string | null | undefined) => { try { return u ? new URL(u).hostname : ''; } catch { return ''; } };
 const fileOf = (u: string) => { try { return decodeURIComponent(new URL(u).pathname.split('/').pop() ?? u); } catch { return u; } };
 
@@ -131,7 +146,9 @@ const fileOf = (u: string) => { try { return decodeURIComponent(new URL(u).pathn
 const NOTE_ORDER = ['offer page', 'destination page', 'gallery page', 'homepage', 'provider page'];
 const noteRank = (n: string | null) => { const i = NOTE_ORDER.indexOf(n ?? ''); return i < 0 ? NOTE_ORDER.length : i; };
 
-const KEEP_RULE = `"keep": true for a real, sharp photo that fits a kite-cruise listing: the boat, its cabins or deck, people kiting, foiling, sailing or relaxing on board, or the scenery of the trip. false for logos, icons, badges, maps, text graphics, screenshots, product cut-outs, collages, stock-looking or AI-generated images, portraits or selfies as the subject, food.`;
+const KEEP_RULE = `"keep": true for a real, sharp photo that fits a kite-cruise listing: the boat, its cabins or deck, people kiting, foiling, sailing or relaxing on board, or the scenery of the trip. false for logos, icons, badges, maps, text graphics, screenshots, product cut-outs, collages, stock-looking or AI-generated images, portraits, headshots or selfies as the subject, team or staff photos, video stills with a play button, food.`;
+const BOAT_RULE = `"boat": the boat in the photo, also when only its deck or cabin shows and you can tell: "catamaran" (two hulls), "monohull" (a sailing yacht with one hull), "motor" (a motor yacht or liveaboard without sails), "traditional" (a wooden gulet or dhow), "other" (a dinghy, RIB or small support boat), "none" (no boat, or too small to tell).`;
+const boatOf = (item: Record<string, unknown>) => BOATS.find(b => b === item.boat) ?? null;
 
 async function bucketImage(path: string): Promise<Buffer | null> {
   const { data, error } = await supabase.storage.from(CRUISE_IMAGE_BUCKET).download(path);
@@ -159,32 +176,34 @@ async function visionCall(photos: Photo[], label: (p: Photo, i: number) => strin
   if (used.length === 0) return { items: new Map(), order: [], costUsd: 0 };
   blocks.push({ type: 'text', text: prompt });
 
-  let text = '';
   let costUsd = 0;
-  try {
-    const msg = await withRetry(() =>
-      anthropic.messages.create({
-        model: ANALYSIS_MODEL,
-        max_tokens: 3000,
-        // DeepSeek's thinking counts against max_tokens and left no JSON (images.ts visionSelect, 2026-11-02)
-        thinking: { type: 'disabled' },
-        messages: [{ role: 'user', content: blocks }],
-      }),
-      4,
-      3000,
-    );
-    text = msg.content[0]?.type === 'text' ? msg.content[0].text : '';
-    // OpenRouter reports the call's price in usage.cost (USD)
-    costUsd = Number((msg.usage as unknown as { cost?: number }).cost ?? 0) || 0;
-  } catch (err) {
-    console.error(`  vision call failed: ${err instanceof Error ? err.message.slice(0, 160) : err}`);
-    return null;
+  let parsed: Array<Record<string, unknown> | null> | null = null;
+  // an empty answer now and then (3 of ~150 calls, 2026-11-10) left a whole provider unjudged: ask once more
+  for (let attempt = 1; attempt <= 2 && !parsed; attempt++) {
+    let text = '';
+    try {
+      const msg = await withRetry(() =>
+        anthropic.messages.create({
+          model: ANALYSIS_MODEL,
+          max_tokens: 3000,
+          // DeepSeek's thinking counts against max_tokens and left no JSON (images.ts visionSelect, 2026-11-02)
+          thinking: { type: 'disabled' },
+          messages: [{ role: 'user', content: blocks }],
+        }),
+        4,
+        3000,
+      );
+      text = msg.content.map(b => (b.type === 'text' ? b.text : '')).join('');
+      // OpenRouter reports the call's price in usage.cost (USD)
+      costUsd += Number((msg.usage as unknown as { cost?: number }).cost ?? 0) || 0;
+    } catch (err) {
+      console.error(`  vision call failed: ${err instanceof Error ? err.message.slice(0, 160) : err}`);
+      return null;
+    }
+    parsed = parseJsonArray(text) as Array<Record<string, unknown> | null> | null;
+    if (!parsed) console.error(`  vision answer without a JSON array (attempt ${attempt}): ${text.slice(0, 160)}`);
   }
-  const parsed = parseJsonArray(text) as Array<Record<string, unknown> | null> | null;
-  if (!parsed) {
-    console.error(`  vision answer without a JSON array: ${text.slice(0, 160)}`);
-    return null;
-  }
+  if (!parsed) return null;
   const items = new Map<Photo, Record<string, unknown>>();
   const order: Photo[] = [];
   for (const item of parsed) {
@@ -218,7 +237,7 @@ async function prepareOffer(o: OfferRow, rows: CandRow[], siblings: OfferRow[], 
   const others = siblings.filter(s => s.id !== o.id && destKey(s) !== destKey(o));
   prepared.others = others;
   const ownTerms = termsOf(o);
-  const otherTerms = [...new Set(others.flatMap(termsOf))].filter(t => !ownTerms.includes(t));
+  const otherTerms = [...new Set(others.flatMap(termsOf))];
   const elsewhere = new Set<string>();
   for (const s of others) {
     for (const u of [...rowsOf(s.id).map(r => r.url), ...liveImagesOf(s.images).map(i => i.source_url)]) {
@@ -238,13 +257,16 @@ async function prepareOffer(o: OfferRow, rows: CandRow[], siblings: OfferRow[], 
   for (const r of cands) {
     const key = imageIdentity(r.url);
     const stem = photoStem(r.url);
-    const namedOther = namedPlaces(r.url, otherTerms);
-    const namesOwn = namedPlaces(r.url, ownTerms).length > 0;
+    const named = fileNamePlaces(r.url, ownTerms, otherTerms);
+    const namedOther = [...named.other, ...foreignCountries(r.url, placeOf(o))];
+    const namesOwn = named.own.length > 0;
+    const nameFlag = fileNameFlag(r.url);
     const ownPage = (r.note === 'offer page' || r.note === 'destination page') && !elsewhere.has(key) && !(stem && elsewhere.has(`stem:${stem}`));
     const p: Photo = { row: r, key, sourceUrl: r.url, width: 0, height: 0, ownPage, tied: ownPage || namesOwn };
     p.reason =
       !isOwnSiteImage(r.url, siteHosts) ? "not on the provider's own site"
         : isNotOwnPhoto(r.url) ? 'stock / AI / floor-plan file name'
+          : nameFlag ? nameFlag
           : isJunkImageUrl(r.url) ? 'logo / icon / food file name'
             : liveIds.has(key) || (stem && liveStems.has(stem)) ? 'same file as a live photo'
               : poolKeys.has(key) || (stem && poolKeys.has(`stem:${stem}`)) ? 'same file as another candidate'
@@ -266,6 +288,7 @@ async function prepareOffer(o: OfferRow, rows: CandRow[], siblings: OfferRow[], 
     p.width = size.width;
     p.height = size.height;
     if (!usablePhotoSize(size.width, size.height)) p.reason = `too small or banner-shaped (${size.width}x${size.height})`;
+    else if (await isCutout(buf)) p.reason = 'cut-out on white (product, round portrait or graphic)';
   })));
   await Promise.all(live.map((img, i) => limit(async () => { out.live[i].buf = await bucketImage(img.path); })));
   const liveFeats = await Promise.all(out.live.map(l => featuresOf(l.buf)));
@@ -279,7 +302,9 @@ async function prepareOffer(o: OfferRow, rows: CandRow[], siblings: OfferRow[], 
   const dedup = await dropNearDuplicates(pool.filter(p => !p.reason), p => p.buf!);
   for (const d of dedup.dropped) { d.reason = 'same photo as another candidate'; out.rejected.push(d); }
 
-  for (const p of dedup.kept) (others.length && !p.tied ? prepared.shared : prepared.tied).push(p);
+  // a site-wide photo is judged like one shared with other destinations, also for a provider with one listing: a kite
+  // school's homepage shows its home spot, not its Red Sea safari (2026-11-02)
+  for (const p of dedup.kept) (p.tied ? prepared.tied : prepared.shared).push(p);
   return prepared;
 }
 
@@ -306,9 +331,10 @@ Judge EVERY image:
   "this" = recognisably ${dest} or one of its stops
   "other" = recognisably somewhere else: the file name or the picture names or shows another island, country or spot${otherNames ? ` (for example ${otherNames})` : ''}
   "unsure" = a particular island, coastline, town or landmark you cannot place
+- ${BOAT_RULE}
 - "caption": what it shows, at most 8 words.
 Respond with ONLY a JSON array, one object per image, the kept photos first and best first:
-[{"index": <number>, "keep": <true|false>, "place": "generic|this|other|unsure", "caption": "..."}]`;
+[{"index": <number>, "keep": <true|false>, "place": "generic|this|other|unsure", "boat": "none|catamaran|monohull|motor|traditional|other", "caption": "..."}]`;
   const label = (p: Photo, i: number) =>
     `Image ${i}: file "${fileOf(p.sourceUrl)}", ${p.ownPage ? `from the ${dest} trip's own page` : "from another page of the provider's site"}`;
   const res = await visionCall(batch, label, prompt);
@@ -320,50 +346,56 @@ Respond with ONLY a JSON array, one object per image, the kept photos first and 
     const item = res.items.get(p)!;
     p.keep = item.keep === true;
     p.place = PLACES.find(x => x === item.place) ?? null;
+    p.boat = boatOf(item);
     p.caption = captionOf(item);
-    p.reason = acceptVerdict({ keep: p.keep, place: p.place }, { tied: p.tied });
+    p.reason = acceptVerdict({ keep: p.keep, place: p.place }, { tied: p.tied }) ?? boatMismatch([p.boat], listingBoat(o.vessel_type));
     (p.reason ? prep.out.rejected : accepted).push(p);
   }
   return accepted; // best first, as the model listed them
 }
 
 // ---------------------------------------------------------------------------
-// Vision: site-wide photos of a provider with several destinations, once per provider
+// Vision: site-wide photos (homepage, general pages), once per provider
 // ---------------------------------------------------------------------------
-async function judgeShared(preps: Prepared[]): Promise<{ order: string[]; verdict: Map<string, { reason: string | null; land: Land | null; caption: string | null }>; judged: Set<string>; costUsd: number }> {
-  const result = { order: [] as string[], verdict: new Map<string, { reason: string | null; land: Land | null; caption: string | null }>(), judged: new Set<string>(), costUsd: 0 };
+type SharedResult = { reason: string | null; land: Land | null; boats: Array<Boat | null>; caption: string | null };
+
+async function judgeShared(preps: Prepared[]): Promise<{ order: string[]; verdict: Map<string, SharedResult>; judged: Set<string>; costUsd: number }> {
+  const result = { order: [] as string[], verdict: new Map<string, SharedResult>(), judged: new Set<string>(), costUsd: 0 };
   // one photo per key (the same homepage photo is a row on every listing)
   const byKey = new Map<string, Photo>();
   for (const prep of preps) for (const p of prep.shared) if (!byKey.has(p.key)) byKey.set(p.key, p);
   if (byKey.size === 0) return result;
   const dedup = await dropNearDuplicates([...byKey.values()], p => p.buf!);
-  for (const d of dedup.dropped) result.verdict.set(d.key, { reason: 'same photo as another candidate', land: null, caption: null });
+  for (const d of dedup.dropped) result.verdict.set(d.key, { reason: 'same photo as another candidate', land: null, boats: [], caption: null });
   const batch = visionBatch(dedup.kept, [], VISION_MAX).map(b => b.img);
   for (const d of dedup.dropped) result.judged.add(d.key);
 
   const o = preps[0].out.offer;
-  const dests = [...new Set(preps.flatMap(pr => [pr.out.offer, ...pr.others]).map(destLabel))].join('; ');
-  const prompt = `These photos come from the website of ${o.provider.name ?? o.provider.root_domain}, which runs kite cruises in several destinations: ${dests}.
-Its pages reuse the same photos for every destination, so a photo would be shown on the listing of each of them. That is only right when nothing in the photo shows WHERE it was taken.
+  const offers = preps.flatMap(pr => [pr.out.offer, ...pr.others]);
+  const destinations = new Set(offers.map(destKey)).size;
+  const dests = [...new Set(offers.map(destLabel))].join('; ');
+  const prompt = `These photos come from the website of ${o.provider.name ?? o.provider.root_domain}: its homepage and general pages, not the page of a particular trip. It runs kite cruises in: ${dests}.
+Such site-wide photos often show another trip, the provider's home spot or its school, so a photo may go on a trip's listing only when nothing in it shows WHERE it was taken.
 Judge EVERY image:
 - ${KEEP_RULE}
 - "land": how much land or shore the photo shows: "none" = only water, sky, the boat or people (a thin line of far-away coast at the horizon counts as none); "background" = some coast, hills or palms behind the main subject, small and not the point of the photo; "prominent" = an island, beach, lagoon, reef, hills, town or landmark fills a large part of the photo or is its subject.
 - "place": the island, spot or country that the file name names or that the photo recognisably shows, else null.
+- ${BOAT_RULE}
 - "caption": what it shows, at most 8 words.
 Respond with ONLY a JSON array, one object per image, the kept photos first and best first:
-[{"index": <number>, "keep": <true|false>, "land": "none|background|prominent", "place": "<name>" or null, "caption": "..."}]`;
+[{"index": <number>, "keep": <true|false>, "land": "none|background|prominent", "place": "<name>" or null, "boat": "none|catamaran|monohull|motor|traditional|other", "caption": "..."}]`;
   const label = (p: Photo, i: number) => `Image ${i}: file "${fileOf(p.sourceUrl)}"`;
 
-  const passes: Array<Map<Photo, SharedVerdict & { caption: string | null }>> = [];
+  const passes: Array<Map<Photo, SharedVerdict & { boat: Boat | null; caption: string | null }>> = [];
   for (let pass = 0; pass < SHARED_PASSES; pass++) {
     // a different order each pass, so a position effect cannot carry a photo through
     const res = await visionCall(pass % 2 ? [...batch].reverse() : batch, label, prompt);
     if (!res) break;
     result.costUsd += res.costUsd;
-    const m = new Map<Photo, SharedVerdict & { caption: string | null }>();
+    const m = new Map<Photo, SharedVerdict & { boat: Boat | null; caption: string | null }>();
     for (const [p, item] of res.items) {
       const place = typeof item.place === 'string' && item.place.trim() && !/^(null|none|unknown|n\/a)$/i.test(item.place.trim()) ? item.place.trim() : null;
-      m.set(p, { keep: item.keep === true, land: LANDS.find(x => x === item.land) ?? null, place, caption: captionOf(item) });
+      m.set(p, { keep: item.keep === true, land: LANDS.find(x => x === item.land) ?? null, place, boat: boatOf(item), caption: captionOf(item) });
     }
     if (pass === 0) result.order = res.order.map(p => p.key);
     passes.push(m);
@@ -373,7 +405,7 @@ Respond with ONLY a JSON array, one object per image, the kept photos first and 
     const vs = passes.map(m => m.get(p) ?? null);
     if (vs.every(v => !v)) continue; // the model skipped it: next run
     result.judged.add(p.key);
-    result.verdict.set(p.key, { reason: acceptShared(vs), land: vs[0]?.land ?? null, caption: vs[0]?.caption ?? null });
+    result.verdict.set(p.key, { reason: acceptShared(vs, { destinations }), land: vs[0]?.land ?? null, boats: vs.map(v => v?.boat ?? null), caption: vs[0]?.caption ?? null });
   }
   return result;
 }
@@ -445,7 +477,8 @@ async function thumb(buf: Buffer | null | undefined, url: string): Promise<strin
   return url;
 }
 
-const how = (p: Photo) => (p.shared ? `geteilt, Land: ${p.land ?? '?'}` : `${p.place ?? '?'}${p.ownPage ? ', eigene Seite' : p.tied ? ', Dateiname' : ''}`);
+const how = (p: Photo) => (p.shared ? `geteilt, Land: ${p.land ?? '?'}` : `${p.place ?? '?'}${p.ownPage ? ', eigene Seite' : p.tied ? ', Dateiname' : ''}`)
+  + (p.boat && p.boat !== 'none' ? `, Boot: ${p.boat}` : '');
 
 async function writeSheet(path: string, outcomes: OfferOutcome[], dryRun: boolean, totalUsd: number): Promise<void> {
   const card = (src: string, top: string, sub: string, cls = '') =>
@@ -506,7 +539,7 @@ export async function runAutoSelectMedia(opts: {
   const started = Date.now();
   const { data, error } = await supabase
     .from('cruise_offers')
-    .select('id, slug, title, country, region, source_url, images, hero_video_url, itinerary_spots, is_active, is_reseller, cruise_provider_id, provider:cruise_providers!inner(name, root_domain, website_url)');
+    .select('id, slug, title, country, region, source_url, images, hero_video_url, itinerary_spots, vessel_type, is_active, is_reseller, cruise_provider_id, provider:cruise_providers!inner(name, root_domain, website_url)');
   if (error) throw error;
   const all = ((data ?? []) as unknown as OfferRow[]).filter(o => o.is_active !== false && !o.is_reseller);
   const prefixes = opts.offer?.split(',').map(s => s.trim()).filter(Boolean) ?? [];
@@ -569,8 +602,10 @@ export async function runAutoSelectMedia(opts: {
         p.shared = true;
         if (!shared.judged.has(p.key)) { out.unjudged.push(p); continue; }
         const v = shared.verdict.get(p.key)!;
-        p.reason = v.reason;
+        // the boat rule is per listing: one provider may sail a catamaran here and a motor yacht there
+        p.reason = v.reason ?? boatMismatch(v.boats, listingBoat(out.offer.vessel_type));
         p.land = v.land;
+        p.boat = v.boats.find(b => b && b !== 'none') ?? v.boats[0] ?? null;
         p.caption = v.caption;
         (p.reason ? out.rejected : sharedAccepted).push(p);
       }
