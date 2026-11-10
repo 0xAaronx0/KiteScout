@@ -1,6 +1,6 @@
-// Kite Suites (Praia Seca, Araruama): replays the home, /acomodacoes and /servicos recorded 2026-10-26 with curl
-// (Node cannot verify the site's ISRG Root YR chain, see the adapter header; scripts and styles trimmed).
-// Content only: no price on the site, WhatsApp request only -> [].
+// Kite Suites (Praia Seca, Araruama): replays the home, /acomodacoes/ and /servicos/ of the rebuilt site, recorded
+// 2026-11-10 with OFFERS_RECORD_DIR (the old Locaweb build broke the cron on 2026-11-09 and 2026-11-10).
+// Content only: one undated "Suítes a partir de R$ 418,00" line, WhatsApp request only -> [] with a note.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
@@ -16,36 +16,38 @@ const files = readdirSync(DIR);
 const read = (prefix: string) => readFileSync(join(DIR, files.find(f => f.startsWith(prefix))!), 'utf8');
 const notes: string[] = [];
 const ctx = { note: (t: string) => notes.push(t), incomplete: () => {} };
-const rooms = read('kitesuites.com.br_acomodacoes.');
-const IMG = 'https://yata-apix-9ac0e6bf-5cdd-4930-9841-f65a94fe84fe.s3-object.locaweb.com.br/';
+const rooms = read('kitesuites.com.br_acomodacoes_.');
+const IMG = 'https://kitesuites.com.br/assets/';
 
-test('kite-suites: three suites with facts and galleries', () => {
+test('kite-suites: three suites with facts, the shared Arubinha/Coroinha gallery and the Lagoa gallery', () => {
   const r = parseKsRooms(rooms);
   assert.deepEqual(r.map(x => [x.name, x.sizeM2, x.maxGuests, x.beds, x.images.length]), [
     ['Suite Arubinha', 17, 3, 'queen bed or two single beds, plus one single bed', 6],
-    ['Suite Coroinha', 17, 3, 'queen bed or two single beds, plus one single bed', 7],
-    ['Suite Lagoa', null, 4, 'double bed + bunk bed', 5],
+    ['Suite Coroinha', 17, 3, 'queen bed or two single beds, plus one single bed', 6],
+    ['Suite Lagoa', null, null, null, 4],
   ]);
+  assert.deepEqual(r[0].images, r[1].images, 'the page says the photos show both suites');
+  assert.ok(r[2].images.every(u => /suite-lagoa-/.test(u)));
   assert.deepEqual(r[0].amenities, ['Breakfast', 'Minibar', 'Air conditioning', 'TV', 'Wi-Fi']);
-  assert.deepEqual(r[2].amenities, ['Breakfast', 'Minibar', 'Air conditioning', 'Wi-Fi']);
-  assert.ok(r.every(x => x.images.every(u => u.startsWith(IMG) && u.endsWith('.jpg'))));
+  assert.deepEqual(r[2].amenities, ['Breakfast']);
+  assert.ok(r.every(x => x.images.every(u => u.startsWith(IMG))));
+  assert.deepEqual(parseKsRooms('<main><h1>Acomodações</h1></main>'), [], 'no cards: fetchSlots throws');
 });
 
 test('kite-suites: services with their photos, address', () => {
-  const s = parseKsServices(read('kitesuites.com.br_servicos.'));
-  assert.deepEqual(s.map(x => x.name), ['Gastronomia', 'Aulas de Kitesurf', 'Serviços de Praia', 'Passeios']);
-  assert.match(s[1].text, /nossos instrutores certificados/);
-  assert.equal(s[1].image, `${IMG}bf912733deca4f04b911846310b32913.jpg`);
-  assert.equal(ksAddress(read('kitesuites.com.br_.')), 'Av. Praia dos Nobres, 741 - Sao Tome, Praia Seca - Araruama - RJ, 28970-000');
+  const s = parseKsServices(read('kitesuites.com.br_servicos_.'));
+  assert.deepEqual(s.map(x => x.name), ['Piscina aquecida', 'Restaurante', 'Vestiários', 'Guardaria de equipamentos', 'Yoga',
+    'Canoa havaiana', 'Caiaque e stand up paddle', 'Day use para kitesurf']);
+  assert.equal(s[7].image, `${IMG}kitesurf-frente-05.jpg`);
+  assert.equal(ksAddress(read('kitesuites.com.br_.')), 'Av. Praia dos Nobres, 741, Praia Seca, Araruama - RJ');
 });
 
-test('kite-suites: no price on the site -> [] (price on request)', async () => {
-  assert.deepEqual(ksVisiblePrices(rooms), []);
+test('kite-suites: the undated "from" amount is noted, slots stay [] (price on request)', async () => {
+  assert.deepEqual(ksVisiblePrices(rooms), ['R$ 418,00.']);
   const slots = await kiteSuitesPraiaSeca.fetchSlots(ctx);
   assert.deepEqual(slots, []);
   assert.deepEqual(checkSlots(slots).problems, []);
-  assert.deepEqual(notes, []);
-  assert.deepEqual(ksVisiblePrices('<section><h3>Suite Lagoa</h3><p>Diária R$ 380</p></section>'), ['R$ 380']);
+  assert.deepEqual(notes, ['prices appeared on /acomodacoes (R$ 418,00.): extend the adapter']);
 });
 
 test('kite-suites: content', async () => {
@@ -62,17 +64,22 @@ test('kite-suites: content', async () => {
   assert.deepEqual(c.rooms.map(r => [r.name, r.description]), [
     ['Suite Arubinha', '17 m2, lagoon view, up to 3 guests, queen bed or two single beds, plus one single bed'],
     ['Suite Coroinha', '17 m2, lagoon view, up to 3 guests, queen bed or two single beds, plus one single bed'],
-    ['Suite Lagoa', 'ground floor, up to 4 guests, double bed + bunk bed, large bathroom'],
+    ['Suite Lagoa', 'private suite, layout and capacity on request'],
   ]);
   assert.match(c.summary, /with 3 suites: Suite Arubinha, Suite Coroinha, Suite Lagoa\./);
-  assert.match(c.summary, /there is a pool/);
-  assert.match(c.summary, /price on request/);
+  assert.match(c.summary, /heated pool/);
+  assert.match(c.summary, /partner school Wind Hunter Kite Center/);
+  assert.match(c.summary, /confirmed on request/);
   assert.doesNotMatch(c.summary, /[–—]/, 'no en/em dashes');
+  assert.ok(c.optionalServices.includes('Kite day use with shore support for rigging, launch and landing'));
   assert.equal(c.imageUrls.length, 12);
-  assert.equal(c.imageUrls[0], `${IMG}bf912733deca4f04b911846310b32913.jpg`, 'kite lesson photo first');
+  assert.equal(c.imageUrls[0], `${IMG}kitesurf-frente-05.jpg`, 'kite photo first');
   assert.equal(new Set(c.imageUrls).size, 12);
+  assert.ok(!c.imageUrls.some(u => /vestiarios|caiaque/.test(u)), 'illustrative service photos stay out');
   assert.equal(c.bookingUrl, 'https://wa.me/5522999886066');
+  assert.equal(c.sourceUrl, 'https://kitesuites.com.br/acomodacoes/');
   assert.match(c.sourceText ?? '', /address: Av\. Praia dos Nobres, 741/);
+  assert.match(c.sourceText ?? '', /Suítes a partir de R\$ 418,00\./);
   assert.equal(kiteSuitesPraiaSeca.instantBooking, false);
   assert.equal(kiteSuitesPraiaSeca.liveAvailability, undefined);
   assert.deepEqual(kiteSuitesPraiaSeca.disciplines, ['kitesurf']);

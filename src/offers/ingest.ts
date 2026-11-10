@@ -285,6 +285,35 @@ export function keptPriceNote(kind: OfferKind, note: string | null, storedSlots:
   return marked === note ? null : marked;
 }
 
+const STORED_SLOT_COLS = 'slot_key,start_date,end_date,unit,price,currency,price_unit,price_basis,occupancy,availability,availability_text,spots_left,date_precision,package_nights';
+
+/** a stored slot (offer_slots row or pricing.slots entry) back as a Slot */
+function storedSlot(j: Record<string, unknown>): Slot {
+  const num = (v: unknown) => (v === null || v === undefined ? null : Number(v));
+  return {
+    key: String(j.slot_key ?? j.key ?? ''), startDate: (j.start_date as string | null) ?? null, endDate: (j.end_date as string | null) ?? null,
+    unit: (j.unit as string | null) ?? null, price: num(j.price), currency: (j.currency as string | null) ?? null,
+    priceUnit: (j.price_unit as Slot['priceUnit']) ?? null, priceBasis: (j.price_basis as Slot['priceBasis']) ?? null,
+    occupancy: num(j.occupancy), availability: ((j.availability ?? j.status) as Slot['availability']) ?? 'on_request',
+    availabilityText: ((j.availability_text ?? j.status_text) as string | null) ?? null, spotsLeft: num(j.spots_left),
+    datePrecision: (j.date_precision as Slot['datePrecision']) ?? 'day', packageNights: num(j.package_nights),
+  };
+}
+
+/**
+ * The fallback for a clean run that finds no price (Aaron 2026-11-10, Wind Sports Fiji: season over, adapter filters on
+ * today, listing fell to "Price on request"): the stored priced slots, to go into summarizePrice as last published.
+ * Empty when one of them is still ahead (a price the provider no longer prints before its date is a removed price) or
+ * when the latest of them ended more than 12 months ago.
+ */
+export function storedPastSlots(kind: OfferKind, stored: unknown[], today: string): Slot[] {
+  const slots = (stored as Array<Record<string, unknown>>).map(storedSlot).filter(s => s.price !== null);
+  if (!slots.length || slots.some(s => isAhead(kind, s, today))) return [];
+  const last = slots.map(s => s.endDate ?? s.startDate ?? '').sort().at(-1)!;
+  const yearBefore = `${Number(today.slice(0, 4)) - 1}${today.slice(4)}`;
+  return last >= yearBefore ? slots : [];
+}
+
 function slotJson(s: Slot) {
   return {
     key: s.key, start_date: s.startDate, end_date: s.endDate, unit: s.unit,
@@ -763,7 +792,7 @@ async function runAdapterInner(
     rep.problems.push(...problems);
     rep.slots = slots.length;
     rep.bookable = slots.filter(s => isBookable(s.availability) && isAhead(a.kind, s, today)).length;
-    const price = summarizePrice(a.kind, slots, today, lastPublished);
+    let price = summarizePrice(a.kind, slots, today, lastPublished);
     rep.minPrice = price.raw;
     if (content) hashes.content = sha({ ...content, imageUrls: content.imageUrls.slice(0, 12) });
     hashes.slots = sha(slots.map(slotJson));
@@ -799,9 +828,26 @@ async function runAdapterInner(
     // empty-result guard: an adapter that suddenly finds nothing must not wipe a stock of slots
     const guardTripped = slots.length === 0 && known >= EMPTY_GUARD;
     if (guardTripped) rep.notes.push(`empty result with ${known} known slots: kept the stock (EMPTY_GUARD)`);
+    // a clean run with no price and no date ahead: the stored slots that are over give the last published price
+    // (storedPastSlots). pricing.slots holds future slots only, so the table is read where it exists.
+    if (!price.min && !rep.slotError && incomplete === null && !guardTripped && !slots.some(s => isAhead(a.kind, s, today))) {
+      let stored: unknown[] = prevSlots;
+      if (useTable && offerId) {
+        const { data, error: sErr } = await supabase.from('offer_slots').select(STORED_SLOT_COLS).eq('package_offer_id', offerId).eq('active', true);
+        if (sErr) throw new Error(`offer_slots read failed: ${sErr.message}`);
+        stored = data ?? [];
+      }
+      const past = storedPastSlots(a.kind, stored, today);
+      if (past.length) {
+        price = summarizePrice(a.kind, slots, today, past);
+        rep.minPrice = price.raw;
+        rep.notes.push(`kept the last published price from ${past.length} stored slot(s): all dates are over, none printed now`);
+      }
+    }
 
-    // the jsonb summary is all-or-nothing: keep the old one on a partial or empty delivery
-    const keepSlots = guardTripped || (incomplete !== null && slots.length < prevSlots.length);
+    // the jsonb summary is all-or-nothing: keep the old one on a partial or empty delivery, and a partial run that
+    // finds no price never overwrites the stored one (pricing.slots is empty once every date is over)
+    const keepSlots = guardTripped || (incomplete !== null && (slots.length < prevSlots.length || !price.min));
     const pricing = {
       raw: price.raw,
       currency: price.min?.currency ?? null,
