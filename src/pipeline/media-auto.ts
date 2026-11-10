@@ -4,7 +4,10 @@
 //
 //   cruise-media collect  →  cruise-media auto (this file)  →  cruise-media apply   (auto + apply in the daily cron)
 //
-// /admin/media stays as the optional correction: a save there resets the offer's selection as before.
+// /admin/media stays as the optional correction: a save there resets the offer's selection as before and marks every
+// image it did not take 'rejected', so this step never adds back what Aaron saw and left out; on a listing he curated
+// only photos collected after his last save come in (variant B, Aaron 2026-11-10; `cruise-media seen` catches up the
+// saves made before that, media-selection.ts seenAtLastSave).
 //
 // Per offer with room (fewer than 12 media) and unjudged candidates:
 //   1. The live images are the base and stay as they are (rules 1 + 2, media-selection.ts planAutoFill); offers with a
@@ -12,7 +15,7 @@
 //   2. Free checks: provider's own site only (its domain or site-builder CDN), no stock / AI / floor-plan / screenshot /
 //      Flickr or junk file names, no second copy of a live photo (same file stem, e.g. a /v2/ or -scaled copy), no file
 //      name that names another destination of the provider or another country. Then download, size filter, same pixels
-//      as a live photo or another one.
+//      as a live photo or another one (a burst shot counts as the same photo).
 //   3. Vision on ANALYSIS_MODEL via OpenRouter (the cheap model; OpenRouter's usage.cost is summed):
 //      - photos tied to the listing (its own page or its destination page, or the file name names the destination):
 //        one call per listing, keep or not and WHERE (generic / this / other / unsure), acceptVerdict decides;
@@ -20,7 +23,9 @@
 //        they show, whether they show a particular place); acceptShared lets through only the photos every pass calls
 //        placeless, so no island lands on another island's listing and no home spot of a school on its safari.
 //      Both calls also name the boat; a photo of another kind of boat than the listing's vessel_type is left out.
-//   4. Write: live base as applied rows, the picks as 'selected' behind it (own-page photos first, then shared ones in
+//   4. Balance (rule 5): both calls name the subject, one more call names it for the live set; SUBJECT_CAP keeps any
+//      subject from taking over the listing (underwater, the same boat again) and rooms on land stay out.
+//   5. Write: live base as applied rows, the picks as 'selected' behind it (own-page photos first, then shared ones in
 //      the model's order), the rejected rows 'rejected' (still visible and pickable in /admin/media). Photos the model
 //      did not see stay 'candidate' for the next run.
 // ---------------------------------------------------------------------------
@@ -30,7 +35,7 @@ import type Anthropic from '@anthropic-ai/sdk';
 import pLimit from 'p-limit';
 import sharp from 'sharp';
 import { anthropic, ANALYSIS_MODEL } from '../lib/anthropic.js';
-import { dropNearDuplicates, dupFeatures, sameDupPhoto, type DupFeat } from '../lib/image-dedup.js';
+import { BURST, dropNearDuplicates, dupFeatures, sameDupPhoto, type DupFeat } from '../lib/image-dedup.js';
 import {
   CRUISE_IMAGE_BUCKET, downloadImage, imageIdentity, imageSize, isJunkImageUrl, parseJsonArray, usablePhotoSize,
   visionBatch, visionThumb, type ReserveGroup, type StoredImage,
@@ -40,8 +45,8 @@ import { supabase } from '../lib/supabase.js';
 import { isNotOwnPhoto } from '../offers/gallery.js';
 import {
   acceptShared, acceptVerdict, boatMismatch, BOATS, cornerCutout, CUTOUT_SIZE, fileNameFlag, fileNamePlaces, foreignCountries,
-  isOwnSiteImage, LANDS, listingBoat, photoStem, placeTerms, planAutoFill, PLACES, selectionImageRows, type Boat, type FillPlan, type Land,
-  type Place, type SharedVerdict,
+  isOwnSiteImage, LANDS, listingBoat, photoStem, placeTerms, planAutoFill, PLACES, seenAtLastSave, selectionImageRows, SUBJECTS,
+  balancePicks, type Boat, type FillPlan, type Land, type Place, type SharedVerdict, type Subject,
 } from './media-selection.js';
 
 const VISION_MAX = 16;         // photos per vision call (own-page photos get extra seats, see visionBatch)
@@ -77,6 +82,8 @@ interface CandRow {
   note: string | null;
   status: string;
   sort: number | null;
+  created_at: string;
+  updated_at: string;
 }
 
 interface Photo {
@@ -94,6 +101,7 @@ interface Photo {
   place?: Place | null;
   land?: Land | null;
   boat?: Boat | null;
+  subject?: Subject | null;
   caption?: string | null;
   /** judged as a site-wide photo, once per provider */
   shared?: boolean;
@@ -103,7 +111,7 @@ interface Photo {
 
 export interface OfferOutcome {
   offer: OfferRow;
-  live: Array<{ url: string; buf: Buffer | null; caption: string | null }>;
+  live: Array<{ url: string; buf: Buffer | null; caption: string | null; subject?: Subject | null }>;
   hasVideo: boolean;
   plan: FillPlan | null;
   picked: Photo[];
@@ -149,6 +157,8 @@ const noteRank = (n: string | null) => { const i = NOTE_ORDER.indexOf(n ?? ''); 
 const KEEP_RULE = `"keep": true for a real, sharp photo that fits a kite-cruise listing: the boat, its cabins or deck, people kiting, foiling, sailing or relaxing on board, or the scenery of the trip. false for logos, icons, badges, maps, text graphics, screenshots, product cut-outs, collages, stock-looking or AI-generated images, portraits, headshots or selfies as the subject, team or staff photos, video stills with a play button, food.`;
 const BOAT_RULE = `"boat": the boat in the photo, also when only its deck or cabin shows and you can tell: "catamaran" (two hulls), "monohull" (a sailing yacht with one hull), "motor" (a motor yacht or liveaboard without sails), "traditional" (a wooden gulet or dhow), "other" (a dinghy, RIB or small support boat), "none" (no boat, or too small to tell).`;
 const boatOf = (item: Record<string, unknown>) => BOATS.find(b => b === item.boat) ?? null;
+const SUBJECT_RULE = `"subject": what the photo is about: "boat" = the boat seen from outside; "onboard" = its deck, cabin or saloon, people on board; "kiting" = kiting, foiling, wingfoiling or windsurfing; "scenery" = island, beach, anchorage or sunset without action; "underwater" = under water, fish, turtles, rays or other sea life, snorkelling or diving; "land_stay" = the provider's base on land: a house, hotel, villa, room, pool, garden, terrace or beach bar, its kite school, kite house or camp (tents, briefings, groups on the beach); "other" = anything else.`;
+const subjectOf = (item: Record<string, unknown>) => SUBJECTS.find(x => x === item.subject) ?? null;
 
 async function bucketImage(path: string): Promise<Buffer | null> {
   const { data, error } = await supabase.storage.from(CRUISE_IMAGE_BUCKET).download(path);
@@ -162,10 +172,10 @@ async function featuresOf(buf: Buffer | null | undefined): Promise<DupFeat | nul
 }
 
 /** One vision call over `photos` (in this order) with `prompt` after them; the parsed items by photo, and the price. */
-async function visionCall(photos: Photo[], label: (p: Photo, i: number) => string, prompt: string):
-  Promise<{ items: Map<Photo, Record<string, unknown>>; order: Photo[]; costUsd: number } | null> {
+async function visionCall<P extends { buf?: Buffer | null }>(photos: P[], label: (p: P, i: number) => string, prompt: string):
+  Promise<{ items: Map<P, Record<string, unknown>>; order: P[]; costUsd: number } | null> {
   const blocks: Anthropic.ContentBlockParam[] = [];
-  const used: Photo[] = [];
+  const used: P[] = [];
   for (const p of photos) {
     let small: Buffer;
     try { small = await visionThumb(p.buf!); } catch { continue; }
@@ -204,8 +214,8 @@ async function visionCall(photos: Photo[], label: (p: Photo, i: number) => strin
     if (!parsed) console.error(`  vision answer without a JSON array (attempt ${attempt}): ${text.slice(0, 160)}`);
   }
   if (!parsed) return null;
-  const items = new Map<Photo, Record<string, unknown>>();
-  const order: Photo[] = [];
+  const items = new Map<P, Record<string, unknown>>();
+  const order: P[] = [];
   for (const item of parsed) {
     const i = typeof item?.index === 'number' ? item.index : -1;
     if (i < 0 || i >= used.length || items.has(used[i])) continue;
@@ -295,11 +305,11 @@ async function prepareOffer(o: OfferRow, rows: CandRow[], siblings: OfferRow[], 
   for (const p of pool) {
     if (p.reason) continue;
     const f = await featuresOf(p.buf);
-    const k = f ? liveFeats.findIndex(lf => lf && sameDupPhoto(lf, f)) : -1;
+    const k = f ? liveFeats.findIndex(lf => lf && sameDupPhoto(lf, f, BURST)) : -1;
     if (k >= 0) p.reason = `same photo as live #${k + 1}`;
   }
   out.rejected.push(...pool.filter(p => p.reason));
-  const dedup = await dropNearDuplicates(pool.filter(p => !p.reason), p => p.buf!);
+  const dedup = await dropNearDuplicates(pool.filter(p => !p.reason), p => p.buf!, BURST);
   for (const d of dedup.dropped) { d.reason = 'same photo as another candidate'; out.rejected.push(d); }
 
   // a site-wide photo is judged like one shared with other destinations, also for a provider with one listing: a kite
@@ -332,9 +342,10 @@ Judge EVERY image:
   "other" = recognisably somewhere else: the file name or the picture names or shows another island, country or spot${otherNames ? ` (for example ${otherNames})` : ''}
   "unsure" = a particular island, coastline, town or landmark you cannot place
 - ${BOAT_RULE}
+- ${SUBJECT_RULE}
 - "caption": what it shows, at most 8 words.
 Respond with ONLY a JSON array, one object per image, the kept photos first and best first:
-[{"index": <number>, "keep": <true|false>, "place": "generic|this|other|unsure", "boat": "none|catamaran|monohull|motor|traditional|other", "caption": "..."}]`;
+[{"index": <number>, "keep": <true|false>, "place": "generic|this|other|unsure", "boat": "none|catamaran|monohull|motor|traditional|other", "subject": "boat|onboard|kiting|scenery|underwater|land_stay|other", "caption": "..."}]`;
   const label = (p: Photo, i: number) =>
     `Image ${i}: file "${fileOf(p.sourceUrl)}", ${p.ownPage ? `from the ${dest} trip's own page` : "from another page of the provider's site"}`;
   const res = await visionCall(batch, label, prompt);
@@ -347,6 +358,7 @@ Respond with ONLY a JSON array, one object per image, the kept photos first and 
     p.keep = item.keep === true;
     p.place = PLACES.find(x => x === item.place) ?? null;
     p.boat = boatOf(item);
+    p.subject = subjectOf(item);
     p.caption = captionOf(item);
     p.reason = acceptVerdict({ keep: p.keep, place: p.place }, { tied: p.tied }) ?? boatMismatch([p.boat], listingBoat(o.vessel_type));
     (p.reason ? prep.out.rejected : accepted).push(p);
@@ -357,7 +369,8 @@ Respond with ONLY a JSON array, one object per image, the kept photos first and 
 // ---------------------------------------------------------------------------
 // Vision: site-wide photos (homepage, general pages), once per provider
 // ---------------------------------------------------------------------------
-type SharedResult = { reason: string | null; land: Land | null; boats: Array<Boat | null>; caption: string | null };
+type SharedResult = { reason: string | null; land: Land | null; boats: Array<Boat | null>; subject: Subject | null; caption: string | null };
+type SharedPass = SharedVerdict & { boat: Boat | null; subject: Subject | null; caption: string | null };
 
 async function judgeShared(preps: Prepared[]): Promise<{ order: string[]; verdict: Map<string, SharedResult>; judged: Set<string>; costUsd: number }> {
   const result = { order: [] as string[], verdict: new Map<string, SharedResult>(), judged: new Set<string>(), costUsd: 0 };
@@ -365,8 +378,8 @@ async function judgeShared(preps: Prepared[]): Promise<{ order: string[]; verdic
   const byKey = new Map<string, Photo>();
   for (const prep of preps) for (const p of prep.shared) if (!byKey.has(p.key)) byKey.set(p.key, p);
   if (byKey.size === 0) return result;
-  const dedup = await dropNearDuplicates([...byKey.values()], p => p.buf!);
-  for (const d of dedup.dropped) result.verdict.set(d.key, { reason: 'same photo as another candidate', land: null, boats: [], caption: null });
+  const dedup = await dropNearDuplicates([...byKey.values()], p => p.buf!, BURST);
+  for (const d of dedup.dropped) result.verdict.set(d.key, { reason: 'same photo as another candidate', land: null, boats: [], subject: null, caption: null });
   const batch = visionBatch(dedup.kept, [], VISION_MAX).map(b => b.img);
   for (const d of dedup.dropped) result.judged.add(d.key);
 
@@ -381,21 +394,22 @@ Judge EVERY image:
 - "land": how much land or shore the photo shows: "none" = only water, sky, the boat or people (a thin line of far-away coast at the horizon counts as none); "background" = some coast, hills or palms behind the main subject, small and not the point of the photo; "prominent" = an island, beach, lagoon, reef, hills, town or landmark fills a large part of the photo or is its subject.
 - "place": the island, spot or country that the file name names or that the photo recognisably shows, else null.
 - ${BOAT_RULE}
+- ${SUBJECT_RULE}
 - "caption": what it shows, at most 8 words.
 Respond with ONLY a JSON array, one object per image, the kept photos first and best first:
-[{"index": <number>, "keep": <true|false>, "land": "none|background|prominent", "place": "<name>" or null, "boat": "none|catamaran|monohull|motor|traditional|other", "caption": "..."}]`;
+[{"index": <number>, "keep": <true|false>, "land": "none|background|prominent", "place": "<name>" or null, "boat": "none|catamaran|monohull|motor|traditional|other", "subject": "boat|onboard|kiting|scenery|underwater|land_stay|other", "caption": "..."}]`;
   const label = (p: Photo, i: number) => `Image ${i}: file "${fileOf(p.sourceUrl)}"`;
 
-  const passes: Array<Map<Photo, SharedVerdict & { boat: Boat | null; caption: string | null }>> = [];
+  const passes: Array<Map<Photo, SharedPass>> = [];
   for (let pass = 0; pass < SHARED_PASSES; pass++) {
     // a different order each pass, so a position effect cannot carry a photo through
     const res = await visionCall(pass % 2 ? [...batch].reverse() : batch, label, prompt);
     if (!res) break;
     result.costUsd += res.costUsd;
-    const m = new Map<Photo, SharedVerdict & { boat: Boat | null; caption: string | null }>();
+    const m = new Map<Photo, SharedPass>();
     for (const [p, item] of res.items) {
       const place = typeof item.place === 'string' && item.place.trim() && !/^(null|none|unknown|n\/a)$/i.test(item.place.trim()) ? item.place.trim() : null;
-      m.set(p, { keep: item.keep === true, land: LANDS.find(x => x === item.land) ?? null, place, boat: boatOf(item), caption: captionOf(item) });
+      m.set(p, { keep: item.keep === true, land: LANDS.find(x => x === item.land) ?? null, place, boat: boatOf(item), subject: subjectOf(item), caption: captionOf(item) });
     }
     if (pass === 0) result.order = res.order.map(p => p.key);
     passes.push(m);
@@ -405,9 +419,35 @@ Respond with ONLY a JSON array, one object per image, the kept photos first and 
     const vs = passes.map(m => m.get(p) ?? null);
     if (vs.every(v => !v)) continue; // the model skipped it: next run
     result.judged.add(p.key);
-    result.verdict.set(p.key, { reason: acceptShared(vs, { destinations }), land: vs[0]?.land ?? null, boats: vs.map(v => v?.boat ?? null), caption: vs[0]?.caption ?? null });
+    result.verdict.set(p.key, {
+      reason: acceptShared(vs, { destinations }), land: vs[0]?.land ?? null, boats: vs.map(v => v?.boat ?? null),
+      subject: mostOften(vs.map(v => v?.subject ?? null)), caption: vs[0]?.caption ?? null,
+    });
   }
   return result;
+}
+
+/** The value most passes gave (the first pass's on a tie), null when none gave one. */
+function mostOften<T>(xs: Array<T | null>): T | null {
+  let best: T | null = null, bestN = 0;
+  for (const x of xs) {
+    if (x === null) continue;
+    const n = xs.filter(y => y === x).length;
+    if (n > bestN) { best = x; bestN = n; }
+  }
+  return best;
+}
+
+/** The subject of each live photo, for the balance rule (null where the bucket copy or the answer is missing). */
+async function labelLive(out: OfferOutcome): Promise<Array<Subject | null>> {
+  const res = await visionCall(out.live.filter(l => l.buf), (_, i) => `Image ${i}`,
+    `The numbered images above are the photos of the listing of the kite cruise "${out.offer.title}". For EVERY image name
+${SUBJECT_RULE}
+Respond with ONLY a JSON array, one object per image: [{"index": <number>, "subject": "boat|onboard|kiting|scenery|underwater|land_stay|other"}]`);
+  if (!res) return out.live.map(() => null);
+  out.costUsd += res.costUsd;
+  for (const l of out.live) l.subject = res.items.has(l) ? subjectOf(res.items.get(l)!) : null;
+  return out.live.map(l => l.subject ?? null);
 }
 
 // ---------------------------------------------------------------------------
@@ -478,7 +518,7 @@ async function thumb(buf: Buffer | null | undefined, url: string): Promise<strin
 }
 
 const how = (p: Photo) => (p.shared ? `geteilt, Land: ${p.land ?? '?'}` : `${p.place ?? '?'}${p.ownPage ? ', eigene Seite' : p.tied ? ', Dateiname' : ''}`)
-  + (p.boat && p.boat !== 'none' ? `, Boot: ${p.boat}` : '');
+  + (p.boat && p.boat !== 'none' ? `, Boot: ${p.boat}` : '') + (p.subject ? `, Motiv: ${p.subject}` : '');
 
 async function writeSheet(path: string, outcomes: OfferOutcome[], dryRun: boolean, totalUsd: number): Promise<void> {
   const card = (src: string, top: string, sub: string, cls = '') =>
@@ -489,7 +529,7 @@ async function writeSheet(path: string, outcomes: OfferOutcome[], dryRun: boolea
     const after = r.live.length + r.picked.length + (r.hasVideo ? 1 : 0);
     parts.push(`<section><h2>${esc(o.title)}</h2><p class="meta">${esc(o.id.slice(0, 8))} · ${esc(destLabel(o))} · live ${r.live.length} Bilder${r.hasVideo ? ' + Video' : ''} → <b>${after} Medien</b> · Kosten USD ${r.costUsd.toFixed(4)}${r.note ? ` · ${esc(r.note)}` : ''}</p>`);
     parts.push('<h3>Bleibt (live, unverändert)</h3><div class="row">');
-    for (const [i, l] of r.live.entries()) parts.push(card(await thumb(l.buf, l.url), i === 0 ? 'Hero' : `#${i + 1}`, fileOf(l.url), 'live'));
+    for (const [i, l] of r.live.entries()) parts.push(card(await thumb(l.buf, l.url), i === 0 ? 'Hero' : `#${i + 1}`, `${fileOf(l.url)}${l.subject ? ` · Motiv: ${l.subject}` : ''}`, 'live'));
     parts.push('</div><h3>Neu (automatisch, hinten angehängt)</h3><div class="row">');
     for (const [i, p] of r.picked.entries()) parts.push(card(await thumb(p.buf, p.sourceUrl), `#${r.live.length + i + 1} · ${how(p)}`, `${p.caption ?? ''} · ${fileOf(p.sourceUrl)}`, 'pick'));
     if (!r.picked.length) parts.push('<p class="none">keine</p>');
@@ -535,7 +575,10 @@ export async function runAutoSelectMedia(opts: {
   sheet?: string;
   /** stop starting new providers after this many minutes (the cron job has a 30-min timeout) */
   maxMinutes?: number;
+  /** dry run only: count the rows `cruise-media seen` would mark as seen (preview of variant B before the catch-up) */
+  assumeSeen?: boolean;
 } = {}): Promise<OfferOutcome[]> {
+  if (opts.assumeSeen && !opts.dryRun) throw new Error('--assume-seen only with --dry-run: run `cruise-media seen --apply` instead');
   const started = Date.now();
   const { data, error } = await supabase
     .from('cruise_offers')
@@ -552,7 +595,7 @@ export async function runAutoSelectMedia(opts: {
   for (let i = 0; i < ids.length; i += 50) {
     for (let from = 0; ; from += 1000) {
       const { data: page, error: e } = await supabase.from('offer_media_candidates')
-        .select('id, cruise_offer_id, kind, url, origin, note, status, sort')
+        .select('id, cruise_offer_id, kind, url, origin, note, status, sort, created_at, updated_at')
         .in('cruise_offer_id', ids.slice(i, i + 50)).order('id').range(from, from + 999);
       if (e) throw e;
       rows.push(...((page ?? []) as CandRow[]));
@@ -562,6 +605,15 @@ export async function runAutoSelectMedia(opts: {
   const byOffer = new Map<string, CandRow[]>();
   for (const r of rows) (byOffer.get(r.cruise_offer_id) ?? byOffer.set(r.cruise_offer_id, []).get(r.cruise_offer_id)!).push(r);
   const rowsOf = (id: string) => byOffer.get(id) ?? [];
+  if (opts.assumeSeen) {
+    let seen = 0;
+    for (const list of byOffer.values()) {
+      const ids = new Set(seenAtLastSave(list));
+      for (const r of list) if (ids.has(r.id)) r.status = 'rejected';
+      seen += ids.size;
+    }
+    console.log(`Assuming ${seen} candidate(s) seen at the last save (not written)`);
+  }
 
   // room left and something new to judge; the emptiest listings first, a provider's listings together
   const media = (o: OfferRow) => (o.images?.length ?? 0) + (o.hero_video_url ? 1 : 0);
@@ -606,17 +658,23 @@ export async function runAutoSelectMedia(opts: {
         p.reason = v.reason ?? boatMismatch(v.boats, listingBoat(out.offer.vessel_type));
         p.land = v.land;
         p.boat = v.boats.find(b => b && b !== 'none') ?? v.boats[0] ?? null;
+        p.subject = v.subject;
         p.caption = v.caption;
         (p.reason ? out.rejected : sharedAccepted).push(p);
       }
       sharedAccepted.sort((a, b) => shared.order.indexOf(a.key) - shared.order.indexOf(b.key));
       // listing photos first, then the shared ones; one copy of each photo
-      const dd = await dropNearDuplicates([...(tiedAccepted ?? []), ...sharedAccepted], p => p.buf!);
+      const dd = await dropNearDuplicates([...(tiedAccepted ?? []), ...sharedAccepted], p => p.buf!, BURST);
       for (const d of dd.dropped) { d.reason = 'same photo as another pick'; out.rejected.push(d); }
-      out.plan = planAutoFill({ liveUrls: out.live.map(l => l.url), rows: prep.rows, hasVideo: out.hasVideo, picks: dd.kept.map(p => p.row.id) });
+      // no subject takes over the listing, the live photos counted (rule 5)
+      const before = out.costUsd;
+      const bal = balancePicks(dd.kept.length ? await labelLive(out) : [], dd.kept, p => p.subject);
+      cost += out.costUsd - before;
+      for (const d of bal.dropped) { d.pick.reason = d.reason; out.rejected.push(d.pick); }
+      out.plan = planAutoFill({ liveUrls: out.live.map(l => l.url), rows: prep.rows, hasVideo: out.hasVideo, picks: bal.kept.map(p => p.row.id) });
       const chosen = new Set(out.plan.picks.map(x => x.id));
-      out.picked = dd.kept.filter(p => chosen.has(p.row.id));
-      out.spare = dd.kept.filter(p => !chosen.has(p.row.id));
+      out.picked = bal.kept.filter(p => chosen.has(p.row.id));
+      out.spare = bal.kept.filter(p => !chosen.has(p.row.id));
     }
     for (const prep of preps) {
       const out = prep.out;
@@ -635,4 +693,48 @@ export async function runAutoSelectMedia(opts: {
     `${opts.dryRun ? ' (dry run: nothing written)' : ' (stored by `cruise-media apply`)'}`);
   if (opts.sheet) await writeSheet(opts.sheet, outcomes, !!opts.dryRun, cost);
   return outcomes;
+}
+
+/**
+ * One-time catch-up for variant B (Aaron 2026-11-10): on every curated offer, the image candidates that were there at
+ * Aaron's last save in /admin/media become 'rejected' (media-selection.ts seenAtLastSave), so the automatic step only
+ * takes photos collected after it. Saves since the route change mark their rows themselves. Run it before the automatic
+ * step writes to curated offers (see seenAtLastSave); --apply writes, and the ids go to `backup` for the way back
+ * ('rejected' → 'candidate').
+ */
+export async function runMarkSeen(opts: { apply?: boolean; backup?: string } = {}): Promise<number> {
+  if (opts.apply && !opts.backup) throw new Error('--apply needs --backup <file.json> (the ids, for the way back)');
+  const { data: offers, error } = await supabase.from('cruise_offers').select('id, slug');
+  if (error) throw error;
+  const slugOf = new Map((offers ?? []).map(o => [o.id as string, o.slug as string]));
+  const byOffer = new Map<string, Array<Pick<CandRow, 'id' | 'cruise_offer_id' | 'kind' | 'status' | 'created_at' | 'updated_at'>>>();
+  for (let from = 0; ; from += 1000) {
+    const { data: page, error: e } = await supabase.from('offer_media_candidates')
+      .select('id, cruise_offer_id, kind, status, created_at, updated_at').order('id').range(from, from + 999);
+    if (e) throw e;
+    for (const r of page ?? []) (byOffer.get(r.cruise_offer_id) ?? byOffer.set(r.cruise_offer_id, []).get(r.cruise_offer_id)!).push(r);
+    if (!page || page.length < 1000) break;
+  }
+  const marked: Record<string, string[]> = {};
+  let total = 0;
+  for (const [offerId, list] of byOffer) {
+    const ids = seenAtLastSave(list);
+    if (!ids.length) continue;
+    marked[offerId] = ids;
+    total += ids.length;
+    const open = list.filter(r => r.kind === 'image' && r.status === 'candidate').length;
+    console.log(`  ${slugOf.get(offerId) ?? offerId}: ${ids.length} of ${open} candidate(s) seen`);
+  }
+  if (opts.apply) {
+    writeFileSync(opts.backup!, JSON.stringify(marked, null, 1));
+    const all = Object.values(marked).flat();
+    for (let i = 0; i < all.length; i += 100) {
+      const { error: e } = await supabase.from('offer_media_candidates').update({ status: 'rejected' })
+        .in('id', all.slice(i, i + 100)).eq('status', 'candidate');
+      if (e) throw e;
+    }
+  }
+  console.log(`${opts.apply ? 'Marked' : 'Would mark'} ${total} candidate(s) of ${Object.keys(marked).length} offer(s) as seen ('rejected')` +
+    (opts.apply ? `, ids in ${opts.backup}` : ' (dry run: add --apply --backup <file.json>)'));
+  return total;
 }

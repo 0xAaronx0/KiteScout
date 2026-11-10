@@ -62,7 +62,11 @@ The app caches the catalog in memory ~5 min, so DB changes can lag in the UI.
   the available ratings.
 - **Media curation** - since 2026-11-02 automatic: `cruise-media auto` (vision) fills listings with
   fewer than 12 media behind their live set, apply stores it, both in the daily cron; `/admin/media`
-  stays as Aaron's optional correction. Offers with <8 media are flagged "to be checked".
+  stays as Aaron's optional correction. On a listing Aaron saved there, only photos collected after
+  that save come in: a save marks every image it did not take `rejected` (variant B, Aaron
+  2026-11-10; `cruise-media seen` is the one-time catch-up for older saves). The picks keep a
+  listing balanced (SUBJECT_CAP per subject, live photos counted; no base on land for a cruise).
+  Offers with <8 media are flagged "to be checked".
 - **Monitoring (live)** — daily cron 06:00 UTC (`.github/workflows/monitor.yml`): applies approved
   changes → applies pending media selections → change-detection sweep. Volatile dates/price changes
   auto-apply; everything else waits in the `/changes` approval queue. Full re-extraction
@@ -224,6 +228,7 @@ pnpm cli cruise-reviews             # bstoked/TripAdvisor/Google review links + 
 # Media curation (the active loop)
 pnpm cli cruise-media collect [--domain X]   # scrape image/video candidates → offer_media_candidates
 pnpm cli cruise-media auto    [--domain X] [--offer id8,...] [--dry-run --sheet f.html]   # vision picks → 'selected'
+pnpm cli cruise-media seen    [--apply --backup f.json]   # one-time: candidates seen at the last admin save → 'rejected'
 pnpm cli cruise-media apply   [--domain X]   # apply the selection → buckets + cruise_offers.images
 
 # Monitoring

@@ -10,7 +10,7 @@ import { runExtractCruiseLocations } from './pipeline/extract-cruise-locations.j
 import { runExtractCruiseOffers, runReviewCruiseOffers } from './pipeline/extract-cruise-offers.js';
 import { runExtractCruiseReviews, recomputeAllAvgRatings } from './pipeline/extract-cruise-reviews.js';
 import { runCollectMediaCandidates, runApplySelectedMedia } from './pipeline/media-candidates.js';
-import { runAutoSelectMedia } from './pipeline/media-auto.js';
+import { runAutoSelectMedia, runMarkSeen } from './pipeline/media-auto.js';
 import { runRegionConditions } from './pipeline/region-conditions.js';
 import { runSpotConditions } from './pipeline/spot-conditions.js';
 import { runMonitor, showChanges, applyApprovedChanges, type DetectedChange } from './pipeline/monitor.js';
@@ -313,12 +313,16 @@ async function main(): Promise<void> {
           maxMinutes: minutes > 0 ? minutes : undefined,
           dryRun: args.includes('--dry-run'),
           sheet: flagStr('--sheet'),
+          assumeSeen: args.includes('--assume-seen'),
         });
+      } else if (sub === 'seen') {
+        await runMarkSeen({ apply: args.includes('--apply'), backup: flagStr('--backup') });
       } else if (sub === 'apply') {
         await runApplySelectedMedia({ domain: flagStr('--domain') });
       } else {
         console.log('Usage: cruise-media collect|auto|apply [--domain <root_domain>] [--limit n]\n' +
-          '       cruise-media auto [--offer <id-prefix,...>] [--max-minutes n] [--dry-run] [--sheet <file.html>]');
+          '       cruise-media auto [--offer <id-prefix,...>] [--max-minutes n] [--dry-run [--assume-seen]] [--sheet <file.html>]\n' +
+          '       cruise-media seen [--apply --backup <file.json>]   (one-time: candidates seen at the last admin save)');
       }
       break;
     }

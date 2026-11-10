@@ -5,9 +5,11 @@
 //   selectionImageRows  rule 1: apply rebuilds an offer's images from EVERY sorted selected/applied row
 //   planAutoFill        rule 2: the live set stays as it is (same photos, same order, same hero); new photos only go
 //                       behind it, up to MAX_MEDIA together with the hero video
+//   seenAtLastSave      rule 2: on a curated listing only photos collected after Aaron's last save (variant B)
 //   isOwnSiteImage, photoStem, fileNameFlag, cornerCutout   rule 3: the provider's own photos, no second copy of one
 //   placeTerms, namedPlaces, fileNamePlaces, foreignCountries, acceptVerdict, acceptShared, boatMismatch
 //                       rule 4: no photo of another destination or another boat, in doubt leave it out
+//   balancePicks        rule 5: a balanced listing, no subject dominates, no rooms on land for a cruise
 // ---------------------------------------------------------------------------
 
 /** The app shows at most 12 media per listing: images and the hero video together. */
@@ -73,6 +75,22 @@ export function planAutoFill(input: { liveUrls: string[]; rows: MediaRow[]; hasV
   const free = new Set(images.filter(r => r.status === 'candidate' && !live.has(r.url)).map(r => r.id));
   const picks = [...new Set(input.picks)].filter(id => free.has(id)).slice(0, room).map((id, j) => ({ id, sort: next + j }));
   return { skip: null, base, stale, picks, room };
+}
+
+/**
+ * Rule 2, variant B (Aaron 2026-11-10: "b"): on a listing Aaron curated, the automatic selection only adds photos
+ * collected after his last save in /admin/media; what he saw then and did not take stays out. A save marks those rows
+ * 'rejected' itself since then (web/app/api/admin/media/select/route.ts), and the automatic step only picks
+ * 'candidate' rows. For the saves before that, this is the one-time catch-up (`pnpm cli cruise-media seen`): the image
+ * candidates created before the newest selected/applied row of the offer was written. It only holds before the
+ * automatic step has written to the offer: its base rows and the apply of its picks move that time, after which every
+ * candidate would count as seen. An offer without selected/applied rows was never curated: nothing is seen there.
+ */
+export function seenAtLastSave(rows: Array<{ id: string; kind: string; status: string; created_at: string; updated_at: string }>): string[] {
+  const saved = rows.filter(r => r.status === 'selected' || r.status === 'applied');
+  if (saved.length === 0) return [];
+  const lastSave = Math.max(...saved.map(r => Date.parse(r.updated_at)));
+  return rows.filter(r => r.kind === 'image' && r.status === 'candidate' && Date.parse(r.created_at) < lastSave).map(r => r.id);
 }
 
 // ---------------------------------------------------------------------------
@@ -380,4 +398,43 @@ export function boatMismatch(seen: Array<Boat | null | undefined>, listing: Boat
   if (!listing) return null;
   const other = seen.find(b => b && BOAT_KINDS.has(b) && b !== listing);
   return other ? `vision: another boat (${BOAT_WORDS[other]}, the trip is on a ${BOAT_WORDS[listing]})` : null;
+}
+
+// ---------------------------------------------------------------------------
+// Rule 5: a balanced listing
+// ---------------------------------------------------------------------------
+
+/** What a photo is about, as the vision step names it. */
+export type Subject = 'boat' | 'onboard' | 'kiting' | 'scenery' | 'underwater' | 'land_stay' | 'other';
+export const SUBJECTS: Subject[] = ['boat', 'onboard', 'kiting', 'scenery', 'underwater', 'land_stay', 'other'];
+
+/**
+ * At most this many photos of one subject in a listing's set, the live photos counted (Aaron 2026-11-10: a few
+ * underwater photos are nice "auf ein, zwei oder vielleicht noch drei Fotos, aber nicht auf 8 oder 9"; no "fast
+ * identische weitere Aufnahmen vom gleichen Boot"; on a cruise "übernachtet man nicht im Kite-Haus, sondern auf dem
+ * Boot"). A mix of boat, kiting, deck/cabin and scenery, no subject dominates.
+ */
+export const SUBJECT_CAP: Record<Subject, number> = { boat: 3, onboard: 4, kiting: 5, scenery: 4, underwater: 2, land_stay: 0, other: 2 };
+const SUBJECT_WORDS: Record<Subject, string> = {
+  boat: 'photos of the boat', onboard: 'deck or cabin photos', kiting: 'kiting photos', scenery: 'scenery photos',
+  underwater: 'underwater photos', land_stay: '', other: 'other photos',
+};
+
+/**
+ * The picks (best first) that fit next to the live set under SUBJECT_CAP; the rest with the reason. A pick without a
+ * subject counts as 'other', a live photo without one counts nowhere.
+ */
+export function balancePicks<T>(live: Array<Subject | null>, picks: T[], subjectOf: (p: T) => Subject | null | undefined):
+  { kept: T[]; dropped: Array<{ pick: T; reason: string }> } {
+  const count = new Map<Subject, number>();
+  for (const s of live) if (s) count.set(s, (count.get(s) ?? 0) + 1);
+  const kept: T[] = [], dropped: Array<{ pick: T; reason: string }> = [];
+  for (const p of picks) {
+    const s = subjectOf(p) ?? 'other';
+    const n = count.get(s) ?? 0;
+    if (s === 'land_stay') dropped.push({ pick: p, reason: 'the base on land (on a cruise the guests sleep on the boat)' });
+    else if (n >= SUBJECT_CAP[s]) dropped.push({ pick: p, reason: `balance: already ${n} ${SUBJECT_WORDS[s]}` });
+    else { kept.push(p); count.set(s, n + 1); }
+  }
+  return { kept, dropped };
 }

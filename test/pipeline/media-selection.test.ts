@@ -1,8 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  acceptShared, acceptVerdict, boatMismatch, cornerCutout, CUTOUT_SIZE, fileNameFlag, fileNamePlaces, foreignCountries, isOwnSiteImage, listingBoat, MAX_MEDIA,
-  namedPlaces, photoStem, placeTerms, planAutoFill, selectionImageRows, type FillPlan, type MediaRow,
+  acceptShared, acceptVerdict, balancePicks, boatMismatch, cornerCutout, CUTOUT_SIZE, fileNameFlag, fileNamePlaces, foreignCountries, isOwnSiteImage, listingBoat, MAX_MEDIA,
+  namedPlaces, photoStem, placeTerms, planAutoFill, seenAtLastSave, selectionImageRows, SUBJECT_CAP, type FillPlan, type MediaRow, type Subject,
 } from '../../src/pipeline/media-selection.js';
 
 const U = 'https://caribbeankitecruise.com/wp-content/uploads';
@@ -118,6 +118,24 @@ test('rule 2: picks of non-candidate rows are ignored', () => {
   const rows = [...live5.map((u, i) => row(`l${i}`, u, 'applied', i)), row('rej', `${U}/x.jpg`, 'rejected', null), ...pool];
   const plan = planAutoFill({ liveUrls: live5, rows, hasVideo: false, picks: ['rej', 'l2', 'c1', 'c1'] });
   assert.deepEqual(plan.picks, [{ id: 'c1', sort: 5 }]);
+});
+
+test('rule 2, variant B: on a curated listing only photos collected after the last save (Aaron 2026-11-10)', () => {
+  const r = (id: string, status: string, created: string, updated = created, kind = 'image') =>
+    ({ id, kind, status, created_at: created, updated_at: updated });
+  const rows = [
+    r('a1', 'applied', '2026-07-01T10:00:00Z', '2026-07-12T06:00:00Z'), // saved on 07-11, applied by the cron on 07-12
+    r('a2', 'applied', '2026-07-01T10:00:00Z', '2026-07-12T06:00:00Z'),
+    r('shown', 'candidate', '2026-07-01T10:00:00Z'), // on the page at the save, not taken
+    r('new', 'candidate', '2026-10-20T08:00:00Z'), // collected after the save
+    r('rej', 'rejected', '2026-07-01T10:00:00Z'),
+    r('video', 'candidate', '2026-07-01T10:00:00Z', undefined, 'video'),
+  ];
+  assert.deepEqual(seenAtLastSave(rows), ['shown']);
+  // a pending save is the last save
+  assert.deepEqual(seenAtLastSave([...rows, r('s', 'selected', '2026-07-01T10:00:00Z', '2026-10-21T09:00:00Z')]), ['shown', 'new']);
+  // never curated: nothing is seen, the listing fills from every candidate
+  assert.deepEqual(seenAtLastSave(rows.filter(x => x.status !== 'applied')), []);
 });
 
 // ---------------------------------------------------------------------------
@@ -294,4 +312,21 @@ test('rule 4: a site-wide photo: the place needs every pass, a fitting photo the
   assert.match(acceptShared([ok, no, no], five) ?? '', /not a fitting/);
   assert.match(acceptShared([ok, ok, { ...ok, place: 'Union Island' }], five) ?? '', /Union Island/);
   assert.match(acceptShared([ok, ok, { ...ok, land: 'prominent' }], five) ?? '', /subject/);
+});
+
+test('rule 5: no subject takes over a listing, the live photos counted (Aaron 2026-11-10)', () => {
+  // Custom Red Sea Kite Safari: shark and turtle live, three more mantas offered
+  const live: Array<Subject | null> = ['boat', 'kiting', 'underwater', 'underwater', null];
+  const picks = [
+    { id: 'manta1', s: 'underwater' as const }, { id: 'kite', s: 'kiting' as const }, { id: 'manta2', s: 'underwater' as const },
+    { id: 'pool', s: 'land_stay' as const }, { id: 'cabin', s: 'onboard' as const }, { id: 'odd', s: null },
+  ];
+  const r = balancePicks(live, picks, p => p.s);
+  assert.deepEqual(r.kept.map(p => p.id), ['kite', 'cabin', 'odd']);
+  assert.deepEqual(r.dropped.map(d => d.pick.id), ['manta1', 'manta2', 'pool']);
+  assert.match(r.dropped[0].reason, /already 2 underwater/);
+  assert.match(r.dropped[2].reason, /sleep on the boat/);
+  // the same boat again: three outside shots are enough
+  const boats = balancePicks(['boat', 'boat'], [{ s: 'boat' as const }, { s: 'boat' as const }], p => p.s);
+  assert.equal(boats.kept.length, SUBJECT_CAP.boat - 2);
 });
