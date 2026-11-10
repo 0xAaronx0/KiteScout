@@ -1,14 +1,15 @@
 // Kite Suites (Praia Seca, Araruama): replays the home, /acomodacoes/ and /servicos/ of the rebuilt site, recorded
 // 2026-11-10 with OFFERS_RECORD_DIR (the old Locaweb build broke the cron on 2026-11-09 and 2026-11-10).
-// Content only: one undated "Suítes a partir de R$ 418,00" line, WhatsApp request only -> [] with a note.
+// One undated "Suítes a partir de R$ 418,00" line -> one undated "from" slot per night (Aaron 2026-11-10).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
-  kiteSuitesPraiaSeca, ksAddress, ksVisiblePrices, parseKsRooms, parseKsServices,
+  kiteSuitesPraiaSeca, ksAddress, ksFromPrice, ksVisiblePrices, parseKsRooms, parseKsServices,
 } from '../../src/offers/adapters/kite-suites-praia-seca.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { summarizePrice } from '../../src/offers/ingest.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/kite-suites-praia-seca');
 process.env.OFFERS_FIXTURE_DIR = DIR;
@@ -42,12 +43,21 @@ test('kite-suites: services with their photos, address', () => {
   assert.equal(ksAddress(read('kitesuites.com.br_.')), 'Av. Praia dos Nobres, 741, Praia Seca, Araruama - RJ');
 });
 
-test('kite-suites: the undated "from" amount is noted, slots stay [] (price on request)', async () => {
+test('kite-suites: the undated "from" line becomes one BRL 418 / night slot for every suite, to be confirmed', async () => {
   assert.deepEqual(ksVisiblePrices(rooms), ['R$ 418,00.']);
+  assert.equal(ksFromPrice(rooms), 418);
   const slots = await kiteSuitesPraiaSeca.fetchSlots(ctx);
-  assert.deepEqual(slots, []);
+  assert.equal(slots.length, 1);
   assert.deepEqual(checkSlots(slots).problems, []);
-  assert.deepEqual(notes, ['prices appeared on /acomodacoes (R$ 418,00.): extend the adapter']);
+  assert.deepEqual([slots[0].price, slots[0].currency, slots[0].priceUnit, slots[0].priceBasis, slots[0].undated, slots[0].priceIsMinimum],
+    [418, 'BRL', 'per_night', 'room', true, true]);
+  assert.deepEqual(slots[0].rooms, ['Suite Arubinha', 'Suite Coroinha', 'Suite Lagoa']);
+  assert.deepEqual(notes, []);
+  assert.equal(summarizePrice('accommodation', slots, '2026-11-10').note,
+    'From BRL 418 / night per room (cheapest bookable: Suite; undated rates on the provider\'s site, to be confirmed)');
+  // the line gone: no slot; another amount next to it: noted
+  assert.equal(ksFromPrice(rooms.replace('Suítes a partir de', 'Suítes')), null);
+  assert.equal(ksFromPrice('<main><p>Suites a partir de R$ 1.250,00 por noite</p></main>'), 1250);
 });
 
 test('kite-suites: content', async () => {

@@ -14,9 +14,11 @@
 //            facts and amenities; gallery sections "Arubinha e Coroinha" - the two suites share one set, the page says
 //            the photos show both - and "Suíte Lagoa"), /servicos/ (article.service-card: photo, h3, text; the page
 //            says only the pool, restaurant, yoga, canoe and kite photos are real, the rest illustrative).
-//   slots    none: one line "Suítes a partir de R$ 418,00" with no date, no unit (night? suite?) and "consulte ...
-//            tarifas" next to it; every button opens WhatsApp. fetchSlots re-reads /acomodacoes/ (memoised), returns []
-//            ("price on request") and notes the amounts it sees. Turning that line into a slot waits for Aaron's call.
+//   slots    one undated line "Suítes a partir de R$ 418,00" ("consulte ... tarifas e disponibilidade" next to it);
+//            every button opens WhatsApp. fetchSlots re-reads /acomodacoes/ (memoised) and returns one undated slot
+//            "from BRL 418 / night per room" for all suites (Aaron 2026-11-10: "dann bitte pro Nacht zeigen"; the page
+//            names no unit, per night is our reading - Praia Seca pousadas list R$ 170-290 a night, a week at R$ 418
+//            would be R$ 60 a night). Other amounts are noted, not priced.
 //   Not used: /gastronomia/, /experiencias/ (tour ideas), /contato/, /kitesurf/ (lessons, Duotone shop, Windguru
 //            embed: the home says the same), Instagram, YouTube.
 // robots.txt (2026-11-10): allows everything. Until 2026-11-08 the site was a Locaweb "Criador de Sites" build
@@ -158,9 +160,27 @@ export function ksAddress(html: string): string | null {
   return line ? line.replace(/\s*[–—]\s*/g, ' - ') : null;
 }
 
-/** Amounts printed on /acomodacoes/ (since 2026-11-09 one undated "a partir de" line); fetchSlots notes them. */
+/** Amounts printed on /acomodacoes/ (since 2026-11-09 one undated "a partir de" line). */
 export function ksVisiblePrices(roomsHtml: string): string[] {
   return findPrices(textOf(roomsHtml)).map(p => p.raw);
+}
+
+/** "Suítes a partir de R$ 418,00" -> 418; null when the line is gone */
+export function ksFromPrice(roomsHtml: string): number | null {
+  const m = textOf(roomsHtml).match(/Su[ií]tes a partir de (R\$\s?\d[\d.,]*)/i);
+  return m ? findPrices(m[1])[0]?.amount ?? null : null;
+}
+
+/** the "from" rate as one undated slot for every suite: "from" on each room, confirmed on request */
+export function ksSlots(roomsHtml: string): Slot[] {
+  const price = ksFromPrice(roomsHtml);
+  if (price === null) return [];
+  return [{
+    key: 'suites-from', startDate: null, endDate: null, unit: 'Suite', rooms: parseKsRooms(roomsHtml).map(r => r.name),
+    price, currency: 'BRL', priceUnit: 'per_night', priceBasis: 'room', occupancy: null,
+    availability: 'on_request', availabilityText: 'rates and availability on request', spotsLeft: null,
+    undated: true, priceIsMinimum: true,
+  }];
 }
 
 export interface KsPages { home: string; rooms: string; services: string }
@@ -257,7 +277,7 @@ export const kiteSuitesPraiaSeca: OfferAdapter = {
   slotMethod: 'price_table',
   instantBooking: false, // WhatsApp request only; liveAvailability unset
   fetchBudget: 4,
-  confidence: 'low', // one undated "from" amount on the site, request only
+  confidence: 'low', // one undated "from" amount, unit read as per night, request only
   async fetchContent() {
     const home = await page(KS_HOME_URL);
     const rooms = await page(KS_ROOMS_URL);
@@ -267,8 +287,9 @@ export const kiteSuitesPraiaSeca: OfferAdapter = {
   async fetchSlots(ctx): Promise<Slot[]> {
     const html = await page(KS_ROOMS_URL);
     if (parseKsRooms(html).length === 0) throw new Error('kite-suites: suite sections missing on /acomodacoes (layout changed?)');
+    const slots = ksSlots(html);
     const prices = ksVisiblePrices(html);
-    if (prices.length) ctx.note(`prices appeared on /acomodacoes (${prices.slice(0, 5).join(', ')}): extend the adapter`);
-    return [];
+    if (prices.length > slots.length) ctx.note(`more amounts on /acomodacoes than the "a partir de" line (${prices.slice(0, 5).join(', ')}): extend the adapter`);
+    return slots;
   },
 };
