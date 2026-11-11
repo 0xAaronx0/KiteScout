@@ -394,6 +394,33 @@ async function main(): Promise<void> {
       break;
     }
 
+    case 'google-scrape-cleanup': {
+      // Clears the scraped Google numbers (KCS#607): dry run by default; --apply --backup f.json writes the backup
+      // first (outside the repo), --restore f.json [--apply] puts the backed-up values back. See the module header.
+      const m = await import('./pipeline/google-scrape-cleanup.js');
+      const supabaseHost = new URL(process.env.SUPABASE_URL ?? '').host;
+      const notes = !args.includes('--keep-notes');
+      const restore = flagStr('--restore');
+      if (restore) {
+        const r = await m.runGoogleScrapeRestore(supabase, { file: restore, apply: args.includes('--apply'), supabaseHost });
+        console.log(`restore ${restore}: ${r.rows} backup rows, ${r.restorable} still hold the cleaned values` +
+          (args.includes('--apply') ? `; ${r.written} restored, ${r.skipped.length} skipped${r.skipped.length ? ` (${r.skipped.join(', ')})` : ''}` : ' (dry run, nothing written)'));
+        break;
+      }
+      const apply = args.includes('--apply');
+      const r = await m.runGoogleScrapeCleanup(supabase, { apply, backup: flagStr('--backup'), notes, supabaseHost });
+      for (const s of r.summaries)
+        console.log(`${s.table}: ${s.rows} rows, ${s.affected} to change | google_rating ${s.google_rating}, google_review_count ${s.google_review_count}, ` +
+          `avg_rating ${s.avg_rating}, review_match_notes ${notes ? s.review_match_notes : 'kept (--keep-notes)'} ` +
+          `| not touched: ${s.stale_avg_untouched} stale avg_rating on rows without a Google number`);
+      if (!apply) { console.log(`dry run: ${r.planned.length} rows would change, nothing written. Write with --apply --backup ~/kitescout-backups/<name>.json`); break; }
+      console.log(`backup ${r.backupPath}: ${r.planned.length} rows; written ${r.written}, skipped ${r.skipped.length}${r.skipped.length ? ` (${r.skipped.join(', ')})` : ''}`);
+      const v = await m.verifyCleanup(supabase, { notes });
+      console.log(`verify (read-only): ${JSON.stringify(v)}`);
+      if (r.written + r.skipped.length !== r.planned.length) process.exitCode = 1;
+      break;
+    }
+
     case 'operator-reviews': {
       // Package operators' review links (bstoked, TripAdvisor, Google). Two steps (Aaron 2026-10-30):
       //   --dry-run --out f.json   search, write only the file (for review)
