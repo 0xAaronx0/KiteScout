@@ -1,0 +1,934 @@
+{
+  "version": 1,
+  "manifestRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+  "title": "Healthy camps (real rows, real verification)",
+  "cases": [
+    {
+      "name": "healthy 11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
+      "synthetic": false,
+      "note": "real entry from the pilot manifest",
+      "now": "2026-10-21T10:54:00.490Z",
+      "expectedRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+      "row": {
+        "offer_id": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
+        "provider_id": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
+        "title": "LEN10 Experience: Stig x Ruben Brazil",
+        "slug": "len10-experience-stig-x-ruben-brazil",
+        "summary": "A coached kite week in Tatajuba (Ceará, Brazil) with pro riders Ruben Lenten and Stig Hoefnagel: 7 days / 6 nights at La Ventana Tatajuba in a shared or private room, three chef-cooked meals a day, on- and off-water coaching with video analysis, 4x4 transport to the spots, downwinders and yoga. Aimed at confident intermediate to pro riders who already ride upwind; flat-water lagoons, waves and downwinders in the November trade winds. Next dates: 2 November 2026 to 8 November 2026, from EUR 2,999 per person (only 4 rooms left).",
+        "package_type": "camp",
+        "country": "Brazil",
+        "countries": [
+          "Brazil"
+        ],
+        "region": "Ceará",
+        "source_url": "https://www.len10.com/experience",
+        "operator_id": "c0924bb1-2ae2-4d13-ab4e-717265928981",
+        "provider_name": "LEN10 (Ruben Lenten)",
+        "provider_website_url": "https://www.len10.com",
+        "price_pp_cabin": 2999,
+        "price_from_eur": 2999,
+        "price_pp_cabin_currency": "EUR",
+        "currency": "EUR",
+        "price_unit": "package",
+        "price_basis_note": "From EUR 2,999 p.p. (cheapest bookable: Shared or private room at La Ventana Tatajuba, 2026-11-02; as of 2026-10-20)",
+        "dates": [
+          {
+            "unit": "Shared or private room at La Ventana Tatajuba",
+            "price": 2999,
+            "status": "limited",
+            "currency": "EUR",
+            "end_date": "2026-11-08",
+            "price_unit": "package",
+            "spots_left": 4,
+            "start_date": "2026-11-02",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          }
+        ],
+        "updated_at": "2026-10-20T11:00:10.907357+00:00"
+      },
+      "evidence": {
+        "version": 1,
+        "status": "active",
+        "source": "package_offers",
+        "offerId": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
+        "snapshot": {
+          "revision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/schema/v1/evidence.schema.json",
+          "schemaRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/fb8f4989fd796674641f8b936eeb11cd34caf52d/src/publishing",
+          "generatorRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "observedAt": "2026-10-21T10:53:00.490Z",
+          "complete": true
+        },
+        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "rights": {
+          "status": "permitted",
+          "scope": "text",
+          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/docs/publishing/text-policy.md",
+          "owner": "KiteScout (Aaron Lindner)",
+          "expiresAt": "2027-10-21T10:53:00.490Z"
+        },
+        "claims": [
+          {
+            "field": "title",
+            "valueHash": "256e590a198b05409af97202b6595b7d3748bba090f0a00049a02cf91c461e81",
+            "sourceUrl": "https://www.len10.com/experience",
+            "observedAt": "2026-10-21T10:51:27.163Z",
+            "verifiedAt": "2026-10-21T10:51:29.429Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:27.163Z"
+          },
+          {
+            "field": "description",
+            "valueHash": "a189ea38decc5db2c6e374e49283037d02675c87ed7ec2385075e551cd27cb9d",
+            "sourceUrl": "https://www.len10.com/experience",
+            "observedAt": "2026-10-21T10:51:27.163Z",
+            "verifiedAt": "2026-10-21T10:51:29.429Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-01-19T10:51:27.163Z"
+          },
+          {
+            "field": "type",
+            "valueHash": "2130443d6d715d15c45bfb15140309cbb529c709899c55bf71ef088e4e5930ec",
+            "sourceUrl": "https://www.len10.com/experience",
+            "observedAt": "2026-10-21T10:51:27.163Z",
+            "verifiedAt": "2026-10-21T10:51:29.429Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:27.163Z"
+          },
+          {
+            "field": "operator",
+            "valueHash": "dea131f2283d7b3c016bc527ca82abb63e69bad160fec6c850210d48ba952e1f",
+            "sourceUrl": "https://www.len10.com/experience",
+            "observedAt": "2026-10-21T10:51:27.163Z",
+            "verifiedAt": "2026-10-21T10:51:29.429Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:27.163Z"
+          },
+          {
+            "field": "location",
+            "valueHash": "f9fc75d3bbe128391a560948e23edc2ea29b3c6bfbbb87eaa43bb5154e41c5af",
+            "sourceUrl": "https://www.len10.com/experience",
+            "observedAt": "2026-10-21T10:51:27.163Z",
+            "verifiedAt": "2026-10-21T10:51:29.429Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:51:27.163Z"
+          },
+          {
+            "field": "price",
+            "valueHash": "00abf0163263baa55dc8a7726cf64da8f0904b8e2c0a9bb62480146aebf339cb",
+            "sourceUrl": "https://www.len10.com/experience",
+            "observedAt": "2026-10-21T10:51:27.163Z",
+            "verifiedAt": "2026-10-21T10:51:29.429Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2026-11-20T10:51:27.163Z"
+          },
+          {
+            "field": "departures",
+            "valueHash": "802b3459b0442c169d1e2fba9ad3b9afb9d2667070cc52da2b0da0ae9ebac324",
+            "sourceUrl": "https://www.len10.com/experience",
+            "observedAt": "2026-10-21T10:51:27.163Z",
+            "verifiedAt": "2026-10-21T10:51:29.429Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2026-10-28T10:51:27.163Z"
+          }
+        ]
+      },
+      "policy": {
+        "version": 1,
+        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "owner": "KiteScout data (Aaron Lindner) with Kite Cruise Scout app (Martin Marzidovsek)",
+        "approvedAt": "2026-10-21T10:53:00.490Z",
+        "rules": [
+          {
+            "field": "title",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "type",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "operator",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "location",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "description",
+            "maxAgeHours": 2160
+          },
+          {
+            "field": "price",
+            "maxAgeHours": 720
+          },
+          {
+            "field": "departures",
+            "maxAgeHours": 168
+          }
+        ]
+      },
+      "expect": {
+        "status": "editorial_preview",
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "healthy 1710050d-0e4a-4222-ae35-84059772d354",
+      "synthetic": false,
+      "note": "real entry from the pilot manifest",
+      "now": "2026-10-21T10:54:00.490Z",
+      "expectedRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+      "row": {
+        "offer_id": "1710050d-0e4a-4222-ae35-84059772d354",
+        "provider_id": "1710050d-0e4a-4222-ae35-84059772d354",
+        "title": "Swiss Kitesurf Kite Camp Egypt, Soma Bay",
+        "slug": "swiss-kitesurf-kite-camp-egypt-soma-bay",
+        "summary": "Swiss Kitesurf, the kite school from Silvaplana, runs autumn camp weeks in Soma Bay on the Egyptian Red Sea coast, with the kite station (storage, rescue, compressor) right next to the hotel. A week includes airport transfers, 7 nights in a simple hotel, full board, rescue service and an excursion to Safaga; flights and visa are not included. Three packages per person in a shared double room (bookable in pairs): lessons package CHF 1750, board & lodging + rental gear CHF 1350, board & lodging only CHF 950; single room + CHF 300. Lessons are semi-private in German or English. A camp runs from 3 students; booking is by request. Camp weeks 2026: 24 Oct - 31 Oct, 31 Oct - 7 Nov.",
+        "package_type": "camp",
+        "country": "Egypt",
+        "countries": [
+          "Egypt"
+        ],
+        "region": "Red Sea",
+        "source_url": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+        "operator_id": "2d52492e-fa7f-4912-af76-3576622fc21a",
+        "provider_name": "Swiss Kitesurf",
+        "provider_website_url": "https://www.kitesailing.ch/en/school/camps/kite-camp-kenya",
+        "price_pp_cabin": 950,
+        "price_from_eur": null,
+        "price_pp_cabin_currency": "CHF",
+        "currency": "CHF",
+        "price_unit": "package",
+        "price_basis_note": "From CHF 950 p.p. (cheapest bookable: Board & lodging only, shared double room, 2026-10-24; as of 2026-10-20)",
+        "dates": [
+          {
+            "unit": "Board & lodging + rental gear, shared double room",
+            "price": 1350,
+            "status": "on_request",
+            "currency": "CHF",
+            "end_date": "2026-10-31",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-10-24",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Board & lodging + rental gear, single room",
+            "price": 1650,
+            "status": "on_request",
+            "currency": "CHF",
+            "end_date": "2026-10-31",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-10-24",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Board & lodging only, shared double room",
+            "price": 950,
+            "status": "on_request",
+            "currency": "CHF",
+            "end_date": "2026-10-31",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-10-24",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Board & lodging only, single room",
+            "price": 1250,
+            "status": "on_request",
+            "currency": "CHF",
+            "end_date": "2026-10-31",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-10-24",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Lessons package, shared double room",
+            "price": 1750,
+            "status": "on_request",
+            "currency": "CHF",
+            "end_date": "2026-10-31",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-10-24",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Lessons package, single room",
+            "price": 2050,
+            "status": "on_request",
+            "currency": "CHF",
+            "end_date": "2026-10-31",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-10-24",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Board & lodging + rental gear, shared double room",
+            "price": 1350,
+            "status": "on_request",
+            "currency": "CHF",
+            "end_date": "2026-11-07",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-10-31",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Board & lodging + rental gear, single room",
+            "price": 1650,
+            "status": "on_request",
+            "currency": "CHF",
+            "end_date": "2026-11-07",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-10-31",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Board & lodging only, shared double room",
+            "price": 950,
+            "status": "on_request",
+            "currency": "CHF",
+            "end_date": "2026-11-07",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-10-31",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Board & lodging only, single room",
+            "price": 1250,
+            "status": "on_request",
+            "currency": "CHF",
+            "end_date": "2026-11-07",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-10-31",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Lessons package, shared double room",
+            "price": 1750,
+            "status": "on_request",
+            "currency": "CHF",
+            "end_date": "2026-11-07",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-10-31",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Lessons package, single room",
+            "price": 2050,
+            "status": "on_request",
+            "currency": "CHF",
+            "end_date": "2026-11-07",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-10-31",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          }
+        ],
+        "updated_at": "2026-10-20T11:03:41.822046+00:00"
+      },
+      "evidence": {
+        "version": 1,
+        "status": "active",
+        "source": "package_offers",
+        "offerId": "1710050d-0e4a-4222-ae35-84059772d354",
+        "snapshot": {
+          "revision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/schema/v1/evidence.schema.json",
+          "schemaRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/fb8f4989fd796674641f8b936eeb11cd34caf52d/src/publishing",
+          "generatorRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "observedAt": "2026-10-21T10:53:00.490Z",
+          "complete": true
+        },
+        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "rights": {
+          "status": "permitted",
+          "scope": "text",
+          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/docs/publishing/text-policy.md",
+          "owner": "KiteScout (Aaron Lindner)",
+          "expiresAt": "2027-10-21T10:53:00.490Z"
+        },
+        "claims": [
+          {
+            "field": "title",
+            "valueHash": "4f1f38fef49c47f8589a551fd8b39bd4ff3fb24e22a1a3b74ec7804db6a54ffd",
+            "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+            "observedAt": "2026-10-21T10:52:42.327Z",
+            "verifiedAt": "2026-10-21T10:52:45.718Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:42.327Z"
+          },
+          {
+            "field": "description",
+            "valueHash": "21005a5bb39e127aed53cedcb9fcd47bd0c2427fcfb81b63c2c8072bda193334",
+            "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+            "observedAt": "2026-10-21T10:52:42.327Z",
+            "verifiedAt": "2026-10-21T10:52:45.718Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-01-19T10:52:42.327Z"
+          },
+          {
+            "field": "type",
+            "valueHash": "d4868149f73c9abb34e3f645d52678259f08583d59e69854eed1030871c15858",
+            "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+            "observedAt": "2026-10-21T10:52:42.327Z",
+            "verifiedAt": "2026-10-21T10:52:45.718Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:42.327Z"
+          },
+          {
+            "field": "operator",
+            "valueHash": "9b42b242a83b5e7f1248635f832ca5eab0a2e297cd97acfdfccb1710228799c7",
+            "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+            "observedAt": "2026-10-21T10:52:42.327Z",
+            "verifiedAt": "2026-10-21T10:52:45.718Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:42.327Z"
+          },
+          {
+            "field": "location",
+            "valueHash": "8a693d1b38a82793504dd497ebd5e4c03f1e3358c9e2f7fa61ecdac52578d353",
+            "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+            "observedAt": "2026-10-21T10:52:42.327Z",
+            "verifiedAt": "2026-10-21T10:52:45.718Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:42.327Z"
+          },
+          {
+            "field": "price",
+            "valueHash": "5866996e01ee2af4af0e9fbe7d4006d32ab551b7de294144200b78b2bd1ae6cd",
+            "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+            "observedAt": "2026-10-21T10:52:42.327Z",
+            "verifiedAt": "2026-10-21T10:52:45.718Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2026-11-20T10:52:42.327Z"
+          },
+          {
+            "field": "departures",
+            "valueHash": "2d0887272bdbcfd82657c0204f70915b3069c3ef460bc7c8c680c1188e303495",
+            "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+            "observedAt": "2026-10-21T10:52:42.327Z",
+            "verifiedAt": "2026-10-21T10:52:45.718Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2026-10-28T10:52:42.327Z"
+          }
+        ]
+      },
+      "policy": {
+        "version": 1,
+        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "owner": "KiteScout data (Aaron Lindner) with Kite Cruise Scout app (Martin Marzidovsek)",
+        "approvedAt": "2026-10-21T10:53:00.490Z",
+        "rules": [
+          {
+            "field": "title",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "type",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "operator",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "location",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "description",
+            "maxAgeHours": 2160
+          },
+          {
+            "field": "price",
+            "maxAgeHours": 720
+          },
+          {
+            "field": "departures",
+            "maxAgeHours": 168
+          }
+        ]
+      },
+      "expect": {
+        "status": "editorial_preview",
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "healthy d2e723d2-f3d3-4234-a766-27122931188d",
+      "synthetic": false,
+      "note": "real entry from the pilot manifest",
+      "now": "2026-10-21T10:54:00.490Z",
+      "expectedRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+      "row": {
+        "offer_id": "d2e723d2-f3d3-4234-a766-27122931188d",
+        "provider_id": "d2e723d2-f3d3-4234-a766-27122931188d",
+        "title": "KiteMex Kite & Wingfoil Camp",
+        "slug": "kitemex-kite-wingfoil-camp",
+        "summary": "KiteMex, the kitesurf and wing foil school at La Ventana Beach Resort (Baja California Sur), runs 6-night Kite & Wingfoil Camps with up to 15 hours of private kite or wing foil coaching over 5 days. The camp includes 6 nights in a shared beachfront double room at the resort, continental breakfast and lunch, kite and wing foil gear with radio communication, four morning yoga / SUP sessions and no-wind activities. It costs USD 2,799 per person; dates: December 6-12, 2026, January 9-15, 2027, February 13-19, 2027, March 7-13, 2027. Private coaching suits beginners and experienced riders.",
+        "package_type": "camp",
+        "country": "Mexico",
+        "countries": [
+          "Mexico"
+        ],
+        "region": "La Ventana, Baja California Sur",
+        "source_url": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+        "operator_id": "426975cd-5be6-447f-874a-8806a17f9d98",
+        "provider_name": "KiteMex",
+        "provider_website_url": "https://kitemex.com",
+        "price_pp_cabin": 2799,
+        "price_from_eur": null,
+        "price_pp_cabin_currency": "USD",
+        "currency": "USD",
+        "price_unit": "package",
+        "price_basis_note": "From USD 2,799 / 6 nights p.p. (cheapest bookable: Beachfront Double Room (shared), 2026-12-06; as of 2026-10-20)",
+        "dates": [
+          {
+            "unit": "Beachfront Double Room (shared)",
+            "price": 2799,
+            "status": "on_request",
+            "currency": "USD",
+            "end_date": "2026-12-12",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-12-06",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Beachfront Double Room (shared)",
+            "price": 2799,
+            "status": "on_request",
+            "currency": "USD",
+            "end_date": "2027-01-15",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2027-01-09",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Beachfront Double Room (shared)",
+            "price": 2799,
+            "status": "on_request",
+            "currency": "USD",
+            "end_date": "2027-02-19",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2027-02-13",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Beachfront Double Room (shared)",
+            "price": 2799,
+            "status": "on_request",
+            "currency": "USD",
+            "end_date": "2027-03-13",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2027-03-07",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          }
+        ],
+        "updated_at": "2026-10-21T10:18:37.604836+00:00"
+      },
+      "evidence": {
+        "version": 1,
+        "status": "active",
+        "source": "package_offers",
+        "offerId": "d2e723d2-f3d3-4234-a766-27122931188d",
+        "snapshot": {
+          "revision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/schema/v1/evidence.schema.json",
+          "schemaRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/fb8f4989fd796674641f8b936eeb11cd34caf52d/src/publishing",
+          "generatorRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "observedAt": "2026-10-21T10:53:00.490Z",
+          "complete": true
+        },
+        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "rights": {
+          "status": "permitted",
+          "scope": "text",
+          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/docs/publishing/text-policy.md",
+          "owner": "KiteScout (Aaron Lindner)",
+          "expiresAt": "2027-10-21T10:53:00.490Z"
+        },
+        "claims": [
+          {
+            "field": "title",
+            "valueHash": "46123724585f402509ce3a1393a13c686f85c4113f1c1c31f3b447326f6b0ebc",
+            "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+            "observedAt": "2026-10-21T10:52:51.330Z",
+            "verifiedAt": "2026-10-21T10:52:54.413Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:51.330Z"
+          },
+          {
+            "field": "description",
+            "valueHash": "e4e64f481a1e93d4e0bb292efc8b0e14a85c266f8ac577eece4e6d3841e9ae84",
+            "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+            "observedAt": "2026-10-21T10:52:51.330Z",
+            "verifiedAt": "2026-10-21T10:52:54.413Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-01-19T10:52:51.330Z"
+          },
+          {
+            "field": "type",
+            "valueHash": "66b166fb7f348a1f6653ed2450234e3b608424e1925f185f3781b538eb3e2c55",
+            "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+            "observedAt": "2026-10-21T10:52:51.330Z",
+            "verifiedAt": "2026-10-21T10:52:54.413Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:51.330Z"
+          },
+          {
+            "field": "operator",
+            "valueHash": "972507a5c7457c7cd9da0657dbd8026bdbc683e9242d68cc502034ac7896479f",
+            "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+            "observedAt": "2026-10-21T10:52:51.330Z",
+            "verifiedAt": "2026-10-21T10:52:54.413Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:51.330Z"
+          },
+          {
+            "field": "location",
+            "valueHash": "2a70f24903ea5536aa8c42aa6e59cbd0adff7cd8e06f6635ffeb8f81cccee3c6",
+            "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+            "observedAt": "2026-10-21T10:52:51.330Z",
+            "verifiedAt": "2026-10-21T10:52:54.413Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:51.330Z"
+          },
+          {
+            "field": "price",
+            "valueHash": "1d613156cbbcdfb15179a898a56515e2ceb54cd44c9c522b30d7e300f7117f10",
+            "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+            "observedAt": "2026-10-21T10:52:51.330Z",
+            "verifiedAt": "2026-10-21T10:52:54.413Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2026-11-20T10:52:51.330Z"
+          },
+          {
+            "field": "departures",
+            "valueHash": "dc18490d1fd8d08bd1b7f8f1ad1116a3e171c8cbd0c78360eea2a3486fedc9c3",
+            "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+            "observedAt": "2026-10-21T10:52:51.330Z",
+            "verifiedAt": "2026-10-21T10:52:54.413Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2026-10-28T10:52:51.330Z"
+          }
+        ]
+      },
+      "policy": {
+        "version": 1,
+        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "owner": "KiteScout data (Aaron Lindner) with Kite Cruise Scout app (Martin Marzidovsek)",
+        "approvedAt": "2026-10-21T10:53:00.490Z",
+        "rules": [
+          {
+            "field": "title",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "type",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "operator",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "location",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "description",
+            "maxAgeHours": 2160
+          },
+          {
+            "field": "price",
+            "maxAgeHours": 720
+          },
+          {
+            "field": "departures",
+            "maxAgeHours": 168
+          }
+        ]
+      },
+      "expect": {
+        "status": "editorial_preview",
+        "diagnostics": []
+      }
+    },
+    {
+      "name": "healthy d56117f0-242c-4e61-b0d2-e640aa5dd925",
+      "synthetic": false,
+      "note": "real entry from the pilot manifest",
+      "now": "2026-10-21T10:54:00.490Z",
+      "expectedRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+      "row": {
+        "offer_id": "d56117f0-242c-4e61-b0d2-e640aa5dd925",
+        "provider_id": "d56117f0-242c-4e61-b0d2-e640aa5dd925",
+        "title": "Dakhla Evasion Free Ride & Wellness Kite Camp",
+        "slug": "dakhla-evasion-free-ride-wellness-kite-camp",
+        "summary": "Dakhla Evasion's all-inclusive kite weeks on the Dakhla lagoon: 7 nights in a private bungalow facing the lagoon, full board, airport transfers, pool, gym and yoga room, one 75-minute massage and one 60-minute hammam. Free Ride is for beginners (16 hours of semi-private kite lessons), Ride Evolution for intermediates (12 hours of semi-private lessons plus 3 days of unlimited gear rental), and Freedom Ride for independent riders with their own gear (storage, boat assistance, downwinders to the Dune Blanche and the Speed Spot with 4x4 return); each is also sold for wing foil. Prices per person (\"from\"): Free Ride & Bien être EUR 1,550, Ride Evolution & Bien être EUR 1,500, Freedom Ride Pack & Bien être EUR 990, for stays between 2026-11-21 and 2027-03-13; booking on request.",
+        "package_type": "camp",
+        "country": "Morocco",
+        "countries": [
+          "Morocco"
+        ],
+        "region": "Dakhla-Oued Ed-Dahab",
+        "source_url": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+        "operator_id": "b5fb5311-9ac9-46d9-83cd-e714aa88db55",
+        "provider_name": "Dakhla Evasion Resort & Spa",
+        "provider_website_url": "https://www.dakhla-evasion.com/en/",
+        "price_pp_cabin": 990,
+        "price_from_eur": 990,
+        "price_pp_cabin_currency": "EUR",
+        "currency": "EUR",
+        "price_unit": "package",
+        "price_basis_note": "From EUR 990 / 7 nights p.p. (cheapest bookable: Freedom Ride Pack & Bien-être (independent riders, own gear, downwinders), 2026-11-21; as of 2026-10-20)",
+        "dates": [
+          {
+            "unit": "Free Ride & Bien-être (beginners, 16 h semi-private lessons)",
+            "price": 1550,
+            "status": "on_request",
+            "currency": "EUR",
+            "end_date": "2027-03-13",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-11-21",
+            "price_basis": "person",
+            "date_precision": "season",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Freedom Ride Pack & Bien-être (independent riders, own gear, downwinders)",
+            "price": 990,
+            "status": "on_request",
+            "currency": "EUR",
+            "end_date": "2027-03-13",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-11-21",
+            "price_basis": "person",
+            "date_precision": "season",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Ride Evolution & Bien-être (intermediates, 12 h semi-private lessons + 3 days rental)",
+            "price": 1500,
+            "status": "on_request",
+            "currency": "EUR",
+            "end_date": "2027-03-13",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-11-21",
+            "price_basis": "person",
+            "date_precision": "season",
+            "price_valid_until": null
+          }
+        ],
+        "updated_at": "2026-10-21T10:18:37.604836+00:00"
+      },
+      "evidence": {
+        "version": 1,
+        "status": "active",
+        "source": "package_offers",
+        "offerId": "d56117f0-242c-4e61-b0d2-e640aa5dd925",
+        "snapshot": {
+          "revision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/schema/v1/evidence.schema.json",
+          "schemaRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/fb8f4989fd796674641f8b936eeb11cd34caf52d/src/publishing",
+          "generatorRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
+          "observedAt": "2026-10-21T10:53:00.490Z",
+          "complete": true
+        },
+        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "rights": {
+          "status": "permitted",
+          "scope": "text",
+          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/docs/publishing/text-policy.md",
+          "owner": "KiteScout (Aaron Lindner)",
+          "expiresAt": "2027-10-21T10:53:00.490Z"
+        },
+        "claims": [
+          {
+            "field": "title",
+            "valueHash": "12bd4960e163cae760b59893ad8ac10f614d8d1d15fa8577bac580e6e549c3ff",
+            "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+            "observedAt": "2026-10-21T10:52:48.822Z",
+            "verifiedAt": "2026-10-21T10:52:53.386Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:48.822Z"
+          },
+          {
+            "field": "description",
+            "valueHash": "fc96c5492c57e7c1e73c9ee7c21de1c136ff0bc341a9a1c360f7f005f59233bb",
+            "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+            "observedAt": "2026-10-21T10:52:48.822Z",
+            "verifiedAt": "2026-10-21T10:52:53.386Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-01-19T10:52:48.822Z"
+          },
+          {
+            "field": "type",
+            "valueHash": "d75ed54b7302cbd79ddbd3c1db3c7ac01821771a4320daa075a629cd848dfada",
+            "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+            "observedAt": "2026-10-21T10:52:48.822Z",
+            "verifiedAt": "2026-10-21T10:52:53.386Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:48.822Z"
+          },
+          {
+            "field": "operator",
+            "valueHash": "d216cce167a2c7ea9239080854e620960775b39214aabca70f38f2b609fb30f3",
+            "sourceUrl": "https://www.dakhla-evasion.com/en/",
+            "observedAt": "2026-10-21T10:52:50.615Z",
+            "verifiedAt": "2026-10-21T10:52:53.386Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:50.615Z"
+          },
+          {
+            "field": "location",
+            "valueHash": "ab6605f4bb2b9f0a604e51c49d342526e087d7ccdc8f5020f283cfd1806251e5",
+            "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+            "observedAt": "2026-10-21T10:52:48.822Z",
+            "verifiedAt": "2026-10-21T10:52:53.386Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2027-04-19T10:52:48.822Z"
+          },
+          {
+            "field": "price",
+            "valueHash": "9ce1ad92fdc2531637bc786a6c39e0a4ba1d2898ebec10d6dc9092a5e47011fa",
+            "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+            "observedAt": "2026-10-21T10:52:48.822Z",
+            "verifiedAt": "2026-10-21T10:52:53.386Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "method": "source_reviewed",
+            "expiresAt": "2026-11-20T10:52:48.822Z"
+          }
+        ]
+      },
+      "policy": {
+        "version": 1,
+        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "owner": "KiteScout data (Aaron Lindner) with Kite Cruise Scout app (Martin Marzidovsek)",
+        "approvedAt": "2026-10-21T10:53:00.490Z",
+        "rules": [
+          {
+            "field": "title",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "type",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "operator",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "location",
+            "maxAgeHours": 4320
+          },
+          {
+            "field": "description",
+            "maxAgeHours": 2160
+          },
+          {
+            "field": "price",
+            "maxAgeHours": 720
+          },
+          {
+            "field": "departures",
+            "maxAgeHours": 168
+          }
+        ]
+      },
+      "expect": {
+        "status": "editorial_preview",
+        "diagnostics": [
+          {
+            "field": "departures",
+            "code": "missing_evidence"
+          }
+        ]
+      }
+    }
+  ]
+}

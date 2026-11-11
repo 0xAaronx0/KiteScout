@@ -14,7 +14,8 @@ import type { OfferVerification } from '../../src/publishing/verify.js';
 const root = join(import.meta.dirname, '../..');
 const historical = JSON.parse(readFileSync(join(root,'publishing/corrections/354-evergreen-summary-proposals.json'),'utf8'));
 const proposals = JSON.parse(readFileSync(join(root,'publishing/corrections/354-advice-free-summary-proposals.json'),'utf8'));
-const healthy = JSON.parse(readFileSync(join(root,'publishing/samples/v1/healthy.json'),'utf8'));
+// the 6b172a6 sample (pre-correction rows of 2026-10-21), frozen: publishing/samples/v1 moves with every manifest
+const healthy = JSON.parse(readFileSync(join(root,'test/fixtures/publishing/healthy-6b172a6.json'),'utf8'));
 const read = (adapter: string, part: string) => {
   const dir = join(root,'test/fixtures/offers',adapter);
   return readFileSync(join(dir,readdirSync(dir).find(f=>f.includes(part))!),'utf8');

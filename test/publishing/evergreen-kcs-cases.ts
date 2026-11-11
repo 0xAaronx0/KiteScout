@@ -8,7 +8,8 @@ import type { OfferVerification } from '../../src/publishing/verify.js';
 export function evergreenKcsCases() {
   const root = join(import.meta.dirname,'../..');
   const proposals = JSON.parse(readFileSync(join(root,'publishing/corrections/354-advice-free-summary-proposals.json'),'utf8'));
-  const healthy = JSON.parse(readFileSync(join(root,'publishing/samples/v1/healthy.json'),'utf8'));
+  // the 6b172a6 sample (rows of 2026-10-21), frozen: publishing/samples/v1 moves with every manifest
+  const healthy = JSON.parse(readFileSync(join(root,'test/fixtures/publishing/healthy-6b172a6.json'),'utf8'));
   const observedAt = '2026-10-21T19:00:00.000Z';
   const rules = loadPolicyRules(join(root,'publishing/policy/v1/freshness-proposal.json'));
   const ref = 'https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json';
