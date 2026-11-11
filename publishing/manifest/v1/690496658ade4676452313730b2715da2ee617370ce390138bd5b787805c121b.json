@@ -1,0 +1,367 @@
+{
+  "version": 1,
+  "kind": "kitescout.publishing-evidence-manifest",
+  "revision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
+  "observedAt": "2026-11-11T15:44:20.428Z",
+  "verifier": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+  "refs": {
+    "sha": "871fa97436128e2a0ecfb4881e68742156dc0224",
+    "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/schema/v1/evidence.schema.json",
+    "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/871fa97436128e2a0ecfb4881e68742156dc0224/src/publishing",
+    "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/docs/publishing/text-policy.md",
+    "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/policy/v1/freshness-proposal.json"
+  },
+  "evidence": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b.evidence.json",
+  "entries": [
+    {
+      "version": 1,
+      "status": "active",
+      "source": "package_offers",
+      "offerId": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
+      "snapshot": {
+        "revision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
+        "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/schema/v1/evidence.schema.json",
+        "schemaRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+        "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/871fa97436128e2a0ecfb4881e68742156dc0224/src/publishing",
+        "generatorRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+        "observedAt": "2026-11-11T15:44:20.428Z",
+        "complete": true
+      },
+      "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/policy/v1/freshness-proposal.json",
+      "rights": {
+        "status": "permitted",
+        "scope": "text",
+        "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/docs/publishing/text-policy.md",
+        "owner": "KiteScout (Aaron Lindner)",
+        "expiresAt": "2027-11-11T15:44:20.428Z"
+      },
+      "claims": [
+        {
+          "field": "title",
+          "valueHash": "4e18878b3b76f887e9328d541d72a833edc647a61790d699855052eb4e3c69b0",
+          "sourceUrl": "https://www.len10.com/experience",
+          "observedAt": "2026-11-11T15:44:14.411Z",
+          "verifiedAt": "2026-11-11T15:44:16.867Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:14.411Z"
+        },
+        {
+          "field": "description",
+          "valueHash": "81ee65c4d6ff0f077d12de2822b61c6f801e2552ee743410abad7f7dc1f0f939",
+          "sourceUrl": "https://www.len10.com/experience",
+          "observedAt": "2026-11-11T15:44:14.411Z",
+          "verifiedAt": "2026-11-11T15:44:16.867Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-02-09T15:44:14.411Z"
+        },
+        {
+          "field": "type",
+          "valueHash": "8ae2db3ec14e9d641203403dafad1ea4b9dab0edae81d3e33725f4c84546549b",
+          "sourceUrl": "https://www.len10.com/experience",
+          "observedAt": "2026-11-11T15:44:14.411Z",
+          "verifiedAt": "2026-11-11T15:44:16.867Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:14.411Z"
+        },
+        {
+          "field": "operator",
+          "valueHash": "ce1a56d0d8dccf299dbe03448fdc07ad2c870a4ec0161c69e48f3a1576cf708e",
+          "sourceUrl": "https://www.len10.com/experience",
+          "observedAt": "2026-11-11T15:44:14.411Z",
+          "verifiedAt": "2026-11-11T15:44:16.867Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:14.411Z"
+        },
+        {
+          "field": "location",
+          "valueHash": "a9b0828f27985b2d67e3ab8c02a64b3b14d28bbbe589f3267a0ea98ec04f97c3",
+          "sourceUrl": "https://www.len10.com/experience",
+          "observedAt": "2026-11-11T15:44:14.411Z",
+          "verifiedAt": "2026-11-11T15:44:16.867Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:14.411Z"
+        },
+        {
+          "field": "price",
+          "valueHash": "c05db7a40e4f1dbded8487c70799dd7091c0b186a4c7a6afe663898781ef52e6",
+          "sourceUrl": "https://www.len10.com/experience",
+          "observedAt": "2026-11-11T15:44:14.411Z",
+          "verifiedAt": "2026-11-11T15:44:16.867Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2026-12-11T15:44:14.411Z"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "status": "active",
+      "source": "package_offers",
+      "offerId": "1710050d-0e4a-4222-ae35-84059772d354",
+      "snapshot": {
+        "revision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
+        "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/schema/v1/evidence.schema.json",
+        "schemaRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+        "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/871fa97436128e2a0ecfb4881e68742156dc0224/src/publishing",
+        "generatorRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+        "observedAt": "2026-11-11T15:44:20.428Z",
+        "complete": true
+      },
+      "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/policy/v1/freshness-proposal.json",
+      "rights": {
+        "status": "permitted",
+        "scope": "text",
+        "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/docs/publishing/text-policy.md",
+        "owner": "KiteScout (Aaron Lindner)",
+        "expiresAt": "2027-11-11T15:44:20.428Z"
+      },
+      "claims": [
+        {
+          "field": "title",
+          "valueHash": "368cd5eab6c598462ea28064435300cc876d556b9a4f798c777e584e53697efc",
+          "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+          "observedAt": "2026-11-11T15:44:14.790Z",
+          "verifiedAt": "2026-11-11T15:44:16.815Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:14.790Z"
+        },
+        {
+          "field": "description",
+          "valueHash": "3f422c5cf18c785e4bd21e5904992082b6e6331cf9267d306af2a79d19472d6a",
+          "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+          "observedAt": "2026-11-11T15:44:14.790Z",
+          "verifiedAt": "2026-11-11T15:44:16.815Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-02-09T15:44:14.790Z"
+        },
+        {
+          "field": "type",
+          "valueHash": "aff2cb3357dca4b2cd5a85180d0f583dae5731d2c70ea8d8088c034390e4a8c2",
+          "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+          "observedAt": "2026-11-11T15:44:14.790Z",
+          "verifiedAt": "2026-11-11T15:44:16.815Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:14.790Z"
+        },
+        {
+          "field": "operator",
+          "valueHash": "592246033ad753fc8127f7255e11b29aadff0af72ea71dd6130a50f8b96afc24",
+          "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+          "observedAt": "2026-11-11T15:44:14.790Z",
+          "verifiedAt": "2026-11-11T15:44:16.815Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:14.790Z"
+        },
+        {
+          "field": "location",
+          "valueHash": "012117d3a52c1458bef4f17e40ae6ee4d55abf7c9e4e8484bd850e79ed46ccca",
+          "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+          "observedAt": "2026-11-11T15:44:14.790Z",
+          "verifiedAt": "2026-11-11T15:44:16.815Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:14.790Z"
+        },
+        {
+          "field": "price",
+          "valueHash": "fe291155c82fcc15cfdd3b0b9df146ca1bebb523fe4d676fc3666c088cc9bc90",
+          "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+          "observedAt": "2026-11-11T15:44:14.790Z",
+          "verifiedAt": "2026-11-11T15:44:16.815Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2026-12-11T15:44:14.790Z"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "status": "active",
+      "source": "package_offers",
+      "offerId": "d2e723d2-f3d3-4234-a766-27122931188d",
+      "snapshot": {
+        "revision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
+        "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/schema/v1/evidence.schema.json",
+        "schemaRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+        "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/871fa97436128e2a0ecfb4881e68742156dc0224/src/publishing",
+        "generatorRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+        "observedAt": "2026-11-11T15:44:20.428Z",
+        "complete": true
+      },
+      "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/policy/v1/freshness-proposal.json",
+      "rights": {
+        "status": "permitted",
+        "scope": "text",
+        "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/docs/publishing/text-policy.md",
+        "owner": "KiteScout (Aaron Lindner)",
+        "expiresAt": "2027-11-11T15:44:20.428Z"
+      },
+      "claims": [
+        {
+          "field": "title",
+          "valueHash": "d1cbf397a9031ae62b340f99d1be4c9d4f8c408ca9e4db2a4741d5ef7692749e",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "verifiedAt": "2026-11-11T15:44:19.795Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:15.834Z"
+        },
+        {
+          "field": "description",
+          "valueHash": "9b7bf7655cef01191943e5869628c475f189b995285810c2811236aca5c18bda",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "verifiedAt": "2026-11-11T15:44:19.795Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-02-09T15:44:15.834Z"
+        },
+        {
+          "field": "type",
+          "valueHash": "5473247aca09b94fffedebfbe048aa14522ead131820901f85b47970821f4fc4",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "verifiedAt": "2026-11-11T15:44:19.795Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:15.834Z"
+        },
+        {
+          "field": "operator",
+          "valueHash": "cd80231563cba371afbdd6bf6cd08d39eb15df79f9d4470e5357214b2113ca58",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "verifiedAt": "2026-11-11T15:44:19.795Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:15.834Z"
+        },
+        {
+          "field": "location",
+          "valueHash": "5985875934d229f399963e46a6ebfb0e7602ae24d1fcceb92402389979940e7b",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "verifiedAt": "2026-11-11T15:44:19.795Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:15.834Z"
+        },
+        {
+          "field": "price",
+          "valueHash": "cd03a57fd4fad1fd322b91e2a635ffb282cc0d330eb886121956d5ec1c92620b",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "verifiedAt": "2026-11-11T15:44:19.795Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2026-12-11T15:44:15.834Z"
+        },
+        {
+          "field": "departures",
+          "valueHash": "6d306423e2a09e0c56968a15c24ea50d065fea746647ae672bcf1c4c9983b393",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "verifiedAt": "2026-11-11T15:44:19.795Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2026-11-18T15:44:15.834Z"
+        }
+      ]
+    },
+    {
+      "version": 1,
+      "status": "active",
+      "source": "package_offers",
+      "offerId": "d56117f0-242c-4e61-b0d2-e640aa5dd925",
+      "snapshot": {
+        "revision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
+        "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/schema/v1/evidence.schema.json",
+        "schemaRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+        "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/871fa97436128e2a0ecfb4881e68742156dc0224/src/publishing",
+        "generatorRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+        "observedAt": "2026-11-11T15:44:20.428Z",
+        "complete": true
+      },
+      "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/policy/v1/freshness-proposal.json",
+      "rights": {
+        "status": "permitted",
+        "scope": "text",
+        "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/docs/publishing/text-policy.md",
+        "owner": "KiteScout (Aaron Lindner)",
+        "expiresAt": "2027-11-11T15:44:20.428Z"
+      },
+      "claims": [
+        {
+          "field": "title",
+          "valueHash": "78376f7a9c1043e685d2a99bff872c38d712cfaf484cd7535d3aa523a0cb4765",
+          "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+          "observedAt": "2026-11-11T15:44:14.302Z",
+          "verifiedAt": "2026-11-11T15:44:18.990Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:14.302Z"
+        },
+        {
+          "field": "description",
+          "valueHash": "f0d2e7252057dd1f410e700b7ca47b5268c24a80641d9efe9db5dc185d704f35",
+          "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+          "observedAt": "2026-11-11T15:44:14.302Z",
+          "verifiedAt": "2026-11-11T15:44:18.990Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-02-09T15:44:14.302Z"
+        },
+        {
+          "field": "type",
+          "valueHash": "f36e5fda6bc1c5860ef3db74b9558266a41e48dba2e44cf196d4fbf5bebcbea5",
+          "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+          "observedAt": "2026-11-11T15:44:14.302Z",
+          "verifiedAt": "2026-11-11T15:44:18.990Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:14.302Z"
+        },
+        {
+          "field": "operator",
+          "valueHash": "e0d52fd1c01f721949eaf234acb09e7fec139539b902dd5eca8383355064cbe3",
+          "sourceUrl": "https://www.dakhla-evasion.com/en/",
+          "observedAt": "2026-11-11T15:44:15.991Z",
+          "verifiedAt": "2026-11-11T15:44:18.990Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:15.991Z"
+        },
+        {
+          "field": "location",
+          "valueHash": "17a4cd105c20226348866932820fd6682c17766fe12fd8acda40522e5ef485f6",
+          "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+          "observedAt": "2026-11-11T15:44:14.302Z",
+          "verifiedAt": "2026-11-11T15:44:18.990Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2027-05-10T15:44:14.302Z"
+        },
+        {
+          "field": "price",
+          "valueHash": "04ba77544b4016e5e632f3b124719b3e9f6317650ebc8303bbfc8a3cdaee02cb",
+          "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+          "observedAt": "2026-11-11T15:44:14.302Z",
+          "verifiedAt": "2026-11-11T15:44:18.990Z",
+          "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+          "method": "source_reviewed",
+          "expiresAt": "2026-12-11T15:44:14.302Z"
+        }
+      ]
+    }
+  ]
+}

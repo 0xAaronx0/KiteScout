@@ -1,79 +1,129 @@
 {
   "version": 1,
-  "manifestRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+  "manifestRevision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
   "title": "Partial source failure",
   "cases": [
     {
-      "name": "verification incomplete",
-      "synthetic": false,
-      "note": "real entry, snapshot.complete = false: judge failed: judge answer is not JSON (stop_reason max_tokens, 8000 output tokens): Unexpected end of JSON input",
-      "now": "2026-10-21T10:54:00.490Z",
-      "expectedRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+      "name": "operator page unreadable",
+      "synthetic": true,
+      "note": "synthetic: real entry with snapshot.complete forced to false",
+      "now": "2026-11-11T15:45:20.428Z",
+      "expectedRevision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
       "row": {
-        "offer_id": "35f343cf-6381-4b7a-b596-f10bafda4653",
-        "provider_id": "35f343cf-6381-4b7a-b596-f10bafda4653",
-        "title": "Kite Fun Tarifa Surf House",
-        "slug": "kite-fun-tarifa-surf-house",
-        "summary": "The Kite Fun Tarifa Surf House is the kite school's own guest house in a quiet street of Tarifa's town centre, Spain, a few minutes' walk from the beach and the old town; most guests come to learn or practise kitesurfing. It is sold as a pack: any group or private kite course plus 3 nights in a double room for 2 people, from EUR 520 to 760 for both (June/October and July/September; August on request). Lessons include a certified instructor, full equipment (North Kiteboarding, Ocean Rodeo and Mystic), radio helmets and insurance; the school also offers surf, SUP and wing foil courses and rental.",
+        "offer_id": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
+        "provider_id": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
+        "title": "LEN10 Experience: Stig x Ruben Brazil",
+        "slug": "len10-experience-stig-x-ruben-brazil",
+        "summary": "Coached kite camp in Tatajuba, Brazil, hosted by Ruben Lenten and Stig Hoefnagel. The programme combines on-water coaching and video feedback with accommodation, meals, spot transport and activities. It is aimed at confident upwind riders seeking progression.",
         "package_type": "camp",
-        "country": "Spain",
+        "country": "Brazil",
         "countries": [
-          "Spain"
+          "Brazil"
         ],
-        "region": "Tarifa town",
-        "source_url": "https://kitefuntarifa.com/en/kitesurf-courses-tarifa/kitesurf-courses-accommodation-tarifa.html",
-        "operator_id": "9c8df2d2-815c-4fd0-bf73-32b559a120de",
-        "provider_name": "Kite Fun Tarifa",
-        "provider_website_url": "https://kitefuntarifa.com/en/",
-        "price_pp_cabin": 260,
-        "price_from_eur": 260,
+        "region": "Ceará",
+        "source_url": "https://www.len10.com/experience",
+        "operator_id": "c0924bb1-2ae2-4d13-ab4e-717265928981",
+        "provider_name": "LEN10 (Ruben Lenten)",
+        "provider_website_url": "https://www.len10.com",
+        "price_pp_cabin": 2999,
+        "price_from_eur": 2999,
         "price_pp_cabin_currency": "EUR",
         "currency": "EUR",
         "price_unit": "package",
-        "price_basis_note": "From EUR 260 / 3 nights p.p. (cheapest bookable: 9h Kite Course + 3 nights in a double room, 2026-10-01; as of 2026-10-20)",
+        "price_basis_note": "From EUR 2,999 p.p. (last published price, 2026 dates are over, new dates not published yet: Shared or private room at La Ventana Tatajuba, 2026-11-02; as of 2026-11-11)",
         "dates": null,
-        "updated_at": "2026-10-21T10:18:37.604836+00:00"
+        "updated_at": "2026-11-11T13:38:27.202232+00:00"
       },
       "evidence": {
         "version": 1,
         "status": "active",
         "source": "package_offers",
-        "offerId": "35f343cf-6381-4b7a-b596-f10bafda4653",
+        "offerId": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
         "snapshot": {
-          "revision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
-          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/schema/v1/evidence.schema.json",
-          "schemaRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
-          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/fb8f4989fd796674641f8b936eeb11cd34caf52d/src/publishing",
-          "generatorRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
-          "observedAt": "2026-10-21T10:53:00.490Z",
+          "revision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
+          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/schema/v1/evidence.schema.json",
+          "schemaRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/871fa97436128e2a0ecfb4881e68742156dc0224/src/publishing",
+          "generatorRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+          "observedAt": "2026-11-11T15:44:20.428Z",
           "complete": false
         },
-        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/policy/v1/freshness-proposal.json",
         "rights": {
           "status": "permitted",
           "scope": "text",
-          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/docs/publishing/text-policy.md",
+          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/docs/publishing/text-policy.md",
           "owner": "KiteScout (Aaron Lindner)",
-          "expiresAt": "2027-10-21T10:53:00.490Z"
+          "expiresAt": "2027-11-11T15:44:20.428Z"
         },
         "claims": [
           {
-            "field": "operator",
-            "valueHash": "54108b27208a20668da641045a52f6a01d97bd29918242bb58bb76a3751321d4",
-            "sourceUrl": "https://kitefuntarifa.com/en/kitesurf-courses-tarifa/kitesurf-courses-accommodation-tarifa.html",
-            "observedAt": "2026-10-21T10:51:41.821Z",
-            "verifiedAt": "2026-10-21T10:52:12.909Z",
-            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "field": "title",
+            "valueHash": "4e18878b3b76f887e9328d541d72a833edc647a61790d699855052eb4e3c69b0",
+            "sourceUrl": "https://www.len10.com/experience",
+            "observedAt": "2026-11-11T15:44:14.411Z",
+            "verifiedAt": "2026-11-11T15:44:16.867Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
             "method": "source_reviewed",
-            "expiresAt": "2027-04-19T10:51:41.821Z"
+            "expiresAt": "2027-05-10T15:44:14.411Z"
+          },
+          {
+            "field": "description",
+            "valueHash": "81ee65c4d6ff0f077d12de2822b61c6f801e2552ee743410abad7f7dc1f0f939",
+            "sourceUrl": "https://www.len10.com/experience",
+            "observedAt": "2026-11-11T15:44:14.411Z",
+            "verifiedAt": "2026-11-11T15:44:16.867Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+            "method": "source_reviewed",
+            "expiresAt": "2027-02-09T15:44:14.411Z"
+          },
+          {
+            "field": "type",
+            "valueHash": "8ae2db3ec14e9d641203403dafad1ea4b9dab0edae81d3e33725f4c84546549b",
+            "sourceUrl": "https://www.len10.com/experience",
+            "observedAt": "2026-11-11T15:44:14.411Z",
+            "verifiedAt": "2026-11-11T15:44:16.867Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+            "method": "source_reviewed",
+            "expiresAt": "2027-05-10T15:44:14.411Z"
+          },
+          {
+            "field": "operator",
+            "valueHash": "ce1a56d0d8dccf299dbe03448fdc07ad2c870a4ec0161c69e48f3a1576cf708e",
+            "sourceUrl": "https://www.len10.com/experience",
+            "observedAt": "2026-11-11T15:44:14.411Z",
+            "verifiedAt": "2026-11-11T15:44:16.867Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+            "method": "source_reviewed",
+            "expiresAt": "2027-05-10T15:44:14.411Z"
+          },
+          {
+            "field": "location",
+            "valueHash": "a9b0828f27985b2d67e3ab8c02a64b3b14d28bbbe589f3267a0ea98ec04f97c3",
+            "sourceUrl": "https://www.len10.com/experience",
+            "observedAt": "2026-11-11T15:44:14.411Z",
+            "verifiedAt": "2026-11-11T15:44:16.867Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+            "method": "source_reviewed",
+            "expiresAt": "2027-05-10T15:44:14.411Z"
+          },
+          {
+            "field": "price",
+            "valueHash": "c05db7a40e4f1dbded8487c70799dd7091c0b186a4c7a6afe663898781ef52e6",
+            "sourceUrl": "https://www.len10.com/experience",
+            "observedAt": "2026-11-11T15:44:14.411Z",
+            "verifiedAt": "2026-11-11T15:44:16.867Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+            "method": "source_reviewed",
+            "expiresAt": "2026-12-11T15:44:14.411Z"
           }
         ]
       },
       "policy": {
         "version": 1,
-        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/policy/v1/freshness-proposal.json",
         "owner": "KiteScout data (Aaron Lindner) with Kite Cruise Scout app (Martin Marzidovsek)",
-        "approvedAt": "2026-10-21T10:53:00.490Z",
+        "approvedAt": "2026-11-11T15:44:20.428Z",
         "rules": [
           {
             "field": "title",

@@ -1,0 +1,1098 @@
+{
+  "version": 1,
+  "kind": "kitescout.publishing-evidence-sidecar",
+  "revision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
+  "verifier": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
+  "copyRunWords": 12,
+  "offers": [
+    {
+      "offerId": "1710050d-0e4a-4222-ae35-84059772d354",
+      "row": {
+        "offer_id": "1710050d-0e4a-4222-ae35-84059772d354",
+        "provider_id": "1710050d-0e4a-4222-ae35-84059772d354",
+        "title": "Swiss Kitesurf Kite Camp Egypt, Soma Bay",
+        "slug": "swiss-kitesurf-kite-camp-egypt-soma-bay",
+        "summary": "Kite camp in Soma Bay, Egypt, organised by Swiss Kitesurf. Hotel-based options combine accommodation with instruction or rental equipment according to the chosen package.",
+        "package_type": "camp",
+        "country": "Egypt",
+        "countries": [
+          "Egypt"
+        ],
+        "region": "Red Sea",
+        "source_url": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+        "operator_id": "2d52492e-fa7f-4912-af76-3576622fc21a",
+        "provider_name": "Swiss Kitesurf",
+        "provider_website_url": "https://www.kitesailing.ch/en/school/camps/kite-camp-kenya",
+        "price_pp_cabin": 950,
+        "price_from_eur": null,
+        "price_pp_cabin_currency": "CHF",
+        "currency": "CHF",
+        "price_unit": "package",
+        "price_basis_note": "From CHF 950 p.p. (last published price, 2026 dates are over, new dates not published yet: Board & lodging only, shared double room, 2026-10-31; as of 2026-10-31)",
+        "dates": null,
+        "updated_at": "2026-11-03T13:45:01.903916+00:00"
+      },
+      "rowDigest": "4d750e90598ab07ca3ebace4212ff4634d303d3f4752581b882ccaba9afdf95e",
+      "rowUnchangedAtSnapshot": true,
+      "complete": true,
+      "incompleteReason": null,
+      "verifiedAt": "2026-11-11T15:44:16.815Z",
+      "model": "deepseek/deepseek-v4.1-flash",
+      "pages": [
+        {
+          "url": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+          "fetchedAt": "2026-11-11T15:44:14.790Z",
+          "ok": true,
+          "htmlSha256": "83473d17805c231c11642e90d4dd96f2298ceef797c93064b810b7429fc1ce70",
+          "textSha256": "bcbbf3d89605f6b94fc3d324606eb5636788c46e064da9558009d53fc83d6e34",
+          "textChars": 6182
+        }
+      ],
+      "textReuse": {
+        "words": 0,
+        "run": ""
+      },
+      "fields": {
+        "title": {
+          "claimed": true,
+          "reason": "judge: page offers a product this title names (quote found)",
+          "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+          "observedAt": "2026-11-11T15:44:14.790Z",
+          "deterministic": [
+            {
+              "check": "title phrase on page",
+              "hit": null
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "Swiss Kitesurf ♡ Kiloashara Don't let winter take hold just yet - keep the summer vibes and come kitesurfing with us in the beautiful Red Sea in Egypt!",
+            "note": "Page names Swiss Kitesurf, kite camp, Egypt, and Soma Bay.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 588,
+              "matched": "Swiss Kitesurf ♡ Kiloashara Don't let winter take hold just yet - keep the summer vibes and come kitesurfing with us in the beautiful Red Sea in Egypt!",
+              "excerpt": "... Home Schooling Kite Camps abroad Kite camp Egypt Swiss Kitesurf ♡ Kiloashara Don't let winter take hold just yet - keep the summer vibes and come kitesurfing with us in the beautiful Red Sea in Eg"
+            }
+          }
+        },
+        "description": {
+          "claimed": true,
+          "reason": "all 0 numbers on the page; all 2 sentences supported with on-page quotes",
+          "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+          "observedAt": "2026-11-11T15:44:14.790Z",
+          "deterministic": [
+            {
+              "check": "sentence #0 quote",
+              "hit": {
+                "zone": "visible",
+                "offset": 957,
+                "matched": "Join us in Soma Bay, Egypt, for an unforgettable kite camp in the fall of 2026!",
+                "excerpt": "...o escape the winter and extend the summer season? Join us in Soma Bay, Egypt, for an unforgettable kite camp in the fall of 2026! Whether you're a complete beginner or an experien..."
+              }
+            },
+            {
+              "check": "sentence #1 quote",
+              "hit": {
+                "zone": "visible",
+                "offset": 2655,
+                "matched": "Full board and accommodation in a double room Complete equipment rental for the entire week.",
+                "excerpt": "... and rent your equipment directly at the station! Full board and accommodation in a double room Complete equipment rental for the entire week. CHF 1350.- in shared room (only bookable in pairs..."
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": null,
+            "note": "#0:ok #1:ok",
+            "quoteHit": null
+          }
+        },
+        "type": {
+          "claimed": true,
+          "reason": "camp keyword on page and judge confirms a multi-day camp package",
+          "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+          "observedAt": "2026-11-11T15:44:14.790Z",
+          "deterministic": [
+            {
+              "check": "camp/package keyword",
+              "hit": {
+                "zone": "visible",
+                "offset": 100,
+                "matched": "Kite Camps",
+                "excerpt": "...ections Contact Webshop Schooling Snowkite School Kite Camps abroad Kite camp Egypt Kite camp Sicily Kite camp..."
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "Join us in Soma Bay, Egypt, for an unforgettable kite camp in the fall of 2026!",
+            "note": "Multi-day camp with lessons, accommodation, and full board.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 957,
+              "matched": "Join us in Soma Bay, Egypt, for an unforgettable kite camp in the fall of 2026!",
+              "excerpt": "...o escape the winter and extend the summer season? Join us in Soma Bay, Egypt, for an unforgettable kite camp in the fall of 2026! Whether you're a complete beginner or an experien..."
+            }
+          }
+        },
+        "operator": {
+          "claimed": true,
+          "reason": "operator name printed on the operator's own site; offer page is on that site",
+          "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+          "observedAt": "2026-11-11T15:44:14.790Z",
+          "deterministic": [
+            {
+              "check": "name \"Swiss Kitesurf\" on offer page",
+              "hit": {
+                "zone": "visible",
+                "offset": 513,
+                "matched": "Swiss Kitesurf",
+                "excerpt": "...nter rental Stand Up Paddle rental Our Team About Swiss Kitesurf Book now × Home Schooling Kite Camps abroad Kite ..."
+              }
+            },
+            {
+              "check": "offer page on operator domain kitesailing.ch",
+              "hit": {
+                "zone": "meta",
+                "offset": 0,
+                "matched": "kitesailing.ch",
+                "excerpt": "https://kitesailing.ch/en/school/camps/kite-camp-egypt"
+              }
+            }
+          ]
+        },
+        "location": {
+          "claimed": true,
+          "reason": "place name on page and judge confirms the destination",
+          "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+          "observedAt": "2026-11-11T15:44:14.790Z",
+          "deterministic": [
+            {
+              "check": "country on page",
+              "hit": {
+                "zone": "visible",
+                "offset": 128,
+                "matched": "Egypt",
+                "excerpt": "...oling Snowkite School Kite Camps abroad Kite camp Egypt Kite camp Sicily Kite camp Kenya Kitesurf School ..."
+              }
+            },
+            {
+              "check": "region on page",
+              "hit": {
+                "zone": "visible",
+                "offset": 722,
+                "matched": "Red Sea",
+                "excerpt": "...bes and come kitesurfing with us in the beautiful Red Sea in Egypt! Perfect wind, endless space and the blu..."
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "come kitesurfing with us in the beautiful Red Sea in Egypt!",
+            "note": "Page states Red Sea in Egypt and Soma Bay.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 680,
+              "matched": "come kitesurfing with us in the beautiful Red Sea in Egypt!",
+              "excerpt": "...er take hold just yet - keep the summer vibes and come kitesurfing with us in the beautiful Red Sea in Egypt! Perfect wind, endless space and the bluest water ..."
+            }
+          }
+        },
+        "price": {
+          "claimed": true,
+          "reason": "amount with currency printed on the page and judge confirms the basis",
+          "sourceUrl": "https://kitesailing.ch/en/school/camps/kite-camp-egypt",
+          "observedAt": "2026-11-11T15:44:14.790Z",
+          "deterministic": [
+            {
+              "check": "amount + currency on page",
+              "hit": {
+                "zone": "visible",
+                "offset": 2982,
+                "matched": "CHF 950.-",
+                "excerpt": "...ull board and accommodation in a double room only CHF 950.- in shared room (only bookable in pairs) + CHF 300..."
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "only CHF 950.- in shared room (only bookable in pairs)",
+            "note": "Page states CHF 950 shared room for board and lodging only package.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 2977,
+              "matched": "only CHF 950.- in shared room (only bookable in pairs)",
+              "excerpt": "...mp? Full board and accommodation in a double room only CHF 950.- in shared room (only bookable in pairs) + CHF 300.- single room surcharge I wanna come! R..."
+            }
+          }
+        },
+        "departures": {
+          "claimed": false,
+          "reason": "no upcoming departures on the row (dates stay unknown)",
+          "sourceUrl": null,
+          "observedAt": null,
+          "deterministic": []
+        }
+      }
+    },
+    {
+      "offerId": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
+      "row": {
+        "offer_id": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
+        "provider_id": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
+        "title": "LEN10 Experience: Stig x Ruben Brazil",
+        "slug": "len10-experience-stig-x-ruben-brazil",
+        "summary": "Coached kite camp in Tatajuba, Brazil, hosted by Ruben Lenten and Stig Hoefnagel. The programme combines on-water coaching and video feedback with accommodation, meals, spot transport and activities. It is aimed at confident upwind riders seeking progression.",
+        "package_type": "camp",
+        "country": "Brazil",
+        "countries": [
+          "Brazil"
+        ],
+        "region": "Ceará",
+        "source_url": "https://www.len10.com/experience",
+        "operator_id": "c0924bb1-2ae2-4d13-ab4e-717265928981",
+        "provider_name": "LEN10 (Ruben Lenten)",
+        "provider_website_url": "https://www.len10.com",
+        "price_pp_cabin": 2999,
+        "price_from_eur": 2999,
+        "price_pp_cabin_currency": "EUR",
+        "currency": "EUR",
+        "price_unit": "package",
+        "price_basis_note": "From EUR 2,999 p.p. (last published price, 2026 dates are over, new dates not published yet: Shared or private room at La Ventana Tatajuba, 2026-11-02; as of 2026-11-11)",
+        "dates": null,
+        "updated_at": "2026-11-11T13:38:27.202232+00:00"
+      },
+      "rowDigest": "59cde08504947abaebbd6e7bbae0af2cf2c116e5981d4ae1587a11223862c086",
+      "rowUnchangedAtSnapshot": true,
+      "complete": true,
+      "incompleteReason": null,
+      "verifiedAt": "2026-11-11T15:44:16.867Z",
+      "model": "deepseek/deepseek-v4.1-flash",
+      "pages": [
+        {
+          "url": "https://www.len10.com/experience",
+          "fetchedAt": "2026-11-11T15:44:14.411Z",
+          "ok": true,
+          "htmlSha256": "0bda5a7fefd1d3a652fc4848c43f6dbbf50d6fcbaa08e182ab2ad171fd67a604",
+          "textSha256": "dec20811044d34a322356aa6437472fec5d69ed881ad3be06be632587ac518c3",
+          "textChars": 2619
+        }
+      ],
+      "textReuse": {
+        "words": 0,
+        "run": ""
+      },
+      "fields": {
+        "title": {
+          "claimed": true,
+          "reason": "judge: page offers a product this title names (quote found)",
+          "sourceUrl": "https://www.len10.com/experience",
+          "observedAt": "2026-11-11T15:44:14.411Z",
+          "deterministic": [
+            {
+              "check": "title phrase on page",
+              "hit": null
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "STIG × RUBEN · BRAZIL 2026 2–8 November 2026 · Tatajuba, Brazil",
+            "note": "Page names Stig, Ruben, Brazil and Tatajuba for the featured experience.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 892,
+              "matched": "STIG × RUBEN · BRAZIL 2026 2–8 November 2026 · Tatajuba, Brazil",
+              "excerpt": "...d experience ONLY 4 ROOMS LEFT · From €2,999 p.p. STIG × RUBEN · BRAZIL 2026 2–8 November 2026 · Tatajuba, Brazil Two riders. One legendary stretch of coast. A ful..."
+            }
+          }
+        },
+        "description": {
+          "claimed": true,
+          "reason": "all 0 numbers on the page; all 3 sentences supported with on-page quotes",
+          "sourceUrl": "https://www.len10.com/experience",
+          "observedAt": "2026-11-11T15:44:14.411Z",
+          "deterministic": [
+            {
+              "check": "sentence #0 quote",
+              "hit": {
+                "zone": "visible",
+                "offset": 1044,
+                "matched": "7 days / 6 nights at La Ventana Tatajuba with Ruben Lenten + Stig Hoefnagel",
+                "excerpt": "...oast. A full week of wind, water and good people. 7 days / 6 nights at La Ventana Tatajuba with Ruben Lenten + Stig Hoefnagel. Book Your Spot → Upcoming trips Where are we rid..."
+              }
+            },
+            {
+              "check": "sentence #1 quote",
+              "hit": {
+                "zone": "visible",
+                "offset": 1838,
+                "matched": "Accommodation at La Ventana (shared or private), 3 chef-cooked meals daily, pro coaching from Ruben + Stig, video analysis, 4x4 spot transport, downwinders, yoga and all group activities.",
+                "excerpt": "...pic downwinders. What is included in the price? + Accommodation at La Ventana (shared or private), 3 chef-cooked meals daily, pro coaching from Ruben + Stig, video analysis, 4x4 spot transport, dow"
+              }
+            },
+            {
+              "check": "sentence #2 quote",
+              "hit": {
+                "zone": "visible",
+                "offset": 1429,
+                "matched": "Confident intermediate to pro. You should be riding upwind comfortably and ready to push your jumps, loops or overall control.",
+                "excerpt": "... FAQ Good to know. What riding level do I need? + Confident intermediate to pro. You should be riding upwind comfortably and ready to push your jumps, loops or overall control. Ruben and Stig tailo"
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": null,
+            "note": "#0:ok #1:ok #2:ok",
+            "quoteHit": null
+          }
+        },
+        "type": {
+          "claimed": true,
+          "reason": "camp keyword on page and judge confirms a multi-day camp package",
+          "sourceUrl": "https://www.len10.com/experience",
+          "observedAt": "2026-11-11T15:44:14.411Z",
+          "deterministic": [
+            {
+              "check": "camp/package keyword",
+              "hit": {
+                "zone": "visible",
+                "offset": 1007,
+                "matched": "week",
+                "excerpt": "...wo riders. One legendary stretch of coast. A full week of wind, water and good people. 7 days / 6 nights..."
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "A full week of wind, water and good people. 7 days / 6 nights at La Ventana Tatajuba",
+            "note": "Multi-day camp with coaching and accommodation.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 1000,
+              "matched": "A full week of wind, water and good people. 7 days / 6 nights at La Ventana Tatajuba",
+              "excerpt": "...razil Two riders. One legendary stretch of coast. A full week of wind, water and good people. 7 days / 6 nights at La Ventana Tatajuba with Ruben Lenten + Stig Hoefnagel. Book Your Spo..."
+            }
+          }
+        },
+        "operator": {
+          "claimed": true,
+          "reason": "operator name printed on the operator's own site; offer page is on that site",
+          "sourceUrl": "https://www.len10.com/experience",
+          "observedAt": "2026-11-11T15:44:14.411Z",
+          "deterministic": [
+            {
+              "check": "name \"LEN10 (Ruben Lenten)\" on offer page",
+              "hit": {
+                "zone": "visible",
+                "offset": 164,
+                "matched": "LEN10",
+                "excerpt": "...erience Watch Up Next Shop Connect Work with me → LEN10 Experience Come ride with me. Great kite spots. S..."
+              }
+            },
+            {
+              "check": "offer page on operator domain len10.com",
+              "hit": {
+                "zone": "meta",
+                "offset": 0,
+                "matched": "www.len10.com",
+                "excerpt": "https://www.len10.com/experience"
+              }
+            }
+          ]
+        },
+        "location": {
+          "claimed": true,
+          "reason": "place name on page and judge confirms the destination",
+          "sourceUrl": "https://www.len10.com/experience",
+          "observedAt": "2026-11-11T15:44:14.411Z",
+          "deterministic": [
+            {
+              "check": "country on page",
+              "hit": {
+                "zone": "visible",
+                "offset": 907,
+                "matched": "BRAZIL",
+                "excerpt": "...LY 4 ROOMS LEFT · From €2,999 p.p. STIG × RUBEN · BRAZIL 2026 2–8 November 2026 · Tatajuba, Brazil Two rid..."
+              }
+            },
+            {
+              "check": "region on page",
+              "hit": null
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "Tatajuba, Brazil",
+            "note": "Tatajuba is in Ceará, Brazil; page states Tatajuba, Brazil.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 939,
+              "matched": "Tatajuba, Brazil",
+              "excerpt": "...p. STIG × RUBEN · BRAZIL 2026 2–8 November 2026 · Tatajuba, Brazil Two riders. One legendary stretch of coast. A ful..."
+            }
+          }
+        },
+        "price": {
+          "claimed": true,
+          "reason": "amount with currency printed on the page and judge confirms the basis",
+          "sourceUrl": "https://www.len10.com/experience",
+          "observedAt": "2026-11-11T15:44:14.411Z",
+          "deterministic": [
+            {
+              "check": "amount + currency on page",
+              "hit": {
+                "zone": "visible",
+                "offset": 880,
+                "matched": "€2,999",
+                "excerpt": "...n’t. Featured experience ONLY 4 ROOMS LEFT · From €2,999 p.p. STIG × RUBEN · BRAZIL 2026 2–8 November 2026..."
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "From €2,999 p.p.",
+            "note": "Amount, currency and per-person basis match; bookkeeping note not judged.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 875,
+              "matched": "From €2,999 p.p.",
+              "excerpt": "... doesn’t. Featured experience ONLY 4 ROOMS LEFT · From €2,999 p.p. STIG × RUBEN · BRAZIL 2026 2–8 November 2026 · Ta..."
+            }
+          }
+        },
+        "departures": {
+          "claimed": false,
+          "reason": "no upcoming departures on the row (dates stay unknown)",
+          "sourceUrl": null,
+          "observedAt": null,
+          "deterministic": []
+        }
+      }
+    },
+    {
+      "offerId": "d56117f0-242c-4e61-b0d2-e640aa5dd925",
+      "row": {
+        "offer_id": "d56117f0-242c-4e61-b0d2-e640aa5dd925",
+        "provider_id": "d56117f0-242c-4e61-b0d2-e640aa5dd925",
+        "title": "Dakhla Evasion Free Ride & Wellness Kite Camp",
+        "slug": "dakhla-evasion-free-ride-wellness-kite-camp",
+        "summary": "Kitesurf and wingfoil packages on the Dakhla lagoon from Dakhla Evasion. Options combine accommodation and meals with instruction or services for independent riders.",
+        "package_type": "camp",
+        "country": "Morocco",
+        "countries": [
+          "Morocco"
+        ],
+        "region": "Dakhla-Oued Ed-Dahab",
+        "source_url": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+        "operator_id": "b5fb5311-9ac9-46d9-83cd-e714aa88db55",
+        "provider_name": "Dakhla Evasion Resort & Spa",
+        "provider_website_url": "https://www.dakhla-evasion.com/en/",
+        "price_pp_cabin": 990,
+        "price_from_eur": 990,
+        "price_pp_cabin_currency": "EUR",
+        "currency": "EUR",
+        "price_unit": "package",
+        "price_basis_note": "From EUR 990 / 7 nights p.p. (cheapest bookable: Freedom Ride Pack & Bien-être (independent riders, own gear, downwinders), 2026-11-21; as of 2026-11-11)",
+        "dates": [
+          {
+            "unit": "Free Ride & Bien-être (beginners, 16 h semi-private lessons)",
+            "price": 1550,
+            "status": "on_request",
+            "currency": "EUR",
+            "end_date": "2027-03-13",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-11-21",
+            "price_basis": "person",
+            "date_precision": "season",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Freedom Ride Pack & Bien-être (independent riders, own gear, downwinders)",
+            "price": 990,
+            "status": "on_request",
+            "currency": "EUR",
+            "end_date": "2027-03-13",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-11-21",
+            "price_basis": "person",
+            "date_precision": "season",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Ride Evolution & Bien-être (intermediates, 12 h semi-private lessons + 3 days rental)",
+            "price": 1500,
+            "status": "on_request",
+            "currency": "EUR",
+            "end_date": "2027-03-13",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-11-21",
+            "price_basis": "person",
+            "date_precision": "season",
+            "price_valid_until": null
+          }
+        ],
+        "updated_at": "2026-11-11T13:29:16.25768+00:00"
+      },
+      "rowDigest": "9ff34f2633885f594d37df90bd292a9822fd0f148b101c5bc28e9b33b13d424c",
+      "rowUnchangedAtSnapshot": true,
+      "complete": true,
+      "incompleteReason": null,
+      "verifiedAt": "2026-11-11T15:44:18.990Z",
+      "model": "deepseek/deepseek-v4.1-flash",
+      "pages": [
+        {
+          "url": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+          "fetchedAt": "2026-11-11T15:44:14.302Z",
+          "ok": true,
+          "htmlSha256": "e6a4d5c70af8b4e09413de26bc3adfabfe8e720ed8a548cc23953bb9068e2c41",
+          "textSha256": "f3ad6bbefa8928b5a453edb784d64ec08025dcfaba1e4138e88a82b4a7573442",
+          "textChars": 9295
+        },
+        {
+          "url": "https://www.dakhla-evasion.com/en/",
+          "fetchedAt": "2026-11-11T15:44:15.991Z",
+          "ok": true,
+          "htmlSha256": "f4c63b0063b9896e15a695611fe9959ebb12838c9122618915316d0a70771add",
+          "textSha256": "541963c700dcd6780292aadd3f17dfc3211557eb5bf956284223a93a957c0890",
+          "textChars": 16731
+        }
+      ],
+      "textReuse": {
+        "words": 0,
+        "run": ""
+      },
+      "fields": {
+        "title": {
+          "claimed": true,
+          "reason": "judge: page offers a product this title names (quote found)",
+          "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+          "observedAt": "2026-11-11T15:44:14.302Z",
+          "deterministic": [
+            {
+              "check": "title phrase on page",
+              "hit": null
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "L’offre Free Ride & Bien être , à partir de 1 550 € par personne",
+            "note": "The page presents an offer named 'Free Ride & Bien être' from Dakhla Évasion, matching the product name.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 2726,
+              "matched": "L’offre Free Ride & Bien être , à partir de 1 550 € par personne",
+              "excerpt": "...utre séjour . Offre Free Ride & Bien être L’offre L’offre Free Ride & Bien être , à partir de 1 550 € par personne , est conçue pour les débutants qui souhaitent dé..."
+            }
+          }
+        },
+        "description": {
+          "claimed": true,
+          "reason": "all 0 numbers on the page; all 2 sentences supported with on-page quotes",
+          "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+          "observedAt": "2026-11-11T15:44:14.302Z",
+          "deterministic": [
+            {
+              "check": "sentence #0 quote",
+              "hit": {
+                "zone": "visible",
+                "offset": 490,
+                "matched": "L'été venez vivre l'offre de kitesurf tout compris",
+                "excerpt": "...ort Dakhla Evasion - Offres de stage tout compris L'été venez vivre l'offre de kitesurf tout compris et pour cet hiver, venez vivre l'expérience ultim..."
+              }
+            },
+            {
+              "check": "sentence #1 quote",
+              "hit": {
+                "zone": "visible",
+                "offset": 2921,
+                "matched": "Vous séjournez 7 nuits en bungalow privé , dans un cadre confortable et apaisant, avec une pension complète",
+                "excerpt": "...e dans les conditions exceptionnelles de Dakhla . Vous séjournez 7 nuits en bungalow privé , dans un cadre confortable et apaisant, avec une pension complète pour profiter pleinement de chaque jour"
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": null,
+            "note": "#0:ok #1:ok",
+            "quoteHit": null
+          }
+        },
+        "type": {
+          "claimed": true,
+          "reason": "camp keyword on page and judge confirms a multi-day camp package",
+          "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+          "observedAt": "2026-11-11T15:44:14.302Z",
+          "deterministic": [
+            {
+              "check": "camp/package keyword",
+              "hit": {
+                "zone": "visible",
+                "offset": 112,
+                "matched": "stage",
+                "excerpt": "...igation Resort Dakhla Evasion Logements Offres de stage tout compris Restauration & bar Services et équip..."
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "16 heures de cours de kitesurf en semi-privé par personne",
+            "note": "Multi-day package with 7 nights accommodation, full board and kite instruction.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 3189,
+              "matched": "16 heures de cours de kitesurf en semi-privé par personne",
+              "excerpt": "...rir un apprentissage progressif et personnalisé : 16 heures de cours de kitesurf en semi-privé par personne , pour acquérir les bases, progresser à votre ryt..."
+            }
+          }
+        },
+        "operator": {
+          "claimed": true,
+          "reason": "operator name printed on the operator's own site; offer page is on that site",
+          "sourceUrl": "https://www.dakhla-evasion.com/en/",
+          "observedAt": "2026-11-11T15:44:15.991Z",
+          "deterministic": [
+            {
+              "check": "name \"Dakhla Evasion Resort & Spa\" on offer page",
+              "hit": null
+            },
+            {
+              "check": "offer page on operator domain dakhla-evasion.com",
+              "hit": {
+                "zone": "meta",
+                "offset": 0,
+                "matched": "www.dakhla-evasion.com",
+                "excerpt": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/"
+              }
+            },
+            {
+              "check": "operator website links to dakhla-evasion.com",
+              "hit": {
+                "zone": "meta",
+                "offset": 0,
+                "matched": "dakhla-evasion.com",
+                "excerpt": "https://www.dakhla-evasion.com/en/"
+              }
+            },
+            {
+              "check": "name \"Dakhla Evasion Resort & Spa\" on operator website",
+              "hit": {
+                "zone": "visible",
+                "offset": 515,
+                "matched": "Dakhla Evasion Resort & Spa",
+                "excerpt": "...ptional kitesurfing holiday in Morocco Welcome to Dakhla Evasion Resort & Spa. Are you looking for the best destination for you..."
+              }
+            }
+          ]
+        },
+        "location": {
+          "claimed": true,
+          "reason": "place name on page and judge confirms the destination",
+          "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+          "observedAt": "2026-11-11T15:44:14.302Z",
+          "deterministic": [
+            {
+              "check": "country on page",
+              "hit": {
+                "zone": "visible",
+                "offset": 614,
+                "matched": "Maroc",
+                "excerpt": "...z vivre l'expérience ultime d'un voyage glisse au Maroc avec notre offre Stage surf Dakhla tout compris o..."
+              }
+            },
+            {
+              "check": "region on page",
+              "hit": null
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "Dakhla est la destination mondiale du kitesurf",
+            "note": "Dakhla is in Morocco; the page names Dakhla and Morocco.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 711,
+              "matched": "Dakhla est la destination mondiale du kitesurf",
+              "excerpt": "...ompris ou profitez de nos packs Surf & Bien-être. Dakhla est la destination mondiale du kitesurf et nos séjours récoltent d'excellents avis grâce ..."
+            }
+          }
+        },
+        "price": {
+          "claimed": true,
+          "reason": "amount with currency printed on the page and judge confirms the basis",
+          "sourceUrl": "https://www.dakhla-evasion.com/resort-dakhla-evasion/offres-de-stage-tout-compris/",
+          "observedAt": "2026-11-11T15:44:14.302Z",
+          "deterministic": [
+            {
+              "check": "amount + currency on page",
+              "hit": {
+                "zone": "visible",
+                "offset": 5515,
+                "matched": "990 €",
+                "excerpt": "...re Le pack Freedom Ride & Bien être , à partir de 990 € par personne , est l’expérience idéale pour les r..."
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "Le pack Freedom Ride & Bien être , à partir de 990 € par personne",
+            "note": "The page states 990 EUR per person for the Freedom Ride & Bien être pack, a 7-night package.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 5468,
+              "matched": "Le pack Freedom Ride & Bien être , à partir de 990 € par personne",
+              "excerpt": "...CETTE OFFRE Freedom Ride Pack & Bien être L’offre Le pack Freedom Ride & Bien être , à partir de 990 € par personne , est l’expérience idéale pour les riders expérim..."
+            }
+          }
+        },
+        "departures": {
+          "claimed": false,
+          "reason": "1 slot(s) with date_precision season: the app would show an exact-day label",
+          "sourceUrl": null,
+          "observedAt": null,
+          "deterministic": [
+            {
+              "check": "departure 2026-11-21..2027-03-13",
+              "hit": {
+                "zone": "visible",
+                "offset": 923,
+                "matched": "21/11/2026 au 13/03/2027",
+                "excerpt": "...nse ou de la détente, nos offres sont valables du 21/11/2026 au 13/03/2027. RÉSERVER VOTRE SÉJOUR À DAKHLA Pack Wave Escape ..."
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "offerId": "d2e723d2-f3d3-4234-a766-27122931188d",
+      "row": {
+        "offer_id": "d2e723d2-f3d3-4234-a766-27122931188d",
+        "provider_id": "d2e723d2-f3d3-4234-a766-27122931188d",
+        "title": "KiteMex Kite & Wingfoil Camp",
+        "slug": "kitemex-kite-wingfoil-camp",
+        "summary": "Kite and wingfoil coaching camp in La Ventana, Baja California Sur, Mexico. The programme combines private coaching with shared beachfront accommodation, equipment and yoga or SUP activities. Coaching and alternative activities depend on conditions.",
+        "package_type": "camp",
+        "country": "Mexico",
+        "countries": [
+          "Mexico"
+        ],
+        "region": "La Ventana, Baja California Sur",
+        "source_url": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+        "operator_id": "426975cd-5be6-447f-874a-8806a17f9d98",
+        "provider_name": "KiteMex",
+        "provider_website_url": "https://kitemex.com",
+        "price_pp_cabin": 2799,
+        "price_from_eur": null,
+        "price_pp_cabin_currency": "USD",
+        "currency": "USD",
+        "price_unit": "package",
+        "price_basis_note": "From USD 2,799 / 6 nights p.p. (cheapest bookable: Beachfront Double Room (shared), 2026-12-06; as of 2026-11-11)",
+        "dates": [
+          {
+            "unit": "Beachfront Double Room (shared)",
+            "price": 2799,
+            "status": "on_request",
+            "currency": "USD",
+            "end_date": "2026-12-12",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2026-12-06",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Beachfront Double Room (shared)",
+            "price": 2799,
+            "status": "on_request",
+            "currency": "USD",
+            "end_date": "2027-01-15",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2027-01-09",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Beachfront Double Room (shared)",
+            "price": 2799,
+            "status": "on_request",
+            "currency": "USD",
+            "end_date": "2027-02-19",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2027-02-13",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          },
+          {
+            "unit": "Beachfront Double Room (shared)",
+            "price": 2799,
+            "status": "on_request",
+            "currency": "USD",
+            "end_date": "2027-03-13",
+            "price_unit": "package",
+            "spots_left": null,
+            "start_date": "2027-03-07",
+            "price_basis": "person",
+            "date_precision": "day",
+            "price_valid_until": null
+          }
+        ],
+        "updated_at": "2026-11-11T13:36:53.652425+00:00"
+      },
+      "rowDigest": "61e76eb30b96bd8791d368eceeac1dce7dc5572fbbb0e3259ae073fe3e148355",
+      "rowUnchangedAtSnapshot": true,
+      "complete": true,
+      "incompleteReason": null,
+      "verifiedAt": "2026-11-11T15:44:19.795Z",
+      "model": "deepseek/deepseek-v4.1-flash",
+      "pages": [
+        {
+          "url": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "fetchedAt": "2026-11-11T15:44:15.834Z",
+          "ok": true,
+          "htmlSha256": "fd04fdaeddfef45688baff9d3b6bac4469a77fd118a04f55e2c6a7f95607169c",
+          "textSha256": "7d7eead953b56b9a99c029e4455559d3c6f9185cac6d3bd5369e1be1fe71dd04",
+          "textChars": 5291
+        }
+      ],
+      "textReuse": {
+        "words": 6,
+        "run": "in la ventana baja california sur"
+      },
+      "fields": {
+        "title": {
+          "claimed": true,
+          "reason": "judge: page offers a product this title names (quote found)",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "deterministic": [
+            {
+              "check": "title phrase on page",
+              "hit": null
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "Kitemex La Ventana Kite & Wingfoil Camp",
+            "note": "The page names the product 'Kitemex La Ventana Kite & Wingfoil Camp', which fairly matches 'KiteMex Kite & Wingfoil Camp'.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 136,
+              "matched": "Kitemex La Ventana Kite & Wingfoil Camp",
+              "excerpt": "...s Contact Wing Foil KiteBoarding About Us Contact Kitemex La Ventana Kite & Wingfoil Camp Join us in La Ventana, Baja California Sur, for a..."
+            }
+          }
+        },
+        "description": {
+          "claimed": true,
+          "reason": "all 0 numbers on the page; all 3 sentences supported with on-page quotes",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "deterministic": [
+            {
+              "check": "sentence #0 quote",
+              "hit": {
+                "zone": "visible",
+                "offset": 176,
+                "matched": "Join us in La Ventana, Baja California Sur, for a premium kiteboarding and wingfoiling camp",
+                "excerpt": "...s Contact Kitemex La Ventana Kite & Wingfoil Camp Join us in La Ventana, Baja California Sur, for a premium kiteboarding and wingfoiling camp designed to help you improve your skills, confide..."
+              }
+            },
+            {
+              "check": "sentence #1 quote",
+              "hit": {
+                "zone": "visible",
+                "offset": 596,
+                "matched": "The camp includes up to 15 hours of private kiteboarding and wingfoiling coaching over five days, four guided yoga sessions, beachfront accommodation",
+                "excerpt": "... skills, confidence and progression on the water. The camp includes up to 15 hours of private kiteboarding and wingfoiling coaching over five days, four guided yoga sessions, beachfront accommodati"
+              }
+            },
+            {
+              "check": "sentence #2 quote",
+              "hit": {
+                "zone": "visible",
+                "offset": 4710,
+                "matched": "Sessions are scheduled according to wind conditions, safety and your level of progression.",
+                "excerpt": "...wingfoiling coaching are included over five days. Sessions are scheduled according to wind conditions, safety and your level of progression. The 15 hours represent the maximum coaching time ..."
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": null,
+            "note": "#0:ok #1:ok #2:ok",
+            "quoteHit": null
+          }
+        },
+        "type": {
+          "claimed": true,
+          "reason": "camp keyword on page and judge confirms a multi-day camp package",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "deterministic": [
+            {
+              "check": "camp/package keyword",
+              "hit": {
+                "zone": "visible",
+                "offset": 171,
+                "matched": "Camp",
+                "excerpt": "...out Us Contact Kitemex La Ventana Kite & Wingfoil Camp Join us in La Ventana, Baja California Sur, for a..."
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "The camp includes up to 15 hours of private kiteboarding and wingfoiling coaching over five days, four guided yoga sessions, beachfront accommodation",
+            "note": "Multi-day camp combining coaching, yoga and beachfront accommodation.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 596,
+              "matched": "The camp includes up to 15 hours of private kiteboarding and wingfoiling coaching over five days, four guided yoga sessions, beachfront accommodation",
+              "excerpt": "... skills, confidence and progression on the water. The camp includes up to 15 hours of private kiteboarding and wingfoiling coaching over five days, four guided yoga sessions, beachfront accommodati"
+            }
+          }
+        },
+        "operator": {
+          "claimed": true,
+          "reason": "operator name printed on the operator's own site; offer page is on that site",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "deterministic": [
+            {
+              "check": "name \"KiteMex\" on offer page",
+              "hit": {
+                "zone": "visible",
+                "offset": 136,
+                "matched": "Kitemex",
+                "excerpt": "...s Contact Wing Foil KiteBoarding About Us Contact Kitemex La Ventana Kite & Wingfoil Camp Join us in La Ven..."
+              }
+            },
+            {
+              "check": "offer page on operator domain kitemex.com",
+              "hit": {
+                "zone": "meta",
+                "offset": 0,
+                "matched": "kitemex.com",
+                "excerpt": "https://kitemex.com/kitesurf-and-wingfoil-camps/"
+              }
+            }
+          ]
+        },
+        "location": {
+          "claimed": true,
+          "reason": "place name on page and judge confirms the destination",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "deterministic": [
+            {
+              "check": "country on page",
+              "hit": null
+            },
+            {
+              "check": "region on page",
+              "hit": {
+                "zone": "visible",
+                "offset": 144,
+                "matched": "La Ventana",
+                "excerpt": "...t Wing Foil KiteBoarding About Us Contact Kitemex La Ventana Kite & Wingfoil Camp Join us in La Ventana, Baja ..."
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "Join us in La Ventana, Baja California Sur, for a premium kiteboarding and wingfoiling camp",
+            "note": "La Ventana, Baja California Sur is in Mexico.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 176,
+              "matched": "Join us in La Ventana, Baja California Sur, for a premium kiteboarding and wingfoiling camp",
+              "excerpt": "...s Contact Kitemex La Ventana Kite & Wingfoil Camp Join us in La Ventana, Baja California Sur, for a premium kiteboarding and wingfoiling camp designed to help you improve your skills, confide..."
+            }
+          }
+        },
+        "price": {
+          "claimed": true,
+          "reason": "amount with currency printed on the page and judge confirms the basis",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "deterministic": [
+            {
+              "check": "amount + currency on page",
+              "hit": {
+                "zone": "visible",
+                "offset": 817,
+                "matched": "$ 2,799",
+                "excerpt": "...camp experience. Duration: Up to 15 hrs. Price: US$ 2,799 per person Camp Dates December 6–12, 2026 January..."
+              }
+            }
+          ],
+          "llm": {
+            "supported": true,
+            "quote": "Price: US$ 2,799 per person",
+            "note": "Amount, currency and per-person basis match; the 6-night basis is supported by '6 nights at La Ventana Beach Resort' and the shared Beachfront Double Room.",
+            "quoteHit": {
+              "zone": "visible",
+              "offset": 808,
+              "matched": "Price: US$ 2,799 per person",
+              "excerpt": "... Kitemex camp experience. Duration: Up to 15 hrs. Price: US$ 2,799 per person Camp Dates December 6–12, 2026 January 9–15, 2027..."
+            }
+          }
+        },
+        "departures": {
+          "claimed": true,
+          "reason": "all 4 departures printed on the page",
+          "sourceUrl": "https://kitemex.com/kitesurf-and-wingfoil-camps/",
+          "observedAt": "2026-11-11T15:44:15.834Z",
+          "deterministic": [
+            {
+              "check": "departure 2026-12-06..2026-12-12",
+              "hit": {
+                "zone": "visible",
+                "offset": 847,
+                "matched": "December 6–12",
+                "excerpt": "...to 15 hrs. Price: US$ 2,799 per person Camp Dates December 6–12, 2026 January 9–15, 2027 February 13–19, 2027 Mar..."
+              }
+            },
+            {
+              "check": "departure 2027-01-09..2027-01-15",
+              "hit": {
+                "zone": "visible",
+                "offset": 867,
+                "matched": "January 9–15",
+                "excerpt": "...$ 2,799 per person Camp Dates December 6–12, 2026 January 9–15, 2027 February 13–19, 2027 March 7–13, 2027 Limit..."
+              }
+            },
+            {
+              "check": "departure 2027-02-13..2027-02-19",
+              "hit": {
+                "zone": "visible",
+                "offset": 886,
+                "matched": "February 13–19",
+                "excerpt": "...Camp Dates December 6–12, 2026 January 9–15, 2027 February 13–19, 2027 March 7–13, 2027 Limited availability for e..."
+              }
+            },
+            {
+              "check": "departure 2027-03-07..2027-03-13",
+              "hit": {
+                "zone": "visible",
+                "offset": 907,
+                "matched": "March 7–13",
+                "excerpt": "...–12, 2026 January 9–15, 2027 February 13–19, 2027 March 7–13, 2027 Limited availability for each camp. Book No..."
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "removed": []
+}

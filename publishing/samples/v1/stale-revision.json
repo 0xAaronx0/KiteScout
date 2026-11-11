@@ -1,20 +1,20 @@
 {
   "version": 1,
-  "manifestRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+  "manifestRevision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
   "title": "Wrong or stale revision",
   "cases": [
     {
       "name": "app expects a newer revision",
       "synthetic": true,
       "note": "synthetic: the app pins a newer manifest revision than this entry carries",
-      "now": "2026-10-21T10:54:00.490Z",
+      "now": "2026-11-11T15:45:20.428Z",
       "expectedRevision": "d2ec222ca7297215438382e7700c52d660b93c883417729f98f8b6ece8da8217",
       "row": {
         "offer_id": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
         "provider_id": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
         "title": "LEN10 Experience: Stig x Ruben Brazil",
         "slug": "len10-experience-stig-x-ruben-brazil",
-        "summary": "A coached kite week in Tatajuba (Ceará, Brazil) with pro riders Ruben Lenten and Stig Hoefnagel: 7 days / 6 nights at La Ventana Tatajuba in a shared or private room, three chef-cooked meals a day, on- and off-water coaching with video analysis, 4x4 transport to the spots, downwinders and yoga. Aimed at confident intermediate to pro riders who already ride upwind; flat-water lagoons, waves and downwinders in the November trade winds. Next dates: 2 November 2026 to 8 November 2026, from EUR 2,999 per person (only 4 rooms left).",
+        "summary": "Coached kite camp in Tatajuba, Brazil, hosted by Ruben Lenten and Stig Hoefnagel. The programme combines on-water coaching and video feedback with accommodation, meals, spot transport and activities. It is aimed at confident upwind riders seeking progression.",
         "package_type": "camp",
         "country": "Brazil",
         "countries": [
@@ -30,23 +30,9 @@
         "price_pp_cabin_currency": "EUR",
         "currency": "EUR",
         "price_unit": "package",
-        "price_basis_note": "From EUR 2,999 p.p. (cheapest bookable: Shared or private room at La Ventana Tatajuba, 2026-11-02; as of 2026-10-20)",
-        "dates": [
-          {
-            "unit": "Shared or private room at La Ventana Tatajuba",
-            "price": 2999,
-            "status": "limited",
-            "currency": "EUR",
-            "end_date": "2026-11-08",
-            "price_unit": "package",
-            "spots_left": 4,
-            "start_date": "2026-11-02",
-            "price_basis": "person",
-            "date_precision": "day",
-            "price_valid_until": null
-          }
-        ],
-        "updated_at": "2026-10-20T11:00:10.907357+00:00"
+        "price_basis_note": "From EUR 2,999 p.p. (last published price, 2026 dates are over, new dates not published yet: Shared or private room at La Ventana Tatajuba, 2026-11-02; as of 2026-11-11)",
+        "dates": null,
+        "updated_at": "2026-11-11T13:38:27.202232+00:00"
       },
       "evidence": {
         "version": 1,
@@ -54,100 +40,90 @@
         "source": "package_offers",
         "offerId": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
         "snapshot": {
-          "revision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
-          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/schema/v1/evidence.schema.json",
-          "schemaRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
-          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/fb8f4989fd796674641f8b936eeb11cd34caf52d/src/publishing",
-          "generatorRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
-          "observedAt": "2026-10-21T10:53:00.490Z",
+          "revision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
+          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/schema/v1/evidence.schema.json",
+          "schemaRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/871fa97436128e2a0ecfb4881e68742156dc0224/src/publishing",
+          "generatorRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+          "observedAt": "2026-11-11T15:44:20.428Z",
           "complete": true
         },
-        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/policy/v1/freshness-proposal.json",
         "rights": {
           "status": "permitted",
           "scope": "text",
-          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/docs/publishing/text-policy.md",
+          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/docs/publishing/text-policy.md",
           "owner": "KiteScout (Aaron Lindner)",
-          "expiresAt": "2027-10-21T10:53:00.490Z"
+          "expiresAt": "2027-11-11T15:44:20.428Z"
         },
         "claims": [
           {
             "field": "title",
-            "valueHash": "256e590a198b05409af97202b6595b7d3748bba090f0a00049a02cf91c461e81",
+            "valueHash": "4e18878b3b76f887e9328d541d72a833edc647a61790d699855052eb4e3c69b0",
             "sourceUrl": "https://www.len10.com/experience",
-            "observedAt": "2026-10-21T10:51:27.163Z",
-            "verifiedAt": "2026-10-21T10:51:29.429Z",
-            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "observedAt": "2026-11-11T15:44:14.411Z",
+            "verifiedAt": "2026-11-11T15:44:16.867Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
             "method": "source_reviewed",
-            "expiresAt": "2027-04-19T10:51:27.163Z"
+            "expiresAt": "2027-05-10T15:44:14.411Z"
           },
           {
             "field": "description",
-            "valueHash": "a189ea38decc5db2c6e374e49283037d02675c87ed7ec2385075e551cd27cb9d",
+            "valueHash": "81ee65c4d6ff0f077d12de2822b61c6f801e2552ee743410abad7f7dc1f0f939",
             "sourceUrl": "https://www.len10.com/experience",
-            "observedAt": "2026-10-21T10:51:27.163Z",
-            "verifiedAt": "2026-10-21T10:51:29.429Z",
-            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "observedAt": "2026-11-11T15:44:14.411Z",
+            "verifiedAt": "2026-11-11T15:44:16.867Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
             "method": "source_reviewed",
-            "expiresAt": "2027-01-19T10:51:27.163Z"
+            "expiresAt": "2027-02-09T15:44:14.411Z"
           },
           {
             "field": "type",
-            "valueHash": "2130443d6d715d15c45bfb15140309cbb529c709899c55bf71ef088e4e5930ec",
+            "valueHash": "8ae2db3ec14e9d641203403dafad1ea4b9dab0edae81d3e33725f4c84546549b",
             "sourceUrl": "https://www.len10.com/experience",
-            "observedAt": "2026-10-21T10:51:27.163Z",
-            "verifiedAt": "2026-10-21T10:51:29.429Z",
-            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "observedAt": "2026-11-11T15:44:14.411Z",
+            "verifiedAt": "2026-11-11T15:44:16.867Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
             "method": "source_reviewed",
-            "expiresAt": "2027-04-19T10:51:27.163Z"
+            "expiresAt": "2027-05-10T15:44:14.411Z"
           },
           {
             "field": "operator",
-            "valueHash": "dea131f2283d7b3c016bc527ca82abb63e69bad160fec6c850210d48ba952e1f",
+            "valueHash": "ce1a56d0d8dccf299dbe03448fdc07ad2c870a4ec0161c69e48f3a1576cf708e",
             "sourceUrl": "https://www.len10.com/experience",
-            "observedAt": "2026-10-21T10:51:27.163Z",
-            "verifiedAt": "2026-10-21T10:51:29.429Z",
-            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "observedAt": "2026-11-11T15:44:14.411Z",
+            "verifiedAt": "2026-11-11T15:44:16.867Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
             "method": "source_reviewed",
-            "expiresAt": "2027-04-19T10:51:27.163Z"
+            "expiresAt": "2027-05-10T15:44:14.411Z"
           },
           {
             "field": "location",
-            "valueHash": "f9fc75d3bbe128391a560948e23edc2ea29b3c6bfbbb87eaa43bb5154e41c5af",
+            "valueHash": "a9b0828f27985b2d67e3ab8c02a64b3b14d28bbbe589f3267a0ea98ec04f97c3",
             "sourceUrl": "https://www.len10.com/experience",
-            "observedAt": "2026-10-21T10:51:27.163Z",
-            "verifiedAt": "2026-10-21T10:51:29.429Z",
-            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "observedAt": "2026-11-11T15:44:14.411Z",
+            "verifiedAt": "2026-11-11T15:44:16.867Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
             "method": "source_reviewed",
-            "expiresAt": "2027-04-19T10:51:27.163Z"
+            "expiresAt": "2027-05-10T15:44:14.411Z"
           },
           {
             "field": "price",
-            "valueHash": "00abf0163263baa55dc8a7726cf64da8f0904b8e2c0a9bb62480146aebf339cb",
+            "valueHash": "c05db7a40e4f1dbded8487c70799dd7091c0b186a4c7a6afe663898781ef52e6",
             "sourceUrl": "https://www.len10.com/experience",
-            "observedAt": "2026-10-21T10:51:27.163Z",
-            "verifiedAt": "2026-10-21T10:51:29.429Z",
-            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
+            "observedAt": "2026-11-11T15:44:14.411Z",
+            "verifiedAt": "2026-11-11T15:44:16.867Z",
+            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@871fa97436128e2a0ecfb4881e68742156dc0224",
             "method": "source_reviewed",
-            "expiresAt": "2026-11-20T10:51:27.163Z"
-          },
-          {
-            "field": "departures",
-            "valueHash": "802b3459b0442c169d1e2fba9ad3b9afb9d2667070cc52da2b0da0ae9ebac324",
-            "sourceUrl": "https://www.len10.com/experience",
-            "observedAt": "2026-10-21T10:51:27.163Z",
-            "verifiedAt": "2026-10-21T10:51:29.429Z",
-            "verifiedBy": "kitescout-ai-verifier/deepseek/deepseek-v4.1-flash@fb8f4989fd796674641f8b936eeb11cd34caf52d",
-            "method": "source_reviewed",
-            "expiresAt": "2026-10-28T10:51:27.163Z"
+            "expiresAt": "2026-12-11T15:44:14.411Z"
           }
         ]
       },
       "policy": {
         "version": 1,
-        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/policy/v1/freshness-proposal.json",
         "owner": "KiteScout data (Aaron Lindner) with Kite Cruise Scout app (Martin Marzidovsek)",
-        "approvedAt": "2026-10-21T10:53:00.490Z",
+        "approvedAt": "2026-11-11T15:44:20.428Z",
         "rules": [
           {
             "field": "title",

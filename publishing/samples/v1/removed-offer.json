@@ -1,20 +1,20 @@
 {
   "version": 1,
-  "manifestRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+  "manifestRevision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
   "title": "Removed offer",
   "cases": [
     {
       "name": "offer left the catalog",
       "synthetic": true,
       "note": "synthetic: the generator writes status removed (no claims) for an offer of the previous manifest that is no longer an active camp",
-      "now": "2026-10-21T10:54:00.490Z",
-      "expectedRevision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
+      "now": "2026-11-11T15:45:20.428Z",
+      "expectedRevision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
       "row": {
         "offer_id": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
         "provider_id": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
         "title": "LEN10 Experience: Stig x Ruben Brazil",
         "slug": "len10-experience-stig-x-ruben-brazil",
-        "summary": "A coached kite week in Tatajuba (Ceará, Brazil) with pro riders Ruben Lenten and Stig Hoefnagel: 7 days / 6 nights at La Ventana Tatajuba in a shared or private room, three chef-cooked meals a day, on- and off-water coaching with video analysis, 4x4 transport to the spots, downwinders and yoga. Aimed at confident intermediate to pro riders who already ride upwind; flat-water lagoons, waves and downwinders in the November trade winds. Next dates: 2 November 2026 to 8 November 2026, from EUR 2,999 per person (only 4 rooms left).",
+        "summary": "Coached kite camp in Tatajuba, Brazil, hosted by Ruben Lenten and Stig Hoefnagel. The programme combines on-water coaching and video feedback with accommodation, meals, spot transport and activities. It is aimed at confident upwind riders seeking progression.",
         "package_type": "camp",
         "country": "Brazil",
         "countries": [
@@ -30,23 +30,9 @@
         "price_pp_cabin_currency": "EUR",
         "currency": "EUR",
         "price_unit": "package",
-        "price_basis_note": "From EUR 2,999 p.p. (cheapest bookable: Shared or private room at La Ventana Tatajuba, 2026-11-02; as of 2026-10-20)",
-        "dates": [
-          {
-            "unit": "Shared or private room at La Ventana Tatajuba",
-            "price": 2999,
-            "status": "limited",
-            "currency": "EUR",
-            "end_date": "2026-11-08",
-            "price_unit": "package",
-            "spots_left": 4,
-            "start_date": "2026-11-02",
-            "price_basis": "person",
-            "date_precision": "day",
-            "price_valid_until": null
-          }
-        ],
-        "updated_at": "2026-10-20T11:00:10.907357+00:00"
+        "price_basis_note": "From EUR 2,999 p.p. (last published price, 2026 dates are over, new dates not published yet: Shared or private room at La Ventana Tatajuba, 2026-11-02; as of 2026-11-11)",
+        "dates": null,
+        "updated_at": "2026-11-11T13:38:27.202232+00:00"
       },
       "evidence": {
         "version": 1,
@@ -54,29 +40,29 @@
         "source": "package_offers",
         "offerId": "11e22ba0-4f25-4d8b-8ad6-2e3ea4cbf326",
         "snapshot": {
-          "revision": "f14b748cb041032eaa751100204545d624be777f4f236afbac596bfab051b27a",
-          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/schema/v1/evidence.schema.json",
-          "schemaRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
-          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/fb8f4989fd796674641f8b936eeb11cd34caf52d/src/publishing",
-          "generatorRevision": "fb8f4989fd796674641f8b936eeb11cd34caf52d",
-          "observedAt": "2026-10-21T10:53:00.490Z",
+          "revision": "690496658ade4676452313730b2715da2ee617370ce390138bd5b787805c121b",
+          "schemaRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/schema/v1/evidence.schema.json",
+          "schemaRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+          "generatorRef": "https://github.com/0xAaronx0/KiteScout/tree/871fa97436128e2a0ecfb4881e68742156dc0224/src/publishing",
+          "generatorRevision": "871fa97436128e2a0ecfb4881e68742156dc0224",
+          "observedAt": "2026-11-11T15:44:20.428Z",
           "complete": true
         },
-        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "policyRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/policy/v1/freshness-proposal.json",
         "rights": {
           "status": "permitted",
           "scope": "text",
-          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/docs/publishing/text-policy.md",
+          "grantRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/docs/publishing/text-policy.md",
           "owner": "KiteScout (Aaron Lindner)",
-          "expiresAt": "2027-10-21T10:53:00.490Z"
+          "expiresAt": "2027-11-11T15:44:20.428Z"
         },
         "claims": []
       },
       "policy": {
         "version": 1,
-        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/fb8f4989fd796674641f8b936eeb11cd34caf52d/publishing/policy/v1/freshness-proposal.json",
+        "approvalRef": "https://github.com/0xAaronx0/KiteScout/blob/871fa97436128e2a0ecfb4881e68742156dc0224/publishing/policy/v1/freshness-proposal.json",
         "owner": "KiteScout data (Aaron Lindner) with Kite Cruise Scout app (Martin Marzidovsek)",
-        "approvedAt": "2026-10-21T10:53:00.490Z",
+        "approvedAt": "2026-11-11T15:44:20.428Z",
         "rules": [
           {
             "field": "title",
