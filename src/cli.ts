@@ -377,20 +377,35 @@ async function main(): Promise<void> {
 
     case 'google-place-ids': {
       // Google place IDs for operators with a stored Maps place link (KCS#607 option 1, Aaron 2026-10-31). Only the
-      // place ID is stored; KCS fetches the rating live. Needs GOOGLE_PLACES_API_KEY. Two steps like operator-reviews.
+      // place ID is stored; KCS shows the reviews live. Dry run by default (needs GOOGLE_PLACES_API_KEY, writes only
+      // a file); --apply writes a reviewed file after a backup; --revert undoes an apply from its backup.
+      const list = (flag: string) => (flagStr(flag) ?? '').split(',').map(s => s.trim()).filter(Boolean);
+      const revert = flagStr('--revert');
+      if (revert) {
+        const { revertGooglePlaceIds } = await import('./pipeline/google-place-ids.js');
+        const r = await revertGooglePlaceIds(revert);
+        console.log(`google-place-ids --revert: ${r.reverted} reverted, ${r.skipped} skipped (place ID changed since)`);
+        break;
+      }
       const apply = flagStr('--apply');
       if (apply) {
         const { applyGooglePlaceIds } = await import('./pipeline/google-place-ids.js');
-        const r = await applyGooglePlaceIds(JSON.parse(readFileSync(apply, 'utf8')));
-        console.log(`google-place-ids: ${r.written} written, ${r.skipped} skipped (already had a place ID)`);
+        const r = await applyGooglePlaceIds(apply, { skip: list('--skip'), accept: list('--accept') });
+        console.log(`google-place-ids: ${r.written} written, ${r.skipped} skipped (already had a place ID); backup ${r.backup}`);
         break;
       }
-      if (!args.includes('--dry-run')) { console.error('google-place-ids: pass --dry-run --out f.json (search) or --apply f.json (write a reviewed file).'); process.exitCode = 1; break; }
-      const { runGooglePlaceIdsDryRun } = await import('./pipeline/google-place-ids.js');
-      const results = await runGooglePlaceIdsDryRun({ limit: positionalLimit() });
-      const out = flagStr('--out');
-      if (out) writeFileSync(out, JSON.stringify(results, null, 2));
-      console.log(`${results.length} operators: ${results.filter(r => r.placeId).length} matched, ${results.filter(r => r.note.startsWith('error')).length} errors${out ? ` -> ${out}` : ''}`);
+      const { runGooglePlaceIdsDryRun, defaultDryRunFile } = await import('./pipeline/google-place-ids.js');
+      const maxCalls = flagStr('--max-calls') ? Number(flagStr('--max-calls')) : undefined;
+      const { results, calls } = await runGooglePlaceIdsDryRun({ limit: positionalLimit(), maxCalls });
+      const out = flagStr('--out') ?? defaultDryRunFile();
+      writeFileSync(out, JSON.stringify(results, null, 2));
+      const by = (v: string) => results.filter(r => r.verdict === v);
+      for (const v of ['match', 'check-location', 'ambiguous', 'none', 'error']) {
+        if (!by(v).length) continue;
+        console.log(`\n${v} (${by(v).length})`);
+        for (const r of by(v)) console.log(`  ${r.table === 'providers' ? 'pkg' : 'cruise'} ${r.domain} | ${r.name} -> ${r.displayName ?? '-'} | ${r.address ?? '-'} | ${r.note}`);
+      }
+      console.log(`\n${results.length} operators, ${calls} Text Search calls: ${by('match').length} match, ${by('check-location').length} check-location, ${by('ambiguous').length} ambiguous, ${by('none').length} none, ${by('error').length} errors -> ${out} (dry run, nothing written)`);
       break;
     }
 
