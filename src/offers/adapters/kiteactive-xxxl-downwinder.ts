@@ -1,6 +1,14 @@
 // ---------------------------------------------------------------------------
 // KiteActive - XXXL Adventure Downwinder Brazil (guided 4x4-supported downwinder, Ceará coast)
 //
+// NOT REGISTERED since 2026-11-11 (hidden on Aaron's word, package_offers.is_active false, never deleted): KiteActive
+//   relaunched www.kiteactive.com; the destination page below redirects to /en and the new sitemap has no Brazil trip.
+//   The booking app still answers for brazil-downwind-2026 (every run started, the last on 2026-11-05) and has no
+//   brazil-downwind-2027 ("Trip not found"). The trip was taken off the website and 2027 is not published, so the
+//   adapter is out of src/offers/registry.ts (listed in NOT_REGISTERED in test/offers/registry.test.ts). To bring it
+//   back: find the new trip page, adjust KITEACTIVE_PAGE_URL / kiteactiveTripSlug, register it again and let a full
+//   run set is_active.
+//
 // Data path (checked 2026-10-09):
 //   content  WP page https://www.kiteactive.com/en/destinations/xxxl-adventure-downwinder-in-brazilie/
 //            (title, included / not-included lists, page variants) + the trip JSON below.
