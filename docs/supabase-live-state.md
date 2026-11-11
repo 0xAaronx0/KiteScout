@@ -22,7 +22,7 @@ because **migrations are run manually by Aaron in the SQL editor**.
 | offers with `hero_video_url` | 35 | |
 | providers with `contact_email` | 93 total / **91 of 95 active** | the 4 active gaps are exhausted research (memory `provider-email-coverage`) |
 | review **links**: google / TA / bstoked | 39 / 26 / 13 (same on active basis; ≥1 source: 54/95) | memory "Google 39, TA 26" counts links |
-| review **ratings**: google / TA / bstoked | 38 / 16 / 6 | numeric rating present; `avg_rating` set on 47 |
+| review **ratings**: google / TA / bstoked | 0 / 16 / 6 | numeric rating present. **Google cleared 2026-11-11** (KCS#607, `pnpm cli google-scrape-cleanup`, Aaron's OK, backup outside the repo): `google_rating` 38 -> 0, `google_review_count` 3 -> 0, `avg_rating` recomputed from TA/bSTOKED on the 32 Google rows (set on 47 -> 19); same run on `providers`: 133 -> 0, avg 133 -> 6. `google_url` kept. TA/bstoked counts are from 2026-07-10, not re-probed |
 
 ## Migration ledger
 
