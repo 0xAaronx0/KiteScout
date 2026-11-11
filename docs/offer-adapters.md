@@ -71,7 +71,7 @@ BRL 2,580.72; Kite Village 05.-12.12.: Bungalow EUR 770).
 | accommodation | keros-blue-limnos | Cloudbeds | BLOCKED (403 to non-browser clients) |
 | accommodation | michaels-kite-vacancies-rhodes | static price table | no (on request) |
 | accommodation | panama-kite-house | price tables (Bookinglayer robots-blocked) | no |
-| tour | kiteactive-xxxl-downwinder | KiteActive app JSON (undocumented, ask first) | yes, spots left |
+| tour | kiteactive-xxxl-downwinder | KiteActive app JSON (undocumented, ask first); NOT REGISTERED since 2026-11-11 (trip off the website, hidden) | yes, spots left |
 | tour | toowettoshred-brazil | dated page text (Bookinglayer robots-blocked) | status words |
 | tour | ventus-brazil-routes | page text (JSON-LD is wrong: Colombia) | no (inquiry) |
 | tour | dakhla-downwind-challenge | price table, early-bird until 2027-05-31 | no (inquiry) |

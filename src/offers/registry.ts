@@ -146,7 +146,6 @@ import { kiteThailandPackageAPranburi } from './adapters/kite-thailand-package-a
 import { kiteThailandPackageBHuaHin } from './adapters/kite-thailand-package-b-hua-hin.js';
 import { kiteThailandPackageBKohPhangan } from './adapters/kite-thailand-package-b-koh-phangan.js';
 import { kiteVillageHamata } from './adapters/kite-village-hamata.js';
-import { kiteactiveXxxlDownwinder } from './adapters/kiteactive-xxxl-downwinder.js';
 import { kiteadventureColombiaCourseStayMayapo } from './adapters/kiteadventure-colombia-course-stay-mayapo.js';
 import { kiteboardingColombiaWildNorthKiteTrip } from './adapters/kiteboarding-colombia-wild-north-kite-trip.js';
 import { kiteclubOkinawaKohamaKiteTour } from './adapters/kiteclub-okinawa-kohama-kite-tour.js';
@@ -458,7 +457,6 @@ export const adapters: OfferAdapter[] = [
   kenyawaysDiani,
   kerosBlueLimnos,
   kilomboVillasSibauma,
-  kiteactiveXxxlDownwinder,
   kiteadventureColombiaCourseStayMayapo,
   kiteAventureAmwejDjerbahood,
   kiteBasecampPodsLangebaan,

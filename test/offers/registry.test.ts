@@ -13,6 +13,7 @@ const NOT_REGISTERED: Record<string, string> = {
   'ucpa-kitesurf-debutant-essaouira': "no general booking e-mail (phone + forms only), so KCS cannot offer an inquiry; hidden on Aaron's word 2026-10-27",
   'ucpa-kitesurf-debutant-hurghada': "no general booking e-mail (phone + forms only), so KCS cannot offer an inquiry; hidden on Aaron's word 2026-10-27",
   'ucpa-kitesurf-safari-cape-town': "no general booking e-mail (phone + forms only), so KCS cannot offer an inquiry; hidden on Aaron's word 2026-10-27",
+  'kiteactive-xxxl-downwinder': "trip taken off the relaunched website (seen 2026-11-11), 2027 edition not published; hidden on Aaron's word 2026-11-11",
 };
 
 test('registry is complete and keys are unique', async () => {
@@ -29,6 +30,11 @@ test('registry is complete and keys are unique', async () => {
       }
     }
   }
+});
+
+test('hidden adapters (NOT_REGISTERED) stay out of the registry', () => {
+  const keys = new Set(adapters.map(a => a.key));
+  for (const key of Object.keys(NOT_REGISTERED)) assert.ok(!keys.has(key), `${key} is hidden (${NOT_REGISTERED[key]}) but registered`);
 });
 
 // Aaron 2026-11-02: "Camps in unserem Sinne bedeutet Camp Package". A listing booked per night (accommodation
