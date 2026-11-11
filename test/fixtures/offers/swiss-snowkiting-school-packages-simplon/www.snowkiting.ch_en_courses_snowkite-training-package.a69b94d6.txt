@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Snowkite Training Package | Swiss Snowkiting School</title>
+	<meta name="description" content="Snowkite Training Package">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap">
+	<link rel="stylesheet" href="https://www.snowkiting.ch/assets/css/main.css?v=1794416914">
+	<link rel="stylesheet" href="https://www.snowkiting.ch/assets/third-party/weather-icons/css/weather-icons-wind.min.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.snowkiting.ch/assets/img/layout/favicons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.snowkiting.ch/assets/img/layout/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://www.snowkiting.ch/assets/img/layout/favicons/favicon-16x16.png">
+	<meta name="theme-color" content="#ffffff">
+	</head>
+<body>
+<nav class="site-nav">
+	<div class="nav-inner">
+		<a class="nav-logo" href="https://www.snowkiting.ch/en/">
+			<img src="https://www.snowkiting.ch/assets/img/layout/logo-swiss-snowkiting-school.svg" alt="Swiss Snowkiting School" width="44" height="44">
+			<span>Swiss Snowkiting School</span>
+		</a>
+		<ul class="nav-links">
+														<li><a href="https://www.snowkiting.ch/en/courses">Courses</a></li>
+															<li><a href="https://www.snowkiting.ch/en/training-program">Training program</a></li>
+															<li><a href="https://www.snowkiting.ch/en/vouchers">Vouchers</a></li>
+															<li><a href="https://www.snowkiting.ch/en/kite-shop">Kiteshop</a></li>
+															<li><a href="https://www.snowkiting.ch/en/wind-and-weather">Wind &amp; Weather</a></li>
+																					<li class="nav-dropdown">
+						<a href="#" class="nav-dropdown-toggle">Info</a>
+						<div class="nav-dropdown-menu">
+														<a href="https://www.snowkiting.ch/en/contact">Contact</a>
+														<a href="https://www.snowkiting.ch/en/location">Location</a>
+														<a href="https://www.snowkiting.ch/en/getting-there">Getting there</a>
+														<a href="https://www.snowkiting.ch/en/team">Team</a>
+														<a href="https://www.snowkiting.ch/en/faq">FAQ</a>
+													</div>
+					</li>
+														</ul>
+		<div class="nav-meta">
+			<div class="nav-lang">
+																										<a href="https://www.snowkiting.ch/kurse/snowkite-training-package">DE</a>
+																	<a href="https://www.snowkiting.ch/en/courses/snowkite-training-package">EN</a>
+																	<a href="https://www.snowkiting.ch/fr/cours/snowkite-training-package">FR</a>
+												</div>
+			<div class="nav-social">
+				<a href="https://www.instagram.com/swiss_snowkiting_school/" target="_blank" rel="noopener" aria-label="Instagram">
+				</a>
+			</div>
+		</div>
+		<button class="nav-toggle" aria-label="Menu">
+			<span class="nav-toggle-bar"></span>
+		</button>
+	</div>
+</nav>
+<div class="nav-mobile">
+	<ul>
+								<li><a href="https://www.snowkiting.ch/en/courses">Courses</a></li>
+											<li><a href="https://www.snowkiting.ch/en/training-program">Training program</a></li>
+											<li><a href="https://www.snowkiting.ch/en/vouchers">Vouchers</a></li>
+											<li><a href="https://www.snowkiting.ch/en/kite-shop">Kiteshop</a></li>
+											<li><a href="https://www.snowkiting.ch/en/wind-and-weather">Wind &amp; Weather</a></li>
+																<li>
+					<a href="#">Info</a>
+					<ul class="nav-mobile-sub">
+												<a href="https://www.snowkiting.ch/en/contact">Contact</a>
+												<a href="https://www.snowkiting.ch/en/location">Location</a>
+												<a href="https://www.snowkiting.ch/en/getting-there">Getting there</a>
+												<a href="https://www.snowkiting.ch/en/team">Team</a>
+												<a href="https://www.snowkiting.ch/en/faq">FAQ</a>
+											</ul>
+				</li>
+										</ul>
+	<div class="nav-mobile-meta">
+		<div class="nav-lang">
+																	<a href="https://www.snowkiting.ch/kurse/snowkite-training-package">DE</a>
+														<a href="https://www.snowkiting.ch/en/courses/snowkite-training-package">EN</a>
+														<a href="https://www.snowkiting.ch/fr/cours/snowkite-training-package">FR</a>
+									</div>
+		<div class="nav-social">
+			<a href="https://www.instagram.com/swiss_snowkiting_school/" target="_blank" rel="noopener">Instagram</a>
+		</div>
+	</div>
+</div>
+<main>
+<div class="container">
+	<h1>Snowkite Training Package</h1>
+		
+					<div class="row">
+			<div class="md-col-2 lg-col-3">
+				<div class="bv-card">
+					<div class="bv-header">
+						<h3 class="bv-title kurs"
+							data-loop="1"
+							data-kurs="213"
+							data-type="packages"
+							data-aufsicht=""
+							data-nichtBuchbarAnWochenenden=""
+							data-preis="960">Snowkite Training Package</h3>
+						<div class="bv-price">CHF 960.–</div>
+					</div>
+																<div class="bv-details"><ul><li>3 days snowkite course (9 hours)</li><li>the kite equipment is included in the course</li><li>4 nights in a double room with breakfast in the hotel Hotel Monte Leone, Simplon</li><li>local advice for skiing or snowboarding excursion</li><li>extension possible for CHF 50.–/h.</li></ul></div>
+										<div class="bv-actions">
+						<button type="button" class="btn btn-primary modal-trigger" data-toggle="modal" data-target="#modal1">
+							Book
+						</button>
+						<a href="https://www.snowkiting.ch/en/vouchers" class="bv-gift-link">Vouchers &rsaquo;</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="modalLabel-1" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="modalLabel-1" data-loop="1" data-dauer="3">Snowkite Training Package</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<strong>Number of people</strong><br>
+				<div class="btn-group personen-wrap" role="group" data-toggle="buttons" aria-label="Basic example" data-loop="1">
+					<label class="btn btn-secondary active" data-value="1">
+						<input type="radio" checked> 1
+					</label>
+					<label class="btn btn-secondary" data-value="2">
+						<input type="radio"> 2
+					</label>
+					<label class="btn btn-secondary" data-value="3">
+						<input type="radio"> 3
+					</label>
+					<label class="btn btn-secondary" data-value="4">
+						<input type="radio"> 4
+					</label>
+					<label class="btn btn-secondary" data-value="5">
+						<input type="radio"> 5
+					</label>
+				</div>
+				<br><br>
+				<strong>Date</strong><br>
+				<div class="row">
+					<div class="col-4">
+						<div class="form-group">
+							<select class="form-control select-day" data-loop="1">
+																	<option data-day="1" >1</option>
+																	<option data-day="2" >2</option>
+																	<option data-day="3" >3</option>
+																	<option data-day="4" >4</option>
+																	<option data-day="5" >5</option>
+																	<option data-day="6" >6</option>
+																	<option data-day="7" >7</option>
+																	<option data-day="8" >8</option>
+																	<option data-day="9" >9</option>
+																	<option data-day="10" >10</option>
+																	<option data-day="11" >11</option>
+																	<option data-day="12" selected>12</option>
+																	<option data-day="13" >13</option>
+																	<option data-day="14" >14</option>
+																	<option data-day="15" >15</option>
+																	<option data-day="16" >16</option>
+																	<option data-day="17" >17</option>
+																	<option data-day="18" >18</option>
+																	<option data-day="19" >19</option>
+																	<option data-day="20" >20</option>
+																	<option data-day="21" >21</option>
+																	<option data-day="22" >22</option>
+																	<option data-day="23" >23</option>
+																	<option data-day="24" >24</option>
+																	<option data-day="25" >25</option>
+																	<option data-day="26" >26</option>
+																	<option data-day="27" >27</option>
+																	<option data-day="28" >28</option>
+																	<option data-day="29" >29</option>
+																	<option data-day="30" >30</option>
+																	<option data-day="31" >31</option>
+															</select>
+						</div>
+					</div>
+					<div class="col-8">
+						<div class="form-group">
+							<select class="form-control select-month-and-year" data-loop="1">
+																																											<option data-month="11" data-year="2026">November 2026</option>
+																		<option data-month="12" data-year="2026">December 2026</option>
+									<option>--</option>
+									<option data-month="1" data-year="2027">January 2027</option>
+									<option data-month="2" data-year="2027">February 2027</option>
+									<option data-month="3" data-year="2027">March 2027</option>
+									<option data-month="4" data-year="2027">April 2027</option>
+															</select>
+						</div>
+					</div>
+				</div>
+				<div class="alert alert-info alert-search hidden" data-loop="1">
+					<span class="fa fa-refresh fa-spin"></span> One Moment ...
+				</div>
+				<div class="wrap-result" data-loop="1"></div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary check-availability" data-loop="1">Check availability</button>
+			</div>
+		</div>
+	</div>
+</div>
+			
+		<div class="mt-4 mb-4">
+		<a href="https://www.snowkiting.ch/en/courses" class="btn btn-secondary">
+			&larr; Back to overview
+		</a>
+	</div>
+</div>
+</main>
+<footer class="site-footer">
+	<div class="container">
+		<div class="footer-inner">
+			<div>&copy; 2026 Swiss Snowkiting School</div>
+			<div class="footer-links">
+				<a href="https://www.snowkiting.ch/en/impressum">Impressum</a>
+				<a href="https://www.snowkiting.ch/en/agb">Terms &amp; conditions</a>
+				<a href="https://www.snowkiting.ch/en/datenschutz">Datenschutzerklärung</a>
+				<a href="https://www.snowkiting.ch/en/links">Links</a>
+			</div>
+		</div>
+	</div>
+</footer>
+<link rel="stylesheet" href="https://www.snowkiting.ch/assets/third-party/bootstrap-4.0.0-alpha.6/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox@3.3.0/dist/css/glightbox.min.css">
+</body>
+</html>

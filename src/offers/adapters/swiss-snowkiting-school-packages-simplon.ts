@@ -5,16 +5,19 @@
 // 4 nights), Kite & Fly (1-day course + tandem paragliding flight at Belalp, 2 nights). Operator Kite Rider GmbH
 // (Ried-Brig), which also runs the Ozone / GIN kite shop and test center on the pass.
 //
-// Data path (checked 2026-10-19): Craft CMS, server-rendered.
-//   slots    /en/packages: one card per package - h3.kurs (data-preis = the price, data-kurs = id), the bullet list
-//            ("2 nights in a double room with breakfast ..."), "CHF 690.– (per person)" and "Additional charge for single
-//            room: CHF 20.–". The booking modal's month list (data-month / data-year: November 2026 .. April 2027) is
-//            the bookable season -> one season band per package (datePrecision 'season').
-//   content  /en/packages + /en/location (spot description and photos).
+// Data path (checked 2026-10-19, relaunch re-checked 2026-11-11): Craft CMS, server-rendered.
+//   Since the relaunch (seen 2026-11-11) /en/packages is an overview: one a.card-v2 per package with "from CHF 690.–
+//   / per person" and a link to its own page /en/courses/<slug>. The package page carries what the old cards had:
+//   h3.kurs (data-preis = the price, data-kurs = id) in a .bv-card, the bullet list ("2 nights in a double room with
+//   breakfast ...") and the booking modal's month list (data-month / data-year: November 2026 .. April 2027) = the
+//   bookable season -> one season band per package (datePrecision 'season'). The old cards' "Additional charge for
+//   single room" line is not on the new pages (read if it comes back). Before the relaunch the cards sat on
+//   /en/packages itself; parseSssPackages reads both layouts.
+//   content  /en/packages + the package pages + /en/location (spot description and photos).
 // Booking: "Check availability" POSTs to /en/check-availability with a per-session CSRF token; that is a session-bound
 //   call, not used (never bypass) -> availability 'unknown'; instantBooking left unset (the result step was not seen).
 // robots.txt (2026-10-19): none (the site answers /robots.txt with its HTML page) -> all allowed.
-// Requests per run: content 2, slots 1 (memoised: 0 extra when content ran in the same process).
+// Requests per run: content 2 + one per package (4), slots 1 + 4 (memoised: 0 extra when content ran in the same process).
 // Prices: CHF per person (printed "(per person)"), for the package's nights in a double room; the single-room surcharge
 //   ("Additional charge for single room: CHF 20.–") goes into availabilityText (not stated whether per night).
 // Training package = 4 nights (its own bullet "4 nights in a double room"; the modal's data-dauer=3 is the course days).
@@ -57,21 +60,36 @@ export interface SssPackage {
   features: string[];
 }
 
-/** The package cards: h3.kurs + its list + "CHF 690.– (per person)". */
+/** The overview cards since the relaunch: a.card-v2 -> package page, "from CHF 690.– / per person". */
+export interface SssLink { url: string; name: string; from: number | null; perPerson: boolean }
+export function parseSssOverview(html: string): SssLink[] {
+  const out: SssLink[] = [];
+  for (const a of mainRoot(html).querySelectorAll('a.card-v2')) {
+    const url = a.getAttribute('href') ?? '';
+    const name = txt(a.querySelector('.card-v2-title'));
+    if (!/^https:\/\/www\.snowkiting\.ch\/en\/courses\/[a-z0-9-]+$/.test(url) || !name) continue;
+    const priceText = txt(a.querySelector('.card-v2-price'));
+    const m = priceText.match(/(?:CHF|EUR|€)\s*([\d'.,]+)/);
+    out.push({ url, name, from: m ? parseAmount(m[1].replace(/'/g, '')) : null, perPerson: /per person/i.test(priceText) });
+  }
+  return out;
+}
+
+/** The package cards: h3.kurs + its list + "CHF 690.– (per person)" (.card on the old /en/packages, .bv-card on a package page). */
 export function parseSssPackages(html: string): SssPackage[] {
   const out: SssPackage[] = [];
-  for (const card of mainRoot(html).querySelectorAll('.card')) {
+  for (const card of mainRoot(html).querySelectorAll('.card, .bv-card')) {
     const h = card.querySelector('h3.kurs');
     if (!h) continue;
     const name = txt(h);
     const features = card.querySelectorAll('li').map(li => txt(li)).filter(Boolean);
-    const priceText = txt(card.querySelector('.card-preis')) || txt(card);
+    const priceText = txt(card.querySelector('.card-preis, .bv-price')) || txt(card);
     const m = priceText.match(/(CHF|EUR|€)\s*([\d'.,]+)/);
     const amount = m ? parseAmount(m[2].replace(/'/g, '')) : null;
     const fromAttr = parseAmount(h.getAttribute('data-preis') ?? '');
     const price = amount ?? fromAttr;
     if (!name || !price) continue;
-    const single = priceText.match(/single room:?\s*(?:CHF|EUR|€)\s*([\d'.,]+)/i);
+    const single = txt(card).match(/single room:?\s*(?:CHF|EUR|€)\s*([\d'.,]+)/i);
     const nightsLine = features.map(f => f.match(/(\d+)\s+nights?\b/i)).find(Boolean);
     out.push({
       id: h.getAttribute('data-kurs') ?? null,
@@ -142,11 +160,36 @@ export function sssImages(...pages: string[]): string[] {
   return [...best.values()].filter(x => x.r > 0).map(x => x.url);
 }
 
-export interface SssPages { packages: string; location: string }
+/** The pages a run reads: the overview, one page per package (empty on the old layout), the location page. */
+export interface SssPages { packages: string; details: string[]; location: string }
+
+/** Packages and season from the package pages (per person from the overview card), or from the old one-page layout. */
+export function sssPackagesAndSeason(p: Pick<SssPages, 'packages' | 'details'>): { pkgs: SssPackage[]; season: ReturnType<typeof parseSssSeason> } {
+  if (!p.details.length) return { pkgs: parseSssPackages(p.packages), season: parseSssSeason(p.packages) };
+  const links = parseSssOverview(p.packages);
+  const pkgs = p.details.flatMap(html => parseSssPackages(html).slice(0, 1)).map(x => {
+    const link = links.find(l => l.name.toLowerCase() === x.name.toLowerCase());
+    return { ...x, perPerson: x.perPerson || !!link?.perPerson };
+  });
+  const seasons = p.details.map(parseSssSeason).filter((x): x is NonNullable<typeof x> => !!x);
+  const season = seasons.length ? {
+    start: seasons.map(x => x.start).sort()[0],
+    end: seasons.map(x => x.end).sort().at(-1)!,
+    months: seasons.reduce((a, b) => (b.months.length > a.months.length ? b : a)).months,
+  } : null;
+  return { pkgs, season };
+}
+
+/** Overview + package pages (memoised). The old layout had no package links: details stay empty. */
+async function sssPages(): Promise<Pick<SssPages, 'packages' | 'details'>> {
+  const packages = await page(SSS_PACKAGES_URL);
+  const details: string[] = [];
+  for (const l of parseSssOverview(packages)) details.push(await page(l.url));
+  return { packages, details };
+}
 
 export function parseSssContent(p: SssPages, today = todayIso()): OfferContent {
-  const pkgs = parseSssPackages(p.packages);
-  const season = parseSssSeason(p.packages);
+  const { pkgs, season } = sssPackagesAndSeason(p);
   const loc = mainRoot(p.location);
   const locText = txt(loc);
   const intro = txt(mainRoot(p.packages).querySelector('.block.text'));
@@ -191,7 +234,7 @@ export function parseSssContent(p: SssPages, today = todayIso()): OfferContent {
     mealPlan: 'breakfast',
     languages: ['de', 'en', 'fr'], // site in DE / EN / FR (2026-10-19)
     rooms: [],
-    imageUrls: sssImages(p.packages, p.location).slice(0, 20),
+    imageUrls: sssImages(p.packages, ...p.details, p.location).slice(0, 20),
     heroVideoUrl: null,
     sourceUrl: SSS_PACKAGES_URL,
     bookingUrl: SSS_PACKAGES_URL,
@@ -205,9 +248,7 @@ export function parseSssContent(p: SssPages, today = todayIso()): OfferContent {
 }
 
 export async function fetchSssSlots(today: string, ctx?: Pick<FetchContext, 'note'>): Promise<Slot[]> {
-  const html = await page(SSS_PACKAGES_URL);
-  const pkgs = parseSssPackages(html);
-  const season = parseSssSeason(html);
+  const { pkgs, season } = sssPackagesAndSeason(await sssPages());
   if (pkgs.length < 2) throw new Error(`swiss-snowkiting-school: package cards not found or changed (${pkgs.length} parsed)`);
   if (!season) throw new Error('swiss-snowkiting-school: booking month list not found (layout changed?)');
   const slots = buildSssSlots(pkgs, season, today);
@@ -230,12 +271,12 @@ export const swissSnowkitingSchoolPackagesSimplon: OfferAdapter = {
   },
   url: SSS_PACKAGES_URL,
   slotMethod: 'price_table',
-  fetchBudget: 3,
+  fetchBudget: 6,
   confidence: 'medium',
   async fetchContent() {
-    const packages = await page(SSS_PACKAGES_URL);
+    const pages = await sssPages();
     const location = await page(SSS_LOCATION_URL);
-    return parseSssContent({ packages, location });
+    return parseSssContent({ ...pages, location });
   },
   fetchSlots: ctx => fetchSssSlots(todayIso(), ctx),
 };

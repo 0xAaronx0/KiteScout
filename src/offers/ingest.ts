@@ -260,9 +260,12 @@ export function summarizePrice(kind: OfferKind, slots: Slot[], today: string, la
   const running = tier !== 'past' && min.startDate !== null && min.startDate < today && min.endDate !== null && min.endDate >= today;
   const date = running ? `until ${min.endDate}` : min.startDate;
   const what = min.unit ? `${min.unit}${date ? `, ${date}` : ''}` : (date ?? 'season');
+  // new dates printed without a price (Kitesurf Adventure 2026-11-11: "27/09 a 02/10/2027", "Valores 2027 sob consulta"):
+  // the dates are out, their prices are not
+  const datesOut = slots.some(s => s.price === null && isAhead(kind, s, today));
   const label = tier === 'bookable' ? 'cheapest bookable'
     : tier === 'full' ? 'next dates full or waitlist only'
-    : `last published price, ${latestYear || 'earlier'} dates are over, new dates not published yet`;
+    : `last published price, ${latestYear || 'earlier'} dates are over, ${datesOut ? 'prices for the new dates' : 'new dates'} not published yet`;
   // An undated rate gets no "as of" read date, which would look like a dated price.
   return { min, priceUnit, raw, note: `${raw} (${label}: ${what}; ${min.undated ? 'undated rates on the provider\'s site, to be confirmed' : `as of ${today}`})` };
 }
