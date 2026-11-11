@@ -75,6 +75,12 @@ export function writeSamples(manifestDir: string, outDir = 'publishing/samples/v
   }
   for (const e of active.filter(x => x.snapshot.complete && x.rights.status === 'permitted' && expected(x, now).status === 'held').slice(0, 3))
     add('absent-required-claim.json', 'Required claim absent (real)', make(`held: ${expected(e, now).diagnostics.filter(d => REQUIRED_FIELDS.includes(d.field as Field)).map(d => `${d.field} ${d.code}`).join(', ')}`, e, { note: 'real entry: a required fact did not verify against the operator page, so no claim was written' }));
+  // a manifest where every complete entry verified (a pilot subset) still ships this case, derived from a healthy one
+  if (!files['absent-required-claim.json'] && healthy[0]) {
+    const e = healthy[0];
+    add('absent-required-claim.json', 'Required claim absent', make('held: description missing_evidence', { ...e, claims: e.claims.filter(c => c.field !== 'description') },
+      { synthetic: true, note: 'synthetic: real healthy entry with its description claim removed (as when one summary sentence does not verify); the app holds the page' }));
+  }
 
   const base = healthy[0] ?? active[0];
   // prefer an unreadable operator page over other incomplete causes
