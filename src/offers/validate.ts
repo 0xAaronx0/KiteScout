@@ -3,7 +3,7 @@
 // returns a reason string for anything that must not be written, else null.
 // ---------------------------------------------------------------------------
 import { AVAILABILITY, type OfferContent, type Slot } from './types.js';
-import { internalNote, isPlayableVideoUrl } from '../lib/offer-text.js';
+import { hasEmailAddress, internalNote, isPlayableVideoUrl } from '../lib/offer-text.js';
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 const ISO_CURRENCY = /^[A-Z]{3}$/;
@@ -33,6 +33,8 @@ export function contentProblem(c: OfferContent): string | null {
   for (const [field, text] of shown) {
     const note = internalNote(text);
     if (note) return `internal note in ${field} ("${note}")`;
+    // the address itself is not echoed: run logs of this public repo are public
+    if (hasEmailAddress(text)) return `e-mail address in ${field} (contacts belong in operator.contactEmail)`;
   }
   return null;
 }

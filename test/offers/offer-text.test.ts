@@ -1,7 +1,7 @@
 // Guards for user-facing offer text and hero videos (audit 2026-10-27, docs/app-inventar-report-2026-10-27.md).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { internalNote, isPlayableVideoUrl } from '../../src/lib/offer-text.js';
+import { hasEmailAddress, internalNote, isPlayableVideoUrl } from '../../src/lib/offer-text.js';
 import { contentProblem } from '../../src/offers/validate.js';
 import type { OfferContent } from '../../src/offers/types.js';
 
@@ -51,4 +51,21 @@ test('contentProblem: rejects a YouTube hero and research notes in shown fields,
   assert.match(contentProblem({ ...base, accommodation: 'rooms (the page does not describe them)' })!, /internal note in accommodation/);
   assert.match(contentProblem({ ...base, optionalServices: ['SUP', 'Kiting (no rental named on the site)'] })!, /internal note in optionalServices/);
   assert.match(contentProblem({ ...base, rooms: [{ name: 'Double', description: 'The site does not say the size.', features: [] }] })!, /internal note in rooms/);
+});
+
+// Aaron 2026-11-12: a partner school's address in a service line reached Scout chat answers.
+test('hasEmailAddress: addresses yes, retina image names and handles no', () => {
+  for (const t of ['Lessons with the school (VDWS, info@school-example.com)', 'write to a.b+c@mail.example.co.uk', 'MAIL@EXAMPLE.ORG'])
+    assert.equal(hasEmailAddress(t), true, t);
+  for (const t of ['hero@2x.webp', 'room-1@3x.jpg', 'follow @kiteschool on Instagram', 'kite@home', 'From EUR 80 per night', null, ''])
+    assert.equal(hasEmailAddress(t), false, String(t));
+});
+
+test('contentProblem: rejects an e-mail address in any shown field, without echoing it; sourceText not checked', () => {
+  assert.match(contentProblem({ ...base, optionalServices: ['SUP', 'Kiting with the school (VDWS, info@school-example.com)'] })!, /^e-mail address in optionalServices/);
+  assert.match(contentProblem({ ...base, includedServices: ['Transfer, book via desk@lodge-example.com'] })!, /^e-mail address in includedServices/);
+  assert.match(contentProblem({ ...base, summary: `${base.summary} Write to info@lodge-example.com.` })!, /^e-mail address in summary/);
+  assert.match(contentProblem({ ...base, rooms: [{ name: 'Double', description: null, features: ['ask rooms@lodge-example.com'] }] })!, /^e-mail address in rooms/);
+  assert.doesNotMatch(contentProblem({ ...base, summary: `${base.summary} Write to info@lodge-example.com.` })!, /lodge-example/);
+  assert.equal(contentProblem({ ...base, sourceText: 'contact: info@lodge-example.com' }), null);
 });

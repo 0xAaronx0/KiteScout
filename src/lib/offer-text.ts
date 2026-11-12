@@ -23,6 +23,18 @@ export function internalNote(text: string | null | undefined): string | null {
   return null;
 }
 
+/**
+ * An e-mail address in shown text (Aaron 2026-11-12: a partner school's address in a Masira service line reached
+ * Scout chat answers). Listing contacts live in the operator's contactEmail, never in title/summary/services/rooms.
+ * Retina image names ("hero@2x.webp") are not addresses.
+ */
+const EMAIL_RE = /[\w.%+-]+@(?!\d+x\.)[a-z0-9-]+(?:\.[a-z0-9-]+)*\.[a-z]{2,}\b/i;
+
+/** True when `text` contains something shaped like an e-mail address. */
+export function hasEmailAddress(text: string | null | undefined): boolean {
+  return !!text && EMAIL_RE.test(text);
+}
+
 const VIDEO_FILE = /\.(?:mp4|webm|mov|m4v)(?:$|[?#])/i;
 const VIDEO_PAGE_HOSTS = /(^|\.)(youtube\.com|youtu\.be|vimeo\.com|facebook\.com|instagram\.com|tiktok\.com)$/i;
 

@@ -1,8 +1,7 @@
 // ---------------------------------------------------------------------------
 // Masira Island Resort, Masirah Island (Oman) - 22-room boutique beach resort (rooms, suites, chalets) on
 // Masirah, the island's kite season hotel; its activities page presents Masirah's kite spots and sends kiters
-// to Watersport Oman, which runs kiteboarding and SUP on VDWS / IKO standards on the island
-// (masirah@watersport-oman.com).
+// to Watersport Oman, which runs kiteboarding and SUP on VDWS / IKO standards on the island.
 //
 // Data path (checked 2026-10-12): masiraislandresort.com, a static export of a WordPress/Elementor site
 //   (relative "../wp-content/" links, footer "(c) 2019", site icon uploaded 2023-08):
@@ -15,8 +14,9 @@
 // robots.txt (2026-10-12): masiraislandresort.com answers 404 (no robots.txt = everything allowed).
 // Kite link: /activities/ "Kite Surfing ... we have the perfect place for you - Masira Island ... For more
 //   details, please visit www.watersport-oman.com" and "Water Sport: watersport Oman offers the very best in
-//   kiteboarding and stand up paddling activities on international VDWS and IKO standards ...
-//   masirah@watersport-oman.com".
+//   kiteboarding and stand up paddling activities on international VDWS and IKO standards" (followed by the
+//   partner's e-mail address, deliberately not read: no third-party contact data in listing text, Aaron 2026-11-12;
+//   the listing contact is the resort's own contactEmail below).
 // Liveness evidence (rule 5b relaxed, Aaron 2026-10-12): the own site carries no 2026 date. The kite partner's
 //   own site (watersport-oman.com/masirah-island, sitemap lastmod 2026-08-04) recommends staying at the resort
 //   ("you can stay at a 4 star hotel called Masirah Island resort ... 10-20 minute drive to both the lagoon and
@@ -105,7 +105,7 @@ export function parseMirAmenities(html: string): string[] {
   return out;
 }
 
-export interface MirKite { kite: string[]; partner: string | null; partnerEmail: string | null }
+export interface MirKite { kite: string[]; partner: string | null }
 
 /** /activities/: the "Kite Surfing" paragraphs and the "Water Sport" partner block. */
 export function parseMirKite(html: string): MirKite {
@@ -119,8 +119,7 @@ export function parseMirKite(html: string): MirKite {
     }
   }
   const partner = lines.find(l => /^watersport Oman offers/i.test(l)) ?? null;
-  const partnerEmail = html.match(/[\w.+-]+@watersport-oman\.com/i)?.[0] ?? null;
-  return { kite, partner, partnerEmail };
+  return { kite, partner };
 }
 
 /** Home page: restaurant/bar names and the facilities list. */
@@ -215,7 +214,7 @@ export function parseMasiraIslandResortContent(p: MirPages): OfferContent {
     beginnerFriendly: true,
     includedServices: amenities.filter(a => /Wi-Fi/i.test(a)),
     optionalServices: [
-      `Kiteboarding and stand-up paddling with Watersport Oman (VDWS / IKO standards${kite.partnerEmail ? `, ${kite.partnerEmail}` : ''})`,
+      'Kiteboarding and stand-up paddling with Watersport Oman (VDWS / IKO standards)',
       'Deep sea fishing (October to March)',
       'Bird watching and turtle watching',
     ],
@@ -235,7 +234,7 @@ export function parseMasiraIslandResortContent(p: MirPages): OfferContent {
       `rooms: ${rooms.map(r => `${r.name} (${r.size ?? '-'}; ${r.beds ?? '-'}; ${r.floor ?? '-'}; ${r.view ?? '-'}): ${r.description}`).join(' | ')}`,
       `amenities: ${amenities.join(' | ')}`,
       `kite: ${kite.kite.join(' | ')}`,
-      `water sport partner: ${kite.partner} ${kite.partnerEmail ?? ''}`,
+      `water sport partner: ${kite.partner}`,
     ].join('\n'),
   };
 }
