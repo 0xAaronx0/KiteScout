@@ -8,6 +8,7 @@ import {
   masiraIslandResortMasirah, mirImages, mirSpotImages, parseMirAmenities, parseMirHome, parseMirKite, parseMirRooms,
 } from '../../src/offers/adapters/masira-island-resort-masirah.js';
 import { checkSlots, contentProblem } from '../../src/offers/validate.js';
+import { hasEmailAddress } from '../../src/lib/offer-text.js';
 import { planGallery } from '../../src/offers/gallery.js';
 
 const DIR = join(import.meta.dirname, '../fixtures/offers/masira-island-resort-masirah');
@@ -32,7 +33,7 @@ test('mir: kite section and Watersport Oman partner on /activities/', () => {
   assert.match(k.kite[0], /20 to 45 knots of wind day and night steady from south/);
   assert.match(k.kite[0], /www\.watersport-oman\.com$/);
   assert.match(k.partner ?? '', /kiteboarding and stand up paddling activities on international VDWS and IKO standards/);
-  assert.equal(k.partnerEmail, 'masirah@watersport-oman.com');
+  assert.deepEqual(Object.keys(k).sort(), ['kite', 'partner']); // the partner's e-mail is not read (Aaron 2026-11-12)
 });
 
 test('mir: home page facts and photos', () => {
@@ -65,7 +66,7 @@ test('mir: content', async () => {
   assert.deepEqual(c.rooms.map(r => r.name), ['Chalet', 'Executive Suite', 'Premier Room', 'Deluxe Room']);
   assert.ok(c.rooms[3].features.includes('View: Poolside view'));
   assert.equal(c.kiteLessons, true);
-  assert.ok(c.optionalServices[0].startsWith('Kiteboarding and stand-up paddling with Watersport Oman'));
+  assert.equal(c.optionalServices[0], 'Kiteboarding and stand-up paddling with Watersport Oman (VDWS / IKO standards)');
   assert.equal(c.imageUrls.length, 30);
   assert.equal(c.bookingUrl, 'https://be.synxis.com/?chain=31982&hotel=64798&level=hotel&locale=en-US');
 });
@@ -86,4 +87,16 @@ test('mir: one own photo per room type from its image box, the kite photo as spo
   const first24 = planGallery(c).candidates.slice(0, 24);
   for (const r of c.rooms) assert.ok(first24.includes(r.imageUrls![0]), r.name);
   assert.ok(first24.includes(c.spotImageUrls![0]));
+});
+
+// Aaron 2026-11-12: the partner school's e-mail (printed on /activities/) reached Scout chat answers via
+// optional_services. The page still carries it; no listing field, nor sourceText (stored in package_offers), may.
+test('mir: the partner e-mail on /activities/ ends up in no listing field', async () => {
+  assert.ok(hasEmailAddress(read('masiraislandresort.com_activities_.')), 'fixture should still carry the partner e-mail');
+  const c = await masiraIslandResortMasirah.fetchContent(ctx);
+  const texts = [c.title, c.summary, c.accommodation, c.region, c.spot, c.mealPlan, c.sourceText,
+    ...c.includedServices, ...c.optionalServices, ...c.languages,
+    ...c.rooms.flatMap(r => [r.name, r.description, ...r.features])];
+  assert.deepEqual(texts.filter(t => hasEmailAddress(t)), []);
+  assert.doesNotMatch(c.sourceText ?? '', /@/);
 });
